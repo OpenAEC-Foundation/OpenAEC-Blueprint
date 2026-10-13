@@ -1,0 +1,221 @@
+{
+  "name": "ifccad",
+  "url": "https://github.com/OpenAEC-Foundation/ifccad",
+  "branch": "main",
+  "description": "Parallel development of IFCCAD and OCDraw: open CAD drawing models, format contracts, Rust implementations, and DXF/DWG conversion.",
+  "archived": false,
+  "license": "MPL-2.0",
+  "icons": [
+    {
+      "path": "format-explorer/src/openaec-symbol.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/format-explorer/src/openaec-symbol.svg",
+      "sha256": "e306dd20153a1503d0084e174063ffd41c6e3dfdf9c2babfa85124e19caee4ff",
+      "bytes": 2130
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/Cargo.toml",
+      "sha256": "94cdac43480ee0ca8730a191850e8adfcba784ebe9f8b14b8ecae32e80810562",
+      "bytes": 1096
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/blob-digest-mismatch/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/blob-digest-mismatch/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/dependency-cycle/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/dependency-cycle/package.json",
+      "sha256": "35c1e6441537baba9b894167c1f19e7cd3fe0b6a45c1df3645aca4ea76e1a3c1",
+      "bytes": 294
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/generated-source-archive/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/generated-source-archive/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/package-checksum-mismatch/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/package-checksum-mismatch/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/package-missing-resource/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/package-missing-resource/package.json",
+      "sha256": "aa90ae1e940782e2504a798f85e3b97260bbb54abd697b089fde6fc9084c5276",
+      "bytes": 163
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/payload-range-invalid/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/payload-range-invalid/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/projection-resource-missing/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/projection-resource-missing/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/record-reference-missing/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/record-reference-missing/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/schema-unknown-field/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/schema-unknown-field/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/schema-unknown-origin/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/schema-unknown-origin/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/invalid/schema-wrong-scalar/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/invalid/schema-wrong-scalar/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/valid/generated-snapshot/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/valid/generated-snapshot/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/valid/minimal-no-preservation/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/valid/minimal-no-preservation/package.json",
+      "sha256": "aa90ae1e940782e2504a798f85e3b97260bbb54abd697b089fde6fc9084c5276",
+      "bytes": 163
+    },
+    {
+      "path": "conformance/1.0.0/packages/valid/multi-drawing-projections/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/valid/multi-drawing-projections/package.json",
+      "sha256": "777f14aa8441037e718ec340ab5e259d9d224892719c72abfb111f6f51306258",
+      "bytes": 275
+    },
+    {
+      "path": "conformance/1.0.0/packages/valid/source-archive/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/valid/source-archive/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/1.0.0/packages/valid/unrepresented-packed/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/conformance/1.0.0/packages/valid/unrepresented-packed/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "crates/browser/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/browser/Cargo.toml",
+      "sha256": "1fe7632605e20b191b97a8ff65788dcfff6dc832389aab0805af761ce192b103",
+      "bytes": 277
+    },
+    {
+      "path": "crates/cad-geometry-convert/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/cad-geometry-convert/Cargo.toml",
+      "sha256": "81cc0708946a35a5daaa11e7b22cafded692052a85b824c356839b72cd4f4ca3",
+      "bytes": 478
+    },
+    {
+      "path": "crates/cad-presentation-convert/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/cad-presentation-convert/Cargo.toml",
+      "sha256": "f02a8e0b4ace6fa09f59dfde8ab0d567c1b48c412312101a04bbe1154d41db4b",
+      "bytes": 325
+    },
+    {
+      "path": "crates/cad-preservation/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/cad-preservation/Cargo.toml",
+      "sha256": "5f29ce34319f026ac1cb08d9da1ca09fb485420339b2ae50925289a604b79bd1",
+      "bytes": 390
+    },
+    {
+      "path": "crates/cad-text/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/cad-text/Cargo.toml",
+      "sha256": "f6b48be1890ec10f7c06eaafd0203d29832edad2210fcd11bd102bdf5f2f4e56",
+      "bytes": 478
+    },
+    {
+      "path": "crates/cad-workspace-convert/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/cad-workspace-convert/Cargo.toml",
+      "sha256": "6f576dcd5c33912ba047bdc1ea5c5b2f9666103fa41f6f466712b03752f85475",
+      "bytes": 403
+    },
+    {
+      "path": "crates/ifccad-convert/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/ifccad-convert/Cargo.toml",
+      "sha256": "6bfaf0f378296cd3a55203303f8f52590b709fb3e91c2237aa64772b2dbdd0d4",
+      "bytes": 720
+    },
+    {
+      "path": "crates/ocdraw-convert/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/ocdraw-convert/Cargo.toml",
+      "sha256": "e59b11356cb8f9b53f8c04acb27134851b8f84729feea58d240049efbe050194",
+      "bytes": 1036
+    },
+    {
+      "path": "crates/viewer/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/crates/viewer/Cargo.toml",
+      "sha256": "64cea5fccfd2c6ec450949db34097a30e9dade3bbe3de6de675fce478e8d2d3d",
+      "bytes": 538
+    },
+    {
+      "path": "format-explorer/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/format-explorer/package.json",
+      "sha256": "efb50ab78ec89aa7f3c3452eb6bef652b4dc46c58f2cbcd6271b00829cd1e623",
+      "bytes": 452
+    },
+    {
+      "path": "patches/cadcodec-upstream/harness/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/patches/cadcodec-upstream/harness/Cargo.toml",
+      "sha256": "6c0906579510f8c8a281306307d5dde5e47f0519f30b973f5e634dcb8747ec9a",
+      "bytes": 426
+    }
+  ],
+  "errors": [],
+  "commit": "4a98b901912b46ee4bcba367890ea5da02dc9536",
+  "files_scanned": 953,
+  "ui_stack": [],
+  "icon_packages": []
+}

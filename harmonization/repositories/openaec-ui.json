@@ -1,0 +1,24 @@
+{
+  "name": "openaec-ui",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-ui",
+  "branch": "master",
+  "description": "OpenAEC shared design tokens and component CSS",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-ui/9fd4d25c3d8dc6c1d37e36d732811be29be211bb/package.json",
+      "sha256": "cae00c70cf4e190f49e4cb74fd399a9dd414dfcb5b5eb1277f88a968b2b3eef2",
+      "bytes": 244
+    }
+  ],
+  "errors": [],
+  "commit": "9fd4d25c3d8dc6c1d37e36d732811be29be211bb",
+  "files_scanned": 3,
+  "ui_stack": [],
+  "icon_packages": []
+}

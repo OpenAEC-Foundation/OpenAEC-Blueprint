@@ -1,0 +1,531 @@
+{
+  "name": "open-pdf-studio-v3",
+  "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "crates/app/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/128x128.png",
+      "sha256": "f10ffbdc6ff079d4d2e29db09777c65346fa7f2e246a44de2d5a25ad5c55fcdd",
+      "bytes": 14341
+    },
+    {
+      "path": "crates/app/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/128x128%402x.png",
+      "sha256": "0fd6579fc7420bfe7828508c87405d6572bb54c3868f3596d268fc644d178218",
+      "bytes": 43067
+    },
+    {
+      "path": "crates/app/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/32x32.png",
+      "sha256": "7a395d19e5dfa6885fd8f36cfb57a6d33b68dd63448de2c25a6a3ce9af0fce43",
+      "bytes": 1796
+    },
+    {
+      "path": "crates/app/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/icon.icns",
+      "sha256": "73d4c764627c041daf44038471ae5eb0800e66f346ea9d7c075431e017988a6d",
+      "bytes": 747363
+    },
+    {
+      "path": "crates/app/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/icon.ico",
+      "sha256": "880599c8b56699b66691d07b8430e24217f195106deef1870911f89cac287ecd",
+      "bytes": 72142
+    },
+    {
+      "path": "crates/app/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/icons/icon.png",
+      "sha256": "b79c4de641baa5b7e0d7a0c6c769505f8de052f493263837ac648b2beccdc327",
+      "bytes": 133473
+    },
+    {
+      "path": "crates/app/ui/icons/about.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/about.svg",
+      "sha256": "30cdd1d5c4bb4f0066648171b0ebe3b76acf858c6ab6f55d29b64d12a59ec2d0",
+      "bytes": 287
+    },
+    {
+      "path": "crates/app/ui/icons/actual-size.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/actual-size.svg",
+      "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
+      "bytes": 359
+    },
+    {
+      "path": "crates/app/ui/icons/add-place.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/add-place.svg",
+      "sha256": "363de2ea7120f098515c2add459fdc007b36ed87041f93e07b5707fba6e3f275",
+      "bytes": 352
+    },
+    {
+      "path": "crates/app/ui/icons/angle.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/angle.svg",
+      "sha256": "d417086de1c07293d9b0e50a1d9bee9a96fe3ffce25670d7f46f5a8e35835c8e",
+      "bytes": 284
+    },
+    {
+      "path": "crates/app/ui/icons/annotations.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/annotations.svg",
+      "sha256": "cec6d303c0c591ff07668e14456881e68c3cd549d0596a3bc3166835eec82867",
+      "bytes": 278
+    },
+    {
+      "path": "crates/app/ui/icons/apply.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/apply.svg",
+      "sha256": "992865516ff45c0f78105c714d9783b58b642585322fd0d34643acc38c780712",
+      "bytes": 254
+    },
+    {
+      "path": "crates/app/ui/icons/area.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/area.svg",
+      "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
+      "bytes": 359
+    },
+    {
+      "path": "crates/app/ui/icons/back.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/back.svg",
+      "sha256": "b40a9b63a8e5e2919db1ef0d908e6a98265ca27628437d9db35e7ad09b42eb59",
+      "bytes": 255
+    },
+    {
+      "path": "crates/app/ui/icons/behavior.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/behavior.svg",
+      "sha256": "86d17802eb17fdecac1420c0951b56f595be68f99d23d56ae017801a4fdc4ea7",
+      "bytes": 415
+    },
+    {
+      "path": "crates/app/ui/icons/browse.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/browse.svg",
+      "sha256": "5ae49f7b0acad95290a28bdabe80faeb18a9dd9278c5be78b4098e73e45dab35",
+      "bytes": 335
+    },
+    {
+      "path": "crates/app/ui/icons/callout.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/callout.svg",
+      "sha256": "629381d45f2a5683baf4596c3319e90e058eb242b61fccaca79f685631a05da2",
+      "bytes": 332
+    },
+    {
+      "path": "crates/app/ui/icons/camera.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/camera.svg",
+      "sha256": "56e36d415c1aa490a5e56dce40902a9526888000df6619030e069f5d4b1b59df",
+      "bytes": 430
+    },
+    {
+      "path": "crates/app/ui/icons/caret-down.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/caret-down.svg",
+      "sha256": "21afe63fedc1c70a73f64b9c32be49633b115cd3586452df810e2231ac69e886",
+      "bytes": 229
+    },
+    {
+      "path": "crates/app/ui/icons/clear-all.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/clear-all.svg",
+      "sha256": "bacb16605fa89d98d3d971c43440edc3a7e6f4c89e6fc364774710d06e9f6935",
+      "bytes": 425
+    },
+    {
+      "path": "crates/app/ui/icons/clear-page.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/clear-page.svg",
+      "sha256": "dce88a2bb92fc19539f2d11695839800206fd66224949b12c43b229482de5c6c",
+      "bytes": 382
+    },
+    {
+      "path": "crates/app/ui/icons/close.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/close.svg",
+      "sha256": "1809b200f0e677698e366631b49097f3afdfc0e2343c0523fa8a4fa6cfe68d4e",
+      "bytes": 253
+    },
+    {
+      "path": "crates/app/ui/icons/compare.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/compare.svg",
+      "sha256": "8e02506fc8fd35dc6ccb83eb17355173c79ff7b127c69085f5f1f217f94d72bc",
+      "bytes": 278
+    },
+    {
+      "path": "crates/app/ui/icons/continuous.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/continuous.svg",
+      "sha256": "a7c26eda9a9e510872929ed4d458ffd2f36427918b58393ead453d230ef4bcaf",
+      "bytes": 437
+    },
+    {
+      "path": "crates/app/ui/icons/cursor.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/cursor.svg",
+      "sha256": "511d42bca9467a1729e2aeec793c07a2c71cea9e5fe7c0271c98743ee6900955",
+      "bytes": 349
+    },
+    {
+      "path": "crates/app/ui/icons/distance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/distance.svg",
+      "sha256": "3be0aa15d3834e282406a097c07f788f6942a35b977dc13f8714ddbc7b94b804",
+      "bytes": 279
+    },
+    {
+      "path": "crates/app/ui/icons/doc-props.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/doc-props.svg",
+      "sha256": "c1d5358ee5c7b8f056bcc5a296eb9ee1a7149999a266ab68b51d130098c7e89e",
+      "bytes": 437
+    },
+    {
+      "path": "crates/app/ui/icons/exit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/exit.svg",
+      "sha256": "c8dd1cad34799760b03caf2d1c94a7334f2f1650ca9194a950891f0e135a9f25",
+      "bytes": 310
+    },
+    {
+      "path": "crates/app/ui/icons/export.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/export.svg",
+      "sha256": "bd7cc1eb2a9737760034e23b6bbcc83dc5badf8c6dd1c5d71cc67c20a393f28d",
+      "bytes": 311
+    },
+    {
+      "path": "crates/app/ui/icons/extensions.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/extensions.svg",
+      "sha256": "729e97dcdfa044806470886089f47c258a41f9be06129400d1759274fa56f7ff",
+      "bytes": 678
+    },
+    {
+      "path": "crates/app/ui/icons/file-assoc.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/file-assoc.svg",
+      "sha256": "fccf22362f01f6824ddab39c2ffaf4a4ab6552729654db987836468990f4c91b",
+      "bytes": 720
+    },
+    {
+      "path": "crates/app/ui/icons/find.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/find.svg",
+      "sha256": "b377e14ea62970ee3caf0f584a5837f2a4c876e23ca4e62a6b93d0662275f3df",
+      "bytes": 268
+    },
+    {
+      "path": "crates/app/ui/icons/first.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/first.svg",
+      "sha256": "ae38d6dbc9b8b5cc1dc195e4fdb7c2418a50e7184a12e504670ea3b56a1c7a58",
+      "bytes": 261
+    },
+    {
+      "path": "crates/app/ui/icons/fit-page.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/fit-page.svg",
+      "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701",
+      "bytes": 359
+    },
+    {
+      "path": "crates/app/ui/icons/fit-width.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/fit-width.svg",
+      "sha256": "59e6d2254c77485f9155f22999f1434a13543c8d5546d30a23a8b932e7b546d8",
+      "bytes": 282
+    },
+    {
+      "path": "crates/app/ui/icons/fullscreen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/fullscreen.svg",
+      "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701",
+      "bytes": 359
+    },
+    {
+      "path": "crates/app/ui/icons/hand.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/hand.svg",
+      "sha256": "d06d91a69951e66642cbacc45c15e7dbff9072607d3c04ef88a21ffd2aa07230",
+      "bytes": 476
+    },
+    {
+      "path": "crates/app/ui/icons/highlight.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/highlight.svg",
+      "sha256": "da327a4e248d6b99ed797d50a27ff3a1b30c805d5aaa859d0cc14b82641f2e6b",
+      "bytes": 310
+    },
+    {
+      "path": "crates/app/ui/icons/import.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/import.svg",
+      "sha256": "e91f26884fd06b6d9b2967f0927da087ee05b0408825fc568ed8c227679e2056",
+      "bytes": 311
+    },
+    {
+      "path": "crates/app/ui/icons/last.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/last.svg",
+      "sha256": "e793c92b4b0a028b13b3037f2f46d7d1ea001c255e65e4c214f53cd50ddc90f5",
+      "bytes": 260
+    },
+    {
+      "path": "crates/app/ui/icons/navigation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/navigation.svg",
+      "sha256": "5f6c68d5825489c873a65e7c2a0e6c3b2d26cc1fb9720b9abaa107dd9f146df2",
+      "bytes": 277
+    },
+    {
+      "path": "crates/app/ui/icons/new.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/new.svg",
+      "sha256": "080c5e6d5059e2066d5b2e8cec57d6b06f749459c0ebf52017497d6c7daf0b22",
+      "bytes": 414
+    },
+    {
+      "path": "crates/app/ui/icons/next.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/next.svg",
+      "sha256": "dc0db1785b1effab0c2bdc45ed06af5a4bd792651acec30101d2d9c3f72c5bb0",
+      "bytes": 230
+    },
+    {
+      "path": "crates/app/ui/icons/note.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/note.svg",
+      "sha256": "7d707522f7340f6401007c1fcf19b294c4a5b37250588041acdc534420b56439",
+      "bytes": 401
+    },
+    {
+      "path": "crates/app/ui/icons/open.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/open.svg",
+      "sha256": "f7d0c247100ba1dd39e370535f4ce1b85ea4e89702351c8601a6e364554856e4",
+      "bytes": 394
+    },
+    {
+      "path": "crates/app/ui/icons/parametric.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/parametric.svg",
+      "sha256": "e1353715256c6fdd7fbb4b5bf7c0a350bffa0a8f09012c3afd65fcc00387a8b3",
+      "bytes": 408
+    },
+    {
+      "path": "crates/app/ui/icons/perimeter.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/perimeter.svg",
+      "sha256": "ef9b4746ebfbaaaa6735068576bbfbb416fcfaba90b31a90f3a4d3b4c59cc371",
+      "bytes": 307
+    },
+    {
+      "path": "crates/app/ui/icons/pin.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/pin.svg",
+      "sha256": "312f6dc380eff620fbd7ec5d8679ec78909cf4ab925578673cbcfaff2e868ddc",
+      "bytes": 443
+    },
+    {
+      "path": "crates/app/ui/icons/preferences.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/preferences.svg",
+      "sha256": "22fd994e7a976c2d644e6b48c555576792ceaf31502fac9e34c9e24639abae24",
+      "bytes": 579
+    },
+    {
+      "path": "crates/app/ui/icons/prev.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/prev.svg",
+      "sha256": "537370d3b52fc42264e9c0aaf53806a8c63637230d789c694dd703dab2580f3b",
+      "bytes": 231
+    },
+    {
+      "path": "crates/app/ui/icons/print.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/print.svg",
+      "sha256": "64c66d1638728d8b840ebcf125f465331d77e8ac60c21aba0486b16d3fa3dfbf",
+      "bytes": 399
+    },
+    {
+      "path": "crates/app/ui/icons/recent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/recent.svg",
+      "sha256": "cb48afa8f0d0c634fbc790fb1fbded6559f338351b18ac986358fa2ac792c150",
+      "bytes": 264
+    },
+    {
+      "path": "crates/app/ui/icons/redact.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/redact.svg",
+      "sha256": "a5a1d5d7124b5cb1cb5c9e9b29f45810e1fcfdf82ce75c4c5fc4a361f3179b0c",
+      "bytes": 325
+    },
+    {
+      "path": "crates/app/ui/icons/rotate-left.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/rotate-left.svg",
+      "sha256": "86a21c6888f55e7b00a9f24f0c116666f44aa5d7a75a635321832038fe0a0559",
+      "bytes": 290
+    },
+    {
+      "path": "crates/app/ui/icons/rotate-right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/rotate-right.svg",
+      "sha256": "cd577a6c948850fd989c8dd3550aa6e24970c36ae4111851e8fcde6692247f5b",
+      "bytes": 292
+    },
+    {
+      "path": "crates/app/ui/icons/save.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/save.svg",
+      "sha256": "354e2fca072a9a9cc7a7fc1f5f202294072119078e8bb193ac105b146ccb24b9",
+      "bytes": 410
+    },
+    {
+      "path": "crates/app/ui/icons/scale-page.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/scale-page.svg",
+      "sha256": "8204ed98df53c2133b5ec6fbebbd018a0b51789d42a5e3a3e130c952adcaa7e1",
+      "bytes": 353
+    },
+    {
+      "path": "crates/app/ui/icons/select-dashed.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/select-dashed.svg",
+      "sha256": "003464d7ae176374875ae45d70382f6d6d574cc4f038b66d391ebd3e5a93e275",
+      "bytes": 525
+    },
+    {
+      "path": "crates/app/ui/icons/sessions.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/sessions.svg",
+      "sha256": "ddf0c39f38ca86604a5261216622d4399bf3174e97d5949d726966da9d551b50",
+      "bytes": 409
+    },
+    {
+      "path": "crates/app/ui/icons/signature.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/signature.svg",
+      "sha256": "fe9c18f719002f444ebf324e937442a66c0bfa38878b79220ce67738928691f2",
+      "bytes": 408
+    },
+    {
+      "path": "crates/app/ui/icons/single.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/single.svg",
+      "sha256": "ac9c789ffafc1ade9329318761f2f06c4f2c3ad7f067e84c408b72f527042cef",
+      "bytes": 366
+    },
+    {
+      "path": "crates/app/ui/icons/stamp.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/stamp.svg",
+      "sha256": "09e71b632d7edd93e1f5aa8fbae7689286739cdd95891f5dafb84ce92dfe7bee",
+      "bytes": 403
+    },
+    {
+      "path": "crates/app/ui/icons/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/symbols.svg",
+      "sha256": "0733e923cdd6ab4a60a1ecac3a730cb1fed40523f5c217b279178d8b610f5cf0",
+      "bytes": 398
+    },
+    {
+      "path": "crates/app/ui/icons/takeoff.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/takeoff.svg",
+      "sha256": "c4ff0f011f9bb5b8483ba0cab81e4a54410f6dcd2f5db427b5d40dc569f0557c",
+      "bytes": 348
+    },
+    {
+      "path": "crates/app/ui/icons/thin-lines.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/thin-lines.svg",
+      "sha256": "fb76e8072542a1db940106194ce0b2fa1b8e14867842559e523d7848d586478c",
+      "bytes": 272
+    },
+    {
+      "path": "crates/app/ui/icons/tool-palette.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/tool-palette.svg",
+      "sha256": "18597c96a24c2e9de823a9df26ccb4ea06cbb77adde91b605cd1ff7b8995e2e5",
+      "bytes": 536
+    },
+    {
+      "path": "crates/app/ui/icons/url.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/url.svg",
+      "sha256": "7b694a6779448da1a8e405c4dc95482fbd66b44f3d905f02ac7ede943e2d78b1",
+      "bytes": 352
+    },
+    {
+      "path": "crates/app/ui/icons/whats-new.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/whats-new.svg",
+      "sha256": "ed733801b471eb83e72ec3dfb12f6d9929b22ee0b2aa052bfe44ae84857a6483",
+      "bytes": 560
+    },
+    {
+      "path": "crates/app/ui/icons/zoom-in.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/zoom-in.svg",
+      "sha256": "0ba810fc4b918eac828e83b198efdac1a7c94ff2af2c260ffc7de96b288fdabb",
+      "bytes": 369
+    },
+    {
+      "path": "crates/app/ui/icons/zoom-out.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/icons/zoom-out.svg",
+      "sha256": "2cee3cb5a99e71a6913cc41cb98e06a4746be28fd172cd9631761864e5278d0d",
+      "bytes": 327
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/Cargo.toml",
+      "sha256": "dc619c8efa3d506c1fce0123490e4879075e131be311df886e7e9c0f6c69c451",
+      "bytes": 486
+    },
+    {
+      "path": "crates/app/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/Cargo.toml",
+      "sha256": "2683e18ba0b0c698a31abfdce68d457bfee9caf8637fc69bffc6517c4254e9cd",
+      "bytes": 2629
+    },
+    {
+      "path": "crates/pdf-engine/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/pdf-engine/Cargo.toml",
+      "sha256": "331b05689bae5942688e23786e23a4e59d7d1b7cfc2ecad559d12749b969f3e6",
+      "bytes": 205
+    }
+  ],
+  "errors": [],
+  "commit": "380706f5820c6090a36461663b076cec4f324fc3",
+  "files_scanned": 93,
+  "ui_stack": [
+    "Slint"
+  ],
+  "icon_packages": []
+}

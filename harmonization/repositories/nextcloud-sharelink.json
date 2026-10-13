@@ -1,0 +1,17 @@
+{
+  "name": "nextcloud-sharelink",
+  "url": "https://github.com/OpenAEC-Foundation/nextcloud-sharelink",
+  "branch": "main",
+  "description": "Little tool to add NextCloud link to right click menu",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [],
+  "errors": [
+    {
+      "stage": "tree",
+      "error": "Command '['git', '-C', '/tmp/openaec-inventory/nextcloud-sharelink', 'rev-parse', 'HEAD']' returned non-zero exit status 128."
+    }
+  ]
+}

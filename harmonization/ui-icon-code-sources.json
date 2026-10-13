@@ -1,0 +1,4041 @@
+[
+  {
+    "repo": "OpenAEC-style-book",
+    "source": "packages/ribbon/src/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      7,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "names": [
+      "settingsIcon",
+      "helpIcon",
+      "infoIcon",
+      "ifcImportIcon",
+      "ifcExportIcon",
+      "ifcTreeIcon",
+      "ifcValidateIcon",
+      "ifcStatsIcon",
+      "viewerLoadIcon",
+      "viewerOrbitIcon",
+      "viewerSectionIcon",
+      "viewerMeasureIcon",
+      "viewerFitIcon",
+      "viewerWireframeIcon",
+      "reportNewIcon",
+      "reportTemplateIcon",
+      "reportGenerateIcon",
+      "reportPreviewIcon",
+      "reportCoverIcon",
+      "extensionBrowseIcon",
+      "extensionInstallIcon",
+      "extensionManageIcon",
+      "projectIcon",
+      "pasteIcon",
+      "cutIcon",
+      "copyIcon",
+      "undoIcon",
+      "redoIcon",
+      "boldIcon",
+      "italicIcon",
+      "underlineIcon",
+      "alignLeftIcon",
+      "alignCenterIcon",
+      "alignRightIcon",
+      "pencilIcon",
+      "lineIcon",
+      "arrowIcon",
+      "circleIcon",
+      "rectangleIcon",
+      "imageIcon",
+      "tableIcon",
+      "linkIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/icons.ts"
+  },
+  {
+    "repo": "OpenAEC-style-book",
+    "source": "project-templates/Tauri+React/src/components/backstage/Backstage.tsx",
+    "kind": "icon-component",
+    "lines": [
+      349
+    ],
+    "names": [
+      "typeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "OpenAEC-style-book",
+    "source": "project-templates/Tauri+React/src/components/ribbon/ReportTab.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "names": [
+      "a4Icon",
+      "a3Icon",
+      "portraitIcon",
+      "landscapeIcon",
+      "downloadIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/ReportTab.tsx"
+  },
+  {
+    "repo": "OpenAEC-style-book",
+    "source": "project-templates/Tauri+React/src/components/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      7,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "names": [
+      "settingsIcon",
+      "helpIcon",
+      "infoIcon",
+      "ifcImportIcon",
+      "ifcExportIcon",
+      "ifcTreeIcon",
+      "ifcValidateIcon",
+      "ifcStatsIcon",
+      "viewerLoadIcon",
+      "viewerOrbitIcon",
+      "viewerSectionIcon",
+      "viewerMeasureIcon",
+      "viewerFitIcon",
+      "viewerWireframeIcon",
+      "reportNewIcon",
+      "reportTemplateIcon",
+      "reportGenerateIcon",
+      "reportPreviewIcon",
+      "reportCoverIcon",
+      "extensionBrowseIcon",
+      "extensionInstallIcon",
+      "extensionManageIcon",
+      "projectIcon",
+      "pasteIcon",
+      "cutIcon",
+      "copyIcon",
+      "undoIcon",
+      "redoIcon",
+      "boldIcon",
+      "italicIcon",
+      "underlineIcon",
+      "alignLeftIcon",
+      "alignCenterIcon",
+      "alignRightIcon",
+      "pencilIcon",
+      "lineIcon",
+      "arrowIcon",
+      "circleIcon",
+      "rectangleIcon",
+      "imageIcon",
+      "tableIcon",
+      "linkIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/icons.ts"
+  },
+  {
+    "repo": "openaec-reports",
+    "source": "frontend/src/components/chrome/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19
+    ],
+    "names": [
+      "paragraphIcon",
+      "calculationIcon",
+      "checkIcon",
+      "tableIcon",
+      "spreadsheetIcon",
+      "imageIcon",
+      "mapIcon",
+      "bulletListIcon",
+      "heading2Icon",
+      "spacerIcon",
+      "pageBreakIcon",
+      "validateIcon",
+      "generatePdfIcon",
+      "downloadIcon",
+      "pasteIcon",
+      "copyIcon",
+      "editorIcon",
+      "splitIcon",
+      "jsonIcon",
+      "previewIcon",
+      "sidebarIcon",
+      "newSectionIcon",
+      "newAppendixIcon",
+      "templateIcon",
+      "settingsIcon",
+      "helpIcon",
+      "infoIcon",
+      "adminIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/icons.ts"
+  },
+  {
+    "repo": "openaec-reports",
+    "source": "frontend/src/components/shared/BlockIcons.tsx",
+    "kind": "icon-component",
+    "lines": [
+      6
+    ],
+    "names": [
+      "BlockIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/shared/BlockIcons.tsx"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/landing/main.ts",
+    "kind": "inline-svg",
+    "lines": [
+      201
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/landing/main.ts"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/landing/montyviewer-landing.html",
+    "kind": "inline-svg",
+    "lines": [
+      698
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/landing/montyviewer-landing.html"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/landing/montyviewer-landing2.html",
+    "kind": "inline-svg",
+    "lines": [
+      899
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/landing/montyviewer-landing2.html"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/ui/filter-panel.ts",
+    "kind": "inline-svg",
+    "lines": [
+      7
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/ui/filter-panel.ts"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/ui/model-panel.ts",
+    "kind": "inline-svg",
+    "lines": [
+      6,
+      7,
+      8
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/ui/model-panel.ts"
+  },
+  {
+    "repo": "monty-ifc-viewer",
+    "source": "src/ui/property-panel.ts",
+    "kind": "inline-svg",
+    "lines": [
+      14
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/monty-ifc-viewer/blob/eca30ab3e0af13e314e60602d21f278d5be59085/src/ui/property-panel.ts"
+  },
+  {
+    "repo": "openaec-installer",
+    "source": "src/components/CategoryIcon.tsx",
+    "kind": "icon-component",
+    "lines": [
+      7
+    ],
+    "names": [
+      "CategoryIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/CategoryIcon.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/domain/imports/ProjectImportPanel.tsx",
+    "kind": "icon-component",
+    "lines": [
+      415
+    ],
+    "names": [
+      "FileActionIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/domain/imports/ProjectImportPanel.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/domain/pile-plans/PilePlanExplorer.tsx",
+    "kind": "icon-component",
+    "lines": [
+      230
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/domain/pile-plans/PilePlanExplorer.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/domain/pile-plans/legend-editor/LegendConflictNotice.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      78
+    ],
+    "names": [
+      "legend-editor-info-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/domain/pile-plans/legend-editor/LegendConflictNotice.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/domain/pile-plans/legend-editor/LegendEditorItemRow.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      188
+    ],
+    "names": [
+      "legend-editor-info-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/domain/pile-plans/legend-editor/LegendEditorItemRow.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+    "kind": "icon-component",
+    "lines": [
+      359
+    ],
+    "names": [
+      "typeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "pile-plan-studio",
+    "source": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      11,
+      12
+    ],
+    "names": [
+      "settingsIcon",
+      "infoIcon",
+      "removeIcon",
+      "ifcImportIcon",
+      "projectIcon",
+      "loadPointIcon",
+      "cptIcon",
+      "optimizeIcon",
+      "lockIcon",
+      "unlockIcon",
+      "applyIcon",
+      "gridIcon",
+      "groupsIcon",
+      "tipLevelRegionsIcon",
+      "explorerPanelIcon",
+      "propertiesPanelIcon",
+      "lassoIcon",
+      "pencilIcon",
+      "filterCheckIcon",
+      "searchIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/icons.ts"
+  },
+  {
+    "repo": "ifcgit-4-nextcloud",
+    "source": "frontend/src/views/LoginView.vue",
+    "kind": "inline-svg",
+    "lines": [
+      78,
+      90,
+      102
+    ],
+    "names": [
+      "input-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/ifcgit-4-nextcloud/blob/40645d35cc2f5e3c7eae853c3ba9ec60dce0d487/frontend/src/views/LoginView.vue"
+  },
+  {
+    "repo": "Open-Field-Studio",
+    "source": "index.html",
+    "kind": "inline-svg",
+    "lines": [
+      69,
+      70
+    ],
+    "names": [
+      "theme-icon-light",
+      "theme-icon-dark"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Field-Studio/blob/8a4f104106b208ad053c73fa9390786d805058b8/index.html"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/desktop/src/components/backstage/Backstage.tsx",
+    "kind": "icon-component",
+    "lines": [
+      304
+    ],
+    "names": [
+      "typeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/desktop/src/components/calc/VoetplaatDesigner.tsx",
+    "kind": "icon-component",
+    "lines": [
+      308
+    ],
+    "names": [
+      "OpzetIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/calc/VoetplaatDesigner.tsx"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/desktop/src/components/calc/WindAreaMap.tsx",
+    "kind": "icon-component",
+    "lines": [
+      20,
+      46
+    ],
+    "names": [
+      "defaultIcon",
+      "gebiedLabelIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/calc/WindAreaMap.tsx"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+    "kind": "icon-component",
+    "lines": [
+      13,
+      19,
+      24,
+      32,
+      39,
+      44,
+      50,
+      55
+    ],
+    "names": [
+      "newDocIcon",
+      "openFolderIcon",
+      "saveDiskIcon",
+      "moduleIcon",
+      "undoIcon",
+      "redoIcon",
+      "headingIcon",
+      "formulaIcon",
+      "variableIcon",
+      "selectListIcon",
+      "checkIcon",
+      "imageIcon",
+      "svgShapeIcon",
+      "viewSplitIcon",
+      "viewEditorIcon",
+      "viewPreviewIcon",
+      "pdfIcon",
+      "pdfPreviewIcon",
+      "ifcExportIcon",
+      "ifcImportIcon",
+      "ifcTreeIcon",
+      "ifcPropertiesIcon",
+      "ifcValidateIcon",
+      "gefIcon",
+      "broIcon",
+      "beamIcon",
+      "columnIcon",
+      "pileIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/calcIcons.ts"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/desktop/src/components/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      7,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "names": [
+      "settingsIcon",
+      "helpIcon",
+      "infoIcon",
+      "ifcImportIcon",
+      "ifcExportIcon",
+      "ifcTreeIcon",
+      "ifcValidateIcon",
+      "ifcStatsIcon",
+      "viewerLoadIcon",
+      "viewerOrbitIcon",
+      "viewerSectionIcon",
+      "viewerMeasureIcon",
+      "viewerFitIcon",
+      "viewerWireframeIcon",
+      "reportNewIcon",
+      "reportTemplateIcon",
+      "reportGenerateIcon",
+      "reportPreviewIcon",
+      "reportCoverIcon",
+      "extensionBrowseIcon",
+      "extensionInstallIcon",
+      "extensionManageIcon",
+      "projectIcon",
+      "pasteIcon",
+      "cutIcon",
+      "copyIcon",
+      "undoIcon",
+      "redoIcon",
+      "boldIcon",
+      "italicIcon",
+      "underlineIcon",
+      "alignLeftIcon",
+      "alignCenterIcon",
+      "alignRightIcon",
+      "pencilIcon",
+      "lineIcon",
+      "arrowIcon",
+      "circleIcon",
+      "rectangleIcon",
+      "imageIcon",
+      "tableIcon",
+      "linkIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/icons.ts"
+  },
+  {
+    "repo": "Open-Calculations-Studio",
+    "source": "packages/web/index.html",
+    "kind": "inline-svg",
+    "lines": [
+      781,
+      785,
+      789,
+      868,
+      946,
+      950,
+      960,
+      964
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio/blob/21d218c996d09b92018ad21b730c883c665dc035/packages/web/index.html"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/components/FeedbackDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "TbOutlineX"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/FeedbackDialog.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/components/PackageSelector.tsx",
+    "kind": "icon-component",
+    "lines": [
+      22
+    ],
+    "names": [
+      "CategoryIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/PackageSelector.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/components/SearchBar.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      15
+    ],
+    "names": [
+      "search-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/SearchBar.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/components/WorkflowTypeSelector.tsx",
+    "kind": "icon-component",
+    "lines": [
+      9
+    ],
+    "names": [
+      "WorkflowIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/WorkflowTypeSelector.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/layouts/AppLayout.tsx",
+    "kind": "icon-library",
+    "lines": [
+      11
+    ],
+    "names": [
+      "TbOutlineHome",
+      "TbOutlineBolt",
+      "TbOutlinePackage",
+      "TbOutlineFolder",
+      "TbOutlineSettings",
+      "TbOutlineLink",
+      "TbOutlineShield",
+      "TbOutlineCpu",
+      "TbOutlineFileText",
+      "TbOutlineCloudDownload",
+      "TbOutlineServer",
+      "TbOutlineRefresh",
+      "TbOutlineInfoCircle",
+      "TbOutlineSun",
+      "TbOutlineMoon",
+      "TbOutlineMessage"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/pages/DashboardPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "TbOutlinePackage",
+      "TbOutlineBolt",
+      "TbOutlineFolder",
+      "TbOutlineSettings",
+      "TbOutlineShield",
+      "TbOutlineLink",
+      "TbOutlineCpu",
+      "TbOutlineFileText",
+      "TbOutlineServer",
+      "TbOutlineRefresh"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/pages/GitPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "TbOutlineGitBranch",
+      "TbOutlineFileText",
+      "TbOutlineGitCommit",
+      "TbOutlineBolt",
+      "TbOutlineArrowUp",
+      "TbOutlineInfoCircle",
+      "TbOutlineGitFork",
+      "TbOutlineCheck",
+      "TbOutlineTerminal"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx"
+  },
+  {
+    "repo": "OpenAEC-Workspace-Composer",
+    "source": "src/pages/PromptsPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "TbOutlineMessage",
+      "TbOutlineChevronDown",
+      "TbOutlineCopy",
+      "TbOutlineEdit"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx"
+  },
+  {
+    "repo": "open-books",
+    "source": "index.html",
+    "kind": "inline-svg",
+    "lines": [
+      12
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-books/blob/f4015d275ad905b2f6169b188c18adfa311b8eb7/index.html"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/modeller/Ribbon.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3,
+      10
+    ],
+    "names": [
+      "MousePointer2",
+      "Hand",
+      "Square",
+      "Pentagon",
+      "Circle",
+      "Grid2x2",
+      "DoorOpen",
+      "Scissors",
+      "MoveHorizontal",
+      "Type",
+      "CornerRightDown",
+      "Ruler",
+      "Undo2",
+      "Redo2",
+      "FileImage",
+      "FileText",
+      "Download",
+      "Upload",
+      "FileDown",
+      "FileUp",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/modeller/Ribbon.tsx",
+    "kind": "icon-component",
+    "lines": [
+      363,
+      383
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4,
+      11
+    ],
+    "names": [
+      "MousePointer2",
+      "Hand",
+      "Square",
+      "Pentagon",
+      "Circle",
+      "Grid2x2",
+      "DoorOpen",
+      "Scissors",
+      "MoveHorizontal",
+      "Type",
+      "CornerRightDown",
+      "Ruler",
+      "Undo2",
+      "Redo2",
+      "FileImage",
+      "FileText",
+      "Download",
+      "Upload",
+      "FileDown",
+      "FileUp",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/ModellerTab.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+    "kind": "icon-component",
+    "lines": [
+      367
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/ModellerTab.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22,
+      25
+    ],
+    "names": [
+      "plusIcon",
+      "calculatorIcon",
+      "layersIcon",
+      "exportIcon",
+      "reportIcon",
+      "buildingIcon",
+      "thermometerIcon",
+      "cubeIcon",
+      "chartIcon",
+      "navigateIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/icons.ts"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+    "kind": "icon-library",
+    "lines": [
+      19
+    ],
+    "names": [
+      "AlertTriangle",
+      "ChevronDown",
+      "ChevronRight",
+      "Layers",
+      "Pencil",
+      "Check"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ConstructionImportStep.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/FileUploadStep.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "Upload",
+      "FileJson",
+      "AlertCircle",
+      "CheckCircle2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/FileUploadStep.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/ImportSummary.tsx",
+    "kind": "icon-library",
+    "lines": [
+      14
+    ],
+    "names": [
+      "AlertTriangle",
+      "CheckCircle2",
+      "Home",
+      "Layers",
+      "DoorOpen",
+      "ArrowRight"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ImportSummary.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/RoomImportStep.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "AlertCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/RoomImportStep.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+    "kind": "icon-library",
+    "lines": [
+      22
+    ],
+    "names": [
+      "Upload",
+      "Home",
+      "Layers",
+      "DoorOpen",
+      "ClipboardCheck",
+      "ChevronLeft",
+      "ChevronRight",
+      "Loader2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+    "kind": "icon-component",
+    "lines": [
+      286
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/pages/Library.tsx",
+    "kind": "icon-library",
+    "lines": [
+      1
+    ],
+    "names": [
+      "Pencil"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/pages/Library.tsx"
+  },
+  {
+    "repo": "open-heatloss-studio",
+    "source": "frontend/src/pages/ProjectConstructions.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "Pencil"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/pages/ProjectConstructions.tsx"
+  },
+  {
+    "repo": "OpenAEC-zaagplan",
+    "source": "src/components/Toast.jsx",
+    "kind": "icon-component",
+    "lines": [
+      4
+    ],
+    "names": [
+      "getIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-zaagplan/blob/22c20be17262a57a015de662b1aada5fcba5db44/src/components/Toast.jsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/ApiKeyManager.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Key",
+      "Plus",
+      "Trash2",
+      "Copy",
+      "Check"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/CommentThread.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Send",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CommentThread.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/CreateTopic.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Plus",
+      "ChevronDown",
+      "ChevronUp"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CreateTopic.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/MemberManager.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "UserPlus",
+      "Trash2",
+      "Search"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/MemberManager.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/TopicList.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Trash2",
+      "AlertCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/TopicList.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/ViewpointCard.tsx",
+    "kind": "icon-library",
+    "lines": [
+      1
+    ],
+    "names": [
+      "Camera"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ViewpointCard.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/shell/AppBar.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      4,
+      6
+    ],
+    "names": [
+      "iconSave",
+      "iconSettingsSmall"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/AppBar.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/components/shell/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17
+    ],
+    "names": [
+      "iconNewProject",
+      "iconImportBcf",
+      "iconExportBcf",
+      "iconNewIssue",
+      "iconSettings",
+      "iconAbout",
+      "iconClose",
+      "iconCloud",
+      "iconCloudUpload",
+      "iconCloudDownload"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/icons.ts"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/pages/ProjectDetail.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "ChevronRight",
+      "Download",
+      "Upload",
+      "Key",
+      "Users",
+      "BarChart3",
+      "CircleDot",
+      "CheckCircle2",
+      "Clock",
+      "AlertTriangle",
+      "MapPin",
+      "Image"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/pages/ProjectList.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "FolderOpen",
+      "Plus",
+      "MapPin"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectList.tsx"
+  },
+  {
+    "repo": "openaec-bcf-platform",
+    "source": "frontend/src/pages/TopicDetail.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ChevronRight",
+      "MessageSquare",
+      "Eye",
+      "Tag",
+      "Calendar",
+      "User",
+      "Hash"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx"
+  },
+  {
+    "repo": "open-calc-studio",
+    "source": "src/components/backstage/Backstage.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      916
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "open-calc-studio",
+    "source": "src/components/backstage/CloudPanel.tsx",
+    "kind": "icon-component",
+    "lines": [
+      127,
+      132
+    ],
+    "names": [
+      "FolderIcon",
+      "FileIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/backstage/CloudPanel.tsx"
+  },
+  {
+    "repo": "open-calc-studio",
+    "source": "src/components/grid/GridCell.tsx",
+    "kind": "icon-component",
+    "lines": [
+      321,
+      322
+    ],
+    "names": [
+      "showExcelIcon",
+      "showQuantityLinkIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/GridCell.tsx"
+  },
+  {
+    "repo": "open-calc-studio",
+    "source": "src/components/grid/GridCell.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      366
+    ],
+    "names": [
+      "grid-excel-link-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/GridCell.tsx"
+  },
+  {
+    "repo": "open-calc-studio",
+    "source": "src/components/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      4,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16
+    ],
+    "names": [
+      "companyIcon",
+      "clipboardIcon",
+      "cutIcon",
+      "copyIcon",
+      "undoIcon",
+      "redoIcon",
+      "addChapterIcon",
+      "addBegrotingspostIcon",
+      "addBewakingspostIcon",
+      "addRegelIcon",
+      "addTekstregelIcon",
+      "addWitregelIcon",
+      "deleteIcon",
+      "exportIcon",
+      "reportIcon",
+      "reportWerkbeschrijvingIcon",
+      "reportHoofdaannemingIcon",
+      "reportOnderaannemingIcon",
+      "reportInschrijfstaatIcon",
+      "reportNacalculatieIcon",
+      "reportBouw1Icon",
+      "reportBouw2Icon",
+      "reportDirectieIcon",
+      "textBoldIcon",
+      "textItalicIcon",
+      "textUnderlineIcon",
+      "textAlignLeftIcon",
+      "textAlignCenterIcon",
+      "textAlignRightIcon",
+      "textSizeUpIcon",
+      "textSizeDownIcon",
+      "textClearIcon",
+      "printIcon",
+      "pdfExportIcon",
+      "excelExportIcon",
+      "settingsIcon",
+      "portraitIcon",
+      "landscapeIcon",
+      "pageSizeIcon",
+      "viewStIcon",
+      "viewWpCalcIcon",
+      "trackChangesIcon",
+      "clearMarksIcon",
+      "rowHighlightIcon",
+      "cellHighlightIcon",
+      "branchIcon",
+      "optionSetIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/icons.ts"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/App.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "PanelRightOpen",
+      "PanelRightClose"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/App.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/layout/MenuBar/MenuBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Settings"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/MenuBar/MenuBar.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Upload",
+      "Sun",
+      "Eye",
+      "BoxSelect",
+      "Trash2",
+      "XCircle",
+      "Move",
+      "Maximize",
+      "Filter",
+      "Building2",
+      "Shapes",
+      "Download",
+      "Focus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/Ribbon.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/layout/Ribbon/RibbonComponents.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Check",
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/RibbonComponents.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/layout/Ribbon/RibbonIcons.tsx",
+    "kind": "icon-component",
+    "lines": [
+      1,
+      12,
+      20,
+      31
+    ],
+    "names": [
+      "RGBIcon",
+      "ElevationIcon",
+      "ClassificationIcon",
+      "IntensityIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/RibbonIcons.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/panels/BAG3DPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      12
+    ],
+    "names": [
+      "Download",
+      "MapPin"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/panels/BAG3DPanel.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/panels/PointcloudPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Eye",
+      "EyeOff",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/panels/PointcloudPanel.tsx"
+  },
+  {
+    "repo": "open-pointcloud-studio",
+    "source": "classic/src/components/panels/ReconstructionProgressDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "XCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/panels/ReconstructionProgressDialog.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/BuildFlow/BuildFlow.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Building2",
+      "Factory",
+      "GraduationCap",
+      "HeartPulse",
+      "Home",
+      "MoreHorizontal",
+      "ShoppingBag",
+      "Upload"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/BuildFlow/BuildFlow.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/CalculationNotice/CalculationNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      1
+    ],
+    "names": [
+      "Info"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/CalculationNotice/CalculationNotice.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/EvidenceLink/EvidenceLink.tsx",
+    "kind": "icon-library",
+    "lines": [
+      12
+    ],
+    "names": [
+      "Camera",
+      "Paperclip"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/EvidenceLink/EvidenceLink.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Plus",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ItemActions/ItemActions.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Pencil",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ItemActions/ItemActions.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "AlertCircle",
+      "CheckCircle2",
+      "CircleHelp",
+      "ShieldCheck"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/KernelAuditPanel/KernelAuditPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      5
+    ],
+    "names": [
+      "ClipboardList",
+      "FileDown",
+      "Plus",
+      "RefreshCw"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "ArrowRight",
+      "FolderOpen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/MaatwerkadviesPanel/RelabelPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "AlertCircle",
+      "Calculator",
+      "CircleHelp"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/NtaPerformancePanel/NtaPerformancePanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/PreviewPanel/PreviewPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      13
+    ],
+    "names": [
+      "PanelRightClose"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/PreviewPanel/PreviewPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/PropertiesPanel/PropertiesPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      5
+    ],
+    "names": [
+      "PanelRightClose"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/PropertiesPanel/PropertiesPanel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SettingsDialog/SettingsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "Calculator",
+      "Info",
+      "SlidersHorizontal"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SettingsDialog/SettingsDialog.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/StatusBar/StatusBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Check"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/StatusBar/StatusBar.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+    "kind": "icon-library",
+    "lines": [
+      9
+    ],
+    "names": [
+      "Droplet",
+      "Flame",
+      "Home",
+      "Layers",
+      "PanelTop",
+      "Sun",
+      "Wind",
+      "LayoutGrid"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyMwa.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyRegistration.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "CheckCircle2",
+      "CircleX",
+      "Clock"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyRegistration.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyRegistration.tsx",
+    "kind": "icon-component",
+    "lines": [
+      114
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyRegistration.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyRelabel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "CheckCircle2",
+      "CircleX",
+      "Clock"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyRelabel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyRelabel.tsx",
+    "kind": "icon-component",
+    "lines": [
+      311
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyRelabel.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyReport.tsx",
+    "kind": "icon-library",
+    "lines": [
+      9
+    ],
+    "names": [
+      "FileDown",
+      "Printer"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyReport.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Ban",
+      "Building2",
+      "Caravan",
+      "CircleHelp",
+      "Factory",
+      "Fan",
+      "Flame",
+      "Home",
+      "Network",
+      "Plug",
+      "Ship",
+      "Thermometer",
+      "TreePine",
+      "Wind",
+      "Zap"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/SurveyWizard/SurveyWizard.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ThermalBridgeCalculator/ThermalBridgeCalculator.tsx",
+    "kind": "icon-component",
+    "lines": [
+      254
+    ],
+    "names": [
+      "getDetailIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ThermalBridgeCalculator/ThermalBridgeCalculator.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Plus",
+      "Trash2",
+      "Copy",
+      "Check",
+      "GripVertical",
+      "ChevronUp",
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/UValueCalculator/UValueCalculator.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "Building",
+      "Building2",
+      "Caravan",
+      "Home",
+      "HousePlus",
+      "Search",
+      "Ship"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/WelcomeScreen/NewProjectDialog.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+    "kind": "icon-library",
+    "lines": [
+      12
+    ],
+    "names": [
+      "Archive",
+      "Building",
+      "Building2",
+      "Caravan",
+      "Copy",
+      "FileInput",
+      "Folder",
+      "FolderOpen",
+      "FolderPlus",
+      "HousePlus",
+      "Home",
+      "LayoutGrid",
+      "List",
+      "MoreHorizontal",
+      "MoreVertical",
+      "Plus",
+      "RotateCcw",
+      "Search",
+      "Ship",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/WelcomeScreen/WelcomeScreen.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+    "kind": "icon-component",
+    "lines": [
+      71
+    ],
+    "names": [
+      "KindIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/WelcomeScreen/WelcomeScreen.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/CommandPalette.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "Search"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/CommandPalette.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/Inspector.tsx",
+    "kind": "icon-library",
+    "lines": [
+      12
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/Inspector.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/NtaStepPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      13
+    ],
+    "names": [
+      "ArrowLeft",
+      "ArrowRight",
+      "FileText",
+      "Paperclip",
+      "Undo2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/NtaStepPage.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/PageHeader.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "BookOpen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/PageHeader.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/StepRouter.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "Box",
+      "Download",
+      "FileDown",
+      "Printer"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/StepRouter.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/TopBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      11
+    ],
+    "names": [
+      "ChevronDown",
+      "FilePlus",
+      "FolderOpen",
+      "MessageSquare",
+      "Minus",
+      "PanelRight",
+      "RefreshCw",
+      "Save",
+      "Search",
+      "Settings",
+      "Square",
+      "Copy",
+      "Upload",
+      "XSquare"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/TopBar.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/WorkflowNav.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "BookOpen",
+      "Box",
+      "Calculator",
+      "Check",
+      "ChevronRight",
+      "Download",
+      "Flame",
+      "MessageSquare",
+      "SlidersHorizontal",
+      "Upload",
+      "Wrench"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/WorkflowNav.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/BuildingPages.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Plus",
+      "Search"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/BuildingPages.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/DeliveryPages.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "Box",
+      "Download",
+      "FileArchive",
+      "FileDown",
+      "FileText",
+      "Pencil",
+      "Printer"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/DeliveryPages.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/InstallationsPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "ArrowRight",
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/InstallationsPage.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/ProjectOverview.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "AlertTriangle",
+      "ArrowRight",
+      "Check",
+      "ChevronRight",
+      "Pencil",
+      "Upload"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/ProjectOverview.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/RegistrationForm.tsx",
+    "kind": "icon-library",
+    "lines": [
+      11
+    ],
+    "names": [
+      "Save",
+      "Undo2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/RegistrationForm.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/RegistrationPage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "CheckCircle2",
+      "CircleAlert"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/RegistrationPage.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/existing/MwaViews.tsx",
+    "kind": "icon-library",
+    "lines": [
+      6
+    ],
+    "names": [
+      "Pencil",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/existing/MwaViews.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/results/MonthlyChart.tsx",
+    "kind": "icon-library",
+    "lines": [
+      12
+    ],
+    "names": [
+      "Table2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/results/MonthlyChart.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/shell/pages/results/ResultsDashboard.tsx",
+    "kind": "icon-library",
+    "lines": [
+      11
+    ],
+    "names": [
+      "CheckCircle2",
+      "Info",
+      "XCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/shell/pages/results/ResultsDashboard.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ui/DataTable.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "ArrowRight",
+      "AlertTriangle",
+      "Info",
+      "XCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ui/DataTable.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ui/Display.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "AlertCircle",
+      "AlertTriangle",
+      "CheckCircle2",
+      "History",
+      "Info",
+      "ShieldQuestion",
+      "XCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ui/Display.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ui/Navigation.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Check"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ui/Navigation.tsx"
+  },
+  {
+    "repo": "open-energy-studio",
+    "source": "src/components/ui/Toast.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "AlertTriangle",
+      "CheckCircle2",
+      "Info",
+      "XCircle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/a0cad82bd759b215f12f2230c47d407733ac885b/src/components/ui/Toast.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/DocumentBar.tsx",
+    "kind": "icon-component",
+    "lines": [
+      85,
+      103
+    ],
+    "names": [
+      "FileIcon",
+      "FolderIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/DocumentBar.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+    "kind": "icon-component",
+    "lines": [
+      671
+    ],
+    "names": [
+      "typeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/panels/GisLayerPanel.tsx",
+    "kind": "icon-component",
+    "lines": [
+      418
+    ],
+    "names": [
+      "MapIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/panels/GisLayerPanel.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/panels/LeftPanel.tsx",
+    "kind": "icon-component",
+    "lines": [
+      656,
+      665,
+      673,
+      682
+    ],
+    "names": [
+      "FileIcon",
+      "FolderIcon",
+      "EyeIcon",
+      "EyeOffIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/panels/LeftPanel.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/panels/MapAddressSearch.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      264
+    ],
+    "names": [
+      "map-addrsearch-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/panels/MapAddressSearch.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/ribbon/KaartTab.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      6,
+      9
+    ],
+    "names": [
+      "measureIcon",
+      "exportImageIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/KaartTab.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/ribbon/RapportTab.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      10,
+      11
+    ],
+    "names": [
+      "downloadIcon",
+      "openIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/RapportTab.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+    "kind": "icon-component",
+    "lines": [
+      18,
+      26,
+      33,
+      38,
+      45,
+      54,
+      63,
+      74
+    ],
+    "names": [
+      "printIcon",
+      "sonderingIcon",
+      "boreIcon",
+      "overlayIcon",
+      "frameIcon",
+      "rasterIcon",
+      "tagIcon",
+      "moveIcon",
+      "quotesIcon",
+      "dwgIcon",
+      "exportPdfIcon",
+      "rotateIcon",
+      "copyIcon",
+      "deleteIcon",
+      "selectIcon",
+      "lineIcon",
+      "vlakIcon",
+      "noteIcon",
+      "dimensionIcon",
+      "trimIcon",
+      "extendIcon",
+      "mirrorIcon",
+      "offsetIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/ribbon/StartTab.tsx",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      6,
+      7
+    ],
+    "names": [
+      "zoomOutIcon",
+      "zoomFitIcon",
+      "settingsIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/StartTab.tsx"
+  },
+  {
+    "repo": "open-geotechniek-studio",
+    "source": "apps/desktop/src/components/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      5,
+      7,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "names": [
+      "settingsIcon",
+      "helpIcon",
+      "infoIcon",
+      "ifcImportIcon",
+      "ifcExportIcon",
+      "ifcTreeIcon",
+      "ifcValidateIcon",
+      "ifcStatsIcon",
+      "viewerLoadIcon",
+      "viewerOrbitIcon",
+      "viewerSectionIcon",
+      "viewerMeasureIcon",
+      "viewerFitIcon",
+      "viewerWireframeIcon",
+      "reportNewIcon",
+      "reportTemplateIcon",
+      "reportGenerateIcon",
+      "reportPreviewIcon",
+      "reportCoverIcon",
+      "extensionBrowseIcon",
+      "extensionInstallIcon",
+      "extensionManageIcon",
+      "projectIcon",
+      "pasteIcon",
+      "cutIcon",
+      "copyIcon",
+      "undoIcon",
+      "redoIcon",
+      "boldIcon",
+      "italicIcon",
+      "underlineIcon",
+      "alignLeftIcon",
+      "alignCenterIcon",
+      "alignRightIcon",
+      "pencilIcon",
+      "lineIcon",
+      "arrowIcon",
+      "circleIcon",
+      "rectangleIcon",
+      "imageIcon",
+      "tableIcon",
+      "linkIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/icons.ts"
+  },
+  {
+    "repo": "OpenCADStudio",
+    "source": "src/ui/dock.rs",
+    "kind": "inline-svg",
+    "lines": [
+      1593
+    ],
+    "names": [],
+    "url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/dock.rs"
+  },
+  {
+    "repo": "OpenAEC-BIM-validator",
+    "source": "viewer/src/components/ErrorDisplay.tsx",
+    "kind": "icon-component",
+    "lines": [
+      32
+    ],
+    "names": [
+      "getErrorIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/ErrorDisplay.tsx"
+  },
+  {
+    "repo": "OpenAEC-BIM-validator",
+    "source": "viewer/src/components/ValidationProgress.tsx",
+    "kind": "icon-component",
+    "lines": [
+      61
+    ],
+    "names": [
+      "getStatusIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/ValidationProgress.tsx"
+  },
+  {
+    "repo": "OpenAEC-BIM-validator",
+    "source": "viewer/src/components/chrome/ribbon/icons.ts",
+    "kind": "inline-svg",
+    "lines": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "names": [
+      "uploadIcon",
+      "validateIcon",
+      "bcfExportIcon",
+      "syncIcon",
+      "removeIcon",
+      "idsStandardIcon",
+      "resetIcon",
+      "panelLeftIcon",
+      "panelRightIcon",
+      "zoomFitIcon",
+      "resetCameraIcon",
+      "cloudSaveIcon",
+      "cloudOpenIcon",
+      "pushIcon",
+      "resetViewIcon",
+      "loginIcon",
+      "sectionPlaneIcon",
+      "removeSectionIcon",
+      "saveIcon",
+      "saveAsIcon",
+      "openIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/icons.ts"
+  },
+  {
+    "repo": "OpenAEC-BIM-validator",
+    "source": "webpagina/3bm-viewer-mockup.html",
+    "kind": "inline-svg",
+    "lines": [
+      485,
+      506,
+      513,
+      520,
+      529,
+      536,
+      602
+    ],
+    "names": [
+      "logo-icon",
+      "nav-icon",
+      "viewer-placeholder-icon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/webpagina/3bm-viewer-mockup.html"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/backstage/Backstage.tsx",
+    "kind": "icon-library",
+    "lines": [
+      7
+    ],
+    "names": [
+      "ArrowLeft",
+      "FileText",
+      "FolderOpen",
+      "Clock",
+      "Save",
+      "SaveAll",
+      "Download",
+      "Printer",
+      "Info",
+      "Settings",
+      "FileType",
+      "Puzzle",
+      "Upload",
+      "BookOpen",
+      "Compass",
+      "LifeBuoy",
+      "Building2",
+      "ClipboardCheck"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/Backstage.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      20
+    ],
+    "names": [
+      "AlertTriangle",
+      "Puzzle",
+      "FileArchive",
+      "FileCode",
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/ExtensionManagerPanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/backstage/HelpPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      23
+    ],
+    "names": [
+      "Search"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/HelpPanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/backstage/LibrarySection.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Building2",
+      "Plus",
+      "Trash2",
+      "Star",
+      "Download",
+      "Upload",
+      "ArrowUpFromLine",
+      "Pencil",
+      "Check"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/LibrarySection.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/common/Dialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/common/Dialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/common/ExtensionIcon.tsx",
+    "kind": "icon-component",
+    "lines": [
+      21
+    ],
+    "names": [
+      "ExtensionIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/common/ExtensionIcon.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/common/HelpButton.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "CircleHelp"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/common/HelpButton.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/common/Select.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/common/Select.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Copy",
+      "Check",
+      "Eye",
+      "EyeOff",
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/AiConnectionDetailsDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/BaselineDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/BaselineDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/BenchmarkDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Gauge",
+      "Copy",
+      "Check",
+      "Play",
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/BenchmarkDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/CalendarDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Plus",
+      "Copy",
+      "Trash2",
+      "Star",
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/CalendarDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/CalendarForm.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ChevronDown",
+      "ChevronUp",
+      "Plus",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/CalendarForm.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/CalendarGeneratorFields.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ChevronDown",
+      "ChevronRight"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/CalendarGeneratorFields.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ContourDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ContourDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ExtensionConsentDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "ShieldAlert",
+      "HardDrive",
+      "Globe"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ExtensionConsentDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ExternalLinkDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Link2",
+      "FileDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ExternalLinkDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/FeedbackDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      17
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/FeedbackDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/FilterDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/FilterDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "ArrowDown",
+      "ArrowUp",
+      "ExternalLink",
+      "Download",
+      "Library",
+      "GitBranch",
+      "ListTree",
+      "Boxes",
+      "BookOpen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/JustUpdatedDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+    "kind": "icon-component",
+    "lines": [
+      76
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/JustUpdatedDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/LayoutsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      5
+    ],
+    "names": [
+      "Info"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/LayoutsDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/LibraryLinkDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Link2",
+      "AlertCircle",
+      "ArrowRight"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/LibraryLinkDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/MoveProjectDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/MoveProjectDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/NewOrOpenProjectDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      1
+    ],
+    "names": [
+      "FilePlus2",
+      "FolderOpen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/NewOrOpenProjectDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/PoolImportDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/PoolImportDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ProgressImportDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ProgressImportDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/RecoveryDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "RotateCcw",
+      "FileText"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/RecoveryDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+    "kind": "icon-library",
+    "lines": [
+      17
+    ],
+    "names": [
+      "ArrowUpRight",
+      "Square",
+      "Pen",
+      "Type",
+      "Undo2",
+      "Trash2",
+      "Pencil"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ScreenshotAnnotator.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/SettingsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/SettingsDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/ShortcutsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Keyboard"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/ShortcutsDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/SiteOpenDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ChevronDown",
+      "ChevronRight",
+      "FileText",
+      "HardDrive",
+      "RefreshCw"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/SiteOpenDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/SiteSaveDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "HardDrive"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/SiteSaveDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/StatsDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "BarChart3"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/StatsDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/StructureDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Plus",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/StructureDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/TaskDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      17
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/TaskDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/TutorialOfferDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "GraduationCap"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/TutorialOfferDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/Ribbon/Ribbon.tsx",
+    "kind": "icon-library",
+    "lines": [
+      5
+    ],
+    "names": [
+      "ChevronUp",
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/Ribbon.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+    "kind": "icon-library",
+    "lines": [
+      15
+    ],
+    "names": [
+      "Plus",
+      "Play",
+      "Undo2",
+      "Redo2",
+      "ZoomIn",
+      "ZoomOut",
+      "FileText",
+      "FolderOpen",
+      "Save",
+      "Printer",
+      "Trash2",
+      "Calendar",
+      "Settings",
+      "Info",
+      "Eye",
+      "EyeOff",
+      "SaveAll",
+      "Tags",
+      "ListOrdered",
+      "Hash",
+      "IndentIncrease",
+      "IndentDecrease",
+      "Users",
+      "BarChart3",
+      "Scale",
+      "Eraser",
+      "ChevronLeft",
+      "ChevronRight",
+      "ArrowLeftToLine",
+      "ArrowRightToLine",
+      "LayoutGrid",
+      "Spline",
+      "TrendingUp",
+      "CalendarDays",
+      "Palette",
+      "MoveHorizontal",
+      "Keyboard",
+      "PanelRight",
+      "CalendarClock",
+      "ChevronsDownUp",
+      "ChevronsUpDown",
+      "Columns3",
+      "AlertTriangle",
+      "FileDown",
+      "FileUp",
+      "Scissors"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonConfig.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+    "kind": "icon-library",
+    "lines": [
+      11
+    ],
+    "names": [
+      "Diamond",
+      "Link",
+      "ZoomIn",
+      "ZoomOut",
+      "Trash2",
+      "Eye",
+      "History",
+      "Download",
+      "Puzzle",
+      "LayoutTemplate",
+      "UserPlus",
+      "Flag",
+      "GitCompareArrows",
+      "CalendarClock",
+      "Columns3",
+      "Filter",
+      "Layers",
+      "ArrowUpDown",
+      "Maximize2",
+      "Minimize2",
+      "SplitSquareHorizontal",
+      "Palette",
+      "Map",
+      "AlertTriangle",
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonWidgets.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/TitleBar/TitleBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      8
+    ],
+    "names": [
+      "Undo2",
+      "Redo2",
+      "Minus",
+      "Square",
+      "Copy",
+      "Settings"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/TitleBar/TitleBar.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/ribbon/ai/AiActivityGroup.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Activity"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/ribbon/ai/AiActivityGroup.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Copy",
+      "Check",
+      "RefreshCw",
+      "Eye",
+      "EyeOff",
+      "Plug"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/ribbon/ai/AiConnectionGroup.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Pause",
+      "Play",
+      "Lock",
+      "Unlock",
+      "DatabaseBackup",
+      "Save",
+      "FolderOpen",
+      "Check",
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/ribbon/ai/AiSafetyGroup.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/ribbon/ai/AiServerGroup.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Play",
+      "Square",
+      "Circle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/ribbon/ai/AiServerGroup.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/viewControls/layoutIcons.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "CalendarRange",
+      "Filter",
+      "Flag",
+      "GanttChartSquare",
+      "HardHat",
+      "LayoutTemplate",
+      "ListTree",
+      "Milestone",
+      "Route",
+      "Star",
+      "Truck",
+      "Users",
+      "Wrench"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/viewControls/layoutIcons.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/viewControls/layoutIcons.tsx",
+    "kind": "icon-component",
+    "lines": [
+      31,
+      32
+    ],
+    "names": [
+      "layoutIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/viewControls/layoutIcons.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/UpdateDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Download",
+      "RefreshCw",
+      "AlertTriangle",
+      "CheckCircle2",
+      "RotateCw",
+      "Copy",
+      "Check",
+      "ExternalLink",
+      "PackageOpen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/UpdateDialog.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/WorkTimeEditor.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Plus",
+      "Trash2",
+      "Copy"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/dialogs/WorkTimeEditor.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/guide/GuidePanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      23
+    ],
+    "names": [
+      "CheckCircle2",
+      "ChevronDown",
+      "ChevronUp"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/guide/GuidePanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/DependencyModeNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Link"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/DependencyModeNotice.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Menu",
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/DocumentChrome/DocumentTabBar.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/DocumentChrome/ProjectOverview.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/DocumentChrome/ProjectOverview.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/DocumentChrome/ProjectRail.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "LayoutGrid",
+      "Plus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/DocumentChrome/ProjectRail.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/DocumentChrome/SwitcherPill.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/DocumentChrome/SwitcherPill.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/HourDataNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Clock"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/HourDataNotice.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/NoticeStrip.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "LucideIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/NoticeStrip.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/RecordedDatesNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "AlertTriangle",
+      "CircleDot"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/RecordedDatesNotice.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/RightRail/RightRail.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ChevronRight",
+      "Maximize2",
+      "PanelRightClose"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/RightRail/RightRail.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/SplitModeNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Scissors"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/SplitModeNotice.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/StatusBar/StatusBar.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Terminal",
+      "Circle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/StatusBar/StatusBar.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/layout/StructureLockedNotice.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "ListTree"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/StructureLockedNotice.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/AIActivityPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Trash2",
+      "Check",
+      "AlertTriangle",
+      "ChevronRight",
+      "ChevronDown"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/AIActivityPanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/DebugTerminal.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Pause",
+      "Play",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/DebugTerminal.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/ResourceOccupancyView.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "ChevronDown",
+      "ChevronRight",
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/ResourceOccupancyView.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/ResourcePanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Plus",
+      "Trash2",
+      "Pencil",
+      "ChevronDown",
+      "ChevronRight",
+      "Check",
+      "Unlink2",
+      "Library"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/ResourcePanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/ResourcePanelCompact.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/ResourcePanelCompact.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/StatusBanner.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "AlertTriangle"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/StatusBanner.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/TaskPropertiesPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      6
+    ],
+    "names": [
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/TaskPropertiesPanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/panels/WarningsPanel.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "AlertTriangle",
+      "OctagonAlert",
+      "CheckCircle2",
+      "RefreshCw"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/panels/WarningsPanel.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/settings/ProjectInfoPanelContent.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "Check",
+      "Pencil"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/settings/ProjectInfoPanelContent.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/settings/SchedulingProfileSection.tsx",
+    "kind": "icon-library",
+    "lines": [
+      4
+    ],
+    "names": [
+      "ChevronDown",
+      "ChevronRight"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/settings/SchedulingProfileSection.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/settings/SettingsPanelContent.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Info"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/settings/SettingsPanelContent.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-grid/ColumnChooser.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Check",
+      "ChevronDown",
+      "Plus",
+      "RotateCcw",
+      "Search"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-grid/ColumnChooser.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-grid/DataGridHeader.tsx",
+    "kind": "icon-library",
+    "lines": [
+      10
+    ],
+    "names": [
+      "Minus"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-grid/DataGridHeader.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-grid/RelationCellEditor.tsx",
+    "kind": "icon-library",
+    "lines": [
+      14
+    ],
+    "names": [
+      "AlertTriangle",
+      "Zap"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-grid/RelationCellEditor.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskAssignmentsSection.tsx",
+    "kind": "icon-library",
+    "lines": [
+      6
+    ],
+    "names": [
+      "AlertTriangle",
+      "BarChart3",
+      "Lock",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskAssignmentsSection.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+    "kind": "icon-library",
+    "lines": [
+      14
+    ],
+    "names": [
+      "Check",
+      "Plus",
+      "Trash2",
+      "Zap"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskDependenciesSection.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskDurationField.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Info"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskDurationField.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskNotesFields.tsx",
+    "kind": "icon-library",
+    "lines": [
+      5
+    ],
+    "names": [
+      "Plus",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskNotesFields.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskSplitsSection.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Plus",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskSplitsSection.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskTypeField.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "Pencil",
+      "Trash2"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskTypeField.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/task-sections/TaskWorkRuleField.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [
+      "Lock"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/task-sections/TaskWorkRuleField.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/viewControls/LevelListEditor.tsx",
+    "kind": "icon-library",
+    "lines": [
+      2
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/viewControls/LevelListEditor.tsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      908,
+      1060,
+      1061,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067
+    ],
+    "names": [
+      "revealInFolderIcon",
+      "moveUpIcon",
+      "moveDownIcon",
+      "thumbnailCutIcon",
+      "thumbnailCopyIcon",
+      "thumbnailPasteIcon",
+      "thumbnailInsertIcon",
+      "thumbnailExtractIcon",
+      "thumbnailReplaceIcon",
+      "thumbnailDeleteIcon",
+      "thumbnailRotateLeftIcon",
+      "thumbnailRotateRightIcon",
+      "thumbnailPropertiesIcon",
+      "selectAllIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ContextMenu.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+    "kind": "icon-component",
+    "lines": [
+      392,
+      403
+    ],
+    "names": [
+      "GripIcon",
+      "CloseIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      16,
+      17
+    ],
+    "names": [
+      "handIcon",
+      "selectIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ToolPalette.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/compare/CompareView.jsx",
+    "kind": "icon-component",
+    "lines": [
+      958,
+      1107
+    ],
+    "names": [
+      "typeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/compare/CompareView.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      31
+    ],
+    "names": [
+      "scheduleIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "names": [
+      "placeholderIcon",
+      "arcIcon",
+      "splineIcon",
+      "splineArrowIcon",
+      "hatchIcon",
+      "imageIcon",
+      "removeImageIcon",
+      "moveIcon",
+      "copyAnnIcon",
+      "arrayIcon",
+      "trimIcon",
+      "extendIcon",
+      "pasteIcon",
+      "pasteInPlaceIcon",
+      "cutIcon",
+      "deleteIcon",
+      "tableIcon",
+      "knipselIcon",
+      "knipselPlakIcon",
+      "scaleRegionIcon",
+      "labelIcon",
+      "lShapeIcon",
+      "radiusIcon",
+      "diameterIcon",
+      "explodeIcon",
+      "joinIcon",
+      "splitIcon",
+      "breakIcon",
+      "lengthenIcon",
+      "collectionCreateIcon",
+      "collectionExplodeIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      53,
+      58
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      23,
+      25,
+      27,
+      29,
+      31
+    ],
+    "names": [
+      "newDocIcon",
+      "ifcExportIcon",
+      "cadExportIcon",
+      "emailIcon",
+      "rasterPdfIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      16,
+      17,
+      111
+    ],
+    "names": [
+      "reorderIcon",
+      "compressIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      75,
+      89,
+      140,
+      159
+    ],
+    "names": [],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+    "kind": "inline-svg",
+    "lines": [
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "names": [
+      "openPopupIcon",
+      "hidePopupIcon",
+      "resetPopupIcon",
+      "cutIcon",
+      "copyIcon",
+      "pasteIcon",
+      "deleteIcon",
+      "flattenIcon",
+      "addReplyIcon",
+      "lockedIcon",
+      "unlockedIcon",
+      "markedIcon",
+      "printableIcon",
+      "statusIcon",
+      "reviewHistoryIcon",
+      "layerIcon",
+      "arrangeIcon",
+      "flipLineIcon",
+      "convertMeasurementIcon",
+      "convertPolylineIcon",
+      "convertPolygonIcon",
+      "styleToolsIcon",
+      "exportIcon",
+      "propertiesIcon",
+      "transformIcon",
+      "duplicateIcon",
+      "bookmarkIcon",
+      "stickyNoteIcon",
+      "imageIcon",
+      "qrCodeIcon",
+      "handToolIcon",
+      "snapshotIcon",
+      "selectTextPageIcon",
+      "zoomIcon",
+      "pageCutIcon",
+      "pageCopyIcon",
+      "pagePasteIcon",
+      "pageDeleteIcon",
+      "selectAllIcon",
+      "deselectIcon",
+      "goToIcon",
+      "printIcon",
+      "findIcon",
+      "searchIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/data/contextMenuIcons.js"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/data/leftPanelIcons.js",
+    "kind": "inline-svg",
+    "lines": [
+      1,
+      8,
+      12,
+      16,
+      20,
+      24,
+      30,
+      37
+    ],
+    "names": [
+      "thumbnailsIcon",
+      "bookmarksIcon",
+      "annotationsIcon",
+      "attachmentsIcon",
+      "signaturesIcon",
+      "layersIcon",
+      "formFieldsIcon",
+      "destinationsIcon",
+      "tagsIcon",
+      "linksIcon",
+      "measurementsIcon",
+      "schedulesIcon",
+      "toggleIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/data/leftPanelIcons.js"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+    "kind": "inline-svg",
+    "lines": [
+      7,
+      9,
+      13,
+      15,
+      17,
+      19,
+      23,
+      25
+    ],
+    "names": [
+      "fullscreenIcon",
+      "fullscreenExitIcon",
+      "handIcon",
+      "selectTextIcon",
+      "selectCommentsIcon",
+      "screenshotIcon",
+      "screenshotPageMenuIcon",
+      "screenshotRegionMenuIcon",
+      "zoomInIcon",
+      "zoomOutIcon",
+      "fitWidthIcon",
+      "actualSizeIcon",
+      "fitPageIcon",
+      "rotateLeftIcon",
+      "rotateRightIcon",
+      "editTextIcon",
+      "addTextIcon",
+      "ocrIcon",
+      "cropMarginsIcon",
+      "resizePagesIcon",
+      "straightenIcon",
+      "shiftPageIcon",
+      "firstPageIcon",
+      "prevPageIcon",
+      "nextPageIcon",
+      "lastPageIcon",
+      "findIcon",
+      "highlightIcon",
+      "freehandIcon",
+      "lineIcon",
+      "arrowIcon",
+      "drawIcon",
+      "eraserIcon",
+      "polylineIcon",
+      "rectIcon",
+      "circleIcon",
+      "ellipseIcon",
+      "polygonIcon",
+      "cloudIcon",
+      "cloudPolylineIcon",
+      "textAnnotIcon",
+      "textboxIcon",
+      "noteIcon",
+      "calloutIcon",
+      "stampIcon",
+      "signatureIcon",
+      "northArrowIcon",
+      "measureDistanceIcon",
+      "measureAreaIcon",
+      "measurePerimeterIcon",
+      "measureAngleIcon",
+      "calibrateIcon",
+      "snapToDrawingIcon",
+      "redactionIcon",
+      "applyRedactionsIcon",
+      "undoIcon",
+      "clearPageIcon",
+      "clearAllIcon",
+      "singlePageIcon",
+      "continuousIcon",
+      "bookViewIcon",
+      "facingPagesIcon",
+      "navigationIcon",
+      "propertiesIcon",
+      "annotationsListIcon",
+      "thinLinesIcon",
+      "annotationLayersIcon",
+      "elementVisibilityIcon",
+      "insertPageIcon",
+      "deletePageIcon",
+      "extractPagesIcon",
+      "mergePdfsIcon",
+      "watermarkIcon",
+      "headerFooterIcon",
+      "manageWatermarksIcon",
+      "aboutIcon",
+      "shortcutsIcon",
+      "previousVersionIcon",
+      "updatesIcon",
+      "fileAssocIcon",
+      "preferencesIcon",
+      "extensionsIcon",
+      "styleToolsIcon",
+      "resetLocationIcon",
+      "openPropertiesIcon",
+      "hideAnnotationIcon",
+      "cropIcon",
+      "grayscaleIcon",
+      "brightnessIcon",
+      "contrastIcon",
+      "resetAdjustIcon",
+      "editTypeIcon",
+      "alignLeftIcon",
+      "alignCenterIcon",
+      "alignRightIcon",
+      "alignTopIcon",
+      "alignMiddleIcon",
+      "alignBottomIcon",
+      "distSpaceHIcon",
+      "distSpaceVIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/data/ribbonIcons.js"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/dialogs/ManageWatermarksDialog.jsx",
+    "kind": "icon-component",
+    "lines": [
+      35
+    ],
+    "names": [
+      "getWmIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/dialogs/ManageWatermarksDialog.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "names": [
+      "expandAllIcon",
+      "collapseAllIcon",
+      "summarizeIcon",
+      "importIcon",
+      "exportCommentsIcon",
+      "groupByIcon",
+      "showIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      202
+    ],
+    "names": [
+      "gripIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx",
+    "kind": "icon-component",
+    "lines": [
+      203
+    ],
+    "names": [
+      "gripIcon",
+      "renameIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/left-panel/panels/SignaturesPanel.jsx",
+    "kind": "icon-component",
+    "lines": [
+      6
+    ],
+    "names": [
+      "SignatureIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/js/solid/components/left-panel/panels/SignaturesPanel.jsx"
+  }
+]

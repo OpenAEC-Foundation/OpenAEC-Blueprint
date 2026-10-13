@@ -1,0 +1,414 @@
+{
+  "name": "Open-Field-Studio",
+  "url": "https://github.com/OpenAEC-Foundation/Open-Field-Studio",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "public/favicon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "bytes": 9522
+    },
+    {
+      "path": "public/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/icon.ico",
+      "sha256": "e37381779888cd03345cc2d33c5beb9d132e1a3b5213eb249e11e4eef24bd056",
+      "bytes": 8406
+    },
+    {
+      "path": "public/icon_256.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/icon_256.png",
+      "sha256": "88c45d650fe71703a5a56c88b76da8ff4a1aa51f93bd7a54e07b3119c1266918",
+      "bytes": 3011
+    },
+    {
+      "path": "public/icons.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/icons.svg",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "bytes": 5031
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/128x128.png",
+      "sha256": "70c3f4f142c8c7d6ca8f13fa42a35d188c86c42971e0631c731f4c4be1283f1a",
+      "bytes": 6953
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/128x128%402x.png",
+      "sha256": "56e8397ca077d9828e7d8918f879c8b63da75ddbf97381b934e6cc6e5251c5c7",
+      "bytes": 2348
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/32x32.png",
+      "sha256": "0744c944b4fc1341e1b0466a6f213bfa2b10dec6bb752d4b9882db3a3643625b",
+      "bytes": 1833
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/64x64.png",
+      "sha256": "00b49f6acd3054e7ae3c253c84ea7b0794ff43cddd09a33d5add2b8a9c7204da",
+      "bytes": 3929
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "f1e82662e3cb9fe787ab39610d90c7a18395190872ef23193a64a51db2a6f76a",
+      "bytes": 7359
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "43b6647570015bab630c12e02adc350484a65c502ff02c82ec521bd78ba8b02f",
+      "bytes": 10485
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "5f7e5772867a5ed57172242b8691f11fe87d5e498b1a15d5d3caf6542536f505",
+      "bytes": 11074
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "745036d08ba8a62ccb41040a323a49f3c6fd12b823d11e779a499139a887cdcf",
+      "bytes": 25856
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "646e50eaf1891f908c018719d415235e12673eed22741a5025c1fa3e24e6f6d1",
+      "bytes": 1715
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "17198e18ac823b412893497711a71a6a1418c0800f6305e40721e67ab96093ef",
+      "bytes": 30118
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "81232465940a64a2d7b95587adcdffe5889819e428fdab0d4ce2a072bb5677c7",
+      "bytes": 2588
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "44a78a2d895ee185c2caea6f134c40ffa2c050fb2ac92cc39b387706da982f9e",
+      "bytes": 4509
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "3faa5a5994021a9ffaf478ac151ad93a80cf313b89f29c69d06a459003a9ed55",
+      "bytes": 5862
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/StoreLogo.png",
+      "sha256": "a67528d31e6ac9237a0626e00c94e42ea2e01a3233f7f2eaf119bcabcac17621",
+      "bytes": 2981
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "8abe6bd334699ad8cc4a232f35d0b59f9b5139de0097305164dfb6bb3c96c48d",
+      "bytes": 2744
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "05d6878151849762832743fa7df1e0b49ddea1f630eb24af93347b2006f0a52d",
+      "bytes": 12129
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "da63622948484484126b5598464d7c49b142b78de9d121ae2f10284a25679018",
+      "bytes": 3067
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "55fcb66ec6f6cc13030306296937649a83ffe20cb267807c46c81d2647c7f285",
+      "bytes": 2662
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "3bb49a4283b8eeff6313bd6162fa3c634c08e59439c4715a495be61df5939428",
+      "bytes": 7423
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "577ed2da2ac4f61c24710194ca79ce3d185ccf9d67bd4ae151d84c5b4a2395f4",
+      "bytes": 3021
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "7797b4e35ff51a5ef600c1dcf8310b6c46e239174a47d5373050fc6a67c9a5e6",
+      "bytes": 5849
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "27cc1e6fb6c1d61d5a3ec1a820fa58067613e0ab221f3f316e4e0197da155f3d",
+      "bytes": 17273
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "8aba0f8d6c7331b350f670b72ca10c133e7f7cea46ae42622f7fae8bc8eac725",
+      "bytes": 6645
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "353243e0ba7c391c66345449b0f81b3391c26b92cbec2642af3bcc7a34e9cb89",
+      "bytes": 9573
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "f5bbf09db5fd6e186a9a6cb85f4ed956b4c6631f308c501a63c5bc6d8d4adee9",
+      "bytes": 32471
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "7f47fc94d984b6d37d8bb533391c00b2d9f4f77e4aca66e9ebed8f794f467041",
+      "bytes": 11013
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "b12b95e881197570be8c4e8ecf04df9d8337d0f2ad6b3eada086ce57b1050fef",
+      "bytes": 13434
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "d09abd3530152cb18db5bd3cd96193ce77fa3e96a464e7f885006f5696b235aa",
+      "bytes": 52614
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "7c3d335588f2940642a3f0b6ec68045f1532e1b6ab86edea6a52c56082c1257d",
+      "bytes": 15475
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/icon.icns",
+      "sha256": "6db20ef35da64d65b347ad28091f0d85a5845942bf76412af9762bffa16a16aa",
+      "bytes": 260104
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/icon.ico",
+      "sha256": "a93a0cccdc112faa3047bf9f87f711e7ba4c087539f91b690f9bb7028814e72c",
+      "bytes": 13346
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/icon.png",
+      "sha256": "f581f7abcb1250eaa9a7265191e7fd2ce2c6de7a12be4a9bf2c5b123b145671b",
+      "bytes": 20852
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "1b25197c75d2e60e742727d6fa61cea9c1628adefea5cee60e3f22cffa3a804c",
+      "bytes": 1034
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "27f668492cad257f13e0d67d8e9ddf69f3523fbac1761997d51819947ba5d764",
+      "bytes": 2340
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "27f668492cad257f13e0d67d8e9ddf69f3523fbac1761997d51819947ba5d764",
+      "bytes": 2340
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "8bf7bc3b62e1a334c459d42923730f9b01dd893db4bfc32cfdc14ffe8b08aaf5",
+      "bytes": 3680
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "fdbebf52a91f4e9f3793210596bae24e24d7e91cfd0aa05255715f0c3be75498",
+      "bytes": 1635
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "42bff8e7346311866f687d4f51ecfd49e03cc3419b35329b8858af9cadba5b24",
+      "bytes": 3577
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "42bff8e7346311866f687d4f51ecfd49e03cc3419b35329b8858af9cadba5b24",
+      "bytes": 3577
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "edefb40335be3e26d90fa8b2e8364f51676d68ee0b598c35ad0272b04974429f",
+      "bytes": 5622
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "27f668492cad257f13e0d67d8e9ddf69f3523fbac1761997d51819947ba5d764",
+      "bytes": 2340
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "c5abf8b5a5a19e99344739856d920076811767f62be28ff9d13fa5897c15896f",
+      "bytes": 5120
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "c5abf8b5a5a19e99344739856d920076811767f62be28ff9d13fa5897c15896f",
+      "bytes": 5120
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "6448f5aa80623b149a67993cde5a0a4dab6bdce14c1a1f5772178aea7722c32f",
+      "bytes": 8429
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "9f5792d0a1e50921e7ac5d0a8ef01d98840cfd907b4558370a55a83465cd261e",
+      "bytes": 196727
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "6448f5aa80623b149a67993cde5a0a4dab6bdce14c1a1f5772178aea7722c32f",
+      "bytes": 8429
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "c62a742841f525ae9fa18b85073d20183a812c68e66ad240dd6594b5e186aca5",
+      "bytes": 13731
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "01bac6304d0db988a0144b6efa60b928821f47585ca64007ab0d9b8aea0ab7ca",
+      "bytes": 4892
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "cae5fa535e801fc7b2f76d5ee28ca66d31f618bc7f47288a374ab6aa7b8e5801",
+      "bytes": 11318
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "72b7ab3f7e1bf4b4a062354d6d84a933cbc32ffef385d14861b501ef3bf678fd",
+      "bytes": 12731
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/package.json",
+      "sha256": "5439e168d0759d4023473bc3dbbe5b25d24260fc86f27b7317eb7d6a2fc98fe0",
+      "bytes": 1122
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/src-tauri/Cargo.toml",
+      "sha256": "3e98798ed060aa31fec3469f976b07e2527c9f51d8d45ca0f3c416b6340228b1",
+      "bytes": 725
+    }
+  ],
+  "errors": [],
+  "commit": "8a4f104106b208ad053c73fa9390786d805058b8",
+  "files_scanned": 102,
+  "ui_stack": [
+    "React",
+    "Slint",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

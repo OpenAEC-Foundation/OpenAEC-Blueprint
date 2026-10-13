@@ -1,0 +1,56 @@
+{
+  "name": "OpenAEC-BIM-validator",
+  "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator",
+  "branch": "master",
+  "description": "Browser-based IFC validation tool: upload an IFC model, validate against IDS specifications (NL-BIM, RVB), view results in 3D, export BCF issues. Open source by 3BM Bouwkunde.",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "test/venv/Lib/site-packages/ifctester/webapp/www/images/no_document.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/test/venv/Lib/site-packages/ifctester/webapp/www/images/no_document.svg",
+      "sha256": "98e761b4d605582b91cbe97af21cee57fbf282c3a9890d88158a77fa4160eae1",
+      "bytes": 13293
+    },
+    {
+      "path": "test/venv/Lib/site-packages/ifctester/webapp/www/logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/test/venv/Lib/site-packages/ifctester/webapp/www/logo.svg",
+      "sha256": "41e5e79e9b947dbf7d4644768cdfa42412ac2ba660070b57910c3821c17b7e15",
+      "bytes": 1659
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "viewer/src/components/chrome/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/icons.ts",
+      "sha256": "16a5e8b9edf42d864fd247ba5ca28751bd50deb2c5eadce80e8505a914e018e1",
+      "bytes": 6398
+    }
+  ],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/pyproject.toml",
+      "sha256": "ac678aeeeb5983f0867d81b8aedab6001c2b7394229fdcb93e259fd50441ff37",
+      "bytes": 2592
+    },
+    {
+      "path": "viewer/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/package.json",
+      "sha256": "2045e94ea82ff78890a843e7208896fcd29aef27678483a60b33301f21da707e",
+      "bytes": 1546
+    }
+  ],
+  "errors": [],
+  "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+  "files_scanned": 5535,
+  "ui_stack": [
+    "React"
+  ],
+  "icon_packages": []
+}

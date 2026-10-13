@@ -1,0 +1,33 @@
+{
+  "name": "ifcgit-4-nextcloud",
+  "url": "https://github.com/OpenAEC-Foundation/ifcgit-4-nextcloud",
+  "branch": "main",
+  "description": "Add-on for NextCloud to integrate IfcGit",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "frontend/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifcgit-4-nextcloud/40645d35cc2f5e3c7eae853c3ba9ec60dce0d487/frontend/package.json",
+      "sha256": "7a4bc64db8cc10868a3e0610226aed1422bb79a9614eda89c7e57a643c7f1859",
+      "bytes": 667
+    },
+    {
+      "path": "server/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifcgit-4-nextcloud/40645d35cc2f5e3c7eae853c3ba9ec60dce0d487/server/package.json",
+      "sha256": "e4fa29160815022b2b5486c62c8692e74298968c815b53763baa3e81ec6432bc",
+      "bytes": 272
+    }
+  ],
+  "errors": [],
+  "commit": "40645d35cc2f5e3c7eae853c3ba9ec60dce0d487",
+  "files_scanned": 105,
+  "ui_stack": [
+    "Vue"
+  ],
+  "icon_packages": []
+}

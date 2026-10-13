@@ -1,0 +1,136 @@
+{
+  "name": "ifccad-prototype",
+  "url": "https://github.com/OpenAEC-Foundation/ifccad-prototype",
+  "branch": "main",
+  "description": "Python reference implementation and format laboratory for IFCCAD.",
+  "archived": false,
+  "license": "MIT",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "conformance/packages/invalid/blob-digest-mismatch/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/blob-digest-mismatch/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/dependency-cycle/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/dependency-cycle/package.json",
+      "sha256": "35c1e6441537baba9b894167c1f19e7cd3fe0b6a45c1df3645aca4ea76e1a3c1",
+      "bytes": 294
+    },
+    {
+      "path": "conformance/packages/invalid/generated-source-archive/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/generated-source-archive/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/package-checksum-mismatch/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/package-checksum-mismatch/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/package-missing-resource/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/package-missing-resource/package.json",
+      "sha256": "aa90ae1e940782e2504a798f85e3b97260bbb54abd697b089fde6fc9084c5276",
+      "bytes": 163
+    },
+    {
+      "path": "conformance/packages/invalid/payload-range-invalid/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/payload-range-invalid/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/projection-resource-missing/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/projection-resource-missing/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/record-reference-missing/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/record-reference-missing/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/schema-unknown-field/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/schema-unknown-field/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/schema-unknown-origin/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/schema-unknown-origin/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/invalid/schema-wrong-scalar/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/invalid/schema-wrong-scalar/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/valid/generated-snapshot/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/valid/generated-snapshot/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/valid/minimal-no-preservation/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/valid/minimal-no-preservation/package.json",
+      "sha256": "aa90ae1e940782e2504a798f85e3b97260bbb54abd697b089fde6fc9084c5276",
+      "bytes": 163
+    },
+    {
+      "path": "conformance/packages/valid/multi-drawing-projections/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/valid/multi-drawing-projections/package.json",
+      "sha256": "777f14aa8441037e718ec340ab5e259d9d224892719c72abfb111f6f51306258",
+      "bytes": 275
+    },
+    {
+      "path": "conformance/packages/valid/source-archive/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/valid/source-archive/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "conformance/packages/valid/unrepresented-packed/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/conformance/packages/valid/unrepresented-packed/package.json",
+      "sha256": "f16ae9d0822edbb26f81b575ac5b6cff7cf38336a1e4ff70ab18bc38503e3ace",
+      "bytes": 223
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/pyproject.toml",
+      "sha256": "33ec81eba99835f30b673f4091216ec55097cbc98032444babf7d91716b41e5c",
+      "bytes": 558
+    }
+  ],
+  "errors": [],
+  "commit": "6f970792a782eaf2ef40c556c3bc542f9f70b0b9",
+  "files_scanned": 801,
+  "ui_stack": [],
+  "icon_packages": []
+}

@@ -1,0 +1,232 @@
+{
+  "name": "OpenAEC-Workspace-Composer",
+  "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer",
+  "branch": "master",
+  "description": "Desktop app (Tauri 2 + SolidJS) to compose Claude Code workspaces with curated skill packages, MCP servers, hooks, commands & CORE-documenten \u2014 OpenAEC Foundation",
+  "archived": false,
+  "license": "MIT",
+  "icons": [
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src-tauri/icons/icon.ico",
+      "sha256": "e51540eaad29da78a7753058b98d1839466b66ce3f0a3334af9dab42134201eb",
+      "bytes": 285478
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src-tauri/icons/icon.png",
+      "sha256": "d05236e4792987f41fa8154ccd17d9ec1723a3c2410f7480c5522cb67df7b4a7",
+      "bytes": 13245
+    },
+    {
+      "path": "src/assets/logos/anthropic.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/anthropic.png",
+      "sha256": "67f4aac82a97926d052b9d1013ea6062c9c4871290937f7d7144460e0b165106",
+      "bytes": 2740
+    },
+    {
+      "path": "src/assets/logos/blender.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/blender.svg",
+      "sha256": "a84d3950258375ab7a9b132c1ccbbf8c75272fab5f78cb1c531d355dd00a39c4",
+      "bytes": 1311
+    },
+    {
+      "path": "src/assets/logos/cross-tech.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/cross-tech.png",
+      "sha256": "83ddff2b1eb2e0a4ed74354871b00f0221c4b9d1c21357c2d5d66ce978210418",
+      "bytes": 3715
+    },
+    {
+      "path": "src/assets/logos/docker.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/docker.svg",
+      "sha256": "ba1fb157870b2ec02e054aed42154ac7418e25af91ec321fd328d17cad4023cd",
+      "bytes": 1780
+    },
+    {
+      "path": "src/assets/logos/drawio.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/drawio.png",
+      "sha256": "7c45bd382f195f87aab62af0662526501e342566a19ed729e13531379c19d210",
+      "bytes": 3218
+    },
+    {
+      "path": "src/assets/logos/drawio.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/drawio.svg",
+      "sha256": "e60b94521beb980a163bcc3dd5a42feb962eaec87db34ac5e0b6b0a0db0588c3",
+      "bytes": 839
+    },
+    {
+      "path": "src/assets/logos/fluent-i18n.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/fluent-i18n.png",
+      "sha256": "8d934f3f5f9073b16b58c415fe8f039df39c0a5ff9c7ec83584659ab6e467bab",
+      "bytes": 4033
+    },
+    {
+      "path": "src/assets/logos/frappe.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/frappe.png",
+      "sha256": "abd724244557704042731b850dfc1231cea14e3f74dce1ee30291a2630c630f8",
+      "bytes": 552
+    },
+    {
+      "path": "src/assets/logos/n8n.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/n8n.png",
+      "sha256": "949ccd2ab230957d069b32ccf840f257c56c9b9933e921786f193f2c41ef4b2e",
+      "bytes": 3217
+    },
+    {
+      "path": "src/assets/logos/nextcloud.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/nextcloud.png",
+      "sha256": "12d5c96b94ed276654dfa77383788a7666d11104ad20687a84a76c92377239d0",
+      "bytes": 804
+    },
+    {
+      "path": "src/assets/logos/nextcloud.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/nextcloud.svg",
+      "sha256": "c332ad568ebe57c5a177c16c153b1e2d87b1575485a4845222d8996092d74b01",
+      "bytes": 873
+    },
+    {
+      "path": "src/assets/logos/open-pdf-studio-icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/open-pdf-studio-icon.png",
+      "sha256": "a1e5a1460e54c6f8e9e2d7f7a1c646846c25098e9a7ce424b36086d2526be342",
+      "bytes": 133999
+    },
+    {
+      "path": "src/assets/logos/open-pdf-studio.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/open-pdf-studio.png",
+      "sha256": "83ddff2b1eb2e0a4ed74354871b00f0221c4b9d1c21357c2d5d66ce978210418",
+      "bytes": 3715
+    },
+    {
+      "path": "src/assets/logos/pdfjs.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/pdfjs.svg",
+      "sha256": "f43462dcb76e704680515e6f492cfdbbfe5eb793b97b712a17a4e706bcfa071a",
+      "bytes": 3094
+    },
+    {
+      "path": "src/assets/logos/qgis.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/qgis.svg",
+      "sha256": "b545a8bf8271d9bc0198b63024d65bc481132be74785aab583bcf2e2331368be",
+      "bytes": 559
+    },
+    {
+      "path": "src/assets/logos/react.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/react.svg",
+      "sha256": "37c8c23bc6ea999ad58b7f3883fc08b7e22128ec25adcca60ae1046ff878bcc3",
+      "bytes": 2941
+    },
+    {
+      "path": "src/assets/logos/solidjs.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/solidjs.png",
+      "sha256": "9658701e9faa99015f96ba48b124d72650a6749bef6d6799c8c32fab6dfbf2b4",
+      "bytes": 2825
+    },
+    {
+      "path": "src/assets/logos/solidjs.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/solidjs.svg",
+      "sha256": "57614ec0433fec9a13c02f3bf75423fb9e9f3b47ad24e51c66a41ef34cdb9291",
+      "bytes": 1144
+    },
+    {
+      "path": "src/assets/logos/speckle.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/speckle.png",
+      "sha256": "0343d8e5224888c6556d8fd63038fe2b4fe60086f0eac328dfa8072d3b8cd68c",
+      "bytes": 1658
+    },
+    {
+      "path": "src/assets/logos/tauri.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/tauri.png",
+      "sha256": "ac40c9dd7daac3239fb27d3991f57998a2ea77562e4c76a683473480e6a6a77b",
+      "bytes": 3908
+    },
+    {
+      "path": "src/assets/logos/tauri.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/tauri.svg",
+      "sha256": "7dddfb74261e8cf41139f7f784f17046801ac0f843bc40658cea537c2b53b074",
+      "bytes": 600
+    },
+    {
+      "path": "src/assets/logos/thatopen.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/thatopen.png",
+      "sha256": "501f138032f1832d27b845b2813c5918475c630236d167d2be08d4a21fffd30f",
+      "bytes": 4817
+    },
+    {
+      "path": "src/assets/logos/threejs.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/threejs.svg",
+      "sha256": "b2b8aae1a911d3b9576df1184af77631b8b566344b52db84a2578e705ba755de",
+      "bytes": 912
+    },
+    {
+      "path": "src/assets/logos/vite.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/logos/vite.svg",
+      "sha256": "4494223d51e62bc6d14fb2399d12de4dae54740c6977ea66b7b6e914913d9367",
+      "bytes": 10966
+    },
+    {
+      "path": "src/assets/openaec-logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/openaec-logo.svg",
+      "sha256": "8f7387fed58630f862ecb8cbe418b6624c6093be2ed5cb120c2c98bd23fcabba",
+      "bytes": 4102
+    },
+    {
+      "path": "src/assets/openaec-symbol.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/assets/openaec-symbol.svg",
+      "sha256": "d811d4571d5690f4230de118cafd84b74f6117694c08a724612db83a907fb146",
+      "bytes": 2000
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/package.json",
+      "sha256": "0f433873f852ac788bc0b0e6ae1057be70d79eb46900f875ba60909dfde29485",
+      "bytes": 1134
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src-tauri/Cargo.toml",
+      "sha256": "381c457f40f6f80f6e7666234b5c5fde7b461fd065c514b8d702d16af1adae54",
+      "bytes": 663
+    }
+  ],
+  "errors": [],
+  "commit": "33327e001d6ad917356920060b8c7016fcbd6de5",
+  "files_scanned": 438,
+  "ui_stack": [
+    "Tauri"
+  ],
+  "icon_packages": [
+    "solid-icons"
+  ]
+}

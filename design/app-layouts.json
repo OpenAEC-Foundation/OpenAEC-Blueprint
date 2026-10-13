@@ -1,0 +1,741 @@
+[
+  {
+    "id": "pdf",
+    "name": "Open PDF Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Annoteren",
+      "Meten",
+      "Bewerken",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Pagina’s",
+    "right_panel": "Annotatie-eigenschappen",
+    "workspace": "Documentblad",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "pointcloud",
+    "name": "Open Pointcloud Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Selecteren",
+      "Meten",
+      "Bewerken",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Scans & lagen",
+    "right_panel": "Selectie-eigenschappen",
+    "workspace": "3D-puntenwolk",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "fem",
+    "name": "Open FEM Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Geometrie",
+      "Randvoorwaarden",
+      "Belastingen",
+      "Net",
+      "Berekenen",
+      "Resultaten",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Rekenmodel",
+    "right_panel": "Elementeigenschappen",
+    "workspace": "Constructie + resultaatplot",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel; geen volledige functie-inventarisatie. FEM/BIM zijn ontwerpuitbreidingen zonder toegankelijke bronrepository."
+  },
+  {
+    "id": "bim",
+    "name": "Open BIM Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Modelleren",
+      "Documenteren",
+      "Coördineren",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Projectstructuur",
+    "right_panel": "Objecteigenschappen",
+    "workspace": "Model / plattegrond",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel; geen volledige functie-inventarisatie. FEM/BIM zijn ontwerpuitbreidingen zonder toegankelijke bronrepository."
+  },
+  {
+    "id": "planner",
+    "name": "Open Planner Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Taken",
+      "Resources",
+      "Berekenen",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Projecten & WBS",
+    "right_panel": "Taakeigenschappen",
+    "workspace": "Gantt + taaklijst",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "calc",
+    "name": "Open Calc Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Posten",
+      "Bibliotheek",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Begrotingsstructuur",
+    "right_panel": "Posteigenschappen",
+    "workspace": "Begrotingsregels",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "geotech",
+    "name": "Open Geotechniek Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Sonderingen",
+      "Kaart",
+      "Analyseren",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Onderzoeken",
+    "right_panel": "Sonderingseigenschappen",
+    "workspace": "Profiel / kaart",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "heatloss",
+    "name": "Open Heatloss Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Gebouw",
+      "Installaties",
+      "Berekenen",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Gebouw & ruimten",
+    "right_panel": "Ruimte-eigenschappen",
+    "workspace": "Ruimtetabel + warmtebalans",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "energy",
+    "name": "Open Energy Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Gebouw",
+      "Installaties",
+      "Scenario’s",
+      "Berekenen",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Gebouw & scenario’s",
+    "right_panel": "Scenario-eigenschappen",
+    "workspace": "Energiebalans",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "calculations",
+    "name": "Open Calculations Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Berekeningen",
+      "Bibliotheek",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Berekeningsbladen",
+    "right_panel": "Berekeningseigenschappen",
+    "workspace": "Rekenblad + resultaat",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "reports",
+    "name": "Open Reports Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Invoegen",
+      "Opmaak",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Rapportstructuur",
+    "right_panel": "Sectie-eigenschappen",
+    "workspace": "Rapportblad",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "frame",
+    "name": "Open Frame Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Modelleren",
+      "Materialen",
+      "Bewerken",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Kozijnen & profielen",
+    "right_panel": "Profieleigenschappen",
+    "workspace": "Kozijnaanzicht",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "field",
+    "name": "Open Field Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Opname",
+      "Inspectie",
+      "Oplevering",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Locaties & inspecties",
+    "right_panel": "Inspectie-eigenschappen",
+    "workspace": "Inspectielijst / kaart",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "validator",
+    "name": "Open BIM Validator Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Regels",
+      "Valideren",
+      "Issues",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "IFC-modellen & controles",
+    "right_panel": "Controle-eigenschappen",
+    "workspace": "Model + bevindingen",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "speech",
+    "name": "Open Speech Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Opnemen",
+      "Transcriberen",
+      "Bewerken",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Opnamen",
+    "right_panel": "Audio-eigenschappen",
+    "workspace": "Transcript",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "cad",
+    "name": "Open CAD Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Tekenen",
+      "Bewerken",
+      "Annoteren",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Lagen & blokken",
+    "right_panel": "Entiteitseigenschappen",
+    "workspace": "2D/3D-tekening",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "pile",
+    "name": "Open Pile Plan Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Palen",
+      "Belastingen",
+      "Optimaliseren",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Varianten & bronnen",
+    "right_panel": "Paal-eigenschappen",
+    "workspace": "Palenplan",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  },
+  {
+    "id": "2d",
+    "name": "Open 2D Studio",
+    "proposed": true,
+    "tabs": [
+      "Bestand",
+      "Start",
+      "Tekenen",
+      "Bewerken",
+      "Opmaak",
+      "Weergave",
+      "Rapport",
+      "Help"
+    ],
+    "left_panel": "Lagen & objecten",
+    "right_panel": "Objecteigenschappen",
+    "workspace": "Tekenblad",
+    "fixed_regions": [
+      "titlebar",
+      "quick-access",
+      "ribbon-tabs",
+      "ribbon-groups",
+      "document-tabs",
+      "explorer",
+      "workspace",
+      "properties",
+      "status"
+    ],
+    "screens": [
+      "start",
+      "workspace",
+      "backstage",
+      "settings",
+      "import-export",
+      "long-running-operation",
+      "unsaved-changes",
+      "empty",
+      "error"
+    ],
+    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+  }
+]

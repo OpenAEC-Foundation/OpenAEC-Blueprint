@@ -1,0 +1,451 @@
+{
+  "name": "Open-Calculations-Studio",
+  "url": "https://github.com/OpenAEC-Foundation/Open-Calculations-Studio",
+  "branch": "main",
+  "description": "Open desktop-applicatie voor constructieve berekeningen op basis van CalcPAD-syntax, met live IFCX en IFC4x3 STEP export \u2014 opvolger van CalcPAD onder de OpenAEC Foundation.",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "packages/desktop/src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/128x128.png",
+      "sha256": "a90ff5c7b9f08d640a6c1faeb49b941dd69dd10a91129e428ab4c838cfc6beb5",
+      "bytes": 6657
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/128x128%402x.png",
+      "sha256": "bda4c3bba1aa48094b1c877341dfd361d64a3ec739a2296fab4323677ed4d34a",
+      "bytes": 12619
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/32x32.png",
+      "sha256": "406f58fc205e462656aed4c464c8014fe2d05b6730b254a66d3cce7c4549098e",
+      "bytes": 1842
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/64x64.png",
+      "sha256": "c391e2de2a03b3deab606478a9b2c7e072e860092d3b42a8e31ad74af8f59080",
+      "bytes": 3543
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "cc75efe1d1769903a5b6a113f8a549fbab08e2cb888b2c69de0f8a4dc2b10b80",
+      "bytes": 6206
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "9a1a86a233871ecd94d061726bace5ea9c37560c76eb9f9cc36ad6d4198bd088",
+      "bytes": 8082
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "e7db694a7fc932baac216c4e046dabc4af99bfe7c08eb2cdea9e30c2459e9438",
+      "bytes": 8484
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "c9e42b579a6fa02f6d49d13883cac12e0e66602c97b99f40d78fd32e9bc1c40c",
+      "bytes": 14690
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "f5b3e87191fc9979db915948eb0da53be6c160390df2fa594eaa7f2bf98970ed",
+      "bytes": 1668
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "5c33b6c1f431f2c4c1543f4c0e84ff4daaf2ba33a7f18abfb5f36f9b2c708d4b",
+      "bytes": 15825
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "4ffd3a2bf3588ac965fc318394ef33d2c11a37bd7dad61746217ff33ac26edde",
+      "bytes": 2506
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "bb868720dd9e79b72863925fe2ef8be3a3d0e433a29e61218ee6cb8dff1c4d7d",
+      "bytes": 4104
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "10d88c4896cc3feff6796d84c2138fef3205c78166cb9e8cdefb82edbc870e92",
+      "bytes": 5290
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/StoreLogo.png",
+      "sha256": "59443129ebd77fd3cc7e9633d86c601c9fbbda8a34a5698cf47c6fe43455f62c",
+      "bytes": 2952
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "7c304c9ae97233cf79ea310565b0c05784920339b677d1ddfa6e15c9ed3c8ce3",
+      "bytes": 2684
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "40ae376d4657b0d2fa616d87e6bf3823d0a32adc87ea1ccec9230cb4b239971b",
+      "bytes": 9034
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "497da4073a9c98559d1f291819ebf5df5f3eea519fab8db46e8e4f554c271a09",
+      "bytes": 2553
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "1942d318a4a4674946ae31b95a1e7674f92512c87041b4b0dfca6aaab6947ba2",
+      "bytes": 2680
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "6de26a05425609e268bb88a8b4a055b369bb2ff169063b71623ce0c94a12ccae",
+      "bytes": 6129
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "6540aa548da2f28fb4954c89340e00e04882f2ef41addbd3670a6fe2528e6656",
+      "bytes": 2465
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "0292cf8f4ebc0350668266d3952be0210a422641d4a37212a2ea0e82ecfd519c",
+      "bytes": 5709
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "dd452c1aaf1c35a2eb9812be8a4ea189b66f0ea401fecd992f721bd6cb817b68",
+      "bytes": 11294
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "6c7d4a470ec70d2fbc089dcecf4f56495863a8e40365c78709d7d697fdb6abe3",
+      "bytes": 5095
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "b93109d63963608e74d0ea78d8d807bc6de124decc26d3482da6913d5fc26078",
+      "bytes": 8893
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "bbfb26edb6a7eb7118128c79aa62e7a1fa663487bbd0fae077468bbadbc89b33",
+      "bytes": 16285
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "29dc2c51bdf24941e7560415e72361f296bd504a705427f79478b2e3b6295dcc",
+      "bytes": 8208
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "45c46daf4dc857b1db0e2c5e48d6507e9f443346fcdf1689ab1ab9a6f5bd719f",
+      "bytes": 11924
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "360571b7dc8053c2779e91edfaf8b065e93d64cfd8e14aca983a2c6b91d5c6be",
+      "bytes": 23251
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "8d18df404e5569863e65e678d756d2bec1458e7de0de312c57b8a9c368b5b930",
+      "bytes": 11206
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/icon.icns",
+      "sha256": "7fb4f077eb6f010fe7983bb611e73ee06226ec5806297bd6dc546197399c0a07",
+      "bytes": 124973
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/icon.ico",
+      "sha256": "53aaebac9fb0bd6114d1519a3c39c1240363ec4d8879a0b257272fb1b519390d",
+      "bytes": 24020
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/icon.png",
+      "sha256": "6dc3f73661889bf0db9fb512d33af2f6639f25c176fc036ca1509b669aa91e07",
+      "bytes": 24566
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "f92b17c7c9eea3e09affa649d7bf6b535c839a726f3854ca5695aaa5618e6584",
+      "bytes": 1042
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "a1d7d1d2bb546db667939b99970a32a04b00e341440f9690dea7967d91b902d2",
+      "bytes": 2238
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "a1d7d1d2bb546db667939b99970a32a04b00e341440f9690dea7967d91b902d2",
+      "bytes": 2238
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "f018483247fbf5205a1f17483638835b2c7c15a6a36945124df9c0d87a12cbf8",
+      "bytes": 3364
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "a520eba230d4eaef821592bb69d21b35b00d29bc0ca204f73fa86c72c4723226",
+      "bytes": 1584
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "4466f78069a702158c204cdba9bc911bb7c192193602bbc400b618808e51a0cd",
+      "bytes": 3265
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "4466f78069a702158c204cdba9bc911bb7c192193602bbc400b618808e51a0cd",
+      "bytes": 3265
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "51b5c96b865ba85c2df0bb95d65283e26ea70d8cfb7f6a65386b53faf4b82763",
+      "bytes": 4875
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "a1d7d1d2bb546db667939b99970a32a04b00e341440f9690dea7967d91b902d2",
+      "bytes": 2238
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "d6a050098ce073b6ad081dbf8b4caaa5ae77309a4fb73739c28bc49fadb9216b",
+      "bytes": 4381
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "d6a050098ce073b6ad081dbf8b4caaa5ae77309a4fb73739c28bc49fadb9216b",
+      "bytes": 4381
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "d2fbc4ec9bdf8250c3d63a1add7b1f7e93e1bd54c4932bb22cc9fe03e571b1f5",
+      "bytes": 6679
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "3e19b5f4b4af50b3f845358645005711860f21471f660ccd9146453fd95ed2c2",
+      "bytes": 32919
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "d2fbc4ec9bdf8250c3d63a1add7b1f7e93e1bd54c4932bb22cc9fe03e571b1f5",
+      "bytes": 6679
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "eeb5f405a12362534f7093aae5c941acd20ca869d7d6af216e80216beb511ea0",
+      "bytes": 9333
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "e84d048bb9aa0d65ba62db1002b154341238e026fd0bac172f1e7546fe9a6d17",
+      "bytes": 4183
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "54ea60549cfcad50cd2ab63d4a6012a7d692806ad5a7e1e9ea63b0f19981abbe",
+      "bytes": 7884
+    },
+    {
+      "path": "packages/desktop/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "00fa58d0a552839dbd5567ea1509b409dd675a28cf8d891e5a06a4a83f30cba7",
+      "bytes": 8971
+    },
+    {
+      "path": "packages/desktop/src/assets/ocs-logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/assets/ocs-logo.svg",
+      "sha256": "78125e2a905f64d3b888a005c3e30843fc3952dac7569d48122dd6972777abdf",
+      "bytes": 1787
+    },
+    {
+      "path": "packages/desktop/src/assets/ocs-wordmark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/assets/ocs-wordmark.svg",
+      "sha256": "47b152fe95f82fe598cbd95c21ce48b3587f1b12c96318a837d406c6ecbacd48",
+      "bytes": 1691
+    },
+    {
+      "path": "packages/desktop/src/assets/react.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "bytes": 4126
+    },
+    {
+      "path": "packages/desktop/src/templates/calcpad-samples/fundering-detail.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/templates/calcpad-samples/fundering-detail.svg",
+      "sha256": "fc29fb61a9a95b0e171cd029a6e0bd012844062982738353dbbccb55dff688e1",
+      "bytes": 2299
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/calcIcons.ts",
+      "sha256": "fe77c7aa9920cbf93155ba83ac2fcfa25695bccebb21c3f20eec16717eaf78db",
+      "bytes": 7003
+    },
+    {
+      "path": "packages/desktop/src/components/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/icons.ts",
+      "sha256": "eb6168a3a7078751795ffad7442b320dc6cce036df692f1666fcc9786c621f79",
+      "bytes": 13209
+    }
+  ],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/package.json",
+      "sha256": "563931d519d2ed0ef46e52a8cf402f04b8129ee6b3975a7d7f649f9e5d24c448",
+      "bytes": 852
+    },
+    {
+      "path": "packages/core/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/core/package.json",
+      "sha256": "ed3f722590202c131da2e052b943e5a2b7bc5f23444f9b7f913c1b5e7359c525",
+      "bytes": 466
+    },
+    {
+      "path": "packages/desktop/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/package.json",
+      "sha256": "c53f2667cd04f5f255914d10539d832a3dcfcec9c63a1f99d9f7b9c134f4aeb7",
+      "bytes": 1296
+    },
+    {
+      "path": "packages/desktop/src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src-tauri/Cargo.toml",
+      "sha256": "838ed2c9f3c0b7ebe60df47043e2ca18950ceea3e5228acc819dc17dd6c3dea3",
+      "bytes": 1848
+    },
+    {
+      "path": "packages/web/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/web/package.json",
+      "sha256": "dd8d2c74f1ffd1c53458427ab5836690bff3d7d09cec8142f6fd8249f41516e4",
+      "bytes": 430
+    }
+  ],
+  "errors": [],
+  "commit": "21d218c996d09b92018ad21b730c883c665dc035",
+  "files_scanned": 512,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": [
+    "icons"
+  ]
+}

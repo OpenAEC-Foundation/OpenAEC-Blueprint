@@ -1,0 +1,26 @@
+{
+  "name": "open-2D-studio-AEC-extension",
+  "url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/fd22965ed28ae8e7c137039c538cb6da7d076b2a/package.json",
+      "sha256": "3bcb9332ac81ee817b4add0e4eccb7738abd50f03cc1208eea20623e0979f1a5",
+      "bytes": 475
+    }
+  ],
+  "errors": [],
+  "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a",
+  "files_scanned": 32,
+  "ui_stack": [],
+  "icon_packages": [
+    "lucide-react"
+  ]
+}

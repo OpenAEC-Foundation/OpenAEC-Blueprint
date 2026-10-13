@@ -1,0 +1,17 @@
+{
+  "name": "master-builder-library",
+  "url": "https://github.com/OpenAEC-Foundation/master-builder-library",
+  "branch": "main",
+  "description": "Library with building knowledge, standards, drawings etc. Basis for education for humans and AI",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [],
+  "errors": [
+    {
+      "stage": "tree",
+      "error": "Command '['git', '-C', '/tmp/openaec-inventory/master-builder-library', 'rev-parse', 'HEAD']' returned non-zero exit status 128."
+    }
+  ]
+}

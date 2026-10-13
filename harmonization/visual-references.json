@@ -1,0 +1,2755 @@
+[
+  {
+    "name": "open-pdf-studio-v3",
+    "commit": "380706f5820c6090a36461663b076cec4f324fc3",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/README.md",
+        "local": "references/open-pdf-studio-v3/README.md"
+      },
+      {
+        "path": "crates/app/ui/app.slint",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/app.slint",
+        "local": "references/open-pdf-studio-v3/crates/app/ui/app.slint"
+      },
+      {
+        "path": "crates/app/ui/backstage.slint",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint",
+        "local": "references/open-pdf-studio-v3/crates/app/ui/backstage.slint"
+      },
+      {
+        "path": "crates/app/ui/ribbon.slint",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-v3/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint",
+        "local": "references/open-pdf-studio-v3/crates/app/ui/ribbon.slint"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-ui",
+    "commit": "9fd4d25c3d8dc6c1d37e36d732811be29be211bb",
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "OpenAEC-style-book",
+    "commit": "dfdcd415b26604081b1699560621d3e9ae7ea6bf",
+    "screenshots": [
+      {
+        "path": "project-templates/Tauri+React/screenshots/app-light-theme.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/screenshots/app-light-theme.png",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png"
+      },
+      {
+        "path": "project-templates/Tauri+React/screenshots/settings-theme-switcher.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/screenshots/settings-theme-switcher.png",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/settings-theme-switcher.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/README.md",
+        "local": "references/OpenAEC-style-book/README.md"
+      },
+      {
+        "path": "packages/ribbon/src/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/Ribbon.css",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/Ribbon.css"
+      },
+      {
+        "path": "packages/ribbon/src/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/Ribbon.tsx",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/Ribbon.tsx"
+      },
+      {
+        "path": "packages/ribbon/src/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/RibbonButton.tsx",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/RibbonButton.tsx"
+      },
+      {
+        "path": "packages/ribbon/src/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/RibbonButtonStack.tsx",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "packages/ribbon/src/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/RibbonGroup.tsx",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/RibbonGroup.tsx"
+      },
+      {
+        "path": "packages/ribbon/src/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/RibbonTab.tsx",
+        "local": "references/OpenAEC-style-book/packages/ribbon/src/RibbonTab.tsx"
+      },
+      {
+        "path": "packages/shell/src/DocumentBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/shell/src/DocumentBar.css",
+        "local": "references/OpenAEC-style-book/packages/shell/src/DocumentBar.css"
+      },
+      {
+        "path": "packages/shell/src/DocumentBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/shell/src/DocumentBar.tsx",
+        "local": "references/OpenAEC-style-book/packages/shell/src/DocumentBar.tsx"
+      },
+      {
+        "path": "packages/shell/src/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/shell/src/TitleBar.css",
+        "local": "references/OpenAEC-style-book/packages/shell/src/TitleBar.css"
+      },
+      {
+        "path": "packages/shell/src/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/shell/src/TitleBar.tsx",
+        "local": "references/OpenAEC-style-book/packages/shell/src/TitleBar.tsx"
+      },
+      {
+        "path": "packages/ui-primitives/src/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ui-primitives/src/ThemedSelect.css",
+        "local": "references/OpenAEC-style-book/packages/ui-primitives/src/ThemedSelect.css"
+      },
+      {
+        "path": "packages/ui-primitives/src/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ui-primitives/src/ThemedSelect.tsx",
+        "local": "references/OpenAEC-style-book/packages/ui-primitives/src/ThemedSelect.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/App.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/App.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/DocumentBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/DocumentBar.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/DocumentBar.css"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/DocumentBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/DocumentBar.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/DocumentBar.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ThemedSelect.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ThemedSelect.css"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ThemedSelect.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ThemedSelect.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/TitleBar.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/TitleBar.css"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/TitleBar.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/TitleBar.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/backstage/Backstage.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/backstage/Backstage.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/Ribbon.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/Ribbon.css"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/Ribbon.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/RibbonButton.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/RibbonButtonStack.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/RibbonGroup.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/components/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/RibbonTab.tsx",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "project-templates/Tauri+React/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/themes.css",
+        "local": "references/OpenAEC-style-book/project-templates/Tauri+React/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "project-templates/Tauri+React/screenshots/app-light-theme.png",
+      "project-templates/Tauri+React/screenshots/settings-theme-switcher.png"
+    ]
+  },
+  {
+    "name": "open-aec-master-builder-I-OAMBI",
+    "commit": null,
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": []
+  },
+  {
+    "name": "openaec-reports",
+    "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/README.md",
+        "local": "references/openaec-reports/README.md"
+      },
+      {
+        "path": "deploy/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/deploy/README.md",
+        "local": "references/openaec-reports/deploy/README.md"
+      },
+      {
+        "path": "examples/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/examples/README.md",
+        "local": "references/openaec-reports/examples/README.md"
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/App.tsx",
+        "local": "references/openaec-reports/frontend/src/App.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ThemedSelect.css",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ThemedSelect.css"
+      },
+      {
+        "path": "frontend/src/components/chrome/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ThemedSelect.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ThemedSelect.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/TitleBar.css",
+        "local": "references/openaec-reports/frontend/src/components/chrome/TitleBar.css"
+      },
+      {
+        "path": "frontend/src/components/chrome/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/TitleBar.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/TitleBar.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/backstage/Backstage.css",
+        "local": "references/openaec-reports/frontend/src/components/chrome/backstage/Backstage.css"
+      },
+      {
+        "path": "frontend/src/components/chrome/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/backstage/Backstage.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/backstage/Backstage.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/Ribbon.css",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/Ribbon.css"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/Ribbon.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/RibbonButton.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/RibbonButtonStack.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/RibbonGroup.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "frontend/src/components/chrome/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/RibbonTab.tsx",
+        "local": "references/openaec-reports/frontend/src/components/chrome/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "frontend/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-reports/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/themes.css",
+        "local": "references/openaec-reports/frontend/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "master-builder-library",
+    "commit": null,
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": []
+  },
+  {
+    "name": "pile-plan-studio",
+    "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/import_data.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/docs/screenshots/import_data.png",
+        "local": "references/pile-plan-studio/docs/screenshots/import_data.png"
+      },
+      {
+        "path": "docs/screenshots/optimization.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/docs/screenshots/optimization.png",
+        "local": "references/pile-plan-studio/docs/screenshots/optimization.png"
+      },
+      {
+        "path": "docs/screenshots/pile_options.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/docs/screenshots/pile_options.png",
+        "local": "references/pile-plan-studio/docs/screenshots/pile_options.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/README.md",
+        "local": "references/pile-plan-studio/README.md"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/App.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/App.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/ThemeControls.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/ThemeControls.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/ThemeControls.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/ThemedScrollbars.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/ThemedScrollbars.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/ThemedScrollbars.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedNumberInput.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedNumberInput.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedNumberInput.css"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedNumberInput.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedNumberInput.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedNumberInput.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedNumberInput.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedNumberInput.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedNumberInput.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedSelect.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedSelect.css"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedSelect.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedSelect.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedSelect.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ThemedSelect.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ThemedSelect.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/TitleBar.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/TitleBar.css"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/TitleBar.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/TitleBar.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/TitleBar.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/TitleBar.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/TitleBar.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/backstage/Backstage.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/backstage/Backstage.css"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/backstage/backstageInteractions.test.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/backstage/backstageInteractions.test.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/backstage/backstageInteractions.test.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.css"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/RibbonButton.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/RibbonButtonStack.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/RibbonGroup.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/RibbonTab.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/ribbonInteractions.test.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/ribbonInteractions.test.tsx",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/ribbon/ribbonInteractions.test.tsx"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/components/template/themedNumberInputModel.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/themedNumberInputModel.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/components/template/themedNumberInputModel.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/integration/ViewerTheme.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/integration/ViewerTheme.test.ts",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/integration/ViewerTheme.test.ts"
+      },
+      {
+        "path": "apps/pile-plan-studio/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/themes.css",
+        "local": "references/pile-plan-studio/apps/pile-plan-studio/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/import_data.png",
+      "docs/screenshots/optimization.png",
+      "docs/screenshots/pile_options.png"
+    ]
+  },
+  {
+    "name": "open-speech-studio",
+    "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/README.md",
+        "local": "references/open-speech-studio/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src/App.tsx",
+        "local": "references/open-speech-studio/src/App.tsx"
+      },
+      {
+        "path": "src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src/components/TitleBar.tsx",
+        "local": "references/open-speech-studio/src/components/TitleBar.tsx"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-frame-studio",
+    "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/README.md",
+        "local": "references/open-frame-studio/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-accounts-client",
+    "commit": "5c573482c5ba8f65fbcc1f371c9facbdcb22f1a8",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-accounts-client/5c573482c5ba8f65fbcc1f371c9facbdcb22f1a8/README.md",
+        "local": "references/openaec-accounts-client/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "pyrevit-gis2bim",
+    "commit": "4d80109d25a814fab0090ca0dd78ed8bd79c00ad",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/README.md",
+        "local": "references/pyrevit-gis2bim/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-cloud-desktop",
+    "commit": "38b30e8ed3182060df11250da73f5914601b11ce",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/README.md",
+        "local": "references/openaec-cloud-desktop/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src/App.tsx",
+        "local": "references/openaec-cloud-desktop/src/App.tsx"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-calc-studio-extensions",
+    "commit": "f61c052cff90e4e039b93581742b1a055122993b",
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "inb-template",
+    "commit": "edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "03_user example projects/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/README.md",
+        "local": "references/inb-template/03_user example projects/README.md"
+      },
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/README.md",
+        "local": "references/inb-template/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "Computational-Design-Day-Delft-March-2026",
+    "commit": "1fed963d204e4a8666b50ee18008e9a6b178c745",
+    "screenshots": [
+      {
+        "path": "docs/social-preview.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Computational-Design-Day-Delft-March-2026/1fed963d204e4a8666b50ee18008e9a6b178c745/docs/social-preview.png",
+        "local": "references/Computational-Design-Day-Delft-March-2026/docs/social-preview.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Computational-Design-Day-Delft-March-2026/1fed963d204e4a8666b50ee18008e9a6b178c745/README.md",
+        "local": "references/Computational-Design-Day-Delft-March-2026/README.md"
+      },
+      {
+        "path": "session-1/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Computational-Design-Day-Delft-March-2026/1fed963d204e4a8666b50ee18008e9a6b178c745/session-1/README.md",
+        "local": "references/Computational-Design-Day-Delft-March-2026/session-1/README.md"
+      },
+      {
+        "path": "session-2/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Computational-Design-Day-Delft-March-2026/1fed963d204e4a8666b50ee18008e9a6b178c745/session-2/README.md",
+        "local": "references/Computational-Design-Day-Delft-March-2026/session-2/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/social-preview.png"
+    ]
+  },
+  {
+    "name": "building-py",
+    "commit": "291cc79d27dd820bd79ea05209bca29e0ff0a34d",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/README.md",
+        "local": "references/building-py/README.md"
+      },
+      {
+        "path": "pypi/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/pypi/README.md",
+        "local": "references/building-py/pypi/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-cloud",
+    "commit": "1cdce4de1ccb55a35c2d9878e1860234efdb1d0c",
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-heatloss-studio",
+    "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/README.md",
+        "local": "references/open-heatloss-studio/README.md"
+      },
+      {
+        "path": "api/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/api/README.md",
+        "local": "references/open-heatloss-studio/api/README.md"
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/App.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/App.tsx"
+      },
+      {
+        "path": "frontend/src/components/DocumentBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/DocumentBar.css",
+        "local": "references/open-heatloss-studio/frontend/src/components/DocumentBar.css"
+      },
+      {
+        "path": "frontend/src/components/DocumentBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/DocumentBar.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/DocumentBar.tsx"
+      },
+      {
+        "path": "frontend/src/components/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ThemedSelect.css",
+        "local": "references/open-heatloss-studio/frontend/src/components/ThemedSelect.css"
+      },
+      {
+        "path": "frontend/src/components/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ThemedSelect.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ThemedSelect.tsx"
+      },
+      {
+        "path": "frontend/src/components/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/TitleBar.css",
+        "local": "references/open-heatloss-studio/frontend/src/components/TitleBar.css"
+      },
+      {
+        "path": "frontend/src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/TitleBar.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/TitleBar.tsx"
+      },
+      {
+        "path": "frontend/src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/backstage/Backstage.css",
+        "local": "references/open-heatloss-studio/frontend/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "frontend/src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/backstage/Backstage.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "frontend/src/components/modeller/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/modeller/Ribbon.tsx"
+      },
+      {
+        "path": "frontend/src/components/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/Ribbon.css",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/Ribbon.css"
+      },
+      {
+        "path": "frontend/src/components/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/Ribbon.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "frontend/src/components/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/RibbonButton.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "frontend/src/components/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/RibbonButtonStack.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "frontend/src/components/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/RibbonGroup.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "frontend/src/components/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/RibbonTab.tsx",
+        "local": "references/open-heatloss-studio/frontend/src/components/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "frontend/src/hooks/useTheme.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/hooks/useTheme.ts",
+        "local": "references/open-heatloss-studio/frontend/src/hooks/useTheme.ts"
+      },
+      {
+        "path": "frontend/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/themes.css",
+        "local": "references/open-heatloss-studio/frontend/src/themes.css"
+      },
+      {
+        "path": "mcp-server/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/mcp-server/README.md",
+        "local": "references/open-heatloss-studio/mcp-server/README.md"
+      },
+      {
+        "path": "src-tauri/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/README.md",
+        "local": "references/open-heatloss-studio/src-tauri/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-baken-studio-releases",
+    "commit": "e901762dd8a8c4b830e065b03f6c66ead026fcf5",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-baken-studio-releases/e901762dd8a8c4b830e065b03f6c66ead026fcf5/README.md",
+        "local": "references/open-baken-studio-releases/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "zaagplan",
+    "commit": "dd4d15acbb3a0666a443fd37c13f1c302994f860",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/zaagplan/dd4d15acbb3a0666a443fd37c13f1c302994f860/README.md",
+        "local": "references/zaagplan/README.md"
+      },
+      {
+        "path": "files/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/zaagplan/dd4d15acbb3a0666a443fd37c13f1c302994f860/files/README.md",
+        "local": "references/zaagplan/files/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "website",
+    "commit": "4e83fbd452b4018af3015e6d91907ecf38795fe8",
+    "screenshots": [
+      {
+        "path": "shared/assets/screenshots/open-speech-studio-settings.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/shared/assets/screenshots/open-speech-studio-settings.png",
+        "local": "references/website/shared/assets/screenshots/open-speech-studio-settings.png"
+      },
+      {
+        "path": "open-calc-studio/Screenshot.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/open-calc-studio/Screenshot.png",
+        "local": "references/website/open-calc-studio/Screenshot.png"
+      },
+      {
+        "path": "open-calc-studio/Screenshot 2.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/open-calc-studio/Screenshot%202.png",
+        "local": "references/website/open-calc-studio/Screenshot 2.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/README.md",
+        "local": "references/website/README.md"
+      },
+      {
+        "path": "marketing/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/marketing/README.md",
+        "local": "references/website/marketing/README.md"
+      },
+      {
+        "path": "open-geotechniek-studio/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/website/4e83fbd452b4018af3015e6d91907ecf38795fe8/open-geotechniek-studio/README.md",
+        "local": "references/website/open-geotechniek-studio/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "open-calc-studio/Screenshot 2.png",
+      "open-calc-studio/Screenshot 3.png",
+      "open-calc-studio/Screenshot 4.png",
+      "open-calc-studio/Screenshot.png",
+      "presentation foundation/impertio-screenshot.png",
+      "presentation foundation/nextcloud-screenshot.png",
+      "presentation foundation/open calc studio/screenshot.png",
+      "presentation foundation/openaec-docs-screenshot.png",
+      "presentation foundation/opencompany246-screenshot.png",
+      "shared/assets/screenshots/bim-validator-2.png",
+      "shared/assets/screenshots/bim-validator-3.png",
+      "shared/assets/screenshots/bim-validator-4.png",
+      "shared/assets/screenshots/bim-validator.png",
+      "shared/assets/screenshots/ifcx.png",
+      "shared/assets/screenshots/monty-ifc-viewer-2.png",
+      "shared/assets/screenshots/monty-ifc-viewer-3.png",
+      "shared/assets/screenshots/monty-ifc-viewer.jpeg",
+      "shared/assets/screenshots/monty-ifc-viewer.png",
+      "shared/assets/screenshots/open-2d-studio.jpeg",
+      "shared/assets/screenshots/open-books.jpg",
+      "shared/assets/screenshots/open-cad-studio-2.png",
+      "shared/assets/screenshots/open-cad-studio-3.png",
+      "shared/assets/screenshots/open-cad-studio-3d.jpg",
+      "shared/assets/screenshots/open-cad-studio.jpeg",
+      "shared/assets/screenshots/open-calc-studio-es-informe.png",
+      "shared/assets/screenshots/open-calc-studio-es-presupuesto.png",
+      "shared/assets/screenshots/open-calc-studio-new.png",
+      "shared/assets/screenshots/open-calc-studio.png",
+      "shared/assets/screenshots/open-calculations-studio.png",
+      "shared/assets/screenshots/open-energy-studio-2.jpeg",
+      "shared/assets/screenshots/open-energy-studio.jpeg",
+      "shared/assets/screenshots/open-field-studio-2.jpeg",
+      "shared/assets/screenshots/open-field-studio-3.jpeg",
+      "shared/assets/screenshots/open-field-studio-4.jpeg",
+      "shared/assets/screenshots/open-field-studio-5.jpeg",
+      "shared/assets/screenshots/open-field-studio-6.jpeg",
+      "shared/assets/screenshots/open-field-studio-7.jpeg",
+      "shared/assets/screenshots/open-field-studio-8.jpeg",
+      "shared/assets/screenshots/open-field-studio.jpeg",
+      "shared/assets/screenshots/open-geotechniek-studio-1.jpg",
+      "shared/assets/screenshots/open-geotechniek-studio-2.jpg",
+      "shared/assets/screenshots/open-geotechniek-studio-3.jpg",
+      "shared/assets/screenshots/open-geotechniek-studio-4.png",
+      "shared/assets/screenshots/open-geotechniek-studio-5.jpg",
+      "shared/assets/screenshots/open-heatloss-1.png",
+      "shared/assets/screenshots/open-heatloss-10.png",
+      "shared/assets/screenshots/open-heatloss-2.png",
+      "shared/assets/screenshots/open-heatloss-3.png",
+      "shared/assets/screenshots/open-heatloss-4.png",
+      "shared/assets/screenshots/open-heatloss-5.png",
+      "shared/assets/screenshots/open-heatloss-6.png",
+      "shared/assets/screenshots/open-heatloss-7.png",
+      "shared/assets/screenshots/open-heatloss-8.png",
+      "shared/assets/screenshots/open-heatloss-9.png",
+      "shared/assets/screenshots/open-heatloss-studio.png",
+      "shared/assets/screenshots/open-pdf-studio-2.jpeg",
+      "shared/assets/screenshots/open-pdf-studio-3.png",
+      "shared/assets/screenshots/open-pdf-studio-4.png",
+      "shared/assets/screenshots/open-pdf-studio-5.png",
+      "shared/assets/screenshots/open-pdf-studio-6.jpeg",
+      "shared/assets/screenshots/open-pdf-studio-7.jpeg",
+      "shared/assets/screenshots/open-pdf-studio.jpeg",
+      "shared/assets/screenshots/open-pile-plan-studio-import.png",
+      "shared/assets/screenshots/open-pile-plan-studio-optimization.png",
+      "shared/assets/screenshots/open-pile-plan-studio.png",
+      "shared/assets/screenshots/open-planner-studio-app-browser.png",
+      "shared/assets/screenshots/open-planner-studio-app-gantt.png",
+      "shared/assets/screenshots/open-planner-studio-app-rapport.png",
+      "shared/assets/screenshots/open-planner-studio-context.png",
+      "shared/assets/screenshots/open-planner-studio-details.png",
+      "shared/assets/screenshots/open-planner-studio-gantt.png",
+      "shared/assets/screenshots/open-planner-studio-handleiding.png",
+      "shared/assets/screenshots/open-planner-studio-histogram.png",
+      "shared/assets/screenshots/open-planner-studio-licht.png",
+      "shared/assets/screenshots/open-planner-studio-mpp-import.png",
+      "shared/assets/screenshots/open-planner-studio-occupancy.png",
+      "shared/assets/screenshots/open-planner-studio-planning.png",
+      "shared/assets/screenshots/open-planner-studio-rapport.png",
+      "shared/assets/screenshots/open-planner-studio-resource-library.png",
+      "shared/assets/screenshots/open-planner-studio-tabel.png",
+      "shared/assets/screenshots/open-planner-studio.jpeg",
+      "shared/assets/screenshots/open-pointcloud-studio-2.jpg",
+      "shared/assets/screenshots/open-pointcloud-studio-3.jpg",
+      "shared/assets/screenshots/open-pointcloud-studio-4.jpg",
+      "shared/assets/screenshots/open-pointcloud-studio-5.jpg",
+      "shared/assets/screenshots/open-pointcloud-studio-6.jpg",
+      "shared/assets/screenshots/open-pointcloud-studio.jpeg",
+      "shared/assets/screenshots/open-speech-studio-models.png",
+      "shared/assets/screenshots/open-speech-studio-settings.png",
+      "shared/assets/screenshots/open-speech-studio-tts.png",
+      "shared/assets/screenshots/open-speech-studio.png",
+      "shared/assets/screenshots/openaec-cloud.jpeg",
+      "shared/assets/screenshots/openaec-docs.png",
+      "shared/assets/screenshots/y-app-2.png",
+      "shared/assets/screenshots/y-app-3.png",
+      "shared/assets/screenshots/y-app.jpeg"
+    ]
+  },
+  {
+    "name": "ifccad-prototype",
+    "commit": "6f970792a782eaf2ef40c556c3bc542f9f70b0b9",
+    "screenshots": [
+      {
+        "path": "DXF DWG samples/samples/preview.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/DXF%20DWG%20samples/samples/preview.png",
+        "local": "references/ifccad-prototype/DXF DWG samples/samples/preview.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/README.md",
+        "local": "references/ifccad-prototype/README.md"
+      },
+      {
+        "path": "docs/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad-prototype/6f970792a782eaf2ef40c556c3bc542f9f70b0b9/docs/README.md",
+        "local": "references/ifccad-prototype/docs/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "DXF DWG samples/samples/preview.png"
+    ]
+  },
+  {
+    "name": "openaec-docs",
+    "commit": "9af134425a78ea39d93ac7a0d0f11f4b39dabbf8",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "frontend/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/README.md",
+        "local": "references/openaec-docs/frontend/README.md"
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/src/App.tsx",
+        "local": "references/openaec-docs/frontend/src/App.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/src/components/shell/Backstage.tsx",
+        "local": "references/openaec-docs/frontend/src/components/shell/Backstage.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/src/components/shell/Ribbon.tsx",
+        "local": "references/openaec-docs/frontend/src/components/shell/Ribbon.tsx"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "monty-ifc-viewer",
+    "commit": "eca30ab3e0af13e314e60602d21f278d5be59085",
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-monuments-core",
+    "commit": "da046509e5bbb91998ffd21745803d6f03ca925a",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-core/da046509e5bbb91998ffd21745803d6f03ca925a/README.md",
+        "local": "references/open-monuments-core/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-installer",
+    "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+    "screenshots": [
+      {
+        "path": "public/previews/open-books.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/public/previews/open-books.jpg",
+        "local": "references/openaec-installer/public/previews/open-books.jpg"
+      },
+      {
+        "path": "public/previews/open-2d-studio.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/public/previews/open-2d-studio.jpg",
+        "local": "references/openaec-installer/public/previews/open-2d-studio.jpg"
+      },
+      {
+        "path": "public/previews/open-cad-studio.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/public/previews/open-cad-studio.jpg",
+        "local": "references/openaec-installer/public/previews/open-cad-studio.jpg"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/README.md",
+        "local": "references/openaec-installer/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/App.tsx",
+        "local": "references/openaec-installer/src/App.tsx"
+      },
+      {
+        "path": "src/components/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/ThemedSelect.css",
+        "local": "references/openaec-installer/src/components/ThemedSelect.css"
+      },
+      {
+        "path": "src/components/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/ThemedSelect.tsx",
+        "local": "references/openaec-installer/src/components/ThemedSelect.tsx"
+      },
+      {
+        "path": "src/components/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/TitleBar.css",
+        "local": "references/openaec-installer/src/components/TitleBar.css"
+      },
+      {
+        "path": "src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/TitleBar.tsx",
+        "local": "references/openaec-installer/src/components/TitleBar.tsx"
+      },
+      {
+        "path": "src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/themes.css",
+        "local": "references/openaec-installer/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "public/previews/monty-ifc-viewer.jpg",
+      "public/previews/open-2d-studio.jpg",
+      "public/previews/open-bim-validator.jpg",
+      "public/previews/open-books.jpg",
+      "public/previews/open-cad-studio.jpg",
+      "public/previews/open-calc-studio.jpg",
+      "public/previews/open-calculations-studio.jpg",
+      "public/previews/open-energy-studio.jpg",
+      "public/previews/open-field-studio.jpg",
+      "public/previews/open-geotechniek-studio.jpg",
+      "public/previews/open-heatloss-studio.jpg",
+      "public/previews/open-pdf-studio.jpg",
+      "public/previews/open-planner-studio.jpg",
+      "public/previews/open-pointcloud-studio.jpg",
+      "public/previews/open-speech-studio.jpg"
+    ]
+  },
+  {
+    "name": "Open-Calculations-Studio",
+    "commit": "21d218c996d09b92018ad21b730c883c665dc035",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/README.md",
+        "local": "references/Open-Calculations-Studio/README.md"
+      },
+      {
+        "path": "packages/desktop/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/App.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/App.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/DocumentBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/DocumentBar.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/DocumentBar.css"
+      },
+      {
+        "path": "packages/desktop/src/components/DocumentBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/DocumentBar.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/DocumentBar.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ThemedSelect.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ThemedSelect.css"
+      },
+      {
+        "path": "packages/desktop/src/components/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ThemedSelect.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ThemedSelect.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/TitleBar.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/TitleBar.css"
+      },
+      {
+        "path": "packages/desktop/src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/TitleBar.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/TitleBar.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/backstage/Backstage.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "packages/desktop/src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/backstage/Backstage.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/Ribbon.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/Ribbon.css"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/Ribbon.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/RibbonButton.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/RibbonButtonStack.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/RibbonGroup.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "packages/desktop/src/components/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/components/ribbon/RibbonTab.tsx",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/components/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "packages/desktop/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Calculations-Studio/21d218c996d09b92018ad21b730c883c665dc035/packages/desktop/src/themes.css",
+        "local": "references/Open-Calculations-Studio/packages/desktop/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "github",
+    "commit": "33fa7d9469a6632154d97210acbb637278738a04",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/github/33fa7d9469a6632154d97210acbb637278738a04/README.md",
+        "local": "references/github/README.md"
+      },
+      {
+        "path": "profile/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/github/33fa7d9469a6632154d97210acbb637278738a04/profile/README.md",
+        "local": "references/github/profile/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "Y-app-ERPNext",
+    "commit": "35130a90ad76f5781087b19ae7d5c932ff2c6549",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/y-next-light-workplace.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/docs/screenshots/y-next-light-workplace.jpg",
+        "local": "references/Y-app-ERPNext/docs/screenshots/y-next-light-workplace.jpg"
+      },
+      {
+        "path": "docs/screenshots/y-next-email-dwg-concept.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/docs/screenshots/y-next-email-dwg-concept.png",
+        "local": "references/Y-app-ERPNext/docs/screenshots/y-next-email-dwg-concept.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/README.md",
+        "local": "references/Y-app-ERPNext/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/y-next-email-dwg-concept.png",
+      "docs/screenshots/y-next-light-workplace.jpg"
+    ]
+  },
+  {
+    "name": "llvm-project",
+    "commit": "df5fb99ca79db0d06163bc2eebcb04489c865299",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/README.md",
+        "local": "references/llvm-project/README.md"
+      },
+      {
+        "path": "bolt/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/bolt/README.md",
+        "local": "references/llvm-project/bolt/README.md"
+      },
+      {
+        "path": "cmake/README.rst",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/cmake/README.rst",
+        "local": "references/llvm-project/cmake/README.rst"
+      },
+      {
+        "path": "flang/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/flang/README.md",
+        "local": "references/llvm-project/flang/README.md"
+      },
+      {
+        "path": "flang/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/flang/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "local": "references/llvm-project/flang/docs/_themes/llvm-theme/static/llvm-theme.css"
+      },
+      {
+        "path": "lld/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/lld/README.md",
+        "local": "references/llvm-project/lld/README.md"
+      },
+      {
+        "path": "llvm/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "local": "references/llvm-project/llvm/docs/_themes/llvm-theme/static/llvm-theme.css"
+      },
+      {
+        "path": "mlir/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/README.md",
+        "local": "references/llvm-project/mlir/README.md"
+      },
+      {
+        "path": "offload/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/offload/README.md",
+        "local": "references/llvm-project/offload/README.md"
+      },
+      {
+        "path": "openmp/README.rst",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/openmp/README.rst",
+        "local": "references/llvm-project/openmp/README.rst"
+      },
+      {
+        "path": "openmp/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/openmp/docs/_themes/llvm-theme/static/llvm-theme.css",
+        "local": "references/llvm-project/openmp/docs/_themes/llvm-theme/static/llvm-theme.css"
+      },
+      {
+        "path": "pstl/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/pstl/README.md",
+        "local": "references/llvm-project/pstl/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "ifcgit-4-nextcloud",
+    "commit": "40645d35cc2f5e3c7eae853c3ba9ec60dce0d487",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifcgit-4-nextcloud/40645d35cc2f5e3c7eae853c3ba9ec60dce0d487/README.md",
+        "local": "references/ifcgit-4-nextcloud/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-pdf-studio",
+    "commit": "c84593984480f10ba52d19166f1829e3fc6072c9",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/pdf-compare.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/docs/screenshots/pdf-compare.jpg",
+        "local": "references/open-pdf-studio/docs/screenshots/pdf-compare.jpg"
+      },
+      {
+        "path": "docs/screenshots/file-browser.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/docs/screenshots/file-browser.jpg",
+        "local": "references/open-pdf-studio/docs/screenshots/file-browser.jpg"
+      },
+      {
+        "path": "docs/screenshots/drawing-tools.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/docs/screenshots/drawing-tools.jpg",
+        "local": "references/open-pdf-studio/docs/screenshots/drawing-tools.jpg"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/README.md",
+        "local": "references/open-pdf-studio/README.md"
+      },
+      {
+        "path": "mcp-server/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/mcp-server/README.md",
+        "local": "references/open-pdf-studio/mcp-server/README.md"
+      },
+      {
+        "path": "mcp-stdio/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/mcp-stdio/README.md",
+        "local": "references/open-pdf-studio/mcp-stdio/README.md"
+      },
+      {
+        "path": "mcpb/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/mcpb/README.md",
+        "local": "references/open-pdf-studio/mcpb/README.md"
+      },
+      {
+        "path": "open-pdf-studio/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/README.md",
+        "local": "references/open-pdf-studio/open-pdf-studio/README.md"
+      },
+      {
+        "path": "open-pdf-studio/styles/ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/styles/ribbon.css",
+        "local": "references/open-pdf-studio/open-pdf-studio/styles/ribbon.css"
+      },
+      {
+        "path": "open-pdf-studio/styles/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/styles/themes.css",
+        "local": "references/open-pdf-studio/open-pdf-studio/styles/themes.css"
+      },
+      {
+        "path": "open-pdf-studio/styles/titlebar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/open-pdf-studio/styles/titlebar.css",
+        "local": "references/open-pdf-studio/open-pdf-studio/styles/titlebar.css"
+      },
+      {
+        "path": "pocs/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio/c84593984480f10ba52d19166f1829e3fc6072c9/pocs/README.md",
+        "local": "references/open-pdf-studio/pocs/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/annotation-tools.jpg",
+      "docs/screenshots/drawing-tools.jpg",
+      "docs/screenshots/file-browser.jpg",
+      "docs/screenshots/pdf-compare.jpg"
+    ]
+  },
+  {
+    "name": "Open-Field-Studio",
+    "commit": "8a4f104106b208ad053c73fa9390786d805058b8",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/06-export.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/docs/screenshots/06-export.png",
+        "local": "references/Open-Field-Studio/docs/screenshots/06-export.png"
+      },
+      {
+        "path": "docs/screenshots/01-project.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/docs/screenshots/01-project.png",
+        "local": "references/Open-Field-Studio/docs/screenshots/01-project.png"
+      },
+      {
+        "path": "docs/screenshots/03-inspectie.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/docs/screenshots/03-inspectie.png",
+        "local": "references/Open-Field-Studio/docs/screenshots/03-inspectie.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/README.md",
+        "local": "references/Open-Field-Studio/README.md"
+      },
+      {
+        "path": "public/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/themes.css",
+        "local": "references/Open-Field-Studio/public/themes.css"
+      },
+      {
+        "path": "public/titlebar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-Field-Studio/8a4f104106b208ad053c73fa9390786d805058b8/public/titlebar.css",
+        "local": "references/Open-Field-Studio/public/titlebar.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/01-project.png",
+      "docs/screenshots/02-koppelingen.png",
+      "docs/screenshots/03-inspectie.png",
+      "docs/screenshots/04-oplevering.png",
+      "docs/screenshots/05-dashboard.png",
+      "docs/screenshots/06-export.png"
+    ]
+  },
+  {
+    "name": "blender-bonsai-training",
+    "commit": "ef8cb6469647bfc2b0da89f651c3d7aac6bfae33",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/README.md",
+        "local": "references/blender-bonsai-training/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "crates-warehouse",
+    "commit": "6e8738c075719e2fc8fcf918d969406f98927b07",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/README.md",
+        "local": "references/crates-warehouse/README.md"
+      },
+      {
+        "path": "cpt-core/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/cpt-core/README.md",
+        "local": "references/crates-warehouse/cpt-core/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "OpenAEC-Workspace-Composer",
+    "commit": "33327e001d6ad917356920060b8c7016fcbd6de5",
+    "screenshots": [
+      {
+        "path": "docs/social-preview.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/docs/social-preview.png",
+        "local": "references/OpenAEC-Workspace-Composer/docs/social-preview.png"
+      },
+      {
+        "path": "docs/screenshots/install-complete.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/docs/screenshots/install-complete.png",
+        "local": "references/OpenAEC-Workspace-Composer/docs/screenshots/install-complete.png"
+      },
+      {
+        "path": "docs/screenshots/workspace-presets.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/docs/screenshots/workspace-presets.png",
+        "local": "references/OpenAEC-Workspace-Composer/docs/screenshots/workspace-presets.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/README.md",
+        "local": "references/OpenAEC-Workspace-Composer/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/App.tsx",
+        "local": "references/OpenAEC-Workspace-Composer/src/App.tsx"
+      },
+      {
+        "path": "src/components/Titlebar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/Titlebar.tsx",
+        "local": "references/OpenAEC-Workspace-Composer/src/components/Titlebar.tsx"
+      },
+      {
+        "path": "src/styles/theme-light.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/33327e001d6ad917356920060b8c7016fcbd6de5/src/styles/theme-light.css",
+        "local": "references/OpenAEC-Workspace-Composer/src/styles/theme-light.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/install-complete.png",
+      "docs/screenshots/workspace-packages.png",
+      "docs/screenshots/workspace-presets.png",
+      "docs/social-preview.png"
+    ]
+  },
+  {
+    "name": "open-pdf-studio-library",
+    "commit": "46f844f67cfa4226c84ebfaeaad66086fa4d7112",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pdf-studio-library/46f844f67cfa4226c84ebfaeaad66086fa4d7112/README.md",
+        "local": "references/open-pdf-studio-library/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-books",
+    "commit": "f4015d275ad905b2f6169b188c18adfa311b8eb7",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-books/f4015d275ad905b2f6169b188c18adfa311b8eb7/README.md",
+        "local": "references/open-books/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "OpenAEC-zaagplan",
+    "commit": "22c20be17262a57a015de662b1aada5fcba5db44",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-zaagplan/22c20be17262a57a015de662b1aada5fcba5db44/README.md",
+        "local": "references/OpenAEC-zaagplan/README.md"
+      },
+      {
+        "path": "files/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-zaagplan/22c20be17262a57a015de662b1aada5fcba5db44/files/README.md",
+        "local": "references/OpenAEC-zaagplan/files/README.md"
+      },
+      {
+        "path": "src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-zaagplan/22c20be17262a57a015de662b1aada5fcba5db44/src/components/backstage/Backstage.css",
+        "local": "references/OpenAEC-zaagplan/src/components/backstage/Backstage.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "ext-drawing-statistics",
+    "commit": "d074aaa9115298411bc1cfbb0c39bc52af886657",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ext-drawing-statistics/d074aaa9115298411bc1cfbb0c39bc52af886657/README.md",
+        "local": "references/ext-drawing-statistics/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-bcf-platform",
+    "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "frontend/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/README.md",
+        "local": "references/openaec-bcf-platform/frontend/README.md"
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/App.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/App.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/Backstage.css",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/Backstage.css"
+      },
+      {
+        "path": "frontend/src/components/shell/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/Backstage.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/Backstage.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/Ribbon.css",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/Ribbon.css"
+      },
+      {
+        "path": "frontend/src/components/shell/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/Ribbon.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/Ribbon.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/RibbonButton.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/RibbonButton.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/RibbonButtonStack.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/RibbonGroup.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/RibbonGroup.tsx"
+      },
+      {
+        "path": "frontend/src/components/shell/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/RibbonTab.tsx",
+        "local": "references/openaec-bcf-platform/frontend/src/components/shell/RibbonTab.tsx"
+      },
+      {
+        "path": "frontend/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/themes.css",
+        "local": "references/openaec-bcf-platform/frontend/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-monuments-inspect",
+    "commit": "b68758d025021c3edb427cb3166909ab5cc7c957",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-inspect/b68758d025021c3edb427cb3166909ab5cc7c957/README.md",
+        "local": "references/open-monuments-inspect/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "nextcloud-sharelink",
+    "commit": null,
+    "screenshots": [],
+    "ui_sources": [],
+    "errors": []
+  },
+  {
+    "name": "ERPNext-NL-Translation",
+    "commit": "906e48bf06a49420cbf2d57d2f13b5b718609170",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ERPNext-NL-Translation/906e48bf06a49420cbf2d57d2f13b5b718609170/README.md",
+        "local": "references/ERPNext-NL-Translation/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-energy-studio",
+    "commit": "a0cad82bd759b215f12f2230c47d407733ac885b",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/README.md",
+        "local": "references/open-energy-studio/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src/App.tsx",
+        "local": "references/open-energy-studio/src/App.tsx"
+      },
+      {
+        "path": "src/__tests__/openaec-theme-config.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src/__tests__/openaec-theme-config.test.ts",
+        "local": "references/open-energy-studio/src/__tests__/openaec-theme-config.test.ts"
+      },
+      {
+        "path": "src/__tests__/theme-contrast.test.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src/__tests__/theme-contrast.test.ts",
+        "local": "references/open-energy-studio/src/__tests__/theme-contrast.test.ts"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-calc-studio",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/en/2-grid.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/2-grid.png",
+        "local": "references/open-calc-studio/docs/screenshots/en/2-grid.png"
+      },
+      {
+        "path": "docs/screenshots/en/3-report.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/3-report.png",
+        "local": "references/open-calc-studio/docs/screenshots/en/3-report.png"
+      },
+      {
+        "path": "docs/screenshots/es/3-informe.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/3-informe.png",
+        "local": "references/open-calc-studio/docs/screenshots/es/3-informe.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/README.md",
+        "local": "references/open-calc-studio/README.md"
+      },
+      {
+        "path": "mcp-server/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/mcp-server/README.md",
+        "local": "references/open-calc-studio/mcp-server/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx",
+        "local": "references/open-calc-studio/src/App.tsx"
+      },
+      {
+        "path": "src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/backstage/Backstage.css",
+        "local": "references/open-calc-studio/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/backstage/Backstage.tsx",
+        "local": "references/open-calc-studio/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "src/components/layout/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/layout/TitleBar.css",
+        "local": "references/open-calc-studio/src/components/layout/TitleBar.css"
+      },
+      {
+        "path": "src/components/layout/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/layout/TitleBar.tsx",
+        "local": "references/open-calc-studio/src/components/layout/TitleBar.tsx"
+      },
+      {
+        "path": "src/components/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/Ribbon.css",
+        "local": "references/open-calc-studio/src/components/ribbon/Ribbon.css"
+      },
+      {
+        "path": "src/components/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/Ribbon.tsx",
+        "local": "references/open-calc-studio/src/components/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "src/components/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RibbonButton.tsx",
+        "local": "references/open-calc-studio/src/components/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "src/components/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RibbonButtonStack.tsx",
+        "local": "references/open-calc-studio/src/components/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "src/components/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RibbonGroup.tsx",
+        "local": "references/open-calc-studio/src/components/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "src/components/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RibbonTab.tsx",
+        "local": "references/open-calc-studio/src/components/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "src/styles/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/styles/themes.css",
+        "local": "references/open-calc-studio/src/styles/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/de/1-leistungsverzeichnis.png",
+      "docs/screenshots/de/2-leistungsbuch-hochbau.png",
+      "docs/screenshots/en/1-estimate.png",
+      "docs/screenshots/en/2-grid.png",
+      "docs/screenshots/en/3-report.png",
+      "docs/screenshots/es/1-presupuesto.png",
+      "docs/screenshots/es/2-partidas.png",
+      "docs/screenshots/es/3-informe.png",
+      "docs/screenshots/es/4-idiomas.png",
+      "docs/screenshots/nl/1-begroting.png",
+      "docs/screenshots/nl/2-rapport.png"
+    ]
+  },
+  {
+    "name": "Open-STL-3DMap-Studio",
+    "commit": "ba736d4999b16dcac12ca44c79c6bada08db0fd5",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-STL-3DMap-Studio/ba736d4999b16dcac12ca44c79c6bada08db0fd5/README.md",
+        "local": "references/Open-STL-3DMap-Studio/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-pointcloud-studio",
+    "commit": "13b199a426e692d2149998b3f2f596a191568501",
+    "screenshots": [
+      {
+        "path": "screenshots/native-openaec-ribbon-tokens-light.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-openaec-ribbon-tokens-light.png",
+        "local": "references/open-pointcloud-studio/screenshots/native-openaec-ribbon-tokens-light.png"
+      },
+      {
+        "path": "screenshots/native-ribbon-ocad-openaec-home.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-ocad-openaec-home.png",
+        "local": "references/open-pointcloud-studio/screenshots/native-ribbon-ocad-openaec-home.png"
+      },
+      {
+        "path": "screenshots/native-ribbon-overflow-home-wide.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-home-wide.png",
+        "local": "references/open-pointcloud-studio/screenshots/native-ribbon-overflow-home-wide.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/README.md",
+        "local": "references/open-pointcloud-studio/README.md"
+      },
+      {
+        "path": "classic/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/README.md",
+        "local": "references/open-pointcloud-studio/classic/README.md"
+      },
+      {
+        "path": "classic/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/App.tsx",
+        "local": "references/open-pointcloud-studio/classic/src/App.tsx"
+      },
+      {
+        "path": "classic/src/components/layout/Ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/Ribbon.css",
+        "local": "references/open-pointcloud-studio/classic/src/components/layout/Ribbon/Ribbon.css"
+      },
+      {
+        "path": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/Ribbon.tsx",
+        "local": "references/open-pointcloud-studio/classic/src/components/layout/Ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "classic/src/components/layout/Ribbon/RibbonComponents.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/RibbonComponents.tsx",
+        "local": "references/open-pointcloud-studio/classic/src/components/layout/Ribbon/RibbonComponents.tsx"
+      },
+      {
+        "path": "classic/src/components/layout/Ribbon/RibbonIcons.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/RibbonIcons.tsx",
+        "local": "references/open-pointcloud-studio/classic/src/components/layout/Ribbon/RibbonIcons.tsx"
+      },
+      {
+        "path": "classic/src/components/layout/Ribbon/useRibbonActions.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/useRibbonActions.ts",
+        "local": "references/open-pointcloud-studio/classic/src/components/layout/Ribbon/useRibbonActions.ts"
+      },
+      {
+        "path": "native/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/README.md",
+        "local": "references/open-pointcloud-studio/native/README.md"
+      },
+      {
+        "path": "native/desktop/src/opencad_ribbon.rs",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/desktop/src/opencad_ribbon.rs",
+        "local": "references/open-pointcloud-studio/native/desktop/src/opencad_ribbon.rs"
+      },
+      {
+        "path": "native/desktop/src/ui_theme.rs",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/desktop/src/ui_theme.rs",
+        "local": "references/open-pointcloud-studio/native/desktop/src/ui_theme.rs"
+      },
+      {
+        "path": "promo/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/promo/README.md",
+        "local": "references/open-pointcloud-studio/promo/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/design/ribbon-approved.png",
+      "docs/screenshots/ribbon-approved-build.png",
+      "docs/screenshots/ribbon-approved-compact.png",
+      "docs/screenshots/start-ribbon-v093.png",
+      "docs/screenshots/start-ribbon-v094.png",
+      "docs/screenshots/weergave-ribbon-v093.png",
+      "docs/screenshots/weergave-ribbon-v094.png",
+      "screenshots/classic-v0.3-home.png",
+      "screenshots/classic-v0.3-tools.jpg",
+      "screenshots/native-10m-budget-114m-ahn6.png",
+      "screenshots/native-114m-ply-camera-selection.png",
+      "screenshots/native-2p58gib-xyz-cached-pick.png",
+      "screenshots/native-2p58gib-xyz-cached-reopen.png",
+      "screenshots/native-3.2gib-ply-114m.png",
+      "screenshots/native-3.2gib-ply-432k-selection-zoom.png",
+      "screenshots/native-3.2gib-ply-432k-selection.png",
+      "screenshots/native-3.2gib-ply-index-progress.png",
+      "screenshots/native-3.2gib-ply-indexed-selection-latest.png",
+      "screenshots/native-3d-surface-save-dialog-after-click.png",
+      "screenshots/native-3d-surface-save-dialog-location.png",
+      "screenshots/native-3d-surface-save-dialog-typed.png",
+      "screenshots/native-3d-surface-save-dialog.png",
+      "screenshots/native-3d-surface-tools-ribbon.png",
+      "screenshots/native-3dbag-81-buildings-faces.png",
+      "screenshots/native-3dbag-81-buildings.png",
+      "screenshots/native-3dbag-gui-download.png",
+      "screenshots/native-3dbag-native-map-download.png",
+      "screenshots/native-3dbag-native-map-final.png",
+      "screenshots/native-3dbag-native-map-selected.png",
+      "screenshots/native-3dbag-panel.png",
+      "screenshots/native-3dbag-reopened.png",
+      "screenshots/native-3dbag-section-box.png",
+      "screenshots/native-3dbag-tools-ribbon.png",
+      "screenshots/native-45m-budget-1p9m.png",
+      "screenshots/native-adaptive-spheres-114m.png",
+      "screenshots/native-ahn-continuous-pan-lod.png",
+      "screenshots/native-ahn-mesh-progress.png",
+      "screenshots/native-ahn-pan-render-cache.png",
+      "screenshots/native-ahn-section-box-current.png",
+      "screenshots/native-ahn-section-box.png",
+      "screenshots/native-ahn6-11m-exact-selection.png",
+      "screenshots/native-ahn6-250k-default.png",
+      "screenshots/native-ahn6-3d-surface-faces.png",
+      "screenshots/native-ahn6-3d-surface.png",
+      "screenshots/native-ahn6-45m-3d-surface-faces.png",
+      "screenshots/native-ahn6-45m-3d-surface-oriented.png",
+      "screenshots/native-ahn6-45m-lit-terrain-faces.png",
+      "screenshots/native-ahn6-45m-optimized-gui-terrain.png",
+      "screenshots/native-ahn6-45m-rgb-terrain-mesh.png",
+      "screenshots/native-ahn6-exact-scale-centroid.png",
+      "screenshots/native-ahn6-immediate-pan-lod-three-tiles.png",
+      "screenshots/native-ahn6-progressive-full-2m.png",
+      "screenshots/native-ahn6-progressive-lod-final.png",
+      "screenshots/native-ahn6-progressive-preview-2m.png",
+      "screenshots/native-ahn6-section-class-mesh-45m.png",
+      "screenshots/native-ahn6-section-terrain-45m.png",
+      "screenshots/native-ahn6-surface-spatial-faces.png",
+      "screenshots/native-ahn6-surface-spatial-mesh.png",
+      "screenshots/native-ahn6-thin-45m-50-percent.png",
+      "screenshots/native-ahn6-three-tiles-rayon-lod-1m.png",
+      "screenshots/native-ahn6-three-tiles-rayon-lod-zoom4x.png",
+      "screenshots/native-api-select-world-ahn45m.png",
+      "screenshots/native-api-top-section-ahn.png",
+      "screenshots/native-auto-index-section-box-ahn-clipped.png",
+      "screenshots/native-auto-index-section-box-ahn.png",
+      "screenshots/native-auto-index-three-ahn-progress.png",
+      "screenshots/native-auto-index-three-ahn-ready-old-ribbon.png",
+      "screenshots/native-auto-index-three-ahn-section-box-final.png",
+      "screenshots/native-auto-index-three-ahn-start.png",
+      "screenshots/native-auto-index-tools-ribbon-fixed.png",
+      "screenshots/native-auto-index-tools-ribbon.png",
+      "screenshots/native-auto-index-view-ribbon.png",
+      "screenshots/native-auto-lod-ahn-pan.png",
+      "screenshots/native-auto-lod-ahn-zoom.png",
+      "screenshots/native-auto-lod-ahn.png",
+      "screenshots/native-auto-lod-synthetic.png",
+      "screenshots/native-auto-lod-three-tiles.png",
+      "screenshots/native-auto-lod-zoom.png",
+      "screenshots/native-blueprint-light-native-titlebar-114m.png",
+      "screenshots/native-box-select-active.png",
+      "screenshots/native-cached-3p2gib-ply-114m.png",
+      "screenshots/native-camera-view-restored.png",
+      "screenshots/native-camera-views-panel.png",
+      "screenshots/native-camera-views-saved.png",
+      "screenshots/native-cancel-selection-ribbon.png",
+      "screenshots/native-class-filter-all-ahn45m.png",
+      "screenshots/native-class-filter-controls-ahn45m.png",
+      "screenshots/native-class-filter-no-ground-ahn45m.png",
+      "screenshots/native-context-menu-aligned-129m.png",
+      "screenshots/native-context-pick-escape-129m.png",
+      "screenshots/native-cornell-obj-mtl-colors.png",
+      "screenshots/native-current-114m-ply-camera-api.png",
+      "screenshots/native-current-114m-ply-selection.png",
+      "screenshots/native-current-e57-neutral-rgb.png",
+      "screenshots/native-dark-chrome-refined-project-114m.png",
+      "screenshots/native-deep-zoom-exact-visible-114m.png",
+      "screenshots/native-deep-zoom-node-preview-114m.png",
+      "screenshots/native-dev-e57-parallel-mesher.png",
+      "screenshots/native-duplicate-las-layer-selection.png",
+      "screenshots/native-dxf-3dface-mesh.png",
+      "screenshots/native-dxf-3dface-surface-only.png",
+      "screenshots/native-e57-3d-surface-check.png",
+      "screenshots/native-e57-3d-surface-faces.png",
+      "screenshots/native-e57-3d-surface.png",
+      "screenshots/native-e57-center-station.png",
+      "screenshots/native-e57-export-ribbon.png",
+      "screenshots/native-e57-filtered-scans.png",
+      "screenshots/native-e57-one-pass-source-progress.png",
+      "screenshots/native-e57-scaled-section-poses.png",
+      "screenshots/native-e57-scan-orientation.png",
+      "screenshots/native-e57-scan-positions-framed.png",
+      "screenshots/native-e57-scan-positions-grouped.png",
+      "screenshots/native-e57-scan-positions.png",
+      "screenshots/native-e57-surface-from-gui.png",
+      "screenshots/native-e57-translated-section-poses.png",
+      "screenshots/native-e57-triangular-gap-repair.png",
+      "screenshots/native-e57.png",
+      "screenshots/native-edit-45m-deleted.png",
+      "screenshots/native-edit-45m-redo.png",
+      "screenshots/native-edit-45m-selected.png",
+      "screenshots/native-edit-45m-undo.png",
+      "screenshots/native-edl-ahn-off.png",
+      "screenshots/native-edl-ahn-on.png",
+      "screenshots/native-edl-ahn-view-on.png",
+      "screenshots/native-edl-ahn-zoom-off.png",
+      "screenshots/native-edl-ahn-zoom-on.png",
+      "screenshots/native-edl-e57-off.png",
+      "screenshots/native-edl-e57-on.png",
+      "screenshots/native-edl-e57-view-tab.png",
+      "screenshots/native-edl-latest-three-ahn.png",
+      "screenshots/native-edl-mesh-off.png",
+      "screenshots/native-edl-mesh-on.png",
+      "screenshots/native-edl-section-mesh-clipped.png",
+      "screenshots/native-edl-section-mesh.png",
+      "screenshots/native-escape-select-closed.png",
+      "screenshots/native-eye-dome-strength-0-ahn45m.png",
+      "screenshots/native-eye-dome-strength-5-ahn45m.png",
+      "screenshots/native-f-zoom-all-114m-ply.png",
+      "screenshots/native-file-backstage-ahn6.png",
+      "screenshots/native-index-progress.png",
+      "screenshots/native-latest-three-ahn.png",
+      "screenshots/native-laz-export-gui.png",
+      "screenshots/native-merge-file-view-83m.png",
+      "screenshots/native-merge-progress-ahn6.png",
+      "screenshots/native-merged-114m-1p2gb-view.png",
+      "screenshots/native-merged-114m-selection-373k.png",
+      "screenshots/native-mesh-export-ahn-off.png",
+      "screenshots/native-mesh-section-box.png",
+      "screenshots/native-missing-intensity-visible.png",
+      "screenshots/native-multiple-mesh-obj-ply.png",
+      "screenshots/native-multiple-mesh-one-hidden.png",
+      "screenshots/native-multiple-mesh-surfaces-only.png",
+      "screenshots/native-off-stl-mesh.png",
+      "screenshots/native-off-stl-surfaces-only.png",
+      "screenshots/native-openaec-home-current.png",
+      "screenshots/native-openaec-home.png",
+      "screenshots/native-openaec-ribbon-tokens-forge.png",
+      "screenshots/native-openaec-ribbon-tokens-light.png",
+      "screenshots/native-openaec-tab-unoutlined.png",
+      "screenshots/native-openaec-tools-mesher.png",
+      "screenshots/native-pan-across-viewport-edge.png",
+      "screenshots/native-pcl-mosd-label-rgba-point.png",
+      "screenshots/native-pcl-pcd-cached-pick.png",
+      "screenshots/native-pcl-pcd-cached-viewpoint.png",
+      "screenshots/native-pcl-rgb-lzf-top.png",
+      "screenshots/native-pick-cancel-114m.png",
+      "screenshots/native-pick-exact-114m.png",
+      "screenshots/native-pick-without-index.png",
+      "screenshots/native-ply-mesh-ahn-faces.png",
+      "screenshots/native-ply-mesh-ahn.png",
+      "screenshots/native-project-properties-bounds-refined-114m.png",
+      "screenshots/native-ptx-two-station-cache.png",
+      "screenshots/native-ribbon-narrow-tools-scrolled.png",
+      "screenshots/native-ribbon-narrow-tools-start.png",
+      "screenshots/native-ribbon-neutral-active-ahn6.png",
+      "screenshots/native-ribbon-neutral-tools-ahn6.png",
+      "screenshots/native-ribbon-ocad-openaec-home.png",
+      "screenshots/native-ribbon-ocad-openaec-tools.png",
+      "screenshots/native-ribbon-overflow-home-wide.png",
+      "screenshots/native-ribbon-overflow-tools-narrow.png",
+      "screenshots/native-ribbon-overflow-tools-scrolled.png",
+      "screenshots/native-ribbon-overflow-tools-wide.png",
+      "screenshots/native-ribbon-overflow-view-wide.png",
+      "screenshots/native-ribbon-quick-access-opencad.png",
+      "screenshots/native-ribbon-quick-access-three-ahn.png",
+      "screenshots/native-ribbon-scroll-tools-end.png",
+      "screenshots/native-ribbon-scroll-tools-narrow.png",
+      "screenshots/native-ribbon-scroll-tools-start.png",
+      "screenshots/native-ribbon-tools-openaec-gray.png",
+      "screenshots/native-right-click-after-escape.png",
+      "screenshots/native-right-click-after-pan-fix.png",
+      "screenshots/native-right-click-menu.png",
+      "screenshots/native-right-drag-pan.png",
+      "screenshots/native-right-pan-release-ahn6.png",
+      "screenshots/native-scale-xyz-tools-45m.png",
+      "screenshots/native-scale-xyz-ui-export.png",
+      "screenshots/native-section-box-45m-export-complete.png",
+      "screenshots/native-section-box-45m-export.png",
+      "screenshots/native-section-box-45m-reopened.png",
+      "screenshots/native-section-box-clipped.png",
+      "screenshots/native-section-box-export.png",
+      "screenshots/native-section-box-fit-one-selected-45m.png",
+      "screenshots/native-section-box-fit-selection-ribbon-45m.png",
+      "screenshots/native-section-box-three-tiles-clipped.png",
+      "screenshots/native-section-box-three-tiles.png",
+      "screenshots/native-section-box-xyz-input-45m.png",
+      "screenshots/native-section-box-zoom-box-45m.png",
+      "screenshots/native-section-box-zoom-detailed-45m.png",
+      "screenshots/native-section-box.png",
+      "screenshots/native-section-handle-drag.png",
+      "screenshots/native-section-handles.png",
+      "screenshots/native-select-ribbon-zoom-selection-114m.png",
+      "screenshots/native-selected-after-disjoint-delete-114m.png",
+      "screenshots/native-spherical-points-close.png",
+      "screenshots/native-spherical-points-e57.png",
+      "screenshots/native-spherical-points-size8.png",
+      "screenshots/native-spherical-points-zoom.png",
+      "screenshots/native-stale-lod-cancel-ahn2m.png",
+      "screenshots/native-surface-settings-25k-mesh.png",
+      "screenshots/native-surface-settings-tools-25k.png",
+      "screenshots/native-terrain-mesh-faces.png",
+      "screenshots/native-terrain-mesh.png",
+      "screenshots/native-theme-api-forge-114m-exact-selection.png",
+      "screenshots/native-theme-blue-45m.png",
+      "screenshots/native-theme-contrast-45m.png",
+      "screenshots/native-theme-forge-45m.png",
+      "screenshots/native-theme-light-45m.png",
+      "screenshots/native-theme-night-45m.png",
+      "screenshots/native-thin-30-percent-ui-export.png",
+      "screenshots/native-thin-45m-after.png",
+      "screenshots/native-thin-45m-redo.png",
+      "screenshots/native-thin-45m-undo.png",
+      "screenshots/native-thin-tools-before.png",
+      "screenshots/native-tools-ribbon-classic-order-114m.png",
+      "screenshots/native-tools-ribbon-compact-1440.png",
+      "screenshots/native-tools-ribbon-compact-ahn6.png",
+      "screenshots/native-transform-45m-before.png",
+      "screenshots/native-transform-45m-reset-section.png",
+      "screenshots/native-transform-45m-scaled.png",
+      "screenshots/native-transform-45m-selected.png",
+      "screenshots/native-transform-45m-translated.png",
+      "screenshots/native-view-cube-front.png",
+      "screenshots/native-view-cube-iso.png",
+      "screenshots/native-view-cube-top.png",
+      "screenshots/native-view-ribbon-compact-ahn6.png",
+      "screenshots/native-view-ribbon-section-box.png",
+      "screenshots/native-wgpu-sphere-depth-pick.png",
+      "screenshots/native-wgpu-visible-lod-pick.png",
+      "screenshots/native-zoom-selected-373382-of-114m.png"
+    ]
+  },
+  {
+    "name": "dynlex",
+    "commit": "b504363b9d132d23a0d94a232b8a584011bdab43",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/README.md",
+        "local": "references/dynlex/README.md"
+      },
+      {
+        "path": "vscode-extension/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/vscode-extension/README.md",
+        "local": "references/dynlex/vscode-extension/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "repo-cleaner",
+    "commit": "16444410068f684617dd3ccd6ae0b39d38b6ce73",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/repo-cleaner/16444410068f684617dd3ccd6ae0b39d38b6ce73/README.md",
+        "local": "references/repo-cleaner/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-monuments-mjop",
+    "commit": "65455e3843d81478b326f8c26440456305fffc2c",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-mjop/65455e3843d81478b326f8c26440456305fffc2c/README.md",
+        "local": "references/open-monuments-mjop/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-2D-studio-AEC-extension",
+    "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "src/ribbonTabs.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx",
+        "local": "references/open-2D-studio-AEC-extension/src/ribbonTabs.tsx"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "acadifc",
+    "commit": "7b306fb4cce7635231c2993b5a9b372be02479f2",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/acadifc/7b306fb4cce7635231c2993b5a9b372be02479f2/README.md",
+        "local": "references/acadifc/README.md"
+      },
+      {
+        "path": "ifccad/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/acadifc/7b306fb4cce7635231c2993b5a9b372be02479f2/ifccad/README.md",
+        "local": "references/acadifc/ifccad/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "ifccad",
+    "commit": "4a98b901912b46ee4bcba367890ea5da02dc9536",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/README.md",
+        "local": "references/ifccad/README.md"
+      },
+      {
+        "path": "examples/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/examples/README.md",
+        "local": "references/ifccad/examples/README.md"
+      },
+      {
+        "path": "format-explorer/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/ifccad/4a98b901912b46ee4bcba367890ea5da02dc9536/format-explorer/README.md",
+        "local": "references/ifccad/format-explorer/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-geotechniek-studio",
+    "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+    "screenshots": [
+      {
+        "path": "docs/screenshots/03.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/docs/screenshots/03.png",
+        "local": "references/open-geotechniek-studio/docs/screenshots/03.png"
+      },
+      {
+        "path": "docs/screenshots/03-kaart-bro.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/docs/screenshots/03-kaart-bro.jpg",
+        "local": "references/open-geotechniek-studio/docs/screenshots/03-kaart-bro.jpg"
+      },
+      {
+        "path": "docs/screenshots/02-bhr-boring.jpg",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/docs/screenshots/02-bhr-boring.jpg",
+        "local": "references/open-geotechniek-studio/docs/screenshots/02-bhr-boring.jpg"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/README.md",
+        "local": "references/open-geotechniek-studio/README.md"
+      },
+      {
+        "path": "apps/desktop/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/App.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/App.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/DocumentBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/DocumentBar.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/DocumentBar.css"
+      },
+      {
+        "path": "apps/desktop/src/components/DocumentBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/DocumentBar.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/DocumentBar.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ThemedSelect.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ThemedSelect.css"
+      },
+      {
+        "path": "apps/desktop/src/components/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ThemedSelect.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ThemedSelect.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/TitleBar.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/TitleBar.css"
+      },
+      {
+        "path": "apps/desktop/src/components/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/TitleBar.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/TitleBar.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/backstage/Backstage.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "apps/desktop/src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/backstage/Backstage.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/Ribbon.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/Ribbon.css"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/Ribbon.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/RibbonButton.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/RibbonButtonStack.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/RibbonGroup.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/RibbonTab.tsx",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/components/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "apps/desktop/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/themes.css",
+        "local": "references/open-geotechniek-studio/apps/desktop/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "docs/screenshots/01-cpt-sondering.jpg",
+      "docs/screenshots/02-bhr-boring.jpg",
+      "docs/screenshots/03-kaart-bro.jpg",
+      "docs/screenshots/03.png",
+      "docs/screenshots/04-rapport-pdf.png",
+      "docs/screenshots/05-situatietekening.jpg"
+    ]
+  },
+  {
+    "name": "conventions",
+    "commit": "7758e611badb1cf8390f454c5ee12f05649c2dc6",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/conventions/7758e611badb1cf8390f454c5ee12f05649c2dc6/README.md",
+        "local": "references/conventions/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "openaec-accounts-server",
+    "commit": "576dd3b928e33841aecc2d258c1b615defd6325e",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-accounts-server/576dd3b928e33841aecc2d258c1b615defd6325e/README.md",
+        "local": "references/openaec-accounts-server/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "open-planner-studio",
+    "commit": "55461d2b2d16a1ee317c89ad982159850f2d1580",
+    "screenshots": [
+      {
+        "path": "artifacts/resourcediagram/01-resourcediagram-preview-en-dark.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/artifacts/resourcediagram/01-resourcediagram-preview-en-dark.png",
+        "local": "references/open-planner-studio/artifacts/resourcediagram/01-resourcediagram-preview-en-dark.png"
+      },
+      {
+        "path": "screenshot.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/screenshot.png",
+        "local": "references/open-planner-studio/screenshot.png"
+      },
+      {
+        "path": "screenshot-rapport.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/screenshot-rapport.png",
+        "local": "references/open-planner-studio/screenshot-rapport.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/README.md",
+        "local": "references/open-planner-studio/README.md"
+      },
+      {
+        "path": "examples/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/examples/README.md",
+        "local": "references/open-planner-studio/examples/README.md"
+      },
+      {
+        "path": "scripts/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/scripts/README.md",
+        "local": "references/open-planner-studio/scripts/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/App.tsx",
+        "local": "references/open-planner-studio/src/App.tsx"
+      },
+      {
+        "path": "src/components/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/Backstage.css",
+        "local": "references/open-planner-studio/src/components/backstage/Backstage.css"
+      },
+      {
+        "path": "src/components/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/Backstage.tsx",
+        "local": "references/open-planner-studio/src/components/backstage/Backstage.tsx"
+      },
+      {
+        "path": "src/components/backstage/backstageLeaveGuard.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/backstage/backstageLeaveGuard.ts",
+        "local": "references/open-planner-studio/src/components/backstage/backstageLeaveGuard.ts"
+      },
+      {
+        "path": "src/components/layout/Ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/Ribbon.css",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/Ribbon.css"
+      },
+      {
+        "path": "src/components/layout/Ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/Ribbon.tsx",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "src/components/layout/Ribbon/RibbonTabContent.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/RibbonTabContent.tsx",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/RibbonTabContent.tsx"
+      },
+      {
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonConfig.tsx",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/ribbonConfig.tsx"
+      },
+      {
+        "path": "src/components/layout/Ribbon/ribbonDensity.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonDensity.ts",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/ribbonDensity.ts"
+      },
+      {
+        "path": "src/components/layout/Ribbon/ribbonPrimitives.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonPrimitives.tsx",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/ribbonPrimitives.tsx"
+      },
+      {
+        "path": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/Ribbon/ribbonWidgets.tsx",
+        "local": "references/open-planner-studio/src/components/layout/Ribbon/ribbonWidgets.tsx"
+      },
+      {
+        "path": "src/components/layout/TitleBar/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/TitleBar/TitleBar.css",
+        "local": "references/open-planner-studio/src/components/layout/TitleBar/TitleBar.css"
+      },
+      {
+        "path": "src/components/layout/TitleBar/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/components/layout/TitleBar/TitleBar.tsx",
+        "local": "references/open-planner-studio/src/components/layout/TitleBar/TitleBar.tsx"
+      },
+      {
+        "path": "src/engine/renderer/themePalette.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/engine/renderer/themePalette.ts",
+        "local": "references/open-planner-studio/src/engine/renderer/themePalette.ts"
+      },
+      {
+        "path": "src/hooks/useResolvedUITheme.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/hooks/useResolvedUITheme.ts",
+        "local": "references/open-planner-studio/src/hooks/useResolvedUITheme.ts"
+      },
+      {
+        "path": "src/utils/theme.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/src/utils/theme.ts",
+        "local": "references/open-planner-studio/src/utils/theme.ts"
+      },
+      {
+        "path": "tests/browser/ribbon-status-date-time.spec.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/browser/ribbon-status-date-time.spec.ts",
+        "local": "references/open-planner-studio/tests/browser/ribbon-status-date-time.spec.ts"
+      },
+      {
+        "path": "tests/browser/ribbon-time-scale.spec.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/browser/ribbon-time-scale.spec.ts",
+        "local": "references/open-planner-studio/tests/browser/ribbon-time-scale.spec.ts"
+      },
+      {
+        "path": "tests/browser/ribbon-toggles.spec.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/browser/ribbon-toggles.spec.ts",
+        "local": "references/open-planner-studio/tests/browser/ribbon-toggles.spec.ts"
+      },
+      {
+        "path": "tests/browser/system-theme.spec.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/browser/system-theme.spec.ts",
+        "local": "references/open-planner-studio/tests/browser/system-theme.spec.ts"
+      },
+      {
+        "path": "tests/browser/theme-render.spec.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/browser/theme-render.spec.ts",
+        "local": "references/open-planner-studio/tests/browser/theme-render.spec.ts"
+      },
+      {
+        "path": "tests/planning/check-relation-ribbon-trace.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/planning/check-relation-ribbon-trace.ts",
+        "local": "references/open-planner-studio/tests/planning/check-relation-ribbon-trace.ts"
+      },
+      {
+        "path": "tests/planning/check-ribbon-overlays.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/planning/check-ribbon-overlays.ts",
+        "local": "references/open-planner-studio/tests/planning/check-ribbon-overlays.ts"
+      },
+      {
+        "path": "tests/planning/check-system-theme.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/planning/check-system-theme.ts",
+        "local": "references/open-planner-studio/tests/planning/check-system-theme.ts"
+      },
+      {
+        "path": "tests/planning/check-theme-bar-contrast.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/planning/check-theme-bar-contrast.ts",
+        "local": "references/open-planner-studio/tests/planning/check-theme-bar-contrast.ts"
+      },
+      {
+        "path": "tests/planning/check-theme-premirror.ts",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/55461d2b2d16a1ee317c89ad982159850f2d1580/tests/planning/check-theme-premirror.ts",
+        "local": "references/open-planner-studio/tests/planning/check-theme-premirror.ts"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "artifacts/resourcediagram/01-resourcediagram-preview-en-dark.png",
+      "screenshot-context-menu.png",
+      "screenshot-rapport.png",
+      "screenshot.png"
+    ]
+  },
+  {
+    "name": "open-planner-studio-extensions",
+    "commit": "f61cde6aeff821665d2f374b553fa0b2f794404e",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/f61cde6aeff821665d2f374b553fa0b2f794404e/README.md",
+        "local": "references/open-planner-studio-extensions/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "OpenAEC-BIM-validator",
+    "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/README.md",
+        "local": "references/OpenAEC-BIM-validator/README.md"
+      },
+      {
+        "path": "research/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/research/README.md",
+        "local": "references/OpenAEC-BIM-validator/research/README.md"
+      },
+      {
+        "path": "viewer/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/README.md",
+        "local": "references/OpenAEC-BIM-validator/viewer/README.md"
+      },
+      {
+        "path": "viewer/src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/App.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/App.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ThemedSelect.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ThemedSelect.css",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ThemedSelect.css"
+      },
+      {
+        "path": "viewer/src/components/chrome/ThemedSelect.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ThemedSelect.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ThemedSelect.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/TitleBar.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/TitleBar.css",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/TitleBar.css"
+      },
+      {
+        "path": "viewer/src/components/chrome/TitleBar.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/TitleBar.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/TitleBar.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/backstage/Backstage.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/backstage/Backstage.css",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/backstage/Backstage.css"
+      },
+      {
+        "path": "viewer/src/components/chrome/backstage/Backstage.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/backstage/Backstage.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/backstage/Backstage.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/Ribbon.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/Ribbon.css",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/Ribbon.css"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/Ribbon.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/Ribbon.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/RibbonButton.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/RibbonButton.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/RibbonButton.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/RibbonButtonStack.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/RibbonButtonStack.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/RibbonButtonStack.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/RibbonGroup.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/RibbonGroup.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/RibbonGroup.tsx"
+      },
+      {
+        "path": "viewer/src/components/chrome/ribbon/RibbonTab.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/RibbonTab.tsx",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/components/chrome/ribbon/RibbonTab.tsx"
+      },
+      {
+        "path": "viewer/src/themes.css",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-BIM-validator/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/themes.css",
+        "local": "references/OpenAEC-BIM-validator/viewer/src/themes.css"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  },
+  {
+    "name": "gis2bim-openanalysis",
+    "commit": "44f3aa36f8bf63be84710adc938a65b3f3ee62ee",
+    "screenshots": [
+      {
+        "path": "Screenshot.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/gis2bim-openanalysis/44f3aa36f8bf63be84710adc938a65b3f3ee62ee/Screenshot.png",
+        "local": "references/gis2bim-openanalysis/Screenshot.png"
+      }
+    ],
+    "ui_sources": [
+      {
+        "path": ".claude-history/README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/gis2bim-openanalysis/44f3aa36f8bf63be84710adc938a65b3f3ee62ee/.claude-history/README.md",
+        "local": "references/gis2bim-openanalysis/.claude-history/README.md"
+      },
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/gis2bim-openanalysis/44f3aa36f8bf63be84710adc938a65b3f3ee62ee/README.md",
+        "local": "references/gis2bim-openanalysis/README.md"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": [
+      "Screenshot.png"
+    ]
+  },
+  {
+    "name": "open-3d-studio",
+    "commit": "47109f381faa6eb3a78701b5e3950b9129fd2e5d",
+    "screenshots": [],
+    "ui_sources": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/README.md",
+        "local": "references/open-3d-studio/README.md"
+      },
+      {
+        "path": "src/App.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src/App.tsx",
+        "local": "references/open-3d-studio/src/App.tsx"
+      },
+      {
+        "path": "src/ui/Ribbon.tsx",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src/ui/Ribbon.tsx",
+        "local": "references/open-3d-studio/src/ui/Ribbon.tsx"
+      }
+    ],
+    "errors": [],
+    "available_screenshots": []
+  }
+]

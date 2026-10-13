@@ -1,0 +1,24 @@
+{
+  "name": "openaec-accounts-server",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-accounts-server",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "MIT",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-accounts-server/576dd3b928e33841aecc2d258c1b615defd6325e/pyproject.toml",
+      "sha256": "bebf5211f46eb3131b961a820d2c97f2edd73deb742023547a4367ecb4b9601a",
+      "bytes": 992
+    }
+  ],
+  "errors": [],
+  "commit": "576dd3b928e33841aecc2d258c1b615defd6325e",
+  "files_scanned": 14,
+  "ui_stack": [],
+  "icon_packages": []
+}

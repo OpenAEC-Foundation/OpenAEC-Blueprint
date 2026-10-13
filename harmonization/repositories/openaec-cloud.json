@@ -1,0 +1,24 @@
+{
+  "name": "openaec-cloud",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-cloud",
+  "branch": "master",
+  "description": "Shared Nextcloud cloud storage library for OpenAEC tools \u2014 hybrid I/O, multi-tenant, multi-manifest (ADR-001)",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud/1cdce4de1ccb55a35c2d9878e1860234efdb1d0c/Cargo.toml",
+      "sha256": "3be3d12f5c533a272d0a8b69ee14f6fac0bd1752470930217b725606ddc14029",
+      "bytes": 499
+    }
+  ],
+  "errors": [],
+  "commit": "1cdce4de1ccb55a35c2d9878e1860234efdb1d0c",
+  "files_scanned": 12,
+  "ui_stack": [],
+  "icon_packages": []
+}

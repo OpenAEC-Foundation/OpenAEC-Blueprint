@@ -1,0 +1,105 @@
+{
+  "name": "open-frame-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-frame-studio",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "CC-BY-SA-4.0",
+  "icons": [
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/icons/128x128.png",
+      "sha256": "01efd8c3d44f3f13df148b7e62b2b5d2833e5dd76a4b6e8431f38d4e9883979c",
+      "bytes": 439
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/icons/128x128%402x.png",
+      "sha256": "aadc8b43298ebd62e565e3824ab86f69936e117de9dabdaf6900cc063419afff",
+      "bytes": 921
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/icons/32x32.png",
+      "sha256": "1df5a9549e6627c727029ac7f0152acc0c871a161d39275f7b2207011f69e173",
+      "bytes": 143
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/icons/icon.icns",
+      "sha256": "aadc8b43298ebd62e565e3824ab86f69936e117de9dabdaf6900cc063419afff",
+      "bytes": 921
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/icons/icon.ico",
+      "sha256": "260288cf5c0403d439b894856ff8398438bd5e334574f0a6ca8f224592aed916",
+      "bytes": 136
+    },
+    {
+      "path": "ui/public/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/public/icon.png",
+      "sha256": "1df5a9549e6627c727029ac7f0152acc0c871a161d39275f7b2207011f69e173",
+      "bytes": 143
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/Cargo.toml",
+      "sha256": "b7221296f2da053c17f5afb652f86beb68f69d3618d5dac61882d9a1c8b4f24e",
+      "bytes": 402
+    },
+    {
+      "path": "ofs-cloud/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ofs-cloud/Cargo.toml",
+      "sha256": "56ee39d3136225ef15bcefd1dbd87d26697bb4f1ef58c268a6d44f6825689875",
+      "bytes": 327
+    },
+    {
+      "path": "ofs-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ofs-core/Cargo.toml",
+      "sha256": "b6ec81e021f8aaed5248a181ec38304ebfcd489ca5655c57a75b1d47446f1a30",
+      "bytes": 510
+    },
+    {
+      "path": "ofs-wasm/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ofs-wasm/Cargo.toml",
+      "sha256": "e33fb3e89813daa262c981fd29fa27c0c0037560ef74288912aed76442ef4b1b",
+      "bytes": 407
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/src-tauri/Cargo.toml",
+      "sha256": "8660e1586214cdf10d12c65ee2771921dd44906570fbd318575049fd3bce2b72",
+      "bytes": 772
+    },
+    {
+      "path": "ui/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-frame-studio/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/package.json",
+      "sha256": "d969c8edce45aa0fd4c02c3823e6b0960cb8245c9030dd4edbfe8ac30ee79b0c",
+      "bytes": 865
+    }
+  ],
+  "errors": [],
+  "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+  "files_scanned": 251,
+  "ui_stack": [
+    "Svelte",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

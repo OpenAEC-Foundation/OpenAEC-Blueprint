@@ -1,0 +1,591 @@
+{
+  "name": "open-heatloss-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio",
+  "branch": "master",
+  "description": "Rust rekenbibliotheek voor warmteverliesberekeningen volgens ISSO 51:2023",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "frontend/public/favicon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/public/favicon.svg",
+      "sha256": "900a172f9a754e1ad7ab288a28c5029ac3baf6d2bf1a1d79ebdc52f872a42cea",
+      "bytes": 728
+    },
+    {
+      "path": "pyrevit/3BM_Bouwkunde.extension/OpenAEC.tab/Bouwbesluit.panel/ThermalExport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/pyrevit/3BM_Bouwkunde.extension/OpenAEC.tab/Bouwbesluit.panel/ThermalExport.pushbutton/icon.png",
+      "sha256": "5cfb323a1858797b8ea244ac3e0763f8ae8345703b217410c5c61793001f076e",
+      "bytes": 7268
+    },
+    {
+      "path": "pyrevit/3BM_Bouwkunde.extension/OpenAEC.tab/Bouwbesluit.panel/WarmteverliesExport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/pyrevit/3BM_Bouwkunde.extension/OpenAEC.tab/Bouwbesluit.panel/WarmteverliesExport.pushbutton/icon.png",
+      "sha256": "5cfb323a1858797b8ea244ac3e0763f8ae8345703b217410c5c61793001f076e",
+      "bytes": 7268
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/128x128.png",
+      "sha256": "5cfb323a1858797b8ea244ac3e0763f8ae8345703b217410c5c61793001f076e",
+      "bytes": 7268
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/128x128%402x.png",
+      "sha256": "f44ef08a9933b8268bab583fa70337f1f7d296cf88205940c8caa045b39d2f13",
+      "bytes": 16045
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/32x32.png",
+      "sha256": "53929e462e550e2b3fdb219cd4d1120f24fa95333978810449f896fe694950d1",
+      "bytes": 1494
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/64x64.png",
+      "sha256": "ae6118f41226fd24c2d5f3ad748334296ebb8663603613e315afb36a679555b8",
+      "bytes": 3408
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "0fb73438a481fcbef8cf01bfa5d10a4e58f7cc9dd2e2e5878026fa69f69b8e4c",
+      "bytes": 5970
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "65e16b4aeac60156fa6914bc295da8afec05a7f20002f315811ed102072ac572",
+      "bytes": 7933
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "99a7fa210a20bb80a9cfc02bcc41b2ddb9919eb5da986704b712e4cb1e9ad754",
+      "bytes": 8355
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "566a42a511babcbfccf2649fded26ac63cd509291d4ae40a789f32e363641b04",
+      "bytes": 18529
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "27e45465f594f2af5146264c36c7871622d24e5a7bd8d8a9b81a159e408d9542",
+      "bytes": 1334
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "fe2222bab492f552950c2fcce7bb6e1e1c0d9c52cd6e793a401aec04d41d63ce",
+      "bytes": 20237
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "4068e31c85beb59d7bf58e191f15671dff006f94b77a5645f5e98cce984c652c",
+      "bytes": 2196
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "fa4b359fb7b59da6449ff1501fc910ee7f0e49013e8f2a61df5290d9f321f61e",
+      "bytes": 3825
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "12ac1461e6cf78c57af605cccf1001bf03803830ab2ae2d59486f9b0e9ee038e",
+      "bytes": 4758
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/StoreLogo.png",
+      "sha256": "fcb1f5a9727f93e9a14c9f8355936099f19ff2bd7e997e8ad1f3e035e3c98949",
+      "bytes": 2543
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "deca207e43fca07521e4827ee829e6fc675bb8bba8870e8132a1e1299d1fbbe3",
+      "bytes": 2321
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "4e9035a8606b985037deb54d7ce83e124718f173d7bf60acb97d251b5d997b8b",
+      "bytes": 9230
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "5c0e45966ee9fbd28ce0b860534a43a5ea41dbe3be51bfa9ff76760aea92fcd9",
+      "bytes": 2647
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "e1284908caa6b70beac60f306d2a5336b2b291c3c43d6fba5a5aa3ad8e88b560",
+      "bytes": 2218
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "af14272ef2fa876dfcdd8f011680b82fd17940bf395c42e715eccc0f822bdf1c",
+      "bytes": 5863
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "978929cb6d3539bb115ca338e81f535e51ddf595336e09a6e331adaa25d0cc7f",
+      "bytes": 2577
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "ce32ab209f2a508a9143d14f3102b763c4c84d8d5e25cb83b455094afa1e2c12",
+      "bytes": 5173
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "8f3b0a0e681bde5fc1f38ece3da95a55685d9b5a0ee64787a775818d23413ea1",
+      "bytes": 12900
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "76236b018be8a6ef6c810b01a72b93e4f940d0cbf20a149b89d88989d5c0c4cb",
+      "bytes": 6122
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "93252a5b5062284085aea20fafa47e05306adb8fba9cdef4d486b2ad0c15fcd2",
+      "bytes": 8116
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "053009a5f0e4cefa203492e6935c03d4198da0ca6f292d91b1b9e99a572d7d2d",
+      "bytes": 22118
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "83a12cbea7db6f48b7035b92b705e90c2a38e8cb75495d95ffe153ddad4426fd",
+      "bytes": 9772
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "65c38f08c0f3a81cb872fc9f82a374c20a7e35c37f8bbd98d192b2f5332fccef",
+      "bytes": 11563
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "5423302948255d6bcc26027975bf1ec6480b279abad975ea6d87761a1fe27be7",
+      "bytes": 30983
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "b7aa5a99e3ac32874f501ea63bedef6d5c0d58c1775891fdc854799a58f1790e",
+      "bytes": 13679
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/icon.icns",
+      "sha256": "2fecc9c3f65e1ed1f821c90f05da44c41b3c8b997828b12d6c1f2fce5efaf80d",
+      "bytes": 163037
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/icon.ico",
+      "sha256": "e1d01aa1e2f14a427a177bb4a97d4ae12917910686115f4b9fdbb620c225b856",
+      "bytes": 26582
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/icon.png",
+      "sha256": "a71daeafa628a9d91b25107cc5a2bf7fdb9fe3c06c8b7cdeb19122820f26425b",
+      "bytes": 36642
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "93d1de1624443079894d87215f2552d3c97b209ad25414df23b3ed37d2a8637b",
+      "bytes": 805
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "d953063b6a81f46ad1d69ea5357626706221c9bf1f45461acd28b8bf4c2afa3a",
+      "bytes": 1952
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "d953063b6a81f46ad1d69ea5357626706221c9bf1f45461acd28b8bf4c2afa3a",
+      "bytes": 1952
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "f8cb5f5f14a2733fb33da7772b11b3c3ba88286760c5e21dc6d8cb590c8e76e0",
+      "bytes": 3196
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "fbb50c4dc80b80aa6c847b82a102dfd258fa6d68d1348aa4807ace4b23eb09f9",
+      "bytes": 1320
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "4b92c80de4d89c2f0ea5aa0b2ba6bed108a2e652bca451fa8ca48a6b83f2d5f0",
+      "bytes": 3011
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "4b92c80de4d89c2f0ea5aa0b2ba6bed108a2e652bca451fa8ca48a6b83f2d5f0",
+      "bytes": 3011
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "e2bf1985523cb0bfc5b1cec6b4b18cf434e62e96c150797fab11ee7c8489e3fe",
+      "bytes": 4493
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "d953063b6a81f46ad1d69ea5357626706221c9bf1f45461acd28b8bf4c2afa3a",
+      "bytes": 1952
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "231d5415edf79e4d9b9a21b5a0d789957e012b530ab74f478b6df0c4e6e72819",
+      "bytes": 4268
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "231d5415edf79e4d9b9a21b5a0d789957e012b530ab74f478b6df0c4e6e72819",
+      "bytes": 4268
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "45c16c829ddaadc7ddf7f758a0eb5e56151029e181b7ea973933f5ad03a21923",
+      "bytes": 6523
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "bf3d2c3b2138016a303b037a52c74e3cb9153af9fb6f476f63709c3d838c4a2d",
+      "bytes": 41633
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "45c16c829ddaadc7ddf7f758a0eb5e56151029e181b7ea973933f5ad03a21923",
+      "bytes": 6523
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "6dbcbfc8507f50c22c1f0ccbe69893bbf7ec158c746367bf5a9c9037fc2ffd83",
+      "bytes": 10201
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "9014754f6626d2c287fef62f9edc1b23103dbaef181e36a29e4f4ddcd79f32b3",
+      "bytes": 4030
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "661b85d96404a77ec6a946f55ab66a18af6534004995093d4691acf2e088bd3f",
+      "bytes": 8636
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "d64299a7ed6d919bd35031a2ed4154c3fad48f88c0b6657736207851b0186f7d",
+      "bytes": 9532
+    },
+    {
+      "path": "src-tauri/icons/source.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/icons/source.png",
+      "sha256": "08c6b18ca36f9e1f608ddff318ff7e8124b84ac46b29f452e85539abbfc16398",
+      "bytes": 31033
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "frontend/src/components/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/icons.ts",
+      "sha256": "5c1dce0e4e01bf8c5a1fb220653d47b39bf8652705797fee2b56bb50f722d067",
+      "bytes": 2958
+    }
+  ],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/Cargo.toml",
+      "sha256": "85ab8587333024c64c7bbc3bdc1978e4a7dedb500aa071a447efe71972fb220e",
+      "bytes": 985
+    },
+    {
+      "path": "crates/isso51-api/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/isso51-api/Cargo.toml",
+      "sha256": "d427ce139882bfcd7230992a9301e3ec97eef16e8a399b2d50ea23466f1c0532",
+      "bytes": 1414
+    },
+    {
+      "path": "crates/isso51-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/isso51-core/Cargo.toml",
+      "sha256": "7b7b7422946ee5d5b96aa30030496b53e1e3ef8950b08e0ceba67ba818a39ce0",
+      "bytes": 1331
+    },
+    {
+      "path": "crates/isso51-ifcx/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/isso51-ifcx/Cargo.toml",
+      "sha256": "2a0378a0a885c366edebbe1032b319b5fc5e285fac495d3e845dddebcc2cf4b4",
+      "bytes": 441
+    },
+    {
+      "path": "crates/isso53-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/isso53-core/Cargo.toml",
+      "sha256": "d91450ab2dcbe1fd9d27e64aaeec2a074addfc4f7cb5e7668387aa63426ba5f3",
+      "bytes": 413
+    },
+    {
+      "path": "crates/nta8800-automation/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-automation/Cargo.toml",
+      "sha256": "ca2ff29abb3a2508251a90398c12dd2f95aff0f4ddb814222653ed85009d84d2",
+      "bytes": 373
+    },
+    {
+      "path": "crates/nta8800-cooling/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-cooling/Cargo.toml",
+      "sha256": "de23b16ef7676df42d814db26f2557f3fa1a0579939d963bbbd42bcd479ff407",
+      "bytes": 567
+    },
+    {
+      "path": "crates/nta8800-demand/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-demand/Cargo.toml",
+      "sha256": "9297cd441a579e0eef6b91d1635259f3b5c5d4ea2f0de5232f7e6074701a1cd1",
+      "bytes": 543
+    },
+    {
+      "path": "crates/nta8800-dhw/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-dhw/Cargo.toml",
+      "sha256": "e5097f9f1e89d819cbd62cb1f0810fa9c0542c9111cb8a71c2afdb81eb5409f0",
+      "bytes": 404
+    },
+    {
+      "path": "crates/nta8800-ep/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-ep/Cargo.toml",
+      "sha256": "d0a0181a39d7fdd137ce76e9c8c6bac136b8547553aa0d007c960c1018dfb232",
+      "bytes": 389
+    },
+    {
+      "path": "crates/nta8800-geometry/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-geometry/Cargo.toml",
+      "sha256": "9d2bbfd4c307ce3b7338f61423aedf813280bb7fe563173f3fdde7d37f5f97f5",
+      "bytes": 380
+    },
+    {
+      "path": "crates/nta8800-heating/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-heating/Cargo.toml",
+      "sha256": "7813059bdffb3ef19f7193f6b61315fa1a9036baf19ee39d7822c3b9659a3586",
+      "bytes": 484
+    },
+    {
+      "path": "crates/nta8800-humidity/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-humidity/Cargo.toml",
+      "sha256": "335cddc50b0148c734844ff0ff2a398a479fd13fa6d95f278c43d964bec2e427",
+      "bytes": 410
+    },
+    {
+      "path": "crates/nta8800-lighting/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-lighting/Cargo.toml",
+      "sha256": "0c5ac952003fbc571f67c624065a866d434d71f697ef24e7532366180ee64eb9",
+      "bytes": 407
+    },
+    {
+      "path": "crates/nta8800-model/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-model/Cargo.toml",
+      "sha256": "18016e4c65866ca0af7d7faa3d36601f8bb0ea0343a001974e538e8c6a37ffe0",
+      "bytes": 384
+    },
+    {
+      "path": "crates/nta8800-pv/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-pv/Cargo.toml",
+      "sha256": "63eb86d012bc3ee828eaf7d6577c672c0c11e00234910c7296e529782aa23aa4",
+      "bytes": 426
+    },
+    {
+      "path": "crates/nta8800-tables/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-tables/Cargo.toml",
+      "sha256": "82e784d4c33014319a52cd640b1862a82d09e0238d64f84ce24a4aef46a77e12",
+      "bytes": 435
+    },
+    {
+      "path": "crates/nta8800-transmission/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-transmission/Cargo.toml",
+      "sha256": "5238283e909cfbd74825500a842f2460c0b2b3405fafd9a35d274886f262ba6f",
+      "bytes": 503
+    },
+    {
+      "path": "crates/nta8800-ventilation/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/nta8800-ventilation/Cargo.toml",
+      "sha256": "c482ce2c9da1035e43bf1c1bf927c9d174ea543ef9d5888963de1836a3d1bcec",
+      "bytes": 425
+    },
+    {
+      "path": "crates/openaec-project-shared/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/openaec-project-shared/Cargo.toml",
+      "sha256": "80c1969529d463578ffaba57ed960e52ece7aa1cb7857dcbfe4c069f951bc8ac",
+      "bytes": 1239
+    },
+    {
+      "path": "crates/uniec3-import/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/uniec3-import/Cargo.toml",
+      "sha256": "9a6435568c6a56de9fdf33fbadd32ec649e7de1584e939c6e8aab5b19f919bf6",
+      "bytes": 483
+    },
+    {
+      "path": "crates/vabi-importer/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/crates/vabi-importer/Cargo.toml",
+      "sha256": "ab82e19b0e3ccda51f7a58b0b6028e47e6097ce88bfd06926b250f917b5a41a5",
+      "bytes": 517
+    },
+    {
+      "path": "frontend/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/package.json",
+      "sha256": "b053778c9f29eceb6fe813dbe296d0bb41671ce40ce036a6cbd4c47f14c31568",
+      "bytes": 1989
+    },
+    {
+      "path": "mcp-server/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/mcp-server/package.json",
+      "sha256": "2ae331a260d07b4f599870bf5ce962b30d084963ab5d535dfd55b6518465208a",
+      "bytes": 739
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/src-tauri/Cargo.toml",
+      "sha256": "64aed359f300eb4574c6511df6828fbb3a0fa4ce113c76e864cbe565aa5ced68",
+      "bytes": 1642
+    },
+    {
+      "path": "tools/ifc-tool/pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-heatloss-studio/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/tools/ifc-tool/pyproject.toml",
+      "sha256": "f61b4cf6b8d05b2931cb40a5006c9d2ac21b46bcc4e4687d7040665a164b5459",
+      "bytes": 636
+    }
+  ],
+  "errors": [],
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "files_scanned": 1024,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": [
+    "lucide-react"
+  ]
+}

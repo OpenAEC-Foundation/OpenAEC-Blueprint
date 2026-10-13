@@ -1,0 +1,24 @@
+{
+  "name": "Open-STL-3DMap-Studio",
+  "url": "https://github.com/OpenAEC-Foundation/Open-STL-3DMap-Studio",
+  "branch": "main",
+  "description": "3D-printbare meerkleuren stadskaarten van Nederland (3DBAG + OpenStreetMap + PDOK) voor de Creality K1 Max met CFS. Onderdeel van de OpenAEC Foundation.",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [
+    {
+      "path": "make_icon.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Open-STL-3DMap-Studio/ba736d4999b16dcac12ca44c79c6bada08db0fd5/make_icon.py",
+      "sha256": "08d208e2785d944341a9e798daf1bc07b6a820d81e1b1e3cf91840baca6702d8",
+      "bytes": 1864
+    }
+  ],
+  "manifests": [],
+  "errors": [],
+  "commit": "ba736d4999b16dcac12ca44c79c6bada08db0fd5",
+  "files_scanned": 31,
+  "ui_stack": [],
+  "icon_packages": []
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "visual-design-review",
+  "implementation": "paused-by-user",
+  "technology_decision": "deferred: Rust or Dynlex after visual review",
+  "existing_rust_code": "Unapproved draft created before the user requested design-first. Do not use as the accepted UI specification.",
+  "review_order": ["evidence and coverage", "shared screen layouts", "ribbon structure and density", "icon meaning and visual family", "FEM and BIM gaps", "approval", "implementation"],
+  "reference_branches": {"open-pdf-studio/dynlex": "not found in public heads or searched forks", "open-pdf-studio/feat/rust-native": "not found in public heads or searched forks"},
+  "principle": "Identical shared chrome, interactions and command meanings. Domain-specific tools and content within fixed slots."
+}

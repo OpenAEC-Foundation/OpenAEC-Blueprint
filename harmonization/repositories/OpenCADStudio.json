@@ -1,0 +1,2857 @@
+{
+  "name": "OpenCADStudio",
+  "url": "https://github.com/HakanSeven12/OpenCADStudio",
+  "branch": "main",
+  "description": "A CAD application built with Rust \u2014 2D/3D drawing, DWG/DXF support, and GPU-accelerated rendering",
+  "archived": false,
+  "license": "GPL-3.0",
+  "icons": [
+    {
+      "path": "assets/icons/about.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/about.svg",
+      "sha256": "74862f087dfc24b4b58995aaa9c0a952871c373a6380d04cc131d04d5e1c8074",
+      "bytes": 430
+    },
+    {
+      "path": "assets/icons/add_scale.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/add_scale.svg",
+      "sha256": "52d66c611f29ee46b0dd5ee5c0cf75b8d61f02d37eb156c1b42f9d522c7693f2",
+      "bytes": 360
+    },
+    {
+      "path": "assets/icons/align_bottom.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_bottom.svg",
+      "sha256": "3de2f5ea790173b94f7a26d8fe09bb91744e5881f6ada14cba6edf7ccd96c398",
+      "bytes": 236
+    },
+    {
+      "path": "assets/icons/align_hcenter.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_hcenter.svg",
+      "sha256": "2c52bdc8b8c6f5ff2be650f6c64ce5d2ca2a5453408d41d72110fad35b0e55d9",
+      "bytes": 258
+    },
+    {
+      "path": "assets/icons/align_left.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_left.svg",
+      "sha256": "31a71b44746a59b2db63ef060590069e5cb0b2dab34817b9e89e436d2fb6d1df",
+      "bytes": 234
+    },
+    {
+      "path": "assets/icons/align_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_right.svg",
+      "sha256": "6f26b2daac28cf16cdb6da594e8dc34c21c79cd845fda622cd272958697c029e",
+      "bytes": 236
+    },
+    {
+      "path": "assets/icons/align_top.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_top.svg",
+      "sha256": "8405f773c4239465cb2582f86d6a79120acb037432fa843238ca2ba2173113e1",
+      "bytes": 234
+    },
+    {
+      "path": "assets/icons/align_vcenter.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/align_vcenter.svg",
+      "sha256": "93f8c68d3d63be8447a5d8313ed99dacdae58e0a8b136ad567268816db7ed3b5",
+      "bytes": 258
+    },
+    {
+      "path": "assets/icons/arc/arc.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc.svg",
+      "sha256": "66e6c55d53211d5e8149a6aad8e6b30012a36ecdd7cacd8eac07c8cf49fc8671",
+      "bytes": 298
+    },
+    {
+      "path": "assets/icons/arc/arc_3p.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_3p.svg",
+      "sha256": "79ce1efc79791fcf52b35455d8221bfb11aae82866643f8827f04da5fc99988d",
+      "bytes": 403
+    },
+    {
+      "path": "assets/icons/arc/arc_cont.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_cont.svg",
+      "sha256": "db0304d0e6459d2de7651bf781c4e26291d4cdbe5d296572d6996147c703db1c",
+      "bytes": 489
+    },
+    {
+      "path": "assets/icons/arc/arc_csa.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_csa.svg",
+      "sha256": "9f5921487e0bab4f5da55a9b0b77c69a5739cc7a8d9eac687f517d42cd6e9d14",
+      "bytes": 746
+    },
+    {
+      "path": "assets/icons/arc/arc_cse.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_cse.svg",
+      "sha256": "b7bc110f8f5ec5e7110450448fddc4e6d8e6ad092010c07561afe44e0d8469bc",
+      "bytes": 620
+    },
+    {
+      "path": "assets/icons/arc/arc_csl.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_csl.svg",
+      "sha256": "941adcb26b22e284c1517176383931e1ef28be0ca1d5c26e1df6227772fb0cde",
+      "bytes": 604
+    },
+    {
+      "path": "assets/icons/arc/arc_sca.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_sca.svg",
+      "sha256": "3d2d1f789a871a76aed9b7d44bb53ba836811ffb07a9b2a416ef350ee662bd72",
+      "bytes": 713
+    },
+    {
+      "path": "assets/icons/arc/arc_sce.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_sce.svg",
+      "sha256": "fc59da48c811b50909a6c37048567cd5b02e97b7295f0e3d5cf9c6ccfa5bf149",
+      "bytes": 620
+    },
+    {
+      "path": "assets/icons/arc/arc_scl.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_scl.svg",
+      "sha256": "5771451deb5b8aec5d75a339be49c4c86281b49ab1d238b8f8200635462ec1f5",
+      "bytes": 604
+    },
+    {
+      "path": "assets/icons/arc/arc_sea.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_sea.svg",
+      "sha256": "460e0384df4375b4c2c1343bf2f7dd10b721f50b00cc4a61f2d095a74e1fba3c",
+      "bytes": 672
+    },
+    {
+      "path": "assets/icons/arc/arc_sed.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_sed.svg",
+      "sha256": "ed10ff448adf86134a464a31c7f587f9147ec47e0e91753009bb571e6bbb87ab",
+      "bytes": 556
+    },
+    {
+      "path": "assets/icons/arc/arc_ser.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/arc/arc_ser.svg",
+      "sha256": "c75d3d3f0135f387477e63b507eaf85e1cd99baa447dde0f4f38dc57d9742e5f",
+      "bytes": 745
+    },
+    {
+      "path": "assets/icons/area.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/area.svg",
+      "sha256": "766a2211c2be1f7dc8cd091654629a2e94c0cb0b76450785f57e9162ee46a384",
+      "bytes": 4904
+    },
+    {
+      "path": "assets/icons/array_path.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/array_path.svg",
+      "sha256": "44786616aed2c1dc5afb842482365a1685702e483ce4222450b6f25ed63b4b1b",
+      "bytes": 1955
+    },
+    {
+      "path": "assets/icons/array_polar.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/array_polar.svg",
+      "sha256": "a3c8cfd85484f5847d8c4e05b991f5d6db343de39249a32348d175edc33c9319",
+      "bytes": 2651
+    },
+    {
+      "path": "assets/icons/array_rect.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/array_rect.svg",
+      "sha256": "01dbb5e053c6f1c2c160ac9267bb0cf451de427d7fdbe5187569b240c568809f",
+      "bytes": 2060
+    },
+    {
+      "path": "assets/icons/attdef.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attdef.svg",
+      "sha256": "78a89ac023530645d3b7e170ddce60e6037e83d1a876130e955bdaf3800b50e9",
+      "bytes": 592
+    },
+    {
+      "path": "assets/icons/attedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attedit.svg",
+      "sha256": "44a8571f266b94855822f64b9490be5082d238fcbbf1cbc2c0eebb71a8e8bf3c",
+      "bytes": 452
+    },
+    {
+      "path": "assets/icons/attman.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attman.svg",
+      "sha256": "f4190f432e75f5151bdce8a4c7792ff7cb96cc0ba37d9d06dc7519b2e63230f6",
+      "bytes": 723
+    },
+    {
+      "path": "assets/icons/attributes/lineweight.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attributes/lineweight.svg",
+      "sha256": "60f22e32e56d6f9deb0469df121375db924c4512097831d85b042a15b3a894b9",
+      "bytes": 1778
+    },
+    {
+      "path": "assets/icons/attributes/transparency.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attributes/transparency.svg",
+      "sha256": "442ba3d12339a4dda4bd18483d98b5ce5dc621d0f0eb41d065e5ab2be5b5b7fa",
+      "bytes": 1454
+    },
+    {
+      "path": "assets/icons/attsync.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/attsync.svg",
+      "sha256": "eb4b21bd51fc210ecab11b719786ebe6ab3b4a8fbdb1f9bd5c78162d4cfa7eb8",
+      "bytes": 1263
+    },
+    {
+      "path": "assets/icons/audit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/audit.svg",
+      "sha256": "abc8da05abcaf2f903d9a8139239c003c0dccd4b4a0980fb1c9828a03b490d22",
+      "bytes": 448
+    },
+    {
+      "path": "assets/icons/base_point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/base_point.svg",
+      "sha256": "37cd0ae7efe5f58ea1b66e998bff9ddf7d30d0cd44eeb8b7ba6ada1d77300f82",
+      "bytes": 410
+    },
+    {
+      "path": "assets/icons/blocks/block.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/block.svg",
+      "sha256": "081f2daaac3cb9cebfb72e7d30daa6791e3852d8f7873aabfc017e85f6ea3e0d",
+      "bytes": 616
+    },
+    {
+      "path": "assets/icons/blocks/insert.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/insert.svg",
+      "sha256": "f03ea9c9dfe71036b3d2d3ea90ea1dd9c78ec1e1db611ee58ddb1602e3ba0be5",
+      "bytes": 1025
+    },
+    {
+      "path": "assets/icons/blocks/pick_point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/pick_point.svg",
+      "sha256": "2d7fbbc5eb9007bc330b8064ed32548f148e9a7d92f35fde7c1769cc170f6331",
+      "bytes": 553
+    },
+    {
+      "path": "assets/icons/blocks/preview_size.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/preview_size.svg",
+      "sha256": "0bfdde666e7df06eade43bdec87823d623a8536e97ad4d02ff5228044089000d",
+      "bytes": 419
+    },
+    {
+      "path": "assets/icons/blocks/quick_select.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/quick_select.svg",
+      "sha256": "4b6173c04009886aec24094281077596d3bafe835089ef764e47dcbf22a85d59",
+      "bytes": 861
+    },
+    {
+      "path": "assets/icons/blocks/select_objects.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/blocks/select_objects.svg",
+      "sha256": "4506cc87ead8a57359f4726988251036fc792b93a42e183a89045d268d310edc",
+      "bytes": 438
+    },
+    {
+      "path": "assets/icons/boundary.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/boundary.svg",
+      "sha256": "3f8398d52ad3575eb3ade1aa937cadf2c8b27af126a290f03a3fce95910d68f1",
+      "bytes": 291
+    },
+    {
+      "path": "assets/icons/box3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/box3d.svg",
+      "sha256": "9d3dd3c94ff0f576736cd68c45b2761f98eb3ec32a1b3056c70082d7cc819587",
+      "bytes": 663
+    },
+    {
+      "path": "assets/icons/bylayer.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/bylayer.svg",
+      "sha256": "b99171a127fdbeff675b76d341c0c7d4e9a7473cec5c8cef6fe9f7cd793907fe",
+      "bytes": 494
+    },
+    {
+      "path": "assets/icons/cascade.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cascade.svg",
+      "sha256": "547a32371c6a88ddade8c17649361ced2ade2e7eee8451bec803b1b59c7e6da2",
+      "bytes": 548
+    },
+    {
+      "path": "assets/icons/chamfer.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/chamfer.svg",
+      "sha256": "5bb127bd66392b8a85b04979e92e52abb16516551c3ffbc086327dce9897639e",
+      "bytes": 1951
+    },
+    {
+      "path": "assets/icons/changelog.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/changelog.svg",
+      "sha256": "bd2c1b937eb3af22cbd5d9dc4c6e4c59fa7cb5dab3a90b38cce4c48dbc946804",
+      "bytes": 933
+    },
+    {
+      "path": "assets/icons/circle/circle.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle.svg",
+      "sha256": "aba6c7c58302873c9be8f31c5a6dffeb1718e2bb15cdd22c0741c5191c57b9bd",
+      "bytes": 342
+    },
+    {
+      "path": "assets/icons/circle/circle_2p.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_2p.svg",
+      "sha256": "96a4db84da94ec562c406e32e7684c187480eea5764979ce08e8544ae7b820a9",
+      "bytes": 384
+    },
+    {
+      "path": "assets/icons/circle/circle_3p.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_3p.svg",
+      "sha256": "6da7f21908736181aa274f21faee24bb275fbf0f52438dc0544f572b728dba41",
+      "bytes": 669
+    },
+    {
+      "path": "assets/icons/circle/circle_cd.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_cd.svg",
+      "sha256": "c868f4e12161aa8442427e770e31fb03925c768872a15668afc6da8ed813e0d2",
+      "bytes": 311
+    },
+    {
+      "path": "assets/icons/circle/circle_cr.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_cr.svg",
+      "sha256": "2080c3ee1489449e4afd21b0cd2d6b5c71e41f8e49465dc9e755fd4492cd5a56",
+      "bytes": 334
+    },
+    {
+      "path": "assets/icons/circle/circle_ttr.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_ttr.svg",
+      "sha256": "f71aff0165d9557ded20a7ae97a395e8355ce3a629b1973d34f9330ac127d4bb",
+      "bytes": 507
+    },
+    {
+      "path": "assets/icons/circle/circle_ttt.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/circle/circle_ttt.svg",
+      "sha256": "4f7f99924fc5bb2428bffb63d368cf966d0f76352e6f4cdcac23907735eefb52",
+      "bytes": 257
+    },
+    {
+      "path": "assets/icons/clear_tool.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/clear_tool.svg",
+      "sha256": "4374a4fd210db7b5c6e427aa88183f7f071253cdbd176154ce63d2393a964dae",
+      "bytes": 654
+    },
+    {
+      "path": "assets/icons/color_palette.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/color_palette.svg",
+      "sha256": "4c64f6418345c032f3a3c02511f6721eceff9e2a39d597245d4538b0b7ead122",
+      "bytes": 588
+    },
+    {
+      "path": "assets/icons/cone3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cone3d.svg",
+      "sha256": "027fe20ba3b492c117651fe95123cc692a2bd23f2a9e03f4f504ad759ad84776",
+      "bytes": 654
+    },
+    {
+      "path": "assets/icons/constrain/angle.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/angle.svg",
+      "sha256": "fd6a66fa101988c5cc7c3915e206322e18180d336efad4fd0885ed8af1861761",
+      "bytes": 406
+    },
+    {
+      "path": "assets/icons/constrain/auto.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/auto.svg",
+      "sha256": "25fb0e62258aca566bc09fc1feb66c11b2f5d5b49dc35c9dd0d707b8ec6d9a0a",
+      "bytes": 399
+    },
+    {
+      "path": "assets/icons/constrain/center_point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/center_point.svg",
+      "sha256": "f03c49decf09e0f18979676e150475f9edfff8351e26e7d0d00975838ae98a69",
+      "bytes": 225
+    },
+    {
+      "path": "assets/icons/constrain/coincident.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/coincident.svg",
+      "sha256": "09d6a48306ad81b966127afce60824721bc5b12495972ae266983c6c5f1e5ffe",
+      "bytes": 223
+    },
+    {
+      "path": "assets/icons/constrain/colinear.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/colinear.svg",
+      "sha256": "be33b253ab4ae95985afcfc391211586065f6c0214abc85b0d52f8f19c7d6d5e",
+      "bytes": 293
+    },
+    {
+      "path": "assets/icons/constrain/concentric.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/concentric.svg",
+      "sha256": "7942c5f5798c3a5791b1a1830da738183cadf8b74bee1d3c9bbe85d986b6251d",
+      "bytes": 257
+    },
+    {
+      "path": "assets/icons/constrain/convert.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/convert.svg",
+      "sha256": "01e16f7e028cf5a0817eb07a59ab5e6620653cb18dd15493095e8495765c6261",
+      "bytes": 330
+    },
+    {
+      "path": "assets/icons/constrain/delete.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/delete.svg",
+      "sha256": "6e9c6102fcb119ee91740c17e3c80442693a4dc826763eb5793127292dfd51f9",
+      "bytes": 311
+    },
+    {
+      "path": "assets/icons/constrain/distance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/distance.svg",
+      "sha256": "dcdd7c527bca08e3b0e608e123aecadf2b09e6345b17f5baa56ec9de3c9210ab",
+      "bytes": 616
+    },
+    {
+      "path": "assets/icons/constrain/distance_x.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/distance_x.svg",
+      "sha256": "c3cbd3601ee1d5025d36d1fa41a00982c9af91273c4130a6a1966ae30e5fdca1",
+      "bytes": 408
+    },
+    {
+      "path": "assets/icons/constrain/distance_y.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/distance_y.svg",
+      "sha256": "886ea61552f27d9f0a049f46e16df01081707dd420f091d401e56e1297784a20",
+      "bytes": 408
+    },
+    {
+      "path": "assets/icons/constrain/equal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/equal.svg",
+      "sha256": "25b48321ebbc9af65282b2da47af4dfd120b266298662e2d3fc88628c8339b69",
+      "bytes": 291
+    },
+    {
+      "path": "assets/icons/constrain/equal_distance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/equal_distance.svg",
+      "sha256": "dc2da7cb5e8e81110bb8f7c5d733d64fc824afc9cf51c85b81d1b87a018161df",
+      "bytes": 485
+    },
+    {
+      "path": "assets/icons/constrain/fixed.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/fixed.svg",
+      "sha256": "2f623283a3f0621db58ad22bd0765df960932d964c998e004bd9d85e8f9150ec",
+      "bytes": 587
+    },
+    {
+      "path": "assets/icons/constrain/hide_all.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/hide_all.svg",
+      "sha256": "e89f4ee3e2b8723ffb6d929979c27068981e6c19b1fa66a836ef90e0d0c47d88",
+      "bytes": 294
+    },
+    {
+      "path": "assets/icons/constrain/horizontal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/horizontal.svg",
+      "sha256": "cada480392d8a9f721dff2750eada5f8fcf8d77a52960d13ed9116c5c5f3d89b",
+      "bytes": 192
+    },
+    {
+      "path": "assets/icons/constrain/midpoint.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/midpoint.svg",
+      "sha256": "3c006b138b607f68fc5fea654b9d7bcd2b687222ec884179f9f8b8744ce27621",
+      "bytes": 242
+    },
+    {
+      "path": "assets/icons/constrain/normal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/normal.svg",
+      "sha256": "d1122b1b83862a8fa168e1bb5a8ca1dce2831da749bfc17b777114c1c7d61788",
+      "bytes": 333
+    },
+    {
+      "path": "assets/icons/constrain/parallel.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/parallel.svg",
+      "sha256": "6e37c68e6858c82023ef2df2094f9719064ea5571850d1500c0c020375f08b4b",
+      "bytes": 292
+    },
+    {
+      "path": "assets/icons/constrain/parameters.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/parameters.svg",
+      "sha256": "8afbd2bd0bcc99c3c185b9a431997c43f4ee9d0f48499a2f51b5b80a79edb642",
+      "bytes": 333
+    },
+    {
+      "path": "assets/icons/constrain/perpendicular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/perpendicular.svg",
+      "sha256": "9f6a1dcac286b494487ad7ed17f4d307e39219d1994f6df168b2b56f7372171a",
+      "bytes": 301
+    },
+    {
+      "path": "assets/icons/constrain/point_on_curve.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/point_on_curve.svg",
+      "sha256": "8cc1db7baf91ca17d657cd2a3762a290aa10d380bba65031e1a8d2e2db292e38",
+      "bytes": 249
+    },
+    {
+      "path": "assets/icons/constrain/show.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/show.svg",
+      "sha256": "15b80302906aa0208c654b41413ec2a4acb7835a235629e00ee9184a1f2e9f7e",
+      "bytes": 261
+    },
+    {
+      "path": "assets/icons/constrain/show_all.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/show_all.svg",
+      "sha256": "df02fa5eaebd6ebb87b4f8493d229927dfee8065995e06ffe64cb65079e59275",
+      "bytes": 365
+    },
+    {
+      "path": "assets/icons/constrain/smooth.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/smooth.svg",
+      "sha256": "4e1ca3f735d6d801fe106277a8af8329190b47d2e25476cc6296e2a0dd451940",
+      "bytes": 357
+    },
+    {
+      "path": "assets/icons/constrain/symmetric.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/symmetric.svg",
+      "sha256": "73f9cf5bdf400ddbd0405f92e905005ebf1a4a9c18044a0c0ceec51800d8977e",
+      "bytes": 389
+    },
+    {
+      "path": "assets/icons/constrain/tangent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/tangent.svg",
+      "sha256": "81e7e5e3dc5e6b53cf019bb82260e5a0bea44a503c5f2d9839e10249a9cea1a1",
+      "bytes": 323
+    },
+    {
+      "path": "assets/icons/constrain/vertical.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/constrain/vertical.svg",
+      "sha256": "a36805c257481b757da422e109d2b9dac6dd5c384dae304e0fe499b1b726bf5f",
+      "bytes": 192
+    },
+    {
+      "path": "assets/icons/content_browser.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/content_browser.svg",
+      "sha256": "075963aca34ac2d0f29519ed46b13d83b1a9d4e84be083897dcceaf75d0967bd",
+      "bytes": 953
+    },
+    {
+      "path": "assets/icons/copy.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/copy.svg",
+      "sha256": "467bd1b78a5d78aa2644cdc835b072cd0738d07c0dbedce6450c1419c18510c1",
+      "bytes": 1608
+    },
+    {
+      "path": "assets/icons/copy_clip.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/copy_clip.svg",
+      "sha256": "3dd2ab9a0e3fa0609b2ca5bee46b9db090805c0e7c7fb0f298983888cb5da096",
+      "bytes": 528
+    },
+    {
+      "path": "assets/icons/cui_export.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cui_export.svg",
+      "sha256": "7257cd3779219e9d94ff8fa9bbad2d52d8d1b0da7a4039e0ddeaf9069a4aa35f",
+      "bytes": 1004
+    },
+    {
+      "path": "assets/icons/cui_import.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cui_import.svg",
+      "sha256": "75e3162aa609dad972be7644104a16de293fb98d34bbe03a8531694c492a8ad1",
+      "bytes": 1004
+    },
+    {
+      "path": "assets/icons/cut.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cut.svg",
+      "sha256": "6986d5e529286cee78b131aaf7c4729ac998b0645075b85ef9ce83745b908969",
+      "bytes": 639
+    },
+    {
+      "path": "assets/icons/cylinder3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/cylinder3d.svg",
+      "sha256": "b912b2533925faaf9bb5385c61c6647db314553a303d0a51b5b65338a3ced233",
+      "bytes": 808
+    },
+    {
+      "path": "assets/icons/data_extract.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/data_extract.svg",
+      "sha256": "0d331b560afb727413bda9cb9791db0ea447cb580cf550e092d8b16b229e6472",
+      "bytes": 1015
+    },
+    {
+      "path": "assets/icons/data_link.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/data_link.svg",
+      "sha256": "b743d437e7d4d24e57aeebe103935940a3a535506d2286ae7e1307094b352c89",
+      "bytes": 706
+    },
+    {
+      "path": "assets/icons/ddedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ddedit.svg",
+      "sha256": "3edc294244397b0a8caf7d5abfaf448dd2a6d64dcd26a098a5ff9db9d6f3ff8e",
+      "bytes": 384
+    },
+    {
+      "path": "assets/icons/design_center.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/design_center.svg",
+      "sha256": "2da0803a7a2d8f924b0918db536304ebf7d947f11225c3def1afa8196e27851e",
+      "bytes": 442
+    },
+    {
+      "path": "assets/icons/dim_aligned.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_aligned.svg",
+      "sha256": "95ff69cade62c3fdad8ad057ff04d8d78ca417e3d841140f3a6923a1090d5baa",
+      "bytes": 694
+    },
+    {
+      "path": "assets/icons/dim_angular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_angular.svg",
+      "sha256": "d2c974f41fa1138cf921882adecb68108c57c2ae2d9317d30e99a33d2c7ddaea",
+      "bytes": 674
+    },
+    {
+      "path": "assets/icons/dim_baseline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_baseline.svg",
+      "sha256": "2ef87328448abb03f9379a2721fa37bd77c73d8dd48c47c9d9b870b6a57c5baf",
+      "bytes": 926
+    },
+    {
+      "path": "assets/icons/dim_break.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_break.svg",
+      "sha256": "7ac8036203c39ca17fb21ec98b109fb122a68527cef480a520ffe1cf88712f3e",
+      "bytes": 921
+    },
+    {
+      "path": "assets/icons/dim_continue.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_continue.svg",
+      "sha256": "d61102941b3ae51f9b39138e4f128c028da8c762a554ac86f494cfd47f0bc8a6",
+      "bytes": 927
+    },
+    {
+      "path": "assets/icons/dim_diameter.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_diameter.svg",
+      "sha256": "fa4682e418c15237507056381241717e628bb62f3878c21d664f68d27fd47584",
+      "bytes": 509
+    },
+    {
+      "path": "assets/icons/dim_edit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_edit.svg",
+      "sha256": "72f993f0626d540d6826066c0fb9b74e463ec7cbe4fe8b752ecad1632dbecac1",
+      "bytes": 929
+    },
+    {
+      "path": "assets/icons/dim_jog.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_jog.svg",
+      "sha256": "ea32d18edab11c719c98ce0bd9cc5e97c9246b84dbd95e24a0668082a100a552",
+      "bytes": 926
+    },
+    {
+      "path": "assets/icons/dim_linear.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_linear.svg",
+      "sha256": "61c06473fb231546b139e64c892159d740c4d21dc6bc7a8a3989ebe1b8de7daf",
+      "bytes": 786
+    },
+    {
+      "path": "assets/icons/dim_ordinate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_ordinate.svg",
+      "sha256": "6aa613e2bfe6075e3c7e8d79363eea730b6894ef35ffea22dfbe16b9628e2ffd",
+      "bytes": 714
+    },
+    {
+      "path": "assets/icons/dim_radius.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_radius.svg",
+      "sha256": "95cc8aea425820e8cb874d7a7aeddb0ae8a7d993db9f135df3024767d91908b6",
+      "bytes": 707
+    },
+    {
+      "path": "assets/icons/dim_space.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_space.svg",
+      "sha256": "fdc46e6877c994abe7ba9b3649bfab80df917fc15f895c1b2429a2b3c8883940",
+      "bytes": 1061
+    },
+    {
+      "path": "assets/icons/dim_style.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_style.svg",
+      "sha256": "f920654356d3720614f8728ac1ee879ed800d547f0ca47f2d720629319241bec",
+      "bytes": 930
+    },
+    {
+      "path": "assets/icons/dim_tedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/dim_tedit.svg",
+      "sha256": "8e20a8fdf0ecd445240af526da5608045cb695e04bfc5663b75e1cf23e1a5431",
+      "bytes": 930
+    },
+    {
+      "path": "assets/icons/distance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/distance.svg",
+      "sha256": "aad1b855ecbd045d498f173a09c96d5d47b633f4e829e84443e2706895506e9b",
+      "bytes": 16907
+    },
+    {
+      "path": "assets/icons/divide.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/divide.svg",
+      "sha256": "d21d4aa300be4dfe9ebf116b31195bdaff898ba5f93895e9bedbed458a818a45",
+      "bytes": 293
+    },
+    {
+      "path": "assets/icons/donate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/donate.svg",
+      "sha256": "594fdfc66805cb04c72e1a022e1498c2ad7f97aeabf4d42d4990e1c78d0e8c0f",
+      "bytes": 216
+    },
+    {
+      "path": "assets/icons/donut.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/donut.svg",
+      "sha256": "2657582093113a5773e9153ecdedcc04176fe59e8e53da491ae1a76a14ccf436",
+      "bytes": 292
+    },
+    {
+      "path": "assets/icons/edit_aliases.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/edit_aliases.svg",
+      "sha256": "661c711b8611134ab64d7e5158fadafa3201a3c96c0db7956a391c3142e8788b",
+      "bytes": 673
+    },
+    {
+      "path": "assets/icons/edit_block.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/edit_block.svg",
+      "sha256": "f02452778085e90bcb4342ef2fb51a14c283e7181f570c439af36baadf9e4655",
+      "bytes": 694
+    },
+    {
+      "path": "assets/icons/ellipse.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ellipse.svg",
+      "sha256": "c455c06b377d2d780734a88295cb2ac990fba5e166e6eab8d96c44e31d03a91e",
+      "bytes": 281
+    },
+    {
+      "path": "assets/icons/ellipse/ellipse_arc.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ellipse/ellipse_arc.svg",
+      "sha256": "3e7d93516637634e843918e204ddb2bca536453abe8703b1688a9ba1693d49ec",
+      "bytes": 1833
+    },
+    {
+      "path": "assets/icons/ellipse/ellipse_axis.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ellipse/ellipse_axis.svg",
+      "sha256": "7a864fdc15fe581a0310193e8f1576c51eb04fe83faacf86ab9c2898b80bffa2",
+      "bytes": 713
+    },
+    {
+      "path": "assets/icons/ellipse/ellipse_ctr.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ellipse/ellipse_ctr.svg",
+      "sha256": "15f1a04b4ff374f3de88b65aeb3042f0e395bea8d69f095f3329b11ea8160154",
+      "bytes": 503
+    },
+    {
+      "path": "assets/icons/erase.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/erase.svg",
+      "sha256": "b9d05522909f63041fe7497c758b800ad13448fdf34f63fce48d6c8cf6416ef0",
+      "bytes": 1655
+    },
+    {
+      "path": "assets/icons/explode.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/explode.svg",
+      "sha256": "aaf1c1ac089f99ef94bcee971a4a5328c20899785e37e22760922e52f995cd22",
+      "bytes": 2301
+    },
+    {
+      "path": "assets/icons/extend.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/extend.svg",
+      "sha256": "9e577f07ea96f682b3eaead1d7622a672643d43f1d42e52f11afe942a9bbdee5",
+      "bytes": 2288
+    },
+    {
+      "path": "assets/icons/extrude.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/extrude.svg",
+      "sha256": "d793d2a341d1a3bac70d3f815add375dc6eda79c5c8bf1a3824aedb1e17194f3",
+      "bytes": 332
+    },
+    {
+      "path": "assets/icons/file_tabs.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/file_tabs.svg",
+      "sha256": "f7179225e1f2d2ee0c3dc315e079d06d6bf90b3f47a989cdec1347feaf22b810",
+      "bytes": 518
+    },
+    {
+      "path": "assets/icons/fillet.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/fillet.svg",
+      "sha256": "b79afe493005db4e1578081aae16252f099b28b3d91626041acda8605f577d46",
+      "bytes": 2332
+    },
+    {
+      "path": "assets/icons/find.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/find.svg",
+      "sha256": "b0c95232dc69e26db7e8866e852f414906251f1c0e784981c387e1cc9af57e5d",
+      "bytes": 371
+    },
+    {
+      "path": "assets/icons/find_nonpurgeable.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/find_nonpurgeable.svg",
+      "sha256": "6bc7f4bccbd764c39c3f548f212323ca720027ca3ea99df3b77655862c476f71",
+      "bytes": 678
+    },
+    {
+      "path": "assets/icons/gradient/gradient_curved.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_curved.svg",
+      "sha256": "5cf913aa70a24181c5cf1ba691e46f7c9cd025ebf4c76fd7c2f99a2e2b3bde53",
+      "bytes": 3905
+    },
+    {
+      "path": "assets/icons/gradient/gradient_curved_inverted.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_curved_inverted.svg",
+      "sha256": "decfb11b6e0a71dbb9b2e8f80a8df213c6a41c24b26ea5818ba972e197794b9b",
+      "bytes": 4527
+    },
+    {
+      "path": "assets/icons/gradient/gradient_cylindrical.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_cylindrical.svg",
+      "sha256": "397d82a0f2ce7f97fe34251badcee1510d7756e3f6a1a0ef7f379e3a5557b600",
+      "bytes": 2709
+    },
+    {
+      "path": "assets/icons/gradient/gradient_cylindrical_inverted.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_cylindrical_inverted.svg",
+      "sha256": "721a37f299cc1c0a5461d2a8a211a2562da9a0351b2ff853465fa2aed16886f0",
+      "bytes": 2709
+    },
+    {
+      "path": "assets/icons/gradient/gradient_hemispherical.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_hemispherical.svg",
+      "sha256": "4bb3c31ee7641d76c03b9a0353b3e353bfa12cce9235e9df786ef685ec192fed",
+      "bytes": 2505
+    },
+    {
+      "path": "assets/icons/gradient/gradient_hemispherical_inverted.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_hemispherical_inverted.svg",
+      "sha256": "fd9ca78e2b7658f0c94e41bb34b252553990653faac673d72e400db714999a24",
+      "bytes": 2802
+    },
+    {
+      "path": "assets/icons/gradient/gradient_linear.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_linear.svg",
+      "sha256": "c0ece968b860748999b4f6769e3dbcb127574e53056162695ef1b86a6f44249e",
+      "bytes": 2483
+    },
+    {
+      "path": "assets/icons/gradient/gradient_spherical.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_spherical.svg",
+      "sha256": "e04fa1d713764110d4e30eea6ab1314ce4273179f0ae94c682692c84b71553e9",
+      "bytes": 2510
+    },
+    {
+      "path": "assets/icons/gradient/gradient_spherical_inverted.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/gradient/gradient_spherical_inverted.svg",
+      "sha256": "e541d013817accb81bd3aca733130c6f070b33da4d5d1355a5335aebb19abe5b",
+      "bytes": 2519
+    },
+    {
+      "path": "assets/icons/graphic_attributes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/graphic_attributes.svg",
+      "sha256": "72a35095bc35555deac8240ad11e6e85273e12a6d506e16fcbea521b1ad040cc",
+      "bytes": 445
+    },
+    {
+      "path": "assets/icons/group.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/group.svg",
+      "sha256": "0a837bf89e80b28d88b61a71d47ad0845e64814dac85bd828b9d5dffc91785a9",
+      "bytes": 639
+    },
+    {
+      "path": "assets/icons/hatch/hatch_boundary.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_boundary.svg",
+      "sha256": "9ad21afa2db207b5c3d9e0fc693a2fd66b7f438b48ab02b088f9f584a4f15090",
+      "bytes": 538
+    },
+    {
+      "path": "assets/icons/hatch/hatch_cross.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_cross.svg",
+      "sha256": "5842e9d155691cb9bcd9dec657d438d651ad0d40623ec175a0471adeabb0a53a",
+      "bytes": 1075
+    },
+    {
+      "path": "assets/icons/hatch/hatch_gradient.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_gradient.svg",
+      "sha256": "8cfe61864ecb08b728dfe57907bd54ddf49a378b58b9493705b4eff1d7262443",
+      "bytes": 2393
+    },
+    {
+      "path": "assets/icons/hatch/hatch_lines.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_lines.svg",
+      "sha256": "43569d2e8645f01af2fc50a900bd5cbd294c9b49504f1002be4c9c5e47763933",
+      "bytes": 2497
+    },
+    {
+      "path": "assets/icons/hatch/hatch_none.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_none.svg",
+      "sha256": "6f1ee6e29c05af690ccf219767d2b84ece7cc037cb02303f13c4cfd7b90676c5",
+      "bytes": 1464
+    },
+    {
+      "path": "assets/icons/hatch/hatch_solid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hatch/hatch_solid.svg",
+      "sha256": "c7460a1c9e10c3aa58c830107b755fc5afa631d946b50e515ceccc48930ab296",
+      "bytes": 1283
+    },
+    {
+      "path": "assets/icons/helix.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/helix.svg",
+      "sha256": "a6ebaff4e4339afef7987eb2f339ce20351b013198cc3971cd8da0b82b880adf",
+      "bytes": 365
+    },
+    {
+      "path": "assets/icons/hidden.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/hidden.svg",
+      "sha256": "e1c7d97fb6322000c7937f08c6d819b07b09a9a739ecb04147ff148e79e83a80",
+      "bytes": 691
+    },
+    {
+      "path": "assets/icons/import_obj.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/import_obj.svg",
+      "sha256": "61a71c4e41f865565aafef7f6836c0ac54d9cf4271ddcc9cd65462bca1ff86cd",
+      "bytes": 375
+    },
+    {
+      "path": "assets/icons/intersect.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/intersect.svg",
+      "sha256": "ffb9d01f336f33fba14823187a56a2db59043ae8dec2ec8bdbd875029f7e4545",
+      "bytes": 452
+    },
+    {
+      "path": "assets/icons/landxml.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/landxml.svg",
+      "sha256": "aadb564ff6b713446c56cc883224137cd44ef2706d30f8148ff019a5daaec4e0",
+      "bytes": 447
+    },
+    {
+      "path": "assets/icons/layers/layfrz.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layfrz.svg",
+      "sha256": "aedba700adea056ebc7773e4fbe30547081194276c089e7eaae1107ab6ca0064",
+      "bytes": 2025
+    },
+    {
+      "path": "assets/icons/layers/layiso.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layiso.svg",
+      "sha256": "65ee75daef392b297606b46008ff86f07cb18792d287580ce4857b8e3930c70f",
+      "bytes": 854
+    },
+    {
+      "path": "assets/icons/layers/laylck.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/laylck.svg",
+      "sha256": "5e52ff241121aa810969ba965644cf5729dc8545a3d9d8cd3ffab87d49419324",
+      "bytes": 1628
+    },
+    {
+      "path": "assets/icons/layers/laymatch.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/laymatch.svg",
+      "sha256": "955213f1484331e420a76299fa1e9d7336ac166ec2a76488fa592e95d3a8b3fc",
+      "bytes": 2593
+    },
+    {
+      "path": "assets/icons/layers/laymcur.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/laymcur.svg",
+      "sha256": "c3ef5fbda24c36558dd9204c1c28e37ad4af28c0f77d24c14149748301ac68d3",
+      "bytes": 2356
+    },
+    {
+      "path": "assets/icons/layers/layoff.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layoff.svg",
+      "sha256": "fe70b78c488c5bca76173011be48629c775191b1747c33a4d779eb5db8671401",
+      "bytes": 2847
+    },
+    {
+      "path": "assets/icons/layers/layon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layon.svg",
+      "sha256": "15f907f0c644d60066d3367de89fccd9c6b440362a46e8ce696b48efc6568a7a",
+      "bytes": 3870
+    },
+    {
+      "path": "assets/icons/layers/laythw.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/laythw.svg",
+      "sha256": "573a4744278c2d0227bd1ec96d487f89c31678cdaa0a686506d4d588ac400dd9",
+      "bytes": 3212
+    },
+    {
+      "path": "assets/icons/layers/layulk.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layulk.svg",
+      "sha256": "8699ad90f5a38bc2353ece346c1d7908fabc085e6810e90d14881fa66b799cb2",
+      "bytes": 1725
+    },
+    {
+      "path": "assets/icons/layers/layuniso.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layuniso.svg",
+      "sha256": "4d881f175cdfe3aed53f627828350f62eb887795c2f2894a292fa8331027c98a",
+      "bytes": 671
+    },
+    {
+      "path": "assets/icons/layers/layvpfrz.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layvpfrz.svg",
+      "sha256": "33dbc9eea43801c5005575b53a8765f25b4539662b1635e205b9e4b2df144b22",
+      "bytes": 463
+    },
+    {
+      "path": "assets/icons/layers/layvpthw.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/layvpthw.svg",
+      "sha256": "204c3492293506e7e08dd3b1124a432d8afe804fcf5473654e3f75586f203ecc",
+      "bytes": 563
+    },
+    {
+      "path": "assets/icons/layers/panel.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layers/panel.svg",
+      "sha256": "17f2738e6b785adc7359371f29b94a730b1099f4e082638d8ced2ca00c44535c",
+      "bytes": 519
+    },
+    {
+      "path": "assets/icons/layout_tabs.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/layout_tabs.svg",
+      "sha256": "801927b3a109a43a14213694c5d65045437b5b379b672af7f2ca77dbf6ef4076",
+      "bytes": 464
+    },
+    {
+      "path": "assets/icons/leader.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/leader.svg",
+      "sha256": "43a5536881c102ba4dd7a8396d69c0b5cf85dcedefa6e40cd5bde5d74ceba99f",
+      "bytes": 451
+    },
+    {
+      "path": "assets/icons/line.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/line.svg",
+      "sha256": "c9064ea78fbca0ac07c4e1f32d145defc31d139b8382870c208678798ccb19d1",
+      "bytes": 366
+    },
+    {
+      "path": "assets/icons/loft.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/loft.svg",
+      "sha256": "fb6bbee774907f87bd7ca5bc16669ee6611b266fdeca610cb15f1c7b73bd3f9e",
+      "bytes": 275
+    },
+    {
+      "path": "assets/icons/match_prop.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/match_prop.svg",
+      "sha256": "66a5cb98da32839539380831de7ba4f9203d0fab19513732c0106efb695e50cb",
+      "bytes": 807
+    },
+    {
+      "path": "assets/icons/measure.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/measure.svg",
+      "sha256": "0003bcc1fef0ba70032b928ee176784a288cb9d90f99eec46ff64e6adf66294d",
+      "bytes": 419
+    },
+    {
+      "path": "assets/icons/mirror.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mirror.svg",
+      "sha256": "5d939383c8f4b0b36648a88701096cdf38fb8f0d0de0deed21897f747601b55b",
+      "bytes": 1714
+    },
+    {
+      "path": "assets/icons/mleader.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mleader.svg",
+      "sha256": "ef00ef8063d81412754b0a26925681e09917431af58474149e801309233b6d11",
+      "bytes": 589
+    },
+    {
+      "path": "assets/icons/mleader_add.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mleader_add.svg",
+      "sha256": "69a74c2cb5f22efab5c9f96f9782f6b58314156ae060666312f0a3d0cb42d22d",
+      "bytes": 879
+    },
+    {
+      "path": "assets/icons/mleader_align.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mleader_align.svg",
+      "sha256": "a2d6461f4df40b08f2f720110e4a1f3f954efc0e47743832c9b067ed329871f2",
+      "bytes": 871
+    },
+    {
+      "path": "assets/icons/mleader_collect.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mleader_collect.svg",
+      "sha256": "d21bfac726eb211819634af730e46c1c2fa07d84ba9d879d1dd3092ae2d734b5",
+      "bytes": 748
+    },
+    {
+      "path": "assets/icons/mleader_remove.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mleader_remove.svg",
+      "sha256": "e608d62c0ce7982b50bf795f9b7ee106f0fdfa467106b6f84597ba85ae4362a0",
+      "bytes": 739
+    },
+    {
+      "path": "assets/icons/model/box.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/box.svg",
+      "sha256": "ee3295b50f078fb85f49faf072d744324bc4a0493ba8157437a151aff907c936",
+      "bytes": 410
+    },
+    {
+      "path": "assets/icons/model/chamfer.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/chamfer.svg",
+      "sha256": "cb500ba63095e1e30eae88a019a21e4128b459b369694ab68e22b80fd5c0e011",
+      "bytes": 477
+    },
+    {
+      "path": "assets/icons/model/cone.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/cone.svg",
+      "sha256": "9231c0da0387f8a7fd76bf11d2bc43c1e1364ffadd41457352db1ba1e9b128bb",
+      "bytes": 577
+    },
+    {
+      "path": "assets/icons/model/cylinder.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/cylinder.svg",
+      "sha256": "ab132a68678f35f5050f3db59a09d9c71523df6ad9049439ed37a4df9445a763",
+      "bytes": 542
+    },
+    {
+      "path": "assets/icons/model/extrude.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/extrude.svg",
+      "sha256": "d8cb48d6a95eedc84f69169e7b86def1453bab5f22249a0520a9af2f677b1a56",
+      "bytes": 564
+    },
+    {
+      "path": "assets/icons/model/fillet.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/fillet.svg",
+      "sha256": "f05feae9afb04ae00cf410f338082e142b3264efcd831e13436aff436a400f64",
+      "bytes": 512
+    },
+    {
+      "path": "assets/icons/model/intersect.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/intersect.svg",
+      "sha256": "2e10c415e95d162d3f88ff3f8bf7bc906a29fc671156fb15b992ed196f901a66",
+      "bytes": 2018
+    },
+    {
+      "path": "assets/icons/model/loft.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/loft.svg",
+      "sha256": "27736aea12e8f99058cc159dddedf5686e7588381e86a9448aaf54cd5cfca2cf",
+      "bytes": 764
+    },
+    {
+      "path": "assets/icons/model/polysolid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/polysolid.svg",
+      "sha256": "4c5e08ed0d650ddcf0323b1ccc565dbe1f8c3f32a1e58b1a9b146bff1dba177e",
+      "bytes": 507
+    },
+    {
+      "path": "assets/icons/model/presspull.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/presspull.svg",
+      "sha256": "b7986a9e47c56a52a3fe22c037824e3a3bba1af356bf9d38fdb581d34ddc5b3b",
+      "bytes": 627
+    },
+    {
+      "path": "assets/icons/model/pyramid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/pyramid.svg",
+      "sha256": "25b68881c7704a8f12f158cba8f69b60a99cfa54cd503456c1b0ae62eec25731",
+      "bytes": 381
+    },
+    {
+      "path": "assets/icons/model/revolve.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/revolve.svg",
+      "sha256": "e7727c33041cda62b8be527071b08fe1274a9c8e5675baad6dbb329092764a45",
+      "bytes": 788
+    },
+    {
+      "path": "assets/icons/model/shell.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/shell.svg",
+      "sha256": "c9a79bfd06a0d0bc5f81883b8a35fb86b0beba92ed4e5a26042cb5f65a68c7be",
+      "bytes": 567
+    },
+    {
+      "path": "assets/icons/model/sphere.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/sphere.svg",
+      "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
+      "bytes": 651
+    },
+    {
+      "path": "assets/icons/model/subtract.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/subtract.svg",
+      "sha256": "593b081925422887260de38e7a4a5e8fff2ab7b5a201cc96bd4e656a8f8c6a27",
+      "bytes": 638
+    },
+    {
+      "path": "assets/icons/model/sweep.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/sweep.svg",
+      "sha256": "56fc0133938e7478a37dd4b4bca9204a60809df8057d932a2f492c15d3abb892",
+      "bytes": 805
+    },
+    {
+      "path": "assets/icons/model/torus.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/torus.svg",
+      "sha256": "4e12bf879a9c5fee3b879cc2a927420756562f60e9df7c84ff6f5a570ef0a978",
+      "bytes": 690
+    },
+    {
+      "path": "assets/icons/model/union.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/union.svg",
+      "sha256": "b70738921be11d4024a324ce0b95f897d47d3d287557dfc08725262492b4852b",
+      "bytes": 600
+    },
+    {
+      "path": "assets/icons/model/wedge.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/model/wedge.svg",
+      "sha256": "63d867ceb409d7de63b5d387f31509f721936db7412b1515403ca2232c964738",
+      "bytes": 335
+    },
+    {
+      "path": "assets/icons/modify_align.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_align.svg",
+      "sha256": "91757d7c592e3da2fb7b5ef0c6de00152254c9b58494336279c9b679830bd410",
+      "bytes": 254
+    },
+    {
+      "path": "assets/icons/modify_break.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_break.svg",
+      "sha256": "ce0ecd6064cec4a3cb955d1533d64c873ddd932c793bf07e4527d5dcdbc97862",
+      "bytes": 237
+    },
+    {
+      "path": "assets/icons/modify_breakatpoint.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_breakatpoint.svg",
+      "sha256": "13bad1874714bc4e888055727e6277bf4831b69b37d506c7b7daac9ae65e715f",
+      "bytes": 239
+    },
+    {
+      "path": "assets/icons/modify_draworder.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_draworder.svg",
+      "sha256": "3336140637a8dbfba0354928d2ac070aa4d54efcda59e392663657a6c11d90e6",
+      "bytes": 253
+    },
+    {
+      "path": "assets/icons/modify_hatchedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_hatchedit.svg",
+      "sha256": "c2f6cb28f30d08ac166ef5c947e27c2b03de8ffffd7402eaecab907631d94211",
+      "bytes": 279
+    },
+    {
+      "path": "assets/icons/modify_join.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_join.svg",
+      "sha256": "e7a0873ede27702d11650e0001a99f7fd405e6bc3ca05dfe5d0217c4e9ae22d4",
+      "bytes": 241
+    },
+    {
+      "path": "assets/icons/modify_lengthen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_lengthen.svg",
+      "sha256": "c2acb3df645e96ed0312cba426d02828df57e5be4147da519d9f5eaafe561af2",
+      "bytes": 256
+    },
+    {
+      "path": "assets/icons/modify_ncopy.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_ncopy.svg",
+      "sha256": "b421bea8216053110fb3231b9f44d2a9f5201ca013813ba5f6ab9d27a2b972ee",
+      "bytes": 243
+    },
+    {
+      "path": "assets/icons/modify_overkill.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_overkill.svg",
+      "sha256": "161feb7c675b4542996ea59cd5ed239cc8df31e2b61fff6502c8abc3666fa27c",
+      "bytes": 246
+    },
+    {
+      "path": "assets/icons/modify_pedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_pedit.svg",
+      "sha256": "818029a7f23eb200d5c62fddcc6f418496fdaa2fede318a74d2cf196a201073d",
+      "bytes": 240
+    },
+    {
+      "path": "assets/icons/modify_reverse.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_reverse.svg",
+      "sha256": "aaa2e541eede48918fafaa58974e21e7bc2b04ba1ef1831b5460baf60546dee2",
+      "bytes": 263
+    },
+    {
+      "path": "assets/icons/modify_setbylayer.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_setbylayer.svg",
+      "sha256": "37ba432fc5da799da52006210dca00d184972515880ab3bcf74d23744f69879b",
+      "bytes": 263
+    },
+    {
+      "path": "assets/icons/modify_splinedit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/modify_splinedit.svg",
+      "sha256": "c36461acb7b71d3db12ca622e3ad99647c9c1d9c4a5792f9dbf00bec383eca30",
+      "bytes": 245
+    },
+    {
+      "path": "assets/icons/move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/move.svg",
+      "sha256": "7099074b059aaf296b43a3f47af0373934d3066ce7cfa2c89330a8a38a00052a",
+      "bytes": 4474
+    },
+    {
+      "path": "assets/icons/mt_align_center.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_center.svg",
+      "sha256": "d739874b2c02e1e53deda2a51ebc48ec207dae2344c436d44fb8bf026cdb53f5",
+      "bytes": 322
+    },
+    {
+      "path": "assets/icons/mt_align_justify.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_justify.svg",
+      "sha256": "37104eebaf99605bc1776596656a898e3e0eaecc64469f98e841942919e6ab9a",
+      "bytes": 322
+    },
+    {
+      "path": "assets/icons/mt_align_left.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_left.svg",
+      "sha256": "78ae1db77f5a1167a2f91e30dd7a3ead87c6cfa54465078b59435363362e62a9",
+      "bytes": 322
+    },
+    {
+      "path": "assets/icons/mt_align_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_right.svg",
+      "sha256": "41c74faeb294438e044a4f5ac9235698df79fcc27b70c351be6b4439046497d7",
+      "bytes": 324
+    },
+    {
+      "path": "assets/icons/mt_bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_bold.svg",
+      "sha256": "62b387ead1ecc95aff28e938be57ceda80c94cb139dd6bc2f689db9a950b0996",
+      "bytes": 185
+    },
+    {
+      "path": "assets/icons/mt_cancel.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_cancel.svg",
+      "sha256": "5b1d8c73f92d93775db70da7d726082f523d4d6f19185a094f72e0e2f58df536",
+      "bytes": 242
+    },
+    {
+      "path": "assets/icons/mt_italic.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_italic.svg",
+      "sha256": "ff7874b611b1b311d7a73e5ebb42f3448697419f41f0108ab8b9e06da80926b7",
+      "bytes": 282
+    },
+    {
+      "path": "assets/icons/mt_lower.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_lower.svg",
+      "sha256": "bac40e19d0eda690ac673e13258357f6effc0573f0c103599f289bf8b7c605b6",
+      "bytes": 353
+    },
+    {
+      "path": "assets/icons/mt_ok.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_ok.svg",
+      "sha256": "90461470c7e9567bc3c882d1ce41244adf23f60817db48ba22fad59ec2abfc2a",
+      "bytes": 219
+    },
+    {
+      "path": "assets/icons/mt_overline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_overline.svg",
+      "sha256": "dabef71fc659f46d215870c01957e88dfd63ed4de87d358ac50e024dddf3f2f7",
+      "bytes": 265
+    },
+    {
+      "path": "assets/icons/mt_strike.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_strike.svg",
+      "sha256": "e2a66ade81b36456cd9a1db4ffab5db4fadeebd5d7a09092826a6bd337d860c2",
+      "bytes": 266
+    },
+    {
+      "path": "assets/icons/mt_underline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_underline.svg",
+      "sha256": "387b0ac85f89f12842685d49aa9fd7ad96b6461937ba92160ebb1148fa11dbb8",
+      "bytes": 267
+    },
+    {
+      "path": "assets/icons/mt_upper.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_upper.svg",
+      "sha256": "341ef5563f4ef483412024d7aa38c028fb64bf4f2f29bceda4705acad9bd5b69",
+      "bytes": 282
+    },
+    {
+      "path": "assets/icons/mtext.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mtext.svg",
+      "sha256": "f834e381b033823c17a5452aec01b94005b1fc5ea4a22889f84f5a8db163d575",
+      "bytes": 654
+    },
+    {
+      "path": "assets/icons/multipoint.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/multipoint.svg",
+      "sha256": "b769d360a069d16644bbc3f8bb77d73b4ab30cf11475d092632e8fd881ee13bd",
+      "bytes": 275
+    },
+    {
+      "path": "assets/icons/mview_block.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mview_block.svg",
+      "sha256": "7342f83a509cc2d7bcdcc7872c6ba3c648bb48af7828ecda11cb8fff009fb385",
+      "bytes": 535
+    },
+    {
+      "path": "assets/icons/offset.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/offset.svg",
+      "sha256": "26466e98ed21d8ac616750618f9e9eb5ba33ad86c02ac8ee764037053d52eeb2",
+      "bytes": 1621
+    },
+    {
+      "path": "assets/icons/options_tool.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/options_tool.svg",
+      "sha256": "09338d4b4850203e5b24817298f74d9cce572fd30a21019d2186a1a2a3d3ba1e",
+      "bytes": 1797
+    },
+    {
+      "path": "assets/icons/orbit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/orbit.svg",
+      "sha256": "ff36868ae4514bf9e9d3a4b6de47038971e13678b9a8a7e7a4cf245730ea64eb",
+      "bytes": 452
+    },
+    {
+      "path": "assets/icons/ortho.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ortho.svg",
+      "sha256": "b4e5cd8180adaaab6dc9b4dbd8c9dffadc31d774c14194d920e4b0f66067acd0",
+      "bytes": 560
+    },
+    {
+      "path": "assets/icons/osnap/apparent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/apparent.svg",
+      "sha256": "a6989eb3cde9abcc7dab7065b4bd00bd33bc2ed9fd1075a519d9d534af99ba21",
+      "bytes": 266
+    },
+    {
+      "path": "assets/icons/osnap/center.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/center.svg",
+      "sha256": "e938452ab906404350f4469cb433524020068551e7a6ca2a687f945b7375b6c4",
+      "bytes": 193
+    },
+    {
+      "path": "assets/icons/osnap/endpoint.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/endpoint.svg",
+      "sha256": "63275b84fd5413d023e0f0037476531e65659a4f14a4fce1de4910f7ae00adea",
+      "bytes": 204
+    },
+    {
+      "path": "assets/icons/osnap/extension.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/extension.svg",
+      "sha256": "086f6cd705a7d1f25e39fef503b6dbb2b240202bb7a125b3f368d395cd2fd698",
+      "bytes": 204
+    },
+    {
+      "path": "assets/icons/osnap/geometric_center.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/geometric_center.svg",
+      "sha256": "bc62d660404363d1eca605b8e3b4805fb6005a12cb44e310ccef8a56afb40169",
+      "bytes": 263
+    },
+    {
+      "path": "assets/icons/osnap/grid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/grid.svg",
+      "sha256": "f9fc743450d2672aa427fe3a6d21ae78a6e4c689dab9f65f4e5f3e7028d73760",
+      "bytes": 211
+    },
+    {
+      "path": "assets/icons/osnap/insertion.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/insertion.svg",
+      "sha256": "4487fae629e6324a90cf91dfd1eaa84dfd32d3dcf963085aa9a49c9654cd4cc4",
+      "bytes": 246
+    },
+    {
+      "path": "assets/icons/osnap/intersection.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/intersection.svg",
+      "sha256": "df77844ad06aed80ef8428fa8f2939758710d77e58f33c27f635d54250e2fd3b",
+      "bytes": 197
+    },
+    {
+      "path": "assets/icons/osnap/midpoint.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/midpoint.svg",
+      "sha256": "4f1452079ec2581be9f10069033c47950382ff102de33d31b8b7486c3b081855",
+      "bytes": 191
+    },
+    {
+      "path": "assets/icons/osnap/mtp.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/mtp.svg",
+      "sha256": "4172f64f1bd31e9b54ca3a39a8439f933012555e8d0e2c39af890e8c3c5b26fd",
+      "bytes": 330
+    },
+    {
+      "path": "assets/icons/osnap/nearest.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/nearest.svg",
+      "sha256": "1ae2cd82723c6c273d0adcbefc1f8138d0235d74d30a182fcf8145a8b5ea8e4a",
+      "bytes": 194
+    },
+    {
+      "path": "assets/icons/osnap/node.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/node.svg",
+      "sha256": "ef8476c735e24bc82db4fccb5836e9666614a7b7155732b081c41d48ffa957f3",
+      "bytes": 230
+    },
+    {
+      "path": "assets/icons/osnap/parallel.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/parallel.svg",
+      "sha256": "f13453d5cc991ed793241a876997e5429637ba6232e91381c9aecc16440c80ee",
+      "bytes": 198
+    },
+    {
+      "path": "assets/icons/osnap/perpendicular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/perpendicular.svg",
+      "sha256": "45067cea36c36cf5c7e416ca362b587f103c087ded2622778599c8e156da0b91",
+      "bytes": 211
+    },
+    {
+      "path": "assets/icons/osnap/quadrant.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/quadrant.svg",
+      "sha256": "04eff441a20cfda26dfa206d962898f29d222bc22c9259e14eed05a9a3dfb50d",
+      "bytes": 201
+    },
+    {
+      "path": "assets/icons/osnap/tangent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/osnap/tangent.svg",
+      "sha256": "08182cf7331a199d980fb51f65ffd3fc4c14b4f968e4bd25431b81c9006d3d76",
+      "bytes": 215
+    },
+    {
+      "path": "assets/icons/overkill.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/overkill.svg",
+      "sha256": "0d63c6db833254600a46e9440afca1d274a36f703decb2a07cc019c38466d4f8",
+      "bytes": 512
+    },
+    {
+      "path": "assets/icons/pagesetup.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/pagesetup.svg",
+      "sha256": "f6a6f9b6fc374d1a1119c79f69956a11f703366bcf1fe851935ad1463509b92e",
+      "bytes": 372
+    },
+    {
+      "path": "assets/icons/pan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/pan.svg",
+      "sha256": "bb3d60c8f01594faa577c59634395b49aa1c2c3ee737fc86edc6139345faf256",
+      "bytes": 690
+    },
+    {
+      "path": "assets/icons/paste.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/paste.svg",
+      "sha256": "6d75e3ce5b8e6cf907676b748ee54728fd973b0125a77a67a734c485b6cd1f93",
+      "bytes": 670
+    },
+    {
+      "path": "assets/icons/pc_attach.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/pc_attach.svg",
+      "sha256": "59785dc93d0a4cd46a73de90f4c374add55e554bb561ee395a0a959bae10b97d",
+      "bytes": 916
+    },
+    {
+      "path": "assets/icons/persp.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/persp.svg",
+      "sha256": "c5b13e79942e3560c8c890ddde23ed64e1802f9cc4bdafe5d81fc9a29f6da898",
+      "bytes": 636
+    },
+    {
+      "path": "assets/icons/plot.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/plot.svg",
+      "sha256": "4df6f225509e244ad9c7a34e39298b16d7973d2b849bc4c962eb6049ea3d1c93",
+      "bytes": 519
+    },
+    {
+      "path": "assets/icons/point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/point.svg",
+      "sha256": "ad10eac89204d755a73654a64c896a28d675b06fd2d21b26613ce3b86b3663e0",
+      "bytes": 713
+    },
+    {
+      "path": "assets/icons/polyline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/polyline.svg",
+      "sha256": "90f934fbfc262abcf51b82d3a8ea91342c7beb06c462a6f3949bbf50353b70f6",
+      "bytes": 423
+    },
+    {
+      "path": "assets/icons/polysolid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/polysolid.svg",
+      "sha256": "55f9139981da6d55dbd8d5d19b823d18a02a0e1a2baa0bf833b0a196bc495da4",
+      "bytes": 303
+    },
+    {
+      "path": "assets/icons/presspull.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/presspull.svg",
+      "sha256": "f4e8288dd8c4d635fa381b6ef5ede39831e8e44e6aa639481cde85a964cdfe29",
+      "bytes": 352
+    },
+    {
+      "path": "assets/icons/properties.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/properties.svg",
+      "sha256": "623f8775aa259a52691842f9cc530e1a26cbe0657d69756acd28e8b1723e82b5",
+      "bytes": 708
+    },
+    {
+      "path": "assets/icons/purge.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/purge.svg",
+      "sha256": "a8dc326bd3a0715ad0bed8f1ece89e8333f2ea306e013dc2ff3d3b693fce199d",
+      "bytes": 546
+    },
+    {
+      "path": "assets/icons/pyramid3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/pyramid3d.svg",
+      "sha256": "e92e8e23e9ef8f132d20b7a6815cb542b8d788da1bceee5c57561400b9abc63f",
+      "bytes": 280
+    },
+    {
+      "path": "assets/icons/qdim.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/qdim.svg",
+      "sha256": "196bec008f1dd07b35c84df18ab0dfc59346117fc7a27c3dbbd174f7e24ea16b",
+      "bytes": 855
+    },
+    {
+      "path": "assets/icons/ray.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ray.svg",
+      "sha256": "e981c2669055fec7c97ad7b1ed59d417523e29e101c036782d7353327419a3be",
+      "bytes": 326
+    },
+    {
+      "path": "assets/icons/recap.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/recap.svg",
+      "sha256": "6eeff64fbb4a97871e56917e2e413016f2350725ca32707285a9e868369d0609",
+      "bytes": 662
+    },
+    {
+      "path": "assets/icons/reddit.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/reddit.svg",
+      "sha256": "915d31f4b0b2403cac784176ec7f69ae98600a0d8685391269cdb9a229c5723d",
+      "bytes": 1176
+    },
+    {
+      "path": "assets/icons/region.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/region.svg",
+      "sha256": "6c31f26481eed43b44c4dc8b7b16e7624bd4a89bf6f6cc6c1e0ddcc74efd299c",
+      "bytes": 282
+    },
+    {
+      "path": "assets/icons/report.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/report.svg",
+      "sha256": "99556555e1cf1e102257d3b8eda297ac34338f72f52a9415834505931bb72914",
+      "bytes": 659
+    },
+    {
+      "path": "assets/icons/revcloud.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/revcloud.svg",
+      "sha256": "22ee82c1185883661bea8b136d719412457081295d5b3c6e4fa32786bf0f7c26",
+      "bytes": 352
+    },
+    {
+      "path": "assets/icons/revolve.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/revolve.svg",
+      "sha256": "cf3f21737a24f2faded2e063e80ab34ba2eea78e5688de20f8a6481de8d1c5c0",
+      "bytes": 335
+    },
+    {
+      "path": "assets/icons/rotate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/rotate.svg",
+      "sha256": "3367e27d8ad9f0e2347ab270258de1cd520f73d82a544eebcfbbe1149b933019",
+      "bytes": 1954
+    },
+    {
+      "path": "assets/icons/scale.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/scale.svg",
+      "sha256": "009207efb7a63a77eee215f19826edb0d3d78b8fc0d67148730b8c9b0266aaf3",
+      "bytes": 2077
+    },
+    {
+      "path": "assets/icons/scale_list.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/scale_list.svg",
+      "sha256": "1deb765101ac86590935e6c70c12e44b5ad19554af01970266abda043dc0bb88",
+      "bytes": 1059
+    },
+    {
+      "path": "assets/icons/shapes/poly_c.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/poly_c.svg",
+      "sha256": "af9c096dbe0ffd5f675142649ddcd37d888f252b7514548ca75cb3a926898c97",
+      "bytes": 498
+    },
+    {
+      "path": "assets/icons/shapes/poly_e.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/poly_e.svg",
+      "sha256": "0d898b99aa73ed82d8bc7bd495a09b1ae6b1beb750d78d53349dbad865536b82",
+      "bytes": 368
+    },
+    {
+      "path": "assets/icons/shapes/poly_i.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/poly_i.svg",
+      "sha256": "0eefcee34d48fd1c6625412afcabbfc904dcd46b099bec4e592de41778b42507",
+      "bytes": 496
+    },
+    {
+      "path": "assets/icons/shapes/rect.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/rect.svg",
+      "sha256": "e451d7c8bb65ce077f379a9a955a2d6229e3e248e7b7d54e49e735930cea0f98",
+      "bytes": 1377
+    },
+    {
+      "path": "assets/icons/shapes/rect_cen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/rect_cen.svg",
+      "sha256": "e35829b79c99d8d52a9f806c1ec85d4a2b8cff88458ac2851a63862dcc9d465a",
+      "bytes": 385
+    },
+    {
+      "path": "assets/icons/shapes/rect_rot.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/shapes/rect_rot.svg",
+      "sha256": "02bfa46d7e78582fe7020fa71206109458ac438c8043442f454b792c40ba1634",
+      "bytes": 354
+    },
+    {
+      "path": "assets/icons/sheetset.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/sheetset.svg",
+      "sha256": "2ea81587f82c1a4d8ed2cd1c86dc61abd6288b06ec8492b4586ce4b9d19d350f",
+      "bytes": 397
+    },
+    {
+      "path": "assets/icons/snap_underlays.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/snap_underlays.svg",
+      "sha256": "3e408333990c44d7cdfc68bbfd6e49cfac0ac69e989197bb09a73c5f0fd41614",
+      "bytes": 342
+    },
+    {
+      "path": "assets/icons/solid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/solid.svg",
+      "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
+      "bytes": 489
+    },
+    {
+      "path": "assets/icons/sphere3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/sphere3d.svg",
+      "sha256": "b13d7627f0f7879759417882bbc273500353963f835ea77a2a03b7adcbc5cb08",
+      "bytes": 512
+    },
+    {
+      "path": "assets/icons/spline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/spline.svg",
+      "sha256": "df2100159519a21346bef1fd0e600cd477c11510151560f8176a39b5f9d1d5bc",
+      "bytes": 374
+    },
+    {
+      "path": "assets/icons/spline_cv.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/spline_cv.svg",
+      "sha256": "f0cbaaae96478e97ff64403e6a1e47209ba4b43913e6a8f62eda1c2c18a0b290",
+      "bytes": 395
+    },
+    {
+      "path": "assets/icons/status/cleanscreen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/cleanscreen.svg",
+      "sha256": "90fdbf410f9188594ff69a30c9e620c452079c5d9b24919ef330f8384b3e49e8",
+      "bytes": 225
+    },
+    {
+      "path": "assets/icons/status/dyn.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/dyn.svg",
+      "sha256": "c555db914a5197af55d6384753e029fcb49f47dc64675326d61988ea07704d55",
+      "bytes": 230
+    },
+    {
+      "path": "assets/icons/status/filter.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/filter.svg",
+      "sha256": "ab5ce21c10da5c34015bbfb088197684ea5a92de5156bd99ef49e6236aa13c7c",
+      "bytes": 210
+    },
+    {
+      "path": "assets/icons/status/isolate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/isolate.svg",
+      "sha256": "453ad6ed97630ffe834b7ffc9d146a4c48bb2dea3fe28fb0cc7f7a48c8dbd74b",
+      "bytes": 294
+    },
+    {
+      "path": "assets/icons/status/lwt.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/lwt.svg",
+      "sha256": "7c26df948de6bb842efbf1e59961cda4e4b504caa6a1df92aab60e0fb22204ee",
+      "bytes": 283
+    },
+    {
+      "path": "assets/icons/status/ortho.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/ortho.svg",
+      "sha256": "fff5fa0b88916eb059208fc02cddcb4d4bf35e4735862d032be5c1b2a455ebbd",
+      "bytes": 241
+    },
+    {
+      "path": "assets/icons/status/osnap.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/osnap.svg",
+      "sha256": "848a5e3e1727e331d711f6ac8a2fd06ee69529d30446c023b236b165998b5f7b",
+      "bytes": 266
+    },
+    {
+      "path": "assets/icons/status/otrack.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/otrack.svg",
+      "sha256": "18b204813f7daf84ca41420eebb171a47ad1939953a9017a1162179f4c806cc7",
+      "bytes": 279
+    },
+    {
+      "path": "assets/icons/status/polar.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/polar.svg",
+      "sha256": "0fe08a059e07db3411fa295b2221f4e106adca0704844f39cbcb04e7bd26c884",
+      "bytes": 251
+    },
+    {
+      "path": "assets/icons/status/quickprops.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/quickprops.svg",
+      "sha256": "b03dbe6a29fed9353c3920393888788d6bfa24f47f8e7119f667dbd6c6f6e8b2",
+      "bytes": 253
+    },
+    {
+      "path": "assets/icons/status/selcycle.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/selcycle.svg",
+      "sha256": "0ce79517f04c22a7b0a28c4903a35d60f3df6b0c34a6162e34f03196dde410e5",
+      "bytes": 238
+    },
+    {
+      "path": "assets/icons/status/transparency.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/status/transparency.svg",
+      "sha256": "8ec96c8f4fcf0684987a707c2e1a4c14ed2e1c4afa4312418a5877c68e2c658e",
+      "bytes": 283
+    },
+    {
+      "path": "assets/icons/stretch.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/stretch.svg",
+      "sha256": "87e4282e6fdeb1d99a0dd4ed7702cbcec25bf098bfbc26782f259938642c6281",
+      "bytes": 2034
+    },
+    {
+      "path": "assets/icons/subtract.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/subtract.svg",
+      "sha256": "71c4b7975fb4b15df3f256f9d3c980e2e5723d5ad181d1900b01f31145897757",
+      "bytes": 332
+    },
+    {
+      "path": "assets/icons/sweep.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/sweep.svg",
+      "sha256": "076068b3f98e40225324ccddd4a6523af256031cba47027b9cc9a21899a313f6",
+      "bytes": 313
+    },
+    {
+      "path": "assets/icons/sync.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/sync.svg",
+      "sha256": "c04eded1e5ba0c0509e5bee60488a35be0153b7f08c575f5f25de355563e2a7f",
+      "bytes": 365
+    },
+    {
+      "path": "assets/icons/table.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/table.svg",
+      "sha256": "74cdd60a06ae5ace994b0eb239f9a5040bfea29a576658fcaa143b41da0746c5",
+      "bytes": 613
+    },
+    {
+      "path": "assets/icons/text.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/text.svg",
+      "sha256": "489f0bb489978d0d2d726e41f45b917f45d6496f4c6c24d1bf533af5d7906643",
+      "bytes": 509
+    },
+    {
+      "path": "assets/icons/text_style.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/text_style.svg",
+      "sha256": "03a407d65ef28dc3b79655c1dfcac3de616ff75ace8fee7850bda13ad25f4ace",
+      "bytes": 2182
+    },
+    {
+      "path": "assets/icons/tile_horiz.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/tile_horiz.svg",
+      "sha256": "f223ab7ef9077c7b125a354eae69fe0c242fe04b62eef9eb10ab9924b8440691",
+      "bytes": 390
+    },
+    {
+      "path": "assets/icons/tile_vert.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/tile_vert.svg",
+      "sha256": "2ef7f1fc2dbfee902b3dfe36397b7a741f0f978397cfbc299534b98425ac6057",
+      "bytes": 389
+    },
+    {
+      "path": "assets/icons/tolerance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/tolerance.svg",
+      "sha256": "4a71d6365bfe6975ce5995e7cb40a6b9cb4a77d70d5b981b39397a33565bf317",
+      "bytes": 661
+    },
+    {
+      "path": "assets/icons/tool_palettes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/tool_palettes.svg",
+      "sha256": "328db5d3c9fdf45dacc8834f591522a6dc9c57eb7082279c6a58485b7894f0f1",
+      "bytes": 1014
+    },
+    {
+      "path": "assets/icons/torus3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/torus3d.svg",
+      "sha256": "64826537e8f483b1d08e70bfbaaebcf03848b9c1c956b01e2d4526471a047e80",
+      "bytes": 380
+    },
+    {
+      "path": "assets/icons/trim.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/trim.svg",
+      "sha256": "7c6bbb774d3c701a1f9093fbf4f0cded7dc040c8bed0ab20067d078dd9dce47b",
+      "bytes": 1995
+    },
+    {
+      "path": "assets/icons/ucs_icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ucs_icon.svg",
+      "sha256": "62751efa0b24a308c73fce0a26f40ced76414e4cac3feaae02f8894cb866e61d",
+      "bytes": 1667
+    },
+    {
+      "path": "assets/icons/ui/arrow_long_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/arrow_long_right.svg",
+      "sha256": "770f51f3810ceab155e29645fba9a1ae958c8a03e6df206d5fdf08a21237dd97",
+      "bytes": 201
+    },
+    {
+      "path": "assets/icons/ui/bolt.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/bolt.svg",
+      "sha256": "42febb42839eaa5c96768748a23e78bb88f82657ab5522610b537164c60e77ae",
+      "bytes": 143
+    },
+    {
+      "path": "assets/icons/ui/check.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/check.svg",
+      "sha256": "b2394698d7dfc412700406be338801e4c38716b0e810db91b8f6e76539dc68b3",
+      "bytes": 195
+    },
+    {
+      "path": "assets/icons/ui/close.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/close.svg",
+      "sha256": "e0722b24fc5dc07a5a5ef01a28a247b0e266963ebcff17027e3c56c6749f6417",
+      "bytes": 197
+    },
+    {
+      "path": "assets/icons/ui/copy.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/copy.svg",
+      "sha256": "b75a5ab4854586d00d5b839029d2eae06cd95ef4021e5a951a00dec68cf08093",
+      "bytes": 289
+    },
+    {
+      "path": "assets/icons/ui/dirty_dot.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/dirty_dot.svg",
+      "sha256": "1cec6a9c312f6d83589cac7036f2d0573704522c3bc479792019c94f2118f1c7",
+      "bytes": 139
+    },
+    {
+      "path": "assets/icons/ui/doc.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/doc.svg",
+      "sha256": "0f1e45196a1f9a8a7d7ecdd4b65ce3f434fca71fb1eb478b5724120657bb4a2b",
+      "bytes": 249
+    },
+    {
+      "path": "assets/icons/ui/doc_new.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/doc_new.svg",
+      "sha256": "3c8ed9067d0ac85a1e023846503bd99b251432c031d5ea7005950ac06766da2f",
+      "bytes": 316
+    },
+    {
+      "path": "assets/icons/ui/dot.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/dot.svg",
+      "sha256": "3c5778a247035463e4ad5cf93e82f161863fe926443370af4d9822d07be196c6",
+      "bytes": 129
+    },
+    {
+      "path": "assets/icons/ui/file_export.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/file_export.svg",
+      "sha256": "f0d36747f8d931393f8304a9499c4c5b9fb5966c341399dc53b6c49f3ced1b74",
+      "bytes": 310
+    },
+    {
+      "path": "assets/icons/ui/folder.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/folder.svg",
+      "sha256": "ced46bb64c7e2da67eaa48c8add334912a67cca22a7a3f745510cac7ae5236e7",
+      "bytes": 200
+    },
+    {
+      "path": "assets/icons/ui/folder_open.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/folder_open.svg",
+      "sha256": "9b9ef0ae581bb4e6940b060cb7374898bff9003cc87800a6f2f754334ae19c22",
+      "bytes": 340
+    },
+    {
+      "path": "assets/icons/ui/gear.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/gear.svg",
+      "sha256": "94a1a9af43b63f65acc6ffec53e2c74192bfdd2305b8de5a64c5ffb166986ef6",
+      "bytes": 310
+    },
+    {
+      "path": "assets/icons/ui/grid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/grid.svg",
+      "sha256": "0676876aac95083a46e3208a7fbd2267a827ccb44defc1c10d56d2d12f07fd1f",
+      "bytes": 266
+    },
+    {
+      "path": "assets/icons/ui/heart.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/heart.svg",
+      "sha256": "8102cccd10099c7fce592ba8cd2deea51508b626387034adc5a58c40df42edf8",
+      "bytes": 201
+    },
+    {
+      "path": "assets/icons/ui/help.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/help.svg",
+      "sha256": "33d639740ea29555dea3f625ae1e2a1ff07629782d8f86c524cccd9db2330ace",
+      "bytes": 278
+    },
+    {
+      "path": "assets/icons/ui/home.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/home.svg",
+      "sha256": "2e9696ea9192a04a8861b32fa03c4a1ccc99a904956a9ebebde3064dd5926399",
+      "bytes": 160
+    },
+    {
+      "path": "assets/icons/ui/info.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/info.svg",
+      "sha256": "1ccae62a1e7b513245df03fd9623a411367a57f5c890de947d18f3cad04f9e6f",
+      "bytes": 223
+    },
+    {
+      "path": "assets/icons/ui/menu.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/menu.svg",
+      "sha256": "76bd85af5ec4c9e32b57c61d3b04f5961477dbe75837675694df2d4563abd688",
+      "bytes": 176
+    },
+    {
+      "path": "assets/icons/ui/minus.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/minus.svg",
+      "sha256": "aabaceb18f68b4ac5f88e21b9d54acd16b5a8f4ce00a811a9c860043734f5411",
+      "bytes": 162
+    },
+    {
+      "path": "assets/icons/ui/more.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/more.svg",
+      "sha256": "5118b13cbb9bc7f4d9861795e8b9d1d66f1bc75d598034a41c584b42d1eee943",
+      "bytes": 188
+    },
+    {
+      "path": "assets/icons/ui/move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/move.svg",
+      "sha256": "da13b64ae1aff274b0682c06abab0219562f08a8c6cdc055b291604bdce3ac1f",
+      "bytes": 293
+    },
+    {
+      "path": "assets/icons/ui/node_graph.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/node_graph.svg",
+      "sha256": "8622f704bb1312579c643e369a17d55eb6cb1761894496367251e89ff4d0ae88",
+      "bytes": 347
+    },
+    {
+      "path": "assets/icons/ui/pin.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/pin.svg",
+      "sha256": "3e0f10ad78dc061d6efada03424bb0f1da4b12115bee189d0c9f36318ffc3de9",
+      "bytes": 235
+    },
+    {
+      "path": "assets/icons/ui/pin_active.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/pin_active.svg",
+      "sha256": "01ec5810c5f1c7a061752de5992a13b5f4b3152afd0a4b4e090aa86c863fa295",
+      "bytes": 270
+    },
+    {
+      "path": "assets/icons/ui/plus.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/plus.svg",
+      "sha256": "02d42bcf1a9a98d8771ef6ea2846da534684de24a3d1c215759596d04da07bb6",
+      "bytes": 175
+    },
+    {
+      "path": "assets/icons/ui/print.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/print.svg",
+      "sha256": "acfc708a401517959cf09cc0ec854903ec2bfedcf00f1211a70fc5ff0bb09799",
+      "bytes": 395
+    },
+    {
+      "path": "assets/icons/ui/redo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/redo.svg",
+      "sha256": "9b9852455d3b1bdb32fc6bb27b3ffa4f114a418ae0d562593f9087ec5005190a",
+      "bytes": 1212
+    },
+    {
+      "path": "assets/icons/ui/refresh.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/refresh.svg",
+      "sha256": "60e2b0f9d1a6d06f3320f28f1cf337b423d6ea0ffe3132a6fac244a195605473",
+      "bytes": 226
+    },
+    {
+      "path": "assets/icons/ui/resize.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/resize.svg",
+      "sha256": "85904a071d3951dc67845770c4c833a23835f19a73ad6a32e89a94365c4d3259",
+      "bytes": 213
+    },
+    {
+      "path": "assets/icons/ui/resize_left.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/resize_left.svg",
+      "sha256": "0d167656ddafbff9e60782cc701216c0ae997d658b234b9fb1d6b761c8682c3f",
+      "bytes": 208
+    },
+    {
+      "path": "assets/icons/ui/save.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/save.svg",
+      "sha256": "f3d6b951c0f34623f9caab7b5250a5673386d8a45a0fcc9bbb04daa9f0351a3d",
+      "bytes": 317
+    },
+    {
+      "path": "assets/icons/ui/snap.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/snap.svg",
+      "sha256": "f2204f59d56b4931670c7556140a10705caf1e7a9b3964c0dd7c24f0109b4e56",
+      "bytes": 250
+    },
+    {
+      "path": "assets/icons/ui/spacemouse.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/spacemouse.svg",
+      "sha256": "7e8d6eb93c83c7321120ac3b958ffe777a97e5614bc40d6a0127e4d90f367b10",
+      "bytes": 307
+    },
+    {
+      "path": "assets/icons/ui/split_h.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/split_h.svg",
+      "sha256": "cb2e7d8f389d21b25bd6adab66a3f811325b4fd6a53bc6f30140482b694d2b54",
+      "bytes": 230
+    },
+    {
+      "path": "assets/icons/ui/split_v.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/split_v.svg",
+      "sha256": "d55554634340108871019eb1809c05e3dec410dcbfb18a02de3ba67c4d7dee3f",
+      "bytes": 230
+    },
+    {
+      "path": "assets/icons/ui/swap.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/swap.svg",
+      "sha256": "3e31623c5b6d33f8bb0489f43f6b322abe8bb27e9ff51783fcd6efb29e0f4c9e",
+      "bytes": 240
+    },
+    {
+      "path": "assets/icons/ui/trash.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/trash.svg",
+      "sha256": "de5418ccc6bfc1564d9f6f8048b3224288d21f7f505727771d25ff436860a5b9",
+      "bytes": 300
+    },
+    {
+      "path": "assets/icons/ui/tri_down.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/tri_down.svg",
+      "sha256": "6e6dbca7de53c2c26897f043c8414a9881df127bb4ea6f2d9859d3da4618a02f",
+      "bytes": 115
+    },
+    {
+      "path": "assets/icons/ui/tri_left.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/tri_left.svg",
+      "sha256": "7983a9dc8e83e281d72149cc2f2a9e337fcd8b122cdae1855e8f3c40fd335dff",
+      "bytes": 115
+    },
+    {
+      "path": "assets/icons/ui/tri_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/tri_right.svg",
+      "sha256": "5b2f9b80861f859e4e60520d0d2ae922f20374cfcdaca22043a820473dafa70b",
+      "bytes": 115
+    },
+    {
+      "path": "assets/icons/ui/tri_up.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/tri_up.svg",
+      "sha256": "4c8f4fc1979b63bf9fb3696f7708bf5405521ad51c6ba394af8badccd7937061",
+      "bytes": 115
+    },
+    {
+      "path": "assets/icons/ui/undo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/undo.svg",
+      "sha256": "a3a1eb95c7643d2da3ce9b90baa1cb4ee4b5dcb6d7acd97eec90335751b808ab",
+      "bytes": 1211
+    },
+    {
+      "path": "assets/icons/ui/up.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/up.svg",
+      "sha256": "f18eafdf4c18612225c4bd348b601bbf37304c40e3d0e758244fe3137faf39fd",
+      "bytes": 205
+    },
+    {
+      "path": "assets/icons/ui/warning_triangle.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ui/warning_triangle.svg",
+      "sha256": "cc05ae6075670f1248826e6259e67725fb4725d06fc302f52fafb562432b6830",
+      "bytes": 350
+    },
+    {
+      "path": "assets/icons/underlay_frames.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/underlay_frames.svg",
+      "sha256": "a22753ed03580a43733a05a4c68759506f32a570a76dcd3c4f70379df23ff266",
+      "bytes": 430
+    },
+    {
+      "path": "assets/icons/underlay_layers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/underlay_layers.svg",
+      "sha256": "6a7ce1ff14b9ca462488e304053e7f6e22c763582cee52f5def161af039a7554",
+      "bytes": 529
+    },
+    {
+      "path": "assets/icons/ungroup.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/ungroup.svg",
+      "sha256": "f03759d0546ce5760dc1f68f9d5d3c0ba6a92a3761f7e477c2981cffd8944dca",
+      "bytes": 1496
+    },
+    {
+      "path": "assets/icons/union.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/union.svg",
+      "sha256": "9c3eef1e2111ba45a713b46425933779c79b7d8d31b12b84a8cfa265096e1cdf",
+      "bytes": 352
+    },
+    {
+      "path": "assets/icons/user_interface.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/user_interface.svg",
+      "sha256": "79a8a5a03d588f8beb306e054114fb83d2bbe27483fc25b618bf210b0aa6b888",
+      "bytes": 589
+    },
+    {
+      "path": "assets/icons/view_front.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/view_front.svg",
+      "sha256": "1b30c4197646c20c522c0eaf8f1bbebbcd45d9b75a10bf5a9f25c0b74f755ea4",
+      "bytes": 713
+    },
+    {
+      "path": "assets/icons/view_iso.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/view_iso.svg",
+      "sha256": "7f55b585af1fc23299551d78f03ba03e3ec4b920e88e32beee3d2ad53d3c6a2a",
+      "bytes": 605
+    },
+    {
+      "path": "assets/icons/view_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/view_right.svg",
+      "sha256": "6add6450f1a4222cfc4ed226a3f12a9cb31120a84ab7139283536a5c77df03a2",
+      "bytes": 672
+    },
+    {
+      "path": "assets/icons/view_top.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/view_top.svg",
+      "sha256": "1336d70acae790e25b32d63af790f3c5f2501ea1239f02f8052e908cf6501c71",
+      "bytes": 665
+    },
+    {
+      "path": "assets/icons/viewcube.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/viewcube.svg",
+      "sha256": "188f85564f286d48b9e961b6e826dfda527d236a797479cdd5a38c5885d761ce",
+      "bytes": 531
+    },
+    {
+      "path": "assets/icons/viewport.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/viewport.svg",
+      "sha256": "9692545ad80cfbadc36c45b0dc5f08fefa1277d02765e1e354c373a5491dbc47",
+      "bytes": 388
+    },
+    {
+      "path": "assets/icons/vports_config.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/vports_config.svg",
+      "sha256": "5721a7f2d22e5e6e3268ea2be8dc47922b854f9a3032f8b7eae619541c57ea97",
+      "bytes": 531
+    },
+    {
+      "path": "assets/icons/vports_join.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/vports_join.svg",
+      "sha256": "75637b886de22144e1b75bb54eaf95fdef7e897884f057cbc66314c0285cc088",
+      "bytes": 857
+    },
+    {
+      "path": "assets/icons/vports_named.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/vports_named.svg",
+      "sha256": "904944c4d459e937ffe16a84ec7cd3ded522e54cce171bec66d0d588cd5255c5",
+      "bytes": 542
+    },
+    {
+      "path": "assets/icons/vports_restore.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/vports_restore.svg",
+      "sha256": "6c962e70f937b203f30d9c1e6c5e9dbfdc916a77f71fca18e4006ed226f15d05",
+      "bytes": 525
+    },
+    {
+      "path": "assets/icons/wedge3d.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/wedge3d.svg",
+      "sha256": "879ef2399dbad1cc30eeb00c8353e9740b146a5602c7f97a7884c7946e825803",
+      "bytes": 561
+    },
+    {
+      "path": "assets/icons/wipeout.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/wipeout.svg",
+      "sha256": "78d9d7f0b541fbf73d42cca3ee1bfc31e59555ba700c6b6c19a9dcdd4de0b37d",
+      "bytes": 797
+    },
+    {
+      "path": "assets/icons/wireframe.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/wireframe.svg",
+      "sha256": "b3a93c2c25b2bfe07d797cc9380befaba01000954354db75af84c2d336b70153",
+      "bytes": 511
+    },
+    {
+      "path": "assets/icons/xadjust.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/xadjust.svg",
+      "sha256": "72ad1cbfc9bf5ffe27e25b5fbdddb4178d7e29f69ce5470b255db56c9b2a4c02",
+      "bytes": 772
+    },
+    {
+      "path": "assets/icons/xclip.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/xclip.svg",
+      "sha256": "ed33bf1d5c87294463bb8ee2e43b6e76a6aa6504c8a927dfa04b91ddf9e12dc0",
+      "bytes": 574
+    },
+    {
+      "path": "assets/icons/xclip_remove.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/xclip_remove.svg",
+      "sha256": "bd9a3c7e3f54bc069245ec55f6750067cedf0fcb82156a6e1bd23f7292a0202f",
+      "bytes": 797
+    },
+    {
+      "path": "assets/icons/xline.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/xline.svg",
+      "sha256": "241ea105930e4703877fa276bf1efa26fca9c88f8cc4c131e0eac6eb192cc233",
+      "bytes": 351
+    },
+    {
+      "path": "assets/icons/xray.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/xray.svg",
+      "sha256": "52e6b66698e42c90af5e6b69fdf13047868966d579c6f8859a8efb9bfa203e9b",
+      "bytes": 697
+    },
+    {
+      "path": "assets/icons/zoom_ext.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/zoom_ext.svg",
+      "sha256": "7f8f869e64da7ed996a4c8866a46a1d5cf067c13d5aee0f0007a706ad8e279f1",
+      "bytes": 915
+    },
+    {
+      "path": "assets/icons/zoom_in.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/zoom_in.svg",
+      "sha256": "3023a2eb167b2014c27f5229bbfe782b9e6120ce1ea074f9167837e589e10136",
+      "bytes": 456
+    },
+    {
+      "path": "assets/icons/zoom_out.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/zoom_out.svg",
+      "sha256": "18c5f91fb8251aa5905b99933fa54527957043690089d3b8f100cc6df62c79ea",
+      "bytes": 379
+    },
+    {
+      "path": "assets/icons/zoom_window.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/zoom_window.svg",
+      "sha256": "7aa578bd0d2a7fb8e22b09e652619863fa98ce7e5e988204d441b4e658320384",
+      "bytes": 408
+    },
+    {
+      "path": "assets/logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/logo.svg",
+      "sha256": "a83164a0598ef58f9c7eda5470fcecd5df86bab1d9b9bed568a2dcabc9b87cc8",
+      "bytes": 3772
+    },
+    {
+      "path": "assets/mimetypes/image-vnd.dwg.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/mimetypes/image-vnd.dwg.svg",
+      "sha256": "af71bf541f40b50697df014ea7ecdd03005ef0ed40faa9f681e3ede4a4650e4c",
+      "bytes": 788
+    },
+    {
+      "path": "assets/mimetypes/image-vnd.dxf.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/mimetypes/image-vnd.dxf.svg",
+      "sha256": "28ad0e3dd86a5394c248598b5c8f352a034bbe2b697ccbf7a733eec1a12bc3df",
+      "bytes": 788
+    },
+    {
+      "path": "assets/sponsors/openaec-logo-dark-on-light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/sponsors/openaec-logo-dark-on-light.svg",
+      "sha256": "00780db85cc5fd1689fbb5305893594120e92c1a590cd717f37cc7ae4710cc85",
+      "bytes": 16910
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/after-dimbreak.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/after-dimbreak.png",
+      "sha256": "2cbe13acfeef4f9a4004b058aa5d3114c80db26fc25422f57f17d33867c8b8d3",
+      "bytes": 39920
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/after-offset.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/after-offset.png",
+      "sha256": "6aef7f9f04abea77521d2b706322ba4928934ce495bad063265dae2bcf0a19fb",
+      "bytes": 39706
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/after-xline.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/after-xline.png",
+      "sha256": "c6fad7647af8c20c3b187e2d3604e0380731bd784a4bca7a17b0242e70852ec7",
+      "bytes": 39783
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/before-dimbreak.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/before-dimbreak.png",
+      "sha256": "4fc26536132265cc4c4868f8d32d662487ad80a74ce2ce91cd51ddac9efb5455",
+      "bytes": 39400
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/before-offset.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/before-offset.png",
+      "sha256": "4fc26536132265cc4c4868f8d32d662487ad80a74ce2ce91cd51ddac9efb5455",
+      "bytes": 39400
+    },
+    {
+      "path": "docs/screenshots/ribbon-highlight/before-xline.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/before-xline.png",
+      "sha256": "4fc26536132265cc4c4868f8d32d662487ad80a74ce2ce91cd51ddac9efb5455",
+      "bytes": 39400
+    },
+    {
+      "path": "docs/viewport-dimension-association.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/viewport-dimension-association.svg",
+      "sha256": "1c0ad84ca404cdea75835db3b96d58f81335ad877851a1bf7012ae29741221b9",
+      "bytes": 1936
+    },
+    {
+      "path": "docs/viewport-dimension-creation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/viewport-dimension-creation.svg",
+      "sha256": "15d4717874670e216767a5380617dc0d3b243bbdb48db228806422aeb2a59207",
+      "bytes": 1811
+    },
+    {
+      "path": "site/apple-touch-icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/apple-touch-icon.png",
+      "sha256": "bf3930caa0929c46ffb6f186f94b18ff901b575a6d92b84e88bc03d44a616638",
+      "bytes": 3691
+    },
+    {
+      "path": "site/favicon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/favicon.ico",
+      "sha256": "5300dbcd533a48c0afac6d73228c2c89815c0cfa6a6ed5003ee7a4c0b7bbf360",
+      "bytes": 12263
+    },
+    {
+      "path": "site/favicon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/favicon.png",
+      "sha256": "81597ca201b352661d81b0825d41f12a686d104b5f67cafd793dc897be90a755",
+      "bytes": 2061
+    },
+    {
+      "path": "site/favicon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/favicon.svg",
+      "sha256": "c6b8e62e4c8fbc076bd6050b7d42dd28d97e22ffdf922fe8a95c8f1ca32bb976",
+      "bytes": 3057
+    },
+    {
+      "path": "site/icon-192.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/icon-192.png",
+      "sha256": "629089d87c4dba969b04f1e0b08619503c2655a0a1c56b0298949d8c054083a5",
+      "bytes": 3859
+    },
+    {
+      "path": "site/icon-512.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/icon-512.png",
+      "sha256": "facba32fb8f5b1424f1045379b0d1b43a512137baf5a9ef1957f7c57bdc401d1",
+      "bytes": 10796
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "src/modules/view/ucs_icon.rs",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/ucs_icon.rs",
+      "sha256": "89c08cfae30452e28ee6bf3a0d49158294ff1c5570852cf0a5bc85e0cab711c5",
+      "bytes": 330
+    },
+    {
+      "path": "src/ui/icons.rs",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs",
+      "sha256": "436a3987dda839ce6ad6012d09ddeac5870d0f3bc7b350586e7d3bf617ab6d09",
+      "bytes": 45142
+    }
+  ],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/Cargo.toml",
+      "sha256": "4e791e309dc6d6f4c47cb7405488832f471cece32d51f5b34fb57c1699fb53fa",
+      "bytes": 8940
+    },
+    {
+      "path": "crates/dwg-thumbnailer-win/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/crates/dwg-thumbnailer-win/Cargo.toml",
+      "sha256": "06b8f63b36fc61189e05656112b030e1cfd3c5d7cbcf1ac38bc9eefc0bc6e4e7",
+      "bytes": 1051
+    },
+    {
+      "path": "crates/dwg-thumbnailer/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/crates/dwg-thumbnailer/Cargo.toml",
+      "sha256": "d4f8dae129243ffd0d74ffb22ae292483e5f84dd9bd4e1e0b123921339b2300f",
+      "bytes": 711
+    },
+    {
+      "path": "crates/ocs_plugin_api/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/crates/ocs_plugin_api/Cargo.toml",
+      "sha256": "63403b7822d17c92edab7b237880138e55d2aa796a400f8336ce79c3b8846d4f",
+      "bytes": 2133
+    },
+    {
+      "path": "crates/ocs_save/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/crates/ocs_save/Cargo.toml",
+      "sha256": "5269e5bb036d9b0393f51e5ab9a5592862805789e02bed9d0bc98dd7ad1cc1c1",
+      "bytes": 608
+    },
+    {
+      "path": "crates/ocs_web_worker/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/crates/ocs_web_worker/Cargo.toml",
+      "sha256": "5ae3a5ed3f28c7790c50d8936b901c96870b52de1b922a9169384a7ec13d05fa",
+      "bytes": 630
+    },
+    {
+      "path": "docs/plugin-template-v2/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/plugin-template-v2/Cargo.toml",
+      "sha256": "6fd6f7662f6f83998cd95e32f72cb2dc559d193f80803b083fd2bf5057ec3c50",
+      "bytes": 424
+    },
+    {
+      "path": "docs/plugin-template/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/plugin-template/Cargo.toml",
+      "sha256": "533df4e5b66d5fe04a175224312d43629858a4fd9ffcfbb86e814483b76e999c",
+      "bytes": 435
+    },
+    {
+      "path": "plugins/opencad-python/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/plugins/opencad-python/Cargo.toml",
+      "sha256": "1ceaefe0dd1b6012c1d0b3b158e8555b021ce26e023d71e89f0caa965c10d001",
+      "bytes": 2129
+    }
+  ],
+  "errors": [],
+  "commit": "77f19dafd01776947934e71563dd3d92a77c4f94",
+  "files_scanned": 1456,
+  "ui_stack": [
+    "iced",
+    "winit"
+  ],
+  "icon_packages": []
+}

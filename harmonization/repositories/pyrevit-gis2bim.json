@@ -1,0 +1,1033 @@
+{
+  "name": "pyrevit-gis2bim",
+  "url": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim",
+  "branch": "master",
+  "description": "pyRevit extension for loading Dutch GIS data (AHN, BAG3D, BGT, CityJSON, KLIC, WMS) into Autodesk Revit",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "ICONS_3BM_Bouwkunde/AutoDim_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/AutoDim_32.png",
+      "sha256": "f7026a83f77bb574ca0dcceb87ded481ddfad868527fbd2ab6d0a63a8724b836",
+      "bytes": 961
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/AutoDim_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/AutoDim_96.png",
+      "sha256": "f78ee79d0735418cc5b4eddd14393e514a3c6640432c1873212f476be9bad9c3",
+      "bytes": 2874
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/CrossDim_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/CrossDim_32.png",
+      "sha256": "fd8fcaa0314e9c7973bd9518a986989a99675153380ce0d6052a188d137293c5",
+      "bytes": 1043
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/CrossDim_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/CrossDim_96.png",
+      "sha256": "5afa4bce0d105976aeb4f59ed8b60ebec9699d0caebaa1eab602e84b7a2f4330",
+      "bytes": 3544
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/DbExp_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/DbExp_32.png",
+      "sha256": "b9896ce631e1de37926c83ec4f3df34b7af8a18034574fb308a0a136d4fff6c5",
+      "bytes": 1409
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/DbExp_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/DbExp_96.png",
+      "sha256": "4798bf10c809431c218a5adea42b9e2123d322e85d96d2ad6968a34373c8f10c",
+      "bytes": 5088
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/DetailOverzicht_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/DetailOverzicht_32.png",
+      "sha256": "3231fcb61838a7cf2771d4456b1081abc6673f5b01d7f8520a4642fed5d234c6",
+      "bytes": 1893
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/FilterCreator_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/FilterCreator_32.png",
+      "sha256": "06bb3ec1e000a379f7d41495741d53200640df18a6fc9f80492453e8fbebfaf9",
+      "bytes": 1233
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/FilterCreator_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/FilterCreator_96.png",
+      "sha256": "f24dd78a938222bde3513cbed6f9c33ff3856f0c95c8d6d3166ea58eeaa6392d",
+      "bytes": 4263
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/HellingbaanGenerator_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/HellingbaanGenerator_32.png",
+      "sha256": "73c3633d9438b2ae236c01f563bfeccbb5bac7c05632be1b9623593dd1705754",
+      "bytes": 1212
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/HellingbaanGenerator_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/HellingbaanGenerator_96.png",
+      "sha256": "55a3e7c40b319232b725aa0efbf4c7c74f4bdf32b4091c1b020ddf0813ba5939",
+      "bytes": 4500
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/IFCKozijnAnalyzer_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/IFCKozijnAnalyzer_32.png",
+      "sha256": "8fd02187e3e4a4766506d72c1700c538c0118e6a4760b63b05685e9645c8e8b2",
+      "bytes": 1547
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/IFCKozijnAnalyzer_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/IFCKozijnAnalyzer_96.png",
+      "sha256": "b88dc955914d2f672f512549c2ad709a24a7c6e71977277b38471f0b3421c343",
+      "bytes": 3698
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MCPStatus_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MCPStatus_32.png",
+      "sha256": "12c646978ea4fd9205c0388799d306d0ca22910c1fda7671a18118ac74833ca8",
+      "bytes": 1022
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MCPStatus_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MCPStatus_96.png",
+      "sha256": "20f93a8b95189696f71da05835ad9200ae7fbdf626d750d913e25423a3f70db5",
+      "bytes": 3568
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MatExp_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MatExp_32.png",
+      "sha256": "4fbda3a10f7f29a41294d7708f92ec6d4a3966145a208253e958aab37b0c6e6f",
+      "bytes": 1269
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MatExp_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MatExp_96.png",
+      "sha256": "dfeaaa57f7b4ea69838795edf09d17cad4531cc2e6936585a169e3e08a4130b9",
+      "bytes": 3382
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MatImp_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MatImp_32.png",
+      "sha256": "45015e081581de6b6c83bef609659384977de39ed4cec37725798ef9a8f9fc2b",
+      "bytes": 1214
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/MatImp_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/MatImp_96.png",
+      "sha256": "b94ec2b3745163290b995e14d650489954ff358de7b95a643f381cc45798c075",
+      "bytes": 3279
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/NAAKTGenerator_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/NAAKTGenerator_32.png",
+      "sha256": "32a77bb0815147ed27fdfbbd3353913b49deef6e75a93e94358c9cebdb1237e6",
+      "bytes": 1184
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/NAAKTGenerator_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/NAAKTGenerator_96.png",
+      "sha256": "201fab259dc08c9be57a49bad607a2609ff28133f21cec7a474f5cff227579a1",
+      "bytes": 2850
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/PalenNummeren_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/PalenNummeren_32.png",
+      "sha256": "ff465d12c196ec0954c256ebd5d5ab2e21ed8faee5cf079d4818658f521af298",
+      "bytes": 1766
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/PalenNummeren_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/PalenNummeren_96.png",
+      "sha256": "baad878e693893731e1b41788f810c832935857d2cbb61995692a4d0fe7fa563",
+      "bytes": 7288
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/RcBerekening_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/RcBerekening_32.png",
+      "sha256": "bb99193bc9367af84d9cfd9998b5c1b318a2abc26a808ad290dbd3e13f3495e7",
+      "bytes": 1743
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/RcBerekening_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/RcBerekening_96.png",
+      "sha256": "3b6022d69b4b3cafeb79a06b73b6c40146a7eaefacc835cf1519deeb0f560068",
+      "bytes": 4738
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/ScheduleExport_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/ScheduleExport_32.png",
+      "sha256": "465ec80de4039bf9cab5941e7b84eb7bedd903cc88f88a47aad975fb3b3f9560",
+      "bytes": 1419
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/ScheduleExport_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/ScheduleExport_96.png",
+      "sha256": "e13de0b051d6f7e15dff83e66723209cbc5b36271d6704f6469b5364c5d22408",
+      "bytes": 3064
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/ScheduleImport_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/ScheduleImport_32.png",
+      "sha256": "09d6418116958dfd4c612db006239d64fc68fb8860fa5f31a2fe09f4dcef16f9",
+      "bytes": 1359
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/ScheduleImport_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/ScheduleImport_96.png",
+      "sha256": "c419c1493356e4ce6e520195c6d98c6b0fe688bcadc23141c5ad2a8d90858146",
+      "bytes": 3030
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/SheetParameters_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/SheetParameters_32.png",
+      "sha256": "62cea4c35a57e7bb18d1a6b169ffb71163bb4d6a2749dcbe84b50c453e997759",
+      "bytes": 952
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/SheetParameters_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/SheetParameters_96.png",
+      "sha256": "b6040104bd8081e95e628fc60bd4ec1ab1d95240df71d70869fa43a606527dd0",
+      "bytes": 1895
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/UITestWPF_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/UITestWPF_32.png",
+      "sha256": "da6aaa07881d768296f5df3369b5544d84eca60d34f53fcfcc2b07a495bf9160",
+      "bytes": 1147
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/UITestWPF_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/UITestWPF_96.png",
+      "sha256": "ef7aff5269c83512e513d553f9b510570567fbf730af0e2a5760057cf79fc335",
+      "bytes": 3304
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/UITest_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/UITest_32.png",
+      "sha256": "556004c185a1678ea0e64020c3fa156eb958e738961a34976805ab8532cdb67d",
+      "bytes": 1185
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/UITest_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/UITest_96.png",
+      "sha256": "ca98dc720ed24cadf907d3dd596e593146416515f021edc239dd0bb2a5b10a2d",
+      "bytes": 2551
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/VentilatieBalans_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/VentilatieBalans_32.png",
+      "sha256": "3dc4b34bc904cb90d81ca80303c0a177ebbd197fd89ef628b0b5a20a18bc6b23",
+      "bytes": 1133
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/VentilatieBalans_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/VentilatieBalans_96.png",
+      "sha256": "24f8bf25d15f87b2143737a001963a64bd5aad23b0166ca64c7118379e9de621",
+      "bytes": 3258
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/WandVloerAfwerking_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/WandVloerAfwerking_32.png",
+      "sha256": "84c2223cf59936efe0c251018c6ffccac9ff57d952d740786c7494a45d6e2545",
+      "bytes": 971
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/WandVloerAfwerking_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/WandVloerAfwerking_96.png",
+      "sha256": "0e5852dc9dd4dd9b2b8bac846e60cff93e77f6b986fffc0d8b4edc406806f668",
+      "bytes": 2089
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/WarmteverliesExport_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/WarmteverliesExport_32.png",
+      "sha256": "c143ddb5f754dafb13d329633397c38ca1ead3d8e5593f2e0b0dc5f0feba4e21",
+      "bytes": 443
+    },
+    {
+      "path": "ICONS_3BM_Bouwkunde/WarmteverliesExport_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_3BM_Bouwkunde/WarmteverliesExport_96.png",
+      "sha256": "917675453a5e5ebaa7ae7c0eb9a33ab1641838a8e1c6b26b1e4337a449d31184",
+      "bytes": 1344
+    },
+    {
+      "path": "ICONS_GIS2BIM/AHN_Hoogte_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/AHN_Hoogte_32.png",
+      "sha256": "f6b6e245a2b5057fff1784e79bd87e199fcae08c7a5ee6ad93958a0d804137e4",
+      "bytes": 1584
+    },
+    {
+      "path": "ICONS_GIS2BIM/AHN_Hoogte_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/AHN_Hoogte_96.png",
+      "sha256": "b2fea07f809612b533380ed9d318b9d05b1f50ee589eb889acad1f54006416ea",
+      "bytes": 6594
+    },
+    {
+      "path": "ICONS_GIS2BIM/BAG_Data_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/BAG_Data_32.png",
+      "sha256": "35694ee8f4728abec372014a512068760ea98ec86d091e973d53f3f73f49bf32",
+      "bytes": 1429
+    },
+    {
+      "path": "ICONS_GIS2BIM/BAG_Data_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/BAG_Data_96.png",
+      "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710",
+      "bytes": 3297
+    },
+    {
+      "path": "ICONS_GIS2BIM/Bestemmingsplan_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/Bestemmingsplan_32.png",
+      "sha256": "50147f9c37c954de1bf7a307f1b15d526aa67c9e26634464f27ccc07239059be",
+      "bytes": 1722
+    },
+    {
+      "path": "ICONS_GIS2BIM/Bestemmingsplan_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/Bestemmingsplan_96.png",
+      "sha256": "28e01cda03473bb053a50e29af750902f6e9d1fb2f90040fee0d99b301548347",
+      "bytes": 4150
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS2BIM_main_192.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS2BIM_main_192.png",
+      "sha256": "be3006b2c64a8c3cb39c9b489ddf84f1e27e21f7ca0c897109b17a018550072f",
+      "bytes": 13189
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS2BIM_main_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS2BIM_main_96.png",
+      "sha256": "1756574f7801735868d5e9f85609b880c9001ae863417452a337b6c1f0a9474b",
+      "bytes": 5844
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS_Locatie_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS_Locatie_32.png",
+      "sha256": "0663d694d7339c8f5efe05797e6b3c49081827c406f1a097f00d1b0540ab51db",
+      "bytes": 1213
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS_Locatie_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS_Locatie_96.png",
+      "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
+      "bytes": 3790
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS_naar_BIM_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS_naar_BIM_32.png",
+      "sha256": "13faf81f0a5a5f532842f4cd3405f7d59afa810cf12d8e22b4f4b89366f3e3ab",
+      "bytes": 1616
+    },
+    {
+      "path": "ICONS_GIS2BIM/GIS_naar_BIM_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/GIS_naar_BIM_96.png",
+      "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
+      "bytes": 5154
+    },
+    {
+      "path": "ICONS_GIS2BIM/Kadaster_Data_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/Kadaster_Data_32.png",
+      "sha256": "efb0a0acc22a0ea58cd774462bcf3d21aad7066b455c6a81fcfa23ac82a32766",
+      "bytes": 1286
+    },
+    {
+      "path": "ICONS_GIS2BIM/Kadaster_Data_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/Kadaster_Data_96.png",
+      "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
+      "bytes": 3412
+    },
+    {
+      "path": "ICONS_GIS2BIM/OSM_Data_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/OSM_Data_32.png",
+      "sha256": "2dbeb5bf8263f5eb4addb96f8d245f4d592a0c47c8b31d600db875458f6ebe43",
+      "bytes": 1733
+    },
+    {
+      "path": "ICONS_GIS2BIM/OSM_Data_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/OSM_Data_96.png",
+      "sha256": "4afa714178605e4e98f50c6bbb7e4680ba17747392b570e59657ac4c6a6cae00",
+      "bytes": 6882
+    },
+    {
+      "path": "ICONS_GIS2BIM/PDOK_Data_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/PDOK_Data_32.png",
+      "sha256": "ed347a8f2901827396eab6d03f119340ce003616f7dcd33d0614bec75e72f47c",
+      "bytes": 1395
+    },
+    {
+      "path": "ICONS_GIS2BIM/PDOK_Data_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/PDOK_Data_96.png",
+      "sha256": "1e64e4dcd0b45219ad71310d81da688a466bbd54f16034f6c5b23bfabb148bbb",
+      "bytes": 5464
+    },
+    {
+      "path": "ICONS_GIS2BIM/WFS_Service_32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/WFS_Service_32.png",
+      "sha256": "5d67976d5420c39481150516962bb75c66b4565917ee0842f791ff2b4511c9d2",
+      "bytes": 1815
+    },
+    {
+      "path": "ICONS_GIS2BIM/WFS_Service_96.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/ICONS_GIS2BIM/WFS_Service_96.png",
+      "sha256": "b49642d47d8300f2590f37cb3e586c75932f99bfd87a3f12fb02bd64bea96abf",
+      "bytes": 7735
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Analyse.panel/GebiedsAnalyse.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Analyse.panel/GebiedsAnalyse.pushbutton/icon.png",
+      "sha256": "b380c676756ba20207c671f55416d3457e0488729b1d8827bc239c5a82d42ecf",
+      "bytes": 620
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Analyse.panel/GebiedsAnalyse.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Analyse.panel/GebiedsAnalyse.pushbutton/icon.svg",
+      "sha256": "46c3035a259a55872f83e411be44e395f4ccc4e199e6d22522e1ba4a2b6be25f",
+      "bytes": 2299
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/AHN.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/AHN.pushbutton/icon.png",
+      "sha256": "b2fea07f809612b533380ed9d318b9d05b1f50ee589eb889acad1f54006416ea",
+      "bytes": 6594
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BAG3D.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BAG3D.pushbutton/icon.png",
+      "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710",
+      "bytes": 3297
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT.pushbutton/icon.png",
+      "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
+      "bytes": 3412
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT3D.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT3D.pushbutton/icon.png",
+      "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
+      "bytes": 3412
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/CityJSON.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/CityJSON.pushbutton/icon.png",
+      "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710",
+      "bytes": 3297
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/GEFSonderingen.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/GEFSonderingen.pushbutton/icon.png",
+      "sha256": "58813595193435c18167fb473958211a366806290c1b43d65c6416ee422dcc03",
+      "bytes": 852
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/KLIC.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/KLIC.pushbutton/icon.png",
+      "sha256": "e1be864129abc849ba21053e6c2ed55f0d08d20c6ebc2786035bedc98a4f272c",
+      "bytes": 1381
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/Mesh3D.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/Mesh3D.pushbutton/icon.png",
+      "sha256": "def45fd7470c56d57b9ad4237f169372999b3d0659e86f5fd1a24dbb966f1172",
+      "bytes": 2041
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/NAPPeilmerken.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/NAPPeilmerken.pushbutton/icon.png",
+      "sha256": "eaced16bdad60c809df4d8a1123b503d4354408a0482cf00eb1fe1a1911b18cd",
+      "bytes": 1555
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/Natura2000.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/Natura2000.pushbutton/icon.png",
+      "sha256": "dcb555328834972887c307ab67ffa393472b97afc3ae4fa13759332491204937",
+      "bytes": 1320
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/OSM.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/OSM.pushbutton/icon.png",
+      "sha256": "4afa714178605e4e98f50c6bbb7e4680ba17747392b570e59657ac4c6a6cae00",
+      "bytes": 6882
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/WFS.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/WFS.pushbutton/icon.png",
+      "sha256": "b49642d47d8300f2590f37cb3e586c75932f99bfd87a3f12fb02bd64bea96abf",
+      "bytes": 7735
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/KaartTijdreis.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/KaartTijdreis.pushbutton/icon.png",
+      "sha256": "db683e64844d35567ca960b8d15f3c4379840367806b1ec7e031f84297789cfa",
+      "bytes": 1532
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/LuchtfotoTijdreis.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/LuchtfotoTijdreis.pushbutton/icon.png",
+      "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
+      "bytes": 5154
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/StreetView.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/StreetView.pushbutton/icon.png",
+      "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
+      "bytes": 5154
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/WMS.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/WMS.pushbutton/icon.png",
+      "sha256": "28e01cda03473bb053a50e29af750902f6e9d1fb2f90040fee0d99b301548347",
+      "bytes": 4150
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Locatie.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Locatie.pushbutton/icon.png",
+      "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
+      "bytes": 3790
+    },
+    {
+      "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Opschonen.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Opschonen.pushbutton/icon.png",
+      "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
+      "bytes": 3790
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Aanzichten.panel/RuimteSheet.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Aanzichten.panel/RuimteSheet.pushbutton/icon.png",
+      "sha256": "766340f681d1aca18b9da4dbaf86feb43d68bfd46628a84c070b18c0d5c0d3e3",
+      "bytes": 1595
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Aanzichten.panel/Vlakaanzicht.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Aanzichten.panel/Vlakaanzicht.pushbutton/icon.png",
+      "sha256": "c65c764851b6b50c962be6cd1eb54ef6e42633dd59fe0bf24040efa1e7a83acc",
+      "bytes": 1466
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Afwerking.panel/WandVloerAfwerking.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Afwerking.panel/WandVloerAfwerking.pushbutton/icon.png",
+      "sha256": "84c2223cf59936efe0c251018c6ffccac9ff57d952d740786c7494a45d6e2545",
+      "bytes": 971
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/BblToets.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/BblToets.pushbutton/icon.png",
+      "sha256": "5cc40f865de130f07ffaf73a5a7e7e3012d73d26ec35a23a8db8e4221e0b857b",
+      "bytes": 683
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/HellingbaanGenerator.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/HellingbaanGenerator.pushbutton/icon.png",
+      "sha256": "73c3633d9438b2ae236c01f563bfeccbb5bac7c05632be1b9623593dd1705754",
+      "bytes": 1212
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/HellingbaanGenerator.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/HellingbaanGenerator.pushbutton/icon.svg",
+      "sha256": "1b7cd2ed55bf0b15f2a6a9552d704817f6b5b1b6daedc00fd6022189bba11d61",
+      "bytes": 986
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/RcBerekening.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/RcBerekening.pushbutton/icon.png",
+      "sha256": "bb99193bc9367af84d9cfd9998b5c1b318a2abc26a808ad290dbd3e13f3495e7",
+      "bytes": 1743
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/VentilatieBalans.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/VentilatieBalans.pushbutton/icon.png",
+      "sha256": "3dc4b34bc904cb90d81ca80303c0a177ebbd197fd89ef628b0b5a20a18bc6b23",
+      "bytes": 1133
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/WarmteverliesExport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/WarmteverliesExport.pushbutton/icon.png",
+      "sha256": "46f916d0089552adc5b5916fff66819e1fc9624a93dec7de2acc328fbe95f072",
+      "bytes": 2175
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/WarmteverliesGrensvlakCheck.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/WarmteverliesGrensvlakCheck.pushbutton/icon.png",
+      "sha256": "955c0bd5285ef74008803378ac500b4b6714f643704a1564db2b18f5757c395b",
+      "bytes": 2187
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/RaycastExport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/RaycastExport.pushbutton/icon.png",
+      "sha256": "e25d1cd9652566b1e8bc59a0e3c7c147813f9dacf90c46dbc5d1ce22242c0d7d",
+      "bytes": 1747
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/RaycastExport.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/RaycastExport.pushbutton/icon.svg",
+      "sha256": "1e2b017f728c13221550a9e012f2b5846704e1a5c32351b2a198185cae117ebc",
+      "bytes": 966
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/WarmteverliesView.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/WarmteverliesView.pushbutton/icon.png",
+      "sha256": "64a2ec98d52ce2f44e95b6045774af13a8ae49ea463ad3ae7b9fa376cc4d85b7",
+      "bytes": 466
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/WarmteverliesView.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Bouwbesluit.panel/_archived/WarmteverliesView.pushbutton/icon.svg",
+      "sha256": "940f8fa4ee391975a39d20d1896ddb58ecac21f7783f4793f2030826d82a140b",
+      "bytes": 631
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Data Exchange.panel/ScheduleExport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Data%20Exchange.panel/ScheduleExport.pushbutton/icon.png",
+      "sha256": "465ec80de4039bf9cab5941e7b84eb7bedd903cc88f88a47aad975fb3b3f9560",
+      "bytes": 1419
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Data Exchange.panel/ScheduleExport.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Data%20Exchange.panel/ScheduleExport.pushbutton/icon.svg",
+      "sha256": "04493fbeaa6589e5cc0b3c9cb301108f89ab899ca0c10c3fc20e1321f25256cb",
+      "bytes": 938
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Data Exchange.panel/ScheduleImport.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Data%20Exchange.panel/ScheduleImport.pushbutton/icon.png",
+      "sha256": "09d6418116958dfd4c612db006239d64fc68fb8860fa5f31a2fe09f4dcef16f9",
+      "bytes": 1359
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Data Exchange.panel/ScheduleImport.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Data%20Exchange.panel/ScheduleImport.pushbutton/icon.svg",
+      "sha256": "fd04bace4bf296eb34d81570bcd63bdd3ed0290b82513e06afc36e49ea05f258",
+      "bytes": 937
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatAantallen.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatAantallen.pushbutton/icon.png",
+      "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc",
+      "bytes": 1980
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatConfig.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatConfig.pushbutton/icon.png",
+      "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224",
+      "bytes": 997
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatCreate.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatCreate.pushbutton/icon.png",
+      "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a",
+      "bytes": 499
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatMaatvoering.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatMaatvoering.pushbutton/icon.png",
+      "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82",
+      "bytes": 561
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatRename.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatRename.pushbutton/icon.png",
+      "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750",
+      "bytes": 1512
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatTag.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatTag.pushbutton/icon.png",
+      "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421",
+      "bytes": 867
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/_archived/DeurstaatWizard.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/_archived/DeurstaatWizard.pushbutton/icon.png",
+      "sha256": "8867bb68f2e7c716ea2818fc49a84fdd11728b6b0c0c388ffc6527ad64ea46c6",
+      "bytes": 1129
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Document.panel/SheetParameters.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Document.panel/SheetParameters.pushbutton/icon.png",
+      "sha256": "62cea4c35a57e7bb18d1a6b169ffb71163bb4d6a2749dcbe84b50c453e997759",
+      "bytes": 952
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Document.panel/SheetParameters.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Document.panel/SheetParameters.pushbutton/icon.svg",
+      "sha256": "5215e471bf2b34c716866912f8ad692fb2e751574094629328f0425d43c70b43",
+      "bytes": 1397
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Filter.panel/FilterCreator.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Filter.panel/FilterCreator.pushbutton/icon.png",
+      "sha256": "06bb3ec1e000a379f7d41495741d53200640df18a6fc9f80492453e8fbebfaf9",
+      "bytes": 1233
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Filter.panel/FilterCreator.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Filter.panel/FilterCreator.pushbutton/icon.svg",
+      "sha256": "8fda5f01da472937a400da09dfc0915746b395d5036c58bacab2b26a2989477e",
+      "bytes": 538
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Fundering.panel/PalenNummeren.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Fundering.panel/PalenNummeren.pushbutton/icon.png",
+      "sha256": "ff465d12c196ec0954c256ebd5d5ab2e21ed8faee5cf079d4818658f521af298",
+      "bytes": 1766
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Fundering.panel/PalenNummeren.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Fundering.panel/PalenNummeren.pushbutton/icon.svg",
+      "sha256": "dbd3ff938ee56ff57c277f356310e918c801bdb93179d8dd6ed9fa4c4c128e75",
+      "bytes": 1769
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/GealanRename.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/GealanRename.pushbutton/icon.png",
+      "sha256": "952ea1b8a00082fecdbce08e564b85f49c413b926fdfc5bc2ed3153889c0072b",
+      "bytes": 327
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/GealanRename.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/GealanRename.pushbutton/icon.svg",
+      "sha256": "cfe053c0a16122041de52db182765d3de12fa505600525113967647441f1d1ac",
+      "bytes": 856
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/IFCKozijnAnalyzer.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/IFC.panel/IFCKozijnAnalyzer.pushbutton/icon.png",
+      "sha256": "8fd02187e3e4a4766506d72c1700c538c0118e6a4760b63b05685e9645c8e8b2",
+      "bytes": 1547
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatAantallen.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatAantallen.pushbutton/icon.png",
+      "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc",
+      "bytes": 1980
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatConfig.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatConfig.pushbutton/icon.png",
+      "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224",
+      "bytes": 997
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatCreate.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatCreate.pushbutton/icon.png",
+      "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a",
+      "bytes": 499
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatGlasTag.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatGlasTag.pushbutton/icon.png",
+      "sha256": "5180de16d3a4b0f858ec2ed61a39e2a563a0e41a137810c87b039a58337598ca",
+      "bytes": 1057
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatMaatvoering.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatMaatvoering.pushbutton/icon.png",
+      "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82",
+      "bytes": 561
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatRename.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatRename.pushbutton/icon.png",
+      "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750",
+      "bytes": 1512
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatWindowTag.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatWindowTag.pushbutton/icon.png",
+      "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421",
+      "bytes": 867
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/_archived/KozijnstaatWizard.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/_archived/KozijnstaatWizard.pushbutton/icon.png",
+      "sha256": "8867bb68f2e7c716ea2818fc49a84fdd11728b6b0c0c388ffc6527ad64ea46c6",
+      "bytes": 1129
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/AutoDim.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/AutoDim.pushbutton/icon.png",
+      "sha256": "f7026a83f77bb574ca0dcceb87ded481ddfad868527fbd2ab6d0a63a8724b836",
+      "bytes": 961
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/AutoDim.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/AutoDim.pushbutton/icon.svg",
+      "sha256": "f34db77fd3c1a969682420f048db73dd2c2de6975d89f245b8a1870bc81da694",
+      "bytes": 933
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/CrossDim.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Maatvoering.panel/CrossDim.pushbutton/icon.png",
+      "sha256": "fd8fcaa0314e9c7973bd9518a986989a99675153380ce0d6052a188d137293c5",
+      "bytes": 1043
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/DbExp.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/DbExp.pushbutton/icon.png",
+      "sha256": "b9896ce631e1de37926c83ec4f3df34b7af8a18034574fb308a0a136d4fff6c5",
+      "bytes": 1409
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/MatExp.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/MatExp.pushbutton/icon.png",
+      "sha256": "4fbda3a10f7f29a41294d7708f92ec6d4a3966145a208253e958aab37b0c6e6f",
+      "bytes": 1269
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/MatImp.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/MatImp.pushbutton/icon.png",
+      "sha256": "45015e081581de6b6c83bef609659384977de39ed4cec37725798ef9a8f9fc2b",
+      "bytes": 1214
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.png",
+      "sha256": "32a77bb0815147ed27fdfbbd3353913b49deef6e75a93e94358c9cebdb1237e6",
+      "bytes": 1184
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.svg",
+      "sha256": "f139e37b287eca8804afaab6b9f5a1c5d8b703d0b0715b8440acc92598975ba5",
+      "bytes": 1354
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Parameters.panel/SharedParamAudit.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Parameters.panel/SharedParamAudit.pushbutton/icon.png",
+      "sha256": "3de899353e9cba504721feabd006eeee83d75ae4e7b48f9e591f1159dbe928b6",
+      "bytes": 291
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Parameters.panel/SharedParamAudit.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Parameters.panel/SharedParamAudit.pushbutton/icon.svg",
+      "sha256": "54e089f4e90209e9801bad1897a625590896f1efcb3b833aae438f0ef6332af2",
+      "bytes": 1124
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Test.panel/MCPStatus.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Test.panel/MCPStatus.pushbutton/icon.png",
+      "sha256": "12c646978ea4fd9205c0388799d306d0ca22910c1fda7671a18118ac74833ca8",
+      "bytes": 1022
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Types.panel/TypeRename.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Types.panel/TypeRename.pushbutton/icon.png",
+      "sha256": "ed386c17b7e843f1c5e107c08956604815206c7a51b56380330faa2aed4daa21",
+      "bytes": 349
+    },
+    {
+      "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Types.panel/TypeRename.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Types.panel/TypeRename.pushbutton/icon.svg",
+      "sha256": "e04b19a705e30989e026edf62c5bca8d18aab62ed16b8a033134120ff32a7fe4",
+      "bytes": 1232
+    },
+    {
+      "path": "reference/GIS2BIM_dynamo/scripts/IMAGES/legend_gis2bim_logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/reference/GIS2BIM_dynamo/scripts/IMAGES/legend_gis2bim_logo.png",
+      "sha256": "f6316d8437e6b46c6dac11a394a2be6e01412f8adb494bce7059b4143db10bea",
+      "bytes": 22976
+    },
+    {
+      "path": "reference/github_packages/NAAKT-Generator/OpenAEC.extension/OpenAEC.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/reference/github_packages/NAAKT-Generator/OpenAEC.extension/OpenAEC.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.png",
+      "sha256": "4599808fea614e5747e885b8ab480222d2d3cd62a2d88a64cd626a1ab358746c",
+      "bytes": 474
+    },
+    {
+      "path": "reference/github_packages/NAAKT-Generator/OpenAEC.extension/OpenAEC.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/reference/github_packages/NAAKT-Generator/OpenAEC.extension/OpenAEC.tab/Materialen.panel/NAAKTGenerator.pushbutton/icon.svg",
+      "sha256": "f139e37b287eca8804afaab6b9f5a1c5d8b703d0b0715b8440acc92598975ba5",
+      "bytes": 1354
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "scripts/create_icons.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/create_icons.py",
+      "sha256": "ecc5ddfcf3dbc80f33c26224337561138878cbab6195f270bbf5a06245224f59",
+      "bytes": 2096
+    },
+    {
+      "path": "scripts/create_icons_pil.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/create_icons_pil.py",
+      "sha256": "603a415e9e49fbdbcb36476dce158c5f30fae0212c2f07a6f731120d49ca8f0b",
+      "bytes": 1304
+    },
+    {
+      "path": "scripts/create_locatie_icon.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/create_locatie_icon.py",
+      "sha256": "3ae63afe92c9c3955416ba7e1347a372780bb6383a2e552ce6b8433dbc8cedf4",
+      "bytes": 1670
+    },
+    {
+      "path": "scripts/create_natura2000_icon.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/create_natura2000_icon.py",
+      "sha256": "3221ab95492239992dfc1a75921d66ecab73c27eabb3c0d170e11407f7ab0ba2",
+      "bytes": 3629
+    },
+    {
+      "path": "scripts/create_toolbar_icons.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/create_toolbar_icons.py",
+      "sha256": "1b0625b186c937b3d23a0d94ae003ba97d41ff6564c5cc5851447685bd18e64a",
+      "bytes": 5398
+    },
+    {
+      "path": "scripts/fix_locatie_icon.py",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pyrevit-gis2bim/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/scripts/fix_locatie_icon.py",
+      "sha256": "93805325b96da31b831adcf145ea88eae3ad2d3809e8d152cf4780e9cbc7e646",
+      "bytes": 4082
+    }
+  ],
+  "manifests": [],
+  "errors": [],
+  "commit": "4d80109d25a814fab0090ca0dd78ed8bd79c00ad",
+  "files_scanned": 827,
+  "ui_stack": [],
+  "icon_packages": []
+}

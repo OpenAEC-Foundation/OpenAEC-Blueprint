@@ -1,0 +1,241 @@
+{
+  "name": "crates-warehouse",
+  "url": "https://github.com/OpenAEC-Foundation/crates-warehouse",
+  "branch": "main",
+  "description": "Warehouse with RUST crates",
+  "archived": false,
+  "license": "MIT",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/Cargo.toml",
+      "sha256": "bfc139bd6bfd3a3e757a65244d86274e3ed293e5c618ce14a760d13658625562",
+      "bytes": 2087
+    },
+    {
+      "path": "baken-geo/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/baken-geo/Cargo.toml",
+      "sha256": "ec2a54cd027bcd8dc533bffe7a30438abdc88f0b37b5cd765bd7c3af19e7bdf9",
+      "bytes": 233
+    },
+    {
+      "path": "baken-import-wasm/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/baken-import-wasm/Cargo.toml",
+      "sha256": "6c21f0ff99c3b5318bdf2cfe313fda2bb012e04ecd0a1f28dd777f12b93116b7",
+      "bytes": 477
+    },
+    {
+      "path": "cpt-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/cpt-core/Cargo.toml",
+      "sha256": "09961e032778fec81310a126c2f6176b4f51fd39678f487de323fc30275f33e3",
+      "bytes": 638
+    },
+    {
+      "path": "isso51-api/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/isso51-api/Cargo.toml",
+      "sha256": "fe59e7b4962a7d8a78c454ed96448d0625e421a3cb0ec39c4f18a986be94f112",
+      "bytes": 1278
+    },
+    {
+      "path": "isso51-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/isso51-core/Cargo.toml",
+      "sha256": "fd13b05310876b7f7e1f60e72d991887110dee4265c93da99370ae49187dfa66",
+      "bytes": 632
+    },
+    {
+      "path": "isso51-ifcx/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/isso51-ifcx/Cargo.toml",
+      "sha256": "2a0378a0a885c366edebbe1032b319b5fc5e285fac495d3e845dddebcc2cf4b4",
+      "bytes": 441
+    },
+    {
+      "path": "klic2geo/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/klic2geo/Cargo.toml",
+      "sha256": "c8dd702b1395b3c2dbf0b8eb62f085af72bac6d5e42e686b9879868f79aa4a71",
+      "bytes": 326
+    },
+    {
+      "path": "nta8800-automation/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-automation/Cargo.toml",
+      "sha256": "ca2ff29abb3a2508251a90398c12dd2f95aff0f4ddb814222653ed85009d84d2",
+      "bytes": 373
+    },
+    {
+      "path": "nta8800-cooling/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-cooling/Cargo.toml",
+      "sha256": "dc0d55033e67ec10d5de7c08938b90a131b24547425078fa42a1e30012704895",
+      "bytes": 503
+    },
+    {
+      "path": "nta8800-demand/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-demand/Cargo.toml",
+      "sha256": "9297cd441a579e0eef6b91d1635259f3b5c5d4ea2f0de5232f7e6074701a1cd1",
+      "bytes": 543
+    },
+    {
+      "path": "nta8800-dhw/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-dhw/Cargo.toml",
+      "sha256": "e5097f9f1e89d819cbd62cb1f0810fa9c0542c9111cb8a71c2afdb81eb5409f0",
+      "bytes": 404
+    },
+    {
+      "path": "nta8800-ep/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-ep/Cargo.toml",
+      "sha256": "d0a0181a39d7fdd137ce76e9c8c6bac136b8547553aa0d007c960c1018dfb232",
+      "bytes": 389
+    },
+    {
+      "path": "nta8800-geometry/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-geometry/Cargo.toml",
+      "sha256": "9d2bbfd4c307ce3b7338f61423aedf813280bb7fe563173f3fdde7d37f5f97f5",
+      "bytes": 380
+    },
+    {
+      "path": "nta8800-heating/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-heating/Cargo.toml",
+      "sha256": "7813059bdffb3ef19f7193f6b61315fa1a9036baf19ee39d7822c3b9659a3586",
+      "bytes": 484
+    },
+    {
+      "path": "nta8800-humidity/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-humidity/Cargo.toml",
+      "sha256": "335cddc50b0148c734844ff0ff2a398a479fd13fa6d95f278c43d964bec2e427",
+      "bytes": 410
+    },
+    {
+      "path": "nta8800-lighting/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-lighting/Cargo.toml",
+      "sha256": "0c5ac952003fbc571f67c624065a866d434d71f697ef24e7532366180ee64eb9",
+      "bytes": 407
+    },
+    {
+      "path": "nta8800-model/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-model/Cargo.toml",
+      "sha256": "18016e4c65866ca0af7d7faa3d36601f8bb0ea0343a001974e538e8c6a37ffe0",
+      "bytes": 384
+    },
+    {
+      "path": "nta8800-pv/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-pv/Cargo.toml",
+      "sha256": "63eb86d012bc3ee828eaf7d6577c672c0c11e00234910c7296e529782aa23aa4",
+      "bytes": 426
+    },
+    {
+      "path": "nta8800-tables/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-tables/Cargo.toml",
+      "sha256": "82e784d4c33014319a52cd640b1862a82d09e0238d64f84ce24a4aef46a77e12",
+      "bytes": 435
+    },
+    {
+      "path": "nta8800-transmission/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-transmission/Cargo.toml",
+      "sha256": "5238283e909cfbd74825500a842f2460c0b2b3405fafd9a35d274886f262ba6f",
+      "bytes": 503
+    },
+    {
+      "path": "nta8800-ventilation/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/nta8800-ventilation/Cargo.toml",
+      "sha256": "c482ce2c9da1035e43bf1c1bf927c9d174ea543ef9d5888963de1836a3d1bcec",
+      "bytes": 425
+    },
+    {
+      "path": "openaec-cli/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-cli/Cargo.toml",
+      "sha256": "fa10c2ca51690e908717340f7aee0799c40b2760eda49100198d9226e97b5a96",
+      "bytes": 419
+    },
+    {
+      "path": "openaec-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-core/Cargo.toml",
+      "sha256": "668d8d1161cae420eb78f1718dfe1366cb814d3c05c4028eab3fc543e7c26d99",
+      "bytes": 595
+    },
+    {
+      "path": "openaec-dwg-parser/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-dwg-parser/Cargo.toml",
+      "sha256": "b79b00885f3350445279db00b7e6723c89c0286f827992929288c2ffa820fbef",
+      "bytes": 920
+    },
+    {
+      "path": "openaec-dxf-importer/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-dxf-importer/Cargo.toml",
+      "sha256": "810c9de9bdddecd1b0edf69049bfd83838f119ee8600f7c88bb8aec078f43f7b",
+      "bytes": 868
+    },
+    {
+      "path": "openaec-engine/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-engine/Cargo.toml",
+      "sha256": "abc1cbf7db87107acbd3b2f6b15d7807afac40045149a34d06e07293e041f4c2",
+      "bytes": 720
+    },
+    {
+      "path": "openaec-ffi/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-ffi/Cargo.toml",
+      "sha256": "5b5d9e1e55a138238060408c56adc3a28bcc1ddb66f2c5b2a643d57ee39cfa76",
+      "bytes": 326
+    },
+    {
+      "path": "openaec-layout/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-layout/Cargo.toml",
+      "sha256": "acf01f71ff9040a713b745127281f2def0e6faf29ee0f4b00f7e8c7fb487a529",
+      "bytes": 375
+    },
+    {
+      "path": "openaec-project-shared/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-project-shared/Cargo.toml",
+      "sha256": "684e92bc83111428eda5d39e613a42a8e3ebee8eacefe3fc5a428ff29e046cdb",
+      "bytes": 714
+    },
+    {
+      "path": "openaec-server/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/openaec-server/Cargo.toml",
+      "sha256": "61dcff02c04044847331d2a2beedf9458e1604b12052555b16bafab7066990cd",
+      "bytes": 726
+    },
+    {
+      "path": "plan2geo/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/crates-warehouse/6e8738c075719e2fc8fcf918d969406f98927b07/plan2geo/Cargo.toml",
+      "sha256": "b8b48c0abd8fab289676bd6f2b556bbea8347d9e71db779ad40aaf5a049161e9",
+      "bytes": 296
+    }
+  ],
+  "errors": [],
+  "commit": "6e8738c075719e2fc8fcf918d969406f98927b07",
+  "files_scanned": 418,
+  "ui_stack": [],
+  "icon_packages": []
+}

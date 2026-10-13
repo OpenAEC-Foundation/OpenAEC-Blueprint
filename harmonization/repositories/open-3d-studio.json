@@ -1,0 +1,392 @@
+{
+  "name": "open-3d-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-3d-studio",
+  "branch": "main",
+  "description": "Open source 3D-modelleerstudio met IFC als native output - OpenAEC-stijl, aangedreven door That Open Engine",
+  "archived": false,
+  "license": "MIT",
+  "icons": [
+    {
+      "path": "app-icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/app-icon.png",
+      "sha256": "16ce8d019b72f0063ad354707963e93cb8696ffa2038a272caac99ce6509a208",
+      "bytes": 4075
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/128x128.png",
+      "sha256": "2f24305bae98817e1bed804a6cc9751a1f89231adbd2835cd98b132d9976b1dd",
+      "bytes": 1820
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/128x128%402x.png",
+      "sha256": "64672285293bc69fc3e4a45c45af30d599741a795901a3847cccd929f86b7653",
+      "bytes": 2809
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/32x32.png",
+      "sha256": "8b9057152ed0feb737dd5eab0328ebeeb85b40cc90cdcf521135737c83640a2d",
+      "bytes": 773
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/64x64.png",
+      "sha256": "3995a6378bcdf0d92a864e4bd9cbe3fac95e0fd2c3f5065306f8f15e79297b6f",
+      "bytes": 1146
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "3aa15dd84e239bd4a86e6c0144158f3771f4d073eb4c4186cd6a1c1054a5fb7d",
+      "bytes": 1568
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "2d4f3368e5889a98c4b59a83ae6a5865e81d9a3d2e1cc01c05e5943bf3bae4f3",
+      "bytes": 1808
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "d0f0b9c2959f6c84fbf5c08225d647292075c4c9b3547719df1a1b84737c59d2",
+      "bytes": 2273
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "84a22ef7569c8466edf515bbc7b10f5803ac360c5500d497fa14a4030ba8cd7d",
+      "bytes": 3959
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "0a1f81d3f9cf21b2d8886cdb1b434763952c861553fcaef1dbc78ea844779cb9",
+      "bytes": 898
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "cae723532e52fa2083c6dc7f82c8b9b49d1a1b2fdeb4c58c510b0d2e3fd6da9d",
+      "bytes": 4618
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "ac6323a27584be71569eb97831d4da76632c5a76705873d66e1c70222a051d86",
+      "bytes": 846
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "d820fbb5056d84acbc15f5dda820c31c6c5cf1d116973c2cfccfdaf671d22cdf",
+      "bytes": 1388
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "6a7e4813916954d29569a9b365cfce72e98746a6e6561a93cde33be07c192f5f",
+      "bytes": 1685
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/StoreLogo.png",
+      "sha256": "d078eec0bafd5b06d421d6a420d62953d238ea3e9a7bd4d0f7bd989ec7862e56",
+      "bytes": 1113
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "d5bdb1d4a76fe529bab0f273cfe52fcafc3bb2d4d891845d3dcee9bb9fe148a9",
+      "bytes": 2283
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "b48e91c7ce0d9b42bc39aa2a1584d5adcd626c68578c5758bc8221a412226189",
+      "bytes": 2026
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "a32d5287ccc8d797fd33ba9e5a75df276a968719c75872340685ac8b6124eb7b",
+      "bytes": 2579
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "1ce0a9fe0fcfa25f310269fc486ba9026535a96c618ae8c1513cdb6ef827c676",
+      "bytes": 1553
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "3950d982220d058ea601464c12ae09ab7c187e2fd001a9d40af79b3d8ecd14df",
+      "bytes": 1482
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "8776634352725ae91c7496352d1d44762bcae6cc1e200695a4c98033a8efadc8",
+      "bytes": 1879
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "6a15c6eab9e9a952b8545ccf362f7f3a3e7c25b73f35a314747f5796225db9cb",
+      "bytes": 2208
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "264333b8c81282ea6054c839d657fe4b93adfa0f67a6fb5494bf98023aac2d1e",
+      "bytes": 2781
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "9933020b358257165894ce3ced6a37985f534fcf1eae0bb54ac259c9fe969094",
+      "bytes": 3446
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "058a24ddfe7e58d327d6570a7816137d06895c93112507f0fe61a9dc84ff0c58",
+      "bytes": 2851
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "e298cad55a38dbf3b1ce1f635147fe51f7307aa6145ee4467cef863f08506cf4",
+      "bytes": 5679
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "c29c9ce3856d017ca7f231abe88916424565120aff44f57364556d6a379e4fad",
+      "bytes": 4131
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "d7c47d64e6650b65853cf3974f902e042be21d3aa2940f0dbbcc574b926de01e",
+      "bytes": 3562
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "8e42884cdeec9383b1d9642a261cf0f379ba783bbf767056264b519971f173ab",
+      "bytes": 16616
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "34b859c79f95269ac34f6bb28bdff3781cfb3a82d70711f471dcebacd2edc208",
+      "bytes": 4461
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/icon.icns",
+      "sha256": "3b303ad7b058a9b4c331747e07819e00da8edbc8af3bb45b76ce52d8088e29a1",
+      "bytes": 41817
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/icon.ico",
+      "sha256": "b47ae4dae48620d4fd5a1fb121292d1ca3161fbf911af61335b4fda236b5f939",
+      "bytes": 15823
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/icon.png",
+      "sha256": "95f13a339cfb766f1d9aaba16f44c68ef81ffd8032dcf4c85303a56a634164e4",
+      "bytes": 4796
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "880b80578bc4b54aa5d315c67e3ac1227878f43573327b3ecb93399de4345bcc",
+      "bytes": 547
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "aa6f537928f4c7476ff18a89a7c30367472720e8cd64a115c922b46349d3813f",
+      "bytes": 909
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "aa6f537928f4c7476ff18a89a7c30367472720e8cd64a115c922b46349d3813f",
+      "bytes": 909
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "ed6601fb306182618a0426102c305c82dbf89557c759680a20e8963d28336edb",
+      "bytes": 1013
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "9a30bacb864c1fe3fee086173adecc7e9df3a069aa09c015e1b5b6dd2ca7b731",
+      "bytes": 835
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "b5cdd68c9d094a060ecae3ed5b5bc7678adbd16a97d1d6c5b9ce1b817e644d31",
+      "bytes": 1087
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "b5cdd68c9d094a060ecae3ed5b5bc7678adbd16a97d1d6c5b9ce1b817e644d31",
+      "bytes": 1087
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "51fdb7d71e1939a929eb8e22af8be3e46547243f1444c9718ad6b706beacbe3d",
+      "bytes": 1465
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "aa6f537928f4c7476ff18a89a7c30367472720e8cd64a115c922b46349d3813f",
+      "bytes": 909
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "77f9477b7d30f031f734cffef1c935634cdeb7418ded8c17689e8dddaffb9cb2",
+      "bytes": 1203
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "77f9477b7d30f031f734cffef1c935634cdeb7418ded8c17689e8dddaffb9cb2",
+      "bytes": 1203
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "852d2534794771bd9b090710790d972d6dd63de51aa2be5100cf08cbf15c81b6",
+      "bytes": 1452
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "983b19c1aabaaeb2341811e4c85fd71de69a0f37272d596a5a1c393379b8f6ab",
+      "bytes": 18559
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "852d2534794771bd9b090710790d972d6dd63de51aa2be5100cf08cbf15c81b6",
+      "bytes": 1452
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "4b1e47c8abd7a86c4a954cade62b6c49c223bffbbe6de0f6150bed86b78c133e",
+      "bytes": 2261
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "1b9cd7274431c6e7e5142176116f0a88cabe3f52fd80885ede7f678fd218f1b1",
+      "bytes": 1216
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "c52968e5051e9cc2672a11f477cb40cf10c2d5016f55d66438009a8c9982a8e5",
+      "bytes": 2058
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "8a31541a89d8ee203f01432cbdba31c879f36e7bd0231844711a44881e601069",
+      "bytes": 2208
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/package.json",
+      "sha256": "abcd9f5b592694bde9a6c37f01be14da10a876f9d0d12feddd6181a9a66fbf16",
+      "bytes": 1115
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-3d-studio/47109f381faa6eb3a78701b5e3950b9129fd2e5d/src-tauri/Cargo.toml",
+      "sha256": "74f05680f8a501a099b4fb9659ffa35d271aa8128effcfe5a2d32f770073e0b2",
+      "bytes": 853
+    }
+  ],
+  "errors": [],
+  "commit": "47109f381faa6eb3a78701b5e3950b9129fd2e5d",
+  "files_scanned": 172,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

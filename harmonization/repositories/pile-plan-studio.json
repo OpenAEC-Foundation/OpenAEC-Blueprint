@@ -1,0 +1,85 @@
+{
+  "name": "pile-plan-studio",
+  "url": "https://github.com/OpenAEC-Foundation/pile-plan-studio",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "LGPL-3.0",
+  "icons": [
+    {
+      "path": "apps/pile-plan-studio/public/pile-plan-studio-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/public/pile-plan-studio-icon.svg",
+      "sha256": "008533fb58d41575e6d9d1c6ba13a05dc55f619b7bcfd52b2164392ddc795f44",
+      "bytes": 719
+    },
+    {
+      "path": "apps/pile-plan-studio/src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src-tauri/icons/icon.ico",
+      "sha256": "b2d6b8980b2a45a388fab02fee4822e392c43c69a4f4dd31332a2e69681b7ddc",
+      "bytes": 19243
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "sha256": "5a38017359d982a5a15150893efe2dd25c1a67597575e517834388ac183b5984",
+      "bytes": 5942
+    }
+  ],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/Cargo.toml",
+      "sha256": "374fc7ac654756d101b985fbb18e4a2e1d19a6f443f527697815f37beb056023",
+      "bytes": 134
+    },
+    {
+      "path": "apps/pile-plan-studio/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/package.json",
+      "sha256": "7f929f8db21b8b01f4c7a66a292f6aa4d66f9e431a7169a00c2744e2c5dd735a",
+      "bytes": 1479
+    },
+    {
+      "path": "apps/pile-plan-studio/src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src-tauri/Cargo.toml",
+      "sha256": "d00a4eb43c080542f72b731cbc485736edd0ebd91d8b2d3333a8e47e031b3e0c",
+      "bytes": 556
+    },
+    {
+      "path": "apps/pile-plan-studio/src/core/wasm/pile-plan-wasm/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/core/wasm/pile-plan-wasm/package.json",
+      "sha256": "32eee63278c4006ef97c74e64c4631ae372eae6b1ba9d814e616d62c6fedb2a2",
+      "bytes": 314
+    },
+    {
+      "path": "crates/pile-plan-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/crates/pile-plan-core/Cargo.toml",
+      "sha256": "eb3e17c09fdfa1ed6dc383c49d58e8a0daa12a94bd51394f9a589eb34ec3f18f",
+      "bytes": 611
+    },
+    {
+      "path": "crates/pile-plan-wasm/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/pile-plan-studio/ffe979d3b85976fe1f523d31a411c97ebd331e2f/crates/pile-plan-wasm/Cargo.toml",
+      "sha256": "7ed4e77cca5066f7eb0b531419debaa3c0babc8f41d7683bfaf670de4a968b3c",
+      "bytes": 340
+    }
+  ],
+  "errors": [],
+  "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+  "files_scanned": 633,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

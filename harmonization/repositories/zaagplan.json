@@ -1,0 +1,27 @@
+{
+  "name": "zaagplan",
+  "url": "https://github.com/OpenAEC-Foundation/zaagplan",
+  "branch": "main",
+  "description": "Optimaliseer zaagplannen voor 1D en 2D materialen",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/zaagplan/dd4d15acbb3a0666a443fd37c13f1c302994f860/package.json",
+      "sha256": "790f5f0896966024fbe9bfea1f49aba898a1162b9767bcad97dd1eddcb7b5610",
+      "bytes": 787
+    }
+  ],
+  "errors": [],
+  "commit": "dd4d15acbb3a0666a443fd37c13f1c302994f860",
+  "files_scanned": 55,
+  "ui_stack": [
+    "React",
+    "Slint"
+  ],
+  "icon_packages": []
+}

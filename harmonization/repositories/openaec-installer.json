@@ -1,0 +1,176 @@
+{
+  "name": "openaec-installer",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-installer",
+  "branch": "main",
+  "description": "Centrale hub voor OpenAEC Foundation tools \u2014 installeren, bijwerken en starten \u00b7 Central hub for OpenAEC tools",
+  "archived": false,
+  "license": "CC-BY-SA-4.0",
+  "icons": [
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/128x128.png",
+      "sha256": "3397a3a156fb7132a0b7f66359c3706ca62e179d70fa244b3777d77d9babc4fa",
+      "bytes": 6041
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/128x128%402x.png",
+      "sha256": "2f2a7720f09a593b1c9089429e26348c9474f7ced1e93989dc38cf398fe32053",
+      "bytes": 13898
+    },
+    {
+      "path": "src-tauri/icons/256x256.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/256x256.png",
+      "sha256": "53427e1eef72d3e304e1dae508bea8256ed911426817ccf1e0bb40005c932d70",
+      "bytes": 3890
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/32x32.png",
+      "sha256": "8630412cc789e73f5b2997e4797ac70929b9fca1a4a99b926772f57b5a6823ba",
+      "bytes": 1209
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/64x64.png",
+      "sha256": "a4d47b6c420b77fc2c9c051c8aa18430f462e6691a888d0e2fce293b43cb359d",
+      "bytes": 2859
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "7a0b12cc81022c5fdbff45cba02e8b6d6f4ab029e2efee279fce6900dcb21992",
+      "bytes": 5090
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "4510a968b24265a305ae04339145e96569dddad3848a8def779377fc05da4aa4",
+      "bytes": 6849
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "ef11824f3956f393601a0586d3535bf01fa5ec88e427db470db60ad72fb44dec",
+      "bytes": 7263
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "f0a77a10c3357b83a871f134c438883b31a4f0005609aa5078800abfad25d53a",
+      "bytes": 15687
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "f05f951b28939cea096f5090fcd8caaa51684ee7947ecc68a75f5a82b8cda3e8",
+      "bytes": 1097
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "a62a25aeac134c2c9992fe047b02bec9ff329b26514aba9a52affc1f5c77eb90",
+      "bytes": 17947
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "8c74e47e3a456420396d3bd66e909dc074419455b235d49098ddb898bf3d4108",
+      "bytes": 1770
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "f66ac44f0a96e45ad0930f6577cc6594539bc4da8589c2e18fdbd1a47cece277",
+      "bytes": 3218
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "8bab89302f2d53b2be2c86865344733a9da3288fd8838565af5e62d75e34d1f4",
+      "bytes": 4018
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/StoreLogo.png",
+      "sha256": "07c4eadcdc9fe4e12581018b4b441f26b375cd08af926e2983f67c147c6091e9",
+      "bytes": 2140
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/icon.icns",
+      "sha256": "80d935ed0dcc8755b1b74bdb2c2b01d88f072b1860e3822809a36e34d8a8cc61",
+      "bytes": 203731
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/icon.ico",
+      "sha256": "14cf7d118ec7a04e5023e7f67135f075ab77448c95d5e60da648df8be8f034b9",
+      "bytes": 22382
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/icon.png",
+      "sha256": "254cb8f37b2fcd54d301ea3309927bf123ee7fb2415afe5a11d8ea04002cf8fa",
+      "bytes": 37195
+    },
+    {
+      "path": "src-tauri/icons/icon_large.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/icons/icon_large.png",
+      "sha256": "f69c6b6a689cc7735096edbe45a2546e05b31eab49a452713399fba3bc9fed6e",
+      "bytes": 8472
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "src/components/CategoryIcon.tsx",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/CategoryIcon.tsx",
+      "sha256": "321354a5560e234c7dd36c5b878ebd7b993816206d707fdd31502698d3b26946",
+      "bytes": 2983
+    }
+  ],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/package.json",
+      "sha256": "47510639b15fb98537881d00d078cebc78999b611d719191aa2bd81af0547a36",
+      "bytes": 899
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-installer/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src-tauri/Cargo.toml",
+      "sha256": "0dec692ad853f203c1a9223dcfdfa88494eae72e144fe3de447d599e43b514eb",
+      "bytes": 950
+    }
+  ],
+  "errors": [],
+  "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+  "files_scanned": 99,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

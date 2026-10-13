@@ -1,0 +1,1026 @@
+{
+  "name": "open-pointcloud-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio",
+  "branch": "main",
+  "description": "Pointcloud editing tool",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [
+    {
+      "path": "classic/public/logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/public/logo.svg",
+      "sha256": "41e8d5826eba651e644a95664172bdd426a0161fcd9b5d6a308f3839f267886b",
+      "bytes": 5684
+    },
+    {
+      "path": "classic/src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/128x128.png",
+      "sha256": "478b555c78a1037fcda0fa520267d2dfb70aa430e0bb8571b2508fc5815d07ac",
+      "bytes": 6292
+    },
+    {
+      "path": "classic/src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/128x128%402x.png",
+      "sha256": "85811d52ff6443de5b8827c0dec490826485b4597d3e96f9249e4b9f3d7c8298",
+      "bytes": 12578
+    },
+    {
+      "path": "classic/src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/32x32.png",
+      "sha256": "ed859aee6767b19d2f24a017370a97ae741350c45281a043c4f5d33f9634cf1c",
+      "bytes": 1264
+    },
+    {
+      "path": "classic/src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/64x64.png",
+      "sha256": "51eb28ce32245609ac446a3123d717b6e5f38cd9140774a540047d748c31921e",
+      "bytes": 2915
+    },
+    {
+      "path": "classic/src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "748b9bb0de0a358a6d687bb4d46c53d52e9f07cc38703cfa7aa0c5b25fa3bbab",
+      "bytes": 5250
+    },
+    {
+      "path": "classic/src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "92620ea17267c43b625c1e08a591aec6d75740f77f90a0602fa38472ec1d1683",
+      "bytes": 6847
+    },
+    {
+      "path": "classic/src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "56dc56041171a6d87d426d12335224f21e2517c17a2532b51b81dfecd717623e",
+      "bytes": 4867
+    },
+    {
+      "path": "classic/src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "d9793406d1362a9cbff516ae87c1747b4b99066172720ec584e28adecfc6298e",
+      "bytes": 13982
+    },
+    {
+      "path": "classic/src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "e085253a62c010d83535863fe2f434d659496efe5c5168ff1d4ea50d98b2aa6b",
+      "bytes": 1104
+    },
+    {
+      "path": "classic/src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "737a021b2c79eced37e38543a96bc0546d452314d1034d44be64f013f6a3620b",
+      "bytes": 14979
+    },
+    {
+      "path": "classic/src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "2c9619fe7315bf128fce1004978f46ffa13779876efd85ce8d2a6d1226ace2ac",
+      "bytes": 1752
+    },
+    {
+      "path": "classic/src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "485eb17de009ec488d458fb4b4083876f3435782600eef50e3714374dbd9658d",
+      "bytes": 3232
+    },
+    {
+      "path": "classic/src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "2c492b58aeeeb0a7f7f89eb3505fe6a6649964172bae0f8b6da9a781a962f4bc",
+      "bytes": 4220
+    },
+    {
+      "path": "classic/src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/StoreLogo.png",
+      "sha256": "10fc130b4698da74245e88f6b17e5c331c38fea7e143681721f794fa4950ed41",
+      "bytes": 1352
+    },
+    {
+      "path": "classic/src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/icon.icns",
+      "sha256": "a9a4d819dfefbe09a73eeda43f5cdcec73832924fa145ac56570fef2a33b481f",
+      "bytes": 27075
+    },
+    {
+      "path": "classic/src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/icon.ico",
+      "sha256": "c1ba7555a475047236a9a381234317143aeab91648dfe1372dd86eb62cb2ea91",
+      "bytes": 16369
+    },
+    {
+      "path": "classic/src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/icons/icon.png",
+      "sha256": "5a06405a76731bd4e0f61d8ef3ff6de1b1f1fecb4d4882ada367de00a331a556",
+      "bytes": 27059
+    },
+    {
+      "path": "docs/design/ribbon-approved.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/design/ribbon-approved.png",
+      "sha256": "9b926efe689d71d281b8a1bfc2b074f96baa6f3f0fa0c7da364496d50f2e7a7a",
+      "bytes": 2267762
+    },
+    {
+      "path": "docs/screenshots/ribbon-approved-build.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/ribbon-approved-build.png",
+      "sha256": "274463e69c279304cee1eebe260a0ae2f7e20736572fe5d8b9a1459be8469c48",
+      "bytes": 953996
+    },
+    {
+      "path": "docs/screenshots/ribbon-approved-compact.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/ribbon-approved-compact.png",
+      "sha256": "79e814bdf45337c451f0bd6a94f25dfd63f26a65e964f9cf63b50d1e48a31209",
+      "bytes": 343956
+    },
+    {
+      "path": "docs/screenshots/ribbon-icon-only-580.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/ribbon-icon-only-580.png",
+      "sha256": "6bfc3d5e7f73f3446dd38cd10eb3eab0c64d9f3b845eab1415384d7e49d5bfd0",
+      "bytes": 118553
+    },
+    {
+      "path": "docs/screenshots/ribbon-icon-only-narrow.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/ribbon-icon-only-narrow.png",
+      "sha256": "60b6c11553948cc6a138dc35278db17a47504a18643f99975537e3b4a6faac79",
+      "bytes": 347339
+    },
+    {
+      "path": "docs/screenshots/ribbon-icon-only-wide.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/ribbon-icon-only-wide.png",
+      "sha256": "a899bf7cc9dd852750e3c0a6dd0452f5ac9dd69763a96c8cbd002acead3b9363",
+      "bytes": 854269
+    },
+    {
+      "path": "docs/screenshots/start-ribbon-v093.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/start-ribbon-v093.png",
+      "sha256": "4df2a3acdb1ea4b77d632a11c2706af6f44a8301a64d0e03f96d701fc03c2b86",
+      "bytes": 953640
+    },
+    {
+      "path": "docs/screenshots/start-ribbon-v094.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/start-ribbon-v094.png",
+      "sha256": "b9d95455e3429954ddff3b34dcec11579958b4ca69bb5056a93b901f17bd1e4f",
+      "bytes": 1008932
+    },
+    {
+      "path": "docs/screenshots/weergave-ribbon-v093.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/weergave-ribbon-v093.png",
+      "sha256": "74a41ec804ca8f6908cf744c086c1c787f18b7e2fe01e6c3844b4b5cd672fa26",
+      "bytes": 942974
+    },
+    {
+      "path": "docs/screenshots/weergave-ribbon-v094.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/docs/screenshots/weergave-ribbon-v094.png",
+      "sha256": "fb43165704454889448271eac1422943d35d4f45854b8966d2fe24eac75665cf",
+      "bytes": 996844
+    },
+    {
+      "path": "native/assets/icons/icon-64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/icons/icon-64.png",
+      "sha256": "8287e40ca3d256db399c0bee07409b4a3d1a7f86772557716de643130d6a7b59",
+      "bytes": 1401
+    },
+    {
+      "path": "native/assets/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/icons/icon.ico",
+      "sha256": "953fc90eb2db19be9d35510dd558bc5d117abf4715155a18ed1069b39255e2e4",
+      "bytes": 46149
+    },
+    {
+      "path": "native/assets/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/icons/icon.png",
+      "sha256": "03f19e75e54ef04be8aebeabb49651853e482e69c728a8a7b8b68dfb19f277f5",
+      "bytes": 19165
+    },
+    {
+      "path": "native/assets/icons/logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/icons/logo.svg",
+      "sha256": "99a52591c39fd5998728576bf497e09ece4fbfb98d804d06704c41f5b3ef91b5",
+      "bytes": 401
+    },
+    {
+      "path": "native/assets/opencad-icons/annotation_dimension.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/annotation_dimension.svg",
+      "sha256": "c282608517b34ca3eaeae6fbffb205f1dbaf6a12cc337881247bb14d82c98dc3",
+      "bytes": 432
+    },
+    {
+      "path": "native/assets/opencad-icons/annotation_leader.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/annotation_leader.svg",
+      "sha256": "7dbccc3c4fafc9c6fdfa4431dfdf256ae78a4159d6b1b0ffdf8a2b3f65fa65eb",
+      "bytes": 369
+    },
+    {
+      "path": "native/assets/opencad-icons/annotation_line.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/annotation_line.svg",
+      "sha256": "e4ec87331891d277272044dc77ce087e41c49f2e04eccb76baa0d1da93f3503d",
+      "bytes": 381
+    },
+    {
+      "path": "native/assets/opencad-icons/annotation_note.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/annotation_note.svg",
+      "sha256": "20e3e8a5253443daa42b1cd51dd7524ed166382e74cd17032b29e269e8ab3e60",
+      "bytes": 616
+    },
+    {
+      "path": "native/assets/opencad-icons/annotation_text.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/annotation_text.svg",
+      "sha256": "1bbb66b9eb3f82cc0ab4c2ecebf6e185fd871472a1596419d23b7ddfdfee9980",
+      "bytes": 353
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_bcf.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_bcf.svg",
+      "sha256": "31b249593191de3fc88eda39bba0618535eedc921ad84c035429bd50755b134d",
+      "bytes": 365
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_classes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_classes.svg",
+      "sha256": "7f0ff2758c528b7487efa70df1cc125c895152f6cf4404f4f29e1d120f63bef9",
+      "bytes": 609
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_duplicate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_duplicate.svg",
+      "sha256": "7e7811ece250821791529549d30f6349f31849e75c36a6b8d241abf7aa2c291a",
+      "bytes": 428
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_elevation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_elevation.svg",
+      "sha256": "35174521c919854c9c30e6c39c088ab57b7d30d07af6acd4460c0a4eeb83e773",
+      "bytes": 483
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_file.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_file.svg",
+      "sha256": "ca171e0e6475753a53a085dec22b14ece0a056c155cafeaec1e442f67f67274a",
+      "bytes": 389
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_locked.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_locked.svg",
+      "sha256": "47f9e9c3e4922bbdd328e54d8c513312857e3b6de81f1ef4da9af2ae93618bed",
+      "bytes": 405
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_model.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_model.svg",
+      "sha256": "49841de0b667ae4375b59840015955233cbd39222c2bdb0d891c67b9292ec8f8",
+      "bytes": 417
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_plan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_plan.svg",
+      "sha256": "50762b6a89d02596f7ca749fe46607f43fe8896be1dc5239ea8e51e4d4ecfcdc",
+      "bytes": 410
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_rename.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_rename.svg",
+      "sha256": "ffb2cdd90bf927549af502db773af02c475249fd31b6ed4f181dfb88725bf610",
+      "bytes": 390
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_saved_view.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_saved_view.svg",
+      "sha256": "3de8c9e879e8c2db26e24966c8eaee87cb7297712967bf50913f007e8ad545bf",
+      "bytes": 444
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_scan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_scan.svg",
+      "sha256": "7f6a5f79cf602ba0790f2d32f362051eebfa0caceb7a0eb9887e8d94550001f8",
+      "bytes": 838
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_section.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_section.svg",
+      "sha256": "1e07bb4e7da708509754333165324eab5667cf46fe371c121cf626b02ddcd2ef",
+      "bytes": 381
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_sheet.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_sheet.svg",
+      "sha256": "7a1e2de97981d7c1e8c9ab89f067010e77b80cf50e467922707980cd6c3d8cce",
+      "bytes": 470
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_unlocked.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_unlocked.svg",
+      "sha256": "8687e97e96c8444d511f4db3ede2b3ecba036cacc60230c5b14362f899fa07cb",
+      "bytes": 395
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_update.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_update.svg",
+      "sha256": "ccba739d0dd88bb546cad78bfff3d9cef263a1013f653bb375145020c0fe2205",
+      "bytes": 382
+    },
+    {
+      "path": "native/assets/opencad-icons/browser_views.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/browser_views.svg",
+      "sha256": "5fe3532c55344e92685f22ff02aa8c41b55f5f071314559a6e5321d370beca07",
+      "bytes": 510
+    },
+    {
+      "path": "native/assets/opencad-icons/chevron_closed.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/chevron_closed.svg",
+      "sha256": "369fe1fcc611e3879793c977488eacb06941a1494960d7b9bc5271ec960cf1af",
+      "bytes": 235
+    },
+    {
+      "path": "native/assets/opencad-icons/chevron_open.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/chevron_open.svg",
+      "sha256": "390ab0b727b3f74b6c1270b6a6719200b4e0bfb6a5b3922102c9e467de18062d",
+      "bytes": 230
+    },
+    {
+      "path": "native/assets/opencad-icons/closed_mesh.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/closed_mesh.svg",
+      "sha256": "614a9590dc5e32d50604b35f5b017522c883c5b57781fbcc279f019e2c794bd1",
+      "bytes": 408
+    },
+    {
+      "path": "native/assets/opencad-icons/color_classification.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/color_classification.svg",
+      "sha256": "32a0e4a9a4b260d5254d57bfbd9e1a34147e6b6e3e652bed8b31c19823b87572",
+      "bytes": 486
+    },
+    {
+      "path": "native/assets/opencad-icons/color_elevation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/color_elevation.svg",
+      "sha256": "f64ed67fe79cb2dadcfb011e9d732ecf0b0eb4a2ca42839131c85273e31bdf18",
+      "bytes": 359
+    },
+    {
+      "path": "native/assets/opencad-icons/color_intensity.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/color_intensity.svg",
+      "sha256": "586335e89e0e92bca0171cc39f9ca0002042f8bc55d15b9386dae10a295fb5f0",
+      "bytes": 370
+    },
+    {
+      "path": "native/assets/opencad-icons/color_rgb.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/color_rgb.svg",
+      "sha256": "37d3c194e6e7c90c4bfc092f1e1985ac62b1a32e71ddce62d440bb694f293bce",
+      "bytes": 421
+    },
+    {
+      "path": "native/assets/opencad-icons/detect_faces.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/detect_faces.svg",
+      "sha256": "a680d1759bd86c8966f7a0bfb609f70da013240ccba1e89d9aa54a7e8ecf37c9",
+      "bytes": 336
+    },
+    {
+      "path": "native/assets/opencad-icons/eye_dome.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/eye_dome.svg",
+      "sha256": "1b9f0b2af32f9cb6b30723f7d3ffd5469fa15f2430362b88efb5380705b9c941",
+      "bytes": 354
+    },
+    {
+      "path": "native/assets/opencad-icons/file_export.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/file_export.svg",
+      "sha256": "729a7813aa1755e09e656653b83646bb908edb1fe1ccf162ea50aa5fe9df26be",
+      "bytes": 310
+    },
+    {
+      "path": "native/assets/opencad-icons/file_import.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/file_import.svg",
+      "sha256": "13f03bd1abffc7cc035ef92bc09ecfe947f54edd2eff3c331ce67424011e4200",
+      "bytes": 286
+    },
+    {
+      "path": "native/assets/opencad-icons/fit_selection.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/fit_selection.svg",
+      "sha256": "75220cde4512782fa055f2f3d68dfbbe141cdccf6d9c22a0ba3c915e75236618",
+      "bytes": 365
+    },
+    {
+      "path": "native/assets/opencad-icons/fit_stations.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/fit_stations.svg",
+      "sha256": "752f3851a24b6a3da6706c4b998bfbd437a425a9b3a3c61b17d53464458d4879",
+      "bytes": 430
+    },
+    {
+      "path": "native/assets/opencad-icons/folder_import.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/folder_import.svg",
+      "sha256": "4820425a8e0df9de52cb02ff797a64da0533705f9a39ee080bf1a8fb08c65d71",
+      "bytes": 360
+    },
+    {
+      "path": "native/assets/opencad-icons/folder_open.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/folder_open.svg",
+      "sha256": "4163281a4c459fd42d574926dc715e0626cedb56bc4392395730580ec1871419",
+      "bytes": 340
+    },
+    {
+      "path": "native/assets/opencad-icons/folder_scans.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/folder_scans.svg",
+      "sha256": "e347be2640f4a6423fb04a411f5532ffb91adc96ca900e587942020066873b41",
+      "bytes": 496
+    },
+    {
+      "path": "native/assets/opencad-icons/measure_area.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/measure_area.svg",
+      "sha256": "9dcf22bbedb55e6e5e2e8acb07946a0ca11c088392c63edd3995c2c940896e4e",
+      "bytes": 525
+    },
+    {
+      "path": "native/assets/opencad-icons/measure_distance.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/measure_distance.svg",
+      "sha256": "c7e29b6d03e2ded0c23918de87021bc33fe5b4ca56b3ad586ebf83bb3cd0c8e5",
+      "bytes": 557
+    },
+    {
+      "path": "native/assets/opencad-icons/mesh_pointcloud.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/mesh_pointcloud.svg",
+      "sha256": "ae618ae7cf45931b3bd06a0de5eec9f2aced1af5a16404eb41aa1c6bd73a70e7",
+      "bytes": 581
+    },
+    {
+      "path": "native/assets/opencad-icons/mesh_surface.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/mesh_surface.svg",
+      "sha256": "b207ba7556ef52dc152d63ceb0a64dbc1cca863f988ea0a08923732a5d0ca070",
+      "bytes": 406
+    },
+    {
+      "path": "native/assets/opencad-icons/mesh_terrain.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/mesh_terrain.svg",
+      "sha256": "759626b229b9ae9e76e3015ebc0d7d40eff0a2f28b48253cb6436ba713328862",
+      "bytes": 406
+    },
+    {
+      "path": "native/assets/opencad-icons/mesh_to_plans.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/mesh_to_plans.svg",
+      "sha256": "f451ee8b8df3f18070a47377ff7b4e0f91513d9aed7bd1351d72a6284f4f0563",
+      "bytes": 551
+    },
+    {
+      "path": "native/assets/opencad-icons/move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/move.svg",
+      "sha256": "7e25452bf471679e226c4d8a281906d84e143618b4054e72d0cda7c1c84f0feb",
+      "bytes": 4474
+    },
+    {
+      "path": "native/assets/opencad-icons/pan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/pan.svg",
+      "sha256": "fcb1d116efd9739eeec116820e23d8fbe06f5bc602a221883ec9b8bee272c6b3",
+      "bytes": 690
+    },
+    {
+      "path": "native/assets/opencad-icons/pick_point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/pick_point.svg",
+      "sha256": "7cbd7bbeca045712d69460f2f443d2c31f1e751e50f77a3abc701a07b54af8ca",
+      "bytes": 553
+    },
+    {
+      "path": "native/assets/opencad-icons/point.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/point.svg",
+      "sha256": "eafce5b4b50b02739769b93279a254819ed3d16ce6c7e9262e6938fdbd4e65f1",
+      "bytes": 713
+    },
+    {
+      "path": "native/assets/opencad-icons/redo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/redo.svg",
+      "sha256": "da6e38e676ecb88081ba0e037aa5d212ed39028691ddcd60078e4994a78b1e68",
+      "bytes": 1212
+    },
+    {
+      "path": "native/assets/opencad-icons/region.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/region.svg",
+      "sha256": "abc7a0a86b24db93be6aabcc5290806334e432b76ce25cc297bdcb70609cf6ef",
+      "bytes": 282
+    },
+    {
+      "path": "native/assets/opencad-icons/revcloud.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/revcloud.svg",
+      "sha256": "0c0d9b6ee8f2e07954949a78f1d01b90ed04720085b7984bcf7b52ba87c27b81",
+      "bytes": 352
+    },
+    {
+      "path": "native/assets/opencad-icons/ribbon_fit_arrows.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/ribbon_fit_arrows.svg",
+      "sha256": "61de2df114386979f46d8f12b09640224101592a71bef6cc2759a63a3ad07927",
+      "bytes": 304
+    },
+    {
+      "path": "native/assets/opencad-icons/ribbon_target.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/ribbon_target.svg",
+      "sha256": "1f070f521c5d19d4fb4655f05603ba9a02c7daaf5483f08c315a8ec0320c4eee",
+      "bytes": 270
+    },
+    {
+      "path": "native/assets/opencad-icons/save.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/save.svg",
+      "sha256": "07b554c251864b1dfb5cbd3a4e8cb4735bba1bb63765eebdecedd88d4cfc2da4",
+      "bytes": 317
+    },
+    {
+      "path": "native/assets/opencad-icons/scale.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/scale.svg",
+      "sha256": "34cf1e2bfe6c0adc4205811cff1a6c2e7d4d75ba5ffe56c70a1cd4679ffcac12",
+      "bytes": 2077
+    },
+    {
+      "path": "native/assets/opencad-icons/scan_positions.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/scan_positions.svg",
+      "sha256": "0efc1fcd19f3736e670654f87032f82a85381566337fe27aa8fa2cb2855de342",
+      "bytes": 529
+    },
+    {
+      "path": "native/assets/opencad-icons/section_box.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/section_box.svg",
+      "sha256": "fc88a49c5e872713fbad0fac23290833578370922dffeed86e42f5276b0b9040",
+      "bytes": 454
+    },
+    {
+      "path": "native/assets/opencad-icons/section_drawing.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/section_drawing.svg",
+      "sha256": "a98dbff71fffa2460ee85a5c2946f0446a494dec4f870841660ca8af39180137",
+      "bytes": 471
+    },
+    {
+      "path": "native/assets/opencad-icons/select_objects.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/select_objects.svg",
+      "sha256": "0cc9f54fad654cc5b40f23f2df3b085760526b00c72b34e61d1f6fe5c7e5412c",
+      "bytes": 438
+    },
+    {
+      "path": "native/assets/opencad-icons/selection_export.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/selection_export.svg",
+      "sha256": "931e8430998118fd08c1b641eaaadd6c771c1420d5be39518a7f35da18b2735c",
+      "bytes": 386
+    },
+    {
+      "path": "native/assets/opencad-icons/solid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/solid.svg",
+      "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
+      "bytes": 489
+    },
+    {
+      "path": "native/assets/opencad-icons/sphere.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/sphere.svg",
+      "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
+      "bytes": 651
+    },
+    {
+      "path": "native/assets/opencad-icons/undo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/undo.svg",
+      "sha256": "70a76c315f12457b3166e25495e2549e609f5b30e8068beacd18092528a7ff3c",
+      "bytes": 1211
+    },
+    {
+      "path": "native/assets/opencad-icons/view_front.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/view_front.svg",
+      "sha256": "9d35a3b6be2967e4a32f1415f6e7fdf9b01fe056506eafeaf568665ce9372919",
+      "bytes": 713
+    },
+    {
+      "path": "native/assets/opencad-icons/view_iso.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/view_iso.svg",
+      "sha256": "f0e403c3fd9cdc071231c9e6f08cb8992ae1f04b6dbe24eec491c2d86a8aff34",
+      "bytes": 605
+    },
+    {
+      "path": "native/assets/opencad-icons/view_right.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/view_right.svg",
+      "sha256": "060b378c5a2c6706726fba25706ae4f1ad41945a491290f67082b05a3e036399",
+      "bytes": 672
+    },
+    {
+      "path": "native/assets/opencad-icons/view_top.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/view_top.svg",
+      "sha256": "13a349161bb092a2c8fb518c1e7b09e9b6761e714be74c730a3f9abd7085ce7b",
+      "bytes": 665
+    },
+    {
+      "path": "native/assets/opencad-icons/xclip_remove.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/xclip_remove.svg",
+      "sha256": "fcc78d7f71a01f3487b57e9a6a939455ab2c03dcf0c8beb3162b5f26f2306ea2",
+      "bytes": 797
+    },
+    {
+      "path": "native/assets/opencad-icons/zoom_ext.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/zoom_ext.svg",
+      "sha256": "75c55011c2b751d323cf672a590566f9ef3557be626206eca983a6833e1a510c",
+      "bytes": 915
+    },
+    {
+      "path": "native/assets/opencad-icons/zoom_in.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/zoom_in.svg",
+      "sha256": "d09cdddd777fddaf3d5a4860713d10cc5f4025d611f98fe0084b34b495a987b4",
+      "bytes": 456
+    },
+    {
+      "path": "native/assets/opencad-icons/zoom_out.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/assets/opencad-icons/zoom_out.svg",
+      "sha256": "2b2302bf10f30161a66685e257b3e75fc40389b482f253e4c7bd88051373b31e",
+      "bytes": 379
+    },
+    {
+      "path": "native/extensions/examples/point-count-report/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/extensions/examples/point-count-report/icon.svg",
+      "sha256": "8ee47db613bf8fd4da4f6713b9b5bb400af5c9c0d6b8a59055f544511be3f23c",
+      "bytes": 575
+    },
+    {
+      "path": "screenshots/native-3d-surface-tools-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-3d-surface-tools-ribbon.png",
+      "sha256": "7d3fd85c24f6ac442b3ae9f3b180488148476b1ca1eec5e29a4d3710c3273418",
+      "bytes": 137606
+    },
+    {
+      "path": "screenshots/native-3dbag-tools-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-3dbag-tools-ribbon.png",
+      "sha256": "ebf775f069b09b009658098c41ab4b3162068a3be30921e84ac1d6db0ab46430",
+      "bytes": 87583
+    },
+    {
+      "path": "screenshots/native-auto-index-three-ahn-ready-old-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-auto-index-three-ahn-ready-old-ribbon.png",
+      "sha256": "0fdca33425657d889196d3d37ed2eabc6af4aaccd56c4c9f6b56ff37c3f0a9bf",
+      "bytes": 302154
+    },
+    {
+      "path": "screenshots/native-auto-index-tools-ribbon-fixed.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-auto-index-tools-ribbon-fixed.png",
+      "sha256": "17a95be5d0376243507a61e1b532f6b964e75c8499c9eb861e57d4b4b7d8623d",
+      "bytes": 379283
+    },
+    {
+      "path": "screenshots/native-auto-index-tools-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-auto-index-tools-ribbon.png",
+      "sha256": "a6fa6aed7d2610e460e787f62cb2fcc9efb6623db1c1b3857d3bcf73ad485219",
+      "bytes": 255272
+    },
+    {
+      "path": "screenshots/native-auto-index-view-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-auto-index-view-ribbon.png",
+      "sha256": "beee5a3800a3fc72b2c3b22967d3b87ba04204d058c62908e3ccc130ce1a1427",
+      "bytes": 313313
+    },
+    {
+      "path": "screenshots/native-cancel-selection-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-cancel-selection-ribbon.png",
+      "sha256": "ad290d2347cbbf35a7effdff4b8f5279cd4ef9dc9e33595c710494765b24d75c",
+      "bytes": 437994
+    },
+    {
+      "path": "screenshots/native-e57-export-ribbon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-e57-export-ribbon.png",
+      "sha256": "bf076c78c1c57ba7b52f46ef126fc9ea7547267d97318589b02beb572645ec2a",
+      "bytes": 501158
+    },
+    {
+      "path": "screenshots/native-openaec-ribbon-tokens-forge.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-openaec-ribbon-tokens-forge.png",
+      "sha256": "fcded4541162db26d8dd087800879a693bdb02f552c833ec0112afa81b992959",
+      "bytes": 170115
+    },
+    {
+      "path": "screenshots/native-openaec-ribbon-tokens-light.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-openaec-ribbon-tokens-light.png",
+      "sha256": "1eb2cef8e7908d79f467b3d1fc0f953f477a8d59d005de2abb8fb0d6b0c5284d",
+      "bytes": 167542
+    },
+    {
+      "path": "screenshots/native-ribbon-narrow-tools-scrolled.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-narrow-tools-scrolled.png",
+      "sha256": "9957c054e631574fdcd01f42a163aa53e7f60c9095504b9a4070ee85ff45696c",
+      "bytes": 197197
+    },
+    {
+      "path": "screenshots/native-ribbon-narrow-tools-start.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-narrow-tools-start.png",
+      "sha256": "de85a184432d61e1dee2b60ae2337cd011cd3bb3662ea6df5a7c7d7868e9eee6",
+      "bytes": 197943
+    },
+    {
+      "path": "screenshots/native-ribbon-neutral-active-ahn6.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-neutral-active-ahn6.png",
+      "sha256": "6409f7f0e3c9826798899608eab730fd87ce02d5a7e5a0f9f93ffdabba0affda",
+      "bytes": 402063
+    },
+    {
+      "path": "screenshots/native-ribbon-neutral-tools-ahn6.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-neutral-tools-ahn6.png",
+      "sha256": "df68f47f4e12e977bc299388cc6358f125e1f66b6d6317bafd371eef20975209",
+      "bytes": 399727
+    },
+    {
+      "path": "screenshots/native-ribbon-ocad-openaec-home.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-ocad-openaec-home.png",
+      "sha256": "26988298a5926d95978d5de44328fd7a344070f10ea7fdf745de11e7ca9be87d",
+      "bytes": 438017
+    },
+    {
+      "path": "screenshots/native-ribbon-ocad-openaec-tools.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-ocad-openaec-tools.png",
+      "sha256": "6e2ed65aa389b18fc9351661caa9d0106d53d288f2700fe1c10920d50e424f3e",
+      "bytes": 438900
+    },
+    {
+      "path": "screenshots/native-ribbon-overflow-home-wide.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-home-wide.png",
+      "sha256": "f2872420205fb628b6147b9d77d07b79e0ac74ffd66cb1f057956409f3c36816",
+      "bytes": 170282
+    },
+    {
+      "path": "screenshots/native-ribbon-overflow-tools-narrow.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-tools-narrow.png",
+      "sha256": "d68dd83964a1fddcce299d6b45ab2a96ac180637a568fb05af912a7bf04dd225",
+      "bytes": 92903
+    },
+    {
+      "path": "screenshots/native-ribbon-overflow-tools-scrolled.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-tools-scrolled.png",
+      "sha256": "1599f1f000b733b374d94c42822456dfffe0a70a12660803df900f39eaff4462",
+      "bytes": 98158
+    },
+    {
+      "path": "screenshots/native-ribbon-overflow-tools-wide.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-tools-wide.png",
+      "sha256": "35bb281a2b6eb05ba10002471177137e8e48afefe891efd246fc4ba966de4f9b",
+      "bytes": 168737
+    },
+    {
+      "path": "screenshots/native-ribbon-overflow-view-wide.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-overflow-view-wide.png",
+      "sha256": "5bfc97a8025e4a0be73b4355b86acfc002d65ec2b9ada4affe3a9d6aa2c0399a",
+      "bytes": 178932
+    },
+    {
+      "path": "screenshots/native-ribbon-quick-access-opencad.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-quick-access-opencad.png",
+      "sha256": "ff1f66cffe21441f5437ba8067b8c5d35f4f690f0f48d5b54d037e9929b7677d",
+      "bytes": 507720
+    },
+    {
+      "path": "screenshots/native-ribbon-quick-access-three-ahn.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-quick-access-three-ahn.png",
+      "sha256": "9909dd3491822c4b2875d9352caeab69ec3102603076e537f135525af1bbd08c",
+      "bytes": 452389
+    },
+    {
+      "path": "screenshots/native-ribbon-scroll-tools-end.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-scroll-tools-end.png",
+      "sha256": "ad0746b574d9455179c16d2b2d4bba6cd5a27cd25e1c74b5744f68f035a70ddd",
+      "bytes": 502818
+    },
+    {
+      "path": "screenshots/native-ribbon-scroll-tools-narrow.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-scroll-tools-narrow.png",
+      "sha256": "b383533755f30fe65ce654e5a0601c32bb51288fe0cf8ba95d33f268754a6d45",
+      "bytes": 378867
+    },
+    {
+      "path": "screenshots/native-ribbon-scroll-tools-start.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-scroll-tools-start.png",
+      "sha256": "24845653f9d173b91b28cee012faa971badbb899e06e0d4b3c9bb79b04eb1925",
+      "bytes": 502651
+    },
+    {
+      "path": "screenshots/native-ribbon-tools-openaec-gray.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-ribbon-tools-openaec-gray.png",
+      "sha256": "d68c3fbd677645df2f5b51e3d7d8d3170f51af3d71f4ad7c5bd9c6b31711bdfe",
+      "bytes": 443323
+    },
+    {
+      "path": "screenshots/native-section-box-fit-selection-ribbon-45m.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-section-box-fit-selection-ribbon-45m.png",
+      "sha256": "4d20e05ea03189e3545652eb4eba200ad993e8be71f827aa00e2d186e5211243",
+      "bytes": 322851
+    },
+    {
+      "path": "screenshots/native-select-ribbon-zoom-selection-114m.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-select-ribbon-zoom-selection-114m.png",
+      "sha256": "f14206bb98af0105f1afdbe0a36c87a585057e6b8ec7d79c02f9b7ab978ad973",
+      "bytes": 1208259
+    },
+    {
+      "path": "screenshots/native-tools-ribbon-classic-order-114m.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-tools-ribbon-classic-order-114m.png",
+      "sha256": "cd4a53747147a3da1d2d80d7b3bbfe807096549e8a3cacabc3752f8c619827a7",
+      "bytes": 489122
+    },
+    {
+      "path": "screenshots/native-tools-ribbon-compact-1440.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-tools-ribbon-compact-1440.png",
+      "sha256": "cbd63cbd96fd2db214137f85fa328ad71f1a09031c471f1663e541e784d8cfca",
+      "bytes": 490909
+    },
+    {
+      "path": "screenshots/native-tools-ribbon-compact-ahn6.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-tools-ribbon-compact-ahn6.png",
+      "sha256": "d8daf699cfcccbebdfb1ecaccacd420af81da63a4ebc5e6874f4c130886400ee",
+      "bytes": 441602
+    },
+    {
+      "path": "screenshots/native-view-ribbon-compact-ahn6.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-view-ribbon-compact-ahn6.png",
+      "sha256": "0b14b07d28b6fdaedbc6233b0a959c32c5c06d74d973839d5b46874580cad475",
+      "bytes": 453619
+    },
+    {
+      "path": "screenshots/native-view-ribbon-section-box.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/screenshots/native-view-ribbon-section-box.png",
+      "sha256": "c3a29049340edbcf5f97eadca38177e656c36fc12d3196bd47cb8adcff689618",
+      "bytes": 236747
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "classic/src/components/layout/Ribbon/RibbonIcons.tsx",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src/components/layout/Ribbon/RibbonIcons.tsx",
+      "sha256": "4a78b97b072799659b58ef94167fbdcb1e347f7100b163faca028a26c3386ed8",
+      "bytes": 1502
+    }
+  ],
+  "manifests": [
+    {
+      "path": "classic/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/package.json",
+      "sha256": "e28db59e0a0bd0942ed8b6a775edfa1304580802aeb298acde33c8dcdc2057f8",
+      "bytes": 1282
+    },
+    {
+      "path": "classic/src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/classic/src-tauri/Cargo.toml",
+      "sha256": "b39cbd806c4afd2459e7c246c1f5d2c29c5194da3b9f08d96df5d62bfb5b67d0",
+      "bytes": 898
+    },
+    {
+      "path": "native/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/Cargo.toml",
+      "sha256": "a77ca855377961c980558afc3427341ace998993287a18e0d07808484fed5bae",
+      "bytes": 342
+    },
+    {
+      "path": "native/core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/core/Cargo.toml",
+      "sha256": "408c9fad78066717476414db2423ff389d33e458b5c959c45ee228b2ecedce84",
+      "bytes": 869
+    },
+    {
+      "path": "native/desktop/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/13b199a426e692d2149998b3f2f596a191568501/native/desktop/Cargo.toml",
+      "sha256": "f555a195bcac79df28ba70132784fbc41a469ea53cfbf0290fb8cef0074267c7",
+      "bytes": 2400
+    }
+  ],
+  "errors": [],
+  "commit": "13b199a426e692d2149998b3f2f596a191568501",
+  "files_scanned": 687,
+  "ui_stack": [
+    "React",
+    "Tauri",
+    "iced"
+  ],
+  "icon_packages": [
+    "lucide-react"
+  ]
+}

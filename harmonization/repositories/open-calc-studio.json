@@ -1,0 +1,435 @@
+{
+  "name": "open-calc-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-calc-studio",
+  "branch": "main",
+  "description": "Open Source Calculatieprogramma voor de bouwsector",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "public/app-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/public/app-icon.svg",
+      "sha256": "aa9294199a116611a2124113fa70a58cd61300a38dd45929f2243ff8f38697a5",
+      "bytes": 917
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/128x128.png",
+      "sha256": "ed5157be855e018ffff4e30639f53054069b846fdd4dae3f426d4cf629423531",
+      "bytes": 7616
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/128x128%402x.png",
+      "sha256": "350f00c5e271847135c3030de35316b8c039e893c0ee216508dbbecaa8b4a447",
+      "bytes": 15149
+    },
+    {
+      "path": "src-tauri/icons/256x256.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/256x256.png",
+      "sha256": "f62661c4ebea601cf20426012b76d2c387b3831d2b28a99295400446b9732301",
+      "bytes": 8850
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/32x32.png",
+      "sha256": "50947e7ee3780ba8a826c15ac41c416fac64935fbcbc4c6d9633d72290699e6a",
+      "bytes": 2017
+    },
+    {
+      "path": "src-tauri/icons/512x512.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/512x512.png",
+      "sha256": "556f7270565c41a7b8ad34562564a93898efa7f2075a3a6a53741493e885c0db",
+      "bytes": 19832
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/64x64.png",
+      "sha256": "20b718ab1cb2c1706caa755ed890c77cc21733c3efa61ca7a0c76de98ad96f95",
+      "bytes": 4052
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "e246f5877a630038946989a7eda1a33148a726dcbb2833b2f53fae2349fe0566",
+      "bytes": 6398
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "3eab943baf0db57cf4de61d857224f1bac7d4009f790d2a7b2c455f460630d4a",
+      "bytes": 8383
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "137f72211470e1c1298d754c0f65b85f04f74c53c89a23ffc4ebd40fe53ca646",
+      "bytes": 8845
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "8ffcf3cde782aca6deed059e481a205e6bb6f952c728d0a0e20c0afbd443b96c",
+      "bytes": 16923
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "19fe1305b2afb392cfae4c23fbfd1d4c81afbf8d3f4c1b9f8bbb76aeb0a2ec7e",
+      "bytes": 1794
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "d837e9288ffc08e96db4ff2b3b0d3b061e8083373c323a4496e68b912f13b4a4",
+      "bytes": 18443
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "4bc2c1d4f945cef57075056b2b526777661f178ad88fb3c98de8bd30bb25596e",
+      "bytes": 2660
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "4c533c0209629b501ffd02e91fc23197456af1b6667eafb0cd4e6137d8b830dc",
+      "bytes": 4270
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "83c9896f5b4aded6c89be2906628e3aca512e48f9f65ba71dc673f8ce3572fa3",
+      "bytes": 5492
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/StoreLogo.png",
+      "sha256": "05883dd33440e621b7fa7d9ba1684f4d2db0003dd93b304488d6c2cddd39b222",
+      "bytes": 3116
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "8e36be7650646ee330b43558fe89b7eadde7b071cd3aec0c1f2fa6620665bde7",
+      "bytes": 2992
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "c9c950b369a19151261bbd1d0938c86e73aebb65b2f17ae27a8ac74d7117cdc9",
+      "bytes": 9571
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "fe8a7352b935fa02b8099f31b5114194f0f78f9794719dfe24666de84595588d",
+      "bytes": 2702
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "03c55de3767a04c62b562d92792be95c95576d204b0ea17b6356ef192049a57d",
+      "bytes": 2989
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "bf38006b86f088cd64d0e69ad36a901750450ba494b48c420e03f1447f2d857f",
+      "bytes": 6427
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "5c1b81d7d80b188409b4c85e14b1b18ca3a6e42b82c9e4b6a7ac0c9f1f6ee3e4",
+      "bytes": 2686
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "aceefe75091ba8ae854eb0c5f13256556ba90ae54103c2fcdc24765f988953ec",
+      "bytes": 6002
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "83b077197f898d5c90655377f87357299f437956e8614064d97bae795462c40d",
+      "bytes": 12717
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "d3412b4b2cecbd496b125b46bab17bdbbd79abf07c23907b2090bca49981f2ae",
+      "bytes": 5111
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "625fada000e5781b138602e4ec4f9e8df6b0f1be6ca0a56dff75e560420fa7bb",
+      "bytes": 8846
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "862af349e12034e63d3cac44121d9b5d13e6a59439e8046942b8bb4ef24fd339",
+      "bytes": 18987
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "dab8b6bdf3477ed36956143bd00ff2220f35b5bf66726d823814553250cfe95f",
+      "bytes": 7549
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "dd7cace7038af12d6f052a0bb8589ba80a2d9877cbe8a04d2fe052dda805e5d5",
+      "bytes": 11536
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "435bca772c9cc9df0f711f5190bf4f810da3529252656dc61c68b5c4a503ac57",
+      "bytes": 28501
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "4195a7d9ef58590eea2418b487623cae2775c3e7482c5ea0ef8f9f06a029c3c4",
+      "bytes": 9438
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/icon.icns",
+      "sha256": "16b48377d78ea79714e73026a9a530a0cc9d293defb6f7b8102b46f69d588b57",
+      "bytes": 180578
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/icon.ico",
+      "sha256": "0e3a1d769f96264a17534ccda4809e85b6f2ecad90d2e2c73762d66271ee0bd8",
+      "bytes": 27840
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/icon.png",
+      "sha256": "5c63db28d46bd9adafe2cd455bf754efa1f87c14a748c3ebace431b6085baca3",
+      "bytes": 15336
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "28087e2cb5f6c28069433cbb49fddc72d6fa1967387ccd0e03569916c82828b2",
+      "bytes": 1085
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "977d0c207530fc068379c59b7217564a87459f12ade09a96a2998d24cd453942",
+      "bytes": 2391
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "977d0c207530fc068379c59b7217564a87459f12ade09a96a2998d24cd453942",
+      "bytes": 2391
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "f3f7df2c86bc947304e95729706000c0dda5608bd6dd6c6a015e290724e236c2",
+      "bytes": 3719
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "0cd27db00b6bf9b2afdbc5b68ee1326c90be0e2212ad2748e2fb8ad8c9674318",
+      "bytes": 1693
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "17f9a280b3806aecfecda5201b6d788b5d696dd7dc284828d488915173cf4458",
+      "bytes": 3507
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "17f9a280b3806aecfecda5201b6d788b5d696dd7dc284828d488915173cf4458",
+      "bytes": 3507
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "d027f2b19b217f61be7706622a4488ed00600a136164ab5756807ed2b7e137af",
+      "bytes": 5315
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "977d0c207530fc068379c59b7217564a87459f12ade09a96a2998d24cd453942",
+      "bytes": 2391
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "37f5cb5abcfbf9e6107cfef33c938f01e157962f49b8a4b15bd93aeea184b353",
+      "bytes": 4899
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "37f5cb5abcfbf9e6107cfef33c938f01e157962f49b8a4b15bd93aeea184b353",
+      "bytes": 4899
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "62ae090064af649ae46d482efaf1247d7460ad75e367ed75fbe5606748dc48d0",
+      "bytes": 7144
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "556a948b863b06c97d2605d42acf40e28464d0966d4cb7936b1f83ae32ed0c2c",
+      "bytes": 99363
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "62ae090064af649ae46d482efaf1247d7460ad75e367ed75fbe5606748dc48d0",
+      "bytes": 7144
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "1b687bbf8617d8c79fbbbbed9f8f81efa12487291feedc6c7a018a63fa6d9b0f",
+      "bytes": 10672
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "619f2e54953c892e65fe0b4e4aeb2322f891be06c800b203b44d49d7c4c4d82a",
+      "bytes": 4595
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "781b545f495bf2268b539592805f4940b7982a28e086a3cb5ba63b8a46d177bb",
+      "bytes": 8736
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "7edc0a178164a9c086dc2d2f1024ec19bdd8bf32f63447ac48489f92623e97a8",
+      "bytes": 9640
+    },
+    {
+      "path": "src/assets/app-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/assets/app-icon.svg",
+      "sha256": "e2f54e1532d348b078b9d0cb28257a2dab85e61ce3f12b312bafa70d5dbd2a48",
+      "bytes": 917
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "src/components/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/icons.ts",
+      "sha256": "4538c0178cbb06d18931e92ad973300b221e50f798395bcb3e33fdc7cd40aed0",
+      "bytes": 16605
+    }
+  ],
+  "manifests": [
+    {
+      "path": "mcp-server/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/mcp-server/package.json",
+      "sha256": "3c88069ef74593a2fe1b0ad21bbf980c356dd935a2269c0589c8795cc3707a4f",
+      "bytes": 658
+    },
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/package.json",
+      "sha256": "d466dcc2a5118dc50ab0daa1181472e87196f729230ce817818ff1bbb1379d25",
+      "bytes": 1751
+    },
+    {
+      "path": "packages/embed/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/packages/embed/package.json",
+      "sha256": "87645c147f14172a16d0b725e7e629630bb925f8c5fb78a533ea0751f8086c5b",
+      "bytes": 2049
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src-tauri/Cargo.toml",
+      "sha256": "64829a45a6c1cca8a8c0ec818e0a6ce09734bb1ea88cc88d1a82cc23b32bfaa2",
+      "bytes": 1665
+    }
+  ],
+  "errors": [],
+  "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "files_scanned": 937,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

@@ -1,0 +1,220 @@
+# DynLex
+
+A natural-language-like programming language that compiles to native code via LLVM.
+
+## Features
+
+- Pattern-based syntax that reads like English
+- Compiles to native executables via LLVM
+- Static typing with full type inference
+- Standard library written in DynLex itself
+- Named compile-time values via zero-argument replacement functions (see [`docs/named_compile_time_values.md`](./docs/named_compile_time_values.md))
+- VS Code extension with LSP support
+
+## Build
+
+```bash
+./scripts/build.sh
+```
+
+Requires C++23, Clang 20 or newer, CMake, Ninja, `nlohmann_json`, Git, and GNU
+binutils on ELF systems. `scripts/build.sh` checks out and caches the exact LLVM
+23 fork recorded in `metadata/LLVM_TOOLCHAIN`; system LLVM installations are not
+used. Linked Git worktrees automatically share the primary checkout's
+`.cache/llvm-toolchain` directory. Set `DYNLEX_LLVM_CACHE_DIR` to use an explicit
+cache location instead. Build that toolchain independently with:
+
+```bash
+./scripts/build_llvm.sh native
+```
+
+The normal build uses `-O2` while retaining debug information and compiler
+invariants. Use `./scripts/build.sh --debug` when an unoptimized executable is
+needed for source-level debugging.
+
+## Browser Compiler
+
+DynLex can be built as a browser-hosted compiler module (`dynlex_web.js/.wasm`) with a Monaco-based web UI.
+This target requires Emscripten (`emcmake`, `emcc`). The build compiles and
+caches a WebAssembly version of the same pinned LLVM fork with the WebAssembly
+and SPIR-V targets.
+The build uses SPIRV-Cross for shader reflection and a pinned Naga WebAssembly
+module to validate and translate emitted SPIR-V into WebGPU's WGSL.
+
+Build compiler WASM artifacts and copy them into the web app:
+
+```bash
+source ~/emsdk/emsdk_env.sh
+./scripts/build_web.sh
+```
+
+The build script uses the active Emscripten SDK and builds the exact web LLVM
+toolchain recorded in `metadata/LLVM_TOOLCHAIN`.
+
+`./scripts/build_web.sh` refreshes `src/web/ide/public/compiler/dynlex_web.js` and
+`src/web/ide/public/compiler/dynlex_web.wasm` and
+`src/web/ide/public/compiler/dynlex_wgsl_translator.wasm`; commit those files
+when updating the deployed web compiler.
+
+Run the compiler WASM smoke test:
+
+```bash
+./scripts/test_web_smoke.sh
+```
+
+Run the web app:
+
+```bash
+cd src/web/ide
+npm install
+npm run dev
+```
+
+Refresh the deployable static web root (`web/`) after IDE changes:
+
+```bash
+./scripts/build_web_root.sh
+```
+
+View the deployable web site (`web/`) locally and open it in your browser:
+
+```bash
+./scripts/view_web.sh
+```
+
+Web layout:
+- `src/web/ide/`: IDE source (Vite + Monaco)
+- `web/`: deployable web root (site/wiki source + built IDE assets)
+
+The web app uses:
+- one editable `/workspace/*.dl` entry file plus read-only imported definitions
+- bundled stdlib from `/lib/*.dl` in Emscripten virtual FS
+- live debounced compile with diagnostics published by the DynLex language server
+- one persistent DynLex LSP session for completion, hover, go-to-definition,
+  semantic tokens, document symbols, quick fixes, and DynLex instantiation selection
+- live WebGPU previews for DynLex fragment/vertex shaders opened from the homepage shader gallery
+- built-in light and dark themes
+- `Run` executing the latest successful emitted program WASM
+
+Compiler WASM C ABI exports:
+- `dynlex_web_init`
+- `dynlex_web_set_main_source`
+- `dynlex_web_compile_and_emit_wasm`
+- `dynlex_web_compile_and_emit_shader_spirv`
+- `dynlex_web_get_diagnostics_json`
+- `dynlex_web_get_output_wasm_ptr` / `dynlex_web_get_output_wasm_len`
+- `dynlex_web_get_output_wasm_base64`
+- `dynlex_web_get_output_shader_spirv_base64`
+- `dynlex_web_get_shader_uniforms_json`
+- `dynlex_web_get_compiler_log_json`
+- `dynlex_web_lsp_exchange_json`
+
+## Install Dependencies
+
+Linux (apt/dnf/pacman/zypper):
+
+```bash
+./scripts/install.sh
+```
+
+macOS (Homebrew):
+
+```bash
+./scripts/install.sh
+if brew info llvm@20 >/dev/null 2>&1; then
+  export PATH="$(brew --prefix llvm@20)/bin:$PATH"
+else
+  export PATH="$(brew --prefix llvm)/bin:$PATH"
+fi
+export PATH="$(brew --prefix rustup)/bin:$PATH"
+export LIBRARY_PATH="$(brew --prefix glfw)/lib:$(brew --prefix freetype)/lib:$(brew --prefix vulkan-loader)/lib:$(brew --prefix)/lib${LIBRARY_PATH:+:$LIBRARY_PATH}"
+```
+
+The installer reuses tools already available on `PATH` and installs missing
+Homebrew formulae without upgrading unrelated installed packages. The Homebrew
+LLVM formula supplies the bootstrap Clang only; DynLex links the pinned fork
+built by `scripts/build_llvm.sh`. Native graphics use the Vulkan loader on
+Linux and Windows and the Vulkan loader with MoltenVK on macOS. The installer
+also installs the pinned Rust 1.87.0 `wasm32-unknown-unknown` toolchain used to
+build the browser's SPIR-V-to-WGSL translator.
+
+Windows (winget):
+
+```powershell
+.\scripts\install.ps1
+```
+
+The Windows installer also installs `nlohmann_json`, GLFW, FreeType, and the
+Vulkan loader through the pinned vcpkg manifest, then exports the package paths
+used by `scripts/build.sh`.
+
+## Usage
+
+Compile a source file:
+
+```bash
+./build/dynlex program.dl -o program.out && ./program.out
+```
+
+Emit a native object for a definition-only library. `--no-main` omits the
+entry point and rejects executable top-level statements; `exposed function`
+declarations provide the callable C ABI. With no `-o`, object output is written
+as `program.o`.
+
+```bash
+./build/dynlex library.dl --emit-object --no-main
+```
+
+`--no-main` can also be combined with `--emit-llvm` for definition-only LLVM
+IR. Definition-only libraries cannot use command-line argument intrinsics,
+because those values are initialized by DynLex's generated entry point.
+
+Or execute DynLex source directly. Command-line source automatically imports
+`lib/commands.dl`, which provides the standard library and command-oriented
+libraries such as file operations:
+
+```bash
+./build/dynlex print 3
+./build/dynlex 'move "a.txt" to "b.txt"'
+```
+
+The outer single quotes in the second example preserve DynLex's string quotes
+when the source passes through the shell.
+
+## Release
+
+Compiler/release version source of truth is [`metadata/VERSION`](./metadata/VERSION).
+
+Create and push a release tag with automatic version bump:
+
+```bash
+./scripts/release.sh patch   # or: minor, major, set X.Y.Z
+```
+
+## ASan Leak Check (With Third-Party Suppressions)
+
+For sanitizer leak checks that ignore known process-lifetime allocations from
+third-party libraries (for example LLVM internals), use:
+
+```bash
+./scripts/asan_leak_check.sh
+```
+
+By default this runs `build-asan/dynlex` with `scripts/lsan.supp`.
+
+## Performance Benchmarks
+
+Benchmark details, reproducible source programs, compiler settings, and
+hardware-specific results:
+
+- [`tests/benchmarks/01_sum_100m.md`](./tests/benchmarks/01_sum_100m.md)
+- [`tests/benchmarks/02_collatz.md`](./tests/benchmarks/02_collatz.md)
+
+Times are hardware- and toolchain-dependent; run the benchmark files locally
+for your exact environment.
+
+## Ubuntu PPA Packaging
+
+Launchpad packaging lives in [`packaging/launchpad`](./packaging/launchpad). Use
+that directory for Debian metadata, source-package builds, and PPA publishing so
+the project root stays focused on the compiler itself.

@@ -1,0 +1,414 @@
+{
+  "name": "llvm-project",
+  "url": "https://github.com/OpenAEC-Foundation/llvm-project",
+  "branch": "main",
+  "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Note: the repository does not accept github pull requests at this moment. Please submit your patches at http://reviews.llvm.org.",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [
+    {
+      "path": "bolt/docs/_static/favicon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/bolt/docs/_static/favicon.ico",
+      "sha256": "a965c5fb2db3cc8e6a7846077c206ab01e05c76204c24a35f2fb50128808879d",
+      "bytes": 1150
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/CFGExample.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/CFGExample.svg",
+      "sha256": "d163d207638c6fb00b92d8c86ad08511b32ddb3fe1880752cfabea004a14b5ae",
+      "bytes": 25514
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/CFGJoinRule.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/CFGJoinRule.svg",
+      "sha256": "f22be884a830900b423ae6a562fac33708b4d17ba802f550fe46be8ca600b34e",
+      "bytes": 13543
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/DefinitiveInitializationLattice.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/DefinitiveInitializationLattice.svg",
+      "sha256": "2641d8bc8af8d352d27df024ca04c57639e54c5bc44a4b571962a0e27d7a965e",
+      "bytes": 4427
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/IntegerSetsFiniteLattice.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/IntegerSetsFiniteLattice.svg",
+      "sha256": "a8feb80ea847e28435863e25c6d0e932326239a1b82efad9982ff0e4b75ddefd",
+      "bytes": 18215
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/IntegerSetsInfiniteLattice.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/IntegerSetsInfiniteLattice.svg",
+      "sha256": "987303775598990296fca44f0c55d10ed12df46e2e487744cf7b9b59584e7675",
+      "bytes": 18263
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/OutputParameterIdentificationLattice.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/OutputParameterIdentificationLattice.svg",
+      "sha256": "b59a645fd17530f1a3e91581903532b7809a17a448d2132ea5f27d5e3cf4a640",
+      "bytes": 13960
+    },
+    {
+      "path": "clang/docs/DataFlowAnalysisIntroImages/UniquePtrLattice.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/docs/DataFlowAnalysisIntroImages/UniquePtrLattice.svg",
+      "sha256": "32b34acd5979cc4173f85e4331a90dbf269d5922099068a030005bb04cffadbc",
+      "bytes": 4412
+    },
+    {
+      "path": "clang/tools/clang-format-vs/ClangFormat/Resources/Package.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/tools/clang-format-vs/ClangFormat/Resources/Package.ico",
+      "sha256": "def5f9cf50c24529015109e7574fcce2397202977ee2c1dfe7d92a1d52fc82bf",
+      "bytes": 1078
+    },
+    {
+      "path": "clang/tools/scan-view/share/bugcatcher.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/tools/scan-view/share/bugcatcher.ico",
+      "sha256": "c165621d1c3a80fe6f4ffe70d1e2abe5ddd6fc1361b75876a9e46ffd53985781",
+      "bytes": 318
+    },
+    {
+      "path": "clang/www/favicon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/clang/www/favicon.ico",
+      "sha256": "a965c5fb2db3cc8e6a7846077c206ab01e05c76204c24a35f2fb50128808879d",
+      "bytes": 1150
+    },
+    {
+      "path": "flang/docs/_themes/llvm-theme/static/logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/flang/docs/_themes/llvm-theme/static/logo.png",
+      "sha256": "e230e979f14ddda1cf6b43aa4997f416f9aa32d6f4bfebb80e9901d08ba3e580",
+      "bytes": 9864
+    },
+    {
+      "path": "libc/docs/gpu/rpc-diagram.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/libc/docs/gpu/rpc-diagram.svg",
+      "sha256": "0bc18d72436d8e818a01cff02e8e5cf7bcb3041610c85d62a98e85f6bcd63c16",
+      "bytes": 63601
+    },
+    {
+      "path": "libc/docs/header_gen_scheme.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/libc/docs/header_gen_scheme.svg",
+      "sha256": "416e0045a5bdea11756a077fad83dd10aaeee29c86c4fef4266f87cfb6331901",
+      "bytes": 530911
+    },
+    {
+      "path": "lld/docs/_static/favicon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/lld/docs/_static/favicon.ico",
+      "sha256": "a965c5fb2db3cc8e6a7846077c206ab01e05c76204c24a35f2fb50128808879d",
+      "bytes": 1150
+    },
+    {
+      "path": "lld/docs/llvm-theme/static/logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/lld/docs/llvm-theme/static/logo.png",
+      "sha256": "8ffa21cc90868f3889e6ecfbabe4810015491caabcc8b3c43b1c8f54b955c8ff",
+      "bytes": 9865
+    },
+    {
+      "path": "lld/docs/partitions.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/lld/docs/partitions.svg",
+      "sha256": "684c523cb3d36aac3f1c999f1db68b5625fd21504a56df57ec5ca7eca69477d9",
+      "bytes": 5951
+    },
+    {
+      "path": "llvm/cmake/nsis_icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/cmake/nsis_icon.ico",
+      "sha256": "3363560105b156ef3c18aad1b3be4e27d42a7a3c62a3c41efc9f2a5fcd36343c",
+      "bytes": 65901
+    },
+    {
+      "path": "llvm/cmake/nsis_logo.bmp",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/cmake/nsis_logo.bmp",
+      "sha256": "6cd903320b42248cf565fbb58545c991171d1d0409ddec4810137fc98ee2e9c0",
+      "bytes": 30776
+    },
+    {
+      "path": "llvm/docs/_themes/llvm-theme/static/logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/_themes/llvm-theme/static/logo.png",
+      "sha256": "e230e979f14ddda1cf6b43aa4997f416f9aa32d6f4bfebb80e9901d08ba3e580",
+      "bytes": 9864
+    },
+    {
+      "path": "llvm/docs/loop-guard.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-guard.svg",
+      "sha256": "87efbc6e19b3ecbb5c41e5354b8dfd575eee180c84216c9ca9d8d455c97e3baa",
+      "bytes": 110735
+    },
+    {
+      "path": "llvm/docs/loop-irreducible.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-irreducible.svg",
+      "sha256": "697cdad38cec42597426a8c0d5fe2cd1f7f1187815e017fa20a6d9dd21c28c5e",
+      "bytes": 78226
+    },
+    {
+      "path": "llvm/docs/loop-merge.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-merge.svg",
+      "sha256": "26fafe3270c4a078b5e2fc88f803acc1540d0073ce8c4dbac8e83d91b3b1fd84",
+      "bytes": 90198
+    },
+    {
+      "path": "llvm/docs/loop-nested.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-nested.svg",
+      "sha256": "39643ab6f70ea1ceb61aa7a17242aec56a13cd39783557fbb6a05ed9abeac93f",
+      "bytes": 89878
+    },
+    {
+      "path": "llvm/docs/loop-nonmaximal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-nonmaximal.svg",
+      "sha256": "b9a187fdde2e1ab8cbc360c57ac7fd4eccb3bcf365c0bcb1b2188d86db00de94",
+      "bytes": 132529
+    },
+    {
+      "path": "llvm/docs/loop-separate.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-separate.svg",
+      "sha256": "714497f1d3b3a2430f677b6754cd638b00460817364dd3773f5beaa1cc6b44de",
+      "bytes": 92865
+    },
+    {
+      "path": "llvm/docs/loop-single.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-single.svg",
+      "sha256": "e01cfb223d080b64f348e8426eb3b3f328542a8b741c335f822e1ac40531b738",
+      "bytes": 36155
+    },
+    {
+      "path": "llvm/docs/loop-terminology.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/docs/loop-terminology.svg",
+      "sha256": "aef5a43099c13fd25d6144655a004947fff47db90490b0019a77dc9c414ab357",
+      "bytes": 118891
+    },
+    {
+      "path": "llvm/test/tools/llvm-rc/Inputs/icon-new.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/test/tools/llvm-rc/Inputs/icon-new.ico",
+      "sha256": "3cbb82383dc10a71383a9c0335ca81c73d79bdb97599c1747cdfd9a2f60b679f",
+      "bytes": 17542
+    },
+    {
+      "path": "llvm/test/tools/llvm-rc/Inputs/icon-old.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/test/tools/llvm-rc/Inputs/icon-old.ico",
+      "sha256": "a862a6d2b795816ddfa5d89852dcfd78113402019bec833303559da8bc4e81bc",
+      "bytes": 17542
+    },
+    {
+      "path": "llvm/test/tools/llvm-rc/Inputs/icon-png.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/test/tools/llvm-rc/Inputs/icon-png.ico",
+      "sha256": "7c1542c52dba345c469ff8a5b8f621ab956ce8f27e81ce32d1618bc717b623a7",
+      "bytes": 104
+    },
+    {
+      "path": "mlir/docs/includes/img/DefUseChains.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/DefUseChains.svg",
+      "sha256": "5b1d54314776d9118b089bc16b6c028f4662f763fd3c0bc2ae3d95fe6e612a80",
+      "bytes": 159376
+    },
+    {
+      "path": "mlir/docs/includes/img/Use-list.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/Use-list.svg",
+      "sha256": "bc163fad73bf59a98f73a81110b0e81e33ef77628a3421af046fe7b652c58bea",
+      "bytes": 70988
+    },
+    {
+      "path": "mlir/docs/includes/img/branch_example_post_move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/branch_example_post_move.svg",
+      "sha256": "e24703cdad9cb98638f19328e24e97fa21f8646bd2af5b52eb3a9208554f798c",
+      "bytes": 15763
+    },
+    {
+      "path": "mlir/docs/includes/img/branch_example_pre_move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/branch_example_pre_move.svg",
+      "sha256": "526030cfb4f25cb158d62992274b6fe09e11b7a7099c0dd480eeb1e655aa3ab9",
+      "bytes": 15357
+    },
+    {
+      "path": "mlir/docs/includes/img/bufferization_dealloc_op.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/bufferization_dealloc_op.svg",
+      "sha256": "e43d942c21be4d973e4c054c1d1d698abb13e2f57aa72d2c7e1c9e1357622c18",
+      "bytes": 430041
+    },
+    {
+      "path": "mlir/docs/includes/img/bufferization_passes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/bufferization_passes.svg",
+      "sha256": "824f712950584e5bde34e5ed640bc29211cbc6ec00dc90b99f5554ad5902f7f2",
+      "bytes": 208279
+    },
+    {
+      "path": "mlir/docs/includes/img/bufferization_tensor_insert_dst.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/bufferization_tensor_insert_dst.svg",
+      "sha256": "20575d0e6c63659ea85c0ae4e17cd97ea3bbfe377f26928db27a06d4f928e385",
+      "bytes": 79342
+    },
+    {
+      "path": "mlir/docs/includes/img/index-map.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/index-map.svg",
+      "sha256": "ba51be9b6c0cfa964cd726bdc94fa39cdd4e89c6e9f7358c7582b7a7388da735",
+      "bytes": 66767
+    },
+    {
+      "path": "mlir/docs/includes/img/mlir-lsp-server-server_diagram.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/mlir-lsp-server-server_diagram.svg",
+      "sha256": "56c69d5fa1c8740c386c2bf57c3561e45288d48315b81696c75d71f9a5b58813",
+      "bytes": 34809
+    },
+    {
+      "path": "mlir/docs/includes/img/nested_branch_example_post_move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/nested_branch_example_post_move.svg",
+      "sha256": "29525e2c9060405f9cb6c1237c9aa0967113f9c7149743052f57cf4504b6b77f",
+      "bytes": 28911
+    },
+    {
+      "path": "mlir/docs/includes/img/nested_branch_example_pre_move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/nested_branch_example_pre_move.svg",
+      "sha256": "a7a3c7c9afb3a2eff09fed65e992a12f27f5a0e71e6ac699f4856b9904ca1671",
+      "bytes": 27133
+    },
+    {
+      "path": "mlir/docs/includes/img/region_branch_example_pre_move.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/region_branch_example_pre_move.svg",
+      "sha256": "b9e5e27e810902fb65ffeac4822af653c2b34409fc4249966737ddd478f7cd34",
+      "bytes": 16470
+    },
+    {
+      "path": "mlir/docs/includes/img/view-operation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/docs/includes/img/view-operation.svg",
+      "sha256": "8ef0ecd9411c8f769d6b14ec39ca8c1613f21f2e467ef5f51e99ae701be01665",
+      "bytes": 158768
+    },
+    {
+      "path": "openmp/docs/_themes/llvm-theme/static/logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/openmp/docs/_themes/llvm-theme/static/logo.png",
+      "sha256": "2db4a1a2ac01f08c512dc0eb7fb96f15b4992d8e3810701b9ea322d005529a8b",
+      "bytes": 218
+    },
+    {
+      "path": "polly/www/favicon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/polly/www/favicon.ico",
+      "sha256": "e41e5f92b6dd1bcdc6b1e70856142d0074d88cdb79346ddb3a4f1a3edfdc430d",
+      "bytes": 2238
+    },
+    {
+      "path": "third-party/benchmark/docs/assets/images/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/third-party/benchmark/docs/assets/images/icon.png",
+      "sha256": "61aace4f506b43a100adf6020509023fc7420234501e1c0e568e5ddba86db63b",
+      "bytes": 11106
+    },
+    {
+      "path": "third-party/benchmark/docs/assets/images/icon_black.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/third-party/benchmark/docs/assets/images/icon_black.png",
+      "sha256": "24dceea1d8b95df3e929b0d79a05be9e6abafcdf0526325206beaf28993ecec6",
+      "bytes": 11559
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "lldb/tools/lldb-dap/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/lldb/tools/lldb-dap/package.json",
+      "sha256": "cff4605e79c37a23c0ab36a1b2675c5619f02af0bd0f7895f362defd702bff32",
+      "bytes": 18953
+    },
+    {
+      "path": "llvm/utils/lit/pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/utils/lit/pyproject.toml",
+      "sha256": "0d2df4e9048f74f759f835775a4bb1f586923dc5bdfb27781abdf0282fa882d9",
+      "bytes": 81
+    },
+    {
+      "path": "llvm/utils/mlgo-utils/pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/utils/mlgo-utils/pyproject.toml",
+      "sha256": "5cc801e67457495fe396eba8dada336308039d4580716607d19717e36837a317",
+      "bytes": 634
+    },
+    {
+      "path": "llvm/utils/vscode/llvm/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/llvm/utils/vscode/llvm/package.json",
+      "sha256": "803d571cf92eda56533c4fc35dc50ca17d69b20c2786bedd32c24da3599b8a0c",
+      "bytes": 3602
+    },
+    {
+      "path": "mlir/utils/tree-sitter-mlir/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/utils/tree-sitter-mlir/package.json",
+      "sha256": "533541b7f0d00d7de3ea87759fbd2cc9bee6dbe9bfbd55a519a94013ec29fb78",
+      "bytes": 615
+    },
+    {
+      "path": "mlir/utils/vscode/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/mlir/utils/vscode/package.json",
+      "sha256": "491d891a8500a09bae2c5cca1c86d3d496df11cdc0faeb0d8e0725670128de19",
+      "bytes": 6155
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/pyproject.toml",
+      "sha256": "ee4a542c3307e974e37912eab90dbb37fa37a11a8cf788cb98c9f7cf08ef38b7",
+      "bytes": 57
+    },
+    {
+      "path": "third-party/benchmark/pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/llvm-project/df5fb99ca79db0d06163bc2eebcb04489c865299/third-party/benchmark/pyproject.toml",
+      "sha256": "7a576dd55a72be8dd886b97a86946fc820bdca061f856a61eb32a386f215c7d1",
+      "bytes": 2103
+    }
+  ],
+  "errors": [],
+  "commit": "df5fb99ca79db0d06163bc2eebcb04489c865299",
+  "files_scanned": 147959,
+  "ui_stack": [
+    "Slint"
+  ],
+  "icon_packages": [
+    "icon"
+  ]
+}

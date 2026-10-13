@@ -1,0 +1,66 @@
+{
+  "name": "openaec-bcf-platform",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform",
+  "branch": "main",
+  "description": "BCF 2.1 issue management platform for BIM projects \u2014 by 3BM Bouwkunde",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "frontend/public/favicon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "bytes": 9522
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "frontend/src/components/shell/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/shell/icons.ts",
+      "sha256": "3eb21885d42f15e7d5ee6669b3ad815ce044464f21973f399edfb99e632b396c",
+      "bytes": 3924
+    }
+  ],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/Cargo.toml",
+      "sha256": "2639836cad0bc580a350ef90ceca0fa4cb813f68b04fa7819ce0c153b49e9966",
+      "bytes": 464
+    },
+    {
+      "path": "crates/bcf-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/crates/bcf-core/Cargo.toml",
+      "sha256": "7ddb7ff38c1fa9522806bf21f03f55e527462cbccb6a57825152eda0bc890c84",
+      "bytes": 422
+    },
+    {
+      "path": "crates/bcf-server/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/crates/bcf-server/Cargo.toml",
+      "sha256": "9cba8093cdd2ba5c7b8365948ac3ea0fb9753df3e1614f92cb741c9df0db4f4d",
+      "bytes": 1394
+    },
+    {
+      "path": "frontend/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-bcf-platform/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/package.json",
+      "sha256": "be2a02623a11898b9445e652a61cd5ab8f16993355adaa78204416cca4d1ba48",
+      "bytes": 951
+    }
+  ],
+  "errors": [],
+  "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597",
+  "files_scanned": 123,
+  "ui_stack": [
+    "React",
+    "Slint"
+  ],
+  "icon_packages": [
+    "lucide-react"
+  ]
+}

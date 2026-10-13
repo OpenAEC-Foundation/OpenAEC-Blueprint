@@ -1,0 +1,70 @@
+{
+  "name": "openaec-docs",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-docs",
+  "branch": "master",
+  "description": "OpenAEC Docs \u2014 BIM Document Management Platform",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "frontend/public/favicon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "bytes": 9522
+    },
+    {
+      "path": "frontend/public/icons.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/public/icons.svg",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "bytes": 5031
+    },
+    {
+      "path": "frontend/src/assets/react.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "bytes": 4126
+    },
+    {
+      "path": "frontend/src/assets/vite.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/src/assets/vite.svg",
+      "sha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "bytes": 8709
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/Cargo.toml",
+      "sha256": "41c93eac1407216453f96ff1e566a006b9f402573c5236621f6f4cede9f8d8e9",
+      "bytes": 438
+    },
+    {
+      "path": "crates/docs-server/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/crates/docs-server/Cargo.toml",
+      "sha256": "8e69c45446edaa786d93322f93e8d4dc1831379e3923814efc3796902bc1453b",
+      "bytes": 1398
+    },
+    {
+      "path": "frontend/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-docs/9af134425a78ea39d93ac7a0d0f11f4b39dabbf8/frontend/package.json",
+      "sha256": "d3f38cbd3db45a6c0d603fd9786b636fb76778965079320b47d934ac3381fa7d",
+      "bytes": 808
+    }
+  ],
+  "errors": [],
+  "commit": "9af134425a78ea39d93ac7a0d0f11f4b39dabbf8",
+  "files_scanned": 68,
+  "ui_stack": [
+    "React",
+    "Slint"
+  ],
+  "icon_packages": []
+}

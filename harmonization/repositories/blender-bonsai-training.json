@@ -1,0 +1,1858 @@
+{
+  "name": "blender-bonsai-training",
+  "url": "https://github.com/OpenAEC-Foundation/blender-bonsai-training",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_BWK_PLG_-1_fundering.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_BWK_PLG_-1_fundering.svg",
+      "sha256": "ce5f880d01ec81f743f040686498c4963dc425d34c97d690227aec97adf55121",
+      "bytes": 423941
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_BWK_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_BWK_PLG_00_begane_grond.svg",
+      "sha256": "56142a2a00f0d7c4ca1664b4a295dbcd8bda9e2d05ded2f9e2a741b8788bcce4",
+      "bytes": 421994
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "sha256": "5721f0844586d835a1868445e904f49441aa40a7f8114130dc7ac1131e1bdc56",
+      "bytes": 419181
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_CON_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_CON_PLG_00_begane_grond.svg",
+      "sha256": "0b1fc68cd71cf5aab033ffdd868673180af2d338e464804d05ccebf96c7b7e47",
+      "bytes": 423824
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "sha256": "dbf47c4dbda32a7b6e578826f3bf485d80685877e96700b94d7c0f547d4a72bc",
+      "bytes": 419181
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/01_CON_PLG_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/01_CON_PLG_palenplan.svg",
+      "sha256": "8bf08bce8de3a40b9e378b1d955d10335f57b9663553ad5714062971cc6130e5",
+      "bytes": 421474
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/3D_model.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/3D_model.svg",
+      "sha256": "bbb70d2f62c9490bfce2393a46c02aca58bb6baabe1077b77157926c723c9906",
+      "bytes": 40537
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/ALG_00_inleiding.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/ALG_00_inleiding.svg",
+      "sha256": "481f7d9f718653c6058648c30acc76fa63a8c3a4a75f65be3732112ca37edf4a",
+      "bytes": 413645
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/ALG_00_totaaloverzicht.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/ALG_00_totaaloverzicht.svg",
+      "sha256": "218a9f4a70fdcaa35bc5a2c7f4a44604ae07a8013fa7fccc5c4ef5c089ee6c1c",
+      "bytes": 740297
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/ALG_symbolen_markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/ALG_symbolen_markers.svg",
+      "sha256": "e9c19fa12fd896f7643e920f8dc257503937eb80bc2b1e1ef0080eda056287c9",
+      "bytes": 412047
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/BWK_arceringen_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/BWK_arceringen_1_5.svg",
+      "sha256": "3c389e0f9de50b76dfaca6dddc7ca37a756b2f143defb3080f1f596a5020595e",
+      "bytes": 426713
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/BWK_detail_2D_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/BWK_detail_2D_1_5.svg",
+      "sha256": "00756408db8cb526c9417a8ddd95d010b1bd5c00fd23e7e55e1f3acce35e7156",
+      "bytes": 349
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/BWK_detail_3D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/BWK_detail_3D_1_10.svg",
+      "sha256": "8add10e095d94b112b873eb2e083d0cbd1cccd2349056df27f2d57ee56c58958",
+      "bytes": 417539
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/CON_details_2D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/CON_details_2D_1_10.svg",
+      "sha256": "c2aa051710e4b79880b162d37399d3a60cb168b0583a858b240d9d7bfdbd89d5",
+      "bytes": 502936
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/CON_renvooi_constructie.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/CON_renvooi_constructie.svg",
+      "sha256": "304ded2da47a1df771584fabd64ee326743297be9c41f7f0f920a58846fe09a4",
+      "bytes": 469013
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/CON_renvooi_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/CON_renvooi_palenplan.svg",
+      "sha256": "da61fa52f6d05feb94c62c98c0baba42bf11683d6fe8eb3d195eb014720d36fc",
+      "bytes": 446831
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/assets/markers.svg",
+      "sha256": "d50c0ea996edd4a1e15565c9ebdbe187ea27de6cdab281bbc6ca53fb5783d9c3",
+      "bytes": 6432
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/assets/patterns.svg",
+      "sha256": "dd5fa19591eb3108ee5658e65eb593fb091121b792a86c5cdda5a3f5b2f13850",
+      "bytes": 379586
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/assets/symbols.svg",
+      "sha256": "36e20cbb7d8558d10b2be615a562249883a941cc54ebeb35ab1070bf6c709600",
+      "bytes": 14163
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "sha256": "d088940add6217532dcb8cb9ffe9f5e09c9a8fc11e8ccb6bfbe9787cde20c133",
+      "bytes": 115427
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "sha256": "f5ff6170f605920c8343b0dc5ecba2057a21dd090b50c2c62a8f7ed1d0892d3d",
+      "bytes": 11043
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/00_ALG_handleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/00_ALG_handleiding-annotation.svg",
+      "sha256": "6c51b662c605bcf2345a96e5a5f9dcc266182ea4d27dd56242087d5039f9981b",
+      "bytes": 10896
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/00_ALG_handleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/00_ALG_handleiding-linework.svg",
+      "sha256": "1570b56bfda12f8c001e98dd3451ad9bc6f62828b9189ed559638c099f052e77",
+      "bytes": 539
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "sha256": "45464430793bce7f0b9ab53e394bfbeca5f114835ce7a36d3d1b5b74640b7eff",
+      "bytes": 7460
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "sha256": "7cbd2e8ecddcdab9ac7b3d6d5e3defe33e1e29149ec3de11599a43a6b740892c",
+      "bytes": 12199
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "sha256": "5373b0fce27a938ce1f4586e42b94486c3d772d586d50bf8293a44539cf018de",
+      "bytes": 6804
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "sha256": "6bf9299abfd8b622fb3eec35dcd2c2c905b2182cd81b14c0905e5013da3daf2d",
+      "bytes": 12234
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "bec506222c97ab5f412392c49c63fce26c38d53c6e40f1dfc298dd26676728f6",
+      "bytes": 6310
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "0d8ed5de3fd07e69e6d26fad311f50a916f80215465708496dd929cca5f6fc47",
+      "bytes": 9915
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "sha256": "d0a464011d9d1ae7b0c72daf6a35029be7f24275ac78d2cd498401c105e82f1b",
+      "bytes": 6310
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "sha256": "fa080baaee3a6661217b513896b99b3449c76813c5ed7337b4d772da7fe57c6d",
+      "bytes": 14558
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "6f1230e7690bbc3a6fa79247c2187fadfb209194d281ca802fc4cc5d4a990038",
+      "bytes": 6310
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "6607aeca183ed3055aa2d25f78eebaa2accf0578f37117f8a2873bfa448ea785",
+      "bytes": 9915
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "sha256": "39ed3609fb90f83f7e7dc96d405d22abeb89b6653f1b733e6eea15f3bd30e95f",
+      "bytes": 6310
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "sha256": "fb78a8bac290601036eb846680f67f8defcfdbf9d0629f96c010dbc28564b434",
+      "bytes": 12208
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/3D_model-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/3D_model-annotation.svg",
+      "sha256": "e4624de46427910d802b558b3d847c5fb6725cc3b191313d60d07fafea7f85bb",
+      "bytes": 6527
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/3D_model-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/3D_model-linework.svg",
+      "sha256": "a2938e4c98532f0054b8519e6ec326986d10f7407bbc64f82ca22e02a40b3989",
+      "bytes": 40317
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_indleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_indleiding-annotation.svg",
+      "sha256": "711df58f867d6e10cd92e89dfbb67612d01a39ef3657833feecb706e818fbbf7",
+      "bytes": 10150
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_indleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_indleiding-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "sha256": "8540da8ed845bd19f03cc45c5fe681f7246776a6030d50c0d1bd68abf5b5d14e",
+      "bytes": 136759
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "sha256": "8c5b52aed626899e7b2f70437cbecff3bb369262f2cba05af6128528ef98466b",
+      "bytes": 180902
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "sha256": "8b55aa4a497f66057c411fc95d601a95d44c95fd17fdfd26dbb175d2faae6d35",
+      "bytes": 140282
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "sha256": "30660659ade2bc9389d339f6caa163cf5fe3055413d9f1e70209ec347dd4b0ec",
+      "bytes": 67674
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "sha256": "9e7774d8935837f19b2c963713083756df604c747ee172b5ba42901cb9947ec2",
+      "bytes": 21530
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "sha256": "6fa321dc8a7c408ef1da5e63502155222d12364996fdbd47762cf29b4587d05c",
+      "bytes": 547
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "sha256": "f64a53ed44ccd923170ae6d2ec432db1a5dc55931e131202a731f2ae6e39ee31",
+      "bytes": 7226
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/ALG_symbolen_markers-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/ALG_symbolen_markers-linework.svg",
+      "sha256": "822128f128a7eab09c7ec64eb677ccc63423dbca0b2e2e99d13db6a064806881",
+      "bytes": 547
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "sha256": "62fbbc5c3a5d20ca9812cd63cfe6a615c80c4d3b2386e6ef42deb6c1b0f65b76",
+      "bytes": 41399
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "sha256": "cb399196a295810a66f7547aabba038fae7ba4973e42496647398c962b86a82c",
+      "bytes": 539
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "sha256": "59c79aadcd4b51f1c082b95796323628c751b30783aa17c8338cc7321550540c",
+      "bytes": 5182
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "sha256": "54f1a156b748e5d865a40031bed7f3db9a692891449daea35279bb86d1d00a01",
+      "bytes": 7713
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "sha256": "572666c9a23cc2987fb6421188854417b8fdb2862be8d5f3b93987e180e4276d",
+      "bytes": 3038
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_PLG_palenplan-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "sha256": "a8aa939162c9a5ab7d8117b99384669b9f702da54692a52881e659b271ddda10",
+      "bytes": 79753
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_details_2D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_details_2D_1_10-linework.svg",
+      "sha256": "8bd10ee5cba1ad84fb3dd713f84f7c1440aea921ea7a47e25fec8236f0cd51a2",
+      "bytes": 549
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "sha256": "dff8b53c541203838a6d86eb55abcd868b4d66af34333a386998c4c27c086708",
+      "bytes": 61746
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "sha256": "32d84ae2880051ae89e4254d1d5e6f0f8e0b604defd928f835bee4798e8565a4",
+      "bytes": 547
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "sha256": "fc3fb84abff1796eef357738f64ae84cfa5f76ed973f93a1c3ff39b7e0392b6b",
+      "bytes": 516
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "sha256": "49607af62918281f6a320b4e1c1af329c0b9315344529bf58237bbd768c4b6ca",
+      "bytes": 64068
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-linework.svg",
+      "sha256": "933516c6010f75657cdac9338b0c4d1686454fcf109d59cd595d6d8e09741bd9",
+      "bytes": 547
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "sha256": "757260c9b9bb4ee05ec90818dec5ab89cfcb4a3cb791cf21e7398b8aa700592b",
+      "bytes": 511
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "sha256": "46e0bd8ade7a97bef01611e4bb902621061ec53de08aab3c663c871b23bc62d8",
+      "bytes": 33588
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "sha256": "40a0916aab2435a20fe7f593fc5cafa007b4178bbc328678fde721af901cc335",
+      "bytes": 10295
+    },
+    {
+      "path": "Bonsai Training beginbestanden/BCF en Clash/drawings/cache/PERSPECTIVE-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Bonsai%20Training%20beginbestanden/BCF%20en%20Clash/drawings/cache/PERSPECTIVE-linework.svg",
+      "sha256": "71cdb9386f2df7fd066300e46748892c43484af44484cd3cbdd0e38e4c64631d",
+      "bytes": 75155
+    },
+    {
+      "path": "Dataset/Wood Framing Element/HSB-tekening POC.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/HSB-tekening%20POC.svg",
+      "sha256": "858558a4aeb4c25e82802e2f4d5e9b14b32cdb52436503542e834d456704b37e",
+      "bytes": 977013
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/MY STOREY PLAN.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/MY%20STOREY%20PLAN.svg",
+      "sha256": "ddbd273051579158c30452a312b400726b86b5ab17e974f829490ab9c053f936",
+      "bytes": 97103
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/PLAN_VIEW.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/PLAN_VIEW.svg",
+      "sha256": "3bb38bc04431a83277c5d2d5bca414cd1ec6c749ab5bb3197dbd4617942ce58a",
+      "bytes": 126898
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/assets/markers.svg",
+      "sha256": "bfdc87519360fe41aa424ca7bcd815bbc3a9e435cf48c36fa566651f8a85bd8e",
+      "bytes": 5805
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/assets/patterns.svg",
+      "sha256": "7deaf909749c66efb12ff72a6777ef34c784fddc85a47ccd7586b22dc098a96d",
+      "bytes": 70664
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/cache/MY STOREY PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/cache/MY%20STOREY%20PLAN-annotation.svg",
+      "sha256": "6111058272e29ebeb74896c0ad0da5439d5b13594dd0c1117ec54d4c3b9f8874",
+      "bytes": 1214
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/cache/MY STOREY PLAN-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/cache/MY%20STOREY%20PLAN-linework.svg",
+      "sha256": "d704b66a9896eebcec92f6998b06336227457ad35491512e48b54df2081d64e2",
+      "bytes": 11248
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/cache/PLAN_VIEW-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/cache/PLAN_VIEW-annotation.svg",
+      "sha256": "a6fc5c01197b4e015ad8889b21202761d1aa3fdcbed916bac432da7006879012",
+      "bytes": 30634
+    },
+    {
+      "path": "Dataset/Wood Framing Element/drawings/cache/PLAN_VIEW-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/drawings/cache/PLAN_VIEW-linework.svg",
+      "sha256": "7e35f7aa7d64582dec531799ca2403c07dbbdbeb31644b9258faedbfc52e4ed9",
+      "bytes": 11619
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns.svg",
+      "sha256": "4c4681e9e0fdd0605236db388ca5a5516e6543cee8f2cbe98a93c83550b2d86b",
+      "bytes": 145680
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_1.svg",
+      "sha256": "66ea6af4d7e96f38833395e3656e8672f0b2a572609e0345f00cccaaba607738",
+      "bytes": 144850
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_10.svg",
+      "sha256": "d18282c6b5f9b6314f7f998820653ec6e07c981b28908a5b830881b0909abba0",
+      "bytes": 144757
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_100.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_100.svg",
+      "sha256": "23f3b6c66250c44cf4e6173c57b1b7418535b69ee1c898d2ee67c44b8ea3978b",
+      "bytes": 100301
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_2.svg",
+      "sha256": "adf8b2c8e1ab3348586198f8db0427675dd00706ce706abd7b4cbf2d394422a3",
+      "bytes": 144850
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_20.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_20.svg",
+      "sha256": "afc00ddf15c4244d8f53a8451870868389afa0e088c15d3543847589d82fcf0f",
+      "bytes": 144757
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_200.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_200.svg",
+      "sha256": "c10e4c31ae09abfd2fe0adda21d0466fc92dddf0f26ebe3b2f27cb2f17e41d72",
+      "bytes": 87390
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_5.svg",
+      "sha256": "99a4a87d0ab90b631b423fd199e7fc37aa58fb478a8bb5459b2c7c082c5f0941",
+      "bytes": 144850
+    },
+    {
+      "path": "Dataset/Wood Framing Element/patterns/patterns_BWK_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/Wood%20Framing%20Element/patterns/patterns_BWK_50.svg",
+      "sha256": "3ae34c11b1c32ba5fd5240eee98f0d7317f793f873d7ba7c6f602c81d5be44b8",
+      "bytes": 144757
+    },
+    {
+      "path": "Dataset/drawings/BEGANE GROND PLAN.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/drawings/BEGANE%20GROND%20PLAN.svg",
+      "sha256": "35b7341a83114bc8a3a831446286d3a809b5768592fb44c228c9c9e0aa84a503",
+      "bytes": 1780841
+    },
+    {
+      "path": "Dataset/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "Dataset/drawings/cache/BEGANE GROND PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/drawings/cache/BEGANE%20GROND%20PLAN-annotation.svg",
+      "sha256": "cbcd17b14e8bde10508f45e6fdcc3b8ae93a0cbaf33cccd4ad802010c55f02de",
+      "bytes": 1260911
+    },
+    {
+      "path": "Dataset/drawings/cache/BEGANE GROND PLAN-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/drawings/cache/BEGANE%20GROND%20PLAN-linework.svg",
+      "sha256": "7b73c7e0e25bb208037a44bb59e548d9e5ee141686c1832f243e1e01e95d2268",
+      "bytes": 516396
+    },
+    {
+      "path": "Dataset/markers_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/markers_BWK_1_50.svg",
+      "sha256": "a615d696954c55265ad77240daa8eaad6d53c6dd1e6b3dc61303a22e693514fe",
+      "bytes": 8063
+    },
+    {
+      "path": "Dataset/patterns_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/patterns_BWK_1_50.svg",
+      "sha256": "3af457ca4a1b66e896a7b2df5c576b611216d33c81ea5c3186e16baca2709044",
+      "bytes": 145228
+    },
+    {
+      "path": "Dataset/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/Dataset/symbols.svg",
+      "sha256": "4e272b61ccf07a2014ca7eb5ac3e7f1d13295c49f5482a0afd78e1b7ade00eed",
+      "bytes": 9537
+    },
+    {
+      "path": "INB-template/drawings/01_BWK_PLG_-1_fundering.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_BWK_PLG_-1_fundering.svg",
+      "sha256": "ce5f880d01ec81f743f040686498c4963dc425d34c97d690227aec97adf55121",
+      "bytes": 423941
+    },
+    {
+      "path": "INB-template/drawings/01_BWK_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_BWK_PLG_00_begane_grond.svg",
+      "sha256": "7dc2349fbff349257e35f97b21b37cccc2b040709e3fcbb63cba755af5fd5f7e",
+      "bytes": 529189
+    },
+    {
+      "path": "INB-template/drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "sha256": "5721f0844586d835a1868445e904f49441aa40a7f8114130dc7ac1131e1bdc56",
+      "bytes": 419181
+    },
+    {
+      "path": "INB-template/drawings/01_CON_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_CON_PLG_00_begane_grond.svg",
+      "sha256": "0b1fc68cd71cf5aab033ffdd868673180af2d338e464804d05ccebf96c7b7e47",
+      "bytes": 423824
+    },
+    {
+      "path": "INB-template/drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "sha256": "13345ac93edd2fdf578ab8093259bab8ce728c11eb6c59cd421d3f27516a1a12",
+      "bytes": 442643
+    },
+    {
+      "path": "INB-template/drawings/01_CON_PLG_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/01_CON_PLG_palenplan.svg",
+      "sha256": "8bf08bce8de3a40b9e378b1d955d10335f57b9663553ad5714062971cc6130e5",
+      "bytes": 421474
+    },
+    {
+      "path": "INB-template/drawings/02_BWK_BVO_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/02_BWK_BVO_00_begane_grond.svg",
+      "sha256": "f60bc842abb3504ae9476cd4e0d81ad5550b53210dee6771604ae6272a5ceee2",
+      "bytes": 445995
+    },
+    {
+      "path": "INB-template/drawings/02_BWK_BVO_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/02_BWK_BVO_01_eerste_verdieping.svg",
+      "sha256": "e5f9d3ea5a4edda715e4239ffeb277ecce433b292cb193e53c7e7236ffc79065",
+      "bytes": 442643
+    },
+    {
+      "path": "INB-template/drawings/3D_model.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/3D_model.svg",
+      "sha256": "bbb70d2f62c9490bfce2393a46c02aca58bb6baabe1077b77157926c723c9906",
+      "bytes": 40537
+    },
+    {
+      "path": "INB-template/drawings/ALG_00_inleiding.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/ALG_00_inleiding.svg",
+      "sha256": "481f7d9f718653c6058648c30acc76fa63a8c3a4a75f65be3732112ca37edf4a",
+      "bytes": 413645
+    },
+    {
+      "path": "INB-template/drawings/ALG_00_totaaloverzicht.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/ALG_00_totaaloverzicht.svg",
+      "sha256": "454f2e2bc2906573b227c7a30b68522bc6d7aff04c0901311b54842e7cf365ec",
+      "bytes": 772347
+    },
+    {
+      "path": "INB-template/drawings/ALG_2D_elements.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/ALG_2D_elements.svg",
+      "sha256": "cfd4d9459fe1deffe8eda2e0b46c491ab57e9b53ebd5f5a8effbb302d702cb5e",
+      "bytes": 485477
+    },
+    {
+      "path": "INB-template/drawings/BWK_arceringen_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/BWK_arceringen_1_5.svg",
+      "sha256": "76909bb306ea1b3e3b54dd827820a4e46164e7915b93b6c80bb769fbdc2b16e6",
+      "bytes": 449116
+    },
+    {
+      "path": "INB-template/drawings/BWK_detail_2D_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/BWK_detail_2D_1_5.svg",
+      "sha256": "a9145681f0821a3de4721008810eabd86d4d8e472f6dcd062c4ddfbcc792efbd",
+      "bytes": 468495
+    },
+    {
+      "path": "INB-template/drawings/BWK_detail_3D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/BWK_detail_3D_1_10.svg",
+      "sha256": "989491b08350969bd6defcefa7fd2fc7c2b5f039c2b99ab3cbfa7296177b89eb",
+      "bytes": 436238
+    },
+    {
+      "path": "INB-template/drawings/CON_details_2D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/CON_details_2D_1_10.svg",
+      "sha256": "fa72d7c02f3b42292ed5016b6a4d1dc41399f022a65a9cb03b374b6e30d215be",
+      "bytes": 738656
+    },
+    {
+      "path": "INB-template/drawings/CON_renvooi_constructie.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/CON_renvooi_constructie.svg",
+      "sha256": "304ded2da47a1df771584fabd64ee326743297be9c41f7f0f920a58846fe09a4",
+      "bytes": 469013
+    },
+    {
+      "path": "INB-template/drawings/CON_renvooi_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/CON_renvooi_palenplan.svg",
+      "sha256": "2f42242387a18754ad838628e4f9ecc25123c7f521f3c6e04397fc0d67e21ee6",
+      "bytes": 469302
+    },
+    {
+      "path": "INB-template/drawings/NEN47_arceringen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/NEN47_arceringen.svg",
+      "sha256": "8ffdcffefc6d626e644c5524117d99e674deae48bec83ce09f1cf81b125df3c6",
+      "bytes": 443244
+    },
+    {
+      "path": "INB-template/drawings/Plattegrond arceringen 50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/Plattegrond%20arceringen%2050.svg",
+      "sha256": "ba023c0e3ae8a72e403e1a34a0e0ea303da77078e0a164a2c0f28179ffd7dfef",
+      "bytes": 86887
+    },
+    {
+      "path": "INB-template/drawings/assets/INB_BWK_symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/assets/INB_BWK_symbols.svg",
+      "sha256": "d1f1955fdd32b617393f52259696032a1361a15825bf6875d8f43db9a815266d",
+      "bytes": 15320
+    },
+    {
+      "path": "INB-template/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/assets/markers.svg",
+      "sha256": "01dfaac046486917cca772d4ccacf85de3b34cb053fcfeab8cf23cdf801fa13a",
+      "bytes": 6831
+    },
+    {
+      "path": "INB-template/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/assets/patterns.svg",
+      "sha256": "fd40519f775b50c173fb9ffe916aed3ca4ed68cf1e630fb266bf538770553cf3",
+      "bytes": 378357
+    },
+    {
+      "path": "INB-template/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/assets/symbols.svg",
+      "sha256": "d1f1955fdd32b617393f52259696032a1361a15825bf6875d8f43db9a815266d",
+      "bytes": 15320
+    },
+    {
+      "path": "INB-template/drawings/cache/00 BEGANE GROND PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/00%20BEGANE%20GROND%20PLAN-annotation.svg",
+      "sha256": "70b497bbf063ac1f0c5b10cefe72854b42723f87c629fcc7af2a00b7d44f180b",
+      "bytes": 6513
+    },
+    {
+      "path": "INB-template/drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "sha256": "d088940add6217532dcb8cb9ffe9f5e09c9a8fc11e8ccb6bfbe9787cde20c133",
+      "bytes": 115427
+    },
+    {
+      "path": "INB-template/drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "sha256": "f5ff6170f605920c8343b0dc5ecba2057a21dd090b50c2c62a8f7ed1d0892d3d",
+      "bytes": 11043
+    },
+    {
+      "path": "INB-template/drawings/cache/00_ALG_handleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/00_ALG_handleiding-annotation.svg",
+      "sha256": "6c51b662c605bcf2345a96e5a5f9dcc266182ea4d27dd56242087d5039f9981b",
+      "bytes": 10896
+    },
+    {
+      "path": "INB-template/drawings/cache/00_ALG_handleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/00_ALG_handleiding-linework.svg",
+      "sha256": "1570b56bfda12f8c001e98dd3451ad9bc6f62828b9189ed559638c099f052e77",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "sha256": "45464430793bce7f0b9ab53e394bfbeca5f114835ce7a36d3d1b5b74640b7eff",
+      "bytes": 7460
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "sha256": "7cbd2e8ecddcdab9ac7b3d6d5e3defe33e1e29149ec3de11599a43a6b740892c",
+      "bytes": 12199
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "sha256": "cd0574ba85d974325f05458e21065af23b72b4b82dc0873a2c2b4e8f1e2dc57c",
+      "bytes": 7944
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "sha256": "7358360424dbcb591059a159880058053a8db865a536b91bc8f7ebd5a1ab2c1f",
+      "bytes": 97762
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "bec506222c97ab5f412392c49c63fce26c38d53c6e40f1dfc298dd26676728f6",
+      "bytes": 6310
+    },
+    {
+      "path": "INB-template/drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "0d8ed5de3fd07e69e6d26fad311f50a916f80215465708496dd929cca5f6fc47",
+      "bytes": 9915
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "sha256": "d0a464011d9d1ae7b0c72daf6a35029be7f24275ac78d2cd498401c105e82f1b",
+      "bytes": 6310
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "sha256": "fa080baaee3a6661217b513896b99b3449c76813c5ed7337b4d772da7fe57c6d",
+      "bytes": 14558
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "a120672b42e9efec7fa24d8f46a8d8c161c68954daa8d22edf70370694a42df0",
+      "bytes": 7972
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "dd23585d68303709800117ccb8348b53ed5fe400480e2e05fd58639ccb66e593",
+      "bytes": 7980
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "sha256": "39ed3609fb90f83f7e7dc96d405d22abeb89b6653f1b733e6eea15f3bd30e95f",
+      "bytes": 6310
+    },
+    {
+      "path": "INB-template/drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "sha256": "fb78a8bac290601036eb846680f67f8defcfdbf9d0629f96c010dbc28564b434",
+      "bytes": 12208
+    },
+    {
+      "path": "INB-template/drawings/cache/02_BWK_BVO_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/02_BWK_BVO_00_begane_grond-annotation.svg",
+      "sha256": "e17c7b28c658a0ff2e410cb1a31bb77e89120d99395a4adffe62da1b6bc9db12",
+      "bytes": 7972
+    },
+    {
+      "path": "INB-template/drawings/cache/02_BWK_BVO_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/02_BWK_BVO_00_begane_grond-linework.svg",
+      "sha256": "6cdb96ab66a48a43d3265a7e0ee7a408d4a34f6c077f42eef85af687c995322b",
+      "bytes": 11253
+    },
+    {
+      "path": "INB-template/drawings/cache/02_BWK_BVO_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/02_BWK_BVO_01_eerste_verdieping-annotation.svg",
+      "sha256": "d43e1d2c71663ed20863101701fe66f4f69d4cd9e5b58cc4f57f259bf0ca71aa",
+      "bytes": 7972
+    },
+    {
+      "path": "INB-template/drawings/cache/02_BWK_BVO_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/02_BWK_BVO_01_eerste_verdieping-linework.svg",
+      "sha256": "03827402fc8696ecf8c05211eedadacfce6f0742c5b68598027358e3a93222c9",
+      "bytes": 7980
+    },
+    {
+      "path": "INB-template/drawings/cache/3D_model-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/3D_model-annotation.svg",
+      "sha256": "e4624de46427910d802b558b3d847c5fb6725cc3b191313d60d07fafea7f85bb",
+      "bytes": 6527
+    },
+    {
+      "path": "INB-template/drawings/cache/3D_model-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/3D_model-linework.svg",
+      "sha256": "a2938e4c98532f0054b8519e6ec326986d10f7407bbc64f82ca22e02a40b3989",
+      "bytes": 40317
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_indleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_indleiding-annotation.svg",
+      "sha256": "711df58f867d6e10cd92e89dfbb67612d01a39ef3657833feecb706e818fbbf7",
+      "bytes": 10150
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_indleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_indleiding-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "sha256": "e60408be96336bdce49a64f8df55916c20e648243e5f3228d7ab7129ef6d9acf",
+      "bytes": 158656
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "sha256": "f08bd69a24b0ad395d68a4a886f6c108957d3f5aaf7eeda0436d8a070c4b2eb6",
+      "bytes": 188014
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "sha256": "8b55aa4a497f66057c411fc95d601a95d44c95fd17fdfd26dbb175d2faae6d35",
+      "bytes": 140282
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "sha256": "30660659ade2bc9389d339f6caa163cf5fe3055413d9f1e70209ec347dd4b0ec",
+      "bytes": 67674
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_2D_elements-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_2D_elements-annotation.svg",
+      "sha256": "02b7e85da4b28fdae507b93e690143cd5f78c169ecba0d279d0fa6e305e0d1ac",
+      "bytes": 21515
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_2D_elements-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_2D_elements-linework.svg",
+      "sha256": "1931bd32a6570c6ffbd9827c3485f97456bac8c406f5a465b372a8e88f41c367",
+      "bytes": 36801
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "sha256": "3ad4d5d4115a6a93a31de51350b4538df98a944d8b8037f8eca246ec0aead4a6",
+      "bytes": 21886
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "sha256": "6fa321dc8a7c408ef1da5e63502155222d12364996fdbd47762cf29b4587d05c",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "sha256": "1af8d91aa5b31ec995cccb7b1aea18c45c3fc204bd0a7fa09a824936e343993a",
+      "bytes": 17730
+    },
+    {
+      "path": "INB-template/drawings/cache/ALG_symbolen_markers-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/ALG_symbolen_markers-linework.svg",
+      "sha256": "822128f128a7eab09c7ec64eb677ccc63423dbca0b2e2e99d13db6a064806881",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "sha256": "1b73c17abffc8e5ed71bf043d20c84f01f32665295cfc26bf93436c9cd3095fb",
+      "bytes": 41481
+    },
+    {
+      "path": "INB-template/drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "sha256": "cb399196a295810a66f7547aabba038fae7ba4973e42496647398c962b86a82c",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "sha256": "aaecd16e7875b7cbf4a6fa94eca4e1cdcfc273e9261b74c5a0fb2c05fa2274d1",
+      "bytes": 5123
+    },
+    {
+      "path": "INB-template/drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "sha256": "5147ff69544ec9dfc937d44bc8b72c989c7909222c4f1a73820aaa0a0f3d3f7b",
+      "bytes": 7632
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "sha256": "572666c9a23cc2987fb6421188854417b8fdb2862be8d5f3b93987e180e4276d",
+      "bytes": 3038
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_PLG_palenplan-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "sha256": "72728c4bcba09bd3383d02528be3df26f24d1493d46a41fb717cd1bedeba0f2a",
+      "bytes": 311027
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_details_2D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_details_2D_1_10-linework.svg",
+      "sha256": "3bbcfb34fc42f8cffc61425bd50c3f0c0994ba8bcce163c79a06f243eccf594c",
+      "bytes": 543
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "sha256": "dff8b53c541203838a6d86eb55abcd868b4d66af34333a386998c4c27c086708",
+      "bytes": 61746
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "sha256": "32d84ae2880051ae89e4254d1d5e6f0f8e0b604defd928f835bee4798e8565a4",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "sha256": "fc3fb84abff1796eef357738f64ae84cfa5f76ed973f93a1c3ff39b7e0392b6b",
+      "bytes": 516
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "sha256": "49607af62918281f6a320b4e1c1af329c0b9315344529bf58237bbd768c4b6ca",
+      "bytes": 64068
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-linework.svg",
+      "sha256": "933516c6010f75657cdac9338b0c4d1686454fcf109d59cd595d6d8e09741bd9",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "sha256": "757260c9b9bb4ee05ec90818dec5ab89cfcb4a3cb791cf21e7398b8aa700592b",
+      "bytes": 511
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "sha256": "cb24a4745ef912ba0df98ff659753439c0249d985c2f03757825a1edd0d443d9",
+      "bytes": 33588
+    },
+    {
+      "path": "INB-template/drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "sha256": "35fcd51a146c6ba9165e9f82e94820907edfb68d9b5884347301d97a29d2f4aa",
+      "bytes": 10295
+    },
+    {
+      "path": "INB-template/drawings/cache/NEN47_arceringen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/NEN47_arceringen-annotation.svg",
+      "sha256": "582a3f949071dc245c5b90117635e46dfbcfe8939bb8719dae6fc00039bf023a",
+      "bytes": 15935
+    },
+    {
+      "path": "INB-template/drawings/cache/NEN47_arceringen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/NEN47_arceringen-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/drawings/cache/PERSPECTIVE-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/PERSPECTIVE-linework.svg",
+      "sha256": "71cdb9386f2df7fd066300e46748892c43484af44484cd3cbdd0e38e4c64631d",
+      "bytes": 75155
+    },
+    {
+      "path": "INB-template/drawings/cache/PLAN_VIEW-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/PLAN_VIEW-annotation.svg",
+      "sha256": "69d0da987c4f8c803373fa520524e0a10d90c9b8d95d6606ef5c7e2a9dbf4eee",
+      "bytes": 350
+    },
+    {
+      "path": "INB-template/drawings/cache/PLAN_VIEW-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/drawings/cache/PLAN_VIEW-linework.svg",
+      "sha256": "9882805f35c73949832aac5f6007cd50268929b1171c25b27b258a5cfeddfce3",
+      "bytes": 2606
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A0.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A0.svg",
+      "sha256": "72c8869d5b6130ac8a75752abdd3e815795a0ac55a0f8520c050c9bbb2fd802d",
+      "bytes": 44611
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A1.svg",
+      "sha256": "b5339e5aa538deaaa071011296c91eb0423ad7132e5671b37da1300bae092d16",
+      "bytes": 44388
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A2.svg",
+      "sha256": "4cc068ceff9c9b63fc7235d6918a873942656caff80cef2c919d824c532c52f2",
+      "bytes": 44558
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A3 - boekje - voorblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A3%20-%20boekje%20-%20voorblad.svg",
+      "sha256": "8a8ad560945d09e300b6187c4f8d8c14cd7120572eda6682f6c20d5f1a2d7d2f",
+      "bytes": 38009
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A3 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A3%20-%20volgblad.svg",
+      "sha256": "830921a2fecced1777f4dd6e20ee524f4cb712d7c0fd8e889e0a692eddc93e94",
+      "bytes": 41438
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A3.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A3.svg",
+      "sha256": "f3fafd80fac20fde7e6abc9c0dfd942ca6f03e301e67fab2731f5c0e972dcfba",
+      "bytes": 43731
+    },
+    {
+      "path": "INB-template/layouts/titleblocks/A3.svg.2025_08_29_10_30_34.0.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks/A3.svg.2025_08_29_10_30_34.0.svg",
+      "sha256": "73e2756dc59f08d9b3b0739b0c64072304fc96d0a507b08a8acc6d45c754ba31",
+      "bytes": 803023
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A0.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A0.svg",
+      "sha256": "1852dc23b498170d440436fa15987bef4263ee09675a48e2eb3fe94c40d6294b",
+      "bytes": 31469
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A1.svg",
+      "sha256": "0be0125b2f9222b00372c8738346d48e1a9ecc03c2b3b00950e8a20275903628",
+      "bytes": 31261
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A2.svg",
+      "sha256": "40bb6c6b1143389c7c29165c5797ada2726ac42e0f66cf21ba88aab649b0ebb9",
+      "bytes": 31429
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3 - boekje - voorblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3%20-%20boekje%20-%20voorblad.svg",
+      "sha256": "9c1d55144cce85dda0b5393fe36a57787abca82d35aa7b2e8a93a456bab88820",
+      "bytes": 22381
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3%20-%20volgblad.svg",
+      "sha256": "80b670bb0d2f345f1ea222c8821d1b9fe0d15bd91587a2c15a81c13da61b20fb",
+      "bytes": 30125
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A3.svg",
+      "sha256": "58b1297f7b9b04663b76e8f8ad58fa4f3eb8d9ad274c16c644a89f7c6d2b9bfb",
+      "bytes": 31429
+    },
+    {
+      "path": "INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A4 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/layouts/titleblocks_openbaar_geannonimiseerd/A4%20-%20volgblad.svg",
+      "sha256": "9c7f641f7dccccfa4d4e6f9d481ecf870729a918b901f380e065cdd71c7902c0",
+      "bytes": 30170
+    },
+    {
+      "path": "INB-template/template/drawings/0000-test.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/0000-test.svg",
+      "sha256": "c0a0726d1b21c3c70e161c768984b4b5c02a918c082dbb5e0e32e05831e79f8e",
+      "bytes": 425098
+    },
+    {
+      "path": "INB-template/template/drawings/2D detail components.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/2D%20detail%20components.svg",
+      "sha256": "74f4fa1668e86b9178312fb8550bc21238b10a253c75addd06c00db67706157c",
+      "bytes": 1193841
+    },
+    {
+      "path": "INB-template/template/drawings/Annotatie types.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Annotatie%20types.svg",
+      "sha256": "56115048e0b68f04c5c9b9e663256ec04d08a88d2753c4c410945a0f57a7edde",
+      "bytes": 1180441
+    },
+    {
+      "path": "INB-template/template/drawings/Basis arceringen test 110.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Basis%20arceringen%20test%20110.svg",
+      "sha256": "13489e460cdbb50f41a899c4aa4c06cea3a4a7d980503d1bc4399cafb0e8f610",
+      "bytes": 21496
+    },
+    {
+      "path": "INB-template/template/drawings/Basis arceringen test 1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Basis%20arceringen%20test%201_10.svg",
+      "sha256": "d4efcfc2a34dfc7cf7ec2ee741a633b401978ef117f5324790bb6a5409652e4b",
+      "bytes": 1190717
+    },
+    {
+      "path": "INB-template/template/drawings/Bouwkundig detail 110.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Bouwkundig%20detail%20110.svg",
+      "sha256": "c3e6cf336a5afc3130048ceda56776bbef5ce16a659c9a67ce71ba2fb54ea980",
+      "bytes": 10895
+    },
+    {
+      "path": "INB-template/template/drawings/Bouwkundige arceringen 1100.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Bouwkundige%20arceringen%201100.svg",
+      "sha256": "f04119a60d5ad2a9ebf5c1648d726671957e01619a592cc2793d7c66a1fc60e9",
+      "bytes": 1180143
+    },
+    {
+      "path": "INB-template/template/drawings/Bouwkundige arceringen 150.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Bouwkundige%20arceringen%20150.svg",
+      "sha256": "a03ddd5fa909142e2dbb7d34ab24720d9f86ff6ad9038b68e991ee37136ef2b5",
+      "bytes": 1180142
+    },
+    {
+      "path": "INB-template/template/drawings/Constructiedetails 110.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Constructiedetails%20110.svg",
+      "sha256": "e8ed2a08155811dec87f929d978e0e6319e7d06062d0a4594ea88b747b081920",
+      "bytes": 123264
+    },
+    {
+      "path": "INB-template/template/drawings/Constructiedetails 1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Constructiedetails%201_10.svg",
+      "sha256": "5f444bc05c8fe3fe1086020ea0dd1fce4db1455ff3e2568a582341ab0de05cbb",
+      "bytes": 1250022
+    },
+    {
+      "path": "INB-template/template/drawings/Materialen  Annotaties.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Materialen%20%20Annotaties.svg",
+      "sha256": "94882f7699c15adb393b14f3cb5cebaddd953babfb6fa89aa0956230df241728",
+      "bytes": 1293829
+    },
+    {
+      "path": "INB-template/template/drawings/NEN47 arceringen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/NEN47%20arceringen.svg",
+      "sha256": "3d210566457657a684f1d9b9542b32de07d77a7698ed250ad307d68bc24acbf0",
+      "bytes": 1179342
+    },
+    {
+      "path": "INB-template/template/drawings/PLAN_VIEW.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/PLAN_VIEW.svg",
+      "sha256": "c1c9dae45a5921937db1470649281b3e3262404d695f9a153f0a9f02683c03f4",
+      "bytes": 85735
+    },
+    {
+      "path": "INB-template/template/drawings/Palenplan Renvooi.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Palenplan%20Renvooi.svg",
+      "sha256": "343f91e4b055ba00c8ee4c13a7bf48d4371d79f4a782eb216af5db0d14eaf90d",
+      "bytes": 1209851
+    },
+    {
+      "path": "INB-template/template/drawings/Renvoois staal verankeringslengtes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Renvoois%20staal%20verankeringslengtes.svg",
+      "sha256": "df60d6f34722e9d043496c4147db525520f091cb58df0581213f1e8d223f4572",
+      "bytes": 1229212
+    },
+    {
+      "path": "INB-template/template/drawings/Schaalstok 1_1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Schaalstok%201_1.svg",
+      "sha256": "9f1acbdbf75575bfde4cddc3cdcbc887de0380a9843d5e81e24a9a12f761d570",
+      "bytes": 1172676
+    },
+    {
+      "path": "INB-template/template/drawings/Schaalstok 1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Schaalstok%201_10.svg",
+      "sha256": "d69a110f0fec148384b3c8bf35b2b118425a863b303db2bf787a684e6254d3e4",
+      "bytes": 1169504
+    },
+    {
+      "path": "INB-template/template/drawings/Symbolen  markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Symbolen%20%20markers.svg",
+      "sha256": "15e7c5ba67683eb53ae728fa3fe2d6a676aef07dcba1801ee1470599b82b3b88",
+      "bytes": 1176975
+    },
+    {
+      "path": "INB-template/template/drawings/Teksten  lijntypes.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Teksten%20%20lijntypes.svg",
+      "sha256": "418b4133a2cd36e35d467f27ec3f1621868182a3a18e0581fd40c27bf07da857",
+      "bytes": 1181413
+    },
+    {
+      "path": "INB-template/template/drawings/Vert. Constructiedetails.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/Vert.%20Constructiedetails.svg",
+      "sha256": "5f6a834d035db71df65b52367c8e573678c90a120c0caa8d213cefd7a4c953b1",
+      "bytes": 1193444
+    },
+    {
+      "path": "INB-template/template/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/assets/markers.svg",
+      "sha256": "d50c0ea996edd4a1e15565c9ebdbe187ea27de6cdab281bbc6ca53fb5783d9c3",
+      "bytes": 6432
+    },
+    {
+      "path": "INB-template/template/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/assets/patterns.svg",
+      "sha256": "fd40519f775b50c173fb9ffe916aed3ca4ed68cf1e630fb266bf538770553cf3",
+      "bytes": 378357
+    },
+    {
+      "path": "INB-template/template/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/assets/symbols.svg",
+      "sha256": "36e20cbb7d8558d10b2be615a562249883a941cc54ebeb35ab1070bf6c709600",
+      "bytes": 14163
+    },
+    {
+      "path": "INB-template/template/drawings/cache/0000-test-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/0000-test-annotation.svg",
+      "sha256": "01a22439573da8b727301a8e465a5d5fe843159e19ec6b76d200eb6ae2c3468f",
+      "bytes": 20273
+    },
+    {
+      "path": "INB-template/template/drawings/cache/0000-test-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/0000-test-linework.svg",
+      "sha256": "1f9d1e1e787bc2d33183ec7f367ae24179db0c3703a5524ff7454e402af3f5be",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/2D detail components-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/2D%20detail%20components-annotation.svg",
+      "sha256": "60db4210c437636d6bd341eb25c30b203b766d16e1b09d371785d71df87d438f",
+      "bytes": 1126
+    },
+    {
+      "path": "INB-template/template/drawings/cache/2D detail components-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/2D%20detail%20components-linework.svg",
+      "sha256": "303a4e176b7e0bc3805215faf78014b00af1e7b1f29531e4c02517724a4fee30",
+      "bytes": 25149
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Annotatie types-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Annotatie%20types-annotation.svg",
+      "sha256": "c11484b99b0ce12e15eb2eb1f17b9bc43a27917b0648bbf026270ac17624d544",
+      "bytes": 11937
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Annotatie types-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Annotatie%20types-linework.svg",
+      "sha256": "1570b56bfda12f8c001e98dd3451ad9bc6f62828b9189ed559638c099f052e77",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/BEGANE GROND PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/BEGANE%20GROND%20PLAN-annotation.svg",
+      "sha256": "a9102c5894bbedbd27a37dc4e6e990e39b765f9a3c4ae2905deeafcf89b927d5",
+      "bytes": 20264
+    },
+    {
+      "path": "INB-template/template/drawings/cache/BEGANE GROND PLAN-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/BEGANE%20GROND%20PLAN-linework.svg",
+      "sha256": "1f9d1e1e787bc2d33183ec7f367ae24179db0c3703a5524ff7454e402af3f5be",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/BlenderBIM standaarden-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/BlenderBIM%20standaarden-annotation.svg",
+      "sha256": "e602274caabed635313833ad78a67a2393deb2130bfedee90fb6fbcf1aff5d8f",
+      "bytes": 35196
+    },
+    {
+      "path": "INB-template/template/drawings/cache/BlenderBIM standaarden-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/BlenderBIM%20standaarden-linework.svg",
+      "sha256": "8646e2680fdc49fa30aed5c875588a2928c5eca6ddfee4575928d3f780e71474",
+      "bytes": 12722
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Constructiedetails-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Constructiedetails-annotation.svg",
+      "sha256": "249065f81ddc2d7d80c60ee481a29ccb71058edb19b391ad0914dfb6d0fa1e49",
+      "bytes": 63515
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Constructiedetails-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Constructiedetails-linework.svg",
+      "sha256": "3bbcfb34fc42f8cffc61425bd50c3f0c0994ba8bcce163c79a06f243eccf594c",
+      "bytes": 543
+    },
+    {
+      "path": "INB-template/template/drawings/cache/DETAIL H002-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/DETAIL%20H002-annotation.svg",
+      "sha256": "dca5e6b5ca7f020f6a707e77f0241ea0f4de6a89a977ad10062b6f95b0f1787b",
+      "bytes": 38255
+    },
+    {
+      "path": "INB-template/template/drawings/cache/DETAIL H002-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/DETAIL%20H002-linework.svg",
+      "sha256": "cb399196a295810a66f7547aabba038fae7ba4973e42496647398c962b86a82c",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/DOORSNEDE B-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/DOORSNEDE%20B-annotation.svg",
+      "sha256": "0f15772c5900441c657be5b62d65486959704f7f99f8f44e6b90a954245854f5",
+      "bytes": 20175
+    },
+    {
+      "path": "INB-template/template/drawings/cache/DOORSNEDE B-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/DOORSNEDE%20B-linework.svg",
+      "sha256": "278b94a9a3ed23c8464793211bfdad0f21aec83375890ea1e0ee26e10aeba9ea",
+      "bytes": 153083
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Horz. Constructiedetails-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Horz.%20Constructiedetails-annotation.svg",
+      "sha256": "146cbcaaa83c59d1ee6cedd77f95ac0ff2506b79614a722881f716c4a6cb10da",
+      "bytes": 9224
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Horz. Constructiedetails-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Horz.%20Constructiedetails-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Maatlijnen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Maatlijnen-annotation.svg",
+      "sha256": "76282c4cfaac53de4ac9c32517625ff8fff710e7ab292b37febab99c281eecdf",
+      "bytes": 14077
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Maatlijnen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Maatlijnen-linework.svg",
+      "sha256": "1570b56bfda12f8c001e98dd3451ad9bc6f62828b9189ed559638c099f052e77",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Materialen & Annotaties-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Materialen%20%26%20Annotaties-annotation.svg",
+      "sha256": "480cf75a16959a4c11053e69e00e8989adabf28c46db703a6c547ce3c25e7fd5",
+      "bytes": 115028
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Materialen & Annotaties-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Materialen%20%26%20Annotaties-linework.svg",
+      "sha256": "9ec99e81631d9d250882f145d05312fad4e726e39332d0d617bbef0645e0c276",
+      "bytes": 11018
+    },
+    {
+      "path": "INB-template/template/drawings/cache/NEN74 arceringen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/NEN74%20arceringen-annotation.svg",
+      "sha256": "cf20c05a1eb04cee6c3b940525be99e6ac05fc7175b554677a25df037a2a78c5",
+      "bytes": 15656
+    },
+    {
+      "path": "INB-template/template/drawings/cache/NEN74 arceringen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/NEN74%20arceringen-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Nederlandse toevoegingen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Nederlandse%20toevoegingen-annotation.svg",
+      "sha256": "ece58ba171c414134248acdd8987a409cb1404abc6a8fa6d174e1e2b3de1f124",
+      "bytes": 90322
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Nederlandse toevoegingen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Nederlandse%20toevoegingen-linework.svg",
+      "sha256": "80aae87bfdd622f6cd7fda5550b7973f2095daf77f7de3e9829dd2c5a042aa3f",
+      "bytes": 198963
+    },
+    {
+      "path": "INB-template/template/drawings/cache/PLAN_VIEW-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/PLAN_VIEW-annotation.svg",
+      "sha256": "587fa14349e9e618aa648681379df0c12e3f5ae9ff1ebbdd32e3e26b7fa761a3",
+      "bytes": 603
+    },
+    {
+      "path": "INB-template/template/drawings/cache/PLAN_VIEW-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/PLAN_VIEW-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Palenplan Renvooi-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Palenplan%20Renvooi-annotation.svg",
+      "sha256": "0ad965c7d147490d931d249875c3d16f4e11a007898e1d0076bf2d8f60abdf2f",
+      "bytes": 33588
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Palenplan Renvooi-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Palenplan%20Renvooi-linework.svg",
+      "sha256": "338bf3cae67f76dd29a5446b4321e8eebddb20c4ef9c7f5582b9703e6e20ec56",
+      "bytes": 10291
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Renvoois staal, verankeringslengtes-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Renvoois%20staal%2C%20verankeringslengtes-annotation.svg",
+      "sha256": "8a595bcc4318e3fae523787d6506cd22fa3a7fe79355e8202cd2dcb209b90ecc",
+      "bytes": 62202
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Renvoois staal, verankeringslengtes-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Renvoois%20staal%2C%20verankeringslengtes-linework.svg",
+      "sha256": "1dc8f4be6bdcaf007145122bdb019f88147198cc2a6146d7ffecb9d22f9ce486",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/template/drawings/cache/SOUTH ELEVATION-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/SOUTH%20ELEVATION-annotation.svg",
+      "sha256": "e908bb8c8687956519ff1750818a57e5330aba8adb9a20526e5d6de5d78eb01a",
+      "bytes": 14927
+    },
+    {
+      "path": "INB-template/template/drawings/cache/SOUTH ELEVATION-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/SOUTH%20ELEVATION-linework.svg",
+      "sha256": "a51dcbb84af959111c418b46a63e024c2a9971c19e3c46cb2b1c13523b20c794",
+      "bytes": 87223
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Schaalstok 1_1-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Schaalstok%201_1-annotation.svg",
+      "sha256": "9ff27ea5eb9c67a1ed27eb23ee340415dce406af129a0b0ce732e2d781e64264",
+      "bytes": 2322
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Schaalstok 1_1-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Schaalstok%201_1-linework.svg",
+      "sha256": "53997f8d66b6c60f0d5a1728357b7f76841b82b2190363ce3defb6b69f9eda13",
+      "bytes": 1689
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Schaalstok 1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Schaalstok%201_10-annotation.svg",
+      "sha256": "0d3b3cdad5b459bc79f766885cb733f46e3606155127ef131e4b7246bcc953cb",
+      "bytes": 642
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Schaalstok 1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Schaalstok%201_10-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Symbolen & markers-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Symbolen%20%26%20markers-annotation.svg",
+      "sha256": "a58ed694e7af67c2f863f9ad124fab7fd627c45df69f437228e02a263edba6bf",
+      "bytes": 7243
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Symbolen & markers-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Symbolen%20%26%20markers-linework.svg",
+      "sha256": "822128f128a7eab09c7ec64eb677ccc63423dbca0b2e2e99d13db6a064806881",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Symbolen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Symbolen-annotation.svg",
+      "sha256": "b6d1f91a21500b602c06b5e9630f66ddcf22b1ce7d5c814ffc3bc7272e8f047d",
+      "bytes": 8434
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Symbolen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Symbolen-linework.svg",
+      "sha256": "72e97ecdb042d1de72796ff2f98c318e160b3188bdf7c511ecab5f09e10aa7d3",
+      "bytes": 1639
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Teksten & lijntypes-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Teksten%20%26%20lijntypes-annotation.svg",
+      "sha256": "7adf55f21a6f93d77e7bd51af5d95f79fd55e0b00aab11caa550533cc97f9c78",
+      "bytes": 12909
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Teksten & lijntypes-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Teksten%20%26%20lijntypes-linework.svg",
+      "sha256": "602412bc1020347b64210cae8756653693d233a0683ca1a419a4d412f7656f34",
+      "bytes": 539
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Vert. Constructiedetails-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Vert.%20Constructiedetails-annotation.svg",
+      "sha256": "51f0597ec644d4735c1257b81511e893f5e2831d592210603ed8043b8828d8ac",
+      "bytes": 16301
+    },
+    {
+      "path": "INB-template/template/drawings/cache/Vert. Constructiedetails-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/Vert.%20Constructiedetails-linework.svg",
+      "sha256": "417e1a466349b7bd31cbd081bc171c51a5d40acb46eed2cd40759668e99b615d",
+      "bytes": 9541
+    },
+    {
+      "path": "INB-template/template/drawings/cache/arceringen test-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/arceringen%20test-annotation.svg",
+      "sha256": "d55633013985ed7fd5cf65b4017021597030fd04fae74f28d1e63c66b9f3e4b8",
+      "bytes": 14071
+    },
+    {
+      "path": "INB-template/template/drawings/cache/arceringen test-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/drawings/cache/arceringen%20test-linework.svg",
+      "sha256": "6fa321dc8a7c408ef1da5e63502155222d12364996fdbd47762cf29b4587d05c",
+      "bytes": 547
+    },
+    {
+      "path": "INB-template/template/titleblocks/A0.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A0.svg",
+      "sha256": "72c8869d5b6130ac8a75752abdd3e815795a0ac55a0f8520c050c9bbb2fd802d",
+      "bytes": 44611
+    },
+    {
+      "path": "INB-template/template/titleblocks/A1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A1.svg",
+      "sha256": "b5339e5aa538deaaa071011296c91eb0423ad7132e5671b37da1300bae092d16",
+      "bytes": 44388
+    },
+    {
+      "path": "INB-template/template/titleblocks/A2 - Palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A2%20-%20Palenplan.svg",
+      "sha256": "a3db8162d9d68218f0a6c368fa04aa2f0427c6bd772012f2955b56eb43e62a74",
+      "bytes": 44730
+    },
+    {
+      "path": "INB-template/template/titleblocks/A2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A2.svg",
+      "sha256": "4cc068ceff9c9b63fc7235d6918a873942656caff80cef2c919d824c532c52f2",
+      "bytes": 44558
+    },
+    {
+      "path": "INB-template/template/titleblocks/A3 - Palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A3%20-%20Palenplan.svg",
+      "sha256": "fd3f69cd1f974f8d1e100c75aebaeddd32bda697bab165d09b5009f717de12f2",
+      "bytes": 44480
+    },
+    {
+      "path": "INB-template/template/titleblocks/A3 - boekje - voorblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A3%20-%20boekje%20-%20voorblad.svg",
+      "sha256": "8a8ad560945d09e300b6187c4f8d8c14cd7120572eda6682f6c20d5f1a2d7d2f",
+      "bytes": 38009
+    },
+    {
+      "path": "INB-template/template/titleblocks/A3 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A3%20-%20volgblad.svg",
+      "sha256": "830921a2fecced1777f4dd6e20ee524f4cb712d7c0fd8e889e0a692eddc93e94",
+      "bytes": 41438
+    },
+    {
+      "path": "INB-template/template/titleblocks/A3.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/blender-bonsai-training/ef8cb6469647bfc2b0da89f651c3d7aac6bfae33/INB-template/template/titleblocks/A3.svg",
+      "sha256": "f96bb3cf117572c346302b46b916950ce6a0978304f9b73c4ea685d645830cd8",
+      "bytes": 44558
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [],
+  "errors": [],
+  "commit": "ef8cb6469647bfc2b0da89f651c3d7aac6bfae33",
+  "files_scanned": 383,
+  "ui_stack": [],
+  "icon_packages": []
+}

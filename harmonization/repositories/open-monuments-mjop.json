@@ -1,0 +1,24 @@
+{
+  "name": "open-monuments-mjop",
+  "url": "https://github.com/OpenAEC-Foundation/open-monuments-mjop",
+  "branch": "main",
+  "description": "Open-Monuments MJOP \u2014 Meerjarenonderhoudsplan Frappe-app (gesynchroniseerd vanuit mono-repo)",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-mjop/65455e3843d81478b326f8c26440456305fffc2c/pyproject.toml",
+      "sha256": "5bb1b80adb0b3e288a28a004876817bcc108f4847c87b22f087dbe561147cb60",
+      "bytes": 332
+    }
+  ],
+  "errors": [],
+  "commit": "65455e3843d81478b326f8c26440456305fffc2c",
+  "files_scanned": 22,
+  "ui_stack": [],
+  "icon_packages": []
+}

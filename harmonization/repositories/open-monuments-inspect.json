@@ -1,0 +1,24 @@
+{
+  "name": "open-monuments-inspect",
+  "url": "https://github.com/OpenAEC-Foundation/open-monuments-inspect",
+  "branch": "main",
+  "description": "Open-Monuments Inspect \u2014 NEN 2767 conditiemeting Frappe-app (gesynchroniseerd vanuit mono-repo)",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-inspect/b68758d025021c3edb427cb3166909ab5cc7c957/pyproject.toml",
+      "sha256": "12be70299eb14419e59df6f5a4926a2f5bf255f4ec8f2a0a9503654d5d7ea9af",
+      "bytes": 348
+    }
+  ],
+  "errors": [],
+  "commit": "b68758d025021c3edb427cb3166909ab5cc7c957",
+  "files_scanned": 31,
+  "ui_stack": [],
+  "icon_packages": []
+}

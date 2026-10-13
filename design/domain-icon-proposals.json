@@ -1,0 +1,2776 @@
+[
+  {
+    "id": "fem.node",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Knoop",
+    "visual_metaphor": "Punt met twee assen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/osnap/node.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/ui/node_graph.svg"
+      }
+    ]
+  },
+  {
+    "id": "fem.beam",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Staaf",
+    "visual_metaphor": "Lijn tussen twee knopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.column",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Kolom",
+    "visual_metaphor": "Verticale staaf met eindknopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.plate",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Plaat",
+    "visual_metaphor": "Vlak met vier hoekknopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.shell",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Schaal",
+    "visual_metaphor": "Gebogen vlak met knopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/model/shell.svg"
+      }
+    ]
+  },
+  {
+    "id": "fem.solid",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Volume-element",
+    "visual_metaphor": "Kubus met hoekknopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 3,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/hatch/hatch_solid.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/model/polysolid.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/solid.svg"
+      }
+    ]
+  },
+  {
+    "id": "fem.truss",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Vakwerk",
+    "visual_metaphor": "Driehoekig staafverband",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.rigid-link",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Starre koppeling",
+    "visual_metaphor": "Dubbele verbinding tussen knopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.offset",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Excentriciteit",
+    "visual_metaphor": "Verschoven staafas met korte maatlijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/offset.svg"
+      }
+    ]
+  },
+  {
+    "id": "fem.local-axes",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Lokale assen",
+    "visual_metaphor": "Drie gelabelde lokale assen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.section",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Doorsnede",
+    "visual_metaphor": "I-profiel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/osnap/intersection.svg"
+      }
+    ]
+  },
+  {
+    "id": "fem.material",
+    "domain": "fem",
+    "group": "Geometrie",
+    "label": "Materiaal",
+    "visual_metaphor": "Gearceerd doorsnedevlak",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.fixed-support",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Inklemming",
+    "visual_metaphor": "Staaf tegen gearceerde vaste wand",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.pinned-support",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Scharnieroplegging",
+    "visual_metaphor": "Driehoek onder knoop, zonder rollen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.roller-support",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Roloplegging",
+    "visual_metaphor": "Driehoek met twee kleine rollen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.spring-support",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Veeroplegging",
+    "visual_metaphor": "Zigzagveer op vaste basis",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.rotational-spring",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Rotatieveer",
+    "visual_metaphor": "Spiraal bij eindknoop",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.release",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Scharnierende staafaansluiting",
+    "visual_metaphor": "Open cirkel bij staafeinde",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.prescribed-displacement",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Opgelegde verplaatsing",
+    "visual_metaphor": "Knoop met verplaatsingspijl en vaste referentielijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.diaphragm",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Star diafragma",
+    "visual_metaphor": "Vlak met verbonden hoekknopen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.contact",
+    "domain": "fem",
+    "group": "Randvoorwaarden",
+    "label": "Contact",
+    "visual_metaphor": "Twee gescheiden vlakken met normaalpijlen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.point-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Puntlast",
+    "visual_metaphor": "Enkele pijl op knoop",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.line-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Lijnlast",
+    "visual_metaphor": "Drie gelijke pijlen op staaf",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.surface-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Vlaklast",
+    "visual_metaphor": "Vier pijlen op vlak",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.moment",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Moment",
+    "visual_metaphor": "Ronde pijl rond knoop",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.self-weight",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Eigen gewicht",
+    "visual_metaphor": "Volume met neerwaartse pijl",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.thermal-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Temperatuurlast",
+    "visual_metaphor": "Staaf met thermometer",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.settlement",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Zetting",
+    "visual_metaphor": "Oplegging met neerwaartse maatpijl",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.load-case",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Belastinggeval",
+    "visual_metaphor": "Lastpijl met tabblad",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.load-combination",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Belastingcombinatie",
+    "visual_metaphor": "Twee lastpijlen met plusteken",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.moving-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Bewegende last",
+    "visual_metaphor": "Lastpijl boven spoor met richting",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.wind-load",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Windlast",
+    "visual_metaphor": "Horizontale pijlen op gevel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.mass",
+    "domain": "fem",
+    "group": "Belastingen",
+    "label": "Massa",
+    "visual_metaphor": "Blok met centraal massapunt",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.mesh",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Net genereren",
+    "visual_metaphor": "Vlak verdeeld in driehoeken",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.mesh-refine",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Net verfijnen",
+    "visual_metaphor": "Grove driehoek met kleinere onderverdeling",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.mesh-quality",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Netkwaliteit",
+    "visual_metaphor": "Driehoeknet met controleteken",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.solve-linear",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Lineair berekenen",
+    "visual_metaphor": "Constructie met startdriehoek",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.solve-nonlinear",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Niet-lineair berekenen",
+    "visual_metaphor": "Gebogen responslijn met startdriehoek",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.buckling",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Knikanalyse",
+    "visual_metaphor": "Rechte en uitgeknikte kolom",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.modal",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Eigenvormen",
+    "visual_metaphor": "Twee slingerende modale lijnen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.convergence",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Convergentie",
+    "visual_metaphor": "Curve die naar horizontale lijn nadert",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.stop-solver",
+    "domain": "fem",
+    "group": "Net & berekening",
+    "label": "Berekening stoppen",
+    "visual_metaphor": "Stopvierkant binnen rekenkader",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.deformation",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Vervorming",
+    "visual_metaphor": "Rechte stippellijn plus gebogen lijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.reaction",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Oplegreactie",
+    "visual_metaphor": "Opwaartse pijl bij oplegging",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.normal-force",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Normaalkracht",
+    "visual_metaphor": "Staaf met tegengestelde axiale pijlen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.shear-force",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Dwarskracht",
+    "visual_metaphor": "Staaf met tegengestelde dwarsrichtingen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.bending-moment",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Buigend moment",
+    "visual_metaphor": "Staaf met parabooldiagram",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.torsion",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Torsie",
+    "visual_metaphor": "Staaf met rotatiepijl",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.stress",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Spanning",
+    "visual_metaphor": "Vlak met contourlijnen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.utilization",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Benuttingsgraad",
+    "visual_metaphor": "Doorsnede met begrensde maatindicator",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.envelope",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Omhullende",
+    "visual_metaphor": "Boven- en ondercurve",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "fem.result-probe",
+    "domain": "fem",
+    "group": "Resultaten",
+    "label": "Resultaat opvragen",
+    "visual_metaphor": "Meetpunt op contourvlak",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.site",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Terrein",
+    "visual_metaphor": "Hoogtelijnen met terreinpunt",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.building",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Gebouw",
+    "visual_metaphor": "Volume met verdiepingstrepen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.storey",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Bouwlaag",
+    "visual_metaphor": "Drie gestapelde vlakken, één geselecteerd",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.grid",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Stramien",
+    "visual_metaphor": "Twee assen met eindbollen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/osnap/grid.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/ui/grid.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.level",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Peil",
+    "visual_metaphor": "Horizontale lijn met driehoekmarkering",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.survey-point",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Landmeetpunt",
+    "visual_metaphor": "Kruis met coördinaatpunt",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.project-origin",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Projectnulpunt",
+    "visual_metaphor": "Drie assen met centrale oorsprong",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.link-model",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Model koppelen",
+    "visual_metaphor": "Twee modelkubussen met schakel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.federate",
+    "domain": "bim",
+    "group": "Project & referenties",
+    "label": "Modellen samenvoegen",
+    "visual_metaphor": "Meerdere transparante kubussen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.wall",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Wand",
+    "visual_metaphor": "Verticaal vlak met dikte",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.curtain-wall",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Vliesgevel",
+    "visual_metaphor": "Verticaal vlak met stijlen en regels",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.slab",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Vloer",
+    "visual_metaphor": "Dun horizontaal volume",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.roof",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Dak",
+    "visual_metaphor": "Hellend dakvlak",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.door",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Deur",
+    "visual_metaphor": "Deurblad met draaisector",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.window",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Raam",
+    "visual_metaphor": "Kozijn met glasverdeling",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/zoom_window.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.beam",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Balk",
+    "visual_metaphor": "Liggend rechthoekig profiel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.column",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Kolom",
+    "visual_metaphor": "Staand rechthoekig profiel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.footing",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Fundering",
+    "visual_metaphor": "Verbrede voet onder kolom",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.pile",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Paal",
+    "visual_metaphor": "Slank verticaal volume in grondlijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.stair",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Trap",
+    "visual_metaphor": "Opeenvolgende treden met looprichting",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.ramp",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Hellingbaan",
+    "visual_metaphor": "Hellend vlak met richting",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.railing",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Balustrade",
+    "visual_metaphor": "Handregel op staanders",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.opening",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Sparing",
+    "visual_metaphor": "Vlak met uitgesneden rechthoek",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.space",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Ruimte",
+    "visual_metaphor": "Omsloten plattegrond met ruimtemarkering",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/dim_space.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/ui/spacemouse.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.zone",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Zone",
+    "visual_metaphor": "Twee ruimten binnen gemeenschappelijke contour",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.site-element",
+    "domain": "bim",
+    "group": "Bouwdelen",
+    "label": "Terreinelement",
+    "visual_metaphor": "Klein object op terreinvlak",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.join",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Verbinden",
+    "visual_metaphor": "Twee aansluitende volumes",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/modify_join.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/vports_join.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.unjoin",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Verbinding losmaken",
+    "visual_metaphor": "Twee gescheiden volumes",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.trim",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Bijsnijden",
+    "visual_metaphor": "Kruisende lijnen met verwijderde overmaat",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/trim.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.extend",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Verlengen",
+    "visual_metaphor": "Korte lijn verlengd tot begrenzing",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/extend.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.align",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Uitlijnen",
+    "visual_metaphor": "Twee objecten aan referentielijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 9,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_bottom.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_hcenter.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_left.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_right.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_top.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/align_vcenter.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/dim_aligned.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mleader_align.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/modify_align.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.offset",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Parallel verplaatsen",
+    "visual_metaphor": "Twee evenwijdige wanden met afstand",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/offset.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.array",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Reeks",
+    "visual_metaphor": "Drie gelijke objecten met richting",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 3,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/array_path.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/array_polar.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/array_rect.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.mirror",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Spiegelen",
+    "visual_metaphor": "Twee vormen rond symmetrieas",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mirror.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.type",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Objecttype",
+    "visual_metaphor": "Twee gelijke objecten met typekaart",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.instance",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Objectinstantie",
+    "visual_metaphor": "Eén object met eigen label",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.property-set",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Eigenschappenset",
+    "visual_metaphor": "Tabelkaart aan object",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.classification",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Classificatie",
+    "visual_metaphor": "Hiërarchische labels",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.material-layers",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Materiaallagen",
+    "visual_metaphor": "Drie doorsnedelagen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.quantity",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Hoeveelheden",
+    "visual_metaphor": "Object met maatlijnen en somteken",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.phasing",
+    "domain": "bim",
+    "group": "Bewerken & informatie",
+    "label": "Fasering",
+    "visual_metaphor": "Twee bouwfasen op tijdlijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.plan",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Plattegrond",
+    "visual_metaphor": "Bovenaanzicht met snijlijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.section",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Doorsnede",
+    "visual_metaphor": "Snijvlak door volume",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/osnap/intersection.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.elevation",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Aanzicht",
+    "visual_metaphor": "Gevelvlak met kijkrichting",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.sheet",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Tekenblad",
+    "visual_metaphor": "Blad met kader en onderhoekstempel",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/layout_tabs.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/sheetset.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.viewport",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Venster op blad",
+    "visual_metaphor": "Kader binnen tekenblad",
+    "status": "proposed-needs-mapping",
+    "existing_match": "candidates-found-requires-visual-review",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/viewport.svg"
+      }
+    ]
+  },
+  {
+    "id": "bim.dimension",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Maatvoering",
+    "visual_metaphor": "Maatlijn met twee getuigenlijnen",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.tag",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Objectlabel",
+    "visual_metaphor": "Object met verbonden label",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.schedule",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Uittrekstaat",
+    "visual_metaphor": "Tabel met objectkolom",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.detail",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Detail",
+    "visual_metaphor": "Vergroot kader met aansluitlijn",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.clash",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Clashcontrole",
+    "visual_metaphor": "Twee elkaar doorsnijdende volumes",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.clearance",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Vrije ruimte",
+    "visual_metaphor": "Object met afstandscontour",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.bcf-issue",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "BCF-issue",
+    "visual_metaphor": "Model met tekstballon",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.ids-check",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "IDS-validatie",
+    "visual_metaphor": "Eigenschappenkaart met checklist",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.ifc-export",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "IFC exporteren",
+    "visual_metaphor": "Gebouw met uitgaande pijl",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.revision",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Revisie vergelijken",
+    "visual_metaphor": "Twee modelcontouren met verschilmarkering",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  },
+  {
+    "id": "bim.section-box",
+    "domain": "bim",
+    "group": "Documentatie & coördinatie",
+    "label": "Doorsnedebox",
+    "visual_metaphor": "Kubus met afgesneden hoek",
+    "status": "proposed-needs-mapping",
+    "existing_match": "no-filename-match-not-proof-of-absence",
+    "style": {
+      "grid": 24,
+      "stroke": 1.75,
+      "color": "currentColor",
+      "badge": "at most one, bottom right",
+      "sizes": [
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
+    "name_match_count": 0,
+    "candidate_assets": []
+  }
+]

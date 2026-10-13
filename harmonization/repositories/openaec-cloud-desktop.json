@@ -1,0 +1,391 @@
+{
+  "name": "openaec-cloud-desktop",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-cloud-desktop",
+  "branch": "main",
+  "description": "OpenAEC Cloud - Dropbox-achtige desktop sync-client voor de OpenAEC SuperCloud (Tauri 2 + Rust + SolidJS)",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/128x128.png",
+      "sha256": "f6af412c036393c019595be107d598497893eb17666c71365d36a00b3caa9ff8",
+      "bytes": 4864
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/128x128%402x.png",
+      "sha256": "e7e843b63c6480a32051491d17a2bb28835a33363950303736c43c2fcc9c5cc3",
+      "bytes": 9119
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/32x32.png",
+      "sha256": "df963fb75d1419fd8fddac2d81bfc5b543697f0372c2efa5391113bcf91c1c59",
+      "bytes": 1143
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/64x64.png",
+      "sha256": "98d8f8386e5f179fcef0f5ce26c1fb9949164e1eab4f28346fd456a7a2e7913f",
+      "bytes": 2514
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "c7e8f9dad70d663a731c0bca66843e9e399a6d07b4044ec852711d23ff07f620",
+      "bytes": 4084
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "a47832764114f7f934ec125c3b4e5fac7bd0177720d5e59ecbd64ebd45e6d3f5",
+      "bytes": 5471
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "a0d72ccede8c3bb93b18fa47ee066a37b768ecf25f9c2a3317925e2bf1e39599",
+      "bytes": 5696
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "982d635c56978247a1c2b9bce19142197fa2090b3feb7d73ca4ba99681e0d646",
+      "bytes": 10283
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "94a4a2fb946c4fc46d7966d6e7edb36108f13281f60683173dbefb011f38116b",
+      "bytes": 1091
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "649d7510444eee34c2181a462531c27d6571f0a3bf491e4f009eaf96358a57f1",
+      "bytes": 11202
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "b5299091c249d97dded349cf0ce673ad92e64333046c7db4d25c65210bbf7de9",
+      "bytes": 1731
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "28f7328e2764ae238b51cf6408ca7f87aabce09cd29772685bf982904b6df030",
+      "bytes": 2746
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "ec2dd64d7526baa6d9e3422d76b458dad57d1083a124538c785a9aec67bbe85a",
+      "bytes": 3419
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/StoreLogo.png",
+      "sha256": "1c1bc9f728e461e503ab35220e3bc8ea9686e5565bef4f52f07a4bcb3e2271a6",
+      "bytes": 1920
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "3292ff5c26020662a78f7636b96faebd390db94410562f4fb88326a8881b49b4",
+      "bytes": 1926
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "49081d61736537d2d0bcfc5525205fa7fcfa4f6d822f7ec2d096d5d07fbb47bb",
+      "bytes": 5953
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "8cabe2c0fc1d032579c7784142bbea20c2e280d46fb74ef7eeac846b58999255",
+      "bytes": 1477
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "98be977eb1a47272f9d5045d36e6c9edd44187f766ee3d0b534b3b9cc5b98656",
+      "bytes": 1818
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "5f819bc4409bbb8c626867957966e092cd16577fd33c9f63d21fa068caec76b5",
+      "bytes": 4069
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "dce3a7ba2f7ed126385ea17bc7c16a4e8d2e7fe8ffa47c6adafde26e012d3d8a",
+      "bytes": 1395
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "c2886fe1070bf829d292bd0c1c07bd7af317a3f595e4d057c519ae67ddda072a",
+      "bytes": 3878
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "90c4e04d6359ff6590590a3b7055f710237db86a4f320642d4a256540a68e8b8",
+      "bytes": 7810
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "fcc74315828934b5199e93e83c657bbb5d9126ada77276fc00924578b581ab33",
+      "bytes": 2861
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "1b1da7348b4678a386c364988bb449739acb596c703e57184cc275d027d6874c",
+      "bytes": 5565
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "4df8a2b3c4d07e4311b53c4662600abd001d8f5e585a8f99efafbd39ca3fa2b1",
+      "bytes": 11551
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "ab5a77957f23b7bef1bbfce436fe1e6e59a85c960f83597d2f416d8877a4cda3",
+      "bytes": 4188
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "1d34e02c88ab781d13c2eee7d7ecd7b2a6383be1ed48aeeae2d2a776e4c66976",
+      "bytes": 7494
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "9d6654513530c49a780bb520b4db2d8c530b6c8a9ef1ffeeb1991da78381ee93",
+      "bytes": 15496
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "559e442352705874e26805319c205f24d101e77a26e9f913fe8b1dfdc7eb773b",
+      "bytes": 5298
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/icon.icns",
+      "sha256": "314aeb10ad1a02ac92321b446e901e8e142c48bd9f4eac8fc9f6ea7d822831dd",
+      "bytes": 86830
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/icon.ico",
+      "sha256": "82ee455f3894d4e21d508f008781408d4e568105d55102e5d4a875de7f9c832a",
+      "bytes": 16814
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/icon.png",
+      "sha256": "ba55a5602227b293e567ce05e21b2e8801d2d5a105f2902309b9f6b08584d5f0",
+      "bytes": 18149
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "5bba8675e586119706b87fdcd776d9a577221aa72ef3ac5c980450e26bf5dbbb",
+      "bytes": 739
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "b896f25619c49b2cee8c2ffd4c8b448c132c7e1af4d7e955a29c43b59bd90a01",
+      "bytes": 1540
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "b896f25619c49b2cee8c2ffd4c8b448c132c7e1af4d7e955a29c43b59bd90a01",
+      "bytes": 1540
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "44fb07c78888beb53fad0b47b85ff598bc9360e022a7a9d160835dc812c07cf3",
+      "bytes": 2191
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "387b536a19b79b63495b720eb078d6fdd8461d0db7984d76d948dcf5437f3cf2",
+      "bytes": 1084
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "df77fa895e97c7d85e416378c763b3d9f517f31333aac24703d0a5a2588572ec",
+      "bytes": 2120
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "df77fa895e97c7d85e416378c763b3d9f517f31333aac24703d0a5a2588572ec",
+      "bytes": 2120
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "5a333932db24250e6b6202c5239048205579673aaba76466ec6bb7d542c69793",
+      "bytes": 3210
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "b896f25619c49b2cee8c2ffd4c8b448c132c7e1af4d7e955a29c43b59bd90a01",
+      "bytes": 1540
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "966b45c0da7f03f515a2f9e0569a16719fe4ca8c30f5e43214c8f3162f0b1a3c",
+      "bytes": 2899
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "966b45c0da7f03f515a2f9e0569a16719fe4ca8c30f5e43214c8f3162f0b1a3c",
+      "bytes": 2899
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "10ca773d5d20228074b61e02c0235e81ac0323ce03876c28e8d872827c2d5520",
+      "bytes": 4406
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "9996685296d603bf94345bfa11d628848fff1906a88fbf11fcf4a591426ab977",
+      "bytes": 19448
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "10ca773d5d20228074b61e02c0235e81ac0323ce03876c28e8d872827c2d5520",
+      "bytes": 4406
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "cda60d86789b407051e99f113c1257cdda8a2438e1c5d8a86f06099f04258bbc",
+      "bytes": 6476
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "6282f801337f77e05ee5de0a1a8a98c57d1f849996610d38e365d75f5ec4801b",
+      "bytes": 2884
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "35c08b551dcf46df1eed4ef5dd649b6bf1acc5c4882c5f98414b0c23117997dd",
+      "bytes": 5607
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "439a43ba3af10b8912a91350fc813f14066d71e6953f378e5c407f7df5e5d1e8",
+      "bytes": 5961
+    },
+    {
+      "path": "src-tauri/icons/source.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/icons/source.png",
+      "sha256": "160016b7d523c0651eec47c5895217b50ebf85bd251685d1115c53c6a85d763e",
+      "bytes": 21049
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/package.json",
+      "sha256": "d92127c355643b8973bfc037f54de2c203139a8339bc4cfa2a25edd64e4dd83b",
+      "bytes": 673
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-cloud-desktop/38b30e8ed3182060df11250da73f5914601b11ce/src-tauri/Cargo.toml",
+      "sha256": "6c46c2236c3d28f8d2cd594719a34ac609097477140166e691a59801f6a58fc6",
+      "bytes": 1590
+    }
+  ],
+  "errors": [],
+  "commit": "38b30e8ed3182060df11250da73f5914601b11ce",
+  "files_scanned": 78,
+  "ui_stack": [
+    "Tauri"
+  ],
+  "icon_packages": []
+}

@@ -1,0 +1,704 @@
+/* ============================================================
+   Light Theme (default) — TRUE LIGHT
+
+   Primary:    Construction Amber #D97706
+   Background: Blueprint White #FAFAF9
+   Text:       Deep Forge #36363E
+   Hover:      Signal Orange #EA580C
+
+   Palette: OpenAEC style-book semantic.light tokens
+   (surface.light, text.light, border.light, brand.*)
+   ============================================================ */
+
+:root,
+[data-theme="light"] {
+  /* ─── Core palette ─── */
+  --theme-bg: #FAFAF9;
+  --theme-bg-lighter: #FFFFFF;
+  --theme-docbar-bg: #F5F5F4;
+  --theme-surface: #FFFFFF;
+  --theme-border: #E7E5E4;
+  --theme-border-subtle: rgba(214, 211, 209, 0.6);
+  --theme-text: #36363E;
+  --theme-text-secondary: #57534E;
+  --theme-text-muted: #71717A;
+  --theme-text-faint: #A1A1AA;
+  --theme-accent: #D97706;
+  --theme-accent-hover: #EA580C;
+  --theme-accent-text: #FFFFFF;
+  --theme-accent-soft: rgba(217, 119, 6, 0.08);
+  --theme-accent-tint: rgba(217, 119, 6, 0.8);
+  --theme-hover: rgba(217, 119, 6, 0.06);
+  --theme-hover-strong: rgba(217, 119, 6, 0.12);
+  --theme-active: #D97706;
+
+  --theme-focus-color: #D97706;
+  --theme-danger-color: #dc2626;
+  --theme-danger-hover: #b91c1c;
+
+  /* ─── Shadows (lichter — donkere drop op witte canvas) ─── */
+  --theme-dialog-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --theme-panel-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+  --theme-popover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* ─── File tab / accent bar ─── */
+  --theme-file-tab-bg: #D97706;
+  --theme-file-tab-hover: #EA580C;
+  --theme-file-tab-text: #FFFFFF;
+
+  /* ─── Content ─── */
+  --theme-content-bg: #FFFFFF;
+  --theme-placeholder-icon: rgba(54, 54, 62, 0.2);
+  --theme-placeholder-heading: rgba(54, 54, 62, 0.35);
+  --theme-placeholder-text: rgba(54, 54, 62, 0.25);
+
+  /* ─── Ribbon ─── */
+  --theme-ribbon-btn-hover: rgba(217, 119, 6, 0.10);
+  --theme-ribbon-btn-hover-border: rgba(217, 119, 6, 0.30);
+  --theme-ribbon-btn-active-bg: rgba(217, 119, 6, 0.15);
+  --theme-ribbon-btn-active-border: rgba(217, 119, 6, 0.40);
+  --theme-ribbon-btn-active-text: #D97706;
+  --theme-ribbon-icon-active: #D97706;
+  --theme-ribbon-text-hover: #D97706;
+  --theme-ribbon-group-separator: rgba(54, 54, 62, 0.15);
+  --theme-ribbon-group-label: rgba(217, 119, 6, 0.85);
+
+  /* ─── Status bar ─── */
+  --theme-status-bg: #F5F5F4;
+  --theme-status-border: #E7E5E4;
+  --theme-status-text: #57534E;
+  --theme-status-text-label: rgba(87, 83, 78, 0.75);
+  --theme-status-hover: rgba(54, 54, 62, 0.06);
+  --theme-status-separator: rgba(54, 54, 62, 0.15);
+
+  /* ─── Backstage (File menu) ─── */
+  --theme-backstage-item-shortcut: rgba(54, 54, 62, 0.5);
+  --theme-backstage-item-shortcut-hover: rgba(217, 119, 6, 0.85);
+
+  /* ─── Dialogs ─── */
+  --theme-dialog-overlay: rgba(0, 0, 0, 0.30);
+  --theme-dialog-bg: #FFFFFF;
+  --theme-dialog-border: rgba(54, 54, 62, 0.15);
+  --theme-dialog-header-bg: #F5F5F4;
+  --theme-dialog-header-text: #D97706;
+  --theme-dialog-sidebar-bg: #F5F5F4;
+  --theme-dialog-sidebar-border: rgba(54, 54, 62, 0.10);
+  --theme-dialog-tab-text: #36363E;
+  --theme-dialog-tab-hover: rgba(217, 119, 6, 0.08);
+  --theme-dialog-tab-hover-text: #D97706;
+  --theme-dialog-tab-active-bg: rgba(217, 119, 6, 0.12);
+  --theme-dialog-tab-active-text: #D97706;
+  --theme-dialog-tab-active-accent: #D97706;
+  --theme-dialog-content-bg: #FFFFFF;
+  --theme-dialog-content-text: #36363E;
+  --theme-dialog-content-secondary: #57534E;
+  --theme-dialog-input-bg: rgba(217, 119, 6, 0.05);
+  --theme-dialog-input-border: rgba(54, 54, 62, 0.20);
+  --theme-dialog-input-text: #36363E;
+  --theme-dialog-btn-bg: #D97706;
+  --theme-dialog-btn-text: #FFFFFF;
+  --theme-dialog-btn-hover: #EA580C;
+  --theme-dialog-section-border: rgba(54, 54, 62, 0.10);
+
+  /* ─── Buttons ─── */
+  --theme-btn-primary-bg: #D97706;
+  --theme-btn-primary-text: #FFFFFF;
+  --theme-btn-primary-border: #D97706;
+  --theme-btn-primary-hover-bg: #EA580C;
+  --theme-btn-primary-hover-text: #FFFFFF;
+  --theme-btn-secondary-bg: rgba(217, 119, 6, 0.08);
+  --theme-btn-secondary-text: #36363E;
+  --theme-btn-secondary-hover-bg: rgba(217, 119, 6, 0.16);
+  --theme-btn-secondary-hover-border: rgba(217, 119, 6, 0.35);
+
+  /* ─── Domain: Boundary types ─── */
+  --domain-boundary-exterior: #2563eb;
+  --domain-boundary-exterior-bg: rgba(37, 99, 235, 0.12);
+  --domain-boundary-unheated: #7c3aed;
+  --domain-boundary-unheated-bg: rgba(124, 58, 237, 0.12);
+  --domain-boundary-adjacent-room: #16a34a;
+  --domain-boundary-adjacent-room-bg: rgba(22, 163, 74, 0.12);
+  --domain-boundary-adjacent-building: #D97706;
+  --domain-boundary-adjacent-building-bg: rgba(217, 119, 6, 0.12);
+  --domain-boundary-ground: #92400e;
+  --domain-boundary-ground-bg: rgba(146, 64, 14, 0.12);
+
+  /* ─── Domain: Chart categories (zwart-based grid voor witte canvas) ─── */
+  --domain-chart-transmission: #2563eb;
+  --domain-chart-ventilation: #16a34a;
+  --domain-chart-heating-up: #d97706;
+  --domain-chart-system: #57534E;
+  --domain-chart-neighbor: #7c3aed;
+  --domain-chart-walls: #dc2626;
+  --domain-chart-glazing: #2563eb;
+  --domain-chart-roofs: #d97706;
+  --domain-chart-floors: #16a34a;
+  --domain-chart-internal-walls: #7c3aed;
+  --domain-chart-other: #57534E;
+  --domain-chart-grid: rgba(54, 54, 62, 0.10);
+  --domain-chart-grid-strong: rgba(54, 54, 62, 0.20);
+
+  /* ─── Domain: Diagram (Glaser) ─── */
+  --domain-diagram-psat: #2563eb;
+  --domain-diagram-pactual: #D97706;
+  --domain-diagram-condensation: #dc2626;
+  --domain-diagram-text: rgba(54, 54, 62, 0.70);
+  --domain-diagram-grid: rgba(54, 54, 62, 0.10);
+  --domain-diagram-grid-strong: rgba(54, 54, 62, 0.20);
+  --domain-diagram-grid-subtle: rgba(54, 54, 62, 0.15);
+
+  /* ─── Semantic: Warning (advies-/waarschuwingsboxen, StatusBar-tekst) ───
+     Behoudt hier het bestaande amber-uiterlijk, afgeleid uit de eerder
+     gebruikte Tailwind-klassen (amber-700/amber-50/amber-300). */
+  --theme-warning: #B45309;
+  --theme-warning-text: #B45309;
+  --theme-warning-bg: #FFFBEB;
+  --theme-warning-border: #FCD34D;
+
+  /* ─── Domain: Ventilatie-overstroom (FloorCanvas-laag + legenda) ─── */
+  --domain-overflow: #D97706;
+
+  /* ─── Tailwind `primary`-brug (tailwind.config.ts) ───────────────────
+     RGB-triplet (géén hex) — Tailwind's `rgb(var(...) / <alpha-value>)`-
+     patroon heeft dit formaat nodig om opacity-modifiers (bg-primary/10
+     e.d.) te laten werken op een CSS-var-gebaseerde kleur. Pixel-gelijk
+     aan de oude hardcoded #D97706/#EA580C. */
+  --theme-primary-rgb: 217 119 6;
+  --theme-primary-hover-rgb: 234 88 12;
+
+  /* Tell native form controls (select dropdowns, scrollbars, input
+     spinners, datepickers) to use the light variant. */
+  color-scheme: light;
+}
+
+/* ─── @openaec/ui token overrides (light mode) ───────────────
+   The shared package defines --oaec-* with dark-grey defaults
+   under [data-theme="light"] (legacy mis-naming). Override here
+   so Card / Input / Select / textareas render truly light.
+
+   Selector uses `html[data-theme="light"]` (specificity 0,1,1)
+   so it beats upstream `[data-theme="light"]` (0,1,0) regardless
+   of bundle cascade order. `:root` deliberately NOT included —
+   that would leak `--oaec-surface: #FFFFFF` into dark theme via
+   the index.css base rule on input[type="number"]. */
+html[data-theme="light"] {
+  --oaec-bg:             var(--theme-bg);
+  --oaec-bg-lighter:     var(--theme-bg-lighter);
+  --oaec-bg-surface:     var(--theme-surface);
+  --oaec-bg-input:       #FFFFFF;
+  --oaec-bg-canvas:      #F5F5F4;
+  --oaec-surface:        #FFFFFF;
+  --oaec-text:           var(--theme-text);
+  --oaec-text-secondary: var(--theme-text-secondary);
+  --oaec-text-muted:     var(--theme-text-muted);
+  --oaec-text-faint:     var(--theme-text-faint);
+  --oaec-border:         var(--theme-border);
+  --oaec-border-subtle:  var(--theme-border-subtle);
+  --oaec-hover:          var(--theme-hover);
+  --oaec-hover-strong:   var(--theme-hover-strong);
+  --oaec-shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.06);
+  --oaec-shadow-md:      0 4px 12px rgba(0, 0, 0, 0.08);
+  --oaec-shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+   OpenAEC Forge Theme (dark with Deep Forge surface)
+
+   Primary:    Construction Amber #D97706
+   Background: Deep Forge #36363E
+   Text:       Blueprint White #FAFAF9
+   Hover:      Signal Orange #EA580C
+
+   Colors sourced from DESIGN-SYSTEM.md
+   ============================================================ */
+
+[data-theme="openaec-forge"] {
+  /* ─── Core palette ─── */
+  --theme-bg: #36363E;
+  --theme-bg-lighter: #44444C;
+  --theme-docbar-bg: #2E2E36;
+  --theme-surface: #36363E;
+  --theme-border: rgba(217, 119, 6, 0.25);
+  --theme-border-subtle: rgba(217, 119, 6, 0.15);
+  --theme-text: #FAFAF9;
+  --theme-text-secondary: rgba(250, 250, 249, 0.6);
+  --theme-text-muted: rgba(250, 250, 249, 0.5);
+  --theme-text-faint: rgba(250, 250, 249, 0.4);
+  --theme-accent: #D97706;
+  --theme-accent-hover: #EA580C;
+  --theme-accent-text: #36363E;
+  --theme-accent-soft: rgba(217, 119, 6, 0.08);
+  --theme-accent-tint: rgba(217, 119, 6, 0.8);
+  --theme-hover: rgba(217, 119, 6, 0.1);
+  --theme-hover-strong: rgba(217, 119, 6, 0.18);
+  --theme-active: #D97706;
+
+  --theme-focus-color: #D97706;
+  --theme-danger-color: #f87171;
+  --theme-danger-hover: #ef4444;
+
+  /* ─── Shadows ─── */
+  --theme-dialog-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --theme-panel-shadow: 2px 0 8px rgba(0, 0, 0, 0.20);
+  --theme-popover-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
+
+  /* ─── File tab / accent bar ─── */
+  --theme-file-tab-bg: #D97706;
+  --theme-file-tab-hover: #EA580C;
+  --theme-file-tab-text: #36363E;
+
+  /* ─── Content ─── */
+  --theme-content-bg: #36363E;
+  --theme-placeholder-icon: rgba(217, 119, 6, 0.2);
+  --theme-placeholder-heading: rgba(250, 250, 249, 0.3);
+  --theme-placeholder-text: rgba(250, 250, 249, 0.25);
+
+  /* ─── Ribbon ─── */
+  --theme-ribbon-btn-hover: rgba(217, 119, 6, 0.15);
+  --theme-ribbon-btn-hover-border: rgba(217, 119, 6, 0.30);
+  --theme-ribbon-btn-active-bg: rgba(217, 119, 6, 0.20);
+  --theme-ribbon-btn-active-border: rgba(217, 119, 6, 0.40);
+  --theme-ribbon-btn-active-text: #D97706;
+  --theme-ribbon-icon-active: #D97706;
+  --theme-ribbon-text-hover: #D97706;
+  --theme-ribbon-group-separator: rgba(250, 250, 249, 0.15);
+  --theme-ribbon-group-label: rgba(217, 119, 6, 0.8);
+
+  /* ─── Status bar ─── */
+  --theme-status-bg: #36363E;
+  --theme-status-border: #27272A;
+  --theme-status-text: #A1A1AA;
+  --theme-status-text-label: rgba(161, 161, 170, 0.7);
+  --theme-status-hover: rgba(250, 250, 249, 0.1);
+  --theme-status-separator: rgba(250, 250, 249, 0.15);
+
+  /* ─── Backstage (File menu) ─── */
+  --theme-backstage-item-shortcut: rgba(250, 250, 249, 0.5);
+  --theme-backstage-item-shortcut-hover: rgba(217, 119, 6, 0.7);
+
+  /* ─── Dialogs ─── */
+  --theme-dialog-overlay: rgba(0, 0, 0, 0.55);
+  --theme-dialog-bg: #36363E;
+  --theme-dialog-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-header-bg: #44444C;
+  --theme-dialog-header-text: #D97706;
+  --theme-dialog-sidebar-bg: #44444C;
+  --theme-dialog-sidebar-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-tab-text: #FAFAF9;
+  --theme-dialog-tab-hover: rgba(217, 119, 6, 0.1);
+  --theme-dialog-tab-hover-text: #D97706;
+  --theme-dialog-tab-active-bg: rgba(217, 119, 6, 0.15);
+  --theme-dialog-tab-active-text: #D97706;
+  --theme-dialog-tab-active-accent: #D97706;
+  --theme-dialog-content-bg: #36363E;
+  --theme-dialog-content-text: #FAFAF9;
+  --theme-dialog-content-secondary: rgba(250, 250, 249, 0.6);
+  --theme-dialog-input-bg: rgba(217, 119, 6, 0.05);
+  --theme-dialog-input-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-input-text: #FAFAF9;
+  --theme-dialog-btn-bg: #D97706;
+  --theme-dialog-btn-text: #36363E;
+  --theme-dialog-btn-hover: #EA580C;
+  --theme-dialog-section-border: rgba(217, 119, 6, 0.15);
+
+  /* ─── Buttons ─── */
+  --theme-btn-primary-bg: #D97706;
+  --theme-btn-primary-text: #36363E;
+  --theme-btn-primary-border: #D97706;
+  --theme-btn-primary-hover-bg: #EA580C;
+  --theme-btn-primary-hover-text: #36363E;
+  --theme-btn-secondary-bg: rgba(217, 119, 6, 0.1);
+  --theme-btn-secondary-text: #FAFAF9;
+  --theme-btn-secondary-hover-bg: rgba(217, 119, 6, 0.2);
+  --theme-btn-secondary-hover-border: rgba(217, 119, 6, 0.3);
+
+  /* ─── Domain: Boundary types ─── */
+  --domain-boundary-exterior: #3b82f6;
+  --domain-boundary-exterior-bg: rgba(59, 130, 246, 0.15);
+  --domain-boundary-unheated: #8b5cf6;
+  --domain-boundary-unheated-bg: rgba(139, 92, 246, 0.15);
+  --domain-boundary-adjacent-room: #22c55e;
+  --domain-boundary-adjacent-room-bg: rgba(34, 197, 94, 0.15);
+  --domain-boundary-adjacent-building: #F59E0B;
+  --domain-boundary-adjacent-building-bg: rgba(245, 158, 11, 0.15);
+  --domain-boundary-ground: #92400e;
+  --domain-boundary-ground-bg: rgba(146, 64, 14, 0.15);
+
+  /* ─── Domain: Chart categories ─── */
+  --domain-chart-transmission: #3b82f6;
+  --domain-chart-ventilation: #22c55e;
+  --domain-chart-heating-up: #f59e0b;
+  --domain-chart-system: #78716c;
+  --domain-chart-neighbor: #8b5cf6;
+  --domain-chart-walls: #ef4444;
+  --domain-chart-glazing: #3b82f6;
+  --domain-chart-roofs: #f59e0b;
+  --domain-chart-floors: #22c55e;
+  --domain-chart-internal-walls: #8b5cf6;
+  --domain-chart-other: #78716c;
+  --domain-chart-grid: rgba(250, 250, 249, 0.1);
+  --domain-chart-grid-strong: rgba(250, 250, 249, 0.2);
+
+  /* ─── Domain: Diagram (Glaser) ─── */
+  --domain-diagram-psat: #2563eb;
+  --domain-diagram-pactual: #D97706;
+  --domain-diagram-condensation: #fca5a5;
+  --domain-diagram-text: rgba(250, 250, 249, 0.6);
+  --domain-diagram-grid: rgba(250, 250, 249, 0.1);
+  --domain-diagram-grid-strong: rgba(250, 250, 249, 0.2);
+  --domain-diagram-grid-subtle: rgba(250, 250, 249, 0.15);
+
+  /* ─── Semantic: Warning — donker-variant (amber-300 tekst op amber-500 tint) ─── */
+  --theme-warning: #FCD34D;
+  --theme-warning-text: #FCD34D;
+  --theme-warning-bg: rgba(245, 158, 11, 0.15);
+  --theme-warning-border: rgba(245, 158, 11, 0.30);
+
+  /* ─── Domain: Ventilatie-overstroom (FloorCanvas-laag + legenda) ─── */
+  --domain-overflow: #D97706;
+
+  /* ─── Tailwind `primary`-brug (tailwind.config.ts) — pixel-gelijk ─── */
+  --theme-primary-rgb: 217 119 6;
+  --theme-primary-hover-rgb: 234 88 12;
+
+  /* Tell native form controls (select dropdowns, scrollbars, input
+     spinners, datepickers) to use the dark variant. */
+  color-scheme: dark;
+}
+
+/* ============================================================
+   Dark Theme (OpenAEC)
+
+   Primary:    Construction Amber #D97706
+   Background: Dark Surface #27272A
+   Canvas:     Night Build #1C1917
+   Text:       Blueprint White #FAFAF9
+   Hover:      Signal Orange #EA580C
+   ============================================================ */
+
+[data-theme="openaec"] {
+  /* ─── Core palette ─── */
+  --theme-bg: #27272A;
+  --theme-bg-lighter: #36363E;
+  --theme-docbar-bg: #1C1917;
+  --theme-surface: #27272A;
+  --theme-border: rgba(217, 119, 6, 0.2);
+  --theme-border-subtle: rgba(217, 119, 6, 0.15);
+  --theme-text: #FAFAF9;
+  --theme-text-secondary: rgba(250, 250, 249, 0.6);
+  --theme-text-muted: rgba(250, 250, 249, 0.5);
+  --theme-text-faint: rgba(250, 250, 249, 0.4);
+  --theme-accent: #D97706;
+  --theme-accent-hover: #EA580C;
+  --theme-accent-text: #27272A;
+  --theme-accent-soft: rgba(217, 119, 6, 0.05);
+  --theme-accent-tint: rgba(217, 119, 6, 0.8);
+  --theme-hover: rgba(217, 119, 6, 0.1);
+  --theme-hover-strong: rgba(217, 119, 6, 0.15);
+  --theme-active: #D97706;
+
+  --theme-focus-color: #D97706;
+  --theme-danger-color: #f87171;
+  --theme-danger-hover: #ef4444;
+
+  /* ─── Shadows ─── */
+  --theme-dialog-shadow: 0 4px 16px rgba(0, 0, 0, 0.40);
+  --theme-panel-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+  --theme-popover-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+  /* ─── File tab / accent bar ─── */
+  --theme-file-tab-bg: #D97706;
+  --theme-file-tab-hover: #EA580C;
+  --theme-file-tab-text: #27272A;
+
+  /* ─── Content ─── */
+  --theme-content-bg: #ffffff;
+  --theme-placeholder-icon: rgba(217, 119, 6, 0.2);
+  --theme-placeholder-heading: rgba(250, 250, 249, 0.3);
+  --theme-placeholder-text: rgba(250, 250, 249, 0.25);
+
+  /* ─── Ribbon ─── */
+  --theme-ribbon-btn-hover: rgba(217, 119, 6, 0.15);
+  --theme-ribbon-btn-hover-border: rgba(217, 119, 6, 0.30);
+  --theme-ribbon-btn-active-bg: rgba(217, 119, 6, 0.20);
+  --theme-ribbon-btn-active-border: rgba(217, 119, 6, 0.40);
+  --theme-ribbon-btn-active-text: #D97706;
+  --theme-ribbon-icon-active: #D97706;
+  --theme-ribbon-text-hover: #D97706;
+  --theme-ribbon-group-separator: rgba(217, 119, 6, 0.25);
+  --theme-ribbon-group-label: rgba(217, 119, 6, 0.8);
+
+  /* ─── Status bar ─── */
+  --theme-status-bg: #27272A;
+  --theme-status-border: #1C1917;
+  --theme-status-text: #A1A1AA;
+  --theme-status-text-label: rgba(161, 161, 170, 0.7);
+  --theme-status-hover: rgba(250, 250, 249, 0.1);
+  --theme-status-separator: rgba(250, 250, 249, 0.15);
+
+  /* ─── Backstage (File menu) ─── */
+  --theme-backstage-item-shortcut: rgba(250, 250, 249, 0.5);
+  --theme-backstage-item-shortcut-hover: rgba(217, 119, 6, 0.7);
+
+  /* ─── Dialogs ─── */
+  --theme-dialog-overlay: rgba(0, 0, 0, 0.60);
+  --theme-dialog-bg: #27272A;
+  --theme-dialog-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-header-bg: #36363E;
+  --theme-dialog-header-text: #D97706;
+  --theme-dialog-sidebar-bg: #36363E;
+  --theme-dialog-sidebar-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-tab-text: #FAFAF9;
+  --theme-dialog-tab-hover: rgba(217, 119, 6, 0.1);
+  --theme-dialog-tab-hover-text: #D97706;
+  --theme-dialog-tab-active-bg: rgba(217, 119, 6, 0.15);
+  --theme-dialog-tab-active-text: #D97706;
+  --theme-dialog-tab-active-accent: #D97706;
+  --theme-dialog-content-bg: #27272A;
+  --theme-dialog-content-text: #FAFAF9;
+  --theme-dialog-content-secondary: rgba(250, 250, 249, 0.6);
+  --theme-dialog-input-bg: rgba(217, 119, 6, 0.05);
+  --theme-dialog-input-border: rgba(217, 119, 6, 0.2);
+  --theme-dialog-input-text: #FAFAF9;
+  --theme-dialog-btn-bg: #D97706;
+  --theme-dialog-btn-text: #27272A;
+  --theme-dialog-btn-hover: #EA580C;
+  --theme-dialog-section-border: rgba(217, 119, 6, 0.15);
+
+  /* ─── Buttons ─── */
+  --theme-btn-primary-bg: #D97706;
+  --theme-btn-primary-text: #27272A;
+  --theme-btn-primary-border: #D97706;
+  --theme-btn-primary-hover-bg: #EA580C;
+  --theme-btn-primary-hover-text: #27272A;
+  --theme-btn-secondary-bg: rgba(217, 119, 6, 0.1);
+  --theme-btn-secondary-text: #FAFAF9;
+  --theme-btn-secondary-hover-bg: rgba(217, 119, 6, 0.2);
+  --theme-btn-secondary-hover-border: rgba(217, 119, 6, 0.3);
+
+  /* ─── Domain tokens (zelfde als forge — content area is altijd wit) ─── */
+
+  /* ─── Semantic: Warning — donker-variant (amber-300 tekst op amber-500 tint) ─── */
+  --theme-warning: #FCD34D;
+  --theme-warning-text: #FCD34D;
+  --theme-warning-bg: rgba(245, 158, 11, 0.15);
+  --theme-warning-border: rgba(245, 158, 11, 0.30);
+
+  /* ─── Domain: Ventilatie-overstroom (FloorCanvas-laag + legenda) ─── */
+  --domain-overflow: #D97706;
+
+  /* ─── Tailwind `primary`-brug (tailwind.config.ts) — pixel-gelijk ─── */
+  --theme-primary-rgb: 217 119 6;
+  --theme-primary-hover-rgb: 234 88 12;
+}
+
+/* ============================================================
+   Kolthof Theme (KBA-huisstijl, light) — DEFAULT
+
+   Primair:    Petrol #0D6862 (koppen, primaire knoppen)
+   Interactief: Teal #0FA08D (accent, hover, focus-ring)
+   Highlight:  Mint #B0EAE2 (selectie/hover-tint)
+   Tekst:      Inkt #0F302C
+   Secundair:  Grijs #6B7975
+   Danger:     Rood #A6342B
+   Border:     Lijn #DFE7E4
+   Panel:      Vlak #F4F8F7
+   Achtergrond: Papier #FFFFFF
+
+   Bron: kba-brand.json (Kolthof Bouwadvies huisstijl)
+   ============================================================ */
+
+[data-theme="kolthof"] {
+  /* ─── Core palette ─── */
+  --theme-bg: #FFFFFF;
+  --theme-bg-lighter: #FFFFFF;
+  --theme-docbar-bg: #F4F8F7;
+  --theme-surface: #FFFFFF;
+  --theme-border: #DFE7E4;
+  --theme-border-subtle: rgba(223, 231, 228, 0.6);
+  --theme-text: #0F302C;
+  --theme-text-secondary: rgba(15, 48, 44, 0.72);
+  --theme-text-muted: #6B7975;
+  --theme-text-faint: rgba(107, 121, 117, 0.65);
+  --theme-accent: #0FA08D;
+  --theme-accent-hover: #0D6862;
+  --theme-accent-text: #FFFFFF;
+  --theme-accent-soft: rgba(15, 160, 141, 0.08);
+  --theme-accent-tint: rgba(15, 160, 141, 0.8);
+  --theme-hover: rgba(176, 234, 226, 0.35);
+  --theme-hover-strong: rgba(176, 234, 226, 0.55);
+  --theme-active: #0FA08D;
+
+  --theme-focus-color: #0FA08D;
+  --theme-danger-color: #A6342B;
+  --theme-danger-hover: #8B2A23;
+
+  /* ─── Shadows (inkt-based drop op witte canvas) ─── */
+  --theme-dialog-shadow: 0 4px 16px rgba(15, 48, 44, 0.12);
+  --theme-panel-shadow: 2px 0 8px rgba(15, 48, 44, 0.08);
+  --theme-popover-shadow: 0 8px 24px rgba(15, 48, 44, 0.14);
+
+  /* ─── File tab / accent bar ─── */
+  --theme-file-tab-bg: #0D6862;
+  --theme-file-tab-hover: #0FA08D;
+  --theme-file-tab-text: #FFFFFF;
+
+  /* ─── Content ─── */
+  --theme-content-bg: #FFFFFF;
+  --theme-placeholder-icon: rgba(15, 48, 44, 0.2);
+  --theme-placeholder-heading: rgba(15, 48, 44, 0.35);
+  --theme-placeholder-text: rgba(15, 48, 44, 0.25);
+
+  /* ─── Ribbon ─── */
+  --theme-ribbon-btn-hover: rgba(15, 160, 141, 0.10);
+  --theme-ribbon-btn-hover-border: rgba(15, 160, 141, 0.30);
+  --theme-ribbon-btn-active-bg: rgba(176, 234, 226, 0.45);
+  --theme-ribbon-btn-active-border: rgba(15, 160, 141, 0.40);
+  --theme-ribbon-btn-active-text: #0D6862;
+  --theme-ribbon-icon-active: #0D6862;
+  --theme-ribbon-text-hover: #0FA08D;
+  --theme-ribbon-group-separator: rgba(15, 48, 44, 0.15);
+  --theme-ribbon-group-label: rgba(13, 104, 98, 0.85);
+
+  /* ─── Status bar ─── */
+  --theme-status-bg: #F4F8F7;
+  --theme-status-border: #DFE7E4;
+  --theme-status-text: #6B7975;
+  --theme-status-text-label: rgba(107, 121, 117, 0.75);
+  --theme-status-hover: rgba(15, 48, 44, 0.06);
+  --theme-status-separator: rgba(15, 48, 44, 0.15);
+
+  /* ─── Backstage (File menu) ─── */
+  --theme-backstage-item-shortcut: rgba(15, 48, 44, 0.5);
+  --theme-backstage-item-shortcut-hover: rgba(15, 160, 141, 0.85);
+
+  /* ─── Dialogs ─── */
+  --theme-dialog-overlay: rgba(15, 48, 44, 0.30);
+  --theme-dialog-bg: #FFFFFF;
+  --theme-dialog-border: rgba(15, 48, 44, 0.15);
+  --theme-dialog-header-bg: #F4F8F7;
+  --theme-dialog-header-text: #0D6862;
+  --theme-dialog-sidebar-bg: #F4F8F7;
+  --theme-dialog-sidebar-border: rgba(15, 48, 44, 0.10);
+  --theme-dialog-tab-text: #0F302C;
+  --theme-dialog-tab-hover: rgba(15, 160, 141, 0.08);
+  --theme-dialog-tab-hover-text: #0FA08D;
+  --theme-dialog-tab-active-bg: rgba(176, 234, 226, 0.40);
+  --theme-dialog-tab-active-text: #0D6862;
+  --theme-dialog-tab-active-accent: #0FA08D;
+  --theme-dialog-content-bg: #FFFFFF;
+  --theme-dialog-content-text: #0F302C;
+  --theme-dialog-content-secondary: #6B7975;
+  --theme-dialog-input-bg: rgba(15, 160, 141, 0.05);
+  --theme-dialog-input-border: rgba(15, 48, 44, 0.20);
+  --theme-dialog-input-text: #0F302C;
+  --theme-dialog-btn-bg: #0D6862;
+  --theme-dialog-btn-text: #FFFFFF;
+  --theme-dialog-btn-hover: #0FA08D;
+  --theme-dialog-section-border: rgba(15, 48, 44, 0.10);
+
+  /* ─── Buttons ───
+     Primaire knop-achtergrond = petrol (niet teal): #FFFFFF-tekst op
+     teal (#0FA08D) haalt slechts ~3,3:1 contrast (WCAG AA-fail voor
+     normale tekst); petrol (#0D6862) haalt ~6,6:1. Teal blijft het
+     interactieve accent voor hover/focus/links op witte/vlak-achtergrond. */
+  --theme-btn-primary-bg: #0D6862;
+  --theme-btn-primary-text: #FFFFFF;
+  --theme-btn-primary-border: #0D6862;
+  --theme-btn-primary-hover-bg: #0FA08D;
+  --theme-btn-primary-hover-text: #FFFFFF;
+  --theme-btn-secondary-bg: rgba(15, 160, 141, 0.08);
+  --theme-btn-secondary-text: #0F302C;
+  --theme-btn-secondary-hover-bg: rgba(15, 160, 141, 0.16);
+  --theme-btn-secondary-hover-border: rgba(15, 160, 141, 0.35);
+
+  /* ─── Domain: Boundary types ─── */
+  --domain-boundary-exterior: #2563eb;
+  --domain-boundary-exterior-bg: rgba(37, 99, 235, 0.12);
+  --domain-boundary-unheated: #7c3aed;
+  --domain-boundary-unheated-bg: rgba(124, 58, 237, 0.12);
+  --domain-boundary-adjacent-room: #16a34a;
+  --domain-boundary-adjacent-room-bg: rgba(22, 163, 74, 0.12);
+  --domain-boundary-adjacent-building: #0FA08D;
+  --domain-boundary-adjacent-building-bg: rgba(15, 160, 141, 0.12);
+  --domain-boundary-ground: #92400e;
+  --domain-boundary-ground-bg: rgba(146, 64, 14, 0.12);
+
+  /* ─── Domain: Chart categories ─── */
+  --domain-chart-transmission: #2563eb;
+  --domain-chart-ventilation: #16a34a;
+  --domain-chart-heating-up: #0FA08D;
+  --domain-chart-system: #6B7975;
+  --domain-chart-neighbor: #7c3aed;
+  --domain-chart-walls: #A6342B;
+  --domain-chart-glazing: #2563eb;
+  --domain-chart-roofs: #0FA08D;
+  --domain-chart-floors: #16a34a;
+  --domain-chart-internal-walls: #7c3aed;
+  --domain-chart-other: #6B7975;
+  --domain-chart-grid: rgba(15, 48, 44, 0.10);
+  --domain-chart-grid-strong: rgba(15, 48, 44, 0.20);
+
+  /* ─── Domain: Diagram (Glaser) ─── */
+  --domain-diagram-psat: #2563eb;
+  --domain-diagram-pactual: #0D6862;
+  --domain-diagram-condensation: #A6342B;
+  --domain-diagram-text: rgba(15, 48, 44, 0.70);
+  --domain-diagram-grid: rgba(15, 48, 44, 0.10);
+  --domain-diagram-grid-strong: rgba(15, 48, 44, 0.20);
+  --domain-diagram-grid-subtle: rgba(15, 48, 44, 0.15);
+
+  /* ─── Semantic: Warning — gedempt oker, huisstijl-conform (GEEN amber/oranje) ─── */
+  --theme-warning: #8F6A1F;
+  --theme-warning-text: #8F6A1F;
+  --theme-warning-bg: #FBF4E4;
+  --theme-warning-border: #E8D9B5;
+
+  /* ─── Domain: Ventilatie-overstroom (FloorCanvas-laag + legenda) — teal, geen oranje ─── */
+  --domain-overflow: #0FA08D;
+
+  /* ─── Tailwind `primary`-brug (tailwind.config.ts) ───────────────────
+     DEFAULT = petrol (#0D6862), niet teal: wit-op-teal haalt maar ~3,3:1
+     contrast (WCAG AA-fail), wit-op-petrol ~6,6:1 — zelfde afweging als
+     --theme-btn-primary-bg hierboven. primary-hover = teal, als lichtere
+     hover-highlight (zelfde richting als --theme-btn-primary-hover-bg). */
+  --theme-primary-rgb: 13 104 98;
+  --theme-primary-hover-rgb: 15 160 141;
+
+  /* ─── Typografie (Segoe UI, huisstijl) ─── */
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  /* Tell native form controls (select dropdowns, scrollbars, input
+     spinners, datepickers) to use the light variant. */
+  color-scheme: light;
+}
+
+[data-theme="kolthof"] h1,
+[data-theme="kolthof"] h2,
+[data-theme="kolthof"] h3 {
+  letter-spacing: -0.02em;
+}
+
+/* ─── @openaec/ui token overrides (kolthof) ───────────────
+   Zelfde reden als [data-theme="light"] hierboven: de shared package
+   heeft geen kolthof-specifieke --oaec-* defaults, dus expliciet zetten
+   zodat Card / Input / Select / textareas de huisstijl volgen. */
+html[data-theme="kolthof"] {
+  --oaec-bg:             var(--theme-bg);
+  --oaec-bg-lighter:     var(--theme-bg-lighter);
+  --oaec-bg-surface:     var(--theme-surface);
+  --oaec-bg-input:       #FFFFFF;
+  --oaec-bg-canvas:      #F4F8F7;
+  --oaec-surface:        #FFFFFF;
+  --oaec-text:           var(--theme-text);
+  --oaec-text-secondary: var(--theme-text-secondary);
+  --oaec-text-muted:     var(--theme-text-muted);
+  --oaec-text-faint:     var(--theme-text-faint);
+  --oaec-border:         var(--theme-border);
+  --oaec-border-subtle:  var(--theme-border-subtle);
+  --oaec-hover:          var(--theme-hover);
+  --oaec-hover-strong:   var(--theme-hover-strong);
+  --oaec-shadow-sm:      0 1px 3px rgba(15, 48, 44, 0.06);
+  --oaec-shadow-md:      0 4px 12px rgba(15, 48, 44, 0.08);
+  --oaec-shadow-lg:      0 8px 24px rgba(15, 48, 44, 0.12);
+}

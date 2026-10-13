@@ -1,0 +1,780 @@
+{
+  "name": "building-py",
+  "url": "https://github.com/OpenAEC-Foundation/building-py",
+  "branch": "main",
+  "description": "Python Library for creating buildings, building systems, objects, and exporting to various programs like Blender, Revit, IFC, Struct4U, DXF & Speckle.",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [
+    {
+      "path": "apps/Struct4U/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/apps/Struct4U/icon.ico",
+      "sha256": "661858aa56245472e60ff41516afb4fbcdc344ddfe23df72c412f57a77c64d36",
+      "bytes": 102692
+    },
+    {
+      "path": "library/text/svg/Aktiv Grotesk W06 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Aktiv%20Grotesk%20W06%20Regular.svg",
+      "sha256": "646327c0accbd89ae8b9bb6b1c27cfa5d77470b66e3e67a09098dedc7d2d235e",
+      "bytes": 822544
+    },
+    {
+      "path": "library/text/svg/All Round Gothic W03 Book.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/All%20Round%20Gothic%20W03%20Book.svg",
+      "sha256": "5ce54343703ae35f0de95976dae0691c404649bef7cdf9ad0a4526005555b7a7",
+      "bytes": 215506
+    },
+    {
+      "path": "library/text/svg/Amazon Ember Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Amazon%20Ember%20Regular.svg",
+      "sha256": "37177b7e8acd8aa5aa0d87dad7220d854c291c735031f3d84b426d9b6fa4156a",
+      "bytes": 205246
+    },
+    {
+      "path": "library/text/svg/American Typewriter Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/American%20Typewriter%20Bold.svg",
+      "sha256": "7741f24f88fabba39a56df5def37c4cbc538edfe0ec50675ed59aa14aa18d331",
+      "bytes": 129485
+    },
+    {
+      "path": "library/text/svg/Amplitude-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Amplitude-Regular.svg",
+      "sha256": "6c297ebc9820059407fd143dada2eed9b8aae20e1dba48bd4b1f9b5ae0e9e227",
+      "bytes": 205208
+    },
+    {
+      "path": "library/text/svg/Apercu Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Apercu%20Regular.svg",
+      "sha256": "de79d9bfcc19cce7e4058412b43759b245adc9cee6b45bff8da2a2a562dd89d3",
+      "bytes": 216763
+    },
+    {
+      "path": "library/text/svg/Apple Color Emoji.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Apple%20Color%20Emoji.svg",
+      "sha256": "74c024929b761f740961ae04d68f35bca205ecb5a740bab6e4bef8a69cbfdba6",
+      "bytes": 86429
+    },
+    {
+      "path": "library/text/svg/Apple SD Gothic Neo Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Apple%20SD%20Gothic%20Neo%20Bold.svg",
+      "sha256": "b8deefe813258ff00719831238bcd0df2ec49c853e2a8364bc695a0658eb45c1",
+      "bytes": 6298462
+    },
+    {
+      "path": "library/text/svg/Arame-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Arame-Regular.svg",
+      "sha256": "7f7266586a14a2aaf762e7996040e2d40fd52e88d1a30e900fd8b092e6df7661",
+      "bytes": 76525
+    },
+    {
+      "path": "library/text/svg/Arial.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Arial.svg",
+      "sha256": "4b03a668e6108032da9ace0bd58cfeeb3adcd3ff05e042784cc4150980b22d4a",
+      "bytes": 429825
+    },
+    {
+      "path": "library/text/svg/Arnold Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Arnold%20Regular.svg",
+      "sha256": "a90e81b63490b0e6c7917d946d209eea95c877a0fb9832b7e10ec2b71f96bff9",
+      "bytes": 267215
+    },
+    {
+      "path": "library/text/svg/Ascender Sans W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Ascender%20Sans%20W01%20Regular.svg",
+      "sha256": "debb2df49132ed591745a9036a9af6610c6194a1ab37c0b68e8906fa520dbf80",
+      "bytes": 83963
+    },
+    {
+      "path": "library/text/svg/Athelas W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Athelas%20W01%20Regular.svg",
+      "sha256": "843640df9fd6708884ec952f413cda6069b2a84eb011e2731131f4cab9f821c5",
+      "bytes": 230263
+    },
+    {
+      "path": "library/text/svg/Avenir Book.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Avenir%20Book.svg",
+      "sha256": "e632a3d30a9e96b33a4c09f093e8dacadd37f13c97fd82468d09ca7c0ac8dcc4",
+      "bytes": 184109
+    },
+    {
+      "path": "library/text/svg/Avenir Next Condensed Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Avenir%20Next%20Condensed%20Bold.svg",
+      "sha256": "e15247a59b3a4b25b19cc1081a0f6560de0cee449ec52125048b89bc99d0650a",
+      "bytes": 225606
+    },
+    {
+      "path": "library/text/svg/Avenir Next Condensed Medium.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Avenir%20Next%20Condensed%20Medium.svg",
+      "sha256": "dd25bdfe39a1e2d0c4168c8ba427866a1d6332882a639e8ab24b57b0643ea8a7",
+      "bytes": 228203
+    },
+    {
+      "path": "library/text/svg/Aveny T WEB.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Aveny%20T%20WEB.svg",
+      "sha256": "23012bc66163a8a9bd1e368e5a0ce17f87d4994bae676d6cc7c350d4cef7a579",
+      "bytes": 147313
+    },
+    {
+      "path": "library/text/svg/Bahnschrift.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bahnschrift.svg",
+      "sha256": "116dc1385e7e9a1a6652e70ad72cc1e585d0e0d6293353dcd42f3c9782a84538",
+      "bytes": 80504
+    },
+    {
+      "path": "library/text/svg/Beaufort W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Beaufort%20W01%20Regular.svg",
+      "sha256": "1fba1955538d20687155478be9392f17eb6b3f7610660176ffe17fea5f3e7173",
+      "bytes": 119006
+    },
+    {
+      "path": "library/text/svg/Billabong W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Billabong%20W00%20Regular.svg",
+      "sha256": "4292c0bafc319cf99e98cdd12fbb2db97730fc69848b812b7c433d5216287d2a",
+      "bytes": 243601
+    },
+    {
+      "path": "library/text/svg/Bodoni Ornaments ITC.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bodoni%20Ornaments%20ITC.svg",
+      "sha256": "92c911796b05e71a4e1ce6b4058d94cbb3f5ba1b2c5a805d56dd1f82d14f073c",
+      "bytes": 139587
+    },
+    {
+      "path": "library/text/svg/Bogle Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bogle%20Regular.svg",
+      "sha256": "90e28f153d2bc7299da358210b98b3fd889b896a2fffdfa8306d72b4fe02b4a0",
+      "bytes": 565957
+    },
+    {
+      "path": "library/text/svg/Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bold.svg",
+      "sha256": "41a34f4e922a6b4bff674c4cffcae121d854b4b07a2e1b1eda2183b89e417a0d",
+      "bytes": 52496
+    },
+    {
+      "path": "library/text/svg/Bonbon Bold W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bonbon%20Bold%20W00%20Regular.svg",
+      "sha256": "734b204e77f3be5f4629835689c3731b0a699a35ee174a90697de0042fcfbfd5",
+      "bytes": 730572
+    },
+    {
+      "path": "library/text/svg/Bookerly.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Bookerly.svg",
+      "sha256": "af4eae3e7058bd4e44af7f83a9ca727557dd6ae576aade1364e599ef1ee3102e",
+      "bytes": 1391107
+    },
+    {
+      "path": "library/text/svg/BrandonGrotesque-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/BrandonGrotesque-Regular.svg",
+      "sha256": "c48dfe39c61b6c658bf7bea838682ec021d382559aa28fea44e047641476e646",
+      "bytes": 729627
+    },
+    {
+      "path": "library/text/svg/CCVictorySpeech W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/CCVictorySpeech%20W00%20Regular.svg",
+      "sha256": "e40b95cc0c33d38011bcbcc37e354324be495794ad54b20e1eeefb6364f8d44a",
+      "bytes": 181020
+    },
+    {
+      "path": "library/text/svg/Calibri.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Calibri.svg",
+      "sha256": "0a9bc391d4920f62e4d35def6bc2b5bef13a74ecd6fba38385d67619d4016816",
+      "bytes": 3483768
+    },
+    {
+      "path": "library/text/svg/Capistrano BF W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Capistrano%20BF%20W01%20Regular.svg",
+      "sha256": "5a70bdac9ec05804e8d206ff5e94ce6cceefd9cc216a4e4d3e1de71bc5fd94d2",
+      "bytes": 469255
+    },
+    {
+      "path": "library/text/svg/Circular Std Black.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Circular%20Std%20Black.svg",
+      "sha256": "a2425c84667a945d6b25b6b83aaf30a9f31abec43cb11ddf99b239946d9a8c8a",
+      "bytes": 444792
+    },
+    {
+      "path": "library/text/svg/Circular Std Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Circular%20Std%20Bold.svg",
+      "sha256": "222fd1f0bba827220a6d9bcacbe6fbc524319755272701982629687969872873",
+      "bytes": 444308
+    },
+    {
+      "path": "library/text/svg/Circular Std Book.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Circular%20Std%20Book.svg",
+      "sha256": "e4d28529662c71efcd3a10c4de895149b9269d3c3963cdcf42851cbdf105495d",
+      "bytes": 348875
+    },
+    {
+      "path": "library/text/svg/Connections Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Connections%20Regular.svg",
+      "sha256": "315a94d94526210876371bd3f9333f4f241a30398719f5064c585955c7182e16",
+      "bytes": 103115
+    },
+    {
+      "path": "library/text/svg/DIN Condensed Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/DIN%20Condensed%20Bold.svg",
+      "sha256": "070d66e7529d0c518a7052f30304a736bdbcededd1bbe04427c7aaf336a61f15",
+      "bytes": 94473
+    },
+    {
+      "path": "library/text/svg/DIN Next LT Pro Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/DIN%20Next%20LT%20Pro%20Regular.svg",
+      "sha256": "a369f09aa6283d3a80bd097ccfb22001cfc0b933bc955d291fe4fa2f8990c94b",
+      "bytes": 406723
+    },
+    {
+      "path": "library/text/svg/DIN Next W01 Light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/DIN%20Next%20W01%20Light.svg",
+      "sha256": "3348b9369674f2df31db804ef3b56a203601d5d67c3e12f8604a24b91f2674c3",
+      "bytes": 146444
+    },
+    {
+      "path": "library/text/svg/DINNextLTPro-Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/DINNextLTPro-Bold.svg",
+      "sha256": "9902249209ad358bb880d86faff8828c14957fa264cdc53d707a9df78565f506",
+      "bytes": 298638
+    },
+    {
+      "path": "library/text/svg/DINOT-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/DINOT-Regular.svg",
+      "sha256": "4c9fbb1830c90c3045a3ff6f77af35fe06ae6b180955866f00b42cad5b5a4095",
+      "bytes": 157947
+    },
+    {
+      "path": "library/text/svg/Domaine Sans Fine Regular Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Domaine%20Sans%20Fine%20Regular%20Regular.svg",
+      "sha256": "12b89e5b5572a6f4bde0ac90009d3eaf03caeaa52d18b53bb5ef8299fa4b6061",
+      "bytes": 269882
+    },
+    {
+      "path": "library/text/svg/Druk Wide Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Druk%20Wide%20Bold.svg",
+      "sha256": "25077a39d1803d916d184728272e5157575a5541908faf54aa5e5f16e871b60c",
+      "bytes": 712498
+    },
+    {
+      "path": "library/text/svg/Druk Wide Medium.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Druk%20Wide%20Medium.svg",
+      "sha256": "e162bb99282a66ab6dd38afd9d5b029267457ac76b3147d95f83c88b702e6b08",
+      "bytes": 588266
+    },
+    {
+      "path": "library/text/svg/Emirates Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Emirates%20Bold.svg",
+      "sha256": "eba9a8f3521556377ce6cdf1dbaa3d76fb2f0e3b26491138c346e70fa8de494a",
+      "bytes": 555602
+    },
+    {
+      "path": "library/text/svg/Engravers Gothic W01 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Engravers%20Gothic%20W01%20Bold.svg",
+      "sha256": "8310336e9f92fa442d49329319433ec431fe9f8f1b1985583eced5e0f022e564",
+      "bytes": 71020
+    },
+    {
+      "path": "library/text/svg/Eveleth W01 Clean Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Eveleth%20W01%20Clean%20Regular.svg",
+      "sha256": "9996fb4754d5bb7ccfb5dbf8fc9e121bf9dcf6eaf79dcac770531b4410100d51",
+      "bytes": 287186
+    },
+    {
+      "path": "library/text/svg/Filson Soft W03 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Filson%20Soft%20W03%20Regular.svg",
+      "sha256": "e5701ab5a3adf67e56035926b3951fc6ca253a0e8cdab38345638de3bfa903c8",
+      "bytes": 515400
+    },
+    {
+      "path": "library/text/svg/Font Awesome 5 Free Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Font%20Awesome%205%20Free%20Regular.svg",
+      "sha256": "a7e8d561d929e0bb97bd9f45a0a2a9d228376ea4f6fdb791c67715b725533e98",
+      "bytes": 95058
+    },
+    {
+      "path": "library/text/svg/Font Awesome 5 Pro Solid.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Font%20Awesome%205%20Pro%20Solid.svg",
+      "sha256": "19fc14a219aac84d87bb3a6cec390cd1ace735117cd359234b38a261f3d1e34d",
+      "bytes": 505386
+    },
+    {
+      "path": "library/text/svg/Futura PT Medium.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Futura%20PT%20Medium.svg",
+      "sha256": "2d2e2d37a3b0ed02948960ed6259c7e642f68d049956d721e96803efae0f2fbb",
+      "bytes": 500032
+    },
+    {
+      "path": "library/text/svg/GT Walsheim Pro Bold Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/GT%20Walsheim%20Pro%20Bold%20Regular.svg",
+      "sha256": "4fe77eae61e50e074e6f612a526a6229bd30494b9b2955c7992da077ff901710",
+      "bytes": 122604
+    },
+    {
+      "path": "library/text/svg/GT Walsheim Pro Regular Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/GT%20Walsheim%20Pro%20Regular%20Regular.svg",
+      "sha256": "84be1c490236b65bb0e16075542b2bb5e0815044e7b7ad608f27de208ed5213a",
+      "bytes": 124529
+    },
+    {
+      "path": "library/text/svg/Geom Graphic W03 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Geom%20Graphic%20W03%20Regular.svg",
+      "sha256": "c0305453ea36a4e3ec49e6e6973c706fd6b366ad47a6bf986b905083410df4b3",
+      "bytes": 222442
+    },
+    {
+      "path": "library/text/svg/Graffiti Classic W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Graffiti%20Classic%20W01%20Regular.svg",
+      "sha256": "d5e93ab8fd3e91ba97a55da43e7b9c9cbf05884d8180dae55cd5c4baee18ec73",
+      "bytes": 729998
+    },
+    {
+      "path": "library/text/svg/Graphique W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Graphique%20W01%20Regular.svg",
+      "sha256": "879093c417033afd0667b79b202848838823757c7ea2db4a07a0ae0d60c05105",
+      "bytes": 84513
+    },
+    {
+      "path": "library/text/svg/Helvetica Neue Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Helvetica%20Neue%20Regular.svg",
+      "sha256": "c77e3b268dda276fe81f79ab0929c760c81a438376bccd810ebaed7bae34f12a",
+      "bytes": 61575
+    },
+    {
+      "path": "library/text/svg/Helvetica Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Helvetica%20Regular.svg",
+      "sha256": "f255582a3391108fada95d2ec99c73229b898c8b986398b3cf76d7a631dd5117",
+      "bytes": 57386
+    },
+    {
+      "path": "library/text/svg/ISOCTEUR V1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/ISOCTEUR%20V1.svg",
+      "sha256": "c6aeff39149adb4c8ea6cca603415de019483581478d3a04dabad8b304f0983c",
+      "bytes": 188483
+    },
+    {
+      "path": "library/text/svg/ITC Medea W01 Extra Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/ITC%20Medea%20W01%20Extra%20Bold.svg",
+      "sha256": "7ba0f7f43734e376b9e84eaabbda90687f407ef3db2f3542803a410018a660ef",
+      "bytes": 78765
+    },
+    {
+      "path": "library/text/svg/Juventus Fans Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Juventus%20Fans%20Bold.svg",
+      "sha256": "256197617fac202b8014617fabd9ab2e35956e1b4b1de0ee7690dd6e216d14f7",
+      "bytes": 169099
+    },
+    {
+      "path": "library/text/svg/Kefa-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Kefa-Regular.svg",
+      "sha256": "7e7401f2cf14ff90c46d278e458c73de52df9ec371ca0df9fe248ea78b261bd3",
+      "bytes": 621101
+    },
+    {
+      "path": "library/text/svg/Kessel 105 W00 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Kessel%20105%20W00%20Bold.svg",
+      "sha256": "6b02904a87acbd86b22b5901b70aa09343a7885403ccf2d3877207418cf01cb1",
+      "bytes": 152046
+    },
+    {
+      "path": "library/text/svg/Kestrel W00 Script.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Kestrel%20W00%20Script.svg",
+      "sha256": "35e77efc1cb5845094552ea524f353db32d59730b09ba98438bf17db8e527f80",
+      "bytes": 125749
+    },
+    {
+      "path": "library/text/svg/Leadville W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Leadville%20W00%20Regular.svg",
+      "sha256": "d993a16f8acbe449969dd85b5fe0eaecd5888c59e107af9cfe28730ecadfee4d",
+      "bytes": 80904
+    },
+    {
+      "path": "library/text/svg/Lulo Clean W01 One Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Lulo%20Clean%20W01%20One%20Bold.svg",
+      "sha256": "0e703d7d7b27c6fb172b24becdaa8efffa7756614a13130c685e4dc0b22d052d",
+      "bytes": 252506
+    },
+    {
+      "path": "library/text/svg/M Ying Hei PRC W48 W7.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/M%20Ying%20Hei%20PRC%20W48%20W7.svg",
+      "sha256": "7ad5635f3b4858bde9c499489a8fdf33089d360b383b9fcf88c28f494892e3b0",
+      "bytes": 18555482
+    },
+    {
+      "path": "library/text/svg/Maison Neue Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Maison%20Neue%20Bold.svg",
+      "sha256": "714ebcac89bc278c5d5d3d011fcbd723a569073582d1ff2ab584f9d36d158f6f",
+      "bytes": 231994
+    },
+    {
+      "path": "library/text/svg/Mark Pro Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Mark%20Pro%20Bold.svg",
+      "sha256": "13acb15c1f02149f4aee7074cf914bb94e91911d209cd2414eff38437b15d7db",
+      "bytes": 624336
+    },
+    {
+      "path": "library/text/svg/Marzo W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Marzo%20W00%20Regular.svg",
+      "sha256": "e580aeaf102e9f04efbff4c4c93bcb25f3147e74e6565e1d262475f59e4f1605",
+      "bytes": 87657
+    },
+    {
+      "path": "library/text/svg/Meiryo UI W53 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Meiryo%20UI%20W53%20Regular.svg",
+      "sha256": "a269934f2eeadb76637d26febb342135ff2db31b48715e770fe203e8c6aadcb7",
+      "bytes": 13769474
+    },
+    {
+      "path": "library/text/svg/Miedinger W01 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Miedinger%20W01%20Bold.svg",
+      "sha256": "99ba44b93e0c520297a54a6a3cbc2585186b425acded6ebc0eeb2a0cc9271a2f",
+      "bytes": 173303
+    },
+    {
+      "path": "library/text/svg/MonoLisa-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/MonoLisa-Regular.svg",
+      "sha256": "77d8875a5cf480cc26689c8e6872c48beb8bc91e6edf3f852aee08ac87f82c21",
+      "bytes": 139302
+    },
+    {
+      "path": "library/text/svg/Monotype Script W01 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Monotype%20Script%20W01%20Bold.svg",
+      "sha256": "a5e5ace974b4e6bcb0bd746c301706415cc2b4ae81fab9ed1b16069696e37a93",
+      "bytes": 109826
+    },
+    {
+      "path": "library/text/svg/MotoGP Display Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/MotoGP%20Display%20Bold.svg",
+      "sha256": "83afd914da64f09fc5a5b87f476629b462860d3fa70f5e858ed660dfe0fa4f95",
+      "bytes": 221540
+    },
+    {
+      "path": "library/text/svg/Museo Sans 100 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Museo%20Sans%20100%20Regular.svg",
+      "sha256": "ca34487779f57587f32bb6884b2ec389cc0f75622ae74dfec53bc2980fd56f0e",
+      "bytes": 100408
+    },
+    {
+      "path": "library/text/svg/Museo W01 900.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Museo%20W01%20900.svg",
+      "sha256": "b613a7efdae8caea3b97051c9772879fa275c70aeb4bed991f307d8ca598019c",
+      "bytes": 121175
+    },
+    {
+      "path": "library/text/svg/MuseoSans-900.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/MuseoSans-900.svg",
+      "sha256": "5cdb9abbd080a026879e1ce9dc9b452c9843ec51d7459189200c443f43c04dc5",
+      "bytes": 199191
+    },
+    {
+      "path": "library/text/svg/Mustang W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Mustang%20W01%20Regular.svg",
+      "sha256": "c65c6c7ad91ff155ea12231cab745e12d109346582967119463412789d0e56a0",
+      "bytes": 1036132
+    },
+    {
+      "path": "library/text/svg/NAB Impact.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/NAB%20Impact.svg",
+      "sha256": "3094fc0700d139637728ff0f658bd583c95af9d0540f4fc4e92bf7d259ad2fd8",
+      "bytes": 52234
+    },
+    {
+      "path": "library/text/svg/Neue Einstellung Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Neue%20Einstellung%20Bold.svg",
+      "sha256": "9ab7141a1cb1b37dc3b81ca535957de68923c26fb9a290c3bac49729fb9837c9",
+      "bytes": 117990
+    },
+    {
+      "path": "library/text/svg/Neue Haas Grotesk Display Pro 75 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Neue%20Haas%20Grotesk%20Display%20Pro%2075%20Bold.svg",
+      "sha256": "d9ddf5dd398af850c308e8cd9e7d66375ffb4ba8986d7dc1a7fb0c37da6e5c5d",
+      "bytes": 418092
+    },
+    {
+      "path": "library/text/svg/Neurial Grotesk Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Neurial%20Grotesk%20Regular.svg",
+      "sha256": "bfa2b78477e666364cb38af91fd3890e6798e176f993e80681dce28293cdb60e",
+      "bytes": 220504
+    },
+    {
+      "path": "library/text/svg/Nexa W01 Heavy.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Nexa%20W01%20Heavy.svg",
+      "sha256": "7d854df0bdbec37f00735160e23aa146911bd506396e476c5aed9c8471699d76",
+      "bytes": 124872
+    },
+    {
+      "path": "library/text/svg/NexaBlack.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/NexaBlack.svg",
+      "sha256": "085f90b4675ee06e4c2613b6a2cc34686725cea9617fa4eea7b2ca99c40dbc7c",
+      "bytes": 331911
+    },
+    {
+      "path": "library/text/svg/Noto Sans V2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Noto%20Sans%20V2.svg",
+      "sha256": "3b73f336749ed0d06b8c527c11730ce362135186da980553fb2beb6e555ace91",
+      "bytes": 1620865
+    },
+    {
+      "path": "library/text/svg/Novecento WideNormal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Novecento%20WideNormal.svg",
+      "sha256": "8ffbe94bdb448eb86a68323869974bdc37a238bd33e1330f17d5096199fe5b03",
+      "bytes": 167286
+    },
+    {
+      "path": "library/text/svg/Omnes Light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Omnes%20Light.svg",
+      "sha256": "a7adb4a6ed174cfd9f3d14d2df902af23e2c5393b6e622cbdd8f0dbfb1e1edb0",
+      "bytes": 88370
+    },
+    {
+      "path": "library/text/svg/Posterama 2001 W04 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Posterama%202001%20W04%20Bold.svg",
+      "sha256": "6d2d4136d4fe98d022482923b069e44dbb7e773054970a95190a91235e77cfc4",
+      "bytes": 331730
+    },
+    {
+      "path": "library/text/svg/Posterama 2001 W04 Light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Posterama%202001%20W04%20Light.svg",
+      "sha256": "0c3e93df7adc12eacf61a190c045a971169731e4afcf6f875d6fd19914ab4368",
+      "bytes": 331848
+    },
+    {
+      "path": "library/text/svg/Radikal Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Radikal%20Bold.svg",
+      "sha256": "704edfe5e903a30a7208589abe81106f92fedb289747c4dba6bf241fa39f86f9",
+      "bytes": 188227
+    },
+    {
+      "path": "library/text/svg/Radikal W03 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Radikal%20W03%20Regular.svg",
+      "sha256": "50eb8aa7be16f64222fbc62363cdca5eb460ef024e43d9417b45047a0eae973b",
+      "bytes": 208939
+    },
+    {
+      "path": "library/text/svg/Replica-Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Replica-Bold.svg",
+      "sha256": "2607ac5c26b2d12b13a810943fa0728cbb681eb97292dbe8efa9ca61b4d2f134",
+      "bytes": 466298
+    },
+    {
+      "path": "library/text/svg/Rossetti W00 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Rossetti%20W00%20Regular.svg",
+      "sha256": "b24f850db78f8877408fa4c8132d6b9ec9ec43a2c3ba5eed047d385864920cf8",
+      "bytes": 42148
+    },
+    {
+      "path": "library/text/svg/SF Pro Display Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/SF%20Pro%20Display%20Bold.svg",
+      "sha256": "f4bb33a32952fd0b5691336e36d7bbc6af4e88ae58d0029250cf82bd8dde92b8",
+      "bytes": 2551495
+    },
+    {
+      "path": "library/text/svg/SF Pro Text Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/SF%20Pro%20Text%20Regular.svg",
+      "sha256": "e2a9c841f2a8474426db929182eec0bf9fb43547e3788c097707af25ccf2c32d",
+      "bytes": 2006475
+    },
+    {
+      "path": "library/text/svg/STC Forward Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/STC%20Forward%20Regular.svg",
+      "sha256": "b6ec88e666018ad485b86d3d338994dca0ca42b1c82df0d10e25e8cfe6dfaba9",
+      "bytes": 511150
+    },
+    {
+      "path": "library/text/svg/STHeiti TC Medium.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/STHeiti%20TC%20Medium.svg",
+      "sha256": "2b1c87fa6dd4271c183882c2278a4fe1694199da26d8b65681a383f8ab69bb44",
+      "bytes": 28322781
+    },
+    {
+      "path": "library/text/svg/San Francisco Display Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/San%20Francisco%20Display%20Bold.svg",
+      "sha256": "d3c41f7b52bd8dbd03e7e6f02ca1376a7e76bc51467b87175a4f8f6391ab0504",
+      "bytes": 1005888
+    },
+    {
+      "path": "library/text/svg/Sans.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Sans.svg",
+      "sha256": "cf5c77422bb1a7bd6dddb0150cf8cffdb5e952baa3d2d0bed129d7cf6519360a",
+      "bytes": 76997
+    },
+    {
+      "path": "library/text/svg/SaolDisplay-Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/SaolDisplay-Regular.svg",
+      "sha256": "b0b5cef524c6219edce06f9dec59554db9417b5a57beaca796f283a20f2ecbdc",
+      "bytes": 849608
+    },
+    {
+      "path": "library/text/svg/SharpSansNo1-Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/SharpSansNo1-Bold.svg",
+      "sha256": "eb66ff5b194248ba18215d927e480653506d611c0ad89fe4ceafc597f74c91be",
+      "bytes": 414661
+    },
+    {
+      "path": "library/text/svg/Shree Devanagari 714.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Shree%20Devanagari%20714.svg",
+      "sha256": "59266d214e2464218cb13101bf672a510f8e03d7a984d7df49fbcde2057b9f73",
+      "bytes": 189489
+    },
+    {
+      "path": "library/text/svg/Sitka Banner.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Sitka%20Banner.svg",
+      "sha256": "7ff9ac3e8d48fb363756950d0d82c9e60adc74b21103e2d05911102960a95750",
+      "bytes": 1000826
+    },
+    {
+      "path": "library/text/svg/Suisse Int'l Medium.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Suisse%20Int%27l%20Medium.svg",
+      "sha256": "626d624b7852eb1af108a0a50435f3f0af9d3861457dfab8a5c6ccdd03ea7e18",
+      "bytes": 204058
+    },
+    {
+      "path": "library/text/svg/TSTAR W00 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/TSTAR%20W00%20Bold.svg",
+      "sha256": "2ee88333fa984d3e76fdda1580ab33ea07c80d967fc57ac26f66fcac39c3aeb8",
+      "bytes": 129182
+    },
+    {
+      "path": "library/text/svg/Termina W05 Bold.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Termina%20W05%20Bold.svg",
+      "sha256": "e72a7ef62a5e41309d57cd55dc4a0e1429f1f6ca169d7d8e25d567937a0fb495",
+      "bytes": 565880
+    },
+    {
+      "path": "library/text/svg/VIP W01 Regular.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/VIP%20W01%20Regular.svg",
+      "sha256": "dd3cfac9c0c5e953e4fd02436bc6574acf399d31e0d0c5ce1b24da9310276cc0",
+      "bytes": 147466
+    },
+    {
+      "path": "library/text/svg/Veneer W01 Two.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Veneer%20W01%20Two.svg",
+      "sha256": "bf154a047d0c11272c41e1f63cab9019b8a92576a67618804f5a43cf6c87011d",
+      "bytes": 3211027
+    },
+    {
+      "path": "library/text/svg/Volvo Novum Light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Volvo%20Novum%20Light.svg",
+      "sha256": "5d5b7f6c828692269261a8278933ec5f998dc5edbcfe6811f3e99c1315fd8d8a",
+      "bytes": 275535
+    },
+    {
+      "path": "library/text/svg/Zinger W00 Italic.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/building-py/291cc79d27dd820bd79ea05209bca29e0ff0a34d/library/text/svg/Zinger%20W00%20Italic.svg",
+      "sha256": "b3f948472d0167d85aa2fb1338daca6fc2f486482955e920a5ed7f7344576a8a",
+      "bytes": 143028
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [],
+  "errors": [],
+  "commit": "291cc79d27dd820bd79ea05209bca29e0ff0a34d",
+  "files_scanned": 456,
+  "ui_stack": [],
+  "icon_packages": []
+}

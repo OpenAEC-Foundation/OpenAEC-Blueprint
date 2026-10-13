@@ -1,0 +1,484 @@
+{
+  "name": "open-geotechniek-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio",
+  "branch": "main",
+  "description": "Viewer of CPT's. GEF / BRO-xml ",
+  "archived": false,
+  "license": "UNKNOWN",
+  "icons": [
+    {
+      "path": "apps/desktop/public/file-icons/gef.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/file-icons/gef.svg",
+      "sha256": "6835f8ba4065b596ad21e5f4c4c6bdcaa3a693b080945e916550aa29942b6dd4",
+      "bytes": 2398
+    },
+    {
+      "path": "apps/desktop/public/file-icons/ifcgeo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/file-icons/ifcgeo.svg",
+      "sha256": "796bff5d726f3022fed2f9b9b504ce6e94bbe977081f539e4a423c7d0e63f466",
+      "bytes": 1784
+    },
+    {
+      "path": "apps/desktop/public/file-icons/ifcgis.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/file-icons/ifcgis.svg",
+      "sha256": "f053fcd5841826b19c6ed52862415b3d537709919e53160fcb9e3e40cd3224d3",
+      "bytes": 2041
+    },
+    {
+      "path": "apps/desktop/public/open-geo-studio-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/open-geo-studio-icon.svg",
+      "sha256": "06ad050d9661799aef53827f3237474af85f19d8de00ccede249d4a060d5fb1a",
+      "bytes": 2438
+    },
+    {
+      "path": "apps/desktop/public/open-geo-studio-wordmark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/open-geo-studio-wordmark.svg",
+      "sha256": "f5c8cb0238c165d7810ae9463f732ddac7326a77926f5707f2f22368e5dce60f",
+      "bytes": 2285
+    },
+    {
+      "path": "apps/desktop/public/tauri.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/tauri.svg",
+      "sha256": "e5d2738bbaa5543c4684001a558dc53165da9b636144827b28db1dcfacf81aa8",
+      "bytes": 2599
+    },
+    {
+      "path": "apps/desktop/public/vite.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/public/vite.svg",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+      "bytes": 1497
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/128x128.png",
+      "sha256": "c3bcb39d7eadecb6fa700e5b22a8beea349865654a6221d8c0548f67b966f953",
+      "bytes": 1379
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/128x128%402x.png",
+      "sha256": "f3fb52bce09e5205f7331218d64e5718f4e2b16d33a4b5db1bd3511a886f1fb3",
+      "bytes": 2411
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/256x256.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/256x256.png",
+      "sha256": "bddcce5dea80f14d0b605a49f412e8bf4445d95bf59ff63ffc1bea6cf7a8189d",
+      "bytes": 7223
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/32x32.png",
+      "sha256": "e3c3a8cd294df3bc7dfca837007eac16bf73ac543141102f7684afdf30244159",
+      "bytes": 542
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/64x64.png",
+      "sha256": "4e025fd27a3c6ecdabc05295372fdba441e10db6a83b792a665d1cb2aee0211b",
+      "bytes": 884
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "cad0f49ca854acacd9641c3b0c6779d17e18900e096e80d97d740b3d4c64accf",
+      "bytes": 1554
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "758cf645a11d4dadf8bcc1b937b4ff516e991688a4806b941a73624d63677aff",
+      "bytes": 1715
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "7a9bf9175d79229d877b0004f9383f5a1603f345f49008050100f3893e908598",
+      "bytes": 1676
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "1ef973e93d80bd722f4761e41320d433ccb9f199725dc5e93d7fb4f082d147bb",
+      "bytes": 2947
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "5ed68a0b1bf752a57d5b7a50e15f45c395ad67a8cc3cba36387b59e75fc7032a",
+      "bytes": 617
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "ff1c75835c4827c6f2914e137f251030aed2ca45e79e60d9e2277b6d8f6c299a",
+      "bytes": 3206
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "993675b510290d2f63fecb3e89e3ffec181303f6b64666452062323e85095a14",
+      "bytes": 835
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "88a0e869bcaf5423b1458c6bdef3d48c50f8aab33f388cdaf8588f32c96dea07",
+      "bytes": 1221
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "ab81212d385d1ad665597815619f0a43e0741a1baf569cbe7943ce4ccf396ef9",
+      "bytes": 1405
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/StoreLogo.png",
+      "sha256": "2a66d2f2225530d04daf58dd44f3af8873af487700372f4cdcff47805a6840ed",
+      "bytes": 907
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "e8d12e4eab95944c8af828f4b72eee1053472f7dd8d7c037cb46e4fc5f2f31ca",
+      "bytes": 1534
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "0c668b0856b3f3524043989815b209a7d226ca3a094136d2b60680fb680d1361",
+      "bytes": 1850
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "54c3ab017d3438f57c8d24f78b9a338737cd7e1e70520b6a13eeda5f79819764",
+      "bytes": 1615
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "7811d75b400a263270c5571253dd6b3b552ff1dfc3d4051c151d67785ee3d3f9",
+      "bytes": 1462
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "233d2b912ba1152da1b0a7c9ab027abd856382d5f42d6c59da038183c1e57fb5",
+      "bytes": 1590
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "9e66a8c919339f996bbc365a065059dc3b6297e2711cdac23307858e47af094f",
+      "bytes": 1566
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "3f04b5072f61cf699012810ea8d36ad318be16ad4e0be868c4d0fd47cffd9f32",
+      "bytes": 2801
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "3de2fffec0915860033045afb7795e630c4b2cdff9eafc93e1f255e1709ce363",
+      "bytes": 2256
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "dbdc16cbed70b6f12d2c05d8f9a0ea2dddd44a60d1bb6b7bd62bdcee3578a65d",
+      "bytes": 3177
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "ca9eab32e80c72444fa037bf888612c95b2b544e5e98b3bafc3564f57a19889c",
+      "bytes": 4277
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "cbab211bca33378bf430cb5e4fdc49250df668a23cdd252c7cf92ba26a36d770",
+      "bytes": 3291
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "453209f22fac6ef392fdc6beec4f543e439fae4491d3173327d36411a26c68c2",
+      "bytes": 4893
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "0ea890143af64e170049b0f6bbb14810de09d685ed6526b58010f6336d4f2273",
+      "bytes": 4819
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "0d8ca37e2cc812bdd7011ce9cdaf5c60a2e10f3dcd91cc658c8ae3b2f6aa935c",
+      "bytes": 4248
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "21ab652a4c4be400af74f6aa12a2d2584e193c443d0e0c4a80741cacb44c0e5d",
+      "bytes": 6381
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/file-associations/gef.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/file-associations/gef.ico",
+      "sha256": "d4a28c498b693e59e3eb59ceb5aa265f7bd263c0de359e09555b74493beadc31",
+      "bytes": 12220
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/file-associations/ifcgeo.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/file-associations/ifcgeo.ico",
+      "sha256": "7581362ef226797ab072ea37be3bdb784fab57cc3cca5f9ab6e86ba7896cb4a8",
+      "bytes": 15787
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/file-associations/ifcgis.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/file-associations/ifcgis.ico",
+      "sha256": "8e3eafe016c726f5577a9af01f408cff9a5846202330327eda284c9173396804",
+      "bytes": 14969
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/icon.icns",
+      "sha256": "b7de6555ea6b903e05072a1c7ffe9ad4c6a3a6c75c13b8167683e69e82aeaff6",
+      "bytes": 31929
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/icon.ico",
+      "sha256": "b298d70500aeec5c01f7f08671e442e3487cc25663a58c07968494be8367159e",
+      "bytes": 6600
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/icon.png",
+      "sha256": "b5b6addc4b60cf8f01e25f04dfc8e15bb4c1ac84692bc234d2fae576c750a62d",
+      "bytes": 4866
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/icon_large.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/icon_large.png",
+      "sha256": "bdc060cf9b2f11d25523157fb2b07b6381a6f8c1e48f0baf5f6695003f0b26d4",
+      "bytes": 44906
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "100cd9e8776838f22ea71a366ad6c05cbfec6fc401b54eff1e7e550b99c366ce",
+      "bytes": 450
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "d693417cb5d9c8ceb3471cc1441fdc0a21077f237d3558efc83c6a4c96bad4cf",
+      "bytes": 784
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "d693417cb5d9c8ceb3471cc1441fdc0a21077f237d3558efc83c6a4c96bad4cf",
+      "bytes": 784
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "2db06651c5aa10a0117bf2d56706ca6311c933001bcdd1072acae3b751e98d9a",
+      "bytes": 1040
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "58e72bd6f9931ef545cfde535c7cea829a5f0df801fd6219d17e6f370ee974ad",
+      "bytes": 644
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "1e743bc29be4768dd593ed4bdc2c41f4703bc68b7e7e223183569e9ba08894eb",
+      "bytes": 1034
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "1e743bc29be4768dd593ed4bdc2c41f4703bc68b7e7e223183569e9ba08894eb",
+      "bytes": 1034
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "c037c0dde5d6ae5b1a3e78a2633f0ca3bdfd0887dc6f8e2cbf117614f433a2df",
+      "bytes": 1405
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "d693417cb5d9c8ceb3471cc1441fdc0a21077f237d3558efc83c6a4c96bad4cf",
+      "bytes": 784
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "94e804bad92f4fd59eb1caabfa9f955c644d198fa7a6c4443839fc68f02d02e1",
+      "bytes": 1223
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "94e804bad92f4fd59eb1caabfa9f955c644d198fa7a6c4443839fc68f02d02e1",
+      "bytes": 1223
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "54278d8fd4b7bfe06215b399402a51c0a2720982b08beb54daf346d6e525994f",
+      "bytes": 1647
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "b4d9b0278d5461b9e92d8e12e0ad3a3da3990fcc236e2af3f403ef618586075c",
+      "bytes": 11071
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "54278d8fd4b7bfe06215b399402a51c0a2720982b08beb54daf346d6e525994f",
+      "bytes": 1647
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "4f5fd748e20ff9afe2e01a1d7b67d85d72b0c3001998341a55547b969c72cf55",
+      "bytes": 2021
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "8473fabe199d590ec9242b992a16ec6aee8ecbc91211c68e4ae8a2b88e29027d",
+      "bytes": 1246
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "e9f040efb8c08fcdf68d9e8ba82314a7e284f6ebc0a200c38b56c2e1becce06b",
+      "bytes": 1790
+    },
+    {
+      "path": "apps/desktop/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "2ab456aee382fd59a366123842674faf63c054be80f5176ad349d888681c0e3c",
+      "bytes": 1967
+    },
+    {
+      "path": "apps/desktop/src/assets/react.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "bytes": 4126
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "apps/desktop/src/components/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/icons.ts",
+      "sha256": "eb6168a3a7078751795ffad7442b320dc6cce036df692f1666fcc9786c621f79",
+      "bytes": 13209
+    }
+  ],
+  "manifests": [
+    {
+      "path": "apps/desktop/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/package.json",
+      "sha256": "203ea7b468b15258e66e4f6a486ed3211c9d0f704cf8cc2613309d3dbe7a9298",
+      "bytes": 1461
+    },
+    {
+      "path": "apps/desktop/src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-geotechniek-studio/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src-tauri/Cargo.toml",
+      "sha256": "2030203427fec0214cf362e70a83ee5de15c8bd3e7eec06fd6940b01dbfec192",
+      "bytes": 2179
+    }
+  ],
+  "errors": [],
+  "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+  "files_scanned": 341,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": []
+}

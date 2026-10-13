@@ -1,0 +1,521 @@
+{
+  "name": "OpenAEC-style-book",
+  "url": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book",
+  "branch": "main",
+  "description": "Open AEC tools and resources",
+  "archived": false,
+  "license": "CC-BY-SA-4.0",
+  "icons": [
+    {
+      "path": "brandbook/assets/colors/color-palette.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/colors/color-palette.svg",
+      "sha256": "5b2de61996e8a2f45c2e05390a9ec071048423e1bbae8a6e564ff88a543c803b",
+      "bytes": 4169
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/background-pattern-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/background-pattern-dark.svg",
+      "sha256": "ced927477bb7c2b761e913e75a988a7bc8e09ef5063f1daaefa22f32b7e62ace",
+      "bytes": 7822
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/background-pattern-tileable-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/background-pattern-tileable-dark.svg",
+      "sha256": "891ba91a0a8b14d02dfab8698031e8ded8e0317f7096b48b5071e7701bdac4be",
+      "bytes": 3081
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/hero-banner-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/hero-banner-dark.svg",
+      "sha256": "8cf32b023d6b30d2b09508e12314cc6b604b28b04cd92f7d46471f3d7a00acb1",
+      "bytes": 9103
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/hero-banner-transparent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/hero-banner-transparent.svg",
+      "sha256": "597bea64f0ed825d29bce93b7a8f2c7ad9ca035a8eeda3cfa8870946f9baf2e6",
+      "bytes": 8587
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/letter-header-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/letter-header-dark.svg",
+      "sha256": "e80c695a5883700173d2aedea245dbece042968a226d4a8b214760999d4bb6c6",
+      "bytes": 2373
+    },
+    {
+      "path": "brandbook/assets/illustrations/svg/report-header-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/illustrations/svg/report-header-dark.svg",
+      "sha256": "4d39f9fc159513f6b453d1e1dc01255fa71d35c3769e98a3e0fa5d7c158a734e",
+      "bytes": 5767
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-amber-on-dark-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-amber-on-dark-1x.png",
+      "sha256": "e7ecd6655d35fcb5c097665a94d1ba4437377503726d25b386f515e698a9aa05",
+      "bytes": 6964
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-amber-on-dark-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-amber-on-dark-2x.png",
+      "sha256": "ce72de1a099362e8464e4b5e79ad8d42806d19c5c2a838478a4510c72bf68bed",
+      "bytes": 14123
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-amber-on-dark-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-amber-on-dark-3x.png",
+      "sha256": "10f758206e2b7b501f8fe9aa0e1de5a1ad35ec939201fd6774e4eb6c67435e91",
+      "bytes": 24379
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-dark-on-light-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-dark-on-light-1x.png",
+      "sha256": "5197380ef15a9a9d65f11fe691403eb317da97bc244ad2a09d523e3878005fa8",
+      "bytes": 6968
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-dark-on-light-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-dark-on-light-2x.png",
+      "sha256": "d3918f74d871246e49acd7289090e0e5d068877b2e7756be831a37fd77b21f63",
+      "bytes": 14333
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-dark-on-light-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-dark-on-light-3x.png",
+      "sha256": "98b06d9421aba6d20171e007dee83864d4c0ece143bd9cef2eb95974d369ce64",
+      "bytes": 24648
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-white-on-dark-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-white-on-dark-1x.png",
+      "sha256": "f05f053054551fdc28c2d94fb1850b0f05338f38e467c2d595f0c1558bbe7555",
+      "bytes": 7031
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-white-on-dark-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-white-on-dark-2x.png",
+      "sha256": "cf6597925f7b216d038cfe357e0d2a4c9a81a0558178f6a627b4a0209d89644d",
+      "bytes": 14180
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-logo-white-on-dark-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-logo-white-on-dark-3x.png",
+      "sha256": "2ad18b81a459de16b0d86186ac6cfd44a62e3a727073579be96813c50c1272ef",
+      "bytes": 24412
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-amber-on-dark-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-amber-on-dark-1x.png",
+      "sha256": "f5d71b1db9536c5b3dd0945778b32c5245a38f7cf2d8a293c5f748a4c31ea020",
+      "bytes": 6833
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-amber-on-dark-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-amber-on-dark-2x.png",
+      "sha256": "92a9bbeb92f572f8762c315a98955c0f3f6ca3e56dfde0f35ca3824ef07ac725",
+      "bytes": 13900
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-amber-on-dark-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-amber-on-dark-3x.png",
+      "sha256": "9ebebda5eeedd34a042709a92db4054e61d92883bd2ffac3bcb5d931290da905",
+      "bytes": 21504
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-dark-on-light-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-dark-on-light-1x.png",
+      "sha256": "430f79c1563d5595243ca8e8b88da292faba75f9ecd1bf2597a1fde554313142",
+      "bytes": 6963
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-dark-on-light-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-dark-on-light-2x.png",
+      "sha256": "914d5c0a4cb441ad532d75ed6f404c4f38e538b7edbf47a2bce5c507da7cfe96",
+      "bytes": 14235
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-dark-on-light-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-dark-on-light-3x.png",
+      "sha256": "1dedc55064c0b1f17c4d1f2c6622bd3a934b29a6a53c3b092016016e914416a3",
+      "bytes": 21965
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-transparent-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-transparent-1x.png",
+      "sha256": "5aaf4647faead6d04dfa412ce3d23f05d56b3c4138d544e383f896936972b709",
+      "bytes": 8069
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-transparent-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-transparent-2x.png",
+      "sha256": "a39a12cd9d4ba4f9efec05147ef4d7d12e3ac23eb1e1e2799c81528bc57ec161",
+      "bytes": 16452
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-transparent-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-transparent-3x.png",
+      "sha256": "b8f085cee42f6b831cca5359d471db5ee8c8f5b45c8825a23fed3a343d8a174e",
+      "bytes": 26116
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-white-on-dark-1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-white-on-dark-1x.png",
+      "sha256": "16992badd2edec5d990d0e92068d2893876f10c014b6da2071ddd31f47482c6a",
+      "bytes": 6884
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-white-on-dark-2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-white-on-dark-2x.png",
+      "sha256": "df7c85150fa7b2a5506f9329781e50cbd40989f65f4418f5118023ce2a000976",
+      "bytes": 14245
+    },
+    {
+      "path": "brandbook/assets/logo/png/openaec-symbol-white-on-dark-3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/png/openaec-symbol-white-on-dark-3x.png",
+      "sha256": "701fe0b8a963a57386e98e7d299b481a1ccb691b9d4dfce3c51a7b372fe0426a",
+      "bytes": 21749
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-logo-amber-on-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-logo-amber-on-dark.svg",
+      "sha256": "275a7080ab499a98d0678a8984df60383c3a76dde1eeb35de258a798eb76b2d3",
+      "bytes": 2302
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-logo-dark-on-light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-logo-dark-on-light.svg",
+      "sha256": "f4f8d936df051447eb8669be3631666a4bce6801b6afc547e7de1b420ed3efd5",
+      "bytes": 2249
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-logo-v2-amber-on-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-logo-v2-amber-on-dark.svg",
+      "sha256": "f7d26e037a3d7cba9f1bdbdc2728ddee2f76021850dde89b0b39503cc489ab9b",
+      "bytes": 3467
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-logo-v2-dark-on-light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-logo-v2-dark-on-light.svg",
+      "sha256": "789adf2589edc2734786bd4270ac4a8844bc03f4ca9ca58069475db22b76a04b",
+      "bytes": 3304
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-logo-white-on-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-logo-white-on-dark.svg",
+      "sha256": "9ef9356f883be9586caab8ba53d3c30028ff4d20b56032c10df37d591c5a5b10",
+      "bytes": 2254
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-symbol-amber-on-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-symbol-amber-on-dark.svg",
+      "sha256": "a83d276d52ba00e5fe1750ed10a5dec7c3168cb0d6ccc77999550a7d966c4859",
+      "bytes": 3178
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-symbol-dark-on-light.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-symbol-dark-on-light.svg",
+      "sha256": "fdd9c77885ad01f42cb5003d299e203a543b59931c4ee4c5b4137395531812cd",
+      "bytes": 2123
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-symbol-transparent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-symbol-transparent.svg",
+      "sha256": "e306dd20153a1503d0084e174063ffd41c6e3dfdf9c2babfa85124e19caee4ff",
+      "bytes": 2130
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-symbol-v2-transparent.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-symbol-v2-transparent.svg",
+      "sha256": "9d0bf488a3945e968a9955ff4d968e8d8ac31db6c81b71fef7e2260492a7fba6",
+      "bytes": 2286
+    },
+    {
+      "path": "brandbook/assets/logo/svg/openaec-symbol-white-on-dark.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/logo/svg/openaec-symbol-white-on-dark.svg",
+      "sha256": "202955c82afbca38415bbedb5827b255f44cc8032b562e8bf32d419bdf30da36",
+      "bytes": 2136
+    },
+    {
+      "path": "brandbook/assets/social/linkedin-header.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/social/linkedin-header.svg",
+      "sha256": "ffa11a5b7b3458275ffe863375b071ad59f79d8be3861cfd177f9d6b3f2fd48c",
+      "bytes": 11699
+    },
+    {
+      "path": "brandbook/assets/social/linkedin-profile.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/social/linkedin-profile.svg",
+      "sha256": "79b1b2cc790e75a76ab88294268d1716e71059667cb71e0cc834c37e67746376",
+      "bytes": 3866
+    },
+    {
+      "path": "brandbook/assets/social/png/openaec-logo-v2-amber-on-dark.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/social/png/openaec-logo-v2-amber-on-dark.png",
+      "sha256": "c1b490795cdcc5069d8ee82854adb71e14871e1371b01fddbb5dcbe4177d3d7f",
+      "bytes": 31698
+    },
+    {
+      "path": "brandbook/assets/social/png/openaec-logo-v2-dark-on-light.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/brandbook/assets/social/png/openaec-logo-v2-dark-on-light.png",
+      "sha256": "6a76628e01843415643a3f3829b0a898c6462080a27b0bdb3d0737ae415dd25b",
+      "bytes": 31131
+    },
+    {
+      "path": "project-templates/Tauri+React/public/tauri.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/public/tauri.svg",
+      "sha256": "e5d2738bbaa5543c4684001a558dc53165da9b636144827b28db1dcfacf81aa8",
+      "bytes": 2599
+    },
+    {
+      "path": "project-templates/Tauri+React/public/vite.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/public/vite.svg",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+      "bytes": 1497
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/128x128.png",
+      "sha256": "67cb103275a0136f526b356e8ae26074f1a9070e26c7c9a05cc60ca3141926a7",
+      "bytes": 1912
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/128x128%402x.png",
+      "sha256": "53427e1eef72d3e304e1dae508bea8256ed911426817ccf1e0bb40005c932d70",
+      "bytes": 3890
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/256x256.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/256x256.png",
+      "sha256": "53427e1eef72d3e304e1dae508bea8256ed911426817ccf1e0bb40005c932d70",
+      "bytes": 3890
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/32x32.png",
+      "sha256": "ac6bb917278d979d4aef2c22cb6c22cb79ef84731c7542999f329be9d68cab95",
+      "bytes": 463
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "304560289ff468e059db072dc14046aff8090053d51f24bc2d8e163e633e5a15",
+      "bytes": 1603
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "0a5dd6f94f8b470bc7d3e088b726d9bef332051c65e09c2bfb2d334d909bf092",
+      "bytes": 2136
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "39eaf65fb80305c32eec0ff72f9a32a2fefece27b56f7a2db387d808d0232d31",
+      "bytes": 2306
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "75284b7422c210493cd7b35af44cc0e530fc84b716344a65313340d7cf4d4445",
+      "bytes": 4409
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "defe2ec7f82d91195df9c44fa2b15798101699faa9bf7de4f714d86318f492a8",
+      "bytes": 440
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "9f811fd9d723f5ff0c87146855c94dce83ba2b8250e72b58c8ba71093c3a75cc",
+      "bytes": 4748
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "acd94aac7151aee8f26c9e54d710e64f97ea3b31b0b72d14691bb1d975cb8961",
+      "bytes": 668
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "55e2274f3770c3a9122347cd68845a72ec74cdbb194daba5c7fe3d9fda8903b8",
+      "bytes": 1103
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "c47fd86fc1857c61cd836e6772ade64edf856d69a6f846e9b552852c31ad03d9",
+      "bytes": 1353
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/StoreLogo.png",
+      "sha256": "21571dabaf09002baec9b6b1237567dfb3e12c6dc0a688205b66b47c9704fe87",
+      "bytes": 734
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/icon.icns",
+      "sha256": "a2147470beccfbf283947725f19b3f150af87ce7ac4088f9d2c7f6f67246f301",
+      "bytes": 17091
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/icon.ico",
+      "sha256": "c01b91d75277ad53e4b5a6244e81ebf90189c8c726709f2373e1896d1483cb11",
+      "bytes": 266
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/icon.png",
+      "sha256": "5a7944bf02f6c607505ecf6459bc18b711cffae8b7b289eea05bab120e4e783c",
+      "bytes": 8298
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/icons/icon_large.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/icons/icon_large.png",
+      "sha256": "f69c6b6a689cc7735096edbe45a2546e05b31eab49a452713399fba3bc9fed6e",
+      "bytes": 8472
+    },
+    {
+      "path": "project-templates/Tauri+React/src/assets/react.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "bytes": 4126
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "packages/ribbon/src/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/src/icons.ts",
+      "sha256": "eb6168a3a7078751795ffad7442b320dc6cce036df692f1666fcc9786c621f79",
+      "bytes": 13209
+    },
+    {
+      "path": "project-templates/Tauri+React/src/components/ribbon/icons.ts",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/ribbon/icons.ts",
+      "sha256": "eb6168a3a7078751795ffad7442b320dc6cce036df692f1666fcc9786c621f79",
+      "bytes": 13209
+    }
+  ],
+  "manifests": [
+    {
+      "path": "packages/ribbon/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ribbon/package.json",
+      "sha256": "369765357a981c539a608ec91d133a07da0132a78b95713d2d13d627b2179eb2",
+      "bytes": 851
+    },
+    {
+      "path": "packages/shell/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/shell/package.json",
+      "sha256": "a88aa93b0b8f07b82a5c27d4796329dbbe0b7e11884285a752e7f3c3acf892b7",
+      "bytes": 1100
+    },
+    {
+      "path": "packages/tokens/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/tokens/package.json",
+      "sha256": "a9c9d315c81d4c06527af8f3041f3b9dc808a01ee363e57ecc238f1b483960d4",
+      "bytes": 1334
+    },
+    {
+      "path": "packages/ui-primitives/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/packages/ui-primitives/package.json",
+      "sha256": "a3040d8b2f4d326de207d1f0aa27f1be26b6c1078c2f9ee1109ad3331d07621d",
+      "bytes": 931
+    },
+    {
+      "path": "project-templates/Tauri+React/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/package.json",
+      "sha256": "cd92d8a117f2ae0367036b0230da82363cacf7b59435cc251ef948fd6eaf8fdc",
+      "bytes": 982
+    },
+    {
+      "path": "project-templates/Tauri+React/src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/OpenAEC-style-book/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src-tauri/Cargo.toml",
+      "sha256": "df1e75b3f47c51b8390adae5988cdc7fae87a3a8ce89dec828e8a613c5b780e6",
+      "bytes": 848
+    }
+  ],
+  "errors": [],
+  "commit": "dfdcd415b26604081b1699560621d3e9ae7ea6bf",
+  "files_scanned": 272,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": [
+    "./icons"
+  ]
+}

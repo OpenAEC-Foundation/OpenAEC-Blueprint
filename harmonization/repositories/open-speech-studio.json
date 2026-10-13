@@ -1,0 +1,398 @@
+{
+  "name": "open-speech-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-speech-studio",
+  "branch": "main",
+  "description": "Open source local speech to text ",
+  "archived": false,
+  "license": "Apache-2.0",
+  "icons": [
+    {
+      "path": "app-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/app-icon.svg",
+      "sha256": "d2a4105814566e30b9d177a7d67ee56f1bc47100f0429fc387dd571ccc7b1cc3",
+      "bytes": 856
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/128x128.png",
+      "sha256": "a76a36f448881530998c933669345bba3b27c588b88838e141326b9ea66dd24d",
+      "bytes": 5928
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/128x128%402x.png",
+      "sha256": "e5a06dc2e7a4a69ccd05f8d01394f5e6d9e9e18cc507e8f387ddaba82ca52d3a",
+      "bytes": 12052
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/32x32.png",
+      "sha256": "6fd55f534651a73fe021033f635c29671b71b35d2e8911be400fa7a3a4c36fc0",
+      "bytes": 1177
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/64x64.png",
+      "sha256": "90840f33caf471e9f38aa44d879c4577a95271e91a9e62b546cc9d48fda071fb",
+      "bytes": 2602
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "650103f41dd761b3835e036c923fb3c7ab8913fb5104141b654b53dfba147960",
+      "bytes": 5060
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "a0915853dcfe07db4265adf3cc754cbb85ff27faded99797350a705f23e4ca8e",
+      "bytes": 6706
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "76b92abd0aeddd2ffd33308c662b814bb92a7c6085aba8c9561c4cc53d4cdd4d",
+      "bytes": 7254
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "d6bfa1dc5628e02d82da3e18958ad29a5897d861cc00c8436a9c86d12a2a9c7d",
+      "bytes": 13522
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "af3b8256960a08d61a36fb285efb8f6b4e8e5152e7dd461e9c2c385b295cba66",
+      "bytes": 1122
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "d69627fc79ce09cb244cf3e40a5d45a756c6a6705b745b1b377577a80548d107",
+      "bytes": 14704
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "0cb0d40c57b3878768d13e85cc43638ad03c5f0f259f07ebfcb896f42ef82762",
+      "bytes": 1691
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "0c00399929b59d7e64a50b7ecdc6b46f65b64d89c1257efaf9776f07778e4bb7",
+      "bytes": 2925
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "97b61f0bd9852a9225229a04d421f88cb18459fd79314e4c830df3f1eb010832",
+      "bytes": 3849
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/StoreLogo.png",
+      "sha256": "cc8e03c0b5ee5ab253c2cc26ca54eaadbd7967936dcebaef64b72d27d89f43ca",
+      "bytes": 1944
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "27382f3a217c665b20ed83adb7c8730c5874d5f9f1049ee88abf1f1ee4e6ca05",
+      "bytes": 2032
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "5f59720b5671690092a0ceef362061676a010fb5ea69883377c46863345c15e2",
+      "bytes": 4058
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "e18eb6ba6333f9f6cc9c7f9625d52d4f568fad5ec23bf91fa7a66aa2a236d766",
+      "bytes": 1874
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "f419f6e3be386836be7ab0a2389a7ad7c200ee181e335cf1788cc1c466ceb62e",
+      "bytes": 1932
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "64fd04716fe06d7e1f650b4599ddd47243423e44453581d73006ded814ee8d4a",
+      "bytes": 2701
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "f621196448948f1147f0fa70893391c95b84606397dfbec3813b178b31cd12fc",
+      "bytes": 1812
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "db9f294ec05af52a42b47015ed86f47a4388b9734efd0a7a25c1cc3ec852c78c",
+      "bytes": 4182
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "e5ef83ca82bc4abb41d800451e5a9554534f1a7ad900ab8a86391ab560977f02",
+      "bytes": 5525
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "72c74d6ab4b9648391e41bd579ac4023493c30c5c64560cfbfa02b7fb29ab9ea",
+      "bytes": 3746
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "751627c676791f298a3530dc348b67f688bb6c64dbb65932c0bfe9dbf2ad844f",
+      "bytes": 6313
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "d93db57aff63db18045e7110edce68aee2643a37ccf8654c33bbb94d5d4f4ecc",
+      "bytes": 8887
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "9b61ed71aa64b365b40dfc285b5a77fef52898567a3adf278e3d75437a01300f",
+      "bytes": 5582
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "339c0486031a383dddf0c8fc1b765324c61135785dd37ed108fd9a536c65c6b3",
+      "bytes": 8696
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "cb697440576503aa002f539c3d9a3bafb9fc4396eb3369e80439d43e710d3071",
+      "bytes": 12854
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "f3b6cebfa3e577d33c87c0a9c201fb072df3a61e3720e1e6071269dab864f635",
+      "bytes": 7525
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/icon.icns",
+      "sha256": "fe0fabafeab218deec3c4e2af11bdde4731da1deb44cf393756cdc0d9f3b8be9",
+      "bytes": 80639
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/icon.ico",
+      "sha256": "b95a780837a32e0ceb11957cc8e37fc1690b910edd4c926a7aa94b3e6fedd14c",
+      "bytes": 361102
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/icon.png",
+      "sha256": "902cc88f37564b10dc5f3a5020f836ee77f88d637b3821f844f213a25b0f0559",
+      "bytes": 24773
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "957fde77fb03d618763e72b6e29a0a6d851d16cb6843a3fc1834c8e2434afaaa",
+      "bytes": 592
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "52952b74dc9549d3794cd3a5951c0e51e2a0f6d4855cba5b854270336c64cb69",
+      "bytes": 1078
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "52952b74dc9549d3794cd3a5951c0e51e2a0f6d4855cba5b854270336c64cb69",
+      "bytes": 1078
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "17102a61349134cf2f47ff339530139a6f6074c11c66e7c17316031445d5a265",
+      "bytes": 1515
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "015ae892c88d440e047a0578200552a3fcd1fda38cd960da9774f4e43d39b666",
+      "bytes": 803
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "0a1cb951fcd599409c8101b83b6a9c3cce58ef4109502d3a5c88a73fc996bd6c",
+      "bytes": 1545
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "0a1cb951fcd599409c8101b83b6a9c3cce58ef4109502d3a5c88a73fc996bd6c",
+      "bytes": 1545
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "ce01d731349fe3e6226f966870e937320bdc3f060e1aa7fb3d3669ae8d5f0fb0",
+      "bytes": 2266
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "52952b74dc9549d3794cd3a5951c0e51e2a0f6d4855cba5b854270336c64cb69",
+      "bytes": 1078
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "ceec2db1cea43ccbda5c4f310cdfb462c46d07c104eea1d6e8bddabef146830a",
+      "bytes": 2068
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "ceec2db1cea43ccbda5c4f310cdfb462c46d07c104eea1d6e8bddabef146830a",
+      "bytes": 2068
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "788986fa77ee453c417e5657c6c4405579cb1d6ee5365c26ad6566a53ba90b94",
+      "bytes": 3011
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "7a4734b2cbda9b2e0d395a05f2ad5366af69589a8150f575ee490399e53a651e",
+      "bytes": 42306
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "788986fa77ee453c417e5657c6c4405579cb1d6ee5365c26ad6566a53ba90b94",
+      "bytes": 3011
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "b8363036482cebb31cd095528114a8078504561828ff4898e9a8c05cb7af927c",
+      "bytes": 4563
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "bd479529b7338ee37fb9bb5ce65813d6667d24e0f9eb7e3cb957a41edaf56b23",
+      "bytes": 1965
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "b8f978062210cef014bf0a5a8e49018fd533769966c0811ec7922c8ffe705844",
+      "bytes": 3862
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "9888f2f3dc61a870ea00f5fb3c1c82b145c17fdba021b80a27ae342583ba2fb5",
+      "bytes": 4177
+    },
+    {
+      "path": "src/assets/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src/assets/icon.png",
+      "sha256": "6fd55f534651a73fe021033f635c29671b71b35d2e8911be400fa7a3a4c36fc0",
+      "bytes": 1177
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/package.json",
+      "sha256": "2432812fa7af6a7a8cb272cc9b74482cd326178404a9f764395531e1447ef6f1",
+      "bytes": 844
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src-tauri/Cargo.toml",
+      "sha256": "f5591c809894a442f520a3a367955108a6fc14ca1f9fe5407f7982bec674e94b",
+      "bytes": 2162
+    }
+  ],
+  "errors": [],
+  "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+  "files_scanned": 197,
+  "ui_stack": [
+    "Tauri"
+  ],
+  "icon_packages": []
+}

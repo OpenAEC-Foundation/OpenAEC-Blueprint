@@ -1,0 +1,1130 @@
+{
+  "name": "inb-template",
+  "url": "https://github.com/OpenAEC-Foundation/inb-template",
+  "branch": "main",
+  "description": "IFC-template voor de bouw-sector in Nederland (experimentele fase)",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/DETAIL H002.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/DETAIL%20H002.svg",
+      "sha256": "7d45ee1a2937e6d936d97da2902c125bb951a1afc47c40d11e3d01b2bebdc7c7",
+      "bytes": 292347
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/assets/markers_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/assets/markers_BWK_1_50.svg",
+      "sha256": "fc8b06a474381d903d81cbaa8c41af59cde023082786cf5855f3dd7fc7b403df",
+      "bytes": 8062
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/assets/patterns_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/assets/patterns_BWK_1_50.svg",
+      "sha256": "7c2dc9d70d1dd9281985ace082803125c5d0e8572b304d931b9ad1231477438f",
+      "bytes": 217051
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/assets/symbols_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/assets/symbols_BWK_1_50.svg",
+      "sha256": "762ceec734c21b16b8ac01f97d30a192bc111a68353e85152ac2470fd5f446d4",
+      "bytes": 10144
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/BEGANE GROND PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/BEGANE%20GROND%20PLAN-annotation.svg",
+      "sha256": "26d1abd55af22a68465bceae7b46c02a14e286fcd6f46ebb8c3bf47ea83138ee",
+      "bytes": 1263828
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/BEGANE GROND PLAN-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/BEGANE%20GROND%20PLAN-linework.svg",
+      "sha256": "50446a1c77f397fa8b2d0108bdf70bd87b2ba7c09339025dc4331c5f0f866122",
+      "bytes": 413634
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/DETAIL H002-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/DETAIL%20H002-annotation.svg",
+      "sha256": "52963a7918ef19b5239f79c9d0942f76865465a57465afa0a3f1726d5db8992e",
+      "bytes": 38259
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/DETAIL H002-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/DETAIL%20H002-linework.svg",
+      "sha256": "cb399196a295810a66f7547aabba038fae7ba4973e42496647398c962b86a82c",
+      "bytes": 539
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/DOORSNEDE B-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/DOORSNEDE%20B-annotation.svg",
+      "sha256": "393897baa83ec745749f736fb231d972c1aa7cb70c8bdde829097db0ea73a3e7",
+      "bytes": 20176
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/DOORSNEDE B-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/DOORSNEDE%20B-linework.svg",
+      "sha256": "5a4b7f49aa1e2676d76b96c7c2014f1dbad1fc81f4bd2af29eb7cca2121de95f",
+      "bytes": 167299
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/SOUTH ELEVATION-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/SOUTH%20ELEVATION-annotation.svg",
+      "sha256": "0a6987b174f1555dec66eb4d8a598a37413f15cee953e040f4c8186e5c032502",
+      "bytes": 14935
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/drawings/cache/SOUTH ELEVATION-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/drawings/cache/SOUTH%20ELEVATION-linework.svg",
+      "sha256": "cc8bda7f17567d9032ad6026ea62fa48815fea6de32a5c44368de7a7831f1cde",
+      "bytes": 121027
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/layouts/A01 - Totaal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/layouts/A01%20-%20Totaal.svg",
+      "sha256": "99080f4f2cdbd307c8394ed7cbacaf89032d7836421bfa21cadc51554e9b06fa",
+      "bytes": 651
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/layouts/assets/view-title.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/layouts/assets/view-title.svg",
+      "sha256": "aad75e4452f692b23f6e26dd185fc755eb9f91e9401e7c7dec415426faf80d89",
+      "bytes": 4492
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/layouts/titleblocks/A1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/layouts/titleblocks/A1.svg",
+      "sha256": "9c3f7eda371640d0674feedca6f205ed642faaeb0883009cd01653479b5d674e",
+      "bytes": 20495
+    },
+    {
+      "path": "03_user example projects/001_CLT gebouwdeel/sheets/A01 - Totaal.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/001_CLT%20gebouwdeel/sheets/A01%20-%20Totaal.svg",
+      "sha256": "616dd3d811d26a64005a28f5ddfaed38f916d803cafbc4e7cc8b6ec3a56b5fcf",
+      "bytes": 3169415
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/BlenderBIM standaarden.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/BlenderBIM%20standaarden.svg",
+      "sha256": "651575c1963833be7f609bff54a8b735fcf65a9365ebd1718e69c24bdf5a424f",
+      "bytes": 297883
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/Nederlandse toevoegingen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/Nederlandse%20toevoegingen.svg",
+      "sha256": "03df4843ed3f9dda54f425b7cec536a302b897e66fc8ca10fd39d672bea756d4",
+      "bytes": 446782
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/Palenplan Renvooi.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/Palenplan%20Renvooi.svg",
+      "sha256": "131633b70ac72c178c1e482fe29290795a3be1f4bebc2e1218b18fa1857d07c0",
+      "bytes": 1212700
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_markers.svg",
+      "sha256": "d50c0ea996edd4a1e15565c9ebdbe187ea27de6cdab281bbc6ca53fb5783d9c3",
+      "bytes": 6432
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_markers_2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_markers_2.svg",
+      "sha256": "50c5fc98237c1e170f6c256d41b416cf14bce23145b4a3e875103ed77cc98ffd",
+      "bytes": 6643
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_patterns.svg",
+      "sha256": "c82a0e536cb21816355fe1cd7d0163f62d30f07a44b693e72329be362adafe45",
+      "bytes": 1127728
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_patterns_2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_patterns_2.svg",
+      "sha256": "c82a0e536cb21816355fe1cd7d0163f62d30f07a44b693e72329be362adafe45",
+      "bytes": 1127728
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_symbols.svg",
+      "sha256": "384ea852a7f068225e251cbaefa5552abefb7121174538a5646e6f2b34cd02a9",
+      "bytes": 7461
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/INB_BWK_symbols_2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/INB_BWK_symbols_2.svg",
+      "sha256": "1d861ff004d28f00c85c286d0ff71920fcd37eb1388e565e1dcadaf345295814",
+      "bytes": 10737
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/markers_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/markers_BWK_1_50.svg",
+      "sha256": "fc8b06a474381d903d81cbaa8c41af59cde023082786cf5855f3dd7fc7b403df",
+      "bytes": 8062
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/patterns_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/patterns_BWK_1_50.svg",
+      "sha256": "6442583b85f95c7e9d8de312798dc2571061392748e997c0544c0c643891bf0a",
+      "bytes": 217051
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/assets/symbols_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/assets/symbols_BWK_1_50.svg",
+      "sha256": "762ceec734c21b16b8ac01f97d30a192bc111a68353e85152ac2470fd5f446d4",
+      "bytes": 10144
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/BlenderBIM standaarden-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/BlenderBIM%20standaarden-annotation.svg",
+      "sha256": "4746855f74bc610d65e26d0d278e964b7a0570f2cb8cf4e3e373ffa5a9189598",
+      "bytes": 35196
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/BlenderBIM standaarden-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/BlenderBIM%20standaarden-linework.svg",
+      "sha256": "59c4fb44d923716392379d2d7123b6a08786c7d0911db0fc3c400dbb076f43c7",
+      "bytes": 9138
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/Nederlandse toevoegingen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/Nederlandse%20toevoegingen-annotation.svg",
+      "sha256": "c9d995754f4a1ab6535e4a67bf90b3e1f20916a309aa9129cf64c2a24fefe751",
+      "bytes": 90015
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/Nederlandse toevoegingen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/Nederlandse%20toevoegingen-linework.svg",
+      "sha256": "ce361fa21fc19ffa6a6cf898f2f08eb4c7c0c14d51d05d5d17e57178e747caa6",
+      "bytes": 103218
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/Palenplan Renvooi-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/Palenplan%20Renvooi-annotation.svg",
+      "sha256": "78cd19746a6ec983580b1fdd326e592b8d5d6cf8af8363805d201a48471a65b7",
+      "bytes": 38204
+    },
+    {
+      "path": "03_user example projects/002_Bibliotheek CLT gebouwdeel/drawings/cache/Palenplan Renvooi-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/002_Bibliotheek%20CLT%20gebouwdeel/drawings/cache/Palenplan%20Renvooi-linework.svg",
+      "sha256": "338bf3cae67f76dd29a5446b4321e8eebddb20c4ef9c7f5582b9703e6e20ec56",
+      "bytes": 10291
+    },
+    {
+      "path": "03_user example projects/003_Steel Structure/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/003_Steel%20Structure/drawings/assets/markers.svg",
+      "sha256": "bfdc87519360fe41aa424ca7bcd815bbc3a9e435cf48c36fa566651f8a85bd8e",
+      "bytes": 5805
+    },
+    {
+      "path": "03_user example projects/003_Steel Structure/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/003_Steel%20Structure/drawings/assets/patterns.svg",
+      "sha256": "7deaf909749c66efb12ff72a6777ef34c784fddc85a47ccd7586b22dc098a96d",
+      "bytes": 70664
+    },
+    {
+      "path": "03_user example projects/003_Steel Structure/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/003_Steel%20Structure/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/HSB-tekening POC.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/HSB-tekening%20POC.svg",
+      "sha256": "858558a4aeb4c25e82802e2f4d5e9b14b32cdb52436503542e834d456704b37e",
+      "bytes": 977013
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/MY STOREY PLAN.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/MY%20STOREY%20PLAN.svg",
+      "sha256": "ddbd273051579158c30452a312b400726b86b5ab17e974f829490ab9c053f936",
+      "bytes": 97103
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/PLAN_VIEW.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/PLAN_VIEW.svg",
+      "sha256": "3bb38bc04431a83277c5d2d5bca414cd1ec6c749ab5bb3197dbd4617942ce58a",
+      "bytes": 126898
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/assets/markers.svg",
+      "sha256": "bfdc87519360fe41aa424ca7bcd815bbc3a9e435cf48c36fa566651f8a85bd8e",
+      "bytes": 5805
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/assets/patterns.svg",
+      "sha256": "7deaf909749c66efb12ff72a6777ef34c784fddc85a47ccd7586b22dc098a96d",
+      "bytes": 70664
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/assets/symbols.svg",
+      "sha256": "93c1704227e10b0d3e3b703db8f40496bda1e062f225742082b85ff01d13720f",
+      "bytes": 4350
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/cache/MY STOREY PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/cache/MY%20STOREY%20PLAN-annotation.svg",
+      "sha256": "6111058272e29ebeb74896c0ad0da5439d5b13594dd0c1117ec54d4c3b9f8874",
+      "bytes": 1214
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/cache/MY STOREY PLAN-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/cache/MY%20STOREY%20PLAN-linework.svg",
+      "sha256": "d704b66a9896eebcec92f6998b06336227457ad35491512e48b54df2081d64e2",
+      "bytes": 11248
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/cache/PLAN_VIEW-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/cache/PLAN_VIEW-annotation.svg",
+      "sha256": "a6fc5c01197b4e015ad8889b21202761d1aa3fdcbed916bac432da7006879012",
+      "bytes": 30634
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/drawings/cache/PLAN_VIEW-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/drawings/cache/PLAN_VIEW-linework.svg",
+      "sha256": "7e35f7aa7d64582dec531799ca2403c07dbbdbeb31644b9258faedbfc52e4ed9",
+      "bytes": 11619
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns.svg",
+      "sha256": "4c4681e9e0fdd0605236db388ca5a5516e6543cee8f2cbe98a93c83550b2d86b",
+      "bytes": 145680
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_1.svg",
+      "sha256": "66ea6af4d7e96f38833395e3656e8672f0b2a572609e0345f00cccaaba607738",
+      "bytes": 144850
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_10.svg",
+      "sha256": "d18282c6b5f9b6314f7f998820653ec6e07c981b28908a5b830881b0909abba0",
+      "bytes": 144757
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_100.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_100.svg",
+      "sha256": "23f3b6c66250c44cf4e6173c57b1b7418535b69ee1c898d2ee67c44b8ea3978b",
+      "bytes": 100301
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_2.svg",
+      "sha256": "adf8b2c8e1ab3348586198f8db0427675dd00706ce706abd7b4cbf2d394422a3",
+      "bytes": 144850
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_20.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_20.svg",
+      "sha256": "afc00ddf15c4244d8f53a8451870868389afa0e088c15d3543847589d82fcf0f",
+      "bytes": 144757
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_200.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_200.svg",
+      "sha256": "c10e4c31ae09abfd2fe0adda21d0466fc92dddf0f26ebe3b2f27cb2f17e41d72",
+      "bytes": 87390
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_5.svg",
+      "sha256": "99a4a87d0ab90b631b423fd199e7fc37aa58fb478a8bb5459b2c7c082c5f0941",
+      "bytes": 144850
+    },
+    {
+      "path": "03_user example projects/004_Wood Framing Element/patterns/patterns_BWK_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/03_user%20example%20projects/004_Wood%20Framing%20Element/patterns/patterns_BWK_50.svg",
+      "sha256": "3ae34c11b1c32ba5fd5240eee98f0d7317f793f873d7ba7c6f602c81d5be44b8",
+      "bytes": 144757
+    },
+    {
+      "path": "04_development projects/005_arceringen/markers_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/04_development%20projects/005_arceringen/markers_BWK_1_50.svg",
+      "sha256": "fc8b06a474381d903d81cbaa8c41af59cde023082786cf5855f3dd7fc7b403df",
+      "bytes": 8062
+    },
+    {
+      "path": "04_development projects/005_arceringen/patterns_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/04_development%20projects/005_arceringen/patterns_BWK_1_50.svg",
+      "sha256": "35b354a0de6f5ab1e540de92ff1b74f8d6f198eac53c711ce88227366ed3ae17",
+      "bytes": 217051
+    },
+    {
+      "path": "04_development projects/005_arceringen/symbols_BWK_1_50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/04_development%20projects/005_arceringen/symbols_BWK_1_50.svg",
+      "sha256": "762ceec734c21b16b8ac01f97d30a192bc111a68353e85152ac2470fd5f446d4",
+      "bytes": 10144
+    },
+    {
+      "path": "drawings/01_BWK_PLG_-1_fundering.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_BWK_PLG_-1_fundering.svg",
+      "sha256": "ce5f880d01ec81f743f040686498c4963dc425d34c97d690227aec97adf55121",
+      "bytes": 423941
+    },
+    {
+      "path": "drawings/01_BWK_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_BWK_PLG_00_begane_grond.svg",
+      "sha256": "7dc2349fbff349257e35f97b21b37cccc2b040709e3fcbb63cba755af5fd5f7e",
+      "bytes": 529189
+    },
+    {
+      "path": "drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_BWK_PLG_01_eerste_verdieping.svg",
+      "sha256": "5721f0844586d835a1868445e904f49441aa40a7f8114130dc7ac1131e1bdc56",
+      "bytes": 419181
+    },
+    {
+      "path": "drawings/01_CON_PLG_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_CON_PLG_00_begane_grond.svg",
+      "sha256": "0b1fc68cd71cf5aab033ffdd868673180af2d338e464804d05ccebf96c7b7e47",
+      "bytes": 423824
+    },
+    {
+      "path": "drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_CON_PLG_01_eerste_verdieping.svg",
+      "sha256": "13345ac93edd2fdf578ab8093259bab8ce728c11eb6c59cd421d3f27516a1a12",
+      "bytes": 442643
+    },
+    {
+      "path": "drawings/01_CON_PLG_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/01_CON_PLG_palenplan.svg",
+      "sha256": "8bf08bce8de3a40b9e378b1d955d10335f57b9663553ad5714062971cc6130e5",
+      "bytes": 421474
+    },
+    {
+      "path": "drawings/02_BWK_BVO_00_begane_grond.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/02_BWK_BVO_00_begane_grond.svg",
+      "sha256": "f60bc842abb3504ae9476cd4e0d81ad5550b53210dee6771604ae6272a5ceee2",
+      "bytes": 445995
+    },
+    {
+      "path": "drawings/02_BWK_BVO_01_eerste_verdieping.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/02_BWK_BVO_01_eerste_verdieping.svg",
+      "sha256": "e5f9d3ea5a4edda715e4239ffeb277ecce433b292cb193e53c7e7236ffc79065",
+      "bytes": 442643
+    },
+    {
+      "path": "drawings/3D_model.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/3D_model.svg",
+      "sha256": "bbb70d2f62c9490bfce2393a46c02aca58bb6baabe1077b77157926c723c9906",
+      "bytes": 40537
+    },
+    {
+      "path": "drawings/ALG_00_inleiding.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/ALG_00_inleiding.svg",
+      "sha256": "481f7d9f718653c6058648c30acc76fa63a8c3a4a75f65be3732112ca37edf4a",
+      "bytes": 413645
+    },
+    {
+      "path": "drawings/ALG_00_totaaloverzicht.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/ALG_00_totaaloverzicht.svg",
+      "sha256": "454f2e2bc2906573b227c7a30b68522bc6d7aff04c0901311b54842e7cf365ec",
+      "bytes": 772347
+    },
+    {
+      "path": "drawings/ALG_2D_elements.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/ALG_2D_elements.svg",
+      "sha256": "cfd4d9459fe1deffe8eda2e0b46c491ab57e9b53ebd5f5a8effbb302d702cb5e",
+      "bytes": 485477
+    },
+    {
+      "path": "drawings/ALG_symbolen_markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/ALG_symbolen_markers.svg",
+      "sha256": "e9c19fa12fd896f7643e920f8dc257503937eb80bc2b1e1ef0080eda056287c9",
+      "bytes": 412047
+    },
+    {
+      "path": "drawings/BWK_arceringen_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/BWK_arceringen_1_5.svg",
+      "sha256": "76909bb306ea1b3e3b54dd827820a4e46164e7915b93b6c80bb769fbdc2b16e6",
+      "bytes": 449116
+    },
+    {
+      "path": "drawings/BWK_detail_2D_1_5.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/BWK_detail_2D_1_5.svg",
+      "sha256": "a9145681f0821a3de4721008810eabd86d4d8e472f6dcd062c4ddfbcc792efbd",
+      "bytes": 468495
+    },
+    {
+      "path": "drawings/BWK_detail_3D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/BWK_detail_3D_1_10.svg",
+      "sha256": "989491b08350969bd6defcefa7fd2fc7c2b5f039c2b99ab3cbfa7296177b89eb",
+      "bytes": 436238
+    },
+    {
+      "path": "drawings/BWK_principe_doorsnede.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/BWK_principe_doorsnede.svg",
+      "sha256": "a2ac9691e492eb83415ac2a43c4ab9e5e2b5d052baee75f23171e264feae69ee",
+      "bytes": 436268
+    },
+    {
+      "path": "drawings/CON_details_2D_1_10.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/CON_details_2D_1_10.svg",
+      "sha256": "fa72d7c02f3b42292ed5016b6a4d1dc41399f022a65a9cb03b374b6e30d215be",
+      "bytes": 738656
+    },
+    {
+      "path": "drawings/CON_renvooi_constructie.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/CON_renvooi_constructie.svg",
+      "sha256": "304ded2da47a1df771584fabd64ee326743297be9c41f7f0f920a58846fe09a4",
+      "bytes": 469013
+    },
+    {
+      "path": "drawings/CON_renvooi_palenplan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/CON_renvooi_palenplan.svg",
+      "sha256": "2f42242387a18754ad838628e4f9ecc25123c7f521f3c6e04397fc0d67e21ee6",
+      "bytes": 469302
+    },
+    {
+      "path": "drawings/NEN47_arceringen.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/NEN47_arceringen.svg",
+      "sha256": "8ffdcffefc6d626e644c5524117d99e674deae48bec83ce09f1cf81b125df3c6",
+      "bytes": 443244
+    },
+    {
+      "path": "drawings/Plattegrond arceringen 50.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/Plattegrond%20arceringen%2050.svg",
+      "sha256": "ba023c0e3ae8a72e403e1a34a0e0ea303da77078e0a164a2c0f28179ffd7dfef",
+      "bytes": 86887
+    },
+    {
+      "path": "drawings/assets/INB_BWK_symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/assets/INB_BWK_symbols.svg",
+      "sha256": "d1f1955fdd32b617393f52259696032a1361a15825bf6875d8f43db9a815266d",
+      "bytes": 15320
+    },
+    {
+      "path": "drawings/assets/markers.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/assets/markers.svg",
+      "sha256": "01dfaac046486917cca772d4ccacf85de3b34cb053fcfeab8cf23cdf801fa13a",
+      "bytes": 6831
+    },
+    {
+      "path": "drawings/assets/patterns.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/assets/patterns.svg",
+      "sha256": "fd40519f775b50c173fb9ffe916aed3ca4ed68cf1e630fb266bf538770553cf3",
+      "bytes": 378357
+    },
+    {
+      "path": "drawings/assets/symbols.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/assets/symbols.svg",
+      "sha256": "d1f1955fdd32b617393f52259696032a1361a15825bf6875d8f43db9a815266d",
+      "bytes": 15320
+    },
+    {
+      "path": "drawings/cache/00 BEGANE GROND PLAN-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/00%20BEGANE%20GROND%20PLAN-annotation.svg",
+      "sha256": "70b497bbf063ac1f0c5b10cefe72854b42723f87c629fcc7af2a00b7d44f180b",
+      "bytes": 6513
+    },
+    {
+      "path": "drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/00_ALG_Totaaloverzicht-annotation.svg",
+      "sha256": "d088940add6217532dcb8cb9ffe9f5e09c9a8fc11e8ccb6bfbe9787cde20c133",
+      "bytes": 115427
+    },
+    {
+      "path": "drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/00_ALG_Totaaloverzicht-linework.svg",
+      "sha256": "f5ff6170f605920c8343b0dc5ecba2057a21dd090b50c2c62a8f7ed1d0892d3d",
+      "bytes": 11043
+    },
+    {
+      "path": "drawings/cache/00_ALG_handleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/00_ALG_handleiding-annotation.svg",
+      "sha256": "6c51b662c605bcf2345a96e5a5f9dcc266182ea4d27dd56242087d5039f9981b",
+      "bytes": 10896
+    },
+    {
+      "path": "drawings/cache/00_ALG_handleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/00_ALG_handleiding-linework.svg",
+      "sha256": "1570b56bfda12f8c001e98dd3451ad9bc6f62828b9189ed559638c099f052e77",
+      "bytes": 539
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_-1_fundering-annotation.svg",
+      "sha256": "45464430793bce7f0b9ab53e394bfbeca5f114835ce7a36d3d1b5b74640b7eff",
+      "bytes": 7460
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_-1_fundering-linework.svg",
+      "sha256": "7cbd2e8ecddcdab9ac7b3d6d5e3defe33e1e29149ec3de11599a43a6b740892c",
+      "bytes": 12199
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_00_begane_grond-annotation.svg",
+      "sha256": "cd0574ba85d974325f05458e21065af23b72b4b82dc0873a2c2b4e8f1e2dc57c",
+      "bytes": 7944
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_00_begane_grond-linework.svg",
+      "sha256": "7358360424dbcb591059a159880058053a8db865a536b91bc8f7ebd5a1ab2c1f",
+      "bytes": 97762
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "bec506222c97ab5f412392c49c63fce26c38d53c6e40f1dfc298dd26676728f6",
+      "bytes": 6310
+    },
+    {
+      "path": "drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_BWK_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "0d8ed5de3fd07e69e6d26fad311f50a916f80215465708496dd929cca5f6fc47",
+      "bytes": 9915
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_00_begane_grond-annotation.svg",
+      "sha256": "d0a464011d9d1ae7b0c72daf6a35029be7f24275ac78d2cd498401c105e82f1b",
+      "bytes": 6310
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_00_begane_grond-linework.svg",
+      "sha256": "fa080baaee3a6661217b513896b99b3449c76813c5ed7337b4d772da7fe57c6d",
+      "bytes": 14558
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_01_eerste_verdieping-annotation.svg",
+      "sha256": "a120672b42e9efec7fa24d8f46a8d8c161c68954daa8d22edf70370694a42df0",
+      "bytes": 7972
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_01_eerste_verdieping-linework.svg",
+      "sha256": "dd23585d68303709800117ccb8348b53ed5fe400480e2e05fd58639ccb66e593",
+      "bytes": 7980
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_palenplan-annotation.svg",
+      "sha256": "39ed3609fb90f83f7e7dc96d405d22abeb89b6653f1b733e6eea15f3bd30e95f",
+      "bytes": 6310
+    },
+    {
+      "path": "drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/01_CON_PLG_palenplan-linework.svg",
+      "sha256": "fb78a8bac290601036eb846680f67f8defcfdbf9d0629f96c010dbc28564b434",
+      "bytes": 12208
+    },
+    {
+      "path": "drawings/cache/02_BWK_BVO_00_begane_grond-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/02_BWK_BVO_00_begane_grond-annotation.svg",
+      "sha256": "e17c7b28c658a0ff2e410cb1a31bb77e89120d99395a4adffe62da1b6bc9db12",
+      "bytes": 7972
+    },
+    {
+      "path": "drawings/cache/02_BWK_BVO_00_begane_grond-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/02_BWK_BVO_00_begane_grond-linework.svg",
+      "sha256": "6cdb96ab66a48a43d3265a7e0ee7a408d4a34f6c077f42eef85af687c995322b",
+      "bytes": 11253
+    },
+    {
+      "path": "drawings/cache/02_BWK_BVO_01_eerste_verdieping-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/02_BWK_BVO_01_eerste_verdieping-annotation.svg",
+      "sha256": "d43e1d2c71663ed20863101701fe66f4f69d4cd9e5b58cc4f57f259bf0ca71aa",
+      "bytes": 7972
+    },
+    {
+      "path": "drawings/cache/02_BWK_BVO_01_eerste_verdieping-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/02_BWK_BVO_01_eerste_verdieping-linework.svg",
+      "sha256": "03827402fc8696ecf8c05211eedadacfce6f0742c5b68598027358e3a93222c9",
+      "bytes": 7980
+    },
+    {
+      "path": "drawings/cache/3D_model-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/3D_model-annotation.svg",
+      "sha256": "e4624de46427910d802b558b3d847c5fb6725cc3b191313d60d07fafea7f85bb",
+      "bytes": 6527
+    },
+    {
+      "path": "drawings/cache/3D_model-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/3D_model-linework.svg",
+      "sha256": "a2938e4c98532f0054b8519e6ec326986d10f7407bbc64f82ca22e02a40b3989",
+      "bytes": 40317
+    },
+    {
+      "path": "drawings/cache/ALG_00_indleiding-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_indleiding-annotation.svg",
+      "sha256": "711df58f867d6e10cd92e89dfbb67612d01a39ef3657833feecb706e818fbbf7",
+      "bytes": 10150
+    },
+    {
+      "path": "drawings/cache/ALG_00_indleiding-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_indleiding-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_totaaloverzicht-annotation.svg",
+      "sha256": "e60408be96336bdce49a64f8df55916c20e648243e5f3228d7ab7129ef6d9acf",
+      "bytes": 158656
+    },
+    {
+      "path": "drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_totaaloverzicht-linework.svg",
+      "sha256": "f08bd69a24b0ad395d68a4a886f6c108957d3f5aaf7eeda0436d8a070c4b2eb6",
+      "bytes": 188014
+    },
+    {
+      "path": "drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_totaaloverzicht_bwkcon-annotation.svg",
+      "sha256": "8b55aa4a497f66057c411fc95d601a95d44c95fd17fdfd26dbb175d2faae6d35",
+      "bytes": 140282
+    },
+    {
+      "path": "drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_00_totaaloverzicht_bwkcon-linework.svg",
+      "sha256": "30660659ade2bc9389d339f6caa163cf5fe3055413d9f1e70209ec347dd4b0ec",
+      "bytes": 67674
+    },
+    {
+      "path": "drawings/cache/ALG_2D_elements-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_2D_elements-annotation.svg",
+      "sha256": "02b7e85da4b28fdae507b93e690143cd5f78c169ecba0d279d0fa6e305e0d1ac",
+      "bytes": 21515
+    },
+    {
+      "path": "drawings/cache/ALG_2D_elements-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_2D_elements-linework.svg",
+      "sha256": "1931bd32a6570c6ffbd9827c3485f97456bac8c406f5a465b372a8e88f41c367",
+      "bytes": 36801
+    },
+    {
+      "path": "drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_basis_arceringen_test_1_10-annotation.svg",
+      "sha256": "3ad4d5d4115a6a93a31de51350b4538df98a944d8b8037f8eca246ec0aead4a6",
+      "bytes": 21886
+    },
+    {
+      "path": "drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_basis_arceringen_test_1_10-linework.svg",
+      "sha256": "6fa321dc8a7c408ef1da5e63502155222d12364996fdbd47762cf29b4587d05c",
+      "bytes": 547
+    },
+    {
+      "path": "drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_symbolen_markers-annotation.svg",
+      "sha256": "1af8d91aa5b31ec995cccb7b1aea18c45c3fc204bd0a7fa09a824936e343993a",
+      "bytes": 17730
+    },
+    {
+      "path": "drawings/cache/ALG_symbolen_markers-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/ALG_symbolen_markers-linework.svg",
+      "sha256": "822128f128a7eab09c7ec64eb677ccc63423dbca0b2e2e99d13db6a064806881",
+      "bytes": 547
+    },
+    {
+      "path": "drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_detail_2D_1_5-annotation.svg",
+      "sha256": "1b73c17abffc8e5ed71bf043d20c84f01f32665295cfc26bf93436c9cd3095fb",
+      "bytes": 41481
+    },
+    {
+      "path": "drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_detail_2D_1_5-linework.svg",
+      "sha256": "cb399196a295810a66f7547aabba038fae7ba4973e42496647398c962b86a82c",
+      "bytes": 539
+    },
+    {
+      "path": "drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_detail_3D_1_10-annotation.svg",
+      "sha256": "aaecd16e7875b7cbf4a6fa94eca4e1cdcfc273e9261b74c5a0fb2c05fa2274d1",
+      "bytes": 5123
+    },
+    {
+      "path": "drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_detail_3D_1_10-linework.svg",
+      "sha256": "5147ff69544ec9dfc937d44bc8b72c989c7909222c4f1a73820aaa0a0f3d3f7b",
+      "bytes": 7632
+    },
+    {
+      "path": "drawings/cache/BWK_principe_doorsnede-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_principe_doorsnede-annotation.svg",
+      "sha256": "c203e9c30ebce8a2a42eecf373f9be9ad587af8046fc254c0b8b689cca7a2d7e",
+      "bytes": 3516
+    },
+    {
+      "path": "drawings/cache/BWK_principe_doorsnede-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/BWK_principe_doorsnede-linework.svg",
+      "sha256": "42047744070697b826b3f6b4977c80d47e47436a7f63a7ab4ea67822957266a4",
+      "bytes": 9252
+    },
+    {
+      "path": "drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_PLG_palenplan-annotation.svg",
+      "sha256": "572666c9a23cc2987fb6421188854417b8fdb2862be8d5f3b93987e180e4276d",
+      "bytes": 3038
+    },
+    {
+      "path": "drawings/cache/CON_PLG_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_PLG_palenplan-linework.svg",
+      "sha256": "5537fc45e0c2e347fdb8d5c5513284fa5e218ed253097d323da85a1bc5bdfb45",
+      "bytes": 539
+    },
+    {
+      "path": "drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_details_2D_1_10-annotation.svg",
+      "sha256": "72728c4bcba09bd3383d02528be3df26f24d1493d46a41fb717cd1bedeba0f2a",
+      "bytes": 311027
+    },
+    {
+      "path": "drawings/cache/CON_details_2D_1_10-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_details_2D_1_10-linework.svg",
+      "sha256": "3bbcfb34fc42f8cffc61425bd50c3f0c0994ba8bcce163c79a06f243eccf594c",
+      "bytes": 543
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-X-annotation.svg",
+      "sha256": "dff8b53c541203838a6d86eb55abcd868b4d66af34333a386998c4c27c086708",
+      "bytes": 61746
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-X-linework.svg",
+      "sha256": "32d84ae2880051ae89e4254d1d5e6f0f8e0b604defd928f835bee4798e8565a4",
+      "bytes": 547
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-X-underlay.svg",
+      "sha256": "fc3fb84abff1796eef357738f64ae84cfa5f76ed973f93a1c3ff39b7e0392b6b",
+      "bytes": 516
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-annotation.svg",
+      "sha256": "49607af62918281f6a320b4e1c1af329c0b9315344529bf58237bbd768c4b6ca",
+      "bytes": 64068
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-linework.svg",
+      "sha256": "933516c6010f75657cdac9338b0c4d1686454fcf109d59cd595d6d8e09741bd9",
+      "bytes": 547
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_constructie-underlay.svg",
+      "sha256": "757260c9b9bb4ee05ec90818dec5ab89cfcb4a3cb791cf21e7398b8aa700592b",
+      "bytes": 511
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_palenplan-annotation.svg",
+      "sha256": "cb24a4745ef912ba0df98ff659753439c0249d985c2f03757825a1edd0d443d9",
+      "bytes": 33588
+    },
+    {
+      "path": "drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/CON_renvooi_palenplan-linework.svg",
+      "sha256": "35fcd51a146c6ba9165e9f82e94820907edfb68d9b5884347301d97a29d2f4aa",
+      "bytes": 10295
+    },
+    {
+      "path": "drawings/cache/NEN47_arceringen-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/NEN47_arceringen-annotation.svg",
+      "sha256": "582a3f949071dc245c5b90117635e46dfbcfe8939bb8719dae6fc00039bf023a",
+      "bytes": 15935
+    },
+    {
+      "path": "drawings/cache/NEN47_arceringen-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/NEN47_arceringen-linework.svg",
+      "sha256": "2fe293e4610884ba0ade58845de1669d598be10ce5b6101704754eb86d3daefb",
+      "bytes": 539
+    },
+    {
+      "path": "drawings/cache/PERSPECTIVE-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/PERSPECTIVE-linework.svg",
+      "sha256": "71cdb9386f2df7fd066300e46748892c43484af44484cd3cbdd0e38e4c64631d",
+      "bytes": 75155
+    },
+    {
+      "path": "drawings/cache/PLAN_VIEW-annotation.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/PLAN_VIEW-annotation.svg",
+      "sha256": "69d0da987c4f8c803373fa520524e0a10d90c9b8d95d6606ef5c7e2a9dbf4eee",
+      "bytes": 350
+    },
+    {
+      "path": "drawings/cache/PLAN_VIEW-linework.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/drawings/cache/PLAN_VIEW-linework.svg",
+      "sha256": "9882805f35c73949832aac5f6007cd50268929b1171c25b27b258a5cfeddfce3",
+      "bytes": 2606
+    },
+    {
+      "path": "img/Arceringen_Annotaties.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/img/Arceringen_Annotaties.svg",
+      "sha256": "03df4843ed3f9dda54f425b7cec536a302b897e66fc8ca10fd39d672bea756d4",
+      "bytes": 446782
+    },
+    {
+      "path": "img/Pile_Layout_Plan.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/img/Pile_Layout_Plan.svg",
+      "sha256": "2e18490e771c42cc6fc2a98cf675f725636f6dd4f7938136fea25c5bf7a8feed",
+      "bytes": 3446936
+    },
+    {
+      "path": "layouts/300 - Voorbeeld tekening.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/300%20-%20Voorbeeld%20tekening.svg",
+      "sha256": "ca417100c00db48711bd6e4af9ccfc6f6fce0ef6b42a7d08cf4965be5de67aa0",
+      "bytes": 982
+    },
+    {
+      "path": "layouts/301 - BWK_plattegronden.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/301%20-%20BWK_plattegronden.svg",
+      "sha256": "bbb7b282aa772a0d0d5cad6aebdb9afdc71531febe106d5f272e58e61e160887",
+      "bytes": 2412
+    },
+    {
+      "path": "layouts/assets/view-title.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/assets/view-title.svg",
+      "sha256": "aad75e4452f692b23f6e26dd185fc755eb9f91e9401e7c7dec415426faf80d89",
+      "bytes": 4492
+    },
+    {
+      "path": "layouts/titleblocks/A0.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A0.svg",
+      "sha256": "1852dc23b498170d440436fa15987bef4263ee09675a48e2eb3fe94c40d6294b",
+      "bytes": 31469
+    },
+    {
+      "path": "layouts/titleblocks/A1.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A1.svg",
+      "sha256": "0be0125b2f9222b00372c8738346d48e1a9ecc03c2b3b00950e8a20275903628",
+      "bytes": 31261
+    },
+    {
+      "path": "layouts/titleblocks/A2.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A2.svg",
+      "sha256": "40bb6c6b1143389c7c29165c5797ada2726ac42e0f66cf21ba88aab649b0ebb9",
+      "bytes": 31429
+    },
+    {
+      "path": "layouts/titleblocks/A3 - boekje - voorblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A3%20-%20boekje%20-%20voorblad.svg",
+      "sha256": "9c1d55144cce85dda0b5393fe36a57787abca82d35aa7b2e8a93a456bab88820",
+      "bytes": 22381
+    },
+    {
+      "path": "layouts/titleblocks/A3 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A3%20-%20volgblad.svg",
+      "sha256": "80b670bb0d2f345f1ea222c8821d1b9fe0d15bd91587a2c15a81c13da61b20fb",
+      "bytes": 30125
+    },
+    {
+      "path": "layouts/titleblocks/A3.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A3.svg",
+      "sha256": "58b1297f7b9b04663b76e8f8ad58fa4f3eb8d9ad274c16c644a89f7c6d2b9bfb",
+      "bytes": 31429
+    },
+    {
+      "path": "layouts/titleblocks/A4 - volgblad.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/layouts/titleblocks/A4%20-%20volgblad.svg",
+      "sha256": "9c7f641f7dccccfa4d4e6f9d481ecf870729a918b901f380e065cdd71c7902c0",
+      "bytes": 30170
+    },
+    {
+      "path": "sheets/300 - Voorbeeld tekening.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/sheets/300%20-%20Voorbeeld%20tekening.svg",
+      "sha256": "0e5113984952f8760912400ee37903dda22cad1df3fccdd8be246f246df4b2f9",
+      "bytes": 1220077
+    },
+    {
+      "path": "sheets/301 - BWK_plattegronden.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/inb-template/edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00/sheets/301%20-%20BWK_plattegronden.svg",
+      "sha256": "f27f422f15a4abd0110ccaa45d2277867063965199f6ad10fcdba65cbf60cc96",
+      "bytes": 1328125
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [],
+  "errors": [],
+  "commit": "edbbf7855e661c0d0d3af980dbe9c6e6fe1f0c00",
+  "files_scanned": 247,
+  "ui_stack": [],
+  "icon_packages": []
+}

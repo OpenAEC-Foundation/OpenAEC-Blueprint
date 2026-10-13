@@ -1,0 +1,72 @@
+{
+  "name": "dynlex",
+  "url": "https://github.com/OpenAEC-Foundation/dynlex",
+  "branch": "master",
+  "description": null,
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [
+    {
+      "path": "vscode-extension/icons/dynlex.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/vscode-extension/icons/dynlex.png",
+      "sha256": "50943a596e4bea48c7e48edf04efa1f71425972bd2a8ccaedafa720c28df5fbd",
+      "bytes": 29455
+    },
+    {
+      "path": "web/icons/dynlex-icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/web/icons/dynlex-icon.png",
+      "sha256": "c3c68dd50b9ff32e7c78c186cb29d14d170b18f68badf81342d762113a2c1997",
+      "bytes": 160023
+    },
+    {
+      "path": "web/icons/dynlex-icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/web/icons/dynlex-icon.svg",
+      "sha256": "7d12e5b96e2f1d7d6475f97255d047a22f547dda3fd74e1e16c0fc76c2a09688",
+      "bytes": 3201
+    },
+    {
+      "path": "web/media/river-challenge/speech-sprig.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/web/media/river-challenge/speech-sprig.svg",
+      "sha256": "6980f3b5d443f72e2686f72ffb149d245e04a736ed82eaf36200c0053d15a665",
+      "bytes": 796
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "src/web/ide/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/src/web/ide/package.json",
+      "sha256": "4094e1128a65e71623fbaedf4de9e2795c9656eca3a20644f550d0e5a75c7594",
+      "bytes": 346
+    },
+    {
+      "path": "tools/wgsl-translator/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/tools/wgsl-translator/Cargo.toml",
+      "sha256": "70fc6c3b171a8708e1c2657e19d208620fda4d6d012ff584ac331c6f3dac75f4",
+      "bytes": 357
+    },
+    {
+      "path": "vscode-extension/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/dynlex/b504363b9d132d23a0d94a232b8a584011bdab43/vscode-extension/package.json",
+      "sha256": "9f96bc27f6108bf287171df5c41b124792483bcca2fa39e11e64620fa7ef176d",
+      "bytes": 9249
+    }
+  ],
+  "errors": [],
+  "commit": "b504363b9d132d23a0d94a232b8a584011bdab43",
+  "files_scanned": 1868,
+  "ui_stack": [
+    "Dynlex",
+    "Slint"
+  ],
+  "icon_packages": [
+    "icon"
+  ]
+}

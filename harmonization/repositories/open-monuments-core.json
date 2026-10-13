@@ -1,0 +1,24 @@
+{
+  "name": "open-monuments-core",
+  "url": "https://github.com/OpenAEC-Foundation/open-monuments-core",
+  "branch": "main",
+  "description": "Open-Monuments Core \u2014 Frappe app voor monumentenregister (Monument, Bouwdeel, Eigenaar, Abonnement)",
+  "archived": false,
+  "license": "NOASSERTION",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-monuments-core/da046509e5bbb91998ffd21745803d6f03ca925a/pyproject.toml",
+      "sha256": "580c67e6fd58c35bc926625c643f5288f98e7fb87be89016c522abe84a04c013",
+      "bytes": 337
+    }
+  ],
+  "errors": [],
+  "commit": "da046509e5bbb91998ffd21745803d6f03ca925a",
+  "files_scanned": 39,
+  "ui_stack": [],
+  "icon_packages": []
+}

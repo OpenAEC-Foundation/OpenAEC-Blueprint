@@ -1,0 +1,464 @@
+{
+  "name": "open-energy-studio",
+  "url": "https://github.com/OpenAEC-Foundation/open-energy-studio",
+  "branch": "main",
+  "description": "Open Source Energy Tool",
+  "archived": false,
+  "license": "LGPL-3.0",
+  "icons": [
+    {
+      "path": "public/favicon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/public/favicon.png",
+      "sha256": "f70870215e168c3b4751c353e6d91122824fe793186f4a780a7be2a2e4c94277",
+      "bytes": 4187
+    },
+    {
+      "path": "public/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/public/icon.png",
+      "sha256": "63bc09278b278208f4644ee7230e0109ccebaed70883e801b26c640ac53d8bac",
+      "bytes": 83609
+    },
+    {
+      "path": "public/logo-mark.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/public/logo-mark.png",
+      "sha256": "18e058f89bdfa2d22f6b987e39bb683c60bad007846bc4d37b5b1263e5aad5ff",
+      "bytes": 9423
+    },
+    {
+      "path": "public/logo-text.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/public/logo-text.png",
+      "sha256": "68f90dc1ee17d3fae240872a88e2658b670901501a120115fb173fbfba8aa78a",
+      "bytes": 58672
+    },
+    {
+      "path": "scripts/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/scripts/icon.png",
+      "sha256": "44fdb9d554f6dd83162ec64e5676d8a2e13ffb4fb1a1cdfa882badfa5aaaec87",
+      "bytes": 91853
+    },
+    {
+      "path": "scripts/icon.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/scripts/icon.svg",
+      "sha256": "1faaffa86fbc122e8335825ecaabd5b9cbdd27c237258cad72336a1d60a10216",
+      "bytes": 2732
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/128x128.png",
+      "sha256": "18e058f89bdfa2d22f6b987e39bb683c60bad007846bc4d37b5b1263e5aad5ff",
+      "bytes": 9423
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/128x128%402x.png",
+      "sha256": "928bbcf90c0860e9fe3e665575fe49d53861a287c132c0d876c3780e23d297d5",
+      "bytes": 25758
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/32x32.png",
+      "sha256": "d3b37a4b6dffd275aeadc92184c3325bd1fd98a7d20302a1f6144af88fc9d309",
+      "bytes": 1865
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/64x64.png",
+      "sha256": "f70870215e168c3b4751c353e6d91122824fe793186f4a780a7be2a2e4c94277",
+      "bytes": 4187
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square107x107Logo.png",
+      "sha256": "7bfd05be1444b87f7c99dfc4dafee138e7378d7652dd8ee80b1cfd0388fca568",
+      "bytes": 7515
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square142x142Logo.png",
+      "sha256": "33005138c524f4b44959203f6d2e2e3c46e47e67e498df7b5708cb788278ad0a",
+      "bytes": 10673
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square150x150Logo.png",
+      "sha256": "ec70883b1566759cd8ebbf6472b45cdd71f1e7ff9a8ebebe408360b791717a69",
+      "bytes": 11509
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square284x284Logo.png",
+      "sha256": "9f0271effa653376d50cfed7d0eb282a34a984ec88d9fb2008e65a68fbdd6744",
+      "bytes": 30390
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square30x30Logo.png",
+      "sha256": "25a2f393e32b717617193212b33e11089b3c521677710a12e2f3257ed8fb8197",
+      "bytes": 1665
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square310x310Logo.png",
+      "sha256": "0f26f8438b3bb46bd4b148b08116b8b33ce753561005be03c8d6cd82e22aacc3",
+      "bytes": 35826
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square44x44Logo.png",
+      "sha256": "ae7c611792943593d65390daec6899ddfcacf04e3d068c9de9bd5a556f0cbbbd",
+      "bytes": 2711
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square71x71Logo.png",
+      "sha256": "abc0e53a0d2ee59d19273128e81066032104cc2dbfe73b43de600d2489ab345b",
+      "bytes": 4754
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/Square89x89Logo.png",
+      "sha256": "0295dc3c31de64b61f4bd5ce5f23b6a05803fe35f46539cfafae953883b98423",
+      "bytes": 6055
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/StoreLogo.png",
+      "sha256": "95c6bd436c8d98445703caec30ec540b88dfd3277dbb2eb3881ca4cff3eb04ab",
+      "bytes": 3130
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "ee1e3f73988b594b1e711111965c6fb2d45f7e36fc25c4d6ad242a1de9473a92",
+      "bytes": 2848
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "a969ee2a18a890fe02f0e5a890b5d3c474e9c7bd6c05616aac1d3c69453655ba",
+      "bytes": 12445
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "bc1d754f9b437fea1c81a4903b80957b77fe6356c51dc2f168a54c1b985e4bd9",
+      "bytes": 3301
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "f35f5fc8a8d857c1b34a08c58ff0166493f61991ea876919dffebf173093cceb",
+      "bytes": 2728
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "22a1828eb79720d19cc1e81731c764d7af31247f45d1a19958e82ff5a328fec9",
+      "bytes": 7619
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "38fcd8798190b2cd57ff19a3ae53a98203072807b8b80f1a06051a0f925d81ee",
+      "bytes": 3196
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "e8b0ac8f6b1ed074b658d96173f4f4d83539d626b458472aa7a688472f8502f6",
+      "bytes": 6764
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "26a843a197769cc1d6ab05ef8d38105944c525a26bdd050a7bb5952db117a7a6",
+      "bytes": 19612
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "2d51e75f1954ac1ca8503c0b4f1aa4583f15d18697d05bb95e659fe7e43cc605",
+      "bytes": 7674
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "9ecd152a08000ff17f9f63f1dbb67f07108e6107bf6873186f3dd7c841d27c68",
+      "bytes": 11154
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "efd19cd96726bd52c9c7b885e821060b9e49febc7279b50c3c7f0e1e102e852a",
+      "bytes": 36867
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "d6403626a25b427a5e1e8695f8e265ecbe18ab0bd90babe6f748bdc10fdf5b32",
+      "bytes": 12840
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "2fe7b89fe4fa17518c6ac9d5d7f1dd62b93e81a4e1d4f201d005c254814b4917",
+      "bytes": 16330
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "31bb18b02eb368af2708ab85594829fcd608757e4e7528874a26ac7c52dbc7a1",
+      "bytes": 62204
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "eb59aad84f0443e39b038e42ffdc4ac4e228f6436ee59743969cc26747a242c2",
+      "bytes": 18711
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/icon.icns",
+      "sha256": "0da4f48ba200a973883dd18917d4ac798b3dfe90ae53d882279d1f8cab73c003",
+      "bytes": 516296
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/icon.ico",
+      "sha256": "ae8321b298dbf11e89173f0cb5609e07450c44756a821efe0c0f29c7b59ae86c",
+      "bytes": 37880
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/icon.png",
+      "sha256": "63bc09278b278208f4644ee7230e0109ccebaed70883e801b26c640ac53d8bac",
+      "bytes": 83609
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-20x20%401x.png",
+      "sha256": "69e70a455c0ff9f33567808b200385877ef8b53a308a0c2ee4934ab7d91aa3fd",
+      "bytes": 920
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-20x20%402x-1.png",
+      "sha256": "27bfe839a1d9f84fed65568fcc752edf8f09d96f4213059eecdb613681bfb9f1",
+      "bytes": 2176
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-20x20%402x.png",
+      "sha256": "27bfe839a1d9f84fed65568fcc752edf8f09d96f4213059eecdb613681bfb9f1",
+      "bytes": 2176
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-20x20%403x.png",
+      "sha256": "ca7f8625741069e8f7bbddcd5bb163ee8384360838ab2cd0a54469c86937249f",
+      "bytes": 3646
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-29x29%401x.png",
+      "sha256": "8f38916a8a2f3d6416d8f51c89c520cdf6f4ce26e211ea43070b16c443f32446",
+      "bytes": 1470
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-29x29%402x-1.png",
+      "sha256": "1fccc6e7b433d8358a1beb17022291e4e40de6392d14c27b8bbb4ba440b1cd87",
+      "bytes": 3526
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-29x29%402x.png",
+      "sha256": "1fccc6e7b433d8358a1beb17022291e4e40de6392d14c27b8bbb4ba440b1cd87",
+      "bytes": 3526
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-29x29%403x.png",
+      "sha256": "0a705e9d9b80a1da974e422a529407a2012212292e8d58fde68de7b089c5d793",
+      "bytes": 5631
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-40x40%401x.png",
+      "sha256": "27bfe839a1d9f84fed65568fcc752edf8f09d96f4213059eecdb613681bfb9f1",
+      "bytes": 2176
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-40x40%402x-1.png",
+      "sha256": "305062f8c73bbf48ae57842d10061f041b393ec76e026b61c3cf3d0d7b8b1990",
+      "bytes": 5151
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-40x40%402x.png",
+      "sha256": "305062f8c73bbf48ae57842d10061f041b393ec76e026b61c3cf3d0d7b8b1990",
+      "bytes": 5151
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-40x40%403x.png",
+      "sha256": "32f7b4240acf9ffe94089df29775196e11094c56bdc5341c8a1de30d308a1df8",
+      "bytes": 8465
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-512%402x.png",
+      "sha256": "21ece5ca6d7958190281f499546f0a9650bb2039bbe63ff60c58f440b9fa60ca",
+      "bytes": 273412
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-60x60%402x.png",
+      "sha256": "32f7b4240acf9ffe94089df29775196e11094c56bdc5341c8a1de30d308a1df8",
+      "bytes": 8465
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-60x60%403x.png",
+      "sha256": "8d276d86811a41b28b61b5938b27f8bfa4d4bdcd57e77c6d925ee8a6698bccc5",
+      "bytes": 14277
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-76x76%401x.png",
+      "sha256": "09926315cbba74a3e338c61747e439914aeda248d3a4368a644fc15c3a1a8224",
+      "bytes": 4864
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-76x76%402x.png",
+      "sha256": "9f258e40a62111d6f2e443c3447354363bce9b6c2bd1d6fa59bbdbb975d56f28",
+      "bytes": 11304
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/icons/ios/AppIcon-83.5x83.5%402x.png",
+      "sha256": "e45a08300228884fefe5f2a6dc956cb988957b2a94e305d04ae81e73e038bdd5",
+      "bytes": 12715
+    }
+  ],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "crates/nta8800-core/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/crates/nta8800-core/Cargo.toml",
+      "sha256": "26dcc7fd55b2ef0f355e371c2ac84cc8572d1aad840c98532c94487cf5891319",
+      "bytes": 412
+    },
+    {
+      "path": "crates/nta8800-operations/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/crates/nta8800-operations/Cargo.toml",
+      "sha256": "767736f0a70be753a3794b0419c02baf9c8e501238526fe16b1800d990519057",
+      "bytes": 451
+    },
+    {
+      "path": "crates/nta8800-service/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/crates/nta8800-service/Cargo.toml",
+      "sha256": "bf8cdfb358364efc6dba39224dd59026591035ce9f77ed0d0b251ee89426a4bd",
+      "bytes": 760
+    },
+    {
+      "path": "crates/nta8800-wasm/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/crates/nta8800-wasm/Cargo.toml",
+      "sha256": "eef75c18247c2ed84b82c77935e9e3cbd1e9d804434d392af3ebe98d38bfd816",
+      "bytes": 543
+    },
+    {
+      "path": "package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/package.json",
+      "sha256": "0ff1f361612063f500336710fd0ad29f4450027f541108e836e1fc80d3196464",
+      "bytes": 1562
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src-tauri/Cargo.toml",
+      "sha256": "a895faf2a8685d2afb2aedb7a75152c7e765a3e272bab14838393b51b193e513",
+      "bytes": 1224
+    },
+    {
+      "path": "src/kernel-wasm/package.json",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/a0cad82bd759b215f12f2230c47d407733ac885b/src/kernel-wasm/package.json",
+      "sha256": "036f3354d17ca73266588943b752a35defc37ac7bc08b48af9d96e8d86c4dc8e",
+      "bytes": 448
+    }
+  ],
+  "errors": [],
+  "commit": "a0cad82bd759b215f12f2230c47d407733ac885b",
+  "files_scanned": 1055,
+  "ui_stack": [
+    "React",
+    "Tauri"
+  ],
+  "icon_packages": [
+    "lucide-react"
+  ]
+}

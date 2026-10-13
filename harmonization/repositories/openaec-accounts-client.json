@@ -1,0 +1,26 @@
+{
+  "name": "openaec-accounts-client",
+  "url": "https://github.com/OpenAEC-Foundation/openaec-accounts-client",
+  "branch": "main",
+  "description": null,
+  "archived": false,
+  "license": "MIT",
+  "icons": [],
+  "icon_sources": [],
+  "manifests": [
+    {
+      "path": "Cargo.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/openaec-accounts-client/5c573482c5ba8f65fbcc1f371c9facbdcb22f1a8/Cargo.toml",
+      "sha256": "67ade8863decfa17cf3308abf6ddf59d2829424827d8ee1e9e03c471cebf88d1",
+      "bytes": 1551
+    }
+  ],
+  "errors": [],
+  "commit": "5c573482c5ba8f65fbcc1f371c9facbdcb22f1a8",
+  "files_scanned": 9,
+  "ui_stack": [
+    "Tauri"
+  ],
+  "icon_packages": []
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Y-app-ERPNext",
+  "url": "https://github.com/OpenAEC-Foundation/Y-app-ERPNext",
+  "branch": "main",
+  "description": "Y-app as ERPNext site",
+  "archived": false,
+  "license": "MIT",
+  "icons": [
+    {
+      "path": "y_next/public/app/vite.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/vite.svg",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+      "bytes": 1497
+    },
+    {
+      "path": "y_next/public/app/y-logo.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/y-logo.svg",
+      "sha256": "1289dfae09c58c8615756a99e1479d3ff8813d82824fb76a1360df04ac52f911",
+      "bytes": 1143
+    }
+  ],
+  "icon_sources": [
+    {
+      "path": "y_next/public/app/yapp-createLucideIcon-BaPRLlQf.js",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/yapp-createLucideIcon-BaPRLlQf.js",
+      "sha256": "d025e608401dd4c72c3121d31b98dc10a54b24de793a92b48fe9b23d7dd5afe6",
+      "bytes": 1428
+    }
+  ],
+  "manifests": [
+    {
+      "path": "pyproject.toml",
+      "kind": "manifest",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/pyproject.toml",
+      "sha256": "d876a7de9d323b8c8f49de2aab53974ea5f2d720bcabb646f0c55ed298354519",
+      "bytes": 532
+    }
+  ],
+  "errors": [],
+  "commit": "35130a90ad76f5781087b19ae7d5c932ff2c6549",
+  "files_scanned": 685,
+  "ui_stack": [],
+  "icon_packages": []
+}
