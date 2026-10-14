@@ -54,8 +54,9 @@ wordt behandeld.
 ## FEM/BIM iconbeoordeling · ronde 1
 
 De [visuele atlas](domain-icon-atlas.html) bevat 109 verschillende vectorvormen
-in negen betekenisgroepen. Alle bestanden zijn XML-geldig en blijven als
-ontwerpconcepten buiten de distribueerbare Rust-crate. In 24 gevallen bestaat
+in negen betekenisgroepen. Alle bestanden zijn XML-geldig. De native Style Repo
+toont ze voor review; de publieke icon-API van de Rust-crate bevat ze nog niet.
+In 24 gevallen bestaat
 een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
 
 | Toets | Waarneming | Ontwerpactie |
