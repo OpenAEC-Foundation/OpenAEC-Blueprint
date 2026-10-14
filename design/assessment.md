@@ -8,8 +8,9 @@ migratie van alle OpenAEC-applicaties.
 
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
-- 436 screenshotkandidaten zijn op commit vastgelegd in `screen-index.json`;
-  322 zijn als mogelijke applicatieschermen geclassificeerd. De classificatie
+- 436 screenshotverwijzingen zijn op commit vastgelegd in `screen-index.json`;
+  415 hebben een unieke Git-blobinhoud en 322 zijn als mogelijke
+  applicatieschermen geclassificeerd. De classificatie
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
   pyRevit-knopbundelconventie. De overige SVG's, CAD-symbolen, illustraties en
@@ -43,7 +44,7 @@ migratie van alle OpenAEC-applicaties.
 | Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen zijn beschreven. | Unieke vectorvormen ontwerpen en op 16, 20 en 24 px toetsen. |
 | Applicatieschermen | Start, werkgebied, bestand, instellingen en lege toestand zijn in het prototype navigeerbaar. | Import/export, voortgang, onopgeslagen werk en fouttoestanden per studio uitwerken. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de titelbalkiconen en fonts. | Ribbon, panelen en dialoogcomponenten gefaseerd op de gedeelde shell aansluiten zonder 3D-functionaliteit te verliezen. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor titelbalkiconen, fonts en 77 algemene kleurvelden per thema. | Ribbon, panelen en dialoogcomponenten gefaseerd op de gedeelde shell aansluiten zonder 3D-functionaliteit te verliezen. |
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
