@@ -1,0 +1,5483 @@
+{
+  "import_occurrences": 684,
+  "unique_package_names": 219,
+  "packages": {
+    "solid-icons/tb": 24,
+    "lucide-react": 660
+  },
+  "records": [
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineX",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/components/FeedbackDialog.tsx",
+      "line": 2,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlinePackage",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineBolt",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineFolder",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineSettings",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineShield",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineLink",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineCpu",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineFileText",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineServer",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineRefresh",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/DashboardPage.tsx",
+      "line": 7,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineGitBranch",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineFileText",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineGitCommit",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineBolt",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineArrowUp",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineInfoCircle",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineGitFork",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineCheck",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineTerminal",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/GitPage.tsx",
+      "line": 4,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineMessage",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/PromptsPage.tsx",
+      "line": 2,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineChevronDown",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/PromptsPage.tsx",
+      "line": 2,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineCopy",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/PromptsPage.tsx",
+      "line": 2,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "solid-icons/tb",
+      "name": "TbOutlineEdit",
+      "repo": "OpenAEC-Workspace-Composer",
+      "source": "src/pages/PromptsPage.tsx",
+      "line": 2,
+      "commit": "33327e001d6ad917356920060b8c7016fcbd6de5"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Circle",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Palette",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderTree",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Shapes",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileBarChart",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DoorOpen",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleDot",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-2D-studio-AEC-extension",
+      "source": "src/ribbonTabs.tsx",
+      "line": 2,
+      "commit": "fd22965ed28ae8e7c137039c538cb6da7d076b2a"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Factory",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GraduationCap",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HeartPulse",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoreHorizontal",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ShoppingBag",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-energy-studio",
+      "source": "src/components/BuildFlow/BuildFlow.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/CalculationNotice/CalculationNotice.tsx",
+      "line": 1,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Camera",
+      "repo": "open-energy-studio",
+      "source": "src/components/EvidenceLink/EvidenceLink.tsx",
+      "line": 12,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Paperclip",
+      "repo": "open-energy-studio",
+      "source": "src/components/EvidenceLink/EvidenceLink.tsx",
+      "line": 12,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/EvidenceLink/EvidenceLink.tsx",
+      "line": 12,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-energy-studio",
+      "source": "src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-energy-studio",
+      "source": "src/components/ItemActions/ItemActions.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-energy-studio",
+      "source": "src/components/ItemActions/ItemActions.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleHelp",
+      "repo": "open-energy-studio",
+      "source": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ShieldCheck",
+      "repo": "open-energy-studio",
+      "source": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ClipboardList",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+      "line": 5,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+      "line": 5,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+      "line": 5,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+      "line": 5,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-energy-studio",
+      "source": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Calculator",
+      "repo": "open-energy-studio",
+      "source": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleHelp",
+      "repo": "open-energy-studio",
+      "source": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRightClose",
+      "repo": "open-energy-studio",
+      "source": "src/components/PreviewPanel/PreviewPanel.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRightClose",
+      "repo": "open-energy-studio",
+      "source": "src/components/PropertiesPanel/PropertiesPanel.tsx",
+      "line": 5,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Calculator",
+      "repo": "open-energy-studio",
+      "source": "src/components/SettingsDialog/SettingsDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/SettingsDialog/SettingsDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "SlidersHorizontal",
+      "repo": "open-energy-studio",
+      "source": "src/components/SettingsDialog/SettingsDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-energy-studio",
+      "source": "src/components/StatusBar/StatusBar.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/StatusBar/StatusBar.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Droplet",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Flame",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelTop",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Sun",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Wind",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutGrid",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyMwa.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRegistration.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleX",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRegistration.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Clock",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRegistration.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRelabel.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleX",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRelabel.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Clock",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyRelabel.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyReport.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Printer",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyReport.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ban",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Caravan",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleHelp",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Factory",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Fan",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Flame",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Network",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plug",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ship",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Thermometer",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "TreePine",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Wind",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Zap",
+      "repo": "open-energy-studio",
+      "source": "src/components/SurveyWizard/SurveyWizard.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GripVertical",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronUp",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/UValueCalculator/UValueCalculator.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Caravan",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HousePlus",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ship",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Archive",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Caravan",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileInput",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Folder",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderPlus",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HousePlus",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutGrid",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "List",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoreHorizontal",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoreVertical",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RotateCcw",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ship",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+      "line": 9,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/CommandPalette.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/Inspector.tsx",
+      "line": 12,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowLeft",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/NtaStepPage.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/NtaStepPage.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/NtaStepPage.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Paperclip",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/NtaStepPage.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/NtaStepPage.tsx",
+      "line": 13,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BookOpen",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/PageHeader.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Box",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/StepRouter.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/StepRouter.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/StepRouter.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Printer",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/StepRouter.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FilePlus",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MessageSquare",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Minus",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XSquare",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/TopBar.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BookOpen",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Box",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Calculator",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Flame",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MessageSquare",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "SlidersHorizontal",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Wrench",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/WorkflowNav.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/BuildingPages.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/BuildingPages.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Box",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileArchive",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Printer",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/DeliveryPages.tsx",
+      "line": 8,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/InstallationsPage.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/InstallationsPage.tsx",
+      "line": 10,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/ProjectOverview.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/RegistrationForm.tsx",
+      "line": 11,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/RegistrationForm.tsx",
+      "line": 11,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/RegistrationPage.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleAlert",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/RegistrationPage.tsx",
+      "line": 7,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/existing/MwaViews.tsx",
+      "line": 6,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/existing/MwaViews.tsx",
+      "line": 6,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Table2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/results/MonthlyChart.tsx",
+      "line": 12,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/results/ResultsDashboard.tsx",
+      "line": 11,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/results/ResultsDashboard.tsx",
+      "line": 11,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/shell/pages/results/ResultsDashboard.tsx",
+      "line": 11,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/DataTable.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/DataTable.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/DataTable.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/DataTable.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "History",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ShieldQuestion",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Display.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Navigation.tsx",
+      "line": 2,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Toast.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Toast.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Toast.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Toast.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-energy-studio",
+      "source": "src/components/ui/Toast.tsx",
+      "line": 4,
+      "commit": "f02286c6d439e3caa4a59e84d0ec9637b1749788"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ConstructionImportStep.tsx",
+      "line": 12,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/FileUploadStep.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileJson",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/FileUploadStep.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/FileUploadStep.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/FileUploadStep.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DoorOpen",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ImportSummary.tsx",
+      "line": 7,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/RoomImportStep.tsx",
+      "line": 8,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Home",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DoorOpen",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ClipboardCheck",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronLeft",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Loader2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "line": 13,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MousePointer2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Hand",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pentagon",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Circle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Grid2x2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DoorOpen",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Scissors",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoveHorizontal",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Type",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CornerRightDown",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ruler",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Redo2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileImage",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileUp",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/modeller/Ribbon.tsx",
+      "line": 4,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MousePointer2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Hand",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pentagon",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Circle",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Grid2x2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DoorOpen",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Scissors",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoveHorizontal",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Type",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CornerRightDown",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Ruler",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Redo2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileImage",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileUp",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/components/ribbon/ModellerTab.tsx",
+      "line": 5,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/pages/Library.tsx",
+      "line": 1,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-heatloss-studio",
+      "source": "frontend/src/pages/ProjectConstructions.tsx",
+      "line": 8,
+      "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowLeft",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Clock",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "SaveAll",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Printer",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileType",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Puzzle",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BookOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Compass",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LifeBuoy",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ClipboardCheck",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/Backstage.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+      "line": 20,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Puzzle",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+      "line": 20,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileArchive",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+      "line": 20,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileCode",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+      "line": 20,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+      "line": 20,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/HelpPanel.tsx",
+      "line": 23,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Star",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowUpFromLine",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/backstage/LibrarySection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/common/Dialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleHelp",
+      "repo": "open-planner-studio",
+      "source": "src/components/common/HelpButton.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/common/Select.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "EyeOff",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/AiConnectionDetailsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BaselineDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Gauge",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BenchmarkDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BenchmarkDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BenchmarkDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Play",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BenchmarkDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/BenchmarkDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Star",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarForm.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarGeneratorFields.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/CalendarGeneratorFields.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ContourDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ShieldAlert",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExtensionConsentDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HardDrive",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExtensionConsentDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Globe",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExtensionConsentDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExternalLinkDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Link2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExternalLinkDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ExternalLinkDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FeedbackDialog.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FilterDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FilterDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BookOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FormatNoticeDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleCheck",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FormatNoticeDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleMinus",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FormatNoticeDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/FormatNoticeDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ExternalLink",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Library",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GitBranch",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ListTree",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Boxes",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BookOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/JustUpdatedDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/LayoutsDialog.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Link2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/LibraryLinkDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/LibraryLinkDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/LibraryLinkDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/MoveProjectDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FilePlus2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/NewOrOpenProjectDialog.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/NewOrOpenProjectDialog.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/PoolImportDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ProgressImportDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RotateCcw",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/RecoveryDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/RecoveryDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowUpRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pen",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Type",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ScreenshotAnnotator.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SettingsDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Keyboard",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/ShortcutsDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteOpenDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteOpenDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteOpenDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HardDrive",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteOpenDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteOpenDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HardDrive",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/SiteSaveDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BarChart3",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/StatsDialog.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/StructureDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/StructureDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/TaskDialog.tsx",
+      "line": 17,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GraduationCap",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/TutorialOfferDialog.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RotateCw",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ExternalLink",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PackageOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/UpdateDialog.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/WorkTimeEditor.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/WorkTimeEditor.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/dialogs/WorkTimeEditor.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-planner-studio",
+      "source": "src/components/guide/GuidePanel.tsx",
+      "line": 23,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/guide/GuidePanel.tsx",
+      "line": 23,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/guide/GuidePanel.tsx",
+      "line": 23,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/guide/GuidePanel.tsx",
+      "line": 23,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Link",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DependencyModeNotice.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronLeft",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Menu",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/ProjectOverview.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/ProjectOverview.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutGrid",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/ProjectRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/ProjectRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/DocumentChrome/SwitcherPill.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Clock",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/HourDataNotice.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/NoticeStrip.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/NotificationHost.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RecordedDatesNotice.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleDot",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RecordedDatesNotice.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Play",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Redo2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ZoomIn",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ZoomOut",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileText",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Printer",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Calendar",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "EyeOff",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "SaveAll",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Tags",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ListOrdered",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Hash",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "IndentIncrease",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "IndentDecrease",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Users",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BarChart3",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Scale",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eraser",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronLeft",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowLeftToLine",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowRightToLine",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutGrid",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Spline",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "TrendingUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CalendarDays",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Palette",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MoveHorizontal",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Keyboard",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CalendarClock",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronsDownUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronsUpDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Columns3",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FileUp",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Scissors",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Diamond",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Link",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ZoomIn",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ZoomOut",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "History",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Puzzle",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutTemplate",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "UserPlus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Flag",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GitCompareArrows",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CalendarClock",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Columns3",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Filter",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Layers",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ArrowUpDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Maximize2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Minimize2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "SplitSquareHorizontal",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Palette",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Map",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RightRail/RightRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Maximize2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RightRail/RightRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRightClose",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RightRail/RightRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/RightRail/RightRail.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Scissors",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/SplitModeNotice.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Terminal",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/StatusBar/StatusBar.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Circle",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/StatusBar/StatusBar.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ListTree",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/StructureLockedNotice.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Undo2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Redo2",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Minus",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-planner-studio",
+      "source": "src/components/layout/TitleBar/TitleBar.tsx",
+      "line": 7,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/AIActivityPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pause",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/DebugTerminal.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Play",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/DebugTerminal.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/DebugTerminal.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/DebugTerminal.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourceOccupancyView.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourceOccupancyView.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourceOccupancyView.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Unlink2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Library",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanel.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/ResourcePanelCompact.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/StatusBanner.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/TaskPropertiesPanel.tsx",
+      "line": 6,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/WarningsPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "OctagonAlert",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/WarningsPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/WarningsPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-planner-studio",
+      "source": "src/components/panels/WarningsPanel.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Activity",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiActivityGroup.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RefreshCw",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "EyeOff",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plug",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pause",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Play",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Lock",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Unlock",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "DatabaseBackup",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Save",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Play",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiServerGroup.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Square",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiServerGroup.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Circle",
+      "repo": "open-planner-studio",
+      "source": "src/components/ribbon/ai/AiServerGroup.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/ProjectInfoPanelContent.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/ProjectInfoPanelContent.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/ProjectInfoPanelContent.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/SchedulingProfileSection.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/SchedulingProfileSection.tsx",
+      "line": 4,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/settings/SettingsPanelContent.tsx",
+      "line": 11,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/ColumnChooser.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/ColumnChooser.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/ColumnChooser.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "RotateCcw",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/ColumnChooser.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/ColumnChooser.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Minus",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/DataGridHeader.tsx",
+      "line": 10,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/RelationCellEditor.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Zap",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-grid/RelationCellEditor.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskAssignmentsSection.tsx",
+      "line": 6,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BarChart3",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskAssignmentsSection.tsx",
+      "line": 6,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Lock",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskAssignmentsSection.tsx",
+      "line": 6,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskAssignmentsSection.tsx",
+      "line": 6,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Zap",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDependenciesSection.tsx",
+      "line": 14,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Info",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskDurationField.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskNotesFields.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskNotesFields.tsx",
+      "line": 5,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskSplitsSection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskSplitsSection.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Pencil",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskTypeField.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskTypeField.tsx",
+      "line": 3,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Lock",
+      "repo": "open-planner-studio",
+      "source": "src/components/task-sections/TaskWorkRuleField.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/LevelListEditor.tsx",
+      "line": 2,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CalendarRange",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Filter",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Flag",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "GanttChartSquare",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "HardHat",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "LayoutTemplate",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ListTree",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Milestone",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Route",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Star",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Truck",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Users",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Wrench",
+      "repo": "open-planner-studio",
+      "source": "src/components/viewControls/layoutIcons.tsx",
+      "line": 1,
+      "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRightOpen",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/App.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "PanelRightClose",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/App.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Settings",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/MenuBar/MenuBar.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Sun",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BoxSelect",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Move",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Maximize",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Filter",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Building2",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Shapes",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Focus",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/Ribbon.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/RibbonComponents.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/layout/Ribbon/RibbonComponents.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "X",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/BAG3DPanel.tsx",
+      "line": 12,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/BAG3DPanel.tsx",
+      "line": 12,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MapPin",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/BAG3DPanel.tsx",
+      "line": 12,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/PointcloudPanel.tsx",
+      "line": 10,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "EyeOff",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/PointcloudPanel.tsx",
+      "line": 10,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/PointcloudPanel.tsx",
+      "line": 10,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "XCircle",
+      "repo": "open-pointcloud-studio",
+      "source": "classic/src/components/panels/ReconstructionProgressDialog.tsx",
+      "line": 2,
+      "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Key",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ApiKeyManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ApiKeyManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ApiKeyManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Copy",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ApiKeyManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Check",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ApiKeyManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Send",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/CommentThread.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/CommentThread.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/CreateTopic.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronDown",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/CreateTopic.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronUp",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/CreateTopic.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "UserPlus",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/MemberManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/MemberManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Search",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/MemberManager.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Trash2",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/TopicList.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertCircle",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/TopicList.tsx",
+      "line": 2,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Camera",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/components/ViewpointCard.tsx",
+      "line": 1,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Download",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Upload",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Key",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Users",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "BarChart3",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CircleDot",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "CheckCircle2",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Clock",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "AlertTriangle",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MapPin",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Image",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "FolderOpen",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectList.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Plus",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectList.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MapPin",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/ProjectList.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "ChevronRight",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "MessageSquare",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Eye",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Tag",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Calendar",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "User",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    },
+    {
+      "package": "lucide-react",
+      "name": "Hash",
+      "repo": "openaec-bcf-platform",
+      "source": "frontend/src/pages/TopicDetail.tsx",
+      "line": 3,
+      "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597"
+    }
+  ],
+  "errors": []
+}

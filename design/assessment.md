@@ -14,6 +14,9 @@ migratie van alle OpenAEC-applicaties.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
   pyRevit-knopbundelconventie. De overige SVG's, CAD-symbolen, illustraties en
   technische tekeningen horen niet bij die telling.
+- 684 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
+  Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
+  gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
   Pointcloud native en de 36 lokaal bewaarde bruikbare UI-referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
