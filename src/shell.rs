@@ -55,7 +55,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
                 let hint = format!("{}{}", label, command.shortcut.as_ref().map(|s|format!(" ({s})")).unwrap_or_default());
                 let control = button(column![command.icon.view(24,color),text(label).font(fonts::BODY).size(12)].spacing(6).align_x(iced::Alignment::Center))
                     .padding([5,10]).height(58).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
-                    .style(move |_,s| widgets::button_style(theme,selected,s));
+                    .style(move |_,s| widgets::ribbon_button_style(theme,selected,s));
                 commands=commands.push(tooltip(control,text(hint).size(12),tooltip::Position::Bottom));
             }
             groups=groups.push(container(column![commands,text(group.label.clone()).font(fonts::MEDIUM).size(11).color(t.ribbon_group_label)].spacing(4).align_x(iced::Alignment::Center)).padding([4,8]).style(move |_| container::Style { border:iced::Border {color:t.ribbon_group_separator,width:1.0,radius:0.0.into()},..Default::default() }));

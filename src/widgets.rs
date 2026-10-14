@@ -13,6 +13,49 @@ pub fn button_style(theme: Theme, selected: bool, status: button::Status) -> but
         ..Default::default()
     }
 }
+/// Canonical ribbon control colors, including hover, selection, and disabled contrast.
+pub fn ribbon_button_style(theme: Theme, selected: bool, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    let (background, text_color, border) = if selected {
+        (
+            Some(t.ribbon_btn_active_bg),
+            t.ribbon_btn_active_text,
+            t.ribbon_btn_active_border,
+        )
+    } else if hovered {
+        (
+            Some(t.ribbon_btn_hover),
+            t.ribbon_text_hover,
+            t.ribbon_btn_hover_border,
+        )
+    } else {
+        (None, t.text, iced::Color::TRANSPARENT)
+    };
+    let style = button::Style {
+        background: background.map(Into::into),
+        text_color,
+        border: Border {
+            color: border,
+            width: 1.0,
+            radius: 2.0.into(),
+        },
+        ..Default::default()
+    };
+    if status == button::Status::Disabled {
+        button::Style {
+            background: style.background.map(|color| color.scale_alpha(0.72)),
+            text_color: style.text_color.scale_alpha(0.72),
+            border: Border {
+                color: style.border.color.scale_alpha(0.72),
+                ..style.border
+            },
+            ..style
+        }
+    } else {
+        style
+    }
+}
 pub fn surface(theme: Theme) -> container::Style {
     let t = theme.tokens(); container::Style::default().background(t.bg).color(t.text)
 }
