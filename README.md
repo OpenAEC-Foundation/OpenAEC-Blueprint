@@ -1,6 +1,18 @@
 # OpenAEC UI-harmonisatie
 
-Deze repository bevat de ontwerpbeoordeling voor een gedeelde OpenAEC-UI. De keuze voor de definitieve Rust/Dynlex-implementatie volgt na beoordeling van de layouts, ribbons en iconen.
+Deze repository bevat een volledig in Rust getekende desktop-Style Repo en een herbruikbare `openaec-ui`-crate. De native interface gebruikt `iced` en volgt de regio's, maten, thema's en typografie van de OpenAEC Tauri-template: titelbalk, ribbon, documenttabs, verkenner, werkgebied, eigenschappen, status en instellingen. Er is geen React, JavaScript, WebView of Tauri-runtime nodig.
+
+Start de Style Repo met:
+
+```bash
+cargo run --bin style_repo
+```
+
+De app laat componenten, vijf thema's, de gedeelde layout, 504 onderzochte UI-iconbestanden en 109 FEM/BIM-iconvoorstellen zien. De broniconen zijn bedoeld voor beoordeling; de 21 iconen in `assets/icons/` vormen de huidige semantische kern van de crate. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
+
+![Native Rust Style Repo](design/style-repo-native.png)
+
+Een andere Rust-tool kan de shell via de `Application`-trait gebruiken. [`examples/studio.rs`](examples/studio.rs) is een klein integratievoorbeeld (`cargo run --example studio`).
 
 Open [`design/review.html`](design/review.html) in een browser voor het interactieve overzicht. De 504 via UI-broncode of actieve knopbundels onderbouwde iconbestanden staan in `harmonization/ui-icons/`. Zes extra broniconen maken de vergelijking in [`design/icon-comparison.html`](design/icon-comparison.html) compleet. Het volledige bronarchief van circa 27.000 visuele bestanden blijft lokaal in `harmonization/sources/` en staat bewust buiten Git; de metadata en herkomst staan in `harmonization/asset-index.json`.
 

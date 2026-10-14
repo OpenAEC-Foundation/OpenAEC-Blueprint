@@ -32,6 +32,14 @@ pub fn action<'a, M: Clone + 'a>(label: impl Into<String>, icon: Icon, message: 
 pub fn icon_button<'a, M: Clone + 'a>(label: &'a str, icon: Icon, message:M, theme:Theme) -> Element<'a,M> {
     tooltip(button(icon.view(16,theme.tokens().text)).padding(7).on_press(message).style(move |_,s|button_style(theme,false,s)), text(label).size(12), tooltip::Position::Bottom).into()
 }
+pub fn status_icon_button<'a, M: Clone + 'a>(label: &'a str, icon: Icon, message:M, theme:Theme) -> Element<'a,M> {
+    let t=theme.tokens();
+    tooltip(button(icon.view(14,t.status_text)).padding([3,7]).on_press(message).style(move |_,status|button::Style {
+        background: Some(if matches!(status,button::Status::Hovered|button::Status::Pressed) {t.status_hover} else {t.status_bg}.into()),
+        text_color:t.status_text,
+        ..Default::default()
+    }),text(label).size(12),tooltip::Position::Top).into()
+}
 pub fn empty_state<'a, M:'a>(title: impl Into<String>, description: impl Into<String>, theme: Theme) -> Element<'a,M> {
     container(column![Icon::Cube.view(48,theme.tokens().accent),text(title.into()).font(fonts::HEADING).size(28),text(description.into()).font(fonts::BODY).size(14)].spacing(16).align_x(iced::Alignment::Center)).center(Fill).into()
 }

@@ -16,6 +16,7 @@ pub trait Application: 'static {
         widgets::empty_state(language.text("Eigenschappen","Properties"), "", theme)
     }
     fn file_commands(&self, _language: Language) -> Vec<Command<Self::Command>> { Vec::new() }
+    fn quick_commands(&self, _language: Language) -> Vec<Command<Self::Command>> { Vec::new() }
     fn documents(&self) -> Vec<Document> { Vec::new() }
     fn active_document(&self) -> Option<String> { None }
     fn document_event(&mut self, _event: DocumentEvent) -> Task<Self::Command> { Task::none() }
@@ -52,7 +53,7 @@ impl<A:Application> Runtime<A> {
         let theme=self.shell.preferences.theme; let language=self.shell.preferences.language;
         shell(&self.shell, Slots {
             title:self.app.title(), tabs:self.app.ribbon(language), documents:self.app.documents(),
-            active_document:self.app.active_document(), file_commands:self.app.file_commands(language),
+            active_document:self.app.active_document(), file_commands:self.app.file_commands(language), quick_commands:self.app.quick_commands(language),
             status:self.error.clone().unwrap_or_else(||self.app.status(language)),
             content:Box::new(move |region| match region {
                 Region::Workspace => self.app.workspace(theme,language).map(Message::Command),

@@ -5,10 +5,10 @@ use serde::{Deserialize, Serialize};
 /// Fixed dimensions shared by every application, in logical pixels.
 pub mod metrics {
     pub const TITLE: u16 = 32;
-    pub const TABS: u16 = 34;
-    pub const RIBBON: u16 = 100;
-    pub const DOCUMENTS: u16 = 32;
-    pub const STATUS: u16 = 26;
+    pub const TABS: u16 = 28;
+    pub const RIBBON: u16 = 94;
+    pub const DOCUMENTS: u16 = 30;
+    pub const STATUS: u16 = 22;
     pub const CONTROL: u16 = 30;
     pub const ICON: u16 = 20;
     pub const GAP: u16 = 8;
