@@ -17,6 +17,8 @@ use serde::Deserialize;
 use std::{path::PathBuf, sync::OnceLock};
 #[path = "style_repo/source_icons.rs"]
 mod source_icons;
+#[path = "style_repo/domain_drafts.rs"]
+mod domain_drafts;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Page {
@@ -97,6 +99,7 @@ enum Action {
 
 #[derive(Deserialize)]
 struct Proposal {
+    id: String,
     domain: String,
     group: String,
     label: String,
@@ -658,9 +661,18 @@ impl StyleRepo {
         let count = proposals().iter().filter(|p| p.domain == domain).count();
         let mut list = Column::new().spacing(10);
         for proposal in proposals().iter().filter(|p| p.domain == domain) {
+            let preview = svg(svg::Handle::from_memory(
+                domain_drafts::get(&proposal.id).expect("draft for every proposal"),
+            ))
+            .width(32)
+            .height(32)
+            .style(move |_, _| svg::Style {
+                color: Some(theme.tokens().text),
+            });
             list = list.push(
                 self.card(
                     row![
+                        container(preview).width(46).center_x(Fill),
                         column![
                             text(&proposal.label).font(fonts::STRONG).size(14),
                             text(&proposal.visual_metaphor)
@@ -685,7 +697,7 @@ impl StyleRepo {
                 ),
             );
         }
-        column![self.heading("DOMAIN ICONS",title,l.text("Semantische voorstellen voor beoordeling; definitieve tekeningen volgen na review.", "Semantic proposals for review; final drawings follow approval."),theme),text(format!("{} {}",count,l.text("voorstellen", "proposals"))).size(12).color(theme.tokens().text_secondary),list].spacing(16).into()
+        column![self.heading("DOMAIN ICONS",title,l.text("Vectorconcepten voor visuele beoordeling; nog niet vrijgegeven voor de gedeelde crate.", "Vector concepts for visual review; not yet released in the shared crate."),theme),text(format!("{} {}",count,l.text("iconconcepten", "icon concepts"))).size(12).color(theme.tokens().text_secondary),list].spacing(16).into()
     }
 }
 
@@ -947,5 +959,9 @@ mod tests {
         assert_eq!(proposals().len(), 109);
         assert!(proposals().iter().any(|proposal| proposal.domain == "fem"));
         assert!(proposals().iter().any(|proposal| proposal.domain == "bim"));
+        assert_eq!(domain_drafts::ALL.len(), proposals().len());
+        assert!(proposals()
+            .iter()
+            .all(|proposal| domain_drafts::get(&proposal.id).is_some()));
     }
 }

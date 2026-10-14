@@ -8,7 +8,7 @@ Start de Style Repo met:
 cargo run --bin style_repo
 ```
 
-De app laat componenten, vijf thema's, de gedeelde layout, 18 studio-indelingen, 565 onderzochte UI-iconbestanden en 109 FEM/BIM-iconvoorstellen zien. De broniconen zijn bedoeld voor beoordeling; de 21 iconen in `assets/icons/` vormen de huidige semantische kern van de crate. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
+De app laat componenten, vijf thema's, de gedeelde layout, 18 studio-indelingen, 565 onderzochte UI-iconbestanden en 109 getekende FEM/BIM-iconconcepten zien. De broniconen en domeinconcepten zijn bedoeld voor beoordeling; de 21 iconen in `assets/icons/` vormen de huidige semantische kern van de crate. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
 
 ![Native Rust Style Repo](design/style-repo-native.png)
 
