@@ -7,25 +7,46 @@
   "license": "MIT",
   "icons": [
     {
+      "path": "y_next/public/app/studios/cad/logo-29f685e80faf44a.svg",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/studios/cad/logo-29f685e80faf44a.svg",
+      "sha256": "23543bea58f8c3014a607fdecd03e2cece58235ac6f556d8b3455666bcb13ea0",
+      "bytes": 2437
+    },
+    {
+      "path": "y_next/public/app/studios/planner/icon.png",
+      "kind": "icon",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/studios/planner/icon.png",
+      "sha256": "79b8bf232c4012aa46a27f0ae78fc915a10afa5ed4183136c8a5b9ca2b94b4dc",
+      "bytes": 1885
+    },
+    {
       "path": "y_next/public/app/vite.svg",
       "kind": "icon",
-      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/vite.svg",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/vite.svg",
       "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
       "bytes": 1497
     },
     {
       "path": "y_next/public/app/y-logo.svg",
       "kind": "icon",
-      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/y-logo.svg",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/y-logo.svg",
       "sha256": "1289dfae09c58c8615756a99e1479d3ff8813d82824fb76a1360df04ac52f911",
       "bytes": 1143
     }
   ],
   "icon_sources": [
     {
+      "path": "y_next/public/app/studios/planner/assets/icons-vendor-BP74PMln.js",
+      "kind": "icon-source",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/studios/planner/assets/icons-vendor-BP74PMln.js",
+      "sha256": "354863598a76d5c1b7f0d9a896a4bc569b06464caa9482defa6657aa1dddecf6",
+      "bytes": 29751
+    },
+    {
       "path": "y_next/public/app/yapp-createLucideIcon-BaPRLlQf.js",
       "kind": "icon-source",
-      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/y_next/public/app/yapp-createLucideIcon-BaPRLlQf.js",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/y_next/public/app/yapp-createLucideIcon-BaPRLlQf.js",
       "sha256": "d025e608401dd4c72c3121d31b98dc10a54b24de793a92b48fe9b23d7dd5afe6",
       "bytes": 1428
     }
@@ -34,14 +55,14 @@
     {
       "path": "pyproject.toml",
       "kind": "manifest",
-      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/35130a90ad76f5781087b19ae7d5c932ff2c6549/pyproject.toml",
+      "source_url": "https://raw.githubusercontent.com/OpenAEC-Foundation/Y-app-ERPNext/340c8f84b567d517b4d832a8501ce3d17255a6ce/pyproject.toml",
       "sha256": "d876a7de9d323b8c8f49de2aab53974ea5f2d720bcabb646f0c55ed298354519",
       "bytes": 532
     }
   ],
   "errors": [],
-  "commit": "35130a90ad76f5781087b19ae7d5c932ff2c6549",
-  "files_scanned": 685,
+  "commit": "340c8f84b567d517b4d832a8501ce3d17255a6ce",
+  "files_scanned": 3095,
   "ui_stack": [],
   "icon_packages": []
 }

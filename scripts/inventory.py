@@ -11,6 +11,7 @@ import re
 import subprocess
 import time
 import urllib.request
+import urllib.parse
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'harmonization'
@@ -32,6 +33,8 @@ def git(repo, *args):
 def inspect(meta):
     name = meta['name']
     repo = CACHE / name
+    previous_path = OUT / 'repositories' / f'{name}.json'
+    previous = json.loads(previous_path.read_text()) if previous_path.exists() else {}
     result = {'name': name, 'url': meta['html_url'], 'branch': meta['default_branch'],
               'description': meta.get('description'), 'archived': meta['archived'],
               'license': (meta.get('license') or {}).get('spdx_id', 'UNKNOWN'),
@@ -40,6 +43,7 @@ def inspect(meta):
         if not (repo / '.git').exists():
             subprocess.run(['git', 'clone', '--depth=1', '--filter=blob:none', '--no-checkout', '--single-branch', meta['clone_url'], str(repo)], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=240)
         sha = git(repo, 'rev-parse', 'HEAD').strip()
+        changed = previous.get('commit') != sha
         result['commit'] = sha
         paths = git(repo, 'ls-tree', '-r', '--name-only', 'HEAD').splitlines()
         result['files_scanned'] = len(paths)
@@ -59,9 +63,9 @@ def inspect(meta):
             dest = base / path
             url = f'https://raw.githubusercontent.com/{meta["full_name"]}/{sha}/{urllib.parse.quote(path)}'
             try:
-                data = dest.read_bytes() if dest.exists() else fetch(url)
+                data = dest.read_bytes() if dest.exists() and not changed else fetch(url)
                 dest.parent.mkdir(parents=True, exist_ok=True)
-                if not dest.exists(): dest.write_bytes(data)
+                if not dest.exists() or changed: dest.write_bytes(data)
                 return {'path': path, 'kind': kind, 'source_url': url, 'sha256': hashlib.sha256(data).hexdigest(), 'bytes':len(data)}
             except Exception as e: return {'path': path, 'error': str(e)}
         with futures.ThreadPoolExecutor(max_workers=6) as pool:

@@ -25,16 +25,18 @@ enum Page {
     Icons,
     Themes,
     Layouts,
+    Studios,
     Fem,
     Bim,
 }
 impl Page {
-    const ALL: [Self; 7] = [
+    const ALL: [Self; 8] = [
         Self::Overview,
         Self::Components,
         Self::Icons,
         Self::Themes,
         Self::Layouts,
+        Self::Studios,
         Self::Fem,
         Self::Bim,
     ];
@@ -45,6 +47,7 @@ impl Page {
             Self::Icons => "icons",
             Self::Themes => "themes",
             Self::Layouts => "layouts",
+            Self::Studios => "studios",
             Self::Fem => "fem",
             Self::Bim => "bim",
         }
@@ -56,6 +59,7 @@ impl Page {
             Self::Icons => l.text("Iconen", "Icons"),
             Self::Themes => l.text("Thema's", "Themes"),
             Self::Layouts => l.text("Layouts", "Layouts"),
+            Self::Studios => l.text("Alle studio's", "All studios"),
             Self::Fem => "Open FEM Studio",
             Self::Bim => "Open BIM Studio",
         }
@@ -67,6 +71,7 @@ impl Page {
             Self::Icons => Icon::Search,
             Self::Themes => Icon::Settings,
             Self::Layouts => Icon::PanelLeft,
+            Self::Studios => Icon::Cube,
             Self::Fem => Icon::Measure,
             Self::Bim => Icon::Fit,
         }
@@ -87,6 +92,7 @@ enum Action {
     Toggle,
     Slider(f32),
     Reset,
+    SelectStudio(usize),
 }
 
 #[derive(Deserialize)]
@@ -96,6 +102,22 @@ struct Proposal {
     label: String,
     visual_metaphor: String,
     name_match_count: usize,
+}
+#[derive(Deserialize)]
+struct StudioLayout {
+    name: String,
+    tabs: Vec<String>,
+    left_panel: String,
+    right_panel: String,
+    workspace: String,
+    notes: String,
+}
+fn studios() -> &'static [StudioLayout] {
+    static DATA: OnceLock<Vec<StudioLayout>> = OnceLock::new();
+    DATA.get_or_init(|| {
+        serde_json::from_str(include_str!("../../design/app-layouts.json"))
+            .expect("valid studio layouts")
+    })
 }
 fn proposals() -> &'static [Proposal] {
     static DATA: OnceLock<Vec<Proposal>> = OnceLock::new();
@@ -114,6 +136,7 @@ struct StyleRepo {
     sample_input: String,
     sample_toggle: bool,
     sample_value: f32,
+    selected_studio: usize,
 }
 impl Default for StyleRepo {
     fn default() -> Self {
@@ -126,6 +149,7 @@ impl Default for StyleRepo {
             sample_input: String::new(),
             sample_toggle: false,
             sample_value: 35.0,
+            selected_studio: 0,
         }
     }
 }
@@ -218,15 +242,15 @@ impl StyleRepo {
             text(l.text("Ontwerpsysteem", "Design system")).font(fonts::HEADING).size(22),
             row![
                 self.nav_card(Page::Components, l.text("Native bediening en formulieren", "Native controls and forms"), theme, l),
-                self.nav_card(Page::Icons, l.text("504 broniconen met UI-bewijs", "504 source icons with UI evidence"), theme, l),
+                self.nav_card(Page::Icons, l.text("Broniconen met UI-bewijs", "Source icons with UI evidence"), theme, l),
                 self.nav_card(Page::Themes, l.text("Vijf gedeelde kleurthema's", "Five shared colour themes"), theme, l),
             ].spacing(12),
             row![
                 self.nav_card(Page::Layouts, l.text("Vaste regio's en ribbon", "Fixed regions and ribbon"), theme, l),
+                self.nav_card(Page::Studios, l.text("18 studio-indelingen", "18 studio layouts"), theme, l),
                 self.nav_card(Page::Fem, l.text("Constructieve pictogrammen", "Structural icon proposals"), theme, l),
-                self.nav_card(Page::Bim, l.text("BIM-pictogrammen", "BIM icon proposals"), theme, l),
             ].spacing(12),
-            self.card(column![text(l.text("Stand van het ontwerp", "Design status")).font(fonts::STRONG).size(14), text(l.text("De shell draait volledig in Rust. De 504 iconen zijn onderzoeksbronnen; definitieve semantische iconen worden na beoordeling gekozen.", "The shell runs entirely in Rust. The 504 icons are research sources; final semantic icons will be chosen after review.")).size(12)].spacing(7), theme),
+            self.card(column![text(l.text("Stand van het ontwerp", "Design status")).font(fonts::STRONG).size(14), text(format!("{} {}", source_icons::ALL.len(), l.text("iconen met UI-bewijs zijn onderzoeksbronnen. Definitieve semantische iconen volgen na beoordeling.", "icons with UI evidence are research sources. Final semantic icons follow review."))).size(12)].spacing(7), theme),
         ].spacing(18).into()
     }
     fn components(&self, theme: Theme, l: Language) -> Element<'_, Action> {
@@ -425,8 +449,8 @@ impl StyleRepo {
                 "ICON RESEARCH",
                 l.text("UI-iconen met bronbewijs", "UI icons with source evidence"),
                 l.text(
-                    "Alle 504 bronbestanden zijn ingebed in deze native app.",
-                    "All 504 source files are embedded in this native app."
+                    "Alle onderzochte bronbestanden zijn ingebed in deze native app.",
+                    "All researched source files are embedded in this native app."
                 ),
                 theme
             ),
@@ -565,6 +589,66 @@ impl StyleRepo {
         }
         column![self.heading("APPLICATION SHELL", l.text("Gedeelde layout", "Shared layout"), l.text("Deze regio's worden door de crate bepaald. Applicaties leveren hun eigen commando's en inhoud.", "The crate defines these regions. Applications supply their commands and content."),theme),list].spacing(18).into()
     }
+    fn studios_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let selected = &studios()[self.selected_studio];
+        let mut list = Column::new().spacing(5).width(220);
+        for (index, studio) in studios().iter().enumerate() {
+            list = list.push(
+                button(text(&studio.name).size(12))
+                    .padding(9)
+                    .width(Fill)
+                    .on_press(Action::SelectStudio(index))
+                    .style(move |_, state| {
+                        widgets::button_style(theme, index == self.selected_studio, state)
+                    }),
+            );
+        }
+        let mut tabs = Row::new().spacing(5);
+        for tab in &selected.tabs {
+            tabs = tabs.push(
+                container(text(tab).size(11).color(t.text))
+                    .padding(8)
+                    .style(move |_| container::Style::default().background(t.bg_lighter)),
+            );
+        }
+        let detail = column![
+            text(&selected.name)
+                .font(fonts::HEADING)
+                .size(27)
+                .color(t.text),
+            text(l.text("Voorgestelde ribbon-tabs", "Proposed ribbon tabs"))
+                .font(fonts::STRONG)
+                .size(11)
+                .color(t.accent),
+            tabs,
+            self.card(
+                column![
+                    text(l.text("Gedeelde schermindeling", "Shared screen layout"))
+                        .font(fonts::STRONG)
+                        .size(14),
+                    widgets::property(l.text("Links", "Left"), &selected.left_panel, theme),
+                    widgets::property(
+                        l.text("Werkgebied", "Workspace"),
+                        &selected.workspace,
+                        theme
+                    ),
+                    widgets::property(l.text("Rechts", "Right"), &selected.right_panel, theme),
+                ]
+                .spacing(14),
+                theme
+            ),
+            text(&selected.notes).size(12).color(t.text_secondary),
+        ]
+        .spacing(16)
+        .width(Fill);
+        column![
+            self.heading("STUDIO ATLAS", l.text("Alle studio's", "All studios"),
+                l.text("Achttien applicatie-indelingen op dezelfde shell. Selecteer een studio om de ribbon en panelen te vergelijken.",
+                       "Eighteen application layouts on one shell. Select a studio to compare its ribbon and panels."), theme),
+            row![list, detail].spacing(24).width(Fill),
+        ].spacing(22).into()
+    }
     fn domains(&self, theme: Theme, l: Language, domain: &'static str) -> Element<'_, Action> {
         let title = if domain == "fem" {
             "Open FEM Studio"
@@ -650,6 +734,12 @@ impl Application for StyleRepo {
                             .selected(self.page == Page::Themes),
                             Command::new("Layouts", Icon::PanelLeft, Action::Show(Page::Layouts))
                                 .selected(self.page == Page::Layouts),
+                            Command::new(
+                                l.text("Studio's", "Studios"),
+                                Icon::Cube,
+                                Action::Show(Page::Studios),
+                            )
+                            .selected(self.page == Page::Studios),
                         ],
                     },
                 ],
@@ -711,6 +801,7 @@ impl Application for StyleRepo {
             Page::Icons => self.icons(theme, l),
             Page::Themes => self.themes(theme, l),
             Page::Layouts => self.layouts(theme, l),
+            Page::Studios => self.studios_page(theme, l),
             Page::Fem => self.domains(theme, l, "fem"),
             Page::Bim => self.domains(theme, l, "bim"),
         };
@@ -784,6 +875,10 @@ impl Application for StyleRepo {
                 self.sample_toggle = false;
                 self.sample_value = 35.0;
             }
+            Action::SelectStudio(index) => {
+                self.selected_studio = index.min(studios().len().saturating_sub(1));
+                self.show(Page::Studios);
+            }
         }
         Task::none()
     }
@@ -818,8 +913,9 @@ impl Application for StyleRepo {
     }
     fn status(&self, l: Language) -> String {
         format!(
-            "{}  ·  504 UI-iconen  ·  109 FEM/BIM-voorstellen",
-            self.page.title(l)
+            "{}  ·  {} UI-iconen  ·  109 FEM/BIM-voorstellen",
+            self.page.title(l),
+            source_icons::ALL.len()
         )
     }
 }
@@ -841,7 +937,7 @@ mod tests {
 
     #[test]
     fn research_catalog_is_complete_and_unique() {
-        assert_eq!(source_icons::ALL.len(), 504);
+        assert!(source_icons::ALL.len() >= 565);
         assert!(source_icons::ALL.iter().all(|icon| !icon.bytes.is_empty()));
         let keys: HashSet<_> = source_icons::ALL
             .iter()

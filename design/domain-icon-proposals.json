@@ -154,8 +154,12 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 3,
+    "name_match_count": 4,
     "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/solid.svg"
+      },
       {
         "repo": "OpenCADStudio",
         "path": "assets/icons/hatch/hatch_solid.svg"
@@ -292,8 +296,20 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 1,
+    "name_match_count": 4,
     "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_section.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/section_box.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/section_drawing.svg"
+      },
       {
         "repo": "OpenCADStudio",
         "path": "assets/icons/osnap/intersection.svg"
@@ -835,7 +851,7 @@
     "label": "Net genereren",
     "visual_metaphor": "Vlak verdeeld in driehoeken",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -849,8 +865,29 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 5,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/closed_mesh.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/mesh_pointcloud.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/mesh_surface.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/mesh_terrain.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/mesh_to_plans.svg"
+      }
+    ]
   },
   {
     "id": "fem.mesh-refine",
@@ -2377,7 +2414,7 @@
     "label": "Plattegrond",
     "visual_metaphor": "Bovenaanzicht met snijlijn",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -2391,8 +2428,17 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 2,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_plan.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/mesh_to_plans.svg"
+      }
+    ]
   },
   {
     "id": "bim.section",
@@ -2415,8 +2461,20 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 1,
+    "name_match_count": 4,
     "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_section.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/section_box.svg"
+      },
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/section_drawing.svg"
+      },
       {
         "repo": "OpenCADStudio",
         "path": "assets/icons/osnap/intersection.svg"
@@ -2430,7 +2488,7 @@
     "label": "Aanzicht",
     "visual_metaphor": "Gevelvlak met kijkrichting",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -2444,8 +2502,13 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_elevation.svg"
+      }
+    ]
   },
   {
     "id": "bim.sheet",
@@ -2468,8 +2531,12 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 2,
+    "name_match_count": 3,
     "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_sheet.svg"
+      },
       {
         "repo": "OpenCADStudio",
         "path": "assets/icons/layout_tabs.svg"
@@ -2516,7 +2583,7 @@
     "label": "Maatvoering",
     "visual_metaphor": "Maatlijn met twee getuigenlijnen",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -2530,8 +2597,13 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/annotation_dimension.svg"
+      }
+    ]
   },
   {
     "id": "bim.tag",
@@ -2660,7 +2732,7 @@
     "label": "BCF-issue",
     "visual_metaphor": "Model met tekstballon",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -2674,8 +2746,13 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/browser_bcf.svg"
+      }
+    ]
   },
   {
     "id": "bim.ids-check",
@@ -2756,7 +2833,7 @@
     "label": "Doorsnedebox",
     "visual_metaphor": "Kubus met afgesneden hoek",
     "status": "proposed-needs-mapping",
-    "existing_match": "no-filename-match-not-proof-of-absence",
+    "existing_match": "candidates-found-requires-visual-review",
     "style": {
       "grid": 24,
       "stroke": 1.75,
@@ -2770,7 +2847,12 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 0,
-    "candidate_assets": []
+    "name_match_count": 1,
+    "candidate_assets": [
+      {
+        "repo": "open-pointcloud-studio",
+        "path": "native/assets/opencad-icons/section_box.svg"
+      }
+    ]
   }
 ]

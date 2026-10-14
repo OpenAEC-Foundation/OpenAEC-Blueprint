@@ -5,9 +5,12 @@ import json,re,subprocess
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('inventory',Path(__file__).with_name('inventory.py'));inv=importlib.util.module_from_spec(spec);spec.loader.exec_module(inv)
 OUT=inv.OUT
+previous_path=OUT/'visual-references.json'
+previous={r['name']:r for r in json.loads(previous_path.read_text())} if previous_path.exists() else {}
 
 def collect(r):
  name=r['name']; repo=inv.CACHE/name
+ changed=previous.get(name,{}).get('commit')!=r.get('commit')
  out={'name':name,'commit':r.get('commit'),'screenshots':[],'ui_sources':[],'errors':[]}
  if not r.get('commit'):return out
  paths=inv.git(repo,'ls-tree','-r','--name-only','HEAD').splitlines()
@@ -26,7 +29,7 @@ def collect(r):
   url=f'https://raw.githubusercontent.com/{r["url"].removeprefix("https://github.com/")}/{r["commit"]}/{inv.urllib.parse.quote(p)}'
   dest=OUT/'references'/name/p
   try:
-   if not dest.exists():dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(inv.fetch(url))
+   if not dest.exists() or changed:dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(inv.fetch(url))
    out[kind].append({'path':p,'url':url,'local':str(dest.relative_to(OUT))})
   except Exception as e:out['errors'].append({'path':p,'error':str(e)})
  out['available_screenshots']=screens
