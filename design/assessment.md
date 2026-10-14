@@ -42,11 +42,32 @@ migratie van alle OpenAEC-applicaties.
 | Herkenbare gedeelde shell | Voldoende voor conceptreview: 18 studio's gebruiken dezelfde regio's en vijf thema's. | Per studio de exacte commando- en tabgroepen aan de broncode koppelen. |
 | Nette opmaak | De compacte browserproef heeft consistente uitlijning, randen en witruimte. | Native screenshots op meerdere platformen vergelijken met de HTML-maten. |
 | Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
-| FEM en BIM | 52 FEM- en 57 BIM-betekenissen zijn beschreven. | Unieke vectorvormen ontwerpen en op 16, 20 en 24 px toetsen. |
-| Applicatieschermen | Start, werkgebied, bestand, instellingen en lege toestand zijn in het prototype navigeerbaar. | Import/export, voortgang, onopgeslagen werk en fouttoestanden per studio uitwerken. |
+| FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
+| Applicatieschermen | Negen gedeelde schermtoestanden zijn in het prototype selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken nu hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
 | Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor titelbalkiconen, fonts en 77 algemene kleurvelden per thema. | Ribbon, panelen en dialoogcomponenten gefaseerd op de gedeelde shell aansluiten zonder 3D-functionaliteit te verliezen. |
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
 en deze beoordeling voorkomen dat die mockup als voltooide productscreenshot
 wordt behandeld.
+
+## FEM/BIM iconbeoordeling · ronde 1
+
+De [visuele atlas](domain-icon-atlas.html) bevat 109 verschillende vectorvormen
+in negen betekenisgroepen. Alle bestanden zijn XML-geldig en blijven als
+ontwerpconcepten buiten de distribueerbare Rust-crate. In 24 gevallen bestaat
+een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
+
+| Toets | Waarneming | Ontwerpactie |
+| --- | --- | --- |
+| Familiebeeld | Het 24 px raster, donkere neutrale lijn en afgeronde einden zijn consistent. | Na semantische review dezelfde meetwaarden als canonieke Rust-iconen vastzetten. |
+| Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Details in onder meer terrein, gebouw, federatie en complexe belastingtekens vallen op die maat samen. | Vereenvoudigde 16 px varianten tekenen voor iconen met meerdere interne lijnen. |
+| Betekenisbotsingen | `bim.level` lijkt op een maatpijl; `bim.survey-point` en `bim.project-origin` delen een kruis/doel-motief; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | Peilmarkering duidelijker maken, oorsprong/meetpunt verder uiteen trekken en domeinlabels in zoekresultaten tonen. |
+| Licht/donker | Het ontwerp contrasteert op beide atlasachtergronden. Donkere weergave gebruikt een kleurinversie van de concept-SVG; de uiteindelijke crate moet themakleur toepassen in plaats van een CSS-filter. | SVG's pas na goedkeuring als themabewuste native assets genereren. |
+| Bronvergelijking | Kandidaten zijn op bestandsnaam geselecteerd en als tooltips zichtbaar. | De 24 paren visueel en functioneel per opdracht beoordelen; dubbele betekenissen samenvoegen. |
+
+De negen toestanden in `harmonized.html` zijn nu opmaaksjablonen. Hun knoppen
+simuleren nog geen bestanden of berekeningen. Pixelgelijkheid vereist daarna
+native screenshots per besturingssysteem, venstermaat en thema, plus vergelijking
+met een echte referentietool. Deze visuele ronde keurt de domeiniconen nog niet
+voor productie goed.
