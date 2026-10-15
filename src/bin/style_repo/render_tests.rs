@@ -196,6 +196,13 @@ fn export_field_topnav_review() {
     render_with_options(&app, Theme::Forge, false, Some("dashboard"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-dashboard-forge.png"))
         .expect("save Field Forge dashboard review");
+    let _ = app.update(Action::SelectScreen(8));
+    render_with_options(&app, Theme::Light, false, Some("koppelingen"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-connectors-light.png"))
+        .expect("save Field connectors review");
+    render_with_options(&app, Theme::Forge, false, Some("koppelingen"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-connectors-forge.png"))
+        .expect("save Field Forge connectors review");
 }
 
 #[test]

@@ -107,6 +107,7 @@ enum Action {
     SelectScreen(usize),
     FieldProjectEdit(usize, String),
     FieldProjectPreview(&'static str),
+    FieldConnectorPreview(&'static str),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -238,6 +239,7 @@ struct StyleRepo {
     selected_studio: usize,
     selected_screen: usize,
     field_project: FieldProjectState,
+    field_connector_notice: Option<&'static str>,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -262,6 +264,7 @@ impl Default for StyleRepo {
             selected_studio: 0,
             selected_screen: 0,
             field_project: FieldProjectState::default(),
+            field_connector_notice: None,
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -987,6 +990,9 @@ impl StyleRepo {
         if screen == "dashboard" {
             return self.field_dashboard_page(theme, l);
         }
+        if screen == "koppelingen" {
+            return self.field_connectors_page(theme, l);
+        }
         let capture = match screen {
             "project" => Some("01-project.png"),
             "koppelingen" => Some("02-koppelingen.png"),
@@ -1237,6 +1243,78 @@ impl StyleRepo {
         ]
         .spacing(24)
         .into()
+    }
+    fn field_connectors_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        // Endpoint defaults from Open Field Studio's _connectorDefs(); status is screenshot example data.
+        let definitions = [
+            ("Woningborg WKI", "https://api.woningborg.nl/pvo/v1/dossiers", false, false),
+            ("SWK (Stichting Waarborgfonds Koopwoningen)", "https://api.swk.nl/pvo/v1/dossiers", false, false),
+            ("AFAS Profit", "https://<klant>.rest.afas.online/profitrestservices/connectors/KnSubject", true, false),
+            ("Exact Online", "https://start.exactonline.nl/api/v1/<division>/documents/Documents", false, false),
+            ("ERPNext (Frappe)", "https://<klant>.frappe.cloud/api/resource/Project", true, true),
+            ("Bouw7", "https://api.bouw7.nl/v1/projects/<project-id>/documents", false, false),
+            ("n8n / webhook", "https://n8n.example.nl/webhook/ofs-dossier", false, true),
+            ("KYP Project (planning)", "https://kyp.nl/api/v1/projects/<project-id>/tasks", false, false),
+        ];
+        let mut list = Column::new().spacing(14);
+        for (name, endpoint, configured, can_import) in definitions {
+            let status = if configured { "INGESTELD" } else { "NIET INGESTELD" };
+            let status_color = if configured { t.text_secondary } else { t.accent };
+            let configure = button(text(l.text("Configureren", "Configure")).size(12))
+                .padding([7, 12]).on_press(Action::FieldConnectorPreview(name))
+                .style(move |_, state| {
+                    let mut style = widgets::button_style(theme, false, state);
+                    style.border = iced::Border { color: t.text, width: 1.0, radius: 5.0.into() };
+                    style
+                });
+            let mut actions = Row::new().spacing(8).align_y(Alignment::Center)
+                .push(text(status).font(fonts::STRONG).size(10).color(status_color));
+            if can_import {
+                actions = actions.push(button(text(l.text("Importeren", "Import")).size(12))
+                    .padding([7, 12]).on_press(Action::FieldConnectorPreview(name))
+                    .style(move |_, state| {
+                        let mut style = widgets::button_style(theme, false, state);
+                        style.border = iced::Border { color: t.text, width: 1.0, radius: 5.0.into() };
+                        style
+                    }));
+            }
+            actions = actions.push(configure);
+            let details = column![
+                text(name).font(fonts::STRONG).size(14).color(t.text),
+                text(endpoint).size(11).color(t.text_secondary),
+            ].spacing(8).width(Fill);
+            list = list.push(container(row![details, actions].spacing(12).align_y(Alignment::Center))
+                .width(1104).padding([20, 24])
+                .style(move |_| container::Style::default().background(t.bg)
+                    .border(iced::Border { color: t.border, width: 1.0, radius: 8.0.into() })));
+        }
+        let mut panel = Column::new().spacing(20)
+            .push(text(l.text("Koppelingen", "Connectors")).font(fonts::HEADING).size(29).color(t.text))
+            .push(text(l.text(
+                "Configureer externe systemen voor opleveringen, dossiers en taken. Sleutels blijven lokaal op deze computer.",
+                "Configure external systems for handovers, dossiers and tasks. Keys remain local to this computer.",
+            )).size(13).color(t.text_secondary));
+        if let Some(name) = self.field_connector_notice {
+            panel = panel.push(text(format!("{name}: configuratie en import zijn in deze schermreview niet gekoppeld."))
+                .size(12).color(t.accent));
+        }
+        panel = panel.push(list);
+        let panel = container(panel).padding(32).width(1168)
+            .style(move |_| container::Style::default().background(t.bg_lighter)
+                .border(iced::Border { color: t.border, width: 1.0, radius: 10.0.into() }));
+        let capture = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/Open-Field-Studio/docs/screenshots/02-koppelingen.png");
+        column![
+            text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG).size(11).color(t.accent),
+            text("Connectorstatussen zijn bronvoorbeelddata; geen lokale sleutels worden gelezen.")
+                .size(12).color(t.text_secondary),
+            panel,
+            text("Broncapture ter vergelijking · commit 8a4f104")
+                .font(fonts::MEDIUM).size(12).color(t.text_secondary),
+            image(image::Handle::from_path(capture)).width(1168),
+        ].spacing(16).into()
     }
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
@@ -1860,6 +1938,7 @@ impl Application for StyleRepo {
                 if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }
             }
             Action::FieldProjectPreview(message) => self.field_project.notice = Some(message),
+            Action::FieldConnectorPreview(name) => self.field_connector_notice = Some(name),
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2271,6 +2350,8 @@ mod tests {
         assert_eq!(app.field_project.notice, Some("BAG-review"));
         let _ = app.tab_event("koppelingen");
         assert_eq!(app.selected_screen, 8);
+        let _ = app.update(Action::FieldConnectorPreview("ERPNext (Frappe)"));
+        assert_eq!(app.field_connector_notice, Some("ERPNext (Frappe)"));
         let _ = app.tab_event("project");
         assert_eq!(app.field_project.values[0], "Nieuwe opname");
     }
