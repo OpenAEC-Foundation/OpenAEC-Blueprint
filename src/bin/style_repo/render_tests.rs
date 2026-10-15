@@ -876,3 +876,17 @@ fn export_native_style_repo_previews() {
             .expect("save Energy workflow variant");
     }
 }
+
+#[test]
+#[ignore = "regenerate shared property-grid component images on demand"]
+fn export_shared_property_grid_review() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    app.show(Page::Components);
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        save_render(&app, theme, &design.join(format!("style-repo-components-{name}.png")));
+        render_sized(&app, theme, false, None, Size::new(1280.0, 1000.0))
+            .save_png(&design.join(format!("style-repo-property-grid-{name}.png")))
+            .expect("save full property-grid review");
+    }
+}

@@ -547,7 +547,11 @@ impl StyleRepo {
                     text(l.text("Eigenschappen", "Properties"))
                         .font(fonts::STRONG)
                         .size(16),
-                    widgets::property(
+                    widgets::property_section(
+                        l.text("Voorbeeld", "Sample"),
+                        theme
+                    ),
+                    widgets::property_grid_row(
                         l.text("Naam", "Name"),
                         if self.sample_input.is_empty() {
                             "—"
@@ -556,7 +560,7 @@ impl StyleRepo {
                         },
                         theme
                     ),
-                    widgets::property(
+                    widgets::property_grid_row(
                         l.text("Status", "Status"),
                         if self.sample_toggle {
                             l.text("Actief", "Active")
@@ -565,13 +569,16 @@ impl StyleRepo {
                         },
                         theme
                     ),
-                    widgets::property(
-                        l.text("Schaal", "Scale"),
-                        format!("{:.0}%", self.sample_value),
-                        theme
+                    widgets::property_grid_control_with(
+                        format!("{} {:.0}%", l.text("Schaal", "Scale"), self.sample_value),
+                        iced::widget::slider(0.0..=100.0, self.sample_value, Action::Slider)
+                            .style(move |_, status| widgets::slider_style(theme, status))
+                            .width(Fill)
+                            .into(),
+                        move |_| theme,
                     ),
                 ]
-                .spacing(12),
+                .spacing(0),
                 theme
             ),
         ]
