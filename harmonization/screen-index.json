@@ -1,10 +1,13 @@
 {
-  "total": 577,
-  "unique_known_blobs": 556,
+  "total": 658,
+  "unique_known_blobs": 637,
   "counts": {
     "social-preview": 2,
-    "application-screen": 463,
+    "application-screen": 464,
     "sample-preview": 1,
+    "documentation-image": 29,
+    "design-mockup": 11,
+    "tutorial-capture": 40,
     "catalog-preview": 15,
     "website-reference": 96
   },
@@ -146,6 +149,406 @@
       "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
       "git_blob": "737a6bd6171b6c7c0e574351802abfa71a848f32",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/nl/2-rapport.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/belemmering-per-raam.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "2476974c70873db5b8a408269a9b07b8ed89dc37",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/belemmering-per-raam.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/bijlage-aa.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "749954a39dd5f71ee06b5b23a830b1d7c9268aad",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/bijlage-aa.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/bron-en-bewijs.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "0d953f10c3b5bc1aa5682cd0bda3adee5349d63e",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/bron-en-bewijs.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/controle.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "5519ba50bdf2b3e0855b1ae48a31fd51dc6ca4c5",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/controle.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/fctrl-gedeclareerd.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "9ed94ddc60c0f9778aa989c838bd53342ee05352",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/fctrl-gedeclareerd.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/gedeelde-serre.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "2ab726e70b3355bc12847dd01fbc83cc7a1ed1ca",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/gedeelde-serre.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/gemeenschappelijke-ruimte.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "ca27c424e6432d352f2f38819bc6ca2a05fcb321",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/gemeenschappelijke-ruimte.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/glas-per-raam.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "f951c20328413cbaac08bb3e5310e536a697ccdf",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/glas-per-raam.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/handleiding-venster.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "9b37a99b1c1044b6e893a081d701126ee766d00a",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/handleiding-venster.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/kelder-wanddelen.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "ea44f0e5ec47cac4677f70cb6fa33d5d2badd0b5",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/kelder-wanddelen.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/koudebrugmethode.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "23114ef1bbc2c7d78f1acf723e78fd8023b7c980",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/koudebrugmethode.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/kwaliteitsverklaring-ketel-wkk.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "636a214fc077883254cd9fd8424ba5a7f9e6d372",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/kwaliteitsverklaring-ketel-wkk.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/opname-uitkomst-onderdeel.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "3921209a35563113c9b4f21083f1ddf591b02055",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/opname-uitkomst-onderdeel.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/opname-voortgang.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "24628dcaa669ee5ba09248913b434154bab1d212",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/opname-voortgang.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/overnemen-vloeren.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "7e53ced9bb91f98042f1697480bea4c74a207328",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/overnemen-vloeren.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/palet.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "ad42cc1cb0167b948a44f4d064f56c4a2203b009",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/palet.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/projectoverzicht.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "7a46a71e91aa2e274545639806fc370faa37a451",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/projectoverzicht.png",
+      "local": "references/open-energy-studio/docs/handleiding-nta8800/img/projectoverzicht.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/psi-leidinggegevens.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "6bfdeef6cc42e5706c6746c6b8ebbeb227024890",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/psi-leidinggegevens.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/rapport.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "c50e38e5c30b2d087af5c2849d2d814816325eaa",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/rapport.png",
+      "local": "references/open-energy-studio/docs/handleiding-nta8800/img/rapport.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/registratie.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "b987a4bad41ca88bac2565f2ccd6949721c2517d",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/registratie.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/resultaten-oudere-uitgave.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "fda9edc3eaf924ad5138ffa0f52c3ccec25e00e3",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/resultaten-oudere-uitgave.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/resultaten.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "355a80128454dbc68e6abddfff3b6f8c502a7304",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/resultaten.png",
+      "local": "references/open-energy-studio/docs/handleiding-nta8800/img/resultaten.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/smalle-luchtlaag.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "84c0339402eeab814cbfbf44c876c4a7686f2f7e",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/smalle-luchtlaag.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/uitgave-keuze.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "291d129b7c798059e7b73feb5ac16072926b50d2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/uitgave-keuze.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/uitgave-wisselen.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "3e96570065768a07b36027c0bceb3a0f04f1a708",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/uitgave-wisselen.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/verklaringen-label.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "55e9c6879e0b194c7d2e0a17f80e635d0bd75055",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/verklaringen-label.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/verwarming.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "09c935c7c32fe52cefbc7233559d0226ef182963",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/verwarming.png",
+      "local": "references/open-energy-studio/docs/handleiding-nta8800/img/verwarming.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/welkom.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "5ce3e8aa0db2e0b33ad28b0eedad8c1115da7aeb",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/welkom.png",
+      "local": "references/open-energy-studio/docs/handleiding-nta8800/img/welkom.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/handleiding-nta8800/img/zonwering-per-raam.png",
+      "kind": "documentation-image",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "ce4a66d482c83f7c39ec278a0855a25059132a72",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/zonwering-per-raam.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/00-designsystem.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "05e96a07dcb72abad81ceb1333fcd425c879c331",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/00-designsystem.png",
+      "local": "references/open-energy-studio/docs/ui-redesign/mockups/00-designsystem.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/01-projectoverzicht.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "5dfd76f5716b6b92b203ed383687d64eecee6f81",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/01-projectoverzicht.png",
+      "local": "references/open-energy-studio/docs/ui-redesign/mockups/01-projectoverzicht.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/02-gebouw-schil.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "17fcf8c23fa48f18f17c2339c68b4a314735b6a4",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/02-gebouw-schil.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/03-installaties.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "36284b90f280d1a667e72e34a38c38557576e21d",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/03-installaties.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/04-nta-stap-verwarming.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "7fe7f8032ed6eae6155bb4c25489a0a2ad255804",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/04-nta-stap-verwarming.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/05-resultaten.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "82542f59d6eb4b71c5ffcef57197bc8349296fe0",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/05-resultaten.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/05b-resultaten-licht.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "d3f7839cf1e48366515f50fd9258f395bceee23e",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/05b-resultaten-licht.png",
+      "local": "references/open-energy-studio/docs/ui-redesign/mockups/05b-resultaten-licht.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/06-rapport-dossier.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "6b020901b9dbdd2828455421a94ea6cfdb875659",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/06-rapport-dossier.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/07-basisopname.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "64d462ab986c155d30e16aebe826e1a1b5a5950b",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/07-basisopname.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/08-maatwerkadvies.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "212e315663ddbf60ed61290bdba16771b1e309f0",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/08-maatwerkadvies.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-energy-studio",
+      "path": "docs/ui-redesign/mockups/09-toestanden.png",
+      "kind": "design-mockup",
+      "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+      "git_blob": "e70463090b413302ec9db295af08d5b7cbf54b5f",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/09-toestanden.png",
       "local": null,
       "assessment": "candidate; visual review pending"
     },
@@ -1757,6 +2160,406 @@
       "git_blob": "659fb289b686ca7a0890c7e81c094be931421822",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/screenshot.png",
       "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-1-berekend.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "dcfdfe6a72ae82707fe67b0e58be4d1b86106f4d",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-1-berekend.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-1-nieuw-project.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "e3b03b9a142031288a282654aedbcdd9cd7d09b8",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-1-nieuw-project.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-2-kritiek-pad.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "40ff7745dc4439aa5784146e2a25828f94262a9c",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-2-kritiek-pad.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-2-speling.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "70242a99e1ac7384fb025d6b52b86d9c2d422955",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-2-speling.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-2-type-relatie.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "ae9178d4ec422c17d296d7eee1a01700a873087b",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-2-type-relatie.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-3-bouwvak-constraint.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "cc4277f42e166d931773c221be8e4afcf30c125a",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-3-bouwvak-constraint.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-3-deadline-overschreden.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "a6ab6bacf4191f14d70feba5b745872daa2c44de",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-3-deadline-overschreden.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-3-feestdagen-genereren.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "23931f15561be80d229f237c641a8e0018bef389",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-3-feestdagen-genereren.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-4-kloktijden.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "525b36653b0c25c387ff4880f9e131dd1f23995a",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-4-kloktijden.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-4-urenplanning.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "29799f3fa79eaf66eb5fdd5a0b09d748c4486d58",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-4-urenplanning.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-5-histogram-kraan.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "346d57a15f546a821fc67971e225e97df149b7e2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-5-histogram-kraan.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-5-nivelleren.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "8a101b83dfab1995d3f49d5d5170ade8642127d3",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-5-nivelleren.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-5-overbezetting.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "b430a8b9089d6323475e9bb1efa77ebfadd61dd4",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-5-overbezetting.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-5-resources.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "a325ab51f22ceb7a78f1d6806e92d6e248b30baf",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-5-resources.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-5-werkregel.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "66d85f2598b5e92578233bad9c7370e452722498",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-5-werkregel.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-6-afwijking-gantt.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "021dd4773988384cbf163e67ad38a604bd20d7a5",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-6-afwijking-gantt.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-6-baseline.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "ec4cfb35ba30cd6c9e6a750e06457156fe66577f",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-6-baseline.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-6-voortgang.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "b0827c1f31876df42e4633bad253ac75c738c271",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-6-voortgang.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-7-variance.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "7ec7930dbef53991139891e11b295bb9a3e7c445",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-7-variance.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/en/tut-7-voortgangsrapport.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "5230c53a431e6c0eec17b4970283580e7534e27f",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/en/tut-7-voortgangsrapport.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-1-berekend.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "861a155297a806572963276db0df89e0e3d9449f",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-1-berekend.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-1-nieuw-project.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "52a3eefcf5bc35ccb8d6ce2f0f8116f7a2e427f7",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-1-nieuw-project.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-2-kritiek-pad.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "d3dc740fa8c8c6a3aa2f10107354396a5365c5c1",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-2-kritiek-pad.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-2-speling.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "aa087282f9e23482789c3e39304ee90ed092af8d",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-2-speling.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-2-type-relatie.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "ff0d9e624f5778a2ef2d8ced5b2daff5cc38d5a2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-2-type-relatie.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-3-bouwvak-constraint.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "5d47f28347dc6046ebda8bf9e8658047fa444c26",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-3-bouwvak-constraint.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-3-deadline-overschreden.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "2121f6ab1c06e4953816c5b828760e05280cd1de",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-3-deadline-overschreden.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-3-feestdagen-genereren.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "e1a5dd0663a3be05cc92cff10be7095b49c125a2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-3-feestdagen-genereren.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-4-kloktijden.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "79265676883e6f52580e8d62bc9daaac6244827c",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-4-kloktijden.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-4-urenplanning.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "312d805f4923c5e3d67993042c7eb18539662421",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-4-urenplanning.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-5-histogram-kraan.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "c0cb03a2deff5d7e503be3b9b9e0db964b223a9e",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-5-histogram-kraan.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-5-nivelleren.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "1ce7d5ac15c8b0d7f7154920c1032d89c40e4d88",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-5-nivelleren.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-5-overbezetting.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "00c7964ba645f969e297cc85253ca4b2532d0b88",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-5-overbezetting.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-5-resources.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "85e9a646d7a659179763ad1095f577403c0818a5",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-5-resources.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-5-werkregel.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "6a5460cf6eead6a5a4f2a5ccaa263753d779987e",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-5-werkregel.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "86ba9341ea71c329d81673be90e1ae286526c478",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+      "local": "references/open-planner-studio-extensions/extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-6-baseline.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "022da70328500a668b953bb27f1537348bb8b1b2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-6-baseline.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-6-voortgang.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "bf1c3772ce24df0c372df8f30d50bcae5a4760b0",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-6-voortgang.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-7-variance.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "389c18d6f09fcb40fe2d7155f92b4170ed1aa3f1",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-7-variance.webp",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-planner-studio-extensions",
+      "path": "extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp",
+      "kind": "tutorial-capture",
+      "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
+      "git_blob": "e955411d091fe051b0026c7e384d298b3f3c0bfd",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp",
+      "local": "references/open-planner-studio-extensions/extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp",
       "assessment": "candidate; visual review pending"
     },
     {
@@ -4766,7 +5569,17 @@
       "commit": "77f19dafd01776947934e71563dd3d92a77c4f94",
       "git_blob": "195fa916bba4e8aacb3cbf1cf4647abfca4838c4",
       "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/before-xline.png",
-      "local": "references/OpenCADStudio/docs/screenshots/ribbon-highlight/before-xline.png",
+      "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "OpenCADStudio",
+      "path": "site/workspace.png",
+      "kind": "application-screen",
+      "commit": "77f19dafd01776947934e71563dd3d92a77c4f94",
+      "git_blob": "1a308b47a957ab0c87b49fefa5a7ba68f3aa74ab",
+      "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/workspace.png",
+      "local": "references/OpenCADStudio/site/workspace.png",
       "assessment": "candidate; visual review pending"
     },
     {

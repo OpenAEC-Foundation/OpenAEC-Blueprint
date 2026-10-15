@@ -38,6 +38,12 @@ for ref in refs:
             kind = "catalog-preview"
         elif repo == "website":
             kind = "website-reference"
+        elif repo == "open-energy-studio" and lower.startswith("docs/ui-redesign/mockups/"):
+            kind = "design-mockup"
+        elif repo == "open-energy-studio" and lower.startswith("docs/handleiding-nta8800/img/"):
+            kind = "documentation-image"
+        elif repo == "open-planner-studio-extensions" and lower.startswith("extensions/tutorials/img/"):
+            kind = "tutorial-capture"
         elif "samples/preview" in lower:
             kind = "sample-preview"
         else:

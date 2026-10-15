@@ -1500,6 +1500,11 @@
     "commit": "77f19dafd01776947934e71563dd3d92a77c4f94",
     "screenshots": [
       {
+        "path": "site/workspace.png",
+        "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/site/workspace.png",
+        "local": "references/OpenCADStudio/site/workspace.png"
+      },
+      {
         "path": "docs/screenshots/ribbon-highlight/after-xline.png",
         "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/after-xline.png",
         "local": "references/OpenCADStudio/docs/screenshots/ribbon-highlight/after-xline.png"
@@ -1508,11 +1513,6 @@
         "path": "docs/screenshots/ribbon-highlight/after-offset.png",
         "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/after-offset.png",
         "local": "references/OpenCADStudio/docs/screenshots/ribbon-highlight/after-offset.png"
-      },
-      {
-        "path": "docs/screenshots/ribbon-highlight/before-xline.png",
-        "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/docs/screenshots/ribbon-highlight/before-xline.png",
-        "local": "references/OpenCADStudio/docs/screenshots/ribbon-highlight/before-xline.png"
       }
     ],
     "ui_sources": [
@@ -1587,7 +1587,8 @@
       "docs/screenshots/ribbon-highlight/after-xline.png",
       "docs/screenshots/ribbon-highlight/before-dimbreak.png",
       "docs/screenshots/ribbon-highlight/before-offset.png",
-      "docs/screenshots/ribbon-highlight/before-xline.png"
+      "docs/screenshots/ribbon-highlight/before-xline.png",
+      "site/workspace.png"
     ]
   },
   {
@@ -1815,7 +1816,48 @@
   {
     "name": "open-energy-studio",
     "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "path": "docs/handleiding-nta8800/img/welkom.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/welkom.png",
+        "local": "references/open-energy-studio/docs/handleiding-nta8800/img/welkom.png"
+      },
+      {
+        "path": "docs/handleiding-nta8800/img/projectoverzicht.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/projectoverzicht.png",
+        "local": "references/open-energy-studio/docs/handleiding-nta8800/img/projectoverzicht.png"
+      },
+      {
+        "path": "docs/handleiding-nta8800/img/verwarming.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/verwarming.png",
+        "local": "references/open-energy-studio/docs/handleiding-nta8800/img/verwarming.png"
+      },
+      {
+        "path": "docs/handleiding-nta8800/img/resultaten.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/resultaten.png",
+        "local": "references/open-energy-studio/docs/handleiding-nta8800/img/resultaten.png"
+      },
+      {
+        "path": "docs/handleiding-nta8800/img/rapport.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/handleiding-nta8800/img/rapport.png",
+        "local": "references/open-energy-studio/docs/handleiding-nta8800/img/rapport.png"
+      },
+      {
+        "path": "docs/ui-redesign/mockups/00-designsystem.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/00-designsystem.png",
+        "local": "references/open-energy-studio/docs/ui-redesign/mockups/00-designsystem.png"
+      },
+      {
+        "path": "docs/ui-redesign/mockups/01-projectoverzicht.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/01-projectoverzicht.png",
+        "local": "references/open-energy-studio/docs/ui-redesign/mockups/01-projectoverzicht.png"
+      },
+      {
+        "path": "docs/ui-redesign/mockups/05b-resultaten-licht.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-energy-studio/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/docs/ui-redesign/mockups/05b-resultaten-licht.png",
+        "local": "references/open-energy-studio/docs/ui-redesign/mockups/05b-resultaten-licht.png"
+      }
+    ],
     "ui_sources": [
       {
         "path": "README.md",
@@ -1839,7 +1881,48 @@
       }
     ],
     "errors": [],
-    "available_screenshots": []
+    "available_screenshots": [
+      "docs/handleiding-nta8800/img/belemmering-per-raam.png",
+      "docs/handleiding-nta8800/img/bijlage-aa.png",
+      "docs/handleiding-nta8800/img/bron-en-bewijs.png",
+      "docs/handleiding-nta8800/img/controle.png",
+      "docs/handleiding-nta8800/img/fctrl-gedeclareerd.png",
+      "docs/handleiding-nta8800/img/gedeelde-serre.png",
+      "docs/handleiding-nta8800/img/gemeenschappelijke-ruimte.png",
+      "docs/handleiding-nta8800/img/glas-per-raam.png",
+      "docs/handleiding-nta8800/img/handleiding-venster.png",
+      "docs/handleiding-nta8800/img/kelder-wanddelen.png",
+      "docs/handleiding-nta8800/img/koudebrugmethode.png",
+      "docs/handleiding-nta8800/img/kwaliteitsverklaring-ketel-wkk.png",
+      "docs/handleiding-nta8800/img/opname-uitkomst-onderdeel.png",
+      "docs/handleiding-nta8800/img/opname-voortgang.png",
+      "docs/handleiding-nta8800/img/overnemen-vloeren.png",
+      "docs/handleiding-nta8800/img/palet.png",
+      "docs/handleiding-nta8800/img/projectoverzicht.png",
+      "docs/handleiding-nta8800/img/psi-leidinggegevens.png",
+      "docs/handleiding-nta8800/img/rapport.png",
+      "docs/handleiding-nta8800/img/registratie.png",
+      "docs/handleiding-nta8800/img/resultaten-oudere-uitgave.png",
+      "docs/handleiding-nta8800/img/resultaten.png",
+      "docs/handleiding-nta8800/img/smalle-luchtlaag.png",
+      "docs/handleiding-nta8800/img/uitgave-keuze.png",
+      "docs/handleiding-nta8800/img/uitgave-wisselen.png",
+      "docs/handleiding-nta8800/img/verklaringen-label.png",
+      "docs/handleiding-nta8800/img/verwarming.png",
+      "docs/handleiding-nta8800/img/welkom.png",
+      "docs/handleiding-nta8800/img/zonwering-per-raam.png",
+      "docs/ui-redesign/mockups/00-designsystem.png",
+      "docs/ui-redesign/mockups/01-projectoverzicht.png",
+      "docs/ui-redesign/mockups/02-gebouw-schil.png",
+      "docs/ui-redesign/mockups/03-installaties.png",
+      "docs/ui-redesign/mockups/04-nta-stap-verwarming.png",
+      "docs/ui-redesign/mockups/05-resultaten.png",
+      "docs/ui-redesign/mockups/05b-resultaten-licht.png",
+      "docs/ui-redesign/mockups/06-rapport-dossier.png",
+      "docs/ui-redesign/mockups/07-basisopname.png",
+      "docs/ui-redesign/mockups/08-maatwerkadvies.png",
+      "docs/ui-redesign/mockups/09-toestanden.png"
+    ]
   },
   {
     "name": "open-calc-studio",
@@ -2906,7 +2989,18 @@
   {
     "name": "open-planner-studio-extensions",
     "commit": "5092e3e2e7a11b5be5c593a4974f26f1aacbf40b",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "path": "extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+        "local": "references/open-planner-studio-extensions/extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp"
+      },
+      {
+        "path": "extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-planner-studio-extensions/5092e3e2e7a11b5be5c593a4974f26f1aacbf40b/extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp",
+        "local": "references/open-planner-studio-extensions/extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp"
+      }
+    ],
     "ui_sources": [
       {
         "path": "README.md",
@@ -2915,7 +3009,48 @@
       }
     ],
     "errors": [],
-    "available_screenshots": []
+    "available_screenshots": [
+      "extensions/tutorials/img/en/tut-1-berekend.webp",
+      "extensions/tutorials/img/en/tut-1-nieuw-project.webp",
+      "extensions/tutorials/img/en/tut-2-kritiek-pad.webp",
+      "extensions/tutorials/img/en/tut-2-speling.webp",
+      "extensions/tutorials/img/en/tut-2-type-relatie.webp",
+      "extensions/tutorials/img/en/tut-3-bouwvak-constraint.webp",
+      "extensions/tutorials/img/en/tut-3-deadline-overschreden.webp",
+      "extensions/tutorials/img/en/tut-3-feestdagen-genereren.webp",
+      "extensions/tutorials/img/en/tut-4-kloktijden.webp",
+      "extensions/tutorials/img/en/tut-4-urenplanning.webp",
+      "extensions/tutorials/img/en/tut-5-histogram-kraan.webp",
+      "extensions/tutorials/img/en/tut-5-nivelleren.webp",
+      "extensions/tutorials/img/en/tut-5-overbezetting.webp",
+      "extensions/tutorials/img/en/tut-5-resources.webp",
+      "extensions/tutorials/img/en/tut-5-werkregel.webp",
+      "extensions/tutorials/img/en/tut-6-afwijking-gantt.webp",
+      "extensions/tutorials/img/en/tut-6-baseline.webp",
+      "extensions/tutorials/img/en/tut-6-voortgang.webp",
+      "extensions/tutorials/img/en/tut-7-variance.webp",
+      "extensions/tutorials/img/en/tut-7-voortgangsrapport.webp",
+      "extensions/tutorials/img/nl/tut-1-berekend.webp",
+      "extensions/tutorials/img/nl/tut-1-nieuw-project.webp",
+      "extensions/tutorials/img/nl/tut-2-kritiek-pad.webp",
+      "extensions/tutorials/img/nl/tut-2-speling.webp",
+      "extensions/tutorials/img/nl/tut-2-type-relatie.webp",
+      "extensions/tutorials/img/nl/tut-3-bouwvak-constraint.webp",
+      "extensions/tutorials/img/nl/tut-3-deadline-overschreden.webp",
+      "extensions/tutorials/img/nl/tut-3-feestdagen-genereren.webp",
+      "extensions/tutorials/img/nl/tut-4-kloktijden.webp",
+      "extensions/tutorials/img/nl/tut-4-urenplanning.webp",
+      "extensions/tutorials/img/nl/tut-5-histogram-kraan.webp",
+      "extensions/tutorials/img/nl/tut-5-nivelleren.webp",
+      "extensions/tutorials/img/nl/tut-5-overbezetting.webp",
+      "extensions/tutorials/img/nl/tut-5-resources.webp",
+      "extensions/tutorials/img/nl/tut-5-werkregel.webp",
+      "extensions/tutorials/img/nl/tut-6-afwijking-gantt.webp",
+      "extensions/tutorials/img/nl/tut-6-baseline.webp",
+      "extensions/tutorials/img/nl/tut-6-voortgang.webp",
+      "extensions/tutorials/img/nl/tut-7-variance.webp",
+      "extensions/tutorials/img/nl/tut-7-voortgangsrapport.webp"
+    ]
   },
   {
     "name": "OpenAEC-BIM-validator",

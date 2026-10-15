@@ -109,9 +109,10 @@ for p in proposals:
  p['existing_match']='candidates-found-requires-visual-review' if matches else 'no-filename-match-not-proof-of-absence'
 (D/'domain-icon-proposals.json').write_text(json.dumps(proposals,ensure_ascii=False,indent=2))
 refs=json.load(open(H/'visual-references.json'))
+screen_kinds={(s['repository'],s['path']):s['kind'] for s in json.load(open(H/'screen-index.json'))['screens']}
 # Exclude non-UI promotional artwork after visual inspection of contact sheets.
 excluded=['social-preview','ifccad-prototype','open-books.jpg']
-shots=[{'repo':r['name'],**s} for r in refs for s in r['screenshots'] if not any(x in r['name']+'/'+s['path'] for x in excluded)]
+shots=[{'repo':r['name'],**s,'kind':screen_kinds.get((r['name'],s['path']),'unclassified')} for r in refs for s in r['screenshots'] if not any(x in r['name']+'/'+s['path'] for x in excluded)]
 counts=collections.Counter(a['category'] for a in assets)
 summary={'repositories':len(repos),'accessible':sum(r['status']=='downloaded' for r in repos),'empty':sum(r['status']=='empty-repository' for r in repos),'unavailable':sum(r['status']=='unavailable' for r in repos),'assets':len(assets),'unique_hashes':len(hashes),'duplicate_occurrences':len(assets)-len(hashes),'categories':counts,'screen_images_archived':len(shots),'screen_candidates':json.load(open(H/'screen-index.json'))['total'],'usable_ui_references':len(shots),'ui_reference_repositories':len(set(s['repo'] for s in shots)),'domain_proposals':len(proposals),'name_matches':sum(bool(p['name_match_count']) for p in proposals),'verified_ui_icon_files':sum(a['category']=='ui-used' for a in assets),'direct_ui_icon_files':sum(a['category']=='ui-used' and a['evidence_type']=='direct-path' for a in assets),'convention_ui_icon_files':sum(a['category']=='ui-used' and a['evidence_type']=='framework-convention' for a in assets),'code_icon_source_files':len(set((a['repo'],a['source']) for a in code_icon_sources)),'source_audit_repositories':sum(s.get('status') in ('source-scanned','partial-source-limit') for s in source_scans),'errors':sum(len(r['errors']) for r in repos)}
 (D/'summary.json').write_text(json.dumps(summary,indent=2))

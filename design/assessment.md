@@ -8,8 +8,8 @@ migratie van alle OpenAEC-applicaties.
 
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
-- 577 screenshotverwijzingen zijn op commit vastgelegd in `screen-index.json`;
-  556 hebben een unieke Git-blobinhoud en 463 zijn als mogelijke
+- 658 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
+  637 hebben een unieke Git-blobinhoud en 464 zijn als mogelijke
   applicatieschermen geclassificeerd. De classificatie
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
@@ -29,7 +29,7 @@ migratie van alle OpenAEC-applicaties.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
-  Pointcloud native en de 41 lokaal bewaarde bruikbare UI-referenties. De
+  Pointcloud native en de 51 lokaal bewaarde visuele referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
 - De Planner-audit omvat nu 145 brongepinde schermkandidaten, waaronder 142
   beelden onder `artifacts/` die de eerdere padfilter miste. Acht uiteenlopende
@@ -38,6 +38,16 @@ migratie van alle OpenAEC-applicaties.
   Start, Planning, Resources, Weergave, Instellingen, Tabel, IFC en Rapport;
   AI is alleen zichtbaar wanneer de AI-modus aanstaat. De concepttabs en
   linker paneelbeschrijving zijn daarop aangepast.
+- De tweede padaudit vond 29 beelden in de NTA 8800-handleiding van Energy
+  Studio, 11 aparte redesign-mockups, 40 Planner Extensions-tutorialuitsneden
+  en het [OpenCAD-werkruimtescherm](../harmonization/references/OpenCADStudio/site/workspace.png).
+  Voorbeelden zijn het [huidige Energy-projectoverzicht](../harmonization/references/open-energy-studio/docs/handleiding-nta8800/img/projectoverzicht.png)
+  en het [Energy-ontwerpsysteem](../harmonization/references/open-energy-studio/docs/ui-redesign/mockups/00-designsystem.png).
+  De screenshot toont een navigatiesidebar en een dataformulier zonder ribbon;
+  de huidige gedeelde Energy-ribbon is dus een migratievoorstel en geen
+  pixelgetrouwe reconstructie van de huidige UI. De mockup is een concept,
+  niet een opgeleverde applicatietoestand. De Planner-beelden tonen vooral
+  detailuitsneden van de Gantt in tutorials, geen 40 unieke vensters.
 - `dynlex` en `feat/rust-native` van PDF Studio waren niet publiek beschikbaar
   bij de bronaudit. PDF Studio v3 is als afzonderlijke Slint-bron meegenomen.
 

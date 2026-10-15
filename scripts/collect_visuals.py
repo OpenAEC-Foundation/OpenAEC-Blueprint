@@ -23,7 +23,10 @@ def collect(r):
   # Planner keeps its actual light/dark UI captures under artifacts/ rather
   # than screenshots/. Include those as screen candidates, not as icons.
   planner_capture = name == 'open-planner-studio' and low.startswith('artifacts/')
-  if re.search(r'\.(png|jpe?g|webp)$',low) and (re.search(r'screenshot|screens/|preview|ribbon-approved|ui-reference',low) or planner_capture) and not re.search(r'icon|logo',low):screens.append(p)
+  energy_reference = name == 'open-energy-studio' and (low.startswith('docs/handleiding-nta8800/img/') or low.startswith('docs/ui-redesign/mockups/'))
+  planner_tutorial = name == 'open-planner-studio-extensions' and low.startswith('extensions/tutorials/img/')
+  cad_workspace = name == 'OpenCADStudio' and low == 'site/workspace.png'
+  if re.search(r'\.(png|jpe?g|webp)$',low) and (re.search(r'screenshot|screens/|preview|ribbon-approved|ui-reference',low) or planner_capture or energy_reference or planner_tutorial or cad_workspace) and not re.search(r'icon|logo',low):screens.append(p)
  def score(p):
   low=p.lower();return sum(v for word,v in [('native',8),('approved',10),('light',8),('ribbon',5),('home',4),('main',4),('overview',4),('backstage',3),('settings',2),('dark',2),('error',-15),('debug',-10),('broken',-10)] if word in low)
  if name == 'open-planner-studio':
@@ -40,6 +43,22 @@ def collect(r):
    'artifacts/balkkleuren/bars-light.png',
   ]
   chosen=[p for p in highlights if p in screens]
+ elif name == 'open-energy-studio':
+  highlights=[
+   'docs/handleiding-nta8800/img/welkom.png',
+   'docs/handleiding-nta8800/img/projectoverzicht.png',
+   'docs/handleiding-nta8800/img/verwarming.png',
+   'docs/handleiding-nta8800/img/resultaten.png',
+   'docs/handleiding-nta8800/img/rapport.png',
+   'docs/ui-redesign/mockups/00-designsystem.png',
+   'docs/ui-redesign/mockups/01-projectoverzicht.png',
+   'docs/ui-redesign/mockups/05b-resultaten-licht.png',
+  ]
+  chosen=[p for p in highlights if p in screens]
+ elif name == 'open-planner-studio-extensions':
+  chosen=[p for p in screens if p.endswith(('nl/tut-6-afwijking-gantt.webp','nl/tut-7-voortgangsrapport.webp'))]
+ elif name == 'OpenCADStudio':
+  chosen=['site/workspace.png']+[p for p in sorted(screens,key=lambda p:(-score(p),len(p))) if p!='site/workspace.png'][:2]
  else:
   chosen=sorted(screens,key=lambda p:(-score(p),len(p)))[:3]
  for p in sorted(set(ui))[:35]+chosen:

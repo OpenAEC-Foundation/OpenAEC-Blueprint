@@ -182,7 +182,9 @@
       "Rapport",
       "AI"
     ],
-    "optional_tabs": ["AI"],
+    "optional_tabs": [
+      "AI"
+    ],
     "left_panel": "WBS / taaklijst naast de tijdlijn",
     "right_panel": "Taakeigenschappen",
     "workspace": "Gantt-tijdlijn met geïntegreerde taaklijst",
@@ -372,7 +374,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Migratievoorstel: de huidige NTA 8800-UI toont een navigatiesidebar en dataformulieren zonder ribbon; zie de brongepinde handleidingbeelden en afzonderlijke redesign-mockups."
   },
   {
     "id": "calculations",
