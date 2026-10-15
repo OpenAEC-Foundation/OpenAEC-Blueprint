@@ -25,6 +25,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
+                .or_else(|| extension_2d_groups(studio, tab, selected))
                 .or_else(|| planner_groups(studio, tab, selected))
                 .or_else(|| frame_groups(studio, tab, selected))
                 .or_else(|| calc_groups(studio, tab, selected))
@@ -38,6 +39,32 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// AEC extension at fd22965ed28a: two added tabs and two buttons in host IFC.
+/// The inaccessible host's other tabs and chrome are intentionally absent.
+fn extension_2d_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "2d" { return None; }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "AEC" => vec![
+            ("Elements", vec![("IfcBeam", planner_source_icon!("Columns3")), ("IfcWall", planner_source_icon!("Square")), ("IfcSlab", planner_source_icon!("LayoutGrid")), ("IfcPile", planner_source_icon!("Compass")), ("IfcColumn", planner_source_icon!("Columns3")), ("CPT", planner_source_icon!("Activity")), ("IfcSpace", planner_source_icon!("Square"))]),
+            ("Annotations", vec![("Slab Label", planner_source_icon!("FileText")), ("IfcGrid", Grid.into()), ("2DLevel", Measure.into()), ("Section/Detail", planner_source_icon!("FileText"))]),
+            ("Connections", vec![("Join", planner_source_icon!("GitBranch"))]),
+            ("Reference", vec![("PDF Underlay", Import.into())]),
+            ("Properties", vec![("Materials", Settings.into()), ("IfcTypes", Settings.into()), ("Wall Systems", Settings.into()), ("Project", Open.into())]),
+        ],
+        "Pile Plan" => vec![
+            ("Place", vec![("IfcPile", planner_source_icon!("Compass")), ("CPT", planner_source_icon!("Activity")), ("Puntniveau", Measure.into()), ("Pile Symbols", planner_source_icon!("Map"))]),
+            ("CPT Data", vec![("Parse CPT", Import.into())]),
+        ],
+        "IFC" => vec![("IFCX · in host-IFC", vec![("Export IFCX", Export.into()), ("Copy IFCX", planner_source_icon!("Copy"))])],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
+        let id = format!("2d:{tab}:{name}");
+        Command::new(name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
+    }).collect() }).collect())
 }
 
 /// Open Frame Studio shell ribbon at eb77f9e4c5d3. Template/theme selects are

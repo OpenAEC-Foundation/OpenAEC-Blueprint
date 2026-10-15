@@ -679,21 +679,16 @@
   },
   {
     "id": "2d",
-    "name": "Open 2D Studio",
+    "name": "Open 2D Studio · AEC-extensie",
     "proposed": true,
     "tabs": [
-      "Bestand",
-      "Start",
-      "Tekenen",
-      "Bewerken",
-      "Opmaak",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "AEC",
+      "Pile Plan",
+      "IFC"
     ],
-    "left_panel": "Lagen & objecten",
-    "right_panel": "Objecteigenschappen",
-    "workspace": "Tekenblad",
+    "left_panel": "Host: niet geverifieerd",
+    "right_panel": "Host: niet geverifieerd",
+    "workspace": "AEC-tekenvlak in host",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -716,6 +711,6 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Alleen de AEC-extensie is toegankelijk, bron src/ribbonTabs.tsx op commit fd22965ed28a: registreert AEC en Pile Plan als extra tabs en voegt Export IFCX/Copy IFCX toe aan de bestaande IFC-tab van open-2d-studio. Deze repository definieert geen volledige hostschil of eigen screenshots. Bestand in de geharmoniseerde shell is een voorstel; de IFC-hosttab is alleen via de extensieaanroep bekend."
   }
 ]

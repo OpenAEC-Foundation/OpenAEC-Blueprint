@@ -1755,6 +1755,19 @@ mod tests {
     }
 
     #[test]
+    fn aec_extension_adds_only_its_two_tabs_and_ifcx_commands() {
+        let studio = studios().iter().find(|studio| studio.id == "2d").unwrap();
+        assert_eq!(studio.tabs, ["AEC", "Pile Plan", "IFC"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Elements", "Annotations", "Connections", "Reference", "Properties"]);
+        assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Place", "CPT Data"]);
+        assert_eq!(tabs[2].groups[0].commands.iter().map(|command| command.label.as_str()).collect::<Vec<_>>(),
+            ["Export IFCX", "Copy IFCX"]);
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

@@ -152,6 +152,18 @@ fn export_field_topnav_review() {
 }
 
 #[test]
+#[ignore = "regenerate native AEC extension review on demand"]
+fn export_aec_extension_review() {
+    let mut app = StyleRepo::default();
+    let aec = studios().iter().position(|studio| studio.id == "2d").unwrap();
+    let _ = app.update(Action::SelectStudio(aec));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("aec"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-2d-extension-forge.png"))
+        .expect("save AEC extension review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -331,6 +343,12 @@ fn export_native_style_repo_previews() {
     render(&app, Theme::Light)
         .save_png(&design.join("style-repo-field-topnav-light.png"))
         .expect("save Field top navigation review");
+    let aec = studios().iter().position(|studio| studio.id == "2d").unwrap();
+    let _ = app.update(Action::SelectStudio(aec));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("aec"))
+        .save_png(&design.join("style-repo-2d-extension-forge.png"))
+        .expect("save AEC extension review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));
