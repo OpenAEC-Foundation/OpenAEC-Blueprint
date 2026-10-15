@@ -132,6 +132,7 @@ enum Action {
     PdfFormatBorder(usize),
     PdfFormatBlend(usize),
     PdfFormatOpacity(f32),
+    PdfFormatOpacityText(String),
     PdfFormatArrowStart(usize),
     PdfFormatArrowEnd(usize),
     PdfFormatLayer(usize),
@@ -1661,7 +1662,8 @@ impl Application for StyleRepo {
             }
             Action::PdfFormatBorder(index) => self.pdf_format.border = index.min(2),
             Action::PdfFormatBlend(index) => self.pdf_format.blend = index.min(1),
-            Action::PdfFormatOpacity(value) => self.pdf_format.opacity = value.round().clamp(0.0, 100.0),
+            Action::PdfFormatOpacity(value) => self.pdf_format.set_opacity(value),
+            Action::PdfFormatOpacityText(value) => self.pdf_format.edit_opacity(value),
             Action::PdfFormatArrowStart(index) => self.pdf_format.arrow_start = index.min(7),
             Action::PdfFormatArrowEnd(index) => self.pdf_format.arrow_end = index.min(7),
             Action::PdfFormatLayer(index) => {
@@ -2066,10 +2068,9 @@ mod tests {
         assert!(matches!(&format[1].commands[1].control,
             Some(RibbonControl::ColorSelect { options, selected: 5, .. }) if options.len() == 42));
         assert!(matches!(&format[2].commands[0].control,
-            Some(RibbonControl::FormStack { fields, .. }) if fields.len() == 3 &&
-                matches!(&fields[0], openaec_ui::RibbonFormField::Number { value, .. } if value == "1")));
-        assert!(matches!(&format[2].commands[1].control,
-            Some(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: 100.0, .. })));
+            Some(RibbonControl::FormStack { fields, .. }) if fields.len() == 4 &&
+                matches!(&fields[0], openaec_ui::RibbonFormField::Number { value, .. } if value == "1") &&
+                matches!(&fields[3], openaec_ui::RibbonFormField::Slider { value: 100.0, .. })));
         assert!(matches!(&format[3].commands[0].control,
             Some(RibbonControl::FormStack { fields, .. }) if fields.len() == 2));
         let arrange = &tabs[7].groups;
@@ -2179,6 +2180,14 @@ mod tests {
         assert_eq!(app.pdf_format.line_width, "0.");
         let _ = app.update(Action::PdfFormatLineWidth("0.1".into()));
         assert_eq!(app.pdf_format.line_width, "0.1");
+        let _ = app.update(Action::PdfFormatOpacity(72.6));
+        assert_eq!((app.pdf_format.opacity, app.pdf_format.opacity_text.as_str()), (73.0, "73"));
+        let _ = app.update(Action::PdfFormatOpacityText("".into()));
+        assert_eq!((app.pdf_format.opacity, app.pdf_format.opacity_text.as_str()), (73.0, ""));
+        let _ = app.update(Action::PdfFormatOpacityText("42".into()));
+        assert_eq!((app.pdf_format.opacity, app.pdf_format.opacity_text.as_str()), (42.0, "42"));
+        let _ = app.update(Action::PdfFormatOpacityText("101".into()));
+        assert_eq!(app.pdf_format.opacity, 42.0);
         let _ = app.update(Action::PdfFormatSymbolStamp);
         let studio = studios().iter().find(|studio| studio.id == "pdf").unwrap();
         let tabs = ribbon_preview::studio_tabs_with_controls(studio, None, app.pile_view,

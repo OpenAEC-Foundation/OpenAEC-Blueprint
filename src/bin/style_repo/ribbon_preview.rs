@@ -76,6 +76,7 @@ pub(super) struct PdfFormatState {
     pub border: usize,
     pub blend: usize,
     pub opacity: f32,
+    pub opacity_text: String,
     pub arrow_start: usize,
     pub arrow_end: usize,
     pub layer: usize,
@@ -89,7 +90,7 @@ impl Default for PdfFormatState {
     fn default() -> Self {
         Self { style: usize::MAX, fill: 0, stroke: 5, fill_color: iced::Color::WHITE, has_fill: false,
             stroke_color: iced::Color::BLACK, line_width: "1".into(), border: 0,
-            blend: 0, opacity: 100.0, arrow_start: 0, arrow_end: 1, layer: 0,
+            blend: 0, opacity: 100.0, opacity_text: "100".into(), arrow_start: 0, arrow_end: 1, layer: 0,
             symbol_stamp: false, open_palette: None, custom_open: false,
             custom_draft: "#ffffff".into(), style_gallery_open: false }
     }
@@ -145,6 +146,22 @@ impl PdfFormatState {
         self.style = usize::MAX;
         self.open_palette = None;
         self.custom_open = false;
+    }
+    pub fn set_opacity(&mut self, value: f32) {
+        self.opacity = value.round().clamp(0.0, 100.0);
+        self.opacity_text = format!("{:.0}", self.opacity);
+    }
+    pub fn edit_opacity(&mut self, value: String) {
+        if value.is_empty() {
+            self.opacity_text = value;
+        } else if value.len() <= 3 && value.bytes().all(|byte| byte.is_ascii_digit()) {
+            if let Ok(number) = value.parse::<u8>() {
+                if number <= 100 {
+                    self.opacity = number as f32;
+                    self.opacity_text = value;
+                }
+            }
+        }
     }
 }
 
@@ -410,10 +427,11 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
                         format.border, Action::PdfFormatBorder),
                     form_select("Mengen", &["Normaal", "Vermenigvuldigen"],
                         format.blend, Action::PdfFormatBlend),
+                    openaec_ui::RibbonFormField::Slider { label: "Dekking".into(),
+                        minimum: 0.0, maximum: 100.0, value: format.opacity, step: 1.0,
+                        value_text: format.opacity_text.clone(), unit: "%",
+                        on_change: Action::PdfFormatOpacity, on_input: Action::PdfFormatOpacityText },
                 ], width: 235.0, label_width: 58.0 }),
-            Command::new("Dekking", Icon::Settings, Action::PdfFormatOpacity(format.opacity))
-                .control(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: format.opacity,
-                    step: 1.0, unit: "%", on_change: Action::PdfFormatOpacity }),
         ] },
         RibbonGroup { label: "Pijlen".into(), commands: vec![
             Command::new("Pijlpunten", Icon::Settings, Action::PdfFormatArrowStart(format.arrow_start))

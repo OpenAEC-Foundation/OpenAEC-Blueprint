@@ -484,6 +484,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
     let title = label.into();
     let width = control.width();
     let compact = matches!(control, RibbonControl::FormStack { .. });
+    let dense_form = matches!(&control, RibbonControl::FormStack { fields, .. } if fields.len() >= 4);
     let body: Element<'a, M> = match control {
         RibbonControl::Slider { minimum, maximum, value, step, unit, on_change } => {
             column![
@@ -581,11 +582,13 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
         RibbonControl::FormStack { fields, label_width, .. } => {
             let mut form = iced::widget::Column::new().spacing(1);
             let field_width = (width - 16.0 - label_width).max(60.0);
+            let row_height = if dense_form { 16 } else { 19 };
+            let padding = if dense_form { [0, 2] } else { [1, 3] };
             for field in fields {
                 let (label, input): (String, Element<'a, M>) = match field {
                     RibbonFormField::Number { label, value, on_change } => {
                         let input = text_input("", &value).on_input(on_change)
-                            .font(fonts::MEDIUM).size(11).padding([1, 3]).width(field_width)
+                            .font(fonts::MEDIUM).size(11).padding(padding).width(field_width)
                             .style(move |_, status| text_input_style(theme, status));
                         (label, input.into())
                     }
@@ -596,15 +599,26 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                         let current = choices.get(selected).cloned();
                         let input = pick_list(choices, current,
                             move |choice: RibbonChoice| options[choice.index].1.clone())
-                            .font(fonts::MEDIUM).text_size(11).padding([1, 3]).width(field_width)
+                            .font(fonts::MEDIUM).text_size(11).padding(padding).width(field_width)
                             .style(move |_, status| pick_list_style(theme, status))
                             .menu_style(move |_| pick_list_menu_style(theme));
                         (label, input.into())
                     }
+                    RibbonFormField::Slider { label, minimum, maximum, value, step,
+                        value_text, unit, on_change, on_input } => {
+                        let track = slider(minimum..=maximum, value, on_change)
+                            .step(step).width(96).height(14)
+                            .style(move |_, status| slider_style(theme, status));
+                        let value = text_input("", &value_text).on_input(on_input)
+                            .font(fonts::MEDIUM).size(11).padding([0, 2]).width(34)
+                            .style(move |_, status| text_input_style(theme, status));
+                        (label, row![track, value, text(unit).size(11).color(t.text)]
+                            .spacing(2).align_y(Alignment::Center).into())
+                    }
                 };
                 form = form.push(row![
                     text(label).font(fonts::BODY).size(11).color(t.text).width(label_width), input,
-                ].spacing(4).align_y(Alignment::Center).height(19));
+                ].spacing(4).align_y(Alignment::Center).height(row_height));
             }
             form.into()
         }
@@ -703,7 +717,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
     container(body)
         .padding(if compact { [0, 6] } else { [4, 6] })
         .width(width)
-        .height(62)
+        .height(if dense_form { 68 } else { 62 })
         .align_y(Alignment::Center)
         .into()
 }

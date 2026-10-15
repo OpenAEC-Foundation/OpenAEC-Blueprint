@@ -71,6 +71,9 @@ pub struct RibbonCustomColor<M> {
 pub enum RibbonFormField<M> {
     Number { label: String, value: String, on_change: fn(String) -> M },
     Select { label: String, options: Vec<(String, M)>, selected: usize },
+    Slider { label: String, minimum: f32, maximum: f32, value: f32, step: f32,
+        value_text: String, unit: &'static str, on_change: fn(f32) -> M,
+        on_input: fn(String) -> M },
 }
 impl<M> RibbonControl<M> {
     pub fn width(&self) -> f32 {
