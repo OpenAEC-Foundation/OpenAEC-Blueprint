@@ -8,7 +8,7 @@ use crate::{
 };
 use iced::{
     widget::{
-        button, center, checkbox, column, container, opaque, pick_list, progress_bar, row,
+        button, checkbox, column, container, pick_list, progress_bar, row,
         scrollable, slider, stack, svg, text, text_input, tooltip, Space,
     },
     Alignment, Background, Border, Element, Fill, Length, Padding,
@@ -1051,9 +1051,7 @@ pub fn dialog_modal<'a, M: Clone + 'a>(
             shadow: theme.dialog_shadow(),
             ..container::Style::default()
         });
-    opaque(center(opaque(card)).style(move |_| {
-        container::Style::default().background(t.dialog_overlay)
-    })).into()
+    crate::modal::modal(card.into(), theme)
 }
 /// Source Style Book settings chrome (560 × 500). Applications provide their
 /// own tabs, fields, footer commands and close action. The backdrop is inert.
@@ -1126,9 +1124,7 @@ pub fn settings_modal<'a, M: Clone + 'a>(
             shadow: theme.dialog_shadow(),
             ..container::Style::default()
         });
-    opaque(center(opaque(card)).style(move |_| {
-        container::Style::default().background(t.dialog_overlay)
-    })).into()
+    crate::modal::modal(card.into(), theme)
 }
 /// The source template's 340 px reset confirmation above an open settings dialog.
 pub fn settings_reset_confirmation<'a, M: Clone + 'a>(

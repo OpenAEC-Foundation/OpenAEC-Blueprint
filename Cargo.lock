@@ -2017,6 +2017,7 @@ name = "openaec-ui"
 version = "0.1.0"
 dependencies = [
  "iced",
+ "iced_tiny_skia",
  "serde",
  "serde_json",
 ]

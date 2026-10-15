@@ -7,7 +7,13 @@ license = "CC-BY-SA-4.0"
 readme = "README.md"
 include = ["src/**", "assets/fonts/**", "assets/icons/**", "assets/domain-icons/**", "assets/domain-icons-small/**", "licenses/**", "Cargo.toml", "README.md", "LICENSE", "NOTICE.md"]
 
+[features]
+gpu-renderer = ["iced/wgpu"]
+
 [dependencies]
 iced = { version = "=0.13.1", default-features = false, features = ["tiny-skia", "svg", "image", "web-colors", "advanced", "fira-sans"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+
+[dev-dependencies]
+iced_tiny_skia = "0.13"
