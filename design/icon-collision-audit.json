@@ -1,0 +1,446 @@
+{
+  "scope": "SHA-256 collisions within 565 verified UI icon assets",
+  "pair_count": 14,
+  "distinct_action_pairs": 6,
+  "context_review_pairs": 8,
+  "pairs": [
+    {
+      "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710",
+      "kind": "distinct-action",
+      "title": "GIS · BAG 3D / CityJSON",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BAG3D.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BAG3D.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BAG3D.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/CityJSON.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/CityJSON.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/CityJSON.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710"
+        }
+      ],
+      "drafts": [
+        "gis-bag3d",
+        "gis-cityjson"
+      ]
+    },
+    {
+      "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
+      "kind": "distinct-action",
+      "title": "GIS · BGT / BGT 3D",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT3D.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT3D.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Data.panel/BGT3D.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f"
+        }
+      ],
+      "drafts": [
+        "gis-bgt",
+        "gis-bgt3d"
+      ]
+    },
+    {
+      "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
+      "kind": "distinct-action",
+      "title": "GIS · historische luchtfoto / straatbeeld",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/LuchtfotoTijdreis.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/LuchtfotoTijdreis.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/LuchtfotoTijdreis.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/StreetView.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/StreetView.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Kaarten.panel/StreetView.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13"
+        }
+      ],
+      "drafts": [
+        "gis-aerial-history",
+        "gis-street-view"
+      ]
+    },
+    {
+      "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
+      "kind": "distinct-action",
+      "title": "GIS · locatie / opschonen",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Locatie.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Locatie.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Locatie.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Opschonen.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Opschonen.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/GIS2BIM.extension/GIS2BIM.tab/Setup.panel/Opschonen.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345"
+        }
+      ],
+      "drafts": [
+        "gis-location",
+        "gis-cleanup"
+      ]
+    },
+    {
+      "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701",
+      "kind": "distinct-action",
+      "title": "PDF · passend zoomen / schermvullend tonen",
+      "originals": [
+        {
+          "repo": "open-pdf-studio-v3",
+          "path": "crates/app/ui/icons/fit-page.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/fit-page.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L103",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "fit",
+          "adopted": "",
+          "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701"
+        },
+        {
+          "repo": "open-pdf-studio-v3",
+          "path": "crates/app/ui/icons/fullscreen.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/fullscreen.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L284",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701"
+        }
+      ],
+      "drafts": [
+        "pdf-fit-page",
+        "pdf-fullscreen"
+      ]
+    },
+    {
+      "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
+      "kind": "distinct-action",
+      "title": "PDF · werkelijke grootte / oppervlaktemeting",
+      "originals": [
+        {
+          "repo": "open-pdf-studio-v3",
+          "path": "crates/app/ui/icons/actual-size.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/actual-size.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L102",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de"
+        },
+        {
+          "repo": "open-pdf-studio-v3",
+          "path": "crates/app/ui/icons/area.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/area.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L204",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de"
+        }
+      ],
+      "drafts": [
+        "pdf-actual-size",
+        "pdf-area"
+      ]
+    },
+    {
+      "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Aantallen.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatAantallen.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatAantallen.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatAantallen.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatAantallen.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatAantallen.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatAantallen.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Config.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatConfig.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatConfig.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatConfig.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatConfig.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatConfig.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatConfig.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Create.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatCreate.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatCreate.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatCreate.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatCreate.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatCreate.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatCreate.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Maatvoering.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatMaatvoering.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatMaatvoering.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatMaatvoering.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatMaatvoering.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatMaatvoering.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatMaatvoering.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Rename.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatRename.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatRename.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatRename.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatRename.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatRename.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatRename.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421",
+      "kind": "context-review",
+      "title": "Bouwkunde · deurstaat / kozijnstaat · Tag.pushbutton",
+      "originals": [
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatTag.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatTag.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Deurstaat.panel/DeurstaatTag.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421"
+        },
+        {
+          "repo": "pyrevit-gis2bim",
+          "path": "extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatWindowTag.pushbutton/icon.png",
+          "preview": "../harmonization/ui-icons/pyrevit-gis2bim/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatWindowTag.pushbutton/icon.png",
+          "source": "https://github.com/OpenAEC-Foundation/pyrevit-gis2bim/blob/4d80109d25a814fab0090ca0dd78ed8bd79c00ad/extensions/bouwkunde.extension/Bouwkunde.tab/Kozijnstaat.panel/KozijnstaatWindowTag.pushbutton/script.py",
+          "evidence": "framework-convention",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
+      "kind": "context-review",
+      "title": "CAD / Pointcloud · gedeelde solid-vorm",
+      "originals": [
+        {
+          "repo": "open-pointcloud-studio",
+          "path": "native/assets/opencad-icons/solid.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/solid.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12401",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
+        },
+        {
+          "repo": "OpenCADStudio",
+          "path": "assets/icons/solid.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/solid.svg",
+          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/visual_style.rs#L18",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
+        }
+      ],
+      "drafts": []
+    },
+    {
+      "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
+      "kind": "context-review",
+      "title": "CAD / Pointcloud · gedeelde sphere-vorm",
+      "originals": [
+        {
+          "repo": "open-pointcloud-studio",
+          "path": "native/assets/opencad-icons/sphere.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/sphere.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12402",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
+        },
+        {
+          "repo": "OpenCADStudio",
+          "path": "assets/icons/model/sphere.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/model/sphere.svg",
+          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L19",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
+        }
+      ],
+      "drafts": []
+    }
+  ]
+}

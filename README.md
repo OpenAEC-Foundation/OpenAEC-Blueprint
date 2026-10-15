@@ -44,6 +44,8 @@ De vijf vaste vensterbanden, 24 px-paneelwerkbalken en de standaardbreedte van b
 
 De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout op branch `feat/shared-rust-ui`. Daar draait een portable snapshot van deze crate als `native/ui`; de Pointcloud-titelbalk, [zes beoordeelde toolacties en de Extensions-bestandspagina](design/icon-adoptions.json) gebruiken de canonieke iconen, naast de gebundelde lettertypen, knoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en 77 gedeelde Tauri-kleurvelden per thema. De stevige randkleur voor sliders en voortgangsbalken komt aanvullend uit de vastgelegde Style Book-merktokens. De [Extensions-iconreview](design/extensions-icon-review.html) onderbouwt waarom die pagina een puzzelstuk krijgt in plaats van een 3D-kubus. De overige domeinribbon en panelen worden pas na de visuele en semantische beoordeling volledig overgezet.
 
+De [icoonbotsingreview](design/icon-collision-review.html) maakt 14 paren met exact dezelfde bronbytes zichtbaar. Voor zes paren met verschillende handelingen zijn twaalf onderscheidende vectorconcepten in 16/24/32 px gemaakt; de acht andere paren blijven ter contextbeoordeling. De concepten staan nog buiten de publieke Rust-icoon-API.
+
 ## Via GitHub Desktop publiceren
 
 1. Kies **File → Add local repository** en selecteer deze map: `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.
