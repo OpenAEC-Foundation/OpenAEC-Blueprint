@@ -210,6 +210,22 @@ fn export_field_topnav_review() {
     render_with_options(&app, Theme::Forge, false, Some("export"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-export-forge.png"))
         .expect("save Field Forge export review");
+    let _ = app.update(Action::SelectScreen(4));
+    render_with_options(&app, Theme::Light, false, Some("inspectie"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-inspection-light.png"))
+        .expect("save Field inspection overview");
+    let _ = app.update(Action::FieldFlowSetup("inspectie"));
+    render_with_options(&app, Theme::Forge, false, Some("inspectie"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-inspection-setup-forge.png"))
+        .expect("save Field inspection setup");
+    let _ = app.update(Action::SelectScreen(5));
+    render_with_options(&app, Theme::Light, false, Some("oplevering"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-handover-light.png"))
+        .expect("save Field handover overview");
+    let _ = app.update(Action::FieldFlowSetup("oplevering"));
+    render_with_options(&app, Theme::Forge, false, Some("oplevering"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-handover-setup-forge.png"))
+        .expect("save Field handover setup");
 }
 
 #[test]

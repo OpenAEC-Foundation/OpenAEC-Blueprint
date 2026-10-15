@@ -170,6 +170,29 @@ pub fn form_field<'a, M: Clone + 'a>(
     ].spacing(7).width(width).into()
 }
 
+/// Full-page empty collection surface used by application workflow screens.
+pub fn empty_collection<'a, M: Clone + 'a>(
+    theme: Theme,
+    title: impl Into<String>,
+    action_label: impl Into<String>,
+    empty_label: impl Into<String>,
+    on_action: M,
+    width: Length,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    container(column![
+        text(title.into()).font(fonts::HEADING).size(29).color(t.text),
+        button(text(action_label.into()).font(fonts::STRONG).size(13))
+            .padding([12, 22]).on_press(on_action)
+            .style(move |_, status| primary_button_style(theme, status)),
+        container(text(empty_label.into()).size(14).color(t.text_secondary))
+            .width(Fill).height(88).align_x(Alignment::Center).align_y(Alignment::Center),
+    ].spacing(26)).padding(32).width(width).height(300)
+        .style(move |_| container::Style::default().background(t.bg_lighter)
+            .border(Border { color: t.border, width: 1.0, radius: 10.0.into() }))
+        .into()
+}
+
 /// Choice field and its popup use the same tokens as text fields.
 pub fn pick_list_style(theme: Theme, status: pick_list::Status) -> pick_list::Style {
     let t = theme.tokens();

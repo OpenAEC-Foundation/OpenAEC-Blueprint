@@ -112,6 +112,11 @@ enum Action {
     FieldExportPhotos(bool),
     FieldExportMap(bool),
     FieldExportPreview(&'static str),
+    FieldFlowSetup(&'static str),
+    FieldFlowCancel,
+    FieldFlowEdit(bool, usize, String),
+    FieldFlowType(bool, usize),
+    FieldFlowPreview(&'static str),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -248,6 +253,12 @@ struct StyleRepo {
     field_export_photos: bool,
     field_export_map: bool,
     field_export_notice: Option<&'static str>,
+    field_flow_mode: Option<&'static str>,
+    field_inspection_values: [String; 3],
+    field_handover_values: [String; 2],
+    field_inspection_type: usize,
+    field_handover_type: usize,
+    field_flow_notice: Option<&'static str>,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -277,6 +288,12 @@ impl Default for StyleRepo {
             field_export_photos: true,
             field_export_map: true,
             field_export_notice: None,
+            field_flow_mode: None,
+            field_inspection_values: [String::new(), String::new(), String::new()],
+            field_handover_values: [String::new(), String::new()],
+            field_inspection_type: 0,
+            field_handover_type: 0,
+            field_flow_notice: None,
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -1008,6 +1025,9 @@ impl StyleRepo {
         if screen == "export" {
             return self.field_export_page(theme, l);
         }
+        if screen == "inspectie" || screen == "oplevering" {
+            return self.field_workflow_page(theme, l, screen == "inspectie");
+        }
         let capture = match screen {
             "project" => Some("01-project.png"),
             "koppelingen" => Some("02-koppelingen.png"),
@@ -1390,7 +1410,9 @@ impl StyleRepo {
         ] {
             actions = actions.push(button(text(label).size(12)).padding([10, 13])
                 .on_press(Action::FieldExportPreview(format))
-                .style(move |_, status| widgets::button_style(theme, format == "PDF", status)));
+                .style(move |_, status| if format == "PDF" {
+                    widgets::primary_button_style(theme, status)
+                } else { widgets::button_style(theme, false, status) }));
         }
         let mut panel = Column::new().spacing(24)
             .push(text(l.text("Project Exporteren", "Export project"))
@@ -1419,6 +1441,100 @@ impl StyleRepo {
             text("Broncapture ter vergelijking · commit 8a4f104")
                 .font(fonts::MEDIUM).size(12).color(t.text_secondary),
             image(image::Handle::from_path(capture)).width(1168),
+        ].spacing(16).into()
+    }
+    fn field_workflow_page(&self, theme: Theme, l: Language, inspection: bool) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let mode = if inspection { "inspectie" } else { "oplevering" };
+        let title = if inspection { "Inspecties" } else { "Opleveringen" };
+        let capture = if inspection { "03-inspectie.png" } else { "04-oplevering.png" };
+        let content: Element<'_, Action> = if self.field_flow_mode == Some(mode) {
+            let edit = |index: usize, label: &'static str, value: String| {
+                widgets::form_field(theme, label, value,
+                    move |value| Action::FieldFlowEdit(inspection, index, value),
+                    iced::Length::Fixed(532.0))
+            };
+            let choices: Vec<String> = if inspection {
+                vec!["Vrije inspectie".into(), "Checklist-inspectie".into()]
+            } else {
+                vec!["Vooroplevering".into(), "Eerste oplevering".into(),
+                    "Tweede oplevering / Naschouw".into()]
+            };
+            let selected_index = if inspection { self.field_inspection_type } else { self.field_handover_type };
+            let selected = choices.get(selected_index).cloned();
+            let type_picker = pick_list(choices.clone(), selected, move |value| {
+                Action::FieldFlowType(inspection,
+                    choices.iter().position(|choice| choice == &value).unwrap_or(0))
+            }).width(532).style(move |_, status| widgets::pick_list_style(theme, status))
+                .menu_style(move |_| widgets::pick_list_menu_style(theme));
+            let picker = column![
+                text(if inspection { "Type" } else { "Type oplevering" })
+                    .font(fonts::MEDIUM).size(12).color(t.text_secondary),
+                type_picker,
+            ].spacing(7);
+            let mut form = Column::new().spacing(22)
+                .push(text(if inspection { "Nieuwe Inspectie" } else { "Nieuwe Oplevering" })
+                    .font(fonts::HEADING).size(29).color(t.text));
+            if inspection {
+                form = form.push(row![
+                    edit(0, "Naam inspectie *", self.field_inspection_values[0].clone()),
+                    picker,
+                ].spacing(24))
+                .push(row![
+                    container(column![
+                        text("Checklist template").font(fonts::MEDIUM).size(12).color(t.text_secondary),
+                        text("— Kies template —").size(13).color(t.text_secondary),
+                    ].spacing(12)).width(532),
+                    container(column![
+                        text("Plattegrond").font(fonts::MEDIUM).size(12).color(t.text_secondary),
+                        text("— Optioneel —").size(13).color(t.text_secondary),
+                    ].spacing(12)).width(532),
+                ].spacing(24))
+                .push(row![
+                    edit(1, "Inspecteur", self.field_inspection_values[1].clone()),
+                    edit(2, "Datum", self.field_inspection_values[2].clone()),
+                ].spacing(24));
+            } else {
+                form = form.push(row![
+                    picker,
+                    edit(0, "Datum", self.field_handover_values[0].clone()),
+                ].spacing(24))
+                .push(edit(1, "Opmerkingen", self.field_handover_values[1].clone()))
+                .push(text("Deelnemers").font(fonts::STRONG).size(16).color(t.text))
+                .push(button(text("+ Deelnemer").size(12)).padding([9, 14])
+                    .on_press(Action::FieldFlowPreview("Deelnemers"))
+                    .style(move |_, status| widgets::button_style(theme, false, status)));
+            }
+            form = form.push(row![
+                button(text(l.text("Annuleren", "Cancel")).size(12)).padding([10, 16])
+                    .on_press(Action::FieldFlowCancel)
+                    .style(move |_, status| widgets::button_style(theme, false, status)),
+                button(text(if inspection { "Inspectie Starten" } else { "Oplevering Starten" }).size(12))
+                    .padding([10, 16]).on_press(Action::FieldFlowPreview(mode))
+                    .style(move |_, status| widgets::primary_button_style(theme, status)),
+            ].spacing(10));
+            if let Some(message) = self.field_flow_notice {
+                form = form.push(text(format!("{message}: deze schermreview maakt nog geen projectrecord aan."))
+                    .size(12).color(t.accent));
+            }
+            container(form).padding(32).width(1168)
+                .style(move |_| container::Style::default().background(t.bg_lighter)
+                    .border(iced::Border { color: t.border, width: 1.0, radius: 10.0.into() })).into()
+        } else {
+            widgets::empty_collection(theme, title,
+                if inspection { "+ Nieuwe inspectie" } else { "+ Nieuwe oplevering" },
+                if inspection { "Nog geen inspecties uitgevoerd" } else { "Nog geen opleveringen" },
+                Action::FieldFlowSetup(mode), iced::Length::Fixed(1168.0))
+        };
+        let source = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/Open-Field-Studio/docs/screenshots").join(capture);
+        column![
+            text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG).size(11).color(t.accent),
+            content,
+            text("Broncapture van leeg overzicht ter vergelijking · commit 8a4f104")
+                .font(fonts::MEDIUM).size(12).color(t.text_secondary),
+            image(image::Handle::from_path(source)).width(1168),
         ].spacing(16).into()
     }
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
@@ -2048,6 +2164,18 @@ impl Application for StyleRepo {
             Action::FieldExportPhotos(value) => self.field_export_photos = value,
             Action::FieldExportMap(value) => self.field_export_map = value,
             Action::FieldExportPreview(format) => self.field_export_notice = Some(format),
+            Action::FieldFlowSetup(mode) => { self.field_flow_mode = Some(mode); self.field_flow_notice = None; }
+            Action::FieldFlowCancel => { self.field_flow_mode = None; self.field_flow_notice = None; }
+            Action::FieldFlowEdit(inspection, index, value) => {
+                if inspection {
+                    if let Some(field) = self.field_inspection_values.get_mut(index) { *field = value; }
+                } else if let Some(field) = self.field_handover_values.get_mut(index) { *field = value; }
+            }
+            Action::FieldFlowType(inspection, index) => {
+                if inspection { self.field_inspection_type = index.min(1); }
+                else { self.field_handover_type = index.min(2); }
+            }
+            Action::FieldFlowPreview(message) => self.field_flow_notice = Some(message),
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2470,6 +2598,21 @@ mod tests {
         assert_eq!(app.field_export_type, 2);
         assert!(!app.field_export_photos && !app.field_export_map);
         assert_eq!(app.field_export_notice, Some("PDF"));
+        let _ = app.tab_event("inspectie");
+        let _ = app.update(Action::FieldFlowSetup("inspectie"));
+        let _ = app.update(Action::FieldFlowEdit(true, 0, "Gevelinspectie".into()));
+        let _ = app.update(Action::FieldFlowType(true, 1));
+        assert_eq!(app.field_flow_mode, Some("inspectie"));
+        assert_eq!(app.field_inspection_values[0], "Gevelinspectie");
+        assert_eq!(app.field_inspection_type, 1);
+        let _ = app.update(Action::FieldFlowCancel);
+        assert_eq!(app.field_flow_mode, None);
+        let _ = app.tab_event("oplevering");
+        let _ = app.update(Action::FieldFlowSetup("oplevering"));
+        let _ = app.update(Action::FieldFlowEdit(false, 1, "Controlepunten".into()));
+        let _ = app.update(Action::FieldFlowType(false, 2));
+        assert_eq!(app.field_handover_values[1], "Controlepunten");
+        assert_eq!(app.field_handover_type, 2);
         let _ = app.tab_event("project");
         assert_eq!(app.field_project.values[0], "Nieuwe opname");
     }
