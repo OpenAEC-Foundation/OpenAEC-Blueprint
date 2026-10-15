@@ -955,6 +955,41 @@ pub fn action<'a, M: Clone + 'a>(
     .style(move |_, status| button_style(theme, false, status))
     .into()
 }
+/// One title-strip action for every studio. The application supplies its
+/// semantic icon and command; the shared crate owns size, hover and tooltip.
+pub fn title_action<'a, M: Clone + 'a>(
+    icon: Element<'a, M>,
+    label: impl Into<String>,
+    message: Option<M>,
+    theme: Theme,
+) -> Element<'a, M> {
+    let control = button(container(icon).width(Fill).height(Fill).center(Fill))
+        .width(30)
+        .height(26)
+        .padding([1, 0])
+        .on_press_maybe(message)
+        .style(move |_, status| title_action_style(theme, status));
+    tooltip(
+        control,
+        container(text(label.into()).size(12))
+            .padding([8, 12])
+            .max_width(340)
+            .style(move |_| tooltip_style(theme)),
+        tooltip::Position::Bottom,
+    )
+    .gap(90)
+    .into()
+}
+
+pub fn title_action_style(theme: Theme, status: button::Status) -> button::Style {
+    let tokens = theme.tokens();
+    button::Style {
+        background: matches!(status, button::Status::Hovered)
+            .then_some(Background::Color(tokens.ribbon_btn_hover)),
+        text_color: tokens.text,
+        ..button::Style::default()
+    }
+}
 pub fn icon_button<'a, M: Clone + 'a>(
     label: &'a str,
     icon: Icon,

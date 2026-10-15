@@ -24,17 +24,19 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     let mut quick = Row::new().spacing(1);
     for command in &slots.quick_commands {
         let hint=format!("{}{}",command.label,command.shortcut.as_ref().map(|s|format!(" ({s})")).unwrap_or_default());
-        let control=button(command.icon.view(16,if command.enabled {t.accent} else {t.text_faint}))
-            .padding([4,7]).on_press_maybe(command.enabled.then(||Message::Command(command.message.clone())))
-            .style(move |_,s|widgets::button_style(theme,false,s));
-        quick=quick.push(tooltip(control,text(hint).size(12),tooltip::Position::Bottom));
+        quick=quick.push(widgets::title_action(
+            command.icon.view(16,if command.enabled {t.accent} else {t.text_faint}).into(),
+            hint,
+            command.enabled.then(||Message::Command(command.message.clone())),
+            theme,
+        ));
     }
     let titlebar = container(row![
         container(Icon::Cube.view(18,t.accent)).padding([0,8]), quick, title,
-        widgets::icon_button(l.text("Instellingen","Settings"),Icon::Settings,Message::Ui(UiEvent::Settings(true)),theme),
-        widgets::icon_button(l.text("Minimaliseren","Minimize"),Icon::Minimize,Message::Ui(UiEvent::Minimize),theme),
-        widgets::icon_button(l.text("Maximaliseren","Maximize"),Icon::Maximize,Message::Ui(UiEvent::Maximize),theme),
-        widgets::icon_button(l.text("Sluiten","Close"),Icon::Close,Message::Ui(UiEvent::CloseWindow),theme),
+        widgets::title_action(Icon::Settings.view(16,t.text).into(),l.text("Instellingen","Settings"),Some(Message::Ui(UiEvent::Settings(true))),theme),
+        widgets::title_action(Icon::Minimize.view(16,t.text).into(),l.text("Minimaliseren","Minimize"),Some(Message::Ui(UiEvent::Minimize)),theme),
+        widgets::title_action(Icon::Maximize.view(16,t.text).into(),l.text("Maximaliseren","Maximize"),Some(Message::Ui(UiEvent::Maximize)),theme),
+        widgets::title_action(Icon::Close.view(16,t.text).into(),l.text("Sluiten","Close"),Some(Message::Ui(UiEvent::CloseWindow)),theme),
     ].align_y(iced::Alignment::Center)).height(metrics::TITLE).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
     let mut tabs = Row::new().spacing(if slots.mode == ChromeMode::CanvasRibbon { 6 } else { 2 });
     if !matches!(slots.mode, ChromeMode::TopNav | ChromeMode::CanvasRibbon) {

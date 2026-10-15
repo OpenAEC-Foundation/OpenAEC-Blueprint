@@ -4,6 +4,8 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 
 `frame::status_bar` owns the shared 22 px status band, one-pixel top rule, theme colors and horizontal padding. An existing application supplies its own status cells and actions as an Iced `Element`; the same component is used by the Style Repo shell and Pointcloud Studio.
 
+`widgets::title_action` owns the 30 × 26 px quick-access control, hover color and tooltip for the title strip. The Style Repo and Pointcloud supply their own command icons, labels and messages through this same Rust widget.
+
 `frame::document_bar` owns the 30 px document band from the pinned Tauri Style Book: the one-pixel top and bottom rules, theme background and 4 px horizontal inset. Applications keep their own tab identity and navigation behavior.
 
 `widgets::document_tab_style` and `widgets::document_close_style` give those app-owned tabs the shared 24 px appearance and a legible close action. Pointcloud retains its middle-click, shortening, scrolling and keyboard behavior while using the same visual tab styles as the Style Repo.
