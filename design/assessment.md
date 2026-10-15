@@ -62,6 +62,20 @@ tabs. Daarom vervallen de eerder voorgestelde tabs Taken en Berekenen.
 De [native Planner-preview](style-repo-planner-ribbon-light.png) volgt de
 gecontroleerde tab- en groepsstructuur; gemeenschappelijke acties gebruiken
 de 22-iconenkern en de overige vormen zijn broniconen ter beoordeling.
+
+De [Energy-router op commit e9a485d](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/core/navigation/routes.ts)
+bevestigt tien hoofdschermen in vier werkstroomgroepen: Invoer (Project,
+Gebouw, Installaties), Berekening (Controle, Resultaten), Bestaande bouw
+(Basisopname, Maatwerkadvies, Herlabelen) en Oplevering (Rapport,
+Registratie). Daaronder liggen 7 gebouw-, 10 installatie-, 2 controle-,
+6 resultaat-, 5 advies- en 4 rapportsubpagina's. Basisopname gebruikt een
+apart, projectafhankelijk vragenpad. Gereedschap heeft vier functies buiten
+de genummerde werkstroom. De [navigatiecomponent](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx)
+toont bovendien verschillende stappen voor nieuwbouw en bestaande bouw.
+Een harmonisatie die alle tien hoofdschermen als vaste ribbontabs tekent,
+zou die werkstroom verliezen. Het gedeelde Rust-frame moet daarom een
+werkstroomnavigatievariant ondersteunen en de domeininhoud op haar eigen
+plaats laten; de huidige Energy-ribbon in de atlas blijft een vergelijkingsproef.
 Een software-render liet zien dat de horizontale scrollbar de groepsnamen
 overlapte. De gedeelde Rust-shell reserveert nu de volledige ribbonhoogte voor
 de scrollbar; een renderregressietest controleert dat de groepsnaam leesbaar
