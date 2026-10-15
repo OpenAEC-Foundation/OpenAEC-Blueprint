@@ -25,10 +25,211 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: planner_groups(studio, tab, selected)
+                .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Source-aligned command samples from Calc's ribbon components at b47042704efa.
+/// Experimental and contextual tab visibility is recorded in app-layouts.json.
+fn calc_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "calc" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Begroting" => vec![
+            (
+                "Regels",
+                vec![
+                    ("Hoofdstuk", planner_source_icon!("FilePlus2")),
+                    ("Begr.post", planner_source_icon!("FileText")),
+                    ("Bew.post", planner_source_icon!("ClipboardCheck")),
+                    ("Rekenregel", planner_source_icon!("ListOrdered")),
+                    ("Tekstregel", planner_source_icon!("FileType")),
+                    ("Witregel", planner_source_icon!("ListTree")),
+                    ("Verwijder", planner_source_icon!("Trash2")),
+                ],
+            ),
+            (
+                "Klembord",
+                vec![
+                    ("Plakken", planner_source_icon!("ClipboardCheck")),
+                    ("Knippen", planner_source_icon!("Scissors")),
+                    ("Kopiëren", planner_source_icon!("Copy")),
+                ],
+            ),
+            (
+                "Geschiedenis",
+                vec![("Ongedaan", Undo.into()), ("Opnieuw", Redo.into())],
+            ),
+            ("Panelen", vec![("Hoeveelheid", Settings.into())]),
+            (
+                "Weergave",
+                vec![
+                    ("UI-1", Grid.into()),
+                    ("UI-2", Grid.into()),
+                    ("Simple", Grid.into()),
+                    ("Inklappen", planner_source_icon!("ChevronsDownUp")),
+                ],
+            ),
+            ("Prijzen", vec![("Prijzen %", Settings.into())]),
+            (
+                "Wijzigingen",
+                vec![
+                    ("Bijhouden", planner_source_icon!("ListOrdered")),
+                    ("Wis markeringen", planner_source_icon!("Eraser")),
+                    ("Hele regel", Grid.into()),
+                    ("Alleen cel", Grid.into()),
+                ],
+            ),
+            ("Project", vec![("Projectgegevens", Settings.into())]),
+            (
+                "Varianten",
+                vec![
+                    ("Varianten", planner_source_icon!("GitBranch")),
+                    ("Optieset", planner_source_icon!("Layers")),
+                ],
+            ),
+        ],
+        "Rapportage" => vec![
+            (
+                "Rapportage",
+                vec![
+                    ("Opdrachtgever", planner_source_icon!("FileText")),
+                    ("Intern", planner_source_icon!("FileText")),
+                    ("Nacalculatie", planner_source_icon!("FileText")),
+                ],
+            ),
+            (
+                "Weergave",
+                vec![
+                    ("Hoeveelheden", Grid.into()),
+                    ("Staand", planner_source_icon!("FileText")),
+                    ("Liggend", planner_source_icon!("FileText")),
+                ],
+            ),
+            (
+                "Afdrukken",
+                vec![("Afdrukken", planner_source_icon!("Printer"))],
+            ),
+            (
+                "Export",
+                vec![
+                    ("PDF Export", Export.into()),
+                    ("Excel Export", Export.into()),
+                    ("IFC Export", Export.into()),
+                ],
+            ),
+        ],
+        "Spreadsheet" => vec![
+            (
+                "Werkbladen",
+                vec![
+                    ("Nieuw blad", New.into()),
+                    ("Verwijder", planner_source_icon!("Trash2")),
+                ],
+            ),
+            (
+                "Opmaak",
+                vec![
+                    ("Vet", planner_source_icon!("FileType")),
+                    ("Cursief", planner_source_icon!("FileType")),
+                    ("Links", planner_source_icon!("IndentDecrease")),
+                    ("Midden", planner_source_icon!("Columns3")),
+                    ("Rechts", planner_source_icon!("IndentIncrease")),
+                ],
+            ),
+            (
+                "Getal",
+                vec![
+                    ("Valuta (€)", planner_source_icon!("Gauge")),
+                    ("Percentage (%)", planner_source_icon!("Gauge")),
+                    ("+Decimaal", planner_source_icon!("Plus")),
+                    ("-Decimaal", planner_source_icon!("Minus")),
+                ],
+            ),
+            (
+                "Tekstgrootte",
+                vec![
+                    ("Groter", planner_source_icon!("ZoomIn")),
+                    ("Kleiner", planner_source_icon!("ZoomOut")),
+                ],
+            ),
+        ],
+        "IFC" => vec![(
+            "Rapport",
+            vec![("Genereer", planner_source_icon!("FileText"))],
+        )],
+        "Offerte" => vec![
+            (
+                "Secties",
+                vec![
+                    ("Technisch", New.into()),
+                    ("Opties", New.into()),
+                    ("Vrij", New.into()),
+                    ("Meerwerk", New.into()),
+                ],
+            ),
+            (
+                "Document",
+                vec![
+                    ("Gegevens", Settings.into()),
+                    ("Termijnen", Settings.into()),
+                    ("Garanties", Settings.into()),
+                ],
+            ),
+            ("Export", vec![("PDF offerte", Export.into())]),
+        ],
+        "Tekstopmaak" => vec![
+            (
+                "Tekststijl",
+                vec![
+                    ("Vet", planner_source_icon!("FileType")),
+                    ("Cursief", planner_source_icon!("FileType")),
+                    ("Onderstr.", planner_source_icon!("FileType")),
+                ],
+            ),
+            (
+                "Grootte",
+                vec![
+                    ("Groter", planner_source_icon!("ZoomIn")),
+                    ("Kleiner", planner_source_icon!("ZoomOut")),
+                ],
+            ),
+            (
+                "Uitlijning",
+                vec![
+                    ("Links", planner_source_icon!("IndentDecrease")),
+                    ("Midden", planner_source_icon!("Columns3")),
+                    ("Rechts", planner_source_icon!("IndentIncrease")),
+                ],
+            ),
+        ],
+        "3D" | "PDF" => vec![("Experimenteel", vec![("Nog niet beschikbaar", Help.into())])],
+        _ => return None,
+    };
+    Some(
+        spec.into_iter()
+            .map(|(label, items)| RibbonGroup {
+                label: label.into(),
+                commands: items
+                    .into_iter()
+                    .map(|(name, icon)| {
+                        let id = format!("calc:{tab}:{name}");
+                        Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                            .selected(selected == Some(id.as_str()))
+                    })
+                    .collect(),
+            })
+            .collect(),
+    )
 }
 
 /// The Planner groups follow its source ribbon registry at commit 5a65f6b865a7.

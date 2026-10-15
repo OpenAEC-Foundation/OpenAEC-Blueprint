@@ -55,6 +55,15 @@ def collect(r):
    'docs/ui-redesign/mockups/05b-resultaten-licht.png',
   ]
   chosen=[p for p in highlights if p in screens]
+ elif name == 'open-calc-studio':
+  # The Dutch full-app capture and report show two different surfaces; the
+  # English crop makes the dense table cells legible during layout review.
+  highlights=[
+   'docs/screenshots/nl/1-begroting.png',
+   'docs/screenshots/nl/2-rapport.png',
+   'docs/screenshots/en/2-grid.png',
+  ]
+  chosen=[p for p in highlights if p in screens]
  elif name == 'open-planner-studio-extensions':
   chosen=[p for p in screens if p.endswith(('nl/tut-6-afwijking-gantt.webp','nl/tut-7-voortgangsrapport.webp'))]
  elif name == 'OpenCADStudio':

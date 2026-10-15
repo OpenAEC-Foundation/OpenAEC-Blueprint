@@ -218,16 +218,19 @@
     "proposed": true,
     "tabs": [
       "Bestand",
-      "Start",
-      "Posten",
-      "Bibliotheek",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Begroting",
+      "Offerte",
+      "Rapportage",
+      "Spreadsheet",
+      "3D",
+      "PDF",
+      "IFC",
+      "Tekstopmaak"
     ],
-    "left_panel": "Begrotingsstructuur",
-    "right_panel": "Posteigenschappen",
-    "workspace": "Begrotingsregels",
+    "optional_tabs": ["Offerte", "3D", "PDF", "Tekstopmaak"],
+    "left_panel": "Start / Structuur",
+    "right_panel": "Eigenschappen",
+    "workspace": "Begrotingstabel",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -250,7 +253,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Lintvolgorde gecontroleerd tegen src/components/ribbon/Ribbon.tsx op commit b47042704efa; Offerte, 3D en PDF verdwijnen bij VITE_HIDE_EXPERIMENTAL=true, Tekstopmaak verschijnt alleen bij een tekst- of witregel. De Nederlandse begrotingscapture toont Start/Structuur links, de brede hiërarchische tabel, Eigenschappen rechts, documenttab boven en werkbladtab onder. Rapportvoorbeeld is een apart uitvoerscherm zonder applicatiechrome. De gedeelde stijl blijft een ontwerpvoorstel."
   },
   {
     "id": "geotech",

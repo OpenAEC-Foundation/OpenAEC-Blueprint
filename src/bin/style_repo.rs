@@ -1524,6 +1524,39 @@ mod tests {
     }
 
     #[test]
+    fn calc_ribbon_tracks_source_tabs_and_command_groups() {
+        let calc = studios().iter().find(|studio| studio.id == "calc").unwrap();
+        assert_eq!(
+            calc.tabs,
+            [
+                "Bestand",
+                "Begroting",
+                "Offerte",
+                "Rapportage",
+                "Spreadsheet",
+                "3D",
+                "PDF",
+                "IFC",
+                "Tekstopmaak"
+            ]
+        );
+        assert_eq!(calc.optional_tabs, ["Offerte", "3D", "PDF", "Tekstopmaak"]);
+        let tabs = ribbon_preview::studio_tabs(calc, None);
+        let budget = tabs.iter().find(|tab| tab.id == "begroting").unwrap();
+        let groups: Vec<_> = budget
+            .groups
+            .iter()
+            .map(|group| group.label.as_str())
+            .collect();
+        assert!(groups.starts_with(&["Regels", "Klembord", "Geschiedenis", "Panelen", "Weergave"]));
+        assert!(groups.contains(&"Varianten"));
+        assert_eq!(
+            tabs.iter().find(|tab| tab.id == "ifc").unwrap().groups[0].label,
+            "Rapport"
+        );
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

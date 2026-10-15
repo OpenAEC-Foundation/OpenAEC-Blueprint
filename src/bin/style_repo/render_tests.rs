@@ -239,6 +239,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Light, false, Some("start"))
         .save_png(&design.join("style-repo-planner-ribbon-light.png"))
         .expect("save Planner ribbon review");
+    let calc = studios().iter().position(|studio| studio.id == "calc").unwrap();
+    let _ = app.update(Action::SelectStudio(calc));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("begroting"))
+        .save_png(&design.join("style-repo-calc-ribbon-light.png"))
+        .expect("save Calc ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));
