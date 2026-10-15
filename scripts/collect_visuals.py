@@ -70,6 +70,9 @@ def collect(r):
  elif name == 'open-speech-studio':
   # Socials/ holds eight direct app captures, not marketing illustrations.
   chosen=sorted(p for p in screens if p.lower().startswith('socials/'))
+ elif name == 'Open-Field-Studio':
+  # Six README captures show distinct navigation pages, not duplicate crops.
+  chosen=sorted(p for p in screens if p.startswith('docs/screenshots/'))
  elif name == 'OpenCADStudio':
   chosen=['site/workspace.png']+[p for p in sorted(screens,key=lambda p:(-score(p),len(p))) if p!='site/workspace.png'][:2]
  else:

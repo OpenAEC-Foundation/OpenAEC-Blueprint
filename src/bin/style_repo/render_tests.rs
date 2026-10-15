@@ -141,6 +141,17 @@ fn export_frame_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Field review on demand"]
+fn export_field_topnav_review() {
+    let mut app = StyleRepo::default();
+    let field = studios().iter().position(|studio| studio.id == "field").unwrap();
+    let _ = app.update(Action::SelectStudio(field));
+    render(&app, Theme::Light)
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-topnav-light.png"))
+        .expect("save Field top navigation review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -315,6 +326,11 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Light, false, Some("home"))
         .save_png(&design.join("style-repo-frame-ribbon-light.png"))
         .expect("save Frame ribbon review");
+    let field = studios().iter().position(|studio| studio.id == "field").unwrap();
+    let _ = app.update(Action::SelectStudio(field));
+    render(&app, Theme::Light)
+        .save_png(&design.join("style-repo-field-topnav-light.png"))
+        .expect("save Field top navigation review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

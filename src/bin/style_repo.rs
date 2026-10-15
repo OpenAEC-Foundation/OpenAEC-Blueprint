@@ -152,6 +152,16 @@ fn screen_label(id: &str, l: Language) -> &'static str {
         "dictionary" => "Dictionary",
         "tts" => "Text To Speech",
         "about" => "About",
+        "project" => "Project",
+        "plattegrond" => "Plattegronden",
+        "ifc" => "3D BIM",
+        "opname" => "Opname",
+        "inspectie" => "Inspectie",
+        "oplevering" => "Oplevering",
+        "dashboard" => "Dashboard",
+        "export" => "Export",
+        "koppelingen" => "Koppelingen",
+        "handleiding" => "Handleiding",
         _ => "?",
     }
 }
@@ -726,6 +736,9 @@ impl StyleRepo {
         if selected.id == "speech" {
             return self.speech_page(theme, l);
         }
+        if selected.id == "field" {
+            return self.field_page(theme, l);
+        }
         let screen = selected
             .screens
             .get(self.selected_screen)
@@ -828,6 +841,31 @@ impl StyleRepo {
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
         ].spacing(22).into()
+    }
+    fn field_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let studio = &studios()[self.selected_studio];
+        let screen = studio.screens.get(self.selected_screen).map(String::as_str).unwrap_or("project");
+        let capture = match screen {
+            "project" => Some("01-project.png"),
+            "koppelingen" => Some("02-koppelingen.png"),
+            "inspectie" => Some("03-inspectie.png"),
+            "oplevering" => Some("04-oplevering.png"),
+            "dashboard" => Some("05-dashboard.png"),
+            "export" => Some("06-export.png"),
+            _ => None,
+        };
+        let t = theme.tokens();
+        let mut content = Column::new().spacing(14)
+            .push(self.heading("SOURCE REVIEW · TOP NAV", "Open Field Studio", "Tien pagina’s in de bovenste navigatie; zes brongepinde captures.", theme))
+            .push(text(format!("{} · {}", screen_label(screen, l), studio.notes)).size(12).color(t.text_secondary));
+        if let Some(name) = capture {
+            let source = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("harmonization/references/Open-Field-Studio/docs/screenshots").join(name);
+            content = content.push(image(image::Handle::from_path(source)).width(1200));
+        } else {
+            content = content.push(self.card(text("Deze pagina is in index.html geverifieerd; een broncapture ontbreekt.").size(12), theme));
+        }
+        content.into()
     }
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
@@ -1163,13 +1201,24 @@ impl Application for StyleRepo {
             ChromeMode::Workflow
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "speech" {
             ChromeMode::Sidebar
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "field" {
+            ChromeMode::TopNav
         } else {
             ChromeMode::Ribbon
         }
     }
+    fn tab_event(&mut self, id: &str) -> Task<Action> {
+        if self.chrome_mode() == ChromeMode::TopNav {
+            if let Some(index) = studios()[self.selected_studio].tabs.iter()
+                .position(|tab| tab.to_lowercase() == id) {
+                self.selected_screen = index;
+            }
+        }
+        Task::none()
+    }
     fn ribbon(&self, l: Language) -> Vec<RibbonTab<Action>> {
         if self.page == Page::Studios {
-            if self.chrome_mode() != ChromeMode::Ribbon {
+            if matches!(self.chrome_mode(), ChromeMode::Workflow | ChromeMode::Sidebar) {
                 return Vec::new();
             }
             return ribbon_preview::studio_tabs(
@@ -1529,13 +1578,15 @@ mod tests {
         ];
         assert!(studios()
             .iter()
-            .filter(|studio| studio.id != "speech")
+            .filter(|studio| !matches!(studio.id.as_str(), "speech" | "field"))
             .all(|studio| studio.screens.len() == required_screens.len()
                 && required_screens
                     .iter()
                     .all(|screen| studio.screens.iter().any(|id| id == screen))));
         assert_eq!(studios().iter().find(|studio| studio.id == "speech").unwrap().screens,
             ["speech", "transcribe", "meeting", "mic-test", "models", "dictionary", "tts", "settings", "about"]);
+        assert_eq!(studios().iter().find(|studio| studio.id == "field").unwrap().screens,
+            ["project", "plattegrond", "ifc", "opname", "inspectie", "oplevering", "dashboard", "export", "koppelingen", "handleiding"]);
     }
 
     #[test]
@@ -1562,6 +1613,12 @@ mod tests {
             if studio.id == "energy" || studio.id == "speech" {
                 assert_eq!(app.chrome_mode(), if studio.id == "energy" { ChromeMode::Workflow } else { ChromeMode::Sidebar });
                 assert!(tabs.is_empty());
+                continue;
+            }
+            if studio.id == "field" {
+                assert_eq!(app.chrome_mode(), ChromeMode::TopNav);
+                assert_eq!(tabs.len(), 10);
+                assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
                 continue;
             }
             assert_eq!(app.chrome_mode(), ChromeMode::Ribbon);
@@ -1682,6 +1739,19 @@ mod tests {
         assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Onderverdeling", "Paneel type", "Vliesgevel"]);
         assert_eq!(tabs[2].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Kozijn exporteren", "IFC Import", "Validatie", "Project exporteren", "Werkplaats", "3D Export", "Blender / Bonsai"]);
         assert_eq!(tabs[4].groups[1].label, "Zoom");
+    }
+
+    #[test]
+    fn field_top_navigation_tracks_source_pages() {
+        let mut app = StyleRepo::default();
+        let field = studios().iter().position(|studio| studio.id == "field").unwrap();
+        let _ = app.update(Action::SelectStudio(field));
+        assert_eq!(app.chrome_mode(), ChromeMode::TopNav);
+        let tabs = app.ribbon(Language::Dutch);
+        assert_eq!(tabs.len(), 10);
+        assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
+        let _ = app.tab_event("koppelingen");
+        assert_eq!(app.selected_screen, 8);
     }
 
     #[test]

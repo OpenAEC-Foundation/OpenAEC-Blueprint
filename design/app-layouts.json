@@ -501,43 +501,41 @@
   {
     "id": "field",
     "name": "Open Field Studio",
-    "proposed": true,
+    "proposed": false,
     "tabs": [
-      "Bestand",
-      "Start",
+      "Project",
+      "Plattegronden",
+      "3D BIM",
       "Opname",
       "Inspectie",
       "Oplevering",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Dashboard",
+      "Export",
+      "Koppelingen",
+      "Handleiding"
     ],
-    "left_panel": "Locaties & inspecties",
-    "right_panel": "Inspectie-eigenschappen",
-    "workspace": "Inspectielijst / kaart",
+    "left_panel": "",
+    "right_panel": "",
+    "workspace": "Projectgegevens en inspectieformulieren",
     "fixed_regions": [
       "titlebar",
-      "quick-access",
-      "ribbon-tabs",
-      "ribbon-groups",
-      "document-tabs",
-      "explorer",
+      "top-navigation",
       "workspace",
-      "properties",
       "status"
     ],
     "screens": [
-      "start",
-      "workspace",
-      "backstage",
-      "settings",
-      "import-export",
-      "long-running-operation",
-      "unsaved-changes",
-      "empty",
-      "error"
+      "project",
+      "plattegrond",
+      "ifc",
+      "opname",
+      "inspectie",
+      "oplevering",
+      "dashboard",
+      "export",
+      "koppelingen",
+      "handleiding"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Bron index.html/public/styles.css/public/app.js op commit 8a4f104106b2: tien hoofdnavpagina’s in een horizontale balk onder de titel, zonder ribbon, documenttabs of vaste zijpanelen. Zes screenshots in docs/screenshots/ tonen Project, Koppelingen, Inspectie, Oplevering, Dashboard en Export; vier andere pagina’s zijn alleen uit de code geverifieerd."
   },
   {
     "id": "validator",

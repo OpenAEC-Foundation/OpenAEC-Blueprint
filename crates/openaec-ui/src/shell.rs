@@ -36,9 +36,12 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         widgets::icon_button(l.text("Maximaliseren","Maximize"),Icon::Maximize,Message::Ui(UiEvent::Maximize),theme),
         widgets::icon_button(l.text("Sluiten","Close"),Icon::Close,Message::Ui(UiEvent::CloseWindow),theme),
     ].align_y(iced::Alignment::Center)).height(metrics::TITLE).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
-    let mut tabs = Row::new().spacing(2).push(button(text(l.text("Bestand","File")).font(fonts::STRONG).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Backstage(true))).style(move |_,s| {
-        let mut style=widgets::button_style(theme,true,s); style.background=Some(t.file_tab_bg.into());style.text_color=t.file_tab_text;style
-    }));
+    let mut tabs = Row::new().spacing(2);
+    if slots.mode != ChromeMode::TopNav {
+        tabs = tabs.push(button(text(l.text("Bestand","File")).font(fonts::STRONG).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Backstage(true))).style(move |_,s| {
+            let mut style=widgets::button_style(theme,true,s); style.background=Some(t.file_tab_bg.into());style.text_color=t.file_tab_text;style
+        }));
+    }
     let active = slots.tabs.iter().find(|tab| tab.id == state.active_tab).or(slots.tabs.first());
     for tab in &slots.tabs {
         let selected = active.is_some_and(|a| a.id == tab.id);
@@ -82,6 +85,8 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         for command in slots.file_commands { commands=commands.push(widgets::action(command.label,command.icon,command.enabled.then_some(Message::Command(command.message)),theme)); }
         commands=commands.push(widgets::action(l.text("Instellingen","Settings"),Icon::Settings,Some(Message::Ui(UiEvent::Settings(true))),theme));
         container(column![text(l.text("Bestand","File")).font(fonts::HEADING).size(28),commands].spacing(24)).padding(32).width(Fill).height(Fill).into()
+    } else if slots.mode == ChromeMode::TopNav {
+        (slots.content)(Region::Workspace)
     } else if matches!(slots.mode, ChromeMode::Workflow | ChromeMode::Sidebar) {
         row![
             container((slots.content)(Region::Explorer)).width(260).height(Fill),
@@ -98,7 +103,12 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             .push(widgets::status_icon_button(l.text("Eigenschappen","Properties"),Icon::PanelRight,Message::Ui(UiEvent::ToggleRight),theme));
     }
     let status = container(status_row.align_y(iced::Alignment::Center)).padding([0,8]).height(metrics::STATUS).style(move |_|container::Style::default().background(t.status_bg).color(t.status_text));
-    let bands = if matches!(slots.mode, ChromeMode::Workflow | ChromeMode::Sidebar) {
+    let bands = if slots.mode == ChromeMode::TopNav {
+        crate::frame::frame(crate::frame::FrameSlots {
+            titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
+            documents: None, content: body, status: status.into(),
+        })
+    } else if matches!(slots.mode, ChromeMode::Workflow | ChromeMode::Sidebar) {
         crate::frame::workflow_frame(titlebar.into(), (slots.mode == ChromeMode::Workflow).then_some(document_bar.into()), body, status.into())
     } else {
         crate::frame::frame(crate::frame::FrameSlots {

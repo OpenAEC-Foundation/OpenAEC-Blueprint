@@ -24,7 +24,8 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
             } else {
                 tab.clone()
             },
-            groups: planner_groups(studio, tab, selected)
+            groups: (studio.id == "field").then(Vec::new)
+                .or_else(|| planner_groups(studio, tab, selected))
                 .or_else(|| frame_groups(studio, tab, selected))
                 .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| geotech_groups(studio, tab, selected))

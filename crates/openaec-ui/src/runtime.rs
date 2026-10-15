@@ -8,6 +8,7 @@ pub trait Application: 'static {
     fn title(&self) -> String;
     fn ribbon(&self, language: Language) -> Vec<RibbonTab<Self::Command>>;
     fn chrome_mode(&self) -> ChromeMode { ChromeMode::Ribbon }
+    fn tab_event(&mut self, _id: &str) -> Task<Self::Command> { Task::none() }
     fn workspace(&self, theme: Theme, language: Language) -> Element<'_, Self::Command>;
     fn update(&mut self, command: Self::Command) -> Task<Self::Command>;
     fn explorer(&self, theme: Theme, language: Language) -> Element<'_, Self::Command> {
@@ -41,6 +42,9 @@ impl<A:Application> Runtime<A> {
                     _ => None,
                 };
                 self.shell.update(&event);
+                if let UiEvent::Tab(id) = &event {
+                    return self.app.tab_event(id).map(Message::Command);
+                }
                 if matches!(event, UiEvent::Theme(_) | UiEvent::Language(_) | UiEvent::Scale(_) | UiEvent::ToggleLeft | UiEvent::ToggleRight | UiEvent::Resize(_)) {
                     if let Some(path)=&self.preferences_path {
                         self.error=self.shell.preferences.save(path).err().map(|e|format!("Settings: {e}"));
