@@ -168,6 +168,9 @@ fn export_shared_settings_review() {
     render_sized_with_reset(&app, Theme::Forge, true, None, Size::new(1280.0, 800.0), true)
         .save_png(&design.join("style-repo-settings-reset-forge.png"))
         .expect("save reset confirmation review");
+    render_sized(&app, Theme::Light, true, None, Size::new(1280.0, 480.0))
+        .save_png(&design.join("style-repo-settings-short-light.png"))
+        .expect("save short-window settings review");
 }
 
 #[test]
@@ -906,6 +909,9 @@ fn export_general_dialog_review() {
             .save_png(&design.join(format!("style-repo-dialog-{name}.png")))
             .expect("save shared general modal review");
     }
+    render_sized(&app, Theme::Light, false, None, Size::new(1280.0, 480.0))
+        .save_png(&design.join("style-repo-dialog-short-light.png"))
+        .expect("save short-window general modal review");
 }
 
 #[test]
