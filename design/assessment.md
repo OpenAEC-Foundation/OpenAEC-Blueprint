@@ -22,7 +22,7 @@ migratie van alle OpenAEC-applicaties.
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
   pyRevit-knopbundelconventie: 229 bij publieke OpenAEC-repositories en
-  336 bij de externe OpenCADStudio-referentie. De overige SVG's, CAD-symbolen, illustraties en
+  336 bij de externe OpenCADStudio-referentie. Bij de publieke repositories zijn daarnaast 226 bestanden met icoonbroncode aangetroffen, waaronder 79 met inline SVG of eigen iconcomponenten; dat zijn aantallen bronbestanden, geen losse iconen. De overige SVG's, CAD-symbolen, illustraties en
   technische tekeningen horen niet bij die telling.
 - 686 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
