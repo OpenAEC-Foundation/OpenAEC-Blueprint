@@ -12,6 +12,24 @@ from urllib.parse import unquote, urlsplit
 from build_icon_semantics import ROOT, candidates, icon_records, norm
 
 ASSESSMENTS = {
+    "chevrondown": ("related-intent", "De pijl opent of sluit een selectmenu, ribbonkeuze of geavanceerde sectie. De richting is gedeeld, maar het bediende object verschilt."),
+    "trash2": ("related-intent", "Alle bronnen verwijderen of trekken een object in: bedrijfsbibliotheekitem, puntwolkobject, warmtebron of API-sleutel. Bevestiging en herstel verschillen."),
+    "plus": ("different-intent", "Energy voegt een inventarisitem toe en BCF maakt een sleutel; Planner toont Plus ook als decoratieve extensiekaart. Een plusvorm is geen zelfstandige commando-ID."),
+    "alertcircle": ("different-intent", "Planner en Energy tonen een afwijking of fout, terwijl BCF dezelfde vorm gebruikt bij een lege 'Geen issues'-toestand."),
+    "alerttriangle": ("different-intent", "Planner toont quarantaine en Energy een waarschuwing; BCF gebruikt dezelfde driehoek voor de KPI 'Open'."),
+    "checkcircle2": ("related-intent", "Planner meldt dat de app actueel is, Energy dat een controle slaagde en BCF dat een issue gesloten is. Alle drie zijn positieve statusindicaties met een andere levenscyclus."),
+    "chevronright": ("different-intent", "Planner en Energy gebruiken de pijl voor uitklappen of navigeren; BCF gebruikt hem als scheidingsteken in een breadcrumb."),
+    "filetext": ("different-intent", "Planner gebruikt FileText voor Nieuw project; de AEC-extensie gebruikt dezelfde vorm voor een PDF-underlay."),
+    "layers": ("different-intent", "Planner koppelt Layers aan groeperen; de AEC-extensie koppelt het aan Wall Systems."),
+    "building2": ("different-intent", "Planner gebruikt Building2 voor de bibliotheek, Pointcloud voor 3D BAG en Energy als pictogram voor het kantoorgebouwtype."),
+    "camera": ("related-intent", "PDF gebruikt de camera voor Screenshot, Energy voor foto-evidence en BCF als beeldplaceholder. Het gaat steeds om beeld, maar niet om dezelfde actie."),
+    "circledot": ("different-intent", "Planner gebruikt CircleDot bij een datumnotitie, de AEC-extensie bij IfcRebar en BCF bij de KPI Totaal."),
+    "clock": ("related-intent", "Planner toont recente items, Energy een wachtende stap en BCF werk in uitvoering. De vorm duidt tijd aan, maar de statussen zijn verschillend."),
+    "eye": ("different-intent", "Planner toont of verbergt een token, Pointcloud schakelt EDL-weergave en BCF labelt viewpoints."),
+    "filter": ("different-intent", "Planner filtert plangegevens; Pointcloud gebruikt Filter voor punten uitdunnen. Het CAD-statusicoon heeft nog een aparte contextcontrole nodig."),
+    "minus": ("related-intent", "Planner en Energy gebruiken Minus om het venster te minimaliseren. De losse CAD-UI-constante heeft nog geen bewezen gelijk commando."),
+    "solid": ("different-intent", "Ondanks identieke SVG-bytes gebruikt Pointcloud solid.svg voor Building, terwijl CAD het als pictogram voor Shaded display inzet."),
+    "sphere": ("different-intent", "Ondanks identieke SVG-bytes gebruikt Pointcloud sphere.svg voor Shading, terwijl CAD het bij een sphere-modelprimitief registreert."),
     "distance": ("different-intent", "PDF gebruikt Distance als meetactie; CAD gebruikt distance.svg voor een parametrische afstandsconstraint."),
     "angle": ("different-intent", "PDF gebruikt Angle als meetactie; CAD koppelt angle.svg aan de parametrische ACONSTRAINT-opdracht."),
     "area": ("related-intent", "PDF toont Area bij de meetgereedschappen; CAD gebruikt area.svg in Draw/Inquiry. Vergelijk bediening en resultaat voordat één icoon wordt gekozen."),
@@ -120,6 +138,7 @@ def build() -> None:
 </style></head><body><header><small>OPENAEC · SEMANTISCHE REVIEW</small><h1>Naamgenoten onder UI-iconen</h1><p>80 naamgroepen verbinden 189 met UI-code of actieve knopbundels onderbouwde iconvarianten uit meerdere tools. Acht groepen zijn op hun commando-context beoordeeld; de overige blijven open. De bronregel staat op elke kaart.</p></header><main><div class="note">Een gelijke bestands- of componentnaam kan een ander commando betekenen. Zelfs identieke SVG-bytes zijn geen besluit om functies samen te voegen. De 26 bestaande gedeelde iconbetekenissen staan in de <a href="icon-semantic-crosswalk.html">semantische kruisvergelijking</a>.</div><div class="controls"><input id="search" type="search" placeholder="Zoek naam of repository" aria-label="Zoek naamgroepen"><select id="status" aria-label="Beoordeling"><option value="">Alle beoordelingen</option><option value="different-intent">Verschillende handelingen</option><option value="related-intent">Verwante handelingen</option><option value="needs-review">Nog beoordelen</option></select><select id="size" aria-label="Icoongrootte"><option value="16">16 px</option><option value="24" selected>24 px</option><option value="32">32 px</option></select><label><input id="dark" type="checkbox"> Donkere achtergrond</label><span id="count" class="count"></span></div><div id="grid" class="grid">''' + "\n".join(cards) + '''</div><footer><a href="review.html">Terug naar ontwerpreview</a> · <a href="icon-name-review.json">Beoordelingsdata en bronregels</a></footer></main><script>
 const cards=[...document.querySelectorAll('.cluster')];function filter(){const q=document.getElementById('search').value.trim().toLowerCase(),status=document.getElementById('status').value;let visible=0;for(const card of cards){const show=(!status||card.dataset.status===status)&&(!q||card.dataset.search.includes(q));card.classList.toggle('hidden',!show);if(show)visible++}document.getElementById('count').textContent=visible+' / '+cards.length+' groepen'}for(const id of ['search','status'])document.getElementById(id).addEventListener('input',filter);document.getElementById('size').onchange=e=>document.documentElement.style.setProperty('--icon-size',e.target.value+'px');document.getElementById('dark').onchange=e=>document.body.classList.toggle('dark',e.target.checked);filter();
 </script></body></html>'''
+    page = page.replace("Acht groepen zijn op hun commando-context beoordeeld", f"{output['assessed_count']} groepen zijn op hun commando-context beoordeeld")
     (ROOT / "design/icon-name-review.html").write_text(page)
     print(f"{len(clusters)} groups, {output['icon_count']} variants, {output['assessed_count']} assessed")
 

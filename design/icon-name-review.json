@@ -3,7 +3,7 @@
   "note": "Only icons without a canonical shared-name match are grouped. Same names and shapes are research candidates, not automatic adoption decisions.",
   "cluster_count": 80,
   "icon_count": 189,
-  "assessed_count": 8,
+  "assessed_count": 26,
   "clusters": [
     {
       "id": "download",
@@ -354,8 +354,8 @@
     {
       "id": "chevrondown",
       "label": "ChevronDown",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "De pijl opent of sluit een selectmenu, ribbonkeuze of geavanceerde sectie. De richting is gedeeld, maar het bediende object verschilt.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -537,8 +537,8 @@
     {
       "id": "trash2",
       "label": "Trash2",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Alle bronnen verwijderen of trekken een object in: bedrijfsbibliotheekitem, puntwolkobject, warmtebron of API-sleutel. Bevestiging en herstel verschillen.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -963,8 +963,8 @@
     {
       "id": "plus",
       "label": "plus",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Energy voegt een inventarisitem toe en BCF maakt een sleutel; Planner toont Plus ook als decoratieve extensiekaart. Een plusvorm is geen zelfstandige commando-ID.",
       "repositories": [
         "OpenCADStudio",
         "open-energy-studio",
@@ -1203,8 +1203,8 @@
     {
       "id": "alertcircle",
       "label": "AlertCircle",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner en Energy tonen een afwijking of fout, terwijl BCF dezelfde vorm gebruikt bij een lege 'Geen issues'-toestand.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -1309,8 +1309,8 @@
     {
       "id": "alerttriangle",
       "label": "AlertTriangle",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner toont quarantaine en Energy een waarschuwing; BCF gebruikt dezelfde driehoek voor de KPI 'Open'.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -1529,8 +1529,8 @@
     {
       "id": "checkcircle2",
       "label": "CheckCircle2",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner meldt dat de app actueel is, Energy dat een controle slaagde en BCF dat een issue gesloten is. Alle drie zijn positieve statusindicaties met een andere levenscyclus.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -1671,8 +1671,8 @@
     {
       "id": "chevronright",
       "label": "ChevronRight",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner en Energy gebruiken de pijl voor uitklappen of navigeren; BCF gebruikt hem als scheidingsteken in een breadcrumb.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -1825,8 +1825,8 @@
     {
       "id": "filetext",
       "label": "FileText",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt FileText voor Nieuw project; de AEC-extensie gebruikt dezelfde vorm voor een PDF-underlay.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-energy-studio",
@@ -1928,8 +1928,8 @@
     {
       "id": "layers",
       "label": "Layers",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner koppelt Layers aan groeperen; de AEC-extensie koppelt het aan Wall Systems.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-energy-studio",
@@ -2104,8 +2104,8 @@
     {
       "id": "building2",
       "label": "Building2",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt Building2 voor de bibliotheek, Pointcloud voor 3D BAG en Energy als pictogram voor het kantoorgebouwtype.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio",
@@ -2208,8 +2208,8 @@
     {
       "id": "camera",
       "label": "camera",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "PDF gebruikt de camera voor Screenshot, Energy voor foto-evidence en BCF als beeldplaceholder. Het gaat steeds om beeld, maar niet om dezelfde actie.",
       "repositories": [
         "open-energy-studio",
         "open-pdf-studio-v3",
@@ -2379,8 +2379,8 @@
     {
       "id": "circledot",
       "label": "CircleDot",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt CircleDot bij een datumnotitie, de AEC-extensie bij IfcRebar en BCF bij de KPI Totaal.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-planner-studio",
@@ -2459,8 +2459,8 @@
     {
       "id": "clock",
       "label": "Clock",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner toont recente items, Energy een wachtende stap en BCF werk in uitvoering. De vorm duidt tijd aan, maar de statussen zijn verschillend.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio",
@@ -2551,8 +2551,8 @@
     {
       "id": "eye",
       "label": "Eye",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner toont of verbergt een token, Pointcloud schakelt EDL-weergave en BCF labelt viewpoints.",
       "repositories": [
         "open-planner-studio",
         "open-pointcloud-studio",
@@ -2655,8 +2655,8 @@
     {
       "id": "filter",
       "label": "filter",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner filtert plangegevens; Pointcloud gebruikt Filter voor punten uitdunnen. Het CAD-statusicoon heeft nog een aparte contextcontrole nodig.",
       "repositories": [
         "OpenCADStudio",
         "open-planner-studio",
@@ -2879,8 +2879,8 @@
     {
       "id": "minus",
       "label": "minus",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner en Energy gebruiken Minus om het venster te minimaliseren. De losse CAD-UI-constante heeft nog geen bewezen gelijk commando.",
       "repositories": [
         "OpenCADStudio",
         "open-energy-studio",
@@ -5835,8 +5835,8 @@
     {
       "id": "solid",
       "label": "solid",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Ondanks identieke SVG-bytes gebruikt Pointcloud solid.svg voor Building, terwijl CAD het als pictogram voor Shaded display inzet.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5890,8 +5890,8 @@
     {
       "id": "sphere",
       "label": "sphere",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Ondanks identieke SVG-bytes gebruikt Pointcloud sphere.svg voor Shading, terwijl CAD het bij een sphere-modelprimitief registreert.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
