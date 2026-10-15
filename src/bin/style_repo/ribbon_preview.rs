@@ -83,6 +83,7 @@ pub(super) struct PdfFormatState {
     pub open_palette: Option<usize>,
     pub custom_open: bool,
     pub custom_draft: String,
+    pub style_gallery_open: bool,
 }
 impl Default for PdfFormatState {
     fn default() -> Self {
@@ -90,7 +91,7 @@ impl Default for PdfFormatState {
             stroke_color: iced::Color::BLACK, line_width: "1".into(), border: 0,
             blend: 0, opacity: 100.0, arrow_start: 0, arrow_end: 1, layer: 0,
             symbol_stamp: false, open_palette: None, custom_open: false,
-            custom_draft: "#ffffff".into() }
+            custom_draft: "#ffffff".into(), style_gallery_open: false }
     }
 }
 impl PdfFormatState {
@@ -108,6 +109,7 @@ impl PdfFormatState {
         self.border = 0;
         self.open_palette = None;
         self.custom_open = false;
+        self.style_gallery_open = false;
     }
     pub fn select_fill(&mut self, index: usize) {
         self.fill = index.min(PDF_FORMAT_PALETTE.len() - 1);
@@ -364,8 +366,10 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
     groups.extend([
         RibbonGroup { label: "Stijlen".into(), commands: vec![
             Command::new("Stijlgalerij", Icon::Grid, Action::PdfFormatStyle(0))
-                .control(RibbonControl::StyleGallery { items: styles, selected: format.style }),
-            preview("more-styles", "Meer", Icon::Grid.into()),
+                .control(RibbonControl::StyleGallery { items: styles, selected: format.style,
+                    visible: 8, open: format.style_gallery_open,
+                    on_toggle: Action::PdfFormatToggleGallery,
+                    on_close: Action::PdfFormatCloseGallery }),
         ] },
         RibbonGroup { label: "Kleur".into(), commands: vec![
             Command::new("Vulkleur", Icon::Grid, Action::PdfFormatFill(format.fill))

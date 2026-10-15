@@ -120,6 +120,8 @@ enum Action {
     PdfResetImage,
     PdfAlignTarget(usize),
     PdfFormatStyle(usize),
+    PdfFormatToggleGallery,
+    PdfFormatCloseGallery,
     PdfFormatFill(usize),
     PdfFormatNoFill,
     PdfFormatStroke(usize),
@@ -1626,6 +1628,12 @@ impl Application for StyleRepo {
             }
             Action::PdfAlignTarget(index) => self.pdf_arrange.align_target = index.min(1),
             Action::PdfFormatStyle(index) => self.pdf_format.select_style(index),
+            Action::PdfFormatToggleGallery => {
+                self.pdf_format.style_gallery_open = !self.pdf_format.style_gallery_open;
+                self.pdf_format.open_palette = None;
+                self.pdf_format.custom_open = false;
+            }
+            Action::PdfFormatCloseGallery => self.pdf_format.style_gallery_open = false,
             Action::PdfFormatFill(index) => self.pdf_format.select_fill(index),
             Action::PdfFormatNoFill => self.pdf_format.clear_fill(),
             Action::PdfFormatStroke(index) => self.pdf_format.select_stroke(index),
@@ -1664,6 +1672,7 @@ impl Application for StyleRepo {
                 let index = index.min(1);
                 self.pdf_format.open_palette = (self.pdf_format.open_palette != Some(index)).then_some(index);
                 self.pdf_format.custom_open = false;
+                self.pdf_format.style_gallery_open = false;
             }
             Action::PdfFormatClosePalette => {
                 self.pdf_format.open_palette = None;
@@ -2114,6 +2123,13 @@ mod tests {
     #[test]
     fn pdf_format_gallery_colors_and_symbol_context_follow_source_defaults() {
         let mut app = StyleRepo::default();
+        let _ = app.update(Action::PdfFormatToggleGallery);
+        assert!(app.pdf_format.style_gallery_open);
+        let _ = app.update(Action::PdfFormatStyle(9));
+        assert!(!app.pdf_format.style_gallery_open);
+        let _ = app.update(Action::PdfFormatToggleGallery);
+        let _ = app.update(Action::PdfFormatCloseGallery);
+        assert!(!app.pdf_format.style_gallery_open);
         let _ = app.update(Action::PdfFormatTogglePalette(0));
         assert_eq!(app.pdf_format.open_palette, Some(0));
         let _ = app.update(Action::PdfFormatFill(9));

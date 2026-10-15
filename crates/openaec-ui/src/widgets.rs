@@ -13,7 +13,7 @@ use iced::{
     },
     Alignment, Background, Border, Element, Fill, Length, Padding,
 };
-pub use crate::popover::popover;
+pub use crate::popover::{popover, popover_aligned};
 
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
     let t = theme.tokens();
@@ -628,10 +628,8 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                 popover(anchor.into(), palette.into(), open, on_close)]
                 .spacing(3).into()
         }
-        RibbonControl::StyleGallery { items, selected } => {
-            let mut gallery = iced::widget::Row::new().spacing(2);
-            for (index, item) in items.into_iter().enumerate() {
-                let active = selected == index;
+        RibbonControl::StyleGallery { items, selected, visible, open, on_toggle, on_close } => {
+            let tile = |item: crate::model::RibbonSwatch<M>, active: bool, width: f32| -> Element<'a, M> {
                 let ink = item.color;
                 let bg = item.background;
                 let sample = container(text("T").font(fonts::STRONG).size(18).color(ink))
@@ -639,11 +637,29 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                     .style(move |_| container::Style::default().background(bg)
                         .border(Border { color: ink, width: 2.0, radius: 0.0.into() }));
                 let label = text(item.label).font(fonts::BODY).size(9).color(t.text);
-                gallery = gallery.push(button(column![sample, label].spacing(2).align_x(Alignment::Center))
-                    .padding(2).width(50).height(62).on_press(item.message)
-                    .style(move |_, status| ribbon_button_style(theme, active, status)));
+                button(column![sample, label].spacing(2).align_x(Alignment::Center))
+                    .padding(2).width(width).height(62).on_press(item.message)
+                    .style(move |_, status| ribbon_button_style(theme, active, status)).into()
+            };
+            let mut gallery = iced::widget::Row::new().spacing(2);
+            for (index, item) in items.iter().take(visible).cloned().enumerate() {
+                gallery = gallery.push(tile(item, selected == index, 50.0));
             }
-            gallery.into()
+            gallery = gallery.push(button(text("›").font(fonts::BODY).size(18).color(t.text_secondary))
+                .width(18).height(62).on_press(on_toggle)
+                .style(move |_, status| ribbon_button_style(theme, open, status)));
+            let mut grid = iced::widget::Column::new().spacing(2);
+            for (row_index, chunk) in items.chunks(5).enumerate() {
+                let mut row = iced::widget::Row::new().spacing(2);
+                for (column_index, item) in chunk.iter().cloned().enumerate() {
+                    row = row.push(tile(item, selected == row_index * 5 + column_index, 56.0));
+                }
+                grid = grid.push(row);
+            }
+            let popup = container(grid).padding(6).width(300)
+                .style(move |_| container::Style::default().background(t.bg_lighter)
+                    .border(Border { color: theme.border_strong(), width: 1.0, radius: 3.0.into() }));
+            popover_aligned(gallery.into(), popup.into(), open, on_close, true)
         }
     };
     container(body)

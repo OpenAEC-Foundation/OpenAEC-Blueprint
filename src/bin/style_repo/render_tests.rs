@@ -323,6 +323,19 @@ fn export_pdf_format_custom_color_review() {
 }
 
 #[test]
+#[ignore = "regenerate PDF Format style gallery popup on demand"]
+fn export_pdf_format_gallery_popup_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    let _ = app.update(Action::PdfFormatToggleGallery);
+    render_with_options(&app, Theme::Forge, false, Some("opmaak"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-format-gallery-forge.png"))
+        .expect("save PDF Format style gallery popup review");
+}
+
+#[test]
 fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     let mut app = StyleRepo::default();
     let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
@@ -351,16 +364,16 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     let mut messages = Vec::new();
     let mut shell = iced::advanced::Shell::new(&mut messages);
     overlay.on_event(click.clone(), Layout::new(&popup_node),
-        mouse::Cursor::Available(iced::Point::new(669.0, 192.0)),
+        mouse::Cursor::Available(iced::Point::new(516.0, 192.0)),
         &renderer, &mut clipboard, &mut shell);
     overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
-        Layout::new(&popup_node), mouse::Cursor::Available(iced::Point::new(669.0, 192.0)),
+        Layout::new(&popup_node), mouse::Cursor::Available(iced::Point::new(516.0, 192.0)),
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
         Message::Command(Action::PdfFormatFill(9)))), "messages: {messages:?}");
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
-    let no_fill_cursor = mouse::Cursor::Available(iced::Point::new(700.0, 260.0));
+    let no_fill_cursor = mouse::Cursor::Available(iced::Point::new(510.0, 260.0));
     overlay.on_event(click.clone(), Layout::new(&popup_node), no_fill_cursor,
         &renderer, &mut clipboard, &mut shell);
     overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
@@ -370,7 +383,7 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
         Message::Command(Action::PdfFormatNoFill))), "messages: {messages:?}");
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
-    let custom_cursor = mouse::Cursor::Available(iced::Point::new(750.0, 260.0));
+    let custom_cursor = mouse::Cursor::Available(iced::Point::new(595.0, 260.0));
     overlay.on_event(click.clone(), Layout::new(&popup_node), custom_cursor,
         &renderer, &mut clipboard, &mut shell);
     overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
@@ -385,6 +398,51 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
         Message::Command(Action::PdfFormatClosePalette))));
+}
+
+#[test]
+fn pdf_format_gallery_popup_selects_hidden_style_and_closes_outside() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::PdfFormatToggleGallery);
+    let mut state = ShellState::new(Preferences::default());
+    state.active_tab = "opmaak".into();
+    let mut element = openaec_ui::shell(&state, Slots {
+        title: app.title(), mode: app.chrome_mode(), tabs: app.ribbon(Language::Dutch),
+        documents: app.documents(), active_document: app.active_document(),
+        file_commands: app.file_commands(Language::Dutch),
+        quick_commands: app.quick_commands(Language::Dutch),
+        status: app.status(Language::Dutch),
+        content: Box::new(|_| text("test").into()),
+    });
+    let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
+    let mut tree = Tree::new(&element);
+    let size = Size::new(1280.0, 800.0);
+    let node = element.as_widget().layout(&mut tree, &renderer,
+        &layout::Limits::new(Size::ZERO, size));
+    let mut overlay = element.as_widget_mut().overlay(&mut tree, Layout::new(&node),
+        &renderer, Vector::ZERO).expect("open style gallery overlay");
+    let popup_node = overlay.layout(&renderer, size);
+    let mut clipboard = iced::advanced::clipboard::Null;
+    let click = iced::Event::Mouse(iced::mouse::Event::ButtonPressed(iced::mouse::Button::Left));
+    let release = iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left));
+    let mut messages = Vec::new();
+    let mut shell = iced::advanced::Shell::new(&mut messages);
+    let hidden_style = mouse::Cursor::Available(iced::Point::new(415.0, 218.0));
+    overlay.on_event(click.clone(), Layout::new(&popup_node), hidden_style,
+        &renderer, &mut clipboard, &mut shell);
+    overlay.on_event(release, Layout::new(&popup_node), hidden_style,
+        &renderer, &mut clipboard, &mut shell);
+    assert!(messages.iter().any(|message| matches!(message,
+        Message::Command(Action::PdfFormatStyle(9)))), "messages: {messages:?}");
+    messages.clear();
+    let mut shell = iced::advanced::Shell::new(&mut messages);
+    overlay.on_event(click, Layout::new(&popup_node),
+        mouse::Cursor::Available(iced::Point::new(700.0, 300.0)),
+        &renderer, &mut clipboard, &mut shell);
+    assert!(messages.iter().any(|message| matches!(message,
+        Message::Command(Action::PdfFormatCloseGallery))));
 }
 
 #[test]

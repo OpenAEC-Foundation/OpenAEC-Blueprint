@@ -11,7 +11,14 @@ pub fn popover<'a, M: Clone + 'a>(
     open: bool,
     on_close: M,
 ) -> Element<'a, M> {
-    Element::new(Popover { anchor, content, open, on_close })
+    popover_aligned(anchor, content, open, on_close, false)
+}
+
+/// Place the trailing edge of the popup at the trailing edge of its anchor.
+pub fn popover_aligned<'a, M: Clone + 'a>(
+    anchor: Element<'a, M>, content: Element<'a, M>, open: bool, on_close: M, align_end: bool,
+) -> Element<'a, M> {
+    Element::new(Popover { anchor, content, open, on_close, align_end })
 }
 
 struct Popover<'a, M> {
@@ -19,6 +26,7 @@ struct Popover<'a, M> {
     content: Element<'a, M>,
     open: bool,
     on_close: M,
+    align_end: bool,
 }
 
 impl<M: Clone> Widget<M, iced::Theme, iced::Renderer> for Popover<'_, M> {
@@ -61,7 +69,7 @@ impl<M: Clone> Widget<M, iced::Theme, iced::Renderer> for Popover<'_, M> {
         let content_tree = children.next().expect("popover content tree");
         let popup = self.open.then(|| overlay::Element::new(Box::new(PopoverOverlay {
             anchor: layout.bounds(), translation, content: &mut self.content,
-            tree: content_tree, on_close: self.on_close.clone(),
+            tree: content_tree, on_close: self.on_close.clone(), align_end: self.align_end,
         })));
         let overlays: Vec<_> = anchor_overlay.into_iter().chain(popup).collect();
         (!overlays.is_empty()).then(|| overlay::Group::with_children(overlays).overlay())
@@ -74,6 +82,7 @@ struct PopoverOverlay<'a, 'b, M> {
     content: &'b mut Element<'a, M>,
     tree: &'b mut Tree,
     on_close: M,
+    align_end: bool,
 }
 
 impl<M: Clone> overlay::Overlay<M, iced::Theme, iced::Renderer> for PopoverOverlay<'_, '_, M> {
@@ -82,7 +91,8 @@ impl<M: Clone> overlay::Overlay<M, iced::Theme, iced::Renderer> for PopoverOverl
         let node = self.content.as_widget().layout(self.tree, renderer, &limits);
         let size = node.size();
         let anchor = self.anchor.position() + self.translation;
-        let x = anchor.x.min((bounds.width - size.width).max(0.0)).max(0.0);
+        let target_x = if self.align_end { anchor.x + self.anchor.width - size.width } else { anchor.x };
+        let x = target_x.min((bounds.width - size.width).max(0.0)).max(0.0);
         let below = anchor.y + self.anchor.height;
         let y = if below + size.height <= bounds.height { below }
             else { (anchor.y - size.height).max(0.0) };

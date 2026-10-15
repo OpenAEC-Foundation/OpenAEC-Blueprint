@@ -51,7 +51,8 @@ pub enum RibbonControl<M> {
         current: iced::Color, width: f32, rows_per_column: usize,
         open: bool, on_toggle: M, on_close: M, none: Option<(String, M)>,
         custom: Option<RibbonCustomColor<M>> },
-    StyleGallery { items: Vec<RibbonSwatch<M>>, selected: usize },
+    StyleGallery { items: Vec<RibbonSwatch<M>>, selected: usize, visible: usize,
+        open: bool, on_toggle: M, on_close: M },
 }
 /// Optional application-owned custom color editor inside a ribbon palette.
 #[derive(Debug, Clone)]
@@ -69,7 +70,7 @@ impl<M> RibbonControl<M> {
         match self {
             Self::Select { width, .. } | Self::Sliders { width, .. } | Self::Number { width, .. }
                 | Self::ColorSelect { width, .. } => *width,
-            Self::StyleGallery { items, .. } => items.len() as f32 * 52.0 + 12.0,
+            Self::StyleGallery { items, visible, .. } => items.len().min(*visible) as f32 * 52.0 + 30.0,
             _ => 170.0,
         }
     }
