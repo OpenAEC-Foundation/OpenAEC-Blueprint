@@ -1,9 +1,71 @@
 //! Canonical controls for domain panels. Use these instead of restyling buttons per app.
 use crate::{fonts, icons::Icon, model::metrics, Theme};
 use iced::{
-    widget::{button, column, container, row, text, tooltip},
-    Border, Element, Fill,
+    widget::{button, column, container, pick_list, row, text, text_input, tooltip},
+    Background, Border, Element, Fill,
 };
+
+/// Square text field shared by panel forms and dialogs.
+pub fn text_input_style(theme: Theme, status: text_input::Status) -> text_input::Style {
+    let t = theme.tokens();
+    let mut style = text_input::Style {
+        background: t.dialog_input_bg.into(),
+        border: Border {
+            color: if status == text_input::Status::Focused {
+                t.focus_color
+            } else {
+                t.dialog_input_border
+            },
+            width: 1.0,
+            radius: 0.0.into(),
+        },
+        icon: t.text_muted,
+        placeholder: t.text_faint,
+        value: t.dialog_input_text,
+        selection: t.accent_soft,
+    };
+    if status == text_input::Status::Disabled {
+        style.background = style.background.scale_alpha(0.5);
+        style.border.color = style.border.color.scale_alpha(0.5);
+        style.value = style.value.scale_alpha(0.5);
+    }
+    style
+}
+
+/// Choice field and its popup use the same tokens as text fields.
+pub fn pick_list_style(theme: Theme, status: pick_list::Status) -> pick_list::Style {
+    let t = theme.tokens();
+    pick_list::Style {
+        text_color: t.dialog_input_text,
+        placeholder_color: t.text_faint,
+        handle_color: t.dialog_input_text.scale_alpha(0.6),
+        background: t.dialog_input_bg.into(),
+        border: Border {
+            color: match status {
+                pick_list::Status::Active => t.dialog_input_border,
+                pick_list::Status::Hovered => t.dialog_content_secondary,
+                pick_list::Status::Opened => t.focus_color,
+            },
+            width: 1.0,
+            radius: 0.0.into(),
+        },
+    }
+}
+
+pub fn pick_list_menu_style(theme: Theme) -> iced::overlay::menu::Style {
+    let t = theme.tokens();
+    iced::overlay::menu::Style {
+        background: Background::Color(t.bg),
+        border: Border {
+            color: t.dialog_input_border,
+            width: 1.0,
+            radius: 0.0.into(),
+        },
+        text_color: t.dialog_input_text,
+        selected_text_color: t.accent,
+        selected_background: Background::Color(t.ribbon_btn_hover),
+    }
+}
 
 /// Filled confirmation button used by dialogs and forms in every studio.
 pub fn primary_button_style(theme: Theme, status: button::Status) -> button::Style {

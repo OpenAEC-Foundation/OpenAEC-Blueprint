@@ -20,11 +20,16 @@ fn load_fonts() {
 }
 
 fn render(app: &StyleRepo, theme: Theme) -> tiny_skia::Pixmap {
+    render_with_settings(app, theme, false)
+}
+
+fn render_with_settings(app: &StyleRepo, theme: Theme, show_settings: bool) -> tiny_skia::Pixmap {
     load_fonts();
     let size = Size::new(1280.0, 800.0);
     let mut preferences = Preferences::default();
     preferences.theme = theme;
-    let state = ShellState::new(preferences);
+    let mut state = ShellState::new(preferences);
+    state.settings = show_settings;
     let language = Language::Dutch;
     let element = openaec_ui::shell(
         &state,
@@ -125,6 +130,11 @@ fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
     let mut app = StyleRepo::default();
     save_render(&app, Theme::Light, &design.join("style-repo-native.png"));
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_with_settings(&app, theme, true)
+            .save_png(&design.join(format!("style-repo-settings-{name}.png")))
+            .expect("save native settings review image");
+    }
     app.show(Page::Components);
     for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
         save_render(

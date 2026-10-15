@@ -342,6 +342,7 @@ impl StyleRepo {
                     text(l.text("Projectnaam", "Project name")).size(12),
                     text_input(l.text("Typ een naam", "Type a name"), &self.sample_input)
                         .on_input(Action::Input)
+                        .style(move |_, status| widgets::text_input_style(theme, status))
                         .width(360),
                     row![
                         widgets::action(
@@ -537,6 +538,7 @@ impl StyleRepo {
                     &self.search
                 )
                 .on_input(Action::Search)
+                .style(move |_, status| widgets::text_input_style(theme, status))
                 .width(360),
                 text(format!(
                     "{} {}",
@@ -813,7 +815,9 @@ impl StyleRepo {
             "import-export" => column![
                 text(title).font(fonts::HEADING).size(23),
                 text(l.text("Actie en bestandsformaat zijn studiospecifiek; veldmaten en knoppen volgen de gedeelde stijl.", "Action and file format are studio-specific; field sizes and buttons follow the shared style.")).size(12),
-                text_input(l.text("Projectnaam", "Project name"), "Project_01").width(300),
+                text_input(l.text("Projectnaam", "Project name"), "Project_01")
+                    .style(move |_, status| widgets::text_input_style(theme, status))
+                    .width(300),
             ].spacing(12).into(),
             "long-running-operation" => column![
                 text(l.text("Bezig met verwerken", "Processing")).font(fonts::HEADING).size(23),

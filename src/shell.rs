@@ -106,9 +106,13 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
     let form=column![
         text(l.text("Uiterlijk","Appearance")).font(fonts::HEADING).size(20),
         text(l.text("Thema","Theme")).font(fonts::STRONG).size(12),
-        pick_list(Theme::ALL,Some(p.theme),|theme|Message::Ui(UiEvent::Theme(theme))).width(Fill),
+        pick_list(Theme::ALL,Some(p.theme),|theme|Message::Ui(UiEvent::Theme(theme)))
+            .style(move |_,status|widgets::pick_list_style(p.theme,status))
+            .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
         text(l.text("Taal","Language")).font(fonts::STRONG).size(12),
-        pick_list(Language::ALL,Some(p.language),|language|Message::Ui(UiEvent::Language(language))).width(Fill),
+        pick_list(Language::ALL,Some(p.language),|language|Message::Ui(UiEvent::Language(language)))
+            .style(move |_,status|widgets::pick_list_style(p.theme,status))
+            .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
         text(format!("{}: {:.0}%",l.text("Schaal","Scale"),p.scale*100.0)).font(fonts::STRONG).size(12),
         slider(0.75..=2.0,p.scale,|scale|Message::Ui(UiEvent::Scale(scale))).step(0.05),
     ].spacing(12);
