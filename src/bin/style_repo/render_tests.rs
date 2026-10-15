@@ -57,7 +57,7 @@ fn render_with_options(
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
-                    if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else if app.chrome_mode() == ChromeMode::Sidebar { language.text("Navigatie", "Navigation") } else { language.text("Verkenner", "Explorer") },
+                    if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else if app.chrome_mode() == ChromeMode::Sidebar { language.text("Navigatie", "Navigation") } else if app.chrome_mode() == ChromeMode::CanvasRibbon { language.text("Eigenschappen", "Properties") } else { language.text("Verkenner", "Explorer") },
                     app.explorer(theme, language).map(Message::Command),
                     theme,
                 ),
@@ -161,6 +161,18 @@ fn export_aec_extension_review() {
     render_with_options(&app, Theme::Forge, false, Some("aec"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-2d-extension-forge.png"))
         .expect("save AEC extension review");
+}
+
+#[test]
+#[ignore = "regenerate native CAD review on demand"]
+fn export_cad_canvas_review() {
+    let mut app = StyleRepo::default();
+    let cad = studios().iter().position(|studio| studio.id == "cad").unwrap();
+    let _ = app.update(Action::SelectStudio(cad));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("tekenen"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-cad-canvas-forge.png"))
+        .expect("save CAD canvas review");
 }
 
 #[test]
@@ -349,6 +361,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Forge, false, Some("aec"))
         .save_png(&design.join("style-repo-2d-extension-forge.png"))
         .expect("save AEC extension review");
+    let cad = studios().iter().position(|studio| studio.id == "cad").unwrap();
+    let _ = app.update(Action::SelectStudio(cad));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("tekenen"))
+        .save_png(&design.join("style-repo-cad-canvas-forge.png"))
+        .expect("save CAD canvas review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

@@ -63,7 +63,7 @@ impl<A:Application> Runtime<A> {
             status:self.error.clone().unwrap_or_else(||self.app.status(language)),
             content:Box::new(move |region| match region {
                 Region::Workspace => self.app.workspace(theme,language).map(Message::Command),
-                Region::Explorer => widgets::panel(if mode == ChromeMode::Workflow { language.text("Werkstroom","Workflow") } else if mode == ChromeMode::Sidebar { language.text("Navigatie","Navigation") } else { language.text("Verkenner","Explorer") },self.app.explorer(theme,language).map(Message::Command),theme),
+                Region::Explorer => widgets::panel(if mode == ChromeMode::Workflow { language.text("Werkstroom","Workflow") } else if mode == ChromeMode::Sidebar { language.text("Navigatie","Navigation") } else if mode == ChromeMode::CanvasRibbon { language.text("Eigenschappen","Properties") } else { language.text("Verkenner","Explorer") },self.app.explorer(theme,language).map(Message::Command),theme),
                 Region::Properties => widgets::panel(language.text("Eigenschappen","Properties"),self.app.properties(theme,language).map(Message::Command),theme),
             }),
         })

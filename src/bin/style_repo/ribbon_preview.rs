@@ -25,6 +25,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
+                .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
                 .or_else(|| planner_groups(studio, tab, selected))
                 .or_else(|| frame_groups(studio, tab, selected))
@@ -39,6 +40,37 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Current core module registry and ribbon group titles in OpenCADStudio.
+/// Commands below are a compact review sample; plugins can add more tabs.
+fn cad_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "cad" { return None; }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Tekenen" => vec![
+            ("Draw", vec![("Line", planner_source_icon!("Pen")), ("Polyline", planner_source_icon!("GitBranch")), ("Circle", planner_source_icon!("Circle")), ("Arc", planner_source_icon!("Compass"))]),
+            ("Modify", vec![("Move", planner_source_icon!("MoveHorizontal")), ("Copy", planner_source_icon!("Copy")), ("Rotate", planner_source_icon!("RotateCw"))]),
+            ("Annotation", vec![("Text", planner_source_icon!("FileText")), ("Dimension", Measure.into())]),
+            ("Layers", vec![("Layers", planner_source_icon!("Layers"))]),
+            ("Block", vec![("Create Block", Cube.into()), ("Insert Block", Import.into())]),
+            ("Properties", vec![("Match Properties", planner_source_icon!("Pencil"))]),
+            ("Groups", vec![("Group", planner_source_icon!("Boxes")), ("Ungroup", planner_source_icon!("Boxes"))]),
+            ("Clipboard", vec![("Paste", planner_source_icon!("ClipboardCheck"))]),
+            ("Measure", vec![("Measure", Measure.into())]),
+        ],
+        "Parametrisch" => vec![("Geometric", vec![("Constraints", planner_source_icon!("GitBranch"))]), ("Dimensional", vec![("Linear", Measure.into())]), ("Manage", vec![("Parameters", Settings.into())])],
+        "Model" => vec![("Create", vec![("Box", Cube.into())]), ("Boolean", vec![("Union", planner_source_icon!("Boxes"))]), ("Edges", vec![("Fillet Edge", planner_source_icon!("RotateCw"))])],
+        "Invoegen" => vec![("Reference", vec![("Attach Underlay", Import.into())]), ("Block", vec![("Insert Block", Import.into())]), ("Block Definition", vec![("Create Block", Cube.into())]), ("Import", vec![("Import", Import.into())]), ("Content", vec![("Content", Open.into())])],
+        "Annoteren" => vec![("Text", vec![("Multiline Text", planner_source_icon!("FileText"))]), ("Dimensions", vec![("Dimension", Measure.into())]), ("Centerlines", vec![("Centerline", planner_source_icon!("Minus"))]), ("Leaders", vec![("Multileader", planner_source_icon!("GitBranch"))]), ("Tables", vec![("Table", Grid.into())]), ("Markup", vec![("Revision Cloud", planner_source_icon!("Circle"))]), ("Annotation Scaling", vec![("Add Current Scale", Fit.into())])],
+        "Beeld" => vec![("Viewport Tools", vec![("Viewport", Grid.into())]), ("Navigate", vec![("Zoom", Search.into())]), ("Model Viewports", vec![("Model Viewport", Grid.into())]), ("Preset", vec![("Views", Cube.into())]), ("Palettes", vec![("Properties", PanelLeft.into())]), ("Interface", vec![("File Tabs", PanelLeft.into())]), ("Plot", vec![("Page Setup", Settings.into())])],
+        "Beheren" => vec![("Customization", vec![("Tool Palettes", Grid.into())]), ("Cleanup", vec![("Purge", planner_source_icon!("Eraser"))]), ("Application", vec![("Options", Settings.into())])],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
+        let id = format!("cad:{tab}:{name}");
+        Command::new(name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
+    }).collect() }).collect())
 }
 
 /// AEC extension at fd22965ed28a: two added tabs and two buttons in host IFC.

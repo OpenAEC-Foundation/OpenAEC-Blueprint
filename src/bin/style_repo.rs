@@ -739,6 +739,9 @@ impl StyleRepo {
         if selected.id == "field" {
             return self.field_page(theme, l);
         }
+        if selected.id == "cad" {
+            return self.cad_page(theme, l);
+        }
         let screen = selected
             .screens
             .get(self.selected_screen)
@@ -841,6 +844,17 @@ impl StyleRepo {
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
         ].spacing(22).into()
+    }
+    fn cad_page(&self, theme: Theme, _l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let studio = &studios()[self.selected_studio];
+        let image_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/OpenCADStudio/site/workspace.png");
+        column![
+            self.heading("SOURCE REVIEW · CAD CANVAS", "Open CAD Studio", "Huidige Rust-registry: zeven zichtbare kernmodules; bronbeeld kan een oudere UI-toestand tonen.", theme),
+            text(&studio.notes).size(12).color(t.text_secondary),
+            image(image::Handle::from_path(image_path)).width(1000),
+        ].spacing(14).into()
     }
     fn field_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
@@ -1203,6 +1217,8 @@ impl Application for StyleRepo {
             ChromeMode::Sidebar
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "field" {
             ChromeMode::TopNav
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "cad" {
+            ChromeMode::CanvasRibbon
         } else {
             ChromeMode::Ribbon
         }
@@ -1344,6 +1360,15 @@ impl Application for StyleRepo {
             .into()
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.chrome_mode() == ChromeMode::CanvasRibbon {
+            return column![
+                widgets::property("Object", "Polyline", theme),
+                widgets::property("Kleur", "ByLayer", theme),
+                widgets::property("Laag", "Defpoints", theme),
+                widgets::property("Lijntype", "ByLayer", theme),
+                widgets::property("Lijngewicht", "ByLayer", theme),
+            ].spacing(2).into();
+        }
         if self.chrome_mode() == ChromeMode::Sidebar {
             let studio = &studios()[self.selected_studio];
             let mut nav = Column::new().spacing(4);
@@ -1621,7 +1646,7 @@ mod tests {
                 assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
                 continue;
             }
-            assert_eq!(app.chrome_mode(), ChromeMode::Ribbon);
+            assert_eq!(app.chrome_mode(), if studio.id == "cad" { ChromeMode::CanvasRibbon } else { ChromeMode::Ribbon });
             let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
             assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
             for (actual, label) in tabs.iter().zip(expected) {
@@ -1765,6 +1790,17 @@ mod tests {
             ["Place", "CPT Data"]);
         assert_eq!(tabs[2].groups[0].commands.iter().map(|command| command.label.as_str()).collect::<Vec<_>>(),
             ["Export IFCX", "Copy IFCX"]);
+    }
+
+    #[test]
+    fn cad_ribbon_tracks_visible_core_modules_without_layout_tab() {
+        let studio = studios().iter().find(|studio| studio.id == "cad").unwrap();
+        assert_eq!(studio.tabs, ["Tekenen", "Parametrisch", "Model", "Invoegen", "Annoteren", "Beeld", "Beheren"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Draw", "Modify", "Annotation", "Layers", "Block", "Properties", "Groups", "Clipboard", "Measure"]);
+        assert_eq!(tabs[6].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Customization", "Cleanup", "Application"]);
     }
 
     #[test]

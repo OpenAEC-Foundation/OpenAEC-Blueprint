@@ -603,29 +603,27 @@
   {
     "id": "cad",
     "name": "Open CAD Studio",
-    "proposed": true,
+    "proposed": false,
     "tabs": [
-      "Bestand",
-      "Start",
       "Tekenen",
-      "Bewerken",
+      "Parametrisch",
+      "Model",
+      "Invoegen",
       "Annoteren",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Beeld",
+      "Beheren"
     ],
-    "left_panel": "Lagen & blokken",
-    "right_panel": "Entiteitseigenschappen",
-    "workspace": "2D/3D-tekening",
+    "left_panel": "Eigenschappen",
+    "right_panel": "",
+    "workspace": "CAD-tekenvlak",
     "fixed_regions": [
       "titlebar",
       "quick-access",
       "ribbon-tabs",
       "ribbon-groups",
       "document-tabs",
-      "explorer",
+      "properties-left",
       "workspace",
-      "properties",
       "status"
     ],
     "screens": [
@@ -639,7 +637,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Bron OpenCADStudio src/modules/registry.rs en src/ui/ribbon/mod.rs op commit 77f19dafd017: zeven zichtbare kernmodules Tekenen, Parametrisch, Model, Invoegen, Annoteren, Beeld, Beheren. Layout-module bestaat maar is geen ribbontab; papiermodeltools staan in de zijwerkbalk. Externe plug-ins kunnen tabs toevoegen. De websitecapture site/workspace.png toont een oudere toestand en is een visuele referentie; de huidige bronregistry is leidend. Eigenschappen staan links, zonder permanent rechterpaneel."
   },
   {
     "id": "pile",
