@@ -1603,6 +1603,15 @@ mod tests {
     }
 
     #[test]
+    fn validator_ribbon_uses_viewer_source_tabs() {
+        let studio = studios().iter().find(|studio| studio.id == "validator").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Start", "Beeld"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Project", "Modellen", "Validatie", "BCF"]);
+        assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Panelen", "3D Beeld", "Doorsnede"]);
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

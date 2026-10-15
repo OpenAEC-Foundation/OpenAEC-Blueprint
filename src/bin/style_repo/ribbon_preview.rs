@@ -30,10 +30,45 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .or_else(|| heatloss_groups(studio, tab, selected))
                 .or_else(|| calculations_groups(studio, tab, selected))
                 .or_else(|| reports_groups(studio, tab, selected))
+                .or_else(|| validator_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// BIM Validator viewer ribbon on 8f837dd9a56e; disconnected BCF state shown.
+fn validator_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "validator" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Start" => vec![
+            ("Project", vec![("Opslaan", Save.into()), ("Opslaan als", planner_source_icon!("SaveAll")), ("Openen", Open.into())]),
+            ("Modellen", vec![("Toevoegen IFC", Import.into()), ("Verwijder", planner_source_icon!("Trash2"))]),
+            ("Validatie", vec![("Valideer", Check.into()), ("IDS Standaard", planner_source_icon!("ListTree")), ("Reset", planner_source_icon!("RotateCcw"))]),
+            ("BCF", vec![("Export BCF", Export.into()), ("Sync", planner_source_icon!("RefreshCw")), ("Inloggen", planner_source_icon!("Lock"))]),
+        ],
+        "Beeld" => vec![
+            ("Panelen", vec![("Modellen", PanelLeft.into()), ("Validatie", PanelRight.into())]),
+            ("3D Beeld", vec![("Passend", Fit.into()), ("Reset", planner_source_icon!("RotateCcw"))]),
+            ("Doorsnede", vec![("Snijvlak X", planner_source_icon!("Columns3")), ("Snijvlak Y", planner_source_icon!("Columns3")), ("Snijvlak Z", planner_source_icon!("Columns3")), ("Wis snijvlakken", planner_source_icon!("Eraser"))]),
+        ],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("validator:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// Reports Studio ribbon at 818e58118c0f: Start, Invoegen and Beeld.

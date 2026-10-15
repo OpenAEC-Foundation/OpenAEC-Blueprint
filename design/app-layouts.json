@@ -540,12 +540,7 @@
     "tabs": [
       "Bestand",
       "Start",
-      "Regels",
-      "Valideren",
-      "Issues",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Beeld"
     ],
     "left_panel": "IFC-modellen & controles",
     "right_panel": "Controle-eigenschappen",
@@ -572,7 +567,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Viewer-lint gecontroleerd tegen viewer/src/components/chrome/ribbon/Ribbon.tsx op commit 8f837dd9a56e: naast Bestand bestaan alleen Start en Beeld. Start heeft Project, Modellen, Validatie en BCF; Beeld heeft Panelen, 3D Beeld en Doorsnede. BCF Push/Inloggen wisselen volgens verbindingsstatus en Cloud-acties verschijnen alleen wanneer ingeschakeld. Er zijn geen bruikbare UI-screenshots in de repository gevonden; model-/bevindingenscherm blijft visueel onbeoordeeld."
   },
   {
     "id": "speech",

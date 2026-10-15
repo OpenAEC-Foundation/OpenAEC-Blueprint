@@ -24,6 +24,8 @@ De [Calculations-ribbon](design/style-repo-calculations-ribbon-light.png) volgt 
 
 De [Reports-ribbon](design/style-repo-reports-ribbon-light.png) volgt de actuele Start-, Invoegen- en Beeld-groepen; echte schermcaptures ontbreken nog in deze bron.
 
+De [BIM Validator-ribbon](design/style-repo-validator-ribbon-light.png) toont de brongecontroleerde Start- en Beeldgroepen in de niet-verbonden BCF-staat.
+
 De native iconenpagina toont de 22 canonieke Rust-iconen afzonderlijk van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.
 De [instellingen in Light](design/style-repo-settings-light.png) en [Forge](design/style-repo-settings-forge.png) tonen de gedeelde keuzelijst- en invoerstijl; Pointcloud gebruikt dezelfde Rust-functies voor velden en het open keuzemenu.
