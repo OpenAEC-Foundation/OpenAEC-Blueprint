@@ -8,8 +8,8 @@ use crate::{
 };
 use iced::{
     widget::{
-        button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
-        stack, svg, text, text_input, tooltip, Space,
+        button, center, checkbox, column, container, opaque, pick_list, progress_bar, row,
+        scrollable, slider, stack, svg, text, text_input, tooltip, Space,
     },
     Alignment, Background, Border, Element, Fill, Length, Padding,
 };
@@ -989,6 +989,80 @@ pub fn title_action_style(theme: Theme, status: button::Status) -> button::Style
         text_color: tokens.text,
         ..button::Style::default()
     }
+}
+/// Source Style Book settings chrome (560 × 500). Applications provide their
+/// own tabs, fields, footer commands and close action. The backdrop is inert.
+pub fn settings_modal<'a, M: Clone + 'a>(
+    title: impl Into<String>,
+    sidebar: Element<'a, M>,
+    content: Element<'a, M>,
+    footer: Element<'a, M>,
+    close: M,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let header = container(row![
+        text(title.into())
+            .font(fonts::STRONG)
+            .size(12)
+            .color(t.dialog_header_text)
+            .width(Fill),
+        button(text("×").size(16))
+            .on_press(close)
+            .width(30)
+            .height(30)
+            .padding(0)
+            .style(move |_, status| button::Style {
+                background: matches!(status, button::Status::Hovered)
+                    .then_some(Background::Color(t.ribbon_btn_hover)),
+                text_color: t.dialog_content_text,
+                ..button::Style::default()
+            }),
+    ].align_y(Alignment::Center))
+        .width(Fill)
+        .height(30)
+        .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
+        .style(move |_| container::Style::default().background(t.dialog_header_bg));
+    let sidebar = container(scrollable(sidebar).height(Fill))
+        .width(120)
+        .height(Fill)
+        .padding([8, 0])
+        .style(move |_| container::Style::default().background(t.dialog_sidebar_bg));
+    let rule = container(Space::new(1, Fill))
+        .width(1)
+        .height(Fill)
+        .style(move |_| container::Style::default().background(t.dialog_sidebar_border));
+    let body = row![
+        sidebar,
+        rule,
+        scrollable(container(content).padding(12).width(Fill)).height(Fill).width(Fill),
+    ]
+    .height(Fill)
+    .width(Fill);
+    let footer_rule = container(Space::new(Fill, 1))
+        .height(1)
+        .width(Fill)
+        .style(move |_| container::Style::default().background(t.dialog_border));
+    let footer = column![
+        footer_rule,
+        container(footer)
+            .padding([8, 12])
+            .height(43)
+            .width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_sidebar_bg)),
+    ]
+    .height(44);
+    let card = container(column![header, body, footer].height(500).width(560))
+        .width(560)
+        .height(500)
+        .style(move |_| container::Style {
+            background: Some(t.dialog_bg.into()),
+            border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        });
+    opaque(center(opaque(card)).style(move |_| {
+        container::Style::default().background(t.dialog_overlay)
+    })).into()
 }
 pub fn icon_button<'a, M: Clone + 'a>(
     label: &'a str,

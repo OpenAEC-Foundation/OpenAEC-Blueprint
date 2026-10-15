@@ -139,6 +139,18 @@ fn save_render(app: &StyleRepo, theme: Theme, path: &std::path::Path) {
 }
 
 #[test]
+#[ignore = "regenerate shared settings dialog review on demand"]
+fn export_shared_settings_review() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let app = StyleRepo::default();
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_with_settings(&app, theme, true)
+            .save_png(&design.join(format!("style-repo-settings-{name}.png")))
+            .expect("save shared settings review");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native Geotechniek borehole review on demand"]
 fn export_geotech_borehole_review() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");

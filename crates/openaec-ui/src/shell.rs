@@ -1,5 +1,5 @@
 use crate::{fonts, icons::Icon, model::*, widgets, Language, Theme};
-use iced::{widget::{button, column, container, mouse_area, opaque, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Column, Row, Space}, Element, Fill, Padding};
+use iced::{widget::{button, column, container, mouse_area, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Column, Row, Space}, Element, Fill, Padding};
 
 /// Application-owned contents. Shell layout and styling stay inside the crate.
 pub struct Slots<'a, M> {
@@ -155,14 +155,11 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     };
     let base: Element<'a,Message<M>>=container(bands).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
     if state.settings {
-        let overlay=container(settings(state)).center(Fill).style(move |_|container::Style::default().background(t.dialog_overlay));
-        stack([base,opaque(overlay)]).width(Fill).height(Fill).into()
+        stack([base,settings(state)]).width(Fill).height(Fill).into()
     } else {base}
 }
 fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
     let p=&state.preferences; let l=p.language; let t=p.theme.tokens();
-    let header=container(row![text(l.text("Instellingen","Settings")).font(fonts::STRONG).size(15).color(t.dialog_header_text).width(Fill),widgets::icon_button(l.text("Sluiten","Close"),Icon::Close,Message::Ui(UiEvent::Settings(false)),p.theme)]
-        .align_y(iced::Alignment::Center)).padding([7,12]).width(Fill).style(move |_|container::Style::default().background(t.dialog_header_bg));
     let form=column![
         text(l.text("Uiterlijk","Appearance")).font(fonts::HEADING).size(20),
         text(l.text("Thema","Theme")).font(fonts::STRONG).size(12),
@@ -178,11 +175,10 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
             .step(0.05).style(move |_,status|widgets::slider_style(p.theme,status)),
     ].spacing(12);
     let sidebar=container(column![text(l.text("Algemeen","General")).size(12),text(l.text("Uiterlijk","Appearance")).font(fonts::STRONG).size(12).color(t.accent)].spacing(20))
-        .padding(16).width(140).height(Fill).style(move |_|container::Style::default().background(t.dialog_sidebar_bg));
-    let body=row![sidebar,container(form).padding(22).width(Fill)].height(Fill);
-    let footer=container(row![Space::with_width(Fill),widgets::action(l.text("Sluiten","Close"),Icon::Check,Some(Message::Ui(UiEvent::Settings(false))),p.theme)])
-        .padding([9,12]).width(Fill).style(move |_|container::Style::default().background(t.dialog_header_bg));
-    container(column![header,body,footer].height(460).width(560)).style(move |_|container::Style {
-        background:Some(t.dialog_bg.into()),border:iced::Border{color:t.dialog_border,width:1.0,radius:4.0.into()},..Default::default()
-    }).into()
+        .padding([4,12]);
+    let footer=row![Space::with_width(Fill),widgets::action(l.text("Sluiten","Close"),Icon::Check,Some(Message::Ui(UiEvent::Settings(false))),p.theme)];
+    widgets::settings_modal(
+        l.text("Instellingen","Settings"), sidebar.into(), form.into(), footer.into(),
+        Message::Ui(UiEvent::Settings(false)), p.theme,
+    )
 }
