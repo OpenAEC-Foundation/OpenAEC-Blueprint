@@ -2,10 +2,52 @@
 use crate::{fonts, icons::Icon, model::metrics, Theme};
 use iced::{
     widget::{
-        button, checkbox, column, container, pick_list, row, scrollable, text, text_input, tooltip,
+        button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
+        text, text_input, tooltip,
     },
     Background, Border, Element, Fill,
 };
+
+pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
+    let t = theme.tokens();
+    slider::Style {
+        rail: slider::Rail {
+            backgrounds: (t.accent.into(), theme.border_strong().into()),
+            width: 4.0,
+            border: Border::default().rounded(2),
+        },
+        handle: slider::Handle {
+            shape: slider::HandleShape::Circle { radius: 7.0 },
+            background: if status == slider::Status::Dragged {
+                t.accent
+            } else {
+                t.bg_lighter
+            }
+            .into(),
+            border_width: 2.0,
+            border_color: if status == slider::Status::Hovered {
+                t.accent_hover
+            } else {
+                t.accent
+            },
+        },
+    }
+}
+
+pub fn progress_style(theme: Theme) -> progress_bar::Style {
+    progress_bar::Style {
+        background: theme.border_strong().into(),
+        bar: theme.tokens().accent.into(),
+        border: Border::default().rounded(4),
+    }
+}
+
+pub fn progress_line_style(theme: Theme) -> progress_bar::Style {
+    progress_bar::Style {
+        border: Border::default().rounded(1),
+        ..progress_style(theme)
+    }
+}
 
 pub fn checkbox_style(theme: Theme, status: checkbox::Status) -> checkbox::Style {
     let t = theme.tokens();

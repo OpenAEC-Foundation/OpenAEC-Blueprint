@@ -16,6 +16,13 @@ impl Theme {
     pub fn tokens(self) -> Tokens {
         match self { Self::Light => tokens::LIGHT, Self::Forge => tokens::FORGE, Self::OpenAec => tokens::OPENAEC, Self::Blueprint => tokens::BLUEPRINT, Self::Contrast => tokens::CONTRAST }
     }
+    /// Brand strong-border token from the pinned Style Book colors.json (light/dark).
+    pub fn border_strong(self) -> iced::Color {
+        match self {
+            Self::Light => iced::Color::from_rgb8(0xD6, 0xD3, 0xD1),
+            _ => iced::Color::from_rgb8(0x3F, 0x3F, 0x46),
+        }
+    }
     pub fn iced(self) -> iced::Theme {
         let t = self.tokens();
         iced::Theme::custom(self.to_string(), iced::theme::Palette {

@@ -370,7 +370,9 @@ impl StyleRepo {
                     ]
                     .spacing(14)
                     .align_y(Alignment::Center),
-                    iced::widget::slider(0.0..=100.0, self.sample_value, Action::Slider).width(360),
+                    iced::widget::slider(0.0..=100.0, self.sample_value, Action::Slider)
+                        .style(move |_, status| widgets::slider_style(theme, status))
+                        .width(360),
                     widgets::action(
                         l.text("Voorbeeld resetten", "Reset sample"),
                         Icon::Undo,
@@ -828,7 +830,10 @@ impl StyleRepo {
             "long-running-operation" => column![
                 text(l.text("Bezig met verwerken", "Processing")).font(fonts::HEADING).size(23),
                 text(format!("{} · 62%", studio.workspace)).size(12),
-                progress_bar(0.0..=100.0, 62.0).width(300),
+                progress_bar(0.0..=100.0, 62.0)
+                    .style(move |_| widgets::progress_style(theme))
+                    .height(8)
+                    .width(300),
                 text(l.text("Stap 3 van 5 · Annuleren blijft beschikbaar.", "Step 3 of 5 · Cancel remains available.")).size(12).color(t.text_secondary),
             ].spacing(12).into(),
             "unsaved-changes" => column![

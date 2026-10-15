@@ -114,7 +114,8 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
             .style(move |_,status|widgets::pick_list_style(p.theme,status))
             .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
         text(format!("{}: {:.0}%",l.text("Schaal","Scale"),p.scale*100.0)).font(fonts::STRONG).size(12),
-        slider(0.75..=2.0,p.scale,|scale|Message::Ui(UiEvent::Scale(scale))).step(0.05),
+        slider(0.75..=2.0,p.scale,|scale|Message::Ui(UiEvent::Scale(scale)))
+            .step(0.05).style(move |_,status|widgets::slider_style(p.theme,status)),
     ].spacing(12);
     let sidebar=container(column![text(l.text("Algemeen","General")).size(12),text(l.text("Uiterlijk","Appearance")).font(fonts::STRONG).size(12).color(t.accent)].spacing(20))
         .padding(16).width(140).height(Fill).style(move |_|container::Style::default().background(t.dialog_sidebar_bg));
