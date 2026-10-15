@@ -2,6 +2,9 @@ import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/paths.mjs";
+import { writeGenerated } from "./lib/write.mjs";
+import { loadTokens } from "./tokens/load.mjs";
+import { renderTokensRust } from "./tokens/rust.mjs";
 
 // Elke stap: [naam, (root) => string[] | Promise<string[]>] — geeft geschreven bestanden terug.
 // Latere tasks voegen bovenaan imports toe (zonder dubbelingen) en hieronder steps.push(...).
@@ -11,6 +14,11 @@ steps.push(["tokens-package", (root) => {
   execFileSync(process.execPath, ["build.js"], { cwd: join(root, "packages", "tokens"), stdio: "inherit" });
   return [];
 }]);
+
+steps.push(["tokens-rust", (root) => [
+  writeGenerated(join(root, "crates", "openaec-tokens", "src", "generated.rs"),
+    renderTokensRust(loadTokens(join(root, "design", "tokens")))),
+]]);
 
 export async function runAll(root = ROOT) {
   const written = [];
