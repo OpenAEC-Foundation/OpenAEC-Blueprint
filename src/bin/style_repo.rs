@@ -20,6 +20,8 @@ use std::{path::PathBuf, sync::OnceLock};
 mod domain_drafts;
 #[path = "style_repo/energy_workflow.rs"]
 mod energy_workflow;
+#[path = "style_repo/field_remaining.rs"]
+mod field_remaining;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
 #[cfg(test)]
@@ -117,6 +119,8 @@ enum Action {
     FieldFlowEdit(bool, usize, String),
     FieldFlowType(bool, usize),
     FieldFlowPreview(&'static str),
+    FieldReviewPreview(&'static str),
+    FieldCaptureFilter(usize, usize),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -259,6 +263,8 @@ struct StyleRepo {
     field_inspection_type: usize,
     field_handover_type: usize,
     field_flow_notice: Option<&'static str>,
+    field_review_notice: Option<&'static str>,
+    field_capture_filter: [usize; 3],
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -294,6 +300,8 @@ impl Default for StyleRepo {
             field_inspection_type: 0,
             field_handover_type: 0,
             field_flow_notice: None,
+            field_review_notice: None,
+            field_capture_filter: [0; 3],
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -1027,6 +1035,15 @@ impl StyleRepo {
         }
         if screen == "inspectie" || screen == "oplevering" {
             return self.field_workflow_page(theme, l, screen == "inspectie");
+        }
+        if screen == "plattegrond" || screen == "ifc" {
+            return self.field_upload_page(theme, l, screen == "ifc");
+        }
+        if screen == "opname" {
+            return self.field_capture_page(theme, l);
+        }
+        if screen == "handleiding" {
+            return self.field_manual_page(theme, l);
         }
         let capture = match screen {
             "project" => Some("01-project.png"),
@@ -1884,6 +1901,7 @@ impl Application for StyleRepo {
             if let Some(index) = studios()[self.selected_studio].tabs.iter()
                 .position(|tab| tab.to_lowercase() == id) {
                 self.selected_screen = index;
+                self.field_review_notice = None;
             }
         }
         Task::none()
@@ -2154,6 +2172,7 @@ impl Application for StyleRepo {
                         .len()
                         .saturating_sub(1),
                 );
+                self.field_review_notice = None;
             }
             Action::FieldProjectEdit(index, value) => {
                 if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }
@@ -2176,6 +2195,10 @@ impl Application for StyleRepo {
                 else { self.field_handover_type = index.min(2); }
             }
             Action::FieldFlowPreview(message) => self.field_flow_notice = Some(message),
+            Action::FieldReviewPreview(message) => self.field_review_notice = Some(message),
+            Action::FieldCaptureFilter(group, index) => {
+                if let Some(filter) = self.field_capture_filter.get_mut(group) { *filter = index; }
+            }
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2613,6 +2636,19 @@ mod tests {
         let _ = app.update(Action::FieldFlowType(false, 2));
         assert_eq!(app.field_handover_values[1], "Controlepunten");
         assert_eq!(app.field_handover_type, 2);
+        let _ = app.tab_event("plattegronden");
+        assert_eq!(app.selected_screen, 1);
+        let _ = app.tab_event("3d bim");
+        assert_eq!(app.selected_screen, 2);
+        let _ = app.tab_event("opname");
+        assert_eq!(app.selected_screen, 3);
+        let _ = app.update(Action::FieldCaptureFilter(0, 2));
+        let _ = app.update(Action::FieldCaptureFilter(usize::MAX, 1));
+        assert_eq!(app.field_capture_filter, [2, 0, 0]);
+        let _ = app.update(Action::FieldReviewPreview("Ticket toevoegen"));
+        assert_eq!(app.field_review_notice, Some("Ticket toevoegen"));
+        let _ = app.tab_event("handleiding");
+        assert_eq!(app.selected_screen, 9);
         let _ = app.tab_event("project");
         assert_eq!(app.field_project.values[0], "Nieuwe opname");
     }

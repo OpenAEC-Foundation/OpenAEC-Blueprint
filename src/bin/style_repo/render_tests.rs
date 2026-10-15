@@ -226,6 +226,19 @@ fn export_field_topnav_review() {
     render_with_options(&app, Theme::Forge, false, Some("oplevering"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-handover-setup-forge.png"))
         .expect("save Field handover setup");
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (index, tab, light, forge) in [
+        (1, "plattegronden", "style-repo-field-floorplans-light.png", "style-repo-field-floorplans-forge.png"),
+        (2, "3d bim", "style-repo-field-ifc-light.png", "style-repo-field-ifc-forge.png"),
+        (3, "opname", "style-repo-field-capture-light.png", "style-repo-field-capture-forge.png"),
+        (9, "handleiding", "style-repo-field-manual-light.png", "style-repo-field-manual-forge.png"),
+    ] {
+        let _ = app.update(Action::SelectScreen(index));
+        render_with_options(&app, Theme::Light, false, Some(tab))
+            .save_png(&design.join(light)).expect("save Field code-derived Light route");
+        render_with_options(&app, Theme::Forge, false, Some(tab))
+            .save_png(&design.join(forge)).expect("save Field code-derived Forge route");
+    }
 }
 
 #[test]
