@@ -1,0 +1,434 @@
+[
+  {
+    "proposal": "fem.node",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/osnap/node.svg",
+    "semantic_assessment": "related",
+    "rationale": "Object-snap naar een CAD-knooppunt; geen FEM-knoop aanmaken.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.node",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/ui/node_graph.svg",
+    "semantic_assessment": "different",
+    "rationale": "Node-editor/diagram, niet een constructieve knoop.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.shell",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/model/shell.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-shell maakt een volume hol; het resultaat lijkt op een schaal, maar is geen FEM-schaalelement.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.solid",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/solid.svg",
+    "semantic_assessment": "related",
+    "rationale": "Pointcloud-solidweergave, niet een volume-element in een FEM-model.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.solid",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/hatch/hatch_solid.svg",
+    "semantic_assessment": "different",
+    "rationale": "Effen arcering is een vlakvulling, geen volume-element.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.solid",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/model/polysolid.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-polysolid maakt een volume; een FEM-solid heeft knopen en elementtopologie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.solid",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/solid.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-solidstijl/volume, niet de FEM-elementdefinitie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.offset",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/offset.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-offset verplaatst geometrie; FEM-excentriciteit beschrijft een verschoven staafas.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_section.svg",
+    "semantic_assessment": "different",
+    "rationale": "Documentboom voor een doorsnedetekening, geen profieltype.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/section_box.svg",
+    "semantic_assessment": "different",
+    "rationale": "Snedebox van een 3D-scène, geen I-profiel.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/section_drawing.svg",
+    "semantic_assessment": "different",
+    "rationale": "Een doorsnedetekening maken is geen staafdoorsnede kiezen.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.section",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/osnap/intersection.svg",
+    "semantic_assessment": "different",
+    "rationale": "CAD-snap op een snijpunt, geen profieldoorsnede.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.mesh",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/closed_mesh.svg",
+    "semantic_assessment": "related",
+    "rationale": "Gesloten pointcloud-oppervlaktenet; geen FEM-discretisatie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.mesh",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/mesh_pointcloud.svg",
+    "semantic_assessment": "related",
+    "rationale": "Net uit puntenwolk; meshingprincipe verwant, invoer en resultaat anders.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.mesh",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/mesh_surface.svg",
+    "semantic_assessment": "related",
+    "rationale": "Oppervlaktesmesh uit scan; mogelijk bruikbaar beeldmotief, ander commando.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.mesh",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/mesh_terrain.svg",
+    "semantic_assessment": "related",
+    "rationale": "Terreinmesh uit punten; geen FEM-elementennet.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "fem.mesh",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/mesh_to_plans.svg",
+    "semantic_assessment": "different",
+    "rationale": "Workflow van mesh naar plattegronden, niet net genereren.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.grid",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/osnap/grid.svg",
+    "semantic_assessment": "different",
+    "rationale": "Object-snap op raster, geen BIM-stramien plaatsen.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.grid",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/ui/grid.svg",
+    "semantic_assessment": "related",
+    "rationale": "Generiek CAD-raster; stramien heeft bouwkundige assen en labels.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.window",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/zoom_window.svg",
+    "semantic_assessment": "different",
+    "rationale": "Venster is hier een zoomrechthoek, geen bouwkundig raam.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.space",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/dim_space.svg",
+    "semantic_assessment": "different",
+    "rationale": "Maatvoering van tussenruimte, geen BIM-ruimteobject.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.space",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/ui/spacemouse.svg",
+    "semantic_assessment": "different",
+    "rationale": "3D-navigatieapparaat, geen gebouwruimte.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.join",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/modify_join.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-geometrie verbinden; BIM-aansluiting heeft objectsemantiek.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.join",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/vports_join.svg",
+    "semantic_assessment": "different",
+    "rationale": "Weergavevensters samenvoegen, geen bouwdelen.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.trim",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/trim.svg",
+    "semantic_assessment": "same",
+    "rationale": "Algemene trimactie op geometrie; betekenis sluit aan bij het BIM-bewerkcommando.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.extend",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/extend.svg",
+    "semantic_assessment": "same",
+    "rationale": "Algemene verlengactie tot begrenzing; dezelfde bewerkbetekenis.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_bottom.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek onder uitlijnen, niet de algemene referentie-uitlijning.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_hcenter.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek horizontaal centreren, niet de algemene uitlijnactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_left.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek links uitlijnen, niet de algemene uitlijnactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_right.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek rechts uitlijnen, niet de algemene uitlijnactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_top.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek boven uitlijnen, niet de algemene uitlijnactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/align_vcenter.svg",
+    "semantic_assessment": "related",
+    "rationale": "Specifiek verticaal centreren, niet de algemene uitlijnactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/dim_aligned.svg",
+    "semantic_assessment": "different",
+    "rationale": "Uitgelijnde maatlijn is annotatie, geen objectuitlijning.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mleader_align.svg",
+    "semantic_assessment": "different",
+    "rationale": "Tekstleiders uitlijnen is een annotatieactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/modify_align.svg",
+    "semantic_assessment": "same",
+    "rationale": "Generieke CAD-objectuitlijning aan een referentie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.offset",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/offset.svg",
+    "semantic_assessment": "related",
+    "rationale": "CAD-lijnen parallel verschuiven; BIM-variant werkt op wanden/bouwdelen.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.array",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/array_path.svg",
+    "semantic_assessment": "related",
+    "rationale": "Reeks langs een pad; specifieke variant van de algemene BIM-reeks.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.array",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/array_polar.svg",
+    "semantic_assessment": "related",
+    "rationale": "Polaire reeks; specifieke variant van de algemene BIM-reeks.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.array",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/array_rect.svg",
+    "semantic_assessment": "related",
+    "rationale": "Rechthoekige reeks; specifieke variant van de algemene BIM-reeks.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.mirror",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mirror.svg",
+    "semantic_assessment": "same",
+    "rationale": "Objecten spiegelen om een as is dezelfde generieke bewerkactie.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.plan",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_plan.svg",
+    "semantic_assessment": "same",
+    "rationale": "Boomicoon voor een plattegrondweergave.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.plan",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/mesh_to_plans.svg",
+    "semantic_assessment": "related",
+    "rationale": "Maakt plattegronden via een scanworkflow; geen plattegrondweergave op zich.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_section.svg",
+    "semantic_assessment": "same",
+    "rationale": "Boomicoon voor een bouwkundige doorsnedetekening.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/section_box.svg",
+    "semantic_assessment": "related",
+    "rationale": "3D-snedebox, geen 2D-doorsnedeweergave.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.section",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/section_drawing.svg",
+    "semantic_assessment": "related",
+    "rationale": "Maakt een doorsnedetekening; het concept is een doorsnedeweergave.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.section",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/osnap/intersection.svg",
+    "semantic_assessment": "different",
+    "rationale": "Object-snap op een snijpunt, geen doorsnede.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.elevation",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_elevation.svg",
+    "semantic_assessment": "same",
+    "rationale": "Boomicoon voor een aanzichtweergave.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.sheet",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_sheet.svg",
+    "semantic_assessment": "same",
+    "rationale": "Boomicoon voor een tekenblad.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.sheet",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/layout_tabs.svg",
+    "semantic_assessment": "related",
+    "rationale": "Bediening van layouttabs, niet het bladobject zelf.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.sheet",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/sheetset.svg",
+    "semantic_assessment": "related",
+    "rationale": "Een verzameling bladen, niet één tekenblad.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.viewport",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/viewport.svg",
+    "semantic_assessment": "same",
+    "rationale": "Modelvenster op een layoutblad is hetzelfde documentconcept.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.dimension",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/annotation_dimension.svg",
+    "semantic_assessment": "same",
+    "rationale": "Maatlijnannotatie met getuigenlijnen; dezelfde betekenis.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.bcf-issue",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/browser_bcf.svg",
+    "semantic_assessment": "related",
+    "rationale": "BCF-groep in de projectboom, geen individuele issue.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.section-box",
+    "repo": "open-pointcloud-studio",
+    "path": "native/assets/opencad-icons/section_box.svg",
+    "semantic_assessment": "same",
+    "rationale": "3D-snedebox voor het begrenzen van een modelweergave.",
+    "status": "source-context-preliminary"
+  }
+]
