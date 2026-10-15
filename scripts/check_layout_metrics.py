@@ -9,6 +9,9 @@ root = Path(__file__).resolve().parents[1]
 spec = json.loads((root / "design/layout-spec.json").read_text())
 model = (root / "src/model.rs").read_text()
 prototype = (root / "design/harmonized-template.html").read_text()
+panel_title = re.search(r"\.paneltitle\{([^}]*)\}", prototype)
+assert panel_title and "padding:0 4px 0 6px" in panel_title.group(1), "HTML panel title padding differs from Tauri"
+assert "font-weight:600" in panel_title.group(1) and "letter-spacing:.5px" in panel_title.group(1), "HTML panel title typography differs from Tauri"
 panel = spec["panel_default"]["pixels"]
 rust_panel = re.search(r"pub const PANEL_DEFAULT: u16 = (\d+);", model)
 html_panels = re.search(r"\.body\{[^}]*grid-template-columns:(\d+)px minmax\(320px,1fr\) (\d+)px", prototype)
@@ -20,6 +23,7 @@ selectors = {
     "ribbon": "ribbon",
     "documents": "docbar",
     "status": "status",
+    "panel_toolbar": "paneltitle",
 }
 for region, entry in spec["regions"].items():
     expected = entry["pixels"]
@@ -54,6 +58,15 @@ if source_root.exists():
         assert rule, f"Missing source selector for {region}"
         height = re.search(r"\bheight:\s*(\d+)px;", rule.group(1))
         assert height and int(height.group(1)) == entry["pixels"], f"Pinned source {region} changed"
-    print("Rust, HTML and local Tauri source agree: 32 / 28 / 94 / 30 / 22 px bands, 240 px panels")
+    app_css = (source_root / "../App.css").read_text()
+    right = re.search(r"\.right-panel-toolbar\s*\{([^}]*)\}", app_css, flags=re.S)
+    assert right and re.search(r"\bheight:\s*24px;", right.group(1)), "Pinned right panel toolbar changed"
+    for side in ("left", "right"):
+        toolbar = re.search(rf"\.{side}-panel-toolbar\s*\{{([^}}]*)\}}", app_css, flags=re.S)
+        title = re.search(rf"\.{side}-panel-title\s*\{{([^}}]*)\}}", app_css, flags=re.S)
+        assert toolbar and re.search(r"\bpadding:\s*0 4px 0 6px;", toolbar.group(1)), f"Pinned {side} panel padding changed"
+        assert title and re.search(r"\bfont-weight:\s*600;", title.group(1)), f"Pinned {side} panel title changed"
+        assert re.search(r"\bletter-spacing:\s*0\.5px;", title.group(1)), f"Pinned {side} panel tracking changed"
+    print("Rust, HTML and local Tauri source agree: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels")
 else:
-    print("Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 240 px panels")
+    print("Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels")

@@ -37,7 +37,7 @@ migratie van alle OpenAEC-applicaties.
 | Onderdeel | Besluit | Onderbouwing |
 | --- | --- | --- |
 | Regio's | Titelbalk, ribbon-tabs, ribbon-groepen, documenttabs, verkenner, werkruimte, eigenschappen en status zijn vaste componenten. | Deze ordening is zichtbaar in de Tauri-template en meerdere studio's. |
-| Maatvoering | Titel 32 px, tabstrip 28 px, ribbon 94 px, documenttabs 30 px en status 22 px volgens de Tauri-template; beide standaardpanelen 240 px. | De Rust-crate, Pointcloud en het HTML-prototype gebruiken nu dezelfde bronmaten voor de standaardweergave. |
+| Maatvoering | Titel 32 px, tabstrip 28 px, ribbon 94 px, documenttabs 30 px, status 22 px en beide paneelwerkbalken 24 px volgens de Tauri-template; beide standaardpanelen 240 px. | De Rust-crate, Pointcloud en het HTML-prototype gebruiken dezelfde bronmaten voor de standaardweergave. |
 | Kleur | Vijf Style Book-thema's; amber is selectie/focus, niet een willekeurige betekenis van een domeinresultaat. | De bestaande apps mengen amber, grijs en vakspecifieke kleuren verschillend. |
 | Lettertype | Inter voor bediening, Space Grotesk voor koppen en JetBrains Mono voor code/waarden. | Gebundelde bestanden maken de rendering onafhankelijk van systeemfonts. |
 | Iconen | 24×24 semantische bedieningsiconen als canonieke set; vakinhoudelijke iconen krijgen een aparte betekenislaag. | Een maatlijn, een constraint en een gemeten afstand lijken op elkaar maar zijn andere opdrachten. |
@@ -52,10 +52,10 @@ migratie van alle OpenAEC-applicaties.
 | Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
 | Applicatieschermen | Negen gedeelde schermtoestanden zijn in het prototype selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken nu hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, titelbalkiconen, zes beoordeelde algemene ribboniconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De portable kopie is op 11 Rust-bestanden, 27 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene ribboniconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De portable kopie is op 11 Rust-bestanden, 27 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
-De [1280 px browserrender](harmonized-layout-1280.png) toont de beoordeelde
-standaardindeling met twee zijpanelen van 240 px.
+Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
+met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex

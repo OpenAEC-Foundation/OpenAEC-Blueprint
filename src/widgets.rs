@@ -59,10 +59,20 @@ pub fn ribbon_button_style(theme: Theme, selected: bool, status: button::Status)
 pub fn surface(theme: Theme) -> container::Style {
     let t = theme.tokens(); container::Style::default().background(t.bg).color(t.text)
 }
-pub fn panel<'a,M:'a>(title: impl Into<String>, content: Element<'a,M>, theme: Theme) -> Element<'a,M> {
+pub fn panel_header<'a, M: 'a>(title: impl Into<String>, theme: Theme) -> Element<'a, M> {
     let t = theme.tokens();
+    let title = container(text(title.into().to_uppercase()).font(fonts::STRONG).size(11))
+        .padding([0, 6]).height(metrics::PANEL_TOOLBAR - 1).width(Fill)
+        .align_y(iced::Alignment::Center)
+        .style(move |_| container::Style::default().background(t.bg_lighter).color(t.accent));
+    let divider = container(iced::widget::Space::new(Fill, 1))
+        .height(1).width(Fill)
+        .style(move |_| container::Style::default().background(t.border));
+    column![title, divider].height(metrics::PANEL_TOOLBAR).width(Fill).into()
+}
+pub fn panel<'a,M:'a>(title: impl Into<String>, content: Element<'a,M>, theme: Theme) -> Element<'a,M> {
     container(column![
-        container(text(title.into()).font(fonts::STRONG).size(12)).padding(10).width(Fill).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text)),
+        panel_header(title, theme),
         iced::widget::scrollable(container(content).padding(12).width(Fill)).height(Fill),
     ]).width(Fill).height(Fill).style(move |_| surface(theme)).into()
 }

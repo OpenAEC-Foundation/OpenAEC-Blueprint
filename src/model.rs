@@ -10,6 +10,7 @@ pub mod metrics {
     pub const DOCUMENTS: u16 = 30;
     pub const STATUS: u16 = 22;
     pub const PANEL_DEFAULT: u16 = 240;
+    pub const PANEL_TOOLBAR: u16 = 24;
     pub const WINDOW_DEFAULT_WIDTH: u16 = 1280;
     pub const CONTROL: u16 = 30;
     pub const ICON: u16 = 20;
