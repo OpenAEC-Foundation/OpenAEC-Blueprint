@@ -1,0 +1,251 @@
+[[icon]]
+id = "draw/arrow"
+label = { nl = "Pijl", en = "Arrow" }
+tags = ["draw"]
+source = "openaec"
+
+[[icon]]
+id = "draw/circle"
+label = { nl = "Cirkel", en = "Circle" }
+tags = ["draw"]
+source = "openaec"
+
+[[icon]]
+id = "draw/line"
+label = { nl = "Lijn", en = "Line" }
+tags = ["draw"]
+source = "openaec"
+
+[[icon]]
+id = "draw/pencil"
+label = { nl = "Potlood", en = "Pencil" }
+tags = ["draw"]
+source = "openaec"
+
+[[icon]]
+id = "draw/rectangle"
+label = { nl = "Rechthoek", en = "Rectangle" }
+tags = ["draw"]
+source = "openaec"
+
+[[icon]]
+id = "edit/copy"
+label = { nl = "Kopiëren", en = "Copy" }
+tags = ["edit", "clipboard"]
+source = "openaec"
+
+[[icon]]
+id = "edit/cut"
+label = { nl = "Knippen", en = "Cut" }
+tags = ["edit", "clipboard"]
+source = "openaec"
+
+[[icon]]
+id = "edit/paste"
+label = { nl = "Plakken", en = "Paste" }
+tags = ["edit", "clipboard"]
+source = "openaec"
+
+[[icon]]
+id = "edit/redo"
+label = { nl = "Opnieuw", en = "Redo" }
+tags = ["edit", "history"]
+source = "openaec"
+
+[[icon]]
+id = "edit/undo"
+label = { nl = "Ongedaan maken", en = "Undo" }
+tags = ["edit", "history"]
+source = "openaec"
+
+[[icon]]
+id = "file/project"
+label = { nl = "Project", en = "Project" }
+tags = ["file"]
+source = "openaec"
+
+[[icon]]
+id = "ifc/export"
+label = { nl = "IFC exporteren", en = "Export IFC" }
+tags = ["ifc"]
+source = "openaec"
+
+[[icon]]
+id = "ifc/import"
+label = { nl = "IFC importeren", en = "Import IFC" }
+tags = ["ifc"]
+source = "openaec"
+
+[[icon]]
+id = "ifc/stats"
+label = { nl = "IFC-statistieken", en = "IFC statistics" }
+tags = ["ifc"]
+source = "openaec"
+
+[[icon]]
+id = "ifc/tree"
+label = { nl = "IFC-structuur", en = "IFC tree" }
+tags = ["ifc"]
+source = "openaec"
+
+[[icon]]
+id = "ifc/validate"
+label = { nl = "IFC valideren", en = "Validate IFC" }
+tags = ["ifc"]
+source = "openaec"
+
+[[icon]]
+id = "insert/image"
+label = { nl = "Afbeelding", en = "Image" }
+tags = ["insert"]
+source = "openaec"
+
+[[icon]]
+id = "insert/link"
+label = { nl = "Koppeling", en = "Link" }
+tags = ["insert"]
+source = "openaec"
+
+[[icon]]
+id = "insert/table"
+label = { nl = "Tabel", en = "Table" }
+tags = ["insert"]
+source = "openaec"
+
+[[icon]]
+id = "report/cover"
+label = { nl = "Voorblad", en = "Cover page" }
+tags = ["report"]
+source = "openaec"
+
+[[icon]]
+id = "report/generate"
+label = { nl = "Rapport genereren", en = "Generate report" }
+tags = ["report"]
+source = "openaec"
+
+[[icon]]
+id = "report/new"
+label = { nl = "Nieuw rapport", en = "New report" }
+tags = ["report"]
+source = "openaec"
+
+[[icon]]
+id = "report/preview"
+label = { nl = "Voorbeeld", en = "Preview" }
+tags = ["report"]
+source = "openaec"
+
+[[icon]]
+id = "report/template"
+label = { nl = "Rapportsjabloon", en = "Report template" }
+tags = ["report"]
+source = "openaec"
+
+[[icon]]
+id = "text/align-center"
+label = { nl = "Centreren", en = "Center" }
+tags = ["text", "align"]
+source = "openaec"
+
+[[icon]]
+id = "text/align-left"
+label = { nl = "Links uitlijnen", en = "Align left" }
+tags = ["text", "align"]
+source = "openaec"
+
+[[icon]]
+id = "text/align-right"
+label = { nl = "Rechts uitlijnen", en = "Align right" }
+tags = ["text", "align"]
+source = "openaec"
+
+[[icon]]
+id = "text/bold"
+label = { nl = "Vet", en = "Bold" }
+tags = ["text"]
+source = "openaec"
+
+[[icon]]
+id = "text/italic"
+label = { nl = "Cursief", en = "Italic" }
+tags = ["text"]
+source = "openaec"
+
+[[icon]]
+id = "text/underline"
+label = { nl = "Onderstrepen", en = "Underline" }
+tags = ["text"]
+source = "openaec"
+
+[[icon]]
+id = "ui/extension-browse"
+label = { nl = "Extensies zoeken", en = "Browse extensions" }
+tags = ["ui", "extension"]
+source = "openaec"
+
+[[icon]]
+id = "ui/extension-install"
+label = { nl = "Extensie installeren", en = "Install extension" }
+tags = ["ui", "extension"]
+source = "openaec"
+
+[[icon]]
+id = "ui/extension-manage"
+label = { nl = "Extensies beheren", en = "Manage extensions" }
+tags = ["ui", "extension"]
+source = "openaec"
+
+[[icon]]
+id = "ui/help"
+label = { nl = "Help", en = "Help" }
+tags = ["ui"]
+source = "openaec"
+
+[[icon]]
+id = "ui/info"
+label = { nl = "Informatie", en = "Information" }
+tags = ["ui"]
+source = "openaec"
+
+[[icon]]
+id = "ui/settings"
+label = { nl = "Instellingen", en = "Settings" }
+tags = ["ui"]
+source = "openaec"
+
+[[icon]]
+id = "view/fit-all"
+label = { nl = "Passend", en = "Fit all" }
+tags = ["view", "3d", "navigation"]
+source = "openaec"
+
+[[icon]]
+id = "view/load-model"
+label = { nl = "Model laden", en = "Load model" }
+tags = ["view", "3d"]
+source = "openaec"
+
+[[icon]]
+id = "view/measure"
+label = { nl = "Meten", en = "Measure" }
+tags = ["view", "3d", "analysis"]
+source = "openaec"
+
+[[icon]]
+id = "view/orbit"
+label = { nl = "Roteren", en = "Orbit" }
+tags = ["view", "3d", "navigation"]
+source = "openaec"
+
+[[icon]]
+id = "view/section"
+label = { nl = "Doorsnede", en = "Section" }
+tags = ["view", "3d", "analysis"]
+source = "openaec"
+
+[[icon]]
+id = "view/wireframe"
+label = { nl = "Draadmodel", en = "Wireframe" }
+tags = ["view", "3d", "display"]
+source = "openaec"
