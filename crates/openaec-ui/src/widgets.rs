@@ -1,5 +1,6 @@
 //! Canonical controls for domain panels. Use these instead of restyling buttons per app.
 use crate::{
+    dual_range::DualRange,
     fonts,
     icons::Icon,
     model::{metrics, CommandIcon, RibbonControl},
@@ -492,22 +493,9 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                     iced::widget::horizontal_space(),
                     text(format!("{lower:.0}–{upper:.0}{unit}")).font(fonts::STRONG).size(10).color(t.text),
                 ],
-                row![
-                    text("min").size(9).color(t.text_secondary),
-                    slider(minimum..=maximum, lower, on_lower)
-                        .step(step)
-                        .width(133)
-                        .style(move |_, status| slider_style(theme, status)),
-                ].spacing(4).align_y(Alignment::Center),
-                row![
-                    text("max").size(9).color(t.text_secondary),
-                    slider(minimum..=maximum, upper, on_upper)
-                        .step(step)
-                        .width(133)
-                        .style(move |_, status| slider_style(theme, status)),
-                ].spacing(4).align_y(Alignment::Center),
+                Element::new(DualRange { theme, minimum, maximum, lower, upper, step, on_lower, on_upper }),
             ]
-            .spacing(0)
+            .spacing(3)
             .into()
         }
         RibbonControl::Segmented { options, selected } => {

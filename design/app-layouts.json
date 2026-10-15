@@ -674,7 +674,7 @@
       "empty",
       "error"
     ],
-    "notes": "Tabs gecontroleerd tegen apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx op commit ffe979d3b859: Bestand, Plan en Weergave. Plan heeft Project, Inspecteren, Selecteren, Instellingen, Vergrendelen en Optimalisatie. Weergave bevat niet alleen knoppen maar ook sliders voor symboolgrootte en benuttingsbereik plus een voorgrondkeuze. De drie broncaptures tonen een donker themalint, verkenner links, 2D-palenplan midden en een wisselend taakpaneel rechts (import, optimalisatie, paalopties). De gedeelde native ribbon heeft nu herbruikbare sliders en keuzeknoppen voor Weergave; de duale bereikslider en het 2D-palenplan vragen nog visuele verfijning."
+      "notes": "Tabs gecontroleerd tegen apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx op commit ffe979d3b859: Bestand, Plan en Weergave. Plan heeft Project, Inspecteren, Selecteren, Instellingen, Vergrendelen en Optimalisatie. Weergave bevat niet alleen knoppen maar ook sliders voor symboolgrootte en benuttingsbereik plus een voorgrondkeuze. De drie broncaptures tonen een donker themalint, verkenner links, 2D-palenplan midden en een wisselend taakpaneel rechts (import, optimalisatie, paalopties). De gedeelde native ribbon heeft nu herbruikbare sliders en keuzeknoppen voor Weergave, inclusief één rail met twee duimen en een geselecteerde band; het 2D-palenplan is nog een cataloguspreview."
   },
   {
     "id": "2d",

@@ -11,6 +11,7 @@ pub mod model;
 pub mod theme;
 pub mod tokens;
 pub mod widgets;
+mod dual_range;
 mod shell;
 mod runtime;
 pub use locale::Language;

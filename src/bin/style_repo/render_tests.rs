@@ -220,6 +220,28 @@ fn atlas_workspace_respects_each_theme_background() {
 }
 
 #[test]
+fn pile_utilization_range_renders_two_thumbs_and_one_selected_band() {
+    let mut app = StyleRepo::default();
+    let pile = studios().iter().position(|studio| studio.id == "pile").unwrap();
+    let _ = app.update(Action::SelectStudio(pile));
+    for theme in [Theme::Light, Theme::Forge] {
+        let picture = render_with_options(&app, theme, false, Some("weergave"));
+        let [red, green, blue, _] = theme.tokens().accent.into_rgba8();
+        for x in [239, 280, 325] {
+            let at = ((106 * picture.width() + x) * 4) as usize;
+            assert!(picture.data()[at..at + 3].iter().zip([red, green, blue])
+                .all(|(actual, expected)| actual.abs_diff(expected) <= 1),
+                "{theme} Pile range missing selected band or thumb at x={x}");
+        }
+        for x in [210, 350] {
+            let at = ((106 * picture.width() + x) * 4) as usize;
+            assert_ne!(&picture.data()[at..at + 3], &[red, green, blue],
+                "{theme} Pile range leaked selection outside handles at x={x}");
+        }
+    }
+}
+
+#[test]
 fn long_ribbon_keeps_group_caption_above_horizontal_scrollbar() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(4));
