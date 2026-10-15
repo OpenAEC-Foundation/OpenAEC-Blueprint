@@ -197,7 +197,9 @@
     "visual_metaphor": "Vlak met verbonden hoekknopen",
     "file": "icon-drafts/fem/diaphragm.svg",
     "sha256": "92a17a385c2e075fe4fafa257d68b03af42b77d5b0176912b385d0e1d8a78ebb",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/diaphragm.svg",
+    "small_sha256": "780ccaffcfbea9f30871fab16c93f7838da944296a86541deff3c52f3b9835ff"
   },
   {
     "id": "fem.contact",
@@ -237,7 +239,9 @@
     "visual_metaphor": "Vier pijlen op vlak",
     "file": "icon-drafts/fem/surface-load.svg",
     "sha256": "c901b82bfdfcb24767f6e1f4fc8bd2b3c9db7bc95ad4a2f6a191db395ac7151f",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/surface-load.svg",
+    "small_sha256": "88defb00d2fc7150a0771c22c547e307eea5e92da49de566d6ad6eda60d289db"
   },
   {
     "id": "fem.moment",
@@ -337,7 +341,9 @@
     "visual_metaphor": "Vlak verdeeld in driehoeken",
     "file": "icon-drafts/fem/mesh.svg",
     "sha256": "166f090be12451ffc4dada3f6a2f3c18fb06424260e444756b7d8826391e2bf4",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/mesh.svg",
+    "small_sha256": "ec162c3c0f9d634703f921222306054ca01312044165d2779bc9b7b2b8ee4a07"
   },
   {
     "id": "fem.mesh-refine",
@@ -347,7 +353,9 @@
     "visual_metaphor": "Grove driehoek met kleinere onderverdeling",
     "file": "icon-drafts/fem/mesh-refine.svg",
     "sha256": "c680c07f939aed9b7a56d19f15fc496a13716f3f2f943f6fba79b77f633e9a11",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/mesh-refine.svg",
+    "small_sha256": "be6f660910a9eb5799d2232883c707f42fab96ba59ace8d621fdd1190aac7dcf"
   },
   {
     "id": "fem.mesh-quality",
@@ -607,7 +615,9 @@
     "visual_metaphor": "Meerdere transparante kubussen",
     "file": "icon-drafts/bim/federate.svg",
     "sha256": "6b0571026299fb9039480d618a34f4a593f6b4a9f008688e8908d52e7c7cc6d4",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/federate.svg",
+    "small_sha256": "a99aa50fc0beac5501d9426ec0d8e9dfa53ed2ce18cb37fa2a60772ddd96b551"
   },
   {
     "id": "bim.wall",
@@ -627,7 +637,9 @@
     "visual_metaphor": "Verticaal vlak met stijlen en regels",
     "file": "icon-drafts/bim/curtain-wall.svg",
     "sha256": "3fd5c462c3d6d69d7b4981464215a86e521c50ddd7948a534c3e2e73af338899",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/curtain-wall.svg",
+    "small_sha256": "835d604a4b89fe26ab1d138b364c88fae3ce00c28a12a25ddbfd387b77cd082f"
   },
   {
     "id": "bim.slab",
@@ -747,7 +759,9 @@
     "visual_metaphor": "Vlak met uitgesneden rechthoek",
     "file": "icon-drafts/bim/opening.svg",
     "sha256": "3959a03124853effad8aaa0497bd02eb9a7eef2d09d0643738f488b6bfd64375",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/opening.svg",
+    "small_sha256": "d7c7ff636546b5b15722d5c462d5c06669aac9b56a29968c9cbf78642ed8c95a"
   },
   {
     "id": "bim.space",
@@ -767,7 +781,9 @@
     "visual_metaphor": "Twee ruimten binnen gemeenschappelijke contour",
     "file": "icon-drafts/bim/zone.svg",
     "sha256": "e6a5860fbc5ce72b9e475360c3b8d3159a2ca6893094460698c442731cf0242e",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/zone.svg",
+    "small_sha256": "773833d66cbbc569dce674c0945480062f0cb3e897d35cda347fee13a10d4bce"
   },
   {
     "id": "bim.site-element",
@@ -847,7 +863,9 @@
     "visual_metaphor": "Drie gelijke objecten met richting",
     "file": "icon-drafts/bim/array.svg",
     "sha256": "6bd9b1a7b25c0fd383d9cd770f4b89e588dfadc539d24b2e8b00113b17869c40",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/array.svg",
+    "small_sha256": "76bc7cf45f078febd04fb7e1411fbeabcf8a1c7bac151b6b0472d2203c8c313e"
   },
   {
     "id": "bim.mirror",
@@ -1077,7 +1095,9 @@
     "visual_metaphor": "Twee modelcontouren met verschilmarkering",
     "file": "icon-drafts/bim/revision.svg",
     "sha256": "5392dbcd7b323f2e60a200a8b0bb2840c3da588edf660158e9ecc75d4d49c14d",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/revision.svg",
+    "small_sha256": "0416739e157300814a490039986bec73b33fe94a7a58434227861d8e276c9b14"
   },
   {
     "id": "bim.section-box",

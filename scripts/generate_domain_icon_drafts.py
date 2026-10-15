@@ -131,6 +131,21 @@ BIM = {
 }
 
 ART = {"fem": FEM, "bim": BIM}
+# At 16 px these concepts lose their distinctive interior lines. The small
+# glyphs retain the same metaphor with fewer strokes; all others use the 24 px
+# drawing at smaller scale until they have been individually reviewed.
+SMALL = {
+    "fem.diaphragm": '<path d="M4 5h16v14H4zM4 5l16 14"/><circle cx="4" cy="5" r="1.3" fill="currentColor" stroke="none"/><circle cx="20" cy="19" r="1.3" fill="currentColor" stroke="none"/>',
+    "fem.mesh": '<path d="M3 4h18v16H3zM3 4l18 16M3 20l9-8"/>',
+    "fem.mesh-refine": '<path d="M3 20 12 4l9 16H3ZM8 20l4-8 4 8"/>',
+    "fem.surface-load": '<path d="m4 15 12-3 4 7-12 3-4-7ZM8 3v9m-2-2 2 2 2-2m8-9v7m-2-2 2 2 2-2"/>',
+    "bim.federate": '<path d="M3 4h12v12H3zM9 10h12v12H9z"/>',
+    "bim.curtain-wall": '<path d="M3 3h18v18H3zM12 3v18M3 12h18"/>',
+    "bim.opening": '<path d="M3 3h18v18H3zM8 8h8v13H8z"/>',
+    "bim.zone": '<path d="M3 3h18v18H3zM12 3v18"/><circle cx="8" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="1.2" fill="currentColor" stroke="none"/>',
+    "bim.array": '<path d="M3 5h8v9H3zM13 10h8v9h-8z"/>',
+    "bim.revision": '<path d="M3 4h12v15H3zM9 7h12v15H9zM12 12h6"/>',
+}
 drafts = []
 for proposal in proposals:
     domain, name = proposal["id"].split(".", 1)
@@ -147,13 +162,27 @@ for proposal in proposals:
     path = DESIGN / "icon-drafts" / domain / f"{name}.svg"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(svg)
-    drafts.append({
+    draft = {
         "id": proposal["id"], "domain": domain, "group": proposal["group"],
         "label": proposal["label"], "visual_metaphor": proposal["visual_metaphor"],
         "file": str(path.relative_to(DESIGN)),
         "sha256": hashlib.sha256(svg.encode()).hexdigest(),
         "status": "visual-draft",
-    })
+    }
+    if proposal["id"] in SMALL:
+        small_svg = (
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" '
+            'viewBox="0 0 24 24" fill="none" stroke="#36363E" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            + SMALL[proposal["id"]] + '</svg>'
+        )
+        small_path = DESIGN / "icon-drafts-small" / domain / f"{name}.svg"
+        small_path.parent.mkdir(parents=True, exist_ok=True)
+        ET.fromstring(small_svg)
+        small_path.write_text(small_svg)
+        draft["small_file"] = str(small_path.relative_to(DESIGN))
+        draft["small_sha256"] = hashlib.sha256(small_svg.encode()).hexdigest()
+    drafts.append(draft)
 for domain, drawings in ART.items():
     unused = set(drawings) - {p["id"].split(".", 1)[1] for p in proposals if p["domain"] == domain}
     if unused:

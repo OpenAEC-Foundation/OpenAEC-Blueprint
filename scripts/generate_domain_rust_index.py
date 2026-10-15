@@ -12,6 +12,12 @@ for draft in drafts:
     path = draft["file"]
     assert (root / "design" / path).is_file()
     lines.append(f'    ("{draft["id"]}", include_bytes!("../../../design/{path}")),')
-lines += ["];", "", "pub fn get(id: &str) -> Option<&'static [u8]> {", "    ALL.iter().find(|(key, _)| *key == id).map(|(_, bytes)| *bytes)", "}"]
+small = [draft for draft in drafts if "small_file" in draft]
+lines += ["];", "", f"pub const SMALL: [(&str, &[u8]); {len(small)}] = ["]
+for draft in small:
+    path = draft["small_file"]
+    assert (root / "design" / path).is_file()
+    lines.append(f'    ("{draft["id"]}", include_bytes!("../../../design/{path}")),')
+lines += ["];", "", "pub fn get(id: &str) -> Option<&'static [u8]> {", "    ALL.iter().find(|(key, _)| *key == id).map(|(_, bytes)| *bytes)", "}", "", "pub fn get_small(id: &str) -> Option<&'static [u8]> {", "    SMALL.iter().find(|(key, _)| *key == id).map(|(_, bytes)| *bytes).or_else(|| get(id))", "}"]
 output.write_text("\n".join(lines) + "\n")
 print(f"Indexed {len(drafts)} review icons for the native Style Repo")

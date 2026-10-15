@@ -5,7 +5,7 @@ edition = "2021"
 description = "Shared native OpenAEC desktop shell, design tokens and components"
 license = "CC-BY-SA-4.0"
 readme = "README.md"
-include = ["src/**", "assets/**", "harmonization/ui-icons/**", "design/domain-icon-proposals.json", "design/domain-icon-drafts.json", "design/icon-drafts/**", "design/app-layouts.json", "design/style-repo-native.png", "examples/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "NOTICE.md"]
+include = ["src/**", "assets/**", "harmonization/ui-icons/**", "design/domain-icon-proposals.json", "design/domain-icon-drafts.json", "design/icon-drafts/**", "design/icon-drafts-small/**", "design/app-layouts.json", "design/style-repo-native.png", "examples/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "NOTICE.md"]
 
 [dependencies]
 iced = { version = "=0.13.1", default-features = false, features = ["tiny-skia", "svg", "image", "web-colors", "advanced", "fira-sans"] }

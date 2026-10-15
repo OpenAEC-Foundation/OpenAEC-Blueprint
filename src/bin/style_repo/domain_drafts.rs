@@ -111,6 +111,23 @@ pub const ALL: [(&str, &[u8]); 109] = [
     ("bim.section-box", include_bytes!("../../../design/icon-drafts/bim/section-box.svg")),
 ];
 
+pub const SMALL: [(&str, &[u8]); 10] = [
+    ("fem.diaphragm", include_bytes!("../../../design/icon-drafts-small/fem/diaphragm.svg")),
+    ("fem.surface-load", include_bytes!("../../../design/icon-drafts-small/fem/surface-load.svg")),
+    ("fem.mesh", include_bytes!("../../../design/icon-drafts-small/fem/mesh.svg")),
+    ("fem.mesh-refine", include_bytes!("../../../design/icon-drafts-small/fem/mesh-refine.svg")),
+    ("bim.federate", include_bytes!("../../../design/icon-drafts-small/bim/federate.svg")),
+    ("bim.curtain-wall", include_bytes!("../../../design/icon-drafts-small/bim/curtain-wall.svg")),
+    ("bim.opening", include_bytes!("../../../design/icon-drafts-small/bim/opening.svg")),
+    ("bim.zone", include_bytes!("../../../design/icon-drafts-small/bim/zone.svg")),
+    ("bim.array", include_bytes!("../../../design/icon-drafts-small/bim/array.svg")),
+    ("bim.revision", include_bytes!("../../../design/icon-drafts-small/bim/revision.svg")),
+];
+
 pub fn get(id: &str) -> Option<&'static [u8]> {
     ALL.iter().find(|(key, _)| *key == id).map(|(_, bytes)| *bytes)
+}
+
+pub fn get_small(id: &str) -> Option<&'static [u8]> {
+    SMALL.iter().find(|(key, _)| *key == id).map(|(_, bytes)| *bytes).or_else(|| get(id))
 }

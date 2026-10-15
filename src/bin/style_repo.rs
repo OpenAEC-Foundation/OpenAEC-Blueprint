@@ -661,6 +661,14 @@ impl StyleRepo {
         let count = proposals().iter().filter(|p| p.domain == domain).count();
         let mut list = Column::new().spacing(10);
         for proposal in proposals().iter().filter(|p| p.domain == domain) {
+            let small_preview = svg(svg::Handle::from_memory(
+                domain_drafts::get_small(&proposal.id).expect("small draft for every proposal"),
+            ))
+            .width(16)
+            .height(16)
+            .style(move |_, _| svg::Style {
+                color: Some(theme.tokens().text),
+            });
             let preview = svg(svg::Handle::from_memory(
                 domain_drafts::get(&proposal.id).expect("draft for every proposal"),
             ))
@@ -672,7 +680,9 @@ impl StyleRepo {
             list = list.push(
                 self.card(
                     row![
-                        container(preview).width(46).center_x(Fill),
+                        container(row![small_preview, preview].spacing(8).align_y(Alignment::Center))
+                            .width(66)
+                            .center_x(Fill),
                         column![
                             text(&proposal.label).font(fonts::STRONG).size(14),
                             text(&proposal.visual_metaphor)
@@ -963,5 +973,10 @@ mod tests {
         assert!(proposals()
             .iter()
             .all(|proposal| domain_drafts::get(&proposal.id).is_some()));
+        assert_eq!(domain_drafts::SMALL.len(), 10);
+        assert!(domain_drafts::SMALL.iter().all(|(id, bytes)|
+            domain_drafts::get(id).is_some()
+                && domain_drafts::get_small(id) == Some(*bytes)
+        ));
     }
 }

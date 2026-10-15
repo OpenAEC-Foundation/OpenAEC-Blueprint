@@ -57,15 +57,24 @@ wordt behandeld.
 ## FEM/BIM iconbeoordeling · ronde 1
 
 De [visuele atlas](domain-icon-atlas.html) bevat 109 verschillende vectorvormen
-in negen betekenisgroepen. Alle bestanden zijn XML-geldig. De native Style Repo
-toont ze voor review; de publieke icon-API van de Rust-crate bevat ze nog niet.
+in negen betekenisgroepen. Tien drukke betekenissen hebben na vergelijking op
+ware 16 px een aparte vereenvoudigde variant; de
+[FEM-contactsheet](fem-icon-small-review.png) en
+[BIM-contactsheet](bim-icon-small-review.png) tonen 16 px, 24 px en 16 px op
+donkere achtergrond. Alle bestanden zijn XML-geldig. De native Style Repo
+toont de kleine en grote vorm naast elkaar voor review; de publieke icon-API
+van de Rust-crate bevat ze nog niet.
+De nieuwe kleine vormen zijn FEM: diaphragm, mesh, mesh-refine en surface-load;
+BIM: federate, curtain-wall, opening, zone, array en revision. De overige
+drukke 16 px-kandidaten voor een tweede ronde zijn onder meer local-axes,
+wind-load, site, building, space, clash en section-box.
 In 24 gevallen bestaat
 een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
 
 | Toets | Waarneming | Ontwerpactie |
 | --- | --- | --- |
 | Familiebeeld | Het 24 px raster, donkere neutrale lijn en afgeronde einden zijn consistent. | Na semantische review dezelfde meetwaarden als canonieke Rust-iconen vastzetten. |
-| Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Details in onder meer terrein, gebouw, federatie en complexe belastingtekens vallen op die maat samen. | Vereenvoudigde 16 px varianten tekenen voor iconen met meerdere interne lijnen. |
+| Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Tien drukke vormen kregen een kleinere variant met minder lijnen; de contactbladen tonen de verbetering. | De resterende complexe belasting-, terrein- en gebouwtekens op ware 16 px beoordelen en waar nodig verder vereenvoudigen. |
 | Betekenisbotsingen | `bim.level` lijkt op een maatpijl; `bim.survey-point` en `bim.project-origin` delen een kruis/doel-motief; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | Peilmarkering duidelijker maken, oorsprong/meetpunt verder uiteen trekken en domeinlabels in zoekresultaten tonen. |
 | Licht/donker | Het ontwerp contrasteert op beide atlasachtergronden. Donkere weergave gebruikt een kleurinversie van de concept-SVG; de uiteindelijke crate moet themakleur toepassen in plaats van een CSS-filter. | SVG's pas na goedkeuring als themabewuste native assets genereren. |
 | Bronvergelijking | Kandidaten zijn op bestandsnaam geselecteerd en als tooltips zichtbaar. | De 24 paren visueel en functioneel per opdracht beoordelen; dubbele betekenissen samenvoegen. |

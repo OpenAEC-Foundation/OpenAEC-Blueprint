@@ -18,11 +18,12 @@ for draft in drafts:
         f'{asset["repo"]}: {asset["path"]}' for asset in proposal["candidate_assets"]
     )
     img = html.escape(draft["file"], quote=True)
+    small_img = html.escape(draft.get("small_file", draft["file"]), quote=True)
     cards.append(
         f'<article class="card" data-domain="{draft["domain"]}" '
         f'data-group="{html.escape(draft["group"], quote=True)}" '
         f'data-search="{html.escape(" ".join([draft["id"], draft["label"], draft["group"], draft["visual_metaphor"], candidate_text]).lower(), quote=True)}">'
-        f'<div class="iconrow"><span class="sample small"><img src="{img}" alt=""></span>'
+        f'<div class="iconrow"><span class="sample small"><img src="{small_img}" alt=""></span>'
         f'<span class="sample medium"><img src="{img}" alt=""></span>'
         f'<span class="sample large"><img src="{img}" alt=""></span></div>'
         f'<div class="identity"><strong>{html.escape(draft["label"])}</strong>'
@@ -49,7 +50,7 @@ main{max-width:1600px;margin:auto;padding:22px 24px 50px}.intro{background:#fff;
 body.dark{background:#20252c;color:#e2e5e8}body.dark .intro,body.dark .card{background:#30363e;border-color:#535a63}body.dark .intro p,body.dark .card p,body.dark .meta,body.dark .identity code{color:#b8bec6}body.dark .sample{background:#242a31;border-color:#58616b}body.dark .sample img{filter:invert(1)}body.dark .iconrow{border-color:#4b535d}body.dark .match{color:#e9a75f}
 .hidden{display:none!important}@media(max-width:600px){header{padding:12px}header .count{width:100%;margin-left:0}main{padding:12px}.grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}}
 </style></head><body><header><strong>OPENAEC · FEM/BIM ICONCONCEPTEN</strong><button class="active" data-filter="all">Alle 109</button><button data-filter="fem">FEM 52</button><button data-filter="bim">BIM 57</button><button id="theme">Donkere omgeving</button><input id="search" placeholder="Zoek betekenis of bron…" aria-label="Zoek iconen"><span class="count" id="count"></span></header>
-<main><div class="intro"><b>Visuele ontwerpronde · 24 × 24 grid · 1,75 px lijn</b><p>Iedere kaart toont dezelfde SVG op 16, 24 en 32 px. Dit zijn 109 unieke vectorconcepten, nog geen goedgekeurde definitieve set. Een bronkandidaat betekent alleen een naamovereenkomst; de betekenis moet visueel worden beoordeeld.</p></div><div id="sections"></div></main>
+<main><div class="intro"><b>Visuele ontwerpronde · 24 × 24 grid · 1,75 px lijn</b><p>Iedere kaart toont het icoon op 16, 24 en 32 px. Tien drukke betekenissen hebben een aparte vereenvoudigde 16 px-variant. Dit zijn 109 unieke vectorconcepten, nog geen goedgekeurde definitieve set. Een bronkandidaat betekent alleen een naamovereenkomst; de betekenis moet visueel worden beoordeeld.</p></div><div id="sections"></div></main>
 <script>const cards=Array.from(document.querySelectorAll('.card'));let domain='all';function update(){const q=document.getElementById('search').value.trim().toLowerCase();let shown=0;for(const c of cards){const ok=(domain==='all'||c.dataset.domain===domain)&&c.dataset.search.includes(q);c.classList.toggle('hidden',!ok);shown+=ok}for(const section of document.querySelectorAll('.section-wrap'))section.classList.toggle('hidden',!section.querySelector('.card:not(.hidden)'));document.getElementById('count').textContent=shown+' concepten zichtbaar'}document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{domain=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));update()});document.getElementById('search').oninput=update;document.getElementById('theme').onclick=()=>{document.body.classList.toggle('dark');document.getElementById('theme').textContent=document.body.classList.contains('dark')?'Lichte omgeving':'Donkere omgeving'};
 </script></body></html>'''
 
