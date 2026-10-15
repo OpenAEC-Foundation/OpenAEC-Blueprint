@@ -9,6 +9,7 @@ import { renderI18nRust } from "./i18n/rust.mjs";
 import { loadIconManifest } from "./icons/manifest.mjs";
 import { renderIconsByIdTs, renderIconsTs } from "./icons/react.mjs";
 import { renderIconsRust } from "./icons/rust.mjs";
+import { readSharedTabs, renderSharedTabsRust } from "./ribbons/rust.mjs";
 import { loadTokens } from "./tokens/load.mjs";
 import { renderTokensRust } from "./tokens/rust.mjs";
 
@@ -52,6 +53,11 @@ steps.push(["i18n", (root) => {
   out.push(writeGenerated(join(root, "crates", "openaec-i18n", "src", "generated.rs"), renderI18nRust(maps)));
   return out;
 }]);
+
+steps.push(["ribbons-rust", (root) => [
+  writeGenerated(join(root, "crates", "openaec-ribbon", "src", "generated.rs"),
+    renderSharedTabsRust(readSharedTabs(join(root, "design", "ribbons")))),
+]]);
 
 export async function runAll(root = ROOT) {
   const written = [];
