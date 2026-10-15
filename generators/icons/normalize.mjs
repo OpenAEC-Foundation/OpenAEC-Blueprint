@@ -1,9 +1,41 @@
-const SVG_NS = 'xmlns="http://www.w3.org/2000/svg"';
-const COLOR_ATTR = /\b(fill|stroke|stop-color|color)\s*=\s*"([^"]*)"/gi;
-const STYLE_ATTR = /\bstyle\s*=\s*"([^"]*)"/gi;
-const STYLE_COLOR = /(fill|stroke|stop-color|color)\s*:\s*([^;"]+)/gi;
-const FORBIDDEN = /<script\b|\son[a-z]+\s*=|(?:xlink:)?href\s*=\s*"(?!#)/i;
+import { XMLParser, XMLValidator } from "fast-xml-parser";
+
+const SVG_NS = "http://www.w3.org/2000/svg";
 const NOT_A_COLOR = new Set(["none", "currentcolor", "transparent", "inherit"]);
+
+const ELEMENTS = new Set([
+  "g", "path", "circle", "ellipse", "line", "polyline", "polygon", "rect",
+  "defs", "linearGradient", "radialGradient", "stop", "clipPath", "mask",
+]);
+const DROPPED_ELEMENTS = new Set(["title", "desc", "metadata"]);
+
+// Presentatie-eigenschappen: toegestaan als attribuut én als eigenschap in `style`.
+const PRESENTATION = new Set([
+  "fill", "fill-opacity", "fill-rule", "stroke", "stroke-width", "stroke-linecap",
+  "stroke-linejoin", "stroke-miterlimit", "stroke-dasharray", "stroke-dashoffset",
+  "stroke-opacity", "opacity", "clip-path", "clip-rule", "mask", "stop-color",
+  "stop-opacity", "color", "vector-effect",
+]);
+const COLOR_PROPS = new Set(["fill", "stroke", "stop-color", "color"]);
+const ATTRIBUTES = new Set([
+  ...PRESENTATION,
+  "id", "d", "x", "y", "x1", "y1", "x2", "y2", "cx", "cy", "r", "rx", "ry", "width", "height",
+  "points", "transform", "offset", "gradientUnits", "gradientTransform", "style",
+]);
+const ROOT_ONLY = new Set(["viewBox"]);
+const STRIPPED_ATTR = /^(?:xmlns(?::.*)?|sodipodi:.*|inkscape:.*|data-.*)$/;
+
+const parser = new XMLParser({
+  preserveOrder: true,
+  ignoreAttributes: false,
+  attributeNamePrefix: "@_",
+  parseAttributeValue: false,
+  parseTagValue: false,
+  trimValues: false,
+  ignoreDeclaration: true,
+  ignorePiTags: true,
+  processEntities: true,
+});
 
 export function normalizeColor(c) {
   const v = c.trim().toLowerCase();
@@ -11,43 +43,129 @@ export function normalizeColor(c) {
   return v;
 }
 
+/** Parseert naar { name, attrs: [[naam, waarde]], children } en gooit bij misvormde XML. */
+function parseTree(raw) {
+  const text = raw.replace(/^﻿/, "");
+  if (/<!(?:DOCTYPE|ENTITY)/i.test(text)) throw new Error("DOCTYPE en entiteiten zijn niet toegestaan");
+  const valid = XMLValidator.validate(text);
+  if (valid !== true) throw new Error(`ongeldige XML: ${valid.err.msg}`);
+  const build = (nodes) => {
+    const out = [];
+    for (const node of nodes) {
+      if ("#text" in node) {
+        out.push({ text: String(node["#text"]) });
+        continue;
+      }
+      const name = Object.keys(node).find((k) => k !== ":@");
+      const attrs = Object.entries(node[":@"] ?? {}).map(([k, v]) => [k.slice(2), String(v)]);
+      out.push({ name, attrs, children: build(node[name]) });
+    }
+    return out;
+  };
+  return build(parser.parse(text));
+}
+
+function styleDeclarations(style) {
+  if (style.includes("\\") || style.includes("/*")) throw new Error("style bevat escapes of commentaar, niet toegestaan");
+  return style.split(";").map((d) => d.trim()).filter(Boolean).map((d) => {
+    const i = d.indexOf(":");
+    if (i < 1) throw new Error(`ongeldige style-declaratie: ${d}`);
+    return [d.slice(0, i).trim(), d.slice(i + 1).trim()];
+  });
+}
+
+function checkUrls(name, value) {
+  for (const m of value.matchAll(/url\s*\(([^)]*)\)/gi)) {
+    if (!/^\s*(["']?)#[^\s"')]+\1\s*$/.test(m[1])) {
+      throw new Error(`${name}: alleen url(#id) is toegestaan (gevonden: ${m[0]})`);
+    }
+  }
+  if (/url\s*\(/i.test(value) && !/url\s*\([^)]*\)/i.test(value)) throw new Error(`${name}: onvolledige url()`);
+}
+
+function collectColors(nodes, found) {
+  const add = (v) => {
+    const n = normalizeColor(v);
+    if (n && !NOT_A_COLOR.has(n) && !n.startsWith("url(")) found.add(n);
+  };
+  for (const node of nodes) {
+    if (!node.name) continue;
+    for (const [k, v] of node.attrs) {
+      if (COLOR_PROPS.has(k)) add(v);
+      else if (k === "style") for (const [p, val] of styleDeclarations(v)) if (COLOR_PROPS.has(p)) add(val);
+    }
+    collectColors(node.children, found);
+  }
+}
+
 export function extraColors(svg) {
   const found = new Set();
-  const collect = (v) => {
-    const n = normalizeColor(v);
-    if (!NOT_A_COLOR.has(n) && !n.startsWith("url(")) found.add(n);
-  };
-  for (const m of svg.matchAll(COLOR_ATTR)) collect(m[2]);
-  for (const m of svg.matchAll(STYLE_ATTR)) for (const s of m[1].matchAll(STYLE_COLOR)) collect(s[2]);
+  collectColors(parseTree(svg), found);
   return [...found].sort();
 }
 
+const escapeXml = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 export function normalizeSvg(raw, { neutralColors = [] } = {}) {
-  let svg = raw.replace(/\r\n?/g, "\n").trim()
-    .replace(/<\?xml[^>]*>\s*/g, "")
-    .replace(/<!--[\s\S]*?-->/g, "")
-    .replace(/<title>[\s\S]*?<\/title>/g, "");
-  const root = /^<svg\b([^>]*)>/.exec(svg);
-  if (!root) throw new Error("geen <svg>-root");
-  if (FORBIDDEN.test(svg)) throw new Error("scripts, event-handlers of externe verwijzingen zijn niet toegestaan");
-  const vb = /\bviewBox\s*=\s*"([^"]*)"/.exec(root[1]);
-  const vbValue = vb ? vb[1].trim().split(/[\s,]+/).join(" ") : null;
-  if (vbValue !== "0 0 24 24") throw new Error(`viewBox moet "0 0 24 24" zijn (gevonden: ${vbValue ?? "geen"})`);
-  const attrs = root[1]
-    .replace(/\s(width|height)\s*=\s*"[^"]*"/g, "")
-    .replace(/\sxmlns\s*=\s*"[^"]*"/g, "")
-    .replace(/\s+/g, " ")
-    .trimEnd();
-  svg = `<svg ${SVG_NS}${attrs.startsWith(" ") ? attrs : " " + attrs}>` + svg.slice(root[0].length);
   const neutral = new Set(neutralColors.map(normalizeColor));
   const recolor = (value) => {
     const n = normalizeColor(value);
     return n === "currentcolor" || neutral.has(n) ? "currentColor" : value.trim();
   };
-  svg = svg
-    .replace(COLOR_ATTR, (_, name, value) => `${name}="${recolor(value)}"`)
-    .replace(STYLE_ATTR, (_, style) => `style="${style.replace(STYLE_COLOR, (__, p, v) => `${p}:${recolor(v)}`)}"`)
-    .replace(/>\s+</g, "><")
-    .replace(/[ \t]{2,}/g, " ");
-  return { svg, colors: extraColors(svg) };
+
+  const top = parseTree(raw);
+  const roots = top.filter((n) => n.name || n.text.trim());
+  if (roots.length !== 1 || roots[0].name !== "svg") throw new Error("geen <svg>-root");
+  const root = roots[0];
+
+  const vb = root.attrs.find(([k]) => k === "viewBox")?.[1];
+  const vbValue = vb === undefined ? null : vb.trim().split(/[\s,]+/).join(" ");
+  if (vbValue !== "0 0 24 24") throw new Error(`viewBox moet "0 0 24 24" zijn (gevonden: ${vbValue ?? "geen"})`);
+
+  const serializeAttrs = (node, isRoot) => {
+    const out = [];
+    for (const [k, v] of node.attrs) {
+      if (STRIPPED_ATTR.test(k)) continue;
+      if (isRoot && (k === "width" || k === "height")) continue;
+      if (!(ATTRIBUTES.has(k) || (isRoot && ROOT_ONLY.has(k)))) {
+        throw new Error(`attribuut ${k} is niet toegestaan`);
+      }
+      checkUrls(k, v);
+      let value = v;
+      if (k === "style") {
+        const decls = styleDeclarations(v);
+        for (const [p, val] of decls) {
+          if (!PRESENTATION.has(p)) throw new Error(`style-eigenschap ${p} is niet toegestaan`);
+          checkUrls(p, val);
+        }
+        value = decls.map(([p, val]) => `${p}:${COLOR_PROPS.has(p) ? recolor(val) : val}`).join(";");
+      } else if (COLOR_PROPS.has(k)) {
+        value = recolor(v);
+      }
+      out.push(` ${k}="${escapeXml(value.trim())}"`);
+    }
+    return out.join("");
+  };
+
+  const serialize = (node, isRoot) => {
+    const attrs = serializeAttrs(node, isRoot);
+    let inner = "";
+    for (const child of node.children) {
+      if (!child.name) {
+        if (child.text.trim()) throw new Error("tekstinhoud is niet toegestaan");
+        continue;
+      }
+      if (DROPPED_ELEMENTS.has(child.name)) continue;
+      if (!ELEMENTS.has(child.name)) throw new Error(`element <${child.name}> is niet toegestaan`);
+      inner += serialize(child, false);
+    }
+    const name = node.name;
+    if (isRoot) return `<svg xmlns="${SVG_NS}"${attrs}>${inner}</svg>`;
+    return inner ? `<${name}${attrs}>${inner}</${name}>` : `<${name}${attrs}/>`;
+  };
+
+  const svg = serialize(root, true);
+  const found = new Set();
+  collectColors(parseTree(svg), found);
+  return { svg, colors: [...found].sort() };
 }

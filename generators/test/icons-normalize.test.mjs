@@ -31,3 +31,70 @@ test("currentColor in elke schrijfwijze telt niet als eigen kleur", () => {
   assert.deepEqual(extraColors(wrap('<path stroke="CurrentColor" fill="none"/>')), []);
   assert.equal(normalizeColor("#ABC"), "#aabbcc");
 });
+
+const VB = 'viewBox="0 0 24 24"';
+
+test("regressie: injectie-probes uit de review worden geweigerd", () => {
+  const probes = [
+    `<svg/onload=alert(1) ${VB}></svg>`,
+    wrap('<path d="M1 1"onclick="alert(1)"/>'),
+    wrap('<path/onclick=alert(1) d="M1 1"/>'),
+    wrap("<a href='javascript:alert(1)'/>"),
+    wrap("<a href=javascript:alert(1)/>"),
+    wrap('<foreignObject><iframe src="javascript:alert(1)"/></foreignObject>'),
+    wrap("<style>@import url(http://evil/x.css);</style>"),
+    wrap('<animate attributeName="href" values="javascript:alert(1)"/>'),
+    wrap('<set attributeName="href" to="javascript:alert(1)"/>'),
+    wrap('<use href="#a"/>'),
+    wrap('<path xlink:href="#a"/>'),
+    wrap('<path class="a"/>'),
+    wrap("<g><g>"),
+  ];
+  for (const p of probes) assert.throws(() => normalizeSvg(p), undefined, p);
+});
+
+test("regressie: elementen en attributen buiten de allow-list noemen de naam", () => {
+  assert.throws(() => normalizeSvg(wrap("<script>x</script>")), /element <script> is niet toegestaan/);
+  assert.throws(() => normalizeSvg(wrap('<path onclick="x()"/>')), /attribuut onclick is niet toegestaan/);
+  assert.throws(() => normalizeSvg(wrap('<path flood-color="red"/>')), /attribuut flood-color/);
+  assert.throws(() => normalizeSvg(wrap('<svg viewBox="0 0 24 24"/>')), /element <svg>/);
+  assert.throws(() => normalizeSvg(wrap('<path viewBox="0 0 24 24"/>')), /attribuut viewBox/);
+  assert.throws(() => normalizeSvg(wrap('<path style="behavior:x"/>')), /style-eigenschap behavior/);
+});
+
+test("regressie: url() moet naar #id verwijzen", () => {
+  const ok = normalizeSvg(wrap('<defs><linearGradient id="g"><stop offset="0" stop-color="#4cc9f0"/></linearGradient></defs><path fill="url(#g)"/>'));
+  assert.ok(ok.svg.includes('fill="url(#g)"'));
+  assert.deepEqual(ok.colors, ["#4cc9f0"]);
+  assert.throws(() => normalizeSvg(wrap('<path fill="url(http://x/y)"/>')), /url\(#id\)/);
+  assert.throws(() => normalizeSvg(wrap('<path style="fill:url(http://x/y)"/>')), /url\(#id\)/);
+});
+
+test("regressie: kleuren in enkele aanhalingstekens en style tellen mee", () => {
+  assert.deepEqual(normalizeSvg(wrap("<path fill='#FF0000'/>")).colors, ["#ff0000"]);
+  assert.deepEqual(normalizeSvg(wrap("<path style='fill:#ff0000'/>")).colors, ["#ff0000"]);
+  assert.deepEqual(extraColors(wrap("<path fill='#ff0000'/>")), ["#ff0000"]);
+  assert.throws(() => normalizeSvg(wrap('<style>.a{fill:#ff0000}</style><path class="a"/>')), /niet toegestaan/);
+});
+
+test("regressie: ruis van editors en een > in een attribuutwaarde", () => {
+  const raw = `<?xml version="1.0"?><svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' ${VB} data-x=">" ` +
+    `xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="1.0">` +
+    `<title>t</title><desc>d</desc><metadata><x/></metadata>` +
+    `<path d="M1 1" data-fill="blue" inkscape:label="a" sodipodi:nodetypes="cc"/></svg>`;
+  const { svg, colors } = normalizeSvg(raw);
+  assert.equal(svg, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 1"/></svg>`);
+  assert.deepEqual(colors, []);
+});
+
+test("regressie: misvormde XML en tekstinhoud worden geweigerd", () => {
+  assert.throws(() => normalizeSvg(wrap("<path>")), /ongeldige XML/);
+  assert.throws(() => normalizeSvg(wrap("<g>tekst</g>")), /tekstinhoud/);
+  assert.throws(() => normalizeSvg(`<!DOCTYPE svg [<!ENTITY a "b">]>${wrap("")}`), /DOCTYPE/);
+  assert.throws(() => normalizeSvg(wrap("") + "<svg/>"), /ongeldige XML|geen <svg>/);
+});
+
+test("regressie: uitvoer is deterministisch, ge-escaped en zelfsluitend", () => {
+  const { svg } = normalizeSvg(wrap('<g>\n  <path d="M1 1" id="a&amp;b"/>\n  <g></g>\n</g>'));
+  assert.equal(svg, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M1 1" id="a&amp;b"/><g/></g></svg>');
+});
