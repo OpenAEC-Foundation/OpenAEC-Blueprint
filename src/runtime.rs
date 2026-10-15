@@ -90,6 +90,6 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
         .scale_factor(|state:&Runtime<A>|state.shell.preferences.scale)
         .default_font(fonts::BODY).font(fonts::FILES[0]).font(fonts::FILES[1]).font(fonts::FILES[2])
         .font(fonts::FILES[3]).font(fonts::FILES[4]).font(fonts::FILES[5])
-        .window(iced::window::Settings { size:iced::Size::new(1280.0,800.0), min_size:Some(iced::Size::new(720.0,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
+        .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(720.0,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
         .run_with(||(Runtime{app,shell:ShellState::new(preferences),preferences_path,error},Task::none()))
 }

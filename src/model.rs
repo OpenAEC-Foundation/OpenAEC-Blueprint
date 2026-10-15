@@ -9,6 +9,8 @@ pub mod metrics {
     pub const RIBBON: u16 = 94;
     pub const DOCUMENTS: u16 = 30;
     pub const STATUS: u16 = 22;
+    pub const PANEL_DEFAULT: u16 = 240;
+    pub const WINDOW_DEFAULT_WIDTH: u16 = 1280;
     pub const CONTROL: u16 = 30;
     pub const ICON: u16 = 20;
     pub const GAP: u16 = 8;
@@ -65,7 +67,10 @@ pub struct Preferences {
 impl Default for Preferences {
     fn default() -> Self {
         Self { theme: Theme::Light, language: Language::Dutch, scale: 1.0,
-            explorer_visible: true, properties_visible: true, explorer_ratio: 0.2, properties_ratio: 0.75 }
+            explorer_visible: true, properties_visible: true,
+            explorer_ratio: metrics::PANEL_DEFAULT as f32 / metrics::WINDOW_DEFAULT_WIDTH as f32,
+            properties_ratio: (metrics::WINDOW_DEFAULT_WIDTH - 2 * metrics::PANEL_DEFAULT) as f32
+                / (metrics::WINDOW_DEFAULT_WIDTH - metrics::PANEL_DEFAULT) as f32 }
     }
 }
 impl Preferences {
