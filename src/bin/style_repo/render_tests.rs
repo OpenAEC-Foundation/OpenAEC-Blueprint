@@ -144,8 +144,19 @@ fn export_speech_sidebar_review() {
     let mut app = StyleRepo::default();
     let speech = studios().iter().position(|studio| studio.id == "speech").unwrap();
     let _ = app.update(Action::SelectStudio(speech));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (index, name) in [(0, "speech"), (1, "transcribe"), (5, "dictionary")] {
+        let _ = app.update(Action::SelectScreen(index));
+        render(&app, Theme::Light)
+            .save_png(&design.join(format!("style-repo-speech-{name}-light.png")))
+            .expect("save native Speech Light review");
+        render(&app, Theme::Forge)
+            .save_png(&design.join(format!("style-repo-speech-{name}-forge.png")))
+            .expect("save native Speech Forge review");
+    }
+    let _ = app.update(Action::SelectScreen(0));
     render(&app, Theme::Forge)
-        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-speech-sidebar-forge.png"))
+        .save_png(&design.join("style-repo-speech-sidebar-forge.png"))
         .expect("save Speech sidebar review");
 }
 

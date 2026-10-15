@@ -22,6 +22,8 @@ mod domain_drafts;
 mod energy_workflow;
 #[path = "style_repo/field_remaining.rs"]
 mod field_remaining;
+#[path = "style_repo/speech_native.rs"]
+mod speech_native;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
 #[cfg(test)]
@@ -121,6 +123,9 @@ enum Action {
     FieldFlowPreview(&'static str),
     FieldReviewPreview(&'static str),
     FieldCaptureFilter(usize, usize),
+    SpeechPreview(&'static str),
+    SpeechDictionaryEdit(bool, String),
+    SpeechDictionaryAdd,
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -265,6 +270,10 @@ struct StyleRepo {
     field_flow_notice: Option<&'static str>,
     field_review_notice: Option<&'static str>,
     field_capture_filter: [usize; 3],
+    speech_notice: Option<&'static str>,
+    speech_word: String,
+    speech_replacement: String,
+    speech_dictionary: Vec<(String, String)>,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -302,6 +311,10 @@ impl Default for StyleRepo {
             field_flow_notice: None,
             field_review_notice: None,
             field_capture_filter: [0; 3],
+            speech_notice: None,
+            speech_word: String::new(),
+            speech_replacement: String::new(),
+            speech_dictionary: Vec::new(),
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -1557,6 +1570,9 @@ impl StyleRepo {
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
         let screen = studio.screens.get(self.selected_screen).map(String::as_str).unwrap_or("speech");
+        if matches!(screen, "speech" | "transcribe" | "dictionary") {
+            return self.speech_native_page(theme, l, screen);
+        }
         let capture = match screen {
             "speech" => Some("Speech.png"),
             "transcribe" => Some("Transcribe.png"),
@@ -2199,6 +2215,18 @@ impl Application for StyleRepo {
             Action::FieldCaptureFilter(group, index) => {
                 if let Some(filter) = self.field_capture_filter.get_mut(group) { *filter = index; }
             }
+            Action::SpeechPreview(message) => self.speech_notice = Some(message),
+            Action::SpeechDictionaryEdit(word, value) => {
+                if word { self.speech_word = value; } else { self.speech_replacement = value; }
+            }
+            Action::SpeechDictionaryAdd => {
+                let word = self.speech_word.trim().to_owned();
+                if !word.is_empty() {
+                    self.speech_dictionary.push((word, self.speech_replacement.trim().to_owned()));
+                    self.speech_word.clear();
+                    self.speech_replacement.clear();
+                }
+            }
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2651,6 +2679,23 @@ mod tests {
         assert_eq!(app.selected_screen, 9);
         let _ = app.tab_event("project");
         assert_eq!(app.field_project.values[0], "Nieuwe opname");
+    }
+
+    #[test]
+    fn speech_dictionary_is_a_local_native_review() {
+        let mut app = StyleRepo::default();
+        let speech = studios().iter().position(|studio| studio.id == "speech").unwrap();
+        let _ = app.update(Action::SelectStudio(speech));
+        let _ = app.update(Action::SelectScreen(5));
+        let _ = app.update(Action::SpeechDictionaryEdit(true, "OpenAEC".into()));
+        let _ = app.update(Action::SpeechDictionaryEdit(false, "Open A E C".into()));
+        let _ = app.update(Action::SpeechDictionaryAdd);
+        assert_eq!(app.speech_dictionary, [("OpenAEC".into(), "Open A E C".into())]);
+        assert!(app.speech_word.is_empty() && app.speech_replacement.is_empty());
+        let _ = app.update(Action::SpeechDictionaryAdd);
+        assert_eq!(app.speech_dictionary.len(), 1);
+        let _ = app.update(Action::SpeechPreview("Bestandsselectie"));
+        assert_eq!(app.speech_notice, Some("Bestandsselectie"));
     }
 
     #[test]

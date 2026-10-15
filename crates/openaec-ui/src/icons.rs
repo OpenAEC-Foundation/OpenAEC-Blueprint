@@ -28,9 +28,10 @@ pub enum Icon {
     Back,
     Check,
     Grid,
+    Microphone,
 }
 impl Icon {
-    pub const ALL: [Self; 26] = [
+    pub const ALL: [Self; 27] = [
         Self::New,
         Self::Open,
         Self::Save,
@@ -57,6 +58,7 @@ impl Icon {
         Self::Back,
         Self::Check,
         Self::Grid,
+        Self::Microphone,
     ];
     pub fn id(self) -> &'static str {
         match self {
@@ -86,6 +88,7 @@ impl Icon {
             Self::Back => "back",
             Self::Check => "check",
             Self::Grid => "grid",
+            Self::Microphone => "microphone",
         }
     }
     pub fn bytes(self) -> &'static [u8] {
@@ -116,6 +119,7 @@ impl Icon {
             Self::Back => include_bytes!("../assets/icons/back.svg"),
             Self::Check => include_bytes!("../assets/icons/check.svg"),
             Self::Grid => include_bytes!("../assets/icons/grid.svg"),
+            Self::Microphone => include_bytes!("../assets/icons/microphone.svg"),
         }
     }
     pub fn view<'a>(self, size: u16, color: Color) -> svg::Svg<'a> {

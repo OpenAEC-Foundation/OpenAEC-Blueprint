@@ -22,6 +22,14 @@ if not portable.is_dir():
     print("Canonical and review assets agree; local Pointcloud snapshot unavailable")
     raise SystemExit(0)
 
+for name in ("README.md", "NOTICE.md", "LICENSE"):
+    assert (canonical / name).read_bytes() == (portable / name).read_bytes(), f"Portable {name} differs"
+canonical_licenses = {p.name: p for p in (canonical / "licenses").iterdir() if p.is_file()}
+portable_licenses = {p.name: p for p in (portable / "licenses").iterdir() if p.is_file()}
+assert canonical_licenses.keys() == portable_licenses.keys(), "Portable license set differs"
+for name, source in canonical_licenses.items():
+    assert source.read_bytes() == portable_licenses[name].read_bytes(), f"Portable license differs: {name}"
+
 
 def formatted(path: Path) -> str:
     result = subprocess.run(
