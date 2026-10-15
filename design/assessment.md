@@ -18,6 +18,13 @@ migratie van alle OpenAEC-applicaties.
 - 686 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
   gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
+  Op de vastgelegde broncommits zijn alle 686 importvoorkomens ook na de import
+  aangetroffen: 608 rechtstreeks als JSX-tag en 78 als identifier die onder meer
+  via een variabele of componentprop wordt doorgegeven. Bij de 312
+  pakketversiegebonden vormen hebben 287 een directe JSX-verwijzing en 25 alleen
+  een indirecte. De [bibliotheekicoonreview](library-icons.html) filtert deze
+  bewijsvormen en linkt naar de gebruiksregel; statisch bronbewijs garandeert
+  geen zichtbaarheid in iedere applicatietoestand.
 - De [UI-icoonreviewwerkbank](icon-review-board.html) beperkt de standaardlijst tot de 565 bronbewezen UI-bestanden uit vijf repositories. Elk origineel staat op lichte en donkere ondergrond; 16, 24 en 32 px zijn omschakelbaar. Een besluit per item blijft lokaal in de browser en is als JSON exporteerbaar. Tien beoordeelde Pointcloud-adopties zijn apart gemarkeerd; naamovereenkomsten zijn nog geen goedkeuring.
 - De [icoonbotsingreview](icon-collision-review.html) vergelijkt 14 exacte SHA-256-dubbelparen binnen deze 565 UI-bestanden. Zes paren representeren aantoonbaar verschillende handelingen; daarvoor zijn 12 nieuwe SVG-concepten getekend en in 16, 24 en 32 px op licht en donker bekeken. De overige acht paren zijn mogelijk bewuste hergebruikgevallen en vragen een contextbesluit. De voorstellen blijven buiten de publieke Rust-icoon-API totdat de visuele en semantische beoordeling is afgerond.
 - De [schermcontactbladen](screen-contact-sheets.html) laten alle 666 geïnventariseerde beeldkandidaten naast elkaar zien, rechtstreeks uit hun vastgelegde Git-objecten gerenderd: 47 bladen en nul leesfouten. Van de 666 zijn 472 als mogelijk applicatiescherm ingedeeld. Vele beelden zijn historische states, detailuitsneden of testcaptures; hun aanwezigheid in een huidige repository maakt ze nog geen actuele UI-bron. De huidige schermstructuur wordt daarom tegen implementatiecode en recente native captures beoordeeld.
