@@ -1,7 +1,7 @@
 import opentype from "opentype.js";
 
-// Lockup: app-tegel + weergavenaam als paden. "Open" (als eerste woord) in amber.
-export function buildLockupSvg({ tileSvg, displayName, mode, colors, fontFile }) {
+// Lockup: app-tegel (binnenwerk op 1024 px, zie buildTileInner) + weergavenaam als paden. "Open" (als eerste woord) in amber.
+export function buildLockupSvg({ tileInner, displayName, mode, colors, fontFile }) {
   const font = opentype.loadSync(fontFile);
   const height = 128;
   const fontSize = 64;
@@ -16,7 +16,5 @@ export function buildLockupSvg({ tileSvg, displayName, mode, colors, fontFile })
     paths += `<path d="${p.toPathData(2)}" fill="${fill}"/>`;
     x += font.getAdvanceWidth(t, fontSize);
   }
-  const tile = tileSvg.replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">',
-    `<svg x="0" y="0" width="${height}" height="${height}" viewBox="0 0 1024 1024">`);
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${Math.ceil(x)} ${height}">${tile}${paths}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${Math.ceil(x)} ${height}"><svg x="0" y="0" width="${height}" height="${height}" viewBox="0 0 1024 1024">${tileInner}</svg>${paths}</svg>`;
 }

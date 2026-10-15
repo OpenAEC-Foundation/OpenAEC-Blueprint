@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
 import { loadApps } from "../apps/load.mjs";
 import { loadTokens, tokenValue } from "../tokens/load.mjs";
-import { buildTileSvg } from "./tile.mjs";
+import { buildTileInner, buildTileSvg } from "./tile.mjs";
 import { packIco } from "./ico.mjs";
 import { packIcns } from "./icns.mjs";
 import { buildLockupSvg } from "./lockup.mjs";
@@ -41,7 +41,7 @@ export function buildLogos(root) {
     const maskable = tile.replace(/rx="[^"]*"/, 'rx="0"');
     writeFileSync(join(out, "web-maskable-512.png"), Buffer.from(new Resvg(maskable, { fitTo: { mode: "width", value: 512 } }).render().asPng()));
     for (const mode of ["light", "dark"]) {
-      writeFileSync(join(out, `lockup-${mode}.svg`), buildLockupSvg({ tileSvg: tile, displayName: app.display_name, mode, colors, fontFile }));
+      writeFileSync(join(out, `lockup-${mode}.svg`), buildLockupSvg({ tileInner: buildTileInner(picto, colors, 1024), displayName: app.display_name, mode, colors, fontFile }));
     }
     written.push(out);
   }
