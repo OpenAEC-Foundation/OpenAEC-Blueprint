@@ -113,9 +113,14 @@ impl<'a> Checker<'a> {
                 _ => {}
             }
         }
+        if item.kind == Custom {
+            if item.tooltip.is_some() { self.err(path, format!("{kind}: tooltip is niet toegestaan")); }
+            if item.shortcut.is_some() { self.err(path, format!("{kind}: shortcut is niet toegestaan")); }
+        }
         if let Some(c) = &item.command { self.command(path, c); }
         if let Some(i) = &item.icon { self.icon(path, i); }
         if let Some(l) = &item.label { self.label(path, l); }
+        if let Some(t) = &item.tooltip { self.label(path, t); }
         for (n, e) in item.items.iter().enumerate() {
             let p = format!("{path}.items[{n}]");
             self.command(&p, &e.command);
@@ -172,10 +177,13 @@ pub fn validate_ribbon(file: &RibbonFile, labels: Option<&AppLabels>) -> Vec<Iss
 pub fn validate_shared(file: &SharedTabFile) -> Vec<Issue> {
     let mut c = Checker { issues: vec![], labels: None, commands: HashSet::new() };
     if file.format != 1 { c.err("format", format!("onbekend formaat {}", file.format)); }
+    if !is_id(&file.shared) { c.err("shared", format!("ongeldige naam voor gedeelde tab {}", file.shared)); }
     for tab in &file.tabs {
         let all_shared = std::iter::once(&tab.label)
             .chain(tab.groups.iter().map(|g| &g.label))
-            .chain(tab.groups.iter().flat_map(|g| g.items.iter().filter_map(|i| i.label.as_ref())))
+            .chain(tab.groups.iter().flat_map(|g| g.items.iter().flat_map(|i| {
+                i.label.iter().chain(i.tooltip.iter()).chain(i.items.iter().map(|e| &e.label))
+            })))
             .all(|l| l.starts_with("openaec."));
         if !all_shared { c.err(&format!("tab[{}]", tab.id), "gedeelde tabs gebruiken alleen openaec.*-labels"); }
     }
