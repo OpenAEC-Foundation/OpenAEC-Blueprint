@@ -1557,6 +1557,19 @@ mod tests {
     }
 
     #[test]
+    fn geotech_ribbon_tracks_core_and_extension_tabs() {
+        let studio = studios().iter().find(|studio| studio.id == "geotech").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Home", "Kaart", "Rapport", "Situatietekening", "Berekeningen", "IFC"]);
+        assert_eq!(studio.optional_tabs, ["Situatietekening", "Berekeningen"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        let map = tabs.iter().find(|tab| tab.id == "kaart").unwrap();
+        assert_eq!(map.groups[0].label, "Kaart");
+        assert_eq!(map.groups[0].commands.len(), 2);
+        let drawing = tabs.iter().find(|tab| tab.id == "situatietekening").unwrap();
+        assert_eq!(drawing.groups.len(), 5);
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

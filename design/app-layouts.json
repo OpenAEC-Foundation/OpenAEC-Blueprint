@@ -261,17 +261,17 @@
     "proposed": true,
     "tabs": [
       "Bestand",
-      "Start",
-      "Sonderingen",
+      "Home",
       "Kaart",
-      "Analyseren",
-      "Weergave",
       "Rapport",
-      "Help"
+      "Situatietekening",
+      "Berekeningen",
+      "IFC"
     ],
-    "left_panel": "Onderzoeken",
-    "right_panel": "Sonderingseigenschappen",
-    "workspace": "Profiel / kaart",
+    "optional_tabs": ["Situatietekening", "Berekeningen"],
+    "left_panel": "Verkenner / lagen",
+    "right_panel": "Eigenschappen / locatie",
+    "workspace": "Sonderingen / boring / kaart",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -294,7 +294,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Tabs en extensievoorwaarden gecontroleerd tegen apps/desktop/src/components/ribbon/Ribbon.tsx op commit 8182b48afc3f. Home, Kaart, Rapport en IFC zijn vaste tabs; Situatietekening is afhankelijk van de tekening-extensie en Berekeningen verschijnt zodra een calc.*-module actief is. De drie broncaptures tonen respectievelijk sonderingsgrafieken, BRO-kaart en boorprofiel met verkenner links, eigenschappen rechts en documenttabs boven het werkgebied. De gedeelde stijl blijft een ontwerpvoorstel."
   },
   {
     "id": "heatloss",

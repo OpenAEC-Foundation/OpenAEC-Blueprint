@@ -16,6 +16,8 @@ De native studio-atlas toont de voorgestelde tabs en groepen in de echte Rust-ri
 De [Planner-ribbon](design/style-repo-planner-ribbon-light.png) is aan de actuele bronregistry gespiegeld: de tabs, groepen en gedeelde acties zijn gecontroleerd; overige Lucide-vormen blijven broniconen ter review. De optionele AI-tab en de horizontale ribbon-scroll zijn zichtbaar.
 De [Calc-ribbon](design/style-repo-calc-ribbon-light.png) volgt de echte linttabs en commandogroepen op broncommit b470427; de Nederlandse begroting en het rapport zijn als aparte referenties in de review opgenomen. De tafelinhoud in de atlas is nog een stijlproef.
 
+De [Geotechniek-ribbon](design/style-repo-geotech-ribbon-light.png) volgt de kern- en extensietabs van de actuele bron. Kaart, sonderingsgrafiek en boorprofiel staan als afzonderlijke schermreferenties in de review.
+
 De native iconenpagina toont de 22 canonieke Rust-iconen afzonderlijk van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.
 De [instellingen in Light](design/style-repo-settings-light.png) en [Forge](design/style-repo-settings-forge.png) tonen de gedeelde keuzelijst- en invoerstijl; Pointcloud gebruikt dezelfde Rust-functies voor velden en het open keuzemenu.

@@ -26,10 +26,50 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
             },
             groups: planner_groups(studio, tab, selected)
                 .or_else(|| calc_groups(studio, tab, selected))
+                .or_else(|| geotech_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Source-aligned Geotechniek ribbon samples at 8182b48afc3f. IFC and
+/// Berekeningen are dynamic status/list surfaces, represented as placeholders.
+fn geotech_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "geotech" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Home" => vec![
+            ("Project", vec![("Projectinfo", Settings.into())]),
+            ("Weergave", vec![("Zoom -", planner_source_icon!("ZoomOut")), ("Passend", Fit.into())]),
+        ],
+        "Kaart" => vec![("Kaart", vec![("Meten", Measure.into()), ("Exporteer als afbeelding", Export.into())])],
+        "Rapport" => vec![("Output", vec![("Genereer PDF", Export.into()), ("Open PDF", Open.into())])],
+        "Situatietekening" => vec![
+            ("Selecteer", vec![("Selecteren", planner_source_icon!("CircleDot"))]),
+            ("Bewerken", vec![("Verplaatsen", planner_source_icon!("MoveHorizontal")), ("Kopiëren", planner_source_icon!("Copy")), ("Roteren", planner_source_icon!("RotateCw")), ("Verwijderen", planner_source_icon!("Trash2")), ("Trim", planner_source_icon!("Scissors")), ("Mirror", planner_source_icon!("GitCompareArrows"))]),
+            ("Plaatsen", vec![("Sondering", planner_source_icon!("Compass")), ("Boring", planner_source_icon!("Compass")), ("Lijn", planner_source_icon!("Minus")), ("Maatlijn", Measure.into()), ("Vlak", planner_source_icon!("Square")), ("Opmerking", planner_source_icon!("Pen"))]),
+            ("Overlay", vec![("Image/PDF import", Import.into()), ("Kader (SVG)", planner_source_icon!("Square")), ("Wis alles", planner_source_icon!("Eraser"))]),
+            ("Export", vec![("Exporteer DWG", Export.into()), ("Exporteer PDF", Export.into()), ("Print", planner_source_icon!("Printer"))]),
+        ],
+        "Berekeningen" => vec![("Projectberekeningen", vec![("Dynamische berekeningenlijst", Grid.into())])],
+        "IFC" => vec![("Automatisch gegenereerd", vec![("Live IFC4x3 + IFCX", Cube.into())])],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("geotech:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// Source-aligned command samples from Calc's ribbon components at b47042704efa.
