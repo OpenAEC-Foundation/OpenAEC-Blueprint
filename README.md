@@ -12,6 +12,8 @@ De app laat componenten, vijf thema's, de gedeelde layout, 18 studio-indelingen 
 
 ![Native Rust Style Repo](design/style-repo-native.png)
 
+De native studio-atlas is in alle vijf thema's gerenderd: [Light](design/style-repo-atlas-light.png), [Forge](design/style-repo-atlas-forge.png), [OpenAEC](design/style-repo-atlas-openaec.png), [Blueprint](design/style-repo-atlas-blueprint.png) en [High contrast](design/style-repo-atlas-contrast.png). Deze beelden zijn reproduceerbaar met `cargo test --bin style_repo render_tests::export_native_style_repo_previews -- --ignored`.
+
 Een andere Rust-tool kan de shell via de `Application`-trait gebruiken. [`examples/studio.rs`](examples/studio.rs) is een klein integratievoorbeeld (`cargo run --example studio`).
 Voor bestaande native applicaties met een eigen eventloop biedt [`src/frame.rs`](src/frame.rs) dezelfde buitenste bandindeling via `FrameSlots`; Pointcloud Studio gebruikt die adapter voor het volledige venster en behoudt zijn eigen 3D-canvas en commando's.
 

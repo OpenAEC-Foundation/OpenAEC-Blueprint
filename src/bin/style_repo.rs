@@ -18,6 +18,9 @@ use serde::Deserialize;
 use std::{path::PathBuf, sync::OnceLock};
 #[path = "style_repo/domain_drafts.rs"]
 mod domain_drafts;
+#[cfg(test)]
+#[path = "style_repo/render_tests.rs"]
+mod render_tests;
 #[path = "style_repo/source_icons.rs"]
 mod source_icons;
 
@@ -686,6 +689,12 @@ impl StyleRepo {
                 .font(fonts::HEADING)
                 .size(27)
                 .color(t.text),
+            text(l.text("Schermtoestand", "Screen state"))
+                .font(fonts::STRONG)
+                .size(11)
+                .color(t.accent),
+            screen_choices,
+            self.screen_preview(selected, screen, theme, l),
             text(l.text("Voorgestelde ribbon-tabs", "Proposed ribbon tabs"))
                 .font(fonts::STRONG)
                 .size(11)
@@ -708,19 +717,13 @@ impl StyleRepo {
                 theme
             ),
             text(&selected.notes).size(12).color(t.text_secondary),
-            text(l.text("Schermtoestand", "Screen state"))
-                .font(fonts::STRONG)
-                .size(11)
-                .color(t.accent),
-            screen_choices,
-            self.screen_preview(selected, screen, theme, l),
         ]
         .spacing(16)
         .width(500);
         column![
             self.heading("STUDIO ATLAS", l.text("Alle studio's", "All studios"),
-                l.text("Achttien applicatie-indelingen op dezelfde shell. Selecteer een studio om de ribbon en panelen te vergelijken.",
-                       "Eighteen application layouts on one shell. Select a studio to compare its ribbon and panels."), theme),
+                l.text("Achttien applicatie-indelingen op dezelfde shell. Vergelijk schermtoestanden, ribbon-tabs en panelen.",
+                       "Eighteen application layouts on one shell. Compare screen states, ribbon tabs and panels."), theme),
             scrollable(row![list, detail].spacing(24).width(744))
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
@@ -967,7 +970,7 @@ impl Application for StyleRepo {
             Page::Fem => self.domains(theme, l, "fem"),
             Page::Bim => self.domains(theme, l, "bim"),
         };
-        let bg = theme.tokens().content_bg;
+        let bg = theme.tokens().bg;
         container(scrollable(container(content).padding(28).width(Fill)).height(Fill))
             .width(Fill)
             .height(Fill)
