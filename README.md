@@ -8,6 +8,8 @@ Start de Style Repo met:
 cargo run --bin style_repo
 ```
 
+De map is een zelfstandige Git-repository op branch `main`, met lokale commits en een schone werkboom. In GitHub Desktop kan hij via **File → Add Local Repository** worden toegevoegd met pad `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`; daarna maakt **Publish repository** de eerste GitHub-remote aan. Er is nog geen remote ingesteld, dus een gewone Push-knop verschijnt pas na publiceren of koppelen aan een bestaande lege repository.
+
 De app laat componenten, vijf thema's, de gedeelde layout, 18 studio-indelingen met elk negen selecteerbare voorbeeldschermen, 565 onderzochte UI-iconbestanden en 109 getekende FEM/BIM-iconconcepten zien. De broniconen en domeinconcepten zijn bedoeld voor beoordeling; de 26 iconen in [`crates/openaec-ui/assets/icons/`](crates/openaec-ui/assets/icons/) vormen de huidige semantische kern van de crate. De gelijkgehouden kopie in `assets/icons/` bedient de HTML-review. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
 
 ![Native Rust Style Repo](design/style-repo-native.png)
