@@ -1,8 +1,11 @@
 import { execFileSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/paths.mjs";
 import { writeGenerated } from "./lib/write.mjs";
+import { loadI18n } from "./i18n/load.mjs";
+import { renderI18nRust } from "./i18n/rust.mjs";
 import { loadIconManifest } from "./icons/manifest.mjs";
 import { renderIconsByIdTs, renderIconsTs } from "./icons/react.mjs";
 import { renderIconsRust } from "./icons/rust.mjs";
@@ -36,6 +39,19 @@ steps.push(["icons-rust", (root) => [
   writeGenerated(join(root, "crates", "openaec-icons", "src", "generated.rs"),
     renderIconsRust(loadIconManifest(join(root, "design", "icons")))),
 ]]);
+
+steps.push(["i18n", (root) => {
+  const src = join(root, "design", "i18n");
+  const maps = loadI18n(src);
+  const out = [];
+  for (const lang of ["nl", "en"]) {
+    // JSON zonder header; inhoud 1-op-1 uit de bron, opnieuw geformatteerd.
+    const json = JSON.stringify(JSON.parse(readFileSync(join(src, lang, "openaec.json"), "utf8")), null, 2);
+    out.push(writeGenerated(join(root, "packages", "i18n", "src", "generated", `${lang}.json`), json));
+  }
+  out.push(writeGenerated(join(root, "crates", "openaec-i18n", "src", "generated.rs"), renderI18nRust(maps)));
+  return out;
+}]);
 
 export async function runAll(root = ROOT) {
   const written = [];
