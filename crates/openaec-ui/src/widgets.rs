@@ -1165,7 +1165,7 @@ pub fn settings_theme_picker<'a, M: Clone + 'a>(
         Space::with_width(Fill),
         text("⌄").size(11).color(t.dialog_content_text),
     ].spacing(8).align_y(Alignment::Center))
-        .on_press(on_toggle)
+        .on_press(on_toggle.clone())
         .width(200)
         .height(27)
         .padding([5, 8])
@@ -1179,9 +1179,7 @@ pub fn settings_theme_picker<'a, M: Clone + 'a>(
             },
             ..button::Style::default()
         });
-    let mut picker = column![trigger].spacing(1).width(200);
-    if open { picker = picker.push(settings_theme_menu(options, selected, current_theme)); }
-    picker.into()
+    popover(trigger.into(), settings_theme_menu(options, selected, current_theme), open, on_toggle)
 }
 /// Section title and underline from SettingsDialog.css.
 pub fn settings_section_heading<'a, M: 'a>(

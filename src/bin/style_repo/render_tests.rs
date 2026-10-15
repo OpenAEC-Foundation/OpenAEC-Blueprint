@@ -155,6 +155,24 @@ fn export_shared_settings_review() {
 }
 
 #[test]
+fn expanded_theme_menu_keeps_the_trigger_height_in_form_layout() {
+    load_fonts();
+    let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
+    for open in [false, true] {
+        let element = widgets::settings_theme_picker(
+            vec![(Theme::Light, "Light".to_owned(), ())],
+            Theme::Light, Theme::Light, open, (),
+        );
+        let mut tree = Tree::new(&element);
+        let node = element.as_widget().layout(
+            &mut tree, &renderer,
+            &layout::Limits::new(Size::ZERO, Size::new(500.0, 500.0)),
+        );
+        assert_eq!(node.size(), Size::new(200.0, 27.0));
+    }
+}
+
+#[test]
 #[ignore = "regenerate native Geotechniek borehole review on demand"]
 fn export_geotech_borehole_review() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
