@@ -48,7 +48,8 @@ pub enum RibbonControl<M> {
     Sliders { items: Vec<RibbonSlider<M>>, minimum: f32, maximum: f32, step: f32, unit: &'static str, width: f32 },
     Number { value: String, on_change: fn(String) -> M, width: f32, show_label: bool },
     ColorSelect { options: Vec<(String, iced::Color, M)>, selected: usize,
-        current: iced::Color, width: f32 },
+        current: iced::Color, width: f32, rows_per_column: usize,
+        open: bool, on_toggle: M, on_close: M, none: Option<(String, M)> },
     StyleGallery { items: Vec<RibbonSwatch<M>>, selected: usize },
 }
 impl<M> RibbonControl<M> {

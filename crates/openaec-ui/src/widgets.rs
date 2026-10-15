@@ -13,6 +13,7 @@ use iced::{
     },
     Alignment, Background, Border, Element, Fill, Length, Padding,
 };
+pub use crate::popover::popover;
 
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
     let t = theme.tokens();
@@ -576,26 +577,34 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                     .spacing(3).into()
             } else { field.into() }
         }
-        RibbonControl::ColorSelect { options, selected, current, .. } => {
-            let choices: Vec<RibbonChoice> = options.iter().enumerate()
-                .map(|(index, (name, _, _))| RibbonChoice { index, label: name.clone() })
-                .collect();
-            let choice = choices.get(selected).cloned().or_else(|| {
-                let byte = |value: f32| (value * 255.0).round() as u8;
-                Some(RibbonChoice { index: usize::MAX,
-                    label: format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b)) })
-            });
-            let color = current;
+        RibbonControl::ColorSelect { options, selected, current, rows_per_column, open, on_toggle, on_close, none, .. } => {
+            let byte = |value: f32| (value * 255.0).round() as u8;
+            let color_label = format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b));
             let swatch = container(Space::new(16, 16)).style(move |_| container::Style::default()
-                .background(color)
+                .background(current)
                 .border(Border { color: theme.border_strong(), width: 1.0, radius: 1.0.into() }));
-            let field = pick_list(choices, choice, move |choice: RibbonChoice| options[choice.index].2.clone())
-                .font(fonts::MEDIUM).text_size(11).padding([4, 6])
-                .width(width - 38.0)
-                .style(move |_, status| pick_list_style(theme, status))
-                .menu_style(move |_| pick_list_menu_style(theme));
+            let anchor = button(row![swatch, text(color_label).font(fonts::MEDIUM).size(11).color(t.text),
+                text("▾").size(11).color(t.text_secondary)].spacing(5).align_y(Alignment::Center))
+                .padding([2, 4]).width(width - 12.0).height(24)
+                .on_press(on_toggle)
+                .style(move |_, status| ribbon_button_style(theme, open, status));
+            let selected_swatch = (selected < options.len()).then_some(selected);
+            let grid = color_grid(theme, options, rows_per_column, selected_swatch);
+            let content: Element<'a, M> = if let Some((name, message)) = none {
+                column![
+                    grid,
+                    container(Space::new(Fill, 1)).style(move |_| container::Style::default().background(t.border_subtle)),
+                    button(text(name).font(fonts::BODY).size(11))
+                        .padding([3, 6]).width(Fill).on_press(message)
+                        .style(move |_, status| ribbon_button_style(theme, false, status)),
+                ].spacing(5).into()
+            } else { grid };
+            let palette = container(content)
+                .padding(6).width(170)
+                .style(move |_| container::Style::default().background(t.bg_lighter)
+                    .border(Border { color: theme.border_strong(), width: 1.0, radius: 3.0.into() }));
             column![text(title).font(fonts::BODY).size(10).color(t.text),
-                row![swatch, field].spacing(5).align_y(Alignment::Center)]
+                popover(anchor.into(), palette.into(), open, on_close)]
                 .spacing(3).into()
         }
         RibbonControl::StyleGallery { items, selected } => {
@@ -635,13 +644,13 @@ pub fn color_grid<'a, M: Clone + 'a>(
     let t = theme.tokens();
     let mut columns = iced::widget::Row::new().spacing(2);
     for (column_index, items) in options.chunks(rows_per_column.max(1)).enumerate() {
-        let mut column = iced::widget::Column::new().spacing(2);
+        let mut column = iced::widget::Column::new().spacing(1);
         for (row_index, (label, color, message)) in items.iter().enumerate() {
             let index = column_index * rows_per_column.max(1) + row_index;
             let chosen = selected == Some(index);
             let fill = *color;
             let cell = button(Space::new(14, 14))
-                .padding(1).width(20).height(20)
+                .padding(1).width(18).height(18)
                 .on_press(message.clone())
                 .style(move |_, status| {
                     let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
@@ -657,7 +666,7 @@ pub fn color_grid<'a, M: Clone + 'a>(
         }
         columns = columns.push(column);
     }
-    columns.into()
+    container(columns).padding(2).into()
 }
 
 /// A 24 px document tab from the pinned Tauri Style Book. The caller owns

@@ -70,6 +70,7 @@ pub(super) struct PdfFormatState {
     pub fill: usize,
     pub stroke: usize,
     pub fill_color: iced::Color,
+    pub has_fill: bool,
     pub stroke_color: iced::Color,
     pub line_width: String,
     pub border: usize,
@@ -79,13 +80,14 @@ pub(super) struct PdfFormatState {
     pub arrow_end: usize,
     pub layer: usize,
     pub symbol_stamp: bool,
+    pub open_palette: Option<usize>,
 }
 impl Default for PdfFormatState {
     fn default() -> Self {
-        Self { style: usize::MAX, fill: 0, stroke: 5, fill_color: iced::Color::WHITE,
+        Self { style: usize::MAX, fill: 0, stroke: 5, fill_color: iced::Color::WHITE, has_fill: false,
             stroke_color: iced::Color::BLACK, line_width: "1".into(), border: 0,
             blend: 0, opacity: 100.0, arrow_start: 0, arrow_end: 1, layer: 0,
-            symbol_stamp: false }
+            symbol_stamp: false, open_palette: None }
     }
 }
 impl PdfFormatState {
@@ -99,17 +101,29 @@ impl PdfFormatState {
             iced::Color { a: if self.style == 9 { 0.15 } else { 0.08 }, ..self.stroke_color }
         } else { iced::Color::WHITE };
         self.fill = usize::MAX;
+        self.has_fill = self.style >= 7;
         self.border = 0;
+        self.open_palette = None;
     }
     pub fn select_fill(&mut self, index: usize) {
         self.fill = index.min(PDF_FORMAT_PALETTE.len() - 1);
         self.fill_color = pdf_color(PDF_FORMAT_PALETTE[self.fill]);
+        self.has_fill = true;
         self.style = usize::MAX;
+        self.open_palette = None;
     }
     pub fn select_stroke(&mut self, index: usize) {
         self.stroke = index.min(PDF_FORMAT_PALETTE.len() - 1);
         self.stroke_color = pdf_color(PDF_FORMAT_PALETTE[self.stroke]);
         self.style = usize::MAX;
+        self.open_palette = None;
+    }
+    pub fn clear_fill(&mut self) {
+        self.fill = usize::MAX;
+        self.fill_color = iced::Color::WHITE;
+        self.has_fill = false;
+        self.style = usize::MAX;
+        self.open_palette = None;
     }
 }
 
@@ -333,10 +347,15 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
         RibbonGroup { label: "Kleur".into(), commands: vec![
             Command::new("Vulkleur", Icon::Grid, Action::PdfFormatFill(format.fill))
                 .control(RibbonControl::ColorSelect { options: colors(Action::PdfFormatFill), selected: format.fill,
-                    current: format.fill_color, width: 126.0 }),
+                    current: format.fill_color, width: 126.0, rows_per_column: 6,
+                    open: format.open_palette == Some(0), on_toggle: Action::PdfFormatTogglePalette(0),
+                    on_close: Action::PdfFormatClosePalette,
+                    none: Some(("Geen vulling".into(), Action::PdfFormatNoFill)) }),
             Command::new("Lijnkleur", Icon::Grid, Action::PdfFormatStroke(format.stroke))
                 .control(RibbonControl::ColorSelect { options: colors(Action::PdfFormatStroke), selected: format.stroke,
-                    current: format.stroke_color, width: 126.0 }),
+                    current: format.stroke_color, width: 126.0, rows_per_column: 6,
+                    open: format.open_palette == Some(1), on_toggle: Action::PdfFormatTogglePalette(1),
+                    on_close: Action::PdfFormatClosePalette, none: None }),
         ] },
         RibbonGroup { label: "Lijn & dekking".into(), commands: vec![
             Command::new("Breedte", Icon::Measure, Action::PdfFormatLineWidth(format.line_width.clone()))

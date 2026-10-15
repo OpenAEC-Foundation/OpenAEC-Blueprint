@@ -121,6 +121,7 @@ enum Action {
     PdfAlignTarget(usize),
     PdfFormatStyle(usize),
     PdfFormatFill(usize),
+    PdfFormatNoFill,
     PdfFormatStroke(usize),
     PdfFormatLineWidth(String),
     PdfFormatBorder(usize),
@@ -130,6 +131,8 @@ enum Action {
     PdfFormatArrowEnd(usize),
     PdfFormatLayer(usize),
     PdfFormatSymbolStamp,
+    PdfFormatTogglePalette(usize),
+    PdfFormatClosePalette,
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -1621,6 +1624,7 @@ impl Application for StyleRepo {
             Action::PdfAlignTarget(index) => self.pdf_arrange.align_target = index.min(1),
             Action::PdfFormatStyle(index) => self.pdf_format.select_style(index),
             Action::PdfFormatFill(index) => self.pdf_format.select_fill(index),
+            Action::PdfFormatNoFill => self.pdf_format.clear_fill(),
             Action::PdfFormatStroke(index) => self.pdf_format.select_stroke(index),
             Action::PdfFormatLineWidth(value) => {
                 if value.is_empty() || value == "." ||
@@ -1637,6 +1641,11 @@ impl Application for StyleRepo {
                 if index == 0 { self.pdf_format.layer = index; }
             }
             Action::PdfFormatSymbolStamp => self.pdf_format.symbol_stamp = !self.pdf_format.symbol_stamp,
+            Action::PdfFormatTogglePalette(index) => {
+                let index = index.min(1);
+                self.pdf_format.open_palette = (self.pdf_format.open_palette != Some(index)).then_some(index);
+            }
+            Action::PdfFormatClosePalette => self.pdf_format.open_palette = None,
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -2082,6 +2091,19 @@ mod tests {
     #[test]
     fn pdf_format_gallery_colors_and_symbol_context_follow_source_defaults() {
         let mut app = StyleRepo::default();
+        let _ = app.update(Action::PdfFormatTogglePalette(0));
+        assert_eq!(app.pdf_format.open_palette, Some(0));
+        let _ = app.update(Action::PdfFormatFill(9));
+        assert_eq!(app.pdf_format.open_palette, None);
+        assert!(app.pdf_format.has_fill);
+        let _ = app.update(Action::PdfFormatTogglePalette(0));
+        let _ = app.update(Action::PdfFormatNoFill);
+        assert!(!app.pdf_format.has_fill);
+        assert_eq!(app.pdf_format.open_palette, None);
+        let _ = app.update(Action::PdfFormatTogglePalette(1));
+        assert_eq!(app.pdf_format.open_palette, Some(1));
+        let _ = app.update(Action::PdfFormatClosePalette);
+        assert_eq!(app.pdf_format.open_palette, None);
         let _ = app.update(Action::PdfFormatStyle(7));
         assert_eq!(app.pdf_format.style, 7);
         assert_eq!(app.pdf_format.stroke_color, ribbon_preview::pdf_color("#ff0000"));
