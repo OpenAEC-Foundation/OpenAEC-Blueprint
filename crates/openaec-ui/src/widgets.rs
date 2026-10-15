@@ -549,6 +549,21 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             if !show_label { field.into() }
             else { column![text(title).font(fonts::BODY).size(10).color(t.text), field].spacing(3).into() }
         }
+        RibbonControl::Sliders { items, minimum, maximum, step, unit, .. } => {
+            let mut rows = iced::widget::Column::new().spacing(4);
+            for item in items {
+                rows = rows.push(row![
+                    item.icon.view(14, t.text),
+                    text(item.label).font(fonts::BODY).size(11).color(t.text).width(58),
+                    slider(minimum..=maximum, item.value, item.on_change)
+                        .step(step).width(96).height(18)
+                        .style(move |_, status| slider_style(theme, status)),
+                    text(format!("{:.0}{unit}", item.value)).font(fonts::MEDIUM).size(11).color(t.text)
+                        .width(34).align_x(iced::alignment::Horizontal::Right),
+                ].spacing(4).align_y(Alignment::Center).height(20));
+            }
+            rows.into()
+        }
     };
     container(body)
         .padding([4, 6])

@@ -45,11 +45,19 @@ pub enum RibbonControl<M> {
         on_lower: fn(f32) -> M, on_upper: fn(f32) -> M },
     Segmented { options: Vec<(String, M)>, selected: usize },
     Select { options: Vec<(String, M)>, selected: usize, width: f32, show_label: bool },
+    Sliders { items: Vec<RibbonSlider<M>>, minimum: f32, maximum: f32, step: f32, unit: &'static str, width: f32 },
 }
 impl<M> RibbonControl<M> {
     pub fn width(&self) -> f32 {
-        match self { Self::Select { width, .. } => *width, _ => 170.0 }
+        match self { Self::Select { width, .. } | Self::Sliders { width, .. } => *width, _ => 170.0 }
     }
+}
+#[derive(Debug, Clone)]
+pub struct RibbonSlider<M> {
+    pub label: String,
+    pub icon: CommandIcon,
+    pub value: f32,
+    pub on_change: fn(f32) -> M,
 }
 /// A command may use a canonical icon or an application-owned SVG.
 /// Custom vectors do not become part of `Icon::ALL`.

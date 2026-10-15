@@ -216,6 +216,18 @@ fn export_pdf_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF image-tab review on demand"]
+fn export_pdf_image_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("afbeelding"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-image-forge.png"))
+        .expect("save PDF image-tab review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -232,6 +244,26 @@ fn atlas_workspace_respects_each_theme_background() {
                 .all(|(a, e)| a.abs_diff(e) <= 1),
             "{theme} atlas background: {actual:?}"
         );
+    }
+}
+
+#[test]
+fn pdf_image_source_icons_render_as_standalone_svg() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let picture = render_with_options(&app, Theme::Forge, false, Some("afbeelding"));
+    for (name, left, right, top, bottom) in [
+        ("crop", 29, 51, 70, 100),
+        ("brightness", 296, 314, 78, 96),
+        ("contrast", 296, 314, 101, 119),
+    ] {
+        let bright = (left..right).flat_map(|x| (top..bottom).map(move |y| (x, y)))
+            .filter(|&(x, y)| {
+                let at = ((y * picture.width() + x) * 4) as usize;
+                picture.data()[at..at + 3].iter().all(|channel| *channel >= 150)
+            }).count();
+        assert!(bright > 5, "PDF {name} icon missing from native render: {bright} light pixels");
     }
 }
 

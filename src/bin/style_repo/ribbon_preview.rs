@@ -11,6 +11,11 @@ macro_rules! planner_source_icon {
         )))
     };
 }
+macro_rules! pdf_image_icon {
+    ($name:literal) => {
+        CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-image-icons/", $name, ".svg")))
+    };
+}
 
 #[derive(Debug, Clone, Copy)]
 pub(super) struct PileViewState {
@@ -35,9 +40,20 @@ impl Default for FrameViewState {
     fn default() -> Self { Self { template: 0, lod: 1, theme: 0 } }
 }
 
+#[derive(Debug, Clone, Copy)]
+pub(super) struct PdfImageState {
+    pub crop: bool,
+    pub grayscale: bool,
+    pub brightness: f32,
+    pub contrast: f32,
+}
+impl Default for PdfImageState {
+    fn default() -> Self { Self { crop: false, grayscale: false, brightness: 100.0, contrast: 100.0 } }
+}
+
 #[cfg(test)]
 pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<RibbonTab<Action>> {
-    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default())
+    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default(), PdfImageState::default())
 }
 
 pub(super) fn studio_tabs_with_controls(
@@ -45,6 +61,7 @@ pub(super) fn studio_tabs_with_controls(
     selected: Option<&str>,
     pile: PileViewState,
     frame: FrameViewState,
+    pdf_image: PdfImageState,
 ) -> Vec<RibbonTab<Action>> {
     studio
         .tabs
@@ -58,7 +75,7 @@ pub(super) fn studio_tabs_with_controls(
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
-                .or_else(|| pdf_groups(studio, tab, selected))
+                .or_else(|| pdf_groups(studio, tab, selected, pdf_image))
                 .or_else(|| pointcloud_groups(studio, tab, selected))
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
@@ -77,9 +94,9 @@ pub(super) fn studio_tabs_with_controls(
         .collect()
 }
 
-/// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Contextual controls are
-/// labeled review placeholders until the shared ribbon has typed form slots.
-fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+/// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Image uses live controls;
+/// other contextual editors remain review placeholders.
+fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: PdfImageState) -> Option<Vec<RibbonGroup<Action>>> {
     if studio.id != "pdf" { return None; }
     let spec: &[(&str, &[&str])] = match tab {
         "Start" => &[("Document", &["Nieuw", "Naar CAD", "IFC-report", "E-mail", "Raster-PDF"]),
@@ -113,10 +130,10 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Optio
         "Schikken" => &[("Uitlijning", &["Uitlijnkeuzes · controls"]), ("Verdelen", &["Horiz. verd.", "Vert. verd.", "Links", "Boven", "Midden"]),
             ("Grootte", &["Groottevelden · controls"]), ("Draaien", &["Rotatievelden · controls"]),
             ("Spiegelen", &["Spiegelkeuzes · controls"]), ("Z-volgorde", &["Laagvolgorde · controls"])],
-        "Afbeelding" => &[("Bijsnijden", &["Bijsnijdopties · controls"]), ("Beeldbewerking", &["Beeldopties · controls"])],
+        "Afbeelding" => &[("Bijsnijden", &[]), ("Beeldbewerking", &[])],
         _ => return None,
     };
-    Some(spec.iter().map(|(label, items)| RibbonGroup { label: (*label).into(), commands: items.iter().map(|name| {
+    let mut groups: Vec<RibbonGroup<Action>> = spec.iter().map(|(label, items)| RibbonGroup { label: (*label).into(), commands: items.iter().map(|name| {
         let id = format!("pdf:{tab}:{name}");
         let icon = if name.contains("PDF") || name.contains("Nieuw") { Icon::New }
             else if name.contains("Zoek") { Icon::Search }
@@ -126,7 +143,19 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Optio
             else if name.contains("Pagina") || name.contains("Beeld") || name.contains("Volledig") { Icon::Fit }
             else { Icon::Grid };
         Command::new(*name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
-    }).collect() }).collect())
+    }).collect() }).collect();
+    if tab == "Afbeelding" {
+        groups[0].commands.push(Command::new("Croppen", pdf_image_icon!("cropIcon"), Action::PdfCrop).selected(image.crop));
+        groups[1].commands.push(Command::new("Grijswaarden", pdf_image_icon!("grayscaleIcon"), Action::PdfGrayscale).selected(image.grayscale));
+        groups[1].commands.push(Command::new("Herstellen", pdf_image_icon!("resetAdjustIcon"), Action::PdfResetImage));
+        groups[1].commands.push(Command::new("Beeldregelaars", Icon::Settings, Action::PdfResetImage)
+            .control(RibbonControl::Sliders { minimum: 0.0, maximum: 200.0, step: 1.0, unit: "%", width: 226.0,
+                items: vec![
+                    RibbonSlider { label: "Helderheid".into(), icon: pdf_image_icon!("brightnessIcon"), value: image.brightness, on_change: Action::PdfBrightness },
+                    RibbonSlider { label: "Contrast".into(), icon: pdf_image_icon!("contrastIcon"), value: image.contrast, on_change: Action::PdfContrast },
+                ] }));
+    }
+    Some(groups)
 }
 
 /// The current native Pointcloud branch has one Start ribbon with ten panels.

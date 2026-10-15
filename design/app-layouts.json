@@ -40,7 +40,7 @@
       "empty",
       "error"
     ],
-    "notes": "Bron open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx en Tab-componenten met Nederlandse locale op commit f754cb7c9d9a: zeven kern-tabs inclusief Bestand; Opmaak, Schikken en Afbeelding zijn contextueel. Oude measure-tab-id valt terug op Annotatie, niet op een aparte tab. De gevraagde dynlex- en feat/rust-native-branches waren publiek niet beschikbaar bij de audit; dit is dus de zichtbare Tauri/Solid-bron, niet hun UI.",
+    "notes": "Bron open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx en Tab-componenten met Nederlandse locale op commit f754cb7c9d9a: zeven kern-tabs inclusief Bestand; Opmaak, Schikken en Afbeelding zijn contextueel. Oude measure-tab-id valt terug op Annotatie, niet op een aparte tab. De contexttab Afbeelding heeft Croppen, Grijswaarden, Herstellen en Helderheid/Contrast op 0–200% met neutraal 100%; deze bedienen nu echte native ribboncontrols. Een nieuwe GitHub-refcontrole vond dynlex en feat/rust-native in geen van beide PDF-repositories als publieke branches; dit is dus de zichtbare Tauri/Solid-main-bron, niet hun UI.",
     "optional_tabs": [
       "Opmaak",
       "Schikken",

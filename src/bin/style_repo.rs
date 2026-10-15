@@ -11,7 +11,7 @@ use openaec_ui::{
     },
     icons::{DomainIcon, Icon},
     model::metrics,
-    run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonControl, RibbonGroup, RibbonTab,
+    run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonControl, RibbonGroup, RibbonSlider, RibbonTab,
     Theme,
 };
 use serde::Deserialize;
@@ -113,6 +113,11 @@ enum Action {
     FrameTemplate(usize),
     FrameLod(usize),
     FrameTheme(usize),
+    PdfCrop,
+    PdfGrayscale,
+    PdfBrightness(f32),
+    PdfContrast(f32),
+    PdfResetImage,
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -201,6 +206,7 @@ struct StyleRepo {
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
+    pdf_image: ribbon_preview::PdfImageState,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -221,6 +227,7 @@ impl Default for StyleRepo {
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
+            pdf_image: ribbon_preview::PdfImageState::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -1294,6 +1301,7 @@ impl Application for StyleRepo {
                 self.selected_preview_command.as_deref(),
                 self.pile_view,
                 self.frame_view,
+                self.pdf_image,
             );
         }
         vec![
@@ -1560,6 +1568,15 @@ impl Application for StyleRepo {
             Action::FrameTemplate(index) => self.frame_view.template = index.min(7),
             Action::FrameLod(index) => self.frame_view.lod = index.min(2),
             Action::FrameTheme(index) => self.frame_view.theme = index.min(6),
+            Action::PdfCrop => self.pdf_image.crop = !self.pdf_image.crop,
+            Action::PdfGrayscale => self.pdf_image.grayscale = !self.pdf_image.grayscale,
+            Action::PdfBrightness(value) => self.pdf_image.brightness = value.round().clamp(0.0, 200.0),
+            Action::PdfContrast(value) => self.pdf_image.contrast = value.round().clamp(0.0, 200.0),
+            Action::PdfResetImage => {
+                self.pdf_image.grayscale = false;
+                self.pdf_image.brightness = 100.0;
+                self.pdf_image.contrast = 100.0;
+            }
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -1937,6 +1954,31 @@ mod tests {
             ["Document", "Hulpmiddelen", "Beeld", "Navigeren", "Zoeken", "Instellingen"]);
         assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
         assert_eq!(tabs[6].groups[0].label, "Symbooltype");
+        let image = &tabs[8].groups;
+        assert_eq!(image.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Bijsnijden", "Beeldbewerking"]);
+        assert_eq!(image[0].commands[0].label, "Croppen");
+        assert_eq!(image[1].commands[0].label, "Grijswaarden");
+        assert_eq!(image[1].commands[1].label, "Herstellen");
+        assert!(matches!(&image[1].commands[2].control,
+            Some(RibbonControl::Sliders { minimum: 0.0, maximum: 200.0, items, .. })
+                if items.len() == 2 && items[0].value == 100.0 && items[1].value == 100.0));
+    }
+
+    #[test]
+    fn pdf_image_controls_update_and_reset_to_source_defaults() {
+        let mut app = StyleRepo::default();
+        let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+        let _ = app.update(Action::SelectStudio(pdf));
+        let _ = app.update(Action::PdfCrop);
+        let _ = app.update(Action::PdfGrayscale);
+        let _ = app.update(Action::PdfBrightness(220.0));
+        let _ = app.update(Action::PdfContrast(48.6));
+        assert!(app.pdf_image.crop && app.pdf_image.grayscale);
+        assert_eq!((app.pdf_image.brightness, app.pdf_image.contrast), (200.0, 49.0));
+        let _ = app.update(Action::PdfResetImage);
+        assert!(app.pdf_image.crop);
+        assert!(!app.pdf_image.grayscale);
+        assert_eq!((app.pdf_image.brightness, app.pdf_image.contrast), (100.0, 100.0));
     }
 
     #[test]
