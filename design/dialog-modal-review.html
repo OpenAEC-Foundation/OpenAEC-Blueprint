@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · algemene Rust-modal</title>
+<style>
+  :root{font:14px/1.5 Inter,system-ui,sans-serif;color:#29292f;background:#f5f4f2}
+  *{box-sizing:border-box}body{margin:0}header{background:#34343b;color:#fafafa;padding:28px max(22px,calc((100vw - 1260px)/2))}header a{color:#f5b85c}h1{font-size:29px;margin:10px 0 5px}header p{max-width:850px;margin:0;color:#dbdbe0}main{max-width:1320px;margin:auto;padding:24px}.metrics{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}.metrics span{background:white;border:1px solid #ddd9d3;padding:7px 11px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,550px),1fr));gap:17px}figure{margin:0;background:white;border:1px solid #ddd9d3;padding:10px}figure img{display:block;width:100%;height:auto}figcaption{padding:8px 2px 2px;color:#696970;font-size:12px}h2{font-size:19px;margin:28px 0 9px}.assessment{background:white;border-left:3px solid #d97706;padding:14px 18px;max-width:1100px}.assessment p{margin:6px 0}a{color:#a85000}@media(prefers-color-scheme:dark){:root{color:#f2f2f3;background:#29292f}.metrics span,figure,.assessment{background:#34343b;border-color:#55545a}figcaption{color:#bbb}a{color:#f5b85c}}
+</style>
+<header><a href="review.html">← OpenAEC visuele review</a><h1>Dezelfde modal in Style Repo en Pointcloud</h1><p>Vier software-renders van de echte Rust-vensters. De Style Repo toont een bewerkbare voorbeeldmodal; Pointcloud gebruikt dezelfde crate-component voor het aanmaken van een 2D-tekening.</p></header>
+<main>
+  <div class="metrics"><span>480 px dialoogbreedte</span><span>30 px kop</span><span>44 px voet</span><span>rechte hoeken</span><span>Light en Forge</span></div>
+  <div class="assessment"><strong>Bron en oordeel</strong><p>De gepinde <a href="https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/Modal.css">Modal.css</a> en <a href="https://github.com/OpenAEC-Foundation/OpenAEC-style-book/blob/dfdcd415b26604081b1699560621d3e9ae7ea6bf/project-templates/Tauri%2BReact/src/components/Modal.tsx">Modal.tsx</a> bepalen de rechte rand, gecentreerde overlay, 30 px kop, 480 px standaardbreedte en de niet-sluitende achtergrond. De Rust-crate levert deze geometrie, kleuren en de sluitknop; inhoud, vertaling en actieberichten blijven van de applicatie.</p><p>De Tauri-kop kan worden versleept en heeft een verloop en schaduw. De bron begrenst de hoogte ook op 90% van het venster. De huidige Rust-modal blijft gecentreerd, tekent nog geen verloop of schaduw en heeft nog geen dynamische hoogtegrens. Dit blijft een zichtbare afwijking voor de pixelreview.</p></div>
+  <h2>Blueprint Light</h2><div class="grid">
+    <figure><a href="style-repo-dialog-light.png"><img src="style-repo-dialog-light.png" alt="Style Repo met gedeelde modal in Light"></a><figcaption>Style Repo · voorbeeld met bewerkbare projectnaam en Opslaan</figcaption></figure>
+    <figure><a href="pointcloud-sheet-dialog-light.png"><img src="pointcloud-sheet-dialog-light.png" alt="Pointcloud 2D-tekeningvenster in Light"></a><figcaption>Pointcloud · 2D-plan, aanzicht of doorsnede van een geladen scan</figcaption></figure>
+  </div>
+  <h2>Deep Forge</h2><div class="grid">
+    <figure><a href="style-repo-dialog-forge.png"><img src="style-repo-dialog-forge.png" alt="Style Repo met gedeelde modal in Forge"></a><figcaption>Style Repo · Forge</figcaption></figure>
+    <figure><a href="pointcloud-sheet-dialog-forge.png"><img src="pointcloud-sheet-dialog-forge.png" alt="Pointcloud 2D-tekeningvenster in Forge"></a><figcaption>Pointcloud · Forge</figcaption></figure>
+  </div>
+</main>
+</html>

@@ -1002,6 +1002,51 @@ pub fn title_action_style(theme: Theme, status: button::Status) -> button::Style
         ..button::Style::default()
     }
 }
+/// Source Style Book modal chrome with an application-owned form and actions.
+/// The overlay is inert; applications keep their own close and Escape messages.
+pub fn dialog_modal<'a, M: Clone + 'a>(
+    title: impl Into<String>,
+    body: Element<'a, M>,
+    footer: Element<'a, M>,
+    close: M,
+    width: f32,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let header = container(row![
+        text(title.into()).font(fonts::STRONG).size(12).color(t.dialog_header_text).width(Fill),
+        button(text("×").size(16))
+            .on_press(close)
+            .width(30).height(30).padding(0)
+            .style(move |_, status| button::Style {
+                background: matches!(status, button::Status::Hovered).then_some(t.ribbon_btn_hover.into()),
+                text_color: t.dialog_content_text,
+                ..button::Style::default()
+            }),
+    ].align_y(Alignment::Center))
+        .height(30).width(Fill)
+        .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
+        .style(move |_| container::Style::default().background(t.dialog_header_bg));
+    let content = container(body)
+        .width(Fill)
+        .style(move |_| container::Style::default().background(t.dialog_content_bg).color(t.dialog_content_text));
+    let footer = column![
+        container(Space::new(Fill, 1)).height(1).width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_border)),
+        container(footer).padding([8, 12]).height(43).width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_sidebar_bg)),
+    ];
+    let card = container(column![header, content, footer].width(width))
+        .width(width)
+        .style(move |_| container::Style {
+            background: Some(t.dialog_bg.into()),
+            border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        });
+    opaque(center(opaque(card)).style(move |_| {
+        container::Style::default().background(t.dialog_overlay)
+    })).into()
+}
 /// Source Style Book settings chrome (560 × 500). Applications provide their
 /// own tabs, fields, footer commands and close action. The backdrop is inert.
 pub fn settings_modal<'a, M: Clone + 'a>(
@@ -1086,47 +1131,16 @@ pub fn settings_reset_confirmation<'a, M: Clone + 'a>(
     reset: M,
     theme: Theme,
 ) -> Element<'a, M> {
-    let t = theme.tokens();
-    let header = container(row![
-        text(title.into()).font(fonts::STRONG).size(12).color(t.dialog_header_text).width(Fill),
-        button(text("×").size(16))
-            .on_press(cancel.clone())
-            .width(30).height(30).padding(0)
-            .style(move |_, status| button::Style {
-                background: matches!(status, button::Status::Hovered).then_some(t.ribbon_btn_hover.into()),
-                text_color: t.dialog_content_text,
-                ..button::Style::default()
-            }),
-    ].align_y(Alignment::Center))
-        .height(30).width(Fill)
-        .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
-        .style(move |_| container::Style::default().background(t.dialog_header_bg));
     let body = container(text(question.into()).size(12).width(Fill))
-        .padding(12).width(Fill)
-        .style(move |_| container::Style::default().background(t.dialog_content_bg));
-    let footer = column![
-        container(Space::new(Fill, 1)).height(1).width(Fill)
-            .style(move |_| container::Style::default().background(t.dialog_border)),
-        container(row![
-            Space::with_width(Fill),
-            dialog_button(cancel_label.into(), move |_, status| secondary_button_style(theme, status))
-                .on_press(cancel),
-            dialog_button(reset_label.into(), move |_, status| primary_button_style(theme, status))
-                .on_press(reset),
-        ].spacing(6).align_y(Alignment::Center))
-            .padding([8, 12]).height(43).width(Fill)
-            .style(move |_| container::Style::default().background(t.dialog_sidebar_bg)),
-    ];
-    let card = container(column![header, body, footer].width(340))
-        .width(340)
-        .style(move |_| container::Style {
-            background: Some(t.dialog_bg.into()),
-            border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
-            ..container::Style::default()
-        });
-    opaque(center(opaque(card)).style(move |_| {
-        container::Style::default().background(t.dialog_overlay)
-    })).into()
+        .padding(12).width(Fill).into();
+    let footer = row![
+        Space::with_width(Fill),
+        dialog_button(cancel_label.into(), move |_, status| secondary_button_style(theme, status))
+            .on_press(cancel.clone()),
+        dialog_button(reset_label.into(), move |_, status| primary_button_style(theme, status))
+            .on_press(reset),
+    ].spacing(6).align_y(Alignment::Center).into();
+    dialog_modal(title, body, footer, cancel, 340.0, theme)
 }
 /// Vertical settings navigation from the pinned Style Book template.
 pub fn settings_tab<'a, M: Clone + 'a>(

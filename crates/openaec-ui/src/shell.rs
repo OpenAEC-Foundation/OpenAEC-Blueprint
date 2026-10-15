@@ -12,6 +12,7 @@ pub struct Slots<'a, M> {
     pub quick_commands: Vec<Command<M>>,
     pub status: String,
     pub content: Box<dyn Fn(Region) -> Element<'a, Message<M>> + 'a>,
+    pub overlay: Option<Element<'a, Message<M>>>,
 }
 fn horizontal<'a,M:'a>(content: impl Into<Element<'a,M>>) -> Element<'a,M> {
     scrollable(content).direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new())).into()
@@ -154,13 +155,14 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         })
     };
     let base: Element<'a,Message<M>>=container(bands).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
+    let mut layers = vec![base];
+    if let Some(overlay) = slots.overlay { layers.push(overlay); }
     if state.settings {
-        if state.settings_reset_confirm {
-            stack([base,settings(state),reset_confirmation(state)]).width(Fill).height(Fill).into()
-        } else {
-            stack([base,settings(state)]).width(Fill).height(Fill).into()
-        }
-    } else {base}
+        layers.push(settings(state));
+        if state.settings_reset_confirm { layers.push(reset_confirmation(state)); }
+    }
+    if layers.len() == 1 { layers.pop().unwrap() }
+    else { stack(layers).width(Fill).height(Fill).into() }
 }
 fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
     let p=&state.preferences; let l=p.language;

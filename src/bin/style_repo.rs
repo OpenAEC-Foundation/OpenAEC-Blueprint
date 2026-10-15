@@ -111,6 +111,9 @@ enum Action {
     Toggle,
     Slider(f32),
     Reset,
+    SampleDialog(bool),
+    SampleDialogInput(String),
+    SampleDialogSave,
     SelectStudio(usize),
     SelectScreen(usize),
     GeotechLayer(usize),
@@ -262,6 +265,8 @@ struct StyleRepo {
     sample_input: String,
     sample_toggle: bool,
     sample_value: f32,
+    sample_dialog: bool,
+    sample_dialog_input: String,
     selected_studio: usize,
     selected_screen: usize,
     geotech_layer: usize,
@@ -307,6 +312,8 @@ impl Default for StyleRepo {
             sample_input: String::new(),
             sample_toggle: false,
             sample_value: 35.0,
+            sample_dialog: false,
+            sample_dialog_input: String::new(),
             selected_studio: 0,
             selected_screen: 0,
             geotech_layer: 4,
@@ -481,6 +488,13 @@ impl StyleRepo {
                         )
                         .width(140)
                         .height(27),
+                        widgets::dialog_button(
+                            l.text("Dialoog", "Dialog"),
+                            move |_, status| widgets::secondary_button_style(theme, status),
+                        )
+                        .width(110)
+                        .height(27)
+                        .on_press(Action::SampleDialog(true)),
                     ]
                     .spacing(10),
                     text(l.text(
@@ -2055,6 +2069,32 @@ impl Application for StyleRepo {
             .style(move |_| container::Style::default().background(bg))
             .into()
     }
+    fn overlay(&self, theme: Theme, l: Language) -> Option<Element<'_, Action>> {
+        if !self.sample_dialog { return None; }
+        let body = container(column![
+            text(l.text("Projectnaam", "Project name")).size(12),
+            text_input(l.text("Typ een naam", "Type a name"), &self.sample_dialog_input)
+                .on_input(Action::SampleDialogInput)
+                .style(move |_, status| widgets::text_input_style(theme, status))
+                .width(Fill),
+            text(l.text("Deze dialoog gebruikt de algemene OpenAEC-modal.",
+                "This dialog uses the general OpenAEC modal.")).size(12),
+        ].spacing(10)).padding(18).width(Fill).into();
+        let footer = row![
+            Space::with_width(Fill),
+            widgets::dialog_button(l.text("Annuleren", "Cancel"),
+                move |_, status| widgets::secondary_button_style(theme, status))
+                .on_press(Action::SampleDialog(false)),
+            widgets::dialog_button(l.text("Opslaan", "Save"),
+                move |_, status| widgets::primary_button_style(theme, status))
+                .on_press(Action::SampleDialogSave),
+        ].spacing(6).align_y(Alignment::Center).into();
+        Some(widgets::dialog_modal(l.text("Voorbeelddialoog", "Sample dialog"),
+            body, footer, Action::SampleDialog(false), 480.0, theme))
+    }
+    fn escape(&self) -> Option<Action> {
+        self.sample_dialog.then_some(Action::SampleDialog(false))
+    }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
             return geotech_native::explorer(theme);
@@ -2175,6 +2215,15 @@ impl Application for StyleRepo {
             Action::Input(value) => self.sample_input = value,
             Action::Toggle => self.sample_toggle = !self.sample_toggle,
             Action::Slider(value) => self.sample_value = value,
+            Action::SampleDialog(open) => {
+                if open { self.sample_dialog_input = self.sample_input.clone(); }
+                self.sample_dialog = open;
+            }
+            Action::SampleDialogInput(value) => self.sample_dialog_input = value,
+            Action::SampleDialogSave => {
+                self.sample_input.clone_from(&self.sample_dialog_input);
+                self.sample_dialog = false;
+            }
             Action::Reset => {
                 self.sample_input.clear();
                 self.sample_toggle = false;

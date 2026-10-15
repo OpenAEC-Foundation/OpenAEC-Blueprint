@@ -10,6 +10,10 @@ pub trait Application: 'static {
     fn chrome_mode(&self) -> ChromeMode { ChromeMode::Ribbon }
     fn tab_event(&mut self, _id: &str) -> Task<Self::Command> { Task::none() }
     fn workspace(&self, theme: Theme, language: Language) -> Element<'_, Self::Command>;
+    /// Optional application dialog above the complete window shell.
+    fn overlay(&self, _theme: Theme, _language: Language) -> Option<Element<'_, Self::Command>> { None }
+    /// Domain Escape command when no shared settings dialog is open.
+    fn escape(&self) -> Option<Self::Command> { None }
     fn update(&mut self, command: Self::Command) -> Task<Self::Command>;
     fn explorer(&self, theme: Theme, language: Language) -> Element<'_, Self::Command> {
         widgets::empty_state(language.text("Verkenner","Explorer"), "", theme)
@@ -34,6 +38,11 @@ impl<A:Application> Runtime<A> {
             Message::Command(command) => self.app.update(command).map(Message::Command),
             Message::Document(event) => self.app.document_event(event).map(Message::Command),
             Message::Ui(event) => {
+                if matches!(event, UiEvent::SettingsEscape) && !self.shell.settings {
+                    if let Some(command) = self.app.escape() {
+                        return self.app.update(command).map(Message::Command);
+                    }
+                }
                 let window_task:Option<Task<Message<A::Command>>> = match &event {
                     UiEvent::DragWindow => Some(iced::window::get_latest().and_then(iced::window::drag)),
                     UiEvent::Minimize => Some(iced::window::get_latest().and_then(|id|iced::window::minimize(id,true))),
@@ -63,6 +72,7 @@ impl<A:Application> Runtime<A> {
             title:self.app.title(), mode, tabs:self.app.ribbon(language), documents:self.app.documents(),
             active_document:self.app.active_document(), file_commands:self.app.file_commands(language), quick_commands:self.app.quick_commands(language),
             status:self.error.clone().unwrap_or_else(||self.app.status(language)),
+            overlay:self.app.overlay(theme,language).map(|element|element.map(Message::Command)),
             content:Box::new(move |region| match region {
                 Region::Workspace => self.app.workspace(theme,language).map(Message::Command),
                 Region::Explorer => widgets::panel(if mode == ChromeMode::Workflow { language.text("Werkstroom","Workflow") } else if mode == ChromeMode::Sidebar { language.text("Navigatie","Navigation") } else if mode == ChromeMode::CanvasRibbon { language.text("Eigenschappen","Properties") } else { language.text("Verkenner","Explorer") },self.app.explorer(theme,language).map(Message::Command),theme),
@@ -138,5 +148,39 @@ mod settings_tests {
         let _ = runtime.update(Message::Ui(UiEvent::SettingsSave));
         assert_eq!(Preferences::load(&path).unwrap().theme, Theme::Forge);
         std::fs::remove_file(path).unwrap();
+    }
+
+    struct OverlayApplication { open: bool }
+    impl Application for OverlayApplication {
+        type Command = ();
+        fn title(&self) -> String { "Overlay test".into() }
+        fn ribbon(&self, _: Language) -> Vec<RibbonTab<Self::Command>> { Vec::new() }
+        fn workspace(&self, _: Theme, _: Language) -> Element<'_, Self::Command> {
+            iced::widget::text("workspace").into()
+        }
+        fn overlay(&self, _: Theme, _: Language) -> Option<Element<'_, Self::Command>> {
+            self.open.then(|| iced::widget::text("dialog").into())
+        }
+        fn escape(&self) -> Option<Self::Command> { self.open.then_some(()) }
+        fn update(&mut self, _: Self::Command) -> Task<Self::Command> {
+            self.open = false;
+            Task::none()
+        }
+    }
+
+    #[test]
+    fn escape_closes_domain_overlay_after_shared_settings() {
+        let mut runtime = Runtime {
+            app: OverlayApplication { open: true },
+            shell: ShellState::default(),
+            preferences_path: None,
+            error: None,
+        };
+        let _ = runtime.update(Message::Ui(UiEvent::Settings(true)));
+        let _ = runtime.update(Message::Ui(UiEvent::SettingsEscape));
+        assert!(!runtime.shell.settings);
+        assert!(runtime.app.open);
+        let _ = runtime.update(Message::Ui(UiEvent::SettingsEscape));
+        assert!(!runtime.app.open);
     }
 }

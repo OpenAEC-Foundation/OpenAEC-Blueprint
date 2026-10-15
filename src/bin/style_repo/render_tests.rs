@@ -79,6 +79,7 @@ fn render_sized_with_reset(
             file_commands: app.file_commands(language),
             quick_commands: app.quick_commands(language),
             status: app.status(language),
+            overlay: app.overlay(theme, language).map(|element| element.map(Message::Command)),
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
@@ -481,6 +482,7 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
         file_commands: app.file_commands(Language::Dutch),
         quick_commands: app.quick_commands(Language::Dutch),
         status: app.status(Language::Dutch),
+        overlay: None,
         content: Box::new(|_| text("test").into()),
     });
     let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
@@ -546,6 +548,7 @@ fn pdf_format_gallery_popup_selects_hidden_style_and_closes_outside() {
         file_commands: app.file_commands(Language::Dutch),
         quick_commands: app.quick_commands(Language::Dutch),
         status: app.status(Language::Dutch),
+        overlay: None,
         content: Box::new(|_| text("test").into()),
     });
     let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
@@ -889,4 +892,33 @@ fn export_shared_property_grid_review() {
             .save_png(&design.join(format!("style-repo-property-grid-{name}.png")))
             .expect("save full property-grid review");
     }
+}
+
+#[test]
+#[ignore = "regenerate general modal review images on demand"]
+fn export_general_dialog_review() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    app.show(Page::Components);
+    app.sample_dialog = true;
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized(&app, theme, false, None, Size::new(1280.0, 800.0))
+            .save_png(&design.join(format!("style-repo-dialog-{name}.png")))
+            .expect("save shared general modal review");
+    }
+}
+
+#[test]
+fn sample_dialog_saves_only_after_confirmation() {
+    let mut app = StyleRepo::default();
+    app.sample_input = "Original".into();
+    let _ = app.update(Action::SampleDialog(true));
+    let _ = app.update(Action::SampleDialogInput("Preview".into()));
+    let _ = app.update(Action::SampleDialog(false));
+    assert_eq!(app.sample_input, "Original");
+    let _ = app.update(Action::SampleDialog(true));
+    let _ = app.update(Action::SampleDialogInput("Saved".into()));
+    let _ = app.update(Action::SampleDialogSave);
+    assert_eq!(app.sample_input, "Saved");
+    assert!(!app.sample_dialog);
 }
