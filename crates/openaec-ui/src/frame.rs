@@ -1,6 +1,37 @@
 //! Shared vertical application frame; tools provide their domain content.
 use crate::{model::metrics, Theme};
-use iced::{widget::{column, container, Column, Space}, Element, Fill};
+use iced::{widget::{column, container, Column, Space}, Alignment, Color, Element, Fill};
+
+/// Tauri Style Book document band: 30 px, one-pixel rules and 4 px inset.
+/// The caller owns document identity, content and activation behavior.
+pub fn document_bar<'a, M: 'a>(theme: Theme, content: Element<'a, M>) -> Element<'a, M> {
+    let tokens = theme.tokens();
+    let blend = |overlay: Color| Color {
+        r: tokens.docbar_bg.r * (1.0 - overlay.a) + overlay.r * overlay.a,
+        g: tokens.docbar_bg.g * (1.0 - overlay.a) + overlay.g * overlay.a,
+        b: tokens.docbar_bg.b * (1.0 - overlay.a) + overlay.b * overlay.a,
+        a: 1.0,
+    };
+    let top = blend(Color::from_rgba8(217, 119, 6, 0.15));
+    let bottom = blend(tokens.border);
+    column![
+        container(Space::new(Fill, 1))
+            .width(Fill)
+            .style(move |_| container::Style::default().background(top)),
+        container(content)
+            .width(Fill)
+            .height(metrics::DOCUMENTS - 2)
+            .padding([0, 4])
+            .align_y(Alignment::End)
+            .style(move |_| container::Style::default().background(tokens.docbar_bg)),
+        container(Space::new(Fill, 1))
+            .width(Fill)
+            .style(move |_| container::Style::default().background(bottom)),
+    ]
+    .width(Fill)
+    .height(metrics::DOCUMENTS)
+    .into()
+}
 
 /// Common 22 px status band with a one-pixel top rule. Applications supply
 /// their own status content while the crate owns its geometry and palette.

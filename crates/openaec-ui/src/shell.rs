@@ -79,7 +79,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             widgets::icon_button(l.text("Document sluiten","Close document"),Icon::Close,Message::Document(DocumentEvent::CloseRequested(doc.id)),theme),
         ]);
     }
-    let document_bar=container(horizontal(documents)).height(metrics::DOCUMENTS).width(Fill).style(move |_|container::Style::default().background(t.docbar_bg));
+    let document_bar=crate::frame::document_bar(theme, horizontal(documents));
     let body: Element<'a,Message<M>> = if state.backstage {
         let mut commands=Column::new().spacing(8).push(widgets::action(l.text("Terug","Back"),Icon::Back,Some(Message::Ui(UiEvent::Backstage(false))),theme));
         for command in slots.file_commands { commands=commands.push(widgets::action(command.label,command.icon,command.enabled.then_some(Message::Command(command.message)),theme)); }
