@@ -4,21 +4,22 @@ use openaec_ui::{
     iced::{
         self,
         widget::{
-            button, column, container, image, row, scrollable, svg, text, text_input, Column, Row,
-            Space,
+            button, column, container, image, progress_bar, row, scrollable, svg, text, text_input,
+            Column, Row, Space,
         },
         Alignment, Element, Fill, Task,
     },
     icons::Icon,
+    model::metrics,
     run, widgets, Application, Command, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
     Theme,
 };
 use serde::Deserialize;
 use std::{path::PathBuf, sync::OnceLock};
-#[path = "style_repo/source_icons.rs"]
-mod source_icons;
 #[path = "style_repo/domain_drafts.rs"]
 mod domain_drafts;
+#[path = "style_repo/source_icons.rs"]
+mod source_icons;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Page {
@@ -95,6 +96,7 @@ enum Action {
     Slider(f32),
     Reset,
     SelectStudio(usize),
+    SelectScreen(usize),
 }
 
 #[derive(Deserialize)]
@@ -113,7 +115,22 @@ struct StudioLayout {
     left_panel: String,
     right_panel: String,
     workspace: String,
+    screens: Vec<String>,
     notes: String,
+}
+fn screen_label(id: &str, l: Language) -> &'static str {
+    match id {
+        "start" => l.text("Start", "Start"),
+        "workspace" => l.text("Werkgebied", "Workspace"),
+        "backstage" => l.text("Bestand", "File"),
+        "settings" => l.text("Instellingen", "Settings"),
+        "import-export" => l.text("Import / export", "Import / export"),
+        "long-running-operation" => l.text("Voortgang", "Progress"),
+        "unsaved-changes" => l.text("Niet opgeslagen", "Unsaved"),
+        "empty" => l.text("Leeg", "Empty"),
+        "error" => l.text("Fout", "Error"),
+        _ => "?",
+    }
 }
 fn studios() -> &'static [StudioLayout] {
     static DATA: OnceLock<Vec<StudioLayout>> = OnceLock::new();
@@ -140,6 +157,7 @@ struct StyleRepo {
     sample_toggle: bool,
     sample_value: f32,
     selected_studio: usize,
+    selected_screen: usize,
 }
 impl Default for StyleRepo {
     fn default() -> Self {
@@ -153,6 +171,7 @@ impl Default for StyleRepo {
             sample_toggle: false,
             sample_value: 35.0,
             selected_studio: 0,
+            selected_screen: 0,
         }
     }
 }
@@ -558,20 +577,42 @@ impl StyleRepo {
             (
                 "01",
                 l.text("Titel & snelle acties", "Title & quick actions"),
-                "32 px",
+                format!("{} px", metrics::TITLE),
             ),
-            ("02", l.text("Ribbon-tabs", "Ribbon tabs"), "34 px"),
-            ("03", "Ribbon", "100 px"),
-            ("04", l.text("Documenttabs", "Document tabs"), "32 px"),
+            (
+                "02",
+                l.text("Ribbon-tabs", "Ribbon tabs"),
+                format!("{} px", metrics::TABS),
+            ),
+            ("03", "Ribbon", format!("{} px", metrics::RIBBON)),
+            (
+                "04",
+                l.text("Documenttabs", "Document tabs"),
+                format!("{} px", metrics::DOCUMENTS),
+            ),
             (
                 "05",
                 l.text(
-                    "Verkenner · Werkgebied · Eigenschappen",
-                    "Explorer · Workspace · Properties",
+                    "Zijpanelen · standaardbreedte",
+                    "Side panels · default width",
                 ),
-                l.text("Schaalbaar", "Resizable"),
+                format!("{} px", metrics::PANEL_DEFAULT),
             ),
-            ("06", l.text("Status", "Status"), "26 px"),
+            (
+                "06",
+                l.text("Paneelwerkbalken", "Panel toolbars"),
+                format!("{} px", metrics::PANEL_TOOLBAR),
+            ),
+            (
+                "07",
+                l.text("Werkgebied", "Workspace"),
+                l.text("Schaalbaar", "Resizable").to_owned(),
+            ),
+            (
+                "08",
+                l.text("Status", "Status"),
+                format!("{} px", metrics::STATUS),
+            ),
         ];
         let mut list = Column::new().spacing(10);
         for (number, name, size) in regions {
@@ -595,6 +636,11 @@ impl StyleRepo {
     fn studios_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
         let selected = &studios()[self.selected_studio];
+        let screen = selected
+            .screens
+            .get(self.selected_screen)
+            .map(String::as_str)
+            .unwrap_or("workspace");
         let mut list = Column::new().spacing(5).width(220);
         for (index, studio) in studios().iter().enumerate() {
             list = list.push(
@@ -607,13 +653,33 @@ impl StyleRepo {
                     }),
             );
         }
-        let mut tabs = Row::new().spacing(5);
-        for tab in &selected.tabs {
-            tabs = tabs.push(
-                container(text(tab).size(11).color(t.text))
-                    .padding(8)
-                    .style(move |_| container::Style::default().background(t.bg_lighter)),
-            );
+        let mut tabs = Column::new().spacing(5);
+        for chunk in selected.tabs.chunks(5) {
+            let mut tab_row = Row::new().spacing(5);
+            for tab in chunk {
+                tab_row = tab_row.push(
+                    container(text(tab).size(11).color(t.text))
+                        .padding(8)
+                        .style(move |_| container::Style::default().background(t.bg_lighter)),
+                );
+            }
+            tabs = tabs.push(tab_row);
+        }
+        let mut screen_choices = Column::new().spacing(5);
+        for (group, chunk) in selected.screens.chunks(5).enumerate() {
+            let mut choices = Row::new().spacing(5);
+            for (offset, id) in chunk.iter().enumerate() {
+                let index = group * 5 + offset;
+                choices = choices.push(
+                    button(text(screen_label(id, l)).size(11))
+                        .padding([6, 9])
+                        .on_press(Action::SelectScreen(index))
+                        .style(move |_, status| {
+                            widgets::button_style(theme, index == self.selected_screen, status)
+                        }),
+                );
+            }
+            screen_choices = screen_choices.push(choices);
         }
         let detail = column![
             text(&selected.name)
@@ -642,15 +708,85 @@ impl StyleRepo {
                 theme
             ),
             text(&selected.notes).size(12).color(t.text_secondary),
+            text(l.text("Schermtoestand", "Screen state"))
+                .font(fonts::STRONG)
+                .size(11)
+                .color(t.accent),
+            screen_choices,
+            self.screen_preview(selected, screen, theme, l),
         ]
         .spacing(16)
-        .width(Fill);
+        .width(500);
         column![
             self.heading("STUDIO ATLAS", l.text("Alle studio's", "All studios"),
                 l.text("Achttien applicatie-indelingen op dezelfde shell. Selecteer een studio om de ribbon en panelen te vergelijken.",
                        "Eighteen application layouts on one shell. Select a studio to compare its ribbon and panels."), theme),
-            row![list, detail].spacing(24).width(Fill),
+            scrollable(row![list, detail].spacing(24).width(744))
+                .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
+                .width(Fill),
         ].spacing(22).into()
+    }
+    fn screen_preview<'a>(
+        &'a self,
+        studio: &'a StudioLayout,
+        screen: &str,
+        theme: Theme,
+        l: Language,
+    ) -> Element<'a, Action> {
+        let t = theme.tokens();
+        let title = screen_label(screen, l);
+        let body: Element<'a, Action> = match screen {
+            "start" => column![
+                Icon::Cube.view(34, t.accent),
+                text(&studio.name).font(fonts::HEADING).size(23),
+                text(l.text("Begin met een nieuw project of open een bestaand bestand.", "Start a new project or open an existing file.")).size(12),
+            ].spacing(9).into(),
+            "workspace" => column![
+                text(&studio.workspace).font(fonts::HEADING).size(20),
+                text(l.text("Domeinwerkruimte binnen de gedeelde titel, ribbon, panelen en status.", "Domain workspace inside the shared title, ribbon, panels and status.")).size(12).color(t.text_secondary),
+                widgets::property(l.text("Verkenner", "Explorer"), &studio.left_panel, theme),
+                widgets::property(l.text("Eigenschappen", "Properties"), &studio.right_panel, theme),
+            ].spacing(12).into(),
+            "backstage" => column![
+                text(l.text("Bestand", "File")).font(fonts::HEADING).size(23),
+                text(l.text("Nieuw  ·  Openen  ·  Opslaan  ·  Exporteren  ·  Instellingen", "New  ·  Open  ·  Save  ·  Export  ·  Settings")).size(12).color(t.accent),
+                text(l.text("Recente projecten verschijnen in dezelfde gedeelde bestandsweergave.", "Recent projects appear in the same shared file view.")).size(12),
+            ].spacing(12).into(),
+            "settings" => column![
+                text(l.text("Instellingen", "Settings")).font(fonts::HEADING).size(23),
+                widgets::property(l.text("Thema", "Theme"), theme.to_string(), theme),
+                widgets::property(l.text("Taal", "Language"), l.text("Nederlands", "English"), theme),
+                text(l.text("De titelbalk opent de werkende instellingen van deze Rust-app.", "The title bar opens this Rust app's working settings.")).size(12).color(t.text_secondary),
+            ].spacing(12).into(),
+            "import-export" => column![
+                text(title).font(fonts::HEADING).size(23),
+                text(l.text("Actie en bestandsformaat zijn studiospecifiek; veldmaten en knoppen volgen de gedeelde stijl.", "Action and file format are studio-specific; field sizes and buttons follow the shared style.")).size(12),
+                text_input(l.text("Projectnaam", "Project name"), "Project_01").width(300),
+            ].spacing(12).into(),
+            "long-running-operation" => column![
+                text(l.text("Bezig met verwerken", "Processing")).font(fonts::HEADING).size(23),
+                text(format!("{} · 62%", studio.workspace)).size(12),
+                progress_bar(0.0..=100.0, 62.0).width(300),
+                text(l.text("Stap 3 van 5 · Annuleren blijft beschikbaar.", "Step 3 of 5 · Cancel remains available.")).size(12).color(t.text_secondary),
+            ].spacing(12).into(),
+            "unsaved-changes" => column![
+                text(l.text("Wijzigingen opslaan?", "Save changes?")).font(fonts::HEADING).size(23).color(t.accent),
+                text(format!("{} {}", studio.workspace, l.text("heeft niet-opgeslagen wijzigingen.", "has unsaved changes."))).size(12),
+                text(l.text("Annuleren  ·  Niet opslaan  ·  Opslaan", "Cancel  ·  Discard  ·  Save")).size(12).color(t.text_secondary),
+            ].spacing(12).into(),
+            "empty" => column![
+                Icon::New.view(34, t.text_faint),
+                text(l.text("Geen document geopend", "No document open")).font(fonts::HEADING).size(23),
+                text(l.text("Open of maak een project om te beginnen.", "Open or create a project to begin.")).size(12),
+            ].spacing(9).into(),
+            "error" => column![
+                text(l.text("Bestand kan niet worden geopend", "Cannot open file")).font(fonts::HEADING).size(23).color(t.danger_color),
+                text(l.text("Een foutmelding noemt de oorzaak en biedt een herstelactie.", "An error message names the cause and offers a recovery action.")).size(12),
+                text(l.text("Details bekijken  ·  Opnieuw proberen", "View details  ·  Try again")).size(12).color(t.text_secondary),
+            ].spacing(12).into(),
+            _ => text(l.text("Schermtoestand niet beschikbaar", "Screen state unavailable")).size(12).into(),
+        };
+        self.card(container(body).height(150), theme)
     }
     fn domains(&self, theme: Theme, l: Language, domain: &'static str) -> Element<'_, Action> {
         let title = if domain == "fem" {
@@ -680,9 +816,13 @@ impl StyleRepo {
             list = list.push(
                 self.card(
                     row![
-                        container(row![small_preview, preview].spacing(8).align_y(Alignment::Center))
-                            .width(66)
-                            .center_x(Fill),
+                        container(
+                            row![small_preview, preview]
+                                .spacing(8)
+                                .align_y(Alignment::Center)
+                        )
+                        .width(66)
+                        .center_x(Fill),
                         column![
                             text(&proposal.label).font(fonts::STRONG).size(14),
                             text(&proposal.visual_metaphor)
@@ -899,7 +1039,16 @@ impl Application for StyleRepo {
             }
             Action::SelectStudio(index) => {
                 self.selected_studio = index.min(studios().len().saturating_sub(1));
+                self.selected_screen = 0;
                 self.show(Page::Studios);
+            }
+            Action::SelectScreen(index) => {
+                self.selected_screen = index.min(
+                    studios()[self.selected_studio]
+                        .screens
+                        .len()
+                        .saturating_sub(1),
+                );
             }
         }
         Task::none()
@@ -974,9 +1123,41 @@ mod tests {
             .iter()
             .all(|proposal| domain_drafts::get(&proposal.id).is_some()));
         assert_eq!(domain_drafts::SMALL.len(), 10);
-        assert!(domain_drafts::SMALL.iter().all(|(id, bytes)|
-            domain_drafts::get(id).is_some()
-                && domain_drafts::get_small(id) == Some(*bytes)
-        ));
+        assert!(domain_drafts::SMALL
+            .iter()
+            .all(|(id, bytes)| domain_drafts::get(id).is_some()
+                && domain_drafts::get_small(id) == Some(*bytes)));
+        assert_eq!(studios().len(), 18);
+        let required_screens = [
+            "start",
+            "workspace",
+            "backstage",
+            "settings",
+            "import-export",
+            "long-running-operation",
+            "unsaved-changes",
+            "empty",
+            "error",
+        ];
+        assert!(studios()
+            .iter()
+            .all(|studio| studio.screens.len() == required_screens.len()
+                && required_screens
+                    .iter()
+                    .all(|screen| studio.screens.iter().any(|id| id == screen))));
+    }
+
+    #[test]
+    fn native_atlas_opens_every_studio_and_screen() {
+        let mut app = StyleRepo::default();
+        for studio in 0..studios().len() {
+            let _ = app.update(Action::SelectStudio(studio));
+            assert_eq!(app.selected_studio, studio);
+            for screen in 0..studios()[studio].screens.len() {
+                let _ = app.update(Action::SelectScreen(screen));
+                assert_eq!(app.selected_screen, screen);
+                let _ = app.studios_page(Theme::Light, Language::Dutch);
+            }
+        }
     }
 }
