@@ -69,23 +69,35 @@ def icon_records() -> list[dict]:
         ) if commit else record["url"]
         concrete.append({
             "kind": "ui-asset", "repo": record["repo"], "name": Path(record["path"]).stem,
+            "repositories": [record["repo"]],
             "path": record["path"], "preview": preview,
             "evidence": record["evidence_type"], "references": record["ui_references"],
             "sha256": record["sha256"], "source_url": source_url,
         })
     libraries = json.loads((ROOT / "harmonization/library-icon-index.json").read_text())
+    imported = json.loads((ROOT / "harmonization/imported-ui-icons.json").read_text())
+    uses = {
+        (item["repo"], item["source"], item["line"], item["name"]): item
+        for item in imported["records"]
+    }
     for record in libraries["icons"]:
         preview = "../harmonization/" + record["file"]
         assert (DESIGN / preview).is_file(), preview
-        source = record["sources"][0]
+        source = next(
+            (item for item in record["sources"] if uses[(item["repo"], item["source"], item["line"], record["name"])]["jsx_lines"]),
+            record["sources"][0],
+        )
+        use = uses[(source["repo"], source["source"], source["line"], record["name"])]
+        line = (use["jsx_lines"] or use["reference_lines"])[0]
         source_url = (
             repos[source["repo"]]["url"].rstrip("/") + "/blob/" + source["commit"] + "/"
-            + quote(source["source"]) + f'#L{source["line"]}'
+            + quote(source["source"]) + f'#L{line}'
         )
         concrete.append({
             "kind": "code-import", "repo": ", ".join(sorted({s["repo"] for s in record["sources"]})),
+            "repositories": sorted({s["repo"] for s in record["sources"]}),
             "name": record["name"], "path": f'{record["package"]}@{record["version"]}/{record["name"]}',
-            "preview": preview, "evidence": "source-import", "references": record["sources"],
+            "preview": preview, "evidence": use["evidence"], "references": record["sources"],
             "sha256": record["sha256"], "source_url": source_url,
         })
     decisions = json.loads((DESIGN / "icon-adoptions.json").read_text())["decisions"]
@@ -126,7 +138,7 @@ def main() -> None:
             unmatched.append(record)
     output = {
         "status": "name-candidate-only",
-        "note": "UI assets have direct code or framework-bundle evidence; imported icons are a separate source-code category. A matching name does not approve semantics or artwork.",
+        "note": "UI assets have direct code or framework-bundle evidence; imported icons have post-import source references. A matching name does not approve semantics or artwork.",
         "source_counts": {"ui_assets": 565, "code_import_variants": 312},
         "adopted_count": len(json.loads((DESIGN / "icon-adoptions.json").read_text())["decisions"]),
         "native_chrome_decisions_count": len(json.loads((DESIGN / "icon-adoptions.json").read_text())["chrome_decisions"]),
@@ -177,7 +189,7 @@ body{{margin:0;background:#f2f3f5;color:#30343b;font:12px/1.4 Inter,"Segoe UI",s
 .candidate small{{font-size:9px;color:#777e87}}details{{margin:8px 0}}summary{{cursor:pointer;font-weight:600}}details .candidates{{margin-top:9px;max-height:360px}}
 .hidden{{display:none!important}}
 </style></head><body><div class="top"><b>OPENAEC · ICONBETEKENISSEN</b><input id="search" placeholder="Zoek betekenis, bron of icoon…" aria-label="Zoek iconen"><span>{counts['ui-asset']} UI-bestanden · {counts['code-import']} code-importvarianten · {len(ALIASES)} gedeelde betekenissen</span></div>
-<main><div class="intro">Naamovereenkomsten zijn <b>reviewkandidaten</b>. Tien Pointcloud-toolacties zijn na semantische beoordeling in de Rust-kern ingebouwd en oranje gemarkeerd. Daarnaast gebruikt de zichtbare Extensions-bestandspagina nu een eigen, nieuw getekend puzzelicoon in plaats van de 3D-kubus. De 565 UI-bestanden hebben broncode- of actieve knopbundel-evidence. De 312 bibliotheekvarianten komen uit broncode-imports en blijven apart; import alleen bewijst geen zichtbare knop. Vakinhoudelijke commando's zonder veilige generieke match staan onderaan.</div>
+<main><div class="intro">Naamovereenkomsten zijn <b>reviewkandidaten</b>. Tien Pointcloud-toolacties zijn na semantische beoordeling in de Rust-kern ingebouwd en oranje gemarkeerd. Daarnaast gebruikt de zichtbare Extensions-bestandspagina nu een eigen, nieuw getekend puzzelicoon in plaats van de 3D-kubus. De 565 UI-bestanden hebben broncode- of actieve knopbundel-evidence. De 312 bibliotheekvarianten hebben na hun import een broncodeverwijzing; ook dat bewijst geen zichtbaarheid in iedere applicatietoestand. Vakinhoudelijke commando's zonder veilige generieke match staan onderaan.</div>
 <h1>Gedeelde kern · {sum(map(len, grouped.values()))} naamkandidaten</h1><div class="grid">{''.join(cards)}</div>
 <h1>Overige UI- en domeiniconen · {len(unmatched)}</h1>{''.join(rest)}
 </main><script>
