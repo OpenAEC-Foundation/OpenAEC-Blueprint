@@ -134,7 +134,7 @@ pub enum DocumentEvent { Activate(String), CloseRequested(String) }
 pub enum Message<M> { Ui(UiEvent), Command(M), Document(DocumentEvent) }
 #[derive(Debug, Clone)]
 pub enum UiEvent {
-    Tab(String), Backstage(bool), Settings(bool), SettingsPage(SettingsPage), Theme(Theme), Language(Language),
+    Tab(String), Backstage(bool), Settings(bool), SettingsPage(SettingsPage), SettingsThemeMenu(bool), Theme(Theme), Language(Language),
     Scale(f64), ToggleLeft, ToggleRight, Resize(pane_grid::ResizeEvent),
     DragWindow, Minimize, Maximize, CloseWindow,
 }
@@ -196,6 +196,7 @@ pub struct ShellState {
     pub backstage: bool,
     pub settings: bool,
     pub settings_page: SettingsPage,
+    pub settings_theme_open: bool,
     pub(crate) panes: pane_grid::State<Region>,
     left_split: Option<pane_grid::Split>,
     right_split: Option<pane_grid::Split>,
@@ -205,7 +206,7 @@ impl ShellState {
     pub fn new(mut preferences: Preferences) -> Self {
         preferences.normalize();
         let (panes, _) = pane_grid::State::new(Region::Workspace);
-        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, settings_page:SettingsPage::General, panes, left_split:None, right_split:None };
+        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, settings_page:SettingsPage::General, settings_theme_open:false, panes, left_split:None, right_split:None };
         state.rebuild(); state
     }
     fn rebuild(&mut self) {
@@ -225,10 +226,11 @@ impl ShellState {
     pub fn update(&mut self, event: &UiEvent) {
         match event {
             UiEvent::Tab(id) => { self.active_tab = id.clone(); self.backstage = false; }
-            UiEvent::Backstage(open) => { self.backstage = *open; self.settings = false; }
-            UiEvent::Settings(open) => { self.settings = *open; self.backstage = false; }
-            UiEvent::SettingsPage(page) => self.settings_page = *page,
-            UiEvent::Theme(theme) => self.preferences.theme = *theme,
+            UiEvent::Backstage(open) => { self.backstage = *open; self.settings = false; self.settings_theme_open = false; }
+            UiEvent::Settings(open) => { self.settings = *open; self.backstage = false; self.settings_theme_open = false; }
+            UiEvent::SettingsPage(page) => { self.settings_page = *page; self.settings_theme_open = false; }
+            UiEvent::SettingsThemeMenu(open) => self.settings_theme_open = *open,
+            UiEvent::Theme(theme) => { self.preferences.theme = *theme; self.settings_theme_open = false; }
             UiEvent::Language(language) => self.preferences.language = *language,
             UiEvent::Scale(scale) => { self.preferences.scale = *scale; self.preferences.normalize(); }
             UiEvent::ToggleLeft => { self.preferences.explorer_visible = !self.preferences.explorer_visible; self.rebuild(); }
@@ -241,5 +243,25 @@ impl ShellState {
             }
             _ => {}
         }
+    }
+}
+
+#[cfg(test)]
+mod settings_tests {
+    use super::*;
+
+    #[test]
+    fn theme_choice_closes_its_menu_and_other_pages_do_not_leave_it_open() {
+        let mut shell = ShellState::default();
+        shell.update(&UiEvent::Settings(true));
+        shell.update(&UiEvent::SettingsPage(SettingsPage::Appearance));
+        shell.update(&UiEvent::SettingsThemeMenu(true));
+        assert!(shell.settings_theme_open);
+        shell.update(&UiEvent::Theme(Theme::Forge));
+        assert_eq!(shell.preferences.theme, Theme::Forge);
+        assert!(!shell.settings_theme_open);
+        shell.update(&UiEvent::SettingsThemeMenu(true));
+        shell.update(&UiEvent::SettingsPage(SettingsPage::About));
+        assert!(!shell.settings_theme_open);
     }
 }

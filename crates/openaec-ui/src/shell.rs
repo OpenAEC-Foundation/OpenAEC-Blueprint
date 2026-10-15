@@ -160,7 +160,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
 }
 fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
     let p=&state.preferences; let l=p.language;
-    let heading = |label| text(label).font(fonts::STRONG).size(11);
+    let heading = |label: &'static str| widgets::settings_section_heading(label,p.theme);
     let form: Element<'a, Message<M>> = match state.settings_page {
         SettingsPage::General => column![
             heading(l.text("Algemeen","General")),
@@ -173,11 +173,17 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
                 .step(0.05).style(move |_,status|widgets::slider_style(p.theme,status)),
         ].spacing(10).into(),
         SettingsPage::Appearance => column![
-            heading(l.text("Uiterlijk","Appearance")),
-            text(l.text("Thema","Theme")).size(11),
-            pick_list(Theme::ALL,Some(p.theme),|theme|Message::Ui(UiEvent::Theme(theme)))
-                .style(move |_,status|widgets::pick_list_style(p.theme,status))
-                .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
+            heading(l.text("Thema","Theme")),
+            row![
+                Space::with_width(Fill),
+                widgets::settings_theme_picker(
+                    Theme::ALL.into_iter().map(|theme| (
+                        theme, theme.to_string(), Message::Ui(UiEvent::Theme(theme)),
+                    )).collect(),
+                    p.theme, p.theme, state.settings_theme_open,
+                    Message::Ui(UiEvent::SettingsThemeMenu(!state.settings_theme_open)),
+                ),
+            ],
         ].spacing(10).into(),
         SettingsPage::About => column![
             heading(l.text("Over","About")),

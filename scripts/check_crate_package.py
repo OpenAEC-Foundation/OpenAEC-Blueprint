@@ -3,6 +3,7 @@
 
 import shutil
 import subprocess
+import re
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -16,8 +17,10 @@ assert all(not name.startswith(("design/", "harmonization/", "src/bin/")) for na
 icons = {f"assets/icons/{p.name}" for p in (root / "crates/openaec-ui/assets/icons").glob("*.svg")}
 domain_icons = {f"assets/{group}/{p.name}" for group in ("domain-icons", "domain-icons-small") for p in (root / "crates/openaec-ui/assets" / group).glob("*.svg")}
 fonts = {f"assets/fonts/{p.name}" for p in (root / "crates/openaec-ui/assets/fonts").glob("*.ttf")}
-assert len(icons) == 26 and len(domain_icons) == 8 and len(fonts) == 6
+icon_source = (root / "crates/openaec-ui/src/icons.rs").read_text()
+core_count, domain_count = map(int, re.findall(r"pub const ALL: \[Self; (\d+)\]", icon_source))
+assert len(icons) == core_count and len(domain_icons) == 2 * domain_count and len(fonts) == 6
 assert icons <= files and domain_icons <= files and fonts <= files
 assert {f"licenses/{name}-OFL.txt" for name in ("Inter", "SpaceGrotesk", "JetBrainsMono")} <= files
 assert {"NOTICE.md", "LICENSE", "README.md", "src/lib.rs"} <= files
-print(f"Reusable crate package: {len(files)} files, 26 core icons, 8 domain SVGs, 6 fonts, 3 font notices, no research assets")
+print(f"Reusable crate package: {len(files)} files, {core_count} core icons, {len(domain_icons)} domain SVGs, 6 fonts, 3 font notices, no research assets")

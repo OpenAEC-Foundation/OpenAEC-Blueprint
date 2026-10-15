@@ -1088,6 +1088,118 @@ pub fn settings_tab<'a, M: Clone + 'a>(
         })
         .into()
 }
+/// One source-sized option in the settings theme menu. The caller owns the
+/// selection and supplies its localized label and action.
+pub fn settings_theme_option<'a, M: Clone + 'a>(
+    label: impl Into<String>,
+    option: Theme,
+    selected: bool,
+    on_press: M,
+    current_theme: Theme,
+) -> Element<'a, M> {
+    let t = current_theme.tokens();
+    let swatches = option.swatches().into_iter().fold(row![].spacing(2), |row, color| {
+        row.push(container(Space::new(14, 14)).style(move |_| container::Style {
+            background: Some(color.into()),
+            border: Border { color: iced::Color::from_rgba8(128, 128, 128, 0.3), width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        }))
+    });
+    button(row![swatches, text(label.into()).size(11).font(fonts::MEDIUM)]
+        .spacing(8).align_y(Alignment::Center))
+        .on_press(on_press)
+        .height(26)
+        .width(Fill)
+        .padding([5, 8])
+        .style(move |_, status| {
+            let hovered = matches!(status, button::Status::Hovered);
+            button::Style {
+                background: if selected { Some(t.dialog_tab_active_bg.into()) }
+                    else if hovered { Some(t.dialog_tab_hover.into()) } else { None },
+                text_color: if selected { t.dialog_tab_active_text } else { t.dialog_content_text },
+                ..button::Style::default()
+            }
+        })
+        .into()
+}
+/// Expanded 200 px theme menu shown in the pinned Style Book reference.
+pub fn settings_theme_menu<'a, M: Clone + 'a>(
+    options: impl IntoIterator<Item = (Theme, String, M)>,
+    selected: Theme,
+    current_theme: Theme,
+) -> Element<'a, M> {
+    let t = current_theme.tokens();
+    let items = options.into_iter().fold(column![], |items, (theme, label, message)| {
+        items.push(settings_theme_option(label, theme, theme == selected, message, current_theme))
+    });
+    container(items)
+        .width(200)
+        .style(move |_| container::Style {
+            background: Some(t.dialog_input_bg.into()),
+            border: Border { color: t.dialog_input_border, width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        })
+        .into()
+}
+/// Tauri-style theme selector: 200 px trigger and an expandable swatch menu.
+pub fn settings_theme_picker<'a, M: Clone + 'a>(
+    options: Vec<(Theme, String, M)>,
+    selected: Theme,
+    current_theme: Theme,
+    open: bool,
+    on_toggle: M,
+) -> Element<'a, M> {
+    let t = current_theme.tokens();
+    let label = options.iter().find(|(theme, _, _)| *theme == selected)
+        .map(|(_, label, _)| label.clone()).unwrap_or_else(|| selected.to_string());
+    let swatches = selected.swatches().into_iter().fold(row![].spacing(2), |row, color| {
+        row.push(container(Space::new(14, 14)).style(move |_| container::Style {
+            background: Some(color.into()),
+            border: Border { color: iced::Color::from_rgba8(128, 128, 128, 0.3), width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        }))
+    });
+    let trigger = button(row![
+        swatches,
+        text(label).size(11).font(fonts::MEDIUM),
+        Space::with_width(Fill),
+        text("⌄").size(11).color(t.dialog_content_text),
+    ].spacing(8).align_y(Alignment::Center))
+        .on_press(on_toggle)
+        .width(200)
+        .height(27)
+        .padding([5, 8])
+        .style(move |_, status| button::Style {
+            background: Some(t.dialog_input_bg.into()),
+            text_color: t.dialog_content_text,
+            border: Border {
+                color: if open { t.focus_color } else if matches!(status, button::Status::Hovered) { t.dialog_content_secondary } else { t.dialog_input_border },
+                width: 1.0,
+                radius: 0.0.into(),
+            },
+            ..button::Style::default()
+        });
+    let mut picker = column![trigger].spacing(1).width(200);
+    if open { picker = picker.push(settings_theme_menu(options, selected, current_theme)); }
+    picker.into()
+}
+/// Section title and underline from SettingsDialog.css.
+pub fn settings_section_heading<'a, M: 'a>(
+    label: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    column![
+        text(label.into()).font(fonts::STRONG).size(11).color(t.dialog_content_text),
+        container(Space::new(Fill, 1))
+            .height(1)
+            .width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_section_border)),
+    ]
+    .spacing(4)
+    .width(Fill)
+    .into()
+}
 pub fn icon_button<'a, M: Clone + 'a>(
     label: &'a str,
     icon: Icon,

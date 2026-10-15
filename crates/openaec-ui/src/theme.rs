@@ -13,6 +13,17 @@ pub enum Theme {
 }
 impl Theme {
     pub const ALL: [Self; 5] = [Self::Light, Self::Forge, Self::OpenAec, Self::Blueprint, Self::Contrast];
+    /// Four swatches from the pinned Tauri SettingsDialog THEME_OPTIONS.
+    pub fn swatches(self) -> [iced::Color; 4] {
+        let hex = |value: u32| iced::Color::from_rgb8((value >> 16) as u8, (value >> 8) as u8, value as u8);
+        match self {
+            Self::Light => [hex(0xFAFAF9), hex(0xFFFFFF), hex(0xD97706), hex(0x36363E)],
+            Self::Forge => [hex(0x36363E), hex(0x44444C), hex(0xD97706), hex(0xFAFAF9)],
+            Self::OpenAec => [hex(0x27272A), hex(0x1C1917), hex(0xD97706), hex(0xFAFAF9)],
+            Self::Blueprint => [hex(0x0F1B2D), hex(0x1A2C45), hex(0x60A5FA), hex(0xE0E7FF)],
+            Self::Contrast => [hex(0x000000), hex(0x0A0A0A), hex(0xFFD700), hex(0xFFFFFF)],
+        }
+    }
     pub fn tokens(self) -> Tokens {
         match self { Self::Light => tokens::LIGHT, Self::Forge => tokens::FORGE, Self::OpenAec => tokens::OPENAEC, Self::Blueprint => tokens::BLUEPRINT, Self::Contrast => tokens::CONTRAST }
     }
