@@ -10,7 +10,7 @@ use iced::{
         button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
         text, text_input, tooltip,
     },
-    Background, Border, Element, Fill,
+    Background, Border, Element, Fill, Length, Padding,
 };
 
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
@@ -411,6 +411,53 @@ pub fn ribbon_tab_style(theme: Theme, active: bool, status: button::Status) -> b
         text_color: if active || hovered { t.accent } else { t.text },
         ..Default::default()
     }
+}
+
+/// Tauri Style Book ribbon group: 94 px including the 4 px top inset,
+/// 8 px sides, a ruled caption and a right separator. `width` is the
+/// measured total group width, including both insets and the separator.
+pub fn ribbon_group<'a, M: 'a>(
+    theme: Theme,
+    label: impl Into<String>,
+    tools: Element<'a, M>,
+    width: f32,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let width = width.max(50.0);
+    let body = container(tools)
+        .width(Fill)
+        .height(69)
+        .align_x(iced::Alignment::Center)
+        .align_y(iced::Alignment::Center);
+    let rule = container(iced::widget::Space::new(Fill, 1))
+        .width(Fill)
+        .style(move |_| container::Style::default().background(t.border_subtle));
+    let caption = container(
+        text(label.into().to_uppercase())
+            .font(fonts::MEDIUM)
+            .size(9)
+            .color(t.ribbon_group_label),
+    )
+    .width(Fill)
+    .height(20)
+    .center_x(Fill)
+    .align_y(iced::Alignment::Center);
+    let content = container(column![body, rule, caption])
+        .width(Length::Fixed(width - 1.0))
+        .height(metrics::RIBBON)
+        .padding(Padding {
+            top: 4.0,
+            right: 8.0,
+            bottom: 0.0,
+            left: 8.0,
+        });
+    let separator = container(iced::widget::Space::new(1, 90))
+        .style(move |_| container::Style::default().background(t.ribbon_group_separator));
+    row![content, separator]
+        .align_y(iced::Alignment::End)
+        .width(Length::Fixed(width))
+        .height(metrics::RIBBON)
+        .into()
 }
 
 /// A 24 px document tab from the pinned Tauri Style Book. The caller owns

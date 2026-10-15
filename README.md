@@ -48,6 +48,8 @@ De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout
 
 De [documentbalkreview](design/document-bar-review.html) zet de gepinde Tauri-CSS en de native Light- en Forge-renders naast elkaar. De gedeelde Rust-crate tekent nu de 30 px-band én de 24 px-tabstijl in Style Repo en Pointcloud; vier echte Pointcloud-tabs tonen de integratie. De review benoemt de resterende 1 px-onderrand en de contrastverbetering van de actieve sluitknop.
 
+De [ribbon-groepsreview](design/ribbon-group-review.html) vergelijkt de Tauri-`Ribbon.css` met native Pointcloud- en Style Repo-renders. `widgets::ribbon_group` tekent in beide applicaties dezelfde 94 px-groep, 4 px bovenruimte, 8 px zijruimte, labelregel en rechter scheidslijn. Pointcloud behoudt zijn adaptieve inklapgedrag; de Style Repo toont de groepslabels boven een smalle horizontale scrollbar.
+
 De [icoonbotsingreview](design/icon-collision-review.html) maakt 14 paren met exact dezelfde bronbytes zichtbaar. Voor zes paren met verschillende handelingen zijn twaalf onderscheidende vectorconcepten in 16/24/32 px gemaakt; de acht andere paren blijven ter contextbeoordeling. De concepten staan nog buiten de publieke Rust-icoon-API.
 
 ## Via GitHub Desktop publiceren

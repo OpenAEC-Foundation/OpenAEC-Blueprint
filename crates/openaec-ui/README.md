@@ -8,6 +8,8 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 
 `widgets::document_tab_style` and `widgets::document_close_style` give those app-owned tabs the shared 24 px appearance and a legible close action. Pointcloud retains its middle-click, shortening, scrolling and keyboard behavior while using the same visual tab styles as the Style Repo.
 
+`widgets::ribbon_group` owns the 94 px ribbon-group geometry from the pinned Tauri template: 4 px top inset, 8 px sides, a ruled 9 px caption and a right separator. Applications pass their actual tools and measured group width. Pointcloud keeps its adaptive collapse and domain actions; the Style Repo uses the same group around its catalogue commands.
+
 This package contains only the shared Rust implementation, six bundled fonts with their [separate license notices](NOTICE.md), and 26 canonical icons. Source icons collected for design research, unapproved FEM/BIM drafts and Style Repo screenshots live in the sibling `openaec-style-repo` application and are not included in this crate package.
 
 The sibling Style Repo application documents the source inventory and the Pointcloud integration.

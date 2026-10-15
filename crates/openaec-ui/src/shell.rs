@@ -48,28 +48,36 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         tabs = tabs.push(button(text(tab.label.clone()).font(fonts::MEDIUM).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Tab(tab.id.clone()))).style(move |_,s| widgets::ribbon_tab_style(theme,selected,s)));
     }
     let tabs = container(horizontal(tabs)).height(metrics::TABS).width(Fill);
-    let mut groups = Row::new().spacing(8);
+    let mut groups = Row::new().spacing(0);
     if let Some(active) = active {
         for group in &active.groups {
-            let mut commands = Row::new().spacing(4);
+            let mut commands = Row::new().spacing(1);
+            let mut tools_width = 0.0_f32;
             for command in &group.commands {
                 let selected = command.selected;
                 let color = if !command.enabled {t.text_faint} else if selected {t.accent} else {t.text};
                 let label = command.label.clone();
+                let control_width = (label.chars().count() as f32 * 7.0 + 20.0).clamp(66.0, 160.0);
+                tools_width += control_width;
                 let hint = format!("{}{}", label, command.shortcut.as_ref().map(|s|format!(" ({s})")).unwrap_or_default());
                 let control = button(column![command.icon.view(24,color),text(label).font(fonts::BODY).size(12)].spacing(6).align_x(iced::Alignment::Center))
-                    .padding([3,10]).height(52).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
+                    .padding([3,10]).width(control_width).height(52).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
                     .style(move |_,s| widgets::ribbon_button_style(theme,selected,s));
                 commands=commands.push(tooltip(control,text(hint).size(12),tooltip::Position::Bottom));
             }
-            groups=groups.push(container(column![commands,text(group.label.clone()).font(fonts::MEDIUM).size(11).color(t.ribbon_group_label)].spacing(4).align_x(iced::Alignment::Center)).padding([2,8]).style(move |_| container::Style { border:iced::Border {color:t.ribbon_group_separator,width:1.0,radius:0.0.into()},..Default::default() }));
+            tools_width += group.commands.len().saturating_sub(1) as f32;
+            let caption_width = (group.label.chars().count() as f32 * 6.0 + 8.0).max(50.0);
+            let group_width = tools_width.max(caption_width) + 17.0;
+            groups=groups.push(widgets::ribbon_group(theme, group.label.clone(), commands.into(), group_width));
         }
     }
     let ribbon = container(
         scrollable(groups)
-            .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
+            .direction(scrollable::Direction::Horizontal(
+                scrollable::Scrollbar::new().width(3).scroller_width(3).margin(0),
+            ))
             .height(Fill),
-    ).height(metrics::RIBBON).padding([4,8]);
+    ).height(metrics::RIBBON).padding(Padding { top: 0.0, right: 8.0, bottom: 0.0, left: 2.0 });
     let mut documents = Row::new().spacing(1).align_y(iced::Alignment::End);
     for doc in slots.documents {
         let selected=slots.active_document.as_ref() == Some(&doc.id);

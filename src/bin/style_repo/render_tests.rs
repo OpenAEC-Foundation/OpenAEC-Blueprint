@@ -225,7 +225,7 @@ fn long_ribbon_keeps_group_caption_above_horizontal_scrollbar() {
     let _ = app.update(Action::SelectStudio(4));
     let picture = render_with_options(&app, Theme::Light, false, Some("start"));
     let orange_ink = (210..270)
-        .flat_map(|x| (128..136).map(move |y| (x, y)))
+        .flat_map(|x| (138..150).map(move |y| (x, y)))
         .filter(|&(x, y)| {
             let at = ((y * picture.width() + x) * 4) as usize;
             let (r, g, b) = (
