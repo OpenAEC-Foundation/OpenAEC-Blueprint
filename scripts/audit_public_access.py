@@ -57,6 +57,24 @@ for name in sorted(historical_org.keys() - names, key=str.lower):
         "last_inventory_errors": historical_org[name].get("errors", []),
     })
 
+public_records = []
+for repo in current:
+    pinned = historical_org.get(repo["name"], {}).get("commit")
+    commit_api_status = None
+    if not pinned:
+        url = f"{API}/repos/{ORG}/{urllib.parse.quote(repo['name'])}/commits?per_page=1"
+        try:
+            request_json(url)
+            commit_api_status = 200
+        except urllib.error.HTTPError as error:
+            commit_api_status = error.code
+    public_records.append({
+        "name": repo["name"], "url": repo["html_url"],
+        "default_branch": repo["default_branch"], "archived": repo["archived"],
+        "pushed_at": repo["pushed_at"], "size_kb": repo["size"],
+        "commit_api_status": commit_api_status,
+    })
+
 audit = {
     "checked_at_utc": datetime.now(timezone.utc).isoformat(),
     "organization": ORG,
@@ -66,12 +84,7 @@ audit = {
     "external_reference_names": external,
     "new_since_inventory": sorted(names - historical_org.keys(), key=str.lower),
     "historical_not_publicly_listed": missing,
-    "current_public_repositories": sorted([
-        {"name": repo["name"], "url": repo["html_url"],
-         "default_branch": repo["default_branch"], "archived": repo["archived"],
-         "pushed_at": repo["pushed_at"]}
-        for repo in current
-    ], key=lambda repo: repo["name"].lower()),
+    "current_public_repositories": sorted(public_records, key=lambda repo: repo["name"].lower()),
 }
 out = ROOT / "harmonization/public-access-audit.json"
 out.write_text(json.dumps(audit, indent=2, ensure_ascii=False) + "\n")
@@ -81,8 +94,11 @@ for repo in audit["current_public_repositories"]:
     name = html.escape(repo["name"])
     url = html.escape(repo["url"], quote=True)
     pinned = historical_org.get(repo["name"], {}).get("commit")
+    commit_label = (pinned or "—")[:12]
+    if not pinned and repo["commit_api_status"] == 409:
+        commit_label = "leeg (API 409)"
     current_rows.append(f'<tr><td><a href="{url}">{name}</a></td>'
-                        f'<td>{html.escape((pinned or "—")[:12])}</td>'
+                        f'<td>{html.escape(commit_label)}</td>'
                         f'<td>{"ja" if repo["archived"] else "nee"}</td></tr>')
 missing_rows = []
 for repo in missing:
