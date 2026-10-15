@@ -130,6 +130,8 @@ FEM/BIM-concepten en reviewbeelden blijven in het niet-publiceerbare
 Style Repo-package. De Root/Pointcloud-kopieën van code en assets worden
 met `scripts/check_portable_ui.py` op inhoud gecontroleerd.
 
+De [Energy-werkstroomreview](energy-workflow.html) toont nieuwbouw voor woning en utiliteit en de opnamevariant voor bestaande bouw in dezelfde kleur-, type- en vensterbandtaal. De routevolgorde volgt de broncode op commit e9a485d; de kaarten en invoervelden zijn ontwerpelementen en geen overgenomen berekeningsinterface. De gekoppelde handleidingscreenshot kan een andere historische schermstaat tonen. De werkstroomvariant is voorlopig HTML; de Rust-crate moet dit type navigatie nog ondersteunen.
+
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
 en deze beoordeling voorkomen dat die mockup als voltooide productscreenshot
