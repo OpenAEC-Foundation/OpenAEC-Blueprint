@@ -278,7 +278,7 @@ fn pdf_arrange_groups(selected: Option<&str>, arrange: PdfArrangeState) -> Vec<R
     groups
 }
 
-const PDF_FORMAT_PALETTE: [&str; 42] = [
+pub(super) const PDF_FORMAT_PALETTE: [&str; 42] = [
     "#ffffff", "#d9d9d9", "#999999", "#666666", "#333333", "#000000",
     "#f4cccc", "#ea9999", "#e06666", "#ff0000", "#cc0000", "#660000",
     "#fce5cd", "#f9cb9c", "#ffff00", "#ffd966", "#f1c232", "#bf9000",

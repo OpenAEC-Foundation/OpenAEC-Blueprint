@@ -891,6 +891,16 @@ impl StyleRepo {
             }
             screen_choices = screen_choices.push(choices);
         }
+        let format_palette: Element<'_, Action> = if selected.id == "pdf" {
+            let colors = ribbon_preview::PDF_FORMAT_PALETTE.iter().enumerate()
+                .map(|(index, hex)| (hex.to_string(), ribbon_preview::pdf_color(hex), Action::PdfFormatFill(index)))
+                .collect();
+            self.card(column![
+                text("Opmaak · bronpalet 7 × 6").font(fonts::STRONG).size(13).color(t.accent),
+                text("Kies een vulkleur; de lijnkleur gebruikt hetzelfde palet.").size(11).color(t.text_secondary),
+                widgets::color_grid(theme, colors, 6, (self.pdf_format.fill < 42).then_some(self.pdf_format.fill)),
+            ].spacing(8), theme)
+        } else { Space::new(0, 0).into() };
         let detail = column![
             text(&selected.name)
                 .font(fonts::HEADING)
@@ -902,6 +912,7 @@ impl StyleRepo {
                 .color(t.accent),
             screen_choices,
             self.screen_preview(selected, screen, theme, l),
+            format_palette,
             tab_review,
             self.card(
                 column![

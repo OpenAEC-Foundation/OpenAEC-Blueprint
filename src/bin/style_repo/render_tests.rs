@@ -272,6 +272,40 @@ fn export_pdf_format_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF Format palette review on demand"]
+fn export_pdf_format_palette_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    render_sized(&app, Theme::Forge, false, Some("opmaak"), Size::new(1280.0, 1100.0))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-format-palette-forge.png"))
+        .expect("save PDF Format palette review");
+}
+
+#[test]
+fn pdf_format_palette_renders_all_source_colors_in_seven_columns() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    let picture = render_sized(&app, Theme::Forge, false, Some("opmaak"), Size::new(1280.0, 1100.0));
+    for column in 0..7 {
+        for row in 0..6 {
+            let index = column * 6 + row;
+            let expected = ribbon_preview::pdf_color(ribbon_preview::PDF_FORMAT_PALETTE[index]);
+            let expected = [expected.r, expected.g, expected.b].map(|value| (value * 255.0).round() as u8);
+            let x = 539 + 22 * column;
+            let y = 750 + 22 * row;
+            let at = ((y * picture.width() as usize + x) * 4) as usize;
+            let actual = &picture.data()[at..at + 3];
+            assert!(actual.iter().zip(expected).all(|(a, e)| a.abs_diff(e) <= 1),
+                "source palette color {index} at ({x},{y}): {actual:?} != {expected:?}");
+        }
+    }
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));

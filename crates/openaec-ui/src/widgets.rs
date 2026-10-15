@@ -624,6 +624,42 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
         .into()
 }
 
+/// Compact palette grid for app-owned colors and actions. `rows_per_column`
+/// preserves source palettes that are arranged in vertical columns.
+pub fn color_grid<'a, M: Clone + 'a>(
+    theme: Theme,
+    options: Vec<(String, iced::Color, M)>,
+    rows_per_column: usize,
+    selected: Option<usize>,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let mut columns = iced::widget::Row::new().spacing(2);
+    for (column_index, items) in options.chunks(rows_per_column.max(1)).enumerate() {
+        let mut column = iced::widget::Column::new().spacing(2);
+        for (row_index, (label, color, message)) in items.iter().enumerate() {
+            let index = column_index * rows_per_column.max(1) + row_index;
+            let chosen = selected == Some(index);
+            let fill = *color;
+            let cell = button(Space::new(14, 14))
+                .padding(1).width(20).height(20)
+                .on_press(message.clone())
+                .style(move |_, status| {
+                    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+                    button::Style {
+                        background: Some(fill.into()),
+                        border: Border { color: if chosen { t.accent } else if hovered { t.text }
+                            else { theme.border_strong() }, width: if chosen { 2.0 } else { 1.0 },
+                            radius: 1.0.into() },
+                        ..Default::default()
+                    }
+                });
+            column = column.push(tooltip(cell, text(label.clone()).size(11), tooltip::Position::Bottom));
+        }
+        columns = columns.push(column);
+    }
+    columns.into()
+}
+
 /// A 24 px document tab from the pinned Tauri Style Book. The caller owns
 /// its contents and actions; this style owns its palette and outline.
 pub fn document_tab_style(theme: Theme, active: bool, status: button::Status) -> button::Style {
