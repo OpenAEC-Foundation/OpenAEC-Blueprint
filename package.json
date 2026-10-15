@@ -1,0 +1,11 @@
+{
+  "name": "openaec-style-book",
+  "private": true,
+  "workspaces": ["generators", "packages/*"],
+  "scripts": {
+    "generate": "node generators/generate.mjs",
+    "check": "node generators/check.mjs",
+    "test": "node --test \"generators/test/**/*.test.mjs\""
+  },
+  "engines": { "node": ">=24" }
+}
