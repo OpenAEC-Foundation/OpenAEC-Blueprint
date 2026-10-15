@@ -38,6 +38,11 @@ De volledige visuele identiteit van OpenAEC Foundation beheren en beschikbaar st
 | `brandbook/assets/export_assets.py` | Script om PNG/PDF exports te genereren uit SVG |
 | `generate_huisstijl_pdfs.py` | Script voor rapport/brief PDF generatie |
 | `reports/` | Referentie PDF's (voorblad, briefpapier) |
+| `design/` | Enige bron voor tokens, iconen, i18n, ribbons, logo's, fonts en app-register |
+| `generators/` | Generators (`npm run generate`, `npm run check`) |
+| `crates/` | Rust-crates voor iced-apps |
+| `frappe/openaec_theme/` | Frappe-thema |
+| `docs/integratie.md` | Integratie per app-categorie |
 
 ---
 

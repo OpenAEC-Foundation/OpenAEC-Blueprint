@@ -38,25 +38,17 @@ See [`project-templates/Tauri+React/`](project-templates/Tauri+React/) for setup
 ## What's inside
 
 ```
-brandbook/
-├── BRANDBOOK.md              # Full brand guidelines
-├── DESIGN-SYSTEM.md          # Machine-readable design tokens & components
-├── styleguide.html           # Rendered visual reference
-└── assets/
-    ├── logo/                 # Logo in SVG, PNG (1x/2x/3x), PDF
-    │   ├── svg/              # Master vector source files
-    │   ├── png/              # Raster exports at 72/144/216 DPI
-    │   └── pdf/              # Print-ready vector exports
-    ├── illustrations/        # Header & background illustrations
-    │   ├── svg/              # Master vector source files
-    │   └── png/              # Raster exports at 72/144/216 DPI
-    ├── colors/               # Color palette reference + CMYK specs
-    └── export_assets.py      # Script to regenerate PNG/PDF from SVG
-project-templates/
-└── Tauri+React/              # Desktop app template (Tauri v2 + React + TS)
-packages/
-└── tokens/                   # Machine-readable design tokens (npm package)
+design/                  # Enige bron: tokens, icons, i18n, ribbons, logos, fonts, apps.toml
+generators/              # Zetten design/ om naar packages/, crates/, frappe/ en logos/
+packages/                # npm (React): design-tokens, icons, i18n, ribbon, shell, ui-primitives
+crates/                  # Rust: openaec-tokens, openaec-icons, openaec-i18n, openaec-ribbon
+frappe/openaec_theme/    # Frappe-app met de huisstijl voor Desk en website
+brandbook/               # Merkregels, styleguide, exports van logo's en illustraties
+project-templates/       # Tauri+React desktop-template
+docs/integratie.md       # Huisstijl gebruiken in een app
 ```
+
+Wijzigingen aan de huisstijl gebeuren in `design/`; zie `design/README.md`.
 
 ## Machine-readable tokens
 
