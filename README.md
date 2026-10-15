@@ -50,6 +50,8 @@ De [documentbalkreview](design/document-bar-review.html) zet de gepinde Tauri-CS
 
 De [ribbon-groepsreview](design/ribbon-group-review.html) vergelijkt de Tauri-`Ribbon.css` met native Pointcloud- en Style Repo-renders. `widgets::ribbon_group` tekent in beide applicaties dezelfde 94 px-groep, 4 px bovenruimte, 8 px zijruimte, labelregel en rechter scheidslijn. Pointcloud behoudt zijn adaptieve inklapgedrag; de Style Repo toont de groepslabels boven een smalle horizontale scrollbar.
 
+De [eigenschappenreview](design/property-grid-review.html) toont de rechterpanelen van beide native applicaties in Light en Forge. De gedeelde Rust-crate tekent daar 28 px label/waarde-rijen en 24 px sectiekoppen; de domeinvelden en bedieningen blijven van de betreffende applicatie.
+
 De [icoonbotsingreview](design/icon-collision-review.html) maakt 14 paren met exact dezelfde bronbytes zichtbaar. Voor zes paren met verschillende handelingen zijn twaalf onderscheidende vectorconcepten in 16/24/32 px gemaakt; de acht andere paren blijven ter contextbeoordeling. De concepten staan nog buiten de publieke Rust-icoon-API.
 
 ## Via GitHub Desktop publiceren

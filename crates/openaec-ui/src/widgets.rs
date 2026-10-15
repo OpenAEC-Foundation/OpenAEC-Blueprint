@@ -667,3 +667,87 @@ pub fn property<'a, M: 'a>(
     .spacing(12)
     .into()
 }
+
+/// A compact 28 px property-grid row. The application supplies the field;
+/// the crate owns the common label/value columns and bottom rule.
+pub fn property_grid_control_with<'a, M: 'a, F>(
+    label: impl Into<String>,
+    control: Element<'a, M>,
+    resolve_theme: F,
+) -> Element<'a, M>
+where
+    F: Fn(&iced::Theme) -> Theme + Copy + 'a,
+{
+    let label = container(text(label.into()).font(fonts::BODY).size(12).style(move |theme| {
+        text::Style {
+            color: Some(resolve_theme(theme).tokens().text_secondary),
+        }
+    }))
+    .width(Length::FillPortion(5))
+    .height(27)
+    .padding([0, 8])
+    .align_y(iced::Alignment::Center);
+    let value = container(control)
+        .width(Length::FillPortion(6))
+        .height(27)
+        .padding([0, 8])
+        .align_y(iced::Alignment::Center)
+        .style(move |theme| {
+            container::Style::default().color(resolve_theme(theme).tokens().text)
+        });
+    let rule = container(iced::widget::Space::new(Fill, 1))
+        .width(Fill)
+        .style(move |theme| {
+            container::Style::default().background(resolve_theme(theme).tokens().border_subtle)
+        });
+    column![row![label, value].height(27), rule]
+        .height(28)
+        .width(Fill)
+        .into()
+}
+
+pub fn property_grid_row_with<'a, M: 'a, F>(
+    label: impl Into<String>,
+    value: impl Into<String>,
+    resolve_theme: F,
+) -> Element<'a, M>
+where
+    F: Fn(&iced::Theme) -> Theme + Copy + 'a,
+{
+    property_grid_control_with(
+        label,
+        text(value.into()).font(fonts::BODY).size(12).into(),
+        resolve_theme,
+    )
+}
+
+pub fn property_grid_row<'a, M: 'a>(
+    label: impl Into<String>,
+    value: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    property_grid_row_with(label, value, move |_| theme)
+}
+
+pub fn property_section_with<'a, M: 'a, F>(
+    title: impl Into<String>,
+    resolve_theme: F,
+) -> Element<'a, M>
+where
+    F: Fn(&iced::Theme) -> Theme + Copy + 'a,
+{
+    container(text(title.into()).font(fonts::STRONG).size(12))
+        .width(Fill)
+        .height(24)
+        .padding([0, 6])
+        .align_y(iced::Alignment::Center)
+        .style(move |theme| {
+            let t = resolve_theme(theme).tokens();
+            container::Style::default().background(t.bg_lighter).color(t.text)
+        })
+        .into()
+}
+
+pub fn property_section<'a, M: 'a>(title: impl Into<String>, theme: Theme) -> Element<'a, M> {
+    property_section_with(title, move |_| theme)
+}

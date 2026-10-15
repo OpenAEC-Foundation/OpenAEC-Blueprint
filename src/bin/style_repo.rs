@@ -1438,25 +1438,25 @@ impl Application for StyleRepo {
     }
     fn properties(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         column![
-            widgets::property(l.text("Pagina", "Page"), self.page.title(l), theme),
-            widgets::property(l.text("Thema", "Theme"), theme.to_string(), theme),
-            widgets::property(
+            widgets::property_grid_row(l.text("Pagina", "Page"), self.page.title(l), theme),
+            widgets::property_grid_row(l.text("Thema", "Theme"), theme.to_string(), theme),
+            widgets::property_grid_row(
                 l.text("Canonieke iconen", "Canonical icons"),
                 Icon::ALL.len().to_string(),
                 theme
             ),
-            widgets::property(
+            widgets::property_grid_row(
                 l.text("UI-broniconen", "UI source icons"),
                 source_icons::ALL.len().to_string(),
                 theme
             ),
-            widgets::property(
+            widgets::property_grid_row(
                 l.text("FEM/BIM-voorstellen", "FEM/BIM proposals"),
                 proposals().len().to_string(),
                 theme
             ),
         ]
-        .spacing(14)
+        .spacing(0)
         .into()
     }
     fn update(&mut self, action: Action) -> Task<Action> {

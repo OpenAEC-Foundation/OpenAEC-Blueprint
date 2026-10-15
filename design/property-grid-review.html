@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · eigenschappenpaneel</title>
+<style>
+  :root{color-scheme:light dark;font:14px/1.5 Inter,system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:#f5f4f2;color:#29292f}
+  header{background:#34343b;color:#fafafa;padding:30px max(24px,calc((100vw - 1260px)/2))}
+  header a{color:#f5b85c;text-decoration:none;font-size:12px}
+  h1{font-size:30px;font-weight:600;margin:12px 0 6px}
+  header p{max-width:790px;color:#d8d8dc;margin:0}
+  main{max-width:1300px;margin:auto;padding:24px}
+  .callout{border-left:3px solid #da7900;background:#fff9ef;padding:14px 18px;max-width:960px}
+  .metrics{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+  .metrics span{padding:7px 12px;border:1px solid #dedbd5;background:#fff;border-radius:3px}
+  h2{font-size:20px;margin:30px 0 6px}
+  p{max-width:970px}
+  .pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,540px),1fr));gap:18px}
+  .docks{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 24px}
+  .docks figure{width:262px}
+  .dock-crop{position:relative;width:240px;height:390px;overflow:hidden}
+  .dock-crop img{position:absolute;left:-1040px;top:-183px;width:1280px;height:auto;max-width:none}
+  figure{margin:0;border:1px solid #d9d6d0;background:#fff;padding:10px;min-width:0}
+  figure img{width:100%;height:auto;display:block}
+  figcaption{padding:10px 2px 2px;font-size:12px;color:#6b6b73}
+  .detail{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:30px 0}
+  .detail div{background:#fff;border:1px solid #dedbd5;padding:14px 18px}
+  .detail h3{font-size:14px;margin:0 0 6px}
+  .detail p{font-size:12px;margin:0}
+  @media(prefers-color-scheme:dark){body{background:#29292f;color:#f2f2f3}.callout{background:#40372b}.metrics span,figure,.detail div{background:#34343b;border-color:#55545a}figcaption{color:#bbb}}
+</style>
+<header><a href="review.html">← OpenAEC visuele review</a><h1>Een eigenschappenpaneel voor de Rust-tools</h1><p>De Style Repo en Open Pointcloud Studio gebruiken dezelfde Rust-rijen en sectiekoppen. Dit scherm toont software-renders uit beide applicaties, niet een getekende mock-up.</p></header>
+<main>
+  <div class="metrics"><span><strong>28 px</strong> rijhoogte</span><span><strong>24 px</strong> sectiekop</span><span><strong>5 : 6</strong> label / waarde</span><span><strong>Light + Forge</strong> getest</span></div>
+  <div class="callout"><strong>Beoordeling</strong> · De rijhoogte en verticale lijnen zijn consistent. Light en Forge hebben leesbare labels en waarden. De compacte Pointcloud-dock laat lang gelokaliseerde labels nog afbreken; die grens wordt in een volgende bredere layoutreview beoordeeld. De bron-Style Book specificeert de paneelregio en kleurrollen, maar geen volledige property-gridmaatvoering: deze maatvoering is een OpenAEC-harmonisatievoorstel.</div>
+  <h2>Detail van de rechterdock</h2><p>De uitsnede is alleen een browserweergave van de volledige 1280 px brede software-renders. De rasterbeelden zelf blijven ongewijzigd.</p>
+  <div class="docks">
+    <figure><div class="dock-crop"><img src="style-repo-components-light.png" alt="Eigenschappenrijen Style Repo Light"></div><figcaption>Style Repo · Light</figcaption></figure>
+    <figure><div class="dock-crop"><img src="pointcloud-shell-property-light.png" alt="Eigenschappenrijen Pointcloud Light"></div><figcaption>Pointcloud · Light</figcaption></figure>
+    <figure><div class="dock-crop"><img src="style-repo-components-forge.png" alt="Eigenschappenrijen Style Repo Forge"></div><figcaption>Style Repo · Forge</figcaption></figure>
+    <figure><div class="dock-crop"><img src="pointcloud-shell-property-forge.png" alt="Eigenschappenrijen Pointcloud Forge"></div><figcaption>Pointcloud · Forge</figcaption></figure>
+  </div>
+  <h2>Light</h2><p>De Style Repo toont de vaste metagegevens rechts. Pointcloud toont echte project- en cameravelden, met dezelfde label- en waardekolommen.</p>
+  <div class="pair">
+    <figure><a href="style-repo-components-light.png"><img src="style-repo-components-light.png" alt="Rust Style Repo met gedeeld eigenschappenpaneel, Light"></a><figcaption>Style Repo · gedeelde rijen in de rechterdock</figcaption></figure>
+    <figure><a href="pointcloud-shell-property-light.png"><img src="pointcloud-shell-property-light.png" alt="Open Pointcloud Studio met gedeeld eigenschappenpaneel, Light"></a><figcaption>Pointcloud · echte domeinvelden en secties</figcaption></figure>
+  </div>
+  <h2>Forge</h2><p>Dezelfde componenten gebruiken hier de Forge-tokens voor tekst, oppervlakken en scheidslijnen.</p>
+  <div class="pair">
+    <figure><a href="style-repo-components-forge.png"><img src="style-repo-components-forge.png" alt="Rust Style Repo met gedeeld eigenschappenpaneel, Forge"></a><figcaption>Style Repo · Forge</figcaption></figure>
+    <figure><a href="pointcloud-shell-property-forge.png"><img src="pointcloud-shell-property-forge.png" alt="Open Pointcloud Studio met gedeeld eigenschappenpaneel, Forge"></a><figcaption>Pointcloud · Forge</figcaption></figure>
+  </div>
+  <h2>Pointcloud met geladen scan</h2><p>Ook wanneer een scan is geopend blijven de eigenschappenrijen onderdeel van dezelfde grid.</p>
+  <div class="pair">
+    <figure><a href="pointcloud-shell-loaded-property-light.png"><img src="pointcloud-shell-loaded-property-light.png" alt="Pointcloud-eigenschappen na laden van een scan, Light"></a><figcaption>Geladen scan · Light</figcaption></figure>
+    <figure><a href="pointcloud-shell-loaded-property-forge.png"><img src="pointcloud-shell-loaded-property-forge.png" alt="Pointcloud-eigenschappen na laden van een scan, Forge"></a><figcaption>Geladen scan · Forge</figcaption></figure>
+  </div>
+  <div class="detail">
+    <div><h3>Wat de crate bezit</h3><p>Rijhoogte, kolomverdeling, padding, tekstrollen, onderste rand en sectiekop. Zowel read-only waarden als app-eigen controls passen in dezelfde grid.</p></div>
+    <div><h3>Wat de applicatie bezit</h3><p>Gelokaliseerde labels, betekenis en interactie van velden, documentcontext en de breedte van de rechterdock.</p></div>
+    <div><h3>Vervolg voor de review</h3><p>Controleer langere labels, selecties, bewerkbare waarden en smalle vensters in elke tool voordat het patroon overal wordt ingebouwd.</p></div>
+  </div>
+</main>
+</html>
