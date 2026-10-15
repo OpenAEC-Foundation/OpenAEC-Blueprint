@@ -1517,6 +1517,10 @@ mod tests {
             for (actual, label) in tabs.iter().zip(expected) {
                 let expected_label = if studio.optional_tabs.contains(label) { format!("{label} · optioneel") } else { (*label).clone() };
                 assert_eq!(actual.label, expected_label, "{}", studio.name);
+                if studio.id == "heatloss" && label == "IFC" {
+                    assert!(actual.groups.is_empty(), "source IFC ribbon is intentionally empty");
+                    continue;
+                }
                 assert!(!actual.groups.is_empty(), "{} / {}", studio.name, label);
                 assert!(actual.groups.iter().all(|group| !group.commands.is_empty()));
             }
@@ -1567,6 +1571,15 @@ mod tests {
         assert_eq!(map.groups[0].commands.len(), 2);
         let drawing = tabs.iter().find(|tab| tab.id == "situatietekening").unwrap();
         assert_eq!(drawing.groups.len(), 5);
+    }
+
+    #[test]
+    fn heatloss_ribbon_tracks_route_tabs_and_empty_ifc() {
+        let studio = studios().iter().find(|studio| studio.id == "heatloss").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Vertrekken", "Constructies", "Modeller", "IFC", "Resultaten", "Rapport"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs.iter().find(|tab| tab.id == "ifc").unwrap().groups.len(), 0);
+        assert_eq!(tabs.iter().find(|tab| tab.id == "vertrekken").unwrap().groups.len(), 3);
     }
 
     #[test]

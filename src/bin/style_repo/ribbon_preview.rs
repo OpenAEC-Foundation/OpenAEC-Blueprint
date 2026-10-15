@@ -27,10 +27,49 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
             groups: planner_groups(studio, tab, selected)
                 .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| geotech_groups(studio, tab, selected))
+                .or_else(|| heatloss_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Heatloss uses route-linked tabs; the IFC ribbon is intentionally empty.
+fn heatloss_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "heatloss" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Vertrekken" => vec![
+            ("Vertrekken", vec![("Nieuw vertrek", New.into())]),
+            ("Zones", vec![("Zones beheren", planner_source_icon!("Building2"))]),
+            ("Berekening", vec![("Bereken", planner_source_icon!("Play"))]),
+        ],
+        "Constructies" => vec![("Constructies", vec![("Nieuwe constructie", New.into()), ("Catalogus", planner_source_icon!("BookOpen"))])],
+        "Modeller" => vec![
+            ("Bewerken", vec![("Ongedaan", Undo.into()), ("Opnieuw", Redo.into()), ("Leeg", planner_source_icon!("Trash2"))]),
+            ("Selectie", vec![("Selecteer", planner_source_icon!("CircleDot"))]),
+            ("Vormen", vec![("Rechthoek", planner_source_icon!("Square")), ("Polygoon", planner_source_icon!("Diamond")), ("Cirkel", planner_source_icon!("Circle"))]),
+            ("Bouwelementen", vec![("Raam", planner_source_icon!("Columns3")), ("Deur", planner_source_icon!("PanelRight"))]),
+        ],
+        "IFC" => vec![],
+        "Resultaten" => vec![("Rapport", vec![("Genereer rapport", planner_source_icon!("FileText"))]), ("Export", vec![("Export JSON", Export.into())])],
+        "Rapport" => vec![("Rapport", vec![("Genereren", planner_source_icon!("FileText")), ("Download PDF", Export.into())])],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("heatloss:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// Source-aligned Geotechniek ribbon samples at 8182b48afc3f. IFC and

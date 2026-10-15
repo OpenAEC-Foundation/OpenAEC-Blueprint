@@ -302,17 +302,16 @@
     "proposed": true,
     "tabs": [
       "Bestand",
-      "Start",
-      "Gebouw",
-      "Installaties",
-      "Berekenen",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Vertrekken",
+      "Constructies",
+      "Modeller",
+      "IFC",
+      "Resultaten",
+      "Rapport"
     ],
-    "left_panel": "Gebouw & ruimten",
-    "right_panel": "Ruimte-eigenschappen",
-    "workspace": "Ruimtetabel + warmtebalans",
+    "left_panel": "Navigatie / project",
+    "right_panel": "Geen vast eigenschappenpaneel",
+    "workspace": "Vertrekken / constructies / model / resultaten",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -335,7 +334,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Tabs en routekoppeling gecontroleerd tegen frontend/src/components/ribbon/Ribbon.tsx op commit e233aec70e16. Het bronlabel Modeller ❄️ is in de gedeelde stijl ingekort tot Modeller omdat de gebundelde Rust-lettertypen de emoji als lege blokjes tekenen. AppShell.tsx toont een vaste Sidebar plus werkgebied maar geen globale rechter eigenschappenstrook; de gedeelde shell voegt die nog als harmonisatievoorstel toe. IFC-lint is bewust leeg: kopiëren/downloaden gebeurt op de IFC-pagina. Geen bruikbare UI-screenshots in deze bron gevonden; pixelbeoordeling van de pagina's staat open."
   },
   {
     "id": "energy",
