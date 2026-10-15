@@ -186,6 +186,9 @@ fn export_field_topnav_review() {
     render(&app, Theme::Light)
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-topnav-light.png"))
         .expect("save Field top navigation review");
+    render(&app, Theme::Forge)
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-topnav-forge.png"))
+        .expect("save Field Forge project form review");
 }
 
 #[test]

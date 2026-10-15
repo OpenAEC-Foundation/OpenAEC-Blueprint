@@ -105,6 +105,8 @@ enum Action {
     Reset,
     SelectStudio(usize),
     SelectScreen(usize),
+    FieldProjectEdit(usize, String),
+    FieldProjectPreview(&'static str),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -166,6 +168,17 @@ struct StudioLayout {
     screens: Vec<String>,
     notes: String,
 }
+struct FieldProjectState {
+    values: [String; 11],
+    notice: Option<&'static str>,
+}
+impl Default for FieldProjectState {
+    fn default() -> Self {
+        Self { values: ["Renovatie Damrak 1", "DAM-2026-001", "BouwCo BV", "Jan Jansen",
+            "Damrak 1", "1012LG", "Amsterdam", "30-07-2026", "Martijn de Vries", "", ""]
+            .map(str::to_owned), notice: None }
+    }
+}
 fn screen_label(id: &str, l: Language) -> &'static str {
     match id {
         "start" => l.text("Start", "Start"),
@@ -224,6 +237,7 @@ struct StyleRepo {
     sample_value: f32,
     selected_studio: usize,
     selected_screen: usize,
+    field_project: FieldProjectState,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -247,6 +261,7 @@ impl Default for StyleRepo {
             sample_value: 35.0,
             selected_studio: 0,
             selected_screen: 0,
+            field_project: FieldProjectState::default(),
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -966,6 +981,9 @@ impl StyleRepo {
     fn field_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
         let screen = studio.screens.get(self.selected_screen).map(String::as_str).unwrap_or("project");
+        if screen == "project" {
+            return self.field_project_page(theme, l);
+        }
         let capture = match screen {
             "project" => Some("01-project.png"),
             "koppelingen" => Some("02-koppelingen.png"),
@@ -987,6 +1005,75 @@ impl StyleRepo {
             content = content.push(self.card(text("Deze pagina is in index.html geverifieerd; een broncapture ontbreekt.").size(12), theme));
         }
         content.into()
+    }
+    fn field_project_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let field = |index: usize, label: &'static str, width: f32| {
+            widgets::form_field(theme, label, self.field_project.values[index].clone(),
+                move |value| Action::FieldProjectEdit(index, value), iced::Length::Fixed(width))
+        };
+        let bag = button(text(l.text("Zoek adres (BAG)", "Find address (BAG)")).size(12))
+            .padding([9, 16]).on_press(Action::FieldProjectPreview(
+                "BAG is in deze schermreview niet gekoppeld; de badge komt uit de broncapture."))
+            .style(move |_, status| widgets::button_style(theme, false, status));
+        let energy = button(text(l.text("Energielabel ophalen", "Fetch energy label")).size(12))
+            .padding([9, 16]).on_press(Action::FieldProjectPreview(
+                "Energielabel is in deze schermreview niet gekoppeld; Label B is bronvoorbeelddata."))
+            .style(move |_, status| widgets::button_style(theme, false, status));
+        let verified_ink = if theme == Theme::Light {
+            iced::Color::from_rgb8(0x05, 0x96, 0x69)
+        } else {
+            iced::Color::from_rgb8(0x86, 0xef, 0xac)
+        };
+        let mut sample_actions = column![
+            bag,
+            text("✓ Bronvoorbeeld: BAG-geverifieerd · 036320000481734")
+                .size(11).color(verified_ink),
+            energy,
+            container(text("Label B").size(11).color(iced::Color::WHITE))
+                .padding([4, 9]).style(|_| container::Style::default()
+                    .background(iced::Color::from_rgb8(0x70, 0xbc, 0x31))
+                    .border(iced::Border::default().rounded(3))),
+        ].spacing(10).align_x(Alignment::Center);
+        if let Some(notice) = self.field_project.notice {
+            sample_actions = sample_actions.push(text(notice).size(11).color(t.text_secondary));
+        }
+        let mut form = Column::new().spacing(24)
+            .push(text(l.text("Projectgegevens", "Project details"))
+                .font(fonts::HEADING).size(29).color(t.text))
+            .push(row![
+                field(0, l.text("Projectnaam *", "Project name *"), 540.0),
+                field(1, l.text("Projectnummer", "Project number"), 540.0)].spacing(24))
+            .push(row![
+                field(2, l.text("Opdrachtgever", "Client"), 540.0),
+                field(3, l.text("Contactpersoon", "Contact person"), 540.0)].spacing(24))
+            .push(field(4, l.text("Straat en huisnummer *", "Street and number *"), 1104.0))
+            .push(row![
+                field(5, l.text("Postcode *", "Postal code *"), 540.0),
+                field(6, l.text("Plaats *", "City *"), 540.0)].spacing(24))
+            .push(container(sample_actions).width(1104).center_x(iced::Fill))
+            .push(row![
+                field(7, l.text("Opnamedatum", "Survey date"), 540.0),
+                field(8, l.text("Opgenomen door", "Surveyor"), 540.0)].spacing(24))
+            .push(field(9, l.text("Projectbeschrijving", "Project description"), 1104.0))
+            .push(field(10, l.text("Notities", "Notes"), 1104.0));
+        form = form.push(button(text(l.text("Project opslaan · preview", "Save project · preview")).size(12))
+            .padding([10, 16]).on_press(Action::FieldProjectPreview(
+                "De Style Repo bewaart dit voorbeeld alleen in de huidige sessie."))
+            .style(move |_, status| widgets::button_style(theme, false, status)));
+        let panel = container(form).padding(32).width(1168)
+            .style(move |_| container::Style::default().background(t.bg_lighter)
+                .border(iced::Border { color: t.border, width: 1.0, radius: 10.0.into() }));
+        let capture = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/Open-Field-Studio/docs/screenshots/01-project.png");
+        column![
+            text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG).size(11).color(t.accent),
+            panel,
+            text("Broncapture ter vergelijking · commit 8a4f104")
+                .font(fonts::MEDIUM).size(12).color(t.text_secondary),
+            image(image::Handle::from_path(capture)).width(1168),
+        ].spacing(16).into()
     }
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
@@ -1606,6 +1693,10 @@ impl Application for StyleRepo {
                         .saturating_sub(1),
                 );
             }
+            Action::FieldProjectEdit(index, value) => {
+                if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }
+            }
+            Action::FieldProjectPreview(message) => self.field_project.notice = Some(message),
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2008,8 +2099,17 @@ mod tests {
         let tabs = app.ribbon(Language::Dutch);
         assert_eq!(tabs.len(), 10);
         assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
+        assert_eq!(app.field_project.values[0], "Renovatie Damrak 1");
+        let _ = app.update(Action::FieldProjectEdit(0, "Nieuwe opname".into()));
+        assert_eq!(app.field_project.values[0], "Nieuwe opname");
+        let _ = app.update(Action::FieldProjectEdit(usize::MAX, "genegeerd".into()));
+        assert_eq!(app.field_project.values[0], "Nieuwe opname");
+        let _ = app.update(Action::FieldProjectPreview("BAG-review"));
+        assert_eq!(app.field_project.notice, Some("BAG-review"));
         let _ = app.tab_event("koppelingen");
         assert_eq!(app.selected_screen, 8);
+        let _ = app.tab_event("project");
+        assert_eq!(app.field_project.values[0], "Nieuwe opname");
     }
 
     #[test]

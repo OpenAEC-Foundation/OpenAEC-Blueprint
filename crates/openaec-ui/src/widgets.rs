@@ -152,6 +152,24 @@ pub fn text_input_style(theme: Theme, status: text_input::Status) -> text_input:
     style
 }
 
+/// Labelled application-owned form field for full-page screens.
+pub fn form_field<'a, M: Clone + 'a>(
+    theme: Theme,
+    label: impl Into<String>,
+    value: impl Into<String>,
+    on_input: impl Fn(String) -> M + 'a,
+    width: Length,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let value = value.into();
+    column![
+        text(label.into()).font(fonts::MEDIUM).size(12).color(t.text_secondary),
+        text_input("", &value).on_input(on_input)
+            .font(fonts::BODY).size(13).padding([11, 14]).width(Fill)
+            .style(move |_, status| text_input_style(theme, status)),
+    ].spacing(7).width(width).into()
+}
+
 /// Choice field and its popup use the same tokens as text fields.
 pub fn pick_list_style(theme: Theme, status: pick_list::Status) -> pick_list::Style {
     let t = theme.tokens();

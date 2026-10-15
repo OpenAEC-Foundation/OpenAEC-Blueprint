@@ -50,7 +50,7 @@ De [naamgenotenreview](design/icon-name-review.html) zet 189 iconvarianten uit 8
 
 De bibliotheekiconen zijn verder op werkelijk broncodegebruik gecontroleerd: 608 van de 686 importvoorkomens verschijnen rechtstreeks als JSX-component, 78 worden na de import als identifier gebruikt. De review onderscheidt 287 direct gebruikte SVG-varianten van 25 varianten die alleen indirect worden doorgegeven, met een link naar de gebruiksregel op de vastgelegde broncommit. Dit blijft statisch codebewijs; zichtbaarheid hangt af van de applicatietoestand.
 
-De [Field Studio-schermroute-review](design/field-route-review.html) zet tien actuele navigatieroutes naast zes bewaarde bronbeelden en koppelt elke route aan de exacte UI-code. Vier routes hebben alleen codebewijs.
+De [Field Studio-schermroute-review](design/field-route-review.html) zet tien actuele navigatieroutes naast zes bewaarde bronbeelden en koppelt elke route aan de exacte UI-code. Vier routes hebben alleen codebewijs. Het [Project-formulier is nu ook native in Rust opgebouwd](design/style-repo-field-topnav-light.png) met gedeelde, bewerkbare formuliervelden; BAG, energielabel en opslag zijn reviewacties.
 
 Alle 666 gevonden screenshotkandidaten zijn rechtstreeks uit hun vastgelegde Git-commit gerenderd op [47 schermcontactbladen](design/screen-contact-sheets.html). Het overzicht toont de 472 als applicatiescherm ingedeelde beelden naast handleidingbeelden, mockups, tutorialuitsneden en websitebeelden; historische captures worden niet als bewijs voor de actuele UI behandeld. De [volledige bronindex](design/screen-inventory.html) blijft per bestand doorzoekbaar.
 
