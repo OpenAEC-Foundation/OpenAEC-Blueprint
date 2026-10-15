@@ -1,13 +1,83 @@
 {
   "scope": "SHA-256 collisions within 565 verified UI icon assets",
   "pair_count": 14,
-  "distinct_action_pairs": 6,
-  "context_review_pairs": 8,
+  "distinct_action_pairs": 8,
+  "related_action_pairs": 6,
+  "context_review_pairs": 0,
   "pairs": [
+    {
+      "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
+      "kind": "distinct-action",
+      "title": "CAD / Pointcloud · EDL-weergave / bolprimitief",
+      "assessment": "Pointcloud schakelt Eye Dome Lighting in; CAD maakt een bolprimitief. Een gedeelde bolvorm maakt renderinstelling en modelgeometrie onduidelijk.",
+      "originals": [
+        {
+          "repo": "open-pointcloud-studio",
+          "path": "native/assets/opencad-icons/sphere.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/sphere.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12402",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
+        },
+        {
+          "repo": "OpenCADStudio",
+          "path": "assets/icons/model/sphere.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/model/sphere.svg",
+          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L19",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
+        }
+      ],
+      "drafts": [
+        "pointcloud-edl",
+        "cad-sphere"
+      ]
+    },
+    {
+      "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
+      "kind": "distinct-action",
+      "title": "CAD / Pointcloud · gebouwpaneel / shaded weergave",
+      "assessment": "Pointcloud opent het 3D BAG-gebouwpaneel; CAD kiest Shaded als visuele stijl. Het gedeelde kubusbeeld staat voor andere acties.",
+      "originals": [
+        {
+          "repo": "open-pointcloud-studio",
+          "path": "native/assets/opencad-icons/solid.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/solid.svg",
+          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12401",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
+        },
+        {
+          "repo": "OpenCADStudio",
+          "path": "assets/icons/solid.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/solid.svg",
+          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/visual_style.rs#L18",
+          "evidence": "direct-path",
+          "references": 1,
+          "candidate": "",
+          "adopted": "",
+          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
+        }
+      ],
+      "drafts": [
+        "pointcloud-bag-panel",
+        "cad-shaded"
+      ]
+    },
     {
       "sha256": "e6fa9a49f9bb0471c041cae764c11fca8d25912af4fa9a7e6338fb0836e26710",
       "kind": "distinct-action",
       "title": "GIS · BAG 3D / CityJSON",
+      "assessment": "BAG 3D haalt gebouwgeometrie op; CityJSON bedient een ander gegevensformaat. De identieke knopafbeelding verbergt het bronverschil.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -41,6 +111,7 @@
       "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
       "kind": "distinct-action",
       "title": "GIS · BGT / BGT 3D",
+      "assessment": "De ene knop vraagt BGT-kaartgegevens, de andere een 3D-variant. De dimensie hoort in de vorm herkenbaar te zijn.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -74,6 +145,7 @@
       "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
       "kind": "distinct-action",
       "title": "GIS · historische luchtfoto / straatbeeld",
+      "assessment": "Een historische luchtfotoreeks en een straatbeeld openen verschillende kaartbronnen en navigatiecontexten.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -107,6 +179,7 @@
       "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
       "kind": "distinct-action",
       "title": "GIS · locatie / opschonen",
+      "assessment": "Locatie stelt plaatsinformatie in; Opschonen verwijdert of herstelt ongewenste gegevens. Dezelfde vorm suggereert ten onrechte dezelfde opdracht.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -140,6 +213,7 @@
       "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701",
       "kind": "distinct-action",
       "title": "PDF · passend zoomen / schermvullend tonen",
+      "assessment": "Fit Page wijzigt de documentzoom; Fullscreen wijzigt de venstermodus. De bediening en terugweg verschillen.",
       "originals": [
         {
           "repo": "open-pdf-studio-v3",
@@ -173,6 +247,7 @@
       "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
       "kind": "distinct-action",
       "title": "PDF · werkelijke grootte / oppervlaktemeting",
+      "assessment": "Actual Size kiest een 1:1-weergave; Area start een meetgereedschap. Dit zijn aparte opdrachten in verschillende lintgroepen.",
       "originals": [
         {
           "repo": "open-pdf-studio-v3",
@@ -204,8 +279,9 @@
     },
     {
       "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Aantallen.pushbutton",
+      "assessment": "Beide tellen family-instances per type; de deurstaat telt deuren, de kozijnstaat kozijnen en schrijft daarbij ook family-typewaarden.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -234,8 +310,9 @@
     },
     {
       "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Config.pushbutton",
+      "assessment": "Beide openen de configuratie van een staat met dezelfde profielgestuurde formulierbasis; deur- en kozijnvelden verschillen.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -264,8 +341,9 @@
     },
     {
       "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Create.pushbutton",
+      "assessment": "Beide plaatsen unieke typen op een geselecteerde wand: deuren respectievelijk kozijnen.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -294,8 +372,9 @@
     },
     {
       "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Maatvoering.pushbutton",
+      "assessment": "Beide plaatsen maatlijnen bij instances in de actieve view; de gebruikte referenties en aantallen verschillen.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -324,8 +403,9 @@
     },
     {
       "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Rename.pushbutton",
+      "assessment": "Beide hernoemen family types; de deurstaat volgt de 3BM-conventie, de kozijnstaat breedte- en hoogteparameters.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -354,8 +434,9 @@
     },
     {
       "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421",
-      "kind": "context-review",
+      "kind": "related-action",
       "title": "Bouwkunde · deurstaat / kozijnstaat · Tag.pushbutton",
+      "assessment": "Beide plaatsen tags onder instances; de bron kiest afzonderlijke deur- en kozijnfamilies en offsets.",
       "originals": [
         {
           "repo": "pyrevit-gis2bim",
@@ -378,66 +459,6 @@
           "candidate": "",
           "adopted": "",
           "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421"
-        }
-      ],
-      "drafts": []
-    },
-    {
-      "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
-      "kind": "context-review",
-      "title": "CAD / Pointcloud · gedeelde solid-vorm",
-      "originals": [
-        {
-          "repo": "open-pointcloud-studio",
-          "path": "native/assets/opencad-icons/solid.svg",
-          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/solid.svg",
-          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12401",
-          "evidence": "direct-path",
-          "references": 1,
-          "candidate": "",
-          "adopted": "",
-          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
-        },
-        {
-          "repo": "OpenCADStudio",
-          "path": "assets/icons/solid.svg",
-          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/solid.svg",
-          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/visual_style.rs#L18",
-          "evidence": "direct-path",
-          "references": 1,
-          "candidate": "",
-          "adopted": "",
-          "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8"
-        }
-      ],
-      "drafts": []
-    },
-    {
-      "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
-      "kind": "context-review",
-      "title": "CAD / Pointcloud · gedeelde sphere-vorm",
-      "originals": [
-        {
-          "repo": "open-pointcloud-studio",
-          "path": "native/assets/opencad-icons/sphere.svg",
-          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/sphere.svg",
-          "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12402",
-          "evidence": "direct-path",
-          "references": 1,
-          "candidate": "",
-          "adopted": "",
-          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
-        },
-        {
-          "repo": "OpenCADStudio",
-          "path": "assets/icons/model/sphere.svg",
-          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/model/sphere.svg",
-          "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L19",
-          "evidence": "direct-path",
-          "references": 1,
-          "candidate": "",
-          "adopted": "",
-          "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944"
         }
       ],
       "drafts": []

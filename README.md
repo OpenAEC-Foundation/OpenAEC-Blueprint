@@ -58,7 +58,7 @@ De [ribbon-groepsreview](design/ribbon-group-review.html) vergelijkt de Tauri-`R
 
 De [eigenschappenreview](design/property-grid-review.html) toont de rechterpanelen van beide native applicaties in Light en Forge. De gedeelde Rust-crate tekent daar 28 px label/waarde-rijen en 24 px sectiekoppen; de domeinvelden en bedieningen blijven van de betreffende applicatie.
 
-De [icoonbotsingreview](design/icon-collision-review.html) maakt 14 paren met exact dezelfde bronbytes zichtbaar. Voor zes paren met verschillende handelingen zijn twaalf onderscheidende vectorconcepten in 16/24/32 px gemaakt; de acht andere paren blijven ter contextbeoordeling. De concepten staan nog buiten de publieke Rust-icoon-API.
+De [icoonbotsingreview](design/icon-collision-review.html) beoordeelt alle 14 paren met exact dezelfde bronbytes. Acht paren koppelen de vorm aan verschillende handelingen; daarvoor staan 16 onderscheidende vectorconcepten in 16/24/32 px op licht en donker. Zes Bouwkunde-paren hergebruiken de vorm voor verwante handelingen bij deur- en kozijnstaten. De concepten staan nog buiten de publieke Rust-icoon-API.
 
 ## Via GitHub Desktop publiceren
 

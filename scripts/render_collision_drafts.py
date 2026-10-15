@@ -13,11 +13,11 @@ from gi.repository import Rsvg
 
 ROOT = Path(__file__).resolve().parents[1]
 files = sorted((ROOT / 'design/icon-collision-drafts').glob('*.svg'))
-assert len(files) == 12
+assert len(files) == 16
 font_path = ROOT / 'assets/fonts/Inter-Regular.ttf'
 font = ImageFont.truetype(str(font_path), 15)
 small = ImageFont.truetype(str(font_path), 11)
-board = Image.new('RGB', (920, 1010), '#f0f2f4')
+board = Image.new('RGB', (920, 67 + len(files) * 78 + 10), '#f0f2f4')
 draw = ImageDraw.Draw(board)
 draw.text((16, 8), 'OPENAEC · COLLISION ICON DRAFTS', font=font, fill='#272b32')
 for col, label in enumerate(['16 LIGHT', '16 DARK', '24 LIGHT', '24 DARK', '32 LIGHT', '32 DARK']):
