@@ -19,6 +19,7 @@ Open [`design/review.html`](design/review.html) in een browser voor het interact
 
 De vijf vaste vensterbanden en de standaardbreedte van beide zijpanelen zijn vastgelegd in [`design/layout-spec.json`](design/layout-spec.json) met een exacte Tauri-broncommit. `python3 scripts/check_layout_metrics.py` vergelijkt de Rust-crate en het HTML-prototype met die maten, en met de lokale Tauri-bron wanneer die naast deze repo staat.
 `python3 scripts/check_icon_adoptions.py` controleert de zes iconbesluiten en identieke SVG-inhoud in de lokale Pointcloud-integratie.
+`python3 scripts/check_portable_ui.py` vergelijkt de volledige portable crate met deze bron: Rust-code na formattering, alle 27 gebundelde fonts/iconen en de runtime-dependencies.
 
 De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout op branch `feat/shared-rust-ui`. Daar draait een portable snapshot van deze crate als `native/ui`; de Pointcloud-titelbalk en [zes beoordeelde ribbonacties](design/icon-adoptions.json) gebruiken de canonieke iconen, naast de gebundelde lettertypen en 77 gedeelde kleurvelden per thema. De overige domeinribbon en panelen worden pas na de visuele en semantische beoordeling volledig overgezet.
 
