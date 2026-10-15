@@ -89,13 +89,12 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         let content = row![text(label).size(11), close]
             .spacing(6)
             .align_y(iced::Alignment::Center);
-        documents = documents.push(
-            button(content)
-                .on_press(Message::Document(DocumentEvent::Activate(doc.id)))
-                .height(24)
-                .padding(Padding { top: 0.0, bottom: 0.0, left: 10.0, right: 4.0 })
-                .style(move |_, status| widgets::document_tab_style(theme, selected, status)),
-        );
+        let tab = button(content)
+            .on_press(Message::Document(DocumentEvent::Activate(doc.id)))
+            .height(24)
+            .padding(Padding { top: 0.0, bottom: 0.0, left: 10.0, right: 4.0 })
+            .style(move |_, status| widgets::document_tab_style(theme, selected, status));
+        documents = documents.push(widgets::document_tab_bottom_gap(theme, tab.into()));
     }
     let document_bar=crate::frame::document_bar(theme, horizontal(documents));
     let body: Element<'a,Message<M>> = if state.backstage {

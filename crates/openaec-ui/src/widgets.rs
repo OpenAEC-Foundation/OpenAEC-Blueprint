@@ -8,9 +8,9 @@ use crate::{
 use iced::{
     widget::{
         button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
-        text, text_input, tooltip,
+        stack, text, text_input, tooltip, Space,
     },
-    Background, Border, Element, Fill, Length, Padding,
+    Alignment, Background, Border, Element, Fill, Length, Padding,
 };
 
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
@@ -493,6 +493,23 @@ pub fn document_tab_style(theme: Theme, active: bool, status: button::Status) ->
         },
         ..button::Style::default()
     }
+}
+
+/// Cover Iced's uniform lower rule with the document-band surface. The Tauri
+/// tab reserves a transparent 2 px bottom border; its contents and actions
+/// remain owned by the first child.
+pub fn document_tab_bottom_gap<'a, M: 'a>(theme: Theme, tab: Element<'a, M>) -> Element<'a, M> {
+    let surface = theme.tokens().docbar_bg;
+    let gap = container(
+        container(Space::new(Fill, 2))
+            .width(Fill)
+            .height(2)
+            .style(move |_| container::Style::default().background(surface)),
+    )
+    .width(Fill)
+    .height(24)
+    .align_y(Alignment::End);
+    stack![tab, gap].into()
 }
 
 /// Close glyph inside a shared document tab. Active and hovered glyphs use
