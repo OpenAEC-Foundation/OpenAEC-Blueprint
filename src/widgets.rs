@@ -1,9 +1,80 @@
 //! Canonical controls for domain panels. Use these instead of restyling buttons per app.
 use crate::{fonts, icons::Icon, model::metrics, Theme};
 use iced::{
-    widget::{button, column, container, pick_list, row, text, text_input, tooltip},
+    widget::{
+        button, checkbox, column, container, pick_list, row, scrollable, text, text_input, tooltip,
+    },
     Background, Border, Element, Fill,
 };
+
+pub fn checkbox_style(theme: Theme, status: checkbox::Status) -> checkbox::Style {
+    let t = theme.tokens();
+    let (checked, hovered, disabled) = match status {
+        checkbox::Status::Active { is_checked } => (is_checked, false, false),
+        checkbox::Status::Hovered { is_checked } => (is_checked, true, false),
+        checkbox::Status::Disabled { is_checked } => (is_checked, false, true),
+    };
+    let (background, border) = if checked {
+        (t.accent, t.accent)
+    } else if hovered {
+        (t.dialog_input_bg, t.dialog_content_secondary)
+    } else {
+        (t.dialog_input_bg, t.dialog_input_border)
+    };
+    let opacity = if disabled { 0.5 } else { 1.0 };
+    checkbox::Style {
+        background: background.scale_alpha(opacity).into(),
+        icon_color: t.btn_primary_text,
+        border: Border {
+            color: border.scale_alpha(opacity),
+            width: 1.0,
+            radius: 2.0.into(),
+        },
+        text_color: Some(t.text.scale_alpha(opacity)),
+    }
+}
+
+pub fn scrollable_style(theme: Theme, status: scrollable::Status) -> scrollable::Style {
+    let t = theme.tokens();
+    let (horizontal, vertical) = match status {
+        scrollable::Status::Active => (false, false),
+        scrollable::Status::Hovered {
+            is_horizontal_scrollbar_hovered,
+            is_vertical_scrollbar_hovered,
+        } => (
+            is_horizontal_scrollbar_hovered,
+            is_vertical_scrollbar_hovered,
+        ),
+        scrollable::Status::Dragged {
+            is_horizontal_scrollbar_dragged,
+            is_vertical_scrollbar_dragged,
+        } => (
+            is_horizontal_scrollbar_dragged,
+            is_vertical_scrollbar_dragged,
+        ),
+    };
+    let rail = |strong: bool| scrollable::Rail {
+        background: None,
+        border: Border::default(),
+        scroller: scrollable::Scroller {
+            color: t.accent.scale_alpha(if strong { 0.40 } else { 0.25 }),
+            border: Border::default().rounded(3),
+        },
+    };
+    scrollable::Style {
+        container: container::Style::default(),
+        vertical_rail: rail(vertical),
+        horizontal_rail: rail(horizontal),
+        gap: None,
+    }
+}
+
+pub fn tooltip_style(_theme: Theme) -> container::Style {
+    container::Style::default()
+        .background(iced::Color::from_rgb8(0x36, 0x36, 0x3E))
+        .color(iced::Color::from_rgb8(0xFA, 0xFA, 0xF9))
+        .border(Border::default().rounded(4))
+}
 
 /// Square text field shared by panel forms and dialogs.
 pub fn text_input_style(theme: Theme, status: text_input::Status) -> text_input::Style {
@@ -258,7 +329,9 @@ pub fn panel<'a, M: 'a>(
 ) -> Element<'a, M> {
     container(column![
         panel_header(title, theme),
-        iced::widget::scrollable(container(content).padding(12).width(Fill)).height(Fill),
+        iced::widget::scrollable(container(content).padding(12).width(Fill))
+            .height(Fill)
+            .style(move |_, status| scrollable_style(theme, status)),
     ])
     .width(Fill)
     .height(Fill)
@@ -301,7 +374,10 @@ pub fn icon_button<'a, M: Clone + 'a>(
             .padding(7)
             .on_press(message)
             .style(move |_, s| button_style(theme, false, s)),
-        text(label).size(12),
+        container(text(label).size(12))
+            .padding([8, 12])
+            .max_width(340)
+            .style(move |_| tooltip_style(theme)),
         tooltip::Position::Bottom,
     )
     .into()

@@ -344,6 +344,12 @@ impl StyleRepo {
                         .on_input(Action::Input)
                         .style(move |_, status| widgets::text_input_style(theme, status))
                         .width(360),
+                    iced::widget::checkbox(l.text("Voorbeeld actief", "Sample active"), self.sample_toggle)
+                        .on_toggle(|_| Action::Toggle)
+                        .size(13)
+                        .text_size(11)
+                        .spacing(6)
+                        .style(move |_, status| widgets::checkbox_style(theme, status)),
                     row![
                         widgets::action(
                             if self.sample_toggle {
