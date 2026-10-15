@@ -176,6 +176,18 @@ fn export_cad_canvas_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Pointcloud review on demand"]
+fn export_pointcloud_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pointcloud = studios().iter().position(|studio| studio.id == "pointcloud").unwrap();
+    let _ = app.update(Action::SelectStudio(pointcloud));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("start"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pointcloud-ribbon-forge.png"))
+        .expect("save Pointcloud ribbon review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -367,6 +379,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Forge, false, Some("tekenen"))
         .save_png(&design.join("style-repo-cad-canvas-forge.png"))
         .expect("save CAD canvas review");
+    let pointcloud = studios().iter().position(|studio| studio.id == "pointcloud").unwrap();
+    let _ = app.update(Action::SelectStudio(pointcloud));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("start"))
+        .save_png(&design.join("style-repo-pointcloud-ribbon-forge.png"))
+        .expect("save Pointcloud ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

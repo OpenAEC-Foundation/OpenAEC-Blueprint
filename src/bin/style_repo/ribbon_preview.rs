@@ -25,6 +25,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
+                .or_else(|| pointcloud_groups(studio, tab, selected))
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
                 .or_else(|| planner_groups(studio, tab, selected))
@@ -40,6 +41,28 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// The current native Pointcloud branch has one Start ribbon with ten panels.
+fn pointcloud_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "pointcloud" || tab != "Start" { return None; }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = vec![
+        ("Bestand", vec![("Openen", Open.into()), ("Scanmap openen", planner_source_icon!("FolderOpen"))]),
+        ("Navigatie", vec![("Alles passend", Fit.into()), ("Inzoomen", planner_source_icon!("ZoomIn")), ("Uitzoomen", planner_source_icon!("ZoomOut")), ("Selectie passend", Fit.into()), ("Pannen", planner_source_icon!("MoveHorizontal"))]),
+        ("Selectie", vec![("Punt kiezen", Search.into()), ("Kaderselectie", Grid.into()), ("Selectie wissen", Close.into()), ("Punten verwijderen", planner_source_icon!("Trash2")), ("Selectie exporteren", Export.into())]),
+        ("Snedebox", vec![("Snedebox", planner_source_icon!("Square")), ("Passend op selectie", Fit.into()), ("Box resetten", planner_source_icon!("RotateCcw"))]),
+        ("Oppervlak", vec![("Mesh", planner_source_icon!("Boxes")), ("Gesloten mesh", Cube.into()), ("Terrein", planner_source_icon!("Map")), ("Vlakken", Grid.into())]),
+        ("Tekening", vec![("Mesh naar plan", planner_source_icon!("FileText")), ("Doorsnedetekening", planner_source_icon!("FileText")), ("Blad", planner_source_icon!("FileText"))]),
+        ("Meten", vec![("Afstand", Measure.into()), ("Oppervlakte", Measure.into())]),
+        ("Annotatie", vec![("Notitie", planner_source_icon!("FileText")), ("Lijn tekenen", planner_source_icon!("Pen"))]),
+        ("Index", vec![("Index bouwen", planner_source_icon!("DatabaseBackup")), ("LOD verversen", planner_source_icon!("RefreshCw"))]),
+        ("Export", vec![("Puntenwolk exporteren", Export.into())]),
+    ];
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
+        let id = format!("pointcloud:{tab}:{name}");
+        Command::new(name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
+    }).collect() }).collect())
 }
 
 /// Current core module registry and ribbon group titles in OpenCADStudio.

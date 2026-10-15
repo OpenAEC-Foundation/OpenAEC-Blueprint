@@ -43,19 +43,13 @@
   {
     "id": "pointcloud",
     "name": "Open Pointcloud Studio",
-    "proposed": true,
+    "proposed": false,
     "tabs": [
       "Bestand",
-      "Start",
-      "Selecteren",
-      "Meten",
-      "Bewerken",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Start"
     ],
-    "left_panel": "Scans & lagen",
-    "right_panel": "Selectie-eigenschappen",
+    "left_panel": "Project",
+    "right_panel": "Eigenschappen",
     "workspace": "3D-puntenwolk",
     "fixed_regions": [
       "titlebar",
@@ -79,7 +73,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Actuele native bron open-pointcloud-studio/native/desktop/src/main.rs op lokale branch feat/shared-rust-ui (ddfc0c1): RibbonTab::CORE bevat alleen Start; de tien groepen zijn Bestand, Navigatie, Selectie, Snedebox, Oppervlak, Tekening, Meten, Annotatie, Index en Export. Beeld-/Selecteren-/Tools-tabs in oudere screenshots zijn historisch. Bestand opent een aparte bestandsweergave; de view cube heeft eigen weergavebediening buiten de ribbon."
   },
   {
     "id": "fem",

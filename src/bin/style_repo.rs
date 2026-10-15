@@ -1804,6 +1804,16 @@ mod tests {
     }
 
     #[test]
+    fn pointcloud_ribbon_matches_current_single_tab_and_ten_panels() {
+        let studio = studios().iter().find(|studio| studio.id == "pointcloud").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Start"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs.len(), 1);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Bestand", "Navigatie", "Selectie", "Snedebox", "Oppervlak", "Tekening", "Meten", "Annotatie", "Index", "Export"]);
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);
