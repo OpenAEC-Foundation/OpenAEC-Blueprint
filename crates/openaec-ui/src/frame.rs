@@ -1,6 +1,33 @@
 //! Shared vertical application frame; tools provide their domain content.
-use crate::model::metrics;
-use iced::{widget::{container, Column}, Element, Fill};
+use crate::{model::metrics, Theme};
+use iced::{widget::{column, container, Column, Space}, Element, Fill};
+
+/// Common 22 px status band with a one-pixel top rule. Applications supply
+/// their own status content while the crate owns its geometry and palette.
+pub fn status_bar<'a, M: 'a>(
+    theme: Theme,
+    content: Element<'a, M>,
+    horizontal_padding: u16,
+) -> Element<'a, M> {
+    let tokens = theme.tokens();
+    column![
+        container(Space::new(Fill, 1))
+            .width(Fill)
+            .style(move |_| container::Style::default().background(tokens.status_border)),
+        container(content)
+            .padding([0, horizontal_padding])
+            .width(Fill)
+            .height(metrics::STATUS - 1)
+            .style(move |_| {
+                container::Style::default()
+                    .background(tokens.status_bg)
+                    .color(tokens.status_text)
+            }),
+    ]
+    .width(Fill)
+    .height(metrics::STATUS)
+    .into()
+}
 
 pub struct FrameSlots<'a, M> {
     pub titlebar: Element<'a, M>,

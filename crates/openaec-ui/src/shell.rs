@@ -107,7 +107,11 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             .push(widgets::status_icon_button(l.text("Verkenner","Explorer"),Icon::PanelLeft,Message::Ui(UiEvent::ToggleLeft),theme))
             .push(widgets::status_icon_button(l.text("Eigenschappen","Properties"),Icon::PanelRight,Message::Ui(UiEvent::ToggleRight),theme));
     }
-    let status = container(status_row.align_y(iced::Alignment::Center)).padding([0,8]).height(metrics::STATUS).style(move |_|container::Style::default().background(t.status_bg).color(t.status_text));
+    let status = crate::frame::status_bar(
+        theme,
+        status_row.align_y(iced::Alignment::Center).height(Fill).into(),
+        8,
+    );
     let bands = if slots.mode == ChromeMode::TopNav {
         crate::frame::frame(crate::frame::FrameSlots {
             titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
