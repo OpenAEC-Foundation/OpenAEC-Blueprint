@@ -59,3 +59,16 @@ test("hetzelfde SVG onder twee id's wordt geweigerd", () => {
   const dir = fixture({ "edit/a": SVG, "edit/b": SVG }, entry("edit/a") + entry("edit/b"));
   assert.throws(() => loadIconManifest(dir), (err) => /edit\/b: zelfde SVG als edit\/a/.test(err.errors.join("\n")));
 });
+
+test("labels met \"*/\", regeleinde of besturingsteken worden geweigerd", () => {
+  const withLabel = (id, nl) =>
+    `[[icon]]\nid = "${id}"\nlabel = { nl = ${nl}, en = "E" }\ntags = []\nsource = "openaec"\n\n`;
+  const dir = fixture({ "edit/a": SVG, "edit/b": SVG.replace("M1", "M2"), "edit/c": SVG.replace("M1", "M3") },
+    withLabel("edit/a", '"a */ b"') + withLabel("edit/b", String.raw`"a\nb"`) + withLabel("edit/c", String.raw`"a\u0001b"`));
+  assert.throws(() => loadIconManifest(dir), (err) => {
+    const all = err.errors.join("\n");
+    return /edit\/a: label\.nl mag "\*\/" niet bevatten/.test(all) &&
+      /edit\/b: label\.nl mag geen regeleinden of besturingstekens/.test(all) &&
+      /edit\/c: label\.nl mag geen regeleinden of besturingstekens/.test(all);
+  });
+});

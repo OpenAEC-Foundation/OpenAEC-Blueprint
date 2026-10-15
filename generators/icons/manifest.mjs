@@ -6,6 +6,16 @@ import { normalizeSvg } from "./normalize.mjs";
 export const ID_PATTERN = /^[a-z][a-z0-9]*\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const byId = (a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
+// Besturingstekens en "*/" breken gegenereerde commentaar- en stringliteralen.
+const CONTROL = /[\u0000-\u001f\u007f]/;
+
+function labelProblem(value) {
+  if (typeof value !== "string") return "moet tekst zijn";
+  if (value.includes("*/")) return 'mag "*/" niet bevatten';
+  if (CONTROL.test(value)) return "mag geen regeleinden of besturingstekens bevatten";
+  return null;
+}
+
 export class IconManifestError extends Error {
   constructor(errors) {
     super(`icons.toml bevat ${errors.length} fout(en):\n- ${errors.join("\n- ")}`);
@@ -32,6 +42,10 @@ export function loadIconManifest(iconsDir) {
     if (seen.has(e.id)) errors.push(`dubbel icoon-id: ${e.id}`);
     seen.add(e.id);
     if (!e.label?.nl || !e.label?.en) errors.push(`${e.id}: label.nl en label.en zijn verplicht`);
+    for (const lang of ["nl", "en"]) {
+      const problem = e.label?.[lang] ? labelProblem(e.label[lang]) : null;
+      if (problem) errors.push(`${e.id}: label.${lang} ${problem}`);
+    }
     if (!e.source) errors.push(`${e.id}: source is verplicht`);
   }
   for (const id of listSvgIds(iconsDir)) if (!seen.has(id)) errors.push(`${id}.svg staat niet in icons.toml`);

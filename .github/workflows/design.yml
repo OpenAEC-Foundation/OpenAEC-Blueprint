@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -19,6 +22,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: npm ci
+      - name: Typecontrole packages
+        run: |
+          npx -w @openaec/icons tsc -p .
+          npx -w @openaec/i18n tsc -p .
       - name: Node-tests
         run: npm test
       - name: Gegenereerde bestanden actueel

@@ -168,8 +168,9 @@ npm run build
 ```
 
 Dit regenereert `dist/tokens.css`, `dist/tokens.js` en
-`dist/tailwind.preset.js` uit `design/tokens/*.json`. `dist/` wordt bewust
-gecommit zodat consumers zonder build-stap kunnen gebruiken.
+`dist/tailwind.preset.js` uit `design/tokens/*.json`. `dist/` staat in de
+root-`.gitignore` en wordt niet gecommit; het ontstaat via `npm run generate`
+(root) en bij een release.
 
 ---
 
@@ -263,8 +264,8 @@ Wanneer je een token-waarde wilt aanpassen:
 
 1. Eerst bijwerken in `brandbook/DESIGN-SYSTEM.md` §2 (de norm).
 2. Dan de overeenkomstige waarde in `tokens/*.json` aanpassen.
-3. `npm run build` draaien om `dist/*` te regenereren.
-4. Beide files in één commit.
+3. `npm run build` draaien om `dist/*` lokaal te controleren (niet gecommit).
+4. DESIGN-SYSTEM.md en `design/tokens/*` in één commit.
 
 ---
 
@@ -272,7 +273,7 @@ Wanneer je een token-waarde wilt aanpassen:
 
 1. Edit een JSON-file in `tokens/` of `extensions/`.
 2. Run `npm run build` — regenereert `dist/*`.
-3. Commit `tokens/*` en `dist/*` samen.
+3. Commit alleen de bronbestanden (`design/tokens/*`); `dist/*` wordt niet gecommit.
 
 Het JSON-formaat is Style Dictionary-compatible:
 

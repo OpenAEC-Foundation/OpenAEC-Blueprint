@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
+const CONTROL = /[\u0000-\u001f\u007f]/;
+
 export const LANGS = ["nl", "en"];
 
 export function flatten(obj, prefix = "") {
@@ -22,6 +24,7 @@ export function loadI18n(i18nDir) {
     for (const l of LANGS) {
       if (!maps[l].has(key)) errors.push(`${key} (${l} ontbreekt)`);
       else if (!maps[l].get(key).trim()) errors.push(`${key} (${l} leeg)`);
+      else if (CONTROL.test(maps[l].get(key))) errors.push(`${key} (${l} bevat besturingstekens)`);
     }
   }
   if (errors.length) throw new Error(`Vertalingen onvolledig: ${errors.join(", ")}`);

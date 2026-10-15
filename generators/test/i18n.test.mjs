@@ -19,6 +19,15 @@ test("ontbrekende of lege vertaling wordt gemeld", () => {
   assert.throws(() => loadI18n(dir), (e) => /b \(en ontbreekt\)/.test(e.message) && /a \(en leeg\)/.test(e.message));
 });
 
+test("waarden met besturingstekens worden geweigerd", () => {
+  const dir = mkdtempSync(join(tmpdir(), "oa-i18n-"));
+  mkdirSync(join(dir, "nl")); mkdirSync(join(dir, "en"));
+  writeFileSync(join(dir, "nl", "openaec.json"), JSON.stringify({ a: "x\u0001y", b: "ok" }));
+  writeFileSync(join(dir, "en", "openaec.json"), JSON.stringify({ a: "x", b: "regel\neind" }));
+  assert.throws(() => loadI18n(dir),
+    (e) => /a \(nl bevat besturingstekens\)/.test(e.message) && /b \(en bevat besturingstekens\)/.test(e.message));
+});
+
 test("echte bron is volledig en niet-ASCII blijft heel", () => {
   const { nl } = loadI18n(repoPath("design", "i18n"));
   assert.equal(nl.get("action.copy"), "Kopiëren");
