@@ -4,14 +4,14 @@ use openaec_ui::{
     iced::{
         self,
         widget::{
-            button, column, container, image, progress_bar, row, scrollable, svg, text, text_input,
+            button, column, container, image, pick_list, progress_bar, row, scrollable, svg, text, text_input,
             Column, Row, Space,
         },
         Alignment, Element, Fill, Task,
     },
     icons::Icon,
     model::metrics,
-    run, widgets, Application, Command, CommandIcon, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
+    run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
     Theme,
 };
 use serde::Deserialize;
@@ -103,6 +103,7 @@ enum Action {
     SelectStudio(usize),
     SelectScreen(usize),
     SelectPreviewCommand(String),
+    SelectEnergyStep(usize),
 }
 
 #[derive(Deserialize)]
@@ -168,6 +169,7 @@ struct StyleRepo {
     selected_studio: usize,
     selected_screen: usize,
     selected_preview_command: Option<String>,
+    selected_energy_step: usize,
 }
 impl Default for StyleRepo {
     fn default() -> Self {
@@ -183,6 +185,7 @@ impl Default for StyleRepo {
             selected_studio: 0,
             selected_screen: 0,
             selected_preview_command: None,
+            selected_energy_step: 0,
         }
     }
 }
@@ -700,6 +703,9 @@ impl StyleRepo {
     fn studios_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
         let selected = &studios()[self.selected_studio];
+        if selected.id == "energy" {
+            return self.energy_page(theme, l);
+        }
         let screen = selected
             .screens
             .get(self.selected_screen)
@@ -729,6 +735,23 @@ impl StyleRepo {
             }
             tabs = tabs.push(tab_row);
         }
+        let tab_review: Element<'_, Action> = if selected.id == "energy" {
+            self.card(
+                column![
+                    text(l.text("Werkstroomnavigatie", "Workflow navigation"))
+                        .font(fonts::STRONG).size(13).color(t.accent),
+                    text(l.text("Project → Gebouw → Installaties → Controle → Resultaten en rapport → Registratie. De historische screenshot en de actuele bronroutes worden apart beoordeeld.",
+                                "Project → Building → Installations → Check → Results and report → Registration. The historical screenshot and current source routes are reviewed separately."))
+                        .size(11).color(t.text_secondary),
+                ].spacing(8), theme)
+        } else {
+            column![
+                text(l.text("Voorgestelde ribbon-tabs", "Proposed ribbon tabs"))
+                    .font(fonts::STRONG).size(11).color(t.accent),
+                tabs,
+                self.preview_command_review(theme, l),
+            ].spacing(10).into()
+        };
         let mut screen_choices = Column::new().spacing(5);
         for (group, chunk) in selected.screens.chunks(5).enumerate() {
             let mut choices = Row::new().spacing(5);
@@ -756,12 +779,7 @@ impl StyleRepo {
                 .color(t.accent),
             screen_choices,
             self.screen_preview(selected, screen, theme, l),
-            text(l.text("Voorgestelde ribbon-tabs", "Proposed ribbon tabs"))
-                .font(fonts::STRONG)
-                .size(11)
-                .color(t.accent),
-            tabs,
-            self.preview_command_review(theme, l),
+            tab_review,
             self.card(
                 column![
                     text(l.text("Gedeelde schermindeling", "Shared screen layout"))
@@ -790,6 +808,79 @@ impl StyleRepo {
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
         ].spacing(22).into()
+    }
+    fn energy_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let selected = &studios()[self.selected_studio];
+        let screen = selected.screens.get(self.selected_screen).map(String::as_str).unwrap_or("workspace");
+        let choices: Vec<String> = studios().iter().map(|studio| studio.name.clone()).collect();
+        let picker = pick_list(choices, Some(selected.name.clone()), |name| {
+            Action::SelectStudio(studios().iter().position(|studio| studio.name == name).unwrap_or(0))
+        }).width(240).style(move |_, status| widgets::pick_list_style(theme, status))
+            .menu_style(move |_| widgets::pick_list_menu_style(theme));
+        let mut states = Row::new().spacing(5);
+        for (index, id) in selected.screens.iter().enumerate() {
+            states = states.push(button(text(screen_label(id, l)).size(11))
+                .padding([6, 9]).on_press(Action::SelectScreen(index))
+                .style(move |_, status| widgets::button_style(theme, index == self.selected_screen, status)));
+        }
+        let main: Element<'_, Action> = if screen == "workspace" {
+            let step = ["Project", "Gebouw", "Installaties", "Controle", "Resultaten en rapport", "Registratie"]
+                [self.selected_energy_step.min(5)];
+            let progress = self.card(column![
+                text(l.text("Voortgang · kerncontrole", "Progress · kernel check"))
+                    .font(fonts::STRONG).size(14),
+                widgets::property("Project", "✓  compleet", theme),
+                widgets::property("Gebouw", "✓  compleet", theme),
+                widgets::property("Installaties", "✓  compleet", theme),
+                widgets::property("Controle", "✓  compleet", theme),
+            ].spacing(13), theme);
+            let outcome = self.card(column![
+                text(l.text("Voorlopige uitkomst", "Provisional outcome"))
+                    .font(fonts::STRONG).size(14),
+                text("A+").font(fonts::HEADING).size(35).color(t.accent),
+                widgets::property("BENG 1", "51,4 kWh/m²", theme),
+                widgets::property("BENG 2", "80,6 kWh/m²", theme),
+                widgets::property("BENG 3", "22,3 %", theme),
+            ].spacing(11), theme);
+            column![
+                text(l.text("Voorbeeld tussenwoning", "Example terraced home"))
+                    .font(fonts::HEADING).size(27),
+                text(format!("{}: {step}", l.text("Actieve stap", "Active step")))
+                    .size(12).color(t.text_secondary),
+                row![progress, outcome].spacing(16).width(Fill),
+                self.card(column![
+                    text(l.text("NTA 8800-invoer", "NTA 8800 input")).font(fonts::STRONG).size(14),
+                    row![
+                        column![
+                            widgets::property(l.text("Uitgave", "Edition"), "NTA 8800:2025+C1:2026", theme),
+                            widgets::property(l.text("Gebruiksfunctie", "Use"), "Woonfunctie", theme),
+                        ].spacing(10).width(Fill),
+                        column![
+                            widgets::property(l.text("Rekenscope", "Calculation scope"), "Woningbouw", theme),
+                            widgets::property(l.text("Bron en bewijs", "Source and evidence"), "Voorbeeldproject", theme),
+                        ].spacing(10).width(Fill),
+                    ].spacing(20),
+                ].spacing(14), theme),
+                text(l.text("Stijlproef op basis van Energy-routes en een brongepind projectbeeld. Berekening en veldgedrag blijven eigendom van Energy Studio.",
+                            "Style study based on Energy routes and a pinned project image. Calculation and field behavior remain with Energy Studio."))
+                    .size(11).color(t.text_secondary),
+            ].spacing(17).into()
+        } else {
+            self.screen_preview(selected, screen, theme, l)
+        };
+        column![
+            row![
+                column![
+                    text("ENERGY WORKFLOW · SOURCE REVIEW").font(fonts::STRONG).size(11).color(t.accent),
+                    text(&selected.name).font(fonts::HEADING).size(29),
+                ].spacing(5).width(Fill),
+                picker,
+            ].align_y(Alignment::Center).spacing(20),
+            scrollable(states).direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new())),
+            main,
+            text(&selected.notes).size(11).color(t.text_secondary),
+        ].spacing(18).into()
     }
     fn preview_command_review(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
@@ -831,6 +922,20 @@ impl StyleRepo {
                 text(&studio.name).font(fonts::HEADING).size(23),
                 text(l.text("Begin met een nieuw project of open een bestaand bestand.", "Start a new project or open an existing file.")).size(12),
             ].spacing(9).into(),
+            "workspace" if studio.id == "energy" => column![
+                text(l.text("Voorbeeld tussenwoning", "Example terraced home"))
+                    .font(fonts::HEADING).size(20),
+                text(l.text("Brongepinde Energy-werkstroom · nieuwbouw woning", "Source-pinned Energy workflow · residential new build"))
+                    .size(11).color(t.text_secondary),
+                widgets::property(l.text("Actieve stap", "Active step"),
+                    ["Project", "Gebouw", "Installaties", "Controle", "Resultaten en rapport", "Registratie"]
+                        [self.selected_energy_step.min(5)], theme),
+                widgets::property(l.text("Voortgang", "Progress"), "Project ✓ · Gebouw ✓ · Installaties ✓", theme),
+                widgets::property(l.text("Indicatieve labelklasse", "Indicative label class"), "A+", theme),
+                text(l.text("De inhoudskaarten zijn een stijlproef; de NTA-berekening blijft in Energy Studio.",
+                            "The content cards are a style study; the NTA calculation remains in Energy Studio."))
+                    .size(11).color(t.text_secondary),
+            ].spacing(11).into(),
             "workspace" => column![
                 text(&studio.workspace).font(fonts::HEADING).size(20),
                 text(l.text("Domeinwerkruimte binnen de gedeelde titel, ribbon, panelen en status.", "Domain workspace inside the shared title, ribbon, panels and status.")).size(12).color(t.text_secondary),
@@ -951,8 +1056,18 @@ impl Application for StyleRepo {
     fn title(&self) -> String {
         "OpenAEC Style Repo  ·  Rust".into()
     }
+    fn chrome_mode(&self) -> ChromeMode {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "energy" {
+            ChromeMode::Workflow
+        } else {
+            ChromeMode::Ribbon
+        }
+    }
     fn ribbon(&self, l: Language) -> Vec<RibbonTab<Action>> {
         if self.page == Page::Studios {
+            if self.chrome_mode() == ChromeMode::Workflow {
+                return Vec::new();
+            }
             return ribbon_preview::studio_tabs(
                 &studios()[self.selected_studio],
                 self.selected_preview_command.as_deref(),
@@ -1076,6 +1191,35 @@ impl Application for StyleRepo {
             .into()
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.chrome_mode() == ChromeMode::Workflow {
+            let t = theme.tokens();
+            let steps = [
+                l.text("Project", "Project"),
+                l.text("Gebouw", "Building"),
+                l.text("Installaties", "Installations"),
+                l.text("Controle", "Check"),
+                l.text("Resultaten en rapport", "Results and report"),
+                l.text("Registratie", "Registration"),
+            ];
+            let mut nav = Column::new().spacing(4).push(
+                self.card(column![
+                    text(l.text("Voorbeeld tussenwoning", "Example terraced home"))
+                        .font(fonts::STRONG).size(13),
+                    text(l.text("Nieuwbouw · woning", "New build · residential"))
+                        .size(11).color(t.text_secondary),
+                ].spacing(4), theme),
+            );
+            for (index, label) in steps.into_iter().enumerate() {
+                let number = format!("{:02}  {label}", index + 1);
+                nav = nav.push(button(text(number).size(12))
+                    .padding([9, 10]).width(Fill)
+                    .on_press(Action::SelectEnergyStep(index))
+                    .style(move |_, status| widgets::button_style(theme, index == self.selected_energy_step, status)));
+            }
+            nav = nav.push(text(l.text("Gereedschap · Instellingen", "Tools · Settings"))
+                .size(11).color(t.text_secondary));
+            return nav.into();
+        }
         let mut nav = Column::new().spacing(5);
         for page in Page::ALL {
             let selected = self.page == page;
@@ -1142,6 +1286,7 @@ impl Application for StyleRepo {
                 self.selected_studio = index.min(studios().len().saturating_sub(1));
                 self.selected_screen = 0;
                 self.selected_preview_command = None;
+                self.selected_energy_step = 0;
                 self.show(Page::Studios);
             }
             Action::SelectScreen(index) => {
@@ -1153,6 +1298,7 @@ impl Application for StyleRepo {
                 );
             }
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
+            Action::SelectEnergyStep(index) => self.selected_energy_step = index.min(5),
         }
         Task::none()
     }
@@ -1267,12 +1413,18 @@ mod tests {
     }
 
     #[test]
-    fn native_ribbon_uses_each_studios_proposed_tabs() {
+    fn native_ribbon_uses_proposed_tabs_except_workflow_studios() {
         let mut app = StyleRepo::default();
         app.show(Page::Studios);
         for (index, studio) in studios().iter().enumerate() {
             let _ = app.update(Action::SelectStudio(index));
             let tabs = app.ribbon(Language::Dutch);
+            if studio.id == "energy" {
+                assert_eq!(app.chrome_mode(), ChromeMode::Workflow);
+                assert!(tabs.is_empty());
+                continue;
+            }
+            assert_eq!(app.chrome_mode(), ChromeMode::Ribbon);
             let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
             assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
             for (actual, label) in tabs.iter().zip(expected) {

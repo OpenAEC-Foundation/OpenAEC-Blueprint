@@ -73,6 +73,12 @@ pub enum UiEvent {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Region { Explorer, Workspace, Properties }
 
+/// The same tokens and window bands can host a ribbon or a guided workflow.
+/// A workflow puts its navigation in the explorer slot and has no tab strip,
+/// ribbon, or permanent properties panel.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
+pub enum ChromeMode { #[default] Ribbon, Workflow }
+
 /// Persisted settings only; document contents remain owned by the application.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(default)]

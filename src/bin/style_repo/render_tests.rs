@@ -47,6 +47,7 @@ fn render_with_options(
         &state,
         Slots {
             title: app.title(),
+            mode: app.chrome_mode(),
             tabs: app.ribbon(language),
             documents: app.documents(),
             active_document: app.active_document(),
@@ -56,7 +57,7 @@ fn render_with_options(
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
-                    language.text("Verkenner", "Explorer"),
+                    if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else { language.text("Verkenner", "Explorer") },
                     app.explorer(theme, language).map(Message::Command),
                     theme,
                 ),
@@ -160,6 +161,23 @@ fn long_ribbon_keeps_group_caption_above_horizontal_scrollbar() {
 }
 
 #[test]
+fn energy_workflow_uses_document_band_without_ribbon_or_properties_panel() {
+    let mut app = StyleRepo::default();
+    let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
+    let _ = app.update(Action::SelectStudio(energy));
+    let _ = app.update(Action::SelectScreen(1));
+    assert_eq!(app.chrome_mode(), ChromeMode::Workflow);
+    for theme in [Theme::Light, Theme::Forge] {
+        let picture = render(&app, theme);
+        let [red, green, blue, _] = theme.tokens().docbar_bg.into_rgba8();
+        let at = ((45 * picture.width() + 1000) * 4) as usize;
+        assert!(picture.data()[at..at + 3].iter().zip([red, green, blue])
+            .all(|(actual, expected)| actual.abs_diff(expected) <= 1),
+            "{theme} document band at y=45");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
@@ -218,4 +236,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Light, false, Some("start"))
         .save_png(&design.join("style-repo-planner-ribbon-light.png"))
         .expect("save Planner ribbon review");
+    let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
+    let _ = app.update(Action::SelectStudio(energy));
+    let _ = app.update(Action::SelectScreen(1));
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render(&app, theme)
+            .save_png(&design.join(format!("style-repo-energy-workflow-{name}.png")))
+            .expect("save Energy workflow review");
+    }
 }

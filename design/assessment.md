@@ -44,8 +44,8 @@ migratie van alle OpenAEC-applicaties.
   Voorbeelden zijn het [huidige Energy-projectoverzicht](../harmonization/references/open-energy-studio/docs/handleiding-nta8800/img/projectoverzicht.png)
   en het [Energy-ontwerpsysteem](../harmonization/references/open-energy-studio/docs/ui-redesign/mockups/00-designsystem.png).
   De screenshot toont een navigatiesidebar en een dataformulier zonder ribbon;
-  de huidige gedeelde Energy-ribbon is dus een migratievoorstel en geen
-  pixelgetrouwe reconstructie van de huidige UI. De mockup is een concept,
+  de ribbon in het algemene HTML-overzicht is dus een vergelijkingsvoorstel
+  en geen pixelgetrouwe reconstructie van de huidige UI. De mockup is een concept,
   niet een opgeleverde applicatietoestand. De Planner-beelden tonen vooral
   detailuitsneden van de Gantt in tutorials, geen 40 unieke vensters.
 - `dynlex` en `feat/rust-native` van PDF Studio waren niet publiek beschikbaar
@@ -73,9 +73,10 @@ apart, projectafhankelijk vragenpad. Gereedschap heeft vier functies buiten
 de genummerde werkstroom. De [navigatiecomponent](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx)
 toont bovendien verschillende stappen voor nieuwbouw en bestaande bouw.
 Een harmonisatie die alle tien hoofdschermen als vaste ribbontabs tekent,
-zou die werkstroom verliezen. Het gedeelde Rust-frame moet daarom een
-werkstroomnavigatievariant ondersteunen en de domeininhoud op haar eigen
-plaats laten; de huidige Energy-ribbon in de atlas blijft een vergelijkingsproef.
+zou die werkstroom verliezen. Het gedeelde Rust-frame ondersteunt nu een
+werkstroomvariant met navigatie links en zonder ribbon of permanent
+eigenschappenpaneel. De Energy-preview in de native atlas gebruikt die variant;
+de algemene HTML-ribbon blijft een vergelijking met de andere studio's.
 Een software-render liet zien dat de horizontale scrollbar de groepsnamen
 overlapte. De gedeelde Rust-shell reserveert nu de volledige ribbonhoogte voor
 de scrollbar; een renderregressietest controleert dat de groepsnaam leesbaar
@@ -130,7 +131,7 @@ FEM/BIM-concepten en reviewbeelden blijven in het niet-publiceerbare
 Style Repo-package. De Root/Pointcloud-kopieën van code en assets worden
 met `scripts/check_portable_ui.py` op inhoud gecontroleerd.
 
-De [Energy-werkstroomreview](energy-workflow.html) toont nieuwbouw voor woning en utiliteit en de opnamevariant voor bestaande bouw in dezelfde kleur-, type- en vensterbandtaal. De routevolgorde volgt de broncode op commit e9a485d; de kaarten en invoervelden zijn ontwerpelementen en geen overgenomen berekeningsinterface. De gekoppelde handleidingscreenshot kan een andere historische schermstaat tonen. De werkstroomvariant is voorlopig HTML; de Rust-crate moet dit type navigatie nog ondersteunen.
+De [Energy-werkstroomreview](energy-workflow.html) toont nieuwbouw voor woning en utiliteit en de opnamevariant voor bestaande bouw in dezelfde kleur-, type- en vensterbandtaal. De routevolgorde volgt de broncode op commit e9a485d; de kaarten en invoervelden zijn ontwerpelementen en geen overgenomen berekeningsinterface. De gekoppelde handleidingscreenshot kan een andere historische schermstaat tonen. De Rust-crate heeft nu een optionele `ChromeMode::Workflow`; de [native Light-preview](style-repo-energy-workflow-light.png) en [Forge-preview](style-repo-energy-workflow-forge.png) tonen de nieuwbouwroute met 32/30/22 px titel-, document- en statusbanden. De bestaande-bouwvariant blijft vooralsnog alleen in de HTML-review en moet native inhoudelijk worden uitgewerkt.
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex

@@ -4,6 +4,7 @@ use iced::{widget::{button, column, container, mouse_area, opaque, pane_grid, pi
 /// Application-owned contents. Shell layout and styling stay inside the crate.
 pub struct Slots<'a, M> {
     pub title: String,
+    pub mode: ChromeMode,
     pub tabs: Vec<RibbonTab<M>>,
     pub documents: Vec<Document>,
     pub active_document: Option<String>,
@@ -81,22 +82,34 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         for command in slots.file_commands { commands=commands.push(widgets::action(command.label,command.icon,command.enabled.then_some(Message::Command(command.message)),theme)); }
         commands=commands.push(widgets::action(l.text("Instellingen","Settings"),Icon::Settings,Some(Message::Ui(UiEvent::Settings(true))),theme));
         container(column![text(l.text("Bestand","File")).font(fonts::HEADING).size(28),commands].spacing(24)).padding(32).width(Fill).height(Fill).into()
+    } else if slots.mode == ChromeMode::Workflow {
+        row![
+            container((slots.content)(Region::Explorer)).width(260).height(Fill),
+            container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
+        ].height(Fill).width(Fill).into()
     } else {
         pane_grid::PaneGrid::new(&state.panes, move |_, region, _| pane_grid::Content::new((slots.content)(*region)))
             .spacing(2).on_resize(6,|e|Message::Ui(UiEvent::Resize(e))).height(Fill).into()
     };
-    let status = container(row![text(slots.status).size(11).width(Fill),
-        widgets::status_icon_button(l.text("Verkenner","Explorer"),Icon::PanelLeft,Message::Ui(UiEvent::ToggleLeft),theme),
-        widgets::status_icon_button(l.text("Eigenschappen","Properties"),Icon::PanelRight,Message::Ui(UiEvent::ToggleRight),theme),
-    ].align_y(iced::Alignment::Center)).padding([0,8]).height(metrics::STATUS).style(move |_|container::Style::default().background(t.status_bg).color(t.status_text));
-    let bands = crate::frame::frame(crate::frame::FrameSlots {
-        titlebar: titlebar.into(),
-        tabs: tabs.into(),
-        ribbon: Some(ribbon.into()),
-        documents: Some(document_bar.into()),
-        content: body,
-        status: status.into(),
-    });
+    let mut status_row = Row::new().push(text(slots.status).size(11).width(Fill));
+    if slots.mode == ChromeMode::Ribbon {
+        status_row = status_row
+            .push(widgets::status_icon_button(l.text("Verkenner","Explorer"),Icon::PanelLeft,Message::Ui(UiEvent::ToggleLeft),theme))
+            .push(widgets::status_icon_button(l.text("Eigenschappen","Properties"),Icon::PanelRight,Message::Ui(UiEvent::ToggleRight),theme));
+    }
+    let status = container(status_row.align_y(iced::Alignment::Center)).padding([0,8]).height(metrics::STATUS).style(move |_|container::Style::default().background(t.status_bg).color(t.status_text));
+    let bands = if slots.mode == ChromeMode::Workflow {
+        crate::frame::workflow_frame(titlebar.into(), Some(document_bar.into()), body, status.into())
+    } else {
+        crate::frame::frame(crate::frame::FrameSlots {
+            titlebar: titlebar.into(),
+            tabs: tabs.into(),
+            ribbon: Some(ribbon.into()),
+            documents: Some(document_bar.into()),
+            content: body,
+            status: status.into(),
+        })
+    };
     let base: Element<'a,Message<M>>=container(bands).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
     if state.settings {
         let overlay=container(settings(state)).center(Fill).style(move |_|container::Style::default().background(t.dialog_overlay));

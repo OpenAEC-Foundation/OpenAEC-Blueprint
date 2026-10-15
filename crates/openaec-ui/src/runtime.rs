@@ -7,6 +7,7 @@ pub trait Application: 'static {
     type Command: Clone + std::fmt::Debug + Send + 'static;
     fn title(&self) -> String;
     fn ribbon(&self, language: Language) -> Vec<RibbonTab<Self::Command>>;
+    fn chrome_mode(&self) -> ChromeMode { ChromeMode::Ribbon }
     fn workspace(&self, theme: Theme, language: Language) -> Element<'_, Self::Command>;
     fn update(&mut self, command: Self::Command) -> Task<Self::Command>;
     fn explorer(&self, theme: Theme, language: Language) -> Element<'_, Self::Command> {
@@ -51,13 +52,14 @@ impl<A:Application> Runtime<A> {
     }
     fn view(&self) -> Element<'_,Message<A::Command>> {
         let theme=self.shell.preferences.theme; let language=self.shell.preferences.language;
+        let mode=self.app.chrome_mode();
         shell(&self.shell, Slots {
-            title:self.app.title(), tabs:self.app.ribbon(language), documents:self.app.documents(),
+            title:self.app.title(), mode, tabs:self.app.ribbon(language), documents:self.app.documents(),
             active_document:self.app.active_document(), file_commands:self.app.file_commands(language), quick_commands:self.app.quick_commands(language),
             status:self.error.clone().unwrap_or_else(||self.app.status(language)),
             content:Box::new(move |region| match region {
                 Region::Workspace => self.app.workspace(theme,language).map(Message::Command),
-                Region::Explorer => widgets::panel(language.text("Verkenner","Explorer"),self.app.explorer(theme,language).map(Message::Command),theme),
+                Region::Explorer => widgets::panel(if mode == ChromeMode::Workflow { language.text("Werkstroom","Workflow") } else { language.text("Verkenner","Explorer") },self.app.explorer(theme,language).map(Message::Command),theme),
                 Region::Properties => widgets::panel(language.text("Eigenschappen","Properties"),self.app.properties(theme,language).map(Message::Command),theme),
             }),
         })
