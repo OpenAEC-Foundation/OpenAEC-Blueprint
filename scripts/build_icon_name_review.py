@@ -12,6 +12,43 @@ from urllib.parse import unquote, urlsplit
 from build_icon_semantics import ROOT, candidates, icon_records, norm
 
 ASSESSMENTS = {
+    "menu": ("related-intent", "CAD opent met het menu-icoon een lijst van model- en layouttabs; Planner opent een projectoverzicht. Beide tonen een keuzelijst voor documenten of weergaven."),
+    "pickpoint": ("related-intent", "Pointcloud kiest een punt in de werkruimte; CAD laat in de blokdefinitie een basispunt kiezen. Beide vragen een puntselectie, met een ander resultaat."),
+    "pin": ("related-intent", "PDF pint een recent bestand; CAD schakelt automatisch inklappen van een dockpaneel. Beide houden iets bereikbaar, maar de vastgezette objecten verschillen."),
+    "print": ("related-intent", "PDF toont Print als menuactie die nog TODO is; CAD heeft een uitvoerbare Print-knop en gebruikt het symbool ook voor de plotbaarheid van lagen."),
+    "selectobjects": ("related-intent", "Pointcloud kiest objecten via een selectievenster; CAD kiest objecten voor een blokdefinitie. Selecteren is gedeeld, de doelverzameling en vervolgactie niet."),
+    "square": ("related-intent", "Planner kiest een rechthoek voor screenshotannotatie; de AEC-extensie kiest de rechthoekmodus in een tekenbediening. Beide plaatsen of bewerken rechthoekige vormen."),
+    "chevronup": ("different-intent", "Planner verhoogt een tijdswaarde, Energy verplaatst een rij omhoog en BCF klapt geavanceerde opties in. De richting is gelijk, de actie niet."),
+    "info": ("different-intent", "Planner opent projectinformatie en Energy markeert een indicatieve berekening; CAD registreert een losse UI-constante. De concrete functie is niet gedeeld."),
+    "arrowright": ("different-intent", "Planner toont een voorgestelde koppeling als richting; Energy gebruikt de pijl als knop om naar een object te navigeren."),
+    "circle": ("different-intent", "Planner toont met Circle een gekleurde AI-status; de AEC-extensie gebruikt Circle als tekenmodus."),
+    "filedown": ("different-intent", "Planner zet FileDown bij een alleen-lezen melding voor externe links; Energy gebruikt het voor rapportexport."),
+    "barchart3": ("related-intent", "Planner toont statistieken en BCF opent het dashboard. Beide verwijzen naar een samenvattende cijferweergave, maar niet dezelfde gegevens."),
+    "box": ("different-intent", "CAD maakt een geometrische box; Energy gebruikt Box om de 3D-gebouwweergave te openen."),
+    "chevronleft": ("related-intent", "Planner schuift de documenttabstrip naar het begin; Heatloss gaat terug in een importwizard. Beide zijn terugwaartse navigatie op een andere as."),
+    "clipboardcheck": ("different-intent", "Planner koppelt ClipboardCheck aan voortgang importeren; Heatloss aan de samenvattingsstap van de thermische importwizard."),
+    "filearchive": ("different-intent", "Planner installeert een extensie uit ZIP; Energy exporteert een projectdossier. Het archiefformaat verbindt import en export niet tot één handeling."),
+    "history": ("different-intent", "Planner opent recente items; Energy gebruikt History als waarschuwing dat een resultaat verouderd is."),
+    "mappin": ("related-intent", "Pointcloud gebruikt MapPin in het 3D BAG-gebouwenpaneel; BCF bij een projectlocatie. Beide verwijzen naar plaats, maar het eerste is een paneeltitel."),
+    "messagesquare": ("related-intent", "Energy opent feedback; BCF labelt de commentaarsectie van een topic. Beide gaan over berichten, met een andere rol in de UI."),
+    "movehorizontal": ("different-intent", "Planner schakelt de groene spelingband van een taakbalk om; Heatloss kiest maatvoering als annotatiegereedschap."),
+    "palette": ("related-intent", "Planner schakelt resourceaccenten in de planning; de AEC-extensie opent materiaalinstellingen. Beide wijzigen visuele eigenschappen, met andere objecten."),
+    "plug": ("different-intent", "Planner opent de AI-verbindingsbediening; Energy duidt een elektrische warmwatertoestelsoort aan."),
+    "point": ("different-intent", "Pointcloud gebruikt point.svg voor punten uitdunnen; CAD gebruikt point.svg voor een nieuw punt tekenen."),
+    "printer": ("related-intent", "Planner opent afdrukvoorbeeld; Energy voert window.print uit. Het zijn opeenvolgende delen van dezelfde afdrukstroom."),
+    "region": ("different-intent", "Pointcloud gebruikt region.svg voor Mesh; CAD maakt met REGION een vlakke CAD-regio."),
+    "revcloud": ("different-intent", "Pointcloud registreert revcloud.svg als Cloud-tool; CAD gebruikt het voor REVCLOUD, een revisiemarkering."),
+    "rotateccw": ("related-intent", "Planner herstelt projectgegevens en Energy herstelt een item uit de prullenbak. Beide draaien een eerdere toestand terug, maar met andere scope."),
+    "shapes": ("different-intent", "Pointcloud reconstrueert een driehoeksmesh; de AEC-extensie opent de configuratie van paalsymbolen."),
+    "spline": ("different-intent", "CAD tekent een spline; Planner schakelt de weergave van afhankelijkheidslijnen in de planning."),
+    "sun": ("different-intent", "Pointcloud wisselt het UI-thema; Energy gebruikt de zon voor een PV-maatregel."),
+    "users": ("related-intent", "Planner opent een resourcepaneel; BCF opent de ledenlijst. Beide tonen personen of teams, met andere relaties en rechten."),
+    "viewfront": ("related-intent", "Pointcloud en CAD kiezen een camera-aanzicht van voren. Pointcloud hergebruikt dit pictogram ook voor achteraanzicht, dus de commando's blijven apart."),
+    "viewiso": ("related-intent", "Pointcloud en CAD kiezen een isometrisch camera-aanzicht."),
+    "viewright": ("related-intent", "Pointcloud en CAD kiezen een rechteraanzicht. Pointcloud hergebruikt dit pictogram ook voor links."),
+    "viewtop": ("related-intent", "Pointcloud en CAD kiezen een bovenaanzicht. Pointcloud hergebruikt dit pictogram ook voor onderaanzicht."),
+    "xclipremove": ("different-intent", "Pointcloud koppelt xclip_remove.svg aan Clear; CAD gebruikt het als UNCLIP voor onderlagen. De broncommando's verschillen."),
+    "zap": ("different-intent", "Planner markeert een sturende taakrelatie; Energy gebruikt Zap voor elektrische verwarming en warm water."),
     "about": ("related-intent", "PDF en CAD tonen About als applicatie-informatieactie. De PDF-menuactie is nog een TODO; de bedoelde bestemming komt overeen, de implementatie nog niet."),
     "arrowleft": ("related-intent", "Planner en Energy gebruiken de pijl om naar een vorige stap of weergave terug te gaan."),
     "bookopen": ("related-intent", "Planner verwijst naar voorbeelden en Energy naar een handleiding. Beide openen leerinhoud, maar een ander soort bron."),
@@ -155,7 +192,10 @@ def build() -> None:
 </style></head><body><header><small>OPENAEC · SEMANTISCHE REVIEW</small><h1>Naamgenoten onder UI-iconen</h1><p>80 naamgroepen verbinden 189 met UI-code of actieve knopbundels onderbouwde iconvarianten uit meerdere tools. Acht groepen zijn op hun commando-context beoordeeld; de overige blijven open. De bronregel staat op elke kaart.</p></header><main><div class="note">Een gelijke bestands- of componentnaam kan een ander commando betekenen. Zelfs identieke SVG-bytes zijn geen besluit om functies samen te voegen. De 26 bestaande gedeelde iconbetekenissen staan in de <a href="icon-semantic-crosswalk.html">semantische kruisvergelijking</a>.</div><div class="controls"><input id="search" type="search" placeholder="Zoek naam of repository" aria-label="Zoek naamgroepen"><select id="status" aria-label="Beoordeling"><option value="">Alle beoordelingen</option><option value="different-intent">Verschillende handelingen</option><option value="related-intent">Verwante handelingen</option><option value="needs-review">Nog beoordelen</option></select><select id="size" aria-label="Icoongrootte"><option value="16">16 px</option><option value="24" selected>24 px</option><option value="32">32 px</option></select><label><input id="dark" type="checkbox"> Donkere achtergrond</label><span id="count" class="count"></span></div><div id="grid" class="grid">''' + "\n".join(cards) + '''</div><footer><a href="review.html">Terug naar ontwerpreview</a> · <a href="icon-name-review.json">Beoordelingsdata en bronregels</a></footer></main><script>
 const cards=[...document.querySelectorAll('.cluster')];function filter(){const q=document.getElementById('search').value.trim().toLowerCase(),status=document.getElementById('status').value;let visible=0;for(const card of cards){const show=(!status||card.dataset.status===status)&&(!q||card.dataset.search.includes(q));card.classList.toggle('hidden',!show);if(show)visible++}document.getElementById('count').textContent=visible+' / '+cards.length+' groepen'}for(const id of ['search','status'])document.getElementById(id).addEventListener('input',filter);document.getElementById('size').onchange=e=>document.documentElement.style.setProperty('--icon-size',e.target.value+'px');document.getElementById('dark').onchange=e=>document.body.classList.toggle('dark',e.target.checked);filter();
 </script></body></html>'''
-    page = page.replace("Acht groepen zijn op hun commando-context beoordeeld", f"{output['assessed_count']} groepen zijn op hun commando-context beoordeeld")
+    page = page.replace(
+        "Acht groepen zijn op hun commando-context beoordeeld; de overige blijven open.",
+        f"Alle {output['assessed_count']} groepen zijn op hun commando-context beoordeeld.",
+    )
     (ROOT / "design/icon-name-review.html").write_text(page)
     print(f"{len(clusters)} groups, {output['icon_count']} variants, {output['assessed_count']} assessed")
 

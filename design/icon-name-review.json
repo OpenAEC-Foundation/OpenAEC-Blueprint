@@ -3,7 +3,7 @@
   "note": "Only icons without a canonical shared-name match are grouped. Same names and shapes are research candidates, not automatic adoption decisions.",
   "cluster_count": 80,
   "icon_count": 189,
-  "assessed_count": 43,
+  "assessed_count": 80,
   "clusters": [
     {
       "id": "download",
@@ -2013,8 +2013,8 @@
     {
       "id": "square",
       "label": "Square",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner kiest een rechthoek voor screenshotannotatie; de AEC-extensie kiest de rechthoekmodus in een tekenbediening. Beide plaatsen of bewerken rechthoekige vormen.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-energy-studio",
@@ -2287,8 +2287,8 @@
     {
       "id": "chevronup",
       "label": "ChevronUp",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner verhoogt een tijdswaarde, Energy verplaatst een rij omhoog en BCF klapt geavanceerde opties in. De richting is gelijk, de actie niet.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio",
@@ -2740,8 +2740,8 @@
     {
       "id": "info",
       "label": "info",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner opent projectinformatie en Energy markeert een indicatieve berekening; CAD registreert een losse UI-constante. De concrete functie is niet gedeeld.",
       "repositories": [
         "OpenCADStudio",
         "open-energy-studio",
@@ -3042,8 +3042,8 @@
     {
       "id": "arrowright",
       "label": "ArrowRight",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner toont een voorgestelde koppeling als richting; Energy gebruikt de pijl als knop om naar een object te navigeren.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -3131,8 +3131,8 @@
     {
       "id": "circle",
       "label": "Circle",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner toont met Circle een gekleurde AI-status; de AEC-extensie gebruikt Circle als tekenmodus.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-heatloss-studio",
@@ -3208,8 +3208,8 @@
     {
       "id": "filedown",
       "label": "FileDown",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner zet FileDown bij een alleen-lezen melding voor externe links; Energy gebruikt het voor rapportexport.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -3925,8 +3925,8 @@
     {
       "id": "barchart3",
       "label": "BarChart3",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner toont statistieken en BCF opent het dashboard. Beide verwijzen naar een samenvattende cijferweergave, maar niet dezelfde gegevens.",
       "repositories": [
         "open-planner-studio",
         "openaec-bcf-platform"
@@ -4069,8 +4069,8 @@
     {
       "id": "box",
       "label": "box",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "CAD maakt een geometrische box; Energy gebruikt Box om de 3D-gebouwweergave te openen.",
       "repositories": [
         "OpenCADStudio",
         "open-energy-studio"
@@ -4194,8 +4194,8 @@
     {
       "id": "chevronleft",
       "label": "ChevronLeft",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner schuift de documenttabstrip naar het begin; Heatloss gaat terug in een importwizard. Beide zijn terugwaartse navigatie op een andere as.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -4257,8 +4257,8 @@
     {
       "id": "clipboardcheck",
       "label": "ClipboardCheck",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner koppelt ClipboardCheck aan voortgang importeren; Heatloss aan de samenvattingsstap van de thermische importwizard.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -4438,8 +4438,8 @@
     {
       "id": "filearchive",
       "label": "FileArchive",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner installeert een extensie uit ZIP; Energy exporteert een projectdossier. Het archiefformaat verbindt import en export niet tot één handeling.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -4734,8 +4734,8 @@
     {
       "id": "history",
       "label": "History",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner opent recente items; Energy gebruikt History als waarschuwing dat een resultaat verouderd is.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -4791,8 +4791,8 @@
     {
       "id": "mappin",
       "label": "MapPin",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud gebruikt MapPin in het 3D BAG-gebouwenpaneel; BCF bij een projectlocatie. Beide verwijzen naar plaats, maar het eerste is een paneeltitel.",
       "repositories": [
         "open-pointcloud-studio",
         "openaec-bcf-platform"
@@ -4854,8 +4854,8 @@
     {
       "id": "menu",
       "label": "menu",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "CAD opent met het menu-icoon een lijst van model- en layouttabs; Planner opent een projectoverzicht. Beide tonen een keuzelijst voor documenten of weergaven.",
       "repositories": [
         "OpenCADStudio",
         "open-planner-studio"
@@ -4910,8 +4910,8 @@
     {
       "id": "messagesquare",
       "label": "MessageSquare",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Energy opent feedback; BCF labelt de commentaarsectie van een topic. Beide gaan over berichten, met een andere rol in de UI.",
       "repositories": [
         "open-energy-studio",
         "openaec-bcf-platform"
@@ -4973,8 +4973,8 @@
     {
       "id": "movehorizontal",
       "label": "MoveHorizontal",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner schakelt de groene spelingband van een taakbalk om; Heatloss kiest maatvoering als annotatiegereedschap.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -5036,8 +5036,8 @@
     {
       "id": "palette",
       "label": "Palette",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner schakelt resourceaccenten in de planning; de AEC-extensie opent materiaalinstellingen. Beide wijzigen visuele eigenschappen, met andere objecten.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-planner-studio"
@@ -5099,8 +5099,8 @@
     {
       "id": "pickpoint",
       "label": "pick_point",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud kiest een punt in de werkruimte; CAD laat in de blokdefinitie een basispunt kiezen. Beide vragen een puntselectie, met een ander resultaat.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5159,8 +5159,8 @@
     {
       "id": "pin",
       "label": "pin",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "PDF pint een recent bestand; CAD schakelt automatisch inklappen van een dockpaneel. Beide houden iets bereikbaar, maar de vastgezette objecten verschillen.",
       "repositories": [
         "OpenCADStudio",
         "open-pdf-studio-v3"
@@ -5214,8 +5214,8 @@
     {
       "id": "plug",
       "label": "Plug",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner opent de AI-verbindingsbediening; Energy duidt een elektrische warmwatertoestelsoort aan.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -5271,8 +5271,8 @@
     {
       "id": "point",
       "label": "point",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud gebruikt point.svg voor punten uitdunnen; CAD gebruikt point.svg voor een nieuw punt tekenen.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5326,8 +5326,8 @@
     {
       "id": "print",
       "label": "print",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "PDF toont Print als menuactie die nog TODO is; CAD heeft een uitvoerbare Print-knop en gebruikt het symbool ook voor de plotbaarheid van lagen.",
       "repositories": [
         "OpenCADStudio",
         "open-pdf-studio-v3"
@@ -5386,8 +5386,8 @@
     {
       "id": "printer",
       "label": "Printer",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner opent afdrukvoorbeeld; Energy voert window.print uit. Het zijn opeenvolgende delen van dezelfde afdrukstroom.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -5461,8 +5461,8 @@
     {
       "id": "region",
       "label": "region",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud gebruikt region.svg voor Mesh; CAD maakt met REGION een vlakke CAD-regio.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5521,8 +5521,8 @@
     {
       "id": "revcloud",
       "label": "revcloud",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud registreert revcloud.svg als Cloud-tool; CAD gebruikt het voor REVCLOUD, een revisiemarkering.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5581,8 +5581,8 @@
     {
       "id": "rotateccw",
       "label": "RotateCcw",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner herstelt projectgegevens en Energy herstelt een item uit de prullenbak. Beide draaien een eerdere toestand terug, maar met andere scope.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -5713,8 +5713,8 @@
     {
       "id": "selectobjects",
       "label": "select_objects",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud kiest objecten via een selectievenster; CAD kiest objecten voor een blokdefinitie. Selecteren is gedeeld, de doelverzameling en vervolgactie niet.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -5778,8 +5778,8 @@
     {
       "id": "shapes",
       "label": "Shapes",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud reconstrueert een driehoeksmesh; de AEC-extensie opent de configuratie van paalsymbolen.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-pointcloud-studio"
@@ -5945,8 +5945,8 @@
     {
       "id": "spline",
       "label": "spline",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "CAD tekent een spline; Planner schakelt de weergave van afhankelijkheidslijnen in de planning.",
       "repositories": [
         "OpenCADStudio",
         "open-planner-studio"
@@ -6011,8 +6011,8 @@
     {
       "id": "sun",
       "label": "Sun",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud wisselt het UI-thema; Energy gebruikt de zon voor een PV-maatregel.",
       "repositories": [
         "open-energy-studio",
         "open-pointcloud-studio"
@@ -6188,8 +6188,8 @@
     {
       "id": "users",
       "label": "Users",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner opent een resourcepaneel; BCF opent de ledenlijst. Beide tonen personen of teams, met andere relaties en rechten.",
       "repositories": [
         "open-planner-studio",
         "openaec-bcf-platform"
@@ -6251,8 +6251,8 @@
     {
       "id": "viewfront",
       "label": "view_front",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud en CAD kiezen een camera-aanzicht van voren. Pointcloud hergebruikt dit pictogram ook voor achteraanzicht, dus de commando's blijven apart.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -6306,8 +6306,8 @@
     {
       "id": "viewiso",
       "label": "view_iso",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud en CAD kiezen een isometrisch camera-aanzicht.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -6361,8 +6361,8 @@
     {
       "id": "viewright",
       "label": "view_right",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud en CAD kiezen een rechteraanzicht. Pointcloud hergebruikt dit pictogram ook voor links.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -6416,8 +6416,8 @@
     {
       "id": "viewtop",
       "label": "view_top",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Pointcloud en CAD kiezen een bovenaanzicht. Pointcloud hergebruikt dit pictogram ook voor onderaanzicht.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -6609,8 +6609,8 @@
     {
       "id": "xclipremove",
       "label": "xclip_remove",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud koppelt xclip_remove.svg aan Clear; CAD gebruikt het als UNCLIP voor onderlagen. De broncommando's verschillen.",
       "repositories": [
         "OpenCADStudio",
         "open-pointcloud-studio"
@@ -6664,8 +6664,8 @@
     {
       "id": "zap",
       "label": "Zap",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner markeert een sturende taakrelatie; Energy gebruikt Zap voor elektrische verwarming en warm water.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
