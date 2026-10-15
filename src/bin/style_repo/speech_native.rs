@@ -14,31 +14,42 @@ impl StyleRepo {
             "speech" => self.speech_home(theme),
             "transcribe" => self.speech_transcribe(theme),
             "dictionary" => self.speech_dictionary_page(theme),
+            "meeting" => self.speech_meeting_page(theme),
+            "mic-test" => self.speech_mic_test_page(theme),
+            "models" => self.speech_models_page(theme),
+            "tts" => self.speech_tts_page(theme),
+            "settings" => self.speech_settings_page(theme),
+            "about" => self.speech_about_page(theme),
             _ => unreachable!("routed Speech screen"),
         };
         let capture = match screen {
-            "speech" => "Speech.png",
-            "transcribe" => "Transcribe.png",
-            "dictionary" => "Dictionary.png",
-            _ => unreachable!("routed Speech capture"),
+            "speech" => Some("Speech.png"),
+            "transcribe" => Some("Transcribe.png"),
+            "dictionary" => Some("Dictionary.png"),
+            "meeting" => Some("Meeting.png"),
+            "mic-test" => Some("Mic Test.png"),
+            "models" => Some("Models.png"),
+            "settings" => Some("Settings.png"),
+            "about" => Some("About.png"),
+            "tts" => None,
+            _ => None,
         };
-        let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("harmonization/references/open-speech-studio/Socials")
-            .join(capture);
-        column![
-            text("OPEN SPEECH STUDIO · NATIVE RUST SCHERMREVIEW")
-                .font(fonts::STRONG)
-                .size(11)
-                .color(t.accent),
-            content,
-            text("Broncapture ter vergelijking · commit 4e8aa61")
-                .font(fonts::MEDIUM)
-                .size(12)
-                .color(t.text_secondary),
-            image(image::Handle::from_path(path)).width(900),
-        ]
-        .spacing(16)
-        .into()
+        let mut page = Column::new().spacing(16)
+            .push(text("OPEN SPEECH STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG).size(11).color(t.accent))
+            .push(content);
+        if let Some(capture) = capture {
+            let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("harmonization/references/open-speech-studio/Socials")
+                .join(capture);
+            page = page.push(text("Broncapture ter vergelijking · commit 4e8aa61")
+                .font(fonts::MEDIUM).size(12).color(t.text_secondary))
+                .push(image(image::Handle::from_path(path)).width(900));
+        } else {
+            page = page.push(text("Text To Speech is uit src/components/TextToSpeech.tsx afgeleid; de bronrepository heeft geen schermcapture.")
+                .size(12).color(t.text_secondary));
+        }
+        page.into()
     }
 
     fn speech_home(&self, theme: Theme) -> Element<'_, Action> {

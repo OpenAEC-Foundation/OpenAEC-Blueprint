@@ -24,6 +24,8 @@ mod energy_workflow;
 mod field_remaining;
 #[path = "style_repo/speech_native.rs"]
 mod speech_native;
+#[path = "style_repo/speech_more.rs"]
+mod speech_more;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
 #[cfg(test)]
@@ -126,6 +128,9 @@ enum Action {
     SpeechPreview(&'static str),
     SpeechDictionaryEdit(bool, String),
     SpeechDictionaryAdd,
+    SpeechSettingsTab(usize),
+    SpeechTtsInput(String),
+    SpeechTtsSpeed(f32),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -274,6 +279,9 @@ struct StyleRepo {
     speech_word: String,
     speech_replacement: String,
     speech_dictionary: Vec<(String, String)>,
+    speech_settings_tab: usize,
+    speech_tts_text: String,
+    speech_tts_speed: f32,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -315,6 +323,9 @@ impl Default for StyleRepo {
             speech_word: String::new(),
             speech_replacement: String::new(),
             speech_dictionary: Vec::new(),
+            speech_settings_tab: 0,
+            speech_tts_text: String::new(),
+            speech_tts_speed: 1.0,
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -1570,32 +1581,7 @@ impl StyleRepo {
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
         let screen = studio.screens.get(self.selected_screen).map(String::as_str).unwrap_or("speech");
-        if matches!(screen, "speech" | "transcribe" | "dictionary") {
-            return self.speech_native_page(theme, l, screen);
-        }
-        let capture = match screen {
-            "speech" => Some("Speech.png"),
-            "transcribe" => Some("Transcribe.png"),
-            "meeting" => Some("Meeting.png"),
-            "mic-test" => Some("Mic Test.png"),
-            "models" => Some("Models.png"),
-            "dictionary" => Some("Dictionary.png"),
-            "settings" => Some("Settings.png"),
-            "about" => Some("About.png"),
-            _ => None,
-        };
-        let t = theme.tokens();
-        let mut content = Column::new().spacing(14)
-            .push(self.heading("SOURCE REVIEW · SIDEBAR", "Open Speech Studio", "Acht brongepinde UI-captures; de echte app heeft geen ribbon of documenttabs.", theme))
-            .push(text(format!("{} · {}", screen_label(screen, l), studio.notes)).size(12).color(t.text_secondary));
-        if let Some(name) = capture {
-            let source = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-                .join("harmonization/references/open-speech-studio/Socials").join(name);
-            content = content.push(image(image::Handle::from_path(source)).width(900));
-        } else {
-            content = content.push(self.card(text("Text To Speech heeft geen broncapture; alleen de navigatieroute is geverifieerd.").size(12), theme));
-        }
-        content.into()
+        self.speech_native_page(theme, l, screen)
     }
     fn energy_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
@@ -2176,6 +2162,7 @@ impl Application for StyleRepo {
             Action::SelectStudio(index) => {
                 self.selected_studio = index.min(studios().len().saturating_sub(1));
                 self.selected_screen = 0;
+                self.speech_notice = None;
                 self.selected_preview_command = None;
                 self.selected_energy_step = 0;
                 self.selected_energy_sub = self.energy_mode.existing().then_some(0);
@@ -2189,6 +2176,7 @@ impl Application for StyleRepo {
                         .saturating_sub(1),
                 );
                 self.field_review_notice = None;
+                self.speech_notice = None;
             }
             Action::FieldProjectEdit(index, value) => {
                 if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }
@@ -2227,6 +2215,9 @@ impl Application for StyleRepo {
                     self.speech_replacement.clear();
                 }
             }
+            Action::SpeechSettingsTab(index) => self.speech_settings_tab = index.min(4),
+            Action::SpeechTtsInput(value) => self.speech_tts_text = value,
+            Action::SpeechTtsSpeed(value) => self.speech_tts_speed = value.clamp(0.5, 2.0),
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2696,6 +2687,15 @@ mod tests {
         assert_eq!(app.speech_dictionary.len(), 1);
         let _ = app.update(Action::SpeechPreview("Bestandsselectie"));
         assert_eq!(app.speech_notice, Some("Bestandsselectie"));
+        let _ = app.update(Action::SelectScreen(7));
+        assert_eq!(app.speech_notice, None);
+        let _ = app.update(Action::SpeechSettingsTab(4));
+        assert_eq!(app.speech_settings_tab, 4);
+        let _ = app.update(Action::SelectScreen(6));
+        let _ = app.update(Action::SpeechTtsInput("OpenAEC".into()));
+        let _ = app.update(Action::SpeechTtsSpeed(5.0));
+        assert_eq!(app.speech_tts_text, "OpenAEC");
+        assert_eq!(app.speech_tts_speed, 2.0);
     }
 
     #[test]

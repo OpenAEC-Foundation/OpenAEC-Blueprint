@@ -145,7 +145,11 @@ fn export_speech_sidebar_review() {
     let speech = studios().iter().position(|studio| studio.id == "speech").unwrap();
     let _ = app.update(Action::SelectStudio(speech));
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
-    for (index, name) in [(0, "speech"), (1, "transcribe"), (5, "dictionary")] {
+    for (index, name) in [
+        (0, "speech"), (1, "transcribe"), (2, "meeting"),
+        (3, "mic-test"), (4, "models"), (5, "dictionary"),
+        (6, "tts"), (7, "settings"), (8, "about"),
+    ] {
         let _ = app.update(Action::SelectScreen(index));
         render(&app, Theme::Light)
             .save_png(&design.join(format!("style-repo-speech-{name}-light.png")))
