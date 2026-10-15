@@ -39,6 +39,8 @@ Open [`design/review.html`](design/review.html) in een browser voor het interact
 
 De bibliotheekiconen zijn verder op werkelijk broncodegebruik gecontroleerd: 608 van de 686 importvoorkomens verschijnen rechtstreeks als JSX-component, 78 worden na de import als identifier gebruikt. De review onderscheidt 287 direct gebruikte SVG-varianten van 25 varianten die alleen indirect worden doorgegeven, met een link naar de gebruiksregel op de vastgelegde broncommit. Dit blijft statisch codebewijs; zichtbaarheid hangt af van de applicatietoestand.
 
+De [Field Studio-schermroute-review](design/field-route-review.html) zet tien actuele navigatieroutes naast zes bewaarde bronbeelden en koppelt elke route aan de exacte UI-code. Vier routes hebben alleen codebewijs.
+
 Alle 666 gevonden screenshotkandidaten zijn rechtstreeks uit hun vastgelegde Git-commit gerenderd op [47 schermcontactbladen](design/screen-contact-sheets.html). Het overzicht toont de 472 als applicatiescherm ingedeelde beelden naast handleidingbeelden, mockups, tutorialuitsneden en websitebeelden; historische captures worden niet als bewijs voor de actuele UI behandeld. De [volledige bronindex](design/screen-inventory.html) blijft per bestand doorzoekbaar.
 
 De vijf vaste vensterbanden, 24 px-paneelwerkbalken en de standaardbreedte van beide zijpanelen zijn vastgelegd in [`design/layout-spec.json`](design/layout-spec.json) met een exacte Tauri-broncommit. `python3 scripts/check_layout_metrics.py` vergelijkt de Rust-crate en het HTML-prototype met die maten, en met de lokale Tauri-bron wanneer die naast deze repo staat.

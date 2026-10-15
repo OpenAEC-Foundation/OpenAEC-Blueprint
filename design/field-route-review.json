@@ -1,0 +1,86 @@
+{
+  "repository": "Open-Field-Studio",
+  "commit": "8a4f104106b208ad053c73fa9390786d805058b8",
+  "routes": [
+    {
+      "id": "project",
+      "label": "Project",
+      "nav_line": 89,
+      "section_line": 133,
+      "screenshot": "01-project.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "plattegrond",
+      "label": "Plattegronden",
+      "nav_line": 93,
+      "section_line": 218,
+      "screenshot": null,
+      "evidence": "source-only"
+    },
+    {
+      "id": "ifc",
+      "label": "3D BIM",
+      "nav_line": 97,
+      "section_line": 232,
+      "screenshot": null,
+      "evidence": "source-only"
+    },
+    {
+      "id": "opname",
+      "label": "Opname",
+      "nav_line": 101,
+      "section_line": 250,
+      "screenshot": null,
+      "evidence": "source-only"
+    },
+    {
+      "id": "inspectie",
+      "label": "Inspectie",
+      "nav_line": 105,
+      "section_line": 313,
+      "screenshot": "03-inspectie.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "oplevering",
+      "label": "Oplevering",
+      "nav_line": 109,
+      "section_line": 431,
+      "screenshot": "04-oplevering.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "nav_line": 113,
+      "section_line": 517,
+      "screenshot": "05-dashboard.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "export",
+      "label": "Export",
+      "nav_line": 117,
+      "section_line": 568,
+      "screenshot": "06-export.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "koppelingen",
+      "label": "Koppelingen",
+      "nav_line": 121,
+      "section_line": 631,
+      "screenshot": "02-koppelingen.png",
+      "evidence": "repository-screenshot"
+    },
+    {
+      "id": "handleiding",
+      "label": "Handleiding",
+      "nav_line": 125,
+      "section_line": 642,
+      "screenshot": null,
+      "evidence": "source-only"
+    }
+  ]
+}
