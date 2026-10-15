@@ -125,3 +125,67 @@ impl Icon {
             .style(move |_, _| svg::Style { color: Some(color) })
     }
 }
+
+/// Reviewed tool-specific commands. Their names include the domain so a
+/// visually similar shape cannot silently acquire another command meaning.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum DomainIcon {
+    PointcloudBagPanel,
+    PointcloudEyeDome,
+    CadShadedView,
+    CadSpherePrimitive,
+}
+
+impl DomainIcon {
+    pub const ALL: [Self; 4] = [
+        Self::PointcloudBagPanel,
+        Self::PointcloudEyeDome,
+        Self::CadShadedView,
+        Self::CadSpherePrimitive,
+    ];
+
+    pub fn id(self) -> &'static str {
+        match self {
+            Self::PointcloudBagPanel => "pointcloud.bag-panel",
+            Self::PointcloudEyeDome => "pointcloud.eye-dome",
+            Self::CadShadedView => "cad.shaded-view",
+            Self::CadSpherePrimitive => "cad.sphere-primitive",
+        }
+    }
+
+    pub fn bytes(self, size: u16) -> &'static [u8] {
+        match (self, size <= 16) {
+            (Self::PointcloudBagPanel, true) => {
+                include_bytes!("../assets/domain-icons-small/pointcloud-bag-panel.svg")
+            }
+            (Self::PointcloudBagPanel, false) => {
+                include_bytes!("../assets/domain-icons/pointcloud-bag-panel.svg")
+            }
+            (Self::PointcloudEyeDome, true) => {
+                include_bytes!("../assets/domain-icons-small/pointcloud-edl.svg")
+            }
+            (Self::PointcloudEyeDome, false) => {
+                include_bytes!("../assets/domain-icons/pointcloud-edl.svg")
+            }
+            (Self::CadShadedView, true) => {
+                include_bytes!("../assets/domain-icons-small/cad-shaded.svg")
+            }
+            (Self::CadShadedView, false) => {
+                include_bytes!("../assets/domain-icons/cad-shaded.svg")
+            }
+            (Self::CadSpherePrimitive, true) => {
+                include_bytes!("../assets/domain-icons-small/cad-sphere.svg")
+            }
+            (Self::CadSpherePrimitive, false) => {
+                include_bytes!("../assets/domain-icons/cad-sphere.svg")
+            }
+        }
+    }
+
+    pub fn view<'a>(self, size: u16, color: Color) -> svg::Svg<'a> {
+        svg(svg::Handle::from_memory(self.bytes(size)))
+            .width(size)
+            .height(size)
+            .style(move |_, _| svg::Style { color: Some(color) })
+    }
+}

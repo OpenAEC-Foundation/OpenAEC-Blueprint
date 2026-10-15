@@ -9,7 +9,7 @@ use openaec_ui::{
         },
         Alignment, Element, Fill, Task,
     },
-    icons::Icon,
+    icons::{DomainIcon, Icon},
     model::metrics,
     run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
     Theme,
@@ -453,9 +453,9 @@ impl StyleRepo {
     }
     fn icons(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
-        let mut canonical = Column::new().spacing(7);
-        for chunk in Icon::ALL.chunks(6) {
-            let mut icons_row = Row::new().spacing(7);
+        let mut canonical = Column::new().spacing(5);
+        for chunk in Icon::ALL.chunks(8) {
+            let mut icons_row = Row::new().spacing(5);
             for &icon in chunk {
                 icons_row = icons_row.push(
                     container(
@@ -464,8 +464,8 @@ impl StyleRepo {
                             .align_x(Alignment::Center),
                     )
                     .padding(8)
-                    .width(94)
-                    .height(70)
+                    .width(84)
+                    .height(64)
                     .align_x(Alignment::Center)
                     .style(move |_| container::Style {
                         background: Some(t.bg.into()),
@@ -479,6 +479,34 @@ impl StyleRepo {
                 );
             }
             canonical = canonical.push(icons_row);
+        }
+        let mut domain = Row::new().spacing(7);
+        for icon in DomainIcon::ALL {
+            domain = domain.push(
+                container(
+                    column![
+                        row![icon.view(16, t.accent), icon.view(24, t.accent)]
+                            .spacing(12)
+                            .align_y(Alignment::Center),
+                        text(icon.id()).size(10),
+                    ]
+                    .spacing(7)
+                    .align_x(Alignment::Center),
+                )
+                .padding(8)
+                .width(155)
+                .height(74)
+                .align_x(Alignment::Center)
+                .style(move |_| container::Style {
+                    background: Some(t.bg.into()),
+                    border: iced::Border {
+                        color: t.border,
+                        width: 1.0,
+                        radius: 4.0.into(),
+                    },
+                    ..Default::default()
+                }),
+            );
         }
         let matches = self.matches();
         let pages = matches.len().max(1).div_ceil(48);
@@ -565,6 +593,19 @@ impl StyleRepo {
                     .font(fonts::STRONG)
                     .size(14),
                     canonical,
+                ]
+                .spacing(10),
+                theme,
+            ),
+            self.card(
+                column![
+                    text(l.text(
+                        "Beoordeelde domeiniconen · 16 / 24 px",
+                        "Reviewed domain icons · 16 / 24 px"
+                    ))
+                    .font(fonts::STRONG)
+                    .size(14),
+                    domain,
                 ]
                 .spacing(10),
                 theme,

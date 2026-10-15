@@ -3,7 +3,7 @@
   "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
   "integration_branch": "feat/shared-rust-ui",
   "status": "native-adopted",
-  "note": "Ten reviewed commands use the shared icon core. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece.",
+  "note": "Ten reviewed general commands use the shared icon core, and two reviewed Pointcloud commands use the domain icon layer. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. The BAG panel and Eye Dome Lighting icons were reviewed at 16/24/32 px on light and dark in icon-collision-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece.",
   "decisions": [
     {
       "tool_icon": "Open",
@@ -64,6 +64,22 @@
       "legacy_asset": "native/assets/opencad-icons/fit_selection.svg",
       "shared_icon": "fit-selection",
       "reason": "Frames only the selected objects; the inner dashed selection separates it from Fit all."
+    }
+  ],
+  "domain_decisions": [
+    {
+      "tool_icon": "Building",
+      "shared_icon": "PointcloudBagPanel",
+      "asset": "pointcloud-bag-panel.svg",
+      "legacy_asset": "native/assets/opencad-icons/solid.svg",
+      "reason": "ToggleBagPanel opens the 3D BAG buildings panel; solid.svg was byte-identical to CAD's Shaded visual-style icon."
+    },
+    {
+      "tool_icon": "Shading",
+      "shared_icon": "PointcloudEyeDome",
+      "asset": "pointcloud-edl.svg",
+      "legacy_asset": "native/assets/opencad-icons/sphere.svg",
+      "reason": "SetEyeDome changes Eye Dome Lighting; sphere.svg was byte-identical to CAD's sphere primitive icon."
     }
   ],
   "chrome_decisions": [

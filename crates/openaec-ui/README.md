@@ -12,6 +12,6 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 
 `widgets::property_grid_row_with`, `property_grid_control_with`, and `property_section_with` provide the shared properties dock. Rows are 28 px high with aligned label and value columns and a bottom rule; section headers are 24 px high. Callers supply their own localized text, input controls and theme resolver. The Style Repo uses the static-theme wrappers for its right dock, while Pointcloud uses the resolver variants so theme changes update the live panel.
 
-This package contains only the shared Rust implementation, six bundled fonts with their [separate license notices](NOTICE.md), and 26 canonical icons. Source icons collected for design research, unapproved FEM/BIM drafts and Style Repo screenshots live in the sibling `openaec-style-repo` application and are not included in this crate package.
+This package contains the shared Rust implementation, six bundled fonts with their [separate license notices](NOTICE.md), 26 canonical control icons, and four reviewed CAD/Pointcloud domain meanings with separate 16 px artwork. `icons::DomainIcon` keeps those commands distinct from the general `icons::Icon` set. Source icons collected for design research, unapproved FEM/BIM drafts and Style Repo screenshots live in the sibling `openaec-style-repo` application and are not included in this crate package.
 
 The sibling Style Repo application documents the source inventory and the Pointcloud integration.

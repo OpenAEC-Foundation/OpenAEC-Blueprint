@@ -37,6 +37,10 @@
       "drafts": [
         "pointcloud-edl",
         "cad-sphere"
+      ],
+      "adopted_drafts": [
+        "pointcloud-edl",
+        "cad-sphere"
       ]
     },
     {
@@ -69,6 +73,10 @@
         }
       ],
       "drafts": [
+        "pointcloud-bag-panel",
+        "cad-shaded"
+      ],
+      "adopted_drafts": [
         "pointcloud-bag-panel",
         "cad-shaded"
       ]
@@ -105,7 +113,8 @@
       "drafts": [
         "gis-bag3d",
         "gis-cityjson"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "5327bb4d212db59408576b3e637ded9d045af49ebfd72702a200775e38e0c11f",
@@ -139,7 +148,8 @@
       "drafts": [
         "gis-bgt",
         "gis-bgt3d"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "761843b4707ee5ba2715fd5581d965aad092d7ba8d967f7e1b33a94761331f13",
@@ -173,7 +183,8 @@
       "drafts": [
         "gis-aerial-history",
         "gis-street-view"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "a4ad0278216ea96db936b027f396295eb44c7568166f6264567e19521aec7345",
@@ -207,7 +218,8 @@
       "drafts": [
         "gis-location",
         "gis-cleanup"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "2398e3c82a273bf1fedba463a823bf8b81eadeb15e43708af8ab9d1d2d5db701",
@@ -241,7 +253,8 @@
       "drafts": [
         "pdf-fit-page",
         "pdf-fullscreen"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
@@ -275,7 +288,8 @@
       "drafts": [
         "pdf-actual-size",
         "pdf-area"
-      ]
+      ],
+      "adopted_drafts": []
     },
     {
       "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc",
@@ -306,7 +320,8 @@
           "sha256": "bcec90cdd1d317ac0de9c0cfbc698ff5c924c323132b2480ac8917ca483ce1dc"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     },
     {
       "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224",
@@ -337,7 +352,8 @@
           "sha256": "d65a73d21ce2e4a19efd8166f20708507b40549a02d682355bce8a051f030224"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     },
     {
       "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a",
@@ -368,7 +384,8 @@
           "sha256": "c0d2dfb55009bbf67db9e07a49ca75cc4f381bd42a61bccd60d0a6c38f38fc8a"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     },
     {
       "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82",
@@ -399,7 +416,8 @@
           "sha256": "71892fe3975b3dc310ea19c6ce9048ef00ea3fd95fc4199afa549fb601095f82"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     },
     {
       "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750",
@@ -430,7 +448,8 @@
           "sha256": "7f426e36ca257cf40c29d5b43ef2f1275200389d55bfe7c46c14d8121b0b8750"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     },
     {
       "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421",
@@ -461,7 +480,8 @@
           "sha256": "1802ac5ac291df8642977de555c9b2752f2a55358327ccc3f34fded2c7c9f421"
         }
       ],
-      "drafts": []
+      "drafts": [],
+      "adopted_drafts": []
     }
   ]
 }
