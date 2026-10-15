@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/paths.mjs";
 import { writeGenerated } from "./lib/write.mjs";
+import { loadIconManifest } from "./icons/manifest.mjs";
+import { renderIconsByIdTs, renderIconsTs } from "./icons/react.mjs";
 import { loadTokens } from "./tokens/load.mjs";
 import { renderTokensRust } from "./tokens/rust.mjs";
 
@@ -19,6 +21,15 @@ steps.push(["tokens-rust", (root) => [
   writeGenerated(join(root, "crates", "openaec-tokens", "src", "generated.rs"),
     renderTokensRust(loadTokens(join(root, "design", "tokens")))),
 ]]);
+
+steps.push(["icons-react", (root) => {
+  const icons = loadIconManifest(join(root, "design", "icons"));
+  const dir = join(root, "packages", "icons", "src", "generated");
+  return [
+    writeGenerated(join(dir, "icons.ts"), renderIconsTs(icons)),
+    writeGenerated(join(dir, "by-id.ts"), renderIconsByIdTs(icons)),
+  ];
+}]);
 
 export async function runAll(root = ROOT) {
   const written = [];
