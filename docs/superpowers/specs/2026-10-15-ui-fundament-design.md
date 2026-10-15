@@ -26,6 +26,8 @@ Daardoor begint elke migratie opnieuw en loopt de huisstijl per app uit elkaar.
    een vastgelegde drempel, aantoonbaar via geautomatiseerde screenshots.
 4. Het overzicht van alle ribbon-tabbladen van alle applicaties wordt automatisch
    uit de applicaties zelf opgebouwd.
+5. Alle applicaties hebben een app-logo uit één lijn (§7), gegenereerd uit één
+   pictogram per app; geen app heeft een afwijkend of tijdelijk logo.
 
 ## 2. Applicatiecategorieën
 
@@ -55,11 +57,16 @@ OpenAEC-style-book/
 │   ├── i18n/<taal>/        gedeelde termen (Bestand, Opslaan, Ongedaan maken, …), nl en en
 │   ├── components/         één specificatie per component (zie §6)
 │   ├── ribbons/            gedeelde ribbon-tabs (viewer3d, ifc, report, …)
+│   ├── logos/
+│   │   ├── foundation/     OpenAEC-logo en -symbool (uit brandbook/assets/logo/svg)
+│   │   └── apps/<app-id>.svg  alleen het pictogram van de app
+│   ├── fonts/              Space Grotesk, Inter, JetBrains Mono + OFL-licenties
 │   └── apps.toml           register van alle app-repo's met categorie en gebruikte onderdelen
 ├── generators/             scripts die design/ omzetten naar onderstaande uitvoer
 ├── packages/               npm (React): tokens, icons, ribbon, shell, ui-primitives
 ├── crates/                 Rust (iced): openaec-tokens, openaec-icons, openaec-i18n, openaec-ui
 ├── frappe/openaec_theme/   Frappe-app: Desk-thema (CSS uit tokens), fonts, logo, favicon
+├── logos/                  gegenereerde app-logo's per app (png, ico, icns, favicon, lockup)
 └── project-templates/
     ├── Tauri+React/        gebruikt packages/ (geen eigen kopieën meer)
     └── iced/               nieuw startpunt voor zware apps, gebruikt crates/
@@ -239,14 +246,50 @@ Frappe Desk krijgt geen componenten, alleen een CSS-thema uit de tokens. Y-Next 
 Z-Next gebruiken de React-componenten die ze nodig hebben; zij gebruiken geen
 ribbon als ze een webnavigatie hebben.
 
-## 7. Migratievolgorde
+## 7. Logo's en app-iconen
+
+Alle app-logo's vormen één lijn. Per app wordt alleen het pictogram ontworpen;
+tegel, verhoudingen en kleuren past de generator toe.
+
+### Regels
+
+| Onderdeel | Waarde |
+|---|---|
+| Tegel | afgeronde vierkante tegel, kleur Deep Forge `#36363E` |
+| Hoekafronding | 22% van de tegelbreedte |
+| Pictogram | Construction Amber `#D97706`, lijnstijl, gecentreerd |
+| Pictogramgrootte | 75% van de tegelbreedte (groot pictogram, kleine marge) |
+| Bron | `design/logos/apps/<app-id>.svg`, viewBox `0 0 24 24`, `currentColor` |
+| Letterlogo's | toegestaan voor bedrijfsfrontends (bijv. Y-Next, Z-Next): één letter in Space Grotesk, zelfde tegel en kleur |
+
+Amber wordt nooit als tegelkleur gebruikt (huisstijlregel: amber niet als
+achtergrondvlak).
+
+### Gegenereerde uitvoer per app (`logos/<app-id>/`)
+
+- `icon-{16,32,48,64,128,256,512,1024}.png`
+- `icon.ico` (16–256) en `icon.icns` (macOS)
+- `favicon.svg`, `favicon.ico`, web-manifest-iconen (192, 512, maskable)
+- `lockup-{light,dark}.svg`: OpenAEC-symbool + "Open" + appnaam in Space Grotesk,
+  voor startscherm, Over-dialoog en titelbalk
+
+De foundation-logo's in `brandbook/assets/logo/{png,pdf}` worden voortaan ook uit
+`design/logos/foundation/` gegenereerd.
+
+### Uitrol
+
+App-logo's volgen dezelfde release en dezelfde uitrol-PR's als iconen en tokens
+(§4). Een app verwijst naar zijn logo-set via `design/apps.toml` (`logo = "<app-id>"`).
+
+## 8. Migratievolgorde
 
 Per repo werkt steeds één ontwikkelspoor tegelijk; fasen in verschillende repo's
 mogen parallel lopen.
 
 | Fase | Inhoud | Opmerking |
 |---|---|---|
-| 0. Fundament | `design/` opzetten, tokens verhuizen, iconen verzamelen en ontdubbelen, generators (Rust, React, Frappe), validator `ribbon.toml`, npm-scope regelen, release `v0.1.0` | alleen het stijlbook |
+| 0. Fundament | `design/` opzetten, tokens verhuizen, iconen verzamelen en ontdubbelen, generators (Rust, React, Frappe, logo's), validator `ribbon.toml`, npm-scope regelen, release `v0.1.0` | alleen het stijlbook |
+| 0b. App-logo's | pictogram per app ontwerpen volgens §7, logo-sets genereren, overzichtspagina in de styleguide | parallel aan fase 1 |
 | 1a. `openaec-ui` (iced) | ribbon, titelbalk en overige schil uit OpenCADStudio overzetten naar de crate; OpenCADStudio wordt de eerste gebruiker | bewijst de crate op bestaande, werkende code |
 | 1b. React | Tauri+React-template overzetten op `packages/` en `ribbon.toml` | voorbeeld voor alle lichte apps |
 | 2. Proefmigraties iced | ① open-pointcloud-studio (iced 0.13 → 0.14, op de crates) ② open-3d-viewer (Tauri → iced, inclusief NavigationCube) | levert het migratiedraaiboek op |
@@ -264,7 +307,7 @@ mogen parallel lopen.
 5. Screenshotvergelijking oud ↔ nieuw.
 6. Bèta-release naast de bestaande versie; oude versie daarna uitfaseren.
 
-## 8. Testen
+## 9. Testen
 
 ### Stijlbook-CI
 
@@ -273,6 +316,8 @@ mogen parallel lopen.
 - Unit-tests voor de generators.
 - Elk icoon wordt naar PNG gerenderd (licht en donker) en vergeleken met een
   snapshot.
+- Elk app-logo wordt op 16, 32 en 256 px gerenderd en vergeleken met een
+  snapshot; de generator controleert dat het pictogram binnen 75% van de tegel valt.
 
 ### Componenten
 
@@ -291,13 +336,13 @@ Bouwen tegen de gepinde tag, `ribbon.toml` valideren, opstart-rooktest.
 Eenmalige proefrelease die alleen een testapp ophoogt, om de keten
 "één keer toevoegen, overal zichtbaar" end-to-end te bewijzen.
 
-## 9. Buiten scope
+## 10. Buiten scope
 
 - Open-Frame-Studio en open-structural-engineer-studio.
 - Infrastructuur van het SaaS-platform.
 - Nieuwe functionaliteit in applicaties (migraties zijn functioneel gelijkwaardig).
 
-## 10. Open punten
+## 11. Open punten
 
 1. Beschikbaarheid van de npm-scope `@openaec` (of alternatieve scope).
 2. Of de testvoorzieningen van iced 0.14 headless screenshots ondersteunen;
@@ -307,3 +352,7 @@ Eenmalige proefrelease die alleen een testapp ophoogt, om de keten
 5. Werkaanname bevestigen: eigen schermen in de Frappe-apps (categorie 3) worden
    in React gebouwd.
 6. Drempelwaarde voor de visuele vergelijking iced ↔ React.
+7. Leesbaarheid van pictogrammen op 16 px: mogelijk een vereenvoudigde
+   16/32 px-variant per app (`<app-id>.small.svg`) toestaan.
+8. Rechten op bestaande iconen uit OpenCADStudio (GPL-3.0, externe
+   rechthebbende): overname pas na schriftelijke toestemming.
