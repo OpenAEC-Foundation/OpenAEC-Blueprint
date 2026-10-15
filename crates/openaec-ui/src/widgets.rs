@@ -249,6 +249,29 @@ pub fn secondary_button_style(theme: Theme, status: button::Status) -> button::S
     }
 }
 
+/// Shared dialog-button geometry: 11 px text, a 27 px line and a 75 px
+/// minimum width. The caller supplies its theme adapter to the style hook.
+pub fn dialog_button<'a, M: 'a>(
+    label: impl text::IntoFragment<'a>,
+    style: impl Fn(&iced::Theme, button::Status) -> button::Style + 'a,
+) -> button::Button<'a, M> {
+    const PADDING: [u16; 2] = [5, 20];
+    const MIN_WIDTH: f32 = 75.0;
+    const LINE_HEIGHT: f32 = 17.0;
+    button(
+        column![
+            text(label)
+                .size(11)
+                .font(fonts::BODY)
+                .line_height(text::LineHeight::Absolute(LINE_HEIGHT.into())),
+            iced::widget::Space::with_width(MIN_WIDTH - 2.0 * f32::from(PADDING[1])),
+        ]
+        .align_x(iced::Alignment::Center),
+    )
+    .padding(PADDING)
+    .style(style)
+}
+
 fn faded_button(style: button::Style, alpha: f32) -> button::Style {
     button::Style {
         background: style.background.map(|color| color.scale_alpha(alpha)),
