@@ -2452,7 +2452,7 @@ mod tests {
         assert!(proposals()
             .iter()
             .all(|proposal| domain_drafts::get(&proposal.id).is_some()));
-        assert_eq!(domain_drafts::SMALL.len(), 10);
+        assert_eq!(domain_drafts::SMALL.len(), 13);
         assert!(domain_drafts::SMALL
             .iter()
             .all(|(id, bytes)| domain_drafts::get(id).is_some()

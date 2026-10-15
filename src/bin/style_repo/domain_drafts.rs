@@ -111,11 +111,14 @@ pub const ALL: [(&str, &[u8]); 109] = [
     ("bim.section-box", include_bytes!("../../../design/icon-drafts/bim/section-box.svg")),
 ];
 
-pub const SMALL: [(&str, &[u8]); 10] = [
+pub const SMALL: [(&str, &[u8]); 13] = [
     ("fem.diaphragm", include_bytes!("../../../design/icon-drafts-small/fem/diaphragm.svg")),
     ("fem.surface-load", include_bytes!("../../../design/icon-drafts-small/fem/surface-load.svg")),
     ("fem.mesh", include_bytes!("../../../design/icon-drafts-small/fem/mesh.svg")),
     ("fem.mesh-refine", include_bytes!("../../../design/icon-drafts-small/fem/mesh-refine.svg")),
+    ("bim.level", include_bytes!("../../../design/icon-drafts-small/bim/level.svg")),
+    ("bim.survey-point", include_bytes!("../../../design/icon-drafts-small/bim/survey-point.svg")),
+    ("bim.project-origin", include_bytes!("../../../design/icon-drafts-small/bim/project-origin.svg")),
     ("bim.federate", include_bytes!("../../../design/icon-drafts-small/bim/federate.svg")),
     ("bim.curtain-wall", include_bytes!("../../../design/icon-drafts-small/bim/curtain-wall.svg")),
     ("bim.opening", include_bytes!("../../../design/icon-drafts-small/bim/opening.svg")),

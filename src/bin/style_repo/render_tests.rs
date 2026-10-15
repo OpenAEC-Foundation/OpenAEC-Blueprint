@@ -915,6 +915,19 @@ fn export_general_dialog_review() {
 }
 
 #[test]
+#[ignore = "regenerate BIM reference icon review images on demand"]
+fn export_bim_reference_review() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    app.show(Page::Bim);
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized(&app, theme, false, None, Size::new(1280.0, 800.0))
+            .save_png(&design.join(format!("style-repo-bim-references-{name}.png")))
+            .expect("save native BIM reference icon review");
+    }
+}
+
+#[test]
 fn sample_dialog_saves_only_after_confirmation() {
     let mut app = StyleRepo::default();
     app.sample_input = "Original".into();

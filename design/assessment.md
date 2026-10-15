@@ -207,19 +207,19 @@ placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
 en deze beoordeling voorkomen dat die mockup als voltooide productscreenshot
 wordt behandeld.
 
-## FEM/BIM iconbeoordeling · ronde 1
+## FEM/BIM iconbeoordeling · ronde 1 en 2
 
 De [visuele atlas](domain-icon-atlas.html) bevat 109 verschillende vectorvormen
-in negen betekenisgroepen. Tien drukke betekenissen hebben na vergelijking op
+in negen betekenisgroepen. Dertien betekenissen hebben na vergelijking op
 ware 16 px een aparte vereenvoudigde variant; de
 [FEM-contactsheet](fem-icon-small-review.png) en
 [BIM-contactsheet](bim-icon-small-review.png) tonen 16 px, 24 px en 16 px op
 donkere achtergrond. Alle bestanden zijn XML-geldig. De native Style Repo
 toont de kleine en grote vorm naast elkaar voor review; de publieke icon-API
 van de Rust-crate bevat ze nog niet.
-De nieuwe kleine vormen zijn FEM: diaphragm, mesh, mesh-refine en surface-load;
-BIM: federate, curtain-wall, opening, zone, array en revision. De overige
-drukke 16 px-kandidaten voor een tweede ronde zijn onder meer local-axes,
+De [tweede BIM-referentiereview](bim-reference-icon-review.html) scheidt peil, landmeetpunt en projectnulpunt op 16/24/32 px en lichte/donkere ondergrond. Hun vormen blijven voorlopig en moeten nog in een echte BIM-ribbon worden getoetst. De nieuwe kleine vormen zijn FEM: diaphragm, mesh, mesh-refine en surface-load;
+BIM: federate, curtain-wall, opening, zone, array, revision, level, survey-point en project-origin. De overige
+drukke 16 px-kandidaten voor een volgende ronde zijn onder meer local-axes,
 wind-load, site, building, space, clash en section-box.
 In 24 gevallen bestaat
 een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
@@ -227,8 +227,8 @@ een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
 | Toets | Waarneming | Ontwerpactie |
 | --- | --- | --- |
 | Familiebeeld | Het 24 px raster, donkere neutrale lijn en afgeronde einden zijn consistent. | Na semantische review dezelfde meetwaarden als canonieke Rust-iconen vastzetten. |
-| Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Tien drukke vormen kregen een kleinere variant met minder lijnen; de contactbladen tonen de verbetering. | De resterende complexe belasting-, terrein- en gebouwtekens op ware 16 px beoordelen en waar nodig verder vereenvoudigen. |
-| Betekenisbotsingen | `bim.level` lijkt op een maatpijl; `bim.survey-point` en `bim.project-origin` delen een kruis/doel-motief; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | Peilmarkering duidelijker maken, oorsprong/meetpunt verder uiteen trekken en domeinlabels in zoekresultaten tonen. |
+| Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Dertien vormen kregen een aparte 16 px-variant met minder lijnen; de contactbladen tonen de verbetering. | De resterende complexe belasting-, terrein- en gebouwtekens op ware 16 px beoordelen en waar nodig verder vereenvoudigen. |
+| Betekenisbotsingen | `bim.level` leek op een maatpijl en `bim.survey-point` deelde een doelkruis met `bim.project-origin`; in ronde twee zijn die vormen onderscheiden; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | De drie aangepaste tekens in een echte BIM-ribbon toetsen en domeinlabels in zoekresultaten tonen. |
 | Licht/donker | De HTML-atlas gebruikt een kleurinversie op donkere achtergrond. De native Rust-ribbon kleurt app-eigen SVG's met de actieve thematekstkleur; Light en Forge zijn als software-render gecontroleerd. | Na goedkeuring de definitieve SVG's per thema en op kleine maten toetsen voordat ze publieke crate-assets worden. |
 | Bronvergelijking | Kandidaten zijn op bestandsnaam geselecteerd en als tooltips zichtbaar. | De 24 paren visueel en functioneel per opdracht beoordelen; dubbele betekenissen samenvoegen. |
 

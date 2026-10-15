@@ -572,20 +572,24 @@
     "domain": "bim",
     "group": "Project & referenties",
     "label": "Peil",
-    "visual_metaphor": "Horizontale lijn met driehoekmarkering",
+    "visual_metaphor": "Horizontale peillijn met ronde datumkop",
     "file": "icon-drafts/bim/level.svg",
-    "sha256": "53841dd210b4c844362ea8e230f92c5a4345900c2d2410496f59dd4b70bec59a",
-    "status": "visual-draft"
+    "sha256": "9275a32c55d71ba967f0906f212d60c5839f9038bf0a213603d96f485090273e",
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/level.svg",
+    "small_sha256": "9fe6a02ad7582da732bfa227ea9e67645c478f0f7fa1d89313c633cf78e26e04"
   },
   {
     "id": "bim.survey-point",
     "domain": "bim",
     "group": "Project & referenties",
     "label": "Landmeetpunt",
-    "visual_metaphor": "Kruis met coördinaatpunt",
+    "visual_metaphor": "Locatiepin met centrale meetpuntstip",
     "file": "icon-drafts/bim/survey-point.svg",
-    "sha256": "a448de92a029e26f8ae77aaa7a2b961c7c18c3ba036d9e2a62700a94ad4474ea",
-    "status": "visual-draft"
+    "sha256": "74d7ddbc1444c6de487cd0a71a2962f44a8727614cf36c9af3e7d7208758cf74",
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/survey-point.svg",
+    "small_sha256": "5d1c14337f8da5fe31b99898ba5740fbc8e2d232708ad5b2dbaab536b865fb4e"
   },
   {
     "id": "bim.project-origin",
@@ -595,7 +599,9 @@
     "visual_metaphor": "Drie assen met centrale oorsprong",
     "file": "icon-drafts/bim/project-origin.svg",
     "sha256": "14b4fbc10a177e2ae0b720361fefc063dc432b039d26b9de65fb61646b8f3ff3",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/project-origin.svg",
+    "small_sha256": "96bfca8e437c1abd9a7ca4725b65a528eca4a31d95c77aa859275d1c1f35f467"
   },
   {
     "id": "bim.link-model",

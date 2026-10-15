@@ -75,8 +75,8 @@ BIM = {
     "building": '<path d="M4 21V6l8-4 8 4v15H4ZM4 10h16M8 6h2m4 0h2M8 14h2m4 0h2M10 21v-5h4v5"/>',
     "storey": '<path d="M3 5h18M3 12h18M3 19h18M6 5v14m12-14v14"/>',
     "grid": '<path d="M6 2v20M18 2v20M2 7h20M2 17h20"/><circle cx="6" cy="7" r="1"/><circle cx="18" cy="17" r="1"/>',
-    "level": '<path d="M3 13h18M5 10l-3 3 3 3M19 10l3 3-3 3M12 3v6m-2-2 2 2 2-2"/>',
-    "survey-point": '<circle cx="12" cy="11" r="7"/><circle cx="12" cy="11" r="2"/><path d="M12 1v3m0 14v5M2 11h3m14 0h3"/>',
+    "level": '<path d="M3 12h12"/><circle cx="18" cy="12" r="3"/><path d="M17 12h2"/>',
+    "survey-point": '<path d="M12 22s-7-7-7-12a7 7 0 1 1 14 0c0 5-7 12-7 12Z"/><circle cx="12" cy="10" r="2"/>',
     "project-origin": '<path d="M12 21V3M3 12h18m-9-9-3 3m3-3 3 3m6 6-3-3m3 3-3 3"/><circle cx="12" cy="12" r="2"/>',
     "link-model": '<path d="m3 7 5-3 5 3v6l-5 3-5-3V7Zm8 5 5-3 5 3v6l-5 3-5-3v-6M8 16l3-4"/>',
     "federate": '<path d="m3 8 6-4 6 4v8l-6 4-6-4V8Zm6 0 6-4 6 4v8l-6 4-6-4M3 8l6 4 6-4m0 4 6-4"/>',
@@ -145,6 +145,9 @@ SMALL = {
     "bim.zone": '<path d="M3 3h18v18H3zM12 3v18"/><circle cx="8" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="1.2" fill="currentColor" stroke="none"/>',
     "bim.array": '<path d="M3 5h8v9H3zM13 10h8v9h-8z"/>',
     "bim.revision": '<path d="M3 4h12v15H3zM9 7h12v15H9zM12 12h6"/>',
+    "bim.level": '<path d="M3 12h12"/><circle cx="18" cy="12" r="3"/>',
+    "bim.survey-point": '<path d="M12 21s-7-7-7-12a7 7 0 1 1 14 0c0 5-7 12-7 12Z"/><circle cx="12" cy="9" r="2"/>',
+    "bim.project-origin": '<path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>',
 }
 drafts = []
 for proposal in proposals:
