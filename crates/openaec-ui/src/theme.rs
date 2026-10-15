@@ -34,6 +34,17 @@ impl Theme {
             _ => iced::Color::from_rgb8(0x3F, 0x3F, 0x46),
         }
     }
+    /// Modal.css and themes.css at dfdcd41: 0 4px 16px with a theme-specific color.
+    pub fn dialog_shadow(self) -> iced::Shadow {
+        let color = match self {
+            Self::Light => iced::Color::from_rgba8(0, 0, 0, 0.12),
+            Self::Forge => iced::Color::from_rgba8(0, 0, 0, 0.35),
+            Self::OpenAec => iced::Color::from_rgba8(0, 0, 0, 0.40),
+            Self::Blueprint => iced::Color::from_rgba8(0, 0, 0, 0.45),
+            Self::Contrast => iced::Color::from_rgba8(255, 215, 0, 0.40),
+        };
+        iced::Shadow { color, offset: iced::Vector::new(0.0, 4.0), blur_radius: 16.0 }
+    }
     pub fn iced(self) -> iced::Theme {
         let t = self.tokens();
         iced::Theme::custom(self.to_string(), iced::theme::Palette {

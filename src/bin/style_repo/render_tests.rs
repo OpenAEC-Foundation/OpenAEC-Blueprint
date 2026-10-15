@@ -922,3 +922,17 @@ fn sample_dialog_saves_only_after_confirmation() {
     assert_eq!(app.sample_input, "Saved");
     assert!(!app.sample_dialog);
 }
+
+#[test]
+fn general_modal_renders_vertical_gradient_and_shadow() {
+    let mut app = StyleRepo::default();
+    app.show(Page::Components);
+    app.sample_dialog = true;
+    let picture = render_sized(&app, Theme::Light, false, None, Size::new(1280.0, 800.0));
+    let red = |x: usize, y: usize| picture.data()[(y * picture.width() as usize + x) * 4];
+    assert!(red(640, 308) < red(640, 330), "header must fade down toward dialog white");
+    assert!(red(399, 350) < red(380, 350), "shadow must darken overlay beside the card");
+    let forge = render_sized(&app, Theme::Forge, false, None, Size::new(1280.0, 800.0));
+    let red = |x: usize, y: usize| forge.data()[(y * forge.width() as usize + x) * 4];
+    assert!(red(640, 308) > red(640, 330), "Forge header must fade toward dark dialog bg");
+}

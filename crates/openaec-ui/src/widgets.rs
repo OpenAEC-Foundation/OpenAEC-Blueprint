@@ -1002,6 +1002,13 @@ pub fn title_action_style(theme: Theme, status: button::Status) -> button::Style
         ..button::Style::default()
     }
 }
+fn modal_header_background(theme: Theme) -> Background {
+    let t = theme.tokens();
+    iced::gradient::Linear::new(iced::Degrees(180.0))
+        .add_stop(0.0, t.dialog_header_bg)
+        .add_stop(1.0, t.dialog_bg)
+        .into()
+}
 /// Source Style Book modal chrome with an application-owned form and actions.
 /// The overlay is inert; applications keep their own close and Escape messages.
 pub fn dialog_modal<'a, M: Clone + 'a>(
@@ -1026,7 +1033,7 @@ pub fn dialog_modal<'a, M: Clone + 'a>(
     ].align_y(Alignment::Center))
         .height(30).width(Fill)
         .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
-        .style(move |_| container::Style::default().background(t.dialog_header_bg));
+        .style(move |_| container::Style::default().background(modal_header_background(theme)));
     let content = container(body)
         .width(Fill)
         .style(move |_| container::Style::default().background(t.dialog_content_bg).color(t.dialog_content_text));
@@ -1041,6 +1048,7 @@ pub fn dialog_modal<'a, M: Clone + 'a>(
         .style(move |_| container::Style {
             background: Some(t.dialog_bg.into()),
             border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
+            shadow: theme.dialog_shadow(),
             ..container::Style::default()
         });
     opaque(center(opaque(card)).style(move |_| {
@@ -1079,7 +1087,7 @@ pub fn settings_modal<'a, M: Clone + 'a>(
         .width(Fill)
         .height(30)
         .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
-        .style(move |_| container::Style::default().background(t.dialog_header_bg));
+        .style(move |_| container::Style::default().background(modal_header_background(theme)));
     let sidebar = container(scrollable(sidebar).height(Fill))
         .width(120)
         .height(Fill)
@@ -1115,6 +1123,7 @@ pub fn settings_modal<'a, M: Clone + 'a>(
         .style(move |_| container::Style {
             background: Some(t.dialog_bg.into()),
             border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
+            shadow: theme.dialog_shadow(),
             ..container::Style::default()
         });
     opaque(center(opaque(card)).style(move |_| {
