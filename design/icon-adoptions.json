@@ -3,7 +3,7 @@
   "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
   "integration_branch": "feat/shared-rust-ui",
   "status": "native-adopted",
-  "note": "These six commands have the same action meaning as the shared UI core. Their legacy SVGs remain archived as source evidence; other Pointcloud domain icons keep their original semantics pending visual review. Loading detail and refreshing LOD now use the existing Update icon instead of Fit. The visible File → Extensions page now uses a newly drawn Extensions icon; a dormant ribbon-title mapping is corrected from Cube as well.",
+  "note": "Ten reviewed commands use the shared icon core. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece.",
   "decisions": [
     {
       "tool_icon": "Open",
@@ -40,6 +40,30 @@
       "legacy_asset": "native/assets/opencad-icons/save.svg",
       "shared_icon": "save",
       "reason": "Saves the active view."
+    },
+    {
+      "tool_icon": "ZoomIn",
+      "legacy_asset": "native/assets/opencad-icons/zoom_in.svg",
+      "shared_icon": "zoom-in",
+      "reason": "Enlarges the viewport around the pointer; the plus inside the lens distinguishes it from Zoom out."
+    },
+    {
+      "tool_icon": "ZoomOut",
+      "legacy_asset": "native/assets/opencad-icons/zoom_out.svg",
+      "shared_icon": "zoom-out",
+      "reason": "Reduces viewport scale; the minus inside the same lens distinguishes it from Zoom in."
+    },
+    {
+      "tool_icon": "Pan",
+      "legacy_asset": "native/assets/opencad-icons/pan.svg",
+      "shared_icon": "pan",
+      "reason": "Moves the viewport without selecting or changing scale."
+    },
+    {
+      "tool_icon": "FitSelection",
+      "legacy_asset": "native/assets/opencad-icons/fit_selection.svg",
+      "shared_icon": "fit-selection",
+      "reason": "Frames only the selected objects; the inner dashed selection separates it from Fit all."
     }
   ],
   "chrome_decisions": [

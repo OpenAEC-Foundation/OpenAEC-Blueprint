@@ -18,16 +18,16 @@ migratie van alle OpenAEC-applicaties.
 - 686 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
   gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
-- De [UI-icoonreviewwerkbank](icon-review-board.html) beperkt de standaardlijst tot de 565 bronbewezen UI-bestanden uit vijf repositories. Elk origineel staat op lichte en donkere ondergrond; 16, 24 en 32 px zijn omschakelbaar. Een besluit per item blijft lokaal in de browser en is als JSON exporteerbaar. Zes eerder beoordeelde Pointcloud-adopties zijn apart gemarkeerd; naamovereenkomsten zijn nog geen goedkeuring.
+- De [UI-icoonreviewwerkbank](icon-review-board.html) beperkt de standaardlijst tot de 565 bronbewezen UI-bestanden uit vijf repositories. Elk origineel staat op lichte en donkere ondergrond; 16, 24 en 32 px zijn omschakelbaar. Een besluit per item blijft lokaal in de browser en is als JSON exporteerbaar. Tien beoordeelde Pointcloud-adopties zijn apart gemarkeerd; naamovereenkomsten zijn nog geen goedkeuring.
 - De [icoonbotsingreview](icon-collision-review.html) vergelijkt 14 exacte SHA-256-dubbelparen binnen deze 565 UI-bestanden. Zes paren representeren aantoonbaar verschillende handelingen; daarvoor zijn 12 nieuwe SVG-concepten getekend en in 16, 24 en 32 px op licht en donker bekeken. De overige acht paren zijn mogelijk bewuste hergebruikgevallen en vragen een contextbesluit. De voorstellen blijven buiten de publieke Rust-icoon-API totdat de visuele en semantische beoordeling is afgerond.
 - De [schermcontactbladen](screen-contact-sheets.html) laten alle 666 geïnventariseerde beeldkandidaten naast elkaar zien, rechtstreeks uit hun vastgelegde Git-objecten gerenderd: 47 bladen en nul leesfouten. Van de 666 zijn 472 als mogelijk applicatiescherm ingedeeld. Vele beelden zijn historische states, detailuitsneden of testcaptures; hun aanwezigheid in een huidige repository maakt ze nog geen actuele UI-bron. De huidige schermstructuur wordt daarom tegen implementatiecode en recente native captures beoordeeld.
 - Het [semantische kruisverband](icon-semantic-crosswalk.html) vergelijkt de
-  22 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
-  versiegebonden bibliotheekvarianten. 79 naamovereenkomsten zijn kandidaten;
-  798 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
-  Dit is geen goedkeuring van vorm of functie. Zes Pointcloud-toolacties hebben na
+  26 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
+  versiegebonden bibliotheekvarianten. 90 naamovereenkomsten zijn kandidaten;
+  787 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
+  Dit is geen goedkeuring van vorm of functie. Tien Pointcloud-toolacties hebben na
   controle van hun commandobetekenis een expliciet
-  [adoptiebesluit](icon-adoptions.json): Open, Export, Fit, Undo, Redo en Save.
+  [adoptiebesluit](icon-adoptions.json): Open, Export, Fit, Undo, Redo, Save, Zoom in, Zoom out, Pan en Fit selection. De vier geharmoniseerde [navigatievectoren](navigation-icon-review.html) zijn op 16/24/32 px in Light en Forge beoordeeld.
   Refresh LOD gebruikt nu zijn eigen Update-symbool in plaats van Fit.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
@@ -58,7 +58,7 @@ Open Speech Studio is op commit `4e8aa6176ae3` opnieuw beoordeeld. Acht echte sc
 
 Open PDF Studio is op commit `f754cb7c9d9a` tegen de Solid-componenten `Ribbon.jsx`, negen tabcomponenten en de Nederlandse ribbon-locale gecontroleerd. De zichtbare hoofdstructuur is Bestand, Start, Beeld, Tekenen, Annotatie, PDF bewerken & samenvoegen en Help; Opmaak, Schikken en Afbeelding zijn contextueel. De oude `measure`-tab-ID activeert Annotatie. De [native PDF-review](style-repo-pdf-ribbon-forge.png) en HTML-proef nemen de brongepinde groepsnamen over; keuzeregelaars in contexttabs zijn in Rust voorlopig gelabelde placeholders. De lokaal bewaarde `drawing-tools.jpg` toont versie 2.0.0 en is een historische visuele referentie. `dynlex` en `feat/rust-native` waren niet publiek toegankelijk bij de audit, zodat hiervoor geen brongetrouwe claim wordt gedaan.
 
-De huidige native Pointcloud-bron op lokale branch `feat/shared-rust-ui` (`native/desktop/src/main.rs`, gecontroleerd op `fdf93c3`) heeft `RibbonTab::CORE = [Start]`, naast de Bestand-weergave. De tien Start-panelen zijn in de Nederlandse locale Bestand, Navigatie, Selectie, Snedebox, Oppervlak, Tekening, Meten, Annotatie, Index en Export. View-cube-bediening zit buiten de ribbon. Oudere screenshots tonen nog Beeld/Selecteren/Tools; die zijn historisch en bepalen de huidige tabtaxonomie niet. De [native atlasrender](style-repo-pointcloud-ribbon-forge.png) controleert labels, volgorde en iconbetekenissen; de echte Pointcloud-ribbon gebruikt compactere stapels en is dus nog niet pixelgelijk aan de generieke crate-ribbon.
+De huidige native Pointcloud-bron op lokale branch `feat/shared-rust-ui` (`native/desktop/src/main.rs`, gecontroleerd op `7ee0f35`) heeft `RibbonTab::CORE = [Start]`, naast de Bestand-weergave. De tien Start-panelen zijn in de Nederlandse locale Bestand, Navigatie, Selectie, Snedebox, Oppervlak, Tekening, Meten, Annotatie, Index en Export. View-cube-bediening zit buiten de ribbon. Oudere screenshots tonen nog Beeld/Selecteren/Tools; die zijn historisch en bepalen de huidige tabtaxonomie niet. De [native atlasrender](style-repo-pointcloud-ribbon-forge.png) controleert labels, volgorde en iconbetekenissen; de echte Pointcloud-ribbon gebruikt compactere stapels en is dus nog niet pixelgelijk aan de generieke crate-ribbon.
 
 De statusband is nu als `openaec_ui::frame::status_bar` in de gedeelde Rust-crate ondergebracht en wordt door de Style Repo-shell én Pointcloud gebruikt. Pointcloud behoudt de contextafhankelijke tellingen, zichtnaam, RAM, importannulering en compacte weergave; de crate tekent de 22 px-band met bovenrand en themakleuren. De vijf Pointcloud-statusbalktests en de vijf-thema-shelltest slagen. Alle zes opnieuw gerenderde Pointcloud-beelden zijn bytegelijk aan de eerdere beelden, inclusief Light en Forge met lege en geopende scan en de Extensions-pagina.
 
@@ -82,7 +82,7 @@ staan Berekenen en taakacties in Start/Planning, niet in aparte top-level
 tabs. Daarom vervallen de eerder voorgestelde tabs Taken en Berekenen.
 De [native Planner-preview](style-repo-planner-ribbon-light.png) volgt de
 gecontroleerde tab- en groepsstructuur; gemeenschappelijke acties gebruiken
-de 22-iconenkern en de overige vormen zijn broniconen ter beoordeling.
+de 26-iconenkern en de overige vormen zijn broniconen ter beoordeling.
 
 De [Energy-router op commit e9a485d](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/core/navigation/routes.ts)
 bevestigt tien hoofdschermen in vier werkstroomgroepen: Invoer (Project,
@@ -121,10 +121,10 @@ compacte knopstapels en een eigen taak/Gantt-werkgebied gebruikt.
 | --- | --- | --- |
 | Herkenbare gedeelde shell | Voldoende voor conceptreview: 18 studio's gebruiken dezelfde regio's en vijf thema's. | Per studio de exacte commando- en tabgroepen aan de broncode koppelen. |
 | Nette opmaak | De compacte browserproef heeft consistente uitlijning, randen en witruimte. | Native screenshots op meerdere platformen vergelijken met de HTML-maten. |
-| Semantiek van iconen | De 22 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
+| Semantiek van iconen | De 26 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
-| Applicatieschermen | Voor 16 studio's zijn negen gedeelde schermtoestanden in HTML en de native Rust-atlas selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. Speech toont in de Rust-atlas negen echte zijbalkroutes en acht broncaptures; Field tien topnavigatiepagina’s en zes broncaptures. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 22 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 Tauri-kleurvelden plus de stevige randkleur uit de merktokens per thema, ribbon- en formulierknoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en vijf vensterbandmaten. Ook de 27 px hoge dialoogknop met 75 px minimumbreedte en identieke tekstuitlijning wordt nu door de crate gebouwd en in beide apps gebruikt. De portable kopie is op 11 Rust-bestanden, 28 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. Zes Pointcloud-renders zijn na deze controlintegratie bytegelijk gebleven; de instellingenrenders tonen de gesloten keuzelijsten in Light en Forge. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
+| Applicatieschermen | Voor 16 studio's zijn negen gedeelde schermtoestanden in HTML en de native Rust-atlas selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. Speech toont in de Rust-atlas negen echte zijbalkroutes en acht broncaptures; Field tien topnavigatiepagina’s en zes broncaptures. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 26 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, tien beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 Tauri-kleurvelden plus de stevige randkleur uit de merktokens per thema, ribbon- en formulierknoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en vijf vensterbandmaten. Ook de 27 px hoge dialoogknop met 75 px minimumbreedte en identieke tekstuitlijning wordt nu door de crate gebouwd en in beide apps gebruikt. De portable kopie is op 11 Rust-bestanden, 32 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. De Pointcloud- en Style Repo-renders zijn na de navigatie-iconadoptie opnieuw gegenereerd; de instellingenrenders tonen de gesloten keuzelijsten in Light en Forge. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 De actieve en hoverstaat van de 28 px ribbon-tab komen nu uit één
 `openaec-ui::widgets::ribbon_tab_style` in zowel de Rust-showcase als
@@ -147,7 +147,7 @@ geen geverifieerde productfuncties.
 De herbruikbare `openaec-ui` is nu een afzonderlijk Cargo-package onder
 `crates/openaec-ui/`. `cargo package -p openaec-ui` heeft het uitgepakte
 pakket zelfstandig gecompileerd: 49 verpakte bestanden, waaronder 11
-Rust-bronnen, zes fonts, drie OFL-licentieteksten en 22 canonieke iconen. De onderzoeksiconen,
+Rust-bronnen, zes fonts, drie OFL-licentieteksten en 26 canonieke iconen. De onderzoeksiconen,
 FEM/BIM-concepten en reviewbeelden blijven in het niet-publiceerbare
 Style Repo-package. De Root/Pointcloud-kopieën van code en assets worden
 met `scripts/check_portable_ui.py` op inhoud gecontroleerd.

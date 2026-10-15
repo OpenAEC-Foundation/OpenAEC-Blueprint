@@ -5,7 +5,7 @@
     "ui_assets": 565,
     "code_import_variants": 312
   },
-  "adopted_count": 6,
+  "adopted_count": 10,
   "native_chrome_decisions_count": 1,
   "canonical": [
     {
@@ -1653,6 +1653,257 @@
           ],
           "sha256": "7f8f869e64da7ed996a4c8866a46a1d5cf067c13d5aee0f0007a706ad8e279f1",
           "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/zoom_ext.rs#L2"
+        }
+      ]
+    },
+    {
+      "id": "fit-selection",
+      "aliases": [
+        "fitselection",
+        "fit_selection",
+        "frameselection"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pointcloud-studio",
+          "name": "fit_selection",
+          "path": "native/assets/opencad-icons/fit_selection.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/fit_selection.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "native/desktop/src/main.rs",
+              "line": 12366,
+              "reference": "../../assets/opencad-icons/fit_selection.svg"
+            }
+          ],
+          "sha256": "75220cde4512782fa055f2f3d68dfbbe141cdccf6d9c22a0ba3c915e75236618",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12366",
+          "adoption": "native-adopted"
+        }
+      ]
+    },
+    {
+      "id": "zoom-in",
+      "aliases": [
+        "zoomin",
+        "zoom_in"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pdf-studio-v3",
+          "name": "zoom-in",
+          "path": "crates/app/ui/icons/zoom-in.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/zoom-in.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "crates/app/ui/ribbon.slint",
+              "line": 95,
+              "reference": "icons/zoom-in.svg"
+            }
+          ],
+          "sha256": "0ba810fc4b918eac828e83b198efdac1a7c94ff2af2c260ffc7de96b288fdabb",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L95"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "open-pointcloud-studio",
+          "name": "zoom_in",
+          "path": "native/assets/opencad-icons/zoom_in.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/zoom_in.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "native/desktop/src/main.rs",
+              "line": 12363,
+              "reference": "../../assets/opencad-icons/zoom_in.svg"
+            }
+          ],
+          "sha256": "d09cdddd777fddaf3d5a4860713d10cc5f4025d611f98fe0084b34b495a987b4",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12363",
+          "adoption": "native-adopted"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "OpenCADStudio",
+          "name": "zoom_in",
+          "path": "assets/icons/zoom_in.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/zoom_in.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "src/ui/icons.rs",
+              "line": 50,
+              "reference": "../../assets/icons/zoom_in.svg"
+            },
+            {
+              "source": "src/modules/view/zoom_in.rs",
+              "line": 2,
+              "reference": "../../../assets/icons/zoom_in.svg"
+            }
+          ],
+          "sha256": "3023a2eb167b2014c27f5229bbfe782b9e6120ce1ea074f9167837e589e10136",
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L50"
+        },
+        {
+          "kind": "code-import",
+          "repo": "open-planner-studio",
+          "name": "ZoomIn",
+          "path": "lucide-static@0.575.0/ZoomIn",
+          "preview": "../harmonization/library-icons/lucide-static/0.575.0/ZoomIn.svg",
+          "evidence": "source-import",
+          "references": [
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+              "line": 3,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            },
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+              "line": 5,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            }
+          ],
+          "sha256": "ad8bfb7157b2ce6badb394083ac7c4affb90ea0dfd8e59225e05d0ff67895c64",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L3"
+        }
+      ]
+    },
+    {
+      "id": "zoom-out",
+      "aliases": [
+        "zoomout",
+        "zoom_out"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pdf-studio-v3",
+          "name": "zoom-out",
+          "path": "crates/app/ui/icons/zoom-out.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/zoom-out.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "crates/app/ui/ribbon.slint",
+              "line": 96,
+              "reference": "icons/zoom-out.svg"
+            }
+          ],
+          "sha256": "2cee3cb5a99e71a6913cc41cb98e06a4746be28fd172cd9631761864e5278d0d",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L96"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "open-pointcloud-studio",
+          "name": "zoom_out",
+          "path": "native/assets/opencad-icons/zoom_out.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/zoom_out.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "native/desktop/src/main.rs",
+              "line": 12364,
+              "reference": "../../assets/opencad-icons/zoom_out.svg"
+            }
+          ],
+          "sha256": "2b2302bf10f30161a66685e257b3e75fc40389b482f253e4c7bd88051373b31e",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12364",
+          "adoption": "native-adopted"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "OpenCADStudio",
+          "name": "zoom_out",
+          "path": "assets/icons/zoom_out.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/zoom_out.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "src/modules/view/zoom_out.rs",
+              "line": 2,
+              "reference": "../../../assets/icons/zoom_out.svg"
+            }
+          ],
+          "sha256": "18c5f91fb8251aa5905b99933fa54527957043690089d3b8f100cc6df62c79ea",
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/zoom_out.rs#L2"
+        },
+        {
+          "kind": "code-import",
+          "repo": "open-planner-studio",
+          "name": "ZoomOut",
+          "path": "lucide-static@0.575.0/ZoomOut",
+          "preview": "../harmonization/library-icons/lucide-static/0.575.0/ZoomOut.svg",
+          "evidence": "source-import",
+          "references": [
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+              "line": 3,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            },
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+              "line": 5,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            }
+          ],
+          "sha256": "a19702c2f695a488dbd934cf36eeb95b36d13650123ad38dc94721a63da34a5e",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L3"
+        }
+      ]
+    },
+    {
+      "id": "pan",
+      "aliases": [
+        "pan"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pointcloud-studio",
+          "name": "pan",
+          "path": "native/assets/opencad-icons/pan.svg",
+          "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/pan.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "native/desktop/src/main.rs",
+              "line": 12365,
+              "reference": "../../assets/opencad-icons/pan.svg"
+            }
+          ],
+          "sha256": "fcb1d116efd9739eeec116820e23d8fbe06f5bc602a221883ec9b8bee272c6b3",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12365",
+          "adoption": "native-adopted"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "OpenCADStudio",
+          "name": "pan",
+          "path": "assets/icons/pan.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/pan.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "src/ui/icons.rs",
+              "line": 49,
+              "reference": "../../assets/icons/pan.svg"
+            },
+            {
+              "source": "src/modules/view/pan.rs",
+              "line": 2,
+              "reference": "../../../assets/icons/pan.svg"
+            }
+          ],
+          "sha256": "bb3d60c8f01594faa577c59634395b49aa1c2c3ee737fc86edc6139345faf256",
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L49"
         }
       ]
     },
@@ -3749,40 +4000,6 @@
     },
     {
       "kind": "ui-asset",
-      "repo": "open-pdf-studio-v3",
-      "name": "zoom-in",
-      "path": "crates/app/ui/icons/zoom-in.svg",
-      "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/zoom-in.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "crates/app/ui/ribbon.slint",
-          "line": 95,
-          "reference": "icons/zoom-in.svg"
-        }
-      ],
-      "sha256": "0ba810fc4b918eac828e83b198efdac1a7c94ff2af2c260ffc7de96b288fdabb",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L95"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pdf-studio-v3",
-      "name": "zoom-out",
-      "path": "crates/app/ui/icons/zoom-out.svg",
-      "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/zoom-out.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "crates/app/ui/ribbon.slint",
-          "line": 96,
-          "reference": "icons/zoom-out.svg"
-        }
-      ],
-      "sha256": "2cee3cb5a99e71a6913cc41cb98e06a4746be28fd172cd9631761864e5278d0d",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L96"
-    },
-    {
-      "kind": "ui-asset",
       "repo": "open-pointcloud-studio",
       "name": "annotation_dimension",
       "path": "native/assets/opencad-icons/annotation_dimension.svg",
@@ -4226,23 +4443,6 @@
     {
       "kind": "ui-asset",
       "repo": "open-pointcloud-studio",
-      "name": "fit_selection",
-      "path": "native/assets/opencad-icons/fit_selection.svg",
-      "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/fit_selection.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "native/desktop/src/main.rs",
-          "line": 12366,
-          "reference": "../../assets/opencad-icons/fit_selection.svg"
-        }
-      ],
-      "sha256": "75220cde4512782fa055f2f3d68dfbbe141cdccf6d9c22a0ba3c915e75236618",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12366"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pointcloud-studio",
       "name": "folder_scans",
       "path": "native/assets/opencad-icons/folder_scans.svg",
       "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/folder_scans.svg",
@@ -4375,23 +4575,6 @@
       ],
       "sha256": "7e25452bf471679e226c4d8a281906d84e143618b4054e72d0cda7c1c84f0feb",
       "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12397"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pointcloud-studio",
-      "name": "pan",
-      "path": "native/assets/opencad-icons/pan.svg",
-      "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/pan.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "native/desktop/src/main.rs",
-          "line": 12365,
-          "reference": "../../assets/opencad-icons/pan.svg"
-        }
-      ],
-      "sha256": "fcb1d116efd9739eeec116820e23d8fbe06f5bc602a221883ec9b8bee272c6b3",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12365"
     },
     {
       "kind": "ui-asset",
@@ -4681,40 +4864,6 @@
       ],
       "sha256": "fcc78d7f71a01f3487b57e9a6a939455ab2c03dcf0c8beb3162b5f26f2306ea2",
       "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12381"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pointcloud-studio",
-      "name": "zoom_in",
-      "path": "native/assets/opencad-icons/zoom_in.svg",
-      "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/zoom_in.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "native/desktop/src/main.rs",
-          "line": 12363,
-          "reference": "../../assets/opencad-icons/zoom_in.svg"
-        }
-      ],
-      "sha256": "d09cdddd777fddaf3d5a4860713d10cc5f4025d611f98fe0084b34b495a987b4",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12363"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pointcloud-studio",
-      "name": "zoom_out",
-      "path": "native/assets/opencad-icons/zoom_out.svg",
-      "preview": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/zoom_out.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "native/desktop/src/main.rs",
-          "line": 12364,
-          "reference": "../../assets/opencad-icons/zoom_out.svg"
-        }
-      ],
-      "sha256": "2b2302bf10f30161a66685e257b3e75fc40389b482f253e4c7bd88051373b31e",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12364"
     },
     {
       "kind": "ui-asset",
@@ -8697,28 +8846,6 @@
     {
       "kind": "ui-asset",
       "repo": "OpenCADStudio",
-      "name": "pan",
-      "path": "assets/icons/pan.svg",
-      "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/pan.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "src/ui/icons.rs",
-          "line": 49,
-          "reference": "../../assets/icons/pan.svg"
-        },
-        {
-          "source": "src/modules/view/pan.rs",
-          "line": 2,
-          "reference": "../../../assets/icons/pan.svg"
-        }
-      ],
-      "sha256": "bb3d60c8f01594faa577c59634395b49aa1c2c3ee737fc86edc6139345faf256",
-      "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L49"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "OpenCADStudio",
       "name": "paste",
       "path": "assets/icons/paste.svg",
       "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/paste.svg",
@@ -10618,45 +10745,6 @@
       ],
       "sha256": "241ea105930e4703877fa276bf1efa26fca9c88f8cc4c131e0eac6eb192cc233",
       "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/draw_panel.rs#L49"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "OpenCADStudio",
-      "name": "zoom_in",
-      "path": "assets/icons/zoom_in.svg",
-      "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/zoom_in.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "src/ui/icons.rs",
-          "line": 50,
-          "reference": "../../assets/icons/zoom_in.svg"
-        },
-        {
-          "source": "src/modules/view/zoom_in.rs",
-          "line": 2,
-          "reference": "../../../assets/icons/zoom_in.svg"
-        }
-      ],
-      "sha256": "3023a2eb167b2014c27f5229bbfe782b9e6120ce1ea074f9167837e589e10136",
-      "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L50"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "OpenCADStudio",
-      "name": "zoom_out",
-      "path": "assets/icons/zoom_out.svg",
-      "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/zoom_out.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "src/modules/view/zoom_out.rs",
-          "line": 2,
-          "reference": "../../../assets/icons/zoom_out.svg"
-        }
-      ],
-      "sha256": "18c5f91fb8251aa5905b99933fa54527957043690089d3b8f100cc6df62c79ea",
-      "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/zoom_out.rs#L2"
     },
     {
       "kind": "ui-asset",
@@ -14576,54 +14664,6 @@
       ],
       "sha256": "dffb5deacead3bb5686c7e889c87c5f81c49c5d532461a5c83c2a0f9045eef3e",
       "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/RelationCellEditor.tsx#L14"
-    },
-    {
-      "kind": "code-import",
-      "repo": "open-planner-studio",
-      "name": "ZoomIn",
-      "path": "lucide-static@0.575.0/ZoomIn",
-      "preview": "../harmonization/library-icons/lucide-static/0.575.0/ZoomIn.svg",
-      "evidence": "source-import",
-      "references": [
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
-          "line": 3,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        },
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
-          "line": 5,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        }
-      ],
-      "sha256": "ad8bfb7157b2ce6badb394083ac7c4affb90ea0dfd8e59225e05d0ff67895c64",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L3"
-    },
-    {
-      "kind": "code-import",
-      "repo": "open-planner-studio",
-      "name": "ZoomOut",
-      "path": "lucide-static@0.575.0/ZoomOut",
-      "preview": "../harmonization/library-icons/lucide-static/0.575.0/ZoomOut.svg",
-      "evidence": "source-import",
-      "references": [
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
-          "line": 3,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        },
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
-          "line": 5,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        }
-      ],
-      "sha256": "a19702c2f695a488dbd934cf36eeb95b36d13650123ad38dc94721a63da34a5e",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L3"
     },
     {
       "kind": "code-import",

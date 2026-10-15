@@ -15,8 +15,8 @@ files = set(result.stdout.splitlines())
 assert all(not name.startswith(("design/", "harmonization/", "src/bin/")) for name in files)
 icons = {f"assets/icons/{p.name}" for p in (root / "crates/openaec-ui/assets/icons").glob("*.svg")}
 fonts = {f"assets/fonts/{p.name}" for p in (root / "crates/openaec-ui/assets/fonts").glob("*.ttf")}
-assert len(icons) == 22 and len(fonts) == 6
+assert len(icons) == 26 and len(fonts) == 6
 assert icons <= files and fonts <= files
 assert {f"licenses/{name}-OFL.txt" for name in ("Inter", "SpaceGrotesk", "JetBrainsMono")} <= files
 assert {"NOTICE.md", "LICENSE", "README.md", "src/lib.rs"} <= files
-print(f"Reusable crate package: {len(files)} files, 22 icons, 6 fonts, 3 font notices, no research assets")
+print(f"Reusable crate package: {len(files)} files, 26 icons, 6 fonts, 3 font notices, no research assets")

@@ -1205,7 +1205,7 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L95",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
+      "candidate": "zoom-in",
       "adopted": "",
       "sha256": "0ba810fc4b918eac828e83b198efdac1a7c94ff2af2c260ffc7de96b288fdabb"
     },
@@ -1216,7 +1216,7 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L96",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
+      "candidate": "zoom-out",
       "adopted": "",
       "sha256": "2cee3cb5a99e71a6913cc41cb98e06a4746be28fd172cd9631761864e5278d0d"
     },
@@ -1524,8 +1524,8 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12366",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
-      "adopted": "",
+      "candidate": "fit-selection",
+      "adopted": "fit-selection",
       "sha256": "75220cde4512782fa055f2f3d68dfbbe141cdccf6d9c22a0ba3c915e75236618"
     },
     {
@@ -1634,8 +1634,8 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12365",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
-      "adopted": "",
+      "candidate": "pan",
+      "adopted": "pan",
       "sha256": "fcb1d116efd9739eeec116820e23d8fbe06f5bc602a221883ec9b8bee272c6b3"
     },
     {
@@ -1876,8 +1876,8 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12363",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
-      "adopted": "",
+      "candidate": "zoom-in",
+      "adopted": "zoom-in",
       "sha256": "d09cdddd777fddaf3d5a4860713d10cc5f4025d611f98fe0084b34b495a987b4"
     },
     {
@@ -1887,8 +1887,8 @@
       "source": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12364",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
-      "adopted": "",
+      "candidate": "zoom-out",
+      "adopted": "zoom-out",
       "sha256": "2b2302bf10f30161a66685e257b3e75fc40389b482f253e4c7bd88051373b31e"
     },
     {
@@ -4307,7 +4307,7 @@
       "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L49",
       "evidence": "direct-path",
       "references": 2,
-      "candidate": "",
+      "candidate": "pan",
       "adopted": "",
       "sha256": "bb3d60c8f01594faa577c59634395b49aa1c2c3ee737fc86edc6139345faf256"
     },
@@ -5561,7 +5561,7 @@
       "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L50",
       "evidence": "direct-path",
       "references": 2,
-      "candidate": "",
+      "candidate": "zoom-in",
       "adopted": "",
       "sha256": "3023a2eb167b2014c27f5229bbfe782b9e6120ce1ea074f9167837e589e10136"
     },
@@ -5572,7 +5572,7 @@
       "source": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/zoom_out.rs#L2",
       "evidence": "direct-path",
       "references": 1,
-      "candidate": "",
+      "candidate": "zoom-out",
       "adopted": "",
       "sha256": "18c5f91fb8251aa5905b99933fa54527957043690089d3b8f100cc6df62c79ea"
     },
