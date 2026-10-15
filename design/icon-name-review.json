@@ -63,7 +63,8 @@
             }
           ],
           "sha256": "d8fe1ef75b6eadacc4822ab42b2ccd195e2edfed7ef3943399546754f1ee2afb",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L125"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L125",
+          "usage_context": "<NavItem icon={<Download size={14} />} label={tMenu('backstage.export')} active={section === 'export'} onClick={() => goTo('export')} /> <NavItem icon={<Upload size={14} />} label={tMenu('extensions.import')} active={section === 'import'} o…"
         },
         {
           "kind": "code-import",
@@ -90,7 +91,8 @@
             }
           ],
           "sha256": "55dd118969a12b239a7fff86fd406336f4202d15c35173f4f43d32b7eaa36b97",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L80"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L80",
+          "usage_context": "<RibbonButton icon={<Download size={20} />} label=\"Import\""
         },
         {
           "kind": "code-import",
@@ -143,7 +145,8 @@
             }
           ],
           "sha256": "d540226d2213af9ba0072e3aeab02768fe26cce3a58280c50dae82a1155ab004",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L700"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L700",
+          "usage_context": "<RibbonButton icon={<Download size={24} />} label=\"Export IFCX\""
         },
         {
           "kind": "code-import",
@@ -164,7 +167,8 @@
             }
           ],
           "sha256": "214d2952005828eef4b34c132d1066529f97249a63ae11c6a0d485fc1136f2dc",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L249"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L249",
+          "usage_context": "<h3 className=\"font-heading font-bold text-sm mb-3 flex items-center gap-2\"> <Download size={16} /> BCF Exporteren </h3>"
         }
       ]
     },
@@ -200,7 +204,8 @@
             }
           ],
           "sha256": "467bd1b78a5d78aa2644cdc835b072cd0738d07c0dbedce6450c1419c18510c1",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/copy.rs#L21"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/copy.rs#L21",
+          "usage_context": "label: \"Copy\", icon: IconKind::Svg(include_bytes!(\"../../../../assets/icons/copy.svg\")), event: ModuleEvent::Command(\"COPY\".to_string()),"
         },
         {
           "kind": "ui-asset",
@@ -220,7 +225,8 @@
             }
           ],
           "sha256": "b75a5ab4854586d00d5b839029d2eae06cd95ef4021e5a951a00dec68cf08093",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L71"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L71",
+          "usage_context": "pub static NODE_GRAPH: &[u8] = include_bytes!(\"../../assets/icons/ui/node_graph.svg\"); pub static COPY: &[u8] = include_bytes!(\"../../assets/icons/ui/copy.svg\"); pub static MENU: &[u8] = include_bytes!(\"../../assets/icons/ui/menu.svg\");"
         },
         {
           "kind": "code-import",
@@ -277,7 +283,8 @@
             }
           ],
           "sha256": "932c4a3016419078a91b031aebec325a2b468d688219fcc116e2ba57ed7e68a5",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L81"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L81",
+          "usage_context": "> {copied === key ? <Check size={14} /> : <Copy size={14} />} </button>"
         },
         {
           "kind": "code-import",
@@ -317,7 +324,8 @@
             }
           ],
           "sha256": "cf73c4ed4b138198eb4d62d0feff42031c1e57b690f2dad020b3eb65c80ef18e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L712"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L712",
+          "usage_context": "<RibbonButton icon={<Copy size={24} />} label={copied ? 'Copied!' : 'Copy JSON'}"
         },
         {
           "kind": "code-import",
@@ -338,7 +346,8 @@
             }
           ],
           "sha256": "b80f71b883f6fc7bb8fa596bba62963c62fd0fc4314bdecb9d720530789424df",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L65"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L65",
+          "usage_context": "<button onClick={handleCopy} className=\"p-1.5 text-text-muted hover:text-amber transition\" title=\"Kopiëren\"> {copied ? <Check size={16} className=\"text-success\" /> : <Copy size={16} />} </button>"
         }
       ]
     },
@@ -441,7 +450,8 @@
             }
           ],
           "sha256": "b69fa342f2cdbbcbb892b1dbaaba6a3fba19c39c61fcd6a70a225da86832b2c7",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/common/Select.tsx#L375"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/common/Select.tsx#L375",
+          "usage_context": "</span> <ChevronDown size={16} className=\"ops-select__chevron\" aria-hidden=\"true\" /> </button>"
         },
         {
           "kind": "code-import",
@@ -462,7 +472,8 @@
             }
           ],
           "sha256": "e38c450aed78d9979ea80a5e38eb2b57fe6b64e89c08e9753f572c293da85633",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/RibbonComponents.tsx#L230"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/RibbonComponents.tsx#L230",
+          "usage_context": "<span className=\"ribbon-btn-label\" style={{ display: 'flex', alignItems: 'center', gap: '2px' }}> {label} <ChevronDown size={10} /> </span>"
         },
         {
           "kind": "code-import",
@@ -496,7 +507,8 @@
             }
           ],
           "sha256": "dc981adfe7aabb292361e9f9a032d8aa169bf50d6e57e18ab4d8ae35bb330a0c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/UValueCalculator/UValueCalculator.tsx#L285"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/UValueCalculator/UValueCalculator.tsx#L285",
+          "usage_context": "> <ChevronDown size={12} /> </button>"
         },
         {
           "kind": "code-import",
@@ -517,7 +529,8 @@
             }
           ],
           "sha256": "4b15c40ee632fb624b720a8793c12a3d81c14c7c67a324a9fce5750f0ac0602d",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CreateTopic.tsx#L66"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CreateTopic.tsx#L66",
+          "usage_context": "<button type=\"button\" onClick={() => setShowAdvanced(!showAdvanced)} className=\"flex items-center gap-1 text-xs text-text-muted hover:text-text transition w-fit\"> {showAdvanced ? <ChevronUp size={14} /> : <ChevronDown size={14} />} {showAdv…"
         }
       ]
     },
@@ -662,7 +675,8 @@
             }
           ],
           "sha256": "71da22f473e36497bcf34847d9ba1df810e7d0d533bb15539e08e7542a15e9d9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/LibrarySection.tsx#L151"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/LibrarySection.tsx#L151",
+          "usage_context": "> <Trash2 size={13} /> {t('companyLibrary.removeCompany')} </button>"
         },
         {
           "kind": "code-import",
@@ -689,7 +703,8 @@
             }
           ],
           "sha256": "8bf516b7fa7cc44f7b63f6a4f91a34104d8c48e89ac874c86aad0dd27f7a8ebe",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L164"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L164",
+          "usage_context": "<RibbonSmallButton icon={<Trash2 size={14} />} label=\"Delete\""
         },
         {
           "kind": "code-import",
@@ -747,7 +762,8 @@
             }
           ],
           "sha256": "f373ec082dfac372e12122b41c11936dfcb5859811d22ddcb4e97f550a3199c6",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx#L168"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx#L168",
+          "usage_context": "}}>{t('kernel.gasAux.remove')}</button>} <button type=\"button\" onClick={() => dispatch({ type: 'DELETE_NTA_HEAT_PUMP', payload: pump.id })} aria-label={`${t('kernel.inventory.remove')}: ${pump.id}`}><Trash2 size={15} /></button> </div>"
         },
         {
           "kind": "code-import",
@@ -786,7 +802,8 @@
             }
           ],
           "sha256": "ee684798ee657a60bb4900ec88c1464b6da7a997672bc9805979710c2b5bb382",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L117"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L117",
+          "usage_context": "<button onClick={() => handleDelete(k.id)} className=\"p-1.5 text-text-subtle hover:text-error transition opacity-0 group-hover:opacity-100\" title=\"Intrekken\"> <Trash2 size={14} /> </button>"
         }
       ]
     },
@@ -829,7 +846,8 @@
             }
           ],
           "sha256": "0b3b0e2ec3d34705a1dfb4e6643273a3ab040a3837d47ef112cb7e92b0cb5579",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L126"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L126",
+          "usage_context": "<NavItem icon={<Download size={14} />} label={tMenu('backstage.export')} active={section === 'export'} onClick={() => goTo('export')} /> <NavItem icon={<Upload size={14} />} label={tMenu('extensions.import')} active={section === 'import'} o…"
         },
         {
           "kind": "code-import",
@@ -850,7 +868,8 @@
             }
           ],
           "sha256": "32fcb77e529b9e548363bca95641efa5cc3fb13651167d80980061ed203024c3",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L86"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L86",
+          "usage_context": "<RibbonDropdownButton icon={<Upload size={20} />} label=\"Export\""
         },
         {
           "kind": "code-import",
@@ -914,7 +933,8 @@
             }
           ],
           "sha256": "0a9d3e27d474380293e87ad9d6034aad1c3e400e6885f23427a63b840204f906",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L252"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L252",
+          "usage_context": "<span>{t('build.import')}</span> <button type=\"button\" className=\"btn btn-sm\" onClick={actions.importUNIEC3}><Upload aria-hidden=\"true\" /> {t('ribbon.importUNIEC3')}</button> <button type=\"button\" className=\"btn btn-sm\" onClick={actions.imp…"
         },
         {
           "kind": "code-import",
@@ -935,7 +955,8 @@
             }
           ],
           "sha256": "0a7e25ed96367366930dd5acb44c2c2d21390c3707a5ef33f19415548cc58d08",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L126"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L126",
+          "usage_context": "<TabButton active={tab === 'import'} onClick={() => setTab('import')}> <Upload size={14} /> Import / Export </TabButton>"
         }
       ]
     },
@@ -970,7 +991,8 @@
             }
           ],
           "sha256": "02d42bcf1a9a98d8771ef6ea2846da534684de24a3d1c215759596d04da07bb6",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L65"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L65",
+          "usage_context": "pub static CLOSE: &[u8] = include_bytes!(\"../../assets/icons/ui/close.svg\"); pub static PLUS: &[u8] = include_bytes!(\"../../assets/icons/ui/plus.svg\"); pub static REFRESH: &[u8] = include_bytes!(\"../../assets/icons/ui/refresh.svg\");"
         },
         {
           "kind": "code-import",
@@ -1087,7 +1109,8 @@
             }
           ],
           "sha256": "ab6f7dad3e5d0e8cad0e38399c32e6890d8d160e69b8cffe062c0fe363317557",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L341"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L341",
+          "usage_context": "<div className=\"ext-card-icon\"> <Plus size={24} /> </div>"
         },
         {
           "kind": "code-import",
@@ -1138,7 +1161,8 @@
             }
           ],
           "sha256": "f1123de1ad1ac07e230d993a0649534437534d196e3bea9a7e927e5890a09211",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx#L118"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx#L118",
+          "usage_context": "</div> <button type=\"button\" onClick={startNew}><Plus size={15} />{t('kernel.inventory.add')}</button> </div>"
         },
         {
           "kind": "code-import",
@@ -1171,7 +1195,8 @@
             }
           ],
           "sha256": "f7a0c4f72901383f2867683be4599a7486434e652f887aa63a9f342fa6597f18",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L77"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ApiKeyManager.tsx#L77",
+          "usage_context": "<button onClick={() => setShowCreate(!showCreate)} className=\"flex items-center gap-1 text-sm text-amber hover:text-signal-orange font-semibold transition\"> <Plus size={14} /> Nieuwe key </button>"
         }
       ]
     },
@@ -1207,7 +1232,8 @@
             }
           ],
           "sha256": "6b1581e818a05f27129026abc49ed65de5c4255163681c370bce26428a1d1d17",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L116"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L116",
+          "usage_context": "<span className=\"badge badge--red flex items-center gap-1\"> <AlertCircle size={11} /> {d.status === 'removed' ? t('companyLibrary.notInCompany') : t('companyLibrary.deviates')} </span>"
         },
         {
           "kind": "code-import",
@@ -1253,7 +1279,8 @@
             }
           ],
           "sha256": "86a84c87d012455e862bb36c2ea7cf78f7292cdab404898944ad10ba9a0cf37d",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/KernelAuditPanel/KernelAuditPanel.tsx#L61"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/KernelAuditPanel/KernelAuditPanel.tsx#L61",
+          "usage_context": "<div className={`kernel-audit-status ${errorCount ? 'has-errors' : 'is-checked'}`} role=\"status\"> {errorCount ? <AlertCircle size={18} /> : <CheckCircle2 size={18} />} <span>{errorCount ? t('kernel.errorsFound') : t('kernel.structureChecked…"
         },
         {
           "kind": "code-import",
@@ -1274,7 +1301,8 @@
             }
           ],
           "sha256": "d349b9e5c6929ede558c47dddf4d998c35a7180dc60e669ea8d99da119bb5b6c",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/TopicList.tsx#L23"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/TopicList.tsx#L23",
+          "usage_context": "<div className=\"text-center py-12 text-text-muted\"> <AlertCircle size={40} className=\"mx-auto mb-2 opacity-40\" /> <p className=\"text-sm\">Geen issues. Maak er een aan of importeer een BCF bestand.</p>"
         }
       ]
     },
@@ -1418,7 +1446,8 @@
             }
           ],
           "sha256": "26a6ccea01577f7ffee05a6f342c8d2440cee431f983cdc580d12567e794fc4d",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L226"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L226",
+          "usage_context": "<div className=\"ext-card-icon ext-card-quarantine-icon\" aria-hidden=\"true\"> <AlertTriangle size={24} /> </div>"
         },
         {
           "kind": "code-import",
@@ -1470,7 +1499,8 @@
             }
           ],
           "sha256": "9265a5aaf59c8b7832580188cf94d41f804e4e2ebefd5c27d0ddce1e8bdcd18f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/ProjectOverview.tsx#L110"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/ProjectOverview.tsx#L110",
+          "usage_context": "actions={<> {warnings > 0 && <Pill tone=\"warn\" icon={<AlertTriangle aria-hidden=\"true\" />}>{t('nav.state.warnings', { count: warnings })}</Pill>} <Pill tone={errors > 0 ? 'err' : 'neutral'}>{t('nav.state.errors', { count: errors })}</Pill>"
         },
         {
           "kind": "code-import",
@@ -1491,7 +1521,8 @@
             }
           ],
           "sha256": "acb41f055a39c2bd90b1361fa910026bd2fc51095981f36af1e48ab32b8c8fb7",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L143"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L143",
+          "usage_context": "<KpiCard label=\"Totaal\" value={dashStats.total} icon={<CircleDot size={20} />} color=\"text-text\" /> <KpiCard label=\"Open\" value={dashStats.open} icon={<AlertTriangle size={20} />} color=\"text-info\" /> <KpiCard label=\"In bewerking\" value={da…"
         }
       ]
     },
@@ -1539,7 +1570,8 @@
             }
           ],
           "sha256": "41bd1f8863e6668c464cf8637dd25b789ca416f8de2637032e63de0a804fb758",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/UpdateDialog.tsx#L174"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/UpdateDialog.tsx#L174",
+          "usage_context": "<div className=\"flex items-center gap-2 text-text-secondary\"> <CheckCircle2 size={14} className=\"text-accent\" /> <span>{t('updates.upToDate')}</span>"
         },
         {
           "kind": "code-import",
@@ -1609,7 +1641,8 @@
             }
           ],
           "sha256": "1ebdaa1d4101e410f1a6faf629764081be40c678f6363bdbb9a533e2cd811189",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/KernelAuditPanel/KernelAuditPanel.tsx#L61"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/KernelAuditPanel/KernelAuditPanel.tsx#L61",
+          "usage_context": "<div className={`kernel-audit-status ${errorCount ? 'has-errors' : 'is-checked'}`} role=\"status\"> {errorCount ? <AlertCircle size={18} /> : <CheckCircle2 size={18} />} <span>{errorCount ? t('kernel.errorsFound') : t('kernel.structureChecked…"
         },
         {
           "kind": "code-import",
@@ -1630,7 +1663,8 @@
             }
           ],
           "sha256": "5b7b7f168f62b94fbfb49a038b15be6e171f18cb0615557786a3a967bca6bdc3",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L145"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L145",
+          "usage_context": "<KpiCard label=\"In bewerking\" value={dashStats.in_progress} icon={<Clock size={20} />} color=\"text-amber\" /> <KpiCard label=\"Gesloten\" value={dashStats.closed} icon={<CheckCircle2 size={20} />} color=\"text-success\" /> </div>"
         }
       ]
     },
@@ -1714,7 +1748,8 @@
             }
           ],
           "sha256": "a8d1dd36df3c5de6066298f5d9ce4e0765475573ee584fa5aa7bbbd914d23159",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/CalendarGeneratorFields.tsx#L151"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/CalendarGeneratorFields.tsx#L151",
+          "usage_context": "{preview.holidays.length > 0 ? ( expanded ? <ChevronDown size={14} /> : <ChevronRight size={14} /> ) : null}"
         },
         {
           "kind": "code-import",
@@ -1754,7 +1789,8 @@
             }
           ],
           "sha256": "eb6fb602da4bb5d4effb2bc73274a2bc32cc834ba3d00884900a09d6fbe3b32c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L265"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L265",
+          "usage_context": "aria-current={route.step === 'tool' ? 'page' : undefined} onClick={() => tools.setOpen(!tools.open)}> <Wrench aria-hidden=\"true\" /><span className=\"nav-step-label\">{t('nav.tools')}</span><ChevronRight aria-hidden=\"true\" /> </button>"
         },
         {
           "kind": "code-import",
@@ -1781,7 +1817,8 @@
             }
           ],
           "sha256": "6628e31e83a803a5da912a87a9cf0ad918fd34449366d6af66b8c0d81c2a9835",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L91"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L91",
+          "usage_context": "<Link to=\"/\" className=\"hover:text-amber transition\">Projecten</Link> <ChevronRight size={14} /> <span className=\"text-text font-medium\">{project.name}</span>"
         }
       ]
     },
@@ -1835,7 +1872,8 @@
             }
           ],
           "sha256": "63e690fa1553cdab13e673270e4167bace7821ee2c80d18ae22c3eb74e07b6a3",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L115"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L115",
+          "usage_context": "{/* Actie-items: triggeren actie en sluiten backstage */} <ActionItem icon={<FileText size={14} />} label={tMenu('ribbon.new')} onClick={() => leave(() => { handleNewProject(); closeBackstage(); })} /> <ActionItem icon={<FolderOpen size={14…"
         },
         {
           "kind": "code-import",
@@ -1882,7 +1920,8 @@
             }
           ],
           "sha256": "246519d9a1c61782fca57d9d4b046a69f6f47068715188713e5e4bc650c96c24",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L128"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L128",
+          "usage_context": "<RibbonButton icon={<FileText size={24} />} label=\"PDF Underlay\""
         }
       ]
     },
@@ -1918,7 +1957,8 @@
             }
           ],
           "sha256": "cacbdb6b7d37713c775c9be859992313229e2faab5f99751d3c42a2de321349c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L763"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L763",
+          "usage_context": "> <span className=\"ribbon-btn-icon\"><Layers size={14} /></span> <span className=\"ribbon-btn-label\">{tMenu('ribbon.group')}</span>"
         },
         {
           "kind": "code-import",
@@ -1965,7 +2005,8 @@
             }
           ],
           "sha256": "639fb267f582286c6b8986dc18028c4a6bb7d2868bf21ffc29f4a6d4419bbcd0",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L502"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L502",
+          "usage_context": "<RibbonButton icon={<Layers size={24} />} label=\"Wall Systems\""
         }
       ]
     },
@@ -2013,7 +2054,8 @@
             }
           ],
           "sha256": "3accaa99fbc9083078faab7b0493cdd160343431eb8bc88693ab494d4925e1ad",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L383"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L383",
+          "usage_context": "> <Square size={16} /> </button>"
         },
         {
           "kind": "code-import",
@@ -2054,7 +2096,8 @@
             }
           ],
           "sha256": "3a2782d4361c3b5e8d0863cba8afdadf5cc93350cd9bd71ddc7298b3827bdc4e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L42"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L42",
+          "usage_context": "> <Square size={14} /> </button>"
         }
       ]
     },
@@ -2095,7 +2138,8 @@
             }
           ],
           "sha256": "aa5c09c9690e8890c9a1a1fc4e70382090decb1d92a15af6e411559a2ac74f0e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L137"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L137",
+          "usage_context": ")} <NavItem icon={<Building2 size={14} />} label={tMenu('backstage.library')} active={section === 'library'} onClick={() => goTo('library')} />"
         },
         {
           "kind": "code-import",
@@ -2116,7 +2160,8 @@
             }
           ],
           "sha256": "5946862714b5ad08a7e75310b4dd6f96c0adcc55bd674a068c48f4f30c46351a",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L241"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L241",
+          "usage_context": "<RibbonGroup label=\"Extensions\"> <RibbonButton icon={<Building2 size={20} />} label=\"3D BAG\" onClick={() => setShowBAG3DPanel(!showBAG3DPanel)} active={showBAG3DPanel} tooltip=\"Download 3D buildings from 3dbag.nl\" /> </RibbonGroup>"
         },
         {
           "kind": "code-import",
@@ -2155,7 +2200,8 @@
             }
           ],
           "sha256": "98227ca01ae106cb2eb3cea182a6b9c9468f8070f7382a31616dc10d7e0c985f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L217"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L217",
+          "usage_context": "{ id: 'residential', icon: <Home /> }, { id: 'office', icon: <Building2 /> }, { id: 'education', icon: <GraduationCap /> },"
         }
       ]
     },
@@ -2189,7 +2235,8 @@
             }
           ],
           "sha256": "56e36d415c1aa490a5e56dce40902a9526888000df6619030e069f5d4b1b59df",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L84"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L84",
+          "usage_context": "text: \"Screenshot\"; icon: @image-url(\"icons/camera.svg\"); has-dropdown: true;"
         },
         {
           "kind": "code-import",
@@ -2210,7 +2257,8 @@
             }
           ],
           "sha256": "1a7c98cfd7c5af2ad69c708b2da284c7186c5055b4be7bb27b269174edfb84b5",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/EvidenceLink/EvidenceLink.tsx#L158"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/EvidenceLink/EvidenceLink.tsx#L158",
+          "usage_context": "<div className=\"evidence-link__head\"> {photo ? <Camera aria-hidden=\"true\" /> : <Paperclip aria-hidden=\"true\" />} <strong>{heading}</strong>"
         },
         {
           "kind": "code-import",
@@ -2231,7 +2279,8 @@
             }
           ],
           "sha256": "0d4649eeebf58e7c1b73b3144005678df39f9fc550a667b6ff978f738d2f510f",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ViewpointCard.tsx#L27"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/ViewpointCard.tsx#L27",
+          "usage_context": "<div className=\"hidden absolute inset-0 flex items-center justify-center text-text-subtle opacity-40\"> <Camera size={32} /> </div>"
         }
       ]
     },
@@ -2278,7 +2327,8 @@
             }
           ],
           "sha256": "dbcb4e2dc1537363dc7005e38de821da4846c466a22545dadc1e8a72f6a82fed",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/common/TimeInput.tsx#L20"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/common/TimeInput.tsx#L20",
+          "usage_context": "<button type=\"button\" className=\"flex flex-1 items-center justify-center rounded border border-[var(--theme-control-border)] text-text-secondary hover:bg-surface-hover focus:outline-none focus:ring-2 focus:ring-accent\" aria-label={increaseL…"
         },
         {
           "kind": "code-import",
@@ -2299,7 +2349,8 @@
             }
           ],
           "sha256": "baa34160d155ab01726cc839ebacb20b76d488b08d12ac631f25d38e91b3d389",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/UValueCalculator/UValueCalculator.tsx#L276"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/UValueCalculator/UValueCalculator.tsx#L276",
+          "usage_context": "> <ChevronUp size={12} /> </button>"
         },
         {
           "kind": "code-import",
@@ -2320,7 +2371,8 @@
             }
           ],
           "sha256": "531d22f31d8b24a0d9d3a8200bb9b0f48dab1be6465c88a590f71d100e4221e5",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CreateTopic.tsx#L66"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/CreateTopic.tsx#L66",
+          "usage_context": "<button type=\"button\" onClick={() => setShowAdvanced(!showAdvanced)} className=\"flex items-center gap-1 text-xs text-text-muted hover:text-text transition w-fit\"> {showAdvanced ? <ChevronUp size={14} /> : <ChevronDown size={14} />} {showAdv…"
         }
       ]
     },
@@ -2355,7 +2407,8 @@
             }
           ],
           "sha256": "0080c11f1f11d87674c21b49c422cc2fe7aba72f8b8ff86b26d9254a60c2759d",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/RecordedDatesNotice.tsx#L45"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/RecordedDatesNotice.tsx#L45",
+          "usage_context": "<NoticeStrip icon={CircleDot} text={recordedDates && recordedDates.shifted !== undefined"
         },
         {
           "kind": "code-import",
@@ -2376,7 +2429,8 @@
             }
           ],
           "sha256": "7c3cf509ff598b879494e37b702b2cca1eb733717e88f09992cc5ef5b3334f10",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L329"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L329",
+          "usage_context": "<RibbonButton icon={<CircleDot size={24} />} label=\"IfcRebar\""
         },
         {
           "kind": "code-import",
@@ -2397,7 +2451,8 @@
             }
           ],
           "sha256": "b933b6362f3e9d0292cc4fad48b1431fdba1a15592b9abdea06d0e2e962e9855",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L142"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L142",
+          "usage_context": "<div className=\"grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mb-6\"> <KpiCard label=\"Totaal\" value={dashStats.total} icon={<CircleDot size={20} />} color=\"text-text\" /> <KpiCard label=\"Open\" value={dashStats.open} icon={<AlertTriangle size={20} …"
         }
       ]
     },
@@ -2438,7 +2493,8 @@
             }
           ],
           "sha256": "ab9a284338f663f22db1220f066d12f66bd5454b5f9275da2af0f08156ecead8",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L117"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L117",
+          "usage_context": "<ActionItem icon={<FolderOpen size={14} />} label={tMenu('ribbon.open')} onClick={() => leave(() => { handleOpen(buildImportLabels(tCommon)); closeBackstage(); })} /> <NavItem icon={<Clock size={14} />} label={tMenu('backstage.recent')} act…"
         },
         {
           "kind": "code-import",
@@ -2465,7 +2521,8 @@
             }
           ],
           "sha256": "5bf6027e6993f7ffab603dc4bd5f022d3ab35cb2f979b6c31617bc15ecf668f4",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyRegistration.tsx#L25"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyRegistration.tsx#L25",
+          "usage_context": "const ICON = { done: CheckCircle2, open: CircleX, waiting: Clock };"
         },
         {
           "kind": "code-import",
@@ -2486,7 +2543,8 @@
             }
           ],
           "sha256": "dab1ccf9babd1531dfb93701d091c2fe5fe0bddc159382c7b153bb7e0a8bfaa6",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L144"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L144",
+          "usage_context": "<KpiCard label=\"Open\" value={dashStats.open} icon={<AlertTriangle size={20} />} color=\"text-info\" /> <KpiCard label=\"In bewerking\" value={dashStats.in_progress} icon={<Clock size={20} />} color=\"text-amber\" /> <KpiCard label=\"Gesloten\" valu…"
         }
       ]
     },
@@ -2539,7 +2597,8 @@
             }
           ],
           "sha256": "c6dfbdcfeb940fa6261c65a3708ee6ea377e72d7d1e68ded53262054f6d64d7f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L93"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L93",
+          "usage_context": "> {showToken ? <EyeOff size={14} /> : <Eye size={14} />} </button>"
         },
         {
           "kind": "code-import",
@@ -2566,7 +2625,8 @@
             }
           ],
           "sha256": "2011739f65e5045174ac907118b81e8c18272fcd0aa2aaaf1f7c83953bb238ac",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L138"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L138",
+          "usage_context": "<RibbonButtonStack> <RibbonSmallButton icon={<Eye size={14} />} label=\"EDL\" onClick={() => setEdlEnabled(!edlEnabled)} active={edlEnabled} /> <RibbonSmallButton"
         },
         {
           "kind": "code-import",
@@ -2587,7 +2647,8 @@
             }
           ],
           "sha256": "61a314e4b7af6565dc419547099986138fd6afc56beb28e171ac4fede5620814",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L143"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L143",
+          "usage_context": "<h2 className=\"text-sm font-heading font-bold mb-3 flex items-center gap-1.5\"> <Eye size={16} /> Viewpoints ({vpList.length}) </h2>"
         }
       ]
     },
@@ -2621,7 +2682,8 @@
             }
           ],
           "sha256": "ab5ce21c10da5c34015bbfb088197684ea5a92de5156bd99ef49e6236aa13c7c",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L109"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L109",
+          "usage_context": "pub static ST_QUICKPROPS: &[u8] = include_bytes!(\"../../assets/icons/status/quickprops.svg\"); pub static ST_FILTER: &[u8] = include_bytes!(\"../../assets/icons/status/filter.svg\"); pub static ST_SELCYCLE: &[u8] = include_bytes!(\"../../assets…"
         },
         {
           "kind": "code-import",
@@ -2648,7 +2710,8 @@
             }
           ],
           "sha256": "feb0be7ebad53c556b49c762ef89ab59a946748d2b8a747e3b3b063c586587c9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L1122"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L1122",
+          "usage_context": "> <span className=\"ribbon-btn-icon\"><Filter size={14} /></span> <span className=\"ribbon-btn-label\">{tMenu('ribbon.filter')} ▾</span>"
         },
         {
           "kind": "code-import",
@@ -2669,7 +2732,8 @@
             }
           ],
           "sha256": "e743469674d6468367ee045f5a849a9ca3dd2362359bf01bbae7ce9572d00111",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L232"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L232",
+          "usage_context": "</div> <RibbonButton icon={<Filter size={20} />} label=\"Apply\" onClick={actions.handleThin} disabled={!hasActivePointcloud} tooltip={`Keep ${actions.thinPercent}% of points`} /> </RibbonGroup>"
         }
       ]
     },
@@ -2703,7 +2767,8 @@
             }
           ],
           "sha256": "1ccae62a1e7b513245df03fd9623a411367a57f5c890de947d18f3cad04f9e6f",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L97"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L97",
+          "usage_context": "pub static MORE: &[u8] = include_bytes!(\"../../assets/icons/ui/more.svg\"); pub static INFO: &[u8] = include_bytes!(\"../../assets/icons/ui/info.svg\");"
         },
         {
           "kind": "code-import",
@@ -2754,7 +2819,8 @@
             }
           ],
           "sha256": "30d50bddad63472ebdff84e6862549cbb7ef19ba5ee382adadde8f0f4e71c963",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L131"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L131",
+          "usage_context": "<NavItem icon={<Info size={14} />} label={tMenu('ribbon.projectInfo')} active={section === 'project-info'} onClick={() => goTo('project-info')} /> <NavItem icon={<Settings size={14} />} label={tMenu('backstage.settings')} active={section ==…"
         },
         {
           "kind": "code-import",
@@ -2805,7 +2871,8 @@
             }
           ],
           "sha256": "165a9e9c2413e2e313551539425c428e39fe54f368f6c7d47ad7fd25da929142",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/CalculationNotice/CalculationNotice.tsx#L14"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/CalculationNotice/CalculationNotice.tsx#L14",
+          "usage_context": "<div className={`calculation-notice${compact ? ' calculation-notice-compact' : ''}`} role=\"status\"> <Info size={compact ? 15 : 18} aria-hidden=\"true\" /> <div>"
         }
       ]
     },
@@ -2839,7 +2906,8 @@
             }
           ],
           "sha256": "aabaceb18f68b4ac5f88e21b9d54acd16b5a8f4ce00a811a9c860043734f5411",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L68"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L68",
+          "usage_context": "pub static SWAP: &[u8] = include_bytes!(\"../../assets/icons/ui/swap.svg\"); pub static MINUS: &[u8] = include_bytes!(\"../../assets/icons/ui/minus.svg\"); pub static TRASH: &[u8] = include_bytes!(\"../../assets/icons/ui/trash.svg\");"
         },
         {
           "kind": "code-import",
@@ -2866,7 +2934,8 @@
             }
           ],
           "sha256": "0aca2fe210a4a2e3ded4c2f7c1c8f9c0d6f4dbe7d59bc97c9e84279882ceae70",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/TitleBar/TitleBar.tsx#L229"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/TitleBar/TitleBar.tsx#L229",
+          "usage_context": "<button className=\"window-btn\" title={tCommon('window.minimize')} onClick={() => { void handleMinimize(); }}> <Minus size={14} /> </button>"
         },
         {
           "kind": "code-import",
@@ -2887,7 +2956,8 @@
             }
           ],
           "sha256": "f9790e7bcdc37c3079a35ff35bc6a78cf7a91b5c1e44e9a10e6827810b7bb6d7",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/TopBar.tsx#L184"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/TopBar.tsx#L184",
+          "usage_context": "<div className=\"top-bar-winctl\" hidden={!isTauri()}> <button type=\"button\" title={t('shell.window.minimize')} aria-label={t('shell.window.minimize')} onClick={() => void minimizeWindow()}><Minus aria-hidden=\"true\" /></button> <button type=\"…"
         }
       ]
     },
@@ -2921,7 +2991,8 @@
             }
           ],
           "sha256": "34cf1e2bfe6c0adc4205811cff1a6c2e7d4d75ba5ffe56c70a1cd4679ffcac12",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12398"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12398",
+          "usage_context": "ToolIcon::Move => include_bytes!(\"../../assets/opencad-icons/move.svg\"), ToolIcon::Scale => include_bytes!(\"../../assets/opencad-icons/scale.svg\"), ToolIcon::Decimate => include_bytes!(\"../../assets/opencad-icons/point.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -2941,7 +3012,8 @@
             }
           ],
           "sha256": "009207efb7a63a77eee215f19826edb0d3d78b8fc0d67148730b8c9b0266aaf3",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/scale.rs#L29"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/scale.rs#L29",
+          "usage_context": "label: \"Scale\", icon: IconKind::Svg(include_bytes!(\"../../../../assets/icons/scale.svg\")), event: ModuleEvent::Command(\"SCALE\".to_string()),"
         },
         {
           "kind": "code-import",
@@ -2962,7 +3034,8 @@
             }
           ],
           "sha256": "43d4c98575420729967bc5fdf3ce270709d1b4484b5c87f4a07a8b8e2f3f08e5",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L628"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L628",
+          "usage_context": "{ kind: 'button', id: 'levelResources', icon: <Scale size={20} />, labelKey: 'menu:ribbon.levelResourcesDialog', use: uiAction({ showLevelingDialog: true }),"
         }
       ]
     },
@@ -2997,7 +3070,8 @@
             }
           ],
           "sha256": "d3f2b03477b9eb36312e9e08239b7c73c14ca2fb1011e3f13683bbbbfaf5b73a",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L87"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L87",
+          "usage_context": "{c.suggestedPoolName ? <span className=\"text-text-secondary flex items-center gap-1\"><ArrowRight size={11} /> {t('companyLibrary.suggestedMatch', { name: c.suggestedPoolName })}</span> : <span className=\"text-text-secondary italic\">{t('comp…"
         },
         {
           "kind": "code-import",
@@ -3049,7 +3123,8 @@
             }
           ],
           "sha256": "dc10ef32ca28304f24c0fa03ec284ae0850e635df2705c7df41f7bde920c3152",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/RelabelPanel.tsx#L196"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/RelabelPanel.tsx#L196",
+          "usage_context": "{actions && <td>{hasExplicitRoute(change.path) && ( <IconButton size=\"sm\" icon={<ArrowRight aria-hidden=\"true\" />} aria-label={t('relabel.page.goToItem', { place: routeLabel(t, routeForPath(change.path)) })}"
         }
       ]
     },
@@ -3090,7 +3165,8 @@
             }
           ],
           "sha256": "df1472c88407f8a93c3edc1992917bb76c28bf71bd1c8a1845119bc7e71a54ee",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/StatusBar/StatusBar.tsx#L111"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/StatusBar/StatusBar.tsx#L111",
+          "usage_context": "> <Circle size={10} fill={AI_STATUS_COLOR[aiServerStatus.state]} color={AI_STATUS_COLOR[aiServerStatus.state]} /> <span>AI</span>"
         },
         {
           "kind": "code-import",
@@ -3124,7 +3200,8 @@
             }
           ],
           "sha256": "cdc03356891a66bde831f2aee073d66239a31db2a410d4e304e128d7b4923e11",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L48"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L48",
+          "usage_context": "> <Circle size={14} /> </button>"
         }
       ]
     },
@@ -3165,7 +3242,8 @@
             }
           ],
           "sha256": "2c444d23cd1b1d67f36e05e5142799cbf4dda91fa43e8ccf8fc8d68c683ec8c0",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ExternalLinkDialog.tsx#L273"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ExternalLinkDialog.tsx#L273",
+          "usage_context": "</label> <p className=\"!text-small text-text-muted flex items-center gap-1\"><FileDown size={11} />{t('externalLinks.readOnlyNote')}</p> {loading && <span className=\"text-text-muted\">{t('externalLinks.loadingTasks')}</span>}"
         },
         {
           "kind": "code-import",
@@ -3217,7 +3295,8 @@
             }
           ],
           "sha256": "d4bad6571c25e6c5761995c8de8d6e95b269f1a9f50046cab7f4df7e49dbce53",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx#L880"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx#L880",
+          "usage_context": "<Card title={t('mwa.page.report')} level={2} actions={<Button icon={<FileDown aria-hidden=\"true\" />} onClick={exportReport}>{t('mwa.report')}</Button>}> <p className=\"nta-form-note\">{t('mwa.page.reportSub')}</p>"
         }
       ]
     },
@@ -3251,7 +3330,8 @@
             }
           ],
           "sha256": "2e9696ea9192a04a8861b32fa03c4a1ccc99a904956a9ebebde3064dd5926399",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L25"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L25",
+          "usage_context": "static TRI_LEFT: &[u8] = include_bytes!(\"../../assets/icons/ui/tri_left.svg\"); static HOME: &[u8] = include_bytes!(\"../../assets/icons/ui/home.svg\"); static UNDO: &[u8] = include_bytes!(\"../../assets/icons/ui/undo.svg\");"
         },
         {
           "kind": "code-import",
@@ -3309,7 +3389,8 @@
             }
           ],
           "sha256": "0047e0aead73952f18210a68fed58ef0de7ee96802d75670a17e9fd79d443a8f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L216"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L216",
+          "usage_context": "const FUNCTIONS: Array<{ id: BuildingFunction; icon: ReactNode }> = [ { id: 'residential', icon: <Home /> }, { id: 'office', icon: <Building2 /> },"
         }
       ]
     },
@@ -3368,7 +3449,8 @@
             }
           ],
           "sha256": "fa8f3f982c69d9d4f0a23a1b64becff8acc2af54ba6f27d900f56c9c59f23cde",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/LibrarySection.tsx#L216"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/LibrarySection.tsx#L216",
+          "usage_context": "<div className=\"library-pool-item-actions\"> <button className=\"edit-icon\" onClick={() => startEditCalendar(cal)} title={t('companyLibrary.editItem')}><Pencil size={12} /></button> <button className=\"danger-icon\" onClick={() => removePoolCal…"
         },
         {
           "kind": "code-import",
@@ -3426,7 +3508,8 @@
             }
           ],
           "sha256": "fe84894f920e4045cb4d6b13775239179aee740e2923bdb743abfbcaa744e2cf",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ItemActions/ItemActions.tsx#L46"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ItemActions/ItemActions.tsx#L46",
+          "usage_context": "title={compact ? t('dialog.edit') : undefined} onClick={() => dispatch(edit)}>{compact ? <Pencil aria-hidden=\"true\" /> : t('dialog.edit')}</button>} {!confirming && <button type=\"button\" className={compact ? 'item-actions__icon item-actions…"
         }
       ]
     },
@@ -3479,7 +3562,8 @@
             }
           ],
           "sha256": "5fab26ba55aeeb94f61a9b89f321b53f7ae18fd5e50b84ad233309f2d4e51050",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/SiteOpenDialog.tsx#L119"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/SiteOpenDialog.tsx#L119",
+          "usage_context": "<button className=\"btn btn--sm btn--secondary flex items-center gap-1.5\" onClick={retry}> <RefreshCw size={13} /> {t('siteFiles.retry')}"
         },
         {
           "kind": "code-import",
@@ -3513,7 +3597,8 @@
             }
           ],
           "sha256": "d9d7545cdc1d2187140de956b34a3aeb60ec89aa5ce2f98a296d708d1014cdba",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L706"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L706",
+          "usage_context": "<RibbonButton icon={<RefreshCw size={24} />} label=\"Generate\""
         }
       ]
     },
@@ -3546,7 +3631,8 @@
             }
           ],
           "sha256": "7e25452bf471679e226c4d8a281906d84e143618b4054e72d0cda7c1c84f0feb",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12397"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12397",
+          "usage_context": "ToolIcon::Save => include_bytes!(\"../../assets/opencad-icons/save.svg\"), ToolIcon::Move => include_bytes!(\"../../assets/opencad-icons/move.svg\"), ToolIcon::Scale => include_bytes!(\"../../assets/opencad-icons/scale.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -3566,7 +3652,8 @@
             }
           ],
           "sha256": "7099074b059aaf296b43a3f47af0373934d3066ce7cfa2c89330a8a38a00052a",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/translate.rs#L22"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/modify/translate.rs#L22",
+          "usage_context": "label: \"Move\", icon: IconKind::Svg(include_bytes!(\"../../../../assets/icons/move.svg\")), event: ModuleEvent::Command(\"MOVE\".to_string()),"
         },
         {
           "kind": "ui-asset",
@@ -3586,7 +3673,8 @@
             }
           ],
           "sha256": "da13b64ae1aff274b0682c06abab0219562f08a8c6cdc055b291604bdce3ac1f",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L73"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L73",
+          "usage_context": "pub static MENU: &[u8] = include_bytes!(\"../../assets/icons/ui/menu.svg\"); pub static MOVE: &[u8] = include_bytes!(\"../../assets/icons/ui/move.svg\"); pub static RESIZE: &[u8] = include_bytes!(\"../../assets/icons/ui/resize.svg\");"
         },
         {
           "kind": "code-import",
@@ -3607,7 +3695,8 @@
             }
           ],
           "sha256": "0789ab6ec1c0870dc5800f96fed51169050d6d6427f3d1c9f8044890c6827c82",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L203"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L203",
+          "usage_context": "</div> <RibbonButton icon={<Move size={20} />} label=\"Apply\" onClick={actions.handleTranslate} disabled={!hasActivePointcloud} tooltip=\"Translate pointcloud\" /> </RibbonGroup>"
         }
       ]
     },
@@ -3640,7 +3729,8 @@
             }
           ],
           "sha256": "30cdd1d5c4bb4f0066648171b0ebe3b76acf858c6ab6f55d29b64d12a59ec2d0",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L178"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L178",
+          "usage_context": "Rectangle { height: 8px; Rectangle { y: 3px; height: 1px; background: #383838; } } MenuItem { text: \"About\"; icon: @image-url(\"icons/about.svg\"); clicked => { root.todo(\"About\"); } } MenuItem { text: \"What's new\"; icon: @image-url(\"icons/wh…"
         },
         {
           "kind": "ui-asset",
@@ -3660,7 +3750,8 @@
             }
           ],
           "sha256": "74862f087dfc24b4b58995aaa9c0a952871c373a6380d04cc131d04d5e1c8074",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/manage/about.rs#L7"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/manage/about.rs#L7",
+          "usage_context": "label: \"About\", icon: IconKind::Svg(include_bytes!(\"../../../assets/icons/about.svg\")), event: ModuleEvent::Command(\"ABOUT\".to_string()),"
         }
       ]
     },
@@ -3693,7 +3784,8 @@
             }
           ],
           "sha256": "d417086de1c07293d9b0e50a1d9bee9a96fe3ffce25670d7f46f5a8e35835c8e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L210"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L210",
+          "usage_context": "RibbonSmallButton { text: \"Perimeter\"; icon: @image-url(\"icons/perimeter.svg\"); clicked => { root.tab-action(\"Perimeter\"); } } RibbonSmallButton { text: \"Angle\"; icon: @image-url(\"icons/angle.svg\"); clicked => { root.tab-action(\"Angle\"); } …"
         },
         {
           "kind": "ui-asset",
@@ -3713,7 +3805,8 @@
             }
           ],
           "sha256": "fd6a66fa101988c5cc7c3915e206322e18180d336efad4fd0885ed8af1861761",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/parametric/value.rs#L139"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/parametric/value.rs#L139",
+          "usage_context": "label: \"Angle\", icon: IconKind::Svg(include_bytes!(\"../../../assets/icons/constrain/angle.svg\")), event: ModuleEvent::Command(\"ACONSTRAINT\".to_string()),"
         }
       ]
     },
@@ -3746,7 +3839,8 @@
             }
           ],
           "sha256": "7fa58890ca301843ce645a6e1d5b09c4fbd6bfd47f1efa9921ae02c652af06de",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L204"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L204",
+          "usage_context": "RibbonSmallButton { text: \"Distance\"; icon: @image-url(\"icons/distance.svg\"); clicked => { root.tab-action(\"Distance\"); } } RibbonSmallButton { text: \"Area\"; icon: @image-url(\"icons/area.svg\"); clicked => { root.tab-action(\"Area\"); } } }"
         },
         {
           "kind": "ui-asset",
@@ -3766,7 +3860,8 @@
             }
           ],
           "sha256": "766a2211c2be1f7dc8cd091654629a2e94c0cb0b76450785f57e9162ee46a384",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/inquiry/area.rs#L13"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/inquiry/area.rs#L13",
+          "usage_context": "pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../../assets/icons/area.svg\")); #[derive(Clone, Copy, PartialEq, Eq)]"
         }
       ]
     },
@@ -3800,7 +3895,8 @@
             }
           ],
           "sha256": "90464e0a85ac56cb6ad56c12e872c6b4356ce8a9b10955c9a4910bba88a08c34",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L111"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L111",
+          "usage_context": "<button className=\"backstage-back\" onClick={() => leave(closeBackstage)} data-ops-backstage-back> <ArrowLeft size={16} /> {tMenu('backstage.back')} </button>"
         },
         {
           "kind": "code-import",
@@ -3821,7 +3917,8 @@
             }
           ],
           "sha256": "2fe5740bcb24bcb4c06217310e2854a9db72aec9d76c8551a8344d562ccb0cf1",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/NtaStepPage.tsx#L431"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/NtaStepPage.tsx#L431",
+          "usage_context": "</Button> {here > 0 && <Button size=\"sm\" icon={<ArrowLeft aria-hidden=\"true\" />} onClick={() => go(here - 1)}>{t('ntaStep.apply.previous')}</Button>} {here >= 0 && here < pages.length - 1"
         }
       ]
     },
@@ -3867,7 +3964,8 @@
             }
           ],
           "sha256": "c5a7cbe413a47d19ba1c1710d0f02870c37a21e089c53c6dbc92bfb4a5a0e98f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/StatsDialog.tsx#L29"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/StatsDialog.tsx#L29",
+          "usage_context": "> <DialogHeader title={t('settings.statsTitle')} icon={<BarChart3 size={16} />} onClose={close} help={{ articleId: SETTINGS_HELP_ARTICLE_ID }} /> <div className=\"flex-1 overflow-y-auto p-4\">"
         },
         {
           "kind": "code-import",
@@ -3888,7 +3986,8 @@
             }
           ],
           "sha256": "84f7945231b06952b769a9516f1377acaf58ea130bdc3769e5d1f572bbf5e477",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L120"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L120",
+          "usage_context": "<TabButton active={tab === 'dashboard'} onClick={() => setTab('dashboard')}> <BarChart3 size={14} /> Dashboard </TabButton>"
         }
       ]
     },
@@ -3934,7 +4033,8 @@
             }
           ],
           "sha256": "b9050a56a288cd78a5b599b273465a651777c4e3e420f20459cfaa6b3ae325e8",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L119"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L119",
+          "usage_context": "{/* data-tour-anchor (tourstap 6): voorbeelden-navitem. */} <NavItem icon={<BookOpen size={14} />} label={tMenu('backstage.examples')} active={section === 'examples'} onClick={() => goTo('examples')} tourAnchor=\"backstage-examples\" /> <Acti…"
         },
         {
           "kind": "code-import",
@@ -3961,7 +4061,8 @@
             }
           ],
           "sha256": "140cb9f5a12c0793e67d646d3d6ec39e9981d9a7b5fe8df18de711c7d8647801",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/PageHeader.tsx#L25"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/PageHeader.tsx#L25",
+          "usage_context": "const manualLink = shell && route.step !== 'tool' && ( <Button variant=\"ghost\" icon={<BookOpen aria-hidden=\"true\" />} title={t('manual.openChapter')} onClick={() => shell.navigate({ step: 'tool', sub: 'manual', chapter: chapterForRoute(rout…"
         }
       ]
     },
@@ -3994,7 +4095,8 @@
             }
           ],
           "sha256": "ee3295b50f078fb85f49faf072d744324bc4a0493ba8157437a151aff907c936",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L16"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L16",
+          "usage_context": "const BOX_ICON: &[u8] = include_bytes!(\"../../../assets/icons/model/box.svg\"); const CYLINDER_ICON: &[u8] = include_bytes!(\"../../../assets/icons/model/cylinder.svg\");"
         },
         {
           "kind": "code-import",
@@ -4027,7 +4129,8 @@
             }
           ],
           "sha256": "a3c00194b5ce99f611cf5b134eaf8c4d757d94effe91450c8bf03dffc6b052b7",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/StepRouter.tsx#L106"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/StepRouter.tsx#L106",
+          "usage_context": "page = <div className=\"page-body\"><BuildFlowFrame route={route} toolbar={<> <Button size=\"sm\" variant=\"ghost\" icon={<Box aria-hidden=\"true\" />} onClick={() => actions.navigate({ step: 'building', sub: 'model3d' })}>{t('building.open3d')}</B…"
         }
       ]
     },
@@ -4061,7 +4164,8 @@
             }
           ],
           "sha256": "bb671f68d699689d37db70f142369fd4ededef3dae72eb4519f09d867bc19acf",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L174"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L174",
+          "usage_context": "const calendarButton: RibbonButtonSpec = { kind: 'button', id: 'calendar', icon: <Calendar size={20} />, labelKey: 'menu:ribbon.calendar', use: uiAction({ showCalendarDialog: true }),"
         },
         {
           "kind": "code-import",
@@ -4082,7 +4186,8 @@
             }
           ],
           "sha256": "ad2e0d20f1d8ddee8a2bc49843c41dd92b7f628b4afc77d49b64bc8f8fccae84",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L124"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L124",
+          "usage_context": "value={new Date(topic.due_date).toLocaleDateString('nl-NL')} icon={<Calendar size={12} />} />"
         }
       ]
     },
@@ -4122,7 +4227,8 @@
             }
           ],
           "sha256": "bc7b67acb5d1babc731bc136cfa2436ccf856ad8f21e8990d27155bb02b43d63",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L208"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L208",
+          "usage_context": "> {direction === 'rtl' ? <ChevronRight size={16} /> : <ChevronLeft size={16} />} </button>"
         },
         {
           "kind": "code-import",
@@ -4143,7 +4249,8 @@
             }
           ],
           "sha256": "1746a67ac2c14089f3754804fa9775b538fa8da9932f49789bedd56c35b94b45",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx#L395"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx#L395",
+          "usage_context": "> <ChevronLeft className=\"h-4 w-4\" /> Vorige"
         }
       ]
     },
@@ -4177,7 +4284,8 @@
             }
           ],
           "sha256": "075244526a571912aa7ad0a66c50b2146a494d763e3dbecb88503e080680f949",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L637"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L637",
+          "usage_context": "> <span className=\"backstage-export-icon\"><ClipboardCheck size={20} /></span> <span className=\"backstage-export-info\">"
         },
         {
           "kind": "code-import",
@@ -4198,7 +4306,8 @@
             }
           ],
           "sha256": "5cca72e774e01e58a4df40937eb4140cac89a2a707ee73e2986c3930e85f571b",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx#L56"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/import/ThermalImportWizard.tsx#L56",
+          "usage_context": "{ label: \"Openingen\", icon: DoorOpen }, { label: \"Samenvatting\", icon: ClipboardCheck }, ] as const;"
         }
       ]
     },
@@ -4231,7 +4340,8 @@
             }
           ],
           "sha256": "3be0aa15d3834e282406a097c07f788f6942a35b977dc13f8714ddbc7b94b804",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L203"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L203",
+          "usage_context": "spacing: 2px; RibbonSmallButton { text: \"Distance\"; icon: @image-url(\"icons/distance.svg\"); clicked => { root.tab-action(\"Distance\"); } } RibbonSmallButton { text: \"Area\"; icon: @image-url(\"icons/area.svg\"); clicked => { root.tab-action(\"Ar…"
         },
         {
           "kind": "ui-asset",
@@ -4251,7 +4361,8 @@
             }
           ],
           "sha256": "dcdd7c527bca08e3b0e608e123aecadf2b09e6345b17f5baa56ec9de3c9210ab",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/parametric/value.rs#L56"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/parametric/value.rs#L56",
+          "usage_context": "icon: IconKind::Svg(include_bytes!( \"../../../assets/icons/constrain/distance.svg\" )),"
         }
       ]
     },
@@ -4297,7 +4408,8 @@
             }
           ],
           "sha256": "17900b846e4ebc07ba4484c0238679395070a9e4b1d76b0de1b70cf13e5f322d",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L93"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/AiConnectionDetailsDialog.tsx#L93",
+          "usage_context": "> {showToken ? <EyeOff size={14} /> : <Eye size={14} />} </button>"
         },
         {
           "kind": "code-import",
@@ -4318,7 +4430,8 @@
             }
           ],
           "sha256": "46011feb10266c4f3ca8fc368539609642d5325d100ce9382c7847616c31af7c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/panels/PointcloudPanel.tsx#L94"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/panels/PointcloudPanel.tsx#L94",
+          "usage_context": "> {pc.visible ? <Eye size={12} /> : <EyeOff size={12} />} </button>"
         }
       ]
     },
@@ -4352,7 +4465,8 @@
             }
           ],
           "sha256": "cb1b6b3af3d6fd53a25172bc45615673a85af1c99adf5ac1a8fde3cf11387576",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L70"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/ExtensionManagerPanel.tsx#L70",
+          "usage_context": "<button className=\"ext-install-btn\" onClick={() => void installFromFile()} title={t('extensions.installFromZip')}> <FileArchive size={14} /> ZIP </button>"
         },
         {
           "kind": "code-import",
@@ -4373,7 +4487,8 @@
             }
           ],
           "sha256": "f149e445a60b69fc64bd5cf2b868031d117b6bdfc97b703b06bdd457e3165f57",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/DeliveryPages.tsx#L90"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/DeliveryPages.tsx#L90",
+          "usage_context": "className=\"delivery-dossier-summary\" actions={<Button variant=\"primary\" icon={<FileArchive aria-hidden=\"true\" />} onClick={dossier.exportDossier} disabled={dossier.busy}>{t('report.exportProjectDossier')}</Button>}>"
         }
       ]
     },
@@ -4407,7 +4522,8 @@
             }
           ],
           "sha256": "73c6dff49555f682dff9eb4e3e21c77e56a96e2b14243b5e950bbac53d1fe38e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L367"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L367",
+          "usage_context": "const progressImportButton: RibbonButtonSpec = { kind: 'small', id: 'progressImport', icon: <FileUp size={14} />, labelKey: 'menu:ribbon.progressImport', use: () => {"
         },
         {
           "kind": "code-import",
@@ -4434,7 +4550,8 @@
             }
           ],
           "sha256": "7596c6aa142ee1221d421e97c7eb26efc7910f447cca5a629184b14e59008063",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L324"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L324",
+          "usage_context": "<LargeButton icon={FileDown} label=\"Importeren\" onClick={onImportJson} /> <LargeButton icon={FileUp} label=\"Exporteren\" onClick={onExportJson} /> </div>"
         }
       ]
     },
@@ -4468,7 +4585,8 @@
             }
           ],
           "sha256": "327d8a235685f5be808e1d9f6dca6eb123c98de18501805ae67f25e5eb8bfa06",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/TutorialOfferDialog.tsx#L124"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/TutorialOfferDialog.tsx#L124",
+          "usage_context": "title={<span id=\"ops-tutorial-offer-title\">{t('tutorialOffer.title')}</span>} icon={<GraduationCap size={16} aria-hidden />} onClose={decline}"
         },
         {
           "kind": "code-import",
@@ -4489,7 +4607,8 @@
             }
           ],
           "sha256": "14396191a3120df60bea6a7304a035bf202af8ecf4f68d0f381ae446b6487d92",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L218"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L218",
+          "usage_context": "{ id: 'office', icon: <Building2 /> }, { id: 'education', icon: <GraduationCap /> }, { id: 'healthcare', icon: <HeartPulse /> },"
         }
       ]
     },
@@ -4522,7 +4641,8 @@
             }
           ],
           "sha256": "d06d91a69951e66642cbacc45c15e7dbff9072607d3c04ef88a21ffd2aa07230",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L72"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L72",
+          "usage_context": "text: \"Hand\"; icon: @image-url(\"icons/hand.svg\"); active: root.active-tool == 0;"
         },
         {
           "kind": "code-import",
@@ -4549,7 +4669,8 @@
             }
           ],
           "sha256": "5efc8f42b63464c4f97762b0f4fbf5c2ea53a46cef3a979f567b6b891a5ee3d3",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L67"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L67",
+          "usage_context": "{ id: \"select\", label: \"Selecteer\", icon: MousePointer2, shortcut: \"V\", large: true }, { id: \"pan\", label: \"Verschuif\", icon: Hand, shortcut: \"H\", large: true }, ];"
         }
       ]
     },
@@ -4583,7 +4704,8 @@
             }
           ],
           "sha256": "cbc3d3cec21d1b9677f393eb0672e2a65f267a1093cd6f3343616dbbbff9ffd4",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L441"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L441",
+          "usage_context": "{ kind: 'small', id: 'wbsAuto', icon: <Hash size={14} />, labelKey: 'menu:ribbon.wbsAuto', use: () => {"
         },
         {
           "kind": "code-import",
@@ -4604,7 +4726,8 @@
             }
           ],
           "sha256": "bc2745110c6810bae42a8a3222904d257f90f57f1e2c0b11b6f1cbc8d7e17954",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L115"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L115",
+          "usage_context": "{topic.index !== null && ( <DetailRow label=\"Index\" value={String(topic.index)} icon={<Hash size={12} />} /> )}"
         }
       ]
     },
@@ -4638,7 +4761,8 @@
             }
           ],
           "sha256": "719087429467f2b29e22040d233fb3f3d0bb05861757f2487eb2f6315142721a",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L450"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L450",
+          "usage_context": "> <span className=\"ribbon-btn-icon\"><History size={14} /></span> <span className=\"ribbon-btn-label\">{tMenu('backstage.recent')}</span>"
         },
         {
           "kind": "code-import",
@@ -4659,7 +4783,8 @@
             }
           ],
           "sha256": "84f4fdf86ad01ec51499593ba4bcfee38c0217b3b87662f0dd566fa034aa9365",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ui/Display.tsx#L185"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ui/Display.tsx#L185",
+          "usage_context": "<div className=\"ui-banner ui-banner--warn ui-banner--stale\" role=\"status\"> <span className=\"ui-banner__icon\"><History aria-hidden=\"true\" /></span> <div className=\"ui-banner__text\">"
         }
       ]
     },
@@ -4693,7 +4818,8 @@
             }
           ],
           "sha256": "0729964cc6034fd746a024bc34251d77c54330b2b5396b2dc5fb0f1e9cebae9c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/panels/BAG3DPanel.tsx#L160"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/panels/BAG3DPanel.tsx#L160",
+          "usage_context": "<div className=\"bag3d-panel-title\"> <MapPin size={16} /> <span>3D BAG - Download Buildings</span>"
         },
         {
           "kind": "code-import",
@@ -4720,7 +4846,8 @@
             }
           ],
           "sha256": "6b21c4be64c83c793d909e3f16e694cc59d5f6b98fba9b291d19ab9f1927bff8",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L99"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L99",
+          "usage_context": "<p className=\"flex items-center gap-1 text-sm text-text-muted mt-0.5\"> <MapPin size={14} /> {project.location} </p>"
         }
       ]
     },
@@ -4753,7 +4880,8 @@
             }
           ],
           "sha256": "76bd85af5ec4c9e32b57c61d3b04f5961477dbe75837675694df2d4563abd688",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L72"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L72",
+          "usage_context": "pub static COPY: &[u8] = include_bytes!(\"../../assets/icons/ui/copy.svg\"); pub static MENU: &[u8] = include_bytes!(\"../../assets/icons/ui/menu.svg\"); pub static MOVE: &[u8] = include_bytes!(\"../../assets/icons/ui/move.svg\");"
         },
         {
           "kind": "code-import",
@@ -4774,7 +4902,8 @@
             }
           ],
           "sha256": "8e565fc1debb11b2024edd06a6bde828e7b8e4845dfe64c05ba330d325c5ebae",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L173"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L173",
+          "usage_context": "> <Menu size={17} /> </button>"
         }
       ]
     },
@@ -4814,7 +4943,8 @@
             }
           ],
           "sha256": "fb9363f57c9a9b4ddef957893f0b10bd6f04bc356ad858b5d9300cc43380d70e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/TopBar.tsx#L168"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/TopBar.tsx#L168",
+          "usage_context": "<MenuItem icon={<Settings aria-hidden=\"true\" />} label={t('nav.settings')} shortcut=\"Ctrl ,\" onSelect={fileMenu.select(props.onOpenSettings)} /> <MenuItem icon={<MessageSquare aria-hidden=\"true\" />} label={t('nav.feedback')} onSelect={fileM…"
         },
         {
           "kind": "code-import",
@@ -4835,7 +4965,8 @@
             }
           ],
           "sha256": "fb02b2884c8e5ee6e6e7f937a038d697aab1b9908968a500e30c57d6d79b877d",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L94"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/TopicDetail.tsx#L94",
+          "usage_context": "<h2 className=\"text-sm font-heading font-bold mb-3 flex items-center gap-1.5\"> <MessageSquare size={16} /> Comments ({commentsList.length}) </h2>"
         }
       ]
     },
@@ -4869,7 +5000,8 @@
             }
           ],
           "sha256": "62cf1b206dd93e34e449e661cbee1fdf3eda1e88a21427aee0f7c55a9d5d812a",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L805"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L805",
+          "usage_context": "// in deze kolom (drie per stack is de vaste linthoogte), naast de andere balk-overlays. kind: 'small', id: 'toggleFloatBand', icon: <MoveHorizontal size={14} />, labelKey: 'menu:ribbon.toggleFloatBand', use: () => {"
         },
         {
           "kind": "code-import",
@@ -4896,7 +5028,8 @@
             }
           ],
           "sha256": "b677ada34f3f0e2cfc67cc627ede35250755c85a48fa4a6a3f016761fde488fa",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L83"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L83",
+          "usage_context": "const ANNOTATION_TOOLS: ToolBtn[] = [ { id: \"annotate_dimension\", label: \"Maatvoering\", icon: MoveHorizontal, large: true }, { id: \"annotate_text\", label: \"Tekst\", icon: Type, large: true },"
         }
       ]
     },
@@ -4936,7 +5069,8 @@
             }
           ],
           "sha256": "7491c9050fd4d495c7faa0c49c5dacb8d5c30f97b3ed51e494953ff623f48a54",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L795"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L795",
+          "usage_context": "{ kind: 'small', id: 'toggleResourceAccent', icon: <Palette size={14} />, labelKey: 'menu:ribbon.toggleResourceAccent', use: () => {"
         },
         {
           "kind": "code-import",
@@ -4957,7 +5091,8 @@
             }
           ],
           "sha256": "0198d0927bb92a069bbf01c17b8572a672c200e4c38a3ce78c893b6dc1e646b8",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L488"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L488",
+          "usage_context": "<RibbonButton icon={<Palette size={24} />} label=\"Materials\""
         }
       ]
     },
@@ -4990,7 +5125,8 @@
             }
           ],
           "sha256": "7cbd7bbeca045712d69460f2f443d2c31f1e751e50f77a3abc701a07b54af8ca",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12372"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12372",
+          "usage_context": "ToolIcon::SectionBox => include_bytes!(\"../../assets/opencad-icons/section_box.svg\"), ToolIcon::Pick => include_bytes!(\"../../assets/opencad-icons/pick_point.svg\"), // The two measure icons are drawn for this app in the same palette."
         },
         {
           "kind": "ui-asset",
@@ -5015,7 +5151,8 @@
             }
           ],
           "sha256": "2d7fbbc5eb9007bc330b8064ed32548f148e9a7d92f35fde7c1769cc170f6331",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/window/block_definition.rs#L19"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/window/block_definition.rs#L19",
+          "usage_context": "static ICON_PICK_POINT: &[u8] = include_bytes!(\"../../../assets/icons/blocks/pick_point.svg\"); static ICON_SELECT_OBJECTS: &[u8] ="
         }
       ]
     },
@@ -5048,7 +5185,8 @@
             }
           ],
           "sha256": "312f6dc380eff620fbd7ec5d8679ec78909cf4ab925578673cbcfaff2e868ddc",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L111"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L111",
+          "usage_context": "background: pta.has-hover ? #ffffff18 : transparent; Image { source: @image-url(\"icons/pin.svg\"); width: 14px; height: 14px; colorize: #b0b0b0; } pta := TouchArea { clicked => { root.pin(); } }"
         },
         {
           "kind": "ui-asset",
@@ -5068,7 +5206,8 @@
             }
           ],
           "sha256": "3e0f10ad78dc061d6efada03424bb0f1da4b12115bee189d0c9f36318ffc3de9",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L77"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L77",
+          "usage_context": "pub static RESIZE_LEFT: &[u8] = include_bytes!(\"../../assets/icons/ui/resize_left.svg\"); pub static PIN: &[u8] = include_bytes!(\"../../assets/icons/ui/pin.svg\"); /// `PIN` tilted 30°: the pin while auto-hide is on."
         }
       ]
     },
@@ -5102,7 +5241,8 @@
             }
           ],
           "sha256": "3731f1958905c23e5fa1c71b57f26f6a9a12bc2342323ba6e73f1789bb1e7406",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L185"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L185",
+          "usage_context": "<RibbonCompactTrigger icon={<Plug size={14} />} title={t('ai.connectHint')}"
         },
         {
           "kind": "code-import",
@@ -5123,7 +5263,8 @@
             }
           ],
           "sha256": "101d169706f059bf6ae988f6c96bcbe1c84262632337b777b84d8f85f5ecf29e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L47"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L47",
+          "usage_context": "const HOT_WATER_ICONS: Record<string, ReactNode> = { gas_appliance: <Flame />, gas_storage_heater: <Flame />, electric_boiler: <Plug />, electric_instantaneous: <Zap />, heat_pump: <Thermometer />, district_heat: <Network />, collective_unk…"
         }
       ]
     },
@@ -5156,7 +5297,8 @@
             }
           ],
           "sha256": "eafce5b4b50b02739769b93279a254819ed3d16ce6c7e9262e6938fdbd4e65f1",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12399"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12399",
+          "usage_context": "ToolIcon::Scale => include_bytes!(\"../../assets/opencad-icons/scale.svg\"), ToolIcon::Decimate => include_bytes!(\"../../assets/opencad-icons/point.svg\"), ToolIcon::Mesh => include_bytes!(\"../../assets/opencad-icons/region.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -5176,7 +5318,8 @@
             }
           ],
           "sha256": "ad10eac89204d755a73654a64c896a28d675b06fd2d21b26613ce3b86b3663e0",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/draw/point.rs#L20"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/draw/point.rs#L20",
+          "usage_context": "label: \"Point\", icon: IconKind::Svg(include_bytes!(\"../../../../assets/icons/point.svg\")), event: ModuleEvent::Command(\"POINT\".to_string()),"
         }
       ]
     },
@@ -5214,7 +5357,8 @@
             }
           ],
           "sha256": "64c66d1638728d8b840ebcf125f465331d77e8ac60c21aba0486b16d3fa3dfbf",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L169"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L169",
+          "usage_context": "MenuItem { text: \"Save As...\"; icon: @image-url(\"icons/save.svg\"); shortcut: \"Ctrl+Shift+S\"; clicked => { root.todo(\"Save As\"); } } MenuItem { text: \"Print\"; icon: @image-url(\"icons/print.svg\"); shortcut: \"Ctrl+P\"; clicked => { root.todo(\"P…"
         },
         {
           "kind": "ui-asset",
@@ -5234,7 +5378,8 @@
             }
           ],
           "sha256": "acfc708a401517959cf09cc0ec854903ec2bfedcf00f1211a70fc5ff0bb09799",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L89"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L89",
+          "usage_context": "pub static FILE_EXPORT: &[u8] = include_bytes!(\"../../assets/icons/ui/file_export.svg\"); pub static PRINT: &[u8] = include_bytes!(\"../../assets/icons/ui/print.svg\"); pub static HEART: &[u8] = include_bytes!(\"../../assets/icons/ui/heart.svg\"…"
         }
       ]
     },
@@ -5274,7 +5419,8 @@
             }
           ],
           "sha256": "23fc14557cbdadf66adb88da09c54af42f40fa3b55e1dd7a68c2499a14b527f9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L127"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L127",
+          "usage_context": "<NavItem icon={<Upload size={14} />} label={tMenu('extensions.import')} active={section === 'import'} onClick={() => goTo('import')} /> <NavItem icon={<Printer size={14} />} label={tMenu('ribbon.printPreview')} active={section === 'print'} …"
         },
         {
           "kind": "code-import",
@@ -5307,7 +5453,8 @@
             }
           ],
           "sha256": "724b1c186f6fad628db302cb83a0d11b6a8140af44648df909c07281cfd73bf9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyReport.tsx#L123"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyReport.tsx#L123",
+          "usage_context": "<div className=\"survey-report-buttons\"> <button type=\"button\" className=\"btn\" onClick={() => window.print()}><Printer aria-hidden=\"true\" /> {t('survey.report.print')}</button> <button type=\"button\" className=\"btn btn-primary\" disabled={busy…"
         }
       ]
     },
@@ -5340,7 +5487,8 @@
             }
           ],
           "sha256": "abc7a0a86b24db93be6aabcc5290806334e432b76ce25cc297bdcb70609cf6ef",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12400"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12400",
+          "usage_context": "ToolIcon::Decimate => include_bytes!(\"../../assets/opencad-icons/point.svg\"), ToolIcon::Mesh => include_bytes!(\"../../assets/opencad-icons/region.svg\"), ToolIcon::Building => include_bytes!(\"../../assets/opencad-icons/solid.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -5365,7 +5513,8 @@
             }
           ],
           "sha256": "6c31f26481eed43b44c4dc8b7b16e7624bd4a89bf6f6cc6c1e0ddcc74efd299c",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/draw_panel.rs#L73"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/draw_panel.rs#L73",
+          "usage_context": "label: \"Region\", icon: include_bytes!(\"../../../assets/icons/region.svg\"), options: &[],"
         }
       ]
     },
@@ -5398,7 +5547,8 @@
             }
           ],
           "sha256": "0c0d9b6ee8f2e07954949a78f1d01b90ed04720085b7984bcf7b52ba87c27b81",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12367"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12367",
+          "usage_context": "ToolIcon::FitSelection => include_bytes!(\"../../assets/opencad-icons/fit_selection.svg\"), ToolIcon::Cloud => include_bytes!(\"../../assets/opencad-icons/revcloud.svg\"), ToolIcon::Select => include_bytes!(\"../../assets/opencad-icons/ribbon_ta…"
         },
         {
           "kind": "ui-asset",
@@ -5423,7 +5573,8 @@
             }
           ],
           "sha256": "22ee82c1185883661bea8b136d719412457081295d5b3c6e4fa32786bf0f7c26",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/draw/revcloud.rs#L19"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/draw/draw/revcloud.rs#L19",
+          "usage_context": "pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../../assets/icons/revcloud.svg\"));"
         }
       ]
     },
@@ -5463,7 +5614,8 @@
             }
           ],
           "sha256": "a6043c3082944bf67dcbd28363a63f06fb9ae9bdde1cc381a58906a33b314bfb",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/RecoveryDialog.tsx#L120"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/RecoveryDialog.tsx#L120",
+          "usage_context": "> <RotateCcw size={13} /> {t('recovery.restore')}"
         },
         {
           "kind": "code-import",
@@ -5484,7 +5636,8 @@
             }
           ],
           "sha256": "b393136d89e9ee4204b516eef072862ee589b69f8d5b60b5d824d3cbd371d6a9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/WelcomeScreen.tsx#L200"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/WelcomeScreen.tsx#L200",
+          "usage_context": "const menuItems = (entry: LibraryEntry) => entry.trashed ? [ { key: 'restore', label: <><RotateCcw aria-hidden=\"true\" /> {t('library.menu.restoreTrash')}</>, onClick: () => onTrashEntry?.(entry.id, false) }, { key: 'delete', label: <><Trash…"
         }
       ]
     },
@@ -5524,7 +5677,8 @@
             }
           ],
           "sha256": "4bc983bab94ccd5d8ff80838740968ea79170f490478d08fd9dd6f2ae5cfb748",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L155"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L155",
+          "usage_context": "const splitTaskButton: RibbonButtonSpec = { kind: 'button', id: 'splitTask', icon: <Scissors size={20} />, labelKey: 'menu:ribbon.splitTask', use: () => {"
         },
         {
           "kind": "code-import",
@@ -5551,7 +5705,8 @@
             }
           ],
           "sha256": "4224ea86082001890c707a58292ecc978f42be40a2495bb4ad01521cd6fdc226",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L79"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L79",
+          "usage_context": "{ id: \"draw_door\", label: \"Deur\", icon: DoorOpen, large: true }, { id: \"split_room\", label: \"Splitsen\", icon: Scissors, shortcut: \"S\", large: true }, ];"
         }
       ]
     },
@@ -5584,7 +5739,8 @@
             }
           ],
           "sha256": "0cc9f54fad654cc5b40f23f2df3b085760526b00c72b34e61d1f6fe5c7e5412c",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12369"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12369",
+          "usage_context": "ToolIcon::Select => include_bytes!(\"../../assets/opencad-icons/ribbon_target.svg\"), ToolIcon::WindowSelect => include_bytes!(\"../../assets/opencad-icons/select_objects.svg\"), ToolIcon::DeletePoints => include_bytes!(\"../../assets/opencad-ic…"
         },
         {
           "kind": "ui-asset",
@@ -5614,7 +5770,8 @@
             }
           ],
           "sha256": "4506cc87ead8a57359f4726988251036fc792b93a42e183a89045d268d310edc",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/window/block_definition.rs#L21"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/window/block_definition.rs#L21",
+          "usage_context": "static ICON_SELECT_OBJECTS: &[u8] = include_bytes!(\"../../../assets/icons/blocks/select_objects.svg\"); static ICON_QUICK_SELECT: &[u8] = include_bytes!(\"../../../assets/icons/blocks/quick_select.svg\");"
         }
       ]
     },
@@ -5648,7 +5805,8 @@
             }
           ],
           "sha256": "c67ba103719947a371debee9f57a486936f9f47ced93f97763056425c7620ddd",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L236"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L236",
+          "usage_context": "<RibbonGroup label=\"Surface\"> <RibbonButton icon={<Shapes size={20} />} label={actions.reconstructing ? 'Working...' : 'Reconstruct'} onClick={actions.handleReconstruct} disabled={!hasActivePointcloud || actions.reconstructing} tooltip=\"Rec…"
         },
         {
           "kind": "code-import",
@@ -5669,7 +5827,8 @@
             }
           ],
           "sha256": "d2cd8826025c3c00737fb87be222aa0658341576234d7d6bcc7d71255fef4ca9",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L587"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-2D-studio-AEC-extension/blob/fd22965ed28ae8e7c137039c538cb6da7d076b2a/src/ribbonTabs.tsx#L587",
+          "usage_context": "<RibbonButton icon={<Shapes size={24} />} label=\"Pile Symbols\""
         }
       ]
     },
@@ -5702,7 +5861,8 @@
             }
           ],
           "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12401"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12401",
+          "usage_context": "ToolIcon::Mesh => include_bytes!(\"../../assets/opencad-icons/region.svg\"), ToolIcon::Building => include_bytes!(\"../../assets/opencad-icons/solid.svg\"), ToolIcon::Shading => include_bytes!(\"../../assets/opencad-icons/sphere.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -5722,7 +5882,8 @@
             }
           ],
           "sha256": "a23aa0ff26bf48c2594a89486cb54c484ca176cfd561357654b5eb73791f5db8",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/visual_style.rs#L18"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/visual_style.rs#L18",
+          "usage_context": "const HIDDEN_ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/hidden.svg\")); const SHADED_ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/solid.svg\"));"
         }
       ]
     },
@@ -5755,7 +5916,8 @@
             }
           ],
           "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12402"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12402",
+          "usage_context": "ToolIcon::Building => include_bytes!(\"../../assets/opencad-icons/solid.svg\"), ToolIcon::Shading => include_bytes!(\"../../assets/opencad-icons/sphere.svg\"), // The section drawing icon is drawn for this app in the same palette."
         },
         {
           "kind": "ui-asset",
@@ -5775,7 +5937,8 @@
             }
           ],
           "sha256": "0b6365281de260be0e7106f8374cefc9a0f4273900620dc173c5d4bf4e7ce944",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L19"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/model/mod.rs#L19",
+          "usage_context": "const CONE_ICON: &[u8] = include_bytes!(\"../../../assets/icons/model/cone.svg\"); const SPHERE_ICON: &[u8] = include_bytes!(\"../../../assets/icons/model/sphere.svg\"); const PYRAMID_ICON: &[u8] = include_bytes!(\"../../../assets/icons/model/py…"
         }
       ]
     },
@@ -5818,7 +5981,8 @@
             }
           ],
           "sha256": "df2100159519a21346bef1fd0e600cd477c11510151560f8176a39b5f9d1d5bc",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/draw_panel.rs#L37"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/draw_panel.rs#L37",
+          "usage_context": "label: \"Spline Fit\", icon: include_bytes!(\"../../../assets/icons/spline.svg\"), options: &[],"
         },
         {
           "kind": "code-import",
@@ -5839,7 +6003,8 @@
             }
           ],
           "sha256": "fdbe7a5e9adcf7aa56491347ec788c81103bff14794ae642e43c97282747f7fc",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L820"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L820",
+          "usage_context": "// (view-state), en een layoutdeel: het resourcediagram zet de lijnen uit. kind: 'small', id: 'toggleRelations', icon: <Spline size={14} />, labelKey: 'menu:ribbon.toggleRelations', use: () => {"
         }
       ]
     },
@@ -5873,7 +6038,8 @@
             }
           ],
           "sha256": "65c3b6e5e946dbf2187d25a4a27c4bfc8fdb11805c270a55f4c577bb7f5c15d2",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L140"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L140",
+          "usage_context": "<RibbonSmallButton icon={<Sun size={14} />} label=\"Theme\""
         },
         {
           "kind": "code-import",
@@ -5894,7 +6060,8 @@
             }
           ],
           "sha256": "f167bc5a2017e1bd0d222c08de5137c0a952c801a9df305522d1032de1d1e871",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L34"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L34",
+          "usage_context": "roof: <Home />, facade: <LayoutGrid />, floor: <Layers />, windows: <PanelTop />, heating: <Flame />, hotWater: <Droplet />, ventilation: <Wind />, pv: <Sun />, };"
         }
       ]
     },
@@ -5928,7 +6095,8 @@
             }
           ],
           "sha256": "ac9a5539e3597999d0ebaf0652db97a3feb5dea70b7a8662f0cb79b737fb81ea",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L397"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L397",
+          "usage_context": "> <Type size={16} /> </button>"
         },
         {
           "kind": "code-import",
@@ -5955,7 +6123,8 @@
             }
           ],
           "sha256": "b359461e1803625aaf0a84b0e7721e393ceb4f12c974f0fe41d8aada97718491",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L84"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/modeller/Ribbon.tsx#L84",
+          "usage_context": "{ id: \"annotate_dimension\", label: \"Maatvoering\", icon: MoveHorizontal, large: true }, { id: \"annotate_text\", label: \"Tekst\", icon: Type, large: true }, { id: \"annotate_leader\", label: \"Leider\", icon: CornerRightDown, large: true },"
         }
       ]
     },
@@ -5989,7 +6158,8 @@
             }
           ],
           "sha256": "0417ab6465fbee56bb384794eb6518c8390e311ab1f7267258db6e19f69723ad",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L596"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L596",
+          "usage_context": "if (!valid) { return <RibbonButton icon={<UserPlus size={20} />} label={tMenu('ribbon.assignResource')} disabled />; }"
         },
         {
           "kind": "code-import",
@@ -6010,7 +6180,8 @@
             }
           ],
           "sha256": "041f74eff16e80eae960d7bed4832bed3d1b95fe488124d8019fd38ca99baa49",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/MemberManager.tsx#L124"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/components/MemberManager.tsx#L124",
+          "usage_context": "> <UserPlus size={14} /> Lid toevoegen </button>"
         }
       ]
     },
@@ -6050,7 +6221,8 @@
             }
           ],
           "sha256": "2f9015072d47ef55b4a14b6963c639957c57150f3cb2b59c6b9231d35181fd57",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L508"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L508",
+          "usage_context": "const openResourcePanelButton: RibbonButtonSpec = { kind: 'button', id: 'openResourcePanel', icon: <Users size={20} />, labelKey: 'menu:ribbon.openResourcePanel', use: () => {"
         },
         {
           "kind": "code-import",
@@ -6071,7 +6243,8 @@
             }
           ],
           "sha256": "e52178cd181cabb12e40793c26a7976b3dc1c9b1abf3e7225175997f6fe8d1af",
-          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L132"
+          "source_url": "https://github.com/OpenAEC-Foundation/openaec-bcf-platform/blob/e98fb97f5f23bc9c9f3b80de18acd721440f7597/frontend/src/pages/ProjectDetail.tsx#L132",
+          "usage_context": "<TabButton active={tab === 'members'} onClick={() => setTab('members')}> <Users size={14} /> Leden </TabButton>"
         }
       ]
     },
@@ -6104,7 +6277,8 @@
             }
           ],
           "sha256": "9d35a3b6be2967e4a32f1415f6e7fdf9b01fe056506eafeaf568665ce9372919",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12388"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12388",
+          "usage_context": "ToolIcon::Camera(CameraPreset::Front | CameraPreset::Back) => { include_bytes!(\"../../assets/opencad-icons/view_front.svg\") }"
         },
         {
           "kind": "ui-asset",
@@ -6124,7 +6298,8 @@
             }
           ],
           "sha256": "1b30c4197646c20c522c0eaf8f1bbebbcd45d9b75a10bf5a9f25c0b74f755ea4",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_front.rs#L2"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_front.rs#L2",
+          "usage_context": "use crate::modules::{IconKind, ModuleEvent, ToolDef}; pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/view_front.svg\")); pub fn tool() -> ToolDef {"
         }
       ]
     },
@@ -6157,7 +6332,8 @@
             }
           ],
           "sha256": "f0e403c3fd9cdc071231c9e6f08cb8992ae1f04b6dbe24eec491c2d86a8aff34",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12394"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12394",
+          "usage_context": "ToolIcon::Camera(CameraPreset::Isometric) => { include_bytes!(\"../../assets/opencad-icons/view_iso.svg\") }"
         },
         {
           "kind": "ui-asset",
@@ -6177,7 +6353,8 @@
             }
           ],
           "sha256": "7f55b585af1fc23299551d78f03ba03e3ec4b920e88e32beee3d2ad53d3c6a2a",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_iso.rs#L2"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_iso.rs#L2",
+          "usage_context": "use crate::modules::{IconKind, ModuleEvent, ToolDef}; pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/view_iso.svg\")); pub fn tool() -> ToolDef {"
         }
       ]
     },
@@ -6210,7 +6387,8 @@
             }
           ],
           "sha256": "060b378c5a2c6706726fba25706ae4f1ad41945a491290f67082b05a3e036399",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12391"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12391",
+          "usage_context": "ToolIcon::Camera(CameraPreset::Right | CameraPreset::Left) => { include_bytes!(\"../../assets/opencad-icons/view_right.svg\") }"
         },
         {
           "kind": "ui-asset",
@@ -6230,7 +6408,8 @@
             }
           ],
           "sha256": "6add6450f1a4222cfc4ed226a3f12a9cb31120a84ab7139283536a5c77df03a2",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_right.rs#L2"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_right.rs#L2",
+          "usage_context": "use crate::modules::{IconKind, ModuleEvent, ToolDef}; pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/view_right.svg\")); pub fn tool() -> ToolDef {"
         }
       ]
     },
@@ -6263,7 +6442,8 @@
             }
           ],
           "sha256": "13a349161bb092a2c8fb518c1e7b09e9b6761e714be74c730a3f9abd7085ce7b",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12385"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12385",
+          "usage_context": "ToolIcon::Camera(CameraPreset::Top | CameraPreset::Bottom) => { include_bytes!(\"../../assets/opencad-icons/view_top.svg\") }"
         },
         {
           "kind": "ui-asset",
@@ -6283,7 +6463,8 @@
             }
           ],
           "sha256": "1336d70acae790e25b32d63af790f3c5f2501ea1239f02f8052e908cf6501c71",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_top.rs#L2"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/modules/view/view_top.rs#L2",
+          "usage_context": "use crate::modules::{IconKind, ModuleEvent, ToolDef}; pub const ICON: IconKind = IconKind::Svg(include_bytes!(\"../../../assets/icons/view_top.svg\")); pub fn tool() -> ToolDef {"
         }
       ]
     },
@@ -6317,7 +6498,8 @@
             }
           ],
           "sha256": "cb0ae43779ba281693ca5d38e94dd2b52e35316c30d31e97f9ed8a48a8dc8528",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx#L20"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx#L20",
+          "usage_context": "equipment: Truck, tools: Wrench, critical: Route,"
         },
         {
           "kind": "code-import",
@@ -6338,7 +6520,8 @@
             }
           ],
           "sha256": "2b9355927b820847bdca102a8a4844665c409191e8d6f0f04f7e8968fb906a2a",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L265"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L265",
+          "usage_context": "aria-current={route.step === 'tool' ? 'page' : undefined} onClick={() => tools.setOpen(!tools.open)}> <Wrench aria-hidden=\"true\" /><span className=\"nav-step-label\">{t('nav.tools')}</span><ChevronRight aria-hidden=\"true\" /> </button>"
         }
       ]
     },
@@ -6378,7 +6561,8 @@
             }
           ],
           "sha256": "ab82bd5ba41be23c82337ed8e9c3916a07efec8065b3b0ca634c59cf38539b6f",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L170"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L170",
+          "usage_context": "/> <RibbonSmallButton icon={<XCircle size={14} />} label=\"Deselect\" onClick={() => clearSelection()} disabled={totalSelected === 0} /> </RibbonButtonStack>"
         },
         {
           "kind": "code-import",
@@ -6417,7 +6601,8 @@
             }
           ],
           "sha256": "1ed410598e3e5ef396f86a2ecc5412ce0a1dd9f94f02465e884058a52aa529fb",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/results/ResultsDashboard.tsx#L211"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/results/ResultsDashboard.tsx#L211",
+          "usage_context": "{failures.map((gauge) => <li key={gauge.key}> <XCircle aria-hidden=\"true\" className=\"results-attention__icon\" /> <span>"
         }
       ]
     },
@@ -6450,7 +6635,8 @@
             }
           ],
           "sha256": "fcc78d7f71a01f3487b57e9a6a939455ab2c03dcf0c8beb3162b5f26f2306ea2",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12381"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12381",
+          "usage_context": "ToolIcon::Line => include_bytes!(\"../../assets/opencad-icons/annotation_line.svg\"), ToolIcon::Clear => include_bytes!(\"../../assets/opencad-icons/xclip_remove.svg\"), ToolIcon::Undo => include_bytes!(\"../../assets/opencad-icons/undo.svg\"),"
         },
         {
           "kind": "ui-asset",
@@ -6470,7 +6656,8 @@
             }
           ],
           "sha256": "bd9a3c7e3f54bc069245ec55f6750067cedf0fcb82156a6e1bd23f7292a0202f",
-          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/context_tools.rs#L29"
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/ribbon/context_tools.rs#L29",
+          "usage_context": "/// The clip icon with a small red cross at its lower right. const UNCLIP: &[u8] = include_bytes!(\"../../../assets/icons/xclip_remove.svg\");"
         }
       ]
     },
@@ -6510,7 +6697,8 @@
             }
           ],
           "sha256": "dffb5deacead3bb5686c7e889c87c5f81c49c5d532461a5c83c2a0f9045eef3e",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/RelationCellEditor.tsx#L165"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/RelationCellEditor.tsx#L165",
+          "usage_context": "<span className=\"task-grid-relation-icon task-grid-relation-icon--driving\" title={t('relations.driving')}> <Zap size={10} aria-label={t('relations.driving')} /> </span>"
         },
         {
           "kind": "code-import",
@@ -6531,7 +6719,8 @@
             }
           ],
           "sha256": "35c2a78c89b541a62af645c11b5ca0174815b17abde1a05d18d3f6b82929a2a5",
-          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43"
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43",
+          "usage_context": "const HEATING_ICONS: Record<string, ReactNode> = { boiler: <Flame />, heat_pump: <Thermometer />, district_heat: <Network />, electric: <Zap />, biomass: <TreePine />, chp: <Factory />, local_fired: <Flame />, gas_air_heater: <Wind />, none…"
         }
       ]
     }
