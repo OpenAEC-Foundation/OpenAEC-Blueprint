@@ -3,7 +3,7 @@ use crate::{
     dual_range::DualRange,
     fonts,
     icons::Icon,
-    model::{metrics, CommandIcon, RibbonControl},
+    model::{metrics, CommandIcon, RibbonControl, RibbonFormField},
     Theme,
 };
 use iced::{
@@ -483,6 +483,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
     let t = theme.tokens();
     let title = label.into();
     let width = control.width();
+    let compact = matches!(control, RibbonControl::FormStack { .. });
     let body: Element<'a, M> = match control {
         RibbonControl::Slider { minimum, maximum, value, step, unit, on_change } => {
             column![
@@ -577,6 +578,36 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                     .spacing(3).into()
             } else { field.into() }
         }
+        RibbonControl::FormStack { fields, label_width, .. } => {
+            let mut form = iced::widget::Column::new().spacing(1);
+            let field_width = (width - 16.0 - label_width).max(60.0);
+            for field in fields {
+                let (label, input): (String, Element<'a, M>) = match field {
+                    RibbonFormField::Number { label, value, on_change } => {
+                        let input = text_input("", &value).on_input(on_change)
+                            .font(fonts::MEDIUM).size(11).padding([1, 3]).width(field_width)
+                            .style(move |_, status| text_input_style(theme, status));
+                        (label, input.into())
+                    }
+                    RibbonFormField::Select { label, options, selected } => {
+                        let choices: Vec<RibbonChoice> = options.iter().enumerate()
+                            .map(|(index, (label, _))| RibbonChoice { index, label: label.clone() })
+                            .collect();
+                        let current = choices.get(selected).cloned();
+                        let input = pick_list(choices, current,
+                            move |choice: RibbonChoice| options[choice.index].1.clone())
+                            .font(fonts::MEDIUM).text_size(11).padding([1, 3]).width(field_width)
+                            .style(move |_, status| pick_list_style(theme, status))
+                            .menu_style(move |_| pick_list_menu_style(theme));
+                        (label, input.into())
+                    }
+                };
+                form = form.push(row![
+                    text(label).font(fonts::BODY).size(11).color(t.text).width(label_width), input,
+                ].spacing(4).align_y(Alignment::Center).height(19));
+            }
+            form.into()
+        }
         RibbonControl::ColorSelect { options, selected, current, rows_per_column, open, on_toggle, on_close, none, custom, .. } => {
             let byte = |value: f32| (value * 255.0).round() as u8;
             let color_label = format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b));
@@ -670,7 +701,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
         }
     };
     container(body)
-        .padding([4, 6])
+        .padding(if compact { [0, 6] } else { [4, 6] })
         .width(width)
         .height(62)
         .align_y(Alignment::Center)

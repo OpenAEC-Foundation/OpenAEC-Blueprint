@@ -47,6 +47,7 @@ pub enum RibbonControl<M> {
     Select { options: Vec<(String, M)>, selected: usize, width: f32, show_label: bool },
     Sliders { items: Vec<RibbonSlider<M>>, minimum: f32, maximum: f32, step: f32, unit: &'static str, width: f32 },
     Number { value: String, on_change: fn(String) -> M, width: f32, show_label: bool },
+    FormStack { fields: Vec<RibbonFormField<M>>, width: f32, label_width: f32 },
     ColorSelect { options: Vec<(String, iced::Color, M)>, selected: usize,
         current: iced::Color, width: f32, rows_per_column: usize,
         open: bool, on_toggle: M, on_close: M, none: Option<(String, M)>,
@@ -65,10 +66,17 @@ pub struct RibbonCustomColor<M> {
     pub on_input: fn(String) -> M,
     pub on_apply: M,
 }
+/// A compact labelled row inside a ribbon form stack.
+#[derive(Debug, Clone)]
+pub enum RibbonFormField<M> {
+    Number { label: String, value: String, on_change: fn(String) -> M },
+    Select { label: String, options: Vec<(String, M)>, selected: usize },
+}
 impl<M> RibbonControl<M> {
     pub fn width(&self) -> f32 {
         match self {
             Self::Select { width, .. } | Self::Sliders { width, .. } | Self::Number { width, .. }
+                | Self::FormStack { width, .. }
                 | Self::ColorSelect { width, .. } => *width,
             Self::StyleGallery { items, visible, .. } => items.len().min(*visible) as f32 * 52.0 + 30.0,
             _ => 170.0,

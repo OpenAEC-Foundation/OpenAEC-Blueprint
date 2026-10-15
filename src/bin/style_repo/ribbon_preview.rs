@@ -359,6 +359,11 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
             options: choices.iter().enumerate().map(|(i, label)| (label.to_string(), action(i))).collect(),
             selected: index, width, show_label: true })
     };
+    let form_select = |label: &str, choices: &[&str], index: usize, action: fn(usize) -> Action| {
+        openaec_ui::RibbonFormField::Select { label: label.into(),
+            options: choices.iter().enumerate().map(|(i, choice)| (choice.to_string(), action(i))).collect(),
+            selected: index }
+    };
     let arrows = ["Geen", "Open", "Gesloten", "Stealth", "Ruit", "Cirkel", "Vierkant", "Schuine streep"];
     let mut groups = Vec::new();
     if format.symbol_stamp {
@@ -397,18 +402,25 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
                         on_input: Action::PdfFormatCustomHex, on_apply: Action::PdfFormatCustomApply }) }),
         ] },
         RibbonGroup { label: "Lijn & dekking".into(), commands: vec![
-            Command::new("Breedte", Icon::Measure, Action::PdfFormatLineWidth(format.line_width.clone()))
-                .control(RibbonControl::Number { value: format.line_width.clone(), on_change: Action::PdfFormatLineWidth,
-                    width: 90.0, show_label: true }),
-            pick("Rand", &["Doorgetrokken", "Gestreept", "Gestippeld"], format.border, Action::PdfFormatBorder, 114.0),
-            pick("Mengen", &["Normaal", "Vermenigvuldigen"], format.blend, Action::PdfFormatBlend, 125.0),
+            Command::new("Lijninstellingen", Icon::Measure, Action::PdfFormatLineWidth(format.line_width.clone()))
+                .control(RibbonControl::FormStack { fields: vec![
+                    openaec_ui::RibbonFormField::Number { label: "Breedte".into(),
+                        value: format.line_width.clone(), on_change: Action::PdfFormatLineWidth },
+                    form_select("Rand", &["Doorgetrokken", "Gestreept", "Gestippeld"],
+                        format.border, Action::PdfFormatBorder),
+                    form_select("Mengen", &["Normaal", "Vermenigvuldigen"],
+                        format.blend, Action::PdfFormatBlend),
+                ], width: 235.0, label_width: 58.0 }),
             Command::new("Dekking", Icon::Settings, Action::PdfFormatOpacity(format.opacity))
                 .control(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: format.opacity,
                     step: 1.0, unit: "%", on_change: Action::PdfFormatOpacity }),
         ] },
         RibbonGroup { label: "Pijlen".into(), commands: vec![
-            pick("Begin", &arrows, format.arrow_start, Action::PdfFormatArrowStart, 120.0),
-            pick("Einde", &arrows, format.arrow_end, Action::PdfFormatArrowEnd, 120.0),
+            Command::new("Pijlpunten", Icon::Settings, Action::PdfFormatArrowStart(format.arrow_start))
+                .control(RibbonControl::FormStack { fields: vec![
+                    form_select("Begin", &arrows, format.arrow_start, Action::PdfFormatArrowStart),
+                    form_select("Einde", &arrows, format.arrow_end, Action::PdfFormatArrowEnd),
+                ], width: 205.0, label_width: 45.0 }),
         ] },
         RibbonGroup { label: "Gereedschap".into(), commands: vec![
             preview("style-tools", "Stijlhulpmiddelen", pdf_format_icon!("styleToolsIcon")),

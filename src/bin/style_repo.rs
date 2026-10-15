@@ -2066,9 +2066,12 @@ mod tests {
         assert!(matches!(&format[1].commands[1].control,
             Some(RibbonControl::ColorSelect { options, selected: 5, .. }) if options.len() == 42));
         assert!(matches!(&format[2].commands[0].control,
-            Some(RibbonControl::Number { value, .. }) if value == "1"));
-        assert!(matches!(&format[2].commands[3].control,
+            Some(RibbonControl::FormStack { fields, .. }) if fields.len() == 3 &&
+                matches!(&fields[0], openaec_ui::RibbonFormField::Number { value, .. } if value == "1")));
+        assert!(matches!(&format[2].commands[1].control,
             Some(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: 100.0, .. })));
+        assert!(matches!(&format[3].commands[0].control,
+            Some(RibbonControl::FormStack { fields, .. }) if fields.len() == 2));
         let arrange = &tabs[7].groups;
         assert_eq!(arrange.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
             ["Uitlijning", "Verdelen", "Grootte", "Draaien", "Spiegelen", "Z-volgorde"]);
