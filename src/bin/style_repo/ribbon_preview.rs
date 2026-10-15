@@ -31,10 +31,51 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .or_else(|| calculations_groups(studio, tab, selected))
                 .or_else(|| reports_groups(studio, tab, selected))
                 .or_else(|| validator_groups(studio, tab, selected))
+                .or_else(|| pile_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Pile Plan ribbon on ffe979d3b859. View controls are labeled review
+/// placeholders until the shared ribbon supports sliders and segmented picks.
+fn pile_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "pile" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Plan" => vec![
+            ("Project", vec![("Projectinformatie", planner_source_icon!("FolderOpen"))]),
+            ("Inspecteren", vec![("Belastinglocaties", planner_source_icon!("Map")), ("Sonderingen", planner_source_icon!("Compass"))]),
+            ("Selecteren", vec![("Kaderselectie", planner_source_icon!("Square"))]),
+            ("Instellingen", vec![("Sonderingsinstellingen", Settings.into()), ("Kosteninstellingen", Settings.into()), ("Groeperingsinstellingen", Settings.into())]),
+            ("Vergrendelen", vec![("Locaties vergrendelen", planner_source_icon!("Lock"))]),
+            ("Optimalisatie", vec![("Uitvoeren", planner_source_icon!("Play"))]),
+        ],
+        "Weergave" => vec![
+            ("Symbolen", vec![("Symboolgrootte · slider", planner_source_icon!("Gauge"))]),
+            ("Benutting", vec![("Gewenst bereik · schuifregelaars", planner_source_icon!("Gauge"))]),
+            ("Voorgrond", vec![("Belastinglocaties / sonderingen", planner_source_icon!("Layers"))]),
+            ("Grid", vec![("Grid tonen", Grid.into())]),
+            ("Gebieden", vec![("Puntniveaugebieden tonen", planner_source_icon!("LayoutGrid")), ("Groepen tonen", planner_source_icon!("Boxes"))]),
+            ("Vensters", vec![("Verkenner tonen", PanelLeft.into()), ("Eigenschappen tonen", PanelRight.into())]),
+        ],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("pile:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// BIM Validator viewer ribbon on 8f837dd9a56e; disconnected BCF state shown.

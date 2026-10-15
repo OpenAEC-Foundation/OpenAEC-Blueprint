@@ -657,17 +657,12 @@
     "proposed": true,
     "tabs": [
       "Bestand",
-      "Start",
-      "Palen",
-      "Belastingen",
-      "Optimaliseren",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Plan",
+      "Weergave"
     ],
-    "left_panel": "Varianten & bronnen",
-    "right_panel": "Paal-eigenschappen",
-    "workspace": "Palenplan",
+    "left_panel": "Project, bronnen & palenplannen",
+    "right_panel": "Taakpaneel / paalopties",
+    "workspace": "2D-palenplan",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -690,7 +685,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Tabs gecontroleerd tegen apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx op commit ffe979d3b859: Bestand, Plan en Weergave. Plan heeft Project, Inspecteren, Selecteren, Instellingen, Vergrendelen en Optimalisatie. Weergave bevat niet alleen knoppen maar ook sliders voor symboolgrootte en benuttingsbereik plus een voorgrondkeuze. De drie broncaptures tonen een donker themalint, verkenner links, 2D-palenplan midden en een wisselend taakpaneel rechts (import, optimalisatie, paalopties). De gedeelde native ribbon heeft nog geen controles voor sliders/keuzegroepen; zijn Weergave-inhoud blijft dus een ontwerpschets."
   },
   {
     "id": "2d",
