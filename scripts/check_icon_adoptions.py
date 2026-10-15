@@ -6,8 +6,11 @@ import re
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
-decisions = json.loads((root / "design/icon-adoptions.json").read_text())["decisions"]
+ledger = json.loads((root / "design/icon-adoptions.json").read_text())
+decisions = ledger["decisions"]
+chrome_decisions = ledger["chrome_decisions"]
 assert len(decisions) == 6
+assert len(chrome_decisions) == 1
 for decision in decisions:
     shared = root / "assets/icons" / f'{decision["shared_icon"]}.svg'
     assert shared.is_file(), shared
@@ -28,6 +31,15 @@ if pointcloud.exists():
         )
         assert (pointcloud / decision["legacy_asset"]).is_file()
     assert re.search(r"Message::LoadDetail\s*\|\s*Message::RefreshLod\s*=>\s*ToolIcon::Update", desktop)
-    print("Six reviewed icons use identical SVGs in Pointcloud; LOD refresh stays distinct")
+    for decision in chrome_decisions:
+        semantic = decision["shared_icon"].title().replace("-", "")
+        expected = rf"TitleIcon::{decision['title_icon']}\s*=>\s*Icon::{semantic}"
+        assert re.search(expected, desktop), f"Missing title icon adoption: {expected}"
+        shared = root / "assets/icons" / f'{decision["shared_icon"]}.svg'
+        portable = pointcloud / "native/ui/assets/icons" / shared.name
+        assert shared.read_bytes() == portable.read_bytes(), f"Portable title icon drift: {shared.name}"
+    extensions_page = (pointcloud / "native/desktop/src/extensions/page.rs").read_text()
+    assert re.search(r"Icon::Extensions\.view\(22, colors\.accent\)", extensions_page), "Extensions page heading does not use the shared icon"
+    print("Six reviewed tool icons and the visible Extensions page use shared SVGs in Pointcloud; LOD refresh stays distinct")
 else:
-    print("Six reviewed shared SVGs exist; local Pointcloud integration unavailable")
+    print("Seven reviewed shared SVGs exist; local Pointcloud integration unavailable")

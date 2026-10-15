@@ -404,6 +404,33 @@ impl StyleRepo {
     }
     fn icons(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
+        let mut canonical = Column::new().spacing(7);
+        for chunk in Icon::ALL.chunks(6) {
+            let mut icons_row = Row::new().spacing(7);
+            for &icon in chunk {
+                icons_row = icons_row.push(
+                    container(
+                        column![icon.view(24, t.accent), text(icon.id()).size(10)]
+                            .spacing(6)
+                            .align_x(Alignment::Center),
+                    )
+                    .padding(8)
+                    .width(94)
+                    .height(70)
+                    .align_x(Alignment::Center)
+                    .style(move |_| container::Style {
+                        background: Some(t.bg.into()),
+                        border: iced::Border {
+                            color: t.border,
+                            width: 1.0,
+                            radius: 4.0.into(),
+                        },
+                        ..Default::default()
+                    }),
+                );
+            }
+            canonical = canonical.push(icons_row);
+        }
         let matches = self.matches();
         let pages = matches.len().max(1).div_ceil(48);
         let page = self.icon_page.min(pages - 1);
@@ -478,6 +505,20 @@ impl StyleRepo {
                     "All researched source files are embedded in this native app."
                 ),
                 theme
+            ),
+            self.card(
+                column![
+                    text(format!(
+                        "{} · {}",
+                        l.text("Canonieke Rust-kern", "Canonical Rust core"),
+                        Icon::ALL.len()
+                    ))
+                    .font(fonts::STRONG)
+                    .size(14),
+                    canonical,
+                ]
+                .spacing(10),
+                theme,
             ),
             row![
                 text_input(
@@ -1111,6 +1152,8 @@ mod tests {
 
     #[test]
     fn research_catalog_is_complete_and_unique() {
+        let canonical: HashSet<_> = Icon::ALL.iter().map(|icon| icon.id()).collect();
+        assert_eq!(canonical.len(), Icon::ALL.len());
         assert!(source_icons::ALL.len() >= 565);
         assert!(source_icons::ALL.iter().all(|icon| !icon.bytes.is_empty()));
         let keys: HashSet<_> = source_icons::ALL

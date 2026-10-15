@@ -19,13 +19,15 @@ migratie van alle OpenAEC-applicaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
   gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
 - Het [semantische kruisverband](icon-semantic-crosswalk.html) vergelijkt de
-  21 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
-  versiegebonden bibliotheekvarianten. 77 naamovereenkomsten zijn kandidaten;
-  800 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
-  Dit is geen goedkeuring van vorm of functie. Zes Pointcloud-acties hebben na
+  22 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
+  versiegebonden bibliotheekvarianten. 79 naamovereenkomsten zijn kandidaten;
+  798 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
+  Dit is geen goedkeuring van vorm of functie. Zes Pointcloud-toolacties hebben na
   controle van hun commandobetekenis een expliciet
   [adoptiebesluit](icon-adoptions.json): Open, Export, Fit, Undo, Redo en Save.
   Refresh LOD gebruikt nu zijn eigen Update-symbool in plaats van Fit.
+  De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
+  een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
   Pointcloud native en de 36 lokaal bewaarde bruikbare UI-referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
@@ -49,15 +51,15 @@ migratie van alle OpenAEC-applicaties.
 | --- | --- | --- |
 | Herkenbare gedeelde shell | Voldoende voor conceptreview: 18 studio's gebruiken dezelfde regio's en vijf thema's. | Per studio de exacte commando- en tabgroepen aan de broncode koppelen. |
 | Nette opmaak | De compacte browserproef heeft consistente uitlijning, randen en witruimte. | Native screenshots op meerdere platformen vergelijken met de HTML-maten. |
-| Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
+| Semantiek van iconen | De 22 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
 | Applicatieschermen | Negen gedeelde schermtoestanden zijn in HTML en de native Rust-atlas voor alle 18 studio's selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken in HTML hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene ribboniconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De portable kopie is op 11 Rust-bestanden, 27 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De portable kopie is op 11 Rust-bestanden, 28 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
 met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
-De [reviewpagina](review.html) toont daarnaast vier native Pointcloud-renders
-van lege en geopende projecten in Light en Forge.
+De [reviewpagina](review.html) toont zes native Pointcloud-renders van lege en
+geopende projecten en de Extensions-bestandspagina in Light en Forge.
 De native Style Repo-atlas is in [alle vijf thema's](review.html) als
 software-render gecontroleerd.
 

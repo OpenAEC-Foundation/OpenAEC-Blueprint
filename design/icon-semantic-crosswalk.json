@@ -6,6 +6,7 @@
     "code_import_variants": 312
   },
   "adopted_count": 6,
+  "native_chrome_decisions_count": 1,
   "canonical": [
     {
       "id": "new",
@@ -1657,6 +1658,63 @@
       "candidates": []
     },
     {
+      "id": "extensions",
+      "aliases": [
+        "extensions",
+        "plugin",
+        "puzzle"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pdf-studio-v3",
+          "name": "extensions",
+          "path": "crates/app/ui/icons/extensions.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/extensions.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "crates/app/ui/backstage.slint",
+              "line": 174,
+              "reference": "icons/extensions.svg"
+            }
+          ],
+          "sha256": "729e97dcdfa044806470886089f47c258a41f9be06129400d1759274fa56f7ff",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L174"
+        },
+        {
+          "kind": "code-import",
+          "repo": "open-planner-studio",
+          "name": "Puzzle",
+          "path": "lucide-static@0.575.0/Puzzle",
+          "preview": "../harmonization/library-icons/lucide-static/0.575.0/Puzzle.svg",
+          "evidence": "source-import",
+          "references": [
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/backstage/Backstage.tsx",
+              "line": 3,
+              "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+            },
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/backstage/ExtensionManagerPanel.tsx",
+              "line": 20,
+              "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+            },
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+              "line": 5,
+              "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
+            }
+          ],
+          "sha256": "9bcca9d337201205c8aadeb51cce6b8a59862ed1073e9397d849ef3936732f91",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/c5c806fbe778f8c5074a990ea30e11b15277d774/src/components/backstage/Backstage.tsx#L3"
+        }
+      ]
+    },
+    {
       "id": "help",
       "aliases": [
         "help",
@@ -3157,23 +3215,6 @@
       ],
       "sha256": "c8dd1cad34799760b03caf2d1c94a7334f2f1650ca9194a950891f0e135a9f25",
       "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L181"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pdf-studio-v3",
-      "name": "extensions",
-      "path": "crates/app/ui/icons/extensions.svg",
-      "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/extensions.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "crates/app/ui/backstage.slint",
-          "line": 174,
-          "reference": "icons/extensions.svg"
-        }
-      ],
-      "sha256": "729e97dcdfa044806470886089f47c258a41f9be06129400d1759274fa56f7ff",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L174"
     },
     {
       "kind": "ui-asset",
@@ -13910,36 +13951,6 @@
         }
       ],
       "sha256": "23fc14557cbdadf66adb88da09c54af42f40fa3b55e1dd7a68c2499a14b527f9",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/c5c806fbe778f8c5074a990ea30e11b15277d774/src/components/backstage/Backstage.tsx#L3"
-    },
-    {
-      "kind": "code-import",
-      "repo": "open-planner-studio",
-      "name": "Puzzle",
-      "path": "lucide-static@0.575.0/Puzzle",
-      "preview": "../harmonization/library-icons/lucide-static/0.575.0/Puzzle.svg",
-      "evidence": "source-import",
-      "references": [
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/backstage/Backstage.tsx",
-          "line": 3,
-          "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
-        },
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/backstage/ExtensionManagerPanel.tsx",
-          "line": 20,
-          "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
-        },
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonWidgets.tsx",
-          "line": 5,
-          "commit": "c5c806fbe778f8c5074a990ea30e11b15277d774"
-        }
-      ],
-      "sha256": "9bcca9d337201205c8aadeb51cce6b8a59862ed1073e9397d849ef3936732f91",
       "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/c5c806fbe778f8c5074a990ea30e11b15277d774/src/components/backstage/Backstage.tsx#L3"
     },
     {

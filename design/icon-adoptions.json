@@ -3,7 +3,7 @@
   "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
   "integration_branch": "feat/shared-rust-ui",
   "status": "native-adopted",
-  "note": "These six commands have the same action meaning as the shared UI core. Their legacy SVGs remain archived as source evidence; other Pointcloud domain icons keep their original semantics pending visual review. Loading detail and refreshing LOD now use the existing Update icon instead of Fit.",
+  "note": "These six commands have the same action meaning as the shared UI core. Their legacy SVGs remain archived as source evidence; other Pointcloud domain icons keep their original semantics pending visual review. Loading detail and refreshing LOD now use the existing Update icon instead of Fit. The visible File → Extensions page now uses a newly drawn Extensions icon; a dormant ribbon-title mapping is corrected from Cube as well.",
   "decisions": [
     {
       "tool_icon": "Open",
@@ -40,6 +40,17 @@
       "legacy_asset": "native/assets/opencad-icons/save.svg",
       "shared_icon": "save",
       "reason": "Saves the active view."
+    }
+  ],
+  "chrome_decisions": [
+    {
+      "title_icon": "Extensions",
+      "previous_shared_icon": "cube",
+      "shared_icon": "extensions",
+      "ui_context": "Visible Open Pointcloud Studio File → Extensions page heading; the dormant Extensions ribbon-title mapping is corrected too",
+      "source_reference": "open-pdf-studio-v3/crates/app/ui/backstage.slint:174",
+      "source_asset": "open-pdf-studio-v3/crates/app/ui/icons/extensions.svg",
+      "reason": "The visible page manages extension tools. Cube denotes a 3D model; a separate puzzle-piece meaning avoids conflating the two. The shared SVG is newly drawn in the canonical stroke system, not copied from the source asset."
     }
   ]
 }
