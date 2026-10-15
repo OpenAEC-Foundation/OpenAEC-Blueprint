@@ -21,6 +21,11 @@ macro_rules! pdf_arrange_icon {
         CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-arrange-icons/", $name, ".svg")))
     };
 }
+macro_rules! pdf_format_icon {
+    ($name:literal) => {
+        CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-format-icons/", $name, ".svg")))
+    };
+}
 
 #[derive(Debug, Clone, Copy)]
 pub(super) struct PileViewState {
@@ -59,9 +64,58 @@ impl Default for PdfImageState {
 #[derive(Debug, Clone, Copy, Default)]
 pub(super) struct PdfArrangeState { pub align_target: usize }
 
+#[derive(Debug, Clone)]
+pub(super) struct PdfFormatState {
+    pub style: usize,
+    pub fill: usize,
+    pub stroke: usize,
+    pub fill_color: iced::Color,
+    pub stroke_color: iced::Color,
+    pub line_width: String,
+    pub border: usize,
+    pub blend: usize,
+    pub opacity: f32,
+    pub arrow_start: usize,
+    pub arrow_end: usize,
+    pub layer: usize,
+    pub symbol_stamp: bool,
+}
+impl Default for PdfFormatState {
+    fn default() -> Self {
+        Self { style: usize::MAX, fill: 0, stroke: 5, fill_color: iced::Color::WHITE,
+            stroke_color: iced::Color::BLACK, line_width: "1".into(), border: 0,
+            blend: 0, opacity: 100.0, arrow_start: 0, arrow_end: 1, layer: 0,
+            symbol_stamp: false }
+    }
+}
+impl PdfFormatState {
+    pub fn select_style(&mut self, index: usize) {
+        const COLORS: [&str; 10] = ["#ff0000", "#800080", "#4b0082", "#0066cc", "#008000",
+            "#e6a817", "#000000", "#ff0000", "#800080", "#7b68ee"];
+        self.style = index.min(9);
+        self.stroke_color = pdf_color(COLORS[self.style]);
+        self.stroke = PDF_FORMAT_PALETTE.iter().position(|hex| *hex == COLORS[self.style]).unwrap_or(usize::MAX);
+        self.fill_color = if self.style >= 7 {
+            iced::Color { a: if self.style == 9 { 0.15 } else { 0.08 }, ..self.stroke_color }
+        } else { iced::Color::WHITE };
+        self.fill = usize::MAX;
+        self.border = 0;
+    }
+    pub fn select_fill(&mut self, index: usize) {
+        self.fill = index.min(PDF_FORMAT_PALETTE.len() - 1);
+        self.fill_color = pdf_color(PDF_FORMAT_PALETTE[self.fill]);
+        self.style = usize::MAX;
+    }
+    pub fn select_stroke(&mut self, index: usize) {
+        self.stroke = index.min(PDF_FORMAT_PALETTE.len() - 1);
+        self.stroke_color = pdf_color(PDF_FORMAT_PALETTE[self.stroke]);
+        self.style = usize::MAX;
+    }
+}
+
 #[cfg(test)]
 pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<RibbonTab<Action>> {
-    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default(), PdfImageState::default(), PdfArrangeState::default())
+    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default(), PdfImageState::default(), PdfArrangeState::default(), PdfFormatState::default())
 }
 
 pub(super) fn studio_tabs_with_controls(
@@ -71,6 +125,7 @@ pub(super) fn studio_tabs_with_controls(
     frame: FrameViewState,
     pdf_image: PdfImageState,
     pdf_arrange: PdfArrangeState,
+    pdf_format: PdfFormatState,
 ) -> Vec<RibbonTab<Action>> {
     studio
         .tabs
@@ -84,7 +139,7 @@ pub(super) fn studio_tabs_with_controls(
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
-                .or_else(|| pdf_groups(studio, tab, selected, pdf_image, pdf_arrange))
+                .or_else(|| pdf_groups(studio, tab, selected, pdf_image, pdf_arrange, pdf_format.clone()))
                 .or_else(|| pointcloud_groups(studio, tab, selected))
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
@@ -105,9 +160,10 @@ pub(super) fn studio_tabs_with_controls(
 
 /// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Image and Arrange use
 /// native review controls; PDF document editing remains outside this atlas.
-fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: PdfImageState, arrange: PdfArrangeState) -> Option<Vec<RibbonGroup<Action>>> {
+fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: PdfImageState, arrange: PdfArrangeState, format: PdfFormatState) -> Option<Vec<RibbonGroup<Action>>> {
     if studio.id != "pdf" { return None; }
     if tab == "Schikken" { return Some(pdf_arrange_groups(selected, arrange)); }
+    if tab == "Opmaak" { return Some(pdf_format_groups(selected, format)); }
     let spec: &[(&str, &[&str])] = match tab {
         "Start" => &[("Document", &["Nieuw", "Naar CAD", "IFC-report", "E-mail", "Raster-PDF"]),
             ("Hulpmiddelen", &["Hand", "Selecteren"]), ("Beeld", &["Inzoomen", "Uitzoomen", "Breedte passend", "Pagina passend"]),
@@ -136,7 +192,6 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
             ("Watermerk", &["Watermerk", "Koptekst/voettekst", "Beheren"])],
         "Help" => &[("Instellingen", &["Extensies", "Bestandskoppelingen"]),
             ("Help", &["Sneltoetsen", "Over", "Wat is nieuw", "Updates", "Diagnose"])],
-        "Opmaak" => &[("Symbooltype", &["Typekiezer · controls"]), ("Eigenschappen", &["Eigenschappenvelden · controls"])],
         "Afbeelding" => &[("Bijsnijden", &[]), ("Beeldbewerking", &[])],
         _ => return None,
     };
@@ -220,6 +275,93 @@ fn pdf_arrange_groups(selected: Option<&str>, arrange: PdfArrangeState) -> Vec<R
             ("Uitlijnen op selectie".into(), Action::PdfAlignTarget(0)),
             ("Uitlijnen op laatst geselecteerde".into(), Action::PdfAlignTarget(1)),
         ], selected: arrange.align_target, width: 220.0, show_label: false }));
+    groups
+}
+
+const PDF_FORMAT_PALETTE: [&str; 42] = [
+    "#ffffff", "#d9d9d9", "#999999", "#666666", "#333333", "#000000",
+    "#f4cccc", "#ea9999", "#e06666", "#ff0000", "#cc0000", "#660000",
+    "#fce5cd", "#f9cb9c", "#ffff00", "#ffd966", "#f1c232", "#bf9000",
+    "#d9ead3", "#b6d7a8", "#93c47d", "#00ff00", "#38761d", "#274e13",
+    "#d0e0e3", "#a2c4c9", "#76a5af", "#00ffff", "#45818e", "#134f5c",
+    "#c9daf8", "#6d9eeb", "#4a86e8", "#0000ff", "#1155cc", "#073763",
+    "#d9d2e9", "#b4a7d6", "#9900ff", "#ff00ff", "#a64d79", "#741b47",
+];
+
+pub(super) fn pdf_color(hex: &str) -> iced::Color {
+    let part = |range| u8::from_str_radix(&hex[range], 16).expect("pinned PDF palette hex");
+    iced::Color::from_rgb8(part(1..3), part(3..5), part(5..7))
+}
+
+/// FormatTab values and order at f754cb7c9d9a. Commands select a review
+/// state; document editing and conditional symbol-insert behavior live in PDF.
+fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<RibbonGroup<Action>> {
+    let preview = |id: &str, label: &str, icon: CommandIcon| {
+        let key = format!("pdf:Opmaak:{id}");
+        Command::new(label, icon, Action::SelectPreviewCommand(key.clone()))
+            .selected(selected == Some(key.as_str()))
+    };
+    let style_names = ["Rood", "Paars", "Indigo", "Blauw", "Groen", "Geel", "Zwart",
+        "Rood bewolkt", "Paars bewolkt", "Indigo bewolkt"];
+    let style_colors = ["#ff0000", "#800080", "#4b0082", "#0066cc", "#008000", "#e6a817",
+        "#000000", "#ff0000", "#800080", "#7b68ee"];
+    let styles = style_names.into_iter().enumerate().map(|(index, label)| {
+        let color = pdf_color(style_colors[index]);
+        openaec_ui::RibbonSwatch { label: label.into(), color,
+            background: if index >= 7 { iced::Color { a: 0.15, ..color } } else { iced::Color::WHITE },
+            message: Action::PdfFormatStyle(index) }
+    }).collect();
+    let colors = |action: fn(usize) -> Action| PDF_FORMAT_PALETTE.iter().enumerate()
+        .map(|(index, hex)| (hex.to_string(), pdf_color(hex), action(index))).collect();
+    let pick = |label: &str, choices: &[&str], index: usize, action: fn(usize) -> Action, width: f32| {
+        Command::new(label, Icon::Settings, action(index)).control(RibbonControl::Select {
+            options: choices.iter().enumerate().map(|(i, label)| (label.to_string(), action(i))).collect(),
+            selected: index, width, show_label: true })
+    };
+    let arrows = ["Geen", "Open", "Gesloten", "Stealth", "Ruit", "Cirkel", "Vierkant", "Schuine streep"];
+    let mut groups = Vec::new();
+    if format.symbol_stamp {
+        groups.push(RibbonGroup { label: "Symbooltype".into(), commands: vec![
+            preview("edit-type", "Type bewerken", pdf_format_icon!("editTypeIcon"))] });
+    }
+    groups.extend([
+        RibbonGroup { label: "Stijlen".into(), commands: vec![
+            Command::new("Stijlgalerij", Icon::Grid, Action::PdfFormatStyle(0))
+                .control(RibbonControl::StyleGallery { items: styles, selected: format.style }),
+            preview("more-styles", "Meer", Icon::Grid.into()),
+        ] },
+        RibbonGroup { label: "Kleur".into(), commands: vec![
+            Command::new("Vulkleur", Icon::Grid, Action::PdfFormatFill(format.fill))
+                .control(RibbonControl::ColorSelect { options: colors(Action::PdfFormatFill), selected: format.fill,
+                    current: format.fill_color, width: 126.0 }),
+            Command::new("Lijnkleur", Icon::Grid, Action::PdfFormatStroke(format.stroke))
+                .control(RibbonControl::ColorSelect { options: colors(Action::PdfFormatStroke), selected: format.stroke,
+                    current: format.stroke_color, width: 126.0 }),
+        ] },
+        RibbonGroup { label: "Lijn & dekking".into(), commands: vec![
+            Command::new("Breedte", Icon::Measure, Action::PdfFormatLineWidth(format.line_width.clone()))
+                .control(RibbonControl::Number { value: format.line_width.clone(), on_change: Action::PdfFormatLineWidth,
+                    width: 90.0, show_label: true }),
+            pick("Rand", &["Doorgetrokken", "Gestreept", "Gestippeld"], format.border, Action::PdfFormatBorder, 114.0),
+            pick("Mengen", &["Normaal", "Vermenigvuldigen"], format.blend, Action::PdfFormatBlend, 125.0),
+            Command::new("Dekking", Icon::Settings, Action::PdfFormatOpacity(format.opacity))
+                .control(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: format.opacity,
+                    step: 1.0, unit: "%", on_change: Action::PdfFormatOpacity }),
+        ] },
+        RibbonGroup { label: "Pijlen".into(), commands: vec![
+            pick("Begin", &arrows, format.arrow_start, Action::PdfFormatArrowStart, 120.0),
+            pick("Einde", &arrows, format.arrow_end, Action::PdfFormatArrowEnd, 120.0),
+        ] },
+        RibbonGroup { label: "Gereedschap".into(), commands: vec![
+            preview("style-tools", "Stijlhulpmiddelen", pdf_format_icon!("styleToolsIcon")),
+            preview("reset-location", "Locatie herstellen", pdf_format_icon!("resetLocationIcon")),
+        ] },
+        RibbonGroup { label: "Eigenschappen".into(), commands: vec![
+            preview("open-properties", "Openen", pdf_format_icon!("openPropertiesIcon")),
+            preview("hide-annotation", "Verbergen", pdf_format_icon!("hideAnnotationIcon")),
+            pick("Laag", &["Geen"], format.layer, Action::PdfFormatLayer, 100.0),
+        ] },
+    ]);
     groups
 }
 

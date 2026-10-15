@@ -249,6 +249,29 @@ fn export_pdf_arrange_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF Format-tab review on demand"]
+fn export_pdf_format_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    for (theme, name) in [(Theme::Forge, "forge"), (Theme::Light, "light")] {
+        render_sized(&app, theme, false, Some("opmaak"), Size::new(2800.0, 800.0))
+            .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join(format!("design/style-repo-pdf-format-{name}.png")))
+            .expect("save PDF Format-tab review");
+    }
+    let _ = app.update(Action::PdfFormatSymbolStamp);
+    render_sized(&app, Theme::Forge, false, Some("opmaak"), Size::new(2800.0, 800.0))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-format-symbol-forge.png"))
+        .expect("save PDF symbol-stamp Format review");
+    let _ = app.update(Action::PdfFormatSymbolStamp);
+    let _ = app.update(Action::PdfFormatStyle(7));
+    render_sized(&app, Theme::Forge, false, Some("opmaak"), Size::new(2800.0, 800.0))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-format-preset-forge.png"))
+        .expect("save PDF cloudy style Format review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));

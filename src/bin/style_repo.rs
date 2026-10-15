@@ -119,6 +119,17 @@ enum Action {
     PdfContrast(f32),
     PdfResetImage,
     PdfAlignTarget(usize),
+    PdfFormatStyle(usize),
+    PdfFormatFill(usize),
+    PdfFormatStroke(usize),
+    PdfFormatLineWidth(String),
+    PdfFormatBorder(usize),
+    PdfFormatBlend(usize),
+    PdfFormatOpacity(f32),
+    PdfFormatArrowStart(usize),
+    PdfFormatArrowEnd(usize),
+    PdfFormatLayer(usize),
+    PdfFormatSymbolStamp,
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -209,6 +220,7 @@ struct StyleRepo {
     frame_view: ribbon_preview::FrameViewState,
     pdf_image: ribbon_preview::PdfImageState,
     pdf_arrange: ribbon_preview::PdfArrangeState,
+    pdf_format: ribbon_preview::PdfFormatState,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -231,6 +243,7 @@ impl Default for StyleRepo {
             frame_view: ribbon_preview::FrameViewState::default(),
             pdf_image: ribbon_preview::PdfImageState::default(),
             pdf_arrange: ribbon_preview::PdfArrangeState::default(),
+            pdf_format: ribbon_preview::PdfFormatState::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -843,10 +856,22 @@ impl StyleRepo {
                         .size(11).color(t.text_secondary),
                 ].spacing(8), theme)
         } else {
+            let context: Element<'_, Action> = if selected.id == "pdf" {
+                button(text(if self.pdf_format.symbol_stamp {
+                    "Opmaaktoestand: één symboolstempel geselecteerd"
+                } else {
+                    "Opmaaktoestand: gewone annotatieselectie"
+                }).size(11))
+                    .padding([6, 9])
+                    .on_press(Action::PdfFormatSymbolStamp)
+                    .style(move |_, status| widgets::button_style(theme, self.pdf_format.symbol_stamp, status))
+                    .into()
+            } else { Space::new(0, 0).into() };
             column![
                 text(l.text("Ribbon-tabs · bron / concept", "Ribbon tabs · source / concept"))
                     .font(fonts::STRONG).size(11).color(t.accent),
                 tabs,
+                context,
                 self.preview_command_review(theme, l),
             ].spacing(10).into()
         };
@@ -1306,6 +1331,7 @@ impl Application for StyleRepo {
                 self.frame_view,
                 self.pdf_image,
                 self.pdf_arrange,
+                self.pdf_format.clone(),
             );
         }
         vec![
@@ -1582,6 +1608,24 @@ impl Application for StyleRepo {
                 self.pdf_image.contrast = 100.0;
             }
             Action::PdfAlignTarget(index) => self.pdf_arrange.align_target = index.min(1),
+            Action::PdfFormatStyle(index) => self.pdf_format.select_style(index),
+            Action::PdfFormatFill(index) => self.pdf_format.select_fill(index),
+            Action::PdfFormatStroke(index) => self.pdf_format.select_stroke(index),
+            Action::PdfFormatLineWidth(value) => {
+                if value.is_empty() || value == "." ||
+                    value.parse::<f32>().is_ok_and(|number| (0.0..=50.0).contains(&number)) {
+                    self.pdf_format.line_width = value;
+                }
+            }
+            Action::PdfFormatBorder(index) => self.pdf_format.border = index.min(2),
+            Action::PdfFormatBlend(index) => self.pdf_format.blend = index.min(1),
+            Action::PdfFormatOpacity(value) => self.pdf_format.opacity = value.round().clamp(0.0, 100.0),
+            Action::PdfFormatArrowStart(index) => self.pdf_format.arrow_start = index.min(7),
+            Action::PdfFormatArrowEnd(index) => self.pdf_format.arrow_end = index.min(7),
+            Action::PdfFormatLayer(index) => {
+                if index == 0 { self.pdf_format.layer = index; }
+            }
+            Action::PdfFormatSymbolStamp => self.pdf_format.symbol_stamp = !self.pdf_format.symbol_stamp,
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -1958,7 +2002,19 @@ mod tests {
         assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
             ["Document", "Hulpmiddelen", "Beeld", "Navigeren", "Zoeken", "Instellingen"]);
         assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
-        assert_eq!(tabs[6].groups[0].label, "Symbooltype");
+        let format = &tabs[6].groups;
+        assert_eq!(format.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Stijlen", "Kleur", "Lijn & dekking", "Pijlen", "Gereedschap", "Eigenschappen"]);
+        assert!(matches!(&format[0].commands[0].control,
+            Some(RibbonControl::StyleGallery { items, .. }) if items.len() == 10));
+        assert!(matches!(&format[1].commands[0].control,
+            Some(RibbonControl::ColorSelect { options, selected: 0, .. }) if options.len() == 42));
+        assert!(matches!(&format[1].commands[1].control,
+            Some(RibbonControl::ColorSelect { options, selected: 5, .. }) if options.len() == 42));
+        assert!(matches!(&format[2].commands[0].control,
+            Some(RibbonControl::Number { value, .. }) if value == "1"));
+        assert!(matches!(&format[2].commands[3].control,
+            Some(RibbonControl::Slider { minimum: 0.0, maximum: 100.0, value: 100.0, .. })));
         let arrange = &tabs[7].groups;
         assert_eq!(arrange.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
             ["Uitlijning", "Verdelen", "Grootte", "Draaien", "Spiegelen", "Z-volgorde"]);
@@ -2005,11 +2061,35 @@ mod tests {
         assert_eq!(app.pdf_arrange.align_target, 1);
         let studio = studios().iter().find(|studio| studio.id == "pdf").unwrap();
         let tabs = ribbon_preview::studio_tabs_with_controls(studio, None, app.pile_view, app.frame_view,
-            app.pdf_image, app.pdf_arrange);
+            app.pdf_image, app.pdf_arrange, app.pdf_format.clone());
         assert!(matches!(&tabs[7].groups[0].commands[6].control,
             Some(RibbonControl::Select { selected: 1, .. })));
         let _ = app.update(Action::PdfAlignTarget(9));
         assert_eq!(app.pdf_arrange.align_target, 1);
+    }
+
+    #[test]
+    fn pdf_format_gallery_colors_and_symbol_context_follow_source_defaults() {
+        let mut app = StyleRepo::default();
+        let _ = app.update(Action::PdfFormatStyle(7));
+        assert_eq!(app.pdf_format.style, 7);
+        assert_eq!(app.pdf_format.stroke_color, ribbon_preview::pdf_color("#ff0000"));
+        assert!((app.pdf_format.fill_color.a - 0.08).abs() < 0.001);
+        let _ = app.update(Action::PdfFormatStroke(32));
+        assert_eq!(app.pdf_format.stroke_color, ribbon_preview::pdf_color("#4a86e8"));
+        assert_eq!(app.pdf_format.style, usize::MAX);
+        let _ = app.update(Action::PdfFormatLineWidth("50.1".into()));
+        assert_eq!(app.pdf_format.line_width, "1");
+        let _ = app.update(Action::PdfFormatLineWidth("0.".into()));
+        assert_eq!(app.pdf_format.line_width, "0.");
+        let _ = app.update(Action::PdfFormatLineWidth("0.1".into()));
+        assert_eq!(app.pdf_format.line_width, "0.1");
+        let _ = app.update(Action::PdfFormatSymbolStamp);
+        let studio = studios().iter().find(|studio| studio.id == "pdf").unwrap();
+        let tabs = ribbon_preview::studio_tabs_with_controls(studio, None, app.pile_view,
+            app.frame_view, app.pdf_image, app.pdf_arrange, app.pdf_format.clone());
+        assert_eq!(tabs[6].groups[0].label, "Symbooltype");
+        assert!(matches!(tabs[6].groups[0].commands[0].icon, CommandIcon::Svg(_)));
     }
 
     #[test]

@@ -46,11 +46,28 @@ pub enum RibbonControl<M> {
     Segmented { options: Vec<(String, M)>, selected: usize },
     Select { options: Vec<(String, M)>, selected: usize, width: f32, show_label: bool },
     Sliders { items: Vec<RibbonSlider<M>>, minimum: f32, maximum: f32, step: f32, unit: &'static str, width: f32 },
+    Number { value: String, on_change: fn(String) -> M, width: f32, show_label: bool },
+    ColorSelect { options: Vec<(String, iced::Color, M)>, selected: usize,
+        current: iced::Color, width: f32 },
+    StyleGallery { items: Vec<RibbonSwatch<M>>, selected: usize },
 }
 impl<M> RibbonControl<M> {
     pub fn width(&self) -> f32 {
-        match self { Self::Select { width, .. } | Self::Sliders { width, .. } => *width, _ => 170.0 }
+        match self {
+            Self::Select { width, .. } | Self::Sliders { width, .. } | Self::Number { width, .. }
+                | Self::ColorSelect { width, .. } => *width,
+            Self::StyleGallery { items, .. } => items.len() as f32 * 52.0 + 12.0,
+            _ => 170.0,
+        }
     }
+}
+/// A labelled style sample. Its colour and meaning are supplied by the app.
+#[derive(Debug, Clone)]
+pub struct RibbonSwatch<M> {
+    pub label: String,
+    pub color: iced::Color,
+    pub background: iced::Color,
+    pub message: M,
 }
 #[derive(Debug, Clone)]
 pub struct RibbonSlider<M> {

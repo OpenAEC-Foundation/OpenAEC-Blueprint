@@ -564,6 +564,57 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             }
             rows.into()
         }
+        RibbonControl::Number { value, on_change, show_label, .. } => {
+            let field = text_input("", &value)
+                .on_input(on_change)
+                .font(fonts::MEDIUM)
+                .size(11)
+                .padding([4, 6])
+                .style(move |_, status| text_input_style(theme, status));
+            if show_label {
+                column![text(title).font(fonts::BODY).size(10).color(t.text), field]
+                    .spacing(3).into()
+            } else { field.into() }
+        }
+        RibbonControl::ColorSelect { options, selected, current, .. } => {
+            let choices: Vec<RibbonChoice> = options.iter().enumerate()
+                .map(|(index, (name, _, _))| RibbonChoice { index, label: name.clone() })
+                .collect();
+            let choice = choices.get(selected).cloned().or_else(|| {
+                let byte = |value: f32| (value * 255.0).round() as u8;
+                Some(RibbonChoice { index: usize::MAX,
+                    label: format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b)) })
+            });
+            let color = current;
+            let swatch = container(Space::new(16, 16)).style(move |_| container::Style::default()
+                .background(color)
+                .border(Border { color: theme.border_strong(), width: 1.0, radius: 1.0.into() }));
+            let field = pick_list(choices, choice, move |choice: RibbonChoice| options[choice.index].2.clone())
+                .font(fonts::MEDIUM).text_size(11).padding([4, 6])
+                .width(width - 38.0)
+                .style(move |_, status| pick_list_style(theme, status))
+                .menu_style(move |_| pick_list_menu_style(theme));
+            column![text(title).font(fonts::BODY).size(10).color(t.text),
+                row![swatch, field].spacing(5).align_y(Alignment::Center)]
+                .spacing(3).into()
+        }
+        RibbonControl::StyleGallery { items, selected } => {
+            let mut gallery = iced::widget::Row::new().spacing(2);
+            for (index, item) in items.into_iter().enumerate() {
+                let active = selected == index;
+                let ink = item.color;
+                let bg = item.background;
+                let sample = container(text("T").font(fonts::STRONG).size(18).color(ink))
+                    .width(40).height(36).center(Fill)
+                    .style(move |_| container::Style::default().background(bg)
+                        .border(Border { color: ink, width: 2.0, radius: 0.0.into() }));
+                let label = text(item.label).font(fonts::BODY).size(9).color(t.text);
+                gallery = gallery.push(button(column![sample, label].spacing(2).align_x(Alignment::Center))
+                    .padding(2).width(50).height(62).on_press(item.message)
+                    .style(move |_, status| ribbon_button_style(theme, active, status)));
+            }
+            gallery.into()
+        }
     };
     container(body)
         .padding([4, 6])
