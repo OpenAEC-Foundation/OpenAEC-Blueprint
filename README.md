@@ -26,7 +26,7 @@ De [Reports-ribbon](design/style-repo-reports-ribbon-light.png) volgt de actuele
 
 De [BIM Validator-ribbon](design/style-repo-validator-ribbon-light.png) toont de brongecontroleerde Start- en Beeldgroepen in de niet-verbonden BCF-staat.
 
-De [Pile Plan-ribbon in Forge](design/style-repo-pile-ribbon-forge.png) volgt Plan en Weergave; de HTML-review toont de Weergave-sliders als ontwerpproef naast drie echte broncaptures.
+De [Pile Plan-ribbon in Forge](design/style-repo-pile-ribbon-forge.png) volgt Plan en Weergave. De [native Weergave-review](design/style-repo-pile-view-forge.png) toont nu een werkende 10–200%-symboolslider, begrensde benuttingskeuze en voorgrondknoppen; de HTML-review en drie echte broncaptures blijven de referentie voor vorm en schermindeling.
 
 De native iconenpagina toont de 26 canonieke Rust-iconen en vier afzonderlijke, beoordeelde CAD/Pointcloud-domeinbetekenissen met eigen 16 px-vormen, los van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.

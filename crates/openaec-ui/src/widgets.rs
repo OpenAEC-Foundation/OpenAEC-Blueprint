@@ -2,7 +2,7 @@
 use crate::{
     fonts,
     icons::Icon,
-    model::{metrics, CommandIcon},
+    model::{metrics, CommandIcon, RibbonControl},
     Theme,
 };
 use iced::{
@@ -457,6 +457,89 @@ pub fn ribbon_group<'a, M: 'a>(
         .align_y(iced::Alignment::End)
         .width(Length::Fixed(width))
         .height(metrics::RIBBON)
+        .into()
+}
+
+/// Typed ribbon input at the 170 px width used by source ribbons with
+/// sliders and segmented choices. Values and actions remain app-owned.
+pub fn ribbon_control<'a, M: Clone + 'a>(
+    theme: Theme,
+    label: impl Into<String>,
+    control: RibbonControl<M>,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let title = label.into();
+    let body: Element<'a, M> = match control {
+        RibbonControl::Slider { minimum, maximum, value, step, unit, on_change } => {
+            column![
+                row![
+                    text(title).font(fonts::BODY).size(10).color(t.text),
+                    iced::widget::horizontal_space(),
+                    text(format!("{value:.0}{unit}")).font(fonts::STRONG).size(10).color(t.text),
+                ],
+                slider(minimum..=maximum, value, on_change)
+                    .step(step)
+                    .width(158)
+                    .style(move |_, status| slider_style(theme, status)),
+            ]
+            .spacing(3)
+            .into()
+        }
+        RibbonControl::Range { minimum, maximum, lower, upper, step, unit, on_lower, on_upper } => {
+            column![
+                row![
+                    text(title).font(fonts::BODY).size(10).color(t.text),
+                    iced::widget::horizontal_space(),
+                    text(format!("{lower:.0}–{upper:.0}{unit}")).font(fonts::STRONG).size(10).color(t.text),
+                ],
+                row![
+                    text("min").size(9).color(t.text_secondary),
+                    slider(minimum..=maximum, lower, on_lower)
+                        .step(step)
+                        .width(133)
+                        .style(move |_, status| slider_style(theme, status)),
+                ].spacing(4).align_y(Alignment::Center),
+                row![
+                    text("max").size(9).color(t.text_secondary),
+                    slider(minimum..=maximum, upper, on_upper)
+                        .step(step)
+                        .width(133)
+                        .style(move |_, status| slider_style(theme, status)),
+                ].spacing(4).align_y(Alignment::Center),
+            ]
+            .spacing(0)
+            .into()
+        }
+        RibbonControl::Segmented { options, selected } => {
+            let mut choices = iced::widget::Row::new().spacing(1);
+            for (index, (name, message)) in options.into_iter().enumerate() {
+                let active = selected == index;
+                let caption: Element<'a, M> = if let Some((first, second)) = name.split_once('\n') {
+                    column![text(first.to_owned()).size(9), text(second.to_owned()).size(9)]
+                        .align_x(Alignment::Center)
+                        .into()
+                } else {
+                    text(name).size(9).into()
+                };
+                choices = choices.push(
+                    button(caption)
+                        .padding([2, 2])
+                        .width(79)
+                        .height(28)
+                        .on_press(message)
+                        .style(move |_, status| ribbon_button_style(theme, active, status)),
+                );
+            }
+            column![text(title).font(fonts::BODY).size(10).color(t.text), choices]
+                .spacing(3)
+                .into()
+        }
+    };
+    container(body)
+        .padding([4, 6])
+        .width(170)
+        .height(62)
+        .align_y(Alignment::Center)
         .into()
 }
 

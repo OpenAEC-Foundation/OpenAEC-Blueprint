@@ -263,6 +263,18 @@ fn energy_workflow_uses_document_band_without_ribbon_or_properties_panel() {
 }
 
 #[test]
+#[ignore = "regenerate native Pile Weergave review on demand"]
+fn export_pile_view_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pile = studios().iter().position(|studio| studio.id == "pile").unwrap();
+    let _ = app.update(Action::SelectStudio(pile));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("weergave"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pile-view-forge.png"))
+        .expect("save Pile Weergave ribbon review");
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");

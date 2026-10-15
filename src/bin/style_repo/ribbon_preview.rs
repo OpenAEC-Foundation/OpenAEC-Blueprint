@@ -12,7 +12,29 @@ macro_rules! planner_source_icon {
     };
 }
 
+#[derive(Debug, Clone, Copy)]
+pub(super) struct PileViewState {
+    pub symbol_scale: f32,
+    pub utilization_minimum: f32,
+    pub utilization_maximum: f32,
+    pub foreground: usize,
+}
+impl Default for PileViewState {
+    fn default() -> Self {
+        Self { symbol_scale: 100.0, utilization_minimum: 20.0, utilization_maximum: 80.0, foreground: 0 }
+    }
+}
+
+#[cfg(test)]
 pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<RibbonTab<Action>> {
+    studio_tabs_with_controls(studio, selected, PileViewState::default())
+}
+
+pub(super) fn studio_tabs_with_controls(
+    studio: &StudioLayout,
+    selected: Option<&str>,
+    pile: PileViewState,
+) -> Vec<RibbonTab<Action>> {
     studio
         .tabs
         .iter()
@@ -37,7 +59,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .or_else(|| calculations_groups(studio, tab, selected))
                 .or_else(|| reports_groups(studio, tab, selected))
                 .or_else(|| validator_groups(studio, tab, selected))
-                .or_else(|| pile_groups(studio, tab, selected))
+                .or_else(|| pile_groups(studio, tab, selected, pile))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
@@ -219,12 +241,12 @@ fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Opt
     }).collect() }).collect())
 }
 
-/// Pile Plan ribbon on ffe979d3b859. View controls are labeled review
-/// placeholders until the shared ribbon supports sliders and segmented picks.
+/// Pile Plan ribbon on ffe979d3b859, including its live view controls.
 fn pile_groups(
     studio: &StudioLayout,
     tab: &str,
     selected: Option<&str>,
+    pile: PileViewState,
 ) -> Option<Vec<RibbonGroup<Action>>> {
     if studio.id != "pile" {
         return None;
@@ -240,23 +262,33 @@ fn pile_groups(
             ("Optimalisatie", vec![("Uitvoeren", planner_source_icon!("Play"))]),
         ],
         "Weergave" => vec![
-            ("Symbolen", vec![("Symboolgrootte · slider", planner_source_icon!("Gauge"))]),
-            ("Benutting", vec![("Gewenst bereik · schuifregelaars", planner_source_icon!("Gauge"))]),
-            ("Voorgrond", vec![("Belastinglocaties / sonderingen", planner_source_icon!("Layers"))]),
+            ("Symbolen", vec![]),
+            ("Benutting", vec![]),
+            ("Voorgrond", vec![]),
             ("Grid", vec![("Grid tonen", Grid.into())]),
             ("Gebieden", vec![("Puntniveaugebieden tonen", planner_source_icon!("LayoutGrid")), ("Groepen tonen", planner_source_icon!("Boxes"))]),
             ("Vensters", vec![("Verkenner tonen", PanelLeft.into()), ("Eigenschappen tonen", PanelRight.into())]),
         ],
         _ => return None,
     };
-    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+    let mut groups: Vec<RibbonGroup<Action>> = spec.into_iter().map(|(label, items)| RibbonGroup {
         label: label.into(),
         commands: items.into_iter().map(|(name, icon)| {
             let id = format!("pile:{tab}:{name}");
             Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
                 .selected(selected == Some(id.as_str()))
         }).collect(),
-    }).collect())
+    }).collect();
+    if tab == "Weergave" {
+        groups[0].commands.push(Command::new("Symboolgrootte", Icon::Measure, Action::PileSymbolScale(pile.symbol_scale))
+            .control(RibbonControl::Slider { minimum: 10.0, maximum: 200.0, value: pile.symbol_scale, step: 1.0, unit: "%", on_change: Action::PileSymbolScale }));
+        groups[1].commands.push(Command::new("Gewenst bereik", Icon::Measure, Action::PileUtilizationMinimum(pile.utilization_minimum))
+            .control(RibbonControl::Range { minimum: 0.0, maximum: 100.0, lower: pile.utilization_minimum, upper: pile.utilization_maximum, step: 1.0, unit: "%",
+                on_lower: Action::PileUtilizationMinimum, on_upper: Action::PileUtilizationMaximum }));
+        groups[2].commands.push(Command::new("Voorgrond", Icon::Grid, Action::PileForeground(pile.foreground))
+            .control(RibbonControl::Segmented { options: vec![("Belasting-\nlocaties".into(), Action::PileForeground(0)), ("Sonderingen".into(), Action::PileForeground(1))], selected: pile.foreground }));
+    }
+    Some(groups)
 }
 
 /// BIM Validator viewer ribbon on 8f837dd9a56e; disconnected BCF state shown.

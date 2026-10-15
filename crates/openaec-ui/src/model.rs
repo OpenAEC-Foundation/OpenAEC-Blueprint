@@ -25,14 +25,25 @@ pub struct Command<M> {
     pub enabled: bool,
     pub selected: bool,
     pub shortcut: Option<String>,
+    pub control: Option<RibbonControl<M>>,
 }
 impl<M> Command<M> {
     pub fn new(label: impl Into<String>, icon: impl Into<CommandIcon>, message: M) -> Self {
-        Self { label: label.into(), icon: icon.into(), message, enabled: true, selected: false, shortcut: None }
+        Self { label: label.into(), icon: icon.into(), message, enabled: true, selected: false, shortcut: None, control: None }
     }
     pub fn enabled(mut self, value: bool) -> Self { self.enabled = value; self }
     pub fn selected(mut self, value: bool) -> Self { self.selected = value; self }
     pub fn shortcut(mut self, value: impl Into<String>) -> Self { self.shortcut = Some(value.into()); self }
+    pub fn control(mut self, control: RibbonControl<M>) -> Self { self.control = Some(control); self }
+}
+/// Input widgets that fit inside the same 94 px ribbon-group body as commands.
+/// The caller owns values and receives changes through its application message.
+#[derive(Debug, Clone)]
+pub enum RibbonControl<M> {
+    Slider { minimum: f32, maximum: f32, value: f32, step: f32, unit: &'static str, on_change: fn(f32) -> M },
+    Range { minimum: f32, maximum: f32, lower: f32, upper: f32, step: f32, unit: &'static str,
+        on_lower: fn(f32) -> M, on_upper: fn(f32) -> M },
+    Segmented { options: Vec<(String, M)>, selected: usize },
 }
 /// A command may use a canonical icon or an application-owned SVG.
 /// Custom vectors do not become part of `Icon::ALL`.

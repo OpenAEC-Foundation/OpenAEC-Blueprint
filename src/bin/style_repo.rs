@@ -11,7 +11,7 @@ use openaec_ui::{
     },
     icons::{DomainIcon, Icon},
     model::metrics,
-    run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
+    run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonControl, RibbonGroup, RibbonTab,
     Theme,
 };
 use serde::Deserialize;
@@ -106,6 +106,10 @@ enum Action {
     SelectStudio(usize),
     SelectScreen(usize),
     SelectPreviewCommand(String),
+    PileSymbolScale(f32),
+    PileUtilizationMinimum(f32),
+    PileUtilizationMaximum(f32),
+    PileForeground(usize),
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -192,6 +196,7 @@ struct StyleRepo {
     selected_studio: usize,
     selected_screen: usize,
     selected_preview_command: Option<String>,
+    pile_view: ribbon_preview::PileViewState,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -210,6 +215,7 @@ impl Default for StyleRepo {
             selected_studio: 0,
             selected_screen: 0,
             selected_preview_command: None,
+            pile_view: ribbon_preview::PileViewState::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -1278,9 +1284,10 @@ impl Application for StyleRepo {
             if matches!(self.chrome_mode(), ChromeMode::Workflow | ChromeMode::Sidebar) {
                 return Vec::new();
             }
-            return ribbon_preview::studio_tabs(
+            return ribbon_preview::studio_tabs_with_controls(
                 &studios()[self.selected_studio],
                 self.selected_preview_command.as_deref(),
+                self.pile_view,
             );
         }
         vec![
@@ -1536,6 +1543,14 @@ impl Application for StyleRepo {
                 );
             }
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
+            Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
+            Action::PileUtilizationMinimum(value) => {
+                self.pile_view.utilization_minimum = value.clamp(0.0, self.pile_view.utilization_maximum);
+            }
+            Action::PileUtilizationMaximum(value) => {
+                self.pile_view.utilization_maximum = value.clamp(self.pile_view.utilization_minimum, 100.0);
+            }
+            Action::PileForeground(index) => self.pile_view.foreground = index.min(1),
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -1794,6 +1809,31 @@ mod tests {
         let tabs = ribbon_preview::studio_tabs(studio, None);
         assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Project", "Inspecteren", "Selecteren", "Instellingen", "Vergrendelen", "Optimalisatie"]);
         assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Symbolen", "Benutting", "Voorgrond", "Grid", "Gebieden", "Vensters"]);
+        assert!(matches!(tabs[1].groups[0].commands[0].control,
+            Some(RibbonControl::Slider { minimum: 10.0, maximum: 200.0, .. })));
+        assert!(matches!(tabs[1].groups[1].commands[0].control,
+            Some(RibbonControl::Range { minimum: 0.0, maximum: 100.0, .. })));
+        assert!(matches!(tabs[1].groups[2].commands[0].control,
+            Some(RibbonControl::Segmented { selected: 0, .. })));
+    }
+
+    #[test]
+    fn pile_ribbon_control_updates_keep_a_valid_range() {
+        let mut app = StyleRepo::default();
+        let pile = studios().iter().position(|studio| studio.id == "pile").unwrap();
+        let _ = app.update(Action::SelectStudio(pile));
+        let _ = app.update(Action::PileSymbolScale(250.0));
+        let _ = app.update(Action::PileUtilizationMinimum(95.0));
+        let _ = app.update(Action::PileUtilizationMaximum(5.0));
+        let _ = app.update(Action::PileForeground(1));
+        assert_eq!(app.pile_view.symbol_scale, 200.0);
+        assert_eq!(app.pile_view.utilization_minimum, 80.0);
+        assert_eq!(app.pile_view.utilization_maximum, 80.0);
+        let tabs = app.ribbon(Language::Dutch);
+        assert!(matches!(tabs[1].groups[1].commands[0].control,
+            Some(RibbonControl::Range { lower: 80.0, upper: 80.0, .. })));
+        assert!(matches!(tabs[1].groups[2].commands[0].control,
+            Some(RibbonControl::Segmented { selected: 1, .. })));
     }
 
     #[test]
