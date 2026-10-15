@@ -25,15 +25,26 @@ impl Default for PileViewState {
     }
 }
 
+#[derive(Debug, Clone, Copy)]
+pub(super) struct FrameViewState {
+    pub template: usize,
+    pub lod: usize,
+    pub theme: usize,
+}
+impl Default for FrameViewState {
+    fn default() -> Self { Self { template: 0, lod: 1, theme: 0 } }
+}
+
 #[cfg(test)]
 pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<RibbonTab<Action>> {
-    studio_tabs_with_controls(studio, selected, PileViewState::default())
+    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default())
 }
 
 pub(super) fn studio_tabs_with_controls(
     studio: &StudioLayout,
     selected: Option<&str>,
     pile: PileViewState,
+    frame: FrameViewState,
 ) -> Vec<RibbonTab<Action>> {
     studio
         .tabs
@@ -52,7 +63,7 @@ pub(super) fn studio_tabs_with_controls(
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
                 .or_else(|| planner_groups(studio, tab, selected))
-                .or_else(|| frame_groups(studio, tab, selected))
+                .or_else(|| frame_groups(studio, tab, selected, frame))
                 .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| geotech_groups(studio, tab, selected))
                 .or_else(|| heatloss_groups(studio, tab, selected))
@@ -197,14 +208,13 @@ fn extension_2d_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>)
     }).collect() }).collect())
 }
 
-/// Open Frame Studio shell ribbon at eb77f9e4c5d3. Template/theme selects are
-/// represented as commands until typed ribbon controls are available.
-fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+/// Open Frame Studio shell ribbon at eb77f9e4c5d3, including source selects.
+fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, frame: FrameViewState) -> Option<Vec<RibbonGroup<Action>>> {
     if studio.id != "frame" { return None; }
     use Icon::*;
     let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
         "Home" => vec![
-            ("Sjabloon", vec![("Sjabloon kiezen", Grid.into()), ("Opslaan als sjabloon", Save.into()), ("Sjabloon verwijderen", Close.into())]),
+            ("Sjabloon", vec![("Opslaan als sjabloon", Save.into()), ("Sjabloon verwijderen", Close.into())]),
             ("Nieuw kozijn", vec![("Leeg", New.into()), ("Draaikiep", planner_source_icon!("Square")), ("Dubbel", planner_source_icon!("LayoutGrid")), ("Schuifpui", planner_source_icon!("Square")), ("Voordeur", planner_source_icon!("Square"))]),
             ("Bewerken", vec![("Kolom toevoegen", planner_source_icon!("Columns3")), ("Rij toevoegen", planner_source_icon!("LayoutGrid")), ("Dupliceren", planner_source_icon!("Copy")), ("Verwijderen", planner_source_icon!("Trash2"))]),
             ("Importeren", vec![("Nieuw profiel", New.into()), ("Profiel DXF", Import.into()), ("Catalogus", Open.into())]),
@@ -215,7 +225,7 @@ fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Opt
             ("Vliesgevel", vec![("Leeg", New.into()), ("Stijl-regel", Grid.into()), ("Element", Cube.into())]),
         ],
         "IFC / Export" => vec![
-            ("Kozijn exporteren", vec![("IFC (LOD-keuze)", Export.into()), ("DXF", Export.into())]),
+            ("Kozijn exporteren", vec![("IFC", Export.into()), ("DXF", Export.into())]),
             ("IFC Import", vec![("IFC Import", Import.into()), ("IFC Roundtrip", planner_source_icon!("GitCompareArrows")), ("IFC vergelijken", planner_source_icon!("GitCompareArrows"))]),
             ("Validatie", vec![("IDS Validatie", Check.into()), ("Certificering", Check.into())]),
             ("Project exporteren", vec![("Kozijnstaat PDF", Export.into()), ("Kozijnstaat Excel", Export.into())]),
@@ -231,14 +241,36 @@ fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Opt
         "Beeld" => vec![
             ("Ongedaan maken", vec![("Ongedaan", Undo.into()), ("Opnieuw", Redo.into())]),
             ("Zoom", vec![("Inzoomen", planner_source_icon!("ZoomIn")), ("Uitzoomen", planner_source_icon!("ZoomOut"))]),
-            ("Thema", vec![("Thema kiezen", Settings.into())]),
+            ("Thema", vec![]),
         ],
         _ => return None,
     };
-    Some(spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
+    let mut groups: Vec<RibbonGroup<Action>> = spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
         let id = format!("frame:{tab}:{name}");
         Command::new(name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
-    }).collect() }).collect())
+    }).collect() }).collect();
+    match tab {
+        "Home" => {
+            let templates = ["Standaard 67mm Meranti", "Standaard 67mm Accoya", "Zwaar 78mm Meranti", "Passief 90mm Meranti",
+                "Kunststof 82mm VEKA Softline", "Kunststof 88mm Kömmerling", "Aluminium 77mm Reynaers CS 77", "Aluminium 75mm Schüco AWS 75.SI+"];
+            groups[0].commands.insert(0, Command::new("Sjabloon kiezen", Grid, Action::FrameTemplate(frame.template))
+                .control(RibbonControl::Select { options: templates.iter().enumerate().map(|(index, name)| ((*name).into(), Action::FrameTemplate(index))).collect(),
+                    selected: frame.template, width: 192.0, show_label: false }));
+        }
+        "IFC / Export" => {
+            groups[0].commands.push(Command::new("IFC LOD", Export, Action::FrameLod(frame.lod))
+                .control(RibbonControl::Select { options: ["LOD 200", "LOD 300", "LOD 400"].iter().enumerate()
+                    .map(|(index, name)| ((*name).into(), Action::FrameLod(index))).collect(), selected: frame.lod, width: 112.0, show_label: false }));
+        }
+        "Beeld" => {
+            groups[2].commands.push(Command::new("Thema kiezen", Settings, Action::FrameTheme(frame.theme))
+                .control(RibbonControl::Select { options: ["Standaard", "Licht", "Donker", "Blauw", "Amber Navy", "Warm Ember", "Hoog contrast"]
+                    .iter().enumerate().map(|(index, name)| ((*name).into(), Action::FrameTheme(index))).collect(),
+                    selected: frame.theme, width: 192.0, show_label: false }));
+        }
+        _ => {}
+    }
+    Some(groups)
 }
 
 /// Pile Plan ribbon on ffe979d3b859, including its live view controls.

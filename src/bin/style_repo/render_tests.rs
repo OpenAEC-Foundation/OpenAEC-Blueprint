@@ -141,6 +141,22 @@ fn export_frame_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Frame selection reviews on demand"]
+fn export_frame_select_reviews() {
+    let mut app = StyleRepo::default();
+    let frame = studios().iter().position(|studio| studio.id == "frame").unwrap();
+    let _ = app.update(Action::SelectStudio(frame));
+    let _ = app.update(Action::SelectScreen(1));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (tab, file) in [("home", "style-repo-frame-ribbon-light.png"),
+        ("ifc / export", "style-repo-frame-ifc-light.png"),
+        ("beeld", "style-repo-frame-view-light.png")] {
+        render_with_options(&app, Theme::Light, false, Some(tab))
+            .save_png(&design.join(file)).expect("save Frame select review");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native Field review on demand"]
 fn export_field_topnav_review() {
     let mut app = StyleRepo::default();

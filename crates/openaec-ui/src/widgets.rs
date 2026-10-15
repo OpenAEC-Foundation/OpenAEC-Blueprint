@@ -461,8 +461,19 @@ pub fn ribbon_group<'a, M: 'a>(
         .into()
 }
 
-/// Typed ribbon input at the 170 px width used by source ribbons with
-/// sliders and segmented choices. Values and actions remain app-owned.
+/// Typed ribbon input using the shared group height and a source-specific width.
+/// Values and actions remain app-owned.
+#[derive(Clone)]
+struct RibbonChoice { index: usize, label: String }
+impl std::fmt::Display for RibbonChoice {
+    fn fmt(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.label.fmt(formatter)
+    }
+}
+impl PartialEq for RibbonChoice {
+    fn eq(&self, other: &Self) -> bool { self.index == other.index }
+}
+
 pub fn ribbon_control<'a, M: Clone + 'a>(
     theme: Theme,
     label: impl Into<String>,
@@ -470,6 +481,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
 ) -> Element<'a, M> {
     let t = theme.tokens();
     let title = label.into();
+    let width = control.width();
     let body: Element<'a, M> = match control {
         RibbonControl::Slider { minimum, maximum, value, step, unit, on_change } => {
             column![
@@ -522,10 +534,25 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                 .spacing(3)
                 .into()
         }
+        RibbonControl::Select { options, selected, show_label, .. } => {
+            let choices: Vec<RibbonChoice> = options.iter().enumerate()
+                .map(|(index, (label, _))| RibbonChoice { index, label: label.clone() })
+                .collect();
+            let current = choices.get(selected).cloned();
+            let field = pick_list(choices, current, move |choice: RibbonChoice| options[choice.index].1.clone())
+                .font(fonts::MEDIUM)
+                .text_size(11)
+                .padding([4, 6])
+                .width(width - 12.0)
+                .style(move |_, status| pick_list_style(theme, status))
+                .menu_style(move |_| pick_list_menu_style(theme));
+            if !show_label { field.into() }
+            else { column![text(title).font(fonts::BODY).size(10).color(t.text), field].spacing(3).into() }
+        }
     };
     container(body)
         .padding([4, 6])
-        .width(170)
+        .width(width)
         .height(62)
         .align_y(Alignment::Center)
         .into()

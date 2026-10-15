@@ -44,6 +44,12 @@ pub enum RibbonControl<M> {
     Range { minimum: f32, maximum: f32, lower: f32, upper: f32, step: f32, unit: &'static str,
         on_lower: fn(f32) -> M, on_upper: fn(f32) -> M },
     Segmented { options: Vec<(String, M)>, selected: usize },
+    Select { options: Vec<(String, M)>, selected: usize, width: f32, show_label: bool },
+}
+impl<M> RibbonControl<M> {
+    pub fn width(&self) -> f32 {
+        match self { Self::Select { width, .. } => *width, _ => 170.0 }
+    }
 }
 /// A command may use a canonical icon or an application-owned SVG.
 /// Custom vectors do not become part of `Icon::ALL`.

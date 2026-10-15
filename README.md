@@ -28,6 +28,8 @@ De [BIM Validator-ribbon](design/style-repo-validator-ribbon-light.png) toont de
 
 De [Pile Plan-ribbon in Forge](design/style-repo-pile-ribbon-forge.png) volgt Plan en Weergave. De [native Weergave-review](design/style-repo-pile-view-forge.png) toont nu een werkende 10–200%-symboolslider, begrensde benuttingskeuze en voorgrondknoppen; de HTML-review en drie echte broncaptures blijven de referentie voor vorm en schermindeling.
 
+De Frame-ribbon toont [Sjabloon](design/style-repo-frame-ribbon-light.png), [IFC LOD](design/style-repo-frame-ifc-light.png) en [Thema](design/style-repo-frame-view-light.png) nu als gedeelde native keuzelijsten met de brongepinde opties en beginwaarden.
+
 De native iconenpagina toont de 26 canonieke Rust-iconen en vier afzonderlijke, beoordeelde CAD/Pointcloud-domeinbetekenissen met eigen 16 px-vormen, los van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.
 De [instellingen in Light](design/style-repo-settings-light.png) en [Forge](design/style-repo-settings-forge.png) tonen de gedeelde keuzelijst- en invoerstijl; Pointcloud gebruikt dezelfde Rust-functies voor velden en het open keuzemenu.

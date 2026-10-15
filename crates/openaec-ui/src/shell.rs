@@ -55,7 +55,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             let mut tools_width = 0.0_f32;
             for command in &group.commands {
                 if let Some(control) = &command.control {
-                    tools_width += 170.0;
+                    tools_width += control.width();
                     commands = commands.push(widgets::ribbon_control(theme, command.label.clone(), control.clone()).map(Message::Command));
                     continue;
                 }

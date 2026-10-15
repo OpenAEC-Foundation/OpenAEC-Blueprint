@@ -110,6 +110,9 @@ enum Action {
     PileUtilizationMinimum(f32),
     PileUtilizationMaximum(f32),
     PileForeground(usize),
+    FrameTemplate(usize),
+    FrameLod(usize),
+    FrameTheme(usize),
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -197,6 +200,7 @@ struct StyleRepo {
     selected_screen: usize,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
+    frame_view: ribbon_preview::FrameViewState,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -216,6 +220,7 @@ impl Default for StyleRepo {
             selected_screen: 0,
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
+            frame_view: ribbon_preview::FrameViewState::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -1288,6 +1293,7 @@ impl Application for StyleRepo {
                 &studios()[self.selected_studio],
                 self.selected_preview_command.as_deref(),
                 self.pile_view,
+                self.frame_view,
             );
         }
         vec![
@@ -1551,6 +1557,9 @@ impl Application for StyleRepo {
                 self.pile_view.utilization_maximum = value.clamp(self.pile_view.utilization_minimum, 100.0);
             }
             Action::PileForeground(index) => self.pile_view.foreground = index.min(1),
+            Action::FrameTemplate(index) => self.frame_view.template = index.min(7),
+            Action::FrameLod(index) => self.frame_view.lod = index.min(2),
+            Action::FrameTheme(index) => self.frame_view.theme = index.min(6),
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -1845,6 +1854,29 @@ mod tests {
         assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Onderverdeling", "Paneel type", "Vliesgevel"]);
         assert_eq!(tabs[2].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Kozijn exporteren", "IFC Import", "Validatie", "Project exporteren", "Werkplaats", "3D Export", "Blender / Bonsai"]);
         assert_eq!(tabs[4].groups[1].label, "Zoom");
+        assert!(matches!(tabs[0].groups[0].commands[0].control,
+            Some(RibbonControl::Select { selected: 0, width: 192.0, .. })));
+        assert!(matches!(tabs[2].groups[0].commands[2].control,
+            Some(RibbonControl::Select { selected: 1, width: 112.0, .. })));
+        assert!(matches!(tabs[4].groups[2].commands[0].control,
+            Some(RibbonControl::Select { selected: 0, width: 192.0, .. })));
+    }
+
+    #[test]
+    fn frame_ribbon_keeps_source_select_values() {
+        let mut app = StyleRepo::default();
+        let frame = studios().iter().position(|studio| studio.id == "frame").unwrap();
+        let _ = app.update(Action::SelectStudio(frame));
+        let _ = app.update(Action::FrameTemplate(6));
+        let _ = app.update(Action::FrameLod(2));
+        let _ = app.update(Action::FrameTheme(5));
+        let tabs = app.ribbon(Language::Dutch);
+        assert!(matches!(tabs[0].groups[0].commands[0].control,
+            Some(RibbonControl::Select { selected: 6, .. })));
+        assert!(matches!(tabs[2].groups[0].commands[2].control,
+            Some(RibbonControl::Select { selected: 2, .. })));
+        assert!(matches!(tabs[4].groups[2].commands[0].control,
+            Some(RibbonControl::Select { selected: 5, .. })));
     }
 
     #[test]
