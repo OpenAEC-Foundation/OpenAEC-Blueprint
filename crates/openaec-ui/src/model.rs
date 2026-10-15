@@ -49,8 +49,20 @@ pub enum RibbonControl<M> {
     Number { value: String, on_change: fn(String) -> M, width: f32, show_label: bool },
     ColorSelect { options: Vec<(String, iced::Color, M)>, selected: usize,
         current: iced::Color, width: f32, rows_per_column: usize,
-        open: bool, on_toggle: M, on_close: M, none: Option<(String, M)> },
+        open: bool, on_toggle: M, on_close: M, none: Option<(String, M)>,
+        custom: Option<RibbonCustomColor<M>> },
     StyleGallery { items: Vec<RibbonSwatch<M>>, selected: usize },
+}
+/// Optional application-owned custom color editor inside a ribbon palette.
+#[derive(Debug, Clone)]
+pub struct RibbonCustomColor<M> {
+    pub label: String,
+    pub editing: bool,
+    pub draft: String,
+    pub valid: bool,
+    pub on_toggle: M,
+    pub on_input: fn(String) -> M,
+    pub on_apply: M,
 }
 impl<M> RibbonControl<M> {
     pub fn width(&self) -> f32 {

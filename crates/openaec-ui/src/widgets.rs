@@ -577,7 +577,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                     .spacing(3).into()
             } else { field.into() }
         }
-        RibbonControl::ColorSelect { options, selected, current, rows_per_column, open, on_toggle, on_close, none, .. } => {
+        RibbonControl::ColorSelect { options, selected, current, rows_per_column, open, on_toggle, on_close, none, custom, .. } => {
             let byte = |value: f32| (value * 255.0).round() as u8;
             let color_label = format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b));
             let swatch = container(Space::new(16, 16)).style(move |_| container::Style::default()
@@ -590,15 +590,36 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
                 .style(move |_, status| ribbon_button_style(theme, open, status));
             let selected_swatch = (selected < options.len()).then_some(selected);
             let grid = color_grid(theme, options, rows_per_column, selected_swatch);
-            let content: Element<'a, M> = if let Some((name, message)) = none {
-                column![
-                    grid,
-                    container(Space::new(Fill, 1)).style(move |_| container::Style::default().background(t.border_subtle)),
-                    button(text(name).font(fonts::BODY).size(11))
-                        .padding([3, 6]).width(Fill).on_press(message)
-                        .style(move |_, status| ribbon_button_style(theme, false, status)),
-                ].spacing(5).into()
-            } else { grid };
+            let has_actions = none.is_some() || custom.is_some();
+            let mut actions = iced::widget::Row::new().spacing(4);
+            if let Some((name, message)) = none {
+                actions = actions.push(button(text(name).font(fonts::BODY).size(11))
+                    .padding([3, 6]).on_press(message)
+                    .style(move |_, status| ribbon_button_style(theme, false, status)));
+            }
+            if let Some(editor) = &custom {
+                let editing = editor.editing;
+                actions = actions.push(button(text(editor.label.clone()).font(fonts::BODY).size(11))
+                    .padding([3, 6]).on_press(editor.on_toggle.clone())
+                    .style(move |_, status| ribbon_button_style(theme, editing, status)));
+            }
+            let mut content = iced::widget::Column::new().spacing(5).push(grid);
+            if has_actions {
+                content = content.push(container(Space::new(Fill, 1))
+                    .style(move |_| container::Style::default().background(t.border_subtle)))
+                    .push(actions);
+            }
+            if let Some(editor) = custom.filter(|editor| editor.editing) {
+                let field = text_input("#RRGGBB", &editor.draft)
+                    .on_input(editor.on_input).font(fonts::MEDIUM).size(11)
+                    .padding([4, 6]).width(Fill)
+                    .style(move |_, status| text_input_style(theme, status));
+                let mut apply = button(text("Toepassen").font(fonts::BODY).size(11))
+                    .padding([4, 6]).width(Fill)
+                    .style(move |_, status| ribbon_button_style(theme, false, status));
+                if editor.valid { apply = apply.on_press(editor.on_apply); }
+                content = content.push(column![field, apply].spacing(4));
+            }
             let palette = container(content)
                 .padding(6).width(170)
                 .style(move |_| container::Style::default().background(t.bg_lighter)

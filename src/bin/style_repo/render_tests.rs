@@ -309,6 +309,20 @@ fn export_pdf_format_palette_popup_review() {
 }
 
 #[test]
+#[ignore = "regenerate PDF Format custom color editor on demand"]
+fn export_pdf_format_custom_color_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    let _ = app.update(Action::PdfFormatTogglePalette(0));
+    let _ = app.update(Action::PdfFormatCustomToggle);
+    render_with_options(&app, Theme::Forge, false, Some("opmaak"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-format-custom-forge.png"))
+        .expect("save PDF Format custom color editor review");
+}
+
+#[test]
 fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     let mut app = StyleRepo::default();
     let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
@@ -354,6 +368,16 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
         Message::Command(Action::PdfFormatNoFill))), "messages: {messages:?}");
+    messages.clear();
+    let mut shell = iced::advanced::Shell::new(&mut messages);
+    let custom_cursor = mouse::Cursor::Available(iced::Point::new(750.0, 260.0));
+    overlay.on_event(click.clone(), Layout::new(&popup_node), custom_cursor,
+        &renderer, &mut clipboard, &mut shell);
+    overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
+        Layout::new(&popup_node), custom_cursor,
+        &renderer, &mut clipboard, &mut shell);
+    assert!(messages.iter().any(|message| matches!(message,
+        Message::Command(Action::PdfFormatCustomToggle))), "messages: {messages:?}");
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
     overlay.on_event(click, Layout::new(&popup_node),

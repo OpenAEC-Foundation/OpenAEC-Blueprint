@@ -81,13 +81,16 @@ pub(super) struct PdfFormatState {
     pub layer: usize,
     pub symbol_stamp: bool,
     pub open_palette: Option<usize>,
+    pub custom_open: bool,
+    pub custom_draft: String,
 }
 impl Default for PdfFormatState {
     fn default() -> Self {
         Self { style: usize::MAX, fill: 0, stroke: 5, fill_color: iced::Color::WHITE, has_fill: false,
             stroke_color: iced::Color::BLACK, line_width: "1".into(), border: 0,
             blend: 0, opacity: 100.0, arrow_start: 0, arrow_end: 1, layer: 0,
-            symbol_stamp: false, open_palette: None }
+            symbol_stamp: false, open_palette: None, custom_open: false,
+            custom_draft: "#ffffff".into() }
     }
 }
 impl PdfFormatState {
@@ -104,6 +107,7 @@ impl PdfFormatState {
         self.has_fill = self.style >= 7;
         self.border = 0;
         self.open_palette = None;
+        self.custom_open = false;
     }
     pub fn select_fill(&mut self, index: usize) {
         self.fill = index.min(PDF_FORMAT_PALETTE.len() - 1);
@@ -111,12 +115,14 @@ impl PdfFormatState {
         self.has_fill = true;
         self.style = usize::MAX;
         self.open_palette = None;
+        self.custom_open = false;
     }
     pub fn select_stroke(&mut self, index: usize) {
         self.stroke = index.min(PDF_FORMAT_PALETTE.len() - 1);
         self.stroke_color = pdf_color(PDF_FORMAT_PALETTE[self.stroke]);
         self.style = usize::MAX;
         self.open_palette = None;
+        self.custom_open = false;
     }
     pub fn clear_fill(&mut self) {
         self.fill = usize::MAX;
@@ -124,7 +130,24 @@ impl PdfFormatState {
         self.has_fill = false;
         self.style = usize::MAX;
         self.open_palette = None;
+        self.custom_open = false;
     }
+    pub fn apply_custom(&mut self) {
+        if !valid_pdf_hex(&self.custom_draft) { return; }
+        let color = pdf_color(&self.custom_draft);
+        match self.open_palette {
+            Some(0) => { self.fill_color = color; self.fill = usize::MAX; self.has_fill = true; },
+            Some(1) => { self.stroke_color = color; self.stroke = usize::MAX; },
+            _ => return,
+        }
+        self.style = usize::MAX;
+        self.open_palette = None;
+        self.custom_open = false;
+    }
+}
+
+pub(super) fn valid_pdf_hex(value: &str) -> bool {
+    value.len() == 7 && value.starts_with('#') && value[1..].bytes().all(|byte| byte.is_ascii_hexdigit())
 }
 
 #[cfg(test)]
@@ -350,12 +373,22 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
                     current: format.fill_color, width: 126.0, rows_per_column: 6,
                     open: format.open_palette == Some(0), on_toggle: Action::PdfFormatTogglePalette(0),
                     on_close: Action::PdfFormatClosePalette,
-                    none: Some(("Geen vulling".into(), Action::PdfFormatNoFill)) }),
+                    none: Some(("Geen vulling".into(), Action::PdfFormatNoFill)),
+                    custom: Some(openaec_ui::RibbonCustomColor { label: "Anders…".into(),
+                        editing: format.custom_open && format.open_palette == Some(0),
+                        draft: format.custom_draft.clone(), valid: valid_pdf_hex(&format.custom_draft),
+                        on_toggle: Action::PdfFormatCustomToggle,
+                        on_input: Action::PdfFormatCustomHex, on_apply: Action::PdfFormatCustomApply }) }),
             Command::new("Lijnkleur", Icon::Grid, Action::PdfFormatStroke(format.stroke))
                 .control(RibbonControl::ColorSelect { options: colors(Action::PdfFormatStroke), selected: format.stroke,
                     current: format.stroke_color, width: 126.0, rows_per_column: 6,
                     open: format.open_palette == Some(1), on_toggle: Action::PdfFormatTogglePalette(1),
-                    on_close: Action::PdfFormatClosePalette, none: None }),
+                    on_close: Action::PdfFormatClosePalette, none: None,
+                    custom: Some(openaec_ui::RibbonCustomColor { label: "Anders…".into(),
+                        editing: format.custom_open && format.open_palette == Some(1),
+                        draft: format.custom_draft.clone(), valid: valid_pdf_hex(&format.custom_draft),
+                        on_toggle: Action::PdfFormatCustomToggle,
+                        on_input: Action::PdfFormatCustomHex, on_apply: Action::PdfFormatCustomApply }) }),
         ] },
         RibbonGroup { label: "Lijn & dekking".into(), commands: vec![
             Command::new("Breedte", Icon::Measure, Action::PdfFormatLineWidth(format.line_width.clone()))

@@ -1,6 +1,6 @@
 //! A reusable anchored overlay for application-owned controls.
 use iced::{
-    advanced::{layout, mouse, overlay, renderer, widget::Tree, Clipboard, Layout, Shell, Widget},
+    advanced::{layout, mouse, overlay, renderer::{self, Renderer as _}, widget::Tree, Clipboard, Layout, Shell, Widget},
     event::{self, Event},
     Element, Length, Point, Rectangle, Size, Vector,
 };
@@ -91,8 +91,10 @@ impl<M: Clone> overlay::Overlay<M, iced::Theme, iced::Renderer> for PopoverOverl
 
     fn draw(&self, renderer: &mut iced::Renderer, theme: &iced::Theme, style: &renderer::Style,
         layout: Layout<'_>, cursor: mouse::Cursor) {
-        self.content.as_widget().draw(self.tree, renderer, theme, style, layout, cursor,
-            &Rectangle::with_size(Size::INFINITY));
+        renderer.with_layer(layout.bounds(), |renderer| {
+            self.content.as_widget().draw(self.tree, renderer, theme, style, layout, cursor,
+                &Rectangle::with_size(Size::INFINITY));
+        });
     }
 
     fn on_event(&mut self, event: Event, layout: Layout<'_>, cursor: mouse::Cursor,

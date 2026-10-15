@@ -123,6 +123,9 @@ enum Action {
     PdfFormatFill(usize),
     PdfFormatNoFill,
     PdfFormatStroke(usize),
+    PdfFormatCustomToggle,
+    PdfFormatCustomHex(String),
+    PdfFormatCustomApply,
     PdfFormatLineWidth(String),
     PdfFormatBorder(usize),
     PdfFormatBlend(usize),
@@ -1626,6 +1629,22 @@ impl Application for StyleRepo {
             Action::PdfFormatFill(index) => self.pdf_format.select_fill(index),
             Action::PdfFormatNoFill => self.pdf_format.clear_fill(),
             Action::PdfFormatStroke(index) => self.pdf_format.select_stroke(index),
+            Action::PdfFormatCustomToggle => {
+                if let Some(palette) = self.pdf_format.open_palette {
+                    self.pdf_format.custom_open = !self.pdf_format.custom_open;
+                    let color = if palette == 0 { self.pdf_format.fill_color } else { self.pdf_format.stroke_color };
+                    self.pdf_format.custom_draft = format!("#{:02x}{:02x}{:02x}",
+                        (color.r * 255.0).round() as u8, (color.g * 255.0).round() as u8,
+                        (color.b * 255.0).round() as u8);
+                }
+            }
+            Action::PdfFormatCustomHex(value) => {
+                if value.len() <= 7 && (value.is_empty() ||
+                    (value.starts_with('#') && value[1..].bytes().all(|byte| byte.is_ascii_hexdigit()))) {
+                    self.pdf_format.custom_draft = value;
+                }
+            }
+            Action::PdfFormatCustomApply => self.pdf_format.apply_custom(),
             Action::PdfFormatLineWidth(value) => {
                 if value.is_empty() || value == "." ||
                     value.parse::<f32>().is_ok_and(|number| (0.0..=50.0).contains(&number)) {
@@ -1644,8 +1663,12 @@ impl Application for StyleRepo {
             Action::PdfFormatTogglePalette(index) => {
                 let index = index.min(1);
                 self.pdf_format.open_palette = (self.pdf_format.open_palette != Some(index)).then_some(index);
+                self.pdf_format.custom_open = false;
             }
-            Action::PdfFormatClosePalette => self.pdf_format.open_palette = None,
+            Action::PdfFormatClosePalette => {
+                self.pdf_format.open_palette = None;
+                self.pdf_format.custom_open = false;
+            }
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -2100,8 +2123,26 @@ mod tests {
         let _ = app.update(Action::PdfFormatNoFill);
         assert!(!app.pdf_format.has_fill);
         assert_eq!(app.pdf_format.open_palette, None);
+        let _ = app.update(Action::PdfFormatTogglePalette(0));
+        let _ = app.update(Action::PdfFormatCustomToggle);
+        assert!(app.pdf_format.custom_open);
+        let _ = app.update(Action::PdfFormatCustomHex("#12ab34".into()));
+        let _ = app.update(Action::PdfFormatCustomApply);
+        assert_eq!(app.pdf_format.fill_color, ribbon_preview::pdf_color("#12ab34"));
+        assert!(app.pdf_format.has_fill);
+        assert_eq!(app.pdf_format.fill, usize::MAX);
+        assert_eq!(app.pdf_format.open_palette, None);
         let _ = app.update(Action::PdfFormatTogglePalette(1));
         assert_eq!(app.pdf_format.open_palette, Some(1));
+        let _ = app.update(Action::PdfFormatCustomToggle);
+        let _ = app.update(Action::PdfFormatCustomHex("#123".into()));
+        let _ = app.update(Action::PdfFormatCustomApply);
+        assert_eq!(app.pdf_format.open_palette, Some(1));
+        let _ = app.update(Action::PdfFormatCustomHex("#badc0d".into()));
+        let _ = app.update(Action::PdfFormatCustomApply);
+        assert_eq!(app.pdf_format.stroke_color, ribbon_preview::pdf_color("#badc0d"));
+        assert_eq!(app.pdf_format.open_palette, None);
+        let _ = app.update(Action::PdfFormatTogglePalette(1));
         let _ = app.update(Action::PdfFormatClosePalette);
         assert_eq!(app.pdf_format.open_palette, None);
         let _ = app.update(Action::PdfFormatStyle(7));
