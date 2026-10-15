@@ -53,7 +53,7 @@ migratie van alle OpenAEC-applicaties.
 | Nette opmaak | De compacte browserproef heeft consistente uitlijning, randen en witruimte. | Native screenshots op meerdere platformen vergelijken met de HTML-maten. |
 | Semantiek van iconen | De 22 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
-| Applicatieschermen | Negen gedeelde schermtoestanden zijn in HTML en de native Rust-atlas voor alle 18 studio's selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken in HTML hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
+| Applicatieschermen | Negen gedeelde schermtoestanden zijn in HTML en de native Rust-atlas voor alle 18 studio's selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 22 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
 | Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 Tauri-kleurvelden plus de stevige randkleur uit de merktokens per thema, ribbon- en formulierknoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en vijf vensterbandmaten. De portable kopie is op 11 Rust-bestanden, 28 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. Zes Pointcloud-renders zijn na deze controlintegratie bytegelijk gebleven; de instellingenrenders tonen de gesloten keuzelijsten in Light en Forge. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
@@ -61,7 +61,11 @@ met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
 De [reviewpagina](review.html) toont zes native Pointcloud-renders van lege en
 geopende projecten en de Extensions-bestandspagina in Light en Forge.
 De native Style Repo-atlas is in [alle vijf thema's](review.html) als
-software-render gecontroleerd.
+software-render gecontroleerd. De [FEM-ribbon](style-repo-fem-ribbon-light.png)
+en [BIM-ribbon](style-repo-bim-ribbon-forge.png) zijn afzonderlijk op
+1280 × 800 px gerenderd: de FEM-groep past binnen het venster, de bredere
+BIM-groepen gebruiken de horizontale ribbon-scroll. Dit zijn ontwerpvoorstellen,
+geen geverifieerde productfuncties.
 
 De herbruikbare `openaec-ui` is nu een afzonderlijk Cargo-package onder
 `crates/openaec-ui/`. `cargo package -p openaec-ui` heeft het uitgepakte
@@ -98,7 +102,7 @@ een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
 | Familiebeeld | Het 24 px raster, donkere neutrale lijn en afgeronde einden zijn consistent. | Na semantische review dezelfde meetwaarden als canonieke Rust-iconen vastzetten. |
 | Kleine maat | Eenvoudige vormen als staaf, kolom, wand en grid blijven herkenbaar op 16 px. Tien drukke vormen kregen een kleinere variant met minder lijnen; de contactbladen tonen de verbetering. | De resterende complexe belasting-, terrein- en gebouwtekens op ware 16 px beoordelen en waar nodig verder vereenvoudigen. |
 | Betekenisbotsingen | `bim.level` lijkt op een maatpijl; `bim.survey-point` en `bim.project-origin` delen een kruis/doel-motief; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | Peilmarkering duidelijker maken, oorsprong/meetpunt verder uiteen trekken en domeinlabels in zoekresultaten tonen. |
-| Licht/donker | Het ontwerp contrasteert op beide atlasachtergronden. Donkere weergave gebruikt een kleurinversie van de concept-SVG; de uiteindelijke crate moet themakleur toepassen in plaats van een CSS-filter. | SVG's pas na goedkeuring als themabewuste native assets genereren. |
+| Licht/donker | De HTML-atlas gebruikt een kleurinversie op donkere achtergrond. De native Rust-ribbon kleurt app-eigen SVG's met de actieve thematekstkleur; Light en Forge zijn als software-render gecontroleerd. | Na goedkeuring de definitieve SVG's per thema en op kleine maten toetsen voordat ze publieke crate-assets worden. |
 | Bronvergelijking | Kandidaten zijn op bestandsnaam geselecteerd en als tooltips zichtbaar. | De 24 paren visueel en functioneel per opdracht beoordelen; dubbele betekenissen samenvoegen. |
 
 De native Pointcloud-renders lieten bovendien zien dat oude OpenCAD-SVG's met

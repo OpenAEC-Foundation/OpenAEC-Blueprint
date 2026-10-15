@@ -20,19 +20,39 @@ pub mod metrics {
 #[derive(Debug, Clone)]
 pub struct Command<M> {
     pub label: String,
-    pub icon: Icon,
+    pub icon: CommandIcon,
     pub message: M,
     pub enabled: bool,
     pub selected: bool,
     pub shortcut: Option<String>,
 }
 impl<M> Command<M> {
-    pub fn new(label: impl Into<String>, icon: Icon, message: M) -> Self {
-        Self { label: label.into(), icon, message, enabled: true, selected: false, shortcut: None }
+    pub fn new(label: impl Into<String>, icon: impl Into<CommandIcon>, message: M) -> Self {
+        Self { label: label.into(), icon: icon.into(), message, enabled: true, selected: false, shortcut: None }
     }
     pub fn enabled(mut self, value: bool) -> Self { self.enabled = value; self }
     pub fn selected(mut self, value: bool) -> Self { self.selected = value; self }
     pub fn shortcut(mut self, value: impl Into<String>) -> Self { self.shortcut = Some(value.into()); self }
+}
+/// A command may use a canonical icon or an application-owned SVG.
+/// Custom vectors do not become part of `Icon::ALL`.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CommandIcon {
+    Canonical(Icon),
+    Svg(&'static [u8]),
+}
+impl From<Icon> for CommandIcon {
+    fn from(icon: Icon) -> Self { Self::Canonical(icon) }
+}
+impl CommandIcon {
+    pub fn view<'a>(self, size: u16, color: iced::Color) -> iced::widget::svg::Svg<'a> {
+        match self {
+            Self::Canonical(icon) => icon.view(size, color),
+            Self::Svg(bytes) => iced::widget::svg(iced::widget::svg::Handle::from_memory(bytes))
+                .width(size).height(size)
+                .style(move |_, _| iced::widget::svg::Style { color: Some(color) }),
+        }
+    }
 }
 #[derive(Debug, Clone)]
 pub struct RibbonGroup<M> { pub label: String, pub commands: Vec<Command<M>> }

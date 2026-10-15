@@ -11,13 +11,15 @@ use openaec_ui::{
     },
     icons::Icon,
     model::metrics,
-    run, widgets, Application, Command, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
+    run, widgets, Application, Command, CommandIcon, Document, DocumentEvent, Language, RibbonGroup, RibbonTab,
     Theme,
 };
 use serde::Deserialize;
 use std::{path::PathBuf, sync::OnceLock};
 #[path = "style_repo/domain_drafts.rs"]
 mod domain_drafts;
+#[path = "style_repo/ribbon_preview.rs"]
+mod ribbon_preview;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -100,6 +102,7 @@ enum Action {
     Reset,
     SelectStudio(usize),
     SelectScreen(usize),
+    SelectPreviewCommand(String),
 }
 
 #[derive(Deserialize)]
@@ -113,6 +116,7 @@ struct Proposal {
 }
 #[derive(Deserialize)]
 struct StudioLayout {
+    id: String,
     name: String,
     tabs: Vec<String>,
     left_panel: String,
@@ -161,6 +165,7 @@ struct StyleRepo {
     sample_value: f32,
     selected_studio: usize,
     selected_screen: usize,
+    selected_preview_command: Option<String>,
 }
 impl Default for StyleRepo {
     fn default() -> Self {
@@ -175,6 +180,7 @@ impl Default for StyleRepo {
             sample_value: 35.0,
             selected_studio: 0,
             selected_screen: 0,
+            selected_preview_command: None,
         }
     }
 }
@@ -759,6 +765,7 @@ impl StyleRepo {
                 .size(11)
                 .color(t.accent),
             tabs,
+            self.preview_command_review(theme, l),
             self.card(
                 column![
                     text(l.text("Gedeelde schermindeling", "Shared screen layout"))
@@ -787,6 +794,27 @@ impl StyleRepo {
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
         ].spacing(22).into()
+    }
+    fn preview_command_review(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let detail: Element<'_, Action> = match self.selected_preview_command.as_deref() {
+            Some(id) => match proposals().iter().find(|proposal| proposal.id == id) {
+                Some(proposal) => column![
+                    text(&proposal.label).font(fonts::STRONG).size(14),
+                    text(&proposal.visual_metaphor).size(12),
+                    text(format!("{} {}", proposal.name_match_count, l.text("naamkandidaten · nog niet goedgekeurd", "name candidates · not approved"))).size(11).color(t.text_secondary),
+                ].spacing(5).into(),
+                None => column![
+                    text(id.rsplit(':').next().unwrap_or(id)).font(fonts::STRONG).size(14),
+                    text(l.text("Gedeeld conceptcommando voor de ribbonvergelijking.", "Shared concept command for ribbon comparison.")).size(11).color(t.text_secondary),
+                ].spacing(5).into(),
+            },
+            None => text(l.text("Kies een ribboncommando om de betekenis te beoordelen.", "Select a ribbon command to review its meaning.")).size(12).color(t.text_secondary).into(),
+        };
+        self.card(column![
+            text(l.text("Ribbonreview · concept", "Ribbon review · concept")).font(fonts::STRONG).size(13).color(t.accent),
+            detail,
+        ].spacing(8), theme)
     }
     fn screen_preview<'a>(
         &'a self,
@@ -924,6 +952,12 @@ impl Application for StyleRepo {
         "OpenAEC Style Repo  ·  Rust".into()
     }
     fn ribbon(&self, l: Language) -> Vec<RibbonTab<Action>> {
+        if self.page == Page::Studios {
+            return ribbon_preview::studio_tabs(
+                &studios()[self.selected_studio],
+                self.selected_preview_command.as_deref(),
+            );
+        }
         vec![
             RibbonTab {
                 id: "start".into(),
@@ -1107,6 +1141,7 @@ impl Application for StyleRepo {
             Action::SelectStudio(index) => {
                 self.selected_studio = index.min(studios().len().saturating_sub(1));
                 self.selected_screen = 0;
+                self.selected_preview_command = None;
                 self.show(Page::Studios);
             }
             Action::SelectScreen(index) => {
@@ -1117,6 +1152,7 @@ impl Application for StyleRepo {
                         .saturating_sub(1),
                 );
             }
+            Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
         }
         Task::none()
     }
@@ -1228,5 +1264,53 @@ mod tests {
                 let _ = app.studios_page(Theme::Light, Language::Dutch);
             }
         }
+    }
+
+    #[test]
+    fn native_ribbon_uses_each_studios_proposed_tabs() {
+        let mut app = StyleRepo::default();
+        app.show(Page::Studios);
+        for (index, studio) in studios().iter().enumerate() {
+            let _ = app.update(Action::SelectStudio(index));
+            let tabs = app.ribbon(Language::Dutch);
+            let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
+            assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
+            for (actual, label) in tabs.iter().zip(expected) {
+                assert_eq!(&actual.label, label, "{}", studio.name);
+                assert!(!actual.groups.is_empty(), "{} / {}", studio.name, label);
+                assert!(actual.groups.iter().all(|group| !group.commands.is_empty()));
+            }
+        }
+    }
+
+    #[test]
+    fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
+        let fem = ribbon_preview::studio_tabs(&studios()[2], None);
+        let bim = ribbon_preview::studio_tabs(&studios()[3], None);
+        for (tabs, label) in [(&fem, "Geometrie"), (&bim, "Modelleren")] {
+            let tab = tabs.iter().find(|tab| tab.label == label).unwrap();
+            let commands: Vec<_> = tab.groups.iter().flat_map(|g| &g.commands).collect();
+            assert!(!commands.is_empty());
+            assert!(commands.iter().all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
+        }
+        let fem_net = fem.iter().find(|tab| tab.label == "Net").unwrap();
+        let fem_compute = fem.iter().find(|tab| tab.label == "Berekenen").unwrap();
+        assert_eq!(fem_net.groups[0].commands.len(), 3);
+        assert!(fem_compute.groups[0].commands.len() > 3);
+        assert!(Icon::ALL.len() < domain_drafts::ALL.len());
+    }
+
+    #[test]
+    fn selected_draft_command_is_highlighted_for_review() {
+        let mut app = StyleRepo::default();
+        app.show(Page::Studios);
+        let _ = app.update(Action::SelectStudio(2));
+        let proposal = proposals().iter().find(|p| p.domain == "fem").unwrap();
+        let _ = app.update(Action::SelectPreviewCommand(proposal.id.clone()));
+        assert_eq!(app.selected_preview_command.as_deref(), Some(proposal.id.as_str()));
+        let tabs = app.ribbon(Language::Dutch);
+        assert!(tabs.iter().flat_map(|tab| &tab.groups).flat_map(|group| &group.commands)
+            .any(|command| command.selected && command.label == proposal.label));
+        let _ = app.preview_command_review(Theme::Light, Language::Dutch);
     }
 }

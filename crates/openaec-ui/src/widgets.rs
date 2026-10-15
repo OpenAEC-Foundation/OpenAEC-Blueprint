@@ -1,5 +1,10 @@
 //! Canonical controls for domain panels. Use these instead of restyling buttons per app.
-use crate::{fonts, icons::Icon, model::metrics, Theme};
+use crate::{
+    fonts,
+    icons::Icon,
+    model::{metrics, CommandIcon},
+    Theme,
+};
 use iced::{
     widget::{
         button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
@@ -382,10 +387,11 @@ pub fn panel<'a, M: 'a>(
 }
 pub fn action<'a, M: Clone + 'a>(
     label: impl Into<String>,
-    icon: Icon,
+    icon: impl Into<CommandIcon>,
     message: Option<M>,
     theme: Theme,
 ) -> Element<'a, M> {
+    let icon = icon.into();
     let color = if message.is_some() {
         theme.tokens().text
     } else {

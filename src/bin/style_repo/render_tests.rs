@@ -20,16 +20,28 @@ fn load_fonts() {
 }
 
 fn render(app: &StyleRepo, theme: Theme) -> tiny_skia::Pixmap {
-    render_with_settings(app, theme, false)
+    render_with_options(app, theme, false, None)
 }
 
 fn render_with_settings(app: &StyleRepo, theme: Theme, show_settings: bool) -> tiny_skia::Pixmap {
+    render_with_options(app, theme, show_settings, None)
+}
+
+fn render_with_options(
+    app: &StyleRepo,
+    theme: Theme,
+    show_settings: bool,
+    active_tab: Option<&str>,
+) -> tiny_skia::Pixmap {
     load_fonts();
     let size = Size::new(1280.0, 800.0);
     let mut preferences = Preferences::default();
     preferences.theme = theme;
     let mut state = ShellState::new(preferences);
     state.settings = show_settings;
+    if let Some(tab) = active_tab {
+        state.active_tab = tab.into();
+    }
     let language = Language::Dutch;
     let element = openaec_ui::shell(
         &state,
@@ -170,4 +182,12 @@ fn export_native_style_repo_previews() {
             &design.join(format!("style-repo-atlas-{name}.png")),
         );
     }
+    let _ = app.update(Action::SelectStudio(2));
+    render_with_options(&app, Theme::Light, false, Some("geometrie"))
+        .save_png(&design.join("style-repo-fem-ribbon-light.png"))
+        .expect("save FEM concept ribbon");
+    let _ = app.update(Action::SelectStudio(3));
+    render_with_options(&app, Theme::Forge, false, Some("modelleren"))
+        .save_png(&design.join("style-repo-bim-ribbon-forge.png"))
+        .expect("save BIM concept ribbon");
 }
