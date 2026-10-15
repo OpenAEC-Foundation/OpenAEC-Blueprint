@@ -118,6 +118,7 @@ enum Action {
     PdfBrightness(f32),
     PdfContrast(f32),
     PdfResetImage,
+    PdfAlignTarget(usize),
     SelectEnergyStep(usize),
     SelectEnergySub(usize),
     SelectEnergyMode(EnergyMode),
@@ -207,6 +208,7 @@ struct StyleRepo {
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
     pdf_image: ribbon_preview::PdfImageState,
+    pdf_arrange: ribbon_preview::PdfArrangeState,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -228,6 +230,7 @@ impl Default for StyleRepo {
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
             pdf_image: ribbon_preview::PdfImageState::default(),
+            pdf_arrange: ribbon_preview::PdfArrangeState::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -1302,6 +1305,7 @@ impl Application for StyleRepo {
                 self.pile_view,
                 self.frame_view,
                 self.pdf_image,
+                self.pdf_arrange,
             );
         }
         vec![
@@ -1577,6 +1581,7 @@ impl Application for StyleRepo {
                 self.pdf_image.brightness = 100.0;
                 self.pdf_image.contrast = 100.0;
             }
+            Action::PdfAlignTarget(index) => self.pdf_arrange.align_target = index.min(1),
             Action::SelectEnergyStep(index) => {
                 let steps = self.energy_mode.steps(Language::Dutch);
                 self.selected_energy_step = index.min(steps.len().saturating_sub(1));
@@ -1954,6 +1959,18 @@ mod tests {
             ["Document", "Hulpmiddelen", "Beeld", "Navigeren", "Zoeken", "Instellingen"]);
         assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
         assert_eq!(tabs[6].groups[0].label, "Symbooltype");
+        let arrange = &tabs[7].groups;
+        assert_eq!(arrange.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Uitlijning", "Verdelen", "Grootte", "Draaien", "Spiegelen", "Z-volgorde"]);
+        assert_eq!(arrange.iter().map(|group| group.commands.len()).collect::<Vec<_>>(),
+            [7, 8, 3, 3, 2, 4]);
+        assert_eq!(arrange[0].commands[0].label, "Links");
+        assert_eq!(arrange[5].commands[3].label, "Naar achtergrond");
+        assert!(arrange.iter().flat_map(|group| &group.commands)
+            .filter(|command| command.control.is_none())
+            .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
+        assert!(matches!(&arrange[0].commands[6].control,
+            Some(RibbonControl::Select { options, selected: 0, .. }) if options.len() == 2));
         let image = &tabs[8].groups;
         assert_eq!(image.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Bijsnijden", "Beeldbewerking"]);
         assert_eq!(image[0].commands[0].label, "Croppen");
@@ -1979,6 +1996,20 @@ mod tests {
         assert!(app.pdf_image.crop);
         assert!(!app.pdf_image.grayscale);
         assert_eq!((app.pdf_image.brightness, app.pdf_image.contrast), (100.0, 100.0));
+    }
+
+    #[test]
+    fn pdf_arrange_align_target_updates_native_selection() {
+        let mut app = StyleRepo::default();
+        let _ = app.update(Action::PdfAlignTarget(1));
+        assert_eq!(app.pdf_arrange.align_target, 1);
+        let studio = studios().iter().find(|studio| studio.id == "pdf").unwrap();
+        let tabs = ribbon_preview::studio_tabs_with_controls(studio, None, app.pile_view, app.frame_view,
+            app.pdf_image, app.pdf_arrange);
+        assert!(matches!(&tabs[7].groups[0].commands[6].control,
+            Some(RibbonControl::Select { selected: 1, .. })));
+        let _ = app.update(Action::PdfAlignTarget(9));
+        assert_eq!(app.pdf_arrange.align_target, 1);
     }
 
     #[test]

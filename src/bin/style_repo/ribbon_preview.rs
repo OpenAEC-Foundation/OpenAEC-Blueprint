@@ -16,6 +16,11 @@ macro_rules! pdf_image_icon {
         CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-image-icons/", $name, ".svg")))
     };
 }
+macro_rules! pdf_arrange_icon {
+    ($name:literal) => {
+        CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-arrange-icons/", $name, ".svg")))
+    };
+}
 
 #[derive(Debug, Clone, Copy)]
 pub(super) struct PileViewState {
@@ -51,9 +56,12 @@ impl Default for PdfImageState {
     fn default() -> Self { Self { crop: false, grayscale: false, brightness: 100.0, contrast: 100.0 } }
 }
 
+#[derive(Debug, Clone, Copy, Default)]
+pub(super) struct PdfArrangeState { pub align_target: usize }
+
 #[cfg(test)]
 pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<RibbonTab<Action>> {
-    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default(), PdfImageState::default())
+    studio_tabs_with_controls(studio, selected, PileViewState::default(), FrameViewState::default(), PdfImageState::default(), PdfArrangeState::default())
 }
 
 pub(super) fn studio_tabs_with_controls(
@@ -62,6 +70,7 @@ pub(super) fn studio_tabs_with_controls(
     pile: PileViewState,
     frame: FrameViewState,
     pdf_image: PdfImageState,
+    pdf_arrange: PdfArrangeState,
 ) -> Vec<RibbonTab<Action>> {
     studio
         .tabs
@@ -75,7 +84,7 @@ pub(super) fn studio_tabs_with_controls(
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
-                .or_else(|| pdf_groups(studio, tab, selected, pdf_image))
+                .or_else(|| pdf_groups(studio, tab, selected, pdf_image, pdf_arrange))
                 .or_else(|| pointcloud_groups(studio, tab, selected))
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
@@ -94,10 +103,11 @@ pub(super) fn studio_tabs_with_controls(
         .collect()
 }
 
-/// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Image uses live controls;
-/// other contextual editors remain review placeholders.
-fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: PdfImageState) -> Option<Vec<RibbonGroup<Action>>> {
+/// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Image and Arrange use
+/// native review controls; PDF document editing remains outside this atlas.
+fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: PdfImageState, arrange: PdfArrangeState) -> Option<Vec<RibbonGroup<Action>>> {
     if studio.id != "pdf" { return None; }
+    if tab == "Schikken" { return Some(pdf_arrange_groups(selected, arrange)); }
     let spec: &[(&str, &[&str])] = match tab {
         "Start" => &[("Document", &["Nieuw", "Naar CAD", "IFC-report", "E-mail", "Raster-PDF"]),
             ("Hulpmiddelen", &["Hand", "Selecteren"]), ("Beeld", &["Inzoomen", "Uitzoomen", "Breedte passend", "Pagina passend"]),
@@ -127,9 +137,6 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
         "Help" => &[("Instellingen", &["Extensies", "Bestandskoppelingen"]),
             ("Help", &["Sneltoetsen", "Over", "Wat is nieuw", "Updates", "Diagnose"])],
         "Opmaak" => &[("Symbooltype", &["Typekiezer · controls"]), ("Eigenschappen", &["Eigenschappenvelden · controls"])],
-        "Schikken" => &[("Uitlijning", &["Uitlijnkeuzes · controls"]), ("Verdelen", &["Horiz. verd.", "Vert. verd.", "Links", "Boven", "Midden"]),
-            ("Grootte", &["Groottevelden · controls"]), ("Draaien", &["Rotatievelden · controls"]),
-            ("Spiegelen", &["Spiegelkeuzes · controls"]), ("Z-volgorde", &["Laagvolgorde · controls"])],
         "Afbeelding" => &[("Bijsnijden", &[]), ("Beeldbewerking", &[])],
         _ => return None,
     };
@@ -156,6 +163,64 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
                 ] }));
     }
     Some(groups)
+}
+
+/// All six ArrangeTab groups and their UI-used SVGs at f754cb7c9d9a.
+fn pdf_arrange_groups(selected: Option<&str>, arrange: PdfArrangeState) -> Vec<RibbonGroup<Action>> {
+    let group = |label: &str, actions: Vec<(&str, &str, CommandIcon)>| RibbonGroup {
+        label: label.into(),
+        commands: actions.into_iter().map(|(id, label, icon)| {
+            let id = format!("pdf:Schikken:{id}");
+            Command::new(label, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    };
+    let mut groups = vec![
+        group("Uitlijning", vec![
+            ("align-left", "Links", pdf_arrange_icon!("alignLeftIcon")),
+            ("align-center", "Midden", pdf_arrange_icon!("alignCenterIcon")),
+            ("align-right", "Rechts", pdf_arrange_icon!("alignRightIcon")),
+            ("align-top", "Boven", pdf_arrange_icon!("alignTopIcon")),
+            ("align-middle", "Midden", pdf_arrange_icon!("alignMiddleIcon")),
+            ("align-bottom", "Onder", pdf_arrange_icon!("alignBottomIcon")),
+        ]),
+        group("Verdelen", vec![
+            ("space-h", "Horiz. verd.", pdf_arrange_icon!("distSpaceHIcon")),
+            ("space-v", "Vert. verd.", pdf_arrange_icon!("distSpaceVIcon")),
+            ("dist-left", "Links", pdf_arrange_icon!("distLeftIcon")),
+            ("dist-top", "Boven", pdf_arrange_icon!("distTopIcon")),
+            ("dist-center", "Midden", pdf_arrange_icon!("distCenterIcon")),
+            ("dist-middle", "Midden", pdf_arrange_icon!("distMiddleIcon")),
+            ("dist-right", "Rechts", pdf_arrange_icon!("distRightIcon")),
+            ("dist-bottom", "Onder", pdf_arrange_icon!("distBottomIcon")),
+        ]),
+        group("Grootte", vec![
+            ("same-size", "Zelfde grootte", pdf_arrange_icon!("sameSize16Icon")),
+            ("same-width", "Zelfde breedte", pdf_arrange_icon!("sameSize16Icon")),
+            ("same-height", "Zelfde hoogte", pdf_arrange_icon!("sameSize16Icon")),
+        ]),
+        group("Draaien", vec![
+            ("rotate-ccw", "90° linksom", pdf_arrange_icon!("rotateCcwIcon")),
+            ("rotate-cw", "90° rechtsom", pdf_arrange_icon!("rotateCwIcon")),
+            ("rotate-180", "180°", pdf_arrange_icon!("rotate180Icon")),
+        ]),
+        group("Spiegelen", vec![
+            ("flip-h", "Horizontaal", pdf_arrange_icon!("flipHIcon")),
+            ("flip-v", "Verticaal", pdf_arrange_icon!("flipVIcon")),
+        ]),
+        group("Z-volgorde", vec![
+            ("bring-forward", "Naar voren", pdf_arrange_icon!("bringForwardIcon")),
+            ("bring-front", "Naar voorgrond", pdf_arrange_icon!("bringToFrontIcon")),
+            ("send-backward", "Naar achteren", pdf_arrange_icon!("sendBackwardIcon")),
+            ("send-back", "Naar achtergrond", pdf_arrange_icon!("sendToBackIcon")),
+        ]),
+    ];
+    groups[0].commands.push(Command::new("Uitlijnen op", Icon::Grid, Action::PdfAlignTarget(arrange.align_target))
+        .control(RibbonControl::Select { options: vec![
+            ("Uitlijnen op selectie".into(), Action::PdfAlignTarget(0)),
+            ("Uitlijnen op laatst geselecteerde".into(), Action::PdfAlignTarget(1)),
+        ], selected: arrange.align_target, width: 220.0, show_label: false }));
+    groups
 }
 
 /// The current native Pointcloud branch has one Start ribbon with ten panels.

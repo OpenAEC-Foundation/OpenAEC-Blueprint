@@ -33,8 +33,17 @@ fn render_with_options(
     show_settings: bool,
     active_tab: Option<&str>,
 ) -> tiny_skia::Pixmap {
+    render_sized(app, theme, show_settings, active_tab, Size::new(1280.0, 800.0))
+}
+
+fn render_sized(
+    app: &StyleRepo,
+    theme: Theme,
+    show_settings: bool,
+    active_tab: Option<&str>,
+    size: Size,
+) -> tiny_skia::Pixmap {
     load_fonts();
-    let size = Size::new(1280.0, 800.0);
     let mut preferences = Preferences::default();
     preferences.theme = theme;
     let mut state = ShellState::new(preferences);
@@ -225,6 +234,18 @@ fn export_pdf_image_ribbon_review() {
     render_with_options(&app, Theme::Forge, false, Some("afbeelding"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-image-forge.png"))
         .expect("save PDF image-tab review");
+}
+
+#[test]
+#[ignore = "regenerate native PDF Arrange-tab review on demand"]
+fn export_pdf_arrange_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    render_sized(&app, Theme::Forge, false, Some("schikken"), Size::new(3200.0, 800.0))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-arrange-forge.png"))
+        .expect("save PDF Arrange-tab review");
 }
 
 #[test]
