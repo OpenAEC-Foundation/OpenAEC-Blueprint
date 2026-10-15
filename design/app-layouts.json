@@ -422,10 +422,7 @@
       "Bestand",
       "Start",
       "Invoegen",
-      "Opmaak",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Beeld"
     ],
     "left_panel": "Rapportstructuur",
     "right_panel": "Sectie-eigenschappen",
@@ -452,7 +449,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Linttabs gecontroleerd tegen frontend/src/components/chrome/ribbon/Ribbon.tsx op commit 818e58118c0f: naast Bestand zijn alleen Start, Invoegen en Beeld zichtbaar. De broncomponenten tonen Start-groepen Klembord, Blokken, Pagina, Controle en Uitvoer; Invoegen heeft Secties en Inhoud; Beeld heeft Weergave en Panelen. Geen bruikbare UI-screenshots in de repository gevonden; werkgebied en rechterpaneel blijven voorstel."
   },
   {
     "id": "frame",

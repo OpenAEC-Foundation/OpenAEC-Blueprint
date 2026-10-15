@@ -1593,6 +1593,16 @@ mod tests {
     }
 
     #[test]
+    fn reports_ribbon_uses_three_source_tabs() {
+        let studio = studios().iter().find(|studio| studio.id == "reports").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Start", "Invoegen", "Beeld"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs.len(), 3);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Klembord", "Blokken", "Pagina", "Controle", "Uitvoer"]);
+        assert_eq!(tabs[2].groups[1].label, "Panelen");
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

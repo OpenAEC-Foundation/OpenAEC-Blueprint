@@ -29,10 +29,49 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .or_else(|| geotech_groups(studio, tab, selected))
                 .or_else(|| heatloss_groups(studio, tab, selected))
                 .or_else(|| calculations_groups(studio, tab, selected))
+                .or_else(|| reports_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Reports Studio ribbon at 818e58118c0f: Start, Invoegen and Beeld.
+fn reports_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "reports" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Start" => vec![
+            ("Klembord", vec![("Plakken", planner_source_icon!("ClipboardCheck")), ("Kopieer sectie", planner_source_icon!("Copy"))]),
+            ("Blokken", vec![("Tekst", planner_source_icon!("FileText")), ("Berekening", planner_source_icon!("Hash")), ("Toets", Check.into()), ("Tabel", Grid.into()), ("Spreadsheet", Grid.into()), ("Afbeelding", planner_source_icon!("FilePlus2")), ("Kaart", planner_source_icon!("Map"))]),
+            ("Pagina", vec![("Witruimte", planner_source_icon!("Minus")), ("Pagina-einde", planner_source_icon!("FilePlus2"))]),
+            ("Controle", vec![("Valideren", Check.into())]),
+            ("Uitvoer", vec![("PDF Genereren", Export.into()), ("Download PDF", Export.into())]),
+        ],
+        "Invoegen" => vec![
+            ("Secties", vec![("Nieuw hoofdstuk", New.into()), ("Nieuwe bijlage", New.into())]),
+            ("Inhoud", vec![("Tekst", planner_source_icon!("FileText")), ("Berekening", planner_source_icon!("Hash")), ("Toets", Check.into()), ("Tabel", Grid.into()), ("Afbeelding", planner_source_icon!("FilePlus2")), ("Kaart", planner_source_icon!("Map"))]),
+        ],
+        "Beeld" => vec![
+            ("Weergave", vec![("Editor", planner_source_icon!("Pen")), ("Gesplitst", planner_source_icon!("Columns3")), ("JSON", planner_source_icon!("FileCode")), ("Preview", planner_source_icon!("Eye"))]),
+            ("Panelen", vec![("Zijpaneel", PanelLeft.into())]),
+        ],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("reports:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// Calculations has only Start and an intentionally empty IFC tab.

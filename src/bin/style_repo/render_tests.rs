@@ -263,6 +263,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Light, false, Some("start"))
         .save_png(&design.join("style-repo-calculations-ribbon-light.png"))
         .expect("save Calculations ribbon review");
+    let reports = studios().iter().position(|studio| studio.id == "reports").unwrap();
+    let _ = app.update(Action::SelectStudio(reports));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("start"))
+        .save_png(&design.join("style-repo-reports-ribbon-light.png"))
+        .expect("save Reports ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));
