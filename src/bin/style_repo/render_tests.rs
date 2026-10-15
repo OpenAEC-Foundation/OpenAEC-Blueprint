@@ -189,6 +189,13 @@ fn export_field_topnav_review() {
     render(&app, Theme::Forge)
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-topnav-forge.png"))
         .expect("save Field Forge project form review");
+    let _ = app.update(Action::SelectScreen(6));
+    render_with_options(&app, Theme::Light, false, Some("dashboard"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-dashboard-light.png"))
+        .expect("save Field dashboard review");
+    render_with_options(&app, Theme::Forge, false, Some("dashboard"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-field-dashboard-forge.png"))
+        .expect("save Field Forge dashboard review");
 }
 
 #[test]

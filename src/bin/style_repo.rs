@@ -984,6 +984,9 @@ impl StyleRepo {
         if screen == "project" {
             return self.field_project_page(theme, l);
         }
+        if screen == "dashboard" {
+            return self.field_dashboard_page(theme, l);
+        }
         let capture = match screen {
             "project" => Some("01-project.png"),
             "koppelingen" => Some("02-koppelingen.png"),
@@ -1074,6 +1077,166 @@ impl StyleRepo {
                 .font(fonts::MEDIUM).size(12).color(t.text_secondary),
             image(image::Handle::from_path(capture)).width(1168),
         ].spacing(16).into()
+    }
+    fn field_dashboard_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let tile = |label: &'static str, value: &'static str, color: iced::Color| {
+            container(
+                column![
+                    text(label)
+                        .font(fonts::STRONG)
+                        .size(11)
+                        .color(t.text_secondary),
+                    text(value).font(fonts::HEADING).size(35).color(color),
+                ]
+                .spacing(18)
+                .align_x(Alignment::Center),
+            )
+            .width(174)
+            .height(126)
+            .align_x(Alignment::Center)
+            .align_y(Alignment::Center)
+            .style(move |_| {
+                container::Style::default()
+                    .background(t.bg_lighter)
+                    .border(iced::Border {
+                        color: t.border,
+                        width: 1.0,
+                        radius: 10.0.into(),
+                    })
+            })
+        };
+        let orange = iced::Color::from_rgb8(0xdc, 0x79, 0x00);
+        let blue = iced::Color::from_rgb8(0x2c, 0x61, 0xe8);
+        let green = iced::Color::from_rgb8(0x13, 0xa0, 0x50);
+        let red = iced::Color::from_rgb8(0xdb, 0x24, 0x2b);
+        let chart =
+            |title: &'static str, entries: &[(&'static str, &'static str, iced::Color, f32)]| {
+                let mut rows = Column::new().spacing(10);
+                for &(label, count, color, fraction) in entries {
+                    rows = rows.push(
+                        row![
+                            container(text(label).size(11).color(t.text)).width(90),
+                            container(
+                                container(Space::new((185.0 * fraction).max(6.0), 22))
+                                    .width((185.0 * fraction).max(6.0))
+                                    .style(move |_| container::Style::default()
+                                        .background(color)
+                                        .border(iced::Border::default().rounded(4)))
+                            )
+                            .width(185)
+                            .height(22)
+                            .style(move |_| container::Style::default().background(t.bg)),
+                            container(text(count).size(11).color(t.text)).width(20),
+                        ]
+                        .spacing(8)
+                        .align_y(Alignment::Center),
+                    );
+                }
+                container(
+                    column![text(title).font(fonts::STRONG).size(15).color(t.text), rows]
+                        .spacing(22),
+                )
+                .padding(24)
+                .width(368)
+                .height(202)
+                .style(move |_| {
+                    container::Style::default()
+                        .background(t.bg_lighter)
+                        .border(iced::Border {
+                            color: t.border,
+                            width: 1.0,
+                            radius: 10.0.into(),
+                        })
+                })
+            };
+        let stats = row![
+            tile("TOTAAL TICKETS", "3", t.text),
+            tile("OPEN", "1", orange),
+            tile("TOEGEWEZEN", "1", blue),
+            tile("AFGEROND", "1", green),
+            tile("VERLOPEN DEADLINE", "0", red),
+            tile("INSPECTIES", "0", t.text),
+        ]
+        .spacing(16);
+        let charts = row![
+            chart(
+                "Tickets per status",
+                &[
+                    ("Open", "1", orange, 1.0),
+                    ("Toegewezen", "1", blue, 1.0),
+                    ("Afgerond", "1", green, 1.0),
+                    ("Verlopen", "0", red, 0.03)
+                ]
+            ),
+            chart(
+                "Tickets per categorie",
+                &[
+                    ("Kozijnen", "1", orange, 1.0),
+                    ("Sanitair", "1", orange, 1.0),
+                    ("Elektra", "1", orange, 1.0)
+                ]
+            ),
+            chart(
+                "Tickets per verantwoordelijke",
+                &[
+                    ("De Wit Bouw", "1", blue, 1.0),
+                    ("Slager Loodgieters", "1", blue, 1.0)
+                ]
+            ),
+        ]
+        .spacing(24);
+        let activity = container(
+            column![
+                text(l.text("Recente activiteit", "Recent activity"))
+                    .font(fonts::STRONG)
+                    .size(15)
+                    .color(t.text),
+                container(
+                    text(l.text("Nog geen activiteit", "No activity yet"))
+                        .size(13)
+                        .color(t.text_secondary)
+                )
+                .height(94)
+                .width(Fill)
+                .align_x(Alignment::Center)
+                .align_y(Alignment::Center),
+            ]
+            .spacing(20),
+        )
+        .padding(24)
+        .width(360)
+        .height(150)
+        .style(move |_| {
+            container::Style::default()
+                .background(t.bg_lighter)
+                .border(iced::Border {
+                    color: t.border,
+                    width: 1.0,
+                    radius: 10.0.into(),
+                })
+        });
+        let capture = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/Open-Field-Studio/docs/screenshots/05-dashboard.png");
+        column![
+            text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG)
+                .size(11)
+                .color(t.accent),
+            text("Voorbeelddata uit broncapture · Renovatie Damrak 1 · 3 tickets")
+                .size(12)
+                .color(t.text_secondary),
+            stats,
+            charts,
+            activity,
+            text("Broncapture ter vergelijking · commit 8a4f104")
+                .font(fonts::MEDIUM)
+                .size(12)
+                .color(t.text_secondary),
+            image(image::Handle::from_path(capture)).width(1168),
+        ]
+        .spacing(24)
+        .into()
     }
     fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let studio = &studios()[self.selected_studio];
