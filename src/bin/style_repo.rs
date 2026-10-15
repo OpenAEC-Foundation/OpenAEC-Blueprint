@@ -119,6 +119,8 @@ struct StudioLayout {
     id: String,
     name: String,
     tabs: Vec<String>,
+    #[serde(default)]
+    optional_tabs: Vec<String>,
     left_panel: String,
     right_panel: String,
     workspace: String,
@@ -720,7 +722,7 @@ impl StyleRepo {
             let mut tab_row = Row::new().spacing(5);
             for tab in chunk {
                 tab_row = tab_row.push(
-                    container(text(tab).size(11).color(t.text))
+                    container(text(if selected.optional_tabs.contains(tab) { format!("{tab} · optioneel") } else { tab.clone() }).size(11).color(t.text))
                         .padding(8)
                         .style(move |_| container::Style::default().background(t.bg_lighter)),
                 );
@@ -797,6 +799,10 @@ impl StyleRepo {
                     text(&proposal.label).font(fonts::STRONG).size(14),
                     text(&proposal.visual_metaphor).size(12),
                     text(format!("{} {}", proposal.name_match_count, l.text("naamkandidaten · nog niet goedgekeurd", "name candidates · not approved"))).size(11).color(t.text_secondary),
+                ].spacing(5).into(),
+                None if id.starts_with("planner:") => column![
+                    text(id.rsplit(':').next().unwrap_or(id)).font(fonts::STRONG).size(14),
+                    text(l.text("Groep en commando uit de actuele Planner-ribbonregistry. Domeiniconen zijn vastgepinde bronvormen ter beoordeling; gedeelde acties gebruiken de canonieke kern.", "Group and command from the current Planner ribbon registry. Domain icons are pinned source vectors for review; shared actions use the canonical core.")).size(11).color(t.text_secondary),
                 ].spacing(5).into(),
                 None => column![
                     text(id.rsplit(':').next().unwrap_or(id)).font(fonts::STRONG).size(14),
@@ -1270,7 +1276,8 @@ mod tests {
             let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
             assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
             for (actual, label) in tabs.iter().zip(expected) {
-                assert_eq!(&actual.label, label, "{}", studio.name);
+                let expected_label = if studio.optional_tabs.contains(label) { format!("{label} · optioneel") } else { (*label).clone() };
+                assert_eq!(actual.label, expected_label, "{}", studio.name);
                 assert!(!actual.groups.is_empty(), "{} / {}", studio.name, label);
                 assert!(actual.groups.iter().all(|group| !group.commands.is_empty()));
             }
@@ -1306,5 +1313,19 @@ mod tests {
         assert!(tabs.iter().flat_map(|tab| &tab.groups).flat_map(|group| &group.commands)
             .any(|command| command.selected && command.label == proposal.label));
         let _ = app.preview_command_review(Theme::Light, Language::Dutch);
+    }
+
+    #[test]
+    fn planner_preview_tracks_source_ribbon_groups_and_optional_ai() {
+        let planner = studios().iter().find(|studio| studio.id == "planner").unwrap();
+        let tabs = ribbon_preview::studio_tabs(planner, None);
+        let start = tabs.iter().find(|tab| tab.id == "start").unwrap();
+        assert_eq!(start.groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Bestand", "Bewerken", "Taken", "Planning", "Zoom"]);
+        assert!(start.groups[0].commands.iter().any(|command| matches!(command.icon, CommandIcon::Canonical(Icon::Save))));
+        let planning = tabs.iter().find(|tab| tab.id == "planning").unwrap();
+        assert_eq!(planning.groups.len(), 7);
+        assert!(planning.groups[0].commands.iter().any(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
+        assert_eq!(tabs.iter().find(|tab| tab.id == "ai").unwrap().label, "AI · optioneel");
     }
 }

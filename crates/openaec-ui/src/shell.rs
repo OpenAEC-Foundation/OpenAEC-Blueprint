@@ -54,14 +54,18 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
                 let label = command.label.clone();
                 let hint = format!("{}{}", label, command.shortcut.as_ref().map(|s|format!(" ({s})")).unwrap_or_default());
                 let control = button(column![command.icon.view(24,color),text(label).font(fonts::BODY).size(12)].spacing(6).align_x(iced::Alignment::Center))
-                    .padding([5,10]).height(58).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
+                    .padding([3,10]).height(52).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
                     .style(move |_,s| widgets::ribbon_button_style(theme,selected,s));
                 commands=commands.push(tooltip(control,text(hint).size(12),tooltip::Position::Bottom));
             }
-            groups=groups.push(container(column![commands,text(group.label.clone()).font(fonts::MEDIUM).size(11).color(t.ribbon_group_label)].spacing(4).align_x(iced::Alignment::Center)).padding([4,8]).style(move |_| container::Style { border:iced::Border {color:t.ribbon_group_separator,width:1.0,radius:0.0.into()},..Default::default() }));
+            groups=groups.push(container(column![commands,text(group.label.clone()).font(fonts::MEDIUM).size(11).color(t.ribbon_group_label)].spacing(4).align_x(iced::Alignment::Center)).padding([2,8]).style(move |_| container::Style { border:iced::Border {color:t.ribbon_group_separator,width:1.0,radius:0.0.into()},..Default::default() }));
         }
     }
-    let ribbon = container(horizontal(groups)).height(metrics::RIBBON).padding([4,8]);
+    let ribbon = container(
+        scrollable(groups)
+            .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
+            .height(Fill),
+    ).height(metrics::RIBBON).padding([4,8]);
     let mut documents = Row::new().spacing(2);
     for doc in slots.documents {
         let selected=slots.active_document.as_ref() == Some(&doc.id);

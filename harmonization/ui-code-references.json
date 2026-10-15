@@ -31522,7 +31522,7 @@
   {
     "repository": "open-pdf-studio",
     "status": "source-scanned",
-    "code_files": 259,
+    "code_files": 265,
     "matches": [
       {
         "source": "open-pdf-studio/create-icon.js",
@@ -32326,17 +32326,17 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
-        "line": 1179,
+        "line": 1180,
         "text": "      <MenuItem icon={thumbnailPropertiesIcon} label={t('thumbnail.properties')} disabled={isMulti()} onClick={() => {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
-        "line": 1199,
+        "line": 1200,
         "text": "      <MenuItem icon={copyIcon} label={tCommon('copy')} onClick={async () => {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
-        "line": 1259,
+        "line": 1260,
         "text": "  // mousedown on document handles clicks on ribbon, panels, title bar, etc."
       },
       {
@@ -32491,7 +32491,7 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/StatusBar.jsx",
-        "line": 66,
+        "line": 67,
         "text": "// Paginaweergave-modi (issue #164): dezelfde knoppen als in de Beeld-ribbon,"
       },
       {
@@ -32516,67 +32516,67 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 136,
+        "line": 138,
         "text": "  const effectiveSvg = resolveSymbolSvg(symbol.svg);"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 140,
+        "line": 142,
         "text": "    stampBaseSvg: symbol.svg,"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 186,
+        "line": 172,
         "text": "// Grip icon (6 dots)"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 273,
+        "line": 259,
         "text": "  const { t } = useTranslation('ribbon');"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 279,
+        "line": 265,
         "text": "          <div class=\"sp-search-icon\" innerHTML={searchSvg} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 304,
+        "line": 290,
         "text": "                  <div class=\"sp-cat-icon\" style={{ color: cat.color || '#333' }} innerHTML={cat.icon} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 333,
+        "line": 319,
         "text": "                          class={`sp-symbol-btn${state.toolOverrides?.stampSvg === sym.svg ? ' active' : ''}${isCatalogusFamilie(sym) ? ' sp-symbol-named' : ''}`}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 337,
+        "line": 323,
         "text": "                          <span class=\"sp-symbol-icon\" innerHTML={colorizeSvg(sym.svg, cat.color)} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 443,
+        "line": 429,
         "text": "      if (file.type === 'image/svg+xml' || file.name.endsWith('.svg')) {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 517,
+        "line": 503,
         "text": "        if (sym.name && sym.svg) {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 518,
+        "line": 504,
         "text": "          addSymbolToGroup(groupId, sym.name, sym.svg);"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 533,
+        "line": 519,
         "text": "      <input ref={fileInputRef} type=\"file\" accept=\".svg,image/*\" multiple"
       },
       {
         "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 623,
+        "line": 609,
         "text": "                          innerHTML={colorizeSvg(sym.svg, cat.color)} />"
       },
       {
@@ -32863,11 +32863,6 @@
         "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
         "line": 385,
         "text": "        <div class=\"tp-dock-target-icon\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
-        "line": 54,
-        "text": " * na een ribbon-klik, of nog nooit over het canvas bewogen) aan het invoeranker"
       },
       {
         "source": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
@@ -33591,62 +33586,77 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 22,
+        "line": 11,
+        "text": "  let iconEl;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
+        "line": 16,
+        "text": "    const svg = props.iconSvg;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
+        "line": 17,
+        "text": "    if (iconEl && svg) iconEl.innerHTML = svg;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
+        "line": 30,
         "text": "  // The ribbon tab's adaptive-groups container clips overflow (needed for"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 25,
+        "line": 33,
         "text": "  // fit inside the ribbon strip's remaining height. position:fixed escapes"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 61,
+        "line": 69,
         "text": "    <div class=\"ribbon-color-picker-wrapper\" ref={wrapperRef}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 63,
+        "line": 71,
         "text": "        class=\"ribbon-btn medium ribbon-color-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 69,
-        "text": "        <div class=\"ribbon-btn-icon\" ref={el => { if (props.iconSvg) el.innerHTML = props.iconSvg; }}></div>"
+        "line": 78,
+        "text": "        <div class=\"ribbon-btn-icon\" ref={el => { iconEl = el; if (props.iconSvg) el.innerHTML = props.iconSvg; }}></div>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 70,
+        "line": 79,
         "text": "        <span class=\"ribbon-btn-label\" ref={el => autoShrinkLabel(el)}>{props.label}</span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 71,
+        "line": 80,
         "text": "        <svg class=\"ribbon-color-dd-arrow\" viewBox=\"0 0 8 5\"><path d=\"M0 0l4 4 4-4z\" fill=\"currentColor\"/></svg>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 73,
+        "line": 82,
         "text": "      <div class={`ribbon-color-dropdown${open() ? ' show' : ''}`} id={props.dropdownId} ref={dropdownRef}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 74,
+        "line": 83,
         "text": "        <div class=\"ribbon-color-palette\" id={props.paletteId}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 96,
+        "line": 105,
         "text": "        <div class=\"ribbon-color-dropdown-actions\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 99,
+        "line": 108,
         "text": "              class=\"ribbon-color-none-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
-        "line": 110,
+        "line": 119,
         "text": "            class=\"ribbon-color-custom-btn\""
       },
       {
@@ -35086,203 +35096,183 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 21,
+        "line": 22,
         "text": "  styleToolsIcon, resetLocationIcon, openPropertiesIcon, hideAnnotationIcon, editTypeIcon"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 22,
+        "line": 23,
         "text": "} from '../../data/ribbonIcons.js';"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 50,
+        "line": 73,
         "text": "function fillIconSvg() {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 53,
+        "line": 76,
         "text": "  return `<svg viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"14\" height=\"11\" rx=\"1\" id=\"fmt-fill-icon-rect\" fill=\"${fc}\" stroke=\"${hasFillColor ? 'none' : '#999'}\" stroke-width=\"1\"/><rect x=\"2\" y=\"14\" width=\"14\" height=\"2.5\" rx=\"0.5\" id=\"fmt-fill-indicator\" fill=\"${fc}\" stroke=\"${hasFillColor ? 'none' : '#ccc'}\" stroke-width=\"0.5\"/></svg>`;"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 56,
+        "line": 79,
         "text": "function strokeIconSvg() {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 58,
+        "line": 81,
         "text": "  return `<svg viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"12\" height=\"9\" rx=\"1\" fill=\"none\" id=\"fmt-stroke-icon-rect\" stroke=\"${sc}\" stroke-width=\"2.5\"/><rect x=\"2\" y=\"14\" width=\"14\" height=\"2.5\" rx=\"0.5\" id=\"fmt-stroke-indicator\" fill=\"${sc}\"/></svg>`;"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 62,
+        "line": 85,
         "text": "  const { t } = useTranslation('ribbon');"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 99,
+        "line": 122,
         "text": "    <div class=\"ribbon-content active\" id=\"tab-format\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 102,
+        "line": 125,
         "text": "          <RibbonGroup label={t('format.symbolTypeGroup')}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 103,
+        "line": 126,
         "text": "            <div class=\"ribbon-grid-col\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 104,
+        "line": 127,
         "text": "              <button class=\"ribbon-row-btn\" id=\"fmt-edit-type\" title={t('format.editTypeHint')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 109,
+        "line": 132,
         "text": "                <span ref={el => { el.innerHTML = editTypeIcon; }} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 113,
+        "line": 136,
         "text": "          </RibbonGroup>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 116,
+        "line": 139,
         "text": "        <RibbonGroup label=\"\" wide={true}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 117,
+        "line": 140,
         "text": "          <div class=\"ribbon-style-gallery-wrap\" ref={moreRef}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 118,
+        "line": 141,
         "text": "            <div class=\"ribbon-style-gallery\" id=\"fmt-style-gallery\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 122,
+        "line": 145,
         "text": "                    class=\"ribbon-style-item\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 128,
+        "line": 152,
         "text": "                      class={`ribbon-style-preview${item.cloudy ? ' ribbon-style-cloudy' : ''}`}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 137,
+        "line": 161,
         "text": "                    <span class=\"ribbon-style-label\">{t(item.labelKey)}</span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 142,
+        "line": 166,
         "text": "            <button class=\"ribbon-gallery-more\" id=\"fmt-style-more\" title={t('format.moreStyles')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 147,
+        "line": 171,
         "text": "            <div class={`ribbon-style-more-popup${moreOpen() ? ' show' : ''}`} id=\"fmt-style-more-popup\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 148,
+        "line": 172,
         "text": "              <div class=\"ribbon-style-more-grid\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 152,
+        "line": 176,
         "text": "                      class=\"ribbon-style-item\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 157,
+        "line": 182,
         "text": "                        class={`ribbon-style-preview${item.cloudy ? ' ribbon-style-cloudy' : ''}`}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 166,
+        "line": 191,
         "text": "                      <span class=\"ribbon-style-label\">{t(item.labelKey)}</span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 172,
+        "line": 197,
         "text": "                <div class=\"ribbon-menu-sep\"></div>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 173,
+        "line": 198,
         "text": "                <div class=\"ribbon-style-more-presets\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 176,
+        "line": 201,
         "text": "                      <button class=\"ribbon-menu-item\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 186,
+        "line": 211,
         "text": "        </RibbonGroup>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 188,
+        "line": 213,
         "text": "        <RibbonGroup label=\"\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 189,
+        "line": 214,
         "text": "          <div class=\"ribbon-btn-stack\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 194,
+        "line": 219,
         "text": "              iconSvg={fillIconSvg()}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 216,
+        "line": 242,
         "text": "              iconSvg={strokeIconSvg()}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 231,
+        "line": 256,
         "text": "        </RibbonGroup>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 233,
+        "line": 258,
         "text": "        <RibbonGroup label=\"\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 234,
+        "line": 259,
         "text": "          <div class=\"ribbon-form-grid ribbon-form-grid-2col\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 235,
-        "text": "            <div class=\"ribbon-form-row\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 237,
-        "text": "              <input type=\"number\" class=\"ribbon-form-number\" id=\"fmt-line-width\" title={t('format.lineWidth')}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 247,
-        "text": "            <div class=\"ribbon-form-row\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 249,
-        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-border-style\" title={t('format.borderStyle')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
@@ -35292,196 +35282,216 @@
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
         "line": 262,
+        "text": "              <input type=\"number\" class=\"ribbon-form-number\" id=\"fmt-line-width\" title={t('format.lineWidth')}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 272,
+        "text": "            <div class=\"ribbon-form-row\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 274,
+        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-border-style\" title={t('format.borderStyle')}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 286,
+        "text": "            <div class=\"ribbon-form-row\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 288,
         "text": "              <select class=\"ribbon-form-select\" id=\"fmt-blend-mode\" title={t('format.blendMode')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 273,
+        "line": 300,
         "text": "          <div class=\"ribbon-slider-row\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 275,
+        "line": 302,
         "text": "            <input type=\"range\" class=\"ribbon-slider\" id=\"fmt-opacity\" title={t('format.opacity')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 282,
+        "line": 310,
         "text": "            <input type=\"number\" class=\"ribbon-slider-number\" title={t('format.opacity')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 291,
+        "line": 319,
         "text": "            <span class=\"ribbon-slider-unit\">%</span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 293,
+        "line": 321,
         "text": "        </RibbonGroup>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 295,
+        "line": 323,
         "text": "        <RibbonGroup label=\"\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 296,
+        "line": 324,
         "text": "          <div class=\"ribbon-form-grid ribbon-form-grid-2col\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 297,
+        "line": 325,
         "text": "            <div class=\"ribbon-form-row\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 299,
+        "line": 327,
         "text": "              <select class=\"ribbon-form-select\" id=\"fmt-arrow-start\" title={t('format.startArrow')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 315,
+        "line": 344,
         "text": "            <div class=\"ribbon-form-row\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 317,
-        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-arrow-end\" title={t('format.endArrow')}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 334,
-        "text": "        </RibbonGroup>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 336,
-        "text": "        <RibbonGroup label=\"\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 337,
-        "text": "          <div class=\"ribbon-grid-col\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 338,
-        "text": "            <div class=\"ribbon-menu-wrapper\" ref={toolsRef}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 339,
-        "text": "              <button class=\"ribbon-row-btn ribbon-dropdown-btn\" id=\"fmt-style-tools\" title={t('format.styleTools')}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 341,
-        "text": "                <span ref={el => { el.innerHTML = styleToolsIcon; }} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 345,
-        "text": "              <div class={`ribbon-menu-dropdown${toolsOpen() ? ' show' : ''}`} id=\"fmt-style-tools-menu\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
         "line": 346,
-        "text": "                <button class=\"ribbon-menu-item\""
+        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-arrow-end\" title={t('format.endArrow')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 350,
-        "text": "                <button class=\"ribbon-menu-item\" disabled={!copiedStyle() || isLocked()}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 354,
-        "text": "                <div class=\"ribbon-menu-sep\"></div>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 355,
-        "text": "                <button class=\"ribbon-menu-item\" disabled={isLocked()} onClick={openCreateDialog}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 358,
-        "text": "                <button class=\"ribbon-menu-item\" disabled={presets().length === 0}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 363,
-        "text": "                  <div class=\"ribbon-menu-sep\"></div>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 366,
-        "text": "                      <button class=\"ribbon-menu-item\" disabled={isLocked()}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 376,
-        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-reset-location\" title={t('format.resetLocation')}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 400,
-        "text": "              <span ref={el => { el.innerHTML = resetLocationIcon; }} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 404,
+        "line": 364,
         "text": "        </RibbonGroup>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 406,
-        "text": "        <RibbonGroup label={t('format.propertiesGroup')}>"
+        "line": 366,
+        "text": "        <RibbonGroup label=\"\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 407,
+        "line": 367,
         "text": "          <div class=\"ribbon-grid-col\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 408,
-        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-open\" title={t('format.openProperties')}"
+        "line": 368,
+        "text": "            <div class=\"ribbon-menu-wrapper\" ref={toolsRef}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 418,
-        "text": "              <span ref={el => { el.innerHTML = openPropertiesIcon; }} />"
+        "line": 369,
+        "text": "              <button class=\"ribbon-row-btn ribbon-dropdown-btn\" id=\"fmt-style-tools\" title={t('format.styleTools')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 421,
-        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-hide\" title={t('format.hideAnnotation')}"
+        "line": 372,
+        "text": "                <span ref={el => { el.innerHTML = styleToolsIcon; }} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 425,
-        "text": "              <span ref={el => { el.innerHTML = hideAnnotationIcon; }} />"
+        "line": 376,
+        "text": "              <div class={`ribbon-menu-dropdown${toolsOpen() ? ' show' : ''}`} id=\"fmt-style-tools-menu\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 429,
-        "text": "          <div class=\"ribbon-grid-col\" style={{ 'justify-content': 'center' }}>"
+        "line": 377,
+        "text": "                <button class=\"ribbon-menu-item\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 430,
-        "text": "            <div class=\"ribbon-form-row\">"
+        "line": 381,
+        "text": "                <button class=\"ribbon-menu-item\" disabled={!copiedStyle() || isLocked()}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 385,
+        "text": "                <div class=\"ribbon-menu-sep\"></div>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 386,
+        "text": "                <button class=\"ribbon-menu-item\" disabled={isLocked()} onClick={openCreateDialog}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 389,
+        "text": "                <button class=\"ribbon-menu-item\" disabled={presets().length === 0}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 394,
+        "text": "                  <div class=\"ribbon-menu-sep\"></div>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 397,
+        "text": "                      <button class=\"ribbon-menu-item\" disabled={isLocked()}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 407,
+        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-reset-location\" title={t('format.resetLocation')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
         "line": 432,
-        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-layer\" title={t('format.layer')}>"
+        "text": "              <span ref={el => { el.innerHTML = resetLocationIcon; }} />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
-        "line": 437,
+        "line": 436,
+        "text": "        </RibbonGroup>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 438,
+        "text": "        <RibbonGroup label={t('format.propertiesGroup')}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 439,
+        "text": "          <div class=\"ribbon-grid-col\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 440,
+        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-open\" title={t('format.openProperties')}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 451,
+        "text": "              <span ref={el => { el.innerHTML = openPropertiesIcon; }} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 454,
+        "text": "            <button class=\"ribbon-row-btn\" id=\"fmt-hide\" title={t('format.hideAnnotation')}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 459,
+        "text": "              <span ref={el => { el.innerHTML = hideAnnotationIcon; }} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 463,
+        "text": "          <div class=\"ribbon-grid-col\" style={{ 'justify-content': 'center' }}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 464,
+        "text": "            <div class=\"ribbon-form-row\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 466,
+        "text": "              <select class=\"ribbon-form-select\" id=\"fmt-layer\" title={t('format.layer')} disabled={invoegen()}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+        "line": 471,
         "text": "        </RibbonGroup>"
       },
       {
@@ -36356,152 +36366,152 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 29,
+        "line": 30,
         "text": "export default function Ribbon() {"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 30,
+        "line": 31,
         "text": "  const { t } = useTranslation('ribbon');"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 43,
+        "line": 44,
         "text": "  const knopVan = (id) => tablistEl?.querySelector(`.ribbon-tab[role=\"tab\"][data-tab=\"${CSS.escape(id)}\"]`);"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 59,
+        "line": 60,
         "text": "    const knop = e.target.closest?.('.ribbon-tab[role=\"tab\"]');"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 61,
+        "line": 62,
         "text": "    const tabs = [...tablistEl.querySelectorAll('.ribbon-tab[role=\"tab\"]')].map((k) => k.dataset.tab);"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 82,
+        "line": 83,
         "text": "  const ribbonCollapsed = () => state.preferences.ribbonCollapsed === true;"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 84,
+        "line": 85,
         "text": "    state.preferences.ribbonCollapsed = !ribbonCollapsed();"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 90,
+        "line": 91,
         "text": "      <div class=\"ribbon-tabs\" role=\"tablist\" ref={tablistEl}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 92,
+        "line": 93,
         "text": "        <RibbonTab label={t('tabs.file')} isFileTab={true} id=\"file-tab\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 94,
+        "line": 95,
         "text": "        <RibbonTab label={t('tabs.home')} dataTab=\"home\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 97,
+        "line": 98,
         "text": "        <RibbonTab label={t('tabs.view')} dataTab=\"view\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 100,
+        "line": 101,
         "text": "        <RibbonTab label={t('tabs.drawing')} dataTab=\"drawing\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 103,
+        "line": 104,
         "text": "        <RibbonTab label={t('tabs.comment')} dataTab=\"comment\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 106,
+        "line": 107,
         "text": "        <RibbonTab label={t('tabs.organize')} dataTab=\"organize\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 109,
+        "line": 110,
         "text": "        <RibbonTab label={t('tabs.help')} dataTab=\"help\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 115,
+        "line": 116,
         "text": "          <span class=\"ribbon-tab-separator contextual-tabs visible\" id=\"contextual-tabs-separator\"></span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 116,
+        "line": 117,
         "text": "          <RibbonTab label={t('tabs.format')} dataTab=\"format\" isContextual={true} id=\"tab-format-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 119,
-        "text": "          <RibbonTab label={t('tabs.arrange')} dataTab=\"arrange\" isContextual={true} id=\"tab-arrange-btn\""
+        "line": 123,
+        "text": "            <RibbonTab label={t('tabs.arrange')} dataTab=\"arrange\" isContextual={true} id=\"tab-arrange-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 125,
+        "line": 130,
         "text": "            <span class=\"ribbon-tab-separator contextual-tabs visible\" id=\"contextual-image-separator\"></span>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 127,
+        "line": 132,
         "text": "          <RibbonTab label={t('tabs.image')} dataTab=\"image\" isContextual={true} id=\"tab-image-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 131,
+        "line": 136,
         "text": "        {/* Collapse/expand toggle (issue #278): hides the ribbon body so only"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 135,
+        "line": 140,
         "text": "          class=\"ribbon-collapse-toggle\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 136,
+        "line": 141,
         "text": "          id=\"ribbon-collapse-toggle\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 137,
+        "line": 142,
         "text": "          title={ribbonCollapsed() ? (t('common.expandRibbon') || 'Expand ribbon') : (t('common.collapseRibbon') || 'Collapse ribbon')}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 141,
+        "line": 146,
         "text": "            <path d={ribbonCollapsed() ? 'M2 4 L6 8 L10 4' : 'M2 8 L6 4 L10 8'}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 148,
+        "line": 153,
         "text": "      {/* De inhoud blijft een direct kind van .ribbon-container, zonder"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 150,
+        "line": 155,
         "text": "          een kindselector (`.x > .ribbon-content`). Elke tabknop wijst met"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 152,
+        "line": 157,
         "text": "      <Show when={!ribbonCollapsed()}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 166,
+        "line": 171,
         "text": "              return <div class=\"ribbon-content active\" id={`tab-${activeTab()}`} role=\"tabpanel\"><div class=\"ribbon-ext-fout\">{t('common.extensionTabFailed')}</div></div>;"
       },
       {
         "source": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
-        "line": 168,
+        "line": 173,
         "text": "              <Show when={activeTab()} keyed>{(id) => <ExtensionRibbonTab id={id} />}</Show>"
       },
       {
@@ -39825,6 +39835,11 @@
         "text": ".quick-access-toolbar {"
       },
       {
+        "source": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
+        "line": 54,
+        "text": " * na een ribbon-klik, of nog nooit over het canvas bewogen) aan het invoeranker"
+      },
+      {
         "source": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
         "line": 9,
         "text": "  const { t } = useTranslation('ribbon');"
@@ -40036,77 +40051,77 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 120,
+        "line": 122,
         "text": "      {/* Toolbar */}"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 121,
+        "line": 123,
         "text": "      <div class=\"text-annot-toolbar\" onKeyDown={handleKeyDown}>"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 122,
+        "line": 124,
         "text": "        <div class=\"text-annot-toolbar-group\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 145,
-        "text": "        <div class=\"text-annot-toolbar-separator\" />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
         "line": 147,
+        "text": "        <div class=\"text-annot-toolbar-separator\" />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 149,
         "text": "        <div class=\"text-annot-toolbar-group\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 150,
+        "line": 152,
         "text": "            class=\"text-annot-toolbar-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 161,
+        "line": 163,
         "text": "            class=\"text-annot-toolbar-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 172,
+        "line": 174,
         "text": "            class=\"text-annot-toolbar-btn\""
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 183,
-        "text": "        <div class=\"text-annot-toolbar-separator\" />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
         "line": 185,
-        "text": "        <div class=\"text-annot-toolbar-group\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 188,
-        "text": "            class=\"text-annot-toolbar-btn\""
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 199,
-        "text": "            class=\"text-annot-toolbar-btn\""
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 210,
-        "text": "            class=\"text-annot-toolbar-btn\""
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
-        "line": 221,
         "text": "        <div class=\"text-annot-toolbar-separator\" />"
       },
       {
         "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 187,
+        "text": "        <div class=\"text-annot-toolbar-group\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 190,
+        "text": "            class=\"text-annot-toolbar-btn\""
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 201,
+        "text": "            class=\"text-annot-toolbar-btn\""
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 212,
+        "text": "            class=\"text-annot-toolbar-btn\""
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
         "line": 223,
+        "text": "        <div class=\"text-annot-toolbar-separator\" />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+        "line": 225,
         "text": "        <div class=\"text-annot-toolbar-group\">"
       },
       {
@@ -40451,37 +40466,37 @@
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 37,
+        "line": 45,
         "text": "        <span class=\"bookmark-icon\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 62,
+        "line": 70,
         "text": "  const disabled = () => toolbarDisabled();"
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 69,
+        "line": 172,
         "text": "      <div class=\"bookmarks-toolbar\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 71,
+        "line": 174,
         "text": "          class=\"bookmarks-toolbar-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 79,
+        "line": 182,
         "text": "          class=\"bookmarks-toolbar-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 87,
+        "line": 190,
         "text": "          class=\"bookmarks-toolbar-btn\""
       },
       {
         "source": "open-pdf-studio/js/solid/components/left-panel/panels/BookmarksPanel.jsx",
-        "line": 95,
+        "line": 198,
         "text": "          class=\"bookmarks-toolbar-btn\""
       },
       {
@@ -40841,12 +40856,12 @@
       },
       {
         "source": "open-pdf-studio/js/ui/chrome/tabs.js",
-        "line": 303,
+        "line": 306,
         "text": "  // Clear selection and hide contextual ribbon tabs"
       },
       {
         "source": "open-pdf-studio/js/ui/chrome/tabs.js",
-        "line": 305,
+        "line": 308,
         "text": "  import('../../solid/stores/ribbonStore.js').then(m => m.setContextualTabsVisible(false));"
       },
       {
@@ -40951,47 +40966,47 @@
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 9,
+        "line": 10,
         "text": "  setBookmarkToolbarDisabled as setToolbarDisabled,"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 141,
+        "line": 142,
         "text": "    updateToolbarState();"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 150,
+        "line": 151,
         "text": "    updateToolbarState();"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 160,
+        "line": 161,
         "text": "  updateToolbarState();"
-      },
-      {
-        "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 163,
-        "text": "// Update toolbar button enabled state by pushing to store"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
         "line": 164,
+        "text": "// Update toolbar button enabled state by pushing to store"
+      },
+      {
+        "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
+        "line": 165,
         "text": "function updateToolbarState() {"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 170,
+        "line": 171,
         "text": "  setToolbarDisabled({"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 187,
+        "line": 188,
         "text": "  updateToolbarState();"
       },
       {
         "source": "open-pdf-studio/js/ui/panels/bookmarks.js",
-        "line": 200,
+        "line": 201,
         "text": "  updateToolbarState();"
       },
       {
@@ -41046,7 +41061,7 @@
       },
       {
         "source": "open-pdf-studio/js/ui/setup.js",
-        "line": 17,
+        "line": 18,
         "text": "const IMAGE_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.svg'];"
       },
       {
@@ -54299,7 +54314,7 @@
   {
     "repository": "open-planner-studio",
     "status": "source-scanned",
-    "code_files": 256,
+    "code_files": 258,
     "matches": [
       {
         "source": "src/App.tsx",
@@ -54683,42 +54698,42 @@
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 336,
+        "line": 337,
         "text": "  // namespace (ribbon.calendarDialog.days, ISO 1=ma … 7=zo) en remapt die naar Sun-first."
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 341,
+        "line": 342,
         "text": "      tMenu('ribbon.calendarDialog.days.7'), // zo (getUTCDay 0 = zondag)"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 342,
+        "line": 343,
         "text": "      tMenu('ribbon.calendarDialog.days.1'), // ma"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 343,
+        "line": 344,
         "text": "      tMenu('ribbon.calendarDialog.days.2'), // di"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 344,
+        "line": 345,
         "text": "      tMenu('ribbon.calendarDialog.days.3'), // wo"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 345,
+        "line": 346,
         "text": "      tMenu('ribbon.calendarDialog.days.4'), // do"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 346,
+        "line": 347,
         "text": "      tMenu('ribbon.calendarDialog.days.5'), // vr"
       },
       {
         "source": "src/components/canvas/GanttCanvas.tsx",
-        "line": 347,
+        "line": 348,
         "text": "      tMenu('ribbon.calendarDialog.days.6'), // za"
       },
       {
@@ -54852,13 +54867,23 @@
         "text": "import { ChevronDown } from 'lucide-react';"
       },
       {
+        "source": "src/components/common/TimeInput.tsx",
+        "line": 2,
+        "text": "import { ChevronDown, ChevronUp } from 'lucide-react';"
+      },
+      {
         "source": "src/components/common/Tooltip.tsx",
         "line": 13,
         "text": " * clips (bv. de ribbon-strook) het niet afsnijden; de horizontale positie wordt binnen de viewport"
       },
       {
         "source": "src/components/common/Tooltip.tsx",
-        "line": 17,
+        "line": 16,
+        "text": " * Info-iconen (`data-tooltip-instant`) zijn er voor de uitleg zelf. Daarom:"
+      },
+      {
+        "source": "src/components/common/Tooltip.tsx",
+        "line": 30,
         "text": "/** `data-tooltip-instant`: geen vertraging — voor info-iconen waar de tooltip dé inhoud is. */"
       },
       {
@@ -54908,82 +54933,82 @@
       },
       {
         "source": "src/components/dialogs/CalendarDialog.tsx",
-        "line": 263,
+        "line": 274,
         "text": "                {tMenu('ribbon.calendarDialog.noHolidays')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
         "line": 3,
-        "text": "import { ChevronDown, ChevronUp, Info, Plus, Trash2, X } from 'lucide-react';"
+        "text": "import { Plus, Trash2, X } from 'lucide-react';"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 558,
+        "line": 487,
         "text": "          {tMenu('ribbon.calendarDialog.name')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 572,
+        "line": 501,
         "text": "            {tMenu('ribbon.calendarDialog.workDays')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 606,
+        "line": 533,
         "text": "                {tMenu(`ribbon.calendarDialog.days.${day}`)}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 621,
+        "line": 547,
         "text": "              {tMenu('ribbon.calendarDialog.startHour')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 638,
+        "line": 564,
         "text": "              {tMenu('ribbon.calendarDialog.endHour')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 657,
+        "line": 583,
         "text": "            {tMenu('ribbon.calendarDialog.netHoursPerDay')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 879,
+        "line": 785,
         "text": "            {tMenu('ribbon.calendarDialog.holidaysSection')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 883,
+        "line": 789,
         "text": "            {tMenu('ribbon.calendarDialog.addHoliday')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 889,
+        "line": 795,
         "text": "            {tMenu('ribbon.calendarDialog.noHolidays')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 894,
+        "line": 800,
         "text": "              <span>{tMenu('ribbon.calendarDialog.holidayName')}</span>"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 895,
+        "line": 801,
         "text": "              <span>{tMenu('ribbon.calendarDialog.from')}</span>"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 896,
+        "line": 802,
         "text": "              <span>{tMenu('ribbon.calendarDialog.until')}</span>"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 918,
+        "line": 824,
         "text": "                      ariaLabel={tMenu('ribbon.calendarDialog.from')}"
       },
       {
         "source": "src/components/dialogs/CalendarForm.tsx",
-        "line": 925,
+        "line": 831,
         "text": "                      ariaLabel={tMenu('ribbon.calendarDialog.until')}"
       },
       {
@@ -55283,12 +55308,12 @@
       },
       {
         "source": "src/components/dialogs/ShortcutsDialog.tsx",
-        "line": 46,
+        "line": 48,
         "text": " * Weergave-ribbontab. Rendert VOLLEDIG uit `SHORTCUTS` (het register is de enige bron van"
       },
       {
         "source": "src/components/dialogs/ShortcutsDialog.tsx",
-        "line": 70,
+        "line": 72,
         "text": "          icon={<Keyboard size={16} />}"
       },
       {
@@ -55300,16 +55325,6 @@
         "source": "src/components/dialogs/SiteSaveDialog.tsx",
         "line": 3,
         "text": "import { HardDrive } from 'lucide-react';"
-      },
-      {
-        "source": "src/components/dialogs/StatsDialog.tsx",
-        "line": 2,
-        "text": "import { BarChart3 } from 'lucide-react';"
-      },
-      {
-        "source": "src/components/dialogs/StatsDialog.tsx",
-        "line": 29,
-        "text": "      <DialogHeader title={t('settings.statsTitle')} icon={<BarChart3 size={16} />} onClose={close} help={{ articleId: SETTINGS_HELP_ARTICLE_ID }} />"
       },
       {
         "source": "src/components/layout/Ribbon/Ribbon.css",
@@ -58892,6 +58907,16 @@
         "text": "  const result = computeSanitizedIcon(raw);"
       },
       {
+        "source": "src/components/dialogs/StatsDialog.tsx",
+        "line": 2,
+        "text": "import { BarChart3 } from 'lucide-react';"
+      },
+      {
+        "source": "src/components/dialogs/StatsDialog.tsx",
+        "line": 29,
+        "text": "      <DialogHeader title={t('settings.statsTitle')} icon={<BarChart3 size={16} />} onClose={close} help={{ articleId: SETTINGS_HELP_ARTICLE_ID }} />"
+      },
+      {
         "source": "src/components/dialogs/StructureDialog.tsx",
         "line": 4,
         "text": "import { Plus, Trash2 } from 'lucide-react';"
@@ -58938,7 +58963,7 @@
       },
       {
         "source": "src/components/dialogs/WorkTimeEditor.tsx",
-        "line": 77,
+        "line": 105,
         "text": "                {tMenu(`ribbon.calendarDialog.days.${wd}`)}"
       },
       {
@@ -59329,7 +59354,7 @@
       {
         "source": "src/components/settings/SchedulingProfileSection.tsx",
         "line": 4,
-        "text": "import { ChevronDown, ChevronRight } from 'lucide-react';"
+        "text": "import { ChevronDown, ChevronRight, Info, Plus, X } from 'lucide-react';"
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
@@ -59343,37 +59368,37 @@
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 99,
+        "line": 100,
         "text": "  // Knoppen die een andere dialoog openen sluiten eerst de Instellingen-dialoog (tandwiel/ribbon)"
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 100,
+        "line": 101,
         "text": "  // én Backstage (activeRibbonTab terug naar 'start'), zodat die dialoog vrij opent."
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 102,
+        "line": 103,
         "text": "    setUI({ showSettingsDialog: false, activeRibbonTab: 'start', ...patch });"
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 299,
+        "line": 314,
         "text": "                de ingangen (gear/ribbontab/backstage). */}"
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 401,
+        "line": 416,
         "text": "                gedeelde component op alle 3 de ingangen (gear/Instellingen-ribbontab/Backstage)."
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 436,
+        "line": 451,
         "text": "                ingangen (gear/Instellingen-ribbontab/Backstage). */}"
       },
       {
         "source": "src/components/settings/SettingsPanelContent.tsx",
-        "line": 456,
+        "line": 471,
         "text": "            {/* [Rondleiding]: derde herstart-ingang naast de Ribbon Weergave-knop en de Backstage-NavItem;"
       },
       {
@@ -59388,7 +59413,7 @@
       },
       {
         "source": "src/components/task-grid/FullTaskGrid.tsx",
-        "line": 1311,
+        "line": 1313,
         "text": "          addRelationDisabledReason={ganttVisible ? undefined : tMenu('ribbon.ganttOnlyHint')}"
       },
       {
@@ -59450,16 +59475,6 @@
         "source": "src/components/task-sections/shared.tsx",
         "line": 8,
         "text": " * paneel-bestand) omdat zowel `TaskPropertiesPanel` als `TaskDialog` als `Ribbon.tsx`"
-      },
-      {
-        "source": "src/components/tour/TourOverlay.tsx",
-        "line": 73,
-        "text": " * klikken vlak bij het anker, niet de rest van de pagina (een klik op bv. de Report-ribbontab"
-      },
-      {
-        "source": "src/components/tour/TourOverlay.tsx",
-        "line": 126,
-        "text": "        activeRibbonTab: ui.activeRibbonTab,"
       },
       {
         "source": "scripts/build-release-highlights-json.ts",
@@ -59635,6 +59650,16 @@
         "source": "src/components/settings/applySetting.ts",
         "line": 5,
         "text": "// Bewust een losse module zonder `@/i18n/config`: het lint (ribbonWidgets) gebruikt dit ook, en"
+      },
+      {
+        "source": "src/components/tour/TourOverlay.tsx",
+        "line": 73,
+        "text": " * klikken vlak bij het anker, niet de rest van de pagina (een klik op bv. de Report-ribbontab"
+      },
+      {
+        "source": "src/components/tour/TourOverlay.tsx",
+        "line": 126,
+        "text": "        activeRibbonTab: ui.activeRibbonTab,"
       },
       {
         "source": "src/components/tour/tourAnchor.ts",
@@ -63601,7 +63626,7 @@
       },
       {
         "source": "en/index.html",
-        "line": 1334,
+        "line": 1318,
         "text": "          <img class=\"tool-thumb\" src=\"/shared/assets/screenshots/monty-ifc-viewer.png\" alt=\"Monty IFC Viewer\">"
       },
       {
@@ -63676,27 +63701,27 @@
       },
       {
         "source": "en/index.html",
-        "line": 1766,
+        "line": 1763,
         "text": "          <span class=\"social-icon\" style=\"background:#0A66C2;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/></svg></span>"
       },
       {
         "source": "en/index.html",
-        "line": 1771,
+        "line": 1768,
         "text": "          <span class=\"social-icon\" style=\"background:#25D366;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5"
       },
       {
         "source": "en/index.html",
-        "line": 1776,
+        "line": 1773,
         "text": "          <span class=\"social-icon\" style=\"background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-"
       },
       {
         "source": "en/index.html",
-        "line": 1781,
+        "line": 1778,
         "text": "          <span class=\"social-icon\" style=\"background:#0866FF;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z\"/></svg></span>"
       },
       {
         "source": "en/index.html",
-        "line": 1786,
+        "line": 1783,
         "text": "          <span class=\"social-icon\" style=\"background:#000; border:1px solid rgba(255,255,255,0.18);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></span>"
       },
       {
@@ -63886,7 +63911,7 @@
       },
       {
         "source": "es/index.html",
-        "line": 1340,
+        "line": 1324,
         "text": "          <img class=\"tool-thumb\" src=\"/shared/assets/screenshots/monty-ifc-viewer.png\" alt=\"Monty IFC Viewer\">"
       },
       {
@@ -63961,27 +63986,27 @@
       },
       {
         "source": "es/index.html",
-        "line": 1772,
+        "line": 1769,
         "text": "          <span class=\"social-icon\" style=\"background:#0A66C2;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/></svg></span>"
       },
       {
         "source": "es/index.html",
-        "line": 1777,
+        "line": 1774,
         "text": "          <span class=\"social-icon\" style=\"background:#25D366;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5"
       },
       {
         "source": "es/index.html",
-        "line": 1782,
+        "line": 1779,
         "text": "          <span class=\"social-icon\" style=\"background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-"
       },
       {
         "source": "es/index.html",
-        "line": 1787,
+        "line": 1784,
         "text": "          <span class=\"social-icon\" style=\"background:#0866FF;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z\"/></svg></span>"
       },
       {
         "source": "es/index.html",
-        "line": 1792,
+        "line": 1789,
         "text": "          <span class=\"social-icon\" style=\"background:#000; border:1px solid rgba(255,255,255,0.18);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></span>"
       },
       {
@@ -64231,7 +64256,7 @@
       },
       {
         "source": "fr/index.html",
-        "line": 1334,
+        "line": 1318,
         "text": "          <img class=\"tool-thumb\" src=\"/shared/assets/screenshots/monty-ifc-viewer.png\" alt=\"Monty IFC Viewer\">"
       },
       {
@@ -64306,27 +64331,27 @@
       },
       {
         "source": "fr/index.html",
-        "line": 1766,
+        "line": 1763,
         "text": "          <span class=\"social-icon\" style=\"background:#0A66C2;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/></svg></span>"
       },
       {
         "source": "fr/index.html",
-        "line": 1771,
+        "line": 1768,
         "text": "          <span class=\"social-icon\" style=\"background:#25D366;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5"
       },
       {
         "source": "fr/index.html",
-        "line": 1776,
+        "line": 1773,
         "text": "          <span class=\"social-icon\" style=\"background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-"
       },
       {
         "source": "fr/index.html",
-        "line": 1781,
+        "line": 1778,
         "text": "          <span class=\"social-icon\" style=\"background:#0866FF;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z\"/></svg></span>"
       },
       {
         "source": "fr/index.html",
-        "line": 1786,
+        "line": 1783,
         "text": "          <span class=\"social-icon\" style=\"background:#000; border:1px solid rgba(255,255,255,0.18);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></span>"
       },
       {
@@ -64546,7 +64571,7 @@
       },
       {
         "source": "index.html",
-        "line": 1333,
+        "line": 1317,
         "text": "          <img class=\"tool-thumb\" src=\"/shared/assets/screenshots/monty-ifc-viewer.png\" alt=\"Monty IFC Viewer\">"
       },
       {
@@ -64621,27 +64646,27 @@
       },
       {
         "source": "index.html",
-        "line": 1765,
+        "line": 1762,
         "text": "          <span class=\"social-icon\" style=\"background:#0A66C2;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/></svg></span>"
       },
       {
         "source": "index.html",
-        "line": 1770,
+        "line": 1767,
         "text": "          <span class=\"social-icon\" style=\"background:#25D366;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5"
       },
       {
         "source": "index.html",
-        "line": 1775,
+        "line": 1772,
         "text": "          <span class=\"social-icon\" style=\"background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-"
       },
       {
         "source": "index.html",
-        "line": 1780,
+        "line": 1777,
         "text": "          <span class=\"social-icon\" style=\"background:#0866FF;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z\"/></svg></span>"
       },
       {
         "source": "index.html",
-        "line": 1785,
+        "line": 1782,
         "text": "          <span class=\"social-icon\" style=\"background:#000; border:1px solid rgba(255,255,255,0.18);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></span>"
       },
       {
@@ -67411,7 +67436,7 @@
       },
       {
         "source": "tr/index.html",
-        "line": 1334,
+        "line": 1318,
         "text": "          <img class=\"tool-thumb\" src=\"/shared/assets/screenshots/monty-ifc-viewer.png\" alt=\"Monty IFC Viewer\">"
       },
       {
@@ -67486,27 +67511,27 @@
       },
       {
         "source": "tr/index.html",
-        "line": 1766,
+        "line": 1763,
         "text": "          <span class=\"social-icon\" style=\"background:#0A66C2;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/></svg></span>"
       },
       {
         "source": "tr/index.html",
-        "line": 1771,
+        "line": 1768,
         "text": "          <span class=\"social-icon\" style=\"background:#25D366;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5"
       },
       {
         "source": "tr/index.html",
-        "line": 1776,
+        "line": 1773,
         "text": "          <span class=\"social-icon\" style=\"background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-"
       },
       {
         "source": "tr/index.html",
-        "line": 1781,
+        "line": 1778,
         "text": "          <span class=\"social-icon\" style=\"background:#0866FF;\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z\"/></svg></span>"
       },
       {
         "source": "tr/index.html",
-        "line": 1786,
+        "line": 1783,
         "text": "          <span class=\"social-icon\" style=\"background:#000; border:1px solid rgba(255,255,255,0.18);\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></span>"
       },
       {

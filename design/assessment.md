@@ -8,14 +8,14 @@ migratie van alle OpenAEC-applicaties.
 
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
-- 436 screenshotverwijzingen zijn op commit vastgelegd in `screen-index.json`;
-  415 hebben een unieke Git-blobinhoud en 322 zijn als mogelijke
+- 577 screenshotverwijzingen zijn op commit vastgelegd in `screen-index.json`;
+  556 hebben een unieke Git-blobinhoud en 463 zijn als mogelijke
   applicatieschermen geclassificeerd. De classificatie
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
   pyRevit-knopbundelconventie. De overige SVG's, CAD-symbolen, illustraties en
   technische tekeningen horen niet bij die telling.
-- 684 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
+- 686 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
   gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
 - Het [semantische kruisverband](icon-semantic-crosswalk.html) vergelijkt de
@@ -29,10 +29,34 @@ migratie van alle OpenAEC-applicaties.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
-  Pointcloud native en de 36 lokaal bewaarde bruikbare UI-referenties. De
+  Pointcloud native en de 41 lokaal bewaarde bruikbare UI-referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
+- De Planner-audit omvat nu 145 brongepinde schermkandidaten, waaronder 142
+  beelden onder `artifacts/` die de eerdere padfilter miste. Acht uiteenlopende
+  licht/donkerbeelden zijn lokaal bewaard; de Gantt- en profieldialoogbeelden
+  zijn visueel bekeken. De huidige ribbonregistry bevestigt
+  Start, Planning, Resources, Weergave, Instellingen, Tabel, IFC en Rapport;
+  AI is alleen zichtbaar wanneer de AI-modus aanstaat. De concepttabs en
+  linker paneelbeschrijving zijn daarop aangepast.
 - `dynlex` en `feat/rust-native` van PDF Studio waren niet publiek beschikbaar
   bij de bronaudit. PDF Studio v3 is als afzonderlijke Slint-bron meegenomen.
+
+De nieuwe Planner-referenties corrigeren een concrete fout in de eerste
+taxonomie. Op het [Gantt-scherm](../harmonization/references/open-planner-studio/artifacts/tabel-overhaul/22-gantt-wide-1280-en-dark.jpg)
+staat de taak/WBS-tabel naast de tijdlijn, met eigenschappen rechts. De
+[profieldialoog](../harmonization/references/open-planner-studio/artifacts/profielblok/eigen-profiel-bewerken-licht.png)
+laat zien dat compacte formulierregels en statuslabels ook bij lange inhoud
+leesbaar moeten blijven. In de [bronregistry op commit 5a65f6b865a7](https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7/src/components/layout/Ribbon/ribbonConfig.tsx)
+staan Berekenen en taakacties in Start/Planning, niet in aparte top-level
+tabs. Daarom vervallen de eerder voorgestelde tabs Taken en Berekenen.
+De [native Planner-preview](style-repo-planner-ribbon-light.png) volgt de
+gecontroleerde tab- en groepsstructuur; gemeenschappelijke acties gebruiken
+de 22-iconenkern en de overige vormen zijn broniconen ter beoordeling.
+Een software-render liet zien dat de horizontale scrollbar de groepsnamen
+overlapte. De gedeelde Rust-shell reserveert nu de volledige ribbonhoogte voor
+de scrollbar; een renderregressietest controleert dat de groepsnaam leesbaar
+blijft. De preview is nog geen pixelkopie van de bestaande Planner-app, die
+compacte knopstapels en een eigen taak/Gantt-werkgebied gebruikt.
 
 ## Besluiten voor de gedeelde shell
 

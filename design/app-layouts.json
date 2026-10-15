@@ -173,16 +173,19 @@
     "tabs": [
       "Bestand",
       "Start",
-      "Taken",
+      "Planning",
       "Resources",
-      "Berekenen",
       "Weergave",
+      "Instellingen",
+      "Tabel",
+      "IFC",
       "Rapport",
-      "Help"
+      "AI"
     ],
-    "left_panel": "Projecten & WBS",
+    "optional_tabs": ["AI"],
+    "left_panel": "WBS / taaklijst naast de tijdlijn",
     "right_panel": "Taakeigenschappen",
-    "workspace": "Gantt + taaklijst",
+    "workspace": "Gantt-tijdlijn met geïntegreerde taaklijst",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -205,7 +208,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Tabs en hoofdgroepen gecontroleerd tegen src/components/layout/Ribbon/ribbonConfig.tsx op commit 5a65f6b865a7; acht uiteenlopende UI-captures geselecteerd uit 145 schermkandidaten. De gedeelde shell blijft een harmonisatievoorstel."
   },
   {
     "id": "calc",

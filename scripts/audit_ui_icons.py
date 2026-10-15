@@ -36,10 +36,14 @@ def scan(item):
 if __name__=='__main__':
  # Scan every accessible UI repository, including code-only icon systems.
  selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'project-ocondat','open-pdf-studio-library','blender-bonsai-training','inb-template','building-py','llvm-project'}]
+ previous_path=H/'ui-code-references.json'
+ previous_order={record['repository']:index for index,record in enumerate(json.loads(previous_path.read_text()))} if previous_path.exists() else {}
  with cf.ThreadPoolExecutor(max_workers=4) as pool:
   results=[]
   for future in cf.as_completed([pool.submit(scan,item) for item in selection]):
    result=future.result();results.append(result)
    print(result['repository'],result['status'],len(result['matches']),flush=True)
-   (H/'ui-code-references.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+ # Completion order depends on network/cache timings. Preserve the established
+ # record order to keep source-audit diffs readable and reproducible.
+ results.sort(key=lambda result: (previous_order.get(result['repository'],len(previous_order)),result['repository'].lower()))
  (H/'ui-code-references.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))

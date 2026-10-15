@@ -137,6 +137,29 @@ fn atlas_workspace_respects_each_theme_background() {
 }
 
 #[test]
+fn long_ribbon_keeps_group_caption_above_horizontal_scrollbar() {
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::SelectStudio(4));
+    let picture = render_with_options(&app, Theme::Light, false, Some("start"));
+    let orange_ink = (210..270)
+        .flat_map(|x| (128..136).map(move |y| (x, y)))
+        .filter(|&(x, y)| {
+            let at = ((y * picture.width() + x) * 4) as usize;
+            let (r, g, b) = (
+                u16::from(picture.data()[at]),
+                u16::from(picture.data()[at + 1]),
+                u16::from(picture.data()[at + 2]),
+            );
+            r > 160 && r > g + 40 && g > b + 35
+        })
+        .count();
+    assert!(
+        orange_ink > 12,
+        "Planner group caption hidden by scrollbar: {orange_ink} pixels"
+    );
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
@@ -190,4 +213,9 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Forge, false, Some("modelleren"))
         .save_png(&design.join("style-repo-bim-ribbon-forge.png"))
         .expect("save BIM concept ribbon");
+    let _ = app.update(Action::SelectStudio(4));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("start"))
+        .save_png(&design.join("style-repo-planner-ribbon-light.png"))
+        .expect("save Planner ribbon review");
 }

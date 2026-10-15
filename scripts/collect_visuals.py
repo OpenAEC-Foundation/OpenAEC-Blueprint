@@ -20,10 +20,28 @@ def collect(r):
   if any(x in low for x in ['node_modules/','vendor/','tests/fixtures/']):continue
   if base in ['readme.md','readme.rst'] and p.count('/')<2: ui.append(p)
   elif re.search(r'\.(tsx?|css|rs|slint)$',low) and re.search(r'(ribbon|backstage|theme|titlebar|documentbar|app\.tsx$|app\.slint$)',base) and p.count('/')<7:ui.append(p)
-  if re.search(r'\.(png|jpe?g|webp)$',low) and re.search(r'screenshot|screens/|preview|ribbon-approved|ui-reference',low) and not re.search(r'icon|logo',low):screens.append(p)
+  # Planner keeps its actual light/dark UI captures under artifacts/ rather
+  # than screenshots/. Include those as screen candidates, not as icons.
+  planner_capture = name == 'open-planner-studio' and low.startswith('artifacts/')
+  if re.search(r'\.(png|jpe?g|webp)$',low) and (re.search(r'screenshot|screens/|preview|ribbon-approved|ui-reference',low) or planner_capture) and not re.search(r'icon|logo',low):screens.append(p)
  def score(p):
   low=p.lower();return sum(v for word,v in [('native',8),('approved',10),('light',8),('ribbon',5),('home',4),('main',4),('overview',4),('backstage',3),('settings',2),('dark',2),('error',-15),('debug',-10),('broken',-10)] if word in low)
- chosen=sorted(screens,key=lambda p:(-score(p),len(p)))[:3]
+ if name == 'open-planner-studio':
+  # Sample distinct real UI states for layout review; all remaining artifact
+  # captures still appear in the source-pinned screen inventory.
+  highlights=[
+   'artifacts/tabel-overhaul/22-gantt-wide-1280-en-dark.jpg',
+   'artifacts/gantt-voortgang/gantt-licht.png',
+   'artifacts/profielblok/eigen-profiel-bewerken-licht.png',
+   'artifacts/kalender-optie2/eenvoudige-kalender-urenplanning-uit-licht.png',
+   'artifacts/formaat-uitleg-popup/xer-donker.png',
+   'artifacts/rapport-kolombreedtes/nl-na.png',
+   'artifacts/resourcediagram/01-resourcediagram-preview-en-dark.png',
+   'artifacts/balkkleuren/bars-light.png',
+  ]
+  chosen=[p for p in highlights if p in screens]
+ else:
+  chosen=sorted(screens,key=lambda p:(-score(p),len(p)))[:3]
  for p in sorted(set(ui))[:35]+chosen:
   kind='screenshots' if p in chosen else 'ui_sources'
   url=f'https://raw.githubusercontent.com/{r["url"].removeprefix("https://github.com/")}/{r["commit"]}/{inv.urllib.parse.quote(p)}'
