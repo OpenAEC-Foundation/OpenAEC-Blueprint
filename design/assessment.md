@@ -29,7 +29,7 @@ migratie van alle OpenAEC-applicaties.
 | Onderdeel | Besluit | Onderbouwing |
 | --- | --- | --- |
 | Regio's | Titelbalk, ribbon-tabs, ribbon-groepen, documenttabs, verkenner, werkruimte, eigenschappen en status zijn vaste componenten. | Deze ordening is zichtbaar in de Tauri-template en meerdere studio's. |
-| Maatvoering | Titel 32 px, tabstrip 34 px, ribbon 100 px, documenttabs 32 px, status 26 px; standaardpanelen 240/260 px. | Vastgelegd in de Rust-crate en in het HTML-prototype zodat dezelfde app op alle tools identieke maten gebruikt. |
+| Maatvoering | Titel 32 px, tabstrip 28 px, ribbon 94 px, documenttabs 30 px en status 22 px volgens de Tauri-template; standaardpanelen in het prototype 240/260 px. | De Rust-crate en het HTML-prototype gebruiken nu dezelfde bronmaten. |
 | Kleur | Vijf Style Book-thema's; amber is selectie/focus, niet een willekeurige betekenis van een domeinresultaat. | De bestaande apps mengen amber, grijs en vakspecifieke kleuren verschillend. |
 | Lettertype | Inter voor bediening, Space Grotesk voor koppen en JetBrains Mono voor code/waarden. | Gebundelde bestanden maken de rendering onafhankelijk van systeemfonts. |
 | Iconen | 24×24 semantische bedieningsiconen als canonieke set; vakinhoudelijke iconen krijgen een aparte betekenislaag. | Een maatlijn, een constraint en een gemeten afstand lijken op elkaar maar zijn andere opdrachten. |
@@ -44,7 +44,7 @@ migratie van alle OpenAEC-applicaties.
 | Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
 | Applicatieschermen | Negen gedeelde schermtoestanden zijn in het prototype selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken nu hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor titelbalkiconen, fonts en 77 algemene kleurvelden per thema. | Ribbon, panelen en dialoogcomponenten gefaseerd op de gedeelde shell aansluiten zonder 3D-functionaliteit te verliezen. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor titelbalkiconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en de vijf vensterbandmaten. De documenttabs staan nu vensterbreed; software-renders voor Light en Forge zijn visueel beoordeeld. | Overige panelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
@@ -66,6 +66,12 @@ een gelijknamige bronkandidaat; zo'n match is geen bewijs van dezelfde functie.
 | Betekenisbotsingen | `bim.level` lijkt op een maatpijl; `bim.survey-point` en `bim.project-origin` delen een kruis/doel-motief; `fem.beam` en `bim.beam` hebben terecht andere context maar kunnen in een gezamenlijke zoeklijst verwarren. | Peilmarkering duidelijker maken, oorsprong/meetpunt verder uiteen trekken en domeinlabels in zoekresultaten tonen. |
 | Licht/donker | Het ontwerp contrasteert op beide atlasachtergronden. Donkere weergave gebruikt een kleurinversie van de concept-SVG; de uiteindelijke crate moet themakleur toepassen in plaats van een CSS-filter. | SVG's pas na goedkeuring als themabewuste native assets genereren. |
 | Bronvergelijking | Kandidaten zijn op bestandsnaam geselecteerd en als tooltips zichtbaar. | De 24 paren visueel en functioneel per opdracht beoordelen; dubbele betekenissen samenvoegen. |
+
+De native Pointcloud-renders lieten bovendien zien dat oude OpenCAD-SVG's met
+vaste donkere lijnen op Forge wegvallen. De eerste integratie kleurt hun hele
+silhouet op donkere thema's met de gedeelde tekstkleur. Dat herstelt contrast,
+maar is geen vervanging voor per icoon beoordeelde vectorvormen en semantische
+kleuren.
 
 De negen toestanden in `harmonized.html` zijn nu opmaaksjablonen. Hun knoppen
 simuleren nog geen bestanden of berekeningen. Pixelgelijkheid vereist daarna
