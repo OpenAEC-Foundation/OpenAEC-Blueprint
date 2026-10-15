@@ -9,7 +9,7 @@ migratie van alle OpenAEC-applicaties.
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
 - 666 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
-  637 hebben een unieke Git-blobinhoud en 472 zijn als mogelijke
+  645 hebben een unieke Git-blobinhoud en 472 zijn als mogelijke
   applicatieschermen geclassificeerd. De classificatie
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
