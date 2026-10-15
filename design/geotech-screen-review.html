@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAEC · Geotechniek schermreview</title>
+<style>
+  :root { color-scheme: light; font: 14px/1.5 Inter, system-ui, sans-serif; color: #303039; background: #f4f4f5 }
+  * { box-sizing: border-box }
+  body { margin: 0 }
+  header { background: #303039; color: #fff; border-bottom: 3px solid #d97706; padding: 22px max(24px, calc((100vw - 1400px)/2)) }
+  header small { color: #f9b45d; letter-spacing: .12em; font-weight: 700 }
+  h1 { font-size: 28px; margin: 5px 0 4px; font-weight: 600 }
+  h2 { font-size: 19px; margin: 0 0 12px }
+  h3 { font-size: 14px; margin: 0 0 5px }
+  p { margin: 0 0 12px }
+  a { color: #af5e06 }
+  header a { color: #ffd08f }
+  main { max-width: 1450px; margin: auto; padding: 22px 24px 48px }
+  .intro { max-width: 1100px; color: #55555e }
+  .screen-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0 }
+  .screen-tabs button, .theme button { font: inherit; border: 1px solid #d3d3d6; background: #fff; color: #303039; border-radius: 5px; padding: 8px 11px; cursor: pointer }
+  .screen-tabs button[aria-selected="true"], .theme button[aria-pressed="true"] { border-color: #d97706; background: #fff2e4; color: #a44e00; font-weight: 650 }
+  .grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(340px, .85fr); gap: 18px }
+  .panel { background: #fff; border: 1px solid #dedee1; border-radius: 7px; padding: 15px; min-width: 0 }
+  .panel figure { margin: 0 }
+  .panel img { display: block; max-width: 100%; width: 100%; height: auto; max-height: 650px; object-fit: contain; object-position: top left; background: #e7e7e9; border: 1px solid #e0e0e2 }
+  figcaption { color: #65656d; font-size: 12px; margin-top: 8px }
+  .detail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 18px 0 }
+  .detail section { background: #fff; border: 1px solid #dedee1; border-radius: 7px; padding: 14px }
+  .detail p { margin: 0 }
+  .theme { display: flex; gap: 6px; margin-bottom: 10px }
+  .theme[hidden] { display: none }
+  .empty { min-height: 190px; display: grid; place-content: center; text-align: center; padding: 24px; color: #62626b; background: #f6f6f7; border: 1px dashed #c6c6cb }
+  .refs { margin-top: 18px; color: #62626b; font-size: 12px }
+  @media(max-width: 900px) { .grid, .detail { grid-template-columns: 1fr } .panel img { max-height: none } }
+</style>
+<header><small>OPENAEC · BRONGEPINDE VISUELE AUDIT</small><h1>Geotechniek: alle zes schermbeelden</h1><p>Broncommit <code>8182b48afc3f</code> · native Rust-review in dezelfde shell</p><a href="review.html">Terug naar de volledige review</a></header>
+<main>
+  <p class="intro">De zes afbeeldingen hieronder zijn echte repositorybestanden, geen verzameling willekeurige SVG’s. Kies een scherm om de bronindeling, de huidige Rust-dekking en de resterende visuele verschillen te beoordelen. Beelden kunnen verschillende productversies en schermtoestanden tonen.</p>
+  <nav class="screen-tabs" aria-label="Geotechniek schermen" id="tabs"></nav>
+  <div class="grid">
+    <section class="panel"><h2>Broncapture</h2><figure><a id="source-link"><img id="source-image" alt=""></a><figcaption id="source-caption"></figcaption></figure></section>
+    <section class="panel"><h2>Native Rust-review</h2><div class="theme" id="theme" hidden><button type="button" data-theme="light" aria-pressed="true">Light</button><button type="button" data-theme="forge" aria-pressed="false">Forge</button></div><div id="native"></div></section>
+  </div>
+  <div class="detail"><section><h3>Waargenomen indeling</h3><p id="structure"></p></section><section><h3>Beoordeling en restant</h3><p id="assessment"></p></section></div>
+  <p class="refs">Bronbeelden: <a href="../harmonization/references/open-geotechniek-studio/README.md">README op vastgelegde commit</a> · <a href="../harmonization/screen-index.json">schermindex</a> · <a href="../harmonization/references/open-geotechniek-studio/apps/desktop/src/App.tsx">actieve schermroutering</a>. De Rust-beelden zijn echte software-renders op 1280 × 800 px; het boorprofiel is een stijlreview en voert geen bodemkundige berekening uit.</p>
+</main>
+<script>
+const base = '../harmonization/references/open-geotechniek-studio/docs/screenshots/';
+const screens = [
+  {id:'cpt', label:'01 · CPT-sondering', file:'01-cpt-sondering.jpg', structure:'Home-ribbon, documenttab, verkenner met sonderingsgegevens en grondopbouw, drie naast elkaar liggende qc/fs/Rf-grafieken, smalle SBT-strook en locatie/legenda rechts.', assessment:'Ribbon en vensterbanden zijn in Rust aanwezig. Een native, databrongetrouwe grafiek met asindeling, meetwaarden, SBT-kleuren en gekoppelde laagselectie ontbreekt nog.'},
+  {id:'bhr', label:'02 · BHR-boring', file:'02-bhr-boring.jpg', native:'style-repo-geotech-borehole-', structure:'Home-ribbon en documenttab boven; verkenner met BHR-metadata links; diepteschaal, grondsoortprofiel en laaglijst midden; Robertson-legenda rechts.', assessment:'De native review neemt alle dertien laagnamen en aaneensluitende grenzen over. Laagselectie werkt. Tekstlabels ín de profielstrook, bronpatronen, exacte rijdichtheid en locatiekaart vragen verdere afstemming.'},
+  {id:'map', label:'03 · BRO-kaart', file:'03-kaart-bro.jpg', structure:'Kaart-ribbon met Meten; links een lange lijst van basislagen en overlays met schuifregelaars; luchtfoto en BRO-markers centraal; locatiekaart en Robertson-legenda rechts.', assessment:'De Kaart-ribbongroep is brongecontroleerd. Een native kaartvlak, kaartlagen, transparantieregelaars, zoekveld, markerkaart en meetinteractie zijn nog niet gebouwd.'},
+  {id:'multi', label:'03 · Meerdere CPT’s', file:'03.png', structure:'Historische browsercapture met drie sonderingsgrafieken naast elkaar, projectverkenner links en mini-kaart plus legenda rechts. De webbrowserrand behoort niet tot de applicatie-UI.', assessment:'Afzonderlijke grafiekpanelen en gekoppelde projectselectie ontbreken. Dit beeld is een aanvullende visuele toestand en geen bewijs dat alle browserchrome in de Rust-shell hoort.'},
+  {id:'report', label:'04 · PDF-rapport', file:'04-rapport-pdf.png', structure:'Rapport-ribbon; sectiekeuzes en sonderingsaantal links; een witte PDF-pagina op grijze achtergrond met grafiek, metadata en oranje accent in het midden.', assessment:'De rapport-ribbongroep is vastgelegd. Paginamaten, checkboxen, rapportpreview en PDF-export zijn nog niet native nagebouwd.'},
+  {id:'drawing', label:'05 · Situatietekening', file:'05-situatietekening.jpg', structure:'Optionele Situatietekening-ribbon met selecteer-, plaats-, overlay- en exportgroepen; A3-papier en titelblok; de capture toont een modal voor offerteaanvragen.', assessment:'De optionele ribbon is als Rust-preview aanwezig. Tekencanvas, schaal, titelblok, projectmarkeringen en offertemodal zijn nog geen werkende native schermen.'},
+];
+const tabs = document.getElementById('tabs');
+let selected = 0, theme = 'light';
+for (const [index, screen] of screens.entries()) {
+  const button = document.createElement('button');
+  button.type = 'button'; button.textContent = screen.label;
+  button.onclick = () => { selected = index; draw(); };
+  tabs.append(button);
+}
+function draw() {
+  const screen = screens[selected];
+  for (const [index, button] of [...tabs.children].entries()) button.setAttribute('aria-selected', String(index === selected));
+  const source = base + screen.file;
+  document.getElementById('source-link').href = source;
+  document.getElementById('source-image').src = source;
+  document.getElementById('source-image').alt = screen.label + ' · Open Geotechniek Studio broncapture';
+  document.getElementById('source-caption').textContent = screen.file + ' · gepinde Git-blob';
+  document.getElementById('structure').textContent = screen.structure;
+  document.getElementById('assessment').textContent = screen.assessment;
+  const native = document.getElementById('native');
+  const themeBar = document.getElementById('theme');
+  themeBar.hidden = !screen.native;
+  if (screen.native) {
+    native.innerHTML = '<a href="' + screen.native + theme + '.png"><img src="' + screen.native + theme + '.png" alt="Native Rust boorprofiel in ' + theme + '"></a><figcaption>Native Style Repo · ' + theme + ' · 1280 × 800 px</figcaption>';
+  } else {
+    native.innerHTML = '<div class="empty">Voor dit scherm is nog geen native Rust-render beschikbaar.<br>De ribbon en shell zijn apart beoordeeld.</div>';
+  }
+  for (const button of themeBar.querySelectorAll('button')) button.setAttribute('aria-pressed', String(button.dataset.theme === theme));
+}
+document.querySelectorAll('#theme button').forEach(button => button.onclick = () => { theme = button.dataset.theme; draw(); });
+draw();
+</script>
+</html>
