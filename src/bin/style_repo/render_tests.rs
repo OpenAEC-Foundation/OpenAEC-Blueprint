@@ -167,13 +167,16 @@ fn energy_workflow_uses_document_band_without_ribbon_or_properties_panel() {
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));
     assert_eq!(app.chrome_mode(), ChromeMode::Workflow);
-    for theme in [Theme::Light, Theme::Forge] {
-        let picture = render(&app, theme);
-        let [red, green, blue, _] = theme.tokens().docbar_bg.into_rgba8();
-        let at = ((45 * picture.width() + 1000) * 4) as usize;
-        assert!(picture.data()[at..at + 3].iter().zip([red, green, blue])
-            .all(|(actual, expected)| actual.abs_diff(expected) <= 1),
-            "{theme} document band at y=45");
+    for mode in EnergyMode::ALL {
+        let _ = app.update(Action::SelectEnergyMode(mode));
+        for theme in [Theme::Light, Theme::Forge] {
+            let picture = render(&app, theme);
+            let [red, green, blue, _] = theme.tokens().docbar_bg.into_rgba8();
+            let at = ((45 * picture.width() + 1000) * 4) as usize;
+            assert!(picture.data()[at..at + 3].iter().zip([red, green, blue])
+                .all(|(actual, expected)| actual.abs_diff(expected) <= 1),
+                "{mode:?} {theme} document band at y=45");
+        }
     }
 }
 
@@ -243,5 +246,15 @@ fn export_native_style_repo_previews() {
         render(&app, theme)
             .save_png(&design.join(format!("style-repo-energy-workflow-{name}.png")))
             .expect("save Energy workflow review");
+    }
+    for (mode, theme, name) in [
+        (EnergyMode::NewBuildUtility, Theme::Light, "utility-light"),
+        (EnergyMode::ExistingResidential, Theme::Light, "existing-light"),
+        (EnergyMode::ExistingUtility, Theme::Forge, "existing-utility-forge"),
+    ] {
+        let _ = app.update(Action::SelectEnergyMode(mode));
+        render(&app, theme)
+            .save_png(&design.join(format!("style-repo-energy-workflow-{name}.png")))
+            .expect("save Energy workflow variant");
     }
 }

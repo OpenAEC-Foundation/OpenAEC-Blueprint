@@ -18,6 +18,8 @@ use serde::Deserialize;
 use std::{path::PathBuf, sync::OnceLock};
 #[path = "style_repo/domain_drafts.rs"]
 mod domain_drafts;
+#[path = "style_repo/energy_workflow.rs"]
+mod energy_workflow;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
 #[cfg(test)]
@@ -25,6 +27,7 @@ mod ribbon_preview;
 mod render_tests;
 #[path = "style_repo/source_icons.rs"]
 mod source_icons;
+use energy_workflow::EnergyMode;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Page {
@@ -104,6 +107,8 @@ enum Action {
     SelectScreen(usize),
     SelectPreviewCommand(String),
     SelectEnergyStep(usize),
+    SelectEnergySub(usize),
+    SelectEnergyMode(EnergyMode),
 }
 
 #[derive(Deserialize)]
@@ -170,6 +175,8 @@ struct StyleRepo {
     selected_screen: usize,
     selected_preview_command: Option<String>,
     selected_energy_step: usize,
+    selected_energy_sub: Option<usize>,
+    energy_mode: EnergyMode,
 }
 impl Default for StyleRepo {
     fn default() -> Self {
@@ -186,6 +193,8 @@ impl Default for StyleRepo {
             selected_screen: 0,
             selected_preview_command: None,
             selected_energy_step: 0,
+            selected_energy_sub: None,
+            energy_mode: EnergyMode::NewBuildResidential,
         }
     }
 }
@@ -814,9 +823,16 @@ impl StyleRepo {
         let selected = &studios()[self.selected_studio];
         let screen = selected.screens.get(self.selected_screen).map(String::as_str).unwrap_or("workspace");
         let choices: Vec<String> = studios().iter().map(|studio| studio.name.clone()).collect();
-        let picker = pick_list(choices, Some(selected.name.clone()), |name| {
+        let studio_picker = pick_list(choices, Some(selected.name.clone()), |name| {
             Action::SelectStudio(studios().iter().position(|studio| studio.name == name).unwrap_or(0))
-        }).width(240).style(move |_, status| widgets::pick_list_style(theme, status))
+        }).width(235).style(move |_, status| widgets::pick_list_style(theme, status))
+            .menu_style(move |_| widgets::pick_list_menu_style(theme));
+        let mode = self.energy_mode;
+        let mode_choices: Vec<String> = EnergyMode::ALL.iter().map(|mode| mode.label(l).to_string()).collect();
+        let mode_picker = pick_list(mode_choices, Some(mode.label(l).to_string()), move |name| {
+            Action::SelectEnergyMode(EnergyMode::ALL.into_iter()
+                .find(|candidate| candidate.label(l) == name).unwrap_or(EnergyMode::NewBuildResidential))
+        }).width(235).style(move |_, status| widgets::pick_list_style(theme, status))
             .menu_style(move |_| widgets::pick_list_menu_style(theme));
         let mut states = Row::new().spacing(5);
         for (index, id) in selected.screens.iter().enumerate() {
@@ -825,45 +841,92 @@ impl StyleRepo {
                 .style(move |_, status| widgets::button_style(theme, index == self.selected_screen, status)));
         }
         let main: Element<'_, Action> = if screen == "workspace" {
-            let step = ["Project", "Gebouw", "Installaties", "Controle", "Resultaten en rapport", "Registratie"]
-                [self.selected_energy_step.min(5)];
-            let progress = self.card(column![
-                text(l.text("Voortgang · kerncontrole", "Progress · kernel check"))
-                    .font(fonts::STRONG).size(14),
-                widgets::property("Project", "✓  compleet", theme),
-                widgets::property("Gebouw", "✓  compleet", theme),
-                widgets::property("Installaties", "✓  compleet", theme),
-                widgets::property("Controle", "✓  compleet", theme),
-            ].spacing(13), theme);
-            let outcome = self.card(column![
-                text(l.text("Voorlopige uitkomst", "Provisional outcome"))
-                    .font(fonts::STRONG).size(14),
-                text("A+").font(fonts::HEADING).size(35).color(t.accent),
-                widgets::property("BENG 1", "51,4 kWh/m²", theme),
-                widgets::property("BENG 2", "80,6 kWh/m²", theme),
-                widgets::property("BENG 3", "22,3 %", theme),
-            ].spacing(11), theme);
-            column![
-                text(l.text("Voorbeeld tussenwoning", "Example terraced home"))
-                    .font(fonts::HEADING).size(27),
-                text(format!("{}: {step}", l.text("Actieve stap", "Active step")))
-                    .size(12).color(t.text_secondary),
-                row![progress, outcome].spacing(16).width(Fill),
+            let steps = mode.steps(l);
+            let active = &steps[self.selected_energy_step.min(steps.len() - 1)];
+            let active_label = self.selected_energy_sub
+                .and_then(|index| active.subs.get(index).copied()).unwrap_or(active.label);
+            let progress_labels: &[&str] = if mode.existing() {
+                &["Opname", "Controle", "Label en rapport", "Registratie"]
+            } else {
+                &["Project", "Gebouw", "Installaties", "Controle"]
+            };
+            let mut progress = Column::new().spacing(13).push(
+                text(l.text("Voortgang · ontwerpvoorbeeld", "Progress · design example"))
+                    .font(fonts::STRONG).size(14));
+            for (index, label) in progress_labels.iter().enumerate() {
+                let status = if index < self.selected_energy_step {
+                    l.text("✓  compleet", "✓  complete")
+                } else if index == self.selected_energy_step {
+                    l.text("actief", "active")
+                } else {
+                    l.text("open", "pending")
+                };
+                progress = progress.push(widgets::property(*label, status, theme));
+            }
+            let outcome = if mode.existing() {
+                self.card(column![
+                    text(l.text("Indicatieve labelklasse", "Indicative energy label"))
+                        .font(fonts::STRONG).size(14),
+                    text("A+").font(fonts::HEADING).size(35).color(t.accent),
+                    widgets::property(l.text("Opname", "Survey"), l.text("In behandeling", "In progress"), theme),
+                    widgets::property(l.text("Bewijs", "Evidence"), l.text("Concept", "Draft"), theme),
+                    widgets::property(l.text("Controle", "Check"), l.text("Nog te beoordelen", "Review pending"), theme),
+                ].spacing(11), theme)
+            } else {
+                self.card(column![
+                    text(l.text("Voorlopige uitkomst", "Provisional outcome"))
+                        .font(fonts::STRONG).size(14),
+                    text("A+").font(fonts::HEADING).size(35).color(t.accent),
+                    widgets::property("BENG 1", "51,4 kWh/m²", theme),
+                    widgets::property("BENG 2", "80,6 kWh/m²", theme),
+                    widgets::property("BENG 3", "22,3 %", theme),
+                ].spacing(11), theme)
+            };
+            let form = if mode.existing() {
+                self.card(column![
+                    text(l.text("Basisopname · overzicht", "Basic survey · overview"))
+                        .font(fonts::STRONG).size(14),
+                    row![
+                        column![
+                            widgets::property(l.text("Opnametype", "Survey type"),
+                                if mode.utility() { "Utiliteit" } else { "Woning" }, theme),
+                            widgets::property(l.text("Onderdeel", "Section"), active_label, theme),
+                        ].spacing(10).width(Fill),
+                        column![
+                            widgets::property(l.text("Bron en bewijs", "Source and evidence"), "Voorbeeldproject", theme),
+                            widgets::property(l.text("Labelstatus", "Label status"), "Concept", theme),
+                        ].spacing(10).width(Fill),
+                    ].spacing(20),
+                ].spacing(14), theme)
+            } else {
                 self.card(column![
                     text(l.text("NTA 8800-invoer", "NTA 8800 input")).font(fonts::STRONG).size(14),
                     row![
                         column![
                             widgets::property(l.text("Uitgave", "Edition"), "NTA 8800:2025+C1:2026", theme),
-                            widgets::property(l.text("Gebruiksfunctie", "Use"), "Woonfunctie", theme),
+                            widgets::property(l.text("Gebruiksfunctie", "Use"),
+                                if mode.utility() { "Overige gebruiksfunctie" } else { "Woonfunctie" }, theme),
                         ].spacing(10).width(Fill),
                         column![
-                            widgets::property(l.text("Rekenscope", "Calculation scope"), "Woningbouw", theme),
+                            widgets::property(l.text("Rekenscope", "Calculation scope"),
+                                if mode.utility() { "Utiliteitsbouw" } else { "Woningbouw" }, theme),
                             widgets::property(l.text("Bron en bewijs", "Source and evidence"), "Voorbeeldproject", theme),
                         ].spacing(10).width(Fill),
                     ].spacing(20),
-                ].spacing(14), theme),
-                text(l.text("Stijlproef op basis van Energy-routes en een brongepind projectbeeld. Berekening en veldgedrag blijven eigendom van Energy Studio.",
-                            "Style study based on Energy routes and a pinned project image. Calculation and field behavior remain with Energy Studio."))
+                ].spacing(14), theme)
+            };
+            column![
+                text(if mode.existing() {
+                    l.text("Voorbeeld bestaande bouw", "Existing-building example")
+                } else {
+                    l.text("Voorbeeld nieuwbouw", "New-build example")
+                }).font(fonts::HEADING).size(27),
+                text(format!("{}: {active_label}", l.text("Actieve stap", "Active step")))
+                    .size(12).color(t.text_secondary),
+                row![self.card(progress, theme), outcome].spacing(16).width(Fill),
+                form,
+                text(l.text("Stijlproef op basis van bronroutes; berekening en veldgedrag blijven eigendom van Energy Studio.",
+                            "Style study based on source routes; calculation and field behavior remain with Energy Studio."))
                     .size(11).color(t.text_secondary),
             ].spacing(17).into()
         } else {
@@ -875,8 +938,9 @@ impl StyleRepo {
                     text("ENERGY WORKFLOW · SOURCE REVIEW").font(fonts::STRONG).size(11).color(t.accent),
                     text(&selected.name).font(fonts::HEADING).size(29),
                 ].spacing(5).width(Fill),
-                picker,
+                studio_picker,
             ].align_y(Alignment::Center).spacing(20),
+            mode_picker,
             scrollable(states).direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new())),
             main,
             text(&selected.notes).size(11).color(t.text_secondary),
@@ -1193,28 +1257,36 @@ impl Application for StyleRepo {
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         if self.chrome_mode() == ChromeMode::Workflow {
             let t = theme.tokens();
-            let steps = [
-                l.text("Project", "Project"),
-                l.text("Gebouw", "Building"),
-                l.text("Installaties", "Installations"),
-                l.text("Controle", "Check"),
-                l.text("Resultaten en rapport", "Results and report"),
-                l.text("Registratie", "Registration"),
-            ];
+            let steps = self.energy_mode.steps(l);
             let mut nav = Column::new().spacing(4).push(
                 self.card(column![
-                    text(l.text("Voorbeeld tussenwoning", "Example terraced home"))
+                    text(if self.energy_mode.existing() {
+                        l.text("Voorbeeld bestaande bouw", "Existing-building example")
+                    } else {
+                        l.text("Voorbeeld nieuwbouw", "New-build example")
+                    })
                         .font(fonts::STRONG).size(13),
-                    text(l.text("Nieuwbouw · woning", "New build · residential"))
+                    text(self.energy_mode.label(l))
                         .size(11).color(t.text_secondary),
                 ].spacing(4), theme),
             );
-            for (index, label) in steps.into_iter().enumerate() {
-                let number = format!("{:02}  {label}", index + 1);
+            for (index, step) in steps.iter().enumerate() {
+                if step.more {
+                    nav = nav.push(text(l.text("MEER", "MORE")).font(fonts::STRONG).size(10).color(t.text_secondary));
+                }
+                let number = if step.more { format!("›  {}", step.label) } else { format!("{:02}  {}", index + 1, step.label) };
                 nav = nav.push(button(text(number).size(12))
                     .padding([9, 10]).width(Fill)
                     .on_press(Action::SelectEnergyStep(index))
                     .style(move |_, status| widgets::button_style(theme, index == self.selected_energy_step, status)));
+                if index == self.selected_energy_step {
+                    for (sub_index, sub) in step.subs.iter().enumerate() {
+                        nav = nav.push(button(text(format!("    {sub}")).size(11))
+                            .padding([5, 9]).width(Fill)
+                            .on_press(Action::SelectEnergySub(sub_index))
+                            .style(move |_, status| widgets::button_style(theme, self.selected_energy_sub == Some(sub_index), status)));
+                    }
+                }
             }
             nav = nav.push(text(l.text("Gereedschap · Instellingen", "Tools · Settings"))
                 .size(11).color(t.text_secondary));
@@ -1287,6 +1359,7 @@ impl Application for StyleRepo {
                 self.selected_screen = 0;
                 self.selected_preview_command = None;
                 self.selected_energy_step = 0;
+                self.selected_energy_sub = self.energy_mode.existing().then_some(0);
                 self.show(Page::Studios);
             }
             Action::SelectScreen(index) => {
@@ -1298,7 +1371,21 @@ impl Application for StyleRepo {
                 );
             }
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
-            Action::SelectEnergyStep(index) => self.selected_energy_step = index.min(5),
+            Action::SelectEnergyStep(index) => {
+                let steps = self.energy_mode.steps(Language::Dutch);
+                self.selected_energy_step = index.min(steps.len().saturating_sub(1));
+                self.selected_energy_sub = (!steps[self.selected_energy_step].subs.is_empty()).then_some(0);
+            }
+            Action::SelectEnergySub(index) => {
+                let steps = self.energy_mode.steps(Language::Dutch);
+                let subs = &steps[self.selected_energy_step.min(steps.len() - 1)].subs;
+                self.selected_energy_sub = (index < subs.len()).then_some(index);
+            }
+            Action::SelectEnergyMode(mode) => {
+                self.energy_mode = mode;
+                self.selected_energy_step = 0;
+                self.selected_energy_sub = mode.existing().then_some(0);
+            }
         }
         Task::none()
     }
