@@ -66,7 +66,7 @@ OpenAEC-style-book/
 ├── packages/               npm (React): tokens, icons, ribbon, shell, ui-primitives
 ├── crates/                 Rust (iced): openaec-tokens, openaec-icons, openaec-i18n, openaec-ui
 ├── frappe/openaec_theme/   Frappe-app: Desk-thema (CSS uit tokens), fonts, logo, favicon
-├── logos/                  gegenereerde app-logo's per app (png, ico, icns, favicon, lockup)
+├── logos/                  build-uitvoer (niet in git): app-logo's per app; gaan als zip mee met elke release
 └── project-templates/
     ├── Tauri+React/        gebruikt packages/ (geen eigen kopieën meer)
     └── iced/               nieuw startpunt voor zware apps, gebruikt crates/
@@ -270,8 +270,8 @@ achtergrondvlak).
 - `icon-{16,32,48,64,128,256,512,1024}.png`
 - `icon.ico` (16–256) en `icon.icns` (macOS)
 - `favicon.svg`, `favicon.ico`, web-manifest-iconen (192, 512, maskable)
-- `lockup-{light,dark}.svg`: OpenAEC-symbool + "Open" + appnaam in Space Grotesk,
-  voor startscherm, Over-dialoog en titelbalk
+- `lockup-{light,dark}.svg`: app-tegel + weergavenaam in Space Grotesk (tekst als
+  paden; "Open" in amber), voor startscherm, Over-dialoog en titelbalk
 
 De foundation-logo's in `brandbook/assets/logo/{png,pdf}` worden voortaan ook uit
 `design/logos/foundation/` gegenereerd.
