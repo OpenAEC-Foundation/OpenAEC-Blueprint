@@ -22,6 +22,8 @@ mod domain_drafts;
 mod energy_workflow;
 #[path = "style_repo/field_remaining.rs"]
 mod field_remaining;
+#[path = "style_repo/geotech_native.rs"]
+mod geotech_native;
 #[path = "style_repo/speech_native.rs"]
 mod speech_native;
 #[path = "style_repo/speech_more.rs"]
@@ -111,6 +113,7 @@ enum Action {
     Reset,
     SelectStudio(usize),
     SelectScreen(usize),
+    GeotechLayer(usize),
     FieldProjectEdit(usize, String),
     FieldProjectPreview(&'static str),
     FieldConnectorPreview(&'static str),
@@ -261,6 +264,7 @@ struct StyleRepo {
     sample_value: f32,
     selected_studio: usize,
     selected_screen: usize,
+    geotech_layer: usize,
     field_project: FieldProjectState,
     field_connector_notice: Option<&'static str>,
     field_export_type: usize,
@@ -305,6 +309,7 @@ impl Default for StyleRepo {
             sample_value: 35.0,
             selected_studio: 0,
             selected_screen: 0,
+            geotech_layer: 4,
             field_project: FieldProjectState::default(),
             field_connector_notice: None,
             field_export_type: 0,
@@ -901,6 +906,9 @@ impl StyleRepo {
         }
         if selected.id == "field" {
             return self.field_page(theme, l);
+        }
+        if selected.id == "geotech" && self.selected_screen == 1 {
+            return geotech_native::workspace(self.geotech_layer, theme, l);
         }
         if selected.id == "cad" {
             return self.cad_page(theme, l);
@@ -2041,6 +2049,9 @@ impl Application for StyleRepo {
             .into()
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
+            return geotech_native::explorer(theme);
+        }
         if self.chrome_mode() == ChromeMode::CanvasRibbon {
             return column![
                 widgets::property("Object", "Polyline", theme),
@@ -2118,6 +2129,9 @@ impl Application for StyleRepo {
         nav.into()
     }
     fn properties(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
+            return geotech_native::properties(self.geotech_layer, theme);
+        }
         column![
             widgets::property_grid_row(l.text("Pagina", "Page"), self.page.title(l), theme),
             widgets::property_grid_row(l.text("Thema", "Theme"), theme.to_string(), theme),
@@ -2178,6 +2192,7 @@ impl Application for StyleRepo {
                 self.field_review_notice = None;
                 self.speech_notice = None;
             }
+            Action::GeotechLayer(index) => self.geotech_layer = index.min(geotech_native::LAYERS.len() - 1),
             Action::FieldProjectEdit(index, value) => {
                 if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }
             }
@@ -2503,6 +2518,25 @@ mod tests {
         assert_eq!(map.groups[0].commands.len(), 2);
         let drawing = tabs.iter().find(|tab| tab.id == "situatietekening").unwrap();
         assert_eq!(drawing.groups.len(), 5);
+    }
+
+    #[test]
+    fn geotech_borehole_layers_follow_pinned_capture_and_select() {
+        let layers = &geotech_native::LAYERS;
+        assert_eq!(layers.len(), 13);
+        assert_eq!((layers[0].top, layers[0].bottom), (0.30, 0.92));
+        assert_eq!((layers[12].top, layers[12].bottom), (8.20, 8.40));
+        for pair in layers.windows(2) {
+            assert!((pair[0].bottom - pair[1].top).abs() < 0.001);
+        }
+        let mut app = StyleRepo::default();
+        let geo = studios().iter().position(|studio| studio.id == "geotech").unwrap();
+        let _ = app.update(Action::SelectStudio(geo));
+        let _ = app.update(Action::SelectScreen(1));
+        let _ = app.update(Action::GeotechLayer(12));
+        assert_eq!(app.geotech_layer, 12);
+        let _ = app.update(Action::GeotechLayer(100));
+        assert_eq!(app.geotech_layer, 12);
     }
 
     #[test]

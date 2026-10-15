@@ -139,6 +139,21 @@ fn save_render(app: &StyleRepo, theme: Theme, path: &std::path::Path) {
 }
 
 #[test]
+#[ignore = "regenerate native Geotechniek borehole review on demand"]
+fn export_geotech_borehole_review() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    let geotech = studios().iter().position(|studio| studio.id == "geotech").unwrap();
+    let _ = app.update(Action::SelectStudio(geotech));
+    let _ = app.update(Action::SelectScreen(1));
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_with_options(&app, theme, false, Some("home"))
+            .save_png(&design.join(format!("style-repo-geotech-borehole-{name}.png")))
+            .expect("save native borehole review");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native Speech review on demand"]
 fn export_speech_sidebar_review() {
     let mut app = StyleRepo::default();
