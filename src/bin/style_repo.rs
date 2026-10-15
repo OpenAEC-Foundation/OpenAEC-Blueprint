@@ -108,6 +108,10 @@ enum Action {
     FieldProjectEdit(usize, String),
     FieldProjectPreview(&'static str),
     FieldConnectorPreview(&'static str),
+    FieldExportType(usize),
+    FieldExportPhotos(bool),
+    FieldExportMap(bool),
+    FieldExportPreview(&'static str),
     SelectPreviewCommand(String),
     PileSymbolScale(f32),
     PileUtilizationMinimum(f32),
@@ -240,6 +244,10 @@ struct StyleRepo {
     selected_screen: usize,
     field_project: FieldProjectState,
     field_connector_notice: Option<&'static str>,
+    field_export_type: usize,
+    field_export_photos: bool,
+    field_export_map: bool,
+    field_export_notice: Option<&'static str>,
     selected_preview_command: Option<String>,
     pile_view: ribbon_preview::PileViewState,
     frame_view: ribbon_preview::FrameViewState,
@@ -265,6 +273,10 @@ impl Default for StyleRepo {
             selected_screen: 0,
             field_project: FieldProjectState::default(),
             field_connector_notice: None,
+            field_export_type: 0,
+            field_export_photos: true,
+            field_export_map: true,
+            field_export_notice: None,
             selected_preview_command: None,
             pile_view: ribbon_preview::PileViewState::default(),
             frame_view: ribbon_preview::FrameViewState::default(),
@@ -993,6 +1005,9 @@ impl StyleRepo {
         if screen == "koppelingen" {
             return self.field_connectors_page(theme, l);
         }
+        if screen == "export" {
+            return self.field_export_page(theme, l);
+        }
         let capture = match screen {
             "project" => Some("01-project.png"),
             "koppelingen" => Some("02-koppelingen.png"),
@@ -1309,6 +1324,96 @@ impl StyleRepo {
             text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
                 .font(fonts::STRONG).size(11).color(t.accent),
             text("Connectorstatussen zijn bronvoorbeelddata; geen lokale sleutels worden gelezen.")
+                .size(12).color(t.text_secondary),
+            panel,
+            text("Broncapture ter vergelijking · commit 8a4f104")
+                .font(fonts::MEDIUM).size(12).color(t.text_secondary),
+            image(image::Handle::from_path(capture)).width(1168),
+        ].spacing(16).into()
+    }
+    fn field_export_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let t = theme.tokens();
+        let summary_tile = |label: &'static str, value: String| {
+            container(column![
+                text(label).font(fonts::STRONG).size(11).color(t.text_secondary),
+                text(value).size(15).color(t.text),
+            ].spacing(10))
+                .padding(16).width(208).height(78)
+                .style(move |_| container::Style::default().background(t.bg_lighter)
+                    .border(iced::Border { color: t.border, width: 1.0, radius: 7.0.into() }))
+        };
+        let summary = container(column![
+            text(l.text("Overzicht", "Overview")).font(fonts::STRONG).size(16).color(t.text),
+            row![
+                summary_tile("Project", self.field_project.values[0].clone()),
+                summary_tile("Adres", self.field_project.values[4].clone()),
+                summary_tile("Plattegronden", "0".into()),
+                summary_tile("Tickets", "3".into()),
+                summary_tile("Foto's", "0".into()),
+            ].spacing(16),
+            row![
+                summary_tile("Inspecties", "0".into()),
+                summary_tile("Opleveringen", "0".into()),
+            ].spacing(16),
+        ].spacing(18)).padding(24).width(1104)
+            .style(move |_| container::Style::default().background(t.bg)
+                .border(iced::Border::default().rounded(8)));
+        let mut report_types = Column::new().spacing(12);
+        for (index, label) in [
+            "Volledig projectrapport", "Puntenlijst (open tickets)",
+            "Inspectie-rapport", "Proces-verbaal van oplevering",
+        ].into_iter().enumerate() {
+            report_types = report_types.push(iced::widget::radio(
+                label, index, Some(self.field_export_type), Action::FieldExportType,
+            ).size(16).text_size(13).spacing(12));
+        }
+        if self.field_export_type == 2 || self.field_export_type == 3 {
+            report_types = report_types.push(text(if self.field_export_type == 2 {
+                "Geen inspecties in dit bronvoorbeeld beschikbaar."
+            } else {
+                "Geen opleveringen in dit bronvoorbeeld beschikbaar."
+            }).size(12).color(t.text_secondary));
+        }
+        let options = column![
+            iced::widget::checkbox(l.text("Foto's insluiten", "Include photos"), self.field_export_photos)
+                .on_toggle(Action::FieldExportPhotos).size(15).text_size(13).spacing(12)
+                .style(move |_, status| widgets::checkbox_style(theme, status)),
+            iced::widget::checkbox(l.text("Plattegrond met markeringen", "Floor plan with markers"), self.field_export_map)
+                .on_toggle(Action::FieldExportMap).size(15).text_size(13).spacing(12)
+                .style(move |_, status| widgets::checkbox_style(theme, status)),
+        ].spacing(12);
+        let mut actions = Row::new().spacing(10);
+        for (label, format) in [
+            ("Exporteer als PDF", "PDF"), ("Exporteer als HTML", "HTML"),
+            ("Exporteer als BCF (BIM)", "BCF"), ("Sync met KYP Project", "KYP"),
+            ("Project Opslaan (JSON)", "JSON"),
+        ] {
+            actions = actions.push(button(text(label).size(12)).padding([10, 13])
+                .on_press(Action::FieldExportPreview(format))
+                .style(move |_, status| widgets::button_style(theme, format == "PDF", status)));
+        }
+        let mut panel = Column::new().spacing(24)
+            .push(text(l.text("Project Exporteren", "Export project"))
+                .font(fonts::HEADING).size(29).color(t.text))
+            .push(summary)
+            .push(text(l.text("Rapport type", "Report type")).font(fonts::STRONG).size(16).color(t.text))
+            .push(report_types)
+            .push(text(l.text("Opties", "Options")).font(fonts::STRONG).size(16).color(t.text))
+            .push(options)
+            .push(actions);
+        if let Some(format) = self.field_export_notice {
+            panel = panel.push(text(format!("{format}: in deze schermreview wordt geen bestand gemaakt of synchronisatie uitgevoerd."))
+                .size(12).color(t.accent));
+        }
+        let panel = container(panel).padding(32).width(1168)
+            .style(move |_| container::Style::default().background(t.bg_lighter)
+                .border(iced::Border { color: t.border, width: 1.0, radius: 10.0.into() }));
+        let capture = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("harmonization/references/Open-Field-Studio/docs/screenshots/06-export.png");
+        column![
+            text("OPEN FIELD STUDIO · NATIVE RUST SCHERMREVIEW")
+                .font(fonts::STRONG).size(11).color(t.accent),
+            text("Projectsamenvatting uit bronvoorbeeld; rapportkeuze en opties zijn interactief.")
                 .size(12).color(t.text_secondary),
             panel,
             text("Broncapture ter vergelijking · commit 8a4f104")
@@ -1939,6 +2044,10 @@ impl Application for StyleRepo {
             }
             Action::FieldProjectPreview(message) => self.field_project.notice = Some(message),
             Action::FieldConnectorPreview(name) => self.field_connector_notice = Some(name),
+            Action::FieldExportType(index) => self.field_export_type = index.min(3),
+            Action::FieldExportPhotos(value) => self.field_export_photos = value,
+            Action::FieldExportMap(value) => self.field_export_map = value,
+            Action::FieldExportPreview(format) => self.field_export_notice = Some(format),
             Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
@@ -2352,6 +2461,15 @@ mod tests {
         assert_eq!(app.selected_screen, 8);
         let _ = app.update(Action::FieldConnectorPreview("ERPNext (Frappe)"));
         assert_eq!(app.field_connector_notice, Some("ERPNext (Frappe)"));
+        let _ = app.tab_event("export");
+        assert_eq!(app.selected_screen, 7);
+        let _ = app.update(Action::FieldExportType(2));
+        let _ = app.update(Action::FieldExportPhotos(false));
+        let _ = app.update(Action::FieldExportMap(false));
+        let _ = app.update(Action::FieldExportPreview("PDF"));
+        assert_eq!(app.field_export_type, 2);
+        assert!(!app.field_export_photos && !app.field_export_map);
+        assert_eq!(app.field_export_notice, Some("PDF"));
         let _ = app.tab_event("project");
         assert_eq!(app.field_project.values[0], "Nieuwe opname");
     }
