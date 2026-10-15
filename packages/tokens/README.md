@@ -1,5 +1,8 @@
 # @openaec/design-tokens
 
+> **Bron:** de tokens staan in [`design/tokens/`](../../design/tokens/). Pas ze daar aan;
+> `npm run generate` in de root bouwt dit package opnieuw.
+
 > Machine-readable counterpart to [`brandbook/DESIGN-SYSTEM.md`](../../brandbook/DESIGN-SYSTEM.md).
 > Token values here MUST stay aligned with DESIGN-SYSTEM.md §2 (Design Tokens).
 
@@ -9,12 +12,12 @@ Design tokens, layout CSS en Tailwind preset voor alle OpenAEC applicaties.
 
 ## Wat zit er in
 
-- **`tokens/*.json`** — source of truth: colors, typography, spacing, radius,
+- **`design/tokens/*.json`** — source of truth (gekopieerd naar `tokens/` bij de build): colors, typography, spacing, radius,
   shadow, semantic. Naming volgt DESIGN-SYSTEM.md §2 (amber, deep-forge,
   signal-orange, warm-gold, scaffold-gray, blueprint-white, concrete,
   night-build) plus aliases (`primary` → amber, `primary-hover` →
   signal-orange).
-- **`extensions/warmteverlies.json`** — domein-kleuren voor ISSO 51
+- **`design/tokens/extensions/warmteverlies.json`** — domein-kleuren voor ISSO 51
   warmteverliesberekening (exterior / unheated / adjacent-room / heated-zone /
   ground / water). Apart zodat andere apps ze niet meekrijgen.
 - **`dist/tokens.css`** — alle tokens als CSS custom properties. Light op
@@ -165,7 +168,7 @@ npm run build
 ```
 
 Dit regenereert `dist/tokens.css`, `dist/tokens.js` en
-`dist/tailwind.preset.js` uit `tokens/*.json`. `dist/` wordt bewust
+`dist/tailwind.preset.js` uit `design/tokens/*.json`. `dist/` wordt bewust
 gecommit zodat consumers zonder build-stap kunnen gebruiken.
 
 ---
@@ -201,7 +204,7 @@ wv.color.warmteverlies.unheated.value;        // "#A855F7"
 wv.color.warmteverlies["adjacent-room"].value; // "#EAB308"
 ```
 
-Of kopieer de hex-waarden handmatig uit `extensions/warmteverlies.json` in je
+Of kopieer de hex-waarden handmatig uit `design/tokens/extensions/warmteverlies.json` in je
 eigen Tailwind config / CSS:
 
 ```css

@@ -2,7 +2,7 @@
 /**
  * Build script voor @openaec/design-tokens.
  *
- * Leest tokens/*.json (+ extensions/*.json) en genereert:
+ * Leest ../../design/tokens/*.json (+ extensions/*.json) en genereert:
  *   - dist/tokens.css           :root light vars + [data-theme="dark"] overrides + prefers-color-scheme fallback
  *   - dist/tokens.js            CommonJS export als JS object
  *   - dist/tailwind.preset.js   Tailwind preset met theme.extend
@@ -17,8 +17,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = __dirname;
-const TOKENS_DIR = path.join(ROOT, "tokens");
-const EXT_DIR = path.join(ROOT, "extensions");
+const DESIGN_TOKENS_DIR = path.join(ROOT, "..", "..", "design", "tokens");
+const TOKENS_DIR = DESIGN_TOKENS_DIR;
+const EXT_DIR = path.join(DESIGN_TOKENS_DIR, "extensions");
 const DIST_DIR = path.join(ROOT, "dist");
 
 // -----------------------------------------------------------------------------
@@ -350,6 +351,20 @@ if (!fs.existsSync(DIST_DIR)) fs.mkdirSync(DIST_DIR, { recursive: true });
 fs.writeFileSync(path.join(DIST_DIR, "tokens.css"), css, "utf8");
 fs.writeFileSync(path.join(DIST_DIR, "tokens.js"), js, "utf8");
 fs.writeFileSync(path.join(DIST_DIR, "tailwind.preset.js"), preset, "utf8");
+
+// -----------------------------------------------------------------------------
+// Kopie van de bron-JSON in het package
+// -----------------------------------------------------------------------------
+
+// Zodat "files" en de export "./extensions/warmteverlies" na publicatie blijven werken.
+function copyJsonDir(fromDir, toDir) {
+  fs.mkdirSync(toDir, { recursive: true });
+  for (const f of fs.readdirSync(fromDir)) {
+    if (f.endsWith(".json")) fs.copyFileSync(path.join(fromDir, f), path.join(toDir, f));
+  }
+}
+copyJsonDir(TOKENS_DIR, path.join(ROOT, "tokens"));
+copyJsonDir(EXT_DIR, path.join(ROOT, "extensions"));
 
 // -----------------------------------------------------------------------------
 // Report
