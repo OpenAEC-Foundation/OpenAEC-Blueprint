@@ -8,8 +8,8 @@ migratie van alle OpenAEC-applicaties.
 
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
-- 658 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
-  637 hebben een unieke Git-blobinhoud en 464 zijn als mogelijke
+- 666 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
+  637 hebben een unieke Git-blobinhoud en 472 zijn als mogelijke
   applicatieschermen geclassificeerd. De classificatie
   bewijst niet dat het unieke pagina's of huidige productiestaten zijn.
 - 565 bestanden hebben een concrete UI-codeverwijzing of de actieve
@@ -29,7 +29,7 @@ migratie van alle OpenAEC-applicaties.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
-  Pointcloud native en de 51 lokaal bewaarde visuele referenties. De
+  Pointcloud native en de 59 lokaal bewaarde visuele referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
 - De Planner-audit omvat nu 145 brongepinde schermkandidaten, waaronder 142
   beelden onder `artifacts/` die de eerdere padfilter miste. Acht uiteenlopende
@@ -50,6 +50,8 @@ migratie van alle OpenAEC-applicaties.
   detailuitsneden van de Gantt in tutorials, geen 40 unieke vensters.
 - `dynlex` en `feat/rust-native` van PDF Studio waren niet publiek beschikbaar
   bij de bronaudit. PDF Studio v3 is als afzonderlijke Slint-bron meegenomen.
+
+Open Speech Studio is op commit `4e8aa6176ae3` opnieuw beoordeeld. Acht echte screenshots onder `Socials/` tonen Speech, Transcribe, Meeting, Mic Test, Models, Dictionary, Settings en About. `src/App.tsx` en `src/components/Sidebar.tsx` bevestigen een zijbalk met negen routes (inclusief Text To Speech), zonder ribbon, documenttabs of permanent eigenschappenpaneel. De Rust-atlas en HTML-proef tonen daarom een zijbalkvariant en de broncaptures (zie [native review](style-repo-speech-sidebar-forge.png)); de inhoud is nog geen pixelgetrouwe Rust-herbouw.
 
 De nieuwe Planner-referenties corrigeren een concrete fout in de eerste
 taxonomie. Op het [Gantt-scherm](../harmonization/references/open-planner-studio/artifacts/tabel-overhaul/22-gantt-wide-1280-en-dark.jpg)
@@ -102,7 +104,7 @@ compacte knopstapels en een eigen taak/Gantt-werkgebied gebruikt.
 | Nette opmaak | De compacte browserproef heeft consistente uitlijning, randen en witruimte. | Native screenshots op meerdere platformen vergelijken met de HTML-maten. |
 | Semantiek van iconen | De 22 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
-| Applicatieschermen | Negen gedeelde schermtoestanden zijn in HTML en de native Rust-atlas voor alle 18 studio's selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 22 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
+| Applicatieschermen | Voor 17 studio's zijn negen gedeelde schermtoestanden in HTML en de native Rust-atlas selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. Speech toont in de Rust-atlas de negen echte zijbalkroutes en acht broncaptures. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 22 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
 | Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 Tauri-kleurvelden plus de stevige randkleur uit de merktokens per thema, ribbon- en formulierknoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en vijf vensterbandmaten. Ook de 27 px hoge dialoogknop met 75 px minimumbreedte en identieke tekstuitlijning wordt nu door de crate gebouwd en in beide apps gebruikt. De portable kopie is op 11 Rust-bestanden, 28 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. Zes Pointcloud-renders zijn na deze controlintegratie bytegelijk gebleven; de instellingenrenders tonen de gesloten keuzelijsten in Light en Forge. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 De actieve en hoverstaat van de 28 px ribbon-tab komen nu uit één

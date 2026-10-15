@@ -1,9 +1,9 @@
 {
-  "total": 658,
-  "unique_known_blobs": 637,
+  "total": 666,
+  "unique_known_blobs": 645,
   "counts": {
     "social-preview": 2,
-    "application-screen": 464,
+    "application-screen": 472,
     "sample-preview": 1,
     "documentation-image": 29,
     "design-mockup": 11,
@@ -89,7 +89,7 @@
       "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
       "git_blob": "295233d90729e8f5fd1be5e42d918c988b420281",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/3-report.png",
-      "local": "references/open-calc-studio/docs/screenshots/en/3-report.png",
+      "local": null,
       "assessment": "candidate; visual review pending"
     },
     {
@@ -119,7 +119,7 @@
       "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
       "git_blob": "a4791cd5464ee8cf93258cc44e52076497d495e1",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/3-informe.png",
-      "local": "references/open-calc-studio/docs/screenshots/es/3-informe.png",
+      "local": null,
       "assessment": "candidate; visual review pending"
     },
     {
@@ -139,7 +139,7 @@
       "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
       "git_blob": "4fdaf2a2a2d3dc10842ca194b381012a4a2dc31b",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/nl/1-begroting.png",
-      "local": null,
+      "local": "references/open-calc-studio/docs/screenshots/nl/1-begroting.png",
       "assessment": "candidate; visual review pending"
     },
     {
@@ -149,7 +149,7 @@
       "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
       "git_blob": "737a6bd6171b6c7c0e574351802abfa71a848f32",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-calc-studio/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/nl/2-rapport.png",
-      "local": null,
+      "local": "references/open-calc-studio/docs/screenshots/nl/2-rapport.png",
       "assessment": "candidate; visual review pending"
     },
     {
@@ -5070,6 +5070,86 @@
       "git_blob": "47ff643afedcb741ab7a3c7a4eb37110f0ff80fd",
       "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-pointcloud-studio/cf209fe7a265aea7d692d710d70709c35b5b2b2c/screenshots/native-zoom-selected-373382-of-114m.png",
       "local": null,
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/About.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "cc08cb53825535afeee01722bbaf09531f550847",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/About.png",
+      "local": "references/open-speech-studio/Socials/About.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Dictionary.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "6822416073177ad4794b34b1afac39921f91294b",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Dictionary.png",
+      "local": "references/open-speech-studio/Socials/Dictionary.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Meeting.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "fd12b72ddb686e178a2b1ea5cb146fcd286edeb2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Meeting.png",
+      "local": "references/open-speech-studio/Socials/Meeting.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Mic Test.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "55973d570acb0a9fa9741d9d9c9d4cc7db5ad9a3",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Mic%20Test.png",
+      "local": "references/open-speech-studio/Socials/Mic Test.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Models.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "4077f466c4cf6d9d139d2386722f172ec4cb0d9d",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Models.png",
+      "local": "references/open-speech-studio/Socials/Models.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Settings.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "d650a0afa92e659499f2157ef92b961da813efac",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Settings.png",
+      "local": "references/open-speech-studio/Socials/Settings.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Speech.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "8fd845ce5fb2e8279c49322604f299618f5963d2",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Speech.png",
+      "local": "references/open-speech-studio/Socials/Speech.png",
+      "assessment": "candidate; visual review pending"
+    },
+    {
+      "repository": "open-speech-studio",
+      "path": "Socials/Transcribe.png",
+      "kind": "application-screen",
+      "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
+      "git_blob": "72debb10c5801c82e8594d3d10f7861b0f2aed01",
+      "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Transcribe.png",
+      "local": "references/open-speech-studio/Socials/Transcribe.png",
       "assessment": "candidate; visual review pending"
     },
     {

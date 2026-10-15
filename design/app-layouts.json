@@ -227,7 +227,12 @@
       "IFC",
       "Tekstopmaak"
     ],
-    "optional_tabs": ["Offerte", "3D", "PDF", "Tekstopmaak"],
+    "optional_tabs": [
+      "Offerte",
+      "3D",
+      "PDF",
+      "Tekstopmaak"
+    ],
     "left_panel": "Start / Structuur",
     "right_panel": "Eigenschappen",
     "workspace": "Begrotingstabel",
@@ -268,7 +273,10 @@
       "Berekeningen",
       "IFC"
     ],
-    "optional_tabs": ["Situatietekening", "Berekeningen"],
+    "optional_tabs": [
+      "Situatietekening",
+      "Berekeningen"
+    ],
     "left_panel": "Verkenner / lagen",
     "right_panel": "Eigenschappen / locatie",
     "workspace": "Sonderingen / boring / kaart",
@@ -572,43 +580,29 @@
   {
     "id": "speech",
     "name": "Open Speech Studio",
-    "proposed": true,
-    "tabs": [
-      "Bestand",
-      "Start",
-      "Opnemen",
-      "Transcriberen",
-      "Bewerken",
-      "Weergave",
-      "Rapport",
-      "Help"
-    ],
-    "left_panel": "Opnamen",
-    "right_panel": "Audio-eigenschappen",
-    "workspace": "Transcript",
+    "proposed": false,
+    "tabs": [],
+    "left_panel": "Navigatie",
+    "right_panel": "",
+    "workspace": "Speech",
     "fixed_regions": [
       "titlebar",
-      "quick-access",
-      "ribbon-tabs",
-      "ribbon-groups",
-      "document-tabs",
-      "explorer",
+      "sidebar",
       "workspace",
-      "properties",
       "status"
     ],
     "screens": [
-      "start",
-      "workspace",
-      "backstage",
+      "speech",
+      "transcribe",
+      "meeting",
+      "mic-test",
+      "models",
+      "dictionary",
+      "tts",
       "settings",
-      "import-export",
-      "long-running-operation",
-      "unsaved-changes",
-      "empty",
-      "error"
+      "about"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Broncode src/App.tsx en src/components/Sidebar.tsx op commit 4e8aa6176ae3, met acht echte UI-captures in Socials/: titelbalk, linker paginanavigatie, inhoud en statusbalk; geen ribbon, documenttabs of permanent eigenschappenpaneel. TTS heeft geen eigen capture."
   },
   {
     "id": "cad",

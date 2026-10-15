@@ -77,7 +77,7 @@ pub enum Region { Explorer, Workspace, Properties }
 /// A workflow puts its navigation in the explorer slot and has no tab strip,
 /// ribbon, or permanent properties panel.
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
-pub enum ChromeMode { #[default] Ribbon, Workflow }
+pub enum ChromeMode { #[default] Ribbon, Workflow, Sidebar }
 
 /// Persisted settings only; document contents remain owned by the application.
 #[derive(Debug, Clone, Serialize, Deserialize)]

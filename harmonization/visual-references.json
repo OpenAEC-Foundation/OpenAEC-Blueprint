@@ -500,7 +500,48 @@
   {
     "name": "open-speech-studio",
     "commit": "4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "path": "Socials/About.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/About.png",
+        "local": "references/open-speech-studio/Socials/About.png"
+      },
+      {
+        "path": "Socials/Dictionary.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Dictionary.png",
+        "local": "references/open-speech-studio/Socials/Dictionary.png"
+      },
+      {
+        "path": "Socials/Meeting.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Meeting.png",
+        "local": "references/open-speech-studio/Socials/Meeting.png"
+      },
+      {
+        "path": "Socials/Mic Test.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Mic%20Test.png",
+        "local": "references/open-speech-studio/Socials/Mic Test.png"
+      },
+      {
+        "path": "Socials/Models.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Models.png",
+        "local": "references/open-speech-studio/Socials/Models.png"
+      },
+      {
+        "path": "Socials/Settings.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Settings.png",
+        "local": "references/open-speech-studio/Socials/Settings.png"
+      },
+      {
+        "path": "Socials/Speech.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Speech.png",
+        "local": "references/open-speech-studio/Socials/Speech.png"
+      },
+      {
+        "path": "Socials/Transcribe.png",
+        "url": "https://raw.githubusercontent.com/OpenAEC-Foundation/open-speech-studio/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/Socials/Transcribe.png",
+        "local": "references/open-speech-studio/Socials/Transcribe.png"
+      }
+    ],
     "ui_sources": [
       {
         "path": "README.md",
@@ -519,7 +560,16 @@
       }
     ],
     "errors": [],
-    "available_screenshots": []
+    "available_screenshots": [
+      "Socials/About.png",
+      "Socials/Dictionary.png",
+      "Socials/Meeting.png",
+      "Socials/Mic Test.png",
+      "Socials/Models.png",
+      "Socials/Settings.png",
+      "Socials/Speech.png",
+      "Socials/Transcribe.png"
+    ]
   },
   {
     "name": "open-frame-studio",

@@ -144,6 +144,14 @@ fn screen_label(id: &str, l: Language) -> &'static str {
         "unsaved-changes" => l.text("Niet opgeslagen", "Unsaved"),
         "empty" => l.text("Leeg", "Empty"),
         "error" => l.text("Fout", "Error"),
+        "speech" => "Speech",
+        "transcribe" => "Transcribe",
+        "meeting" => "Meeting",
+        "mic-test" => "Mic Test",
+        "models" => "Models",
+        "dictionary" => "Dictionary",
+        "tts" => "Text To Speech",
+        "about" => "About",
         _ => "?",
     }
 }
@@ -715,6 +723,9 @@ impl StyleRepo {
         if selected.id == "energy" {
             return self.energy_page(theme, l);
         }
+        if selected.id == "speech" {
+            return self.speech_page(theme, l);
+        }
         let screen = selected
             .screens
             .get(self.selected_screen)
@@ -817,6 +828,33 @@ impl StyleRepo {
                 .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
                 .width(Fill),
         ].spacing(22).into()
+    }
+    fn speech_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        let studio = &studios()[self.selected_studio];
+        let screen = studio.screens.get(self.selected_screen).map(String::as_str).unwrap_or("speech");
+        let capture = match screen {
+            "speech" => Some("Speech.png"),
+            "transcribe" => Some("Transcribe.png"),
+            "meeting" => Some("Meeting.png"),
+            "mic-test" => Some("Mic Test.png"),
+            "models" => Some("Models.png"),
+            "dictionary" => Some("Dictionary.png"),
+            "settings" => Some("Settings.png"),
+            "about" => Some("About.png"),
+            _ => None,
+        };
+        let t = theme.tokens();
+        let mut content = Column::new().spacing(14)
+            .push(self.heading("SOURCE REVIEW · SIDEBAR", "Open Speech Studio", "Acht brongepinde UI-captures; de echte app heeft geen ribbon of documenttabs.", theme))
+            .push(text(format!("{} · {}", screen_label(screen, l), studio.notes)).size(12).color(t.text_secondary));
+        if let Some(name) = capture {
+            let source = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("harmonization/references/open-speech-studio/Socials").join(name);
+            content = content.push(image(image::Handle::from_path(source)).width(900));
+        } else {
+            content = content.push(self.card(text("Text To Speech heeft geen broncapture; alleen de navigatieroute is geverifieerd.").size(12), theme));
+        }
+        content.into()
     }
     fn energy_page(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
@@ -1123,13 +1161,15 @@ impl Application for StyleRepo {
     fn chrome_mode(&self) -> ChromeMode {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "energy" {
             ChromeMode::Workflow
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "speech" {
+            ChromeMode::Sidebar
         } else {
             ChromeMode::Ribbon
         }
     }
     fn ribbon(&self, l: Language) -> Vec<RibbonTab<Action>> {
         if self.page == Page::Studios {
-            if self.chrome_mode() == ChromeMode::Workflow {
+            if self.chrome_mode() != ChromeMode::Ribbon {
                 return Vec::new();
             }
             return ribbon_preview::studio_tabs(
@@ -1255,6 +1295,16 @@ impl Application for StyleRepo {
             .into()
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.chrome_mode() == ChromeMode::Sidebar {
+            let studio = &studios()[self.selected_studio];
+            let mut nav = Column::new().spacing(4);
+            for (index, screen) in studio.screens.iter().enumerate() {
+                nav = nav.push(button(text(screen_label(screen, l)).size(12))
+                    .padding([10, 12]).width(Fill).on_press(Action::SelectScreen(index))
+                    .style(move |_, status| widgets::button_style(theme, index == self.selected_screen, status)));
+            }
+            return nav.into();
+        }
         if self.chrome_mode() == ChromeMode::Workflow {
             let t = theme.tokens();
             let steps = self.energy_mode.steps(l);
@@ -1479,10 +1529,13 @@ mod tests {
         ];
         assert!(studios()
             .iter()
+            .filter(|studio| studio.id != "speech")
             .all(|studio| studio.screens.len() == required_screens.len()
                 && required_screens
                     .iter()
                     .all(|screen| studio.screens.iter().any(|id| id == screen))));
+        assert_eq!(studios().iter().find(|studio| studio.id == "speech").unwrap().screens,
+            ["speech", "transcribe", "meeting", "mic-test", "models", "dictionary", "tts", "settings", "about"]);
     }
 
     #[test]
@@ -1506,8 +1559,8 @@ mod tests {
         for (index, studio) in studios().iter().enumerate() {
             let _ = app.update(Action::SelectStudio(index));
             let tabs = app.ribbon(Language::Dutch);
-            if studio.id == "energy" {
-                assert_eq!(app.chrome_mode(), ChromeMode::Workflow);
+            if studio.id == "energy" || studio.id == "speech" {
+                assert_eq!(app.chrome_mode(), if studio.id == "energy" { ChromeMode::Workflow } else { ChromeMode::Sidebar });
                 assert!(tabs.is_empty());
                 continue;
             }
