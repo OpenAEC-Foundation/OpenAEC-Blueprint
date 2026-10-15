@@ -39,7 +39,7 @@ De Frame-ribbon toont [Sjabloon](design/style-repo-frame-ribbon-light.png), [IFC
 
 De native iconenpagina toont de 26 canonieke Rust-iconen en vier afzonderlijke, beoordeelde CAD/Pointcloud-domeinbetekenissen met eigen 16 px-vormen, los van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.
-De [instellingen in Light](design/style-repo-settings-light.png) en [Forge](design/style-repo-settings-forge.png) tonen de gedeelde keuzelijst- en invoerstijl; Pointcloud gebruikt dezelfde Rust-functies voor velden en het open keuzemenu.
+De [instellingenreview](design/settings-modal-review.html) vergelijkt de gepinde Tauri-bron met Style Repo en Pointcloud in Light en Forge. De modal en de drie selecteerbare tabbladen komen uit dezelfde Rust-crate; de inhoud, themawaarde en opslag blijven van de betreffende app.
 
 Een andere Rust-tool kan de shell via de `Application`-trait gebruiken. [`examples/studio.rs`](examples/studio.rs) is een klein integratievoorbeeld (`cargo run --example studio`).
 Voor bestaande native applicaties met een eigen eventloop biedt [`crates/openaec-ui/src/frame.rs`](crates/openaec-ui/src/frame.rs) dezelfde buitenste bandindeling via `FrameSlots`; Pointcloud Studio gebruikt die adapter voor het volledige venster en behoudt zijn eigen 3D-canvas en commando's.

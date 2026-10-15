@@ -48,6 +48,7 @@ fn render_sized(
     preferences.theme = theme;
     let mut state = ShellState::new(preferences);
     state.settings = show_settings;
+    if show_settings { state.settings_page = openaec_ui::SettingsPage::Appearance; }
     if let Some(tab) = active_tab {
         state.active_tab = tab.into();
     }

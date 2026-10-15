@@ -159,26 +159,40 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     } else {base}
 }
 fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
-    let p=&state.preferences; let l=p.language; let t=p.theme.tokens();
-    let form=column![
-        text(l.text("Uiterlijk","Appearance")).font(fonts::HEADING).size(20),
-        text(l.text("Thema","Theme")).font(fonts::STRONG).size(12),
-        pick_list(Theme::ALL,Some(p.theme),|theme|Message::Ui(UiEvent::Theme(theme)))
-            .style(move |_,status|widgets::pick_list_style(p.theme,status))
-            .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
-        text(l.text("Taal","Language")).font(fonts::STRONG).size(12),
-        pick_list(Language::ALL,Some(p.language),|language|Message::Ui(UiEvent::Language(language)))
-            .style(move |_,status|widgets::pick_list_style(p.theme,status))
-            .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
-        text(format!("{}: {:.0}%",l.text("Schaal","Scale"),p.scale*100.0)).font(fonts::STRONG).size(12),
-        slider(0.75..=2.0,p.scale,|scale|Message::Ui(UiEvent::Scale(scale)))
-            .step(0.05).style(move |_,status|widgets::slider_style(p.theme,status)),
-    ].spacing(12);
-    let sidebar=container(column![text(l.text("Algemeen","General")).size(12),text(l.text("Uiterlijk","Appearance")).font(fonts::STRONG).size(12).color(t.accent)].spacing(20))
-        .padding([4,12]);
+    let p=&state.preferences; let l=p.language;
+    let heading = |label| text(label).font(fonts::STRONG).size(11);
+    let form: Element<'a, Message<M>> = match state.settings_page {
+        SettingsPage::General => column![
+            heading(l.text("Algemeen","General")),
+            text(l.text("Taal","Language")).size(11),
+            pick_list(Language::ALL,Some(p.language),|language|Message::Ui(UiEvent::Language(language)))
+                .style(move |_,status|widgets::pick_list_style(p.theme,status))
+                .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
+            text(format!("{}: {:.0}%",l.text("Schaal","Scale"),p.scale*100.0)).size(11),
+            slider(0.75..=2.0,p.scale,|scale|Message::Ui(UiEvent::Scale(scale)))
+                .step(0.05).style(move |_,status|widgets::slider_style(p.theme,status)),
+        ].spacing(10).into(),
+        SettingsPage::Appearance => column![
+            heading(l.text("Uiterlijk","Appearance")),
+            text(l.text("Thema","Theme")).size(11),
+            pick_list(Theme::ALL,Some(p.theme),|theme|Message::Ui(UiEvent::Theme(theme)))
+                .style(move |_,status|widgets::pick_list_style(p.theme,status))
+                .menu_style(move |_|widgets::pick_list_menu_style(p.theme)).width(Fill),
+        ].spacing(10).into(),
+        SettingsPage::About => column![
+            heading(l.text("Over","About")),
+            text("OpenAEC UI").font(fonts::STRONG).size(12),
+            text(l.text("Gedeelde native Rust-interface voor OpenAEC-tools.","Shared native Rust interface for OpenAEC tools.")).size(11),
+        ].spacing(10).into(),
+    };
+    let sidebar=column![
+        widgets::settings_tab(l.text("Algemeen","General"),state.settings_page==SettingsPage::General,Message::Ui(UiEvent::SettingsPage(SettingsPage::General)),p.theme),
+        widgets::settings_tab(l.text("Uiterlijk","Appearance"),state.settings_page==SettingsPage::Appearance,Message::Ui(UiEvent::SettingsPage(SettingsPage::Appearance)),p.theme),
+        widgets::settings_tab(l.text("Over","About"),state.settings_page==SettingsPage::About,Message::Ui(UiEvent::SettingsPage(SettingsPage::About)),p.theme),
+    ].spacing(2);
     let footer=row![Space::with_width(Fill),widgets::action(l.text("Sluiten","Close"),Icon::Check,Some(Message::Ui(UiEvent::Settings(false))),p.theme)];
     widgets::settings_modal(
-        l.text("Instellingen","Settings"), sidebar.into(), form.into(), footer.into(),
+        l.text("Instellingen","Settings"), sidebar.into(), form, footer.into(),
         Message::Ui(UiEvent::Settings(false)), p.theme,
     )
 }

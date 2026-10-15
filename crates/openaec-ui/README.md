@@ -7,6 +7,7 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 `widgets::title_action` owns the 30 × 26 px quick-access control, hover color and tooltip for the title strip. The Style Repo and Pointcloud supply their own command icons, labels and messages through this same Rust widget.
 
 `widgets::settings_modal` owns the source Style Book's 560 × 500 px settings chrome, 120 px sidebar, overlay, header and footer. Each app supplies its own tabs and settings fields. The backdrop does not dismiss the dialog, matching the pinned Tauri template.
+`widgets::settings_tab` gives those tabs the same square 11 px navigation style. The crate shell provides selectable General, Appearance and About pages; other applications can supply their own page content and messages.
 
 `frame::document_bar` owns the 30 px document band from the pinned Tauri Style Book: the one-pixel top and bottom rules, theme background and 4 px horizontal inset. Applications keep their own tab identity and navigation behavior.
 

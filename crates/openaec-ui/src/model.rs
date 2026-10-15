@@ -134,10 +134,12 @@ pub enum DocumentEvent { Activate(String), CloseRequested(String) }
 pub enum Message<M> { Ui(UiEvent), Command(M), Document(DocumentEvent) }
 #[derive(Debug, Clone)]
 pub enum UiEvent {
-    Tab(String), Backstage(bool), Settings(bool), Theme(Theme), Language(Language),
+    Tab(String), Backstage(bool), Settings(bool), SettingsPage(SettingsPage), Theme(Theme), Language(Language),
     Scale(f64), ToggleLeft, ToggleRight, Resize(pane_grid::ResizeEvent),
     DragWindow, Minimize, Maximize, CloseWindow,
 }
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
+pub enum SettingsPage { #[default] General, Appearance, About }
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Region { Explorer, Workspace, Properties }
 
@@ -193,6 +195,7 @@ pub struct ShellState {
     pub active_tab: String,
     pub backstage: bool,
     pub settings: bool,
+    pub settings_page: SettingsPage,
     pub(crate) panes: pane_grid::State<Region>,
     left_split: Option<pane_grid::Split>,
     right_split: Option<pane_grid::Split>,
@@ -202,7 +205,7 @@ impl ShellState {
     pub fn new(mut preferences: Preferences) -> Self {
         preferences.normalize();
         let (panes, _) = pane_grid::State::new(Region::Workspace);
-        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, panes, left_split:None, right_split:None };
+        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, settings_page:SettingsPage::General, panes, left_split:None, right_split:None };
         state.rebuild(); state
     }
     fn rebuild(&mut self) {
@@ -224,6 +227,7 @@ impl ShellState {
             UiEvent::Tab(id) => { self.active_tab = id.clone(); self.backstage = false; }
             UiEvent::Backstage(open) => { self.backstage = *open; self.settings = false; }
             UiEvent::Settings(open) => { self.settings = *open; self.backstage = false; }
+            UiEvent::SettingsPage(page) => self.settings_page = *page,
             UiEvent::Theme(theme) => self.preferences.theme = *theme,
             UiEvent::Language(language) => self.preferences.language = *language,
             UiEvent::Scale(scale) => { self.preferences.scale = *scale; self.preferences.normalize(); }

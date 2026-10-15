@@ -1064,6 +1064,30 @@ pub fn settings_modal<'a, M: Clone + 'a>(
         container::Style::default().background(t.dialog_overlay)
     })).into()
 }
+/// Vertical settings navigation from the pinned Style Book template.
+pub fn settings_tab<'a, M: Clone + 'a>(
+    label: impl Into<String>,
+    active: bool,
+    on_press: M,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    button(text(label.into()).size(11).font(fonts::MEDIUM))
+        .on_press(on_press)
+        .width(Fill)
+        .padding([8, 12])
+        .style(move |_, status| {
+            let hovered = matches!(status, button::Status::Hovered);
+            button::Style {
+                background: if active { Some(t.dialog_tab_active_bg.into()) }
+                    else if hovered { Some(t.dialog_tab_hover.into()) } else { None },
+                text_color: if active { t.dialog_tab_active_text }
+                    else if hovered { t.dialog_tab_hover_text } else { t.dialog_tab_text },
+                ..button::Style::default()
+            }
+        })
+        .into()
+}
 pub fn icon_button<'a, M: Clone + 'a>(
     label: &'a str,
     icon: Icon,
