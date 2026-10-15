@@ -249,6 +249,36 @@ pub fn secondary_button_style(theme: Theme, status: button::Status) -> button::S
     }
 }
 
+/// Text link used for source references and secondary navigation.
+pub fn link_button_style(theme: Theme, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    let style = button::Style {
+        text_color: if hovered { t.accent_hover } else { t.accent },
+        ..Default::default()
+    };
+    if status == button::Status::Disabled {
+        faded_button(style, 0.5)
+    } else {
+        style
+    }
+}
+
+/// Flat action on the common status bar.
+pub fn status_button_style(theme: Theme, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    button::Style {
+        background: hovered.then_some(t.status_hover.into()),
+        text_color: if status == button::Status::Disabled {
+            t.status_text_label
+        } else {
+            t.status_text
+        },
+        ..Default::default()
+    }
+}
+
 /// Shared dialog-button geometry: 11 px text, a 27 px line and a 75 px
 /// minimum width. The caller supplies its theme adapter to the style hook.
 pub fn dialog_button<'a, M: 'a>(
@@ -464,18 +494,7 @@ pub fn status_icon_button<'a, M: Clone + 'a>(
         button(icon.view(14, t.status_text))
             .padding([3, 7])
             .on_press(message)
-            .style(move |_, status| button::Style {
-                background: Some(
-                    if matches!(status, button::Status::Hovered | button::Status::Pressed) {
-                        t.status_hover
-                    } else {
-                        t.status_bg
-                    }
-                    .into(),
-                ),
-                text_color: t.status_text,
-                ..Default::default()
-            }),
+            .style(move |_, status| status_button_style(theme, status)),
         text(label).size(12),
         tooltip::Position::Top,
     )
