@@ -18,6 +18,7 @@ migratie van alle OpenAEC-applicaties.
 - 686 iconimports in broncode verwijzen naar 219 pakket/naamcombinaties.
   Daarvan zijn 312 versiegebonden SVG's uit Lucide Static en Solid Icons
   gedownload; deze categorie is apart geïndexeerd en visueel vergelijkbaar.
+- De [UI-icoonreviewwerkbank](icon-review-board.html) beperkt de standaardlijst tot de 565 bronbewezen UI-bestanden uit vijf repositories. Elk origineel staat op lichte en donkere ondergrond; 16, 24 en 32 px zijn omschakelbaar. Een besluit per item blijft lokaal in de browser en is als JSON exporteerbaar. Zes eerder beoordeelde Pointcloud-adopties zijn apart gemarkeerd; naamovereenkomsten zijn nog geen goedkeuring.
 - Het [semantische kruisverband](icon-semantic-crosswalk.html) vergelijkt de
   22 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
   versiegebonden bibliotheekvarianten. 79 naamovereenkomsten zijn kandidaten;
