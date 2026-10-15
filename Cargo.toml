@@ -1,14 +1,18 @@
 [package]
-name = "openaec-ui"
+name = "openaec-style-repo"
 version = "0.1.0"
 edition = "2021"
-description = "Shared native OpenAEC desktop shell, design tokens and components"
+description = "Native Rust showcase and source review for the shared OpenAEC UI"
 license = "CC-BY-SA-4.0"
 readme = "README.md"
-include = ["src/**", "assets/**", "harmonization/ui-icons/**", "design/domain-icon-proposals.json", "design/domain-icon-drafts.json", "design/icon-drafts/**", "design/icon-drafts-small/**", "design/app-layouts.json", "design/style-repo-*.png", "examples/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "NOTICE.md"]
+publish = false
+
+[workspace]
+members = ["crates/openaec-ui"]
+resolver = "2"
 
 [dependencies]
-iced = { version = "=0.13.1", default-features = false, features = ["tiny-skia", "svg", "image", "web-colors", "advanced", "fira-sans"] }
+openaec-ui = { path = "crates/openaec-ui" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 

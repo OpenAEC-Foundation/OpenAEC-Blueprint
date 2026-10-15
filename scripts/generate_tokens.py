@@ -23,6 +23,6 @@ for name in variants:
     out.append(f'pub const {name.upper()}: Tokens = Tokens {{')
     for key in sorted(colors):out.append(f'    {key.replace("-","_")}: {color(data[name][key])},')
     out.append('};')
-(root/'src/tokens.rs').write_text('\n'.join(out)+'\n')
+(root/'crates/openaec-ui/src/tokens.rs').write_text('\n'.join(out)+'\n')
 (root/'assets/tokens.json').write_text(json.dumps(data,indent=2)+'\n')
 print(len(colors),'color tokens per theme')

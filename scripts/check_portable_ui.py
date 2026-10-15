@@ -7,11 +7,19 @@ import tomllib
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
+canonical = root / "crates/openaec-ui"
 portable = root.parent / "open-pointcloud-studio/native/ui"
 rustfmt = shutil.which("rustfmt") or str(Path.home() / ".cargo/bin/rustfmt")
 
+for group in ("fonts", "icons"):
+    canonical_assets = {p.name: p for p in (canonical / "assets" / group).iterdir() if p.is_file()}
+    review_assets = {p.name: p for p in (root / "assets" / group).iterdir() if p.is_file()}
+    assert canonical_assets.keys() == review_assets.keys(), f"Review {group} set differs"
+    for name, source in canonical_assets.items():
+        assert source.read_bytes() == review_assets[name].read_bytes(), f"Review {group} differs: {name}"
+
 if not portable.is_dir():
-    print("Local Pointcloud checkout unavailable; portable snapshot not checked")
+    print("Canonical and review assets agree; local Pointcloud snapshot unavailable")
     raise SystemExit(0)
 
 
@@ -26,7 +34,7 @@ def formatted(path: Path) -> str:
     return "".join(lines[2:])
 
 
-canonical_sources = {p.name: p for p in (root / "src").glob("*.rs")}
+canonical_sources = {p.name: p for p in (canonical / "src").glob("*.rs")}
 portable_sources = {p.name: p for p in (portable / "src").glob("*.rs")}
 assert canonical_sources.keys() == portable_sources.keys(), "Portable Rust file set differs"
 for name, source in canonical_sources.items():
@@ -34,14 +42,14 @@ for name, source in canonical_sources.items():
 
 asset_count = 0
 for group in ("fonts", "icons"):
-    canonical_assets = {p.name: p for p in (root / "assets" / group).iterdir() if p.is_file()}
+    canonical_assets = {p.name: p for p in (canonical / "assets" / group).iterdir() if p.is_file()}
     portable_assets = {p.name: p for p in (portable / "assets" / group).iterdir() if p.is_file()}
     assert canonical_assets.keys() == portable_assets.keys(), f"Portable {group} set differs"
     for name, source in canonical_assets.items():
         assert source.read_bytes() == portable_assets[name].read_bytes(), f"Portable {group} differs: {name}"
         asset_count += 1
 
-canonical_manifest = tomllib.loads((root / "Cargo.toml").read_text())
+canonical_manifest = tomllib.loads((canonical / "Cargo.toml").read_text())
 portable_manifest = tomllib.loads((portable / "Cargo.toml").read_text())
 for key in ("name", "version", "edition", "description", "license"):
     assert canonical_manifest["package"][key] == portable_manifest["package"][key], f"Package {key} differs"

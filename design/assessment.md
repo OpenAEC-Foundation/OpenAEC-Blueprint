@@ -63,6 +63,14 @@ geopende projecten en de Extensions-bestandspagina in Light en Forge.
 De native Style Repo-atlas is in [alle vijf thema's](review.html) als
 software-render gecontroleerd.
 
+De herbruikbare `openaec-ui` is nu een afzonderlijk Cargo-package onder
+`crates/openaec-ui/`. `cargo package -p openaec-ui` heeft het uitgepakte
+pakket zelfstandig gecompileerd: 49 verpakte bestanden, waaronder 11
+Rust-bronnen, zes fonts, drie OFL-licentieteksten en 22 canonieke iconen. De onderzoeksiconen,
+FEM/BIM-concepten en reviewbeelden blijven in het niet-publiceerbare
+Style Repo-package. De Root/Pointcloud-kopieën van code en assets worden
+met `scripts/check_portable_ui.py` op inhoud gecontroleerd.
+
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
 en deze beoordeling voorkomen dat die mockup als voltooide productscreenshot

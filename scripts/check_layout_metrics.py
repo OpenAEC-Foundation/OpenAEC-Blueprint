@@ -7,7 +7,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 spec = json.loads((root / "design/layout-spec.json").read_text())
-model = (root / "src/model.rs").read_text()
+model = (root / "crates/openaec-ui/src/model.rs").read_text()
 prototype = (root / "design/harmonized-template.html").read_text()
 panel_title = re.search(r"\.paneltitle\{([^}]*)\}", prototype)
 assert panel_title and "padding:0 4px 0 6px" in panel_title.group(1), "HTML panel title padding differs from Tauri"
