@@ -462,20 +462,18 @@
   {
     "id": "frame",
     "name": "Open Frame Studio",
-    "proposed": true,
+    "proposed": false,
     "tabs": [
       "Bestand",
-      "Start",
-      "Modelleren",
-      "Materialen",
-      "Bewerken",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "Home",
+      "Invoegen",
+      "IFC / Export",
+      "Productie",
+      "Beeld"
     ],
-    "left_panel": "Kozijnen & profielen",
-    "right_panel": "Profieleigenschappen",
-    "workspace": "Kozijnaanzicht",
+    "left_panel": "Kozijnen",
+    "right_panel": "Kozijneigenschappen / AI",
+    "workspace": "2D Editor / 3D Viewer",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -498,7 +496,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Bron ui/src/components/shell/Ribbon.svelte en ui/src/App.svelte op commit eb77f9e4c5d3: vijf ribbon-tabs na Bestand, met brongebonden commando’s; werkruimte heeft circa twintig eigen views en in de 2D-editor een kozijnoverzicht links en eigenschappen/AI rechts. Geen volledige UI-capture in de repository aangetroffen; huidige atlas toont shell/commandoreview, nog geen pixelkopie."
   },
   {
     "id": "field",

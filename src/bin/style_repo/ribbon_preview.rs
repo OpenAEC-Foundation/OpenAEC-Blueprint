@@ -25,6 +25,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: planner_groups(studio, tab, selected)
+                .or_else(|| frame_groups(studio, tab, selected))
                 .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| geotech_groups(studio, tab, selected))
                 .or_else(|| heatloss_groups(studio, tab, selected))
@@ -36,6 +37,50 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Open Frame Studio shell ribbon at eb77f9e4c5d3. Template/theme selects are
+/// represented as commands until typed ribbon controls are available.
+fn frame_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "frame" { return None; }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Home" => vec![
+            ("Sjabloon", vec![("Sjabloon kiezen", Grid.into()), ("Opslaan als sjabloon", Save.into()), ("Sjabloon verwijderen", Close.into())]),
+            ("Nieuw kozijn", vec![("Leeg", New.into()), ("Draaikiep", planner_source_icon!("Square")), ("Dubbel", planner_source_icon!("LayoutGrid")), ("Schuifpui", planner_source_icon!("Square")), ("Voordeur", planner_source_icon!("Square"))]),
+            ("Bewerken", vec![("Kolom toevoegen", planner_source_icon!("Columns3")), ("Rij toevoegen", planner_source_icon!("LayoutGrid")), ("Dupliceren", planner_source_icon!("Copy")), ("Verwijderen", planner_source_icon!("Trash2"))]),
+            ("Importeren", vec![("Nieuw profiel", New.into()), ("Profiel DXF", Import.into()), ("Catalogus", Open.into())]),
+        ],
+        "Invoegen" => vec![
+            ("Onderverdeling", vec![("Kolom", planner_source_icon!("Columns3")), ("Rij", planner_source_icon!("LayoutGrid"))]),
+            ("Paneel type", vec![("Vast glas", planner_source_icon!("Square")), ("Draaikiep", planner_source_icon!("Square")), ("Paneel", planner_source_icon!("Square"))]),
+            ("Vliesgevel", vec![("Leeg", New.into()), ("Stijl-regel", Grid.into()), ("Element", Cube.into())]),
+        ],
+        "IFC / Export" => vec![
+            ("Kozijn exporteren", vec![("IFC (LOD-keuze)", Export.into()), ("DXF", Export.into())]),
+            ("IFC Import", vec![("IFC Import", Import.into()), ("IFC Roundtrip", planner_source_icon!("GitCompareArrows")), ("IFC vergelijken", planner_source_icon!("GitCompareArrows"))]),
+            ("Validatie", vec![("IDS Validatie", Check.into()), ("Certificering", Check.into())]),
+            ("Project exporteren", vec![("Kozijnstaat PDF", Export.into()), ("Kozijnstaat Excel", Export.into())]),
+            ("Werkplaats", vec![("Tekening PDF", Export.into())]),
+            ("3D Export", vec![("glTF/GLB", Export.into())]),
+            ("Blender / Bonsai", vec![("Naar Blender", Export.into()), ("Verbinding testen", Check.into())]),
+        ],
+        "Productie" => vec![
+            ("Productiestaten exporteren", vec![("PDF", Export.into()), ("Excel", Export.into()), ("CSV", Export.into())]),
+            ("CNC / Labels", vec![("CNC G-code", Export.into()), ("Labels PDF", Export.into())]),
+            ("Planning / Optimalisatie", vec![("Zaagplan", planner_source_icon!("BarChart3")), ("Planning", planner_source_icon!("CalendarDays")), ("CNC", Export.into()), ("Inkoop", Open.into())]),
+        ],
+        "Beeld" => vec![
+            ("Ongedaan maken", vec![("Ongedaan", Undo.into()), ("Opnieuw", Redo.into())]),
+            ("Zoom", vec![("Inzoomen", planner_source_icon!("ZoomIn")), ("Uitzoomen", planner_source_icon!("ZoomOut"))]),
+            ("Thema", vec![("Thema kiezen", Settings.into())]),
+        ],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup { label: label.into(), commands: items.into_iter().map(|(name, icon)| {
+        let id = format!("frame:{tab}:{name}");
+        Command::new(name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
+    }).collect() }).collect())
 }
 
 /// Pile Plan ribbon on ffe979d3b859. View controls are labeled review

@@ -766,7 +766,7 @@ impl StyleRepo {
                 ].spacing(8), theme)
         } else {
             column![
-                text(l.text("Voorgestelde ribbon-tabs", "Proposed ribbon tabs"))
+                text(l.text("Ribbon-tabs · bron / concept", "Ribbon tabs · source / concept"))
                     .font(fonts::STRONG).size(11).color(t.accent),
                 tabs,
                 self.preview_command_review(theme, l),
@@ -1671,6 +1671,17 @@ mod tests {
         let tabs = ribbon_preview::studio_tabs(studio, None);
         assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Project", "Inspecteren", "Selecteren", "Instellingen", "Vergrendelen", "Optimalisatie"]);
         assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Symbolen", "Benutting", "Voorgrond", "Grid", "Gebieden", "Vensters"]);
+    }
+
+    #[test]
+    fn frame_ribbon_uses_source_tabs_and_groups() {
+        let studio = studios().iter().find(|studio| studio.id == "frame").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Home", "Invoegen", "IFC / Export", "Productie", "Beeld"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Sjabloon", "Nieuw kozijn", "Bewerken", "Importeren"]);
+        assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Onderverdeling", "Paneel type", "Vliesgevel"]);
+        assert_eq!(tabs[2].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Kozijn exporteren", "IFC Import", "Validatie", "Project exporteren", "Werkplaats", "3D Export", "Blender / Bonsai"]);
+        assert_eq!(tabs[4].groups[1].label, "Zoom");
     }
 
     #[test]

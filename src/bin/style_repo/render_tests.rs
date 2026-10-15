@@ -129,6 +129,18 @@ fn export_speech_sidebar_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Frame review on demand"]
+fn export_frame_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let frame = studios().iter().position(|studio| studio.id == "frame").unwrap();
+    let _ = app.update(Action::SelectStudio(frame));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("home"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-frame-ribbon-light.png"))
+        .expect("save Frame ribbon review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -297,6 +309,12 @@ fn export_native_style_repo_previews() {
     render(&app, Theme::Forge)
         .save_png(&design.join("style-repo-speech-sidebar-forge.png"))
         .expect("save Speech sidebar review");
+    let frame = studios().iter().position(|studio| studio.id == "frame").unwrap();
+    let _ = app.update(Action::SelectStudio(frame));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("home"))
+        .save_png(&design.join("style-repo-frame-ribbon-light.png"))
+        .expect("save Frame ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

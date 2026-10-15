@@ -53,6 +53,8 @@ migratie van alle OpenAEC-applicaties.
 
 Open Speech Studio is op commit `4e8aa6176ae3` opnieuw beoordeeld. Acht echte screenshots onder `Socials/` tonen Speech, Transcribe, Meeting, Mic Test, Models, Dictionary, Settings en About. `src/App.tsx` en `src/components/Sidebar.tsx` bevestigen een zijbalk met negen routes (inclusief Text To Speech), zonder ribbon, documenttabs of permanent eigenschappenpaneel. De Rust-atlas en HTML-proef tonen daarom een zijbalkvariant en de broncaptures (zie [native review](style-repo-speech-sidebar-forge.png)); de inhoud is nog geen pixelgetrouwe Rust-herbouw.
 
+Open Frame Studio is op commit `eb77f9e4c5d3` tegen `ui/src/components/shell/Ribbon.svelte`, de Nederlandse locale en `ui/src/App.svelte` gecontroleerd. De echte tabs zijn Bestand, Home, Invoegen, IFC / Export, Productie en Beeld. De preview gebruikt hun groepsindeling en concrete commando’s; HTML toont Sjabloon-, IFC LOD- en Themakeuzes als selecties. De native ribbon heeft daarvoor voorlopig knopplaceholders. De werkruimte heeft een aparte reeks van circa twintig views, waaronder 2D Editor en 3D Viewer; een broncapture ontbreekt, dus [de render](style-repo-frame-ribbon-light.png) beoordeelt de shell en commandoverdeling, niet de pixelnauwkeurigheid van de bestaande app.
+
 De nieuwe Planner-referenties corrigeren een concrete fout in de eerste
 taxonomie. Op het [Gantt-scherm](../harmonization/references/open-planner-studio/artifacts/tabel-overhaul/22-gantt-wide-1280-en-dark.jpg)
 staat de taak/WBS-tabel naast de tijdlijn, met eigenschappen rechts. De
