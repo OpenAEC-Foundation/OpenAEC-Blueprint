@@ -1814,6 +1814,19 @@ mod tests {
     }
 
     #[test]
+    fn pdf_ribbon_separates_core_and_contextual_tabs() {
+        let studio = studios().iter().find(|studio| studio.id == "pdf").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Start", "Beeld", "Tekenen", "Annotatie", "PDF bewerken & samenvoegen", "Help", "Opmaak", "Schikken", "Afbeelding"]);
+        assert_eq!(studio.optional_tabs, ["Opmaak", "Schikken", "Afbeelding"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs.len(), 9);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
+            ["Document", "Hulpmiddelen", "Beeld", "Navigeren", "Zoeken", "Instellingen"]);
+        assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
+        assert_eq!(tabs[6].groups[0].label, "Symbooltype");
+    }
+
+    #[test]
     fn fem_and_bim_ribbons_render_review_vectors_without_promoting_them() {
         let fem = ribbon_preview::studio_tabs(&studios()[2], None);
         let bim = ribbon_preview::studio_tabs(&studios()[3], None);

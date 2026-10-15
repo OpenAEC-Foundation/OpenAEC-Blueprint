@@ -188,6 +188,18 @@ fn export_pointcloud_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF ribbon review on demand"]
+fn export_pdf_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("tekenen"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pdf-ribbon-forge.png"))
+        .expect("save PDF ribbon review");
+}
+
+#[test]
 fn atlas_workspace_respects_each_theme_background() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::SelectStudio(1));
@@ -385,6 +397,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Forge, false, Some("start"))
         .save_png(&design.join("style-repo-pointcloud-ribbon-forge.png"))
         .expect("save Pointcloud ribbon review");
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("tekenen"))
+        .save_png(&design.join("style-repo-pdf-ribbon-forge.png"))
+        .expect("save PDF ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

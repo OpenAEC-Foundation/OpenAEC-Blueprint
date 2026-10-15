@@ -25,6 +25,7 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 tab.clone()
             },
             groups: (studio.id == "field").then(Vec::new)
+                .or_else(|| pdf_groups(studio, tab, selected))
                 .or_else(|| pointcloud_groups(studio, tab, selected))
                 .or_else(|| cad_groups(studio, tab, selected))
                 .or_else(|| extension_2d_groups(studio, tab, selected))
@@ -41,6 +42,58 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Public Tauri/Solid PDF ribbon at f754cb7c9d9a. Contextual controls are
+/// labeled review placeholders until the shared ribbon has typed form slots.
+fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "pdf" { return None; }
+    let spec: &[(&str, &[&str])] = match tab {
+        "Start" => &[("Document", &["Nieuw", "Naar CAD", "IFC-report", "E-mail", "Raster-PDF"]),
+            ("Hulpmiddelen", &["Hand", "Selecteren"]), ("Beeld", &["Inzoomen", "Uitzoomen", "Breedte passend", "Pagina passend"]),
+            ("Navigeren", &["Eerste", "Vorige", "Volgende", "Laatste"]), ("Zoeken", &["Zoeken"]),
+            ("Instellingen", &["Voorkeuren", "Vorige versie"])],
+        "Beeld" => &[("Paginaweergave", &["Enkel", "Doorlopend", "Boek", "Naast elkaar"]),
+            ("Weergave", &["Dunne lijnen", "Leesmodus"]), ("Panelen", &["Navigatie", "Eigenschappen", "Annotaties", "Lagen"]),
+            ("Weergave", &["Weergavekeuzes · controls"]), ("Vergelijken", &["PDF's vergelijken"]),
+            ("Venster", &["Volledig scherm", "Toetsaanslagen"])],
+        "Tekenen" => &[("Selectie", &["Selecteren", "Hand", "Alles selecteren", "Deselecteren"]),
+            ("Tekenen", &["Vormkiezer · controls"]), ("Lijn", &["Lijnkeuzes · controls"]),
+            ("Knipsel", &["Vectorknipsel", "Plak knipsel"]), ("Schaal", &["Schaalgebied", "Schaalgebied op pagina"]),
+            ("Annoteren", &["Oppervlakte", "Lengte", "Maatlijn", "Hoek", "Coördinaat"]),
+            ("Wijzigen", &["Verplaatsen", "Kopiëren", "Spiegelen H", "Spiegelen V", "Reeks"]),
+            ("Bewerken", &["Inkorten", "Verlengen", "Verschuiven", "Afronden", "Afkanten"]),
+            ("Klembord", &["Plakken", "Plakken op plaats", "Knippen", "Kopiëren", "Verwijderen"]),
+            ("Verzameling", &["Aanmaken", "Ontleden"])],
+        "Annotatie" => &[("Tekening", &["Markeren"]), ("Tekst", &["Tekstvak", "Bijschrift", "Notitie"]),
+            ("Stempel", &["Stempel", "Handtekening", "Parametrisch symbool"]),
+            ("Redactie", &["Redigeren", "Toepassen"]), ("Eigenschappen", &["Annotatie-eigenschappen · controls"]),
+            ("Bewerken", &["Pagina wissen", "Alles wissen"]),
+            ("METEN", &["Afstand", "Oppervlakte", "Omtrek", "Hoek"]), ("HOEVEELHEDEN", &["Hoeveelheden"])],
+        "PDF bewerken & samenvoegen" => &[("Bewerken", &["Tekst bewerken", "Tekst toevoegen", "Tekst herkennen (OCR)", "Bijsnijden"]),
+            ("Pagina's", &["Invoegen", "Verwijderen", "Extraheren", "Volgorde"]),
+            ("Combineren", &["Samenvoegen", "PDF's vergelijken"]),
+            ("Watermerk", &["Watermerk", "Koptekst/voettekst", "Beheren"])],
+        "Help" => &[("Instellingen", &["Extensies", "Bestandskoppelingen"]),
+            ("Help", &["Sneltoetsen", "Over", "Wat is nieuw", "Updates", "Diagnose"])],
+        "Opmaak" => &[("Symbooltype", &["Typekiezer · controls"]), ("Eigenschappen", &["Eigenschappenvelden · controls"])],
+        "Schikken" => &[("Uitlijning", &["Uitlijnkeuzes · controls"]), ("Verdelen", &["Horiz. verd.", "Vert. verd.", "Links", "Boven", "Midden"]),
+            ("Grootte", &["Groottevelden · controls"]), ("Draaien", &["Rotatievelden · controls"]),
+            ("Spiegelen", &["Spiegelkeuzes · controls"]), ("Z-volgorde", &["Laagvolgorde · controls"])],
+        "Afbeelding" => &[("Bijsnijden", &["Bijsnijdopties · controls"]), ("Beeldbewerking", &["Beeldopties · controls"])],
+        _ => return None,
+    };
+    Some(spec.iter().map(|(label, items)| RibbonGroup { label: (*label).into(), commands: items.iter().map(|name| {
+        let id = format!("pdf:{tab}:{name}");
+        let icon = if name.contains("PDF") || name.contains("Nieuw") { Icon::New }
+            else if name.contains("Zoek") { Icon::Search }
+            else if name.contains("Afstand") || name.contains("Oppervlakte") || name.contains("Hoek") || name.contains("Maat") { Icon::Measure }
+            else if name.contains("Export") || name.contains("Samenvoegen") { Icon::Export }
+            else if name.contains("Eigenschap") || name.contains("keuze") || name.contains("controls") { Icon::Settings }
+            else if name.contains("Pagina") || name.contains("Beeld") || name.contains("Volledig") { Icon::Fit }
+            else { Icon::Grid };
+        Command::new(*name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
+    }).collect() }).collect())
 }
 
 /// The current native Pointcloud branch has one Start ribbon with ten panels.
