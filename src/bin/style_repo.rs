@@ -296,24 +296,32 @@ impl StyleRepo {
                         .font(fonts::STRONG)
                         .size(16),
                     row![
-                        widgets::action(
-                            l.text("Primair", "Primary"),
-                            Icon::Check,
-                            Some(Action::Toggle),
-                            theme
-                        ),
-                        widgets::action(
-                            l.text("Secundair", "Secondary"),
-                            Icon::Open,
-                            Some(Action::Show(Page::Layouts)),
-                            theme
-                        ),
-                        widgets::action(
-                            l.text("Uitgeschakeld", "Disabled"),
-                            Icon::Save,
-                            None::<Action>,
-                            theme
+                        button(
+                            text(l.text("Primair", "Primary"))
+                                .size(11)
+                                .font(fonts::BODY)
                         )
+                        .width(110)
+                        .height(27)
+                        .on_press(Action::Toggle)
+                        .style(move |_, status| widgets::primary_button_style(theme, status)),
+                        button(
+                            text(l.text("Secundair", "Secondary"))
+                                .size(11)
+                                .font(fonts::BODY)
+                        )
+                        .width(110)
+                        .height(27)
+                        .on_press(Action::Show(Page::Layouts))
+                        .style(move |_, status| widgets::secondary_button_style(theme, status)),
+                        button(
+                            text(l.text("Uitgeschakeld", "Disabled"))
+                                .size(11)
+                                .font(fonts::BODY)
+                        )
+                        .width(110)
+                        .height(27)
+                        .style(move |_, status| widgets::secondary_button_style(theme, status)),
                     ]
                     .spacing(10),
                     text(l.text(

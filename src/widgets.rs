@@ -1,15 +1,119 @@
 //! Canonical controls for domain panels. Use these instead of restyling buttons per app.
 use crate::{fonts, icons::Icon, model::metrics, Theme};
-use iced::{widget::{button, column, container, row, text, tooltip}, Border, Element, Fill};
+use iced::{
+    widget::{button, column, container, row, text, tooltip},
+    Border, Element, Fill,
+};
+
+/// Filled confirmation button used by dialogs and forms in every studio.
+pub fn primary_button_style(theme: Theme, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    let style = button::Style {
+        background: Some(
+            if hovered {
+                t.btn_primary_hover_bg
+            } else {
+                t.btn_primary_bg
+            }
+            .into(),
+        ),
+        text_color: if hovered {
+            t.btn_primary_hover_text
+        } else {
+            t.btn_primary_text
+        },
+        border: Border {
+            color: t.btn_primary_border,
+            width: 1.0,
+            radius: 2.0.into(),
+        },
+        ..Default::default()
+    };
+    if status == button::Status::Disabled {
+        faded_button(style, 0.5)
+    } else {
+        style
+    }
+}
+
+/// Neutral companion button used by dialogs and forms in every studio.
+pub fn secondary_button_style(theme: Theme, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    let style = button::Style {
+        background: Some(
+            if hovered {
+                t.btn_secondary_hover_bg
+            } else {
+                t.btn_secondary_bg
+            }
+            .into(),
+        ),
+        text_color: t.btn_secondary_text,
+        border: Border {
+            color: if hovered {
+                t.btn_secondary_hover_border
+            } else {
+                t.dialog_input_border
+            },
+            width: 1.0,
+            radius: 2.0.into(),
+        },
+        ..Default::default()
+    };
+    if status == button::Status::Disabled {
+        faded_button(style, 0.5)
+    } else {
+        style
+    }
+}
+
+fn faded_button(style: button::Style, alpha: f32) -> button::Style {
+    button::Style {
+        background: style.background.map(|color| color.scale_alpha(alpha)),
+        text_color: style.text_color.scale_alpha(alpha),
+        border: Border {
+            color: style.border.color.scale_alpha(alpha),
+            ..style.border
+        },
+        ..style
+    }
+}
 
 pub fn button_style(theme: Theme, selected: bool, status: button::Status) -> button::Style {
     let t = theme.tokens();
     let disabled = matches!(status, button::Status::Disabled);
     let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
     button::Style {
-        background: Some(if selected { t.ribbon_btn_active_bg } else if hovered { t.ribbon_btn_hover } else { t.bg }.into()),
-        text_color: if disabled { t.text_faint } else if selected { t.ribbon_btn_active_text } else { t.text },
-        border: Border { color: if selected { t.ribbon_btn_active_border } else if hovered { t.ribbon_btn_hover_border } else { iced::Color::TRANSPARENT }, width: 1.0, radius: 4.0.into() },
+        background: Some(
+            if selected {
+                t.ribbon_btn_active_bg
+            } else if hovered {
+                t.ribbon_btn_hover
+            } else {
+                t.bg
+            }
+            .into(),
+        ),
+        text_color: if disabled {
+            t.text_faint
+        } else if selected {
+            t.ribbon_btn_active_text
+        } else {
+            t.text
+        },
+        border: Border {
+            color: if selected {
+                t.ribbon_btn_active_border
+            } else if hovered {
+                t.ribbon_btn_hover_border
+            } else {
+                iced::Color::TRANSPARENT
+            },
+            width: 1.0,
+            radius: 4.0.into(),
+        },
         ..Default::default()
     }
 }
@@ -57,45 +161,146 @@ pub fn ribbon_button_style(theme: Theme, selected: bool, status: button::Status)
     }
 }
 pub fn surface(theme: Theme) -> container::Style {
-    let t = theme.tokens(); container::Style::default().background(t.bg).color(t.text)
+    let t = theme.tokens();
+    container::Style::default().background(t.bg).color(t.text)
 }
 pub fn panel_header<'a, M: 'a>(title: impl Into<String>, theme: Theme) -> Element<'a, M> {
     let t = theme.tokens();
-    let title = container(text(title.into().to_uppercase()).font(fonts::STRONG).size(11))
-        .padding([0, 6]).height(metrics::PANEL_TOOLBAR - 1).width(Fill)
-        .align_y(iced::Alignment::Center)
-        .style(move |_| container::Style::default().background(t.bg_lighter).color(t.accent));
+    let title = container(
+        text(title.into().to_uppercase())
+            .font(fonts::STRONG)
+            .size(11),
+    )
+    .padding([0, 6])
+    .height(metrics::PANEL_TOOLBAR - 1)
+    .width(Fill)
+    .align_y(iced::Alignment::Center)
+    .style(move |_| {
+        container::Style::default()
+            .background(t.bg_lighter)
+            .color(t.accent)
+    });
     let divider = container(iced::widget::Space::new(Fill, 1))
-        .height(1).width(Fill)
+        .height(1)
+        .width(Fill)
         .style(move |_| container::Style::default().background(t.border));
-    column![title, divider].height(metrics::PANEL_TOOLBAR).width(Fill).into()
+    column![title, divider]
+        .height(metrics::PANEL_TOOLBAR)
+        .width(Fill)
+        .into()
 }
-pub fn panel<'a,M:'a>(title: impl Into<String>, content: Element<'a,M>, theme: Theme) -> Element<'a,M> {
+pub fn panel<'a, M: 'a>(
+    title: impl Into<String>,
+    content: Element<'a, M>,
+    theme: Theme,
+) -> Element<'a, M> {
     container(column![
         panel_header(title, theme),
         iced::widget::scrollable(container(content).padding(12).width(Fill)).height(Fill),
-    ]).width(Fill).height(Fill).style(move |_| surface(theme)).into()
+    ])
+    .width(Fill)
+    .height(Fill)
+    .style(move |_| surface(theme))
+    .into()
 }
-pub fn action<'a, M: Clone + 'a>(label: impl Into<String>, icon: Icon, message: Option<M>, theme: Theme) -> Element<'a,M> {
-    let color = if message.is_some() { theme.tokens().text } else { theme.tokens().text_faint };
-    button(row![icon.view(metrics::ICON,color), text(label.into()).font(fonts::BODY).size(13)].spacing(8).align_y(iced::Alignment::Center))
-        .padding([5,10]).height(metrics::CONTROL).on_press_maybe(message)
-        .style(move |_, status| button_style(theme,false,status)).into()
+pub fn action<'a, M: Clone + 'a>(
+    label: impl Into<String>,
+    icon: Icon,
+    message: Option<M>,
+    theme: Theme,
+) -> Element<'a, M> {
+    let color = if message.is_some() {
+        theme.tokens().text
+    } else {
+        theme.tokens().text_faint
+    };
+    button(
+        row![
+            icon.view(metrics::ICON, color),
+            text(label.into()).font(fonts::BODY).size(13)
+        ]
+        .spacing(8)
+        .align_y(iced::Alignment::Center),
+    )
+    .padding([5, 10])
+    .height(metrics::CONTROL)
+    .on_press_maybe(message)
+    .style(move |_, status| button_style(theme, false, status))
+    .into()
 }
-pub fn icon_button<'a, M: Clone + 'a>(label: &'a str, icon: Icon, message:M, theme:Theme) -> Element<'a,M> {
-    tooltip(button(icon.view(16,theme.tokens().text)).padding(7).on_press(message).style(move |_,s|button_style(theme,false,s)), text(label).size(12), tooltip::Position::Bottom).into()
+pub fn icon_button<'a, M: Clone + 'a>(
+    label: &'a str,
+    icon: Icon,
+    message: M,
+    theme: Theme,
+) -> Element<'a, M> {
+    tooltip(
+        button(icon.view(16, theme.tokens().text))
+            .padding(7)
+            .on_press(message)
+            .style(move |_, s| button_style(theme, false, s)),
+        text(label).size(12),
+        tooltip::Position::Bottom,
+    )
+    .into()
 }
-pub fn status_icon_button<'a, M: Clone + 'a>(label: &'a str, icon: Icon, message:M, theme:Theme) -> Element<'a,M> {
-    let t=theme.tokens();
-    tooltip(button(icon.view(14,t.status_text)).padding([3,7]).on_press(message).style(move |_,status|button::Style {
-        background: Some(if matches!(status,button::Status::Hovered|button::Status::Pressed) {t.status_hover} else {t.status_bg}.into()),
-        text_color:t.status_text,
-        ..Default::default()
-    }),text(label).size(12),tooltip::Position::Top).into()
+pub fn status_icon_button<'a, M: Clone + 'a>(
+    label: &'a str,
+    icon: Icon,
+    message: M,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    tooltip(
+        button(icon.view(14, t.status_text))
+            .padding([3, 7])
+            .on_press(message)
+            .style(move |_, status| button::Style {
+                background: Some(
+                    if matches!(status, button::Status::Hovered | button::Status::Pressed) {
+                        t.status_hover
+                    } else {
+                        t.status_bg
+                    }
+                    .into(),
+                ),
+                text_color: t.status_text,
+                ..Default::default()
+            }),
+        text(label).size(12),
+        tooltip::Position::Top,
+    )
+    .into()
 }
-pub fn empty_state<'a, M:'a>(title: impl Into<String>, description: impl Into<String>, theme: Theme) -> Element<'a,M> {
-    container(column![Icon::Cube.view(48,theme.tokens().accent),text(title.into()).font(fonts::HEADING).size(28),text(description.into()).font(fonts::BODY).size(14)].spacing(16).align_x(iced::Alignment::Center)).center(Fill).into()
+pub fn empty_state<'a, M: 'a>(
+    title: impl Into<String>,
+    description: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    container(
+        column![
+            Icon::Cube.view(48, theme.tokens().accent),
+            text(title.into()).font(fonts::HEADING).size(28),
+            text(description.into()).font(fonts::BODY).size(14)
+        ]
+        .spacing(16)
+        .align_x(iced::Alignment::Center),
+    )
+    .center(Fill)
+    .into()
 }
-pub fn property<'a,M:'a>(label:impl Into<String>, value:impl Into<String>, theme:Theme)->Element<'a,M> {
-    row![text(label.into()).size(12).color(theme.tokens().text_secondary).width(Fill),text(value.into()).size(12).font(fonts::MEDIUM)].spacing(12).into()
+pub fn property<'a, M: 'a>(
+    label: impl Into<String>,
+    value: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    row![
+        text(label.into())
+            .size(12)
+            .color(theme.tokens().text_secondary)
+            .width(Fill),
+        text(value.into()).size(12).font(fonts::MEDIUM)
+    ]
+    .spacing(12)
+    .into()
 }

@@ -125,6 +125,14 @@ fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
     let mut app = StyleRepo::default();
     save_render(&app, Theme::Light, &design.join("style-repo-native.png"));
+    app.show(Page::Components);
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        save_render(
+            &app,
+            theme,
+            &design.join(format!("style-repo-components-{name}.png")),
+        );
+    }
     app.show(Page::Icons);
     save_render(
         &app,

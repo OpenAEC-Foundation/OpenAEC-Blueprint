@@ -14,6 +14,7 @@ De app laat componenten, vijf thema's, de gedeelde layout, 18 studio-indelingen 
 
 De native studio-atlas is in alle vijf thema's gerenderd: [Light](design/style-repo-atlas-light.png), [Forge](design/style-repo-atlas-forge.png), [OpenAEC](design/style-repo-atlas-openaec.png), [Blueprint](design/style-repo-atlas-blueprint.png) en [High contrast](design/style-repo-atlas-contrast.png). Deze beelden zijn reproduceerbaar met `cargo test --bin style_repo render_tests::export_native_style_repo_previews -- --ignored`.
 De native iconenpagina toont de 22 canonieke Rust-iconen afzonderlijk van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
+De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen zoals Pointcloud ze nu uit dezelfde Rust-stijlfuncties tekent.
 
 Een andere Rust-tool kan de shell via de `Application`-trait gebruiken. [`examples/studio.rs`](examples/studio.rs) is een klein integratievoorbeeld (`cargo run --example studio`).
 Voor bestaande native applicaties met een eigen eventloop biedt [`src/frame.rs`](src/frame.rs) dezelfde buitenste bandindeling via `FrameSlots`; Pointcloud Studio gebruikt die adapter voor het volledige venster en behoudt zijn eigen 3D-canvas en commando's.
@@ -24,7 +25,7 @@ De vijf vaste vensterbanden, 24 px-paneelwerkbalken en de standaardbreedte van b
 `python3 scripts/check_icon_adoptions.py` controleert de zes iconbesluiten en identieke SVG-inhoud in de lokale Pointcloud-integratie.
 `python3 scripts/check_portable_ui.py` vergelijkt de volledige portable crate met deze bron: Rust-code na formattering, alle 28 gebundelde fonts/iconen en de runtime-dependencies.
 
-De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout op branch `feat/shared-rust-ui`. Daar draait een portable snapshot van deze crate als `native/ui`; de Pointcloud-titelbalk, [zes beoordeelde toolacties en de Extensions-bestandspagina](design/icon-adoptions.json) gebruiken de canonieke iconen, naast de gebundelde lettertypen en 77 gedeelde kleurvelden per thema. De [Extensions-iconreview](design/extensions-icon-review.html) onderbouwt waarom die pagina een puzzelstuk krijgt in plaats van een 3D-kubus. De overige domeinribbon en panelen worden pas na de visuele en semantische beoordeling volledig overgezet.
+De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout op branch `feat/shared-rust-ui`. Daar draait een portable snapshot van deze crate als `native/ui`; de Pointcloud-titelbalk, [zes beoordeelde toolacties en de Extensions-bestandspagina](design/icon-adoptions.json) gebruiken de canonieke iconen, naast de gebundelde lettertypen, primaire en secundaire knoppen en 77 gedeelde kleurvelden per thema. De [Extensions-iconreview](design/extensions-icon-review.html) onderbouwt waarom die pagina een puzzelstuk krijgt in plaats van een 3D-kubus. De overige domeinribbon en panelen worden pas na de visuele en semantische beoordeling volledig overgezet.
 
 ## Via GitHub Desktop publiceren
 
