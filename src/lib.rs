@@ -5,6 +5,7 @@
 pub use iced;
 pub mod fonts;
 pub mod icons;
+pub mod frame;
 pub mod locale;
 pub mod model;
 pub mod theme;

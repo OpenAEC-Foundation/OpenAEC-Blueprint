@@ -85,7 +85,15 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         widgets::status_icon_button(l.text("Verkenner","Explorer"),Icon::PanelLeft,Message::Ui(UiEvent::ToggleLeft),theme),
         widgets::status_icon_button(l.text("Eigenschappen","Properties"),Icon::PanelRight,Message::Ui(UiEvent::ToggleRight),theme),
     ].align_y(iced::Alignment::Center)).padding([0,8]).height(metrics::STATUS).style(move |_|container::Style::default().background(t.status_bg).color(t.status_text));
-    let base: Element<'a,Message<M>>=container(column![titlebar,tabs,ribbon,document_bar,body,status]).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
+    let bands = crate::frame::frame(crate::frame::FrameSlots {
+        titlebar: titlebar.into(),
+        tabs: tabs.into(),
+        ribbon: Some(ribbon.into()),
+        documents: Some(document_bar.into()),
+        content: body,
+        status: status.into(),
+    });
+    let base: Element<'a,Message<M>>=container(bands).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
     if state.settings {
         let overlay=container(settings(state)).center(Fill).style(move |_|container::Style::default().background(t.dialog_overlay));
         stack([base,opaque(overlay)]).width(Fill).height(Fill).into()
