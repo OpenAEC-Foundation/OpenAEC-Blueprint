@@ -56,6 +56,8 @@ migratie van alle OpenAEC-applicaties.
 
 Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
 met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
+De [reviewpagina](review.html) toont daarnaast vier native Pointcloud-renders
+van lege en geopende projecten in Light en Forge.
 
 De huidige HTML-werkruimte is bewust een wireframe. Een generieke geometrische
 placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
