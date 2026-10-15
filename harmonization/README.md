@@ -1,8 +1,8 @@
 # OpenAEC UI-inventarisatie
 
-Publiek beschikbare repositories in de OpenAEC-Foundation-organisatie. Elke bron is vastgelegd op een commit. Geen code uit de bronrepositories is uitgevoerd.
+Een brongepind onderzoeksarchief met 63 publiek beschikbare repositories in de OpenAEC-Foundation-organisatie, vier eerder onderzochte maar niet publiek bereikbare OpenAEC-namen en OpenCADStudio als externe referentie. Bereikbare bronnen zijn op een commit vastgelegd. Geen code uit de bronrepositories is uitgevoerd. De [actuele toegangsaudit](../design/public-access-audit.html) vergelijkt de 63 huidige openbare organisatierepositories met deze historische records; de [JSON-data](public-access-audit.json) legt de API-uitkomst vast.
 
-Dit is een breed archief van visuele bronbestanden, geen telling van gebruikte UI-iconen: alle SVG/ICO/ICNS/XPM-bestanden en rasterbestanden met icon/logo/favicon/pictogram/toolbar/ribbon in het pad. Het omvat ook technische symbolen, tekeningen en branding. Inline iconen zijn als bronbestanden bewaard; externe iconpackages zijn geregistreerd, niet volledig gespiegeld. Voor UI-gebruik zie `asset-index.json`, `ui-code-references.json` en `../design/review.html`. Privérepositories en externe repositories vallen buiten deze inventarisatie.
+Dit is een breed archief van visuele bronbestanden, geen telling van gebruikte UI-iconen: alle SVG/ICO/ICNS/XPM-bestanden en rasterbestanden met icon/logo/favicon/pictogram/toolbar/ribbon in het pad. Het omvat ook technische symbolen, tekeningen en branding. Inline iconen zijn als bronbestanden bewaard; externe iconpackages zijn geregistreerd, niet volledig gespiegeld. Voor UI-gebruik zie `asset-index.json`, `ui-code-references.json` en `../design/review.html`. Privérepositories zijn niet toegankelijk; buiten de ene genoemde OpenCADStudio-referentie zijn externe repositories niet geïnventariseerd.
 
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 

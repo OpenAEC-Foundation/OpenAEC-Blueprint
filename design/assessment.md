@@ -8,6 +8,12 @@ migratie van alle OpenAEC-applicaties.
 
 - 68 repositoryrecords zijn geïnventariseerd: 63 publieke OpenAEC-repositories,
   de externe OpenCADStudio en vier niet toegankelijke of niet gevonden namen.
+  De [actuele toegangsaudit](public-access-audit.html) controleerde de GitHub API
+  opnieuw op 16 oktober 2026: dezelfde 63 OpenAEC-repositories zijn openbaar
+  vermeld; er zijn geen nieuwe namen. De vier overige OpenAEC-namen geven elk
+  HTTP 404 onder hun historische URL. OpenCADStudio is een aparte externe
+  bron en telt niet mee bij de 63. De bestaande broncommits blijven bewaard;
+  de audit zegt niets over de reden van een 404 of de actualiteit van een UI.
 - 666 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
   645 hebben een unieke Git-blobinhoud en 472 zijn als mogelijke
   applicatieschermen geclassificeerd. De classificatie
