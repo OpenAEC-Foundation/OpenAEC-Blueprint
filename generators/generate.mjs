@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/paths.mjs";
 import { writeGenerated } from "./lib/write.mjs";
+import { buildFrappeTheme } from "./frappe/build.mjs";
 import { loadI18n } from "./i18n/load.mjs";
 import { renderI18nRust } from "./i18n/rust.mjs";
 import { loadIconManifest } from "./icons/manifest.mjs";
@@ -58,6 +59,8 @@ steps.push(["ribbons-rust", (root) => [
   writeGenerated(join(root, "crates", "openaec-ribbon", "src", "generated.rs"),
     renderSharedTabsRust(readSharedTabs(join(root, "design", "ribbons")))),
 ]]);
+
+steps.push(["frappe-theme", (root) => buildFrappeTheme(root)]);
 
 export async function runAll(root = ROOT) {
   const written = [];

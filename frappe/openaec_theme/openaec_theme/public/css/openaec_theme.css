@@ -1,0 +1,87 @@
+/* @generated GEGENEREERD door generators/ uit design/ — niet met de hand bewerken. */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/openaec_theme/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/openaec_theme/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/openaec_theme/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/openaec_theme/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/openaec_theme/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/openaec_theme/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+[data-theme="light"] {
+  --primary: #D97706;
+  --primary-color: #D97706;
+  --btn-primary: #D97706;
+  --primary-hover: #EA580C;
+  --font-stack: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bg-color: #FAFAF9;
+  --fg-color: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --navbar-bg: #FFFFFF;
+  --subtle-fg: #F5F5F4;
+  --text-color: #36363E;
+  --text-light: #57534E;
+  --text-muted: #A1A1AA;
+  --border-color: #E7E5E4;
+  --dark-border-color: #D6D3D1;
+}
+
+[data-theme="dark"] {
+  --bg-color: #36363E;
+  --fg-color: #2A2A32;
+  --card-bg: #2A2A32;
+  --navbar-bg: #2A2A32;
+  --subtle-fg: #27272A;
+  --text-color: #FAFAF9;
+  --text-light: #D6D3D1;
+  --text-muted: #A1A1AA;
+  --border-color: #27272A;
+  --dark-border-color: #3F3F46;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title .title-text,
+.navbar-brand {
+  font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
