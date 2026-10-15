@@ -70,7 +70,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
                 let control = button(column![command.icon.view(24,color),text(label).font(fonts::BODY).size(12)].spacing(6).align_x(iced::Alignment::Center))
                     .padding([3,10]).width(control_width).height(52).on_press_maybe(command.enabled.then(|| Message::Command(command.message.clone())))
                     .style(move |_,s| widgets::ribbon_button_style(theme,selected,s));
-                commands=commands.push(tooltip(control,text(hint).size(12),tooltip::Position::Bottom));
+                commands=commands.push(widgets::themed_tooltip(control,hint,tooltip::Position::Bottom,theme));
             }
             tools_width += group.commands.len().saturating_sub(1) as f32;
             let caption_width = (group.label.chars().count() as f32 * 6.0 + 8.0).max(50.0);

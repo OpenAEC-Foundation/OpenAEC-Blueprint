@@ -6,6 +6,8 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 
 `widgets::title_action` owns the 30 × 26 px quick-access control, hover color and tooltip for the title strip. The Style Repo and Pointcloud supply their own command icons, labels and messages through this same Rust widget.
 
+`widgets::themed_tooltip` owns the 12 px label, 8 × 12 px padding, 340 px maximum width and 8 px gap for ribbon, panel and status controls. The Style Repo ribbon and Pointcloud controls use this same tooltip; follow-cursor tips can override the gap.
+
 `widgets::settings_modal` owns the source Style Book's 560 × 500 px settings chrome, 120 px sidebar, overlay, header and footer. Each app supplies its own tabs and settings fields. The backdrop does not dismiss the dialog, matching the pinned Tauri template.
 `widgets::settings_tab` gives those tabs the same square 11 px navigation style. The crate shell provides selectable General, Appearance and About pages; other applications can supply their own page content and messages.
 `widgets::settings_theme_picker` provides the 200 px trigger and anchored overlay menu with five choices and four 14 px swatches per row. It closes on an outside click without changing form layout. `Theme::swatches` is the single source of those colors for Style Repo and Pointcloud. Both apps own selection and preview behavior; the native review renders deliberately show the menu expanded.

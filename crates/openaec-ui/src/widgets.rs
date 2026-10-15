@@ -125,6 +125,25 @@ pub fn tooltip_style(_theme: Theme) -> container::Style {
         .border(Border::default().rounded(4))
 }
 
+/// Shared tooltip content for ribbon, title strip and domain controls.
+pub fn tooltip_box<'a, M: 'a>(label: impl text::IntoFragment<'a>, theme: Theme) -> Element<'a, M> {
+    container(text(label).size(12))
+        .padding([8, 12])
+        .max_width(340)
+        .style(move |_| tooltip_style(theme))
+        .into()
+}
+
+/// A tooltip with the same typography, width and eight-pixel separation in every studio.
+pub fn themed_tooltip<'a, M: 'a>(
+    content: impl Into<Element<'a, M>>,
+    label: impl text::IntoFragment<'a>,
+    position: tooltip::Position,
+    theme: Theme,
+) -> tooltip::Tooltip<'a, M> {
+    tooltip::Tooltip::new(content, tooltip_box(label, theme), position).gap(8.0)
+}
+
 /// Square text field shared by panel forms and dialogs.
 pub fn text_input_style(theme: Theme, status: text_input::Status) -> text_input::Style {
     let t = theme.tokens();
@@ -969,14 +988,7 @@ pub fn title_action<'a, M: Clone + 'a>(
         .padding([1, 0])
         .on_press_maybe(message)
         .style(move |_, status| title_action_style(theme, status));
-    tooltip(
-        control,
-        container(text(label.into()).size(12))
-            .padding([8, 12])
-            .max_width(340)
-            .style(move |_| tooltip_style(theme)),
-        tooltip::Position::Bottom,
-    )
+    themed_tooltip(control, label.into(), tooltip::Position::Bottom, theme)
     .gap(90)
     .into()
 }
@@ -1256,16 +1268,14 @@ pub fn icon_button<'a, M: Clone + 'a>(
     message: M,
     theme: Theme,
 ) -> Element<'a, M> {
-    tooltip(
+    themed_tooltip(
         button(icon.view(16, theme.tokens().text))
             .padding(7)
             .on_press(message)
             .style(move |_, s| button_style(theme, false, s)),
-        container(text(label).size(12))
-            .padding([8, 12])
-            .max_width(340)
-            .style(move |_| tooltip_style(theme)),
+        label,
         tooltip::Position::Bottom,
+        theme,
     )
     .into()
 }
@@ -1276,13 +1286,14 @@ pub fn status_icon_button<'a, M: Clone + 'a>(
     theme: Theme,
 ) -> Element<'a, M> {
     let t = theme.tokens();
-    tooltip(
+    themed_tooltip(
         button(icon.view(14, t.status_text))
             .padding([3, 7])
             .on_press(message)
             .style(move |_, status| status_button_style(theme, status)),
-        text(label).size(12),
+        label,
         tooltip::Position::Top,
+        theme,
     )
     .into()
 }

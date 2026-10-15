@@ -156,6 +156,12 @@ Pointcloud-vensters in Light en Forge zijn bytegelijk aan de vorige beelden.
 De Style Repo-beelden zijn na de tabwijziging opnieuw gerenderd en visueel
 bekeken in Light en Forge.
 
+De tooltipconstructie is eveneens gedeeld: de Style Repo-ribbon en de
+Pointcloud-panelen gebruiken nu dezelfde Rust-widget met 12 px tekst,
+8 × 12 px binnenruimte, maximaal 340 px breedte en 8 px afstand. De
+Pointcloud-positioneringstest controleert boven-, onder- en cursorvolgende
+tooltips; de app blijft zelf bepalen welke bediening welke uitleg krijgt.
+
 Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
 met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
 De [reviewpagina](review.html) toont zes native Pointcloud-renders van lege en
