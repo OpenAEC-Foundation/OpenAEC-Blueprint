@@ -17506,7 +17506,7 @@
   {
     "repository": "OpenCADStudio",
     "status": "source-scanned",
-    "code_files": 378,
+    "code_files": 383,
     "matches": [
       {
         "source": "build.rs",
@@ -18567,6 +18567,826 @@
         "source": "crates/ocs_plugin_api/src/ribbon/owned.rs",
         "line": 653,
         "text": "        let round_trip: OwnedRibbonGroup = group.to_static().into();"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 16,
+        "text": "        crate::ui::ribbon::tooltip_content(text),"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 21,
+        "text": "    .style(crate::ui::ribbon::tooltip_style)"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 40,
+        "text": "            let button = button(crate::ui::icons::themed_danger(bytes, 15.0))"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 60,
+        "text": "    // Borderless icon button; an `active` toggle gets an accent tint + fill."
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 61,
+        "text": "    let icon_btn = move |bytes: &'static [u8],"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 66,
+        "text": "        let icon = if active {"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 67,
+        "text": "            crate::ui::icons::themed_primary_weak_text(bytes, 15.0)"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 69,
+        "text": "            crate::ui::icons::themed(bytes, 15.0)"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 72,
+        "text": "            button(icon)"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 102,
+        "text": "            crate::ui::icons::themed_arrow_toggle(render_mode_menu_open, 9.0),"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 146,
+        "text": "        let checkmark = crate::ui::icons::themed_check_cell(selected);"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 223,
+        "text": "        .push(icon_btn("
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 224,
+        "text": "            crate::ui::icons::GRID,"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 231,
+        "text": "        .push(icon_btn("
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 232,
+        "text": "            crate::ui::icons::SNAP,"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 243,
+        "text": "            .push(icon_btn("
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 244,
+        "text": "                crate::ui::icons::SPLIT_V,"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 251,
+        "text": "            .push(icon_btn("
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 252,
+        "text": "                crate::ui::icons::SPLIT_H,"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 264,
+        "text": "                container(crate::ui::icons::themed_success("
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 265,
+        "text": "                    crate::ui::icons::MOVE,"
+      },
+      {
+        "source": "src/app/view/controls.rs",
+        "line": 281,
+        "text": "                crate::ui::icons::CLOSE,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 161,
+        "text": "    if modifiers.logo() {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 209,
+        "text": "    /// The primary window: viewport, ribbon, tab bar, status bar. Split out of"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 663,
+        "text": "            // icon / crosshair project through the active pane's camera at"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 667,
+        "text": "            // The UCS icon shows the active pane's UCS tripod: the model view, or"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 670,
+        "text": "            // Rotation-only projection (view_proj_rte): the icon shows axis"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 673,
+        "text": "            let ucs_icons: Vec<crate::ui::overlay::UcsIconParams> = if !self.show_ucs_icon {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 678,
+        "text": "                    .ucs_icon_at_origin"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 685,
+        "text": "                vec![crate::ui::overlay::UcsIconParams {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 690,
+        "text": "                    hover: self.ucs_icon_hover,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 691,
+        "text": "                    selected: self.ucs_icon_selected,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 694,
+        "text": "                // One icon per Model pane — each at its own UCS origin, projected"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 719,
+        "text": "                            .ucs_icon_at_origin"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 725,
+        "text": "                        crate::ui::overlay::UcsIconParams {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 730,
+        "text": "                            hover: i == active && self.ucs_icon_hover,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 731,
+        "text": "                            selected: i == active && self.ucs_icon_selected,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 743,
+        "text": "            // included) — like the grips and UCS icon above — or the marker"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 747,
+        "text": "            // (canvas offset included), matching the grips / UCS icon above."
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 909,
+        "text": "                ucs_icons,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 919,
+        "text": "                self.ribbon.open_dropdown.is_some(),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1220,
+        "text": "            // mouse-area capturing draw clicks, viewcube, nav toolbar, …)."
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1571,
+        "text": "                            crate::ui::icons::themed_check_cell(true)"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1626,
+        "text": "            // ponytail: one right-edge toolbar at a time; stack them if both"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1630,
+        "text": "            } else if self.ribbon.xref_context() {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1631,
+        "text": "                crate::ui::side_toolbar::view(&crate::ui::ribbon::xref_tools())"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1632,
+        "text": "            } else if let Some(shown) = self.ribbon.point_cloud_context() {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1633,
+        "text": "                crate::ui::side_toolbar::view_with_active("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1634,
+        "text": "                    &crate::ui::ribbon::point_cloud_tools(),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1637,
+        "text": "            } else if let Some(ctx) = self.ribbon.underlay_context() {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1639,
+        "text": "                crate::ui::side_toolbar::view_with_active("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1640,
+        "text": "                    &crate::ui::ribbon::pdf_underlay_tools(ctx.kind),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1655,
+        "text": "                    crate::ui::side_toolbar::view(&crate::modules::layout::paper_space_tools())"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1661,
+        "text": "            // In-place block edit (REFEDIT): right-edge toolbar with Save / Discard"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1664,
+        "text": "                if let Some(tb) = crate::ui::side_toolbar::view("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1671,
+        "text": "            // BEDIT block editor: right-edge Save Block / Discard toolbar (#261)."
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1673,
+        "text": "                if let Some(tb) = crate::ui::side_toolbar::view("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1680,
+        "text": "            // Count mode: a blue frame round the drawing and the count toolbar."
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1683,
+        "text": "                viewport_stack = viewport_stack.push(crate::ui::window::count_palette::toolbar("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1752,
+        "text": "                        crate::ui::icons::themed_primary(crate::ui::icons::COPY, 11.0),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1763,
+        "text": "                        crate::ui::icons::themed_danger(crate::ui::icons::TRASH, 11.0),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1861,
+        "text": "            // In-place MText editor (toolbar + text area), anchored at the"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1892,
+        "text": "        // Docked pallets: each edge's icon strip and shown group (see"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 1999,
+        "text": "            // Clean-screen mode drops the ribbon for a full-canvas view; the"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2003,
+        "text": "                col = col.push(self.ribbon.view("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2012,
+        "text": "            // ribbon vs status-bar construction separately (both gated on"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2014,
+        "text": "            mark(\"ribbon\");"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2161,
+        "text": "        let open_dropdown = self.ribbon.open_dropdown.as_deref();"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2162,
+        "text": "        let undo_labels: Vec<String> = if open_dropdown == Some(crate::ui::ribbon::UNDO_HISTORY_ID)"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2168,
+        "text": "        let redo_labels: Vec<String> = if open_dropdown == Some(crate::ui::ribbon::REDO_HISTORY_ID)"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2177,
+        "text": "            self.ribbon.place_dropdown("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2184,
+        "text": "            self.ribbon"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2566,
+        "text": "                            && !modifiers.logo();"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2568,
+        "text": "                            (modifiers.control() || modifiers.alt() || modifiers.logo())"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 2821,
+        "text": "                crate::ui::icons::themed_warning(crate::ui::icons::DIRTY_DOT, 14.0),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3145,
+        "text": "                crate::ui::icons::themed_danger_text(crate::ui::icons::HEART, 14.0),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3151,
+        "text": "        .on_press(Message::RibbonToolClick {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3172,
+        "text": "            Message::RibbonToolClick {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3189,
+        "text": "                .on_press(Message::RibbonToolClick {"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3215,
+        "text": "            iced::widget::svg(iced::widget::svg::Handle::from_memory(include_bytes!("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3216,
+        "text": "                \"../../../assets/icons/reddit.svg\""
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3251,
+        "text": "                iced::widget::svg(iced::widget::svg::Handle::from_memory(include_bytes!("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3252,
+        "text": "                    \"../../../assets/sponsors/openaec-logo-dark-on-light.svg\""
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3585,
+        "text": "                    crate::ui::icons::themed_danger_text(crate::ui::icons::HEART, 13.0),"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3866,
+        "text": "            let remove_btn = button(crate::ui::icons::themed_secondary("
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3867,
+        "text": "                crate::ui::icons::CLOSE,"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3924,
+        "text": "        button(crate::ui::icons::themed(crate::ui::icons::MINUS, 11.0))"
+      },
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3929,
+        "text": "        button(crate::ui::icons::themed(crate::ui::icons::PLUS, 11.0))"
+      },
+      {
+        "source": "src/app/view/modal.rs",
+        "line": 307,
+        "text": "                            show_ucs_icon: self.show_ucs_icon,"
+      },
+      {
+        "source": "src/app/view/modal.rs",
+        "line": 308,
+        "text": "                            ucs_icon_at_origin: self.ucs_icon_at_origin,"
+      },
+      {
+        "source": "src/app/view/modal.rs",
+        "line": 2426,
+        "text": "                crate::ui::icons::themed(crate::ui::icons::HEART, 52.0),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 4,
+        "text": "    ContextMenu, MenuIcon, MenuItem, MenuRow, MENU_PAD_TOP, MENU_ROW_H,"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 38,
+        "text": "/// toolbar), anchored at the insertion-point click. Enter commits; Esc cancels."
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 432,
+        "text": "    let icon_btn = move |bytes: &'static [u8], msg: Message| -> Element<'static, Message> {"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 433,
+        "text": "        button(crate::ui::icons::themed(bytes, 18.0))"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 453,
+        "text": "    // ── Row 1: style / font / height · format icons · colour ──────────────"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 511,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 512,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_bold.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 515,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 516,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_italic.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 519,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 520,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_underline.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 523,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 524,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_overline.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 527,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 528,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_strike.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 531,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 532,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_upper.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 535,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 536,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_lower.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 571,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 572,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_align_left.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 575,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 576,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_align_center.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 579,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 580,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_align_right.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 583,
+        "text": "        icon_btn("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 584,
+        "text": "            include_bytes!(\"../../../assets/icons/mt_align_justify.svg\"),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 775,
+        "text": "    // space left by the toolbars, so the resizable modal's extra height flows"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 780,
+        "text": "        // pass uses an empty viewport proxy. The toolbars alone determine its"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 847,
+        "text": "        // The preview fills the space the toolbars leave; it scrolls in BOTH"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1124,
+        "text": "/// Width of the icon gutter every row reserves so labels line up whether or"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1125,
+        "text": "/// not the row carries a glyph (object snaps, command icons)."
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1127,
+        "text": "const MENU_ICON_SIZE: f32 = 14.0;"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1133,
+        "text": "fn context_menu_gutter(icon: Option<MenuIcon>, enabled: bool) -> Element<'static, Message> {"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1134,
+        "text": "    use crate::ui::icons;"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1137,
+        "text": "            icons::themed::<Message>(bytes, MENU_ICON_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1139,
+        "text": "            icons::themed_disabled::<Message>(bytes, MENU_ICON_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1142,
+        "text": "    let cell: Element<'static, Message> = match icon {"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1143,
+        "text": "        Some(MenuIcon::Snap(t)) => chrome(icons::osnap(t)),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1144,
+        "text": "        Some(MenuIcon::Mtp) => chrome(icons::mtp_icon()),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1145,
+        "text": "        Some(MenuIcon::Chrome(bytes)) => chrome(bytes),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1146,
+        "text": "        Some(MenuIcon::Tool(bytes)) if enabled => icons::semantic(bytes, MENU_ICON_SIZE),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1147,
+        "text": "        Some(MenuIcon::Tool(bytes)) => icons::semantic_disabled(bytes, MENU_ICON_SIZE),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1149,
+        "text": "            .width(MENU_ICON_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1150,
+        "text": "            .height(MENU_ICON_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1199,
+        "text": "                icon,"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1206,
+        "text": "                    crate::ui::icons::themed_disabled_arrow_right(9.0)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1208,
+        "text": "                    crate::ui::icons::themed_arrow_down(9.0)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1210,
+        "text": "                    crate::ui::icons::themed_arrow_right(9.0)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1213,
+        "text": "                    context_menu_gutter(*icon, enabled),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1273,
+        "text": "/// with faded text and icons."
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1283,
+        "text": "    let mut content = row![context_menu_gutter(item.icon, enabled), label_text]"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1306,
+        "text": "            crate::ui::icons::themed(crate::ui::icons::CHECK, MENU_CHECK_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1308,
+        "text": "            crate::ui::icons::themed_disabled(crate::ui::icons::CHECK, MENU_CHECK_SIZE)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1363,
+        "text": "/// snap ICONS only — the names show as hover tooltips. Picking one applies"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1369,
+        "text": "    let cell_icon ="
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1370,
+        "text": "        |icon: &'static [u8], label: String, msg: Message| -> Element<'static, Message> {"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1371,
+        "text": "            let icon = container(crate::ui::icons::themed::<Message>(icon, 16.0))"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1376,
+        "text": "            let btn = button(icon)"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1409,
+        "text": "    // `SnapType`, but same icon-only cell with hover tooltip."
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1413,
+        "text": "        cells.push(cell_icon("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1414,
+        "text": "            crate::ui::icons::osnap(snap_type),"
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1419,
+        "text": "    cells.push(cell_icon("
+      },
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 1420,
+        "text": "        crate::ui::icons::mtp_icon(),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 22,
+        "text": "/// Borderless square icon button used by the ViewCube nav controls."
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 53,
+        "text": "    use crate::ui::icons;"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 88,
+        "text": "            vc_btn(icons::themed_home(13.0), BTN, Message::ViewCubeHome)"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 94,
+        "text": "                icons::themed_undo(12.0, true),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 103,
+        "text": "                icons::themed_redo(12.0, true),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 112,
+        "text": "                icons::themed_arrow_down(8.0),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 121,
+        "text": "                icons::themed_arrow_up(8.0),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 130,
+        "text": "                icons::themed_arrow_right(8.0),"
+      },
+      {
+        "source": "src/app/view/viewcube.rs",
+        "line": 139,
+        "text": "                icons::themed_arrow_left(8.0),"
       },
       {
         "source": "src/cli.rs",
@@ -20117,141 +20937,6 @@
         "source": "src/modules/draw/draw/dimcenter.rs",
         "line": 22,
         "text": "        icon: IconKind::Svg(include_bytes!(\"../../../../assets/icons/line.svg\")),"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 1,
-        "text": "// Ellipse tool — ribbon dropdown + all OpenCADStudio ellipse creation methods."
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 13,
-        "text": "use crate::modules::IconKind;"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 27,
-        "text": "// ── Icons ─────────────────────────────────────────────────────────────────"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 29,
-        "text": "const ICON_CTR: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 30,
-        "text": "    \"../../../../assets/icons/ellipse/ellipse_ctr.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 32,
-        "text": "const ICON_AXIS: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 33,
-        "text": "    \"../../../../assets/icons/ellipse/ellipse_axis.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 35,
-        "text": "const ICON_ARC: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 36,
-        "text": "    \"../../../../assets/icons/ellipse/ellipse_arc.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 43,
-        "text": "pub const DROPDOWN_ITEMS: &[(&str, &str, IconKind)] = &["
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 44,
-        "text": "    (\"ELLIPSE\", \"Center, Axes\", ICON_CTR),"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 45,
-        "text": "    (\"ELLIPSE_AXIS\", \"Axis, End\", ICON_AXIS),"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 46,
-        "text": "    (\"ELLIPSE_ARC\", \"Ellipse Arc\", ICON_ARC),"
-      },
-      {
-        "source": "src/modules/draw/draw/ellipse.rs",
-        "line": 49,
-        "text": "pub const ICON: IconKind = ICON_CTR;"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 4,
-        "text": "use crate::modules::IconKind;"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 14,
-        "text": "// ── Icons ──────────────────────────────────────────────────────────────────"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 16,
-        "text": "const ICON_HATCH: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 17,
-        "text": "    \"../../../../assets/icons/hatch/hatch_lines.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 19,
-        "text": "const ICON_GRADIENT: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 20,
-        "text": "    \"../../../../assets/icons/hatch/hatch_gradient.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 22,
-        "text": "const ICON_BOUNDARY: IconKind = IconKind::Svg(include_bytes!("
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 23,
-        "text": "    \"../../../../assets/icons/hatch/hatch_boundary.svg\""
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 29,
-        "text": "pub const ICON: IconKind = ICON_HATCH;"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 31,
-        "text": "pub const DROPDOWN_ITEMS: &[(&str, &str, IconKind)] = &["
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 32,
-        "text": "    (\"HATCH\", \"Hatch\", ICON_HATCH),"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 33,
-        "text": "    (\"GRADIENT\", \"Gradient\", ICON_GRADIENT),"
-      },
-      {
-        "source": "src/modules/draw/draw/hatch.rs",
-        "line": 34,
-        "text": "    (\"BOUNDARY\", \"Boundary\", ICON_BOUNDARY),"
       },
       {
         "source": "src/modules/view/ucs_icon.rs",
@@ -23272,6 +23957,141 @@
         "source": "src/ui/statusbar/statusbar_menu.rs",
         "line": 54,
         "text": "    let check = crate::ui::icons::themed_check_cell(checked);"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 1,
+        "text": "// Ellipse tool — ribbon dropdown + all OpenCADStudio ellipse creation methods."
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 13,
+        "text": "use crate::modules::IconKind;"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 27,
+        "text": "// ── Icons ─────────────────────────────────────────────────────────────────"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 29,
+        "text": "const ICON_CTR: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 30,
+        "text": "    \"../../../../assets/icons/ellipse/ellipse_ctr.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 32,
+        "text": "const ICON_AXIS: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 33,
+        "text": "    \"../../../../assets/icons/ellipse/ellipse_axis.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 35,
+        "text": "const ICON_ARC: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 36,
+        "text": "    \"../../../../assets/icons/ellipse/ellipse_arc.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 43,
+        "text": "pub const DROPDOWN_ITEMS: &[(&str, &str, IconKind)] = &["
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 44,
+        "text": "    (\"ELLIPSE\", \"Center, Axes\", ICON_CTR),"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 45,
+        "text": "    (\"ELLIPSE_AXIS\", \"Axis, End\", ICON_AXIS),"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 46,
+        "text": "    (\"ELLIPSE_ARC\", \"Ellipse Arc\", ICON_ARC),"
+      },
+      {
+        "source": "src/modules/draw/draw/ellipse.rs",
+        "line": 49,
+        "text": "pub const ICON: IconKind = ICON_CTR;"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 4,
+        "text": "use crate::modules::IconKind;"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 14,
+        "text": "// ── Icons ──────────────────────────────────────────────────────────────────"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 16,
+        "text": "const ICON_HATCH: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 17,
+        "text": "    \"../../../../assets/icons/hatch/hatch_lines.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 19,
+        "text": "const ICON_GRADIENT: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 20,
+        "text": "    \"../../../../assets/icons/hatch/hatch_gradient.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 22,
+        "text": "const ICON_BOUNDARY: IconKind = IconKind::Svg(include_bytes!("
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 23,
+        "text": "    \"../../../../assets/icons/hatch/hatch_boundary.svg\""
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 29,
+        "text": "pub const ICON: IconKind = ICON_HATCH;"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 31,
+        "text": "pub const DROPDOWN_ITEMS: &[(&str, &str, IconKind)] = &["
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 32,
+        "text": "    (\"HATCH\", \"Hatch\", ICON_HATCH),"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 33,
+        "text": "    (\"GRADIENT\", \"Gradient\", ICON_GRADIENT),"
+      },
+      {
+        "source": "src/modules/draw/draw/hatch.rs",
+        "line": 34,
+        "text": "    (\"BOUNDARY\", \"Boundary\", ICON_BOUNDARY),"
       },
       {
         "source": "src/modules/draw/draw/helix.rs",
@@ -28534,6 +29354,191 @@
         "text": "        let check = crate::ui::icons::themed_check_cell(is_current);"
       },
       {
+        "source": "index.html",
+        "line": 13,
+        "text": "    {{icons}}"
+      },
+      {
+        "source": "index.html",
+        "line": 38,
+        "text": "          <img src=\"{{logo}}\" width=\"38\" height=\"38\" alt=\"\" />"
+      },
+      {
+        "source": "index.html",
+        "line": 70,
+        "text": "          <div class=\"visual-toolbar\" aria-hidden=\"true\" dir=\"ltr\">"
+      },
+      {
+        "source": "index.html",
+        "line": 148,
+        "text": "              <a href=\"https://github.com/HakanSeven12/OpenCADStudio\"><img src=\"{{path}}star-history-dark.svg\" width=\"960\" height=\"410\" alt=\"{{stars}}\" loading=\"lazy\" /></a>"
+      },
+      {
+        "source": "index.html",
+        "line": 152,
+        "text": "              <a href=\"https://github.com/HakanSeven12/OpenCADStudio/releases\"><img src=\"{{path}}download-history-dark.svg\" width=\"960\" height=\"410\" alt=\"{{downloads}}\" loading=\"lazy\" /></a>"
+      },
+      {
+        "source": "index.html",
+        "line": 174,
+        "text": "        <div class=\"brand footer-brand\"><img src=\"{{logo}}\" width=\"34\" height=\"34\" alt=\"\" /><span dir=\"ltr\">Open <strong>CAD</strong> Studio</span></div>"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 49,
+        "text": "        path = f\"/assets/{source.stem}-{fingerprint}{source.suffix}\""
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 53,
+        "text": "    logo = asset(ROOT / \"assets/logo.svg\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 54,
+        "text": "    workspace = asset(ROOT / \"site/workspace.png\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 55,
+        "text": "    modeling = asset(ROOT / \"site/modeling.png\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 56,
+        "text": "    shutil.copyfile(ROOT / \"assets/logo.svg\", output / \"assets/logo.svg\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 57,
+        "text": "    for filename in (\"favicon.ico\", \"favicon.svg\", \"favicon.png\"):"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 59,
+        "text": "    icons = ('<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"16x16 32x32 48x48 96x96 256x256\" />\\n'"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 60,
+        "text": "             '<link rel=\"icon\" href=\"/favicon.png\" type=\"image/png\" sizes=\"96x96\" />\\n'"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 61,
+        "text": "             '<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\" sizes=\"any\" />\\n'"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 62,
+        "text": "             '<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" sizes=\"180x180\" />')"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 64,
+        "text": "    manifest[\"icons\"] = [{\"src\": \"/favicon.svg\", \"sizes\": \"any\", \"type\": \"image/svg+xml\"}]"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 66,
+        "text": "        manifest[\"icons\"].append({\"src\": asset(ROOT / f\"site/icon-{size}.png\"), \"sizes\": f\"{size}x{size}\", \"type\": \"image/png\"})"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 67,
+        "text": "    shutil.copyfile(ROOT / \"site/apple-touch-icon.png\", output / \"apple-touch-icon.png\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 100,
+        "text": "                      logo=logo, workspace=workspace, modeling=modeling, icons=icons,"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 120,
+        "text": "        html = re.sub(r'<link\\b(?=[^>]*\\brel=[\"\\'](?:(?:shortcut )?icon|apple-touch-icon)[\"\\'])[^>]*>', '', app.read_text())"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 121,
+        "text": "        app.write_text(html.replace('</head>', icons + '\\n</head>'), encoding=\"utf-8\")"
+      },
+      {
+        "source": "scripts/build-site.py",
+        "line": 122,
+        "text": "    print(f\"Built {len(catalogs)} website languages and current application icons\")"
+      },
+      {
+        "source": "scripts/generate-star-history.py",
+        "line": 324,
+        "text": "            output = args.output_dir / f\"{chart[:-1]}-history-{theme}.svg\""
+      },
+      {
+        "source": "scripts/release.py",
+        "line": 82,
+        "text": "        elif re.search(r\"ui|web|plugin|ribbon|theme|translat|dropdown|mcp|control|cli\", text):"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 35,
+        "text": "    (output / 'app/index.html').write_text('<html><head><link rel=\"icon\" href=\"/old.svg\" integrity=\"old\" /></head><body>App</body></html>')"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 49,
+        "text": "            (output / ('' if locale == 'en-US' else locale) / f'{chart[:-1]}-history-dark.svg').write_text(svg)"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 55,
+        "text": "        assert {link['href'] for link in links if link.get('rel') == 'icon'} == {'/favicon.ico', '/favicon.png', '/favicon.svg'}"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 76,
+        "text": "        for icon in manifest['icons']:"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 77,
+        "text": "            assert (output / icon['src'].lstrip('/')).exists()"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 83,
+        "text": "    assert 'old.svg' not in app and 'integrity=\"old\"' not in app and '>App<' in app"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 84,
+        "text": "    icon = next(attrs['href'] for tag, attrs in Page(app).tags if attrs.get('type') == 'image/svg+xml')"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 85,
+        "text": "    assert icon == '/favicon.svg'"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 86,
+        "text": "    assert (output / icon.lstrip('/')).read_bytes() == (ROOT / 'site/favicon.svg').read_bytes()"
+      },
+      {
+        "source": "scripts/test_site.py",
+        "line": 97,
+        "text": "print(f'All {len(supported)} translations, metadata, local links, charts, manifests and icons passed')"
+      },
+      {
+        "source": "site/site.css",
+        "line": 95,
+        "text": ".visual-toolbar { display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 14px; color: var(--quiet); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; }"
+      },
+      {
+        "source": "site/site.css",
+        "line": 96,
+        "text": ".visual-toolbar b { margin-left: auto; color: var(--cyan); font-weight: 700; }"
+      },
+      {
         "source": "src/ui/style/style_manager.rs",
         "line": 4,
         "text": "//! share the same frame: a top toolbar (New / Copy / Delete on the left,"
@@ -28752,191 +29757,6 @@
         "source": "src/ui/theme_accessibility_tests.rs",
         "line": 616,
         "text": "                \"Theme {:?} hovered icon button ({:.2}:1) fails WCAG AA on hovered background\","
-      },
-      {
-        "source": "index.html",
-        "line": 13,
-        "text": "    {{icons}}"
-      },
-      {
-        "source": "index.html",
-        "line": 38,
-        "text": "          <img src=\"{{logo}}\" width=\"38\" height=\"38\" alt=\"\" />"
-      },
-      {
-        "source": "index.html",
-        "line": 70,
-        "text": "          <div class=\"visual-toolbar\" aria-hidden=\"true\" dir=\"ltr\">"
-      },
-      {
-        "source": "index.html",
-        "line": 148,
-        "text": "              <a href=\"https://github.com/HakanSeven12/OpenCADStudio\"><img src=\"{{path}}star-history-dark.svg\" width=\"960\" height=\"410\" alt=\"{{stars}}\" loading=\"lazy\" /></a>"
-      },
-      {
-        "source": "index.html",
-        "line": 152,
-        "text": "              <a href=\"https://github.com/HakanSeven12/OpenCADStudio/releases\"><img src=\"{{path}}download-history-dark.svg\" width=\"960\" height=\"410\" alt=\"{{downloads}}\" loading=\"lazy\" /></a>"
-      },
-      {
-        "source": "index.html",
-        "line": 174,
-        "text": "        <div class=\"brand footer-brand\"><img src=\"{{logo}}\" width=\"34\" height=\"34\" alt=\"\" /><span dir=\"ltr\">Open <strong>CAD</strong> Studio</span></div>"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 49,
-        "text": "        path = f\"/assets/{source.stem}-{fingerprint}{source.suffix}\""
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 53,
-        "text": "    logo = asset(ROOT / \"assets/logo.svg\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 54,
-        "text": "    workspace = asset(ROOT / \"site/workspace.png\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 55,
-        "text": "    modeling = asset(ROOT / \"site/modeling.png\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 56,
-        "text": "    shutil.copyfile(ROOT / \"assets/logo.svg\", output / \"assets/logo.svg\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 57,
-        "text": "    for filename in (\"favicon.ico\", \"favicon.svg\", \"favicon.png\"):"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 59,
-        "text": "    icons = ('<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"16x16 32x32 48x48 96x96 256x256\" />\\n'"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 60,
-        "text": "             '<link rel=\"icon\" href=\"/favicon.png\" type=\"image/png\" sizes=\"96x96\" />\\n'"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 61,
-        "text": "             '<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\" sizes=\"any\" />\\n'"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 62,
-        "text": "             '<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" sizes=\"180x180\" />')"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 64,
-        "text": "    manifest[\"icons\"] = [{\"src\": \"/favicon.svg\", \"sizes\": \"any\", \"type\": \"image/svg+xml\"}]"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 66,
-        "text": "        manifest[\"icons\"].append({\"src\": asset(ROOT / f\"site/icon-{size}.png\"), \"sizes\": f\"{size}x{size}\", \"type\": \"image/png\"})"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 67,
-        "text": "    shutil.copyfile(ROOT / \"site/apple-touch-icon.png\", output / \"apple-touch-icon.png\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 100,
-        "text": "                      logo=logo, workspace=workspace, modeling=modeling, icons=icons,"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 120,
-        "text": "        html = re.sub(r'<link\\b(?=[^>]*\\brel=[\"\\'](?:(?:shortcut )?icon|apple-touch-icon)[\"\\'])[^>]*>', '', app.read_text())"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 121,
-        "text": "        app.write_text(html.replace('</head>', icons + '\\n</head>'), encoding=\"utf-8\")"
-      },
-      {
-        "source": "scripts/build-site.py",
-        "line": 122,
-        "text": "    print(f\"Built {len(catalogs)} website languages and current application icons\")"
-      },
-      {
-        "source": "scripts/generate-star-history.py",
-        "line": 324,
-        "text": "            output = args.output_dir / f\"{chart[:-1]}-history-{theme}.svg\""
-      },
-      {
-        "source": "scripts/release.py",
-        "line": 82,
-        "text": "        elif re.search(r\"ui|web|plugin|ribbon|theme|translat|dropdown|mcp|control|cli\", text):"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 35,
-        "text": "    (output / 'app/index.html').write_text('<html><head><link rel=\"icon\" href=\"/old.svg\" integrity=\"old\" /></head><body>App</body></html>')"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 49,
-        "text": "            (output / ('' if locale == 'en-US' else locale) / f'{chart[:-1]}-history-dark.svg').write_text(svg)"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 55,
-        "text": "        assert {link['href'] for link in links if link.get('rel') == 'icon'} == {'/favicon.ico', '/favicon.png', '/favicon.svg'}"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 76,
-        "text": "        for icon in manifest['icons']:"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 77,
-        "text": "            assert (output / icon['src'].lstrip('/')).exists()"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 83,
-        "text": "    assert 'old.svg' not in app and 'integrity=\"old\"' not in app and '>App<' in app"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 84,
-        "text": "    icon = next(attrs['href'] for tag, attrs in Page(app).tags if attrs.get('type') == 'image/svg+xml')"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 85,
-        "text": "    assert icon == '/favicon.svg'"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 86,
-        "text": "    assert (output / icon.lstrip('/')).read_bytes() == (ROOT / 'site/favicon.svg').read_bytes()"
-      },
-      {
-        "source": "scripts/test_site.py",
-        "line": 97,
-        "text": "print(f'All {len(supported)} translations, metadata, local links, charts, manifests and icons passed')"
-      },
-      {
-        "source": "site/site.css",
-        "line": 95,
-        "text": ".visual-toolbar { display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 14px; color: var(--quiet); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; }"
-      },
-      {
-        "source": "site/site.css",
-        "line": 96,
-        "text": ".visual-toolbar b { margin-left: auto; color: var(--cyan); font-weight: 700; }"
       },
       {
         "source": "src/ui/window/about.rs",

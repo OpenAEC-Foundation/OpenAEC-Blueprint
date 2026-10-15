@@ -2438,7 +2438,7 @@ mod tests {
     fn research_catalog_is_complete_and_unique() {
         let canonical: HashSet<_> = Icon::ALL.iter().map(|icon| icon.id()).collect();
         assert_eq!(canonical.len(), Icon::ALL.len());
-        assert!(source_icons::ALL.len() >= 565);
+        assert!(source_icons::ALL.len() >= 577);
         assert!(source_icons::ALL.iter().all(|icon| !icon.bytes.is_empty()));
         let keys: HashSet<_> = source_icons::ALL
             .iter()

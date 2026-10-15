@@ -30589,61 +30589,91 @@
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_align_center.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 576,
+        "reference": "../../../assets/icons/mt_align_center.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "d739874b2c02e1e53deda2a51ebc48ec207dae2344c436d44fb8bf026cdb53f5",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_center.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_align_center.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_align_center.svg",
     "bytes": 322
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_align_justify.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 584,
+        "reference": "../../../assets/icons/mt_align_justify.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "37104eebaf99605bc1776596656a898e3e0eaecc64469f98e841942919e6ab9a",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_justify.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_align_justify.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_align_justify.svg",
     "bytes": 322
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_align_left.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 572,
+        "reference": "../../../assets/icons/mt_align_left.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "78ae1db77f5a1167a2f91e30dd7a3ead87c6cfa54465078b59435363362e62a9",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_left.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_align_left.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_align_left.svg",
     "bytes": 322
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_align_right.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 580,
+        "reference": "../../../assets/icons/mt_align_right.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "41c74faeb294438e044a4f5ac9235698df79fcc27b70c351be6b4439046497d7",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_align_right.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_align_right.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_align_right.svg",
     "bytes": 324
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_bold.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 512,
+        "reference": "../../../assets/icons/mt_bold.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "62b387ead1ecc95aff28e938be57ceda80c94cb139dd6bc2f689db9a950b0996",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_bold.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_bold.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_bold.svg",
     "bytes": 185
   },
   {
@@ -30672,25 +30702,37 @@
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_italic.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 516,
+        "reference": "../../../assets/icons/mt_italic.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "ff7874b611b1b311d7a73e5ebb42f3448697419f41f0108ab8b9e06da80926b7",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_italic.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_italic.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_italic.svg",
     "bytes": 282
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_lower.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 536,
+        "reference": "../../../assets/icons/mt_lower.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "bac40e19d0eda690ac673e13258357f6effc0573f0c103599f289bf8b7c605b6",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_lower.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_lower.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_lower.svg",
     "bytes": 353
   },
   {
@@ -30719,49 +30761,73 @@
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_overline.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 524,
+        "reference": "../../../assets/icons/mt_overline.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "dabef71fc659f46d215870c01957e88dfd63ed4de87d358ac50e024dddf3f2f7",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_overline.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_overline.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_overline.svg",
     "bytes": 265
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_strike.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 528,
+        "reference": "../../../assets/icons/mt_strike.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "e2a66ade81b36456cd9a1db4ffab5db4fadeebd5d7a09092826a6bd337d860c2",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_strike.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_strike.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_strike.svg",
     "bytes": 266
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_underline.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 520,
+        "reference": "../../../assets/icons/mt_underline.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "387b0ac85f89f12842685d49aa9fd7ad96b6461937ba92160ebb1148fa11dbb8",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_underline.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_underline.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_underline.svg",
     "bytes": 267
   },
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/mt_upper.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/overlay.rs",
+        "line": 532,
+        "reference": "../../../assets/icons/mt_upper.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "341ef5563f4ef483412024d7aa38c028fb64bf4f2f29bceda4705acad9bd5b69",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/mt_upper.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/mt_upper.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mt_upper.svg",
     "bytes": 282
   },
   {
@@ -31498,13 +31564,19 @@
   {
     "repo": "OpenCADStudio",
     "path": "assets/icons/reddit.svg",
-    "category": "possible-ui-icon",
+    "category": "ui-used",
     "family": "possible-ui-icon",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3216,
+        "reference": "../../../assets/icons/reddit.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "915d31f4b0b2403cac784176ec7f69ae98600a0d8685391269cdb9a229c5723d",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/icons/reddit.svg",
-    "file": "../harmonization/sources/OpenCADStudio/assets/icons/reddit.svg",
+    "file": "../harmonization/ui-icons/OpenCADStudio/assets/icons/reddit.svg",
     "bytes": 1176
   },
   {
@@ -33733,8 +33805,14 @@
     "path": "assets/sponsors/openaec-logo-dark-on-light.svg",
     "category": "branding",
     "family": "branding",
-    "ui_references": [],
-    "evidence_type": null,
+    "ui_references": [
+      {
+        "source": "src/app/view/mod.rs",
+        "line": 3252,
+        "reference": "../../../assets/sponsors/openaec-logo-dark-on-light.svg"
+      }
+    ],
+    "evidence_type": "direct-path",
     "sha256": "00780db85cc5fd1689fbb5305893594120e92c1a590cd717f37cc7ae4710cc85",
     "url": "https://raw.githubusercontent.com/HakanSeven12/OpenCADStudio/77f19dafd01776947934e71563dd3d92a77c4f94/assets/sponsors/openaec-logo-dark-on-light.svg",
     "file": "../harmonization/sources/OpenCADStudio/assets/sponsors/openaec-logo-dark-on-light.svg",

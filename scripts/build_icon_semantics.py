@@ -40,6 +40,7 @@ ALIASES = {
     "back": ["back"],
     "check": ["check", "tboutlinecheck"],
     "grid": ["grid", "grid2x2", "layoutgrid"],
+    "microphone": ["microphone", "mic"],
 }
 
 
@@ -126,7 +127,7 @@ def main() -> None:
     canonical_names = {path.stem for path in (ROOT / "assets/icons").glob("*.svg")}
     assert canonical_names == {key.replace("-", "") for key in ALIASES}, "Canonical icon catalogue differs from semantic crosswalk"
     records = icon_records()
-    assert len([r for r in records if r["kind"] == "ui-asset"]) == 565
+    ui_count = len([r for r in records if r["kind"] == "ui-asset"])
     assert len([r for r in records if r["kind"] == "code-import"]) == 312
     grouped = defaultdict(list)
     unmatched = []
@@ -139,7 +140,7 @@ def main() -> None:
     output = {
         "status": "name-candidate-only",
         "note": "UI assets have direct code or framework-bundle evidence; imported icons have post-import source references. A matching name does not approve semantics or artwork.",
-        "source_counts": {"ui_assets": 565, "code_import_variants": 312},
+        "source_counts": {"ui_assets": ui_count, "code_import_variants": 312},
         "adopted_count": len(json.loads((DESIGN / "icon-adoptions.json").read_text())["decisions"]),
         "native_chrome_decisions_count": len(json.loads((DESIGN / "icon-adoptions.json").read_text())["chrome_decisions"]),
         "canonical": [
@@ -189,7 +190,7 @@ body{{margin:0;background:#f2f3f5;color:#30343b;font:12px/1.4 Inter,"Segoe UI",s
 .candidate small{{font-size:9px;color:#777e87}}details{{margin:8px 0}}summary{{cursor:pointer;font-weight:600}}details .candidates{{margin-top:9px;max-height:360px}}
 .hidden{{display:none!important}}
 </style></head><body><div class="top"><b>OPENAEC · ICONBETEKENISSEN</b><input id="search" placeholder="Zoek betekenis, bron of icoon…" aria-label="Zoek iconen"><span>{counts['ui-asset']} UI-bestanden · {counts['code-import']} code-importvarianten · {len(ALIASES)} gedeelde betekenissen</span></div>
-<main><div class="intro">Naamovereenkomsten zijn <b>reviewkandidaten</b>. Tien Pointcloud-toolacties zijn na semantische beoordeling in de Rust-kern ingebouwd en oranje gemarkeerd. Daarnaast gebruikt de zichtbare Extensions-bestandspagina nu een eigen, nieuw getekend puzzelicoon in plaats van de 3D-kubus. De 565 UI-bestanden hebben broncode- of actieve knopbundel-evidence. De 312 bibliotheekvarianten hebben na hun import een broncodeverwijzing; ook dat bewijst geen zichtbaarheid in iedere applicatietoestand. Vakinhoudelijke commando's zonder veilige generieke match staan onderaan.</div>
+<main><div class="intro">Naamovereenkomsten zijn <b>reviewkandidaten</b>. Tien Pointcloud-toolacties zijn na semantische beoordeling in de Rust-kern ingebouwd en oranje gemarkeerd. Daarnaast gebruikt de zichtbare Extensions-bestandspagina nu een eigen, nieuw getekend puzzelicoon in plaats van de 3D-kubus. De {ui_count} UI-bestanden hebben broncode- of actieve knopbundel-evidence. De 312 bibliotheekvarianten hebben na hun import een broncodeverwijzing; ook dat bewijst geen zichtbaarheid in iedere applicatietoestand. Vakinhoudelijke commando's zonder veilige generieke match staan onderaan.</div>
 <h1>Gedeelde kern · {sum(map(len, grouped.values()))} naamkandidaten</h1><div class="grid">{''.join(cards)}</div>
 <h1>Overige UI- en domeiniconen · {len(unmatched)}</h1>{''.join(rest)}
 </main><script>

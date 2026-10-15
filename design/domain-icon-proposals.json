@@ -2104,7 +2104,7 @@
       ]
     },
     "review": "Check recognizability at 16/20/24 px, collision with shared icons, meaning in each ribbon.",
-    "name_match_count": 9,
+    "name_match_count": 13,
     "candidate_assets": [
       {
         "repo": "OpenCADStudio",
@@ -2141,6 +2141,22 @@
       {
         "repo": "OpenCADStudio",
         "path": "assets/icons/modify_align.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mt_align_center.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mt_align_justify.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mt_align_left.svg"
+      },
+      {
+        "repo": "OpenCADStudio",
+        "path": "assets/icons/mt_align_right.svg"
       }
     ]
   },

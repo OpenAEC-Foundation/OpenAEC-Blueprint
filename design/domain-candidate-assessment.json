@@ -430,5 +430,37 @@
     "semantic_assessment": "same",
     "rationale": "3D-snedebox voor het begrenzen van een modelweergave.",
     "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mt_align_center.svg",
+    "semantic_assessment": "different",
+    "rationale": "Rich-text opmaak in het CAD-tekstvenster; dit lijnt tekens of alinea’s uit, geen BIM-modelobjecten.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mt_align_justify.svg",
+    "semantic_assessment": "different",
+    "rationale": "Rich-text opmaak in het CAD-tekstvenster; dit lijnt tekens of alinea’s uit, geen BIM-modelobjecten.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mt_align_left.svg",
+    "semantic_assessment": "different",
+    "rationale": "Rich-text opmaak in het CAD-tekstvenster; dit lijnt tekens of alinea’s uit, geen BIM-modelobjecten.",
+    "status": "source-context-preliminary"
+  },
+  {
+    "proposal": "bim.align",
+    "repo": "OpenCADStudio",
+    "path": "assets/icons/mt_align_right.svg",
+    "semantic_assessment": "different",
+    "rationale": "Rechts uitlijnen van tekst of alinea’s in de CAD MText-editor; geen BIM-modeluitlijning.",
+    "status": "source-context-preliminary"
   }
 ]

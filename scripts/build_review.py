@@ -105,7 +105,7 @@ proposals=json.load(open(D/'domain-icon-proposals.json'))
 synonyms={'node':['node','knoop'],'beam':['beam','balk','staaf'],'column':['column','kolom'],'slab':['slab','vloer'],'wall':['wall','wand','muur'],'door':['door','deur'],'window':['window','raam','kozijn'],'mesh':['mesh','net'],'section':['section','doorsnede'],'point-load':['point_load','point-load','puntlast'],'line-load':['line_load','line-load','lijnlast'],'fixed-support':['fixed_support','inklemming'],'pinned-support':['pin_support','scharnier'],'roller-support':['roller','roloplegging'],'spring-support':['spring','veer'],'stress':['stress','spanning'],'deformation':['deform','vervorming'],'clash':['clash'],'bcf-issue':['bcf','issue'],'ids-check':['ids','validation'],'storey':['storey','verdieping','bouwlaag'],'stair':['stair','trap'],'roof':['roof','dak'],'footing':['footing','fundering'],'pile':['pile','paal'],'material':['material','materiaal'],'dimension':['dimension','maat'],'sheet':['sheet','layout'],'export':['export'],'grid':['grid','stramien']}
 for p in proposals:
  key=p['id'].split('.',1)[1];terms=synonyms.get(key,[key,key.replace('-','_')]);matches=[a for a in assets if a['category']=='ui-used' and any(t in Path(a['path']).stem.lower() for t in terms)]
- p['name_match_count']=len(matches);p['candidate_assets']=[{'repo':a['repo'],'path':a['path']} for a in matches[:12]]
+ p['name_match_count']=len(matches);p['candidate_assets']=[{'repo':a['repo'],'path':a['path']} for a in matches]
  p['existing_match']='candidates-found-requires-visual-review' if matches else 'no-filename-match-not-proof-of-absence'
 (D/'domain-icon-proposals.json').write_text(json.dumps(proposals,ensure_ascii=False,indent=2))
 refs=json.load(open(H/'visual-references.json'))
