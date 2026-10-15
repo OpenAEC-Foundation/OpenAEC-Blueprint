@@ -1,5 +1,5 @@
 use crate::{fonts, icons::Icon, model::*, widgets, Language, Theme};
-use iced::{widget::{button, column, container, mouse_area, opaque, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Column, Row, Space}, Element, Fill};
+use iced::{widget::{button, column, container, mouse_area, opaque, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Column, Row, Space}, Element, Fill, Padding};
 
 /// Application-owned contents. Shell layout and styling stay inside the crate.
 pub struct Slots<'a, M> {
@@ -70,14 +70,24 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             .direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new()))
             .height(Fill),
     ).height(metrics::RIBBON).padding([4,8]);
-    let mut documents = Row::new().spacing(2);
+    let mut documents = Row::new().spacing(1).align_y(iced::Alignment::End);
     for doc in slots.documents {
         let selected=slots.active_document.as_ref() == Some(&doc.id);
         let label=format!("{}{}",doc.title,if doc.dirty {" •"} else {""});
-        documents=documents.push(row![
-            button(text(label).size(12)).padding([6,12]).on_press(Message::Document(DocumentEvent::Activate(doc.id.clone()))).style(move |_,s|widgets::button_style(theme,selected,s)),
-            widgets::icon_button(l.text("Document sluiten","Close document"),Icon::Close,Message::Document(DocumentEvent::CloseRequested(doc.id)),theme),
-        ]);
+        let close = button(text("×").size(12))
+            .on_press(Message::Document(DocumentEvent::CloseRequested(doc.id.clone())))
+            .style(move |_, status| widgets::document_close_style(theme, selected, status))
+            .padding([0, 4]);
+        let content = row![text(label).size(11), close]
+            .spacing(6)
+            .align_y(iced::Alignment::Center);
+        documents = documents.push(
+            button(content)
+                .on_press(Message::Document(DocumentEvent::Activate(doc.id)))
+                .height(24)
+                .padding(Padding { top: 0.0, bottom: 0.0, left: 10.0, right: 4.0 })
+                .style(move |_, status| widgets::document_tab_style(theme, selected, status)),
+        );
     }
     let document_bar=crate::frame::document_bar(theme, horizontal(documents));
     let body: Element<'a,Message<M>> = if state.backstage {

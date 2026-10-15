@@ -412,6 +412,75 @@ pub fn ribbon_tab_style(theme: Theme, active: bool, status: button::Status) -> b
         ..Default::default()
     }
 }
+
+/// A 24 px document tab from the pinned Tauri Style Book. The caller owns
+/// its contents and actions; this style owns its palette and outline.
+pub fn document_tab_style(theme: Theme, active: bool, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let over_docbar = |overlay: iced::Color| iced::Color {
+        r: t.docbar_bg.r * (1.0 - overlay.a) + overlay.r * overlay.a,
+        g: t.docbar_bg.g * (1.0 - overlay.a) + overlay.g * overlay.a,
+        b: t.docbar_bg.b * (1.0 - overlay.a) + overlay.b * overlay.a,
+        a: 1.0,
+    };
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    button::Style {
+        background: Some(if active {
+            over_docbar(t.accent_soft).into()
+        } else if hovered {
+            over_docbar(t.hover).into()
+        } else {
+            t.docbar_bg.into()
+        }),
+        text_color: if active {
+            t.accent
+        } else if hovered {
+            t.text
+        } else {
+            over_docbar(t.text_muted)
+        },
+        border: Border {
+            color: if active { t.accent } else { over_docbar(t.border) },
+            width: 1.0,
+            radius: iced::border::Radius::default().top(3),
+        },
+        ..button::Style::default()
+    }
+}
+
+/// Close glyph inside a shared document tab. Active and hovered glyphs use
+/// full-strength ink so the 12 px action remains readable on every theme.
+pub fn document_close_style(theme: Theme, active: bool, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered | button::Status::Pressed);
+    let base = if active {
+        iced::Color {
+            r: t.docbar_bg.r * (1.0 - t.accent_soft.a) + t.accent_soft.r * t.accent_soft.a,
+            g: t.docbar_bg.g * (1.0 - t.accent_soft.a) + t.accent_soft.g * t.accent_soft.a,
+            b: t.docbar_bg.b * (1.0 - t.accent_soft.a) + t.accent_soft.b * t.accent_soft.a,
+            a: 1.0,
+        }
+    } else {
+        t.docbar_bg
+    };
+    let background = if hovered {
+        let overlay = t.ribbon_btn_hover;
+        iced::Color {
+            r: base.r * (1.0 - overlay.a) + overlay.r * overlay.a,
+            g: base.g * (1.0 - overlay.a) + overlay.g * overlay.a,
+            b: base.b * (1.0 - overlay.a) + overlay.b * overlay.a,
+            a: 1.0,
+        }
+    } else {
+        iced::Color::TRANSPARENT
+    };
+    button::Style {
+        background: hovered.then_some(background.into()),
+        text_color: if active || hovered { t.text } else { t.text_muted },
+        border: Border::default().rounded(2),
+        ..button::Style::default()
+    }
+}
 pub fn surface(theme: Theme) -> container::Style {
     let t = theme.tokens();
     container::Style::default().background(t.bg).color(t.text)
