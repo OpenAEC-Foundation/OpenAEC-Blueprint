@@ -34,9 +34,10 @@ jobs:
       - name: Logo-sets inpakken
         run: |
           npm run generate
+          mkdir -p logos
           cd logos && zip -r "../openaec-logos-${GITHUB_REF_NAME}.zip" . && cd ..
       - name: npm-packages publiceren
-        run: npm publish --workspaces --access public
+        run: node generators/release/publish-npm.mjs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Frappe-thema naar eigen repo
@@ -46,9 +47,19 @@ jobs:
           git config user.name "openaec-release"
           git config user.email "release@users.noreply.github.com"
           git subtree split --prefix frappe/openaec_theme -b theme-release
-          git push "https://x-access-token:${THEME_REPO_TOKEN}@github.com/OpenAEC-Foundation/openaec_theme.git" theme-release:main
-          git push "https://x-access-token:${THEME_REPO_TOKEN}@github.com/OpenAEC-Foundation/openaec_theme.git" "theme-release:refs/tags/${GITHUB_REF_NAME}"
+          THEME_URL="https://x-access-token:${THEME_REPO_TOKEN}@github.com/OpenAEC-Foundation/openaec_theme.git"
+          git push "$THEME_URL" theme-release:main
+          if [ -n "$(git ls-remote --tags "$THEME_URL" "refs/tags/${GITHUB_REF_NAME}")" ]; then
+            echo "tag ${GITHUB_REF_NAME} bestaat al in het thema-repo; overgeslagen"
+          else
+            git push "$THEME_URL" "theme-release:refs/tags/${GITHUB_REF_NAME}"
+          fi
       - name: GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" "openaec-logos-${GITHUB_REF_NAME}.zip" --generate-notes
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            echo "release $GITHUB_REF_NAME bestaat al; overgeslagen"
+          else
+            gh release create "$GITHUB_REF_NAME" "openaec-logos-${GITHUB_REF_NAME}.zip" --generate-notes
+          fi
