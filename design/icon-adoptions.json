@@ -1,0 +1,45 @@
+{
+  "application": "open-pointcloud-studio",
+  "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
+  "integration_branch": "feat/shared-rust-ui",
+  "status": "native-adopted",
+  "note": "These six commands have the same action meaning as the shared UI core. Their legacy SVGs remain archived as source evidence; other Pointcloud domain icons keep their original semantics pending visual review. Loading detail and refreshing LOD now use the existing Update icon instead of Fit.",
+  "decisions": [
+    {
+      "tool_icon": "Open",
+      "legacy_asset": "native/assets/opencad-icons/folder_open.svg",
+      "shared_icon": "open",
+      "reason": "Opens a point cloud file from the ribbon or project browser."
+    },
+    {
+      "tool_icon": "Export",
+      "legacy_asset": "native/assets/opencad-icons/file_export.svg",
+      "shared_icon": "export",
+      "reason": "Exports a scan, mesh or BCF file; the surrounding label supplies the format."
+    },
+    {
+      "tool_icon": "Fit",
+      "legacy_asset": "native/assets/opencad-icons/zoom_ext.svg",
+      "shared_icon": "fit",
+      "reason": "Fits the scene, a section, station poses or a selection in the viewport."
+    },
+    {
+      "tool_icon": "Undo",
+      "legacy_asset": "native/assets/opencad-icons/undo.svg",
+      "shared_icon": "undo",
+      "reason": "Reverses the previous edit."
+    },
+    {
+      "tool_icon": "Redo",
+      "legacy_asset": "native/assets/opencad-icons/redo.svg",
+      "shared_icon": "redo",
+      "reason": "Reapplies an undone edit."
+    },
+    {
+      "tool_icon": "Save",
+      "legacy_asset": "native/assets/opencad-icons/save.svg",
+      "shared_icon": "save",
+      "reason": "Saves the active view."
+    }
+  ]
+}

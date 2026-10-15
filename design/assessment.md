@@ -22,7 +22,10 @@ migratie van alle OpenAEC-applicaties.
   21 huidige gedeelde iconbetekenissen met 565 bewezen UI-bestanden en 312
   versiegebonden bibliotheekvarianten. 77 naamovereenkomsten zijn kandidaten;
   800 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
-  Dit is geen goedkeuring van vorm of functie.
+  Dit is geen goedkeuring van vorm of functie. Zes Pointcloud-acties hebben na
+  controle van hun commandobetekenis een expliciet
+  [adoptiebesluit](icon-adoptions.json): Open, Export, Fit, Undo, Redo en Save.
+  Refresh LOD gebruikt nu zijn eigen Update-symbool in plaats van Fit.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
   Pointcloud native en de 36 lokaal bewaarde bruikbare UI-referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
@@ -49,7 +52,7 @@ migratie van alle OpenAEC-applicaties.
 | Semantiek van iconen | De 21 huidige canonieke bedieningstekens zijn een begin; 565 bronbestanden zijn onderzoeksdata. | Groepeer synoniemen, beoordeel tegen light/dark en teken de definitieve domeinsets. |
 | FEM en BIM | 52 FEM- en 57 BIM-betekenissen hebben elk een uniek SVG-concept; de atlas toont ze op 16, 24 en 32 px in lichte en donkere omgeving. | Complexe vormen op 16 px verfijnen en de 24 mogelijke bronmatches inhoudelijk vergelijken. |
 | Applicatieschermen | Negen gedeelde schermtoestanden zijn in het prototype selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. FEM- en BIM-ribbons gebruiken nu hun eigen concepticonen en commando's. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen. |
-| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, titelbalkiconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
+| Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, titelbalkiconen, zes beoordeelde algemene ribboniconen, fonts, 77 algemene kleurvelden per thema, ribbonknopstijlen en vijf vensterbandmaten. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
 De [1280 px browserrender](harmonized-layout-1280.png) toont de beoordeelde
 standaardindeling met twee zijpanelen van 240 px.
