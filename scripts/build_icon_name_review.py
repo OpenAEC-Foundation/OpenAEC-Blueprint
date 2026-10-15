@@ -12,6 +12,23 @@ from urllib.parse import unquote, urlsplit
 from build_icon_semantics import ROOT, candidates, icon_records, norm
 
 ASSESSMENTS = {
+    "about": ("related-intent", "PDF en CAD tonen About als applicatie-informatieactie. De PDF-menuactie is nog een TODO; de bedoelde bestemming komt overeen, de implementatie nog niet."),
+    "arrowleft": ("related-intent", "Planner en Energy gebruiken de pijl om naar een vorige stap of weergave terug te gaan."),
+    "bookopen": ("related-intent", "Planner verwijst naar voorbeelden en Energy naar een handleiding. Beide openen leerinhoud, maar een ander soort bron."),
+    "calendar": ("related-intent", "Planner opent de kalender; BCF gebruikt de kalender bij een vervaldatum. Het pictogram verwijst naar datumcontext, maar slechts één toepassing is een knop."),
+    "eyeoff": ("related-intent", "Planner verbergt een token; Pointcloud verbergt een puntwolk. Beide schakelen zichtbaarheid uit, met andere privacy- en documentgevolgen."),
+    "fileup": ("different-intent", "Planner gebruikt FileUp voor een voortgangsimport; Heatloss zet dezelfde vorm bij Exporteren. Pijlrichting en commando lopen uiteen."),
+    "graduationcap": ("different-intent", "Planner gebruikt de afstudeerhoed voor een tutorial; Energy voor het gebouwtype onderwijs."),
+    "hand": ("related-intent", "PDF en Heatloss koppelen Hand aan het verschuiven van de werkruimte of tekening. Dit is dezelfde navigatiehandeling in twee canvassen."),
+    "hash": ("different-intent", "Planner gebruikt Hash voor automatische WBS-nummering; BCF toont het bij de index van een topic."),
+    "home": ("different-intent", "CAD gebruikt Home voor de beginweergave; Energy gebruikt Home als symbool voor de woonfunctie van een gebouw."),
+    "pencil": ("related-intent", "Planner en Energy gebruiken Pencil om bestaande gegevens te bewerken; de bewerkte objecten verschillen."),
+    "refreshcw": ("different-intent", "Planner koppelt RefreshCw aan opnieuw proberen; de AEC-extensie aan Generate. Een draaipijl bewijst geen gelijke actie."),
+    "scissors": ("related-intent", "Planner splitst een taak en Heatloss splitst een ruimte. Beide delen een bestaand object, met andere geometrie en gevolgen."),
+    "type": ("related-intent", "Planner gebruikt Type voor tekst in een screenshotannotatie; Heatloss voor tekstannotatie in de modelleur. Beide plaatsen tekst in een canvas."),
+    "userplus": ("related-intent", "Planner wijst een resource toe; BCF voegt een projectlid toe. Beide koppelen een persoon, met andere rechten en relaties."),
+    "wrench": ("related-intent", "Planner gebruikt Wrench voor de categorie gereedschap; Energy voor de navigatie naar tools. De vorm duidt een tool aan, maar geen gedeeld commando."),
+    "xcircle": ("different-intent", "Pointcloud gebruikt XCircle om selectie op te heffen; Energy toont het bij mislukte controles. Een kruis betekent hier actie tegenover status."),
     "chevrondown": ("related-intent", "De pijl opent of sluit een selectmenu, ribbonkeuze of geavanceerde sectie. De richting is gedeeld, maar het bediende object verschilt."),
     "trash2": ("related-intent", "Alle bronnen verwijderen of trekken een object in: bedrijfsbibliotheekitem, puntwolkobject, warmtebron of API-sleutel. Bevestiging en herstel verschillen."),
     "plus": ("different-intent", "Energy voegt een inventarisitem toe en BCF maakt een sleutel; Planner toont Plus ook als decoratieve extensiekaart. Een plusvorm is geen zelfstandige commando-ID."),

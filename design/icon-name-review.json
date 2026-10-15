@@ -3,7 +3,7 @@
   "note": "Only icons without a canonical shared-name match are grouped. Same names and shapes are research candidates, not automatic adoption decisions.",
   "cluster_count": 80,
   "icon_count": 189,
-  "assessed_count": 26,
+  "assessed_count": 43,
   "clusters": [
     {
       "id": "download",
@@ -3303,8 +3303,8 @@
     {
       "id": "home",
       "label": "home",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "CAD gebruikt Home voor de beginweergave; Energy gebruikt Home als symbool voor de woonfunctie van een gebouw.",
       "repositories": [
         "OpenCADStudio",
         "open-energy-studio",
@@ -3397,8 +3397,8 @@
     {
       "id": "pencil",
       "label": "Pencil",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner en Energy gebruiken Pencil om bestaande gegevens te bewerken; de bewerkte objecten verschillen.",
       "repositories": [
         "open-energy-studio",
         "open-heatloss-studio",
@@ -3516,8 +3516,8 @@
     {
       "id": "refreshcw",
       "label": "RefreshCw",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner koppelt RefreshCw aan opnieuw proberen; de AEC-extensie aan Generate. Een draaipijl bewijst geen gelijke actie.",
       "repositories": [
         "open-2D-studio-AEC-extension",
         "open-energy-studio",
@@ -3703,8 +3703,8 @@
     {
       "id": "about",
       "label": "about",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "PDF en CAD tonen About als applicatie-informatieactie. De PDF-menuactie is nog een TODO; de bedoelde bestemming komt overeen, de implementatie nog niet.",
       "repositories": [
         "OpenCADStudio",
         "open-pdf-studio-v3"
@@ -3868,8 +3868,8 @@
     {
       "id": "arrowleft",
       "label": "ArrowLeft",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner en Energy gebruiken de pijl om naar een vorige stap of weergave terug te gaan.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -3994,8 +3994,8 @@
     {
       "id": "bookopen",
       "label": "BookOpen",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner verwijst naar voorbeelden en Energy naar een handleiding. Beide openen leerinhoud, maar een ander soort bron.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -4137,8 +4137,8 @@
     {
       "id": "calendar",
       "label": "Calendar",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner opent de kalender; BCF gebruikt de kalender bij een vervaldatum. Het pictogram verwijst naar datumcontext, maar slechts één toepassing is een knop.",
       "repositories": [
         "open-planner-studio",
         "openaec-bcf-platform"
@@ -4369,8 +4369,8 @@
     {
       "id": "eyeoff",
       "label": "EyeOff",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner verbergt een token; Pointcloud verbergt een puntwolk. Beide schakelen zichtbaarheid uit, met andere privacy- en documentgevolgen.",
       "repositories": [
         "open-planner-studio",
         "open-pointcloud-studio"
@@ -4495,8 +4495,8 @@
     {
       "id": "fileup",
       "label": "FileUp",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt FileUp voor een voortgangsimport; Heatloss zet dezelfde vorm bij Exporteren. Pijlrichting en commando lopen uiteen.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -4558,8 +4558,8 @@
     {
       "id": "graduationcap",
       "label": "GraduationCap",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt de afstudeerhoed voor een tutorial; Energy voor het gebouwtype onderwijs.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -4615,8 +4615,8 @@
     {
       "id": "hand",
       "label": "hand",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "PDF en Heatloss koppelen Hand aan het verschuiven van de werkruimte of tekening. Dit is dezelfde navigatiehandeling in twee canvassen.",
       "repositories": [
         "open-heatloss-studio",
         "open-pdf-studio-v3"
@@ -4677,8 +4677,8 @@
     {
       "id": "hash",
       "label": "Hash",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Planner gebruikt Hash voor automatische WBS-nummering; BCF toont het bij de index van een topic.",
       "repositories": [
         "open-planner-studio",
         "openaec-bcf-platform"
@@ -5644,8 +5644,8 @@
     {
       "id": "scissors",
       "label": "Scissors",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner splitst een taak en Heatloss splitst een ruimte. Beide delen een bestaand object, met andere geometrie en gevolgen.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -6068,8 +6068,8 @@
     {
       "id": "type",
       "label": "Type",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner gebruikt Type voor tekst in een screenshotannotatie; Heatloss voor tekstannotatie in de modelleur. Beide plaatsen tekst in een canvas.",
       "repositories": [
         "open-heatloss-studio",
         "open-planner-studio"
@@ -6131,8 +6131,8 @@
     {
       "id": "userplus",
       "label": "UserPlus",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner wijst een resource toe; BCF voegt een projectlid toe. Beide koppelen een persoon, met andere rechten en relaties.",
       "repositories": [
         "open-planner-studio",
         "openaec-bcf-platform"
@@ -6471,8 +6471,8 @@
     {
       "id": "wrench",
       "label": "Wrench",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "related-intent",
+      "assessment": "Planner gebruikt Wrench voor de categorie gereedschap; Energy voor de navigatie naar tools. De vorm duidt een tool aan, maar geen gedeeld commando.",
       "repositories": [
         "open-energy-studio",
         "open-planner-studio"
@@ -6528,8 +6528,8 @@
     {
       "id": "xcircle",
       "label": "XCircle",
-      "status": "needs-review",
-      "assessment": "Dezelfde naam bewijst nog geen gelijke functie of vorm.",
+      "status": "different-intent",
+      "assessment": "Pointcloud gebruikt XCircle om selectie op te heffen; Energy toont het bij mislukte controles. Een kruis betekent hier actie tegenover status.",
       "repositories": [
         "open-energy-studio",
         "open-pointcloud-studio"
