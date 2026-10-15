@@ -66,7 +66,7 @@ function parseTree(raw) {
 }
 
 function styleDeclarations(style) {
-  if (style.includes("\\") || style.includes("/*")) throw new Error("style bevat escapes of commentaar, niet toegestaan");
+  rejectEscapes("style", style);
   return style.split(";").map((d) => d.trim()).filter(Boolean).map((d) => {
     const i = d.indexOf(":");
     if (i < 1) throw new Error(`ongeldige style-declaratie: ${d}`);
@@ -74,19 +74,47 @@ function styleDeclarations(style) {
   });
 }
 
-function checkUrls(name, value) {
-  for (const m of value.matchAll(/url\s*\(([^)]*)\)/gi)) {
-    if (!/^\s*(["']?)#[^\s"')]+\1\s*$/.test(m[1])) {
-      throw new Error(`${name}: alleen url(#id) is toegestaan (gevonden: ${m[0]})`);
-    }
+function rejectEscapes(name, value) {
+  if (value.includes("\\") || value.includes("/*")) {
+    throw new Error(`${name}: backslash-escapes en commentaar zijn niet toegestaan`);
   }
-  if (/url\s*\(/i.test(value) && !/url\s*\([^)]*\)/i.test(value)) throw new Error(`${name}: onvolledige url()`);
+}
+
+const URL_REF = String.raw`url\(#[A-Za-z_][\w.-]*\)`;
+const NAMED_COLOR = /^[a-zA-Z]+$/;
+const HEX_COLOR = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
+const RGB_COLOR = /^rgba?\(\s*[\d.]+%?\s*(?:,\s*[\d.]+%?\s*){2}(?:,\s*[\d.]+%?\s*)?\)$/i;
+const isPlainColor = (v) => NAMED_COLOR.test(v) || HEX_COLOR.test(v) || RGB_COLOR.test(v);
+const URL_ONLY = new RegExp(`^${URL_REF}$`);
+const URL_WITH_FALLBACK = new RegExp(String.raw`^${URL_REF}(?:\s+(.+))?$`);
+
+/** Valideert één attribuut- of style-waarde; gooit bij escapes, vreemde url()'s en ongeldige kleuren. */
+function checkValue(name, value) {
+  rejectEscapes(name, value);
+  const v = value.trim();
+  const hasUrl = /url\s*\(/i.test(v);
+  if (name === "clip-path" || name === "mask") {
+    if (hasUrl && !URL_ONLY.test(v)) throw new Error(`${name}: alleen url(#id) is toegestaan (gevonden: ${v})`);
+    return;
+  }
+  if (name === "fill" || name === "stroke") {
+    if (hasUrl) {
+      const m = URL_WITH_FALLBACK.exec(v);
+      if (!m || (m[1] !== undefined && !isPlainColor(m[1].trim()))) {
+        throw new Error(`${name}: alleen url(#id) met optionele kleur-fallback is toegestaan (gevonden: ${v})`);
+      }
+      return;
+    }
+  } else if (hasUrl) {
+    throw new Error(`${name}: url() is hier niet toegestaan (gevonden: ${v})`);
+  }
+  if (COLOR_PROPS.has(name) && !isPlainColor(v)) throw new Error(`ongeldige kleurwaarde voor ${name}: ${v}`);
 }
 
 function collectColors(nodes, found) {
   const add = (v) => {
-    const n = normalizeColor(v);
-    if (n && !NOT_A_COLOR.has(n) && !n.startsWith("url(")) found.add(n);
+    const n = normalizeColor(v.replace(new RegExp(String.raw`^\s*${URL_REF}`), ""));
+    if (n && !NOT_A_COLOR.has(n)) found.add(n);
   };
   for (const node of nodes) {
     if (!node.name) continue;
@@ -130,13 +158,13 @@ export function normalizeSvg(raw, { neutralColors = [] } = {}) {
       if (!(ATTRIBUTES.has(k) || (isRoot && ROOT_ONLY.has(k)))) {
         throw new Error(`attribuut ${k} is niet toegestaan`);
       }
-      checkUrls(k, v);
+      if (k !== "style") checkValue(k, v);
       let value = v;
       if (k === "style") {
         const decls = styleDeclarations(v);
         for (const [p, val] of decls) {
           if (!PRESENTATION.has(p)) throw new Error(`style-eigenschap ${p} is niet toegestaan`);
-          checkUrls(p, val);
+          checkValue(p, val);
         }
         value = decls.map(([p, val]) => `${p}:${COLOR_PROPS.has(p) ? recolor(val) : val}`).join(";");
       } else if (COLOR_PROPS.has(k)) {

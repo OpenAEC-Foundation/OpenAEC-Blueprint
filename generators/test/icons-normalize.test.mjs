@@ -98,3 +98,31 @@ test("regressie: uitvoer is deterministisch, ge-escaped en zelfsluitend", () => 
   const { svg } = normalizeSvg(wrap('<g>\n  <path d="M1 1" id="a&amp;b"/>\n  <g></g>\n</g>'));
   assert.equal(svg, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M1 1" id="a&amp;b"/><g/></g></svg>');
 });
+
+test("regressie ronde 2: escapes en commentaar in attribuutwaarden worden geweigerd", () => {
+  const probes = [
+    '<path fill="\\75rl(http://x/y)"/>',
+    '<path fill="u\\72l(http://x/y)"/>',
+    '<path fill="url/**/(http://x/y)"/>',
+    '<path clip-path="\\75rl(http://x/y#a)"/>',
+  ];
+  for (const p of probes) assert.throws(() => normalizeSvg(wrap(p)), /niet toegestaan/, p);
+});
+
+test("regressie ronde 2: ongeldige kleurwaarden worden geweigerd", () => {
+  assert.throws(() => normalizeSvg(wrap('<path fill="javascript:alert(1)"/>')), /ongeldige kleurwaarde/);
+  assert.throws(() => normalizeSvg(wrap('<path style="fill:expression(alert(1))"/>')), /ongeldige kleurwaarde/);
+  assert.throws(() => normalizeSvg(wrap('<path stroke="#12"/>')), /ongeldige kleurwaarde/);
+  assert.throws(() => normalizeSvg(wrap('<path fill="url(#g) javascript:x"/>')), /fallback/);
+  assert.throws(() => normalizeSvg(wrap('<path clip-path="url(http://x/y#a)"/>')), /url\(#id\)/);
+  assert.throws(() => normalizeSvg(wrap('<path opacity="url(#a)"/>')), /url\(\) is hier niet toegestaan/);
+});
+
+test("regressie ronde 2: geldige kleurwaarden blijven werken", () => {
+  const { svg, colors } = normalizeSvg(wrap(
+    '<path fill="rgb(1,2,3)"/><path fill="#abc"/><path fill="red"/><path stroke="url(#g)"/>' +
+    '<path fill="url(#g) none"/><path fill="url(#g) #FF0000"/><path clip-path="url(#c)"/>' +
+    '<path style="fill:RGBA(1, 2, 3, 0.5);stroke:#aabbccdd"/><path fill="Transparent" stroke="inherit"/>'));
+  assert.ok(svg.includes('fill="url(#g) none"') && svg.includes('clip-path="url(#c)"'));
+  assert.deepEqual(colors, ["#aabbcc", "#aabbccdd", "#ff0000", "red", "rgb(1,2,3)", "rgba(1, 2, 3, 0.5)"]);
+});
