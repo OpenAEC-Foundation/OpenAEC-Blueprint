@@ -81,6 +81,7 @@ pub struct RibbonSwatch<M> {
     pub label: String,
     pub color: iced::Color,
     pub background: iced::Color,
+    pub dashed_border: bool,
     pub message: M,
 }
 #[derive(Debug, Clone)]

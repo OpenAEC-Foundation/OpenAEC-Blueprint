@@ -347,7 +347,9 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
     let styles = style_names.into_iter().enumerate().map(|(index, label)| {
         let color = pdf_color(style_colors[index]);
         openaec_ui::RibbonSwatch { label: label.into(), color,
-            background: if index >= 7 { iced::Color { a: 0.15, ..color } } else { iced::Color::WHITE },
+            background: if index >= 7 { iced::Color { a: if index == 9 { 0.15 } else { 0.08 }, ..color } }
+                else { iced::Color::WHITE },
+            dashed_border: index >= 7,
             message: Action::PdfFormatStyle(index) }
     }).collect();
     let colors = |action: fn(usize) -> Action| PDF_FORMAT_PALETTE.iter().enumerate()

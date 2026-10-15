@@ -2058,7 +2058,9 @@ mod tests {
         assert_eq!(format.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
             ["Stijlen", "Kleur", "Lijn & dekking", "Pijlen", "Gereedschap", "Eigenschappen"]);
         assert!(matches!(&format[0].commands[0].control,
-            Some(RibbonControl::StyleGallery { items, .. }) if items.len() == 10));
+            Some(RibbonControl::StyleGallery { items, visible: 8, .. })
+                if items.len() == 10 && items.iter().enumerate()
+                    .all(|(index, item)| item.dashed_border == (index >= 7))));
         assert!(matches!(&format[1].commands[0].control,
             Some(RibbonControl::ColorSelect { options, selected: 0, .. }) if options.len() == 42));
         assert!(matches!(&format[1].commands[1].control,

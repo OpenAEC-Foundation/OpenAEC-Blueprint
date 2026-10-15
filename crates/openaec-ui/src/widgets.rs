@@ -9,7 +9,7 @@ use crate::{
 use iced::{
     widget::{
         button, checkbox, column, container, pick_list, progress_bar, row, scrollable, slider,
-        stack, text, text_input, tooltip, Space,
+        stack, svg, text, text_input, tooltip, Space,
     },
     Alignment, Background, Border, Element, Fill, Length, Padding,
 };
@@ -632,10 +632,17 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             let tile = |item: crate::model::RibbonSwatch<M>, active: bool, width: f32| -> Element<'a, M> {
                 let ink = item.color;
                 let bg = item.background;
+                let dashed = item.dashed_border;
                 let sample = container(text("T").font(fonts::STRONG).size(18).color(ink))
                     .width(40).height(36).center(Fill)
                     .style(move |_| container::Style::default().background(bg)
-                        .border(Border { color: ink, width: 2.0, radius: 0.0.into() }));
+                        .border(Border { color: ink, width: if dashed { 0.0 } else { 2.0 }, radius: 0.0.into() }));
+                let sample: Element<'a, M> = if dashed {
+                    let channel = |value: f32| (value * 255.0).round() as u8;
+                    let border = format!(r##"<svg xmlns="http://www.w3.org/2000/svg" width="40" height="36" viewBox="0 0 40 36"><rect x="1" y="1" width="38" height="34" fill="none" stroke="#{:02x}{:02x}{:02x}" stroke-width="2" stroke-dasharray="4 3"/></svg>"##,
+                        channel(ink.r), channel(ink.g), channel(ink.b));
+                    stack![sample, svg(svg::Handle::from_memory(border.into_bytes())).width(40).height(36)].into()
+                } else { sample.into() };
                 let label = text(item.label).font(fonts::BODY).size(9).color(t.text);
                 button(column![sample, label].spacing(2).align_x(Alignment::Center))
                     .padding(2).width(width).height(62).on_press(item.message)
