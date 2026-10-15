@@ -32,7 +32,7 @@ De volledige visuele identiteit van OpenAEC Foundation beheren en beschikbaar st
 | `brandbook/DESIGN-SYSTEM.md` | Machine-readable design tokens, componenten, layout templates, CSS starter |
 | `brandbook/LAYOUTS.md` | Uitgebreide layout specs: website, web-tools, desktop-tools met wireframes en CSS |
 | `brandbook/styleguide.html` | Visuele referentie (rendered) |
-| `brandbook/assets/logo/svg/` | Master vector logo bestanden (bron) |
+| `design/logos/foundation/` | Master vector logo bestanden (bron) |
 | `brandbook/assets/illustrations/svg/` | Master vector illustraties (bron) |
 | `brandbook/assets/colors/cmyk-reference.md` | CMYK en Pantone referentie voor drukwerk |
 | `brandbook/assets/export_assets.py` | Script om PNG/PDF exports te genereren uit SVG |

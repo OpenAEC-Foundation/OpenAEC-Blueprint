@@ -1,0 +1,134 @@
+# Register van alle applicaties in het OpenAEC-ecosysteem.
+# category: 1 = zwaar (iced), 2 = licht (Tauri + React), 3 = web (Frappe), 4 = bedrijfsfrontend (ERPNext)
+# logo: app-id van het pictogram in design/logos/apps/ (leeg = nog geen logo ontworpen)
+
+[[app]]
+id = "openaec-template"
+display_name = "Open Template"
+category = 2
+repo = "OpenAEC-Foundation/OpenAEC-style-book"
+logo = "openaec-template"
+
+[[app]]
+id = "open-cad-studio"
+display_name = "Open CAD Studio"
+category = 1
+repo = "HakanSeven12/OpenCADStudio"
+
+[[app]]
+id = "open-2d-studio"
+display_name = "Open 2D Studio"
+category = 1
+repo = "OpenAEC-Foundation/open-2d-studio"
+
+[[app]]
+id = "open-pointcloud-studio"
+display_name = "Open Pointcloud Studio"
+category = 1
+repo = "OpenAEC-Foundation/open-pointcloud-studio"
+
+[[app]]
+id = "open-3d-viewer"
+display_name = "Open 3D Viewer"
+category = 1
+repo = "OpenAEC-Foundation/open-3d-viewer"
+
+[[app]]
+id = "open-fem-studio"
+display_name = "Open FEM Studio"
+category = 1
+repo = "OpenAEC-Foundation/open-fem-studio"
+
+[[app]]
+id = "open-pdf-studio"
+display_name = "Open PDF Studio"
+category = 1
+repo = "OpenAEC-Foundation/open-pdf-studio"
+
+[[app]]
+id = "openaec-bim-validator"
+display_name = "OpenAEC BIM Validator"
+category = 1
+repo = "OpenAEC-Foundation/OpenAEC-BIM-validator"
+
+[[app]]
+id = "open-calc-studio"
+display_name = "Open Calc Studio"
+category = 2
+repo = "OpenAEC-Foundation/open-calc-studio"
+
+[[app]]
+id = "open-heatloss-studio"
+display_name = "Open Heatloss Studio"
+category = 2
+repo = "OpenAEC-Foundation/open-heatloss-studio"
+
+[[app]]
+id = "open-u-value-studio"
+display_name = "Open U-value Studio"
+category = 2
+repo = "OpenAEC-Foundation/Open-U-value-Studio"
+
+[[app]]
+id = "open-safety-studio"
+display_name = "Open Safety Studio"
+category = 2
+repo = "OpenAEC-Foundation/Open-Safety-Studio"
+
+[[app]]
+id = "open-ecoscore-studio"
+display_name = "Open MPG Studio"
+category = 2
+repo = "OpenAEC-Foundation/open-ecoscore-studio"
+
+[[app]]
+id = "openaec-reports"
+display_name = "OpenAEC Reports"
+category = 2
+repo = "OpenAEC-Foundation/openaec-reports"
+
+[[app]]
+id = "open-speech-studio"
+display_name = "Open Speech Studio"
+category = 2
+repo = "OpenAEC-Foundation/open-speech-studio"
+
+[[app]]
+id = "open-orchestrator-studio"
+display_name = "Open Orchestrator Studio"
+category = 2
+repo = "DutchSailor/open-orchestrator-studio"
+
+[[app]]
+id = "openaec-cloud-desktop"
+display_name = "OpenAEC Cloud Desktop"
+category = 2
+repo = "OpenAEC-Foundation/openaec-cloud-desktop"
+
+[[app]]
+id = "open-field-studio"
+display_name = "Open Field Studio"
+category = 3
+
+[[app]]
+id = "open-energy-studio"
+display_name = "Open Energy Studio"
+category = 3
+repo = "OpenAEC-Foundation/open-energy-studio"
+
+[[app]]
+id = "y-next"
+display_name = "Y-Next"
+category = 4
+repo = "OpenAEC-Foundation/Y-app-ERPNext"
+
+[[app]]
+id = "z-next"
+display_name = "Z-Next"
+category = 4
+
+[[app]]
+id = "open-frame-studio"
+display_name = "Open Frame Studio"
+category = 2
+status = "buiten-scope"

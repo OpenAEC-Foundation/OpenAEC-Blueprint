@@ -735,7 +735,7 @@ The logo is an **isometric open building block** — a 3D hexagonal cube with on
 
 | Format | Location | Use |
 |--------|----------|-----|
-| SVG | `assets/logo/svg/` | Master source. Use for web (best quality), editing, resizing |
+| SVG | `design/logos/foundation/` | Master source. Use for web (best quality), editing, resizing |
 | PNG | `assets/logo/png/` | Raster contexts: email, social media, presentations, documents |
 | PDF | `assets/logo/pdf/` | Print production, InDesign, vector-quality print output |
 

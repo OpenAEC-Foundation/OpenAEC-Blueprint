@@ -10,6 +10,7 @@ import { renderI18nRust } from "./i18n/rust.mjs";
 import { loadIconManifest } from "./icons/manifest.mjs";
 import { renderIconsByIdTs, renderIconsTs } from "./icons/react.mjs";
 import { renderIconsRust } from "./icons/rust.mjs";
+import { buildLogos } from "./logos/build.mjs";
 import { readSharedTabs, renderSharedTabsRust } from "./ribbons/rust.mjs";
 import { loadTokens } from "./tokens/load.mjs";
 import { renderTokensRust } from "./tokens/rust.mjs";
@@ -61,6 +62,9 @@ steps.push(["ribbons-rust", (root) => [
 ]]);
 
 steps.push(["frappe-theme", (root) => buildFrappeTheme(root)]);
+
+// Logo's zijn build-uitvoer (logos/, niet in git); check.mjs kijkt er niet naar.
+steps.push(["logos", (root) => { buildLogos(root); return []; }]);
 
 export async function runAll(root = ROOT) {
   const written = [];

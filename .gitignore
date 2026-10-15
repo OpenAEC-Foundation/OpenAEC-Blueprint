@@ -43,3 +43,6 @@ export_social_png.py
 # Kopieën van design/tokens in het npm-package (gemaakt door build.js)
 packages/tokens/tokens/
 packages/tokens/extensions/
+
+# Build-uitvoer: app-logo-sets (gaan als zip mee met de release)
+/logos/

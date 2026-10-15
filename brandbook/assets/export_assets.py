@@ -7,7 +7,7 @@ from reportlab.graphics import renderPDF, renderPM
 
 
 BASE = Path(__file__).parent
-SVG_DIR = BASE / "logo" / "svg"
+SVG_DIR = BASE.parent.parent / "design" / "logos" / "foundation"
 PNG_DIR = BASE / "logo" / "png"
 PDF_DIR = BASE / "logo" / "pdf"
 
@@ -45,7 +45,7 @@ def export_svg(svg_path: Path) -> None:
 
 
 def main() -> None:
-    """Export all SVG files in the logo/svg directory."""
+    """Export all SVG files in the foundation logo source directory."""
     svgs = sorted(SVG_DIR.glob("*.svg"))
     if not svgs:
         print("No SVGs found in", SVG_DIR)
