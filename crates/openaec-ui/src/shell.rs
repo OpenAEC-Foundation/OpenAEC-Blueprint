@@ -155,7 +155,11 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     };
     let base: Element<'a,Message<M>>=container(bands).height(Fill).width(Fill).style(move |_| widgets::surface(theme)).into();
     if state.settings {
-        stack([base,settings(state)]).width(Fill).height(Fill).into()
+        if state.settings_reset_confirm {
+            stack([base,settings(state),reset_confirmation(state)]).width(Fill).height(Fill).into()
+        } else {
+            stack([base,settings(state)]).width(Fill).height(Fill).into()
+        }
     } else {base}
 }
 fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
@@ -196,9 +200,30 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
         widgets::settings_tab(l.text("Uiterlijk","Appearance"),state.settings_page==SettingsPage::Appearance,Message::Ui(UiEvent::SettingsPage(SettingsPage::Appearance)),p.theme),
         widgets::settings_tab(l.text("Over","About"),state.settings_page==SettingsPage::About,Message::Ui(UiEvent::SettingsPage(SettingsPage::About)),p.theme),
     ].spacing(2);
-    let footer=row![Space::with_width(Fill),widgets::action(l.text("Sluiten","Close"),Icon::Check,Some(Message::Ui(UiEvent::Settings(false))),p.theme)];
+    let footer=row![
+        widgets::dialog_button(l.text("Standaardwaarden herstellen","Reset to Defaults"),move |_,status|widgets::secondary_button_style(p.theme,status))
+            .on_press(Message::Ui(UiEvent::SettingsResetPrompt(true))),
+        Space::with_width(Fill),
+        widgets::dialog_button(l.text("Annuleren","Cancel"),move |_,status|widgets::secondary_button_style(p.theme,status))
+            .on_press(Message::Ui(UiEvent::Settings(false))),
+        widgets::dialog_button(l.text("Opslaan","Save"),move |_,status|widgets::primary_button_style(p.theme,status))
+            .on_press(Message::Ui(UiEvent::SettingsSave)),
+    ].spacing(6).align_y(iced::Alignment::Center);
     widgets::settings_modal(
         l.text("Instellingen","Settings"), sidebar.into(), form, footer.into(),
         Message::Ui(UiEvent::Settings(false)), p.theme,
+    )
+}
+fn reset_confirmation<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
+    let l=state.preferences.language;
+    widgets::settings_reset_confirmation(
+        l.text("Standaardwaarden herstellen","Reset to Defaults"),
+        l.text("Weet je zeker dat je alle instellingen naar hun standaardwaarden wilt herstellen?",
+            "Are you sure you want to reset all settings to their default values?"),
+        l.text("Annuleren","Cancel"),
+        l.text("Standaardwaarden herstellen","Reset to Defaults"),
+        Message::Ui(UiEvent::SettingsResetPrompt(false)),
+        Message::Ui(UiEvent::SettingsReset),
+        state.preferences.theme,
     )
 }

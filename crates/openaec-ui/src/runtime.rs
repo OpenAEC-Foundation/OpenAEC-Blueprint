@@ -41,11 +41,13 @@ impl<A:Application> Runtime<A> {
                     UiEvent::CloseWindow if self.app.close_requested() => Some(iced::window::get_latest().and_then(iced::window::close)),
                     _ => None,
                 };
+                let previewing_settings = self.shell.settings;
                 self.shell.update(&event);
                 if let UiEvent::Tab(id) = &event {
                     return self.app.tab_event(id).map(Message::Command);
                 }
-                if matches!(event, UiEvent::Theme(_) | UiEvent::Language(_) | UiEvent::Scale(_) | UiEvent::ToggleLeft | UiEvent::ToggleRight | UiEvent::Resize(_)) {
+                if matches!(&event, UiEvent::SettingsSave | UiEvent::ToggleLeft | UiEvent::ToggleRight | UiEvent::Resize(_))
+                    || (!previewing_settings && matches!(&event, UiEvent::Theme(_) | UiEvent::Language(_) | UiEvent::Scale(_))) {
                     if let Some(path)=&self.preferences_path {
                         self.error=self.shell.preferences.save(path).err().map(|e|format!("Settings: {e}"));
                     }
@@ -75,7 +77,7 @@ impl<A:Application> Runtime<A> {
             iced::keyboard::on_key_press(|key,mods| {
                 use iced::keyboard::{Key,key::Named};
                 match key {
-                    Key::Named(Named::Escape) => Some(Message::Ui(UiEvent::Settings(false))),
+                    Key::Named(Named::Escape) => Some(Message::Ui(UiEvent::SettingsEscape)),
                     Key::Character(c) if mods.command() && c.as_str()=="," => Some(Message::Ui(UiEvent::Settings(true))),
                     _ => None,
                 }
@@ -98,4 +100,43 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
         .font(fonts::FILES[3]).font(fonts::FILES[4]).font(fonts::FILES[5])
         .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(720.0,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
         .run_with(||(Runtime{app,shell:ShellState::new(preferences),preferences_path,error},Task::none()))
+}
+
+#[cfg(test)]
+mod settings_tests {
+    use super::*;
+
+    struct TestApplication;
+    impl Application for TestApplication {
+        type Command = ();
+        fn title(&self) -> String { "Test".into() }
+        fn ribbon(&self, _: Language) -> Vec<RibbonTab<Self::Command>> { Vec::new() }
+        fn workspace(&self, _: Theme, _: Language) -> Element<'_, Self::Command> {
+            iced::widget::text("test").into()
+        }
+        fn update(&mut self, _: Self::Command) -> Task<Self::Command> { Task::none() }
+    }
+
+    #[test]
+    fn preview_does_not_write_preferences_until_save() {
+        let unique = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos();
+        let path = std::env::temp_dir().join(format!("openaec-ui-settings-{}-{unique}.json", std::process::id()));
+        let mut runtime = Runtime {
+            app: TestApplication,
+            shell: ShellState::default(),
+            preferences_path: Some(path.clone()),
+            error: None,
+        };
+        let _ = runtime.update(Message::Ui(UiEvent::Settings(true)));
+        let _ = runtime.update(Message::Ui(UiEvent::Theme(Theme::Forge)));
+        assert!(!path.exists());
+        let _ = runtime.update(Message::Ui(UiEvent::Settings(false)));
+        assert_eq!(runtime.shell.preferences.theme, Theme::Light);
+        let _ = runtime.update(Message::Ui(UiEvent::Settings(true)));
+        let _ = runtime.update(Message::Ui(UiEvent::Theme(Theme::Forge)));
+        let _ = runtime.update(Message::Ui(UiEvent::SettingsSave));
+        assert_eq!(Preferences::load(&path).unwrap().theme, Theme::Forge);
+        std::fs::remove_file(path).unwrap();
+    }
 }

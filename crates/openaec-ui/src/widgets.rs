@@ -1064,6 +1064,58 @@ pub fn settings_modal<'a, M: Clone + 'a>(
         container::Style::default().background(t.dialog_overlay)
     })).into()
 }
+/// The source template's 340 px reset confirmation above an open settings dialog.
+pub fn settings_reset_confirmation<'a, M: Clone + 'a>(
+    title: impl Into<String>,
+    question: impl Into<String>,
+    cancel_label: impl Into<String>,
+    reset_label: impl Into<String>,
+    cancel: M,
+    reset: M,
+    theme: Theme,
+) -> Element<'a, M> {
+    let t = theme.tokens();
+    let header = container(row![
+        text(title.into()).font(fonts::STRONG).size(12).color(t.dialog_header_text).width(Fill),
+        button(text("×").size(16))
+            .on_press(cancel.clone())
+            .width(30).height(30).padding(0)
+            .style(move |_, status| button::Style {
+                background: matches!(status, button::Status::Hovered).then_some(t.ribbon_btn_hover.into()),
+                text_color: t.dialog_content_text,
+                ..button::Style::default()
+            }),
+    ].align_y(Alignment::Center))
+        .height(30).width(Fill)
+        .padding(Padding { top: 0.0, right: 0.0, bottom: 0.0, left: 10.0 })
+        .style(move |_| container::Style::default().background(t.dialog_header_bg));
+    let body = container(text(question.into()).size(12).width(Fill))
+        .padding(12).width(Fill)
+        .style(move |_| container::Style::default().background(t.dialog_content_bg));
+    let footer = column![
+        container(Space::new(Fill, 1)).height(1).width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_border)),
+        container(row![
+            Space::with_width(Fill),
+            dialog_button(cancel_label.into(), move |_, status| secondary_button_style(theme, status))
+                .on_press(cancel),
+            dialog_button(reset_label.into(), move |_, status| primary_button_style(theme, status))
+                .on_press(reset),
+        ].spacing(6).align_y(Alignment::Center))
+            .padding([8, 12]).height(43).width(Fill)
+            .style(move |_| container::Style::default().background(t.dialog_sidebar_bg)),
+    ];
+    let card = container(column![header, body, footer].width(340))
+        .width(340)
+        .style(move |_| container::Style {
+            background: Some(t.dialog_bg.into()),
+            border: Border { color: t.dialog_border, width: 1.0, radius: 0.0.into() },
+            ..container::Style::default()
+        });
+    opaque(center(opaque(card)).style(move |_| {
+        container::Style::default().background(t.dialog_overlay)
+    })).into()
+}
 /// Vertical settings navigation from the pinned Style Book template.
 pub fn settings_tab<'a, M: Clone + 'a>(
     label: impl Into<String>,

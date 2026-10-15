@@ -9,6 +9,7 @@ Native Rust shell, theme tokens, typography, semantic icons and controls shared 
 `widgets::settings_modal` owns the source Style Book's 560 × 500 px settings chrome, 120 px sidebar, overlay, header and footer. Each app supplies its own tabs and settings fields. The backdrop does not dismiss the dialog, matching the pinned Tauri template.
 `widgets::settings_tab` gives those tabs the same square 11 px navigation style. The crate shell provides selectable General, Appearance and About pages; other applications can supply their own page content and messages.
 `widgets::settings_theme_picker` provides the 200 px trigger and anchored overlay menu with five choices and four 14 px swatches per row. It closes on an outside click without changing form layout. `Theme::swatches` is the single source of those colors for Style Repo and Pointcloud. Both apps own selection and preview behavior; the native review renders deliberately show the menu expanded.
+`widgets::settings_reset_confirmation` renders the 340 px reset prompt above the settings modal. The crate shell previews theme, language and scale until Save; Cancel restores the values from when the dialog opened. Reset changes the preview only after confirmation. The shared runtime writes the preferences file on Save.
 
 `frame::document_bar` owns the 30 px document band from the pinned Tauri Style Book: the one-pixel top and bottom rules, theme background and 4 px horizontal inset. Applications keep their own tab identity and navigation behavior.
 

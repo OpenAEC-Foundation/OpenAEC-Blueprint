@@ -43,14 +43,26 @@ fn render_sized(
     active_tab: Option<&str>,
     size: Size,
 ) -> tiny_skia::Pixmap {
+    render_sized_with_reset(app, theme, show_settings, active_tab, size, false)
+}
+
+fn render_sized_with_reset(
+    app: &StyleRepo,
+    theme: Theme,
+    show_settings: bool,
+    active_tab: Option<&str>,
+    size: Size,
+    reset_confirm: bool,
+) -> tiny_skia::Pixmap {
     load_fonts();
     let mut preferences = Preferences::default();
     preferences.theme = theme;
     let mut state = ShellState::new(preferences);
     state.settings = show_settings;
+    state.settings_reset_confirm = reset_confirm;
     if show_settings {
         state.settings_page = openaec_ui::SettingsPage::Appearance;
-        state.settings_theme_open = true;
+        state.settings_theme_open = !reset_confirm;
     }
     if let Some(tab) = active_tab {
         state.active_tab = tab.into();
@@ -152,6 +164,9 @@ fn export_shared_settings_review() {
             .save_png(&design.join(format!("style-repo-settings-{name}.png")))
             .expect("save shared settings review");
     }
+    render_sized_with_reset(&app, Theme::Forge, true, None, Size::new(1280.0, 800.0), true)
+        .save_png(&design.join("style-repo-settings-reset-forge.png"))
+        .expect("save reset confirmation review");
 }
 
 #[test]
