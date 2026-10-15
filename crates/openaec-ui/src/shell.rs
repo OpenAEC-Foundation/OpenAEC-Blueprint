@@ -41,7 +41,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     let active = slots.tabs.iter().find(|tab| tab.id == state.active_tab).or(slots.tabs.first());
     for tab in &slots.tabs {
         let selected = active.is_some_and(|a| a.id == tab.id);
-        tabs = tabs.push(button(text(tab.label.clone()).font(fonts::MEDIUM).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Tab(tab.id.clone()))).style(move |_,s| widgets::button_style(theme,selected,s)));
+        tabs = tabs.push(button(text(tab.label.clone()).font(fonts::MEDIUM).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Tab(tab.id.clone()))).style(move |_,s| widgets::ribbon_tab_style(theme,selected,s)));
     }
     let tabs = container(horizontal(tabs)).height(metrics::TABS).width(Fill);
     let mut groups = Row::new().spacing(8);

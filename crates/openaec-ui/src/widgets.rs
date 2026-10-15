@@ -393,6 +393,25 @@ pub fn ribbon_button_style(theme: Theme, selected: bool, status: button::Status)
         style
     }
 }
+
+/// Flat 28 px ribbon-tab strip, shared by the showcase and desktop tools.
+/// The active tab takes the work-surface colour; hover uses the theme's
+/// ribbon hover token. Geometry belongs to the caller's tab button.
+pub fn ribbon_tab_style(theme: Theme, active: bool, status: button::Status) -> button::Style {
+    let t = theme.tokens();
+    let hovered = matches!(status, button::Status::Hovered);
+    button::Style {
+        background: if active {
+            Some(t.bg.into())
+        } else if hovered {
+            Some(t.ribbon_btn_hover.into())
+        } else {
+            None
+        },
+        text_color: if active || hovered { t.accent } else { t.text },
+        ..Default::default()
+    }
+}
 pub fn surface(theme: Theme) -> container::Style {
     let t = theme.tokens();
     container::Style::default().background(t.bg).color(t.text)

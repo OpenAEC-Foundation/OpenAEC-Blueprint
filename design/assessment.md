@@ -104,6 +104,13 @@ compacte knopstapels en een eigen taak/Gantt-werkgebied gebruikt.
 | Applicatieschermen | Negen gedeelde schermtoestanden zijn in HTML en de native Rust-atlas voor alle 18 studio's selecteerbaar, waaronder import/export, voortgang, onopgeslagen werk en fouten. De native ribbon volgt nu per studio de voorgestelde tabs. FEM en BIM tonen hun eigen concepticonen als themagekleurde app-eigen SVG's; de publieke iconset blijft 22 canonieke betekenissen groot. | Per tool de echte inhoud, dialooginteractie en concrete foutafhandeling aan de broncode koppelen; concepttabs en -iconen vakinhoudelijk beoordelen. |
 | Werkelijke migratie | Pointcloud gebruikt de gedeelde crate voor de complete buitenste venstercompositie, beide paneelkoppen, titelbalkiconen, zes beoordeelde algemene tooliconen en het Extensions-icoon, fonts, 77 Tauri-kleurvelden plus de stevige randkleur uit de merktokens per thema, ribbon- en formulierknoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en vijf vensterbandmaten. Ook de 27 px hoge dialoogknop met 75 px minimumbreedte en identieke tekstuitlijning wordt nu door de crate gebouwd en in beide apps gebruikt. De portable kopie is op 11 Rust-bestanden, 28 assets en dependencies gelijk gecontroleerd. De documenttabs staan vensterbreed; Light- en Forge-renders zijn met lege en geopende scan beoordeeld. Zes Pointcloud-renders zijn na deze controlintegratie bytegelijk gebleven; de instellingenrenders tonen de gesloten keuzelijsten in Light en Forge. | Domeinpanelen en dialogen op gedeelde widgets aansluiten zonder 3D-functionaliteit te verliezen; echte vensterscreenshots op meerdere platformen vergelijken. |
 
+De actieve en hoverstaat van de 28 px ribbon-tab komen nu uit één
+`openaec-ui::widgets::ribbon_tab_style` in zowel de Rust-showcase als
+Pointcloud. De 13 Pointcloud-shelltests slagen; zes opnieuw gerenderde
+Pointcloud-vensters in Light en Forge zijn bytegelijk aan de vorige beelden.
+De Style Repo-beelden zijn na de tabwijziging opnieuw gerenderd en visueel
+bekeken in Light en Forge.
+
 Het [interactieve HTML-prototype](harmonized.html) toont de standaardindeling
 met twee zijpanelen van 240 px en paneelwerkbalken van 24 px.
 De [reviewpagina](review.html) toont zes native Pointcloud-renders van lege en
