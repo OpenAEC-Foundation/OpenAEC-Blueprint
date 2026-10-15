@@ -20,6 +20,8 @@ De [Geotechniek-ribbon](design/style-repo-geotech-ribbon-light.png) volgt de ker
 
 De [Heatloss-ribbon](design/style-repo-heatloss-ribbon-light.png) gebruikt de actuele route-tabs; zijn IFC-lint is bewust leeg. Voor deze app ontbreken nog echte schermcaptures.
 
+De [Calculations-ribbon](design/style-repo-calculations-ribbon-light.png) volgt de twee huidige tabs; zijn IFC-lint is bewust leeg. Ook hier zijn nog geen echte schermcaptures beschikbaar.
+
 De native iconenpagina toont de 22 canonieke Rust-iconen afzonderlijk van de 565 onderzoeksbronnen: [Light](design/style-repo-icons-light.png) en [Forge](design/style-repo-icons-forge.png).
 De [componentenpagina in Light](design/style-repo-components-light.png) en [Forge](design/style-repo-components-forge.png) toont de gedeelde primaire, secundaire en uitgeschakelde knoppen, plus een werkende checkbox en slider. Pointcloud tekent ook zijn scrollbalken, tooltips en voortgangsbalken met de stijlfuncties uit dezelfde crate.
 De [instellingen in Light](design/style-repo-settings-light.png) en [Forge](design/style-repo-settings-forge.png) tonen de gedeelde keuzelijst- en invoerstijl; Pointcloud gebruikt dezelfde Rust-functies voor velden en het open keuzemenu.

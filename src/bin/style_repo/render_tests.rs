@@ -257,6 +257,12 @@ fn export_native_style_repo_previews() {
     render_with_options(&app, Theme::Light, false, Some("vertrekken"))
         .save_png(&design.join("style-repo-heatloss-ribbon-light.png"))
         .expect("save Heatloss ribbon review");
+    let calculations = studios().iter().position(|studio| studio.id == "calculations").unwrap();
+    let _ = app.update(Action::SelectStudio(calculations));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Light, false, Some("start"))
+        .save_png(&design.join("style-repo-calculations-ribbon-light.png"))
+        .expect("save Calculations ribbon review");
     let energy = studios().iter().position(|studio| studio.id == "energy").unwrap();
     let _ = app.update(Action::SelectStudio(energy));
     let _ = app.update(Action::SelectScreen(1));

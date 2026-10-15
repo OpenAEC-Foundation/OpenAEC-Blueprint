@@ -28,10 +28,41 @@ pub(super) fn studio_tabs(studio: &StudioLayout, selected: Option<&str>) -> Vec<
                 .or_else(|| calc_groups(studio, tab, selected))
                 .or_else(|| geotech_groups(studio, tab, selected))
                 .or_else(|| heatloss_groups(studio, tab, selected))
+                .or_else(|| calculations_groups(studio, tab, selected))
                 .or_else(|| domain_groups(studio, tab, selected))
                 .unwrap_or_else(|| base_groups(tab, selected)),
         })
         .collect()
+}
+
+/// Calculations has only Start and an intentionally empty IFC tab.
+fn calculations_groups(
+    studio: &StudioLayout,
+    tab: &str,
+    selected: Option<&str>,
+) -> Option<Vec<RibbonGroup<Action>>> {
+    if studio.id != "calculations" {
+        return None;
+    }
+    use Icon::*;
+    let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
+        "Start" => vec![
+            ("Bestand", vec![("Nieuw", New.into()), ("Bladeren…", Open.into()), ("Opslaan", Save.into())]),
+            ("Bewerken", vec![("Ongedaan", Undo.into()), ("Opnieuw", Redo.into())]),
+            ("Invoegen", vec![("Module", planner_source_icon!("Puzzle")), ("Afbeelding", planner_source_icon!("FilePlus2"))]),
+            ("Exporteren", vec![("Voorbeeld", planner_source_icon!("Eye")), ("PDF blad", Export.into()), ("Rapport (PDF)", Export.into())]),
+        ],
+        "IFC" => vec![],
+        _ => return None,
+    };
+    Some(spec.into_iter().map(|(label, items)| RibbonGroup {
+        label: label.into(),
+        commands: items.into_iter().map(|(name, icon)| {
+            let id = format!("calculations:{tab}:{name}");
+            Command::new(name, icon, Action::SelectPreviewCommand(id.clone()))
+                .selected(selected == Some(id.as_str()))
+        }).collect(),
+    }).collect())
 }
 
 /// Heatloss uses route-linked tabs; the IFC ribbon is intentionally empty.

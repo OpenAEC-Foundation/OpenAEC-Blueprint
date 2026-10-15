@@ -385,15 +385,11 @@
     "tabs": [
       "Bestand",
       "Start",
-      "Berekeningen",
-      "Bibliotheek",
-      "Weergave",
-      "Rapport",
-      "Help"
+      "IFC"
     ],
-    "left_panel": "Berekeningsbladen",
-    "right_panel": "Berekeningseigenschappen",
-    "workspace": "Rekenblad + resultaat",
+    "left_panel": "Projectbrowser",
+    "right_panel": "Geen vast eigenschappenpaneel",
+    "workspace": "Rekenblad / rapport / IFC",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -416,7 +412,7 @@
       "empty",
       "error"
     ],
-    "notes": "Voorstel op basis van beschikbare broncode/schermbeelden; niet elk scherm is visueel geverifieerd."
+    "notes": "Lint gecontroleerd tegen packages/desktop/src/components/ribbon/Ribbon.tsx op commit 21d218c996d0: naast Bestand zijn alleen Start en IFC aanwezig. CalcTab.tsx bevat Bestand, Bewerken, Invoegen en Exporteren; IfcTab.tsx is bewust leeg. App.tsx toont ProjectBrowser links en route-afhankelijk rekenblad/rapport/IFC zonder globaal rechter eigenschappenpaneel. Geen bruikbare UI-screenshots in de repository gevonden."
   },
   {
     "id": "reports",

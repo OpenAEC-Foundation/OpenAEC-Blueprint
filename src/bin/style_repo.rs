@@ -1517,7 +1517,7 @@ mod tests {
             for (actual, label) in tabs.iter().zip(expected) {
                 let expected_label = if studio.optional_tabs.contains(label) { format!("{label} · optioneel") } else { (*label).clone() };
                 assert_eq!(actual.label, expected_label, "{}", studio.name);
-                if studio.id == "heatloss" && label == "IFC" {
+                if matches!(studio.id.as_str(), "heatloss" | "calculations") && label == "IFC" {
                     assert!(actual.groups.is_empty(), "source IFC ribbon is intentionally empty");
                     continue;
                 }
@@ -1580,6 +1580,16 @@ mod tests {
         let tabs = ribbon_preview::studio_tabs(studio, None);
         assert_eq!(tabs.iter().find(|tab| tab.id == "ifc").unwrap().groups.len(), 0);
         assert_eq!(tabs.iter().find(|tab| tab.id == "vertrekken").unwrap().groups.len(), 3);
+    }
+
+    #[test]
+    fn calculations_ribbon_has_only_start_and_empty_ifc() {
+        let studio = studios().iter().find(|studio| studio.id == "calculations").unwrap();
+        assert_eq!(studio.tabs, ["Bestand", "Start", "IFC"]);
+        let tabs = ribbon_preview::studio_tabs(studio, None);
+        assert_eq!(tabs.len(), 2);
+        assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Bestand", "Bewerken", "Invoegen", "Exporteren"]);
+        assert!(tabs[1].groups.is_empty());
     }
 
     #[test]
