@@ -167,8 +167,11 @@ compacte knopstapels en een eigen taak/Gantt-werkgebied gebruikt.
 
 De actieve en hoverstaat van de 28 px ribbon-tab komen nu uit één
 `openaec-ui::widgets::ribbon_tab_style` in zowel de Rust-showcase als
-Pointcloud. De 13 Pointcloud-shelltests slagen; zes opnieuw gerenderde
-Pointcloud-vensters in Light en Forge zijn bytegelijk aan de vorige beelden.
+Pointcloud. De 13 Pointcloud-shelltests slagen. Zes opnieuw gerenderde
+Pointcloud-vensters in Light en Forge tonen nu de gecentreerde titel in de
+accentkleur. De [Light-shell](pointcloud-shell-light.png) en
+[Forge-shell](pointcloud-shell-forge.png) zijn met de native software-renderer
+gemaakt; de Tauri-referentie en de Style Repo zetten de titel eveneens centraal.
 De Style Repo-beelden zijn na de tabwijziging opnieuw gerenderd en visueel
 bekeken in Light en Forge.
 
