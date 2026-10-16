@@ -1,0 +1,502 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "scope": "Rendered titlebar and backstage control SVGs; two app-branding building marks excluded. Three quick-access buttons have no onClick in source.",
+  "count": 26,
+  "ui_uses": 29,
+  "excluded_branding": [
+    {
+      "file": "frontend/src/components/TitleBar.tsx",
+      "line": 78
+    },
+    {
+      "file": "frontend/src/components/backstage/Backstage.tsx",
+      "line": 817
+    }
+  ],
+  "icons": [
+    {
+      "name": "TitleSave",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-save.svg",
+      "sha256": "e4ebc52bd076d9d52b8772aee5826677fdcba54e63e6669fc818dc1ad2ace43a",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 100
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 100,
+          "kind": "jsx"
+        }
+      ],
+      "state": "klikactie aangesloten"
+    },
+    {
+      "name": "TitleUndo",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-undo.svg",
+      "sha256": "5d831707ad8e0751d6cd7ab4483bb890f35c4e0e592bd56ffea6e306f099d86d",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 112
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 112,
+          "kind": "jsx"
+        }
+      ],
+      "state": "zichtbaar, nog geen klikactie"
+    },
+    {
+      "name": "TitleRedo",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-redo.svg",
+      "sha256": "8f8aff8c3b80ef30802c0fdc2a378feaaace37bfdb1beed4a0254b16456ee9e9",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 123
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 123,
+          "kind": "jsx"
+        }
+      ],
+      "state": "zichtbaar, nog geen klikactie"
+    },
+    {
+      "name": "TitlePrint",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-print.svg",
+      "sha256": "d43bc089115a0cf33abf1192b2e853529025723f8c67526ec1dd510b6db4dd67",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 134
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 134,
+          "kind": "jsx"
+        }
+      ],
+      "state": "zichtbaar, nog geen klikactie"
+    },
+    {
+      "name": "TitleSettings",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-settings.svg",
+      "sha256": "88adef4224c8a9ba17a9fdea0005edd530a8c3a5fb1e149fd01b131a09bedb69",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 147
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 147,
+          "kind": "jsx"
+        }
+      ],
+      "state": "klikactie aangesloten"
+    },
+    {
+      "name": "TitleMinimize",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-minimize.svg",
+      "sha256": "b4bd51af542101832b26554cf35b8d79958118710b84e5f6a30c478d2e574510",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 177
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 177,
+          "kind": "jsx"
+        }
+      ],
+      "state": "alleen Tauri"
+    },
+    {
+      "name": "TitleRestore",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-restore.svg",
+      "sha256": "e2445e1188b59292a982736b8fc3d0ea32e4daa84a49c6d3f11bd6ce7cc549ce",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 189
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 189,
+          "kind": "jsx"
+        }
+      ],
+      "state": "alleen Tauri; bij gemaximaliseerd venster"
+    },
+    {
+      "name": "TitleMaximize",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-maximize.svg",
+      "sha256": "d400ee3c184d891d39eead32450597be444c82cc75cc5bc6e579f9489dbff069",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 194
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 194,
+          "kind": "jsx"
+        }
+      ],
+      "state": "alleen Tauri"
+    },
+    {
+      "name": "TitleClose",
+      "group": "Titelbalk",
+      "svg": "inline-ui-icons/open-heatloss-chrome/title-close.svg",
+      "sha256": "e0dd87c7a2c8841641253ce84de33dce3019de6b28f39f22926d7f349950ab02",
+      "definition": {
+        "file": "frontend/src/components/TitleBar.tsx",
+        "line": 206
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/TitleBar.tsx",
+          "line": 206,
+          "kind": "jsx"
+        }
+      ],
+      "state": "alleen Tauri"
+    },
+    {
+      "name": "MenuAbout",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-about.svg",
+      "sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 37
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 751,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuClose",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-close.svg",
+      "sha256": "b682925c71b8e71f2a0dd96130a1549ed096837aee4b4db9341d7d14c76060f0",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 35
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 712,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuExit",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-exit.svg",
+      "sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 38
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 761,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuExtensions",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-extensions.svg",
+      "sha256": "98ba3aeb3283bed72b40be74c39dd07a296dfd6c7a0a8ede3d4cf98fbd96bc7f",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 39
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 743,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuFile",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-file.svg",
+      "sha256": "c0478a0bbed932ffcbb0751e641cbe66a9c867e699386aa9a7eecf2fe5bafd94",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 42
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 586,
+          "kind": "menu-prop"
+        },
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 677,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuImport",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-import.svg",
+      "sha256": "4e2452104feb5530b553ab202d52923151264d5180de7eeee2a6cfefdd26b2e7",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 43
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 688,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuNew",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-new.svg",
+      "sha256": "26132fc1a9127230323576b584065c672ae4902529df7b43ecb86e3d807e289a",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 31
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 563,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuOpen",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-open.svg",
+      "sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 32
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 571,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuPreferences",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-preferences.svg",
+      "sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 36
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 721,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuRecent",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-recent.svg",
+      "sha256": "ca4491ce25ab50930707f58d069b3cc19045553858f06b71bc96997df0793fa6",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 40
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 735,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuSave",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-save.svg",
+      "sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 33
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 654,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuSaveAs",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-save-as.svg",
+      "sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 34
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 662,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuServer",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-server.svg",
+      "sha256": "84e8f459da038ad8fecbe4555bc953987758172686dc142277ad64cbe0aa75fd",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 41
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 580,
+          "kind": "menu-prop"
+        },
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 671,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "MenuVabi",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/menu-vabi.svg",
+      "sha256": "5dfd8a5ca3fb86c22cf6e8b4f74e02a73a727bb14ebe2803111193832b5f4373",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 44
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 592,
+          "kind": "menu-prop"
+        },
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 694,
+          "kind": "menu-prop"
+        }
+      ],
+      "state": "menu-item of submenu-item"
+    },
+    {
+      "name": "BackstageBack",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/backstage-back.svg",
+      "sha256": "4321192d6d3beb6db59f389e65f2917dd5b34f357ca7867369a2954cab96dabe",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 546
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 546,
+          "kind": "jsx"
+        }
+      ],
+      "state": "terugnavigatie"
+    },
+    {
+      "name": "BackstageWebsite",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/backstage-website.svg",
+      "sha256": "f049f3162fc2dd63361b55d3887670f3333716258044400ec8bcccf5956ed3d9",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 846
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 846,
+          "kind": "jsx"
+        }
+      ],
+      "state": "externe link in Over"
+    },
+    {
+      "name": "BackstageGitHub",
+      "group": "Bestand-menu",
+      "svg": "inline-ui-icons/open-heatloss-chrome/backstage-git-hub.svg",
+      "sha256": "1072a96e8d2c31e39be258f6ce156e677bbdd4e8b28d2c8c8a9cd20d73bc9e29",
+      "definition": {
+        "file": "frontend/src/components/backstage/Backstage.tsx",
+        "line": 853
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/backstage/Backstage.tsx",
+          "line": 853,
+          "kind": "jsx"
+        }
+      ],
+      "state": "externe link in Over"
+    }
+  ]
+}
