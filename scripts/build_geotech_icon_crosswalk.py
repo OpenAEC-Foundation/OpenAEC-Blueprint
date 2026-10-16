@@ -43,10 +43,16 @@ DOMAIN = {
     "tekening-note", "tekening-dimension", "tekening-trim", "tekening-extend",
     "tekening-mirror", "tekening-offset",
 }
+ADOPTED_DOMAIN = {
+    "tekening-sondering": ("geotech.sondering", "geotech-sondering.svg"),
+    "tekening-bore": ("geotech.boring", "geotech-boring.svg"),
+    "tekening-raster": ("geotech.sondering-grid", "geotech-sondering-grid.svg"),
+}
 LABELS = {
     "shared": "Gedeelde kernbetekenis",
     "new-shared": "Nieuw in de gedeelde Rust-kern",
     "decision": "Betekenisbesluit nodig",
+    "adopted-domain": "Geharmoniseerd domeinicoon in Rust",
     "domain": "Domein- of bestandstypevorm",
 }
 
@@ -74,17 +80,25 @@ def main() -> None:
         elif name in DECISION:
             status, (meaning, why) = "decision", DECISION[name]
             target = None
+        elif name in ADOPTED_DOMAIN:
+            status, (meaning, filename) = "adopted-domain", ADOPTED_DOMAIN[name]
+            why = "Bronbewezen plaatsingssymbool met beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm."
+            target = f"../crates/openaec-ui/assets/domain-icons/{filename}"
+            small_target = f"../crates/openaec-ui/assets/domain-icons-small/{filename}"
         else:
             status, meaning, why = "domain", "geotech." + name, "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname."
             target = None
         if target:
             assert (ROOT / "design" / target).exists(), target
+        if name in ADOPTED_DOMAIN:
+            assert (ROOT / "design" / small_target).exists(), small_target
         records.append({
             "name": name, "status": status, "meaning": meaning,
             "decision": why, "source": item["source"],
             "source_line": item["source_line"], "usage_lines": item["usage_lines"],
             "source_sha256": item["sha256"], "source_svg": item["svg"],
             "candidate_svg": target,
+            "candidate_small_svg": small_target if name in ADOPTED_DOMAIN else None,
         })
     output = {"repository": "open-geotechniek-studio", "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
               "count": len(records), "counts": {key: sum(r["status"] == key for r in records) for key in LABELS},
@@ -98,13 +112,14 @@ def main() -> None:
             target = item["candidate_svg"]
             ref = f"https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/{output['commit']}/{item['source']}#L{item['usage_lines'][0]}"
             sample = lambda path: ''.join(f'<img src="{escape(path)}" width="{size}" height="{size}" alt="">' for size in (16, 24, 32))
-            comparison = f'<div class="candidate"><span>Canoniek · {escape(item["meaning"])}</span><div class="samples">{sample(target)}</div></div>' if target else f'<div class="candidate text"><span>Betekenis · {escape(item["meaning"])}</span><p>{escape(item["decision"])}</p></div>'
+            candidate_samples = (f'<img src="{escape(item["candidate_small_svg"])}" width="16" height="16" alt=""><img src="{escape(target)}" width="24" height="24" alt=""><img src="{escape(target)}" width="32" height="32" alt="">') if item["candidate_small_svg"] else sample(target) if target else ''
+            comparison = f'<div class="candidate"><span>Rust · {escape(item["meaning"])}</span><div class="samples">{candidate_samples}</div></div>' if target else f'<div class="candidate text"><span>Betekenis · {escape(item["meaning"])}</span><p>{escape(item["decision"])}</p></div>'
             note = f'<p>{escape(item["decision"])}</p>' if target else ''
             cards.append(f'<article data-search="{escape((item["name"] + " " + item["meaning"]).lower())}"><h3>{escape(item["name"])}</h3><div class="pair"><div><span>Bron</span><div class="samples">{sample(source)}</div></div>{comparison}</div>{note}<a href="{ref}">UI-gebruik ↗</a></article>')
         sections.append(f'<section id="{status}"><h2>{label} <small>{sum(r["status"] == status for r in records)}</small></h2><div class="grid">' + ''.join(cards) + '</div></section>')
     html = '''<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Geotechniek · icoonharmonisatie</title><style>
-:root{font:13px/1.45 Inter,system-ui,sans-serif;color:#33343b;background:#f3f3f2}*{box-sizing:border-box}body{margin:0}header{background:#303039;color:#fff;padding:22px max(22px,calc((100vw - 1450px)/2));border-bottom:3px solid #d97706}header a{color:#ffc17a}h1{font-size:28px;margin:11px 0 7px}header p{max-width:1000px;color:#e0e0e4;margin:0}nav{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 19px}nav a{background:white;padding:6px 9px;border:1px solid #d5d5d9;color:#9a5100;text-decoration:none}main{max-width:1490px;margin:auto;padding:22px}input{padding:8px 10px;border:1px solid #a9a9b0;width:270px;max-width:100%;font:inherit;margin-bottom:15px}h2{font-size:19px;border-bottom:1px solid #d4d4d8;padding-bottom:6px;margin:29px 0 12px}h2 small{font-size:12px;color:#777;margin-left:5px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(325px,1fr));gap:12px}article{background:#fff;border:1px solid #d6d6db;padding:12px;min-width:0}article h3{font-size:14px;margin:0 0 10px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair>div{min-width:0;border:1px solid #e0e0e4;background:#fafafa;padding:7px}.pair span{display:block;font-size:11px;color:#717179;min-height:31px}.samples{display:flex;align-items:center;gap:12px;height:39px}.samples img{display:block}.candidate.text p{font-size:11px;margin:3px 0 0}.pair>div.candidate.text{background:#fff7ed}article>p{color:#686873;min-height:39px;margin:10px 0 6px}article a{color:#a45600}.dark{background:#303039;padding:15px;margin-top:15px}.dark h2{color:#f4f4f5;border-color:#676772}.dark h2 small{color:#c2c2ca}.dark article{background:#3d3d45;border-color:#676772;color:#fff}.dark .pair>div{background:#46464f;border-color:#676772}.dark .pair span,.dark article>p{color:#c6c6cc}.dark img{filter:invert(1)}.dark article a{color:#ffbb6d}.hidden{display:none!important}
-</style><header><a href="review.html">← Hoofdreview</a><h1>Geotechniek · icoonharmonisatie</h1><p>Alle 54 bronbewezen UI-vormen uit lint, Bestand, titelbalk en documenttabs krijgen een expliciete betekenis. De Rust-kern is de doelvorm voor gedeelde handelingen; Print, Opslaan als en Herstellen zijn na visuele review toegevoegd. Domeinvormen blijven gescheiden van algemene bediening.</p></header><main><nav><a href="#shared">Gedeeld</a><a href="#new-shared">Nieuw in Rust</a><a href="#decision">Besluit nodig</a><a href="#domain">Domein</a></nav><label for="search">Zoek op bronvorm of betekenis</label><br><input id="search" type="search" placeholder="Bijv. delete, print, boring"><p>Elke bronvorm en eventuele doelvorm staat op 16, 24 en 32 px. De onderste donkere ronde maakt contrastproblemen zichtbaar. Alleen de expliciet aangeduide algemene kernvormen staan in de crate; de rest blijft bron- of ontwerpmateriaal.</p><h2>Licht</h2>'''
+:root{font:13px/1.45 Inter,system-ui,sans-serif;color:#33343b;background:#f3f3f2}*{box-sizing:border-box}body{margin:0}header{background:#303039;color:#fff;padding:22px max(22px,calc((100vw - 1450px)/2));border-bottom:3px solid #d97706}header a{color:#ffc17a}h1{font-size:28px;margin:11px 0 7px}header p{max-width:1000px;color:#e0e0e4;margin:0}nav{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 19px}nav a{background:white;padding:6px 9px;border:1px solid #d5d5d9;color:#9a5100;text-decoration:none}main{max-width:1490px;margin:auto;padding:22px}input{padding:8px 10px;border:1px solid #a9a9b0;width:270px;max-width:100%;font:inherit;margin-bottom:15px}h2{font-size:19px;border-bottom:1px solid #d4d4d8;padding-bottom:6px;margin:29px 0 12px}h2 small{font-size:12px;color:#777;margin-left:5px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(325px,1fr));gap:12px}article{background:#fff;border:1px solid #d6d6db;padding:12px;min-width:0}article h3{font-size:14px;margin:0 0 10px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair>div{min-width:0;border:1px solid #e0e0e4;background:#fafafa;padding:7px}.pair span{display:block;font-size:11px;color:#717179;min-height:31px}.samples{display:flex;align-items:center;gap:12px;height:39px}.samples img{display:block}.candidate.text p{font-size:11px;margin:3px 0 0}.pair>div.candidate.text{background:#fff7ed}article>p{color:#686873;min-height:39px;margin:10px 0 6px}article a{color:#a45600}.dark{background:#303039;padding:15px;margin-top:15px}.dark h2{color:#f4f4f5;border-color:#676772}.dark h2 small{color:#c2c2ca}.dark article{background:#3d3d45;border-color:#676772;color:#fff}.dark .pair>div{background:#46464f;border-color:#676772}.dark .pair>div.candidate.text{background:#51463c}.dark .candidate.text p{color:#f3e2ce}.dark .pair span,.dark article>p{color:#c6c6cc}.dark img{filter:invert(1)}.dark article a{color:#ffbb6d}.hidden{display:none!important}
+</style><header><a href="review.html">← Hoofdreview</a><h1>Geotechniek · icoonharmonisatie</h1><p>Alle 54 bronbewezen UI-vormen uit lint, Bestand, titelbalk en documenttabs krijgen een expliciete betekenis. Print, Opslaan als en Herstellen zijn algemene Rust-kerniconen; Sondering, Boring en Sonderingsraster hebben een afzonderlijke domeinbetekenis met 16px-tekening.</p></header><main><nav><a href="#shared">Gedeeld</a><a href="#new-shared">Nieuw in Rust</a><a href="#decision">Besluit nodig</a><a href="#adopted-domain">Domein in Rust</a><a href="#domain">Overig domein</a></nav><label for="search">Zoek op bronvorm of betekenis</label><br><input id="search" type="search" placeholder="Bijv. delete, print, boring"><p>Elke bronvorm en eventuele doelvorm staat op 16, 24 en 32 px. De onderste donkere ronde maakt contrastproblemen zichtbaar. De algemene kern en drie afzonderlijk gemarkeerde domeiniconen staan in de crate; de rest blijft bron- of ontwerpmateriaal.</p><h2>Licht</h2>'''
     dark_sections = [section.replace(f'id="{status}"', f'id="dark-{status}"', 1) for status, section in zip(LABELS, sections)]
     html += ''.join(sections) + '<h2>Donker</h2><div class="dark">' + ''.join(dark_sections) + '</div><p><a href="geotech-icon-crosswalk.json">Gestructureerde beslisdata</a> · <a href="geotech-inline-icon-review.html">Lintbronvormen</a> · <a href="geotech-backstage-icon-review.html">Bestandbronvormen</a> · <a href="geotech-chrome-icon-review.html">Titel- en documentbronvormen</a></p></main><script>const q=document.getElementById("search");function filter(){let v=q.value.trim().toLowerCase();for(let card of document.querySelectorAll("article"))card.classList.toggle("hidden",!!v&&!card.dataset.search.includes(v));for(let section of document.querySelectorAll("section"))section.classList.toggle("hidden",!!v&&!section.querySelector("article:not(.hidden)"))}q.addEventListener("input",filter);q.value=new URLSearchParams(location.search).get("q")||"";filter();</script></html>'
     (ROOT / "design/geotech-icon-crosswalk.html").write_text(html)

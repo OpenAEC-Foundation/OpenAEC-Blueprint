@@ -704,9 +704,11 @@ impl StyleRepo {
             }
             canonical = canonical.push(icons_row);
         }
-        let mut domain = Row::new().spacing(7);
-        for icon in DomainIcon::ALL {
-            domain = domain.push(
+        let mut domain = Column::new().spacing(7);
+        for chunk in DomainIcon::ALL.chunks(4) {
+            let mut domain_row = Row::new().spacing(7);
+            for &icon in chunk {
+                domain_row = domain_row.push(
                 container(
                     column![
                         row![icon.view(16, t.accent), icon.view(24, t.accent)]
@@ -730,7 +732,9 @@ impl StyleRepo {
                     },
                     ..Default::default()
                 }),
-            );
+                );
+            }
+            domain = domain.push(domain_row);
         }
         let matches = self.matches();
         let pages = matches.len().max(1).div_ceil(48);
@@ -2698,10 +2702,11 @@ mod tests {
         let place = &drawing.groups[2].commands;
         assert_eq!((place[0].label.as_str(), place[1].label.as_str()), ("Sondering", "Boring"));
         assert!(matches!((place[0].icon, place[1].icon),
-            (CommandIcon::Svg(sondering), CommandIcon::Svg(boring)) if sondering != boring));
+            (CommandIcon::Domain(DomainIcon::GeotechSondering), CommandIcon::Domain(DomainIcon::GeotechBoring))));
+        assert!(matches!(place[2].icon, CommandIcon::Domain(DomainIcon::GeotechSonderingGrid)));
         assert!(matches!(drawing.groups[4].commands[2].icon, CommandIcon::Canonical(Icon::Print)));
         assert!(drawing.groups.iter().flat_map(|group| &group.commands)
-            .filter(|command| command.label != "Print")
+            .filter(|command| !["Print", "Sondering", "Boring", "Sonderingsraster"].contains(&command.label.as_str()))
             .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
         let home = tabs.iter().find(|tab| tab.id == "home").unwrap();
         assert!(matches!(home.groups[0].commands[0].icon, CommandIcon::Canonical(Icon::Settings)));

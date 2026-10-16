@@ -111,15 +111,20 @@ pub struct RibbonSlider<M> {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum CommandIcon {
     Canonical(Icon),
+    Domain(crate::icons::DomainIcon),
     Svg(&'static [u8]),
 }
 impl From<Icon> for CommandIcon {
     fn from(icon: Icon) -> Self { Self::Canonical(icon) }
 }
+impl From<crate::icons::DomainIcon> for CommandIcon {
+    fn from(icon: crate::icons::DomainIcon) -> Self { Self::Domain(icon) }
+}
 impl CommandIcon {
     pub fn view<'a>(self, size: u16, color: iced::Color) -> iced::widget::svg::Svg<'a> {
         match self {
             Self::Canonical(icon) => icon.view(size, color),
+            Self::Domain(icon) => icon.view(size, color),
             Self::Svg(bytes) => iced::widget::svg(iced::widget::svg::Handle::from_memory(bytes))
                 .width(size).height(size)
                 .style(move |_, _| iced::widget::svg::Style { color: Some(color) }),

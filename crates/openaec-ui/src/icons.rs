@@ -150,14 +150,20 @@ pub enum DomainIcon {
     PointcloudEyeDome,
     CadShadedView,
     CadSpherePrimitive,
+    GeotechSondering,
+    GeotechBoring,
+    GeotechSonderingGrid,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 4] = [
+    pub const ALL: [Self; 7] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
         Self::CadSpherePrimitive,
+        Self::GeotechSondering,
+        Self::GeotechBoring,
+        Self::GeotechSonderingGrid,
     ];
 
     pub fn id(self) -> &'static str {
@@ -166,6 +172,9 @@ impl DomainIcon {
             Self::PointcloudEyeDome => "pointcloud.eye-dome",
             Self::CadShadedView => "cad.shaded-view",
             Self::CadSpherePrimitive => "cad.sphere-primitive",
+            Self::GeotechSondering => "geotech.sondering",
+            Self::GeotechBoring => "geotech.boring",
+            Self::GeotechSonderingGrid => "geotech.sondering-grid",
         }
     }
 
@@ -194,6 +203,24 @@ impl DomainIcon {
             }
             (Self::CadSpherePrimitive, false) => {
                 include_bytes!("../assets/domain-icons/cad-sphere.svg")
+            }
+            (Self::GeotechSondering, true) => {
+                include_bytes!("../assets/domain-icons-small/geotech-sondering.svg")
+            }
+            (Self::GeotechSondering, false) => {
+                include_bytes!("../assets/domain-icons/geotech-sondering.svg")
+            }
+            (Self::GeotechBoring, true) => {
+                include_bytes!("../assets/domain-icons-small/geotech-boring.svg")
+            }
+            (Self::GeotechBoring, false) => {
+                include_bytes!("../assets/domain-icons/geotech-boring.svg")
+            }
+            (Self::GeotechSonderingGrid, true) => {
+                include_bytes!("../assets/domain-icons-small/geotech-sondering-grid.svg")
+            }
+            (Self::GeotechSonderingGrid, false) => {
+                include_bytes!("../assets/domain-icons/geotech-sondering-grid.svg")
             }
         }
     }

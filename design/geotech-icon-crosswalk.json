@@ -6,7 +6,8 @@
     "shared": 19,
     "new-shared": 5,
     "decision": 8,
-    "domain": 22
+    "adopted-domain": 3,
+    "domain": 19
   },
   "icons": [
     {
@@ -21,7 +22,8 @@
       ],
       "source_sha256": "1cf7f61d2a545b6c1b7a7e19df380590ca8bc4c4232a1aa36921ceb186455566",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/start-zoom-out.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/zoomout.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/zoomout.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "start-zoom-fit",
@@ -35,7 +37,8 @@
       ],
       "source_sha256": "b0298a796e8da73fbf02b5bf9cff55ee0c4b28ebb419df4a8d94d825142ebed0",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/start-zoom-fit.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/fit.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/fit.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "start-settings",
@@ -49,7 +52,8 @@
       ],
       "source_sha256": "836e6a74fc26852bd29708dbff828335106d3eceea71dd2298a889af65ad9232",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/start-settings.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "kaart-measure",
@@ -63,7 +67,8 @@
       ],
       "source_sha256": "36ae90e0759714eaf898ccc80689e8d3b77c26c865f394b4c8f582c16838747b",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/kaart-measure.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/measure.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/measure.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "kaart-export-image",
@@ -77,7 +82,8 @@
       ],
       "source_sha256": "e8aae0c704a36f5f17d6e9e89fcfddfb1cba8b1b001dd63cfc564a7f0570f386",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/kaart-export-image.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "rapport-download",
@@ -91,7 +97,8 @@
       ],
       "source_sha256": "bce3fc8709dc0769b510e3bde09ff15c755596e4716a920231c45aad4ec407f0",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/rapport-download.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "rapport-open",
@@ -105,7 +112,8 @@
       ],
       "source_sha256": "cfb197c26408d2b8953899619a75134dda3841ff39cac3280573a55067ca3eb9",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/rapport-open.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-print",
@@ -119,13 +127,14 @@
       ],
       "source_sha256": "978ed1f3692cc1f40a94d84b5f509ad602962b71051e2553a2972c9eb87ff150",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-print.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-sondering",
-      "status": "domain",
-      "meaning": "geotech.tekening-sondering",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "geotech.sondering",
+      "decision": "Bronbewezen plaatsingssymbool met beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 26,
       "usage_lines": [
@@ -133,13 +142,14 @@
       ],
       "source_sha256": "8032727ff853037285006230ca77b92ef3ce15aff76c17c9e33edf4e88af5d47",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-sondering.svg",
-      "candidate_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/geotech-sondering.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/geotech-sondering.svg"
     },
     {
       "name": "tekening-bore",
-      "status": "domain",
-      "meaning": "geotech.tekening-bore",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "geotech.boring",
+      "decision": "Bronbewezen plaatsingssymbool met beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 33,
       "usage_lines": [
@@ -147,7 +157,8 @@
       ],
       "source_sha256": "e1917c931da284e98518b9e110c9552e07b0b5c8538eb5f2da4be6c015622661",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-bore.svg",
-      "candidate_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/geotech-boring.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/geotech-boring.svg"
     },
     {
       "name": "tekening-overlay",
@@ -161,7 +172,8 @@
       ],
       "source_sha256": "314ceb5f852a09d92025ab1b87322f3daa8f6692e769af275695e8fcbbfcb8c4",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-overlay.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-frame",
@@ -175,13 +187,14 @@
       ],
       "source_sha256": "fe48bba30de137f85dbd266c74323d7aeb77c7fe42eca820c15cfa34f22cf632",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-frame.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-raster",
-      "status": "domain",
-      "meaning": "geotech.tekening-raster",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "geotech.sondering-grid",
+      "decision": "Bronbewezen plaatsingssymbool met beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 54,
       "usage_lines": [
@@ -189,7 +202,8 @@
       ],
       "source_sha256": "b3e701493a90426c3a03c0c52b61d915920fcdda05ef856ebabfef2e53653cc8",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-raster.svg",
-      "candidate_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/geotech-sondering-grid.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/geotech-sondering-grid.svg"
     },
     {
       "name": "tekening-tag",
@@ -203,7 +217,8 @@
       ],
       "source_sha256": "f26251fab24f41ed50466c5d0d5eef8de9c6629870258250f5f7059520253f93",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-tag.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-move",
@@ -217,7 +232,8 @@
       ],
       "source_sha256": "63c85e5040069140070c6dd53ad3ee36604f9662988d16e1bf76f7c12edcfbc9",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-move.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-quotes",
@@ -231,7 +247,8 @@
       ],
       "source_sha256": "ed039bdaad7dc2b147bd5b0718cbc4e808fcf16c84d6f7e8558539e7b685e5da",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-quotes.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-dwg",
@@ -245,7 +262,8 @@
       ],
       "source_sha256": "d6816453a8aa8f92bfbb066714ff69485db5fd6a72f670b403eb8522ac971775",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-dwg.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-export-pdf",
@@ -259,7 +277,8 @@
       ],
       "source_sha256": "1b9b829dfd5f77afed17057e5fc9ee0a7473b17da803b49a21560987c4b2012d",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-export-pdf.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-rotate",
@@ -273,7 +292,8 @@
       ],
       "source_sha256": "6f66f69fa73d8d3d3d60737e5742f768dd74e3071cb9f9e4ccbb9862e0183480",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-rotate.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-copy",
@@ -287,7 +307,8 @@
       ],
       "source_sha256": "ea9558145b5e612d56da88aa4af505e7369ccd3af3ae332ed606a53f7ea86215",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-copy.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-delete",
@@ -302,7 +323,8 @@
       ],
       "source_sha256": "51b3fb020f8a1cefe748eef57e9306ff7f09516e1a38830f6439e6bc02064f0e",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-delete.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-select",
@@ -316,7 +338,8 @@
       ],
       "source_sha256": "f9c3cabb9d1c2446a6b15ffc607b241752911d349293450d29831a8b8f7062bf",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-select.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-line",
@@ -330,7 +353,8 @@
       ],
       "source_sha256": "e17692b189465dac6bc0976a33c5f61851a95f281ef3ecf5bd54751ebb4c9970",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-line.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-vlak",
@@ -344,7 +368,8 @@
       ],
       "source_sha256": "311d0edfe60bfff5a1a7d25a625bd4095c807f04ec2d5df4d62feaaaa2e7a1c1",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-vlak.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-note",
@@ -358,7 +383,8 @@
       ],
       "source_sha256": "4940ed279fa295972743ffa98ec6ad562db3e46936f013ad3672f560b887e536",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-note.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-dimension",
@@ -372,7 +398,8 @@
       ],
       "source_sha256": "d279352502708bb4159330065cdf3400c7ac2a585fc3d14e6da406840b4267c7",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-dimension.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-trim",
@@ -386,7 +413,8 @@
       ],
       "source_sha256": "e0e3dc0fcf2acd5365ed384c15d9a1e118cacbeb6323aeab7e1662456dcb610b",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-trim.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-extend",
@@ -400,7 +428,8 @@
       ],
       "source_sha256": "e5b4491617b8066aa3ac67ab03371c8745640986cffef30c2b049ba9aa241e19",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-extend.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-mirror",
@@ -414,7 +443,8 @@
       ],
       "source_sha256": "104a972fbfa714d76a3286c8a32efd6f0d55cd2415eb22fa07f7b298c0c36b90",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-mirror.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "tekening-offset",
@@ -428,7 +458,8 @@
       ],
       "source_sha256": "e2262a4438e739493ef2b71aa5c73fe482c624011f7695ed130b8d28bd8a2573",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-offset.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-new",
@@ -442,7 +473,8 @@
       ],
       "source_sha256": "26132fc1a9127230323576b584065c672ae4902529df7b43ecb86e3d807e289a",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-new.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/new.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/new.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-open",
@@ -456,7 +488,8 @@
       ],
       "source_sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-open.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/open.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/open.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-save",
@@ -470,7 +503,8 @@
       ],
       "source_sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-save.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/save.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/save.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-save-as",
@@ -484,7 +518,8 @@
       ],
       "source_sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-save-as.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/saveas.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/saveas.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-print",
@@ -498,7 +533,8 @@
       ],
       "source_sha256": "a5f514494431699850543f1683baf68025796d0a8b0a03ddbbade10e39d49403",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-print.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-export",
@@ -512,7 +548,8 @@
       ],
       "source_sha256": "7d8226d17aebac2dafd8392119382a2575d188594a218f5f19502bac55934473",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-export.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/export.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/export.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-import",
@@ -526,7 +563,8 @@
       ],
       "source_sha256": "4e2452104feb5530b553ab202d52923151264d5180de7eeee2a6cfefdd26b2e7",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-import.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/import.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/import.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-preferences",
@@ -540,7 +578,8 @@
       ],
       "source_sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-preferences.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-about",
@@ -554,7 +593,8 @@
       ],
       "source_sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-about.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-exit",
@@ -568,7 +608,8 @@
       ],
       "source_sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-exit.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "backstage-extensions",
@@ -582,7 +623,8 @@
       ],
       "source_sha256": "98ba3aeb3283bed72b40be74c39dd07a296dfd6c7a0a8ede3d4cf98fbd96bc7f",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/backstage-extensions.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/extensions.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/extensions.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "title-save",
@@ -596,7 +638,8 @@
       ],
       "source_sha256": "6c0ee3c31a8359f6c21fb59df32088eec4f5ed4688ac2cf8a4d9a42e4669d6e7",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/title-save.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/save.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/save.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "title-undo",
@@ -610,7 +653,8 @@
       ],
       "source_sha256": "2a1214939e46b0414340a189145e520fbc6602ecb36722c3b8ed34ca952ecc1c",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/title-undo.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/undo.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/undo.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "title-redo",
@@ -624,7 +668,8 @@
       ],
       "source_sha256": "d12f1efaea4f39760e709196156eda464fe51eea43a71a5a20fd9d1f982d38e1",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/title-redo.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/redo.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/redo.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "title-print",
@@ -638,7 +683,8 @@
       ],
       "source_sha256": "a4a9f69e32afddda299be5dd983535d9214374be5203a787ac5eb8dd8b44eb1d",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/title-print.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/print.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "title-settings",
@@ -652,7 +698,8 @@
       ],
       "source_sha256": "21380d2207ef6cf04a170d3d61eec1094a4c0c670f1c6d4066315a31600b321d",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/title-settings.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "window-minimize",
@@ -666,7 +713,8 @@
       ],
       "source_sha256": "a32941b6e6d369d06f8ca02fef2bf3236dc3caf1553b3b70180ea95d7224dbfa",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/window-minimize.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/minimize.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/minimize.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "window-restore",
@@ -680,7 +728,8 @@
       ],
       "source_sha256": "3ea783ee7ba4fb84dc1311109a8f42657f9aafcbf1a407c6160435da53d5272b",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/window-restore.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/restore.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/restore.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "window-maximize",
@@ -694,7 +743,8 @@
       ],
       "source_sha256": "5e19f4480efb966760960c84eb8b8038528a246197312a38648d0505ce651c55",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/window-maximize.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/maximize.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/maximize.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "window-close",
@@ -708,7 +758,8 @@
       ],
       "source_sha256": "073a442b0a679a07ae912192fc85dae4ae6eee97f5ef63200bf669dc5e92df94",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/window-close.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/close.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/close.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "document-close",
@@ -722,7 +773,8 @@
       ],
       "source_sha256": "2187877b387e6572b92948b908eb94daca949984d4222939838f3d0e1b8cd8b7",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/document-close.svg",
-      "candidate_svg": "../crates/openaec-ui/assets/icons/close.svg"
+      "candidate_svg": "../crates/openaec-ui/assets/icons/close.svg",
+      "candidate_small_svg": null
     },
     {
       "name": "document-add",
@@ -736,7 +788,8 @@
       ],
       "source_sha256": "136b1d4bbf09d6cf489ea20c867baa5eae0110ccd3664bce0c3f12356c01def6",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/document-add.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "document-file",
@@ -750,7 +803,8 @@
       ],
       "source_sha256": "b9f99a241922a45a54da3458452d28ee72d137af8c26695daf66d8c3763804c6",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/document-file.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     },
     {
       "name": "document-folder",
@@ -764,7 +818,8 @@
       ],
       "source_sha256": "23fd3b111cd1d433711e89d31e7893db5668cd9aba7fb764ce7786d20e809ef6",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/document-folder.svg",
-      "candidate_svg": null
+      "candidate_svg": null,
+      "candidate_small_svg": null
     }
   ]
 }
