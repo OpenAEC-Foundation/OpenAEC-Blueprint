@@ -1,0 +1,785 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Every literal SVG in the source-reachable desktop DrawingTab.jsx; imported ribbonIcons.js vectors are a separate category. One defined placeholder has no button use.",
+  "svg_sites": 38,
+  "ui_icon_definitions": 37,
+  "ui_button_uses": 38,
+  "excluded_unused_definitions": 1,
+  "identical_source_shapes": [
+    {
+      "sha256": "21eca10365e484b3e5a4ebf70c63a4d0ab80f5e333b644a7dcb698f661ea63b6",
+      "definitions": [
+        "trimIcon",
+        "cutIcon"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 44,
+      "ordinal": 1,
+      "definition": "placeholderIcon",
+      "kind": "unused-placeholder",
+      "state": "not-rendered",
+      "uses": []
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 45,
+      "ordinal": 2,
+      "definition": "arcIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 226,
+          "button_id": "dr-arc",
+          "label": "Arc",
+          "translation_key": null
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-02.svg",
+      "sha256": "823fb5903e0f87c83f955403cfaa87d4bb3c8486433d1c0d066341fff7b7d687",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 46,
+      "ordinal": 3,
+      "definition": "splineIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 237,
+          "button_id": "dr-spline",
+          "label": "Spline (dubbelklik om te voltooien)",
+          "translation_key": "comment.splineTitle"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-03.svg",
+      "sha256": "a5233e1b2a5e67f0976cf48d04f3011390caba714d5a5aa8569a61d278289327",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 47,
+      "ordinal": 4,
+      "definition": "splineArrowIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 218,
+          "button_id": "dr-spline-arrow",
+          "label": "Gebogen pijl (dubbelklik om te voltooien)",
+          "translation_key": "comment.splineArrowTitle"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-04.svg",
+      "sha256": "7fd3e7b9cff689b81333b58043f9c693cfd1245d4125c9078738dc91942911bf",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 48,
+      "ordinal": 5,
+      "definition": "hatchIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 230,
+          "button_id": "dr-hatch",
+          "label": "Gevuld vlak",
+          "translation_key": "comment.filledArea"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-05.svg",
+      "sha256": "43362ff75801c7ea10a476d01758b431abe7b8733935a9b8a4bea52645c69fb7",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 49,
+      "ordinal": 6,
+      "definition": "imageIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 247,
+          "button_id": "dr-image",
+          "label": "Afbeelding",
+          "translation_key": "drawing.image"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-06.svg",
+      "sha256": "d9cf59f3ef06621e6ff4e3bd3566c39a073744f89eb3c9addaf4122c76b0acde",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 50,
+      "ordinal": 7,
+      "definition": "removeImageIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 249,
+          "button_id": "dr-remove-image",
+          "label": "Afbeelding bewerken",
+          "translation_key": "drawing.removeImage"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-07.svg",
+      "sha256": "45dcdd69e6f7171a4150b34e24ab64ce99ebbe06e2cd458915338be74349d8e7",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 51,
+      "ordinal": 8,
+      "definition": "moveIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 381,
+          "button_id": "dr-move",
+          "label": "Verplaatsen",
+          "translation_key": "drawing.move"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-08.svg",
+      "sha256": "8f4057edb0ccae1d2d02d6291781450d5bcf2557889d463f44e239f90e586d21",
+      "review": "compare-with-DomainIcon::TransformMove"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 52,
+      "ordinal": 9,
+      "definition": "spotCoordIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 348,
+          "button_id": "dr-spot-coord",
+          "label": "Coördinaat",
+          "translation_key": "drawing.spotCoord"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-09.svg",
+      "sha256": "9cee6557e485d8af51620f16009713418e68bdb1d4a5760449442b953ac4a9e6",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 53,
+      "ordinal": 10,
+      "definition": "filletIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 419,
+          "button_id": "dr-fillet",
+          "label": "Afronden",
+          "translation_key": "drawing.fillet"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-10.svg",
+      "sha256": "57f9d23bd149caed16b83f4695808af22487d936cb49f7400b2a4d00a07f673e",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 54,
+      "ordinal": 11,
+      "definition": "chamferIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 421,
+          "button_id": "dr-chamfer",
+          "label": "Afkanten",
+          "translation_key": "drawing.chamfer"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-11.svg",
+      "sha256": "7684de8e2c818de400798730c7e3c6ef23c9dd8b3cf1ae6b95bbcd877cf235ff",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 55,
+      "ordinal": 12,
+      "definition": "copyAnnIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 383,
+          "button_id": "dr-copy",
+          "label": "Kopiëren",
+          "translation_key": "drawing.copy"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 461,
+          "button_id": "dr-clip-copy",
+          "label": "Kopiëren",
+          "translation_key": "drawing.copy"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-12.svg",
+      "sha256": "67d25f3b76f804532043d85023651848e326bd193fa96c0abdb2e561978a3c53",
+      "review": "split-duplicate-and-clipboard-copy"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 56,
+      "ordinal": 13,
+      "definition": "arrayIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 393,
+          "button_id": "dr-array",
+          "label": "Reeks",
+          "translation_key": "drawing.array"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-13.svg",
+      "sha256": "467cfd05428d0faea08020f075c224a87f6c4ef2a0a9bed961a80313c8537537",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 57,
+      "ordinal": 14,
+      "definition": "trimIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 411,
+          "button_id": "dr-trim",
+          "label": "Inkorten",
+          "translation_key": "drawing.trim"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-14.svg",
+      "sha256": "21eca10365e484b3e5a4ebf70c63a4d0ab80f5e333b644a7dcb698f661ea63b6",
+      "review": "compare-with-DomainIcon::DrawingTrim"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 58,
+      "ordinal": 15,
+      "definition": "extendIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 413,
+          "button_id": "dr-extend",
+          "label": "Verlengen",
+          "translation_key": "drawing.extend"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-15.svg",
+      "sha256": "f31a52c56cc0405116a6d574785699b4a9d449e9777882767550491239669a5b",
+      "review": "compare-with-DomainIcon::DrawingExtend"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 59,
+      "ordinal": 16,
+      "definition": "pasteIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 452,
+          "button_id": "dr-paste",
+          "label": "Plakken",
+          "translation_key": "drawing.paste"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-16.svg",
+      "sha256": "837f307df0a3943c2ae61ab2d5761d65423eb663cf82400611ebfbde3ea72bc1",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 61,
+      "ordinal": 17,
+      "definition": "pasteInPlaceIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 454,
+          "button_id": "dr-paste-in-place",
+          "label": "Plakken op plaats",
+          "translation_key": "drawing.pasteInPlace"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-17.svg",
+      "sha256": "0ab210ad0e4dd631e387499dece157052c28f6c50297fb710c3db5cab941b323",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 62,
+      "ordinal": 18,
+      "definition": "cutIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 459,
+          "button_id": "dr-cut",
+          "label": "Knippen",
+          "translation_key": "drawing.cut"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-18.svg",
+      "sha256": "21eca10365e484b3e5a4ebf70c63a4d0ab80f5e333b644a7dcb698f661ea63b6",
+      "review": "compare-with-DomainIcon::DrawingTrim"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 63,
+      "ordinal": 19,
+      "definition": "deleteIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 463,
+          "button_id": "dr-delete",
+          "label": "Verwijderen",
+          "translation_key": "drawing.delete"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-19.svg",
+      "sha256": "b304280fb3ad02ac03856f78e43d5ac64e2c32e4c9504478b138abfaccda8e87",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 64,
+      "ordinal": 20,
+      "definition": "tableIcon",
+      "kind": "ui-icon",
+      "state": "always-disabled",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 363,
+          "button_id": "dr-table",
+          "label": "Tabel",
+          "translation_key": "drawing.table"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-20.svg",
+      "sha256": "a74f742063bcec47af31c9cbf75331fce0374bd748d6e06a38ca41c4786bf39f",
+      "review": "keep-disabled-until-command-exists"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 65,
+      "ordinal": 21,
+      "definition": "knipselIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 273,
+          "button_id": "btn-vector-snippet",
+          "label": "Vectorknipsel",
+          "translation_key": "drawing.vectorSnippet"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-21.svg",
+      "sha256": "66fa56840e16a4eb4820aa466a2f60113bf9b4ae2cd08a120fa7f7b3c732dbf6",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 66,
+      "ordinal": 22,
+      "definition": "knipselPlakIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 280,
+          "button_id": "btn-vector-snippet-paste",
+          "label": "Plak knipsel",
+          "translation_key": "drawing.vectorSnippetPaste"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-22.svg",
+      "sha256": "5ffb629374b0136826e97cde9a2aed137153b1b19736eb3ea79ead7e3ac69a18",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 67,
+      "ordinal": 23,
+      "definition": "scaleRegionIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 304,
+          "button_id": "btn-create-scale-region",
+          "label": "Schaalgebied",
+          "translation_key": "comment.scaleRegion"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-23.svg",
+      "sha256": "0c8c2122d153c0ced8d5a3bdae11517f59b425133b3dd5115dc8cf089b675e13",
+      "review": "design-PDF-drawing-command",
+      "native_preview_limitation": "Iced software SVG render omits source <text> glyph",
+      "vector_fallback": "proposals/pdf-drawing-native/scale-region.svg",
+      "vector_fallback_small": "proposals/pdf-drawing-native/scale-region-small.svg"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 68,
+      "ordinal": 24,
+      "definition": "labelIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 360,
+          "button_id": "dr-label",
+          "label": "Label",
+          "translation_key": "drawing.label"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-24.svg",
+      "sha256": "dca06d1375d56ac8517b9c26cecc26f99dac4f8320b51fe018c036bb004eea11",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 70,
+      "ordinal": 25,
+      "definition": "lShapeIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 245,
+          "button_id": "dr-l-shape",
+          "label": "L-vorm",
+          "translation_key": "drawing.lShape"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-25.svg",
+      "sha256": "e329192f925123ca00af3e7fad9b48bbbccc3c8da6ae4b579ac714ec8377ab77",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 72,
+      "ordinal": 26,
+      "definition": "radiusIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 351,
+          "button_id": "dr-radius",
+          "label": "Straal",
+          "translation_key": "drawing.radius"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-26.svg",
+      "sha256": "110a342aaad7eb6fe650f23f54242aaff108242828daae7423f2abedb2e31cfe",
+      "review": "design-PDF-drawing-command",
+      "native_preview_limitation": "Iced software SVG render omits source <text> glyph",
+      "vector_fallback": "proposals/pdf-drawing-native/radius.svg",
+      "vector_fallback_small": "proposals/pdf-drawing-native/radius-small.svg"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 74,
+      "ordinal": 27,
+      "definition": "diameterIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 354,
+          "button_id": "dr-diameter",
+          "label": "Diameter",
+          "translation_key": "drawing.diameter"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-27.svg",
+      "sha256": "34f6c1639ae364afa576429b7cd0b17090a2f8758406458fbaa34a12ead620c1",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 76,
+      "ordinal": 28,
+      "definition": "explodeIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 436,
+          "button_id": "dr-explode",
+          "label": "Ontleden",
+          "translation_key": "drawing.explode"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-28.svg",
+      "sha256": "1758cbb40fad6608f30802c8d1c32acb505360b4b8ae8bf020ff5cbdba3641f3",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 78,
+      "ordinal": 29,
+      "definition": "joinIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 442,
+          "button_id": "dr-join",
+          "label": "Samenvoegen",
+          "translation_key": "drawing.join"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-29.svg",
+      "sha256": "979940d1439ebdad9216cf0cb7739f70edbec8d9e007d3ebb7a826edc655b783",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 80,
+      "ordinal": 30,
+      "definition": "splitIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 432,
+          "button_id": "dr-split",
+          "label": "Splitsen",
+          "translation_key": "drawing.split"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-30.svg",
+      "sha256": "9dbe33ec73e6f9fc52c057d0f00b1e73c8bc8840ad2765cfea614d3a5cab9478",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 82,
+      "ordinal": 31,
+      "definition": "breakIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 440,
+          "button_id": "dr-break",
+          "label": "Breken",
+          "translation_key": "drawing.break"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-31.svg",
+      "sha256": "2a136cc24f614602e3565e4c7ac8fe04d50505b524a05ee1cec7826c9eecc744",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 84,
+      "ordinal": 32,
+      "definition": "lengthenIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 444,
+          "button_id": "dr-lengthen",
+          "label": "Verlengen",
+          "translation_key": "drawing.lengthen"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-32.svg",
+      "sha256": "d09817de99d8b259efb58be107cc1595e198e96049b86fbeea3691360024ad96",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 86,
+      "ordinal": 33,
+      "definition": "offsetIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 415,
+          "button_id": "dr-offset",
+          "label": "Verschuiven",
+          "translation_key": "drawing.offset"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-33.svg",
+      "sha256": "3fd2bbe150873fd9d9dc7b975c8af92cca395c9aa40286e245e90f61ac7efc95",
+      "review": "compare-with-DomainIcon::DrawingOffset"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 88,
+      "ordinal": 34,
+      "definition": "stretchIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 423,
+          "button_id": "dr-stretch",
+          "label": "Uitrekken",
+          "translation_key": "drawing.stretch"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-34.svg",
+      "sha256": "927d32c2a5af79cc419985b9bdeaa81613f366b288970c1208b8b9d9ddf0cc38",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 90,
+      "ordinal": 35,
+      "definition": "enlargeIcon",
+      "kind": "ui-icon",
+      "state": "selection-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 428,
+          "button_id": "dr-enlarge",
+          "label": "Vergroten",
+          "translation_key": "drawing.enlarge"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-35.svg",
+      "sha256": "8c37f920b39041613bb1d6bf51f4d5afd6e87acd8cc9123f8bba82e8b1f73476",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 92,
+      "ordinal": 36,
+      "definition": "collectionCreateIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 471,
+          "button_id": "dr-coll-create",
+          "label": "Aanmaken",
+          "translation_key": "drawing.collectionCreate"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-36.svg",
+      "sha256": "8da19f8169db1a7f87d0e29d03577cef5eeb2db0e395b394c434dae0780570d8",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 94,
+      "ordinal": 37,
+      "definition": "collectionExplodeIcon",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 473,
+          "button_id": "dr-coll-explode",
+          "label": "Ontleden",
+          "translation_key": "drawing.collectionExplode"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-37.svg",
+      "sha256": "c9db164ef07746adb06c8eec9a58f00500f8a98c04c5d3786cf79d4c9d782087",
+      "review": "design-PDF-drawing-command"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+      "line": 313,
+      "ordinal": 38,
+      "definition": "scaleRegionFullPageInline",
+      "kind": "ui-icon",
+      "state": "document-readonly-conditional",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 310,
+          "button_id": "btn-create-scale-region-full-page",
+          "label": "Schaalgebied op pagina",
+          "translation_key": "comment.scaleRegionFullPage"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/drawing/drawing-38.svg",
+      "sha256": "f0bfe491d2d2047c3e72ac601739a53bfc05fdd093f4312410fdaa235c238916",
+      "review": "design-PDF-drawing-command",
+      "native_preview_limitation": "Iced software SVG render omits source <text> glyph",
+      "vector_fallback": "proposals/pdf-drawing-native/scale-region-full-page.svg",
+      "vector_fallback_small": "proposals/pdf-drawing-native/scale-region-full-page-small.svg"
+    }
+  ]
+}

@@ -412,6 +412,107 @@ fn export_pdf_chrome_icon_contact_sheets() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF Drawing icon contact sheets on demand"]
+fn export_pdf_drawing_icon_contact_sheets() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/pdf-drawing-ui-icons.json")).expect("PDF Drawing manifest"),
+    ).expect("valid PDF Drawing manifest");
+    let records = manifest["records"].as_array().expect("PDF Drawing records");
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut cells: Vec<iced::Element<'_, Message<Action>>> = Vec::new();
+        for item in records.iter().filter(|item| item["kind"] == "ui-icon") {
+            let label = item["uses"][0]["label"].as_str().expect("PDF Drawing label");
+            let path = item["svg"].as_str().expect("PDF Drawing icon path");
+            let bytes = std::fs::read(root.join("harmonization").join(path)).expect("PDF Drawing SVG");
+            let glyph = svg(svg::Handle::from_memory(bytes))
+                .width(24)
+                .height(24)
+                .style(move |_, _| svg::Style { color: Some(foreground) });
+            cells.push(
+                container(column![text(label).size(11).color(foreground), glyph].spacing(9))
+                    .width(170)
+                    .height(84)
+                    .padding(8)
+                    .style(move |_| container::Style::default().background(background))
+                    .into(),
+            );
+        }
+        assert_eq!(cells.len(), 37);
+        let mut cells = cells.into_iter();
+        let mut rows = column![].spacing(5).padding(10);
+        for _ in 0..7 {
+            let mut line = row![].spacing(5);
+            for _ in 0..6 {
+                if let Some(cell) = cells.next() {
+                    line = line.push(cell);
+                }
+            }
+            rows = rows.push(line);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(1100.0, 660.0))
+            .save_png(&root.join(format!("design/pdf-drawing-icons-{suffix}.png")))
+            .expect("save PDF Drawing icon sheet");
+    }
+}
+
+#[test]
+#[ignore = "regenerate native PDF SVG-text fallback comparison on demand"]
+fn export_pdf_drawing_text_fallback_review() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/pdf-drawing-ui-icons.json")).expect("PDF Drawing manifest"),
+    ).expect("valid PDF Drawing manifest");
+    let records = manifest["records"].as_array().expect("PDF Drawing records");
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut rows = column![].spacing(12).padding(12);
+        for item in records.iter().filter(|item| item.get("vector_fallback").is_some()) {
+            let name = item["uses"][0]["label"].as_str().expect("PDF fallback label");
+            let source = item["svg"].as_str().expect("PDF source SVG");
+            let candidate = item["vector_fallback"].as_str().expect("PDF fallback SVG");
+            let candidate_small = item["vector_fallback_small"].as_str().expect("PDF small fallback SVG");
+            let mut icons = row![text(name).size(12).color(foreground).width(170)].spacing(14);
+            for (path, size) in [(source, 24), (candidate_small, 16), (candidate, 24), (candidate, 32)] {
+                let bytes = std::fs::read(root.join("harmonization").join(path)).expect("PDF SVG bytes");
+                let glyph = svg(svg::Handle::from_memory(bytes))
+                    .width(size)
+                    .height(size)
+                    .style(move |_, _| svg::Style { color: Some(foreground) });
+                icons = icons.push(
+                    container(glyph).width(100).height(64)
+                        .center_x(iced::Fill).center_y(iced::Fill)
+                        .style(move |_| container::Style::default().background(background)),
+                );
+            }
+            rows = rows.push(icons);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill).height(iced::Fill)
+            .style(move |_| container::Style::default().background(background)).into();
+        render_element(page, theme, Size::new(680.0, 250.0))
+            .save_png(&root.join(format!("design/pdf-drawing-text-fallback-{suffix}.png")))
+            .expect("save PDF SVG-text fallback comparison");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));
