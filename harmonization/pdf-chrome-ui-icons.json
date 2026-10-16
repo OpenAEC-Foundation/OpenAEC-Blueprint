@@ -1,0 +1,1047 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All literal SVG sites in TitleBar, StatusBar, AppMenu, DocumentTabs and Ribbon on the pinned desktop Solid route; each is a UI icon, with disabled, Tauri-only and conditional states kept explicit.",
+  "ui_icon_sites": 41,
+  "rendered_variants": 42,
+  "records": [
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 82,
+      "ordinal": 1,
+      "label": "Openen",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 82
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-01.svg",
+          "sha256": "8bbcd42aaf28f1b268503cb016e8b6522fecca44c02d01d47eb2d5067d1b9026"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Open",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 89,
+      "ordinal": 2,
+      "label": "Opslaan",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 89
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-02.svg",
+          "sha256": "2e6301ee18722b1bdff2a83b407caf6667d3c5c82021ddd2e4787416943c91a3"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Save",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 98,
+      "ordinal": 3,
+      "label": "Opslaan als",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 98
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-03.svg",
+          "sha256": "65515a6b61d6bbe13d70a590b8c1261f9f18418c8a9ad297be8288e6eb11fa44"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::SaveAs",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 108,
+      "ordinal": 4,
+      "label": "Afdrukken",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 108
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-04.svg",
+          "sha256": "2d62d6913681c1c56d871f08146231ecddf7809aa3e198ce8db7ebe77bf40acc"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Print",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 116,
+      "ordinal": 5,
+      "label": "Raster-PDF exporteren",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 116
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-05.svg",
+          "sha256": "87a54327ae652ef72dfc1f9922311b55bd62f6283457a67d5a51dd42a3d8b6f2"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.raster-export",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 126,
+      "ordinal": 6,
+      "label": "Voorkeuren",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 126
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-06.svg",
+          "sha256": "e77f1bfd5570a8be58f2f4d689971efb8804483867cb5d7e44c10ebb2f916be1"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Settings",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 135,
+      "ordinal": 7,
+      "label": "Ongedaan",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 135
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-07.svg",
+          "sha256": "fcdf6e92ea99b2093814c9b0ec371d10514a9d8356601eee14d6f3d4bf53a04d"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Undo",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 143,
+      "ordinal": 8,
+      "label": "Opnieuw",
+      "group": "titelbalk",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 143
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-08.svg",
+          "sha256": "3f48831d3ee26a2bc00e78085745d7366a5a0173b1f4d4dccca403f6c38b3021"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Redo",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 152,
+      "ordinal": 9,
+      "label": "Vorige weergave",
+      "group": "titelbalk",
+      "state": "zichtbaar-maar-uitgeschakeld",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 152
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-09.svg",
+          "sha256": "26c323e76ee9e40bc1921aea29cbb27bb95117f2cbfdac2be4670e42aaf94bc1"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.previous-view",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 158,
+      "ordinal": 10,
+      "label": "Volgende weergave",
+      "group": "titelbalk",
+      "state": "zichtbaar-maar-uitgeschakeld",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 158
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-10.svg",
+          "sha256": "fd75845a84c19982a419673952d73e8798d32b6a0d41add36fdd1db45ffb95d0"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.next-view",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 184,
+      "ordinal": 11,
+      "label": "Minimaliseren",
+      "group": "titelbalk",
+      "state": "tauri-venstercontrole",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 184
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-11.svg",
+          "sha256": "2a735ce601a73c865cee8117d69e882fc7d444113f39a83c221b9fa59b19b1e3"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Minimize",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 189,
+      "ordinal": 12,
+      "label": "Herstellen",
+      "group": "titelbalk",
+      "state": "tauri-venstercontrole",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 189
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-12.svg",
+          "sha256": "a27b927fe44816c052583b6a53411252278c44067c06dc2d4994bbe6638f7b50"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Restore",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 193,
+      "ordinal": 13,
+      "label": "Maximaliseren",
+      "group": "titelbalk",
+      "state": "tauri-venstercontrole",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 193
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-13.svg",
+          "sha256": "03cbe9ba1c420b7bbfd0fde1c68d37dc8bbe6b2ac882733d2fb39308c2a07cdb"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Maximize",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+      "line": 198,
+      "ordinal": 14,
+      "label": "Sluiten",
+      "group": "titelbalk",
+      "state": "tauri-venstercontrole",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+          "line": 198
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/titlebar-14.svg",
+          "sha256": "a8318d90c9a1c41bc91efdde2037adebb146524599f124cdc182ce9422f97a4b"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Close",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 192,
+      "ordinal": 1,
+      "label": "Eerste pagina",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 192
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-01.svg",
+          "sha256": "8597df480f0a0b5a391439094d568a3225e7ebc18676b4e72d2b71831aef6f64"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.page.first",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 198,
+      "ordinal": 2,
+      "label": "Vorige pagina",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 198
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-02.svg",
+          "sha256": "d07cc1c4975efcda7c80cf043c4d6dc279f1b18ad3c0a9c4bbea1e8258bf5f18"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.page.previous",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 211,
+      "ordinal": 3,
+      "label": "Volgende pagina",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 211
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-03.svg",
+          "sha256": "56d0db5eeddde143413122fd1824c78e42fd3a423627fbfa56b31e29da803764"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.page.next",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 217,
+      "ordinal": 4,
+      "label": "Laatste pagina",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 217
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-04.svg",
+          "sha256": "79d697441d9b57b259b14e819440db43b39aa8ab1d55f327260226eeb5bf0629"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.page.last",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 228,
+      "ordinal": 5,
+      "label": "Enkele pagina",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 228
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-05.svg",
+          "sha256": "6007c73a80d2067dd0b09fa0f901afc040a57e12ddc00b38cd08f555b58e34a6"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.view.single",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 234,
+      "ordinal": 6,
+      "label": "Doorlopend",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 234
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-06.svg",
+          "sha256": "573382409e4e11ae33cb114d86036d400bec1a29da48b1e3ea0c792dc5fa52a7"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.view.continuous",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 241,
+      "ordinal": 7,
+      "label": "Boekweergave",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 241
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-07.svg",
+          "sha256": "8ecf8189f2fab3818610f9641dcb077a42a9beee3a91b54fee8453134a1b2b34"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.view.book",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 252,
+      "ordinal": 8,
+      "label": "Tegenover elkaar",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 252
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-08.svg",
+          "sha256": "412ad930f35b52d8595c45d6edab472df6e5aecc99fb0f650a956ccb3a9f381f"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.view.facing",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 261,
+      "ordinal": 9,
+      "label": "Uitzoomen",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 261
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-09.svg",
+          "sha256": "01be349334cec942d4b1c063661745a8058eaa944a1c83a20f7d904cae67c2f1"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::ZoomOut",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 269,
+      "ordinal": 10,
+      "label": "Inzoomen",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 269
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-10.svg",
+          "sha256": "acf9c0b53520be8cd6a4378ed2fba2e4fef462054048fd2e993d662e37b3cec7"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::ZoomIn",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+      "line": 279,
+      "ordinal": 11,
+      "label": "Draaiing herstellen",
+      "group": "status",
+      "state": "actieve-ui-aanroep",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+          "line": 279
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/statusbar-11.svg",
+          "sha256": "1f5099d10bc50185cc1f3eabd03df150531b3330358a6fad3bb30ecbaaa3b33a"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.view.reset-rotation",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+      "line": 507,
+      "ordinal": 1,
+      "label": "Vergelijken-tab",
+      "group": "document",
+      "state": "alleen-vergelijken",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+          "line": 507
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/documenttabs-01.svg",
+          "sha256": "cb6913040c5cb607327bb8443a5863378d1f62e49f248c7b4b05a01bf5bcb11d"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.compare-tab",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
+      "line": 145,
+      "ordinal": 1,
+      "label": "Ribbon inklappen / uitklappen",
+      "group": "ribbon",
+      "state": "twee-dynamische-standen",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
+          "line": 145
+        }
+      ],
+      "variants": [
+        {
+          "state": "expand",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/ribbon-ribbon-01-expand.svg",
+          "sha256": "cf343a32127e3052f3401c1544547ac4c49ace99f17abbe67d118b7944fb7312"
+        },
+        {
+          "state": "collapse",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/ribbon-ribbon-01-collapse.svg",
+          "sha256": "a591f3a82974a44cdd9ea2e4c9897214c67c5fbfb9f64abaeee4e78ce7e32fc5"
+        }
+      ],
+      "review": {
+        "semantic_target": "chrome.ribbon-toggle",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 43,
+      "ordinal": 1,
+      "label": "Nieuw",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 117
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-01.svg",
+          "sha256": "26132fc1a9127230323576b584065c672ae4902529df7b43ecb86e3d807e289a"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::New",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 44,
+      "ordinal": 2,
+      "label": "Openen",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 118
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-02.svg",
+          "sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Open",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 45,
+      "ordinal": 3,
+      "label": "Opslaan",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 119
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 120
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-03.svg",
+          "sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Save",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 46,
+      "ordinal": 4,
+      "label": "Opslaan als",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 120
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-04.svg",
+          "sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::SaveAs",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 47,
+      "ordinal": 5,
+      "label": "Afdrukken",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 121
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-05.svg",
+          "sha256": "a5f514494431699850543f1683baf68025796d0a8b0a03ddbbade10e39d49403"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Print",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 48,
+      "ordinal": 6,
+      "label": "Importeren",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 125
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-06.svg",
+          "sha256": "4e2452104feb5530b553ab202d52923151264d5180de7eeee2a6cfefdd26b2e7"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Import",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 49,
+      "ordinal": 7,
+      "label": "Exporteren",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 126
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-07.svg",
+          "sha256": "7d8226d17aebac2dafd8392119382a2575d188594a218f5f19502bac55934473"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Export",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 50,
+      "ordinal": 8,
+      "label": "Documenteigenschappen",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 130
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-08.svg",
+          "sha256": "303113f0a48e95c5a9facc610e312256755e24ae018585c540cd36600315f6b4"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.document-properties",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 51,
+      "ordinal": 9,
+      "label": "Voorkeuren",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 132
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-09.svg",
+          "sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Settings",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 52,
+      "ordinal": 10,
+      "label": "Over / Wat is nieuw",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 134
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 135
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-10.svg",
+          "sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.about + pdf.whats-new",
+        "decision": "split-two-commands"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 53,
+      "ordinal": 11,
+      "label": "Afsluiten",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 137
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-11.svg",
+          "sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f"
+        }
+      ],
+      "review": {
+        "semantic_target": "app.exit",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 54,
+      "ordinal": 12,
+      "label": "Extensies",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 128
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-12.svg",
+          "sha256": "54a2d40d29e18db8aa70480e6747c8216f83c5bd9710c28551ae1c029c5ff1a7"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Extensions",
+        "decision": "shared-meaning-candidate"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 55,
+      "ordinal": 13,
+      "label": "Screenshot annoteren",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 123
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-13.svg",
+          "sha256": "53f243e2c4edbb635a2b1b3c994c38ef4bbc16c53175fc151085777fe6a0bf47"
+        }
+      ],
+      "review": {
+        "semantic_target": "pdf.annotate-screenshot",
+        "decision": "requires-domain-design"
+      }
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+      "line": 111,
+      "ordinal": 14,
+      "label": "Bestand: terug",
+      "group": "bestand",
+      "state": "bestand-menu-open",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
+          "line": 111
+        }
+      ],
+      "variants": [
+        {
+          "state": "default",
+          "svg": "inline-ui-icons/open-pdf-studio/chrome/app-menu-appmenu-14.svg",
+          "sha256": "1e14e45cbf1ab1f272216ce6c666046aa1d36c0a37e3ce536949651e942ce722"
+        }
+      ],
+      "review": {
+        "semantic_target": "Icon::Back",
+        "decision": "shared-meaning-candidate"
+      }
+    }
+  ]
+}

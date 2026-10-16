@@ -356,6 +356,62 @@ fn export_pointcloud_annotation_icon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF chrome icon contact sheets on demand"]
+fn export_pdf_chrome_icon_contact_sheets() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/pdf-chrome-ui-icons.json")).expect("PDF chrome manifest"),
+    ).expect("valid PDF chrome manifest");
+    let records = manifest["records"].as_array().expect("PDF chrome records");
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut cells: Vec<iced::Element<'_, Message<Action>>> = Vec::new();
+        for item in records {
+            let label = item["label"].as_str().expect("PDF icon label");
+            for variant in item["variants"].as_array().expect("PDF icon variants") {
+                let path = variant["svg"].as_str().expect("PDF icon path");
+                let bytes = std::fs::read(root.join("harmonization").join(path)).expect("PDF icon SVG");
+                let glyph = svg(svg::Handle::from_memory(bytes))
+                    .width(24)
+                    .height(24)
+                    .style(move |_, _| svg::Style { color: Some(foreground) });
+                cells.push(
+                    container(column![text(label).size(11).color(foreground), glyph].spacing(9))
+                        .width(150)
+                        .height(88)
+                        .padding(8)
+                        .style(move |_| container::Style::default().background(background))
+                        .into(),
+                );
+            }
+        }
+        assert_eq!(cells.len(), 42);
+        let mut rows = column![].spacing(5).padding(10);
+        let mut cells = cells.into_iter();
+        for _ in 0..6 {
+            let mut line = row![].spacing(5);
+            for _ in 0..7 {
+                line = line.push(cells.next().expect("complete PDF icon row"));
+            }
+            rows = rows.push(line);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(1100.0, 580.0))
+            .save_png(&root.join(format!("design/pdf-chrome-icons-{suffix}.png")))
+            .expect("save PDF chrome icon sheet");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));
