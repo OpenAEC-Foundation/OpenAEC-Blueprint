@@ -30,6 +30,8 @@ pub struct BackstageFooter<M> {
     pub exit: (String, M),
 }
 
+pub const BACKSTAGE_TILE_WIDTH: f32 = 620.0;
+
 /// The 260 px File menu used by desktop studios. Page order, labels and
 /// messages belong to the application; row geometry and colours belong here.
 pub fn backstage_nav_with<'a, M: Clone + 'a, F>(
@@ -116,6 +118,76 @@ where
             .border(Border { color: t.border, width: 1.0, radius: 0.0.into() })
     })
     .into()
+}
+
+/// Title and lead of a File page; page content remains application-owned.
+pub fn backstage_page_heading<'a, M: 'a>(
+    title: impl Into<String>,
+    lead: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    column![
+        text(title.into()).size(22).font(fonts::HEADING),
+        text(lead.into()).size(13).color(theme.tokens().text_secondary),
+    ]
+    .spacing(6)
+    .into()
+}
+
+pub fn backstage_group_caption<'a, M: 'a>(
+    label: impl Into<String>,
+    theme: Theme,
+) -> Element<'a, M> {
+    container(text(label.into()).size(10).color(theme.tokens().text_muted))
+        .padding(Padding { top: 26.0, bottom: 6.0, ..Padding::ZERO })
+        .into()
+}
+
+/// A File action tile with the same available, unavailable and hover states
+/// in every studio. The action and its explanatory text stay app-owned.
+pub fn backstage_task_tile_with<'a, M: Clone + 'a, F>(
+    title: impl Into<String>,
+    detail: impl Into<String>,
+    action: Option<M>,
+    resolve_theme: F,
+) -> Element<'a, M>
+where
+    F: Fn(&iced::Theme) -> Theme + Copy + 'a,
+{
+    button(
+        column![
+            text(title.into()).size(15).font(fonts::STRONG),
+            text(detail.into()).size(12).style(move |theme| text::Style {
+                color: Some(resolve_theme(theme).tokens().text_secondary),
+            }),
+        ]
+        .spacing(3),
+    )
+    .on_press_maybe(action)
+    .style(move |theme, status| {
+        let shared = resolve_theme(theme);
+        let mut style = ribbon_button_style(shared, false, status);
+        let t = shared.tokens();
+        style.border.color = t.border;
+        style.border.width = 1.0;
+        style.border.radius = 4.0.into();
+        if style.background.is_none() {
+            style.background = Some(t.accent_soft.into());
+        }
+        style
+    })
+    .width(Fill)
+    .padding([12, 16])
+    .into()
+}
+
+pub fn backstage_tile_column<'a, M: 'a>(
+    tiles: impl IntoIterator<Item = Element<'a, M>>,
+) -> Element<'a, M> {
+    container(iced::widget::Column::with_children(tiles).spacing(8).width(Fill))
+        .width(Fill)
+        .max_width(BACKSTAGE_TILE_WIDTH)
+        .into()
 }
 
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {

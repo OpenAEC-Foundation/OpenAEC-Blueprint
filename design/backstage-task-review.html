@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · gedeelde Bestand-taken</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#f3f3f2;color:#303039;font:14px/1.5 Inter,system-ui,sans-serif}
+  header{background:#303039;color:white;padding:26px max(22px,calc((100vw - 1240px)/2));border-bottom:3px solid #dc7900}
+  header a{color:#ffc180}h1{font-size:29px;margin:13px 0 7px}header p{margin:0;color:#dddde3;max-width:920px}
+  main{max-width:1284px;margin:auto;padding:23px 22px 42px}.facts{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+  .facts span{background:white;border:1px solid #d8d8dd;padding:8px 11px}.note{background:#fffaf2;border-left:3px solid #dc7900;padding:14px 16px;max-width:970px;margin-bottom:23px}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  figure{margin:0;padding:9px;background:white;border:1px solid #d8d8dd;min-width:0}
+  .crop{height:345px;overflow:hidden;background:#eee;border:1px solid #e1e1e3}.crop img{display:block;width:1280px;max-width:none}
+  .point img{transform:translate(-290px,-75px)}.style img{transform:translate(-278px,-445px)}
+  figcaption{padding:10px 2px 1px;font-weight:600}figure a{color:#a75200}
+  h2{font-size:19px;margin:29px 0 7px}p{max-width:960px}
+  @media(max-width:850px){.grid{grid-template-columns:1fr}}@media(max-width:500px){.crop{height:280px}}
+</style>
+<header><a href="backstage-review.html">← Bestand-navigatie</a><h1>Bestand · taken uit dezelfde Rust-componenten</h1><p>Pointcloud’s echte New/Open-pagina’s en de Style Repo-componentenpagina gebruiken nu dezelfde paginakop, groepslabel en actietegel.</p></header>
+<main>
+  <div class="facts"><span>620 px maximum</span><span>15 / 12 px titel en detail</span><span>4 px tegelradius</span><span>Light + Forge</span></div>
+  <div class="note"><strong>Beoordeling.</strong> De tegelvorm, teksthiërarchie en afstand komen uit de crate; Pointcloud levert de echte scanacties en hun beschikbaarheid. Vier Pointcloud-renders van New/Open zijn voor en na de omzetting pixel voor pixel gelijk gebleven. De Style Repo toont daarnaast bewust één uitgeschakelde tegel.</div>
+  <div class="grid">
+    <figure><div class="crop point"><img src="pointcloud-file-open-light.png" alt="Pointcloud Open-taken in Light"></div><figcaption>Pointcloud · Open · Light</figcaption><a href="pointcloud-file-open-light.png">Volledig scherm ↗</a></figure>
+    <figure><div class="crop style"><img src="style-repo-backstage-tiles-light.png" alt="Style Repo gedeelde Bestand-tegels in Light"></div><figcaption>Style Repo · Light</figcaption><a href="style-repo-backstage-tiles-light.png">Volledig scherm ↗</a></figure>
+    <figure><div class="crop point"><img src="pointcloud-file-open-forge.png" alt="Pointcloud Open-taken in Forge"></div><figcaption>Pointcloud · Open · Forge</figcaption><a href="pointcloud-file-open-forge.png">Volledig scherm ↗</a></figure>
+    <figure><div class="crop style"><img src="style-repo-backstage-tiles-forge.png" alt="Style Repo gedeelde Bestand-tegels in Forge"></div><figcaption>Style Repo · Forge</figcaption><a href="style-repo-backstage-tiles-forge.png">Volledig scherm ↗</a></figure>
+  </div>
+  <h2>Extra staat: Nieuw</h2><p>De Pointcloud-New-pagina bevat dezelfde tegelvorm, inclusief een taak die zonder geopende scan niet beschikbaar is: <a href="pointcloud-file-new-light.png">Light</a> · <a href="pointcloud-file-new-forge.png">Forge</a>. Actielogica, validatie en bestandskeuze blijven bij Pointcloud.</p>
+</main>
+</html>

@@ -509,6 +509,35 @@ impl StyleRepo {
             ),
             self.card(
                 column![
+                    text(l.text("Bestandstaken", "File tasks"))
+                        .font(fonts::STRONG)
+                        .size(16),
+                    widgets::backstage_page_heading(
+                        l.text("Openen", "Open"),
+                        l.text("Gedeelde opmaak voor Bestand-pagina's.", "Shared layout for File pages."),
+                        theme,
+                    ),
+                    widgets::backstage_group_caption(l.text("BRONNEN", "SOURCES"), theme),
+                    widgets::backstage_tile_column([
+                        widgets::backstage_task_tile_with(
+                            l.text("UI-iconen…", "UI icons…"),
+                            l.text("Open de bronbewezen iconenbibliotheek.", "Open the source-proven icon library."),
+                            Some(Action::Show(Page::Icons)),
+                            move |_| theme,
+                        ),
+                        widgets::backstage_task_tile_with(
+                            l.text("Nog niet beschikbaar", "Not yet available"),
+                            l.text("De gedeelde uitgeschakelde toestand.", "The shared disabled state."),
+                            None,
+                            move |_| theme,
+                        ),
+                    ]),
+                ]
+                .spacing(9),
+                theme
+            ),
+            self.card(
+                column![
                     text(l.text("Formulier", "Form"))
                         .font(fonts::STRONG)
                         .size(16),

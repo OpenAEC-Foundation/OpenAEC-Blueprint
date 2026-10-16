@@ -742,6 +742,19 @@ fn export_shared_backstage_review() {
 }
 
 #[test]
+#[ignore = "regenerate shared File task tiles on demand"]
+fn export_backstage_task_tiles_review() {
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::Show(Page::Components));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized(&app, theme, false, None, Size::new(1280.0, 1000.0))
+            .save_png(&design.join(format!("style-repo-backstage-tiles-{name}.png")))
+            .expect("save File task tile review");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
