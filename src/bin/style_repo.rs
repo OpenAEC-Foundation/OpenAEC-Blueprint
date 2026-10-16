@@ -42,6 +42,8 @@ mod validator_native;
 mod composer_native;
 #[path = "style_repo/calc_native.rs"]
 mod calc_native;
+#[path = "style_repo/pdf_split_native.rs"]
+mod pdf_split_native;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -193,6 +195,16 @@ enum Action {
     PdfBrightness(f32),
     PdfContrast(f32),
     PdfResetImage,
+    PdfSplitOpen(bool),
+    PdfSplitBookmarks(bool),
+    PdfSplitModified(bool),
+    PdfSplitMode(pdf_split_native::SplitMode),
+    PdfSplitPages(String),
+    PdfSplitSize(String),
+    PdfSplitFolder(String),
+    PdfSplitPattern(String),
+    PdfSplitBrowse,
+    PdfSplitPreview,
     PdfAlignTarget(usize),
     PdfFormatStyle(usize),
     PdfFormatToggleGallery,
@@ -365,6 +377,7 @@ struct StyleRepo {
     pdf_image: ribbon_preview::PdfImageState,
     pdf_arrange: ribbon_preview::PdfArrangeState,
     pdf_format: ribbon_preview::PdfFormatState,
+    pdf_split: pdf_split_native::SplitReview,
     selected_energy_step: usize,
     selected_energy_sub: Option<usize>,
     energy_mode: EnergyMode,
@@ -438,6 +451,7 @@ impl Default for StyleRepo {
             pdf_image: ribbon_preview::PdfImageState::default(),
             pdf_arrange: ribbon_preview::PdfArrangeState::default(),
             pdf_format: ribbon_preview::PdfFormatState::default(),
+            pdf_split: pdf_split_native::SplitReview::default(),
             selected_energy_step: 0,
             selected_energy_sub: None,
             energy_mode: EnergyMode::NewBuildResidential,
@@ -1219,15 +1233,29 @@ impl StyleRepo {
                 ].spacing(8), theme)
         } else {
             let context: Element<'_, Action> = if selected.id == "pdf" {
-                button(text(if self.pdf_format.symbol_stamp {
-                    "Opmaaktoestand: één symboolstempel geselecteerd"
-                } else {
-                    "Opmaaktoestand: gewone annotatieselectie"
-                }).size(11))
-                    .padding([6, 9])
-                    .on_press(Action::PdfFormatSymbolStamp)
-                    .style(move |_, status| widgets::button_style(theme, self.pdf_format.symbol_stamp, status))
-                    .into()
+                let mut review = column![
+                    button(text(if self.pdf_format.symbol_stamp {
+                        "Opmaaktoestand: één symboolstempel geselecteerd"
+                    } else {
+                        "Opmaaktoestand: gewone annotatieselectie"
+                    }).size(11))
+                        .padding([6, 9])
+                        .on_press(Action::PdfFormatSymbolStamp)
+                        .style(move |_, status| widgets::button_style(theme, self.pdf_format.symbol_stamp, status)),
+                    row![
+                        button(text("Document splitsen · native schermproef").size(11))
+                            .padding([6, 9]).on_press(Action::PdfSplitOpen(true))
+                            .style(move |_, status| widgets::button_style(theme, false, status)),
+                        iced::widget::checkbox("3 voorbeeldbladwijzers", self.pdf_split.bookmarks)
+                            .on_toggle(Action::PdfSplitBookmarks).text_size(11),
+                        iced::widget::checkbox("Niet opgeslagen", self.pdf_split.modified)
+                            .on_toggle(Action::PdfSplitModified).text_size(11),
+                    ].spacing(12).align_y(Alignment::Center),
+                ].spacing(6);
+                if let Some(notice) = self.pdf_split.notice {
+                    review = review.push(text(notice).size(11).color(t.text_secondary));
+                }
+                review.into()
             } else { Space::new(0, 0).into() };
             column![
                 text(l.text("Ribbon-tabs · bron / concept", "Ribbon tabs · source / concept"))
@@ -2363,6 +2391,7 @@ impl Application for StyleRepo {
     }
     fn overlay(&self, theme: Theme, l: Language) -> Option<Element<'_, Action>> {
         if let Some(details) = self.source_details_modal(theme) { return Some(details); }
+        if self.pdf_split.open { return Some(self.pdf_split.view(theme)); }
         if !self.sample_dialog { return None; }
         let body = container(column![
             text(l.text("Projectnaam", "Project name")).size(12),
@@ -2387,6 +2416,7 @@ impl Application for StyleRepo {
     }
     fn escape(&self) -> Option<Action> {
         if self.source_details.is_some() { Some(Action::SourceDetails(None)) }
+        else if self.pdf_split.open { Some(Action::PdfSplitOpen(false)) }
         else { self.sample_dialog.then_some(Action::SampleDialog(false)) }
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
@@ -2686,7 +2716,12 @@ impl Application for StyleRepo {
             Action::SpeechSettingsTab(index) => self.speech_settings_tab = index.min(4),
             Action::SpeechTtsInput(value) => self.speech_tts_text = value,
             Action::SpeechTtsSpeed(value) => self.speech_tts_speed = value.clamp(0.5, 2.0),
-            Action::SelectPreviewCommand(id) => self.selected_preview_command = Some(id),
+            Action::SelectPreviewCommand(id) => {
+                if id == "pdf:PDF bewerken & samenvoegen:Document splitsen" {
+                    self.pdf_split.open = true;
+                }
+                self.selected_preview_command = Some(id);
+            }
             Action::PileSymbolScale(value) => self.pile_view.symbol_scale = value.clamp(10.0, 200.0),
             Action::PileUtilizationMinimum(value) => {
                 self.pile_view.utilization_minimum = value.clamp(0.0, self.pile_view.utilization_maximum);
@@ -2706,6 +2741,22 @@ impl Application for StyleRepo {
                 self.pdf_image.grayscale = false;
                 self.pdf_image.brightness = 100.0;
                 self.pdf_image.contrast = 100.0;
+            }
+            Action::PdfSplitOpen(open) => { self.pdf_split.open = open; self.pdf_split.notice = None; }
+            Action::PdfSplitBookmarks(available) => self.pdf_split.toggle_bookmarks(available),
+            Action::PdfSplitModified(modified) => self.pdf_split.modified = modified,
+            Action::PdfSplitMode(mode) => self.pdf_split.choose_mode(mode),
+            Action::PdfSplitPages(value) => self.pdf_split.pages = value,
+            Action::PdfSplitSize(value) => self.pdf_split.max_mb = value,
+            Action::PdfSplitFolder(value) => self.pdf_split.folder = value,
+            Action::PdfSplitPattern(value) => {
+                self.pdf_split.pattern = value;
+                self.pdf_split.custom_pattern = true;
+            }
+            Action::PdfSplitBrowse => self.pdf_split.notice = Some("Reviewtoestand: de mapkiezer is niet aan een PDF-document gekoppeld."),
+            Action::PdfSplitPreview => {
+                self.pdf_split.open = false;
+                self.pdf_split.notice = Some("Reviewtoestand: er zijn geen PDF-bestanden geschreven.");
             }
             Action::PdfAlignTarget(index) => self.pdf_arrange.align_target = index.min(1),
             Action::PdfFormatStyle(index) => self.pdf_format.select_style(index),
@@ -3414,6 +3465,24 @@ mod tests {
         assert!(matches!(&image[1].commands[2].control,
             Some(RibbonControl::Sliders { minimum: 0.0, maximum: 200.0, items, .. })
                 if items.len() == 2 && items[0].value == 100.0 && items[1].value == 100.0));
+    }
+
+    #[test]
+    fn pdf_split_ribbon_command_opens_native_review_and_escape_closes_it() {
+        let mut app = StyleRepo::default();
+        let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+        let _ = app.update(Action::SelectStudio(pdf));
+        let _ = app.update(Action::SelectPreviewCommand(
+            "pdf:PDF bewerken & samenvoegen:Document splitsen".into()));
+        assert!(app.pdf_split.open);
+        assert!(app.overlay(Theme::Light, Language::Dutch).is_some());
+        assert!(matches!(app.escape(), Some(Action::PdfSplitOpen(false))));
+        let _ = app.update(app.escape().unwrap());
+        assert!(!app.pdf_split.open);
+        let _ = app.update(Action::PdfSplitOpen(true));
+        let _ = app.update(Action::PdfSplitPreview);
+        assert!(!app.pdf_split.open);
+        assert_eq!(app.pdf_split.notice, Some("Reviewtoestand: er zijn geen PDF-bestanden geschreven."));
     }
 
     #[test]

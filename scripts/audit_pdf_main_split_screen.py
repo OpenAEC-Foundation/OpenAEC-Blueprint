@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import struct
 import subprocess
 from pathlib import Path
 
@@ -26,6 +27,16 @@ def evidence(path: str, marker: str) -> dict:
     return {'file': BASE + path, 'line': line,
             'url': f'https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/{COMMIT}/{BASE}{path}#L{line}',
             'sha256': hashlib.sha256(source.encode()).hexdigest()}
+
+
+def native_render(name: str) -> dict:
+    path = ROOT / 'design' / name
+    data = path.read_bytes()
+    assert data[:8] == b'\x89PNG\r\n\x1a\n'
+    width, height = struct.unpack('>II', data[16:24])
+    assert (width, height) == (1280, 800)
+    return {'file': f'design/{name}', 'width': width, 'height': height,
+            'sha256': hashlib.sha256(data).hexdigest()}
 
 
 jsx_path = 'js/solid/components/dialogs/SplitDocumentDialog.jsx'
@@ -58,7 +69,7 @@ for key in ('title', 'method', 'everyN', 'byBookmarks', 'bySize', 'output', 'fil
 
 manifest = {
     'repository': 'open-pdf-studio', 'commit': COMMIT,
-    'scope': 'source-backed interactive HTML review, not a captured application screenshot or PDF split implementation',
+    'scope': 'source-backed interactive HTML review and native Rust Style Repo renders; no captured PDF application screenshot or working PDF split implementation',
     'route': {'ribbon_command': evidence('js/solid/components/ribbon/OrganizeTab.jsx', 'id="split-document"'),
               'dialog_host': evidence('js/solid/components/DialogHost.jsx', "'split-document': SplitDocumentDialog"),
               'screen': evidence(jsx_path, 'export default function SplitDocumentDialog()')},
@@ -73,6 +84,8 @@ manifest = {
     'locale': {'language': 'nl', 'source': evidence('js/i18n/locales/nl/dialogs.json', '"splitDocument": {'),
                'title': locale['title'], 'split': locale['split']},
     'prototype': 'design/pdf-main-split-document-screen-review.html',
+    'native_renders': {'light_pages': native_render('style-repo-pdf-split-light.png'),
+                       'forge_bookmarks_modified': native_render('style-repo-pdf-split-forge.png')},
 }
 (ROOT / 'harmonization/pdf-main-split-document-screen.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 print('PDF split dialog: route, 460/30/15 px layout, three modes and Dutch labels verified')

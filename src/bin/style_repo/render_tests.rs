@@ -20,6 +20,26 @@ fn load_fonts() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF split-dialog review on demand"]
+fn export_pdf_split_native_screen_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::PdfSplitOpen(true));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    render_sized(&app, Theme::Light, false, Some("pdf bewerken & samenvoegen"), Size::new(1280.0, 800.0))
+        .save_png(&design.join("style-repo-pdf-split-light.png"))
+        .expect("save native PDF split dialog");
+    let _ = app.update(Action::PdfSplitOpen(false));
+    let _ = app.update(Action::PdfSplitBookmarks(true));
+    let _ = app.update(Action::PdfSplitModified(true));
+    let _ = app.update(Action::PdfSplitOpen(true));
+    render_sized(&app, Theme::Forge, false, Some("pdf bewerken & samenvoegen"), Size::new(1280.0, 800.0))
+        .save_png(&design.join("style-repo-pdf-split-forge.png"))
+        .expect("save native PDF split dialog with bookmarks");
+}
+
+#[test]
 #[ignore = "regenerate native Reports screen review on demand"]
 fn export_reports_native_screen_review() {
     let mut app = StyleRepo::default();

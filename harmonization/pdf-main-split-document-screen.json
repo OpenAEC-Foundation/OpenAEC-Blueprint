@@ -1,7 +1,7 @@
 {
   "repository": "open-pdf-studio",
   "commit": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
-  "scope": "source-backed interactive HTML review, not a captured application screenshot or PDF split implementation",
+  "scope": "source-backed interactive HTML review and native Rust Style Repo renders; no captured PDF application screenshot or working PDF split implementation",
   "route": {
     "ribbon_command": {
       "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
@@ -60,5 +60,19 @@
     "title": "Document splitsen",
     "split": "Splitsen"
   },
-  "prototype": "design/pdf-main-split-document-screen-review.html"
+  "prototype": "design/pdf-main-split-document-screen-review.html",
+  "native_renders": {
+    "light_pages": {
+      "file": "design/style-repo-pdf-split-light.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "fcd60b7fe9218940507626425e02eb6d83646829619035d3023b8284a40571e0"
+    },
+    "forge_bookmarks_modified": {
+      "file": "design/style-repo-pdf-split-forge.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "a8dd9847a3b71fdda06f60ad7eda8541fdd54aa46828a3d46135154bb34e10c7"
+    }
+  }
 }
