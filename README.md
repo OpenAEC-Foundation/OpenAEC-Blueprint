@@ -64,6 +64,8 @@ De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout
 
 De [documentbalkreview](design/document-bar-review.html) zet de gepinde Tauri-CSS en de native Light- en Forge-renders naast elkaar. De gedeelde Rust-crate tekent nu de 30 px-band én de 24 px-tabstijl in Style Repo en Pointcloud; vier echte Pointcloud-tabs tonen de integratie. De gedeelde tab maskeert nu ook Iced’s onderste rand van 2 px zoals in de Tauri-CSS; de Pointcloud-pixeltest controleert dit in Light en Forge. De review benoemt de contrastverbetering van de actieve sluitknop.
 
+De [linttabreview](design/ribbon-tab-review.html) zet de gepinde Tauri-template, Style Repo en Pointcloud naast elkaar. De 28 px-band is al gedeeld, maar de actieve rand, de doorlopende accentlijn en de Bestand-staat verschillen nog; een interactieve HTML-vormproef legt de beoogde gezamenlijke geometrie vast.
+
 De [ribbon-groepsreview](design/ribbon-group-review.html) vergelijkt de Tauri-`Ribbon.css` met native Pointcloud- en Style Repo-renders. `widgets::ribbon_group` tekent in beide applicaties dezelfde 94 px-groep, 4 px bovenruimte, 8 px zijruimte, labelregel en rechter scheidslijn. Pointcloud behoudt zijn adaptieve inklapgedrag; de Style Repo toont de groepslabels boven een smalle horizontale scrollbar.
 
 De [eigenschappenreview](design/property-grid-review.html) toont de rechterpanelen van beide native applicaties in Light en Forge. De gedeelde Rust-crate tekent daar 28 px label/waarde- en bedieningsrijen en 24 px sectiekoppen. De Style Repo toont een werkende schaalregelaar in dit raster; Pointcloud gebruikt het voor zes snedebox-regelaars, de bewerkbare viewportvelden en de X/Y/Z-grenzen van een geladen scan. De domeinwaarden en berichten blijven van de betreffende applicatie.

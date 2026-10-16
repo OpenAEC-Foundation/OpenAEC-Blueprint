@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · linttabs vergelijken</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#f3f3f2;color:#303039;font:14px/1.5 Inter,system-ui,sans-serif}
+  header{background:#303039;color:white;padding:26px max(22px,calc((100vw - 1420px)/2));border-bottom:3px solid #dc7900}
+  header a{color:#ffc180}h1{font-size:29px;margin:12px 0 7px}header p{margin:0;color:#dddde3;max-width:1000px}
+  main{max-width:1460px;margin:auto;padding:23px 22px 46px}.facts{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:19px}
+  .facts span{background:white;border:1px solid #d8d8dd;padding:8px 11px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  figure{margin:0;padding:10px;background:white;border:1px solid #d8d8dd;min-width:0}.crop{height:93px;overflow:hidden;border:1px solid #e1e1e3;background:#fff}
+  .crop img{display:block;max-width:none;width:auto;height:auto}.source img{width:1330px}.point img,.style img{width:1280px}
+  figcaption{padding:10px 2px 1px;font-weight:600}figure a{color:#a75200}.note{background:#fffaf2;border-left:3px solid #dc7900;padding:14px 16px;max-width:1040px;margin:21px 0}
+  h2{font-size:19px;margin:28px 0 8px}p{max-width:1000px}table{border-collapse:collapse;background:white;width:100%;max-width:1050px}
+  th,td{text-align:left;vertical-align:top;border:1px solid #dedee2;padding:9px 11px}th{background:#eeeef0}
+  .prototype{background:#fff;border:1px solid #d8d8dd;padding:20px;margin-top:12px;max-width:1050px}
+  .tabbar{height:28px;display:flex;align-items:flex-end;gap:2px;padding:0 8px;border-bottom:1px solid var(--accent);background:var(--lighter);color:var(--text);font:500 12px Inter,system-ui,sans-serif}
+  .tabbar button{font:inherit;color:inherit;cursor:pointer;padding:5px 16px 6px;height:28px;background:transparent;border:1px solid transparent;border-radius:4px 4px 0 0;position:relative;bottom:-1px}
+  .tabbar button:hover{background:var(--hover);color:var(--accent)}.tabbar button.active{color:var(--accent);background:var(--bg);border-color:var(--accent);border-bottom-color:var(--bg)}
+  .tabbar button.active:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--bg)}
+  .tabbar button.file{background:var(--file);border-color:var(--file);color:var(--file-text);font-weight:600;margin-right:5px}
+  .tabbar button.file:hover{background:var(--file-hover);border-color:var(--file-hover)}
+  .light{--accent:#d97706;--lighter:#fff;--bg:#fafafa;--text:#303039;--hover:#f7e9d5;--file:#d97706;--file-hover:#ea580c;--file-text:white}
+  .forge{--accent:#d97706;--lighter:#414149;--bg:#36363e;--text:#eeeef1;--hover:#504a46;--file:#d97706;--file-hover:#ea580c;--file-text:#36363e;margin-top:16px}
+  .proto-caption{font-size:12px;color:#73737b;margin:7px 0 0}.forge+.proto-caption{margin-bottom:0}
+  @media(max-width:980px){.grid{grid-template-columns:1fr}.crop{height:100px}}
+</style>
+<header><a href="review.html">← Hoofdreview</a><h1>Linttabs · bron, Style Repo en Pointcloud</h1><p>Visuele beoordeling van de 28 px bovenband voordat de twee Rust-apps dezelfde volledige tabgeometrie krijgen.</p></header>
+<main>
+  <div class="facts"><span>28 px band</span><span>2 px tabafstand</span><span>1 px accentlijn</span><span>4 px bovenradius</span><span>Bron: Tauri-template</span></div>
+  <div class="grid">
+    <figure><div class="crop source"><img src="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png" alt="Bovenband van de gepinde Tauri-template"></div><figcaption>Tauri-template · bronbeeld</figcaption><a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png">Volledig bronbeeld ↗</a></figure>
+    <figure><div class="crop style"><img src="style-repo-components-light.png" alt="Bovenband van de Rust Style Repo"></div><figcaption>Style Repo · native Rust</figcaption><a href="style-repo-components-light.png">Volledig venster ↗</a></figure>
+    <figure><div class="crop point"><img src="pointcloud-shell-light.png" alt="Bovenband van Open Pointcloud Studio"></div><figcaption>Pointcloud · native Rust</figcaption><a href="pointcloud-shell-light.png">Volledig venster ↗</a></figure>
+  </div>
+  <div class="note"><strong>Oordeel.</strong> De hoogte klopt in beide Rust-apps. De Style Repo gebruikt al de oranje Bestand-tab, maar de actieve Start-tab mist de bronrand en de gedeelde accentlijn. Pointcloud onderstreept Home en toont Bestand neutraal. De bron gebruikt één omlijnde actieve tab boven een doorlopende accentlijn en een altijd gekleurde Bestand-tab. Die tabvorm moet één crate-component worden; vertaling, tabnamen en klikacties blijven per app.</div>
+  <h2>Bronmaten en ontwerpbesluit</h2>
+  <table><thead><tr><th>Onderdeel</th><th>Tauri-bron</th><th>Geharmoniseerde keuze</th></tr></thead><tbody>
+    <tr><td>Tabband</td><td>28 px, 8 px zijruimte, 2 px tussenruimte, 1 px accentlijn onderaan</td><td>Zelfde geometrie in beide Rust-apps</td></tr>
+    <tr><td>Actieve tab</td><td>Werkvlakachtergrond, accenttekst, 1 px boven- en zijrand, 4 px bovenradius; achtergrond dekt de onderlijn af</td><td>Zelfde markering voor gewone tabs</td></tr>
+    <tr><td>Bestand</td><td>Vaste merkkleur, sterk tekstgewicht; ook zichtbaar als een andere tab actief is</td><td>Gedeelde Bestand-staat met thema-afhankelijke tekstkleur</td></tr>
+    <tr><td>Compact venster</td><td>Geen afzonderlijk bronbeeld</td><td>Tabs mogen horizontaal scrollen; de bandmaat blijft 28 px</td></tr>
+  </tbody></table>
+  <h2>Interactieve vormproef</h2><p>Klik de tabs om de actieve rand en de onderlijn op licht en donker te beoordelen. Dit is een CSS-ontwerpproef, nog geen native Rust-render.</p>
+  <div class="prototype"><div class="tabbar light" data-tabs><button class="file">Bestand</button><button class="active">Start</button><button>Beeld</button><button>Annotatie</button></div><p class="proto-caption">Light · Tauri-gebaseerde kleur- en maatproef</p><div class="tabbar forge" data-tabs><button class="file">Bestand</button><button class="active">Start</button><button>Beeld</button><button>Annotatie</button></div><p class="proto-caption">Forge · dezelfde geometrie met donker werkvlak</p></div>
+  <p>Bronnen: <a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/Ribbon.css">gepinde Ribbon.css</a> en <a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/src/themes.css">thematokens</a>. De native screenshots komen uit de huidige lokale Rust-renders.</p>
+</main>
+<script>for(const bar of document.querySelectorAll('[data-tabs]'))bar.addEventListener('click',event=>{const tab=event.target.closest('button');if(!tab||tab.classList.contains('file'))return;bar.querySelector('.active')?.classList.remove('active');tab.classList.add('active')});</script>
+</html>

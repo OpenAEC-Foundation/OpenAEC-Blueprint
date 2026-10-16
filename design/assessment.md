@@ -172,6 +172,16 @@ Pointcloud-vensters in Light en Forge zijn bytegelijk aan de vorige beelden.
 De Style Repo-beelden zijn na de tabwijziging opnieuw gerenderd en visueel
 bekeken in Light en Forge.
 
+De [gerichte linttabreview](ribbon-tab-review.html) vergelijkt nu de gepinde
+Tauri-screenshot en `Ribbon.css` met de huidige native vensters van Style Repo
+en Pointcloud. De bandhoogte is in alle drie 28 px, maar de Tauri-bron heeft
+een omlijnde actieve tab die de doorlopende accentlijn onderbreekt. Style Repo
+tekent geen actieve rand; Pointcloud gebruikt een losse onderstreping en een
+neutrale Bestand-tab. De HTML-vormproef legt de beoogde gezamenlijke maten en
+Light/Forge-staten vast. De volledige tabgeometrie is nog niet als Rust-widget
+in beide apps ingebouwd; de bestaande gedeelde stijlfunctie dekt alleen kleur
+en hover.
+
 De tooltipconstructie is eveneens gedeeld: de Style Repo-ribbon en de
 Pointcloud-panelen gebruiken nu dezelfde Rust-widget met 12 px tekst,
 8 × 12 px binnenruimte, maximaal 340 px breedte en 8 px afstand. De
