@@ -68,6 +68,8 @@ De [ribbon-groepsreview](design/ribbon-group-review.html) vergelijkt de Tauri-`R
 
 De [eigenschappenreview](design/property-grid-review.html) toont de rechterpanelen van beide native applicaties in Light en Forge. De gedeelde Rust-crate tekent daar 28 px label/waarde- en bedieningsrijen en 24 px sectiekoppen. De Style Repo toont een werkende schaalregelaar in dit raster; Pointcloud gebruikt het voor zes snedebox-regelaars, de bewerkbare viewportvelden en de X/Y/Z-grenzen van een geladen scan. De domeinwaarden en berichten blijven van de betreffende applicatie.
 
+De [Pointcloud-weergavepopup](design/pointcloud-display-review.html) gebruikt de verankerde popup uit dezelfde crate. De knop blijft op zijn plaats bij het openen; de popup sluit bij een klik erbuiten. Native Light- en Forge-renders en Pointcloud-tests controleren de positie en interactie.
+
 De [icoonbotsingreview](design/icon-collision-review.html) beoordeelt alle 14 paren met exact dezelfde bronbytes. Acht paren koppelen de vorm aan verschillende handelingen; daarvoor staan 16 onderscheidende vectoren in 16/24/32 px op licht en donker. Zes Bouwkunde-paren hergebruiken de vorm voor verwante handelingen bij deur- en kozijnstaten. Vier CAD/Pointcloud-vormen zijn in `DomainIcon` opgenomen; Pointcloud gebruikt er twee. De overige twaalf blijven concepten buiten de publieke Rust-icoon-API.
 
 De [review van 53 onzekere iconassets](design/possible-icon-review.html) houdt SVG's zonder direct UI-codebewijs apart van de 577 bewezen UI-bestanden. Ze zijn lokaal op 16, 24 en 32 px te beoordelen en maken geen deel uit van de Rust-crate. De PDF.js-audit omvat ook `viewer.mjs`; de meegeleverde afbeeldingen kunnen nog dynamisch geladen worden.
