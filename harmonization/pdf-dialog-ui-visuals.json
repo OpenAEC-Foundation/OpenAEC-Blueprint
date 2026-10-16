@@ -1,0 +1,319 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 25 literal SVGs in eight DialogHost-registered dialogs. Every shape is UI-bound, but feature badges, GitHub brand mark, file marker, and state emblems are not interchangeable command icons. The About app icon is a separate imported PNG asset and is not counted here. The print-page preview is document content, not an icon.",
+  "literal_svg_sites": 25,
+  "ui_visual_sites": 25,
+  "generic_action_icon_sites": 17,
+  "clickable_svg_sites": 18,
+  "role_counts": {
+    "brand-mark": 1,
+    "feature-marker": 3,
+    "link-action": 2,
+    "list-marker": 1,
+    "navigation-action": 4,
+    "status-emblem": 3,
+    "toolbar-action": 11
+  },
+  "source_metrics": {
+    "about_feature_svg_px": 20,
+    "text_toolbar_button_px": [
+      28,
+      26
+    ],
+    "text_toolbar_svg_px": 16,
+    "merge_toolbar_button_px": [
+      26,
+      24
+    ],
+    "print_preview_button_px": [
+      28,
+      22
+    ],
+    "print_preview_svg_px": 10,
+    "confirm_and_validation_emblem_px": 32,
+    "update_emblem_px": 40
+  },
+  "decisions": [
+    "Preserve the GitHub mark geometry as an external brand identity; do not redraw it as a generic OpenAEC icon.",
+    "Map confirmation, validation and update emblems to semantic warning/error/info colors rather than globally tinting every source SVG.",
+    "Keep About feature badges as informational markers, separate from reusable toolbar commands."
+  ],
+  "records": [
+    {
+      "name": "about-free",
+      "label": "Gratis",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "feature-marker",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 44,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-free.svg",
+      "sha256": "375dee7d862c6bf016da5a9a664da63af1c4b9c4a81bc7b42b0e8327e0cd810c"
+    },
+    {
+      "name": "about-open",
+      "label": "Open broncode",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "feature-marker",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 48,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-open.svg",
+      "sha256": "1814b36015e1bb52da86f258db1576ece57fd3a131ffd6de442ff001ff522682"
+    },
+    {
+      "name": "about-no-lock",
+      "label": "Geen vergrendeling",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "feature-marker",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 52,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-no-lock.svg",
+      "sha256": "e682dd422d1a02ce4f1bc75cee69af23180e15ea338c8ec41fbce721c5ce3878"
+    },
+    {
+      "name": "about-website",
+      "label": "Website",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "link-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 66,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-website.svg",
+      "sha256": "180cb31b02f3aca2a9b0a4f8f8b7ac386a71afacef508d8e046821a49976126c"
+    },
+    {
+      "name": "about-github",
+      "label": "GitHub",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "brand-mark",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 73,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-github.svg",
+      "sha256": "617cb95f3be52728a77f408a39ad41777c89d56a9f97af6271f91b9a3092aca3"
+    },
+    {
+      "name": "about-contact",
+      "label": "Contact",
+      "area": "Over",
+      "dialog_id": "about",
+      "role": "link-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+      "source_line": 79,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/about-contact.svg",
+      "sha256": "4dbc4e63f6dd6080c2eb58216df7c6d1482e972051776533c3ac47595376310f"
+    },
+    {
+      "name": "text-bold",
+      "label": "Vet",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 157,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-bold.svg",
+      "sha256": "c7c1cb647987baa3203bf21bb3ce5eb4f7b7f594694f3e97dad8eb7003de0190"
+    },
+    {
+      "name": "text-italic",
+      "label": "Cursief",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 168,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-italic.svg",
+      "sha256": "20e4a3577f06e3edc0f806eb6848f255421bea4458da5bfc09dfc65204723758"
+    },
+    {
+      "name": "text-underline",
+      "label": "Onderstrepen",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 179,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-underline.svg",
+      "sha256": "e7bf58940b633d691af3750e2cd84c672f54e588307ff098f204989f4b07b9a5"
+    },
+    {
+      "name": "text-align-left",
+      "label": "Links uitlijnen",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 195,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-align-left.svg",
+      "sha256": "f94f23bf2f33d244f6bdb7f02dc858f2e0163c0874d37e2eb3f5579f36983ca9"
+    },
+    {
+      "name": "text-align-center",
+      "label": "Centreren",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 206,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-align-center.svg",
+      "sha256": "953e42c6da70ffcb64da39aeb335cc1bb1c06887c44127721fe932b6ff97c9a6"
+    },
+    {
+      "name": "text-align-right",
+      "label": "Rechts uitlijnen",
+      "area": "Tekstannotatie",
+      "dialog_id": "text-annotation",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/TextAnnotationDialog.jsx",
+      "source_line": 217,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/text-align-right.svg",
+      "sha256": "e8dc40494601ec94b8ef7bea732aca3af3f05eceb70c041681f499224e12d4eb"
+    },
+    {
+      "name": "merge-add",
+      "label": "Bestanden toevoegen",
+      "area": "PDF’s samenvoegen",
+      "dialog_id": "merge-pdfs",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",
+      "source_line": 141,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/merge-add.svg",
+      "sha256": "c80229c878639de2ada95721d2b08c50d77514c4901a65fe729899171ad41efb"
+    },
+    {
+      "name": "merge-remove",
+      "label": "Selectie verwijderen",
+      "area": "PDF’s samenvoegen",
+      "dialog_id": "merge-pdfs",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",
+      "source_line": 144,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/merge-remove.svg",
+      "sha256": "a00445911d45df6fb6416b69666f067ceb8fca3b83433911955982cbb8a4c780"
+    },
+    {
+      "name": "merge-up",
+      "label": "Omhoog",
+      "area": "PDF’s samenvoegen",
+      "dialog_id": "merge-pdfs",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",
+      "source_line": 147,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/merge-up.svg",
+      "sha256": "16ccb713b03afb8ea02400f480f06ba68da1fab0b0ff6de14c83daf93d5aab98"
+    },
+    {
+      "name": "merge-down",
+      "label": "Omlaag",
+      "area": "PDF’s samenvoegen",
+      "dialog_id": "merge-pdfs",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",
+      "source_line": 150,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/merge-down.svg",
+      "sha256": "9c8de09d3df290e22b49e9131bb7c6f7581af6b5cbb68c22e34b7f0079cef035"
+    },
+    {
+      "name": "merge-file",
+      "label": "Bestand in lijst",
+      "area": "PDF’s samenvoegen",
+      "dialog_id": "merge-pdfs",
+      "role": "list-marker",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",
+      "source_line": 165,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/merge-file.svg",
+      "sha256": "463cdc38857641421e23d22065878f328fc1ac254837e48655f4aaee18ec9624"
+    },
+    {
+      "name": "print-first",
+      "label": "Eerste voorbeeldpagina",
+      "area": "Afdrukken",
+      "dialog_id": "print",
+      "role": "navigation-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "source_line": 1171,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/print-first.svg",
+      "sha256": "27d9be3674b4f804fec23019bfdf777be52ebab7dba886881667e205db373a9f"
+    },
+    {
+      "name": "print-prev",
+      "label": "Vorige voorbeeldpagina",
+      "area": "Afdrukken",
+      "dialog_id": "print",
+      "role": "navigation-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "source_line": 1177,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/print-prev.svg",
+      "sha256": "0429c81eee03f506fbdcbc318e582a4c7432ab6034c02c1a50f3619d7a770377"
+    },
+    {
+      "name": "print-next",
+      "label": "Volgende voorbeeldpagina",
+      "area": "Afdrukken",
+      "dialog_id": "print",
+      "role": "navigation-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "source_line": 1183,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/print-next.svg",
+      "sha256": "edc3bbf76e9326a3feeca95b6107fb336258f07a61ed7d28442751bccef365f6"
+    },
+    {
+      "name": "print-last",
+      "label": "Laatste voorbeeldpagina",
+      "area": "Afdrukken",
+      "dialog_id": "print",
+      "role": "navigation-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "source_line": 1189,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/print-last.svg",
+      "sha256": "604f897450f3d6ff563afc13de33015755acc05723183c3840a9c76e5878d523"
+    },
+    {
+      "name": "confirm-warning",
+      "label": "Waarschuwing",
+      "area": "Bevestiging",
+      "dialog_id": "confirm",
+      "role": "status-emblem",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/ConfirmDialog.jsx",
+      "source_line": 33,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/confirm-warning.svg",
+      "sha256": "8f2b70ec8a0353764ef4ef7c5f0d62bd777006d8ee8265cf73411c5fb4c83e2b"
+    },
+    {
+      "name": "validation-error",
+      "label": "Validatiefout",
+      "area": "Formuliervalidatie",
+      "dialog_id": "form-validation",
+      "role": "status-emblem",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/FormValidationDialog.jsx",
+      "source_line": 36,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/validation-error.svg",
+      "sha256": "8ba840c1c6b4c58c415a93637dc0163170a41e68ac2a84ab288d9455912ea890"
+    },
+    {
+      "name": "page-label-remove",
+      "label": "OCR-gebied verwijderen",
+      "area": "Paginalabels",
+      "dialog_id": "page-labels",
+      "role": "toolbar-action",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/PageLabelsDialog.jsx",
+      "source_line": 178,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/page-label-remove.svg",
+      "sha256": "365f162c07b9b599544620d9a14d8007c867aba4cf9918628a612cab7a1c928d"
+    },
+    {
+      "name": "update-available",
+      "label": "Update beschikbaar",
+      "area": "Update",
+      "dialog_id": "update",
+      "role": "status-emblem",
+      "source_file": "open-pdf-studio/js/solid/components/dialogs/UpdateDialog.jsx",
+      "source_line": 126,
+      "svg": "inline-ui-icons/open-pdf-studio/dialog-ui/update-available.svg",
+      "sha256": "2932089463714f63b1e8148700014dfc05cc4a14e9f8b2ddc999243c412ac763"
+    }
+  ]
+}
