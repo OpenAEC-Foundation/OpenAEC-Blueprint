@@ -1,0 +1,183 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 14 literal SVGs in source-reachable ImportPanel.jsx, ExportPanel.jsx and ExtensionsPanel.jsx. The first two render through AppMenu; ExtensionsPanel renders through ExtensionsDialog and DialogHost. All are UI icon/object markers, including conditional and visible-disabled states. Office cards show text format badges, not SVGs.",
+  "literal_svg_sites": 14,
+  "ui_symbol_sites": 14,
+  "direction_collisions": [
+    {
+      "format": "CAD",
+      "export": "export-cad",
+      "import": "import-cad",
+      "finding": "same source geometry for opposite transfer directions"
+    },
+    {
+      "format": "XFDF",
+      "export": "export-xfdf",
+      "import": "import-xfdf",
+      "finding": "same source geometry for opposite transfer directions"
+    },
+    {
+      "format": "BCF",
+      "export": "export-bcf",
+      "import": "import-bcf",
+      "finding": "same source geometry for opposite transfer directions"
+    }
+  ],
+  "records": [
+    {
+      "name": "export-images",
+      "label": "Afbeeldingen exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "document-required",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 207,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-images.svg",
+      "sha256": "7515824a3d15c0e502763dfb9ce5d7d8fc3988c1f59d4182a53b07922c8487da"
+    },
+    {
+      "name": "export-raster-pdf",
+      "label": "Raster-PDF exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "document-required",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 221,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-raster-pdf.svg",
+      "sha256": "330f28413bee42780d42ca08b9cc84bd31a5ebb64d219b34d7465cf5402a95b1"
+    },
+    {
+      "name": "export-flat-copy",
+      "label": "Gevlakte kopie maken",
+      "role": "export",
+      "area": "export-card",
+      "availability": "document-required",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 235,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-flat-copy.svg",
+      "sha256": "dca1cbd4162f45eb3311aba5fd00021821817d5953fe9762ba1f46021339b65b"
+    },
+    {
+      "name": "export-pdfx",
+      "label": "PDF/X exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "tauri-only; visible-disabled-in-web",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 251,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-pdfx.svg",
+      "sha256": "fd69b13827debd00398cc46ef81d1e838ad9dffc5dbc0b030fa4cf13c40b6deb"
+    },
+    {
+      "name": "export-cad",
+      "label": "CAD exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "tauri-only; visible-disabled-in-web",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 269,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-cad.svg",
+      "sha256": "94107bd83ab67ea2bbc4f3ace934a07f1c096d817cc957ec79dc8f7d93340eed"
+    },
+    {
+      "name": "export-xfdf",
+      "label": "XFDF exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "document-required",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 283,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-xfdf.svg",
+      "sha256": "8839f9bec18cc4faefcae006ae316578eb0e984a435615ef6fcc868074aed6d2"
+    },
+    {
+      "name": "export-bcf",
+      "label": "BCF exporteren",
+      "role": "export",
+      "area": "export-card",
+      "availability": "document-required",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExportPanel.jsx",
+      "source_line": 298,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/export-bcf.svg",
+      "sha256": "9834ce0a9887ad88398b208f31463b6d7ca03c4a9014f2591ef24e2b6e2d0197"
+    },
+    {
+      "name": "import-cad",
+      "label": "CAD importeren",
+      "role": "import",
+      "area": "import-card",
+      "availability": "tauri-only; visible-disabled-in-web",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx",
+      "source_line": 39,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/import-cad.svg",
+      "sha256": "94107bd83ab67ea2bbc4f3ace934a07f1c096d817cc957ec79dc8f7d93340eed"
+    },
+    {
+      "name": "import-xfdf",
+      "label": "XFDF importeren",
+      "role": "import",
+      "area": "import-card",
+      "availability": "available",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx",
+      "source_line": 53,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/import-xfdf.svg",
+      "sha256": "8839f9bec18cc4faefcae006ae316578eb0e984a435615ef6fcc868074aed6d2"
+    },
+    {
+      "name": "import-bcf",
+      "label": "BCF importeren",
+      "role": "import",
+      "area": "import-card",
+      "availability": "available",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx",
+      "source_line": 68,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/import-bcf.svg",
+      "sha256": "9834ce0a9887ad88398b208f31463b6d7ca03c4a9014f2591ef24e2b6e2d0197"
+    },
+    {
+      "name": "extension-install",
+      "label": "Extensie uit bestand installeren",
+      "role": "extension-action",
+      "area": "extension-panel",
+      "availability": "tauri-only-handler; disabled-only-while-installing",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+      "source_line": 113,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/extension-install.svg",
+      "sha256": "85ce5d6818c263de6439d04ff9fe2e15af7a914dd089360aece696971eae5257"
+    },
+    {
+      "name": "extension-package",
+      "label": "Geïnstalleerde extensie",
+      "role": "extension-object",
+      "area": "extension-card",
+      "availability": "only-when-extension-exists",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+      "source_line": 136,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/extension-package.svg",
+      "sha256": "d319351ff91a12513bd6e04788945cf1aaba3628aad47e9bd30c2c61a0ad73d0"
+    },
+    {
+      "name": "extension-reload",
+      "label": "Extensie herladen",
+      "role": "extension-action",
+      "area": "extension-card",
+      "availability": "only-when-installed",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+      "source_line": 165,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/extension-reload.svg",
+      "sha256": "0128d06675454214ab12faa64e018f61d4b0bc3df50306a05405c1daac95eb12"
+    },
+    {
+      "name": "extension-uninstall",
+      "label": "Extensie verwijderen",
+      "role": "extension-action",
+      "area": "extension-card",
+      "availability": "only-when-installed",
+      "source_file": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+      "source_line": 171,
+      "svg": "inline-ui-icons/open-pdf-studio/transfer-panels/extension-uninstall.svg",
+      "sha256": "2b05b9cb6e6612a7045e90f6f1b555984ba23ac7848e80433b004d8db542aff7"
+    }
+  ]
+}
