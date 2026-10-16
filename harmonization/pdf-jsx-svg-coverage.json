@@ -5,8 +5,8 @@
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 189,
-  "sites_requiring_role_review_or_partial_followup": 128,
+  "fully_reviewed_literal_sites": 194,
+  "sites_requiring_role_review_or_partial_followup": 123,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -406,7 +406,7 @@
         156,
         163
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/dialogs/MergePdfsDialog.jsx",

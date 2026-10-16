@@ -1,0 +1,107 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Five literal UI SVG sites in source-reachable FindBar.jsx, rendered inside App.jsx main-view. Aa case sensitivity, checkboxes, and Unicode disclosure carets are UI controls but not SVGs. Search-highlight rectangles are document overlays, not icons.",
+  "literal_svg_sites": 5,
+  "ui_symbol_sites": 5,
+  "non_svg_controls": [
+    "Aa case-sensitivity text button",
+    "Text and Annotations checkboxes",
+    "results disclosure ▾/▸"
+  ],
+  "source_state_defaults": {
+    "visible": false,
+    "text": true,
+    "annotations": true,
+    "results_open": true,
+    "highlight_all": true,
+    "match_case": false,
+    "whole_word": false
+  },
+  "metrics": {
+    "anchor_top_px": 4,
+    "anchor_right_px": 12,
+    "max_width": "calc(100% - 24px)",
+    "bar_padding_px": 4,
+    "row_gap_px": 2,
+    "stack_gap_px": 4,
+    "input_height_px": 24,
+    "input_text_width_px": 180,
+    "input_wrapper_min_width_px": 90,
+    "count_min_width_px": 50,
+    "navigation_button_px": [
+      22,
+      22
+    ],
+    "toggle_button_px": [
+      24,
+      22
+    ],
+    "close_button_px": [
+      22,
+      22
+    ],
+    "source_checkbox_px": 13,
+    "results_list_max_height_px": 150,
+    "source_css": "open-pdf-studio/styles/find-bar.css"
+  },
+  "states_reviewed": [
+    "open-no-query",
+    "results-expanded",
+    "not-found",
+    "both-sources-off",
+    "narrow-viewer"
+  ],
+  "limitations": [
+    "No source runtime screenshot is available for a pixel-difference comparison.",
+    "Result text and document page in the HTML are illustrative data.",
+    "The HTML uses the pinned source CSS and original inline SVG geometry for the find bar."
+  ],
+  "records": [
+    {
+      "name": "previous",
+      "label": "Vorige treffer",
+      "role": "navigation",
+      "source_file": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "source_line": 119,
+      "svg": "inline-ui-icons/open-pdf-studio/find-bar/previous.svg",
+      "sha256": "45ffea6b3db5419f7b888afed804b99c577cd37de149c89c4b320675059ec7b7"
+    },
+    {
+      "name": "next",
+      "label": "Volgende treffer",
+      "role": "navigation",
+      "source_file": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "source_line": 124,
+      "svg": "inline-ui-icons/open-pdf-studio/find-bar/next.svg",
+      "sha256": "28424cca20a3e88b18c011f25cc4a2d6be86f93d2a156859065379a4c2c391c5"
+    },
+    {
+      "name": "whole-word",
+      "label": "Hele woorden",
+      "role": "toggle",
+      "source_file": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "source_line": 145,
+      "svg": "inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg",
+      "sha256": "876fcd1892791ed48533959988abce2845ae1c26d6b784654a087ed587684f9a"
+    },
+    {
+      "name": "highlight-all",
+      "label": "Alles markeren",
+      "role": "toggle",
+      "source_file": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "source_line": 156,
+      "svg": "inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg",
+      "sha256": "50f15007984481c750bfe47a08b2042497f098095d490ebb7abffa2b73f6557f"
+    },
+    {
+      "name": "close",
+      "label": "Zoekbalk sluiten",
+      "role": "action",
+      "source_file": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "source_line": 163,
+      "svg": "inline-ui-icons/open-pdf-studio/find-bar/close.svg",
+      "sha256": "7e43563023c5ca1a7609370a240b93ef89e5f9fa0d15298e395d14cf4407415d"
+    }
+  ]
+}

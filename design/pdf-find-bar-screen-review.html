@@ -1,0 +1,400 @@
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PDF · Zoekbalk-schermreview</title><style>
+:root{font:14px/1.5 system-ui,sans-serif;color:#303039;background:#f2f2f4}*{box-sizing:border-box}body{margin:0}header{background:#303039;color:#fff;border-bottom:4px solid #df8421;padding:27px max(18px,calc((100vw - 1250px)/2))}header a{font-size:12px;color:#ffcb8b}h1{font-size:29px;letter-spacing:-.03em;margin:7px 0}header p{max-width:900px;margin:0;color:#d7d7df}main{max-width:1290px;margin:auto;padding:20px}.intro{background:#fff;border-left:4px solid #df8421;border-top:1px solid #dedee4;border-right:1px solid #dedee4;border-bottom:1px solid #dedee4;padding:13px 16px}.intro p{margin:5px 0}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px;margin-top:18px}.controls,.preview,.evidence{background:#fff;border:1px solid #d9d9e0;padding:16px}.controls label{display:block;margin:12px 0 5px;font-weight:600;font-size:12px}.controls select,.controls input[type=range]{width:100%;font:inherit}.controls output{display:block;color:#6f6f79;font-size:12px}.preview{min-width:0;overflow:hidden}.viewer{position:relative;width:500px;max-width:100%;height:240px;background:#dedee4;border:1px solid #bebec8;overflow:visible;--theme-surface:#fff;--theme-border:#d4d4d4;--theme-bg:#fff;--theme-text:#333;--theme-text-secondary:#888;--theme-hover:#e5e5e5;--theme-active:#d5d5d5;--theme-accent:#0078d4}.viewer.forge{background:#24242b;--theme-surface:#303039;--theme-border:#555560;--theme-bg:#27272e;--theme-text:#f2f2f4;--theme-text-secondary:#b0b0bc;--theme-hover:#45454e;--theme-active:#555560;--theme-accent:#df8421}.page-mock{position:absolute;left:24px;top:42px;width:190px;height:184px;background:#fff;border:1px solid #cacad2;box-shadow:0 2px 8px #0002;padding:25px;color:#9a9aa5;font:11px system-ui}.page-mock i{display:block;height:5px;background:#dddde3;margin:10px 0}.viewer.forge .page-mock{background:#dddde1}.ruler{display:flex;gap:8px;flex-wrap:wrap;color:#777783;font-size:11px;margin-top:12px}.ruler span{background:#f2f2f4;padding:3px 7px}.evidence{margin-top:16px}.evidence h2{font-size:17px;margin:0 0 7px}.evidence p{margin:4px 0}.icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:16px}.icons article{background:#fff;border:1px solid #d9d9e0;padding:12px}.icons b{display:block}.icons em{font-size:11px;color:#777783;font-style:normal}.sizes{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:9px 0}.sizes>div{display:flex;justify-content:space-around;align-items:center;min-height:65px;border:1px solid #d9d9e0}.sizes .light{background:#fff}.sizes .dark{background:#303039}.sizes .dark img{filter:brightness(0) invert(1)}.sizes span{display:flex;flex-direction:column;align-items:center;gap:3px}.sizes small{font-size:9px;color:#777783}.sizes .dark small{color:#ddd}.icons a{color:#a45b08;font-size:11px}footer{font-size:11px;color:#777783;margin:18px 0}@media(max-width:740px){.layout{grid-template-columns:1fr}main{padding:10px}.preview{overflow:auto}}
+/* ========================================
+   Find Bar — VS Code-inspired compact design
+   ======================================== */
+
+.find-bar {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  z-index: 1000;
+  background: var(--theme-surface, #ffffff);
+  border: 1px solid var(--theme-border, #d4d4d4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  align-items: flex-start;
+  gap: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.find-bar.visible {
+  display: flex;
+}
+
+/* Nooit breder dan het documentvenster: met geopende panelen (of op een klein
+   scherm) liep de balk links het venster uit en waren het begin van het
+   zoekveld en het eerste vinkje niet meer zichtbaar of aanklikbaar. */
+.find-bar {
+  max-width: calc(100% - 24px);
+  box-sizing: border-box;
+}
+
+/* --- Expand/collapse button --- */
+
+.find-expand-btn {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: transparent;
+  color: var(--theme-text-secondary, #888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  cursor: default;
+  align-self: flex-start;
+  margin-top: 3px;
+}
+
+.find-expand-btn:hover {
+  color: var(--theme-text, #333);
+  background: var(--theme-hover, #e5e5e5);
+}
+
+/* --- Row layout --- */
+
+.find-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.find-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* --- Input with inline count --- */
+
+.find-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--theme-border, #d4d4d4);
+  background: var(--theme-bg, #ffffff);
+  flex-shrink: 1;
+  min-width: 90px;
+  height: 24px;
+}
+
+.find-input-wrapper:focus-within {
+  border-color: var(--theme-accent, #0078d4);
+}
+
+.find-input-wrapper.not-found {
+  border-color: #e81123;
+  background: rgba(232, 17, 35, 0.06);
+}
+
+.find-input {
+  width: 180px;
+  min-width: 0;
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--theme-text, #333);
+  height: 100%;
+  outline: none;
+}
+
+.find-input::placeholder {
+  color: var(--theme-text-secondary, #999);
+}
+
+.find-count-inline {
+  font-size: 10px;
+  color: var(--theme-text-secondary, #888);
+  white-space: nowrap;
+  padding: 0 6px;
+  flex-shrink: 0;
+  user-select: none;
+  min-width: 50px;
+  text-align: right;
+}
+
+.find-count-inline.is-searching {
+  color: var(--theme-accent, #0078d4);
+}
+
+/* --- Replace input --- */
+
+.replace-input-wrapper {
+  height: 24px;
+}
+
+.replace-input-wrapper .find-input {
+  width: 180px;
+}
+
+/* --- Buttons (nav + toggles) --- */
+
+.find-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: var(--theme-text-secondary, #888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  cursor: default;
+}
+
+.find-btn:hover:not(:disabled) {
+  background: var(--theme-hover, #e5e5e5);
+  color: var(--theme-text, #333);
+}
+
+.find-btn:active:not(:disabled) {
+  background: var(--theme-active, #d5d5d5);
+}
+
+.find-btn:disabled {
+  opacity: 0.35;
+}
+
+/* --- Replace buttons --- */
+
+.replace-btn,
+.replace-all-btn {
+  width: 22px;
+  height: 22px;
+}
+
+/* --- Separator --- */
+
+.find-separator {
+  width: 1px;
+  height: 16px;
+  background: var(--theme-border, #d4d4d4);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* --- Toggle buttons (Match Case, Whole Word, Highlight All) --- */
+
+.find-toggle-btn {
+  width: 24px;
+  height: 22px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--theme-text-secondary, #888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+  font-family: inherit;
+}
+
+.find-toggle-btn:hover {
+  background: var(--theme-hover, #e5e5e5);
+  color: var(--theme-text, #333);
+}
+
+.find-toggle-btn.active {
+  background: var(--theme-accent, #0078d4);
+  color: #ffffff;
+  border-color: var(--theme-accent, #0078d4);
+}
+
+.find-toggle-btn.active:hover {
+  opacity: 0.9;
+}
+
+/* --- Close button --- */
+
+.find-close-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: var(--theme-text-secondary, #888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  margin-left: 2px;
+  cursor: default;
+}
+
+.find-close-btn:hover {
+  background: #e81123;
+  color: #ffffff;
+}
+
+/* --- Zoekbronnen (Tekst / Annotaties) --- */
+
+.find-sources {
+  gap: 10px;
+  padding: 0 2px;
+}
+
+.find-check {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--theme-text, #333);
+  user-select: none;
+  cursor: default;
+}
+
+.find-check input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: default;
+}
+
+.find-sources-hint {
+  font-size: 10px;
+  color: var(--theme-text-secondary, #888);
+  white-space: nowrap;
+}
+
+/* --- Resultatenlijst per pagina --- */
+
+.find-results {
+  border-top: 1px solid var(--theme-border, #d4d4d4);
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-results-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  color: var(--theme-text, #333);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  padding: 3px 2px;
+  cursor: default;
+}
+
+.find-results-header:hover {
+  background: var(--theme-hover, #e5e5e5);
+}
+
+.find-results-caret {
+  font-size: 9px;
+  width: 10px;
+  color: var(--theme-text-secondary, #888);
+}
+
+.find-results-list {
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-results-row {
+  display: flex;
+  overflow: hidden;
+  align-items: baseline;
+  gap: 6px;
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: var(--theme-text, #333);
+  font-family: inherit;
+  font-size: 11px;
+  text-align: left;
+  padding: 2px 6px 2px 4px;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.find-results-row:hover {
+  background: var(--theme-hover, #e5e5e5);
+}
+
+.find-results-row.current {
+  border-left-color: #ff8c00;
+  background: rgba(255, 165, 0, 0.14);
+  font-weight: 600;
+}
+
+.find-results-count,
+.find-results-kinds {
+  color: var(--theme-text-secondary, #888);
+  font-weight: normal;
+}
+
+/* --- Not found message (shown below the bar) --- */
+
+.find-message {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #e81123;
+  background: var(--theme-surface, #ffffff);
+  border: 1px solid #e81123;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* ========================================
+   Search Highlight Styles
+   ======================================== */
+
+.search-highlight {
+  position: absolute;
+  background-color: rgba(255, 255, 0, 0.4);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.search-highlight.current {
+  background-color: rgba(255, 165, 0, 0.6);
+  outline: 2px solid #ff8c00;
+}
+
+/* Annotatietreffer: een kader om de annotatie in plaats van een vlak over de
+   letters — de tekst van een annotatie staat niet in de tekstlaag. */
+.search-highlight-annotation {
+  background-color: rgba(255, 255, 0, 0.18);
+  outline: 2px solid rgba(214, 187, 0, 0.9);
+  outline-offset: 1px;
+}
+
+.search-highlight-annotation.current {
+  background-color: rgba(255, 165, 0, 0.25);
+  outline-color: #ff8c00;
+}
+
+</style><header><a href="review.html">← Ontwerpreview</a><h1>PDF · Zoekbalk</h1><p>Interactieve indelingsstudie uit de gepinde FindBar-structuur, Nederlandse labels en originele CSS. Selecteer een toestand, breedte en thema om het brongedrag te beoordelen.</p></header><main><div class="intro"><strong>Bron en grens.</strong><p>De zoekbalk staat rechtsboven in de documentweergave: 4 px van boven, 12 px van rechts. De eerste rij bevat het zoekveld, twee pijlen, Aa en twee SVG-opties; de tweede rij bevat Tekst en Annotaties. Bij treffers volgt een uitklapbare lijst met maximaal 150 px hoogte. Alle vijf SVG’s zijn echte UI-knoppen. Aa, vinkjes en ▾/▸ zijn ook bediening, maar geen SVG’s.</p><p>De documentpagina en trefferaantallen hieronder zijn voorbeelddata. Er is geen bronruntime-screenshot voor een verschilbeeld; deze studie gebruikt de originele CSS en SVG-geometrie, maar claimt geen pixelgelijke native Rust-weergave.</p></div><div class="layout"><div class="controls"><label for="theme">Thema</label><select id="theme"><option value="light">Light</option><option value="forge">Forge</option></select><label for="state">Toestand</label><select id="state"><option value="idle">Open · lege zoekopdracht</option><option value="results">Treffers · lijst open</option><option value="closed">Treffers · lijst dicht</option><option value="notfound">Geen treffer</option><option value="sourcesoff">Beide bronnen uit</option></select><label for="width">Documentvlakbreedte</label><input id="width" type="range" min="260" max="700" value="500" step="10"><output id="widthout">500 px</output></div><div class="preview"><div id="viewer" class="viewer"><div class="page-mock" aria-hidden="true">Voorbeeldpagina<i></i><i></i><i></i><i></i></div><div class="find-bar visible"><div class="find-rows"><div class="find-row"><div class="find-input-wrapper"><input class="find-input" placeholder="Zoeken in document..." aria-label="Zoeken in document..."><span class="find-count-inline"></span></div><button class="find-btn" title="Vorige (Shift+Enter)" disabled><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M11 13L5.5 8 11 3"/>
+            </svg></button><button class="find-btn" title="Volgende (Enter)" disabled><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 3l5.5 5L5 13"/>
+            </svg></button><div class="find-separator"></div><button class="find-toggle-btn" title="Hoofdlettergevoelig">Aa</button><button class="find-toggle-btn" title="Hele woorden"><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+              <path d="M1 3h2v1H2v8h1v1H1V3zm12 0h2v10h-2v-1h1V4h-1V3zM5.2 11L4.5 9H7l-.7 2h1.1l2-6H8.2l.5-1h2.7l-.5 1H9.8l-2 6H5.2zM5.1 8l.7-2.2L6.5 8H5.1z"/>
+            </svg></button><button class="find-toggle-btn active" title="Alles markeren"><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+              <path d="M11.3 1.3l3.4 3.4c.4.4.4 1 0 1.4L7.4 13.4c-.2.2-.4.3-.7.3H3.3c-.5 0-1-.4-1-1V9.3c0-.3.1-.5.3-.7L9.9 1.3c.4-.4 1-.4 1.4 0zM4.3 9.7v2h2l6.3-6.3-2-2-6.3 6.3z"/>
+            </svg></button><button class="find-close-btn" title="Sluiten (Esc)"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 3l10 10M13 3L3 13"/>
+            </svg></button></div><div class="find-row find-sources"><label class="find-check"><input type="checkbox" checked> Tekst</label><label class="find-check"><input type="checkbox" checked> Annotaties</label><span class="find-sources-hint" hidden>Kies Tekst of Annotaties</span></div><div class="find-results" hidden><button class="find-results-header"><span class="find-results-caret">▾</span><span class="results-title">Resultaten (7)</span></button><div class="find-results-list"><button class="find-results-row current"><span class="find-results-page">Pagina 2</span><span class="find-results-count">4 treffers</span><span class="find-results-kinds">Tekst</span></button><button class="find-results-row"><span class="find-results-page">Pagina 5</span><span class="find-results-count">3 treffers</span><span class="find-results-kinds">Annotaties</span></button></div></div></div><span class="find-message" hidden>Geen resultaten gevonden</span></div></div><div class="ruler"><span>anker: 4 px boven · 12 px rechts</span><span>veld: 24 px hoog</span><span>navigatie: 22 × 22 px</span><span>opties: 24 × 22 px</span><span>lijst: maximaal 150 px hoog</span></div></div></div><div class="evidence"><h2>Layoutbeoordeling</h2><p>De CSS begrenst de balk op <code>calc(100% - 24px)</code>, maar de knoppen blijven op vaste breedte en de eerste rij breekt niet om. Bij een documentvlak rond 260–280 px kan de rij intern buiten de begrensde balk lopen. Voor de Rust-component is een expliciete compacte toestand of overflow-keuze nodig.</p><p>De bron gebruikt een blauw accent voor de actieve zoekoptie; Forge in deze studie zet dat thematisch naar amber. Dat is een harmonisatievoorstel en geen eigenschap van de gepinde PDF-bron. De bronhighlight in de PDF-pagina blijft apart van deze zoekbalkiconen.</p></div><div class="icons"><article><b>Vorige treffer</b><em>navigation</em><div class="sizes"><div class="light"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="32" height="32" alt=""><small>32px</small></span></div><div class="dark"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/previous.svg" width="32" height="32" alt=""><small>32px</small></span></div></div><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/FindBar.jsx#L119">Bronregel 119 ↗</a></article><article><b>Volgende treffer</b><em>navigation</em><div class="sizes"><div class="light"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="32" height="32" alt=""><small>32px</small></span></div><div class="dark"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/next.svg" width="32" height="32" alt=""><small>32px</small></span></div></div><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/FindBar.jsx#L124">Bronregel 124 ↗</a></article><article><b>Hele woorden</b><em>toggle</em><div class="sizes"><div class="light"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="32" height="32" alt=""><small>32px</small></span></div><div class="dark"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/whole-word.svg" width="32" height="32" alt=""><small>32px</small></span></div></div><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/FindBar.jsx#L145">Bronregel 145 ↗</a></article><article><b>Alles markeren</b><em>toggle</em><div class="sizes"><div class="light"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="32" height="32" alt=""><small>32px</small></span></div><div class="dark"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/highlight-all.svg" width="32" height="32" alt=""><small>32px</small></span></div></div><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/FindBar.jsx#L156">Bronregel 156 ↗</a></article><article><b>Zoekbalk sluiten</b><em>action</em><div class="sizes"><div class="light"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="32" height="32" alt=""><small>32px</small></span></div><div class="dark"><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="16" height="16" alt=""><small>16px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="24" height="24" alt=""><small>24px</small></span><span><img src="../harmonization/inline-ui-icons/open-pdf-studio/find-bar/close.svg" width="32" height="32" alt=""><small>32px</small></span></div></div><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/FindBar.jsx#L163">Bronregel 163 ↗</a></article></div><footer>Bron: open-pdf-studio @ f754cb7c9d9adf654f6894cee15543413c24fcff · FindBar.jsx · find-bar.css · Nederlandse statusbar-locale</footer></main><script>
+const state=document.querySelector('#state'),theme=document.querySelector('#theme'),width=document.querySelector('#width'),viewer=document.querySelector('#viewer'),bar=document.querySelector('.find-bar');function render(){viewer.style.width=width.value+'px';document.querySelector('#widthout').textContent=width.value+' px';viewer.classList.toggle('forge',theme.value==='forge');const value=state.value;const found=value==='results'||value==='closed';const none=value==='notfound';const off=value==='sourcesoff';bar.querySelector('.find-input').value=found?'constructie':none?'nietsgevonden':'';bar.querySelector('.find-count-inline').textContent=found?'1 van 7':'';bar.querySelector('.find-input-wrapper').classList.toggle('not-found',none);bar.querySelector('.find-message').hidden=!none;bar.querySelector('.find-results').hidden=!found;bar.querySelector('.find-results-list').hidden=value==='closed';bar.querySelector('.find-results-caret').textContent=value==='closed'?'▸':'▾';for(const b of bar.querySelectorAll('.find-btn'))b.disabled=!found;for(const c of bar.querySelectorAll('.find-check input'))c.checked=!off;bar.querySelector('.find-sources-hint').hidden=!off}for(const el of [state,theme,width])el.addEventListener('input',render);bar.querySelector('.find-results-header').addEventListener('click',()=>{state.value=state.value==='closed'?'results':'closed';render()});render();
+</script></html>
