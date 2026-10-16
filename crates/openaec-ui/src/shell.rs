@@ -1,5 +1,5 @@
 use crate::{fonts, icons::Icon, model::*, widgets, Language, Theme};
-use iced::{widget::{button, column, container, mouse_area, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Column, Row, Space}, Element, Fill, Padding};
+use iced::{widget::{button, column, container, mouse_area, pane_grid, pick_list, row, scrollable, slider, stack, text, tooltip, Row, Space}, Element, Fill, Padding};
 
 /// Application-owned contents. Shell layout and styling stay inside the crate.
 pub struct Slots<'a, M> {
@@ -9,6 +9,7 @@ pub struct Slots<'a, M> {
     pub documents: Vec<Document>,
     pub active_document: Option<String>,
     pub file_commands: Vec<Command<M>>,
+    pub file_active_label: Option<String>,
     pub quick_commands: Vec<Command<M>>,
     pub status: String,
     pub content: Box<dyn Fn(Region) -> Element<'a, Message<M>> + 'a>,
@@ -106,10 +107,24 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     }
     let document_bar=crate::frame::document_bar(theme, horizontal(documents));
     let body: Element<'a,Message<M>> = if state.backstage {
-        let mut commands=Column::new().spacing(8).push(widgets::action(l.text("Terug","Back"),Icon::Back,Some(Message::Ui(UiEvent::Backstage(false))),theme));
-        for command in slots.file_commands { commands=commands.push(widgets::action(command.label,command.icon,command.enabled.then_some(Message::Command(command.message)),theme)); }
-        commands=commands.push(widgets::action(l.text("Instellingen","Settings"),Icon::Settings,Some(Message::Ui(UiEvent::Settings(true))),theme));
-        container(column![text(l.text("Bestand","File")).font(fonts::HEADING).size(28),commands].spacing(24)).padding(32).width(Fill).height(Fill).into()
+        let pages = slots.file_commands.into_iter().map(|command| {
+            let active = slots.file_active_label.as_ref() == Some(&command.label);
+            widgets::BackstagePage {
+                label: command.label,
+                message: Message::Command(command.message),
+                active,
+                enabled: command.enabled,
+            }
+        }).collect();
+        let footer = widgets::BackstageFooter {
+            settings: (l.text("Instellingen…", "Settings…").into(), Message::Ui(UiEvent::Settings(true))),
+            back: (l.text("←  Terug naar werkgebied", "←  Return to workspace").into(), Message::Ui(UiEvent::Backstage(false))),
+            exit: (l.text("Afsluiten", "Exit").into(), Message::Ui(UiEvent::CloseWindow)),
+        };
+        row![
+            widgets::backstage_nav_with(pages, Vec::new(), footer, move |_| theme),
+            (slots.content)(Region::Workspace),
+        ].height(Fill).width(Fill).into()
     } else if slots.mode == ChromeMode::TopNav {
         (slots.content)(Region::Workspace)
     } else if slots.mode == ChromeMode::CanvasRibbon {
@@ -137,7 +152,12 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         status_row.align_y(iced::Alignment::Center).height(Fill).into(),
         8,
     );
-    let bands = if slots.mode == ChromeMode::TopNav {
+    let bands = if state.backstage {
+        crate::frame::frame(crate::frame::FrameSlots {
+            titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
+            documents: None, content: body, status: status.into(),
+        })
+    } else if slots.mode == ChromeMode::TopNav {
         crate::frame::frame(crate::frame::FrameSlots {
             titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
             documents: None, content: body, status: status.into(),

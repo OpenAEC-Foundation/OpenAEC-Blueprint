@@ -2051,6 +2051,9 @@ impl Application for StyleRepo {
             .map(|&page| Command::new(page.title(l), page.icon(), Action::Show(page)))
             .collect()
     }
+    fn file_active_label(&self, l: Language) -> Option<String> {
+        Some(self.page.title(l).into())
+    }
     fn workspace(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let content = match self.page {
             Page::Overview => self.overview(theme, l),

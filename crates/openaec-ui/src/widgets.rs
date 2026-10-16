@@ -15,6 +15,109 @@ use iced::{
 };
 pub use crate::popover::{popover, popover_aligned};
 
+/// A destination in the shared File/Backstage navigation.
+pub struct BackstagePage<M> {
+    pub label: String,
+    pub message: M,
+    pub active: bool,
+    pub enabled: bool,
+}
+
+/// Application-owned actions shown below the shared page list.
+pub struct BackstageFooter<M> {
+    pub settings: (String, M),
+    pub back: (String, M),
+    pub exit: (String, M),
+}
+
+/// The 260 px File menu used by desktop studios. Page order, labels and
+/// messages belong to the application; row geometry and colours belong here.
+pub fn backstage_nav_with<'a, M: Clone + 'a, F>(
+    task_pages: Vec<BackstagePage<M>>,
+    other_pages: Vec<BackstagePage<M>>,
+    footer: BackstageFooter<M>,
+    resolve_theme: F,
+) -> Element<'a, M>
+where
+    F: Fn(&iced::Theme) -> Theme + Copy + 'a,
+{
+    let rule = || {
+        container(Space::new(Fill, 1)).style(move |theme| {
+            container::Style::default().background(resolve_theme(theme).tokens().border_subtle)
+        })
+    };
+    let page = |entry: BackstagePage<M>| {
+        let active = entry.active;
+        row![
+            container(Space::new(3, Fill)).style(move |theme| {
+                container::Style::default().background(if active {
+                    resolve_theme(theme).tokens().accent
+                } else {
+                    iced::Color::TRANSPARENT
+                })
+            }),
+            button(text(entry.label).size(14))
+                .on_press_maybe(entry.enabled.then_some(entry.message))
+                .style(move |theme, status| {
+                    ribbon_button_style(resolve_theme(theme), active, status)
+                })
+                .width(Fill)
+                .height(Fill)
+                .padding([11, 15]),
+        ]
+        .height(40)
+    };
+    let pages = |entries: Vec<BackstagePage<M>>| {
+        entries.into_iter().fold(column![].width(Fill), |list, entry| list.push(page(entry)))
+    };
+    let item = |label: String, message: M| {
+        button(text(label).size(14))
+            .on_press(message)
+            .style(move |theme, status| {
+                ribbon_button_style(resolve_theme(theme), false, status)
+            })
+            .width(Fill)
+            .padding([11, 18])
+    };
+    let top = column![
+        Space::new(Fill, 14),
+        pages(task_pages),
+        container(rule()).padding([10, 0]),
+        pages(other_pages),
+    ]
+    .width(Fill);
+    let footer = column![
+        rule(),
+        item(footer.settings.0, footer.settings.1),
+        button(text(footer.back.0).size(13).font(fonts::STRONG))
+            .on_press(footer.back.1)
+            .style(move |theme, status| {
+                ribbon_button_style(resolve_theme(theme), false, status)
+            })
+            .width(Fill)
+            .padding([13, 18]),
+        rule(),
+        item(footer.exit.0, footer.exit.1),
+    ]
+    .width(Fill);
+    container(column![
+        scrollable(top)
+            .height(Fill)
+            .style(move |theme, status| scrollable_style(resolve_theme(theme), status)),
+        footer,
+    ]
+    .height(Fill))
+    .width(260)
+    .height(Fill)
+    .style(move |theme| {
+        let t = resolve_theme(theme).tokens();
+        container::Style::default()
+            .background(t.bg_lighter)
+            .border(Border { color: t.border, width: 1.0, radius: 0.0.into() })
+    })
+    .into()
+}
+
 pub fn slider_style(theme: Theme, status: slider::Status) -> slider::Style {
     let t = theme.tokens();
     slider::Style {

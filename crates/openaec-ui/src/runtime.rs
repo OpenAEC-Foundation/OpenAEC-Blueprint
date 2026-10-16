@@ -22,6 +22,7 @@ pub trait Application: 'static {
         widgets::empty_state(language.text("Eigenschappen","Properties"), "", theme)
     }
     fn file_commands(&self, _language: Language) -> Vec<Command<Self::Command>> { Vec::new() }
+    fn file_active_label(&self, _language: Language) -> Option<String> { None }
     fn quick_commands(&self, _language: Language) -> Vec<Command<Self::Command>> { Vec::new() }
     fn documents(&self) -> Vec<Document> { Vec::new() }
     fn active_document(&self) -> Option<String> { None }
@@ -35,7 +36,10 @@ struct Runtime<A:Application> { app:A, shell:ShellState, preferences_path:Option
 impl<A:Application> Runtime<A> {
     fn update(&mut self, message: Message<A::Command>) -> Task<Message<A::Command>> {
         match message {
-            Message::Command(command) => self.app.update(command).map(Message::Command),
+            Message::Command(command) => {
+                self.shell.backstage = false;
+                self.app.update(command).map(Message::Command)
+            }
             Message::Document(event) => self.app.document_event(event).map(Message::Command),
             Message::Ui(event) => {
                 if matches!(event, UiEvent::SettingsEscape) && !self.shell.settings {
@@ -70,7 +74,7 @@ impl<A:Application> Runtime<A> {
         let mode=self.app.chrome_mode();
         shell(&self.shell, Slots {
             title:self.app.title(), mode, tabs:self.app.ribbon(language), documents:self.app.documents(),
-            active_document:self.app.active_document(), file_commands:self.app.file_commands(language), quick_commands:self.app.quick_commands(language),
+            active_document:self.app.active_document(), file_commands:self.app.file_commands(language), file_active_label:self.app.file_active_label(language), quick_commands:self.app.quick_commands(language),
             status:self.error.clone().unwrap_or_else(||self.app.status(language)),
             overlay:self.app.overlay(theme,language).map(|element|element.map(Message::Command)),
             content:Box::new(move |region| match region {
@@ -125,6 +129,19 @@ mod settings_tests {
             iced::widget::text("test").into()
         }
         fn update(&mut self, _: Self::Command) -> Task<Self::Command> { Task::none() }
+    }
+
+    #[test]
+    fn choosing_a_file_page_returns_to_the_workspace() {
+        let mut runtime = Runtime {
+            app: TestApplication,
+            shell: ShellState::default(),
+            preferences_path: None,
+            error: None,
+        };
+        runtime.shell.backstage = true;
+        let _ = runtime.update(Message::Command(()));
+        assert!(!runtime.shell.backstage);
     }
 
     #[test]

@@ -43,7 +43,7 @@ fn render_sized(
     active_tab: Option<&str>,
     size: Size,
 ) -> tiny_skia::Pixmap {
-    render_sized_with_reset(app, theme, show_settings, active_tab, size, false)
+    render_sized_with_reset(app, theme, show_settings, active_tab, size, false, false)
 }
 
 fn render_sized_with_reset(
@@ -53,6 +53,7 @@ fn render_sized_with_reset(
     active_tab: Option<&str>,
     size: Size,
     reset_confirm: bool,
+    backstage: bool,
 ) -> tiny_skia::Pixmap {
     load_fonts();
     let mut preferences = Preferences::default();
@@ -60,6 +61,7 @@ fn render_sized_with_reset(
     let mut state = ShellState::new(preferences);
     state.settings = show_settings;
     state.settings_reset_confirm = reset_confirm;
+    state.backstage = backstage;
     if show_settings {
         state.settings_page = openaec_ui::SettingsPage::Appearance;
         state.settings_theme_open = !reset_confirm;
@@ -77,6 +79,7 @@ fn render_sized_with_reset(
             documents: app.documents(),
             active_document: app.active_document(),
             file_commands: app.file_commands(language),
+            file_active_label: app.file_active_label(language),
             quick_commands: app.quick_commands(language),
             status: app.status(language),
             overlay: app.overlay(theme, language).map(|element| element.map(Message::Command)),
@@ -165,7 +168,7 @@ fn export_shared_settings_review() {
             .save_png(&design.join(format!("style-repo-settings-{name}.png")))
             .expect("save shared settings review");
     }
-    render_sized_with_reset(&app, Theme::Forge, true, None, Size::new(1280.0, 800.0), true)
+    render_sized_with_reset(&app, Theme::Forge, true, None, Size::new(1280.0, 800.0), true, false)
         .save_png(&design.join("style-repo-settings-reset-forge.png"))
         .expect("save reset confirmation review");
     render_sized(&app, Theme::Light, true, None, Size::new(1280.0, 480.0))
@@ -483,6 +486,7 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
         title: app.title(), mode: app.chrome_mode(), tabs: app.ribbon(Language::Dutch),
         documents: app.documents(), active_document: app.active_document(),
         file_commands: app.file_commands(Language::Dutch),
+        file_active_label: app.file_active_label(Language::Dutch),
         quick_commands: app.quick_commands(Language::Dutch),
         status: app.status(Language::Dutch),
         overlay: None,
@@ -549,6 +553,7 @@ fn pdf_format_gallery_popup_selects_hidden_style_and_closes_outside() {
         title: app.title(), mode: app.chrome_mode(), tabs: app.ribbon(Language::Dutch),
         documents: app.documents(), active_document: app.active_document(),
         file_commands: app.file_commands(Language::Dutch),
+        file_active_label: app.file_active_label(Language::Dutch),
         quick_commands: app.quick_commands(Language::Dutch),
         status: app.status(Language::Dutch),
         overlay: None,
@@ -720,6 +725,20 @@ fn export_pile_view_ribbon_review() {
     render_with_options(&app, Theme::Forge, false, Some("weergave"))
         .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pile-view-forge.png"))
         .expect("save Pile Weergave ribbon review");
+}
+
+#[test]
+#[ignore = "regenerate shared File navigation review on demand"]
+fn export_shared_backstage_review() {
+    let app = StyleRepo::default();
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized_with_reset(
+            &app, theme, false, None, Size::new(1280.0, 800.0), false, true,
+        )
+        .save_png(&design.join(format!("style-repo-backstage-{name}.png")))
+        .expect("save shared File navigation review");
+    }
 }
 
 #[test]
