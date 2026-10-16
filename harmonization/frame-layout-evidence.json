@@ -1,0 +1,99 @@
+{
+  "repository": "open-frame-studio",
+  "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+  "basis": "Pinned Svelte CSS declarations and app settings versus current crate model.rs constants. This is a source-measured comparison; no original runtime screenshot or pixel equivalence is claimed.",
+  "source_css_box_sizing": "border-box",
+  "source_spacing_unit": "4 px at a 16 px rem root",
+  "frame_panel_width_constraints": {
+    "left": [
+      140,
+      400
+    ],
+    "right": [
+      200,
+      500
+    ]
+  },
+  "light_theme_contrast": {
+    "workspace_inactive_source": 2.23,
+    "workspace_using_text_secondary": 6.69,
+    "ribbon_inactive_source": 2.06,
+    "ribbon_using_text_secondary": 6.12,
+    "source_tokens": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/styles/tokens.css"
+  },
+  "measurements": [
+    {
+      "region": "Titelbalk",
+      "frame_source": "36 px",
+      "shared_rust": "32 px",
+      "source": {
+        "file": "ui/src/components/shell/TitleBar.svelte",
+        "line": 108,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/TitleBar.svelte#L108"
+      },
+      "rust_metric": "metrics::TITLE",
+      "decision": "Profielmaat per app; vensterknoppen blijven 36 × 36 px."
+    },
+    {
+      "region": "Lintinhoud",
+      "frame_source": "min. 72 px + tabrij",
+      "shared_rust": "94 px vast",
+      "source": {
+        "file": "ui/src/components/shell/Ribbon.svelte",
+        "line": 810,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L810"
+      },
+      "rust_metric": "metrics::RIBBON",
+      "decision": "De inhoudshoogte en de vijf tabbladen afzonderlijk modelleren."
+    },
+    {
+      "region": "Werkruimtetabs",
+      "frame_source": "flex-wrap; hoogte variabel",
+      "shared_rust": "30 px documentbalk",
+      "source": {
+        "file": "ui/src/App.svelte",
+        "line": 475,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/App.svelte#L475"
+      },
+      "rust_metric": "metrics::DOCUMENTS",
+      "decision": "Een eigen omvouwende workspace-navigatie; geen documenttab-nabootsing."
+    },
+    {
+      "region": "Statusbalk",
+      "frame_source": "28 px",
+      "shared_rust": "22 px",
+      "source": {
+        "file": "ui/src/components/shell/StatusBar.svelte",
+        "line": 71,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/StatusBar.svelte#L71"
+      },
+      "rust_metric": "metrics::STATUS",
+      "decision": "App-profielhoogte met behoud van gedeelde statussemantiek."
+    },
+    {
+      "region": "Paneelkop",
+      "frame_source": "26 px",
+      "shared_rust": "24 px gedeelde paneeltoolbar",
+      "source": {
+        "file": "ui/src/App.svelte",
+        "line": 560,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/App.svelte#L560"
+      },
+      "rust_metric": "metrics::PANEL_TOOLBAR",
+      "decision": "Kophoogte apart van de herbruikbare eigenschapsrij."
+    },
+    {
+      "region": "Paneelbreedtes",
+      "frame_source": "links 220 / rechts 290 px",
+      "shared_rust": "240 px standaard",
+      "source": {
+        "file": "ui/src/lib/settings.js",
+        "line": 12,
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/lib/settings.js#L12"
+      },
+      "rust_metric": "metrics::PANEL_DEFAULT",
+      "decision": "Linker en rechter standaardwaarde onafhankelijk bewaren."
+    }
+  ],
+  "recommendation": "Represent Open Frame as a shell profile with its own band metrics, wrapped workspace tabs and independent pane widths; retain the 32/94/30/22 base metrics for tools that match the existing crate shell."
+}
