@@ -1,0 +1,265 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 19 literal SVG call sites in source-reachable desktop OpenPanel.jsx. Every site renders a visible UI symbol when its panel/data state is active; repetitions are preserved as separate placements.",
+  "literal_svg_sites": 19,
+  "ui_icon_placements": 19,
+  "distinct_source_shapes": 15,
+  "duplicate_shapes": [
+    [
+      "recent-document",
+      "site-document"
+    ],
+    [
+      "remove-recent",
+      "remove-session",
+      "remove-place"
+    ],
+    [
+      "pinned-chevron",
+      "unpinned-chevron"
+    ]
+  ],
+  "records": [
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 253,
+      "ordinal": 1,
+      "name": "recent-document",
+      "label": "Bestand in recentlijst",
+      "role": "document",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/recent-document.svg",
+      "sha256": "ea5b91d4480b9c80fb245ce9cabe2bf6f1fd9eb9e1b307537e9bfda756d46b3b",
+      "native_preview_limitation": "Iced SVG render omits PDF lettering from source <text>"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 269,
+      "ordinal": 2,
+      "name": "pin-recent",
+      "label": "Recent bestand vastzetten/losmaken",
+      "role": "action",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/pin-recent.svg",
+      "sha256": "39adb631fa742b95545ff2ecff3c43a9f53cd032550c60ff973114bd8e64a749",
+      "source_dynamic_state": [
+        "fill=none/filled according to pinned state"
+      ]
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 279,
+      "ordinal": 3,
+      "name": "remove-recent",
+      "label": "Recent bestand verwijderen",
+      "role": "action",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/remove-recent.svg",
+      "sha256": "3ab842817e719e162028609e2c980d65b11af0b8994a65fbede39bde14a0786d"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 297,
+      "ordinal": 4,
+      "name": "search-recent",
+      "label": "Recente bestanden zoeken",
+      "role": "search",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/search-recent.svg",
+      "sha256": "c22361bb6bcc57a9ce4691c47fa2b3148ffc64976ff63a36d9fca643aa2cfd65"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 313,
+      "ordinal": 5,
+      "name": "pinned-chevron",
+      "label": "Vastgezette lijst in-/uitklappen",
+      "role": "disclosure",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/pinned-chevron.svg",
+      "sha256": "2a40bda29911d18a91edb1a8e0670120d8007d04553613b494de7a4594636715",
+      "source_dynamic_state": [
+        "chevron rotation according to collapsed state"
+      ]
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 329,
+      "ordinal": 6,
+      "name": "unpinned-chevron",
+      "label": "Andere lijst in-/uitklappen",
+      "role": "disclosure",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/unpinned-chevron.svg",
+      "sha256": "2a40bda29911d18a91edb1a8e0670120d8007d04553613b494de7a4594636715",
+      "source_dynamic_state": [
+        "chevron rotation according to collapsed state"
+      ]
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 382,
+      "ordinal": 7,
+      "name": "session-tile",
+      "label": "Opgeslagen sessie",
+      "role": "object",
+      "subpanel": "sessions",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/session-tile.svg",
+      "sha256": "0843a0e97e7efd62e91e064d118579c783c628c0dd4e2693cbf1ee3c66bc0c46"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 401,
+      "ordinal": 8,
+      "name": "remove-session",
+      "label": "Sessie verwijderen",
+      "role": "action",
+      "subpanel": "sessions",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/remove-session.svg",
+      "sha256": "3ab842817e719e162028609e2c980d65b11af0b8994a65fbede39bde14a0786d"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 459,
+      "ordinal": 9,
+      "name": "site-document",
+      "label": "Site-document",
+      "role": "document",
+      "subpanel": "site",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/site-document.svg",
+      "sha256": "ea5b91d4480b9c80fb245ce9cabe2bf6f1fd9eb9e1b307537e9bfda756d46b3b",
+      "native_preview_limitation": "Iced SVG render omits PDF lettering from source <text>"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 488,
+      "ordinal": 10,
+      "name": "add-place",
+      "label": "Maplocatie toevoegen",
+      "role": "action",
+      "subpanel": "places",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/add-place.svg",
+      "sha256": "478f31fc19bdcc04dddea8cff852747cee66f4817745d0fa643bd06dbb86a227"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 504,
+      "ordinal": 11,
+      "name": "place-folder",
+      "label": "Maplocatie",
+      "role": "object",
+      "subpanel": "places",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/place-folder.svg",
+      "sha256": "ce469c6a3814619fa3d2a1e9b63d12c62e950eb843240f99e7fea67bbbe7061f"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 518,
+      "ordinal": 12,
+      "name": "remove-place",
+      "label": "Maplocatie verwijderen",
+      "role": "action",
+      "subpanel": "places",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/remove-place.svg",
+      "sha256": "3ab842817e719e162028609e2c980d65b11af0b8994a65fbede39bde14a0786d"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 538,
+      "ordinal": 13,
+      "name": "place-document",
+      "label": "PDF in maplocatie",
+      "role": "document",
+      "subpanel": "places",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/place-document.svg",
+      "sha256": "9479a28bcd4a36bd92704000ddab711d519b624a9be04297d481878cadca4c64",
+      "native_preview_limitation": "Iced SVG render omits PDF lettering from source <text>"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 569,
+      "ordinal": 14,
+      "name": "nav-site",
+      "label": "Navigatie: site",
+      "role": "navigation",
+      "subpanel": "site",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-site.svg",
+      "sha256": "7c496bd6c5984a10047fb3f6080547e1755e59e6ffc48cae5fd83e6d97fbe2cb"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 581,
+      "ordinal": 15,
+      "name": "nav-recent",
+      "label": "Navigatie: recent",
+      "role": "navigation",
+      "subpanel": "recent",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-recent.svg",
+      "sha256": "ac0329a610afb594763275e4d3c0c9595da75f3a104cb9201f6524a6bed1d026"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 591,
+      "ordinal": 16,
+      "name": "nav-sessions",
+      "label": "Navigatie: sessies",
+      "role": "navigation",
+      "subpanel": "sessions",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-sessions.svg",
+      "sha256": "4819c848e203d09b037a83392ab45357b6f1f1859c48baecc683ad22a0a60ed4"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 603,
+      "ordinal": 17,
+      "name": "nav-url",
+      "label": "Navigatie: openen van URL",
+      "role": "navigation",
+      "subpanel": "url",
+      "state": "always-available",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-url.svg",
+      "sha256": "b34c964855ca4b0db5eccf46cc821331e7a58cdfa21bc972c7083854638096fe"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 614,
+      "ordinal": 18,
+      "name": "nav-places",
+      "label": "Navigatie: locaties",
+      "role": "navigation",
+      "subpanel": "places",
+      "state": "conditional",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-places.svg",
+      "sha256": "bd815b8471c9636c3dbe59f43ac6c9566dba20d33f57b6aa22a6fee2bffe9ccb"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+      "line": 621,
+      "ordinal": 19,
+      "name": "nav-browse",
+      "label": "Navigatie: bladeren",
+      "role": "navigation",
+      "subpanel": "browse",
+      "state": "always-available",
+      "svg": "inline-ui-icons/open-pdf-studio/open-panel/nav-browse.svg",
+      "sha256": "b3704b29a8887313168b019b22ab4d1f82dbe006e6bdec8f8cbd2d63b77f3c58"
+    }
+  ]
+}
