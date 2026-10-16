@@ -14,6 +14,8 @@ Een eerste aparte audit voor SVG's die direct in UI-code staan heeft [18 gebruik
 
 Ook [47 gebruikte Open Calc Studio-linticonen](../design/calc-inline-icon-review.html) zijn geëxtraheerd. Hun [index](calc-inline-ui-icons.json) volgt `icons.ts` naar concrete aanroepen in Home, Offerte, Rapportage en Tekstopmaak op commit `b47042704efa`; de SVG-reviewkopieën staan onder `inline-ui-icons/open-calc-studio/`. Andere codegetekende SVG's, bijvoorbeeld diagrammen en concepttekeningen, zijn hierdoor niet automatisch UI-iconen.
 
+Voor Open Calculations Studio bevat de [gerichte review](../design/calculations-inline-icon-review.html) acht huidige Calc-knopiconen. De [index](calculations-inline-ui-icons.json) laat tegelijk zien welke twintig definities uit `calcIcons.ts` niet door de huidige knoppen worden aangeroepen en waarom de 42 vormen in de oudere `icons.ts` buiten de telling blijven. De losse reviewvectoren staan onder `inline-ui-icons/Open-Calculations-Studio/`.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |

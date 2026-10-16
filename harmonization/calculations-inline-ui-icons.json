@@ -1,0 +1,130 @@
+{
+  "repository": "Open-Calculations-Studio",
+  "commit": "21d218c996d09b92018ad21b730c883c665dc035",
+  "scope": "SVGs constructed by calcIcons.ts and passed to visible CalcTab RibbonButton controls",
+  "count": 8,
+  "icons": [
+    {
+      "name": "new-doc",
+      "identifier": "newDocIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 13,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        81
+      ],
+      "sha256": "70e88a676f0a28ae7894c431627dddbde7089b8efe5e7fc4ac17e97d4287b306",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/new-doc.svg"
+    },
+    {
+      "name": "open-folder",
+      "identifier": "openFolderIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 19,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        82
+      ],
+      "sha256": "c4535bf24dcbc3e66108f3d5a7350d1106259719512b5046a5c75e0faeddbec8",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/open-folder.svg"
+    },
+    {
+      "name": "save-disk",
+      "identifier": "saveDiskIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 24,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        83
+      ],
+      "sha256": "15e7c279609935475fc4a6a2324d98c10b34dc44a68b8f081ae8d2efa510b4d2",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/save-disk.svg"
+    },
+    {
+      "name": "module",
+      "identifier": "moduleIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 32,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        106
+      ],
+      "sha256": "0b17fc9a759b9e67e06082a2dee01df6e16f22f721918b459a9d58568c486957",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/module.svg"
+    },
+    {
+      "name": "undo",
+      "identifier": "undoIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 39,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        89
+      ],
+      "sha256": "4013cc8169b0432c25b03f01f2df3291593380a63a0af53e6edd42b3a44cebc9",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/undo.svg"
+    },
+    {
+      "name": "redo",
+      "identifier": "redoIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 44,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        96
+      ],
+      "sha256": "a30e2a19cb4224391fddf2a6de0814afc23e049aa2b3f3416aeaf9296b9b3891",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/redo.svg"
+    },
+    {
+      "name": "image",
+      "identifier": "imageIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 77,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        107
+      ],
+      "sha256": "38ee9369ff99002f9afcc6b786ef98d9112041855dd6aad5c0edf88872eef865",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/image.svg"
+    },
+    {
+      "name": "pdf",
+      "identifier": "pdfIcon",
+      "source": "packages/desktop/src/components/ribbon/calcIcons.ts",
+      "source_line": 106,
+      "usage": "packages/desktop/src/components/ribbon/CalcTab.tsx",
+      "usage_lines": [
+        112,
+        118,
+        125
+      ],
+      "sha256": "6380eae5822cfd58eb02d173f5f299cf837576912d1bd45772652e53b778d8d8",
+      "svg": "inline-ui-icons/Open-Calculations-Studio/pdf.svg"
+    }
+  ],
+  "excluded_unwired_calc_icons": [
+    "headingIcon",
+    "formulaIcon",
+    "variableIcon",
+    "selectListIcon",
+    "checkIcon",
+    "svgShapeIcon",
+    "viewSplitIcon",
+    "viewEditorIcon",
+    "viewPreviewIcon",
+    "pdfPreviewIcon",
+    "ifcExportIcon",
+    "ifcImportIcon",
+    "ifcTreeIcon",
+    "ifcPropertiesIcon",
+    "ifcValidateIcon",
+    "gefIcon",
+    "broIcon",
+    "beamIcon",
+    "columnIcon",
+    "pileIcon"
+  ],
+  "excluded_legacy_icons_ts_count": 42,
+  "excluded_legacy_reason": "CalcTab imports ./calcIcons and IfcTab renders an empty ribbon; legacy icons.ts is not imported by these active ribbon tabs"
+}
