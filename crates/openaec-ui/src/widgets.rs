@@ -650,6 +650,82 @@ pub fn ribbon_tab_style(theme: Theme, active: bool, status: button::Status) -> b
     }
 }
 
+/// The source Style Book's 28 px tab, including the active outline and the
+/// gap that masks the continuous accent rule. Callers own labels and actions.
+#[derive(Clone, Copy)]
+pub enum RibbonTabKind { Regular { active: bool }, File }
+
+pub fn ribbon_tab<'a, M: Clone + 'a>(
+    content: Element<'a, M>,
+    message: M,
+    width: f32,
+    kind: RibbonTabKind,
+    theme: Theme,
+) -> Element<'a, M> {
+    let tokens = theme.tokens();
+    let width = width.max(32.0);
+    let outline = match kind {
+        RibbonTabKind::Regular { active: true } => tokens.accent,
+        RibbonTabKind::File => tokens.file_tab_bg,
+        RibbonTabKind::Regular { active: false } => iced::Color::TRANSPARENT,
+    };
+    let gap = match kind {
+        RibbonTabKind::Regular { active: true } => tokens.bg,
+        RibbonTabKind::File => tokens.file_tab_bg,
+        RibbonTabKind::Regular { active: false } => iced::Color::TRANSPARENT,
+    };
+    let edge = || container(Space::new(1, Fill)).width(1).style(move |_| {
+        container::Style::default().background(outline)
+    });
+    let face = button(content)
+        .on_press(message)
+        .width(Fill)
+        .height(25)
+        .padding([3, 6])
+        .style(move |_, status| match kind {
+            RibbonTabKind::Regular { active } => ribbon_tab_style(theme, active, status),
+            RibbonTabKind::File => button::Style {
+                background: Some(if status == button::Status::Hovered {
+                    tokens.file_tab_hover.into()
+                } else {
+                    tokens.file_tab_bg.into()
+                }),
+                text_color: tokens.file_tab_text,
+                ..button::Style::default()
+            },
+        });
+    let top = container(container(Space::new(width - 8.0, 1)).style(move |_| {
+        container::Style::default().background(outline)
+    }))
+    .width(width)
+    .height(1)
+    .center_x(Fill);
+    let bottom = container(Space::new(Fill, 2)).height(2).style(move |_| {
+        container::Style::default().background(gap)
+    });
+    column![top, row![edge(), face, edge()].height(25), bottom]
+        .width(width)
+        .height(metrics::TABS)
+        .into()
+}
+
+/// Continuous amber rule behind the tab gaps, with the Style Book's 8 px inset.
+pub fn ribbon_tab_strip<'a, M: 'a>(content: Element<'a, M>, theme: Theme) -> Element<'a, M> {
+    let tokens = theme.tokens();
+    let baseline = column![
+        Space::new(Fill, metrics::TABS - 1),
+        container(Space::new(Fill, 1)).style(move |_| {
+            container::Style::default().background(tokens.accent)
+        }),
+    ]
+    .height(metrics::TABS);
+    container(stack![baseline, container(content).padding([0, 8]).height(metrics::TABS)])
+        .width(Fill)
+        .height(metrics::TABS)
+        .style(move |_| container::Style::default().background(tokens.bg_lighter))
+        .into()
+}
+
 /// Tauri Style Book ribbon group: 94 px including the 4 px top inset,
 /// 8 px sides, a ruled caption and a right separator. `width` is the
 /// measured total group width, including both insets and the separator.

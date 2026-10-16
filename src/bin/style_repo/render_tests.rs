@@ -788,6 +788,31 @@ fn minimum_window_renders_file_and_component_states() {
 }
 
 #[test]
+fn ribbon_tabs_keep_the_source_outline_and_continuous_rule() {
+    let app = StyleRepo::default();
+    for theme in [Theme::Light, Theme::Forge] {
+        let picture = render_with_options(&app, theme, false, None);
+        let rgb = |x: u32, y: u32| {
+            let at = ((y * picture.width() + x) * 4) as usize;
+            &picture.data()[at..at + 3]
+        };
+        let tokens = theme.tokens();
+        let [ar, ag, ab, _] = tokens.accent.into_rgba8();
+        let [br, bg, bb, _] = tokens.bg.into_rgba8();
+        assert_eq!(rgb(40, 50), &[ar, ag, ab], "{theme} File tab");
+        assert_eq!(rgb(110, 32), &[ar, ag, ab], "{theme} active top border");
+        assert_eq!(rgb(110, 59), &[br, bg, bb], "{theme} active bottom gap");
+        assert_eq!(rgb(500, 59), &[ar, ag, ab], "{theme} continuous rule");
+        let file = render_sized_with_reset(
+            &app, theme, false, None, Size::new(1280.0, 800.0), false, true,
+        );
+        let at = ((32 * file.width() + 110) * 4) as usize;
+        assert_ne!(&file.data()[at..at + 3], &[ar, ag, ab],
+            "{theme} workspace tab must not remain active in File view");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");

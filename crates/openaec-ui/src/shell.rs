@@ -42,16 +42,27 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
     ].align_y(iced::Alignment::Center)).height(metrics::TITLE).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
     let mut tabs = Row::new().spacing(if slots.mode == ChromeMode::CanvasRibbon { 6 } else { 2 });
     if !matches!(slots.mode, ChromeMode::TopNav | ChromeMode::CanvasRibbon) {
-        tabs = tabs.push(button(text(l.text("Bestand","File")).font(fonts::STRONG).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Backstage(true))).style(move |_,s| {
-            let mut style=widgets::button_style(theme,true,s); style.background=Some(t.file_tab_bg.into());style.text_color=t.file_tab_text;style
-        }));
+        let label = l.text("Bestand", "File");
+        tabs = tabs.push(widgets::ribbon_tab(
+            text(label).font(fonts::STRONG).size(12).into(),
+            Message::Ui(UiEvent::Backstage(true)),
+            label.chars().count() as f32 * 7.0 + 32.0,
+            widgets::RibbonTabKind::File,
+            theme,
+        ));
     }
     let active = slots.tabs.iter().find(|tab| tab.id == state.active_tab).or(slots.tabs.first());
     for tab in &slots.tabs {
-        let selected = active.is_some_and(|a| a.id == tab.id);
-        tabs = tabs.push(button(text(tab.label.clone()).font(fonts::MEDIUM).size(13)).padding([4,16]).on_press(Message::Ui(UiEvent::Tab(tab.id.clone()))).style(move |_,s| widgets::ribbon_tab_style(theme,selected,s)));
+        let selected = !state.backstage && active.is_some_and(|a| a.id == tab.id);
+        tabs = tabs.push(widgets::ribbon_tab(
+            text(tab.label.clone()).font(fonts::MEDIUM).size(12).into(),
+            Message::Ui(UiEvent::Tab(tab.id.clone())),
+            tab.label.chars().count() as f32 * 7.0 + 32.0,
+            widgets::RibbonTabKind::Regular { active: selected },
+            theme,
+        ));
     }
-    let tabs = container(horizontal(tabs)).height(metrics::TABS).width(Fill);
+    let tabs = widgets::ribbon_tab_strip(horizontal(tabs), theme);
     let mut groups = Row::new().spacing(0);
     if let Some(active) = active {
         for group in &active.groups {

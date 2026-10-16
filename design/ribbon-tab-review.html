@@ -25,15 +25,22 @@
   .proto-caption{font-size:12px;color:#73737b;margin:7px 0 0}.forge+.proto-caption{margin-bottom:0}
   @media(max-width:980px){.grid{grid-template-columns:1fr}.crop{height:100px}}
 </style>
-<header><a href="review.html">← Hoofdreview</a><h1>Linttabs · bron, Style Repo en Pointcloud</h1><p>Visuele beoordeling van de 28 px bovenband voordat de twee Rust-apps dezelfde volledige tabgeometrie krijgen.</p></header>
+<header><a href="review.html">← Hoofdreview</a><h1>Linttabs · bron, Style Repo en Pointcloud</h1><p>De Tauri-bron, de eerdere Rust-tabvorm en de nieuwe gedeelde widget op dezelfde 28 px bovenband.</p></header>
 <main>
   <div class="facts"><span>28 px band</span><span>2 px tabafstand</span><span>1 px accentlijn</span><span>4 px bovenradius</span><span>Bron: Tauri-template</span></div>
   <div class="grid">
     <figure><div class="crop source"><img src="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png" alt="Bovenband van de gepinde Tauri-template"></div><figcaption>Tauri-template · bronbeeld</figcaption><a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png">Volledig bronbeeld ↗</a></figure>
-    <figure><div class="crop style"><img src="style-repo-components-light.png" alt="Bovenband van de Rust Style Repo"></div><figcaption>Style Repo · native Rust</figcaption><a href="style-repo-components-light.png">Volledig venster ↗</a></figure>
-    <figure><div class="crop point"><img src="pointcloud-shell-light.png" alt="Bovenband van Open Pointcloud Studio"></div><figcaption>Pointcloud · native Rust</figcaption><a href="pointcloud-shell-light.png">Volledig venster ↗</a></figure>
+    <figure><div class="crop style"><img src="ribbon-tab-before-style-light.png" alt="Eerdere bovenband van de Rust Style Repo"></div><figcaption>Style Repo · vóór de gedeelde widget</figcaption><a href="ribbon-tab-before-style-light.png">Volledig venster ↗</a></figure>
+    <figure><div class="crop point"><img src="ribbon-tab-before-pointcloud-light.png" alt="Eerdere bovenband van Open Pointcloud Studio"></div><figcaption>Pointcloud · vóór de gedeelde widget</figcaption><a href="ribbon-tab-before-pointcloud-light.png">Volledig venster ↗</a></figure>
   </div>
-  <div class="note"><strong>Oordeel.</strong> De hoogte klopt in beide Rust-apps. De Style Repo gebruikt al de oranje Bestand-tab, maar de actieve Start-tab mist de bronrand en de gedeelde accentlijn. Pointcloud onderstreept Home en toont Bestand neutraal. De bron gebruikt één omlijnde actieve tab boven een doorlopende accentlijn en een altijd gekleurde Bestand-tab. Die tabvorm moet één crate-component worden; vertaling, tabnamen en klikacties blijven per app.</div>
+  <div class="note"><strong>Oordeel.</strong> De hoogte klopte al in beide Rust-apps. De Style Repo miste de actieve bronrand en accentlijn; Pointcloud onderstreepte Home en toonde Bestand neutraal. Beide apps gebruiken nu dezelfde Rust-widget voor de omlijnde actieve tab, de onderbroken doorlopende lijn en de vaste Bestand-kleur. Vertaling, tabnamen en klikacties blijven per app.</div>
+  <h2>Na de inbouw</h2><p>De software-render toont dezelfde tabvorm in beide apps. Pixeltests controleren op beide thema's de gekleurde Bestand-tab, de bovenrand, de werkvlakkleur onder de actieve tab en de accentlijn buiten de tab. Een beeldvergelijking van de vier Light/Forge-paren vindt onder y = 60 px geen enkel veranderd pixel; canvas, ribbon en panelen zijn dus visueel onveranderd in deze proef.</p>
+  <div class="grid">
+    <figure><div class="crop source"><img src="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png" alt="Tauri-bron als vergelijking na inbouw"></div><figcaption>Tauri-template · referentie</figcaption><a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/screenshots/app-light-theme.png">Volledig bronbeeld ↗</a></figure>
+    <figure><div class="crop style"><img src="style-repo-components-light.png" alt="Nieuwe gedeelde linttabs in Style Repo"></div><figcaption>Style Repo · gedeelde Rust-widget</figcaption><a href="style-repo-components-light.png">Volledig venster ↗</a></figure>
+    <figure><div class="crop point"><img src="pointcloud-shell-light.png" alt="Nieuwe gedeelde linttabs in Pointcloud"></div><figcaption>Pointcloud · gedeelde Rust-widget</figcaption><a href="pointcloud-shell-light.png">Volledig venster ↗</a></figure>
+  </div>
+  <p>Donkere native vergelijking: <a href="style-repo-components-forge.png">Style Repo Forge</a> · <a href="pointcloud-shell-forge.png">Pointcloud Forge</a>. De CSS-bron heeft een afgeronde bovenrand en geanimeerde tabovergang; de Rust-widget tekent een vaste één-pixelomtrek met ingekorte bovenlijn en zonder animatie. Deze details zijn nog geen pixelgelijke reconstructie van de browser.</p>
   <h2>Bronmaten en ontwerpbesluit</h2>
   <table><thead><tr><th>Onderdeel</th><th>Tauri-bron</th><th>Geharmoniseerde keuze</th></tr></thead><tbody>
     <tr><td>Tabband</td><td>28 px, 8 px zijruimte, 2 px tussenruimte, 1 px accentlijn onderaan</td><td>Zelfde geometrie in beide Rust-apps</td></tr>
@@ -41,7 +48,7 @@
     <tr><td>Bestand</td><td>Vaste merkkleur, sterk tekstgewicht; ook zichtbaar als een andere tab actief is</td><td>Gedeelde Bestand-staat met thema-afhankelijke tekstkleur</td></tr>
     <tr><td>Compact venster</td><td>Geen afzonderlijk bronbeeld</td><td>Tabs mogen horizontaal scrollen; de bandmaat blijft 28 px</td></tr>
   </tbody></table>
-  <h2>Interactieve vormproef</h2><p>Klik de tabs om de actieve rand en de onderlijn op licht en donker te beoordelen. Dit is een CSS-ontwerpproef, nog geen native Rust-render.</p>
+  <h2>Interactieve vormproef</h2><p>Klik de tabs om de actieve rand en de onderlijn op licht en donker te beoordelen. Dit blijft de CSS-bronvorm voor verdere pixelvergelijking met de native renders.</p>
   <div class="prototype"><div class="tabbar light" data-tabs><button class="file">Bestand</button><button class="active">Start</button><button>Beeld</button><button>Annotatie</button></div><p class="proto-caption">Light · Tauri-gebaseerde kleur- en maatproef</p><div class="tabbar forge" data-tabs><button class="file">Bestand</button><button class="active">Start</button><button>Beeld</button><button>Annotatie</button></div><p class="proto-caption">Forge · dezelfde geometrie met donker werkvlak</p></div>
   <p>Bronnen: <a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/src/components/ribbon/Ribbon.css">gepinde Ribbon.css</a> en <a href="../harmonization/references/OpenAEC-style-book/project-templates/Tauri+React/src/themes.css">thematokens</a>. De native screenshots komen uit de huidige lokale Rust-renders.</p>
 </main>

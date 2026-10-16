@@ -176,11 +176,14 @@ De [gerichte linttabreview](ribbon-tab-review.html) vergelijkt nu de gepinde
 Tauri-screenshot en `Ribbon.css` met de huidige native vensters van Style Repo
 en Pointcloud. De bandhoogte is in alle drie 28 px, maar de Tauri-bron heeft
 een omlijnde actieve tab die de doorlopende accentlijn onderbreekt. Style Repo
-tekent geen actieve rand; Pointcloud gebruikt een losse onderstreping en een
-neutrale Bestand-tab. De HTML-vormproef legt de beoogde gezamenlijke maten en
-Light/Forge-staten vast. De volledige tabgeometrie is nog niet als Rust-widget
-in beide apps ingebouwd; de bestaande gedeelde stijlfunctie dekt alleen kleur
-en hover.
+tekende eerst geen actieve rand; Pointcloud gebruikte een losse onderstreping
+en een neutrale Bestand-tab. De HTML-vormproef legt de gezamenlijke maten vast.
+Beide apps gebruiken nu `widgets::ribbon_tab` en `ribbon_tab_strip` voor de
+vaste Bestand-kleur, actieve omtrek en accentlijn met uitsparing. Native renders
+en pixeltests controleren vier referentiepunten in Light en Forge. De bronhoek
+heeft 4 px radius en de actieve rand schuift geanimeerd; de Rust-widget heeft
+voorlopig een ingekorte rechte bovenlijn zonder animatie. Exacte browserpixel-
+gelijkheid voor die details is dus nog niet aangetoond.
 
 De tooltipconstructie is eveneens gedeeld: de Style Repo-ribbon en de
 Pointcloud-panelen gebruiken nu dezelfde Rust-widget met 12 px tekst,
