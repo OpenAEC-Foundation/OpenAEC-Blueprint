@@ -808,6 +808,21 @@ fn export_pile_view_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate source-icon Pile Plan ribbon on demand"]
+fn export_pile_plan_source_icon_review() {
+    let mut app = StyleRepo::default();
+    let pile = studios().iter().position(|studio| studio.id == "pile").unwrap();
+    let _ = app.update(Action::SelectStudio(pile));
+    let _ = app.update(Action::SelectScreen(1));
+    render_with_options(&app, Theme::Forge, false, Some("plan"))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pile-ribbon-forge.png"))
+        .expect("save Pile Plan source-icon ribbon review");
+    render_sized(&app, Theme::Forge, false, Some("plan"), Size::new(1600.0, 800.0))
+        .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/style-repo-pile-ribbon-wide-forge.png"))
+        .expect("save complete Pile Plan source-icon ribbon review");
+}
+
+#[test]
 #[ignore = "regenerate shared File navigation review on demand"]
 fn export_shared_backstage_review() {
     let app = StyleRepo::default();

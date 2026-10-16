@@ -1,0 +1,228 @@
+{
+  "repository": "pile-plan-studio",
+  "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+  "scope": "currently called RibbonButton SVG constants in Plan and Weergave tabs",
+  "count": 15,
+  "defined_count": 20,
+  "unused_in_ribbon": [
+    "filterCheckIcon",
+    "ifcImportIcon",
+    "infoIcon",
+    "pencilIcon",
+    "searchIcon"
+  ],
+  "icons": [
+    {
+      "name": "projectIcon",
+      "group": "Plan · Project",
+      "behavior": "Opent projectinformatie",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 9,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        159
+      ],
+      "source_sha256": "c719ecdf82631943e9097ca678fa9b12df7eba02351c831e9509131c90a56cc9",
+      "asset_sha256": "21946298c56150781917b039628259d9babd51b95bf2e80387d0e37bf938c1c5",
+      "svg": "inline-ui-icons/pile-plan-studio/projectIcon.svg"
+    },
+    {
+      "name": "loadPointIcon",
+      "group": "Plan · Inspecteren",
+      "behavior": "Opent rechterpaneel voor paallocaties",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 10,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        162
+      ],
+      "source_sha256": "4346cab0cbba75d062e28fddc11f7fc47e4e8ddb12d3d88dd105c5960f86ac7e",
+      "asset_sha256": "d766a074a135db4fe15d6802859d09b16f1c26a498a43b44d38324783b89ed6a",
+      "svg": "inline-ui-icons/pile-plan-studio/loadPointIcon.svg"
+    },
+    {
+      "name": "cptIcon",
+      "group": "Plan · Inspecteren",
+      "behavior": "Opent rechterpaneel voor sonderingen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 11,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        163
+      ],
+      "source_sha256": "f5847fc44bee6a40d736ddebd5b29fb9e71dfd238c669a8e8224cf17ea353912",
+      "asset_sha256": "9fa49c1926a6118277da4887300ddd2af1c9330639bba238a5b9d9f15c0482f0",
+      "svg": "inline-ui-icons/pile-plan-studio/cptIcon.svg"
+    },
+    {
+      "name": "lassoIcon",
+      "group": "Plan · Selectie",
+      "behavior": "Schakelt lasso-selectie in of uit",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 21,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        169
+      ],
+      "source_sha256": "4c4aa939356a3e54edcd050e9cb46533f4dc07554909bcdffae97ee672fda9b1",
+      "asset_sha256": "02f21235e11e5847df5cf9528cd452de457a6ef17f8381c9f71617d7369a7f17",
+      "svg": "inline-ui-icons/pile-plan-studio/lassoIcon.svg"
+    },
+    {
+      "name": "settingsIcon",
+      "group": "Plan · Instellingen",
+      "behavior": "Drie knoppen voor afzonderlijke instellingenpanelen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 3,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        178,
+        179,
+        180
+      ],
+      "source_sha256": "ed6a3c2a208abb22c874801c1bba06636ddfaadb4ad1a316fc8f7e5097830399",
+      "asset_sha256": "6744c12b2610aed8520100eba3fafeabbb65aabcb6de92f60d85074e07701f08",
+      "svg": "inline-ui-icons/pile-plan-studio/settingsIcon.svg"
+    },
+    {
+      "name": "lockIcon",
+      "group": "Plan · Vergrendeling",
+      "behavior": "Zichtbaar vóór bewerken van vergrendelingen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 13,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        193
+      ],
+      "source_sha256": "ff583f9f15432ab2d9704693b70a7779e9edd17abce9558690cdec896ea4f6e3",
+      "asset_sha256": "ef6d4269f9c99519e4f0e07672bba20e51bff6ff6c01ba26b8228c5d7e1175a0",
+      "svg": "inline-ui-icons/pile-plan-studio/lockIcon.svg"
+    },
+    {
+      "name": "applyIcon",
+      "group": "Plan · Vergrendeling",
+      "behavior": "Alleen tijdens bewerken van vergrendelingen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 15,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        186
+      ],
+      "source_sha256": "f0b45b6c619810173cc1afdf113a38a0091c231e39a2ed64c1fc63ffe384cd4e",
+      "asset_sha256": "bd12e5a6c958ce117241c103883ba8f3bf2ba8d91579ee02430321e0487ce0f9",
+      "svg": "inline-ui-icons/pile-plan-studio/applyIcon.svg"
+    },
+    {
+      "name": "removeIcon",
+      "group": "Plan · Vergrendeling",
+      "behavior": "Alleen tijdens bewerken van vergrendelingen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 5,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        188
+      ],
+      "source_sha256": "2247aa3b626aa35b8049e8b376ec9e0dd1748b50f0c6c3ab3e421b889fd37ad8",
+      "asset_sha256": "73a38e38b930fd6e1b403a0876ec6c4670a776e3cd43587b535d7434f79baa7b",
+      "svg": "inline-ui-icons/pile-plan-studio/removeIcon.svg"
+    },
+    {
+      "name": "unlockIcon",
+      "group": "Plan · Vergrendeling",
+      "behavior": "Alleen tijdens bewerken van vergrendelingen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 14,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        189
+      ],
+      "source_sha256": "4776de7881fcba6ff06687c725dce26b3d5182f56c7d9fbe03e7da2c8b335803",
+      "asset_sha256": "b08ab691ef5e86efe675507fea93c853dbf720c19a780682569cf9dc042c3e7c",
+      "svg": "inline-ui-icons/pile-plan-studio/unlockIcon.svg"
+    },
+    {
+      "name": "optimizeIcon",
+      "group": "Plan · Optimalisatie",
+      "behavior": "Opent ILP-optimalisatiepaneel",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 12,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        197
+      ],
+      "source_sha256": "d7cc18ee3bd19a3ce796c39882ce826323210957bf482ef59ae2151791f5d8a8",
+      "asset_sha256": "d853c8caf69fd34a19302ef666694837d9ff3b6d7d0f2f2635769debfcbc307b",
+      "svg": "inline-ui-icons/pile-plan-studio/optimizeIcon.svg"
+    },
+    {
+      "name": "gridIcon",
+      "group": "Weergave · Raster",
+      "behavior": "Toont of verbergt het raster",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 16,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        289
+      ],
+      "source_sha256": "8fde57081411c22be841cdec6342e9ca2e0960e8de0ee554f9605d4879a44190",
+      "asset_sha256": "04e611a04aed98c6d64ccc7c041da3254fae40c4229e11749bb1bdaf4692e553",
+      "svg": "inline-ui-icons/pile-plan-studio/gridIcon.svg"
+    },
+    {
+      "name": "tipLevelRegionsIcon",
+      "group": "Weergave · Regio's",
+      "behavior": "Toont of verbergt puntniveauregio's",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 18,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        297
+      ],
+      "source_sha256": "7d88f34c503617eff32151c7ce0f6d8db811597450429a1709549d79cfe104f8",
+      "asset_sha256": "f070551a3099b0fbebb2e8c23670d598bb08e09abd4320df40acdbaa474d5cc8",
+      "svg": "inline-ui-icons/pile-plan-studio/tipLevelRegionsIcon.svg"
+    },
+    {
+      "name": "groupsIcon",
+      "group": "Weergave · Regio's",
+      "behavior": "Toont of verbergt paalpuntgroepen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 17,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        303
+      ],
+      "source_sha256": "94128366b62c3f5663f29c10d7cb1fce310f89dd142a475c87215fb46b812812",
+      "asset_sha256": "d2c2dff7528c8dcfb384fb513fc9675fab65bb066fe4c77409b9111a8b8240bc",
+      "svg": "inline-ui-icons/pile-plan-studio/groupsIcon.svg"
+    },
+    {
+      "name": "explorerPanelIcon",
+      "group": "Weergave · Vensters",
+      "behavior": "Toont of verbergt de verkenner",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 19,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        310
+      ],
+      "source_sha256": "87906790d75f0205babb9fe9879c028bc91cb1f2d268124b7e57627475afa61b",
+      "asset_sha256": "2cd2b8034c217d86ae712e3826cdb78b0b5253a381f2c9a88ab910a3050e5377",
+      "svg": "inline-ui-icons/pile-plan-studio/explorerPanelIcon.svg"
+    },
+    {
+      "name": "propertiesPanelIcon",
+      "group": "Weergave · Vensters",
+      "behavior": "Toont of verbergt eigenschappen",
+      "definition": "apps/pile-plan-studio/src/components/template/ribbon/icons.ts",
+      "definition_line": 20,
+      "usage": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+      "usage_lines": [
+        315
+      ],
+      "source_sha256": "cc556c2da5b540fa450a86f1b12b5ac50ac6152c54f4a6be99ee05f411c93e7a",
+      "asset_sha256": "fc8984e0548afce5fd78e3495e1ce7f741bc9eb7a7eabfc3a882ad20a768815b",
+      "svg": "inline-ui-icons/pile-plan-studio/propertiesPanelIcon.svg"
+    }
+  ]
+}

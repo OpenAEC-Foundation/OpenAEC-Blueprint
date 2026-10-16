@@ -21,18 +21,23 @@ const pileGroups = {
 groups = function (tab, app) {
   return app.id === 'pile' ? (pileGroups[tab] || []) : beforePileGroups(tab, app);
 };
-Object.assign(iconMap, {
-  'Projectinformatie': 'open', 'Belastinglocaties': 'measure',
-  'Sonderingen': 'measure', 'Kaderselectie': 'grid',
-  'Sonderingsinstellingen': 'settings', 'Kosteninstellingen': 'settings',
-  'Groeperingsinstellingen': 'settings', 'Uitvoeren': 'check',
-  'Grid tonen': 'grid', 'Verkenner tonen': 'panelleft',
-  'Eigenschappen tonen': 'panelright',
-});
-Object.assign(calcIconFiles, Object.fromEntries(Object.entries({
-  'Locaties vergrendelen': 'Lock',
-  'Puntniveaugebieden tonen': 'LayoutGrid', 'Groepen tonen': 'Boxes',
-}).map(([label, file]) => [label, calcIconRoot + file + '.svg'])));
+const pileIconRoot = '../harmonization/inline-ui-icons/pile-plan-studio/';
+const pileIcons = {
+  'Projectinformatie': 'projectIcon',
+  'Belastinglocaties': 'loadPointIcon',
+  'Sonderingen': 'cptIcon',
+  'Kaderselectie': 'lassoIcon',
+  'Sonderingsinstellingen': 'settingsIcon',
+  'Kosteninstellingen': 'settingsIcon',
+  'Groeperingsinstellingen': 'settingsIcon',
+  'Locaties vergrendelen': 'lockIcon',
+  'Uitvoeren': 'optimizeIcon',
+  'Grid tonen': 'gridIcon',
+  'Puntniveaugebieden tonen': 'tipLevelRegionsIcon',
+  'Groepen tonen': 'groupsIcon',
+  'Verkenner tonen': 'explorerPanelIcon',
+  'Eigenschappen tonen': 'propertiesPanelIcon',
+};
 
 function renderRibbonCommand(c, group, app, index) {
   if (app.id === 'pile' && c === '@slider:Symboolgrootte') {
@@ -44,5 +49,11 @@ function renderRibbonCommand(c, group, app, index) {
   if (app.id === 'pile' && c === '@segmented:Voorgrond') {
     return '<div class="ribbon-control ribbon-segmented" role="group" aria-label="Voorgrond"><button class="active" type="button">Belastinglocaties</button><button type="button">Sonderingen</button></div>';
   }
-  return '<button class="cmd '+(index===0&&group===activeTab?'selected':'')+'" title="'+esc(cmdLabel(c))+'">'+cmdIcon(c)+'<span>'+esc(cmdLabel(c))+'</span></button>';
+  const artwork = app.id === 'pile' && pileIcons[c]
+    ? '<img src="'+pileIconRoot+pileIcons[c]+'.svg" alt="">'
+    : cmdIcon(c);
+  const label = cmdLabel(c);
+  if (app.id !== 'pile') return '<button class="cmd '+(index===0&&group===activeTab?'selected':'')+'" title="'+esc(label)+'">'+artwork+'<span>'+esc(label)+'</span></button>';
+  const width = Math.max(86, Math.min(160, Math.ceil(label.length * 6.2 + 20)));
+  return '<button class="cmd" style="width:'+width+'px" title="'+esc(label)+'">'+artwork+'<span style="max-width:'+(width-8)+'px">'+esc(label)+'</span></button>';
 }

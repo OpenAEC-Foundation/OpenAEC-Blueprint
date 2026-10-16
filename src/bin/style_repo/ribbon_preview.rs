@@ -35,6 +35,15 @@ macro_rules! geotech_source_icon {
         )))
     };
 }
+macro_rules! pile_source_icon {
+    ($name:literal) => {
+        CommandIcon::Svg(include_bytes!(concat!(
+            "../../../harmonization/inline-ui-icons/pile-plan-studio/",
+            $name,
+            ".svg"
+        )))
+    };
+}
 
 #[derive(Debug, Clone, Copy)]
 pub(super) struct PileViewState {
@@ -616,23 +625,22 @@ fn pile_groups(
     if studio.id != "pile" {
         return None;
     }
-    use Icon::*;
     let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
         "Plan" => vec![
-            ("Project", vec![("Projectinformatie", planner_source_icon!("FolderOpen"))]),
-            ("Inspecteren", vec![("Belastinglocaties", planner_source_icon!("Map")), ("Sonderingen", planner_source_icon!("Compass"))]),
-            ("Selecteren", vec![("Kaderselectie", planner_source_icon!("Square"))]),
-            ("Instellingen", vec![("Sonderingsinstellingen", Settings.into()), ("Kosteninstellingen", Settings.into()), ("Groeperingsinstellingen", Settings.into())]),
-            ("Vergrendelen", vec![("Locaties vergrendelen", planner_source_icon!("Lock"))]),
-            ("Optimalisatie", vec![("Uitvoeren", planner_source_icon!("Play"))]),
+            ("Project", vec![("Projectinformatie", pile_source_icon!("projectIcon"))]),
+            ("Inspecteren", vec![("Belastinglocaties", pile_source_icon!("loadPointIcon")), ("Sonderingen", pile_source_icon!("cptIcon"))]),
+            ("Selecteren", vec![("Kaderselectie", pile_source_icon!("lassoIcon"))]),
+            ("Instellingen", vec![("Sonderingsinstellingen", pile_source_icon!("settingsIcon")), ("Kosteninstellingen", pile_source_icon!("settingsIcon")), ("Groeperingsinstellingen", pile_source_icon!("settingsIcon"))]),
+            ("Vergrendelen", vec![("Locaties vergrendelen", pile_source_icon!("lockIcon"))]),
+            ("Optimalisatie", vec![("Uitvoeren", pile_source_icon!("optimizeIcon"))]),
         ],
         "Weergave" => vec![
             ("Symbolen", vec![]),
             ("Benutting", vec![]),
             ("Voorgrond", vec![]),
-            ("Grid", vec![("Grid tonen", Grid.into())]),
-            ("Gebieden", vec![("Puntniveaugebieden tonen", planner_source_icon!("LayoutGrid")), ("Groepen tonen", planner_source_icon!("Boxes"))]),
-            ("Vensters", vec![("Verkenner tonen", PanelLeft.into()), ("Eigenschappen tonen", PanelRight.into())]),
+            ("Grid", vec![("Grid tonen", pile_source_icon!("gridIcon"))]),
+            ("Gebieden", vec![("Puntniveaugebieden tonen", pile_source_icon!("tipLevelRegionsIcon")), ("Groepen tonen", pile_source_icon!("groupsIcon"))]),
+            ("Vensters", vec![("Verkenner tonen", pile_source_icon!("explorerPanelIcon")), ("Eigenschappen tonen", pile_source_icon!("propertiesPanelIcon"))]),
         ],
         _ => return None,
     };

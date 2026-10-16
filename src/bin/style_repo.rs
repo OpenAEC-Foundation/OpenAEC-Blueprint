@@ -2790,6 +2790,10 @@ mod tests {
         let tabs = ribbon_preview::studio_tabs(studio, None);
         assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Project", "Inspecteren", "Selecteren", "Instellingen", "Vergrendelen", "Optimalisatie"]);
         assert_eq!(tabs[1].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(), ["Symbolen", "Benutting", "Voorgrond", "Grid", "Gebieden", "Vensters"]);
+        assert!(tabs[0].groups.iter().flat_map(|group| &group.commands)
+            .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
+        assert!(tabs[1].groups[3..].iter().flat_map(|group| &group.commands)
+            .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
         assert!(matches!(tabs[1].groups[0].commands[0].control,
             Some(RibbonControl::Slider { minimum: 10.0, maximum: 200.0, .. })));
         assert!(matches!(tabs[1].groups[1].commands[0].control,
