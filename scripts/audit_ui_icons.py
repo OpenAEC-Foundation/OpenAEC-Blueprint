@@ -13,12 +13,48 @@ SKIP={'target','node_modules','vendor','third_party','test','tests','docs','exam
 UI_SEGMENTS={'ui','frontend','renderer','classic','viewer','components','ribbon','toolbar','widgets','panels','pages','views','webpagina'}
 PATTERN=r'(icon|\.svg|\.png|\.ico|\.webp|logo|favicon|toolbar|ribbon|sprite|lucide|phosphor|heroicon|assets/|resource_path|include_bytes!)'
 
+def ocondat_ui_source(path):
+ """Audit the two web UIs, not their generated component data or drawing CSS."""
+ if path.startswith('DXF Library/component-library/'):
+  return Path(path).suffix.lower() in {'.html','.css'} or path in {
+   'DXF Library/component-library/js/app.js',
+   'DXF Library/component-library/js/fabrikanten.js',
+  }
+ if path.startswith('Libraries/Netherlands/'):
+  if path.startswith('Libraries/Netherlands/css/'):return False
+  return Path(path).suffix.lower()=='.html' or path in {
+   'Libraries/Netherlands/library/css/style.css',
+   'Libraries/Netherlands/library/js/app.js',
+   'Libraries/Netherlands/library/js/renderer.js',
+  }
+ return False
+
+def is_ui_code_source(name,path):
+ if name=='project-ocondat':return ocondat_ui_source(path)
+ part=Path(path)
+ if part.suffix.lower() not in CODE or any(x in path for x in ('.test.','.spec.','.min.')):return False
+ pdfjs_viewer=name=='open-pdf-studio' and path in {
+  'open-pdf-studio/public/pdfjs/web/viewer.css',
+  'open-pdf-studio/public/pdfjs/web/viewer.html',
+  'open-pdf-studio/public/pdfjs/web/viewer.mjs',
+ }
+ if SKIP.intersection(part.parts) and not pdfjs_viewer:return False
+ return bool(
+  UI_SEGMENTS.intersection(part.parts) or part.suffix.lower()=='.slint'
+  or path.count('/')<=1
+  or re.search(r'icon|ribbon|toolbar|menu|titlebar|backstage',part.name,re.I)
+  or re.search(r'(?:^|/)src/(?:main|app|ui)\.rs$',path)
+  or (name=='open-pointcloud-studio' and path.startswith('native/desktop/src/') and part.suffix.lower()=='.rs')
+  or (name=='OpenCADStudio' and (path.startswith('src/modules/') or path.startswith('src/app/view/')))
+  or (name=='open-pdf-studio' and '/pdfjs/web/' in path)
+ )
+
 def scan(item):
  name,r=item
  repo=Path('/tmp/openaec-inventory')/name
  if not (repo/'.git').exists() or not r.get('commit'):return {'repository':name,'status':'no-checkout','matches':[],'lines_scanned':0}
  files=subprocess.check_output(['git','-C',str(repo),'ls-tree','-r','--name-only','HEAD'],timeout=60).decode(errors='replace').splitlines()
- code=[p for p in files if Path(p).suffix.lower() in CODE and (not SKIP.intersection(Path(p).parts) or (name=='open-pdf-studio' and p in ('open-pdf-studio/public/pdfjs/web/viewer.css','open-pdf-studio/public/pdfjs/web/viewer.html','open-pdf-studio/public/pdfjs/web/viewer.mjs'))) and (UI_SEGMENTS.intersection(Path(p).parts) or p.endswith('.slint') or p.count('/')<=1 or re.search(r'icon|ribbon|toolbar|menu|titlebar|backstage',Path(p).name,re.I) or re.search(r'(?:^|/)src/(?:main|app|ui)\.rs$',p) or (name=='open-pointcloud-studio' and p.startswith('native/desktop/src/') and p.endswith('.rs')) or (name=='OpenCADStudio' and (p.startswith('src/modules/') or p.startswith('src/app/view/'))) or (name=='open-pdf-studio' and '/pdfjs/web/' in p)) and '.test.' not in p and '.spec.' not in p and '.min.' not in p]
+ code=[p for p in files if is_ui_code_source(name,p)]
  # Read actual UI source paths. Core libraries without a UI source are left out.
  if not code:return {'repository':name,'status':'no-ui-source','matches':[],'lines_scanned':0}
  code.sort(key=lambda p:(0 if re.search(r'icon|ribbon|toolbar|menu|titlebar',p,re.I) else 1, 0 if p.endswith(('.tsx','.slint','.rs')) else 1,p))
@@ -35,7 +71,7 @@ def scan(item):
 
 if __name__=='__main__':
  # Scan every accessible UI repository, including code-only icon systems.
- selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'project-ocondat','open-pdf-studio-library','blender-bonsai-training','inb-template','building-py','llvm-project'}]
+ selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'open-pdf-studio-library','blender-bonsai-training','inb-template','building-py','llvm-project'}]
  previous_path=H/'ui-code-references.json'
  previous_order={record['repository']:index for index,record in enumerate(json.loads(previous_path.read_text()))} if previous_path.exists() else {}
  with cf.ThreadPoolExecutor(max_workers=4) as pool:

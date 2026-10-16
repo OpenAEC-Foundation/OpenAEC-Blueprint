@@ -14,7 +14,7 @@ migratie van alle OpenAEC-applicaties.
   HTTP 404 onder hun historische URL. OpenCADStudio is een aparte externe
   bron en telt niet mee bij de 63. De bestaande broncommits blijven bewaard;
   de audit zegt niets over de reden van een 404 of de actualiteit van een UI.
-- De [dekkingsmatrix](coverage-matrix.html) toont per publieke repository UI-codebewijs, gebruikte assetbestanden, bibliotheekimports en applicatieschermkandidaten. Voor 47 van de 63 publieke repositories is de UI-codeaudit uitgevoerd; drie publieke repositories zijn leeg en geven HTTP 409 op de GitHub-commits-API. Een nul in de matrix is een bewijsgat, geen bewijs dat een UI-element ontbreekt.
+- De [dekkingsmatrix](coverage-matrix.html) toont per publieke repository UI-codebewijs, gebruikte assetbestanden, bibliotheekimports en applicatieschermkandidaten. Voor 48 van de 63 publieke repositories is de UI-codeaudit uitgevoerd; drie publieke repositories zijn leeg en geven HTTP 409 op de GitHub-commits-API. Een nul in de matrix is een bewijsgat, geen bewijs dat een UI-element ontbreekt. De [OconDat-review](ocondat-ui-review.html) documenteert twee extra bibliotheekinterfaces en houdt hun technische SVG-tekeningen buiten de UI-icoontelling.
 - 666 beeldverwijzingen zijn op commit vastgelegd in `screen-index.json`;
   645 hebben een unieke Git-blobinhoud en 472 zijn als mogelijke
   applicatieschermen geclassificeerd, waarvan 442 uit de publieke

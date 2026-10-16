@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · OconDat UI-review</title>
+<style>
+  :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#25252d;background:#f3f3f5;font-size:14px}
+  *{box-sizing:border-box}body{margin:0}a{color:#a34f00;text-underline-offset:2px}
+  .top{background:#303039;color:white;border-bottom:3px solid #d97706;padding:21px max(24px,calc((100vw - 1280px)/2))}
+  .top a{color:#ffc47e}.eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:#efae62}
+  h1{font-size:clamp(26px,3vw,38px);line-height:1.12;letter-spacing:-.035em;margin:12px 0 8px}
+  .top p{max-width:810px;line-height:1.55;color:#e1e1e5;margin:0}
+  main{max-width:1328px;margin:auto;padding:26px 24px 70px}
+  .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:22px}
+  .stat,.panel{background:white;border:1px solid #dedee3;box-shadow:0 1px 2px #25252d08}
+  .stat{padding:16px 18px}.stat b{display:block;color:#ad5600;font-size:27px;line-height:1.1;font-variant-numeric:tabular-nums}.stat span{display:block;color:#60606c;margin-top:5px;font-size:12px}
+  h2{font-size:21px;letter-spacing:-.02em;margin:0 0 7px}h3{font-size:15px;margin:0 0 7px}
+  .lead{color:#5b5b65;line-height:1.55;margin:0 0 17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .panel{padding:22px}.panel p{line-height:1.55;margin:0 0 15px}.pill{display:inline-block;padding:3px 8px;border-radius:3px;background:#fff0dc;color:#8a4100;font-size:11px;font-weight:700;margin-bottom:11px}
+  .frame{border:1px solid #d6d6dc;background:#fafafa;margin:17px 0;overflow:hidden}
+  .frame-top{height:36px;background:#303039;color:white;display:flex;align-items:center;gap:8px;padding:0 12px;font-size:11px}
+  .frame-top i{width:8px;height:8px;border-radius:50%;background:#d97706}.frame-top small{margin-left:auto;color:#c6c6ce}
+  .frame-head{padding:14px 16px;border-bottom:1px solid #dedee3}.frame-head strong{font-size:17px}.frame-head small{display:block;color:#747480;margin-top:2px}
+  .frame-content{display:grid;grid-template-columns:126px 1fr;min-height:168px}
+  .rail{background:#f1f1f3;border-right:1px solid #dedee3;padding:14px 11px}.rail span{display:block;height:7px;background:#d1d1d6;margin:0 0 12px}.rail span:nth-child(2){width:70%}.rail span:nth-child(3){width:84%}
+  .body{padding:12px}.search{height:23px;border:1px solid #d6d6dc;background:white;color:#858590;font-size:10px;padding:4px 7px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}.cards i{height:60px;border:1px solid #dedee3;background:linear-gradient(135deg,#fff,#f4f4f6)}
+  .swatches{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.swatches span{border:1px solid #d9d9de;padding:6px 8px;color:#575761;font-size:11px}
+  .routes{width:100%;border-collapse:collapse;margin:15px 0}.routes th,.routes td{border-bottom:1px solid #e7e7eb;text-align:left;padding:9px 7px;vertical-align:top}.routes th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#777783}.routes td:first-child{font-weight:700}.routes td:nth-child(2){color:#60606c}
+  .note{border-left:3px solid #d97706;background:#fffaf3;padding:12px 14px;line-height:1.55;margin:16px 0 0}.source{word-break:break-word;font-size:12px}
+  .wide{margin-top:16px}.check{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.check article{border-top:2px solid #d97706;padding-top:11px}.check p{color:#5b5b65;font-size:13px}
+  @media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.grid,.check{grid-template-columns:1fr}}@media(max-width:520px){main{padding:17px 13px 50px}.top{padding:20px 13px}.stats{gap:6px}.stat{padding:12px}.panel{padding:16px}.routes{font-size:12px}}
+</style>
+<header class="top"><a href="review.html">← Visuele review</a><div class="eyebrow" style="margin-top:20px">Bronreview · Project OconDat</div><h1>Twee bibliotheken, één gedeelde UI-taal</h1><p>De gepinde bron bevat een componentenbrowser en een Nederlandse standaardenbibliotheek. Deze review legt hun echte schermstructuur en icongebruik vast voordat de schermen in het gedeelde Rust-systeem worden overgenomen.</p></header>
+<main>
+  <div class="stats"><div class="stat"><b>19</b><span>geaudite UI-codebestanden</span></div><div class="stat"><b>74</b><span>bronregels met UI-/assetverwijzingen</span></div><div class="stat"><b>2</b><span>bibliotheekinterfaces</span></div><div class="stat"><b>0</b><span>bevestigde SVG-bestanden als UI-icoon</span></div></div>
+  <div class="grid">
+    <section class="panel"><span class="pill">01 · Component Library</span><h2>Componentenbrowser</h2><p class="lead">Eigen topnavigatie, hero met status, linker filterrail, zoekbalk, componentkaarten en een eigenschappenmodal. Fabrikanten heeft een eigen lijst- en filterpagina.</p>
+      <div class="frame" role="img" aria-label="Schematische indeling van het OconDat componentenscherm"><div class="frame-top"><i></i> Project OconDat <small>Fabrikanten · Overzicht</small></div><div class="frame-head"><strong>Component Library</strong><small>IFC-classified construction components · Open BIM</small></div><div class="frame-content"><div class="rail"><span></span><span></span><span></span><span></span></div><div class="body"><div class="search">Zoek op naam, IFC class, tag…</div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+      <p>De kaartafbeeldingen komen uit <code>c.geometry.svg</code> en tonen bouwcomponenten. Het inline SVG in de navigatie is een <strong>logo</strong>. Acties zoals sluiten, uitklappen en “Open 2D Studio” gebruiken Unicode-tekens.</p>
+      <div class="source">Bron: <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/DXF%20Library/component-library/index.html">componentenscherm</a> · <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/DXF%20Library/component-library/fabrikanten.html">fabrikanten</a> · <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/DXF%20Library/component-library/js/app.js">interacties</a></div>
+    </section>
+    <section class="panel"><span class="pill">02 · Nederlandse standaarden</span><h2>Disciplines en Open BIM Library</h2><p class="lead">Een kaartoverzicht leidt naar bouwkundig, constructie, civiel en installatie. De Open BIM Library heeft een eigen zoek- en filterpagina met componentmodal. Een aparte pagina berekent belastingen.</p>
+      <div class="frame" role="img" aria-label="Schematische indeling van de Nederlandse standaardenbibliotheek"><div class="frame-top"><i></i> Project OconDat <small>Terug naar overzicht</small></div><div class="frame-head"><strong>Open BIM Library</strong><small>Detailcomponenten voor de bouwsector · Netherlands</small></div><div class="body"><div class="search">Zoek op naam, familie of type…　 Alles</div><div class="cards"><i></i><i></i><i></i></div></div></div>
+      <p>Het disciplineoverzicht gebruikt tekstsymbolen zoals vierkant, driehoek, raster en tandwiel. De technische SVG’s op disciplinepagina’s zijn patronen en tekenvoorbeelden; ze tellen niet als bedieningsiconen.</p>
+      <div class="source">Bron: <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/Libraries/Netherlands/index.html">disciplineoverzicht</a> · <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/Libraries/Netherlands/library/index.html">Open BIM Library</a> · <a href="https://github.com/OpenAEC-Foundation/project-ocondat/blob/85a78eef15aaae9ed746569fd12db36331a5f3fb/Libraries/Netherlands/belastingen-calculator.html">belastingcalculator</a></div>
+    </section>
+  </div>
+  <section class="panel wide"><h2>Schermroutes en harmonisatie</h2><p class="lead">Dit is een brongetrouwe structuurreview; de kleine kaders hierboven zijn schematische indelingen, geen screenshots of pixelvergelijking.</p><table class="routes"><thead><tr><th>Routegroep</th><th>Huidige schermen</th><th>In gedeelde stijl</th></tr></thead><tbody><tr><td>Catalogus</td><td>Component Library · Fabrikanten · Open BIM Library</td><td>Gedeelde navigatie, zoekveld, filterchips, kaarten en detailpaneel</td></tr><tr><td>Disciplines</td><td>Overzicht · Bouwkundig · Constructie · Civiel · Installatie</td><td>Vaste paginakop, navtegels en technische voorbeeldkaarten</td></tr><tr><td>Technische taken</td><td>Palenplan · Staalprofielen · Wapening · Belastingen Calculator</td><td>Taaklint, invoerpanelen en consistente resultaatpresentatie</td></tr></tbody></table><div class="check"><article><h3>Iconen</h3><p>Vervang de Unicode-bediening door gedeelde semantische iconen. Houd componentgeometrie en technische patronen in een aparte assetlaag.</p></article><article><h3>Schermritme</h3><p>Breng topnavigatie, titel, zoek- en filterregel en modal op dezelfde afstanden en typografische schaal als de andere studio’s.</p></article><article><h3>Bronbeperking</h3><p><code>index.html</code> van de Component Library laadt <code>js/shapes.js</code>, maar dat bestand ontbreekt op de gepinde commit. Een werkende bronrender vraagt eerst herstel van die verwijzing.</p></article></div><p class="note"><strong>Telregel.</strong> Een SVG is pas een UI-icoon als een concrete bediening in UI-code ernaar verwijst. De brongepinnde <a href="../harmonization/coverage-matrix.json">dekkingsmatrix</a> en <a href="../harmonization/ui-code-references.json">regelaudit</a> blijven leidend.</p></section>
+</main>
+</html>

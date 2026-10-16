@@ -75447,5 +75447,382 @@
         "text": "        slide = WORK / f\"{number:02d}-{slug}.png\""
       }
     ]
+  },
+  {
+    "repository": "project-ocondat",
+    "status": "source-scanned",
+    "code_files": 19,
+    "matches": [
+      {
+        "source": "DXF Library/component-library/css/style.css",
+        "line": 25,
+        "text": "nav .brand .logo { flex-shrink: 0; }"
+      },
+      {
+        "source": "DXF Library/component-library/css/style.css",
+        "line": 159,
+        "text": "/* Toolbar */"
+      },
+      {
+        "source": "DXF Library/component-library/css/style.css",
+        "line": 160,
+        "text": ".toolbar {"
+      },
+      {
+        "source": "DXF Library/component-library/css/style.css",
+        "line": 169,
+        "text": ".toolbar-inner {"
+      },
+      {
+        "source": "DXF Library/component-library/css/style.css",
+        "line": 464,
+        "text": ".dl-btn.o2d .o2d-icon { font-size: 1rem; }"
+      },
+      {
+        "source": "DXF Library/component-library/fabrikanten.html",
+        "line": 13,
+        "text": "            <svg class=\"logo\" width=\"28\" height=\"28\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\">"
+      },
+      {
+        "source": "DXF Library/component-library/index.html",
+        "line": 12,
+        "text": "            <svg class=\"logo\" width=\"28\" height=\"28\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\">"
+      },
+      {
+        "source": "DXF Library/component-library/index.html",
+        "line": 51,
+        "text": "            <div class=\"toolbar\">"
+      },
+      {
+        "source": "DXF Library/component-library/index.html",
+        "line": 52,
+        "text": "                <div class=\"toolbar-inner\">"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 323,
+        "text": "                '<img src=\"' + c.geometry.svg + '\" alt=\"' + c.name + '\" loading=\"lazy\">' +"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 419,
+        "text": "            '<img src=\"' + c.geometry.svg + '\" alt=\"' + c.name + '\">';"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 524,
+        "text": "                  '<span class=\"o2d-icon\">&#9998;</span> Open 2D Studio</button>'"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 587,
+        "text": "                    btn.innerHTML = '<span class=\"o2d-icon\">&#9998;</span> Open 2D Studio';"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 614,
+        "text": "                    btn.innerHTML = '<span class=\"o2d-icon\">&#10003;</span> Verstuurd! (' + total + ')';"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 616,
+        "text": "                        btn.innerHTML = '<span class=\"o2d-icon\">&#9998;</span> Open 2D Studio';"
+      },
+      {
+        "source": "DXF Library/component-library/js/app.js",
+        "line": 623,
+        "text": "                    btn.innerHTML = '<span class=\"o2d-icon\">&#9998;</span> Open 2D Studio';"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 43,
+        "text": "        .top-nav .logo {"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 111,
+        "text": "        .card-header .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 116,
+        "text": "        .card-header.collapsed .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 310,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 325,
+        "text": "                    <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 388,
+        "text": "                    <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 438,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/belastingen-calculator.html",
+        "line": 484,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/bouwkundig.html",
+        "line": 43,
+        "text": "        .top-nav .logo {"
+      },
+      {
+        "source": "Libraries/Netherlands/bouwkundig.html",
+        "line": 417,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/civiel.html",
+        "line": 34,
+        "text": "        .top-nav .logo { font-weight: bold; font-size: 1.1rem; }"
+      },
+      {
+        "source": "Libraries/Netherlands/civiel.html",
+        "line": 212,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/constructie.html",
+        "line": 34,
+        "text": "        .top-nav .logo { font-weight: bold; font-size: 1.1rem; }"
+      },
+      {
+        "source": "Libraries/Netherlands/constructie.html",
+        "line": 221,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/constructie.html",
+        "line": 927,
+        "text": "                <a href=\"https://www.betonlexicon.nl/B/Buigstaat/\" target=\"_blank\">Betonlexicon - Buigstaat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 145,
+        "text": "        .discipline-card .header .icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 223,
+        "text": "        .feature-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 327,
+        "text": "                    <span class=\"icon\">&#9634;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 346,
+        "text": "                    <span class=\"icon\">&#9651;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 365,
+        "text": "                    <span class=\"icon\">&#9776;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 384,
+        "text": "                    <span class=\"icon\">&#9881;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 425,
+        "text": "                    <div class=\"feature-icon\">&#128196;</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 432,
+        "text": "                    <div class=\"feature-icon\">&#128200;</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 439,
+        "text": "                    <div class=\"feature-icon\">&#128190;</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/index.html",
+        "line": 446,
+        "text": "                    <div class=\"feature-icon\">&#127760;</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 36,
+        "text": "        .top-nav .logo { font-weight: bold; font-size: 1.1rem; }"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 179,
+        "text": "        .discipline-header .icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 189,
+        "text": "        .discipline-header .icon.e { background: var(--elektra); }"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 190,
+        "text": "        .discipline-header .icon.w { background: var(--water); }"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 212,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 236,
+        "text": "                <div class=\"icon e\">E</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/installatie.html",
+        "line": 498,
+        "text": "                <div class=\"icon w\">W</div>"
+      },
+      {
+        "source": "Libraries/Netherlands/library/css/style.css",
+        "line": 44,
+        "text": "/* Toolbar */"
+      },
+      {
+        "source": "Libraries/Netherlands/library/css/style.css",
+        "line": 45,
+        "text": ".toolbar { background: var(--card-bg); padding: 0.8rem 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.05); }"
+      },
+      {
+        "source": "Libraries/Netherlands/library/css/style.css",
+        "line": 46,
+        "text": ".toolbar-inner { max-width: 1600px; margin: 0 auto; display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }"
+      },
+      {
+        "source": "Libraries/Netherlands/library/index.html",
+        "line": 22,
+        "text": "    <div class=\"toolbar\">"
+      },
+      {
+        "source": "Libraries/Netherlands/library/index.html",
+        "line": 23,
+        "text": "        <div class=\"toolbar-inner\">"
+      },
+      {
+        "source": "Libraries/Netherlands/library/js/app.js",
+        "line": 18,
+        "text": "        const bar = document.querySelector('.toolbar-inner');"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 43,
+        "text": "        .top-nav .logo {"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 106,
+        "text": "        .card-header .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 111,
+        "text": "        .card-header.collapsed .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 237,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 252,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 371,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 492,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/palenplan.html",
+        "line": 679,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/staalprofielen.html",
+        "line": 35,
+        "text": "        .top-nav .logo { font-weight: bold; font-size: 1.1rem; }"
+      },
+      {
+        "source": "Libraries/Netherlands/staalprofielen.html",
+        "line": 319,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 43,
+        "text": "        .top-nav .logo {"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 106,
+        "text": "        .card-header .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 111,
+        "text": "        .card-header.collapsed .toggle-icon {"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 262,
+        "text": "        <a href=\"index.html\" class=\"logo\">Project OconDat</a>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 277,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 375,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 465,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 546,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 665,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      },
+      {
+        "source": "Libraries/Netherlands/wapening.html",
+        "line": 838,
+        "text": "                <span class=\"toggle-icon\">&#9660;</span>"
+      }
+    ]
   }
 ]
