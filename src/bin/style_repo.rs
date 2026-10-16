@@ -28,6 +28,8 @@ mod geotech_native;
 mod speech_native;
 #[path = "style_repo/speech_more.rs"]
 mod speech_more;
+#[path = "style_repo/source_interfaces.rs"]
+mod source_interfaces;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
 #[cfg(test)]
@@ -45,17 +47,19 @@ enum Page {
     Themes,
     Layouts,
     Studios,
+    Sources,
     Fem,
     Bim,
 }
 impl Page {
-    const ALL: [Self; 8] = [
+    const ALL: [Self; 9] = [
         Self::Overview,
         Self::Components,
         Self::Icons,
         Self::Themes,
         Self::Layouts,
         Self::Studios,
+        Self::Sources,
         Self::Fem,
         Self::Bim,
     ];
@@ -67,6 +71,7 @@ impl Page {
             Self::Themes => "themes",
             Self::Layouts => "layouts",
             Self::Studios => "studios",
+            Self::Sources => "sources",
             Self::Fem => "fem",
             Self::Bim => "bim",
         }
@@ -79,6 +84,7 @@ impl Page {
             Self::Themes => l.text("Thema's", "Themes"),
             Self::Layouts => l.text("Layouts", "Layouts"),
             Self::Studios => l.text("Alle studio's", "All studios"),
+            Self::Sources => l.text("Broninterfaces", "Source interfaces"),
             Self::Fem => "Open FEM Studio",
             Self::Bim => "Open BIM Studio",
         }
@@ -91,6 +97,7 @@ impl Page {
             Self::Themes => Icon::Settings,
             Self::Layouts => Icon::PanelLeft,
             Self::Studios => Icon::Cube,
+            Self::Sources => Icon::Grid,
             Self::Fem => Icon::Measure,
             Self::Bim => Icon::Fit,
         }
@@ -116,6 +123,17 @@ enum Action {
     SampleDialogSave,
     SelectStudio(usize),
     SelectScreen(usize),
+    SelectSourceApp(usize),
+    SelectSourceRoute(usize),
+    SourceSearch(String),
+    SourceManufacturer(usize),
+    SourceManufacturerCatalog(usize),
+    SourceStatus(usize),
+    SourceDetails(Option<usize>),
+    SourceLocationEdit(usize, String),
+    SourceGeoOrigin(bool),
+    SourceAerial(bool),
+    SourceNotice(&'static str),
     GeotechLayer(usize),
     FieldProjectEdit(usize, String),
     FieldProjectPreview(&'static str),
@@ -269,6 +287,16 @@ struct StyleRepo {
     sample_dialog_input: String,
     selected_studio: usize,
     selected_screen: usize,
+    source_app: usize,
+    source_route: usize,
+    source_search: String,
+    source_manufacturer: usize,
+    source_status_filter: usize,
+    source_details: Option<usize>,
+    source_location: [String; 4],
+    source_geo_origin: bool,
+    source_aerial: bool,
+    source_notice: Option<&'static str>,
     geotech_layer: usize,
     field_project: FieldProjectState,
     field_connector_notice: Option<&'static str>,
@@ -316,6 +344,16 @@ impl Default for StyleRepo {
             sample_dialog_input: String::new(),
             selected_studio: 0,
             selected_screen: 0,
+            source_app: 0,
+            source_route: 0,
+            source_search: String::new(),
+            source_manufacturer: 0,
+            source_status_filter: 0,
+            source_details: None,
+            source_location: ["Lange geldersekade Dordrecht", "EPSG:28992", "1000", "1000"].map(str::to_owned),
+            source_geo_origin: true,
+            source_aerial: false,
+            source_notice: None,
             geotech_layer: 4,
             field_project: FieldProjectState::default(),
             field_connector_notice: None,
@@ -446,6 +484,9 @@ impl StyleRepo {
                 self.nav_card(Page::Layouts, l.text("Vaste regio's en ribbon", "Fixed regions and ribbon"), theme, l),
                 self.nav_card(Page::Studios, l.text("18 studio-indelingen", "18 studio layouts"), theme, l),
                 self.nav_card(Page::Fem, l.text("Constructieve pictogrammen", "Structural icon proposals"), theme, l),
+            ].spacing(12),
+            row![
+                self.nav_card(Page::Sources, l.text("OconDat en BuildingPy uit broncode", "OconDat and BuildingPy from source"), theme, l),
             ].spacing(12),
             self.card(column![text(l.text("Stand van het ontwerp", "Design status")).font(fonts::STRONG).size(14), text(format!("{} {}", source_icons::ALL.len(), l.text("iconen met UI-bewijs zijn onderzoeksbronnen. Definitieve semantische iconen volgen na beoordeling.", "icons with UI evidence are research sources. Final semantic icons follow review."))).size(12)].spacing(7), theme),
         ].spacing(18).into()
@@ -1950,7 +1991,9 @@ impl Application for StyleRepo {
         "OpenAEC Style Repo  ·  Rust".into()
     }
     fn chrome_mode(&self) -> ChromeMode {
-        if self.page == Page::Studios && studios()[self.selected_studio].id == "energy" {
+        if self.page == Page::Sources {
+            ChromeMode::TopNav
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "energy" {
             ChromeMode::Workflow
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "speech" {
             ChromeMode::Sidebar
@@ -1963,7 +2006,7 @@ impl Application for StyleRepo {
         }
     }
     fn tab_event(&mut self, id: &str) -> Task<Action> {
-        if self.chrome_mode() == ChromeMode::TopNav {
+        if self.page == Page::Studios && self.chrome_mode() == ChromeMode::TopNav {
             if let Some(index) = studios()[self.selected_studio].tabs.iter()
                 .position(|tab| tab.to_lowercase() == id) {
                 self.selected_screen = index;
@@ -2032,6 +2075,12 @@ impl Application for StyleRepo {
                                 Action::Show(Page::Studios),
                             )
                             .selected(self.page == Page::Studios),
+                            Command::new(
+                                l.text("Broninterfaces", "Source interfaces"),
+                                Icon::Grid,
+                                Action::Show(Page::Sources),
+                            )
+                            .selected(self.page == Page::Sources),
                         ],
                     },
                 ],
@@ -2097,6 +2146,7 @@ impl Application for StyleRepo {
             Page::Themes => self.themes(theme, l),
             Page::Layouts => self.layouts(theme, l),
             Page::Studios => self.studios_page(theme, l),
+            Page::Sources => self.source_interfaces_page(theme, l),
             Page::Fem => self.domains(theme, l, "fem"),
             Page::Bim => self.domains(theme, l, "bim"),
         };
@@ -2108,6 +2158,7 @@ impl Application for StyleRepo {
             .into()
     }
     fn overlay(&self, theme: Theme, l: Language) -> Option<Element<'_, Action>> {
+        if let Some(details) = self.source_details_modal(theme) { return Some(details); }
         if !self.sample_dialog { return None; }
         let body = container(column![
             text(l.text("Projectnaam", "Project name")).size(12),
@@ -2131,7 +2182,8 @@ impl Application for StyleRepo {
             body, footer, Action::SampleDialog(false), 480.0, theme))
     }
     fn escape(&self) -> Option<Action> {
-        self.sample_dialog.then_some(Action::SampleDialog(false))
+        if self.source_details.is_some() { Some(Action::SourceDetails(None)) }
+        else { self.sample_dialog.then_some(Action::SampleDialog(false)) }
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
@@ -2286,6 +2338,35 @@ impl Application for StyleRepo {
                 self.field_review_notice = None;
                 self.speech_notice = None;
             }
+            Action::SelectSourceApp(index) => {
+                self.source_app = index.min(1);
+                self.source_route = 0;
+                self.source_search.clear();
+                self.source_details = None;
+                self.source_notice = None;
+                self.show(Page::Sources);
+            }
+            Action::SelectSourceRoute(index) => {
+                self.source_route = index.min(source_interfaces::OCONDAT_ROUTES.len() - 1);
+                self.source_search.clear();
+                self.source_details = None;
+                self.source_notice = None;
+            }
+            Action::SourceSearch(value) => self.source_search = value,
+            Action::SourceManufacturer(index) => self.source_manufacturer = index.min(5),
+            Action::SourceManufacturerCatalog(index) => {
+                self.source_manufacturer = index.min(5);
+                self.source_route = 0;
+                self.source_search.clear();
+            }
+            Action::SourceStatus(index) => self.source_status_filter = index.min(3),
+            Action::SourceDetails(index) => self.source_details = index,
+            Action::SourceLocationEdit(index, value) => {
+                if let Some(field) = self.source_location.get_mut(index) { *field = value; }
+            }
+            Action::SourceGeoOrigin(value) => self.source_geo_origin = value,
+            Action::SourceAerial(value) => self.source_aerial = value,
+            Action::SourceNotice(message) => self.source_notice = Some(message),
             Action::GeotechLayer(index) => self.geotech_layer = index.min(geotech_native::LAYERS.len() - 1),
             Action::FieldProjectEdit(index, value) => {
                 if let Some(field) = self.field_project.values.get_mut(index) { *field = value; }

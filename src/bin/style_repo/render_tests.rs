@@ -160,6 +160,44 @@ fn save_render(app: &StyleRepo, theme: Theme, path: &std::path::Path) {
 }
 
 #[test]
+fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::Show(Page::Sources));
+    assert_eq!(app.chrome_mode(), ChromeMode::TopNav);
+    assert_eq!(source_interfaces::OCONDAT_ROUTES.len(), 12);
+    let _ = app.update(Action::SourceManufacturerCatalog(1));
+    assert_eq!(app.source_manufacturer, 1);
+    assert_eq!(app.source_route, 0);
+    let _ = app.update(Action::SourceDetails(Some(0)));
+    assert!(app.overlay(Theme::Light, Language::Dutch).is_some());
+    let _ = app.update(app.escape().expect("details modal closes on Escape"));
+    assert!(app.source_details.is_none());
+    let _ = app.update(Action::SelectSourceApp(1));
+    assert_eq!(app.source_app, 1);
+    assert_eq!(app.chrome_mode(), ChromeMode::TopNav);
+    let _ = app.source_interfaces_page(Theme::Forge, Language::Dutch);
+}
+
+#[test]
+#[ignore = "regenerate native source-interface reviews on demand"]
+fn export_source_interface_reviews() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::Show(Page::Sources));
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        save_render(&app, theme, &design.join(format!("style-repo-ocondat-catalog-{name}.png")));
+        let _ = app.update(Action::SelectSourceRoute(2));
+        save_render(&app, theme, &design.join(format!("style-repo-ocondat-standards-{name}.png")));
+        let _ = app.update(Action::SelectSourceApp(0));
+        let _ = app.update(Action::SelectSourceApp(1));
+        render_sized(&app, theme, false, None, Size::new(1280.0, 1100.0))
+            .save_png(&design.join(format!("style-repo-buildingpy-location-{name}.png")))
+            .expect("save full BuildingPy location review");
+        let _ = app.update(Action::SelectSourceApp(0));
+    }
+}
+
+#[test]
 #[ignore = "regenerate shared settings dialog review on demand"]
 fn export_shared_settings_review() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
