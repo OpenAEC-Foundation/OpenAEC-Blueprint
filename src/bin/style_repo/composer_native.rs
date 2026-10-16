@@ -67,6 +67,34 @@ const ADVANCED: [&str; 18] = [
     "/prompts", "/teams", "/gpu-server", "/auth", "/git", "/about",
 ];
 
+fn nav_vector(path: &str, advanced: bool) -> &'static [u8] {
+    match (path, advanced) {
+        ("/workspace", false) | ("/git", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/folder.svg"),
+        ("/workspace", true) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/package.svg"),
+        ("/presets", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/bolt.svg"),
+        ("/install", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/cloud-download.svg"),
+        ("/dashboard", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/home.svg"),
+        ("/configure", _) | ("/teams", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/settings.svg"),
+        ("/permissions", _) | ("/auth", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/shield.svg"),
+        ("/hooks", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/link.svg"),
+        ("/mcp", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/cpu.svg"),
+        ("/gpu-server", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/server.svg"),
+        ("/commands", _) | ("/templates", _) | ("/core-files", _) | ("/prompts", _) => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/file-text.svg"),
+        _ => include_bytes!("../../../harmonization/ui-icons/open-aec-workspace-composer/info-circle.svg"),
+    }
+}
+
+fn nav_group(path: &str) -> Option<&'static str> {
+    match path {
+        "/dashboard" => Some("WORKSPACE"),
+        "/configure" => Some("CONFIGURATION"),
+        "/templates" => Some("TEMPLATES"),
+        "/teams" => Some("TEAMS"),
+        "/gpu-server" => Some("INFRASTRUCTURE"),
+        _ => None,
+    }
+}
+
 fn surface<'a>(theme: Theme, content: impl Into<Element<'a, Action>>, padding: u16) -> Element<'a, Action> {
     let t = theme.tokens();
     container(content).padding(padding).width(Fill)
@@ -101,9 +129,20 @@ impl StyleRepo {
         for path in order {
             let index = data().routes.iter().position(|route| route.path == *path)
                 .expect("navigation path registered");
-            nav = nav.push(button(text(route_label(path)).size(11)).padding([8, 10]).width(Fill)
+            if self.composer_advanced {
+                if let Some(group) = nav_group(path) {
+                    nav = nav.push(container(text(group).size(9).font(fonts::STRONG).color(t.text_secondary))
+                        .padding([8, 9]));
+                }
+            }
+            let selected = self.composer_route == index;
+            let bytes = nav_vector(path, self.composer_advanced);
+            let glyph = svg(svg::Handle::from_memory(bytes)).width(17).height(17)
+                .style(move |_, _| svg::Style { color: Some(if selected { t.accent } else { t.text_secondary }) });
+            nav = nav.push(button(row![glyph, text(route_label(path)).size(11)]
+                .spacing(9).align_y(Alignment::Center)).padding([8, 10]).width(Fill)
                 .on_press(Action::ComposerRoute(index))
-                .style(move |_, s| widgets::button_style(theme, self.composer_route == index, s)));
+                .style(move |_, s| widgets::button_style(theme, selected, s)));
         }
         let sidebar = column![
             scrollable(container(nav).padding(12)).height(Fill),
