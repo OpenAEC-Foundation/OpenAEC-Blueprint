@@ -1,0 +1,368 @@
+{
+  "repository": "pile-plan-studio",
+  "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+  "scope": "visible or conditionally visible Backstage command, file-type, and link SVGs",
+  "svg_occurrences": 25,
+  "count": 23,
+  "excluded_branding": {
+    "source": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+    "line": 270,
+    "reason": "1024 px OA logomark"
+  },
+  "duplicate_usage": {
+    "name": "open-project-arrow",
+    "lines": [
+      472,
+      495
+    ]
+  },
+  "icons": [
+    {
+      "name": "menu-open",
+      "group": "Bestand-menu",
+      "meaning": "Openen",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 19,
+      "usage_lines": [
+        137
+      ],
+      "source_sha256": "005220b1c6d61bc97a2a01960a47f0af433331108b54cdee801f764c2f1a1992",
+      "asset_sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-open.svg",
+      "shared_candidate": "open",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/open.svg"
+    },
+    {
+      "name": "menu-save",
+      "group": "Bestand-menu",
+      "meaning": "Opslaan · alleen met save-commando",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 20,
+      "usage_lines": [
+        143
+      ],
+      "source_sha256": "35c5f2a7ba2d56a2296f6c00f44cb270de2ed34e6c346c1f2140cd1679c0f37b",
+      "asset_sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-save.svg",
+      "shared_candidate": "save",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/save.svg"
+    },
+    {
+      "name": "menu-save-as",
+      "group": "Bestand-menu",
+      "meaning": "Opslaan als · alleen met save-commando",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 21,
+      "usage_lines": [
+        144
+      ],
+      "source_sha256": "86abc2b53f5355186b78d975dd01785adfe930ab4330e7877cc0e921a896c0ec",
+      "asset_sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-save-as.svg",
+      "shared_candidate": "save-as",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/saveas.svg"
+    },
+    {
+      "name": "menu-export",
+      "group": "Bestand-menu",
+      "meaning": "Exporteren",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 22,
+      "usage_lines": [
+        159
+      ],
+      "source_sha256": "4f4b06fe44c58d71050967e7f5c1c5291170985e8170a3ce3ce3b3bfdab32097",
+      "asset_sha256": "7d8226d17aebac2dafd8392119382a2575d188594a218f5f19502bac55934473",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-export.svg",
+      "shared_candidate": "export",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/export.svg"
+    },
+    {
+      "name": "menu-import",
+      "group": "Bestand-menu",
+      "meaning": "Importeren en Pile Plan importeren",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 23,
+      "usage_lines": [
+        147,
+        153
+      ],
+      "source_sha256": "f95fb1dadd93e66da2c7420e23b4d4a220285aa3060ceb9a1b8b789affbccf07",
+      "asset_sha256": "4e2452104feb5530b553ab202d52923151264d5180de7eeee2a6cfefdd26b2e7",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-import.svg",
+      "shared_candidate": "import",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/import.svg"
+    },
+    {
+      "name": "menu-preferences",
+      "group": "Bestand-menu",
+      "meaning": "Instellingen openen",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 24,
+      "usage_lines": [
+        166
+      ],
+      "source_sha256": "8c2a3dc232c3006b5dd739be61a00620b8f79bab8e2c9e9cac74a77f959bb26f",
+      "asset_sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-preferences.svg",
+      "shared_candidate": "settings",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg"
+    },
+    {
+      "name": "menu-about",
+      "group": "Bestand-menu",
+      "meaning": "Over deze app",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 25,
+      "usage_lines": [
+        176
+      ],
+      "source_sha256": "f4e90c3a365ea6d49cd2e27b9b40a704a585528c60f20abc3ab96085956c5b7e",
+      "asset_sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-about.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "menu-exit",
+      "group": "Bestand-menu",
+      "meaning": "Afsluiten · alleen met save-commando",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 26,
+      "usage_lines": [
+        184
+      ],
+      "source_sha256": "6702a07ac897743c3748c54887acb7e6d4af22ad0eef1c32a6884e1a6af29337",
+      "asset_sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-exit.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "menu-back",
+      "group": "Bestand-menu",
+      "meaning": "Terug naar werkruimte",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 121,
+      "usage_lines": [
+        121
+      ],
+      "source_sha256": "4bb5f84f31b07725a385851e1580077e957acf9e3e62869aa17f342cac17a1fe",
+      "asset_sha256": "e8958a5dfefc3e81128581004ca4e18dee2bfb2fba7b8f1461bf058326392fc0",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/menu-back.svg",
+      "shared_candidate": "back",
+      "candidate_svg": "../crates/openaec-ui/assets/icons/back.svg"
+    },
+    {
+      "name": "about-website",
+      "group": "Over",
+      "meaning": "Website-link",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 312,
+      "usage_lines": [
+        312
+      ],
+      "source_sha256": "82a9d68098ecc14393a7ccec14ec17a00a9a300713a0a682b58857d4beca8837",
+      "asset_sha256": "b46c2ce66a56db959b5bcc9e71b68b93d77b2f0425bc1dd4485cf62f0b6bcbcc",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/about-website.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "about-github",
+      "group": "Over",
+      "meaning": "GitHub-link",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 323,
+      "usage_lines": [
+        323
+      ],
+      "source_sha256": "c3bf8379ccab78732f15b15cee834ab033f57c8d1689d29b84279a0472026292",
+      "asset_sha256": "ec895224e0628efeab3b53cb50c2079275259c1f4636987928c0a310b9cde3c5",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/about-github.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "recent-ifc",
+      "group": "Recent",
+      "meaning": "IFC-bestandstype",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 362,
+      "usage_lines": [
+        431
+      ],
+      "source_sha256": "9b11317862c40a43f6c87674ebabb1e00aa30eb1c9fbfefa3f038fc024eede31",
+      "asset_sha256": "ff28fb2e4c4567a0150965cca48ee83ede9b0a8076618e0ce434f763fd41e876",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/recent-ifc.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "recent-report",
+      "group": "Recent",
+      "meaning": "Rapportbestandstype",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 364,
+      "usage_lines": [
+        431
+      ],
+      "source_sha256": "68a63561b1d88739a88ef6d5205ef5cbaa0a0d6693df38cfc1787ef06e7c5d11",
+      "asset_sha256": "7cd15fb67ba34615bb61775c86f01ec01d2addf29e1292f2275af134b36e808a",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/recent-report.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "recent-project",
+      "group": "Recent",
+      "meaning": "Projectbestandstype",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 366,
+      "usage_lines": [
+        431
+      ],
+      "source_sha256": "be6228a02abad36d9bc81717c63711307a30639a0a34dccd2e00e4363f3878fd",
+      "asset_sha256": "af4e0e312d5039f206d838d6753d2156dec6d5f048d2902527fbbaf1477ceb3e",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/recent-project.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "recent-other",
+      "group": "Recent",
+      "meaning": "Overig bestandstype",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 368,
+      "usage_lines": [
+        431
+      ],
+      "source_sha256": "b803b4236d8b511166067d4d2d0ac43363e166f41b6631c3070ea5a52e6f6d3f",
+      "asset_sha256": "18e005b846114398d0eccc28c64fad4843b0253f1a731be14e73545a58455a97",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/recent-other.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "recent-remove",
+      "group": "Recent",
+      "meaning": "Verwijder één recent bestand",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 442,
+      "usage_lines": [
+        442
+      ],
+      "source_sha256": "dfd36a9c06991e7a5d994d5f0c6dca7c9446e00d2a2a512ce7f21f2d6c06a266",
+      "asset_sha256": "291a54021172b9faea627d16e005e82dabadcab9fbd3fa422fa86acf273b07b7",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/recent-remove.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "open-choose-project",
+      "group": "Openen",
+      "meaning": "Kies lokaal project",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 458,
+      "usage_lines": [
+        458
+      ],
+      "source_sha256": "5d900c323c23afe60909f54fd98c86bde401460fed1a4a3df02ca09b54b68352",
+      "asset_sha256": "00710650679862a0546c19e314a48240102da39f6edb6c28ef771523a0777838",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/open-choose-project.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "open-project-arrow",
+      "group": "Openen",
+      "meaning": "Pijl bij project kiezen en voorbeeld openen",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 472,
+      "usage_lines": [
+        472,
+        495
+      ],
+      "source_sha256": "e5ad35d1135a5ad2196ca08cfded986a4be9073effc6661353c46aa2fcdcdd69",
+      "asset_sha256": "d1d8045ff907cbcb0d8fa9d49795e95059a3fc2b1f15b1003c968d5b54cd7a22",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/open-project-arrow.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "open-sample",
+      "group": "Openen",
+      "meaning": "Open voorbeeldproject",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 484,
+      "usage_lines": [
+        484
+      ],
+      "source_sha256": "2644e7cd08d0c040842df1e4d4dde0ea8b1a09944f9bdbbfdd42b5525036f2b3",
+      "asset_sha256": "35c6811b29cd4553c2013e483ceab150597d15957e22421696731952aebbed47",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/open-sample.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "export-project",
+      "group": "Export",
+      "meaning": "Projectexportkaart",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 588,
+      "usage_lines": [
+        588
+      ],
+      "source_sha256": "debc6a039ee32e196ed543e690be28204f711dbe5b5d9c191dfc7b4cc99fbed5",
+      "asset_sha256": "2726addf467f50af33bf863dfa33cb9eefe78f0a4b67c9158b1469024640ef84",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/export-project.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "export-table",
+      "group": "Export",
+      "meaning": "Tabelexportkaart",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 593,
+      "usage_lines": [
+        593
+      ],
+      "source_sha256": "7c13af50b76d30f98cd3fa85cb63c49a106e7a54a172976efbb25c890d3ead13",
+      "asset_sha256": "894d543647c84ab55fcf64affdd8e5958314ab5e479089a8ed221b90cb9d23f4",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/export-table.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "export-rows",
+      "group": "Export",
+      "meaning": "Rijexportkaart",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 598,
+      "usage_lines": [
+        598
+      ],
+      "source_sha256": "9f5d0e8114cb7b92f862ba72612ca987d297d9525b71377f79dac59c3be42327",
+      "asset_sha256": "9ee13e5e2c7e0d8e5c83bf94e83e44ffcd02b305665b2a890ab16250bf901071",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/export-rows.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    },
+    {
+      "name": "export-download",
+      "group": "Export",
+      "meaning": "Downloadactie op exportkaart",
+      "definition": "apps/pile-plan-studio/src/components/template/backstage/Backstage.tsx",
+      "definition_line": 611,
+      "usage_lines": [
+        611
+      ],
+      "source_sha256": "14e7d091999971b580a6d08dae44216ab8ec370b090c3b1ed6a0adbb05bc2474",
+      "asset_sha256": "7f90f3f60f0797c135e5b50900ea41eacec8d96810194520f6037406c46f79bf",
+      "svg": "inline-ui-icons/pile-plan-studio-backstage/export-download.svg",
+      "shared_candidate": null,
+      "candidate_svg": null
+    }
+  ]
+}
