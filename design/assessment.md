@@ -139,6 +139,7 @@ conditionele AI-groepen zijn expliciet gemarkeerd; extensie-SVG's hangen van
 geïnstalleerde extensies af. Alle 510 licht/donker-maatvoorbeelden laden in
 de browser. Deze verzameling is een broninventaris, nog geen goedgekeurde
 gedeelde Rust-iconenset.
+De [Planner-kruistabel](planner-ribbon-crosswalk.html) zet alle 85 vormen naast hun handeling: dertien gedeelde kandidaten, twaalf betekenisbotsingen en zestig eigen Planner-contexten. Afdrukvoorbeeld, Taak toevoegen, Taak splitsen en Presentatiemodus mogen niet respectievelijk Print, Nieuw document, Klembord knippen en OS-venster maximaliseren erven. Projectinstellingen toont in Planner een tandwiel terwijl de huidige Rust-Settings een schuifregelaar tekent. De voorgestelde koppelingen zijn nog niet in Planner ingebouwd.
 
 De [Energy-router op commit e9a485d](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/core/navigation/routes.ts)
 bevestigt tien hoofdschermen in vier werkstroomgroepen: Invoer (Project,
