@@ -1,0 +1,251 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 14 literal SVG strings in source-reachable ContextMenu.jsx. The separate imported contextMenuIcons.js catalog and its call sites remain a separate inventory. Lexical scope excludes the imported selectAllIcon in the page menu.",
+  "literal_svg_definitions": 14,
+  "ui_icon_uses": 15,
+  "records": [
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 908,
+      "ordinal": 1,
+      "definition": "revealInFolderIcon",
+      "label": "Bestand tonen in bestandsbeheerder",
+      "menu": "page",
+      "state": "path-only",
+      "uses": [
+        {
+          "line": 1001,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/reveal-in-folder-icon.svg",
+      "sha256": "3e86858a455b8dd9142fc8d911bd8eba91b0dcd8e72adf206d72e05f282b5fc2"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1060,
+      "ordinal": 2,
+      "definition": "moveUpIcon",
+      "label": "Miniatuurpagina omhoog",
+      "menu": "thumbnail",
+      "state": "boundary-conditional",
+      "uses": [
+        {
+          "line": 1120,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/move-up-icon.svg",
+      "sha256": "3a8f3917d30030b08527fd7374d4184be2ec986d9c31de3dc0f178669e6bf7e2"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1061,
+      "ordinal": 3,
+      "definition": "moveDownIcon",
+      "label": "Miniatuurpagina omlaag",
+      "menu": "thumbnail",
+      "state": "boundary-conditional",
+      "uses": [
+        {
+          "line": 1128,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/move-down-icon.svg",
+      "sha256": "fec41afb042b093e1f3e77fc885f1fb9f9cf1e1e20162940efed92235e8a8092"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1063,
+      "ordinal": 4,
+      "definition": "thumbnailCutIcon",
+      "label": "Pagina knippen",
+      "menu": "thumbnail",
+      "state": "last-page-disabled",
+      "uses": [
+        {
+          "line": 1077,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-cut-icon.svg",
+      "sha256": "3123f17cae42cb4256d7152df1aa729c3defd55f961723864006a76ebf6c5e44"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1064,
+      "ordinal": 5,
+      "definition": "thumbnailCopyIcon",
+      "label": "Pagina kopiëren",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1088,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-copy-icon.svg",
+      "sha256": "04e028765467187c084a51cd0dd37bf6ada9a995f40f0addab2d5296b1090490"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1065,
+      "ordinal": 6,
+      "definition": "thumbnailPasteIcon",
+      "label": "Pagina plakken",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1098,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-paste-icon.svg",
+      "sha256": "8372d5aba55aca4a3a39d131cf5dbdb988c7dff03fb16799293a4624400acea5"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1066,
+      "ordinal": 7,
+      "definition": "thumbnailInsertIcon",
+      "label": "Pagina invoegen / uit bestand invoegen",
+      "menu": "thumbnail",
+      "state": "two-commands",
+      "uses": [
+        {
+          "line": 1139,
+          "component": "MenuItem"
+        },
+        {
+          "line": 1142,
+          "component": "Submenu"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-insert-icon.svg",
+      "sha256": "0324145b47cdc73cc26c97376f297bf45b4b0e942b0e2194f59433e6f034cebb"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1067,
+      "ordinal": 8,
+      "definition": "thumbnailExtractIcon",
+      "label": "Pagina extraheren",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1152,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-extract-icon.svg",
+      "sha256": "f00a4538236c4865f3e09a968c1d326a5785c85edc891275be04591e3da40c52"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1068,
+      "ordinal": 9,
+      "definition": "thumbnailReplaceIcon",
+      "label": "Pagina vervangen",
+      "menu": "thumbnail",
+      "state": "multi-selection-disabled",
+      "uses": [
+        {
+          "line": 1158,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-replace-icon.svg",
+      "sha256": "23c4fe4161ea33740627b69bacfec59355b2b46059869c99616653f0fe6145e9"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1069,
+      "ordinal": 10,
+      "definition": "thumbnailDeleteIcon",
+      "label": "Pagina verwijderen",
+      "menu": "thumbnail",
+      "state": "last-page-disabled",
+      "uses": [
+        {
+          "line": 1162,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-delete-icon.svg",
+      "sha256": "f9d3672a759f15601247d33c905b5171dddbc546e0b026c6f8ce672e13d8283c"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1070,
+      "ordinal": 11,
+      "definition": "thumbnailRotateLeftIcon",
+      "label": "Pagina linksom draaien",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1105,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-rotate-left-icon.svg",
+      "sha256": "e127682665b3af4c5006ce4285867c318240c62aae033d0af389c11be1ca652e"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1071,
+      "ordinal": 12,
+      "definition": "thumbnailRotateRightIcon",
+      "label": "Pagina rechtsom draaien",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1111,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-rotate-right-icon.svg",
+      "sha256": "8ef15e97f9c3a863ed1fca9ee081b7ad7e6c46cb1038fd781d288c982a97c443"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1072,
+      "ordinal": 13,
+      "definition": "thumbnailPropertiesIcon",
+      "label": "Pagina-eigenschappen",
+      "menu": "thumbnail",
+      "state": "multi-selection-disabled",
+      "uses": [
+        {
+          "line": 1180,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/thumbnail-properties-icon.svg",
+      "sha256": "77a54ee41be8116414107ca9606db1e51c314f36570b6e9327740acc7986fb47"
+    },
+    {
+      "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+      "line": 1073,
+      "ordinal": 14,
+      "definition": "selectAllIcon",
+      "label": "Alle pagina’s selecteren",
+      "menu": "thumbnail",
+      "state": "available",
+      "uses": [
+        {
+          "line": 1174,
+          "component": "MenuItem"
+        }
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/context-menu/select-all-icon.svg",
+      "sha256": "186cee111c2ca6905ee6d85d6dc17ce02dffeda4c72cd0c120973b1f3f4a9b56"
+    }
+  ]
+}
