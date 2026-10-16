@@ -3,7 +3,7 @@
   "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
   "integration_branch": "feat/shared-rust-ui",
   "status": "native-adopted",
-  "note": "Ten reviewed general commands use the shared icon core, and four reviewed Pointcloud commands use the domain icon layer. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. The BAG panel and Eye Dome Lighting icons were reviewed at 16/24/32 px on light and dark in icon-collision-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece. Dimension and Note use the drawing-domain icons shared with Geotechniek, compared in cross-app-annotation-review.html.",
+  "note": "Ten reviewed general commands use the shared icon core, and six reviewed Pointcloud commands use the domain icon layer. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. The BAG panel and Eye Dome Lighting icons were reviewed at 16/24/32 px on light and dark in icon-collision-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece. Dimension and Note use the drawing-domain icons shared with Geotechniek, compared in cross-app-annotation-review.html. Move and Line were compared with Geotechniek and OpenCAD UI usage in geotech-cad-command-review.html before adopting a shared Rust domain form.",
   "decisions": [
     {
       "tool_icon": "Open",
@@ -94,6 +94,20 @@
       "asset": "drawing-note.svg",
       "legacy_asset": "native/assets/opencad-icons/annotation_note.svg",
       "reason": "Creates a drawing note, the same UI meaning as Geotechniek Opmerking; both tools use a reviewed 16/24 px Rust domain icon."
+    },
+    {
+      "tool_icon": "Move",
+      "shared_icon": "TransformMove",
+      "asset": "transform-move.svg",
+      "legacy_asset": "native/assets/opencad-icons/move.svg",
+      "reason": "Translates a scan; Geotechniek moves a drawing object. Both use the same four-direction transform meaning, reviewed with OpenCAD at 16/24/32 px."
+    },
+    {
+      "tool_icon": "Line",
+      "shared_icon": "DrawingLine",
+      "asset": "drawing-line.svg",
+      "legacy_asset": "native/assets/opencad-icons/annotation_line.svg",
+      "reason": "Creates a line annotation; Geotechniek draws a line. Both now use a shared line-with-endpoints icon after 16/24/32 px review."
     }
   ],
   "chrome_decisions": [

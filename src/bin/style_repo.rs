@@ -2704,11 +2704,13 @@ mod tests {
         assert!(matches!((place[0].icon, place[1].icon),
             (CommandIcon::Domain(DomainIcon::GeotechSondering), CommandIcon::Domain(DomainIcon::GeotechBoring))));
         assert!(matches!(place[2].icon, CommandIcon::Domain(DomainIcon::GeotechSonderingGrid)));
+        assert!(matches!(place[3].icon, CommandIcon::Domain(DomainIcon::DrawingLine)));
         assert!(matches!(place[4].icon, CommandIcon::Domain(DomainIcon::DrawingDimension)));
         assert!(matches!(place[7].icon, CommandIcon::Domain(DomainIcon::DrawingNote)));
+        assert!(matches!(drawing.groups[1].commands[0].icon, CommandIcon::Domain(DomainIcon::TransformMove)));
         assert!(matches!(drawing.groups[4].commands[2].icon, CommandIcon::Canonical(Icon::Print)));
         assert!(drawing.groups.iter().flat_map(|group| &group.commands)
-            .filter(|command| !["Print", "Sondering", "Boring", "Sonderingsraster", "Maatlijn", "Opmerking"].contains(&command.label.as_str()))
+            .filter(|command| !["Print", "Sondering", "Boring", "Sonderingsraster", "Verplaatsen", "Lijn", "Maatlijn", "Opmerking"].contains(&command.label.as_str()))
             .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
         let home = tabs.iter().find(|tab| tab.id == "home").unwrap();
         assert!(matches!(home.groups[0].commands[0].icon, CommandIcon::Canonical(Icon::Settings)));

@@ -6,8 +6,8 @@
     "shared": 19,
     "new-shared": 5,
     "decision": 8,
-    "adopted-domain": 5,
-    "domain": 17
+    "adopted-domain": 7,
+    "domain": 15
   },
   "icons": [
     {
@@ -222,9 +222,9 @@
     },
     {
       "name": "tekening-move",
-      "status": "domain",
-      "meaning": "geotech.tekening-move",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "transform.move",
+      "decision": "Bronbewezen tekenopdracht, gedeeld met Pointcloud; beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 74,
       "usage_lines": [
@@ -232,8 +232,8 @@
       ],
       "source_sha256": "63c85e5040069140070c6dd53ad3ee36604f9662988d16e1bf76f7c12edcfbc9",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-move.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/transform-move.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/transform-move.svg"
     },
     {
       "name": "tekening-quotes",
@@ -284,7 +284,7 @@
       "name": "tekening-rotate",
       "status": "domain",
       "meaning": "geotech.tekening-rotate",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Bronbewezen OpenCAD-rotatie is een gedeelde kandidaat; harmoniseer 16px-vorm vóór opname.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 103,
       "usage_lines": [
@@ -299,7 +299,7 @@
       "name": "tekening-copy",
       "status": "domain",
       "meaning": "geotech.tekening-copy",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "OpenCAD-kopie plaatst een duplicaat; vergelijk gebaar en doelobject voordat een gedeelde vorm wordt gekozen.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 108,
       "usage_lines": [
@@ -330,7 +330,7 @@
       "name": "tekening-select",
       "status": "domain",
       "meaning": "geotech.tekening-select",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Geotechniek-selectiemodus en Pointcloud-vensterselectie zijn niet hetzelfde gebaar; besluit over aparte vormen.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 119,
       "usage_lines": [
@@ -343,9 +343,9 @@
     },
     {
       "name": "tekening-line",
-      "status": "domain",
-      "meaning": "geotech.tekening-line",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "drawing.line",
+      "decision": "Bronbewezen tekenopdracht, gedeeld met Pointcloud; beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 125,
       "usage_lines": [
@@ -353,8 +353,8 @@
       ],
       "source_sha256": "e17692b189465dac6bc0976a33c5f61851a95f281ef3ecf5bd54751ebb4c9970",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-line.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-line.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-line.svg"
     },
     {
       "name": "tekening-vlak",
@@ -405,7 +405,7 @@
       "name": "tekening-trim",
       "status": "domain",
       "meaning": "geotech.tekening-trim",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Bronbewezen OpenCAD-Trim is een gedeelde kandidaat; beide bronvormen verschillen sterk op 16 px.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 152,
       "usage_lines": [
@@ -420,7 +420,7 @@
       "name": "tekening-extend",
       "status": "domain",
       "meaning": "geotech.tekening-extend",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Bronbewezen OpenCAD-Extend is een gedeelde kandidaat; beoordeel de richting en grensweergave.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 161,
       "usage_lines": [
@@ -435,7 +435,7 @@
       "name": "tekening-mirror",
       "status": "domain",
       "meaning": "geotech.tekening-mirror",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Bronbewezen OpenCAD-Mirror is een gedeelde kandidaat; harmoniseer de as op 16 px.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 170,
       "usage_lines": [
@@ -450,7 +450,7 @@
       "name": "tekening-offset",
       "status": "domain",
       "meaning": "geotech.tekening-offset",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "decision": "Bronbewezen OpenCAD-Offset is een gedeelde kandidaat; behoud het afstands- en parallelbetekenisverschil.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 178,
       "usage_lines": [

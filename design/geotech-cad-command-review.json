@@ -1,0 +1,375 @@
+{
+  "commands": [
+    {
+      "name": "tekening-move",
+      "label": "Verplaatsen",
+      "status": "adopted-domain",
+      "decision": "Object verplaatsen; Geotechniek gebruikt slepen, Pointcloud een translatiebediening. De iconbetekenis is gedeeld.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 231,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-move.svg",
+        "sha256": "63c85e5040069140070c6dd53ad3ee36604f9662988d16e1bf76f7c12edcfbc9"
+      },
+      "opencad": {
+        "path": "assets/icons/move.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/move.svg",
+        "sha256": "7099074b059aaf296b43a3f47af0373934d3066ce7cfa2c89330a8a38a00052a",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/translate.rs",
+            "line": 22,
+            "reference": "../../../../assets/icons/move.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": {
+        "path": "native/assets/opencad-icons/move.svg",
+        "svg": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/move.svg",
+        "sha256": "7e25452bf471679e226c4d8a281906d84e143618b4054e72d0cda7c1c84f0feb",
+        "usage": [
+          {
+            "source": "native/desktop/src/main.rs",
+            "line": 12397,
+            "reference": "../../assets/opencad-icons/move.svg"
+          }
+        ],
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+      },
+      "rust": {
+        "meaning": "transform.move",
+        "large": "../crates/openaec-ui/assets/domain-icons/transform-move.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/transform-move.svg"
+      }
+    },
+    {
+      "name": "tekening-copy",
+      "label": "Kopiëren",
+      "status": "decision",
+      "decision": "Geotechniek dupliceert een geselecteerd tekenobject; toets OpenCAD's kopie-plaatsing apart.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 241,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-copy.svg",
+        "sha256": "ea9558145b5e612d56da88aa4af505e7369ccd3af3ae332ed606a53f7ea86215"
+      },
+      "opencad": {
+        "path": "assets/icons/copy.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/copy.svg",
+        "sha256": "467bd1b78a5d78aa2644cdc835b072cd0738d07c0dbedce6450c1419c18510c1",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/copy.rs",
+            "line": 21,
+            "reference": "../../../../assets/icons/copy.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-rotate",
+      "label": "Roteren",
+      "status": "shared-candidate",
+      "decision": "Rotatie van een geselecteerd object met opgegeven hoek.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 248,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-rotate.svg",
+        "sha256": "6f66f69fa73d8d3d3d60737e5742f768dd74e3071cb9f9e4ccbb9862e0183480"
+      },
+      "opencad": {
+        "path": "assets/icons/rotate.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/rotate.svg",
+        "sha256": "3367e27d8ad9f0e2347ab270258de1cd520f73d82a544eebcfbbe1149b933019",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/rotate.rs",
+            "line": 30,
+            "reference": "../../../../assets/icons/rotate.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-trim",
+      "label": "Trim",
+      "status": "shared-candidate",
+      "decision": "Lijn inkorten tegen een referentie of snijpunt.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 276,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-trim.svg",
+        "sha256": "e0e3dc0fcf2acd5365ed384c15d9a1e118cacbeb6323aeab7e1662456dcb610b"
+      },
+      "opencad": {
+        "path": "assets/icons/trim.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/trim.svg",
+        "sha256": "7c6bbb774d3c701a1f9093fbf4f0cded7dc040c8bed0ab20067d078dd9dce47b",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/break_cmd.rs",
+            "line": 30,
+            "reference": "../../../../assets/icons/trim.svg"
+          },
+          {
+            "source": "src/modules/draw/modify/trim.rs",
+            "line": 53,
+            "reference": "../../../../assets/icons/trim.svg"
+          },
+          {
+            "source": "src/modules/draw/modify/trim.rs",
+            "line": 59,
+            "reference": "../../../../assets/icons/trim.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-extend",
+      "label": "Extend",
+      "status": "shared-candidate",
+      "decision": "Lijn verlengen tot een grens of referentie.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 286,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-extend.svg",
+        "sha256": "e5b4491617b8066aa3ac67ab03371c8745640986cffef30c2b049ba9aa241e19"
+      },
+      "opencad": {
+        "path": "assets/icons/extend.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/extend.svg",
+        "sha256": "9e577f07ea96f682b3eaead1d7622a672643d43f1d42e52f11afe942a9bbdee5",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/trim.rs",
+            "line": 64,
+            "reference": "../../../../assets/icons/extend.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-mirror",
+      "label": "Mirror",
+      "status": "shared-candidate",
+      "decision": "Object spiegelen langs een getekende as.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 296,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-mirror.svg",
+        "sha256": "104a972fbfa714d76a3286c8a32efd6f0d55cd2415eb22fa07f7b298c0c36b90"
+      },
+      "opencad": {
+        "path": "assets/icons/mirror.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/mirror.svg",
+        "sha256": "5d939383c8f4b0b36648a88701096cdf38fb8f0d0de0deed21897f747601b55b",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/mirror.rs",
+            "line": 23,
+            "reference": "../../../../assets/icons/mirror.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-offset",
+      "label": "Offset",
+      "status": "shared-candidate",
+      "decision": "Parallelle kopie van een lijn op afstand.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 306,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-offset.svg",
+        "sha256": "e2262a4438e739493ef2b71aa5c73fe482c624011f7695ed130b8d28bd8a2573"
+      },
+      "opencad": {
+        "path": "assets/icons/offset.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/offset.svg",
+        "sha256": "26466e98ed21d8ac616750618f9e9eb5ba33ad86c02ac8ee764037053d52eeb2",
+        "usage": [
+          {
+            "source": "src/modules/draw/modify/offset.rs",
+            "line": 43,
+            "reference": "../../../../assets/icons/offset.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": null,
+      "rust": null
+    },
+    {
+      "name": "tekening-line",
+      "label": "Lijn",
+      "status": "adopted-domain",
+      "decision": "Nieuwe lijn tekenen; Pointcloud noemt dit een annotatielijn. De iconbetekenis is gedeeld.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 338,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-line.svg",
+        "sha256": "e17692b189465dac6bc0976a33c5f61851a95f281ef3ecf5bd54751ebb4c9970"
+      },
+      "opencad": {
+        "path": "assets/icons/line.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/line.svg",
+        "sha256": "c9064ea78fbca0ac07c4e1f32d145defc31d139b8382870c208678798ccb19d1",
+        "usage": [
+          {
+            "source": "src/modules/annotate/mod.rs",
+            "line": 162,
+            "reference": "../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/annotate/mod.rs",
+            "line": 169,
+            "reference": "../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/annotate/mod.rs",
+            "line": 176,
+            "reference": "../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/annotate/mod.rs",
+            "line": 183,
+            "reference": "../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/centerline.rs",
+            "line": 18,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/dimcenter.rs",
+            "line": 22,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/helix.rs",
+            "line": 20,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/line.rs",
+            "line": 24,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/poly3d.rs",
+            "line": 20,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/sketch.rs",
+            "line": 21,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/solid2d.rs",
+            "line": 26,
+            "reference": "../../../../assets/icons/line.svg"
+          },
+          {
+            "source": "src/modules/draw/draw/trace.rs",
+            "line": 31,
+            "reference": "../../../../assets/icons/line.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": {
+        "path": "native/assets/opencad-icons/annotation_line.svg",
+        "svg": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_line.svg",
+        "sha256": "e4ec87331891d277272044dc77ce087e41c49f2e04eccb76baa0d1da93f3503d",
+        "usage": [
+          {
+            "source": "native/desktop/src/main.rs",
+            "line": 12380,
+            "reference": "../../assets/opencad-icons/annotation_line.svg"
+          }
+        ],
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+      },
+      "rust": {
+        "meaning": "drawing.line",
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-line.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-line.svg"
+      }
+    },
+    {
+      "name": "tekening-select",
+      "label": "Selecteren",
+      "status": "decision",
+      "decision": "Geotechniek activeert selectiemodus; Pointcloud selecteert met een venster. Vorm en gebaar vragen scheiding.",
+      "geotechniek": {
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 215,
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-select.svg",
+        "sha256": "f9c3cabb9d1c2446a6b15ffc607b241752911d349293450d29831a8b8f7062bf"
+      },
+      "opencad": {
+        "path": "assets/icons/blocks/select_objects.svg",
+        "svg": "../harmonization/ui-icons/OpenCADStudio/assets/icons/blocks/select_objects.svg",
+        "sha256": "4506cc87ead8a57359f4726988251036fc792b93a42e183a89045d268d310edc",
+        "usage": [
+          {
+            "source": "src/ui/window/block_definition.rs",
+            "line": 21,
+            "reference": "../../../assets/icons/blocks/select_objects.svg"
+          },
+          {
+            "source": "src/ui/window/count_palette.rs",
+            "line": 20,
+            "reference": "../../../assets/icons/blocks/select_objects.svg"
+          },
+          {
+            "source": "src/ui/window/wblock.rs",
+            "line": 16,
+            "reference": "../../../assets/icons/blocks/select_objects.svg"
+          }
+        ],
+        "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
+      },
+      "pointcloud": {
+        "path": "native/assets/opencad-icons/select_objects.svg",
+        "svg": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/select_objects.svg",
+        "sha256": "0cc9f54fad654cc5b40f23f2df3b085760526b00c72b34e61d1f6fe5c7e5412c",
+        "usage": [
+          {
+            "source": "native/desktop/src/main.rs",
+            "line": 12369,
+            "reference": "../../assets/opencad-icons/select_objects.svg"
+          }
+        ],
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c"
+      },
+      "rust": null
+    }
+  ]
+}
