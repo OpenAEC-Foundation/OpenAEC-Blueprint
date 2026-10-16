@@ -1,0 +1,324 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "scope": "All remaining literal JSX <svg> elements outside separately audited TitleBar, Backstage and Sidebar; package icons and string-defined ribbon icons have their own audits.",
+  "tsx_svg_sites": 34,
+  "ui_icon_sites": 19,
+  "inactive_sites": 6,
+  "diagram_sites": 6,
+  "illustration_sites": 2,
+  "pattern_sites": 1,
+  "unique_icon_shapes": 9,
+  "records": [
+    {
+      "name": "SelectChevron",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/ThemedSelect.tsx",
+        "line": 34
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/select-chevron.svg",
+      "sha256": "1dcf576165697826a44ae8eb66c041b39319a7a8c9bf97eb6b752b1176a8e461"
+    },
+    {
+      "name": "DocumentClose",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/DocumentBar.tsx",
+        "line": 44
+      }
+    },
+    {
+      "name": "RampDiagram",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/pages/HellingbaanCalculator.tsx",
+        "line": 419
+      }
+    },
+    {
+      "name": "AngleDiagram",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/pages/HoekenCalculator.tsx",
+        "line": 346
+      }
+    },
+    {
+      "name": "ReportOptionsToggle",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/pages/Rapport.tsx",
+        "line": 145
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/report-options-toggle.svg",
+      "sha256": "3e550855a77ae497182534f4279744380cfdf46fe49c6a715462e84a41ca5169"
+    },
+    {
+      "name": "LayerMoveUp",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/pages/RcCalculator.tsx",
+        "line": 704
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-move-up.svg",
+      "sha256": "8e7911277b3881648fbe44da106ec23bc85f35cff60587ac845153ddef64457f"
+    },
+    {
+      "name": "LayerMoveDown",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/pages/RcCalculator.tsx",
+        "line": 722
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-move-down.svg",
+      "sha256": "ff1c129be06a80c6299a2b168164a9549462fc14de5487c656308a5e67e4adc7"
+    },
+    {
+      "name": "StudToggle",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/pages/RcCalculator.tsx",
+        "line": 774
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/stud-toggle.svg",
+      "sha256": "42c89817c5678ec94ad423551b4a026ec790b9a5fc7fd46a4e11906519f4db0b"
+    },
+    {
+      "name": "LayerRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/pages/RcCalculator.tsx",
+        "line": 865
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "RoomCollapse",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/rooms/RoomHeaderRow.tsx",
+        "line": 73
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/room-collapse.svg",
+      "sha256": "f6693fdaa608e6c0808f55dcb8ba5a9c759c8c0a053f222c52ca2a64a07f7abf"
+    },
+    {
+      "name": "RoomVentilation",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/rooms/RoomHeaderRow.tsx",
+        "line": 98
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/room-ventilation.svg",
+      "sha256": "d0dfd30064891a4c551ae007e2b20c437cb6a0603431ea0e0c3b0e776a3d54ad"
+    },
+    {
+      "name": "RoomRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/rooms/RoomHeaderRow.tsx",
+        "line": 108
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/room-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "BoundaryRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/rooms/ConstructionRow.tsx",
+        "line": 337
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/boundary-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "ThemeSelectChevron",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/settings/SettingsDialog.tsx",
+        "line": 281
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/theme-select-chevron.svg",
+      "sha256": "1dcf576165697826a44ae8eb66c041b39319a7a8c9bf97eb6b752b1176a8e461"
+    },
+    {
+      "name": "ShortcutsPlaceholder",
+      "kind": "illustration",
+      "source": {
+        "file": "frontend/src/components/settings/SettingsDialog.tsx",
+        "line": 401
+      }
+    },
+    {
+      "name": "PluginsPlaceholder",
+      "kind": "illustration",
+      "source": {
+        "file": "frontend/src/components/settings/SettingsDialog.tsx",
+        "line": 413
+      }
+    },
+    {
+      "name": "StackedBarChart",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/components/charts/StackedBarChart.tsx",
+        "line": 71
+      }
+    },
+    {
+      "name": "SummaryDonut",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/components/charts/SummaryDonut.tsx",
+        "line": 73
+      }
+    },
+    {
+      "name": "ConstructionLossChart",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/components/charts/ConstructionLossChart.tsx",
+        "line": 267
+      }
+    },
+    {
+      "name": "ErrorDismiss",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 355
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/error-dismiss.svg",
+      "sha256": "22e319df6202585c5192e49907b5a41c7a141dac1b5b0cb8ed48e197de4e7895"
+    },
+    {
+      "name": "TopbarMenu",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/layout/Topbar.tsx",
+        "line": 71
+      }
+    },
+    {
+      "name": "TopbarBrandMark",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/layout/Topbar.tsx",
+        "line": 78
+      }
+    },
+    {
+      "name": "TopbarSearch",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/layout/Topbar.tsx",
+        "line": 93
+      }
+    },
+    {
+      "name": "TopbarSettings",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/layout/Topbar.tsx",
+        "line": 113
+      }
+    },
+    {
+      "name": "TopbarAccount",
+      "kind": "inactive",
+      "source": {
+        "file": "frontend/src/components/layout/Topbar.tsx",
+        "line": 120
+      }
+    },
+    {
+      "name": "ZoneRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/projectSetup/ZonesCard.tsx",
+        "line": 197
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/zone-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "MaterialHatch",
+      "kind": "pattern",
+      "source": {
+        "file": "frontend/src/components/construction/MaterialPicker.tsx",
+        "line": 33
+      }
+    },
+    {
+      "name": "LayerDialogClose",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/construction/LayerEditor.tsx",
+        "line": 169
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-dialog-close.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "LayerEditorMoveUp",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/construction/LayerEditor.tsx",
+        "line": 230
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-editor-move-up.svg",
+      "sha256": "8e7911277b3881648fbe44da106ec23bc85f35cff60587ac845153ddef64457f"
+    },
+    {
+      "name": "LayerEditorMoveDown",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/construction/LayerEditor.tsx",
+        "line": 244
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-editor-move-down.svg",
+      "sha256": "ff1c129be06a80c6299a2b168164a9549462fc14de5487c656308a5e67e4adc7"
+    },
+    {
+      "name": "LayerEditorRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/construction/LayerEditor.tsx",
+        "line": 317
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/layer-editor-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "GlaserDiagram",
+      "kind": "diagram",
+      "source": {
+        "file": "frontend/src/components/construction/GlaserDiagram.tsx",
+        "line": 416
+      }
+    },
+    {
+      "name": "IfcReviewClose",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/modeller/IfcWallTypeReview.tsx",
+        "line": 283
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/ifc-review-close.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    },
+    {
+      "name": "ProjectLibraryRemove",
+      "kind": "icon",
+      "source": {
+        "file": "frontend/src/components/modeller/ProjectLibraryPanel.tsx",
+        "line": 123
+      },
+      "svg": "inline-ui-icons/open-heatloss-remaining/project-library-remove.svg",
+      "sha256": "33754d522b4c2d4f53491a93852080ec5cb22780bdfad7fbcf300478dd745662"
+    }
+  ]
+}
