@@ -1,0 +1,141 @@
+{
+  "repository": "open-geotechniek-studio",
+  "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+  "scope": "Backstage ICONS strings actually supplied to MenuItem",
+  "count": 11,
+  "icons": [
+    {
+      "name": "backstage-new",
+      "identifier": "ICONS.new",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 29,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        378
+      ],
+      "sha256": "26132fc1a9127230323576b584065c672ae4902529df7b43ecb86e3d807e289a",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-new.svg"
+    },
+    {
+      "name": "backstage-open",
+      "identifier": "ICONS.open",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 30,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        384
+      ],
+      "sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-open.svg"
+    },
+    {
+      "name": "backstage-save",
+      "identifier": "ICONS.save",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 31,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        426
+      ],
+      "sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-save.svg"
+    },
+    {
+      "name": "backstage-save-as",
+      "identifier": "ICONS.saveAs",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 32,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        432
+      ],
+      "sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-save-as.svg"
+    },
+    {
+      "name": "backstage-print",
+      "identifier": "ICONS.print",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 33,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        460
+      ],
+      "sha256": "a5f514494431699850543f1683baf68025796d0a8b0a03ddbbade10e39d49403",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-print.svg"
+    },
+    {
+      "name": "backstage-export",
+      "identifier": "ICONS.export",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 34,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        473
+      ],
+      "sha256": "7d8226d17aebac2dafd8392119382a2575d188594a218f5f19502bac55934473",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-export.svg"
+    },
+    {
+      "name": "backstage-import",
+      "identifier": "ICONS.import",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 35,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        467
+      ],
+      "sha256": "4e2452104feb5530b553ab202d52923151264d5180de7eeee2a6cfefdd26b2e7",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-import.svg"
+    },
+    {
+      "name": "backstage-preferences",
+      "identifier": "ICONS.preferences",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 36,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        486
+      ],
+      "sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-preferences.svg"
+    },
+    {
+      "name": "backstage-about",
+      "identifier": "ICONS.about",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 37,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        493
+      ],
+      "sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-about.svg"
+    },
+    {
+      "name": "backstage-exit",
+      "identifier": "ICONS.exit",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 38,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        500
+      ],
+      "sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-exit.svg"
+    },
+    {
+      "name": "backstage-extensions",
+      "identifier": "ICONS.extensions",
+      "source": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "source_line": 39,
+      "usage": "apps/desktop/src/components/backstage/Backstage.tsx",
+      "usage_lines": [
+        479
+      ],
+      "sha256": "98ba3aeb3283bed72b40be74c39dd07a296dfd6c7a0a8ede3d4cf98fbd96bc7f",
+      "svg": "inline-ui-icons/open-geotechniek-studio/backstage-extensions.svg"
+    }
+  ],
+  "excluded_other_inline_svg": "JSX arrows, logo and other embedded vectors require separate usage classification"
+}

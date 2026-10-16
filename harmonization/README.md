@@ -18,6 +18,8 @@ Voor Open Calculations Studio bevat de [gerichte review](../design/calculations-
 
 De [Geotechniek-review](../design/geotech-inline-icon-review.html) bevat dertig daadwerkelijk gebruikte inline linticonen uit Start, Kaart, Rapport en Sonderingstekening op commit `8182b48afc3f`. De [index](geotech-inline-ui-icons.json) bewaart definitie, knopaanroep en hash; zelfstandige reviewvectoren staan onder `inline-ui-icons/open-geotechniek-studio/`. De 42 oude `icons.ts`-definities worden door deze vier linttabs niet geïmporteerd en zijn apart gehouden. Andere schermcomponenten en technische SVG's vragen nog een afzonderlijke audit.
 
+Hetzelfde broncommit levert [elf gebruikte iconen in Bestand](../design/geotech-backstage-icon-review.html). De [Bestand-index](geotech-backstage-ui-icons.json) verwijst voor elke `ICONS`-string naar zijn `MenuItem`-aanroep en SHA-256. Het overige SVG-gebruik in `Backstage.tsx`, waaronder het applicatielogo, valt buiten deze elf menu-iconen.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |
