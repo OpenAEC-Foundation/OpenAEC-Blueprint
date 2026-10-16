@@ -1,0 +1,64 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+  "scope": "source-backed interactive HTML review, not a captured application screenshot or PDF split implementation",
+  "route": {
+    "ribbon_command": {
+      "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "line": 104,
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx#L104",
+      "sha256": "c9b9cc271a13672f3a6779d0322dae3e68d4e6d5fb38f54fd439f51d7a39fbfb"
+    },
+    "dialog_host": {
+      "file": "open-pdf-studio/js/solid/components/DialogHost.jsx",
+      "line": 75,
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/DialogHost.jsx#L75",
+      "sha256": "500a90237769507f5804e3333984204eadce50358b18c150a2471d008176f4c9"
+    },
+    "screen": {
+      "file": "open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx",
+      "line": 20,
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx#L20",
+      "sha256": "1635a687aa659db74c303cec75edab7c9fbb82f697ce4812ff13770426b5672e"
+    }
+  },
+  "layout": {
+    "dialog_width_px": 460,
+    "header_height_px": 30,
+    "body_padding_px": 15,
+    "form_gap_px": 8,
+    "label_width_px": 90,
+    "number_input_width_px": 56,
+    "source": {
+      "file": "open-pdf-studio/styles/dialogs.css",
+      "line": 2194,
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/dialogs.css#L2194",
+      "sha256": "c1a2cf8f220ed6729e8ee15ee793e11d1cb8def835da821833a58c991d83080f"
+    }
+  },
+  "states": {
+    "methods": [
+      "pages",
+      "bookmarks",
+      "size"
+    ],
+    "initial_without_bookmarks": "pages",
+    "initial_with_bookmarks": "bookmarks",
+    "bookmarks_disabled_without_top_level": true,
+    "max_preview_names": 4,
+    "warning_on_modified_document": true,
+    "native_folder_picker_only_on_tauri": true
+  },
+  "locale": {
+    "language": "nl",
+    "source": {
+      "file": "open-pdf-studio/js/i18n/locales/nl/dialogs.json",
+      "line": 179,
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/i18n/locales/nl/dialogs.json#L179",
+      "sha256": "8da493c163455495f097293f679764e72b857e36844553078a20a046a2d00f9e"
+    },
+    "title": "Document splitsen",
+    "split": "Splitsen"
+  },
+  "prototype": "design/pdf-main-split-document-screen-review.html"
+}
