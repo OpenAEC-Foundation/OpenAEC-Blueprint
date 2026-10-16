@@ -1,0 +1,1051 @@
+{
+  "repository": "OpenAEC-Workspace-Composer",
+  "commit": "33327e001d6ad917356920060b8c7016fcbd6de5",
+  "scope": "Solid icon components actually instantiated in JSX, including NavIcon factory calls; brand and package logos excluded.",
+  "source_files_scanned": 33,
+  "imports": [
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineX",
+      "local": "TbOutlineX",
+      "evidence": {
+        "file": "src/components/FeedbackDialog.tsx",
+        "line": 2,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/FeedbackDialog.tsx#L2"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineHome",
+      "local": "TbOutlineHome",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "TbOutlineBolt",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlinePackage",
+      "local": "TbOutlinePackage",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFolder",
+      "local": "TbOutlineFolder",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSettings",
+      "local": "TbOutlineSettings",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineLink",
+      "local": "TbOutlineLink",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineShield",
+      "local": "TbOutlineShield",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCpu",
+      "local": "TbOutlineCpu",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "TbOutlineFileText",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCloudDownload",
+      "local": "TbOutlineCloudDownload",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineServer",
+      "local": "TbOutlineServer",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineRefresh",
+      "local": "TbOutlineRefresh",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineInfoCircle",
+      "local": "TbOutlineInfoCircle",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSun",
+      "local": "TbOutlineSun",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMoon",
+      "local": "TbOutlineMoon",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMessage",
+      "local": "TbOutlineMessage",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlinePackage",
+      "local": "TbOutlinePackage",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "TbOutlineBolt",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFolder",
+      "local": "TbOutlineFolder",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSettings",
+      "local": "TbOutlineSettings",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineShield",
+      "local": "TbOutlineShield",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineLink",
+      "local": "TbOutlineLink",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCpu",
+      "local": "TbOutlineCpu",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "TbOutlineFileText",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineServer",
+      "local": "TbOutlineServer",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineRefresh",
+      "local": "TbOutlineRefresh",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 7,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L7"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitBranch",
+      "local": "GitBranchIcon",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "FileText",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitCommit",
+      "local": "GitCommitIcon",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "Bolt",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineArrowUp",
+      "local": "ArrowUp",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineInfoCircle",
+      "local": "InfoCircle",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitFork",
+      "local": "GitFork",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCheck",
+      "local": "Checkbox",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineTerminal",
+      "local": "Terminal",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 4,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L4"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMessage",
+      "local": "Message",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 2,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L2"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineChevronDown",
+      "local": "ChevronDown",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 2,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L2"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCopy",
+      "local": "Copy",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 2,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L2"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineEdit",
+      "local": "Edit",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 2,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L2"
+      }
+    }
+  ],
+  "usages": [
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineX",
+      "local": "TbOutlineX",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/components/FeedbackDialog.tsx",
+        "line": 114,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/FeedbackDialog.tsx#L114"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSun",
+      "local": "TbOutlineSun",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 205,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L205"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMoon",
+      "local": "TbOutlineMoon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 205,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L205"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMessage",
+      "local": "TbOutlineMessage",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 193,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L193"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlinePackage",
+      "local": "TbOutlinePackage",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 53,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L53"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "TbOutlineBolt",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 66,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L66"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFolder",
+      "local": "TbOutlineFolder",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 79,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L79"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSettings",
+      "local": "TbOutlineSettings",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 87,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L87"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineShield",
+      "local": "TbOutlineShield",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 95,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L95"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineLink",
+      "local": "TbOutlineLink",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 103,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L103"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCpu",
+      "local": "TbOutlineCpu",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 111,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L111"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "TbOutlineFileText",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 119,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L119"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineServer",
+      "local": "TbOutlineServer",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 128,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L128"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineRefresh",
+      "local": "TbOutlineRefresh",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/DashboardPage.tsx",
+        "line": 138,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L138"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitBranch",
+      "local": "GitBranchIcon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 275,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L275"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitBranch",
+      "local": "GitBranchIcon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 343,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L343"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitBranch",
+      "local": "GitBranchIcon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 636,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L636"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "FileText",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 499,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L499"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitCommit",
+      "local": "GitCommitIcon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 376,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L376"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitCommit",
+      "local": "GitCommitIcon",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 537,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L537"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "Bolt",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 331,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L331"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineArrowUp",
+      "local": "ArrowUp",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 388,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L388"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineInfoCircle",
+      "local": "InfoCircle",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 399,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L399"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineGitFork",
+      "local": "GitFork",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 579,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L579"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCheck",
+      "local": "Checkbox",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 364,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L364"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineTerminal",
+      "local": "Terminal",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/GitPage.tsx",
+        "line": 617,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L617"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineMessage",
+      "local": "Message",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 301,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L301"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineChevronDown",
+      "local": "ChevronDown",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 361,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L361"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCopy",
+      "local": "Copy",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 382,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L382"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineEdit",
+      "local": "Edit",
+      "kind": "direct_jsx",
+      "evidence": {
+        "file": "src/pages/PromptsPage.tsx",
+        "line": 396,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L396"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFolder",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "workspace",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 68,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L68"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "quickstart",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 72,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L72"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCloudDownload",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "install",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 76,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L76"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineHome",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "dashboard",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 87,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L87"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlinePackage",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "packages",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 91,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L91"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineBolt",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "quickstart",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 98,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L98"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCloudDownload",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "install",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 102,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L102"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSettings",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "configure",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 113,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L113"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineShield",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "permissions",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 117,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L117"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineLink",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "hooks",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 121,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L121"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineCpu",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "mcp",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 125,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L125"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "templates",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 129,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L129"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineInfoCircle",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "about",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 133,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L133"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "templates",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 141,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L141"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "templates",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 145,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L145"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFileText",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "templates",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 149,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L149"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineSettings",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "configure",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 157,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L157"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineServer",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "gpu-server",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 165,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L165"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineShield",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "permissions",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 174,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L174"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineFolder",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "workspace",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 178,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L178"
+      }
+    },
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineInfoCircle",
+      "local": "NavIcon",
+      "kind": "dynamic_nav",
+      "nav_key": "about",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 186,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L186"
+      }
+    }
+  ],
+  "unused_imports": [
+    {
+      "package": "solid-icons/tb",
+      "symbol": "TbOutlineRefresh",
+      "local": "TbOutlineRefresh",
+      "evidence": {
+        "file": "src/layouts/AppLayout.tsx",
+        "line": 11,
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/layouts/AppLayout.tsx#L11"
+      }
+    }
+  ],
+  "unique_used_symbols": [
+    "TbOutlineArrowUp",
+    "TbOutlineBolt",
+    "TbOutlineCheck",
+    "TbOutlineChevronDown",
+    "TbOutlineCloudDownload",
+    "TbOutlineCopy",
+    "TbOutlineCpu",
+    "TbOutlineEdit",
+    "TbOutlineFileText",
+    "TbOutlineFolder",
+    "TbOutlineGitBranch",
+    "TbOutlineGitCommit",
+    "TbOutlineGitFork",
+    "TbOutlineHome",
+    "TbOutlineInfoCircle",
+    "TbOutlineLink",
+    "TbOutlineMessage",
+    "TbOutlineMoon",
+    "TbOutlinePackage",
+    "TbOutlineRefresh",
+    "TbOutlineServer",
+    "TbOutlineSettings",
+    "TbOutlineShield",
+    "TbOutlineSun",
+    "TbOutlineTerminal",
+    "TbOutlineX"
+  ],
+  "nav_map": {
+    "dashboard": "TbOutlineHome",
+    "quickstart": "TbOutlineBolt",
+    "packages": "TbOutlinePackage",
+    "workspace": "TbOutlineFolder",
+    "configure": "TbOutlineSettings",
+    "hooks": "TbOutlineLink",
+    "permissions": "TbOutlineShield",
+    "mcp": "TbOutlineCpu",
+    "templates": "TbOutlineFileText",
+    "install": "TbOutlineCloudDownload",
+    "gpu-server": "TbOutlineServer",
+    "sync": "TbOutlineRefresh",
+    "about": "TbOutlineInfoCircle"
+  },
+  "excluded_asset_roles": [
+    "OpenAEC sidebar symbol is branding.",
+    "Package logos represent product identity."
+  ]
+}
