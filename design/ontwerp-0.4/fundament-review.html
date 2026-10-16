@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · fundament 0.4</title>
+<style>
+
+.v4{margin:0;border:1px solid;overflow:hidden;font-size:11px;line-height:1.35}
+.v4title{height:24px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.v4tabs{display:flex;gap:2px;padding:3px 6px 0}.v4tabs span{padding:2px 9px}
+.v4ribbon{display:flex;height:56px}.v4grp{padding:5px 8px 3px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;min-width:80px}
+.v4btns{display:flex;gap:4px}.v4btns i{display:block;width:22px;height:22px;border:1.5px solid;border-radius:3px}
+.v4mono{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;font-size:9.5px}
+.v4doc{display:flex;gap:2px;padding:3px 4px 0}.v4doc span{padding:2px 8px}
+.v4body{display:flex;height:150px}.v4panel{width:30%;display:flex;flex-direction:column}.v4props{width:36%;padding-bottom:6px}
+.v4ph{height:20px;display:flex;align-items:center;padding:0 7px}.v4row{padding:3px 7px}
+.v4work{flex:1;display:grid;place-items:center;font-size:10px}
+.v4field{margin:6px 7px 0;padding:3px 6px}.v4act{display:flex;gap:6px;margin:8px 7px 0}.v4act span{padding:3px 8px;font-weight:600}
+.v4chips{display:flex;gap:4px;flex-wrap:wrap;margin:8px 7px 0}.v4chip{font-family:'JetBrains Mono',monospace;text-transform:uppercase;font-size:9px;letter-spacing:.05em;padding:1px 6px;border-radius:9999px}
+.v4status{height:18px;display:flex;align-items:center;padding:0 7px;font-size:10px}
+.v4 figcaption{padding:6px 9px;font-size:12px}
+.themes04{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(360px,100%),1fr));gap:14px}
+.sw{display:inline-block;width:12px;height:12px;border:1px solid #bbb;vertical-align:-2px;margin-right:6px}
+details{margin:8px 0;background:#fff;border:1px solid #d8d8dd;padding:8px 12px}summary{cursor:pointer;font-weight:600}
+.old{border-top:3px solid #d8d8dd;margin-top:44px;padding-top:4px}
+@font-face{font-family:Inter;src:url('../../assets/fonts/Inter-Regular.ttf');font-weight:400}
+@font-face{font-family:Inter;src:url('../../assets/fonts/Inter-Medium.ttf');font-weight:500}
+@font-face{font-family:Inter;src:url('../../assets/fonts/Inter-SemiBold.ttf');font-weight:600 800}
+@font-face{font-family:'Space Grotesk';src:url('../../assets/fonts/SpaceGrotesk-Medium.ttf');font-weight:500}
+@font-face{font-family:'Space Grotesk';src:url('../../assets/fonts/SpaceGrotesk-Bold.ttf');font-weight:700}
+@font-face{font-family:'JetBrains Mono';src:url('../../assets/fonts/JetBrainsMono-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#f3f3f2;color:#303039;font:14px/1.5 Inter,system-ui,sans-serif}
+header{background:#303039;color:#fff;padding:26px max(22px,calc((100vw - 1420px)/2));border-bottom:3px solid #dc7900}
+header a{color:#ffc180}h1{font:700 29px/1.2 'Space Grotesk',Inter,sans-serif;margin:8px 0}header p{margin:0;color:#dddde3;max-width:1000px}
+main{max-width:1460px;margin:auto;padding:23px 22px 46px}h2{font:500 21px/1.3 'Space Grotesk',Inter,sans-serif;margin:34px 0 8px}h3{font-size:15px;margin:0 0 10px}
+p{max-width:1000px}.facts{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:8px}.facts span{background:#fff;border:1px solid #d8d8dd;padding:8px 11px}
+.note{background:#fffaf2;border-left:3px solid #dc7900;padding:12px 16px;max-width:1040px;margin:14px 0}
+.themes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:14px}
+.theme{margin:0;border:1px solid;overflow:hidden;font-size:12px}.theme figcaption{padding:6px 10px;font-weight:600}
+.tabs{display:flex;gap:2px;padding:4px 6px 0;height:28px}.tabs span{padding:3px 10px;border:1px solid transparent;border-bottom:none}
+.group{padding:6px 8px}.btns{display:flex;gap:6px}.rb{padding:4px 8px;border-radius:2px}.glabel{font-size:11px;text-align:center;margin-top:4px}
+.body{padding:8px 10px}.body p{margin:3px 0}.field{border:1px solid;padding:4px 8px;margin:8px 0;border-radius:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}.btn{padding:5px 10px;border-radius:4px;font-weight:600}
+.dlg{padding:6px 8px;margin:8px 0;font-weight:600}.status{padding:3px 10px;font-size:11px}
+.tablewrap{overflow-x:auto;max-width:100%}table{border-collapse:collapse;background:#fff;width:100%;min-width:640px}th,td{text-align:left;vertical-align:top;border:1px solid #dedee2;padding:8px 10px}
+th small{display:block;font-weight:400;color:#6b6b75;font-size:11px}.contrast td.ok{background:#f0fdf4}.contrast td.bad{background:#fef2f2}
+.contrast .total td,.contrast .total th{background:#f5f5f4}b.ok{color:#15803d}b.bad{color:#b91c1c}
+.props,.conflicts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:14px}.props section,.conflicts section{background:#fff;border:1px solid #d8d8dd;padding:14px}
+.conflicts .wide{grid-column:1/-1}.prop{margin-bottom:10px}.sample{padding:9px 12px;font-weight:600;border:1px solid #e5e5e5}.meta{font-size:12px;color:#55555f;margin-top:3px}
+.chip{display:flex;flex-direction:column;align-items:flex-start;font-size:12px}.chip span{width:56px;height:36px;border:1px solid #ccc}.chip.big span{width:110px;height:56px}
+.chip small{color:#6b6b75}.strip{display:flex;gap:6px;flex-wrap:wrap}.chip.flag span{outline:3px solid #dc2626;outline-offset:2px}
+.types{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(420px,100%),1fr));gap:14px}.types section{min-width:0}.types section{background:#fff;border:1px solid #d8d8dd;padding:14px}
+.ty{display:flex;gap:14px;align-items:baseline;border-bottom:1px solid #eee;padding:6px 0;overflow:hidden;white-space:nowrap}.ty .lbl{flex:0 0 170px;font-size:12px;color:#6b6b75}
+.bars{background:#fff;border:1px solid #d8d8dd;padding:14px;max-width:1040px}.bar{margin:8px 0}.bar .lbl{font-weight:600;display:block}
+.b{display:flex;align-items:center;gap:8px;margin:3px 0}.b i{display:block;height:14px;background:#36363e;max-width:70%}.b.sb i{background:#d97706}.b em{font-style:normal;font-size:12px;color:#55555f}
+footer{color:#6b6b75;font-size:12px;margin-top:30px}code{font-family:'JetBrains Mono',monospace;font-size:12px}
+@media (max-width:640px){.ty .lbl{flex-basis:110px}.types{grid-template-columns:minmax(0,1fr)}}
+</style>
+<header>
+  <a href="README.md">Fase 2: ontwerp 0.4</a>
+  <h1>Fundament · besloten</h1>
+  <p>De vijf thema's voor versie 0.4, gemaakt uit <code>tokens-0.4.json</code>, met het gemeten contrast. Daaronder de analyse van de huidige thema's waar de besluiten op steunen. De besluiten staan in <a href="01-fundament.md">01-fundament.md</a>.</p>
+</header>
+<main>
+  <div class="facts"><span>Tokens 0.4.0-concept</span><span>5 nieuwe thema's</span><span>190 kleurparen getoetst</span><span>Alle paren halen hun minimum</span></div>
+
+  <h2>Thema's voor versie 0.4</h2>
+  <p>Elk voorbeeld gebruikt alleen waarden uit <code>tokens-0.4.json</code>. Hoeken, mono-labels, selectie, focusring en statuslabels volgen de besluiten. De knop Opslaan toont de focusring.</p>
+  <div class="themes04">
+<figure class="v4" style="background:#F1EEEA;color:#2A2A32;border-color:#EAEAEA">
+  <div class="v4title" style="background:#FFFFFF;color:#92400E;border-bottom:1px solid #EAEAEA">Open Calc Studio</div>
+  <div class="v4tabs" style="background:#FFFFFF;border-bottom:2px solid #D97706">
+    <span style="background:#D97706;color:#1C1917">Bestand</span>
+    <span style="color:#92400E;border:1px solid #D97706;border-bottom:none">Start</span>
+    <span style="color:#5F5F65">Beeld</span>
+  </div>
+  <div class="v4ribbon" style="background:#FFFFFF;border-bottom:1px solid #EAEAEA">
+    <div class="v4grp" style="border-right:1px solid #EAEAEA"><div class="v4btns"><i style="border-color:#B45309;background:#FBF1E6"></i><i style="border-color:#7F7F84"></i><i style="border-color:#7F7F84"></i></div><div class="v4mono" style="color:#5F5F65">Klembord</div></div>
+    <div class="v4grp" style="border-right:1px solid #EAEAEA"><div class="v4btns"><i style="border-color:#7F7F84"></i><i style="border-color:#7F7F84"></i></div><div class="v4mono" style="color:#5F5F65">Begroting</div></div>
+  </div>
+  <div class="v4doc" style="background:#F1EEEA;border-bottom:1px solid #EAEAEA"><span style="background:#FFFFFF;color:#2A2A32;border-top:2px solid #D97706">Begroting.ocs</span><span style="color:#5F5F65">Variant B</span></div>
+  <div class="v4body">
+    <div class="v4panel" style="background:#FFFFFF;border-right:1px solid #EAEAEA">
+      <div class="v4mono v4ph" style="color:#5F5F65;border-bottom:1px solid #EAEAEA">Verkenner</div>
+      <div class="v4row" style="background:#FBF1E6;box-shadow:inset 3px 0 0 #B45309">Fundering</div><div class="v4row">Ruwbouw</div><div class="v4row" style="color:#5F5F65">Afbouw</div>
+    </div>
+    <div class="v4work" style="background:#FFFFFF;color:#2A2A32">Werkruimte</div>
+    <div class="v4panel v4props" style="background:#FFFFFF;border-left:1px solid #EAEAEA">
+      <div class="v4mono v4ph" style="color:#5F5F65;border-bottom:1px solid #EAEAEA">Eigenschappen</div>
+      <div class="v4field" style="border:1px solid #7F7F84;border-radius:6px;background:#FFFFFF">Hoeveelheid</div>
+      <div class="v4act"><span style="background:#D97706;color:#1C1917;border-radius:6px;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #B45309">Opslaan</span><span style="border:1px solid #EAEAEA;color:#AAAAAD;border-radius:6px">Export</span></div>
+      <div class="v4chips"><span class="v4chip" style="color:#B91C1C;background:#F8E8E8">Fout</span><span class="v4chip" style="color:#166534;background:#E8F0EB">Gelukt</span><span class="v4chip" style="color:#854D0E;background:#F3EDE7">Let op</span><span class="v4chip" style="color:#1D4ED8;background:#E8EDFB">Info</span></div>
+    </div>
+  </div>
+  <div class="v4status" style="background:#FFFFFF;color:#5F5F65;border-top:1px solid #EAEAEA">Gereed · 91 posten</div>
+  <figcaption style="background:#FFFFFF;color:#2A2A32;border-top:1px solid #EAEAEA"><b>Licht</b></figcaption>
+</figure>
+<figure class="v4" style="background:#2A2A32;color:#EDEBE8;border-color:#474750">
+  <div class="v4title" style="background:#33333C;color:#FBBF24;border-bottom:1px solid #474750">Open Calc Studio</div>
+  <div class="v4tabs" style="background:#33333C;border-bottom:2px solid #D97706">
+    <span style="background:#D97706;color:#1C1917">Bestand</span>
+    <span style="color:#FBBF24;border:1px solid #D97706;border-bottom:none">Start</span>
+    <span style="color:#BEBDBD">Beeld</span>
+  </div>
+  <div class="v4ribbon" style="background:#33333C;border-bottom:1px solid #474750">
+    <div class="v4grp" style="border-right:1px solid #474750"><div class="v4btns"><i style="border-color:#D97706;background:#513F32"></i><i style="border-color:#878689"></i><i style="border-color:#878689"></i></div><div class="v4mono" style="color:#BEBDBD">Klembord</div></div>
+    <div class="v4grp" style="border-right:1px solid #474750"><div class="v4btns"><i style="border-color:#878689"></i><i style="border-color:#878689"></i></div><div class="v4mono" style="color:#BEBDBD">Begroting</div></div>
+  </div>
+  <div class="v4doc" style="background:#2A2A32;border-bottom:1px solid #474750"><span style="background:#26262D;color:#EDEBE8;border-top:2px solid #D97706">Begroting.ocs</span><span style="color:#BEBDBD">Variant B</span></div>
+  <div class="v4body">
+    <div class="v4panel" style="background:#33333C;border-right:1px solid #474750">
+      <div class="v4mono v4ph" style="color:#BEBDBD;border-bottom:1px solid #474750">Verkenner</div>
+      <div class="v4row" style="background:#513F32;box-shadow:inset 3px 0 0 #D97706">Fundering</div><div class="v4row">Ruwbouw</div><div class="v4row" style="color:#BEBDBD">Afbouw</div>
+    </div>
+    <div class="v4work" style="background:#26262D;color:#EDEBE8">Werkruimte</div>
+    <div class="v4panel v4props" style="background:#33333C;border-left:1px solid #474750">
+      <div class="v4mono v4ph" style="color:#BEBDBD;border-bottom:1px solid #474750">Eigenschappen</div>
+      <div class="v4field" style="border:1px solid #878689;border-radius:6px;background:#3B3B45">Hoeveelheid</div>
+      <div class="v4act"><span style="background:#D97706;color:#1C1917;border-radius:6px;box-shadow:0 0 0 2px #33333C,0 0 0 4px #F59E0B">Opslaan</span><span style="border:1px solid #474750;color:#7D7D81;border-radius:6px">Export</span></div>
+      <div class="v4chips"><span class="v4chip" style="color:#FCA5A5;background:#622F36">Fout</span><span class="v4chip" style="color:#4ADE80;background:#2B5240">Gelukt</span><span class="v4chip" style="color:#FACC15;background:#5D4B2C">Let op</span><span class="v4chip" style="color:#93C5FD;background:#2F406D">Info</span></div>
+    </div>
+  </div>
+  <div class="v4status" style="background:#2A2A32;color:#BDBAB5;border-top:1px solid #474750">Gereed · 91 posten</div>
+  <figcaption style="background:#33333C;color:#EDEBE8;border-top:1px solid #474750"><b>Donker</b></figcaption>
+</figure>
+<figure class="v4" style="background:#0A1320;color:#E0E7FF;border-color:#1F3756">
+  <div class="v4title" style="background:#0F1B2D;color:#60A5FA;border-bottom:1px solid #1F3756">Open Calc Studio</div>
+  <div class="v4tabs" style="background:#0F1B2D;border-bottom:2px solid #60A5FA">
+    <span style="background:#60A5FA;color:#0F1B2D">Bestand</span>
+    <span style="color:#60A5FA;border:1px solid #60A5FA;border-bottom:none">Start</span>
+    <span style="color:#B2BAD1">Beeld</span>
+  </div>
+  <div class="v4ribbon" style="background:#0F1B2D;border-bottom:1px solid #1F3756">
+    <div class="v4grp" style="border-right:1px solid #1F3756"><div class="v4btns"><i style="border-color:#60A5FA;background:#1E3452"></i><i style="border-color:#7189B0"></i><i style="border-color:#7189B0"></i></div><div class="v4mono" style="color:#B2BAD1">Klembord</div></div>
+    <div class="v4grp" style="border-right:1px solid #1F3756"><div class="v4btns"><i style="border-color:#7189B0"></i><i style="border-color:#7189B0"></i></div><div class="v4mono" style="color:#B2BAD1">Begroting</div></div>
+  </div>
+  <div class="v4doc" style="background:#0A1320;border-bottom:1px solid #1F3756"><span style="background:#0A1320;color:#E0E7FF;border-top:2px solid #60A5FA">Begroting.ocs</span><span style="color:#B2BAD1">Variant B</span></div>
+  <div class="v4body">
+    <div class="v4panel" style="background:#0F1B2D;border-right:1px solid #1F3756">
+      <div class="v4mono v4ph" style="color:#B2BAD1;border-bottom:1px solid #1F3756">Verkenner</div>
+      <div class="v4row" style="background:#1E3452;box-shadow:inset 3px 0 0 #60A5FA">Fundering</div><div class="v4row">Ruwbouw</div><div class="v4row" style="color:#B2BAD1">Afbouw</div>
+    </div>
+    <div class="v4work" style="background:#0A1320;color:#E0E7FF">Werkruimte</div>
+    <div class="v4panel v4props" style="background:#0F1B2D;border-left:1px solid #1F3756">
+      <div class="v4mono v4ph" style="color:#B2BAD1;border-bottom:1px solid #1F3756">Eigenschappen</div>
+      <div class="v4field" style="border:1px solid #7189B0;border-radius:6px;background:#1A2C45">Hoeveelheid</div>
+      <div class="v4act"><span style="background:#60A5FA;color:#0F1B2D;border-radius:6px;box-shadow:0 0 0 2px #0F1B2D,0 0 0 4px #60A5FA">Opslaan</span><span style="border:1px solid #1F3756;color:#636D81;border-radius:6px">Export</span></div>
+      <div class="v4chips"><span class="v4chip" style="color:#FCA5A5;background:#481E2B">Fout</span><span class="v4chip" style="color:#4ADE80;background:#114135">Gelukt</span><span class="v4chip" style="color:#FACC15;background:#433A22">Let op</span><span class="v4chip" style="color:#2DD4BF;background:#0E3D46">Info</span></div>
+    </div>
+  </div>
+  <div class="v4status" style="background:#0F1B2D;color:#9CA3AF;border-top:1px solid #1F3756">Gereed · 91 posten</div>
+  <figcaption style="background:#0F1B2D;color:#E0E7FF;border-top:1px solid #1F3756"><b>Blueprint</b></figcaption>
+</figure>
+<figure class="v4" style="background:#000000;color:#FFFFFF;border-color:#FFFFFF">
+  <div class="v4title" style="background:#000000;color:#F59E0B;border-bottom:1px solid #FFFFFF">Open Calc Studio</div>
+  <div class="v4tabs" style="background:#000000;border-bottom:2px solid #F59E0B">
+    <span style="background:#F59E0B;color:#000000">Bestand</span>
+    <span style="color:#F59E0B;border:1px solid #F59E0B;border-bottom:none">Start</span>
+    <span style="color:#FFFFFF">Beeld</span>
+  </div>
+  <div class="v4ribbon" style="background:#000000;border-bottom:1px solid #FFFFFF">
+    <div class="v4grp" style="border-right:1px solid #FFFFFF"><div class="v4btns"><i style="border-color:#F59E0B;background:#000000"></i><i style="border-color:#FFFFFF"></i><i style="border-color:#FFFFFF"></i></div><div class="v4mono" style="color:#FFFFFF">Klembord</div></div>
+    <div class="v4grp" style="border-right:1px solid #FFFFFF"><div class="v4btns"><i style="border-color:#FFFFFF"></i><i style="border-color:#FFFFFF"></i></div><div class="v4mono" style="color:#FFFFFF">Begroting</div></div>
+  </div>
+  <div class="v4doc" style="background:#000000;border-bottom:1px solid #FFFFFF"><span style="background:#000000;color:#FFFFFF;border-top:2px solid #F59E0B">Begroting.ocs</span><span style="color:#FFFFFF">Variant B</span></div>
+  <div class="v4body">
+    <div class="v4panel" style="background:#000000;border-right:1px solid #FFFFFF">
+      <div class="v4mono v4ph" style="color:#FFFFFF;border-bottom:1px solid #FFFFFF">Verkenner</div>
+      <div class="v4row" style="outline:2px solid #F59E0B;outline-offset:-2px">Fundering</div><div class="v4row">Ruwbouw</div><div class="v4row" style="color:#FFFFFF">Afbouw</div>
+    </div>
+    <div class="v4work" style="background:#000000;color:#FFFFFF">Werkruimte</div>
+    <div class="v4panel v4props" style="background:#000000;border-left:1px solid #FFFFFF">
+      <div class="v4mono v4ph" style="color:#FFFFFF;border-bottom:1px solid #FFFFFF">Eigenschappen</div>
+      <div class="v4field" style="border:1px solid #FFFFFF;border-radius:6px;background:#000000">Hoeveelheid</div>
+      <div class="v4act"><span style="background:#F59E0B;color:#000000;border-radius:6px;box-shadow:0 0 0 2px #000000,0 0 0 4px #F59E0B">Opslaan</span><span style="border:1px dashed #A3A3A3;color:#A3A3A3;border-radius:6px">Export</span></div>
+      <div class="v4chips"><span class="v4chip" style="color:#FF8080;border:1px solid #FF8080">Fout</span><span class="v4chip" style="color:#4ADE80;border:1px solid #4ADE80">Gelukt</span><span class="v4chip" style="color:#FDE047;border:1px solid #FDE047">Let op</span><span class="v4chip" style="color:#7DD3FC;border:1px solid #7DD3FC">Info</span></div>
+    </div>
+  </div>
+  <div class="v4status" style="background:#000000;color:#FFFFFF;border-top:1px solid #FFFFFF">Gereed · 91 posten</div>
+  <figcaption style="background:#000000;color:#FFFFFF;border-top:1px solid #FFFFFF"><b>High contrast donker</b></figcaption>
+</figure>
+<figure class="v4" style="background:#FFFFFF;color:#000000;border-color:#000000">
+  <div class="v4title" style="background:#FFFFFF;color:#92400E;border-bottom:1px solid #000000">Open Calc Studio</div>
+  <div class="v4tabs" style="background:#FFFFFF;border-bottom:2px solid #92400E">
+    <span style="background:#92400E;color:#FFFFFF">Bestand</span>
+    <span style="color:#92400E;border:1px solid #92400E;border-bottom:none">Start</span>
+    <span style="color:#000000">Beeld</span>
+  </div>
+  <div class="v4ribbon" style="background:#FFFFFF;border-bottom:1px solid #000000">
+    <div class="v4grp" style="border-right:1px solid #000000"><div class="v4btns"><i style="border-color:#92400E;background:#FFFFFF"></i><i style="border-color:#000000"></i><i style="border-color:#000000"></i></div><div class="v4mono" style="color:#000000">Klembord</div></div>
+    <div class="v4grp" style="border-right:1px solid #000000"><div class="v4btns"><i style="border-color:#000000"></i><i style="border-color:#000000"></i></div><div class="v4mono" style="color:#000000">Begroting</div></div>
+  </div>
+  <div class="v4doc" style="background:#FFFFFF;border-bottom:1px solid #000000"><span style="background:#FFFFFF;color:#000000;border-top:2px solid #92400E">Begroting.ocs</span><span style="color:#000000">Variant B</span></div>
+  <div class="v4body">
+    <div class="v4panel" style="background:#FFFFFF;border-right:1px solid #000000">
+      <div class="v4mono v4ph" style="color:#000000;border-bottom:1px solid #000000">Verkenner</div>
+      <div class="v4row" style="outline:2px solid #92400E;outline-offset:-2px">Fundering</div><div class="v4row">Ruwbouw</div><div class="v4row" style="color:#000000">Afbouw</div>
+    </div>
+    <div class="v4work" style="background:#FFFFFF;color:#000000">Werkruimte</div>
+    <div class="v4panel v4props" style="background:#FFFFFF;border-left:1px solid #000000">
+      <div class="v4mono v4ph" style="color:#000000;border-bottom:1px solid #000000">Eigenschappen</div>
+      <div class="v4field" style="border:1px solid #000000;border-radius:6px;background:#FFFFFF">Hoeveelheid</div>
+      <div class="v4act"><span style="background:#92400E;color:#FFFFFF;border-radius:6px;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #92400E">Opslaan</span><span style="border:1px dashed #737373;color:#737373;border-radius:6px">Export</span></div>
+      <div class="v4chips"><span class="v4chip" style="color:#991B1B;border:1px solid #991B1B">Fout</span><span class="v4chip" style="color:#166534;border:1px solid #166534">Gelukt</span><span class="v4chip" style="color:#713F12;border:1px solid #713F12">Let op</span><span class="v4chip" style="color:#1E3A8A;border:1px solid #1E3A8A">Info</span></div>
+    </div>
+  </div>
+  <div class="v4status" style="background:#FFFFFF;color:#000000;border-top:1px solid #000000">Gereed · 91 posten</div>
+  <figcaption style="background:#FFFFFF;color:#000000;border-top:1px solid #000000"><b>High contrast licht</b></figcaption>
+</figure></div>
+
+  <h2>Contrast van de nieuwe thema's</h2>
+  <p>Gemeten met <code>scripts/check_tokens_04.py</code>. Tekst moet 4,5:1 halen, in High contrast 7:1. Randen van velden, de focusring en de selectiestreep moeten 3:1 halen. Statuskleuren zijn ook getoetst op hun eigen lichte tint.</p>
+  <div class="tablewrap"><table class="contrast"><tr><th>Thema</th><th>Getoetste paren</th><th>Krapste paar</th><th>Resultaat</th></tr><tr><th>Licht</th><td>41</td><td>4,52 · Tekst op knop bij ingedrukt op accent-pressed</td><td class="ok">alle gehaald</td></tr><tr><th>Donker</th><td>41</td><td>4,52 · Tekst op knop bij ingedrukt op accent-pressed</td><td class="ok">alle gehaald</td></tr><tr><th>Blueprint</th><td>41</td><td>4,95 · Accenttekst op selected</td><td class="ok">alle gehaald</td></tr><tr><th>High contrast donker</th><td>33</td><td>7,62 · Tekst op knop bij ingedrukt op accent-pressed</td><td class="ok">alle gehaald</td></tr><tr><th>High contrast licht</th><td>33</td><td>7,09 · Accenttekst op panel</td><td class="ok">alle gehaald</td></tr></table></div><details><summary>Licht: alle 41 paren</summary><div class="tablewrap"><table><tr><th>Paar</th><th>Kleur</th><th>Op</th><th>Verhouding / minimum</th></tr><tr><td>Tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#F1EEEA"></span>frame</td><td class="ok"><b>12,30</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FBF1E6"></span>selected</td><td class="ok"><b>12,76</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#5F5F65"></span><code>#5F5F65</code></td><td><span class="sw" style="background:#F1EEEA"></span>frame</td><td class="ok"><b>5,48</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#5F5F65"></span><code>#5F5F65</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>6,34</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#5F5F65"></span><code>#5F5F65</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>6,34</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,09</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>7,09</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FBF1E6"></span>selected</td><td class="ok"><b>6,36</b> / 4,50</td></tr><tr><td>Tekst op primaire knop</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#D97706"></span>accent</td><td class="ok"><b>5,49</b> / 4,50</td></tr><tr><td>Tekst op knop bij hover</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#E78A08"></span>accent-hover</td><td class="ok"><b>6,69</b> / 4,50</td></tr><tr><td>Tekst op knop bij ingedrukt</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#C36B05"></span>accent-pressed</td><td class="ok"><b>4,52</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#F2F2F3"></span>hover</td><td class="ok"><b>12,72</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#E5E5E6"></span>pressed</td><td class="ok"><b>11,30</b> / 4,50</td></tr><tr><td>Statusbalk</td><td><span class="sw" style="background:#5F5F65"></span><code>#5F5F65</code></td><td><span class="sw" style="background:#FFFFFF"></span>statusbar</td><td class="ok"><b>6,34</b> / 4,50</td></tr><tr><td>Werkruimte</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#B91C1C"></span><code>#B91C1C</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>6,47</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#B91C1C"></span><code>#B91C1C</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>6,47</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#B91C1C"></span><code>#B91C1C</code></td><td><span class="sw" style="background:#F8E8E8"></span>error-tint</td><td class="ok"><b>5,45</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#166534"></span><code>#166534</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,13</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#166534"></span><code>#166534</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>7,13</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#166534"></span><code>#166534</code></td><td><span class="sw" style="background:#E8F0EB"></span>success-tint</td><td class="ok"><b>6,14</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#854D0E"></span><code>#854D0E</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>6,85</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#854D0E"></span><code>#854D0E</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>6,85</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#854D0E"></span><code>#854D0E</code></td><td><span class="sw" style="background:#F3EDE7"></span>warning-tint</td><td class="ok"><b>5,90</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#1D4ED8"></span><code>#1D4ED8</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>6,70</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#1D4ED8"></span><code>#1D4ED8</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>6,70</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#1D4ED8"></span><code>#1D4ED8</code></td><td><span class="sw" style="background:#E8EDFB"></span>info-tint</td><td class="ok"><b>5,72</b> / 4,50</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7F7F84"></span><code>#7F7F84</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>3,98</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7F7F84"></span><code>#7F7F84</code></td><td><span class="sw" style="background:#F1EEEA"></span>frame</td><td class="ok"><b>3,44</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7F7F84"></span><code>#7F7F84</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>3,98</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#B45309"></span><code>#B45309</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>5,02</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#B45309"></span><code>#B45309</code></td><td><span class="sw" style="background:#F1EEEA"></span>frame</td><td class="ok"><b>4,34</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#B45309"></span><code>#B45309</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>5,02</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#B45309"></span><code>#B45309</code></td><td><span class="sw" style="background:#FBF1E6"></span>selected</td><td class="ok"><b>4,50</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#B45309"></span><code>#B45309</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>5,02</b> / 3,00</td></tr><tr><td>Werkruimte light: tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Werkruimte light: accent</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Werkruimte dark: tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>12,63</b> / 4,50</td></tr><tr><td>Werkruimte dark: accent</td><td><span class="sw" style="background:#FBBF24"></span><code>#FBBF24</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>9,00</b> / 3,00</td></tr></table></div></details><details><summary>Donker: alle 41 paren</summary><div class="tablewrap"><table><tr><th>Paar</th><th>Kleur</th><th>Op</th><th>Verhouding / minimum</th></tr><tr><td>Tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#2A2A32"></span>frame</td><td class="ok"><b>11,96</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>10,51</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>9,30</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#513F32"></span>selected</td><td class="ok"><b>8,38</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#BEBDBD"></span><code>#BEBDBD</code></td><td><span class="sw" style="background:#2A2A32"></span>frame</td><td class="ok"><b>7,59</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#BEBDBD"></span><code>#BEBDBD</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>6,67</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#BEBDBD"></span><code>#BEBDBD</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>5,90</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#FBBF24"></span><code>#FBBF24</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>7,49</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#FBBF24"></span><code>#FBBF24</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>6,63</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#FBBF24"></span><code>#FBBF24</code></td><td><span class="sw" style="background:#513F32"></span>selected</td><td class="ok"><b>5,97</b> / 4,50</td></tr><tr><td>Tekst op primaire knop</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#D97706"></span>accent</td><td class="ok"><b>5,49</b> / 4,50</td></tr><tr><td>Tekst op knop bij hover</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#E78A08"></span>accent-hover</td><td class="ok"><b>6,69</b> / 4,50</td></tr><tr><td>Tekst op knop bij ingedrukt</td><td><span class="sw" style="background:#1C1917"></span><code>#1C1917</code></td><td><span class="sw" style="background:#C36B05"></span>accent-pressed</td><td class="ok"><b>4,52</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#3E3E46"></span>hover</td><td class="ok"><b>8,90</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#494951"></span>pressed</td><td class="ok"><b>7,49</b> / 4,50</td></tr><tr><td>Statusbalk</td><td><span class="sw" style="background:#BDBAB5"></span><code>#BDBAB5</code></td><td><span class="sw" style="background:#2A2A32"></span>statusbar</td><td class="ok"><b>7,36</b> / 4,50</td></tr><tr><td>Werkruimte</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#26262D"></span>workspace</td><td class="ok"><b>12,63</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>6,59</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>5,83</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#622F36"></span>error-tint</td><td class="ok"><b>5,59</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>7,18</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>6,35</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#2B5240"></span>success-tint</td><td class="ok"><b>5,06</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>8,16</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>7,23</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#5D4B2C"></span>warning-tint</td><td class="ok"><b>5,47</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#93C5FD"></span><code>#93C5FD</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>6,93</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#93C5FD"></span><code>#93C5FD</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>6,14</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#93C5FD"></span><code>#93C5FD</code></td><td><span class="sw" style="background:#2F406D"></span>info-tint</td><td class="ok"><b>5,61</b> / 4,50</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#878689"></span><code>#878689</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>3,45</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#878689"></span><code>#878689</code></td><td><span class="sw" style="background:#2A2A32"></span>frame</td><td class="ok"><b>3,93</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#878689"></span><code>#878689</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>3,06</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>5,82</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#2A2A32"></span>frame</td><td class="ok"><b>6,63</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#3B3B45"></span>raised</td><td class="ok"><b>5,15</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#D97706"></span><code>#D97706</code></td><td><span class="sw" style="background:#513F32"></span>selected</td><td class="ok"><b>3,13</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#D97706"></span><code>#D97706</code></td><td><span class="sw" style="background:#33333C"></span>panel</td><td class="ok"><b>3,92</b> / 3,00</td></tr><tr><td>Werkruimte light: tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Werkruimte light: accent</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Werkruimte dark: tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>12,63</b> / 4,50</td></tr><tr><td>Werkruimte dark: accent</td><td><span class="sw" style="background:#FBBF24"></span><code>#FBBF24</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>9,00</b> / 3,00</td></tr></table></div></details><details><summary>Blueprint: alle 41 paren</summary><div class="tablewrap"><table><tr><th>Paar</th><th>Kleur</th><th>Op</th><th>Verhouding / minimum</th></tr><tr><td>Tekst</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#0A1320"></span>frame</td><td class="ok"><b>15,12</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>14,03</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>11,44</b> / 4,50</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#1E3452"></span>selected</td><td class="ok"><b>10,22</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#B2BAD1"></span><code>#B2BAD1</code></td><td><span class="sw" style="background:#0A1320"></span>frame</td><td class="ok"><b>9,62</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#B2BAD1"></span><code>#B2BAD1</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>8,92</b> / 4,50</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#B2BAD1"></span><code>#B2BAD1</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>7,27</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>6,80</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>5,54</b> / 4,50</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#1E3452"></span>selected</td><td class="ok"><b>4,95</b> / 4,50</td></tr><tr><td>Tekst op primaire knop</td><td><span class="sw" style="background:#0F1B2D"></span><code>#0F1B2D</code></td><td><span class="sw" style="background:#60A5FA"></span>accent</td><td class="ok"><b>6,80</b> / 4,50</td></tr><tr><td>Tekst op knop bij hover</td><td><span class="sw" style="background:#0F1B2D"></span><code>#0F1B2D</code></td><td><span class="sw" style="background:#93C5FD"></span>accent-hover</td><td class="ok"><b>9,58</b> / 4,50</td></tr><tr><td>Tekst op knop bij ingedrukt</td><td><span class="sw" style="background:#0F1B2D"></span><code>#0F1B2D</code></td><td><span class="sw" style="background:#5694E1"></span>accent-pressed</td><td class="ok"><b>5,53</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#1C273A"></span>hover</td><td class="ok"><b>12,17</b> / 4,50</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#283346"></span>pressed</td><td class="ok"><b>10,32</b> / 4,50</td></tr><tr><td>Statusbalk</td><td><span class="sw" style="background:#9CA3AF"></span><code>#9CA3AF</code></td><td><span class="sw" style="background:#0F1B2D"></span>statusbar</td><td class="ok"><b>6,81</b> / 4,50</td></tr><tr><td>Werkruimte</td><td><span class="sw" style="background:#E0E7FF"></span><code>#E0E7FF</code></td><td><span class="sw" style="background:#0A1320"></span>workspace</td><td class="ok"><b>15,12</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>9,11</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>7,43</b> / 4,50</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FCA5A5"></span><code>#FCA5A5</code></td><td><span class="sw" style="background:#481E2B"></span>error-tint</td><td class="ok"><b>7,40</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>9,92</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>8,09</b> / 4,50</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#114135"></span>success-tint</td><td class="ok"><b>6,58</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>11,29</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>9,20</b> / 4,50</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FACC15"></span><code>#FACC15</code></td><td><span class="sw" style="background:#433A22"></span>warning-tint</td><td class="ok"><b>7,34</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#2DD4BF"></span><code>#2DD4BF</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>9,29</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#2DD4BF"></span><code>#2DD4BF</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>7,57</b> / 4,50</td></tr><tr><td>Info</td><td><span class="sw" style="background:#2DD4BF"></span><code>#2DD4BF</code></td><td><span class="sw" style="background:#0E3D46"></span>info-tint</td><td class="ok"><b>6,36</b> / 4,50</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7189B0"></span><code>#7189B0</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>4,86</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7189B0"></span><code>#7189B0</code></td><td><span class="sw" style="background:#0A1320"></span>frame</td><td class="ok"><b>5,24</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#7189B0"></span><code>#7189B0</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>3,96</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>6,80</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#0A1320"></span>frame</td><td class="ok"><b>7,33</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#1A2C45"></span>raised</td><td class="ok"><b>5,54</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#1E3452"></span>selected</td><td class="ok"><b>4,95</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#0F1B2D"></span>panel</td><td class="ok"><b>6,80</b> / 3,00</td></tr><tr><td>Werkruimte light: tekst</td><td><span class="sw" style="background:#2A2A32"></span><code>#2A2A32</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>14,23</b> / 4,50</td></tr><tr><td>Werkruimte light: accent</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace light</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Werkruimte dark: tekst</td><td><span class="sw" style="background:#EDEBE8"></span><code>#EDEBE8</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>12,63</b> / 4,50</td></tr><tr><td>Werkruimte dark: accent</td><td><span class="sw" style="background:#60A5FA"></span><code>#60A5FA</code></td><td><span class="sw" style="background:#26262D"></span>workspace dark</td><td class="ok"><b>5,91</b> / 3,00</td></tr></table></div></details><details><summary>High contrast donker: alle 33 paren</summary><div class="tablewrap"><table><tr><th>Paar</th><th>Kleur</th><th>Op</th><th>Verhouding / minimum</th></tr><tr><td>Tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>frame</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>selected</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>frame</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>9,78</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>9,78</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>selected</td><td class="ok"><b>9,78</b> / 7,00</td></tr><tr><td>Tekst op primaire knop</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#F59E0B"></span>accent</td><td class="ok"><b>9,78</b> / 7,00</td></tr><tr><td>Tekst op knop bij hover</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FBBF24"></span>accent-hover</td><td class="ok"><b>12,58</b> / 7,00</td></tr><tr><td>Tekst op knop bij ingedrukt</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#D88B0A"></span>accent-pressed</td><td class="ok"><b>7,62</b> / 7,00</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>hover</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>pressed</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Statusbalk</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>statusbar</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Werkruimte</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>workspace</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FF8080"></span><code>#FF8080</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>8,65</b> / 7,00</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#FF8080"></span><code>#FF8080</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>8,65</b> / 7,00</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>12,05</b> / 7,00</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#4ADE80"></span><code>#4ADE80</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>12,05</b> / 7,00</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FDE047"></span><code>#FDE047</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>15,93</b> / 7,00</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#FDE047"></span><code>#FDE047</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>15,93</b> / 7,00</td></tr><tr><td>Info</td><td><span class="sw" style="background:#7DD3FC"></span><code>#7DD3FC</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>12,60</b> / 7,00</td></tr><tr><td>Info</td><td><span class="sw" style="background:#7DD3FC"></span><code>#7DD3FC</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>12,60</b> / 7,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>frame</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>9,78</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>frame</td><td class="ok"><b>9,78</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>raised</td><td class="ok"><b>9,78</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>selected</td><td class="ok"><b>9,78</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#F59E0B"></span><code>#F59E0B</code></td><td><span class="sw" style="background:#000000"></span>panel</td><td class="ok"><b>9,78</b> / 3,00</td></tr></table></div></details><details><summary>High contrast licht: alle 33 paren</summary><div class="tablewrap"><table><tr><th>Paar</th><th>Kleur</th><th>Op</th><th>Verhouding / minimum</th></tr><tr><td>Tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>frame</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>selected</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>frame</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Secundaire tekst</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,09</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>7,09</b> / 7,00</td></tr><tr><td>Accenttekst</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>selected</td><td class="ok"><b>7,09</b> / 7,00</td></tr><tr><td>Tekst op primaire knop</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#92400E"></span>accent</td><td class="ok"><b>7,09</b> / 7,00</td></tr><tr><td>Tekst op knop bij hover</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#7C2D12"></span>accent-hover</td><td class="ok"><b>9,37</b> / 7,00</td></tr><tr><td>Tekst op knop bij ingedrukt</td><td><span class="sw" style="background:#FFFFFF"></span><code>#FFFFFF</code></td><td><span class="sw" style="background:#7C360C"></span>accent-pressed</td><td class="ok"><b>8,79</b> / 7,00</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>hover</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Tekst op hover-vlak</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>pressed</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Statusbalk</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>statusbar</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Werkruimte</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>workspace</td><td class="ok"><b>21,00</b> / 7,00</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#991B1B"></span><code>#991B1B</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>8,31</b> / 7,00</td></tr><tr><td>Fout</td><td><span class="sw" style="background:#991B1B"></span><code>#991B1B</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>8,31</b> / 7,00</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#166534"></span><code>#166534</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,13</b> / 7,00</td></tr><tr><td>Gelukt</td><td><span class="sw" style="background:#166534"></span><code>#166534</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>7,13</b> / 7,00</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#713F12"></span><code>#713F12</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>8,67</b> / 7,00</td></tr><tr><td>Waarschuwing</td><td><span class="sw" style="background:#713F12"></span><code>#713F12</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>8,67</b> / 7,00</td></tr><tr><td>Info</td><td><span class="sw" style="background:#1E3A8A"></span><code>#1E3A8A</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>10,36</b> / 7,00</td></tr><tr><td>Info</td><td><span class="sw" style="background:#1E3A8A"></span><code>#1E3A8A</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>10,36</b> / 7,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>frame</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Rand van invoerveld</td><td><span class="sw" style="background:#000000"></span><code>#000000</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>21,00</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>frame</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Focusring</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>raised</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>selected</td><td class="ok"><b>7,09</b> / 3,00</td></tr><tr><td>Selectiestreep</td><td><span class="sw" style="background:#92400E"></span><code>#92400E</code></td><td><span class="sw" style="background:#FFFFFF"></span>panel</td><td class="ok"><b>7,09</b> / 3,00</td></tr></table></div></details>
+
+  <div class="old"><h2>Uitgangssituatie: de huidige thema's</h2><p>Hieronder de analyse van de vijf huidige thema's uit <code>assets/tokens.json</code>, waarop de besluiten zijn gebaseerd.</p></div>
+  <div class="facts"><span>5 huidige thema's</span><span>80 kleurvelden per thema</span><span>13 kleurparen getoetst</span><span>Style Book-tokens op commit <code>dfdcd41</code></span></div>
+
+  <h3>Huidige thema's naast elkaar</h3>
+  <p>Elk voorbeeld gebruikt de echte waarden uit <code>assets/tokens.json</code>. De getallen zijn contrastverhoudingen.</p>
+  <div class="themes">
+<figure class="theme" style="background:#FAFAF9;color:#36363E;border-color:rgba(54, 54, 62, 0.12)">
+  <figcaption style="background:#36363E;color:#A1A1AA">Light</figcaption>
+  <div class="tabs" style="background:#F5F5F4;border-bottom:2px solid #D97706">
+    <span style="background:#D97706;color:#FFFFFF">Bestand</span>
+    <span class="active" style="color:#D97706;background:#FFFFFF;border-color:#D97706">Start</span>
+    <span style="color:rgba(54, 54, 62, 0.65)">Beeld</span>
+  </div>
+  <div class="group" style="background:#FFFFFF;border-right:1px solid rgba(54, 54, 62, 0.12)">
+    <div class="btns"><span class="rb" style="background:rgba(217, 119, 6, 0.15);color:#D97706">Actief</span><span class="rb" style="color:#36363E">Knop</span></div>
+    <div class="glabel" style="color:rgba(217, 119, 6, 0.8)">Lintgroep</div>
+  </div>
+  <div class="body" style="background:#FFFFFF">
+    <p style="color:#36363E">Tekst · 11,46</p>
+    <p style="color:rgba(54, 54, 62, 0.65)">Secundair · 4,06</p>
+    <p style="color:rgba(54, 54, 62, 0.5)">Gedempt · 2,75</p>
+    <p style="color:rgba(54, 54, 62, 0.35)">Vaag · 1,95</p>
+    <p style="color:#D97706">Accent als tekst · 3,19</p>
+    <div class="field" style="background:#FAFAF9;border-color:rgba(54, 54, 62, 0.15);color:#36363E">Invoerveld</div>
+    <div class="row">
+      <span class="btn" style="background:#D97706;color:#FFFFFF">Primair · 3,19</span>
+      <span class="btn" style="background:#F5F5F4;color:#36363E;border:1px solid rgba(54, 54, 62, 0.12)">Secundair</span>
+    </div>
+    <div class="dlg" style="background:#F5F5F4;color:#D97706">Dialoogkop · 2,92</div>
+    <p style="color:#DC2626">Foutmelding · 4,83</p>
+  </div>
+  <div class="status" style="background:#36363E;color:#A1A1AA">Statusbalk · 4,67</div>
+</figure>
+<figure class="theme" style="background:#36363E;color:#FAFAF9;border-color:rgba(217, 119, 6, 0.25)">
+  <figcaption style="background:#36363E;color:#A1A1AA">Forge</figcaption>
+  <div class="tabs" style="background:#2E2E36;border-bottom:2px solid #D97706">
+    <span style="background:#D97706;color:#36363E">Bestand</span>
+    <span class="active" style="color:#D97706;background:#36363E;border-color:#D97706">Start</span>
+    <span style="color:rgba(250, 250, 249, 0.6)">Beeld</span>
+  </div>
+  <div class="group" style="background:#36363E;border-right:1px solid rgba(250, 250, 249, 0.15)">
+    <div class="btns"><span class="rb" style="background:rgba(217, 119, 6, 0.20);color:#D97706">Actief</span><span class="rb" style="color:#FAFAF9">Knop</span></div>
+    <div class="glabel" style="color:rgba(217, 119, 6, 0.8)">Lintgroep</div>
+  </div>
+  <div class="body" style="background:#36363E">
+    <p style="color:#FAFAF9">Tekst · 11,46</p>
+    <p style="color:rgba(250, 250, 249, 0.6)">Secundair · 5,26</p>
+    <p style="color:rgba(250, 250, 249, 0.5)">Gedempt · 4,16</p>
+    <p style="color:rgba(250, 250, 249, 0.4)">Vaag · 3,23</p>
+    <p style="color:#D97706">Accent als tekst · 3,76</p>
+    <div class="field" style="background:rgba(217, 119, 6, 0.05);border-color:rgba(217, 119, 6, 0.2);color:#FAFAF9">Invoerveld</div>
+    <div class="row">
+      <span class="btn" style="background:#D97706;color:#36363E">Primair · 3,76</span>
+      <span class="btn" style="background:rgba(217, 119, 6, 0.1);color:#FAFAF9;border:1px solid rgba(217, 119, 6, 0.25)">Secundair</span>
+    </div>
+    <div class="dlg" style="background:#44444C;color:#D97706">Dialoogkop · 3,03</div>
+    <p style="color:#f87171">Foutmelding · 4,33</p>
+  </div>
+  <div class="status" style="background:#36363E;color:#A1A1AA">Statusbalk · 4,67</div>
+</figure>
+<figure class="theme" style="background:#27272A;color:#FAFAF9;border-color:rgba(217, 119, 6, 0.2)">
+  <figcaption style="background:#27272A;color:#A1A1AA">OpenAEC</figcaption>
+  <div class="tabs" style="background:#1C1917;border-bottom:2px solid #D97706">
+    <span style="background:#D97706;color:#27272A">Bestand</span>
+    <span class="active" style="color:#D97706;background:#27272A;border-color:#D97706">Start</span>
+    <span style="color:rgba(250, 250, 249, 0.6)">Beeld</span>
+  </div>
+  <div class="group" style="background:#27272A;border-right:1px solid rgba(217, 119, 6, 0.25)">
+    <div class="btns"><span class="rb" style="background:rgba(217, 119, 6, 0.20);color:#D97706">Actief</span><span class="rb" style="color:#FAFAF9">Knop</span></div>
+    <div class="glabel" style="color:rgba(217, 119, 6, 0.8)">Lintgroep</div>
+  </div>
+  <div class="body" style="background:#27272A">
+    <p style="color:#FAFAF9">Tekst · 14,26</p>
+    <p style="color:rgba(250, 250, 249, 0.6)">Secundair · 6,09</p>
+    <p style="color:rgba(250, 250, 249, 0.5)">Gedempt · 4,70</p>
+    <p style="color:rgba(250, 250, 249, 0.4)">Vaag · 3,54</p>
+    <p style="color:#D97706">Accent als tekst · 4,68</p>
+    <div class="field" style="background:rgba(217, 119, 6, 0.05);border-color:rgba(217, 119, 6, 0.2);color:#FAFAF9">Invoerveld</div>
+    <div class="row">
+      <span class="btn" style="background:#D97706;color:#27272A">Primair · 4,68</span>
+      <span class="btn" style="background:rgba(217, 119, 6, 0.1);color:#FAFAF9;border:1px solid rgba(217, 119, 6, 0.2)">Secundair</span>
+    </div>
+    <div class="dlg" style="background:#36363E;color:#D97706">Dialoogkop · 3,76</div>
+    <p style="color:#f87171">Foutmelding · 5,38</p>
+  </div>
+  <div class="status" style="background:#27272A;color:#A1A1AA">Statusbalk · 5,81</div>
+</figure>
+<figure class="theme" style="background:#0F1B2D;color:#E0E7FF;border-color:rgba(96, 165, 250, 0.20)">
+  <figcaption style="background:#0F1B2D;color:#9CA3AF">Blueprint</figcaption>
+  <div class="tabs" style="background:#0A1320;border-bottom:2px solid #60A5FA">
+    <span style="background:#60A5FA;color:#0F1B2D">Bestand</span>
+    <span class="active" style="color:#93C5FD;background:#0F1B2D;border-color:#60A5FA">Start</span>
+    <span style="color:rgba(224, 231, 255, 0.65)">Beeld</span>
+  </div>
+  <div class="group" style="background:#0F1B2D;border-right:1px solid rgba(96, 165, 250, 0.18)">
+    <div class="btns"><span class="rb" style="background:rgba(96, 165, 250, 0.18);color:#93C5FD">Actief</span><span class="rb" style="color:#E0E7FF">Knop</span></div>
+    <div class="glabel" style="color:rgba(96, 165, 250, 0.85)">Lintgroep</div>
+  </div>
+  <div class="body" style="background:#0F1B2D">
+    <p style="color:#E0E7FF">Tekst · 14,03</p>
+    <p style="color:rgba(224, 231, 255, 0.65)">Secundair · 6,57</p>
+    <p style="color:rgba(224, 231, 255, 0.50)">Gedempt · 4,42</p>
+    <p style="color:rgba(224, 231, 255, 0.35)">Vaag · 2,83</p>
+    <p style="color:#60A5FA">Accent als tekst · 6,80</p>
+    <div class="field" style="background:rgba(96, 165, 250, 0.05);border-color:rgba(96, 165, 250, 0.20);color:#E0E7FF">Invoerveld</div>
+    <div class="row">
+      <span class="btn" style="background:#60A5FA;color:#0F1B2D">Primair · 6,80</span>
+      <span class="btn" style="background:rgba(96, 165, 250, 0.10);color:#E0E7FF;border:1px solid rgba(96, 165, 250, 0.20)">Secundair</span>
+    </div>
+    <div class="dlg" style="background:#1A2C45;color:#60A5FA">Dialoogkop · 5,54</div>
+    <p style="color:#f87171">Foutmelding · 6,25</p>
+  </div>
+  <div class="status" style="background:#0F1B2D;color:#9CA3AF">Statusbalk · 6,81</div>
+</figure>
+<figure class="theme" style="background:#000000;color:#FFFFFF;border-color:#FFD700">
+  <figcaption style="background:#000000;color:#FFFFFF">High contrast</figcaption>
+  <div class="tabs" style="background:#000000;border-bottom:2px solid #FFD700">
+    <span style="background:#FFD700;color:#000000">Bestand</span>
+    <span class="active" style="color:#FFD700;background:#000000;border-color:#FFD700">Start</span>
+    <span style="color:#FFFFFF">Beeld</span>
+  </div>
+  <div class="group" style="background:#000000;border-right:1px solid #FFFFFF">
+    <div class="btns"><span class="rb" style="background:rgba(255, 215, 0, 0.40);color:#FFD700">Actief</span><span class="rb" style="color:#FFFFFF">Knop</span></div>
+    <div class="glabel" style="color:#FFD700">Lintgroep</div>
+  </div>
+  <div class="body" style="background:#000000">
+    <p style="color:#FFFFFF">Tekst · 21,00</p>
+    <p style="color:#FFFFFF">Secundair · 21,00</p>
+    <p style="color:#E5E5E5">Gedempt · 16,67</p>
+    <p style="color:#C0C0C0">Vaag · 11,54</p>
+    <p style="color:#FFD700">Accent als tekst · 14,97</p>
+    <div class="field" style="background:#0A0A0A;border-color:#FFD700;color:#FFFFFF">Invoerveld</div>
+    <div class="row">
+      <span class="btn" style="background:#FFD700;color:#000000">Primair · 14,97</span>
+      <span class="btn" style="background:#000000;color:#FFFFFF;border:1px solid #FFD700">Secundair</span>
+    </div>
+    <div class="dlg" style="background:#0A0A0A;color:#FFD700">Dialoogkop · 14,12</div>
+    <p style="color:#FF6B6B">Foutmelding · 7,57</p>
+  </div>
+  <div class="status" style="background:#000000;color:#FFFFFF">Statusbalk · 21,00</div>
+</figure></div>
+
+  <h2>Contrast volgens WCAG 2.2 AA</h2>
+  <p>Tekst moet 4,5:1 halen. De focuskleur en de randen van bedieningselementen moeten 3:1 halen. Halfdoorzichtige kleuren zijn eerst met de achtergrond gemengd.</p>
+  <div class="note">Een rand die alleen decoratief scheidt, hoeft niet 3:1 te halen. De rand van een invoerveld wel, omdat die laat zien waar het veld is.</div>
+  <div class="tablewrap"><table class="contrast"><tr><th>Kleurpaar</th><th>Light</th><th>Forge</th><th>OpenAEC</th><th>Blueprint</th><th>High contrast</th></tr><tr><th>Tekst op achtergrond<small>text op bg · minimaal 4,50</small></th><td class="ok"><b>11,46</b> gehaald</td><td class="ok"><b>11,46</b> gehaald</td><td class="ok"><b>14,26</b> gehaald</td><td class="ok"><b>14,03</b> gehaald</td><td class="ok"><b>21,00</b> gehaald</td></tr><tr><th>Secundaire tekst<small>text-secondary op bg · minimaal 4,50</small></th><td class="bad"><b>4,06</b> te laag</td><td class="ok"><b>5,26</b> gehaald</td><td class="ok"><b>6,09</b> gehaald</td><td class="ok"><b>6,57</b> gehaald</td><td class="ok"><b>21,00</b> gehaald</td></tr><tr><th>Gedempte tekst<small>text-muted op bg · minimaal 4,50</small></th><td class="bad"><b>2,75</b> te laag</td><td class="bad"><b>4,16</b> te laag</td><td class="ok"><b>4,70</b> gehaald</td><td class="bad"><b>4,42</b> te laag</td><td class="ok"><b>16,67</b> gehaald</td></tr><tr><th>Vage tekst<small>text-faint op bg · minimaal 4,50</small></th><td class="bad"><b>1,95</b> te laag</td><td class="bad"><b>3,23</b> te laag</td><td class="bad"><b>3,54</b> te laag</td><td class="bad"><b>2,83</b> te laag</td><td class="ok"><b>11,54</b> gehaald</td></tr><tr><th>Accent als tekst<small>accent op surface · minimaal 4,50</small></th><td class="bad"><b>3,19</b> te laag</td><td class="bad"><b>3,76</b> te laag</td><td class="ok"><b>4,68</b> gehaald</td><td class="ok"><b>6,80</b> gehaald</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Tekst op primaire knop<small>btn-primary-text op btn-primary-bg · minimaal 4,50</small></th><td class="bad"><b>3,19</b> te laag</td><td class="bad"><b>3,76</b> te laag</td><td class="ok"><b>4,68</b> gehaald</td><td class="ok"><b>6,80</b> gehaald</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Tekst op Bestand-tab<small>file-tab-text op file-tab-bg · minimaal 4,50</small></th><td class="bad"><b>3,19</b> te laag</td><td class="bad"><b>3,76</b> te laag</td><td class="ok"><b>4,68</b> gehaald</td><td class="ok"><b>6,80</b> gehaald</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Lintgroeplabel<small>ribbon-group-label op surface · minimaal 4,50</small></th><td class="bad"><b>2,51</b> te laag</td><td class="bad"><b>2,92</b> te laag</td><td class="bad"><b>3,49</b> te laag</td><td class="ok"><b>5,27</b> gehaald</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Statusbalktekst<small>status-text op status-bg · minimaal 4,50</small></th><td class="ok"><b>4,67</b> gehaald</td><td class="ok"><b>4,67</b> gehaald</td><td class="ok"><b>5,81</b> gehaald</td><td class="ok"><b>6,81</b> gehaald</td><td class="ok"><b>21,00</b> gehaald</td></tr><tr><th>Dialoogkop<small>dialog-header-text op dialog-header-bg · minimaal 4,50</small></th><td class="bad"><b>2,92</b> te laag</td><td class="bad"><b>3,03</b> te laag</td><td class="bad"><b>3,76</b> te laag</td><td class="ok"><b>5,54</b> gehaald</td><td class="ok"><b>14,12</b> gehaald</td></tr><tr><th>Focuskleur<small>focus-color op surface · minimaal 3,00</small></th><td class="ok"><b>3,19</b> gehaald</td><td class="ok"><b>3,76</b> gehaald</td><td class="ok"><b>4,68</b> gehaald</td><td class="ok"><b>6,80</b> gehaald</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Rand<small>border op surface · minimaal 3,00</small></th><td class="bad"><b>1,24</b> te laag</td><td class="bad"><b>1,37</b> te laag</td><td class="bad"><b>1,32</b> te laag</td><td class="bad"><b>1,43</b> te laag</td><td class="ok"><b>14,97</b> gehaald</td></tr><tr><th>Foutkleur als tekst<small>danger-color op surface · minimaal 4,50</small></th><td class="ok"><b>4,83</b> gehaald</td><td class="bad"><b>4,33</b> te laag</td><td class="ok"><b>5,38</b> gehaald</td><td class="ok"><b>6,25</b> gehaald</td><td class="ok"><b>7,57</b> gehaald</td></tr><tr class="total"><th>Gehaald</th><td><b>4</b> van 13</td><td><b>4</b> van 13</td><td><b>9</b> van 13</td><td><b>10</b> van 13</td><td><b>13</b> van 13</td></tr></table></div>
+
+  <h2>Voorstellen voor Light en Forge</h2>
+  <p>Kleine aanpassingen die de norm halen. Optie A houdt de merkkleur exact, optie B houdt de witte tekst.</p>
+  
+<div class="props">
+  <section><h3>Light · primaire knop</h3>
+    <div class="prop"><div class="sample" style="background:#D97706;color:#FFFFFF">Nu: wit op amber</div>
+<div class="meta"><b class="bad">3,19</b> #FFFFFF op #D97706</div></div>
+    <div class="prop"><div class="sample" style="background:#D97706;color:#1C1917">Optie A: donkere tekst</div>
+<div class="meta"><b class="ok">5,49</b> #1C1917 op #D97706 · merkkleur blijft exact</div></div>
+    <div class="prop"><div class="sample" style="background:#B45309;color:#FFFFFF">Optie B: donkerder amber</div>
+<div class="meta"><b class="ok">5,02</b> #FFFFFF op #B45309 · witte tekst blijft</div></div>
+  </section>
+  <section><h3>Forge · primaire knop</h3>
+    <div class="prop"><div class="sample" style="background:#D97706;color:#36363E">Nu: Deep Forge op amber</div>
+<div class="meta"><b class="bad">3,76</b> #36363E op #D97706</div></div>
+    <div class="prop"><div class="sample" style="background:#D97706;color:#1C1917">Optie A: donkere tekst</div>
+<div class="meta"><b class="ok">5,49</b> #1C1917 op #D97706</div></div>
+    <div class="prop"><div class="sample" style="background:#B45309;color:#FFFFFF">Optie B: donkerder amber</div>
+<div class="meta"><b class="ok">5,02</b> #FFFFFF op #B45309</div></div>
+  </section>
+  <section><h3>Accent als tekst</h3>
+    <div class="prop"><div class="sample" style="background:#FFFFFF;color:#D97706">Light nu</div>
+<div class="meta"><b class="bad">3,19</b> #D97706 op #FFFFFF</div></div>
+    <div class="prop"><div class="sample" style="background:#FFFFFF;color:#B45309">Light voorstel</div>
+<div class="meta"><b class="ok">5,02</b> #B45309 op #FFFFFF</div></div>
+    <div class="prop"><div class="sample" style="background:#36363E;color:#D97706">Forge nu</div>
+<div class="meta"><b class="bad">3,76</b> #D97706 op #36363E</div></div>
+    <div class="prop"><div class="sample" style="background:#36363E;color:#F59E0B">Forge voorstel: Warm Gold</div>
+<div class="meta"><b class="ok">5,57</b> #F59E0B op #36363E</div></div>
+  </section>
+</div>
+
+  <h2>Tegenstrijdigheden tussen de bronnen</h2>
+  
+<div class="conflicts">
+  <section><h3>Night Build</h3>
+    <div class="row">
+      <div class="chip big"><span style="background:#1C1917"></span><b>#1C1917</b><small>thema's, gebruikt in OpenAEC</small></div>
+      <div class="chip big"><span style="background:#2A2A32"></span><b>#2A2A32</b><small>Style Book-tokens</small></div>
+    </div>
+  </section>
+  <section><h3>Betekenis van "accent"</h3>
+    <div class="row">
+      <div class="chip big"><span style="background:#D97706"></span><b>#D97706</b><small>accent in de thema's</small></div>
+      <div class="chip big"><span style="background:#EA580C"></span><b>#EA580C</b><small>accent-alias in het Style Book</small></div>
+    </div>
+  </section>
+  <section class="wide"><h3>Grijsschaal van het Style Book</h3>
+    <p>Stap 900 is donkerder dan stap 950. In een gewone schaal is 950 het donkerst.</p>
+    <div class="strip"><div class="chip"><span style="background:#FFFFFF"></span><b>0</b><small>#FFFFFF</small></div><div class="chip"><span style="background:#FAFAF9"></span><b>50</b><small>#FAFAF9</small></div><div class="chip"><span style="background:#F5F5F4"></span><b>100</b><small>#F5F5F4</small></div><div class="chip"><span style="background:#E7E5E4"></span><b>200</b><small>#E7E5E4</small></div><div class="chip"><span style="background:#D6D3D1"></span><b>300</b><small>#D6D3D1</small></div><div class="chip"><span style="background:#A1A1AA"></span><b>400</b><small>#A1A1AA</small></div><div class="chip"><span style="background:#71717A"></span><b>500</b><small>#71717A</small></div><div class="chip"><span style="background:#57534E"></span><b>600</b><small>#57534E</small></div><div class="chip"><span style="background:#3F3F46"></span><b>700</b><small>#3F3F46</small></div><div class="chip"><span style="background:#27272A"></span><b>800</b><small>#27272A</small></div><div class="chip flag"><span style="background:#2A2A32"></span><b>900</b><small>#2A2A32</small></div><div class="chip flag"><span style="background:#36363E"></span><b>950</b><small>#36363E</small></div></div>
+  </section>
+</div>
+
+  <h2>Typografie</h2>
+  <div class="types">
+    <section><h3>Voorstel: desktopschaal</h3><div class="ty"><span class="lbl">Klein · 11 px</span><span style="font-size:11px;font-family:Inter,system-ui,sans-serif;font-weight:400">Statusbalk, lintgroeplabel, sneltoetsen</span></div><div class="ty"><span class="lbl">Standaard · 12 px</span><span style="font-size:12px;font-family:Inter,system-ui,sans-serif;font-weight:400">Knoppen, velden, lijsten, panelen</span></div><div class="ty"><span class="lbl">Paneelkop · 13 px</span><span style="font-size:13px;font-family:Inter,system-ui,sans-serif;font-weight:500">Paneel- en sectiekoppen</span></div><div class="ty"><span class="lbl">Dialoogkop · 16 px</span><span style="font-size:16px;font-family:'Space Grotesk',Inter,system-ui,sans-serif;font-weight:500">Kop van een dialoog</span></div><div class="ty"><span class="lbl">Paginakop · 22 px</span><span style="font-size:22px;font-family:'Space Grotesk',Inter,system-ui,sans-serif;font-weight:500">Bestand-menu en startscherm</span></div></section>
+    <section><h3>Style Book: webschaal</h3><div class="ty"><span class="lbl">xs · 12px</span><span style="font-size:0.75rem">OpenAEC</span></div><div class="ty"><span class="lbl">sm · 14px</span><span style="font-size:0.875rem">OpenAEC</span></div><div class="ty"><span class="lbl">base · 16px</span><span style="font-size:1rem">OpenAEC</span></div><div class="ty"><span class="lbl">lg · 18px</span><span style="font-size:1.125rem">OpenAEC</span></div><div class="ty"><span class="lbl">xl · 20px</span><span style="font-size:1.25rem">OpenAEC</span></div><div class="ty"><span class="lbl">2xl · 24px</span><span style="font-size:1.5rem">OpenAEC</span></div><div class="ty"><span class="lbl">3xl · 32px</span><span style="font-size:2rem">OpenAEC</span></div><div class="ty"><span class="lbl">4xl · 40px</span><span style="font-size:2.5rem">OpenAEC</span></div></section>
+  </div>
+
+  <h2>Maten van de schil</h2>
+  <p>De desktopmaten komen uit de Tauri-template en worden bewaakt door <code>scripts/check_layout_metrics.py</code>. De Style Book-maten zijn bedoeld voor webapps.</p>
+  <div class="bars"><div class="bar"><span class="lbl">Titelbalk</span>
+<div class="b"><i style="width:96px"></i><em>32 px · Tauri en Rust</em></div>
+<div class="b sb"><i style="width:144px"></i><em>48 px · Style Book</em></div></div><div class="bar"><span class="lbl">Lint</span>
+<div class="b"><i style="width:282px"></i><em>94 px · Tauri en Rust</em></div>
+<div class="b sb"><i style="width:288px"></i><em>96 px · Style Book</em></div></div><div class="bar"><span class="lbl">Zijpaneel</span>
+<div class="b"><i style="width:288.0px"></i><em>240 px · Tauri en Rust</em></div>
+<div class="b sb"><i style="width:336.0px"></i><em>280 px · Style Book</em></div></div></div>
+
+  <footer>Gegenereerd door <code>scripts/build_fundament_review.py</code> uit <code>design/ontwerp-0.4/tokens-0.4.json</code> en <code>assets/tokens.json</code>. Draai dat script opnieuw na een wijziging in de tokens.</footer>
+</main>
+</html>

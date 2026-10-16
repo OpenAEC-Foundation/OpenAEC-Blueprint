@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "name": "OpenAEC UI design tokens",
+    "version": "0.4.0-concept",
+    "date": "2026-10-16",
+    "source": "design/ontwerp-0.4/01-fundament.md, besluiten 1 tot en met 20",
+    "notes": "Kleuren zijn vaste hexwaarden zonder doorzichtigheid, zodat Rust en CSS exact dezelfde kleur krijgen. Alleen schaduwen en de overlay gebruiken doorzichtigheid. Hover en ingedrukt blijven in dezelfde kleur: lichter bij hover, donkerder bij ingedrukt (besluit 2.4, variant A). Statustinten zijn vaste kleuren per thema. In Licht de statuskleur voor 10% over het paneel; in Donker en Blueprint een volle statuskleur voor 28% over het paneel (besluit 2.4, Z2); in High contrast geen tint. De werkruimte volgt standaard het thema; de instelling Werkruimte kan dat overschrijven (besluit 11, herzien). De statusbalk volgt standaard het thema; de instelling Statusbalk kan hem altijd donker maken (besluit 2.5)."
+  },
+  "font": {
+    "family": {
+      "body": "Inter",
+      "heading": "Space Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "size": {
+      "label": 11,
+      "body": 12,
+      "panel-heading": 13,
+      "dialog-heading": 16,
+      "page-heading": 22
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "letter-spacing": {
+      "heading": "-0.02em",
+      "mono-label": "0.08em"
+    },
+    "mono-label": {
+      "family": "mono",
+      "size": "label",
+      "transform": "uppercase",
+      "letter-spacing": "mono-label"
+    }
+  },
+  "space": {
+    "hairline": 2,
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32
+  },
+  "radius": {
+    "none": 0,
+    "small": 3,
+    "medium": 6,
+    "large": 10,
+    "full": 9999
+  },
+  "radius-usage": {
+    "small": "Lintknoppen, checkboxen, kleine bediening",
+    "medium": "Knoppen, invoervelden, keuzelijsten, icoontegels",
+    "large": "Tegels, kaarten, dialogen, menu's",
+    "full": "Labels, badges, statuslabels",
+    "none": "Banden van de schil: titelbalk, lint, documenttabs, statusbalk"
+  },
+  "shell": {
+    "titlebar": 32,
+    "ribbon-tabs": 28,
+    "ribbon": 94,
+    "document-tabs": 30,
+    "panel-header": 24,
+    "statusbar": 22,
+    "panel-width": 240
+  },
+  "brand": {
+    "amber": "#D97706",
+    "signal-orange": "#EA580C",
+    "warm-gold": "#F59E0B",
+    "deep-forge": "#36363E",
+    "night-build": "#2A2A32",
+    "scaffold-gray": "#A1A1AA",
+    "blueprint-white": "#FAFAF9",
+    "concrete": "#F5F5F4"
+  },
+  "themes": {
+    "light": {
+      "name": "Licht",
+      "kind": "light",
+      "selection-style": "tint",
+      "disabled-style": "fade",
+      "color": {
+        "frame": "#F1EEEA",
+        "panel": "#FFFFFF",
+        "raised": "#FFFFFF",
+        "workspace": "#FFFFFF",
+        "workspace-text": "#2A2A32",
+        "docbar": "#F1EEEA",
+        "statusbar": "#FFFFFF",
+        "statusbar-text": "#5F5F65",
+        "text": "#2A2A32",
+        "text-secondary": "#5F5F65",
+        "text-disabled": "#AAAAAD",
+        "border": "#EAEAEA",
+        "border-strong": "#7F7F84",
+        "hover": "#F2F2F3",
+        "pressed": "#E5E5E6",
+        "accent": "#D97706",
+        "accent-hover": "#E78A08",
+        "accent-pressed": "#C36B05",
+        "accent-text": "#92400E",
+        "text-on-accent": "#1C1917",
+        "focus": "#B45309",
+        "selected": "#FBF1E6",
+        "selected-bar": "#B45309",
+        "error": "#B91C1C",
+        "success": "#166534",
+        "warning": "#854D0E",
+        "info": "#1D4ED8",
+        "error-tint": "#F8E8E8",
+        "success-tint": "#E8F0EB",
+        "warning-tint": "#F3EDE7",
+        "info-tint": "#E8EDFB"
+      },
+      "shadow": {
+        "panel": "0 1px 3px rgba(42,42,50,0.10)",
+        "popup": "0 6px 16px rgba(42,42,50,0.16), 0 0 0 1px rgba(42,42,50,0.06)",
+        "dialog": "0 16px 40px rgba(42,42,50,0.24), 0 0 0 1px rgba(42,42,50,0.06)"
+      },
+      "overlay": "rgba(42,42,50,0.35)"
+    },
+    "dark": {
+      "name": "Donker",
+      "kind": "dark",
+      "selection-style": "tint",
+      "disabled-style": "fade",
+      "color": {
+        "frame": "#2A2A32",
+        "panel": "#33333C",
+        "raised": "#3B3B45",
+        "workspace": "#26262D",
+        "workspace-text": "#EDEBE8",
+        "docbar": "#2A2A32",
+        "statusbar": "#2A2A32",
+        "statusbar-text": "#BDBAB5",
+        "text": "#EDEBE8",
+        "text-secondary": "#BEBDBD",
+        "text-disabled": "#7D7D81",
+        "border": "#474750",
+        "border-strong": "#878689",
+        "hover": "#3E3E46",
+        "pressed": "#494951",
+        "accent": "#D97706",
+        "accent-hover": "#E78A08",
+        "accent-pressed": "#C36B05",
+        "accent-text": "#FBBF24",
+        "text-on-accent": "#1C1917",
+        "focus": "#F59E0B",
+        "selected": "#513F32",
+        "selected-bar": "#D97706",
+        "error": "#FCA5A5",
+        "success": "#4ADE80",
+        "warning": "#FACC15",
+        "info": "#93C5FD",
+        "error-tint": "#622F36",
+        "success-tint": "#2B5240",
+        "warning-tint": "#5D4B2C",
+        "info-tint": "#2F406D"
+      },
+      "shadow": {
+        "panel": "0 1px 3px rgba(0,0,0,0.35)",
+        "popup": "0 8px 20px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.06)",
+        "dialog": "0 20px 48px rgba(0,0,0,0.60), inset 0 1px 0 rgba(255,255,255,0.08)"
+      },
+      "overlay": "rgba(0,0,0,0.45)"
+    },
+    "blueprint": {
+      "name": "Blueprint",
+      "kind": "dark",
+      "selection-style": "tint",
+      "disabled-style": "fade",
+      "color": {
+        "frame": "#0A1320",
+        "panel": "#0F1B2D",
+        "raised": "#1A2C45",
+        "workspace": "#0A1320",
+        "workspace-text": "#E0E7FF",
+        "docbar": "#0A1320",
+        "statusbar": "#0F1B2D",
+        "statusbar-text": "#9CA3AF",
+        "text": "#E0E7FF",
+        "text-secondary": "#B2BAD1",
+        "text-disabled": "#636D81",
+        "border": "#1F3756",
+        "border-strong": "#7189B0",
+        "hover": "#1C273A",
+        "pressed": "#283346",
+        "accent": "#60A5FA",
+        "accent-hover": "#93C5FD",
+        "accent-pressed": "#5694E1",
+        "accent-text": "#60A5FA",
+        "text-on-accent": "#0F1B2D",
+        "focus": "#60A5FA",
+        "selected": "#1E3452",
+        "selected-bar": "#60A5FA",
+        "error": "#FCA5A5",
+        "success": "#4ADE80",
+        "warning": "#FACC15",
+        "info": "#2DD4BF",
+        "error-tint": "#481E2B",
+        "success-tint": "#114135",
+        "warning-tint": "#433A22",
+        "info-tint": "#0E3D46"
+      },
+      "shadow": {
+        "panel": "0 1px 3px rgba(0,0,0,0.40)",
+        "popup": "0 8px 20px rgba(0,0,0,0.55), inset 0 1px 0 rgba(224,231,255,0.06)",
+        "dialog": "0 20px 48px rgba(0,0,0,0.65), inset 0 1px 0 rgba(224,231,255,0.08)"
+      },
+      "overlay": "rgba(0,0,0,0.50)"
+    },
+    "high-contrast-dark": {
+      "name": "High contrast donker",
+      "kind": "dark",
+      "high-contrast": true,
+      "selection-style": "outline",
+      "disabled-style": "dashed",
+      "color": {
+        "frame": "#000000",
+        "panel": "#000000",
+        "raised": "#000000",
+        "workspace": "#000000",
+        "workspace-text": "#FFFFFF",
+        "docbar": "#000000",
+        "statusbar": "#000000",
+        "statusbar-text": "#FFFFFF",
+        "text": "#FFFFFF",
+        "text-secondary": "#FFFFFF",
+        "text-disabled": "#A3A3A3",
+        "border": "#FFFFFF",
+        "border-strong": "#FFFFFF",
+        "hover": "#000000",
+        "pressed": "#000000",
+        "accent": "#F59E0B",
+        "accent-hover": "#FBBF24",
+        "accent-pressed": "#D88B0A",
+        "accent-text": "#F59E0B",
+        "text-on-accent": "#000000",
+        "focus": "#F59E0B",
+        "selected": "#000000",
+        "selected-bar": "#F59E0B",
+        "error": "#FF8080",
+        "success": "#4ADE80",
+        "warning": "#FDE047",
+        "info": "#7DD3FC",
+        "error-tint": "#000000",
+        "success-tint": "#000000",
+        "warning-tint": "#000000",
+        "info-tint": "#000000"
+      },
+      "shadow": {
+        "panel": "none",
+        "popup": "0 0 0 1px #FFFFFF",
+        "dialog": "0 0 0 2px #FFFFFF"
+      },
+      "overlay": "rgba(0,0,0,0.70)"
+    },
+    "high-contrast-light": {
+      "name": "High contrast licht",
+      "kind": "light",
+      "high-contrast": true,
+      "selection-style": "outline",
+      "disabled-style": "dashed",
+      "color": {
+        "frame": "#FFFFFF",
+        "panel": "#FFFFFF",
+        "raised": "#FFFFFF",
+        "workspace": "#FFFFFF",
+        "workspace-text": "#000000",
+        "docbar": "#FFFFFF",
+        "statusbar": "#FFFFFF",
+        "statusbar-text": "#000000",
+        "text": "#000000",
+        "text-secondary": "#000000",
+        "text-disabled": "#737373",
+        "border": "#000000",
+        "border-strong": "#000000",
+        "hover": "#FFFFFF",
+        "pressed": "#FFFFFF",
+        "accent": "#92400E",
+        "accent-hover": "#7C2D12",
+        "accent-pressed": "#7C360C",
+        "accent-text": "#92400E",
+        "text-on-accent": "#FFFFFF",
+        "focus": "#92400E",
+        "selected": "#FFFFFF",
+        "selected-bar": "#92400E",
+        "error": "#991B1B",
+        "success": "#166534",
+        "warning": "#713F12",
+        "info": "#1E3A8A",
+        "error-tint": "#FFFFFF",
+        "success-tint": "#FFFFFF",
+        "warning-tint": "#FFFFFF",
+        "info-tint": "#FFFFFF"
+      },
+      "shadow": {
+        "panel": "none",
+        "popup": "0 0 0 1px #000000",
+        "dialog": "0 0 0 2px #000000"
+      },
+      "overlay": "rgba(255,255,255,0.70)"
+    }
+  },
+  "workspace-setting": {
+    "description": "Gebruikersinstelling Werkruimte. Standaard 'theme': de werkruimte volgt het gekozen thema. 'light' en 'dark' vervangen workspace en workspace-text van het thema. High contrast negeert deze instelling.",
+    "default": "theme",
+    "options": {
+      "theme": {
+        "name": "Volgt thema"
+      },
+      "light": {
+        "name": "Altijd licht",
+        "workspace": "#FFFFFF",
+        "workspace-text": "#2A2A32"
+      },
+      "dark": {
+        "name": "Altijd donker",
+        "workspace": "#26262D",
+        "workspace-text": "#EDEBE8"
+      }
+    }
+  },
+  "statusbar-setting": {
+    "description": "Gebruikersinstelling Statusbalk. Standaard 'theme': de statusbalk volgt het thema en heeft een lijn in border erboven. 'dark' maakt hem altijd donker, zoals de voettekst van de website. High contrast negeert deze instelling.",
+    "default": "theme",
+    "options": {
+      "theme": {
+        "name": "Volgt thema"
+      },
+      "dark": {
+        "name": "Altijd donker",
+        "statusbar": "#2A2A32",
+        "statusbar-text": "#D4D1CC"
+      }
+    }
+  }
+}
