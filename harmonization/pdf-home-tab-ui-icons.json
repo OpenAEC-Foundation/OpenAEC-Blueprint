@@ -1,0 +1,117 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All eight literal SVGs in Ribbon.jsx-reachable HomeTab.jsx. All eight are actual UI icons; three live inside the screenshot split menu. Imported ribbonIcons.js icons are in the separate imported catalog.",
+  "literal_svg_sites": 8,
+  "ui_icon_sites": 8,
+  "screenshot_split_menu_icons": 3,
+  "semantic_findings": [
+    "ifc-report source comment describes outgoing arrow but path has no arrow"
+  ],
+  "records": [
+    {
+      "ordinal": 1,
+      "name": "new-document",
+      "label": "Nieuw document",
+      "role": "document",
+      "button_id": "btn-home-new",
+      "availability": "always-enabled",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 23,
+      "review_note": "Bestandsblad met plus",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/new-document.svg",
+      "sha256": "9abba02ea7d8a11399190f06939ced6431cddc14782d9bfe01c69f771eafe6bb"
+    },
+    {
+      "ordinal": 2,
+      "name": "ifc-report",
+      "label": "IFC-report exporteren",
+      "role": "export",
+      "button_id": "btn-home-ifc-export",
+      "availability": "no-pdf-disabled",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 25,
+      "review_note": "Broncomment noemt uitgaande pijl, maar SVG toont alleen een kubus; betekenis moet in harmonisatie expliciet worden ontworpen.",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/ifc-report.svg",
+      "sha256": "1866157850fed9da9d9d98be1be2e9c539b5ec5679e1a3c5d977da5a27472b0a"
+    },
+    {
+      "ordinal": 3,
+      "name": "cad-export",
+      "label": "Naar CAD exporteren",
+      "role": "export",
+      "button_id": "btn-home-cad-export",
+      "availability": "no-pdf-disabled",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 27,
+      "review_note": "Blad met polyline en uitgaande pijl",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/cad-export.svg",
+      "sha256": "d887ef2809b95c4ea02bc0ff8778d01ab6f49235e35e768c08df54d55fb9bd64"
+    },
+    {
+      "ordinal": 4,
+      "name": "email-pdf",
+      "label": "PDF per e-mail",
+      "role": "share",
+      "button_id": "btn-home-email",
+      "availability": "no-pdf-disabled",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 29,
+      "review_note": "Envelop",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/email-pdf.svg",
+      "sha256": "31fa2d2089c9c33864b159f8a9c5c30f230e0008826b36d8e1a1ff9b54bf5507"
+    },
+    {
+      "ordinal": 5,
+      "name": "raster-pdf",
+      "label": "Raster-PDF exporteren",
+      "role": "export",
+      "button_id": "btn-home-raster-pdf",
+      "availability": "no-pdf-disabled",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 31,
+      "review_note": "Document met afbeeldingsglyph",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/raster-pdf.svg",
+      "sha256": "90caa215a000d25b14dd7d1e55d02bf23ea48a243b83b4d14a6a0e83c84e1c48"
+    },
+    {
+      "ordinal": 6,
+      "name": "screenshot-page",
+      "label": "Hele pagina vastleggen",
+      "role": "screenshot",
+      "button_id": "screenshot-menu-page",
+      "availability": "split-menu-open",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 99,
+      "review_note": "Camera in gedeeld screenshotmenu",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/screenshot-page.svg",
+      "sha256": "8ea880a203cb0d103d61dc51aca8150bc41576010efe3acb6a0e54f48b5a91b4"
+    },
+    {
+      "ordinal": 7,
+      "name": "screenshot-region",
+      "label": "Gebied vastleggen",
+      "role": "screenshot",
+      "button_id": "screenshot-menu-region",
+      "availability": "split-menu-open",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 110,
+      "review_note": "Hoekmarkeringen en gestippeld gebied",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/screenshot-region.svg",
+      "sha256": "817a29bf00be177e4331db8d35bbc632c4a7bb3f7c0b1896d84d4018ca4b3a22"
+    },
+    {
+      "ordinal": 8,
+      "name": "screenshot-overlay",
+      "label": "Vorige opname als overlay plaatsen",
+      "role": "screenshot",
+      "button_id": "screenshot-menu-overlay",
+      "availability": "split-menu-and-capture-available",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+      "source_line": 123,
+      "review_note": "Twee overlappende vlakken; knop uitgeschakeld zonder eerdere opname",
+      "svg": "inline-ui-icons/open-pdf-studio/home-tab/screenshot-overlay.svg",
+      "sha256": "195112ad0884fd70a1cfaf6db151d10700dd8a79b5fe82d3af4511314f32176a"
+    }
+  ]
+}
