@@ -16,6 +16,8 @@ Ook [47 gebruikte Open Calc Studio-linticonen](../design/calc-inline-icon-review
 
 Voor Open Calculations Studio bevat de [gerichte review](../design/calculations-inline-icon-review.html) acht huidige Calc-knopiconen. De [index](calculations-inline-ui-icons.json) laat tegelijk zien welke twintig definities uit `calcIcons.ts` niet door de huidige knoppen worden aangeroepen en waarom de 42 vormen in de oudere `icons.ts` buiten de telling blijven. De losse reviewvectoren staan onder `inline-ui-icons/Open-Calculations-Studio/`.
 
+De [Geotechniek-review](../design/geotech-inline-icon-review.html) bevat dertig daadwerkelijk gebruikte inline linticonen uit Start, Kaart, Rapport en Sonderingstekening op commit `8182b48afc3f`. De [index](geotech-inline-ui-icons.json) bewaart definitie, knopaanroep en hash; zelfstandige reviewvectoren staan onder `inline-ui-icons/open-geotechniek-studio/`. De 42 oude `icons.ts`-definities worden door deze vier linttabs niet geïmporteerd en zijn apart gehouden. Andere schermcomponenten en technische SVG's vragen nog een afzonderlijke audit.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |

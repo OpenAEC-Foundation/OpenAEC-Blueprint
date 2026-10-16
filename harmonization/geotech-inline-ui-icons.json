@@ -1,0 +1,371 @@
+{
+  "repository": "open-geotechniek-studio",
+  "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+  "scope": "Inline SVG definitions actually passed to RibbonButton in Start, Kaart, Rapport and Sonderingstekening tabs",
+  "count": 30,
+  "icons": [
+    {
+      "name": "start-zoom-out",
+      "identifier": "zoomOutIcon",
+      "source": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "source_line": 5,
+      "usage": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "usage_lines": [
+        35
+      ],
+      "sha256": "1cf7f61d2a545b6c1b7a7e19df380590ca8bc4c4232a1aa36921ceb186455566",
+      "svg": "inline-ui-icons/open-geotechniek-studio/start-zoom-out.svg"
+    },
+    {
+      "name": "start-zoom-fit",
+      "identifier": "zoomFitIcon",
+      "source": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "source_line": 6,
+      "usage": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "usage_lines": [
+        41
+      ],
+      "sha256": "b0298a796e8da73fbf02b5bf9cff55ee0c4b28ebb419df4a8d94d825142ebed0",
+      "svg": "inline-ui-icons/open-geotechniek-studio/start-zoom-fit.svg"
+    },
+    {
+      "name": "start-settings",
+      "identifier": "settingsIcon",
+      "source": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "source_line": 7,
+      "usage": "apps/desktop/src/components/ribbon/StartTab.tsx",
+      "usage_lines": [
+        27
+      ],
+      "sha256": "836e6a74fc26852bd29708dbff828335106d3eceea71dd2298a889af65ad9232",
+      "svg": "inline-ui-icons/open-geotechniek-studio/start-settings.svg"
+    },
+    {
+      "name": "kaart-measure",
+      "identifier": "measureIcon",
+      "source": "apps/desktop/src/components/ribbon/KaartTab.tsx",
+      "source_line": 6,
+      "usage": "apps/desktop/src/components/ribbon/KaartTab.tsx",
+      "usage_lines": [
+        24
+      ],
+      "sha256": "36ae90e0759714eaf898ccc80689e8d3b77c26c865f394b4c8f582c16838747b",
+      "svg": "inline-ui-icons/open-geotechniek-studio/kaart-measure.svg"
+    },
+    {
+      "name": "kaart-export-image",
+      "identifier": "exportImageIcon",
+      "source": "apps/desktop/src/components/ribbon/KaartTab.tsx",
+      "source_line": 9,
+      "usage": "apps/desktop/src/components/ribbon/KaartTab.tsx",
+      "usage_lines": [
+        30
+      ],
+      "sha256": "e8aae0c704a36f5f17d6e9e89fcfddfb1cba8b1b001dd63cfc564a7f0570f386",
+      "svg": "inline-ui-icons/open-geotechniek-studio/kaart-export-image.svg"
+    },
+    {
+      "name": "rapport-download",
+      "identifier": "downloadIcon",
+      "source": "apps/desktop/src/components/ribbon/RapportTab.tsx",
+      "source_line": 10,
+      "usage": "apps/desktop/src/components/ribbon/RapportTab.tsx",
+      "usage_lines": [
+        74
+      ],
+      "sha256": "bce3fc8709dc0769b510e3bde09ff15c755596e4716a920231c45aad4ec407f0",
+      "svg": "inline-ui-icons/open-geotechniek-studio/rapport-download.svg"
+    },
+    {
+      "name": "rapport-open",
+      "identifier": "openIcon",
+      "source": "apps/desktop/src/components/ribbon/RapportTab.tsx",
+      "source_line": 11,
+      "usage": "apps/desktop/src/components/ribbon/RapportTab.tsx",
+      "usage_lines": [
+        81
+      ],
+      "sha256": "cfb197c26408d2b8953899619a75134dda3841ff39cac3280573a55067ca3eb9",
+      "svg": "inline-ui-icons/open-geotechniek-studio/rapport-open.svg"
+    },
+    {
+      "name": "tekening-print",
+      "identifier": "printIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 18,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        408
+      ],
+      "sha256": "978ed1f3692cc1f40a94d84b5f509ad602962b71051e2553a2972c9eb87ff150",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-print.svg"
+    },
+    {
+      "name": "tekening-sondering",
+      "identifier": "sonderingIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 26,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        320
+      ],
+      "sha256": "8032727ff853037285006230ca77b92ef3ce15aff76c17c9e33edf4e88af5d47",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-sondering.svg"
+    },
+    {
+      "name": "tekening-bore",
+      "identifier": "boreIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 33,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        326
+      ],
+      "sha256": "e1917c931da284e98518b9e110c9552e07b0b5c8538eb5f2da4be6c015622661",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-bore.svg"
+    },
+    {
+      "name": "tekening-overlay",
+      "identifier": "overlayIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 38,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        371
+      ],
+      "sha256": "314ceb5f852a09d92025ab1b87322f3daa8f6692e769af275695e8fcbbfcb8c4",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-overlay.svg"
+    },
+    {
+      "name": "tekening-frame",
+      "identifier": "frameIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 45,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        377
+      ],
+      "sha256": "fe48bba30de137f85dbd266c74323d7aeb77c7fe42eca820c15cfa34f22cf632",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-frame.svg"
+    },
+    {
+      "name": "tekening-raster",
+      "identifier": "rasterIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 54,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        332
+      ],
+      "sha256": "b3e701493a90426c3a03c0c52b61d915920fcdda05ef856ebabfef2e53653cc8",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-raster.svg"
+    },
+    {
+      "name": "tekening-tag",
+      "identifier": "tagIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 63,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        350
+      ],
+      "sha256": "f26251fab24f41ed50466c5d0d5eef8de9c6629870258250f5f7059520253f93",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-tag.svg"
+    },
+    {
+      "name": "tekening-move",
+      "identifier": "moveIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 74,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        231
+      ],
+      "sha256": "63c85e5040069140070c6dd53ad3ee36604f9662988d16e1bf76f7c12edcfbc9",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-move.svg"
+    },
+    {
+      "name": "tekening-quotes",
+      "identifier": "quotesIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 81,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        418
+      ],
+      "sha256": "ed039bdaad7dc2b147bd5b0718cbc4e808fcf16c84d6f7e8558539e7b685e5da",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-quotes.svg"
+    },
+    {
+      "name": "tekening-dwg",
+      "identifier": "dwgIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 88,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        392
+      ],
+      "sha256": "d6816453a8aa8f92bfbb066714ff69485db5fd6a72f670b403eb8522ac971775",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-dwg.svg"
+    },
+    {
+      "name": "tekening-export-pdf",
+      "identifier": "exportPdfIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 96,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        402
+      ],
+      "sha256": "1b9b829dfd5f77afed17057e5fc9ee0a7473b17da803b49a21560987c4b2012d",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-export-pdf.svg"
+    },
+    {
+      "name": "tekening-rotate",
+      "identifier": "rotateIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 103,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        248
+      ],
+      "sha256": "6f66f69fa73d8d3d3d60737e5742f768dd74e3071cb9f9e4ccbb9862e0183480",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-rotate.svg"
+    },
+    {
+      "name": "tekening-copy",
+      "identifier": "copyIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 108,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        241
+      ],
+      "sha256": "ea9558145b5e612d56da88aa4af505e7369ccd3af3ae332ed606a53f7ea86215",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-copy.svg"
+    },
+    {
+      "name": "tekening-delete",
+      "identifier": "deleteIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 113,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        267,
+        383
+      ],
+      "sha256": "51b3fb020f8a1cefe748eef57e9306ff7f09516e1a38830f6439e6bc02064f0e",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-delete.svg"
+    },
+    {
+      "name": "tekening-select",
+      "identifier": "selectIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 119,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        215
+      ],
+      "sha256": "f9c3cabb9d1c2446a6b15ffc607b241752911d349293450d29831a8b8f7062bf",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-select.svg"
+    },
+    {
+      "name": "tekening-line",
+      "identifier": "lineIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 125,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        338
+      ],
+      "sha256": "e17692b189465dac6bc0976a33c5f61851a95f281ef3ecf5bd54751ebb4c9970",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-line.svg"
+    },
+    {
+      "name": "tekening-vlak",
+      "identifier": "vlakIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 130,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        356
+      ],
+      "sha256": "311d0edfe60bfff5a1a7d25a625bd4095c807f04ec2d5df4d62feaaaa2e7a1c1",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-vlak.svg"
+    },
+    {
+      "name": "tekening-note",
+      "identifier": "noteIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 135,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        362
+      ],
+      "sha256": "4940ed279fa295972743ffa98ec6ad562db3e46936f013ad3672f560b887e536",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-note.svg"
+    },
+    {
+      "name": "tekening-dimension",
+      "identifier": "dimensionIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 140,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        344
+      ],
+      "sha256": "d279352502708bb4159330065cdf3400c7ac2a585fc3d14e6da406840b4267c7",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-dimension.svg"
+    },
+    {
+      "name": "tekening-trim",
+      "identifier": "trimIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 152,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        276
+      ],
+      "sha256": "e0e3dc0fcf2acd5365ed384c15d9a1e118cacbeb6323aeab7e1662456dcb610b",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-trim.svg"
+    },
+    {
+      "name": "tekening-extend",
+      "identifier": "extendIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 161,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        286
+      ],
+      "sha256": "e5b4491617b8066aa3ac67ab03371c8745640986cffef30c2b049ba9aa241e19",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-extend.svg"
+    },
+    {
+      "name": "tekening-mirror",
+      "identifier": "mirrorIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 170,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        296
+      ],
+      "sha256": "104a972fbfa714d76a3286c8a32efd6f0d55cd2415eb22fa07f7b298c0c36b90",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-mirror.svg"
+    },
+    {
+      "name": "tekening-offset",
+      "identifier": "offsetIcon",
+      "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "source_line": 178,
+      "usage": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+      "usage_lines": [
+        306
+      ],
+      "sha256": "e2262a4438e739493ef2b71aa5c73fe482c624011f7695ed130b8d28bd8a2573",
+      "svg": "inline-ui-icons/open-geotechniek-studio/tekening-offset.svg"
+    }
+  ],
+  "excluded_legacy_icons_ts_count": 42,
+  "excluded_legacy_reason": "The four audited ribbon tabs define their own SVGs and do not import ./icons"
+}
