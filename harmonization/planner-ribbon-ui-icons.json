@@ -1,0 +1,1274 @@
+{
+  "repository": "open-planner-studio",
+  "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+  "lucide_version": "0.575.0",
+  "lucide_integrity": "sha512-VuXgKZrk0uiDlWjGGXmKV6MSk9Yy4l10qgVvzGn2AWBx1Ylt0iBexKOAoA6I7JO3m+M9oeovJd3yYENfkUbOeg==",
+  "scope": "Core ribbon JSX, its widget components, conditional AI groups and dynamic layout-icon registry; extension-provided SVGs remain runtime data.",
+  "count": 85,
+  "jsx_calls": 114,
+  "icons": [
+    {
+      "name": "Activity",
+      "svg": "ui-icons/open-planner-ribbon/activity.svg",
+      "sha256": "698a89df694fc216948cdaed3e968a79da9aed637d47398589d50078eded4b96",
+      "source_module": "package/dist/esm/icons/activity.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiActivityGroup.tsx",
+          "line": 18,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "AlertTriangle",
+      "svg": "ui-icons/open-planner-ribbon/alert-triangle.svg",
+      "sha256": "cca49331f1f7bc18e5e002e48af7961a61c57e58cf23b04a17351550181da319",
+      "source_module": "package/dist/esm/icons/triangle-alert.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 405,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1179,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 148,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "ArrowLeftToLine",
+      "svg": "ui-icons/open-planner-ribbon/arrow-left-to-line.svg",
+      "sha256": "ea987e2639c50cfafb978b51e392699f9b240e7b04ffaf38b7e7c783fb99641f",
+      "source_module": "package/dist/esm/icons/arrow-left-to-line.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 204,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ArrowRightToLine",
+      "svg": "ui-icons/open-planner-ribbon/arrow-right-to-line.svg",
+      "sha256": "cfab7bc10f52e3fb8145a587ad7d486ebaa474385f98c5dc811d987ee27a367a",
+      "source_module": "package/dist/esm/icons/arrow-right-to-line.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 221,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ArrowUpDown",
+      "svg": "ui-icons/open-planner-ribbon/arrow-up-down.svg",
+      "sha256": "1c3928fdd3e5c789f369f905eb7885f682de825170d6dd2a4298ec983fd62b0c",
+      "source_module": "package/dist/esm/icons/arrow-up-down.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 810,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "BarChart3",
+      "svg": "ui-icons/open-planner-ribbon/bar-chart-3.svg",
+      "sha256": "f886724783199db802a9d0eb85ea9edc5e8463012de0e5c0d5a6bab14822e737",
+      "source_module": "package/dist/esm/icons/chart-column.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 574,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Calendar",
+      "svg": "ui-icons/open-planner-ribbon/calendar.svg",
+      "sha256": "c14e68a5fad58795810f4abd4613b3e70c0a0ef5b956e8f3a3a3e5c6c151a8a3",
+      "source_module": "package/dist/esm/icons/calendar.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 174,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "CalendarClock",
+      "svg": "ui-icons/open-planner-ribbon/calendar-clock.svg",
+      "sha256": "1cb976fd9f7b919718dee670ed76a8ae23417816c55070898a3966524b3c2c69",
+      "source_module": "package/dist/esm/icons/calendar-clock.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 355,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 87,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "CalendarDays",
+      "svg": "ui-icons/open-planner-ribbon/calendar-days.svg",
+      "sha256": "42832efb9eabd18c0961ee53bf9ff5b207fde2f5156438b0b205f46d8ad73b37",
+      "source_module": "package/dist/esm/icons/calendar-days.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 780,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "CalendarRange",
+      "svg": "ui-icons/open-planner-ribbon/calendar-range.svg",
+      "sha256": "9f60c5d945bf0feb307457eba45af726fdfdf6d357a7651b401d8b712dcf8a2c",
+      "source_module": "package/dist/esm/icons/calendar-range.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 24,
+          "kind": "dynamic-layout",
+          "layout_key": "period"
+        }
+      ]
+    },
+    {
+      "name": "Check",
+      "svg": "ui-icons/open-planner-ribbon/check.svg",
+      "sha256": "20fa9a219a369a7b8933ea5147ffce1a0478b2d09aa0420e23240246aee42cc6",
+      "source_module": "package/dist/esm/icons/check.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 136,
+          "kind": "conditional-ai"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 148,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "ChevronDown",
+      "svg": "ui-icons/open-planner-ribbon/chevron-down.svg",
+      "sha256": "942296f13ef58d02dd718f5cb157b1cd119582a2d258c0e994cb15a8b35c693d",
+      "source_module": "package/dist/esm/icons/chevron-down.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/Ribbon.tsx",
+          "line": 362,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ChevronLeft",
+      "svg": "ui-icons/open-planner-ribbon/chevron-left.svg",
+      "sha256": "4481f990b94ed5971bb60a286c39e74bbb8f6d642e60e6c8ab5fc6fbc9d38265",
+      "source_module": "package/dist/esm/icons/chevron-left.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 613,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ChevronRight",
+      "svg": "ui-icons/open-planner-ribbon/chevron-right.svg",
+      "sha256": "73cc92190a6c85fd74115cf9a31d3fd580508b2695bcceb15405d0cc8fd11313",
+      "source_module": "package/dist/esm/icons/chevron-right.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 617,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ChevronUp",
+      "svg": "ui-icons/open-planner-ribbon/chevron-up.svg",
+      "sha256": "39df4d19bc2959b24c85bb12ba02e05c2b668f8ca99ac16ccf77b23a088cc7c5",
+      "source_module": "package/dist/esm/icons/chevron-up.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/Ribbon.tsx",
+          "line": 362,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ChevronsDownUp",
+      "svg": "ui-icons/open-planner-ribbon/chevrons-down-up.svg",
+      "sha256": "f5348720e9174a34040456d5072b3bba6dcbcbb968465d149a07b6d9f450f8eb",
+      "source_module": "package/dist/esm/icons/chevrons-down-up.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 669,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ChevronsUpDown",
+      "svg": "ui-icons/open-planner-ribbon/chevrons-up-down.svg",
+      "sha256": "eee486b23266685e3e5cac9417713204a85386c407e8adfc4872e7396c133896",
+      "source_module": "package/dist/esm/icons/chevrons-up-down.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 683,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Circle",
+      "svg": "ui-icons/open-planner-ribbon/circle.svg",
+      "sha256": "d0912abeddf2661378cac1be2d5f1ae2c91b489595ad9994654b5ca3984b5af8",
+      "source_module": "package/dist/esm/icons/circle.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiServerGroup.tsx",
+          "line": 87,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Columns3",
+      "svg": "ui-icons/open-planner-ribbon/columns-3.svg",
+      "sha256": "e7eadb7c4f4f83794cbf244786d5ebb8b7dcf89340604d3773172bf5cfa033f1",
+      "source_module": "package/dist/esm/icons/columns-3.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 320,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1151,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "svg": "ui-icons/open-planner-ribbon/copy.svg",
+      "sha256": "88e5cdbe419c8f22a51cac7b8b62af3d68062f4dfaceacd539730c887ad08ebb",
+      "source_module": "package/dist/esm/icons/copy.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 136,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "DatabaseBackup",
+      "svg": "ui-icons/open-planner-ribbon/database-backup.svg",
+      "sha256": "c100684893e0712584c133343ad5d003dfc94dc29fd62604f8c31002e4723c99",
+      "source_module": "package/dist/esm/icons/database-backup.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 115,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Diamond",
+      "svg": "ui-icons/open-planner-ribbon/diamond.svg",
+      "sha256": "97f5d3fd9ec01c7863265919a23caeb66c72fb1740a802ae32e0565125e51b94",
+      "source_module": "package/dist/esm/icons/diamond.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 207,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "svg": "ui-icons/open-planner-ribbon/download.svg",
+      "sha256": "eedf3c539e58d67107b7a6c8c75592bebf77b73863cdc58739ec5a58e38f60db",
+      "source_module": "package/dist/esm/icons/download.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 502,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Eraser",
+      "svg": "ui-icons/open-planner-ribbon/eraser.svg",
+      "sha256": "e0391b668515c9807a54818796dc0e89b758e0616f3755699e641fcc8a6d1bfd",
+      "source_module": "package/dist/esm/icons/eraser.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 632,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Eye",
+      "svg": "ui-icons/open-planner-ribbon/eye.svg",
+      "sha256": "00a5231165de8a975d92d83c75c764df730b64a17029453ca24175ac52c59ace",
+      "source_module": "package/dist/esm/icons/eye.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 716,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 742,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1000,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 127,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "EyeOff",
+      "svg": "ui-icons/open-planner-ribbon/eye-off.svg",
+      "sha256": "299cbf59eb71bcae60f5b9480e20b080b884aa4f0b3369cc3861190a5e77709b",
+      "source_module": "package/dist/esm/icons/eye-off.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 742,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 127,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "FileDown",
+      "svg": "ui-icons/open-planner-ribbon/file-down.svg",
+      "sha256": "30749d27591abb36e15424f4bd2ef916330b07ff58a95bf49cdaeeb595b0b4ef",
+      "source_module": "package/dist/esm/icons/file-down.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 383,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "FileText",
+      "svg": "ui-icons/open-planner-ribbon/file-text.svg",
+      "sha256": "454545bbfb937a589ac56977ca983809e766ebc030b0f7a082fc05472aa39c70",
+      "source_module": "package/dist/esm/icons/file-text.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 251,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "FileUp",
+      "svg": "ui-icons/open-planner-ribbon/file-up.svg",
+      "sha256": "7614c5f8f3b3541f50af20a9084aa832608212aa8722c4bef2e66522d6d2b1b9",
+      "source_module": "package/dist/esm/icons/file-up.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 367,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Filter",
+      "svg": "ui-icons/open-planner-ribbon/filter.svg",
+      "sha256": "8cfa560b254f09b2a3389a6ec40eb2a56e9360ad2baf1667dc20207d33943069",
+      "source_module": "package/dist/esm/icons/funnel.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1122,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1128,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 16,
+          "kind": "dynamic-layout",
+          "layout_key": "filter"
+        }
+      ]
+    },
+    {
+      "name": "Flag",
+      "svg": "ui-icons/open-planner-ribbon/flag.svg",
+      "sha256": "89ab4fa4f2f4a45460631d1dbc413f63334e36d8c5beb08ed8a27a81093c8001",
+      "source_module": "package/dist/esm/icons/flag.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 149,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 23,
+          "kind": "dynamic-layout",
+          "layout_key": "flag"
+        }
+      ]
+    },
+    {
+      "name": "FolderOpen",
+      "svg": "ui-icons/open-planner-ribbon/folder-open.svg",
+      "sha256": "e20535ef209f3b788bb834602faaa6bc9865236ada0d8b75c8c090838e8f5ae9",
+      "source_module": "package/dist/esm/icons/folder-open.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 259,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 131,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "GanttChartSquare",
+      "svg": "ui-icons/open-planner-ribbon/gantt-chart-square.svg",
+      "sha256": "4a65ee89d2b798a17d10fa4fb37d4b04fa8a80a8bf034049fded4f3b77d99a0f",
+      "source_module": "package/dist/esm/icons/square-chart-gantt.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 14,
+          "kind": "dynamic-layout",
+          "layout_key": "gantt"
+        }
+      ]
+    },
+    {
+      "name": "GitCompareArrows",
+      "svg": "ui-icons/open-planner-ribbon/git-compare-arrows.svg",
+      "sha256": "749af64d9735ecb6575e97f29ec9677208c7b9b1dc3b484daf06ea59652c319a",
+      "source_module": "package/dist/esm/icons/git-compare-arrows.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 131,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 161,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "HardHat",
+      "svg": "ui-icons/open-planner-ribbon/hard-hat.svg",
+      "sha256": "be97f75a655c9ef8c8bed7bbb17443a9582225e5f80ad3db21646307d44b2184",
+      "source_module": "package/dist/esm/icons/hard-hat.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 18,
+          "kind": "dynamic-layout",
+          "layout_key": "crew"
+        }
+      ]
+    },
+    {
+      "name": "Hash",
+      "svg": "ui-icons/open-planner-ribbon/hash.svg",
+      "sha256": "298e115a55c39b72e7af98673f00e62147ecc2c9a725bdac665e2ef506484e80",
+      "source_module": "package/dist/esm/icons/hash.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 441,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "svg": "ui-icons/open-planner-ribbon/history.svg",
+      "sha256": "27ea0455762195679f008bdbfd161d4c00f113c7758465d371a778a9d87c29fb",
+      "source_module": "package/dist/esm/icons/history.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 450,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "IndentDecrease",
+      "svg": "ui-icons/open-planner-ribbon/indent-decrease.svg",
+      "sha256": "91b15de2cf3fe06486f19979ade3ff3ed1d4ef6ed98c379af7f45bbbcb8f63c6",
+      "source_module": "package/dist/esm/icons/list-indent-decrease.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 474,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "IndentIncrease",
+      "svg": "ui-icons/open-planner-ribbon/indent-increase.svg",
+      "sha256": "16af47cb902a118a777047d431b09dd8aa44aa715d5e22359cb84e782b68bd7f",
+      "source_module": "package/dist/esm/icons/list-indent-increase.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 462,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Info",
+      "svg": "ui-icons/open-planner-ribbon/info.svg",
+      "sha256": "a6b5c71ae8865a66cd75dbb2cb158087e6c1c7652d12e38cd16b7c34035a9652",
+      "source_module": "package/dist/esm/icons/info.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 838,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Keyboard",
+      "svg": "ui-icons/open-planner-ribbon/keyboard.svg",
+      "sha256": "cbda21c370a4c139f5777a0061e2669f7757e48cf4975d0e657919b92e0ec915",
+      "source_module": "package/dist/esm/icons/keyboard.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 851,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "svg": "ui-icons/open-planner-ribbon/layers.svg",
+      "sha256": "35554150a4f2b333bb75f673cc9c5cfc650ea79a0d65f3081cab77a25b48fd6e",
+      "source_module": "package/dist/esm/icons/layers.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 763,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "LayoutGrid",
+      "svg": "ui-icons/open-planner-ribbon/layout-grid.svg",
+      "sha256": "7e8860e2975d8cf2ace55873c48fe5dd09a251be0c5bd39a576425c9351982db",
+      "source_module": "package/dist/esm/icons/layout-grid.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 764,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "LayoutTemplate",
+      "svg": "ui-icons/open-planner-ribbon/layout-template.svg",
+      "sha256": "0e5ae511c59630e707e26ebd87b73729ed7cc93dbaa8d3af1d1038ae62417015",
+      "source_module": "package/dist/esm/icons/layout-template.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 388,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 12,
+          "kind": "dynamic-layout",
+          "layout_key": "layout"
+        }
+      ]
+    },
+    {
+      "name": "Link",
+      "svg": "ui-icons/open-planner-ribbon/link.svg",
+      "sha256": "baf3c423b9a95a6630362cf691211e9831bdb1d09a009677514a80589c2e7b82",
+      "source_module": "package/dist/esm/icons/link.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 337,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ListOrdered",
+      "svg": "ui-icons/open-planner-ribbon/list-ordered.svg",
+      "sha256": "605c3250aa05b2a4741419c80e796a0bff0dcf77130f37e9a51a6e6d1947120a",
+      "source_module": "package/dist/esm/icons/list-ordered.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 449,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ListTree",
+      "svg": "ui-icons/open-planner-ribbon/list-tree.svg",
+      "sha256": "a39e94ff84ce3a5fdc83d65660a077da6d4b3fddfc55adc36f0e23102bca7d6e",
+      "source_module": "package/dist/esm/icons/list-tree.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 15,
+          "kind": "dynamic-layout",
+          "layout_key": "tree"
+        }
+      ]
+    },
+    {
+      "name": "Lock",
+      "svg": "ui-icons/open-planner-ribbon/lock.svg",
+      "sha256": "9dcbaeb18ab02340b0fec2f11553936b4fc381df6e3dd7654012837aa3f74c81",
+      "source_module": "package/dist/esm/icons/lock.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 103,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Map",
+      "svg": "ui-icons/open-planner-ribbon/map.svg",
+      "sha256": "84a6174aeb94137dcf347115c6e6b3be44b36473ea18729e5cf65b3bd1a8d6ec",
+      "source_module": "package/dist/esm/icons/map.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 968,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Maximize2",
+      "svg": "ui-icons/open-planner-ribbon/maximize-2.svg",
+      "sha256": "ea3aa0d61fa5d27d64969c7fe9f359bb2851ab9320f2d300d77d57af461286a3",
+      "source_module": "package/dist/esm/icons/maximize-2.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 954,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 1005,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Milestone",
+      "svg": "ui-icons/open-planner-ribbon/milestone.svg",
+      "sha256": "ea37a6aebab1fdf7812baacfcf344f69c06994f46c2b9421bcbc88c4a492db6e",
+      "source_module": "package/dist/esm/icons/milestone.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 22,
+          "kind": "dynamic-layout",
+          "layout_key": "milestone"
+        }
+      ]
+    },
+    {
+      "name": "Minimize2",
+      "svg": "ui-icons/open-planner-ribbon/minimize-2.svg",
+      "sha256": "dc9c358d20655ee076ed03de6fb08a14f7b299634849f18ca01cd6cd497cb46f",
+      "source_module": "package/dist/esm/icons/minimize-2.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 954,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "MoveHorizontal",
+      "svg": "ui-icons/open-planner-ribbon/move-horizontal.svg",
+      "sha256": "dfdf01ed93e081501f19b0d7512b2cf6b294080c45bb4174670c8710b2f052de",
+      "source_module": "package/dist/esm/icons/move-horizontal.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 805,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Palette",
+      "svg": "ui-icons/open-planner-ribbon/palette.svg",
+      "sha256": "79889e5a8171346fd9addc781eb43b216373e880f824656e9b7bc375ee592097",
+      "source_module": "package/dist/esm/icons/palette.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 795,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 705,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "PanelRight",
+      "svg": "ui-icons/open-planner-ribbon/panel-right.svg",
+      "sha256": "d23f0a16ce472ca789283a957cc0bcec3063c4a085881d2a817c965095b6396b",
+      "source_module": "package/dist/esm/icons/panel-right.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 532,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Pause",
+      "svg": "ui-icons/open-planner-ribbon/pause.svg",
+      "sha256": "f177ce7bbe278783a0b4c4f8e083477ddb8b083467c3ea6671070dd84f8cae18",
+      "source_module": "package/dist/esm/icons/pause.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 94,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Play",
+      "svg": "ui-icons/open-planner-ribbon/play.svg",
+      "sha256": "68ede03669f161a076b45ec6a84a3c742b90be621aa8394220634285c7f8c9f2",
+      "source_module": "package/dist/esm/icons/play.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 120,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 94,
+          "kind": "conditional-ai"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiServerGroup.tsx",
+          "line": 64,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Plug",
+      "svg": "ui-icons/open-planner-ribbon/plug.svg",
+      "sha256": "1d549ac08ef1a8268b0c0b66444567b833bfda80141ba682efebfff71c68dd42",
+      "source_module": "package/dist/esm/icons/plug.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 185,
+          "kind": "conditional-ai"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 200,
+          "kind": "conditional-ai"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 220,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Plus",
+      "svg": "ui-icons/open-planner-ribbon/plus.svg",
+      "sha256": "c0c9490e8f33a47cc4d5d776838365a3b02b84555d5b3441ea7c2279c48c3ccf",
+      "source_module": "package/dist/esm/icons/plus.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 129,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 591,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 918,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Printer",
+      "svg": "ui-icons/open-planner-ribbon/printer.svg",
+      "sha256": "65c48a580d7d88e34075628529dcd50a7dcba64d67efc85305d0e38a7bc0ba70",
+      "source_module": "package/dist/esm/icons/printer.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 180,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Puzzle",
+      "svg": "ui-icons/open-planner-ribbon/puzzle.svg",
+      "sha256": "78ccf663f089057c8192fae8d065e58edd49cd3ecec7d73e4d936e2beda2011e",
+      "source_module": "package/dist/esm/icons/puzzle.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 557,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Redo2",
+      "svg": "ui-icons/open-planner-ribbon/redo-2.svg",
+      "sha256": "33d49d6322fbaebdc35ebdddf37ecba57e2f62b14d96fee9ed5e06c3a233b862",
+      "source_module": "package/dist/esm/icons/redo-2.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 294,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "RefreshCw",
+      "svg": "ui-icons/open-planner-ribbon/refresh-cw.svg",
+      "sha256": "ae50489a9427818e80bf8ba7a1ddd90b39201d5023d8b5e733727fb8095055eb",
+      "source_module": "package/dist/esm/icons/refresh-cw.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+          "line": 145,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Route",
+      "svg": "ui-icons/open-planner-ribbon/route.svg",
+      "sha256": "2abe9834863d283224bca3f450d9434eba90b8e55f4bb6aa5b423e908bbe8861",
+      "source_module": "package/dist/esm/icons/route.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 21,
+          "kind": "dynamic-layout",
+          "layout_key": "critical"
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "svg": "ui-icons/open-planner-ribbon/save.svg",
+      "sha256": "f754770907bc8f2d35030b491fab1e1efc9b962123b5e81c8fff3e8da07642d8",
+      "source_module": "package/dist/esm/icons/save.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 255,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 123,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "SaveAll",
+      "svg": "ui-icons/open-planner-ribbon/save-all.svg",
+      "sha256": "51c66f1295e22f0e92698b16f6fada5d84a8c04747f150785addca2707580b85",
+      "source_module": "package/dist/esm/icons/save-all.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 269,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Scale",
+      "svg": "ui-icons/open-planner-ribbon/scale.svg",
+      "sha256": "dde5ebefc694a1437381ee9ba31b8715c46d29fbc82f254cc7181c629c634e4e",
+      "source_module": "package/dist/esm/icons/scale.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 628,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Scissors",
+      "svg": "ui-icons/open-planner-ribbon/scissors.svg",
+      "sha256": "21b4d58542965e1f4e55d2854777245fe0f93e0fa082a96ab29b2ea906b84da4",
+      "source_module": "package/dist/esm/icons/scissors.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 155,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "svg": "ui-icons/open-planner-ribbon/settings.svg",
+      "sha256": "c8e8459a004fb68c15362c9cf40f5275eb5978406c0600dc1d4965047eb09693",
+      "source_module": "package/dist/esm/icons/settings.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 842,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Spline",
+      "svg": "ui-icons/open-planner-ribbon/spline.svg",
+      "sha256": "e471db9ccc2125c37f1371cb6eee84bddd2a48d8163c6adef76db77d725d7e0d",
+      "source_module": "package/dist/esm/icons/spline.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 820,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "SplitSquareHorizontal",
+      "svg": "ui-icons/open-planner-ribbon/split-square-horizontal.svg",
+      "sha256": "3c37ac006c0b999e5836701f80e37b36cff20f68978b9aca95a243cda59c65f4",
+      "source_module": "package/dist/esm/icons/square-split-horizontal.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 961,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Square",
+      "svg": "ui-icons/open-planner-ribbon/square.svg",
+      "sha256": "9e35d2d8fc09d8f91c7e5e82c3970446e540066eb7521a0004b0c17b902c5176",
+      "source_module": "package/dist/esm/icons/square.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiServerGroup.tsx",
+          "line": 64,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "Star",
+      "svg": "ui-icons/open-planner-ribbon/star.svg",
+      "sha256": "af2af82721dc94590e2941c45ad12004540a94afdb2d33c89db035c12ffebd4b",
+      "source_module": "package/dist/esm/icons/star.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 25,
+          "kind": "dynamic-layout",
+          "layout_key": "star"
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "svg": "ui-icons/open-planner-ribbon/tags.svg",
+      "sha256": "0b3c87552d22da161a2505a8456ca2e4aa8a8b1397b60e4f832d6cf2daed59af",
+      "source_module": "package/dist/esm/icons/tags.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 435,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Trash2",
+      "svg": "ui-icons/open-planner-ribbon/trash-2.svg",
+      "sha256": "d47d14737206170dd22671f0fce9ef4dedd52daac9cc71d1fb2872c52dfe66dd",
+      "source_module": "package/dist/esm/icons/trash-2.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 298,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 419,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "TrendingUp",
+      "svg": "ui-icons/open-planner-ribbon/trending-up.svg",
+      "sha256": "8c303d6a3d349d067109cded41b3ec4efef95649a4fba4b0dbc15d0d58c25ac9",
+      "source_module": "package/dist/esm/icons/trending-up.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 772,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Truck",
+      "svg": "ui-icons/open-planner-ribbon/truck.svg",
+      "sha256": "1044c773e559b8980f59f9b84c54ed9cc9079131b7bdcc32483928480d664670",
+      "source_module": "package/dist/esm/icons/truck.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 19,
+          "kind": "dynamic-layout",
+          "layout_key": "equipment"
+        }
+      ]
+    },
+    {
+      "name": "Undo2",
+      "svg": "ui-icons/open-planner-ribbon/undo-2.svg",
+      "sha256": "1e45ee4841f76d14c90ac0bbab51a3aafa958c610243b0c6e6498b3ebe52ba21",
+      "source_module": "package/dist/esm/icons/undo-2.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 290,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Unlock",
+      "svg": "ui-icons/open-planner-ribbon/unlock.svg",
+      "sha256": "8c6efc24319e54ca68c7b072a9a653ea7929964227b81b3967439ff45caf1dc7",
+      "source_module": "package/dist/esm/icons/lock-open.js",
+      "uses": [
+        {
+          "file": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+          "line": 103,
+          "kind": "conditional-ai"
+        }
+      ]
+    },
+    {
+      "name": "UserPlus",
+      "svg": "ui-icons/open-planner-ribbon/user-plus.svg",
+      "sha256": "ee5a26c1b44ae09f3cbb405c0d536c2b858490857757829327844788bd2fa252",
+      "source_module": "package/dist/esm/icons/user-plus.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 596,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 606,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "svg": "ui-icons/open-planner-ribbon/users.svg",
+      "sha256": "3852b846abf6597627b8f3a9f49278520dd97759a807f63d747da51ee7db755c",
+      "source_module": "package/dist/esm/icons/users.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 508,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 17,
+          "kind": "dynamic-layout",
+          "layout_key": "users"
+        }
+      ]
+    },
+    {
+      "name": "Wrench",
+      "svg": "ui-icons/open-planner-ribbon/wrench.svg",
+      "sha256": "84c55b95f3dcb75b8778c123b790949580d0c2c9e7ebe1dd1294d2986050d050",
+      "source_module": "package/dist/esm/icons/wrench.js",
+      "uses": [
+        {
+          "file": "src/components/viewControls/layoutIcons.tsx",
+          "line": 20,
+          "kind": "dynamic-layout",
+          "layout_key": "tools"
+        }
+      ]
+    },
+    {
+      "name": "X",
+      "svg": "ui-icons/open-planner-ribbon/x.svg",
+      "sha256": "3a7cdc04f135d19fe1482154d1e55f292b374908c71e30c5a2322f639edb6cab",
+      "source_module": "package/dist/esm/icons/x.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 107,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ZoomIn",
+      "svg": "ui-icons/open-planner-ribbon/zoom-in.svg",
+      "sha256": "7a6a24167382e95331a9c25f967cb62fb3bc5c0866c1d97b3d4090403195b11e",
+      "source_module": "package/dist/esm/icons/zoom-in.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 338,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 994,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    },
+    {
+      "name": "ZoomOut",
+      "svg": "ui-icons/open-planner-ribbon/zoom-out.svg",
+      "sha256": "3ecb7a0478607f9b5e5b263f1d30f6ad69ed916691714a62c70174be31b77ad8",
+      "source_module": "package/dist/esm/icons/zoom-out.js",
+      "uses": [
+        {
+          "file": "src/components/layout/Ribbon/ribbonConfig.tsx",
+          "line": 342,
+          "kind": "ribbon-jsx"
+        },
+        {
+          "file": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+          "line": 995,
+          "kind": "ribbon-jsx"
+        }
+      ]
+    }
+  ]
+}

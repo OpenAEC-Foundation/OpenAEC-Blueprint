@@ -132,6 +132,13 @@ tabs. Daarom vervallen de eerder voorgestelde tabs Taken en Berekenen.
 De [native Planner-preview](style-repo-planner-ribbon-light.png) volgt de
 gecontroleerde tab- en groepsstructuur; gemeenschappelijke acties gebruiken
 de 27-iconenkern en de overige vormen zijn broniconen ter beoordeling.
+De [nieuwe linticoonreview](planner-ribbon-icon-review.html) legt 85 unieke
+Lucide-vormen en 114 bronplaatsen vast tegen de `lucide-react`-versie 0.575.0
+uit de lockfile. De 13 dynamisch gekozen layoutvormen en 21 aanroepen uit de
+conditionele AI-groepen zijn expliciet gemarkeerd; extensie-SVG's hangen van
+geïnstalleerde extensies af. Alle 510 licht/donker-maatvoorbeelden laden in
+de browser. Deze verzameling is een broninventaris, nog geen goedgekeurde
+gedeelde Rust-iconenset.
 
 De [Energy-router op commit e9a485d](https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/core/navigation/routes.ts)
 bevestigt tien hoofdschermen in vier werkstroomgroepen: Invoer (Project,
