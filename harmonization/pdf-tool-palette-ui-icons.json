@@ -1,0 +1,101 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All eight literal SVGs in the App.jsx-reachable ToolPalette.jsx. The grip and dock targets are visual UI affordances, not ribbon commands. The 18 imported ribbonIcons.js shapes used by the tool list are covered by the imported ribbon catalog.",
+  "literal_svg_sites": 8,
+  "ui_symbol_sites": 8,
+  "tool_commands": 2,
+  "control_affordances": 1,
+  "controls": 3,
+  "drag_targets": 2,
+  "records": [
+    {
+      "ordinal": 1,
+      "name": "hand",
+      "label": "Pan/handgereedschap",
+      "role": "tool",
+      "availability": "docked-or-floating",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 17,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/hand.svg",
+      "sha256": "ace791825c03d3d96bc7150511170bf3a756f2a63cefa74d279cb14e7566c8ab"
+    },
+    {
+      "ordinal": 2,
+      "name": "select",
+      "label": "Selectiegereedschap",
+      "role": "tool",
+      "availability": "docked-or-floating",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 18,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/select.svg",
+      "sha256": "d0208641fe7874d2065e093182323fb0a21aaace710e342a2940af8d71542e59"
+    },
+    {
+      "ordinal": 3,
+      "name": "dock-grip",
+      "label": "Sleepgreep van gedockt palet",
+      "role": "control-affordance",
+      "availability": "docked",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 311,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/dock-grip.svg",
+      "sha256": "37d76e28d5b0a4f2043da5ae88ab38da664375de41495a125d3af550fceccf73"
+    },
+    {
+      "ordinal": 4,
+      "name": "dock-settings",
+      "label": "Instellingen / icoongrootte",
+      "role": "control",
+      "availability": "docked",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 323,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/dock-settings.svg",
+      "sha256": "efdb13a5b75a365b2f8d4b4328cebd40ed5d1f7d77651813e55750b916490bd5"
+    },
+    {
+      "ordinal": 5,
+      "name": "dock-close",
+      "label": "Gedockt palet sluiten",
+      "role": "control",
+      "availability": "docked",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 328,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/dock-close.svg",
+      "sha256": "0330d5d5248728b48185b11b1ec381ec44c0a444dad3b7b09350ad1a9815e842"
+    },
+    {
+      "ordinal": 6,
+      "name": "floating-close",
+      "label": "Zwevend palet sluiten",
+      "role": "control",
+      "availability": "floating",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 358,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/floating-close.svg",
+      "sha256": "f5515791c5f21cdd10ed1d39dc36cd7ebbd17e0713b0c2765104035ee9c4a51e"
+    },
+    {
+      "ordinal": 7,
+      "name": "dock-target-left",
+      "label": "Links docken · sleepdoel",
+      "role": "drag-target",
+      "availability": "dragging",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 378,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/dock-target-left.svg",
+      "sha256": "2a66c83c66dfb259f32e4c1569af1e49db19fa624c04280a0f780ec96dabf452"
+    },
+    {
+      "ordinal": 8,
+      "name": "dock-target-right",
+      "label": "Rechts docken · sleepdoel",
+      "role": "drag-target",
+      "availability": "dragging",
+      "source_file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+      "source_line": 386,
+      "svg": "inline-ui-icons/open-pdf-studio/tool-palette/dock-target-right.svg",
+      "sha256": "019313c3ab1a90a878fa440d12f1ce48a8712aa913d2145ee9529d50ce66850a"
+    }
+  ]
+}
