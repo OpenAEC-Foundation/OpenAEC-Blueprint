@@ -1,0 +1,555 @@
+{
+  "repository": "open-pdf-studio",
+  "previous_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "current_commit": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+  "scope": "34 changed UI candidates from pinned drift: 23 Solid JSX components and 11 CSS files. Import chains show structural connections, not runtime reachability or pixel equivalence.",
+  "changed_ui_candidates": 34,
+  "changed_jsx_components": 23,
+  "changed_css_files": 11,
+  "new_jsx_components": 4,
+  "current_jsx_total": 176,
+  "components": [
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDLazy.jsx",
+      "status": "A",
+      "role": "conditional-loader",
+      "surface": "3D-lazy gate",
+      "source_lines": 30,
+      "delta_lines": {
+        "added": 30,
+        "removed": 0
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/ThreeDLazy.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "Rendert alleen bij een actief document met 3D-model of 3D-snapshot; laadt ThreeDView dynamisch.",
+      "sha256": "3cd17334a060a4ec71dca59c9c9ad8f475c87aed1ff1f8d2a494038ce3819546",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDLazy.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx",
+      "status": "A",
+      "role": "dialog",
+      "surface": "Document splitsen",
+      "source_lines": 206,
+      "delta_lines": {
+        "added": 206,
+        "removed": 0
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/dialogs/SplitDocumentDialog.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "DialogHost registreert split-document; OrganizeTab opent die dialoog via het lint.",
+      "sha256": "1635a687aa659db74c303cec75edab7c9fbb82f697ce4812ff13770426b5672e",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDView.jsx",
+      "status": "A",
+      "role": "document-viewport",
+      "surface": "3D-model en snapshotbalk",
+      "source_lines": 640,
+      "delta_lines": {
+        "added": 640,
+        "removed": 0
+      },
+      "literal_svg_sites": 1,
+      "import_chain": [
+        "App.jsx",
+        "components/ThreeDLazy.jsx",
+        "components/ThreeDView.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "App monteert de gate; model en snapshotbalk verschijnen alleen met passende PDF-inhoud.",
+      "sha256": "76fe5fdea60e43f685196b9abc7ef2921459e6176a1398ce09e19931a93eba12",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDView.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PapierMaat.jsx",
+      "status": "A",
+      "role": "properties-control",
+      "surface": "Papiermaat-eenheid",
+      "source_lines": 66,
+      "delta_lines": {
+        "added": 66,
+        "removed": 0
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/properties-panel/PropertiesPanel.jsx",
+        "components/properties-panel/PapierMaat.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "ImageSection en PropertiesPanel gebruiken dit invoer- en eenheidscomponent.",
+      "sha256": "b11b083ea759b1828a9be097b4fc0498ec31346d046336fede48a50fd2e64a99",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/properties-panel/PapierMaat.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "status": "M",
+      "role": "dialog",
+      "surface": "Vergelijkingskeuze",
+      "source_lines": 240,
+      "delta_lines": {
+        "added": 19,
+        "removed": 0
+      },
+      "literal_svg_sites": 5,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/compare/CompareDialog.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "DialogHost registreert compare; de nieuwe split-kaart is een modusillustratie.",
+      "sha256": "15e1431ea66b6e1ba47e590134cd3e7053ac55fce10e4bfefa8d6d720e07a0cd",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/compare/CompareDialog.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/ParametricSymbolPicker.jsx",
+      "status": "M",
+      "role": "dialog",
+      "surface": "Parametrische-symboolkiezer",
+      "source_lines": 59,
+      "delta_lines": {
+        "added": 1,
+        "removed": 1
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/dialogs/ParametricSymbolPicker.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "45b3c62c5f6a1725d81dc803ac107ad069948f4f1ff162937a2239fa6ef2dc4a",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/dialogs/ParametricSymbolPicker.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "status": "M",
+      "role": "dialog",
+      "surface": "Afdrukdialoog",
+      "source_lines": 1550,
+      "delta_lines": {
+        "added": 418,
+        "removed": 63
+      },
+      "literal_svg_sites": 4,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/dialogs/PrintDialog.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "20cef225bf16770df1aedb6344fcbaad22d7f89bdce49f1011bfeb0e35eced3c",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "status": "M",
+      "role": "dialog",
+      "surface": "Voorkeuren",
+      "source_lines": 202,
+      "delta_lines": {
+        "added": 3,
+        "removed": 7
+      },
+      "literal_svg_sites": 6,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/preferences/PreferencesDialog.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "b214ef88835504089b3f8d97bdb1404d2f3f24968eb388ef717b6aee623d4d21",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/DialogHost.jsx",
+      "status": "M",
+      "role": "dialog-host",
+      "surface": "Dialoogdispatcher",
+      "source_lines": 137,
+      "delta_lines": {
+        "added": 2,
+        "removed": 0
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "500a90237769507f5804e3333984204eadce50358b18c150a2471d008176f4c9",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/DialogHost.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/compare/CompareView.jsx",
+      "status": "M",
+      "role": "document-viewport",
+      "surface": "Vergelijkingswerkgebied",
+      "source_lines": 1283,
+      "delta_lines": {
+        "added": 100,
+        "removed": 9
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/compare/CompareView.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "361384efe5f29b69eddfad2d4ad18c73fb5bc0dc3042fd49293170b378cdb6ff",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/compare/CompareView.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "status": "M",
+      "role": "left-panel",
+      "surface": "Annotaties",
+      "source_lines": 535,
+      "delta_lines": {
+        "added": 84,
+        "removed": 5
+      },
+      "literal_svg_sites": 14,
+      "import_chain": [
+        "App.jsx",
+        "components/left-panel/LeftPanel.jsx",
+        "components/left-panel/panels/AnnotationsPanel.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "1204723866809b671de852fa20ba4baabdff004cc9c9039f4395a88b191233ad",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx",
+      "status": "M",
+      "role": "overlay",
+      "surface": "Toetsenbordoverlay",
+      "source_lines": 154,
+      "delta_lines": {
+        "added": 1,
+        "removed": 1
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/KeystrokeOverlay.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "61dad8e93496f3d6d32c98068b3274654a1e3a6d9c1025eb92fc73e7f9fcd0c6",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
+      "status": "M",
+      "role": "overlay",
+      "surface": "Tekenlengte-HUD",
+      "source_lines": 113,
+      "delta_lines": {
+        "added": 1,
+        "removed": 1
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/TypeLengthHUD.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "23545bf8fb9f788318766f45c50b9fd3d47bca45244ee7a73b19328ccb87085a",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/TypeLengthHUD.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/AssistantPanel.jsx",
+      "status": "M",
+      "role": "panel",
+      "surface": "Assistentpaneel",
+      "source_lines": 289,
+      "delta_lines": {
+        "added": 94,
+        "removed": 41
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/AssistantPanel.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "e5a628a9a00603b2c17ed6b5e8b3430b8a4416572d3397aac63fee35a55eb8e3",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/AssistantPanel.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/GeneralSection.jsx",
+      "status": "M",
+      "role": "properties",
+      "surface": "Algemene eigenschappen",
+      "source_lines": 165,
+      "delta_lines": {
+        "added": 1,
+        "removed": 1
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/properties-panel/PropertiesPanel.jsx",
+        "components/properties-panel/GeneralSection.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "5ea7def6bcb6fab28638dff94883f22803a5a245aebe3bc315c9b5500ddcd9a8",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/properties-panel/GeneralSection.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/ImageSection.jsx",
+      "status": "M",
+      "role": "properties",
+      "surface": "Afbeeldingseigenschappen",
+      "source_lines": 197,
+      "delta_lines": {
+        "added": 11,
+        "removed": 6
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/properties-panel/PropertiesPanel.jsx",
+        "components/properties-panel/ImageSection.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "43227ab85b368a5d6f4182a838ccc8935c9261cad275ca45db6dbd038df9e63f",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/properties-panel/ImageSection.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PropertiesPanel.jsx",
+      "status": "M",
+      "role": "properties",
+      "surface": "Eigenschappenpaneel",
+      "source_lines": 259,
+      "delta_lines": {
+        "added": 12,
+        "removed": 4
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/properties-panel/PropertiesPanel.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "45d8d98e8970c8093e20f5842c59c3e70200f7354fbfcffa04b7b60d84bc7951",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/properties-panel/PropertiesPanel.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+      "status": "M",
+      "role": "ribbon",
+      "surface": "Annotatielint",
+      "source_lines": 184,
+      "delta_lines": {
+        "added": 9,
+        "removed": 0
+      },
+      "literal_svg_sites": 2,
+      "import_chain": [
+        "App.jsx",
+        "components/ribbon/Ribbon.jsx",
+        "components/ribbon/CommentTab.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "0145f66e0c8772bc9b55ad8bf905872d91b0dbf1b6c5d1d62bcd171d150bcd64",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "status": "M",
+      "role": "ribbon",
+      "surface": "Organiserenlint",
+      "source_lines": 142,
+      "delta_lines": {
+        "added": 5,
+        "removed": 0
+      },
+      "literal_svg_sites": 5,
+      "import_chain": [
+        "App.jsx",
+        "components/ribbon/Ribbon.jsx",
+        "components/ribbon/OrganizeTab.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "c9b9cc271a13672f3a6779d0322dae3e68d4e6d5fb38f54fd439f51d7a39fbfb",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "status": "M",
+      "role": "ribbon",
+      "surface": "Beeldlint",
+      "source_lines": 163,
+      "delta_lines": {
+        "added": 3,
+        "removed": 7
+      },
+      "literal_svg_sites": 4,
+      "import_chain": [
+        "App.jsx",
+        "components/ribbon/Ribbon.jsx",
+        "components/ribbon/ViewTab.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "71f4d61bb0cc8046ab8d3ac0be767a5976ff9a68de42f44059e267501110a95c",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/App.jsx",
+      "status": "M",
+      "role": "root",
+      "surface": "Desktop-documentvenster",
+      "source_lines": 171,
+      "delta_lines": {
+        "added": 3,
+        "removed": 0
+      },
+      "literal_svg_sites": 1,
+      "import_chain": [
+        "App.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "48a928d054db1fd903573263f0ebe16f7eb7c44dd5fb4afa24f64ce945c428d8",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/App.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "status": "M",
+      "role": "root",
+      "surface": "Mobiel documentvenster",
+      "source_lines": 746,
+      "delta_lines": {
+        "added": 10,
+        "removed": 1
+      },
+      "literal_svg_sites": 25,
+      "import_chain": [
+        "App.jsx",
+        "MobileApp.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "9e5a2777913d88ff5a2d577d3b4515efb8ebbb1ccc5fc6b6b5ae067a8e326a10",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/MobileApp.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/preferences/AnnotationsTab.jsx",
+      "status": "M",
+      "role": "settings-page",
+      "surface": "Annotatievoorkeuren",
+      "source_lines": 630,
+      "delta_lines": {
+        "added": 7,
+        "removed": 0
+      },
+      "literal_svg_sites": 0,
+      "import_chain": [
+        "App.jsx",
+        "components/DialogHost.jsx",
+        "components/preferences/PreferencesDialog.jsx",
+        "components/preferences/AnnotationsTab.jsx"
+      ],
+      "route_evidence": "static JSX import chain only; conditional render and UI state require separate verification",
+      "review_note": "",
+      "sha256": "2aea7a8e7d7c730b517891978b46bb8add1adb6176faf75479ff535a939e9947",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/preferences/AnnotationsTab.jsx"
+    }
+  ],
+  "styles": [
+    {
+      "path": "open-pdf-studio/styles/assistant.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/assistant.css",
+      "sha256": "09fc271bc103b459aef473e97e46e7afc450c6f010ade7a1372cfbbb13de4efb"
+    },
+    {
+      "path": "open-pdf-studio/styles/base.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/base.css",
+      "sha256": "8ab53e0f33ae02c35a0d5c9d89dcd3afa88dd8448f3fe384907129c22623ba14"
+    },
+    {
+      "path": "open-pdf-studio/styles/dialogs.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/dialogs.css",
+      "sha256": "c1a2cf8f220ed6729e8ee15ee793e11d1cb8def835da821833a58c991d83080f"
+    },
+    {
+      "path": "open-pdf-studio/styles/find-bar.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/find-bar.css",
+      "sha256": "1d7119ee90ee73bdf64bbbc7c9bc77ffb413075cfa155e52e1b00b2d2945a33e"
+    },
+    {
+      "path": "open-pdf-studio/styles/fonts.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/fonts.css",
+      "sha256": "7eb5f19ac987e7a20c65ab3f8ac579fd818528cd6b528be86a9e95129ab24cff"
+    },
+    {
+      "path": "open-pdf-studio/styles/form-layer.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/form-layer.css",
+      "sha256": "486f4a1d46709851c4f54e7982a897530672240f989155f7f5fb4b7de7fe3b52"
+    },
+    {
+      "path": "open-pdf-studio/styles/handtekening.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/handtekening.css",
+      "sha256": "fb0c0ab0d1c76ab47786274d013517a58a474ec8ba7627020bea51e3b7723d41"
+    },
+    {
+      "path": "open-pdf-studio/styles/mini-log.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/mini-log.css",
+      "sha256": "78eed677b1e94a3c6a5906ef61f608617640c9ea0d7fddec36b23d339eda02a6"
+    },
+    {
+      "path": "open-pdf-studio/styles/panels.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/panels.css",
+      "sha256": "042093cf0f8babe20c94dcb86c2f4912df92deae8a9d3b688f285cac2fbafcca"
+    },
+    {
+      "path": "open-pdf-studio/styles/properties-panel.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/properties-panel.css",
+      "sha256": "16e63f783cbc77c77fc4c2347ffc7edf05b9fff02107a38ca710a52612a2b1b0"
+    },
+    {
+      "path": "open-pdf-studio/styles/text-layer.css",
+      "status": "M",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/text-layer.css",
+      "sha256": "90c31ae29270bc88f914682b62c5bff1a2f74447ac5fe691770db6683b2e8747"
+    }
+  ]
+}
