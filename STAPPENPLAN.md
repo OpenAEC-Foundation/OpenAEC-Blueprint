@@ -1,144 +1,128 @@
-# Stappenplan: nieuw ontwerp en UI-bibliotheek 0.4
+# Stappenplan: harmonisatie van de OpenAEC-apps
 
-Dit plan beschrijft hoe we het nieuwe ontwerp voor alle OpenAEC-tools maken en daarna de UI-bibliotheek versie 0.4 bouwen. Het ombouwen van de tools zelf, te beginnen met Open Calc Studio, volgt na dit plan.
+Status: **concept voor overleg**, bijgewerkt op 2026-10-16. Besluiten en open vragen staan ook in [`NOTES.md`](NOTES.md).
 
-Status: **concept**, opgesteld op 2026-10-16. Besluiten en open vragen staan ook in [`NOTES.md`](NOTES.md).
+## Doel
 
-## Uitgangspunten
+Elke app uit de harmonisatiepagina [`design/harmonized.html`](design/harmonized.html) krijgt dezelfde stijl, in welke taal of techniek hij ook geschreven is. Een gebruiker moet aan elke app zien dat hij bij OpenAEC hoort. Open CAD Studio, Open BIM Studio en de Open 2D Studio AEC-extensie vallen hierbuiten, dus het gaat om 16 apps.
 
-- Alle tools worden omgebouwd naar de nieuwe UI.
-- Bibliotheek 0.4 wordt vanaf nul gebouwd. De huidige crate `openaec-ui` 0.1.0 is een prototype: we gebruiken de kennis en de maten, niet de code als basis.
-- De Style Repo blijft de plek waar het ontwerp wordt gemaakt, beoordeeld en vastgelegd.
-- Er zijn vier soorten interfaces, en het ontwerp moet ze alle vier dekken:
+Dat betekent dezelfde:
 
-| Soort | Voorbeelden | Kenmerk |
+- **kleuren en thema's**, zoals Light en Forge;
+- **lettertypen**, met dezelfde groottes en regelhoogtes;
+- **iconen**, met één betekenis per icoon, plus de app-iconen en het logo;
+- **tegels en kaarten**, zoals in het Bestand-menu, op startschermen en in overzichten;
+- **maten en ruimte**, zoals bandhoogtes, afstanden, hoeken en randen;
+- **componenten**, zoals knoppen, invoervelden, lint, tabs, panelen en dialogen;
+- **schil en layout**, met titelbalk, lint of werkstroom, werkruimte en statusbalk;
+- **gedrag**, zoals hover, focus, uitgeschakeld en foutmeldingen.
+
+## Kernidee: één ontwerp, één bron, een uitvoering per techniek
+
+```
+          Ontwerp (Style Repo)
+                  │
+   Eén bron: tokens + iconen + tegels
+                  │
+        ┌─────────┴─────────┐
+   Rust-bibliotheek      Webpakket
+   (Iced)                (CSS, iconen, React)
+```
+
+Het ontwerp wordt één keer gemaakt. Kleuren, maten en iconen staan in één bronbestand. Daaruit worden per techniek de bestanden gegenereerd die een app nodig heeft. Zo kan geen app uit de pas lopen, ook niet als hij nog niet is omgebouwd.
+
+## De apps per techniek
+
+Het volledige overzicht per app, met interface, status in de Style Repo en licentie, staat in [`APP-OVERZICHT.md`](APP-OVERZICHT.md).
+
+| Techniek | Apps | Hoe de stijl erin komt |
 | --- | --- | --- |
-| Ribbon-tool | Calc, Calculations, Planner, Pointcloud, CAD, PDF | Lint met tabs en groepen, documenttabs, panelen |
-| Webachtige tool | Open Field Studio, Open Energy | Stapsgewijze werkstroom, geen lint |
-| Communicatie-app | Y-Next, Z-Next | Webapplicatie, Y-Next draait op ERPNext |
-| Installer | OpenAEC-installer | Korte wizard met voortgang |
+| **Tauri + React** | Calc, Calculations, Planner, Geotechniek, Heatloss, Pile Plan, Reports, Energy, Field | Ombouwen naar de Rust-UI (besluit). Tot dan het webpakket |
+| **Tauri + Solid** | PDF, Speech, Workspace Composer | Ombouwen of webpakket, te overleggen |
+| **Tauri + Svelte** | Frame | Ombouwen of webpakket, te overleggen |
+| **Rust + Iced** | Pointcloud | Rust-bibliotheek 0.4 |
+| **Webapp, React** | BIM Validator | Webpakket |
+| **Later** | FEM | Repository gaf een 404. Hier komen we later op terug |
 
-## Deel A: het nieuwe ontwerp
+Twaalf apps hebben een lint. Energy, Field, Speech en Workspace Composer hebben een werkstroom.
 
-### A1. Inventaris en prioriteit
+**Buiten de harmonisatie:** Open CAD Studio, waar niets aan verandert, Open BIM Studio, die niet hoeft, en de Open 2D Studio AEC-extensie, omdat Open 2D Studio is gestopt. Apps die niet op de harmonisatiepagina staan, vallen ook buiten de scope. Daaronder vallen de installer en Y-Next/Z-Next, die wel in de uitleg van de leidinggevende stonden.
 
-- Zet alle tools in één lijst met hun interfacesoort, huidige techniek, eigenaar en volgorde van ombouwen.
-- Kies per interfacesoort de kernschermen die het ontwerp moet laten zien, zoals hoofdscherm, Bestand-menu, instellingen, dialoog, lege staat, fout en voortgang.
-- Bronnen: [`design/screen-inventory.html`](design/screen-inventory.html), [`design/harmonized.html`](design/harmonized.html) en [`design/assessment.md`](design/assessment.md).
-- **Resultaat:** toollijst en lijst met kernschermen, vastgesteld met de leidinggevende.
+## Wat er al ligt
 
-### A2. Ontwerpprincipes en fundament
+- **Style Book** (repository `OpenAEC-style-book`). Dit bevat de webpakketten `@openaec/design-tokens` 0.1.0 met CSS en een Tailwind-preset, en pakketten voor lint, schil en basiscomponenten in React. De kleuren van de huidige Rust-crate worden hier ook uit gehaald.
+- **Repository `openaec-ui`**: gedeelde tokens en component-CSS voor het web.
+- **Style Repo** (deze repository): het onderzoek naar alle iconen en schermen, de reviews, en het Rust-prototype `openaec-ui` 0.1.0. Pointcloud gebruikt dat prototype al.
 
-- Leg de principes vast: wat moet elke tool uitstralen, en waar mag een tool afwijken?
-- Kleur: welke thema's blijven? Nu zijn dat Light, Forge, OpenAEC, Blueprint en High contrast. Leg de betekenis van kleuren vast, zoals amber voor selectie en focus.
-- Typografie: lettertypen, groottes en regelhoogtes. Nu zijn dat Inter, Space Grotesk en JetBrains Mono.
-- Maten: raster, afstanden, hoeken, randen en de vaste bandhoogtes van de schil.
-- Toestanden: normaal, hover, ingedrukt, focus, uitgeschakeld en fout, voor alle bedieningselementen.
-- Toegankelijkheid: minimaal contrast, toetsenbordbediening en zichtbare focus.
-- Taal: Nederlands en Engels, en hoe teksten worden aangeleverd.
-- **Resultaat:** één bronbestand met ontwerptokens. Daaruit worden zowel Rust-code als CSS gegenereerd, zodat ook de communicatie-apps en webtools dezelfde waarden gebruiken.
+Er zijn dus nu drie plekken met stijlinformatie. Eén van de eerste besluiten is welke daarvan de bron wordt.
 
-### A3. Iconen
+## Stappen
 
-- Stel de stijl vast: raster, lijndikte, hoeken, en een aparte 16 px-variant voor kleine maten.
-- Maak de kernset van algemene bedieningsiconen definitief. Gebruik de bestaande reviews als bewijs.
-- Daarna de domeinsets per vakgebied, zoals FEM, BIM, CAD en PDF.
-- Leg per icoon één betekenis vast. De reviews laten zien dat dezelfde naam in verschillende tools iets anders kan betekenen.
-- **Resultaat:** iconenset met naam, betekenis, 16 en 24 px, en goedkeuring per icoon.
+### Fase 1: inventaris afronden
 
-### A4. Componenten
+- Bepaal later de techniek van Open FEM Studio.
+- Bevestig per app of hij een lint of een werkstroom heeft.
+- Noteer per app de eigenaar en de volgorde van harmoniseren.
+- **Resultaat:** het app-overzicht, compleet en vastgesteld.
 
-Ontwerp per component de opbouw, maten, toestanden en het gedrag.
+### Fase 2: het ontwerp
 
-- **Basis:** knop, icoonknop, invoerveld, keuzelijst, checkbox, schakelaar, slider, voortgangsbalk, tooltip en scrollbalk.
-- **Samengesteld:** linttab, lintgroep, lintknop, documenttab, paneel met kop, eigenschappenraster, boomstructuur, tabel, zoekbalk, melding, dialoog en lege staat.
-- **Schil:** titelbalk, lint, werkstroomnavigatie, documenttabs, panelen, werkruimte, statusbalk, Bestand-menu en instellingen.
-- **Resultaat:** componentspecificatie met per component een reviewpagina in alle thema's.
+Gestart op 2026-10-16. Werkplan en voortgang staan in [`design/ontwerp-0.4/README.md`](design/ontwerp-0.4/README.md).
 
-### A5. Schermontwerpen per interfacesoort
+- **Fundament.** Thema's, kleurbetekenis, lettertypen, maten, toestanden en toegankelijkheid.
+- **Iconen.** Eén stijl en raster, met een 16 px-variant. Eerst de algemene set, dan de vaksets zoals FEM, PDF, geotechniek en puntenwolken, en dan de app-iconen.
+- **Tegels en kaarten.** Eén ontwerp voor tegels in het Bestand-menu, op startschermen en in overzichten.
+- **Componenten.** Opbouw, maten en toestanden van elk bedieningselement.
+- **Layouts.** Referentieschermen voor een lint-app en een werkstroom-app, in alle thema's.
+- **Vaststellen.** Bespreken met leidinggevende en gebruikers, daarna het ontwerp bevriezen als versie 0.4.
 
-- Maak de kernschermen uit A1 voor elk van de vier interfacesoorten.
-- Toon ze in alle thema's, en op een breed en een smal venster.
-- Werk één echte tool uit als voorbeeld, bij voorkeur Open Calc Studio, omdat die als eerste wordt omgebouwd.
-- **Resultaat:** referentieschermen die als doel dienen voor de bibliotheek.
+### Fase 3: één bron
 
-### A6. Vaststellen
+- Kies de plek van de bron: Style Book, `openaec-ui` of de Style Repo.
+- Leg tokens, iconen en tegelmaten vast in een formaat dat Rust en het web kunnen lezen.
+- Schrijf generators voor Rust en CSS.
+- **Resultaat:** één wijziging in de bron komt automatisch in alle uitvoeringen.
 
-- Bespreek het ontwerp met de leidinggevende en enkele gebruikers.
-- Verwerk de feedback en bevries het ontwerp voor versie 0.4. Wijzigingen daarna gaan naar een volgende versie.
-- **Resultaat:** goedgekeurde ontwerpversie 0.4.
+### Fase 4: uitvoeringen per techniek
 
-## Deel B: bibliotheek 0.4
+- **Rust-bibliotheek 0.4**, vanaf nul gebouwd. Architectuur, fundament, componenten, schil, layouts, documentatie en release. Het Rust-prototype dient als referentie.
+- **Webpakket.** CSS en iconen die in elk webframework werken, met componenten voor React. Dit bouwt voort op het Style Book of vervangt het, afhankelijk van fase 3.
+- **Resultaat:** per techniek een uitvoering met een voorbeeld en een korte handleiding.
 
-Stap B1 en B2 kunnen al starten tijdens deel A. Vanaf B3 is het fundament uit A2 nodig.
+### Fase 5: apps harmoniseren
 
-### B1. Architectuurbesluiten
+- **Proefproject:** Open Calc Studio ombouwen naar de Rust-UI. Wat ontbreekt, gaat terug naar de bibliotheek.
+- **Daarna per groep**, in deze volgorde:
+  1. Pointcloud, die al dezelfde techniek gebruikt;
+  2. de overige Tauri-apps;
+  3. BIM Validator, met het webpakket;
+  4. FEM, zodra de techniek bekend is.
+- **Meten.** Houd per app bij hoeveel van de checklist hieronder klaar is.
 
-Leg elk besluit kort vast met de reden.
+## Wanneer is een app geharmoniseerd?
 
-- **Iced-versie.** Het prototype gebruikt Iced 0.13.1. Kies bewust een versie en een plan voor upgrades.
-- **Renderer.** GPU met wgpu, software met tiny-skia, of allebei met terugval.
-- **Indeling.** Eén crate of meerdere, bijvoorbeeld tokens, iconen, widgets en schil apart.
-- **Gebruik door tools.** Een volledige app-schil, losse widgets, of een adapter voor tools met een eigen eventloop zoals Pointcloud.
-- **Thema-API.** Hoe een tool een thema kiest en hoe tokens in code beschikbaar zijn.
-- **Iconen-API.** Getypeerde iconen per betekenis in plaats van bestandsnamen.
-- **Vertaling.** Hoe teksten in het Nederlands en Engels worden aangeleverd.
-- **Licentie.** Het prototype gebruikt CC-BY-SA-4.0. Die licentie is niet bedoeld voor software. Kies een softwarelicentie die past bij de tools.
-- **Publicatie.** De Style Repo is privé, en publieke tools kunnen niet bouwen op een private repository. Kies een openbare repository, crates.io, of een andere route.
-- **Resultaat:** architectuurdocument.
+Een app is geharmoniseerd als hij:
 
-### B2. Opzet en werkwijze
-
-- Maak de nieuwe crate aan, in deze repo of in een eigen repository, afhankelijk van B1.
-- Richt automatische controles in: opmaak, lint, tests en beeldvergelijking op Windows en Linux.
-- Leg de versie- en releaseafspraken vast, met een changelog.
-- **Resultaat:** lege maar werkende crate met controles.
-
-### B3. Fundament
-
-- Tokens, gegenereerd uit het bronbestand van A2.
-- Thema's en lettertypen.
-- Iconen uit A3.
-- **Resultaat:** een voorbeeldscherm dat kleuren, tekst en iconen in elk thema correct toont.
-
-### B4. Basiscomponenten
-
-- Bouw de basiscomponenten uit A4, met alle toestanden.
-- Schrijf per component een test die het beeld vergelijkt met het ontwerp.
-
-### B5. Samengestelde componenten en schil
-
-- Bouw de samengestelde componenten en de schil uit A4.
-- Zorg dat de schil werkt als volledige app en als adapter voor tools met een eigen eventloop.
-
-### B6. Layouts per interfacesoort
-
-- Bouw de layouts voor ribbon-tool, werkstroomtool en installer.
-- Maak per layout een klein voorbeeldprogramma.
-- Lever voor communicatie-apps en webtools de tokens als CSS en de iconen als SVG. Zij gebruiken de Rust-bibliotheek niet.
-
-### B7. Documentatie en showcase
-
-- Documenteer elke publieke functie.
-- Laat de Style Repo-app alle componenten uit de nieuwe bibliotheek tonen, zodat hij als levende catalogus dient.
-- Schrijf een handleiding voor het ombouwen van een tool.
-
-### B8. Release 0.4
-
-- Controleer alle referentieschermen uit A5 tegen de bibliotheek.
-- Publiceer versie 0.4 met changelog en handleiding.
-- **Daarna:** proefproject Open Calc Studio. Wat daar ontbreekt, komt terug als versie 0.4.x.
+- [ ] de kleuren en thema's uit de bron gebruikt, zonder eigen kleurwaarden;
+- [ ] de gedeelde lettertypen gebruikt;
+- [ ] voor elke algemene handeling het gedeelde icoon gebruikt;
+- [ ] de gedeelde tegels en kaarten gebruikt;
+- [ ] de schil voor zijn interfacesoort volgt;
+- [ ] de gedeelde componenten of hun exacte stijl gebruikt;
+- [ ] in elk thema door een visuele review is gekomen.
 
 ## Samenwerking
 
 - De leidinggevende en de gebruiker nemen de ontwerpbesluiten en keuren goed.
-- ChatGPT en Claude kunnen inventarissen maken, reviewpagina's genereren, code schrijven en controles draaien. Ze werken volgens [`AGENTS.md`](AGENTS.md) en houden [`NOTES.md`](NOTES.md) bij.
+- ChatGPT en Claude maken inventarissen, genereren reviewpagina's, schrijven code en draaien controles. Ze werken volgens [`AGENTS.md`](AGENTS.md) en houden [`NOTES.md`](NOTES.md) bij.
 
-## Open beslissingen
+## Voor het overleg
 
-- Gaan Open Field Studio en Open Energy ook naar de Rust-UI, of krijgen ze een webvariant?
-- Hoeveel van de stijl krijgen de communicatie-apps: alleen kleuren en iconen, of ook componenten in hun eigen webtechniek?
-- Waarin worden de ontwerpen gemaakt: direct in de Style Repo, of eerst in een ontwerptool zoals Figma of Penpot?
-- Welke thema's blijven in versie 0.4?
-- Welke licentie krijgt de bibliotheek, en waar wordt hij gepubliceerd?
-- Wie is eigenaar van het ontwerp, van de bibliotheek en van elke tool?
+1. **Wat wordt de bron?** Style Book, `openaec-ui` of de Style Repo.
+2. **Welke apps worden echt herbouwd in Rust?** Geldt dat voor alle Tauri-desktopapps, ook de Solid- en Svelte-apps? Of krijgen sommige alleen de stijl in hun eigen techniek?
+3. **Vallen de installer en Y-Next/Z-Next echt buiten de scope?** Ze stonden in de uitleg, maar niet op de harmonisatiepagina.
+4. **Open FEM Studio.** Wanneer komen we hierop terug, en in welke techniek is hij gebouwd?
+5. **Waarin ontwerpen we:** direct in de Style Repo, of eerst in een ontwerptool zoals Figma of Penpot?
+6. **Welke thema's blijven er?**
+7. **Licentie en publicatie.** Het Rust-prototype gebruikt CC-BY-SA-4.0, die niet voor software bedoeld is. Het Style Book-tokenpakket gebruikt MIT. Kies één softwarelicentie en een openbare plek.
+8. **Wie is eigenaar** van het ontwerp, van elke uitvoering en van elke app?
