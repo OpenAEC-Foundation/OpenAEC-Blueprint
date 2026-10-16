@@ -256,12 +256,13 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
             ("Klembord", &["Plakken", "Plakken op plaats", "Knippen", "Kopiëren", "Verwijderen"]),
             ("Verzameling", &["Aanmaken", "Ontleden"])],
         "Annotatie" => &[("Tekening", &["Markeren"]), ("Tekst", &["Tekstvak", "Bijschrift", "Notitie"]),
+            ("Proeflezen", &["Proeflezen"]),
             ("Stempel", &["Stempel", "Handtekening", "Parametrisch symbool"]),
             ("Redactie", &["Redigeren", "Toepassen"]), ("Eigenschappen", &["Annotatie-eigenschappen · controls"]),
             ("Bewerken", &["Pagina wissen", "Alles wissen"]),
             ("METEN", &["Afstand", "Oppervlakte", "Omtrek", "Hoek"]), ("HOEVEELHEDEN", &["Hoeveelheden"])],
         "PDF bewerken & samenvoegen" => &[("Bewerken", &["Tekst bewerken", "Tekst toevoegen", "Tekst herkennen (OCR)", "Bijsnijden"]),
-            ("Pagina's", &["Invoegen", "Verwijderen", "Extraheren", "Volgorde"]),
+            ("Pagina's", &["Invoegen", "Verwijderen", "Extraheren", "Document splitsen", "Volgorde"]),
             ("Combineren", &["Samenvoegen", "PDF's vergelijken"]),
             ("Watermerk", &["Watermerk", "Koptekst/voettekst", "Beheren"])],
         "Help" => &[("Instellingen", &["Extensies", "Bestandskoppelingen"]),
@@ -278,10 +279,11 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
             else if name.contains("Eigenschap") || name.contains("keuze") || name.contains("controls") { Icon::Controls }
             else if name.contains("Pagina") || name.contains("Beeld") || name.contains("Volledig") { Icon::Fit }
             else { Icon::Grid };
-        let icon: CommandIcon = if tab == "Start" && *name == "IFC-report" {
-            DomainIcon::PdfIfcReportExport.into()
-        } else {
-            icon.into()
+        let icon: CommandIcon = match *name {
+            "IFC-report" if tab == "Start" => DomainIcon::PdfIfcReportExport.into(),
+            "Proeflezen" if tab == "Annotatie" => DomainIcon::PdfProofread.into(),
+            "Document splitsen" if tab == "PDF bewerken & samenvoegen" => DomainIcon::PdfSplitDocument.into(),
+            _ => icon.into(),
         };
         Command::new(*name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
     }).collect() }).collect();

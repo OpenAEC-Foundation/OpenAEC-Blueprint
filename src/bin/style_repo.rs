@@ -3370,6 +3370,12 @@ mod tests {
         assert_eq!(tabs[0].groups[0].commands[2].label, "IFC-report");
         assert!(matches!(tabs[0].groups[0].commands[2].icon,
             CommandIcon::Domain(DomainIcon::PdfIfcReportExport)));
+        assert!(tabs[3].groups.iter().flat_map(|group| &group.commands).any(|command|
+            command.label == "Proeflezen" && matches!(command.icon,
+                CommandIcon::Domain(DomainIcon::PdfProofread))));
+        assert!(tabs[4].groups.iter().flat_map(|group| &group.commands).any(|command|
+            command.label == "Document splitsen" && matches!(command.icon,
+                CommandIcon::Domain(DomainIcon::PdfSplitDocument))));
         assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
         let format = &tabs[6].groups;
         assert_eq!(format.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),

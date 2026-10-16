@@ -200,10 +200,12 @@ pub enum DomainIcon {
     PdfNavigation,
     PdfManageWatermarks,
     PdfIfcReportExport,
+    PdfProofread,
+    PdfSplitDocument,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 34] = [
+    pub const ALL: [Self; 36] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -238,6 +240,8 @@ impl DomainIcon {
         Self::PdfNavigation,
         Self::PdfManageWatermarks,
         Self::PdfIfcReportExport,
+        Self::PdfProofread,
+        Self::PdfSplitDocument,
     ];
 
     pub fn id(self) -> &'static str {
@@ -276,6 +280,8 @@ impl DomainIcon {
             Self::PdfNavigation => "pdf.navigation",
             Self::PdfManageWatermarks => "pdf.manage-watermarks",
             Self::PdfIfcReportExport => "pdf.ifc-report-export",
+            Self::PdfProofread => "pdf.proofread",
+            Self::PdfSplitDocument => "pdf.split-document",
         }
     }
 
@@ -484,6 +490,18 @@ impl DomainIcon {
             }
             (Self::PdfIfcReportExport, false) => {
                 include_bytes!("../assets/domain-icons/pdf-ifc-report-export.svg")
+            }
+            (Self::PdfProofread, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-proofread.svg")
+            }
+            (Self::PdfProofread, false) => {
+                include_bytes!("../assets/domain-icons/pdf-proofread.svg")
+            }
+            (Self::PdfSplitDocument, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-split-document.svg")
+            }
+            (Self::PdfSplitDocument, false) => {
+                include_bytes!("../assets/domain-icons/pdf-split-document.svg")
             }
         }
     }
