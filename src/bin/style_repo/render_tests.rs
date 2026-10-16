@@ -574,6 +574,68 @@ fn export_pdf_context_imported_icon_contact_sheets() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF built-in ribbon icon sheets on demand"]
+fn export_pdf_ribbon_imported_icon_contact_sheets() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/pdf-ribbon-imported-ui-icons.json"))
+            .expect("PDF ribbon import manifest"),
+    )
+    .expect("valid PDF ribbon import manifest");
+    let records = manifest["records"].as_array().expect("PDF ribbon records");
+    assert_eq!(records.len(), 122);
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut cells: Vec<iced::Element<'_, Message<Action>>> = Vec::new();
+        for item in records.iter().filter(|item| item["classification"] == "built-in-ui-icon") {
+            let name = item["name"].as_str().expect("PDF ribbon name");
+            let path = item["svg"].as_str().expect("PDF ribbon path");
+            let bytes = std::fs::read(root.join("harmonization").join(path))
+                .expect("PDF ribbon imported SVG");
+            let glyph = svg(svg::Handle::from_memory(bytes))
+                .width(24)
+                .height(24)
+                .style(move |_, _| svg::Style {
+                    color: Some(foreground),
+                });
+            cells.push(
+                container(column![text(name).size(10).color(foreground), glyph].spacing(7))
+                    .width(170)
+                    .height(70)
+                    .padding(7)
+                    .style(move |_| container::Style::default().background(background))
+                    .into(),
+            );
+        }
+        assert_eq!(cells.len(), 109);
+        let mut cells = cells.into_iter();
+        let mut rows = column![].spacing(5).padding(10);
+        for _ in 0..11 {
+            let mut line = row![].spacing(5);
+            for _ in 0..10 {
+                if let Some(cell) = cells.next() {
+                    line = line.push(cell);
+                }
+            }
+            rows = rows.push(line);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(1780.0, 840.0))
+            .save_png(&root.join(format!("design/pdf-ribbon-imported-icons-{suffix}.png")))
+            .expect("save PDF ribbon imported icon sheet");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));

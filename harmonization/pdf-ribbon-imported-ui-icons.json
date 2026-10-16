@@ -1,0 +1,2301 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Every SVG export in ribbonIcons.js, checked against the ten source-reachable built-in Solid consumers. A plugin registry also exposes this entire catalog by name, but that alone is not evidence of an icon on a built-in screen. Source token uses after import are checked to be icon/SVG contexts.",
+  "catalog_svg_exports": 122,
+  "built_in_ui_icons": 109,
+  "extension_addressable_only": 13,
+  "built_in_symbol_references": 146,
+  "consumer_files": [
+    "ToolPalette.jsx",
+    "ribbon/ArrangeTab.jsx",
+    "ribbon/CommentTab.jsx",
+    "ribbon/DrawingTab.jsx",
+    "ribbon/FormatTab.jsx",
+    "ribbon/HelpTab.jsx",
+    "ribbon/HomeTab.jsx",
+    "ribbon/ImageTab.jsx",
+    "ribbon/OrganizeTab.jsx",
+    "ribbon/ViewTab.jsx"
+  ],
+  "imports_by_file": {
+    "open-pdf-studio/js/solid/components/ToolPalette.jsx": [
+      "arrowIcon",
+      "calloutIcon",
+      "cloudIcon",
+      "cloudPolylineIcon",
+      "ellipseIcon",
+      "freehandIcon",
+      "highlightIcon",
+      "lineIcon",
+      "measureAreaIcon",
+      "measureDistanceIcon",
+      "measurePerimeterIcon",
+      "noteIcon",
+      "polygonIcon",
+      "polylineIcon",
+      "rectIcon",
+      "signatureIcon",
+      "stampIcon",
+      "textboxIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx": [
+      "alignBottomIcon",
+      "alignCenterIcon",
+      "alignLeftIcon",
+      "alignMiddleIcon",
+      "alignRightIcon",
+      "alignTopIcon",
+      "bringForwardIcon",
+      "bringToFrontIcon",
+      "distBottomIcon",
+      "distCenterIcon",
+      "distLeftIcon",
+      "distMiddleIcon",
+      "distRightIcon",
+      "distSpaceHIcon",
+      "distSpaceVIcon",
+      "distTopIcon",
+      "flipHIcon",
+      "flipVIcon",
+      "rotate180Icon",
+      "rotateCcwIcon",
+      "rotateCwIcon",
+      "sameSize16Icon",
+      "sendBackwardIcon",
+      "sendToBackIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx": [
+      "applyRedactionsIcon",
+      "arrowIcon",
+      "calibrateIcon",
+      "calloutIcon",
+      "clearAllIcon",
+      "clearPageIcon",
+      "cloudIcon",
+      "cloudPolylineIcon",
+      "ellipseIcon",
+      "freehandIcon",
+      "highlightIcon",
+      "lineIcon",
+      "measureAngleIcon",
+      "measureAreaIcon",
+      "measureDistanceIcon",
+      "measurePerimeterIcon",
+      "noteIcon",
+      "polygonIcon",
+      "polylineIcon",
+      "rectIcon",
+      "redactionIcon",
+      "signatureIcon",
+      "stampIcon",
+      "textAnnotIcon",
+      "textboxIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx": [
+      "alignBottomIcon",
+      "alignLeftIcon",
+      "alignTopIcon",
+      "arrowIcon",
+      "calloutIcon",
+      "circleIcon",
+      "clearAllIcon",
+      "cloudIcon",
+      "drawIcon",
+      "ellipseIcon",
+      "eraserIcon",
+      "findIcon",
+      "flipHIcon",
+      "flipVIcon",
+      "handIcon",
+      "lineIcon",
+      "measureAngleIcon",
+      "measureAreaIcon",
+      "measureDistanceIcon",
+      "measurePerimeterIcon",
+      "noteIcon",
+      "polylineIcon",
+      "rectIcon",
+      "rotateCwIcon",
+      "selectCommentsIcon",
+      "textboxIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx": [
+      "editTypeIcon",
+      "hideAnnotationIcon",
+      "openPropertiesIcon",
+      "resetLocationIcon",
+      "styleToolsIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx": [
+      "aboutIcon",
+      "extensionsIcon",
+      "fileAssocIcon",
+      "shortcutsIcon",
+      "updatesIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx": [
+      "actualSizeIcon",
+      "addTextIcon",
+      "cropMarginsIcon",
+      "editTextIcon",
+      "findIcon",
+      "firstPageIcon",
+      "fitPageIcon",
+      "fitWidthIcon",
+      "handIcon",
+      "lastPageIcon",
+      "nextPageIcon",
+      "preferencesIcon",
+      "prevPageIcon",
+      "previousVersionIcon",
+      "screenshotIcon",
+      "selectTextIcon",
+      "zoomInIcon",
+      "zoomOutIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx": [
+      "brightnessIcon",
+      "contrastIcon",
+      "cropIcon",
+      "grayscaleIcon",
+      "resetAdjustIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx": [
+      "addTextIcon",
+      "cropMarginsIcon",
+      "deletePageIcon",
+      "editTextIcon",
+      "extractPagesIcon",
+      "headerFooterIcon",
+      "insertPageIcon",
+      "manageWatermarksIcon",
+      "mergePdfsIcon",
+      "ocrIcon",
+      "resizePagesIcon",
+      "rotateLeftIcon",
+      "rotateRightIcon",
+      "shiftPageIcon",
+      "straightenIcon",
+      "watermarkIcon"
+    ],
+    "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx": [
+      "annotationLayersIcon",
+      "annotationsListIcon",
+      "bookViewIcon",
+      "continuousIcon",
+      "elementVisibilityIcon",
+      "facingPagesIcon",
+      "fullscreenExitIcon",
+      "fullscreenIcon",
+      "navigationIcon",
+      "propertiesIcon",
+      "rotateLeftIcon",
+      "rotateRightIcon",
+      "singlePageIcon",
+      "toolPaletteIcon"
+    ]
+  },
+  "identical_source_shapes": [
+    {
+      "names": [
+        "fitWidthIcon",
+        "fitPageIcon"
+      ],
+      "assessment": "Splits aanpassen aan breedte en volledige pagina: dezelfde hoeken zeggen niet welke maat leidend is."
+    },
+    {
+      "names": [
+        "actualSizeIcon",
+        "findIcon"
+      ],
+      "assessment": "Ware grootte en zoeken moeten verschillende tekens krijgen; het huidige vergrootglas verbergt het verschil."
+    },
+    {
+      "names": [
+        "editTextIcon",
+        "textAnnotIcon"
+      ],
+      "assessment": "Tekst bewerken is ingebouwd; textAnnotIcon heeft hier geen ingebouwde aanroep. Bewaar de betekenissen apart."
+    },
+    {
+      "names": [
+        "clearPageIcon",
+        "deletePageIcon"
+      ],
+      "assessment": "Pagina-inhoud wissen en pagina verwijderen hebben verschillende destructieve reikwijdte."
+    },
+    {
+      "names": [
+        "singlePageIcon",
+        "continuousIcon",
+        "fileAssocIcon"
+      ],
+      "assessment": "Enkele pagina, doorlopend lezen en bestandsassociatie mogen niet hetzelfde documentblad blijven."
+    },
+    {
+      "names": [
+        "bookViewIcon",
+        "shortcutsIcon"
+      ],
+      "assessment": "Boekweergave en sneltoetsen verwijzen naar verschillende objecten."
+    },
+    {
+      "names": [
+        "navigationIcon",
+        "manageWatermarksIcon"
+      ],
+      "assessment": "Navigatie en watermerkbeheer vragen om onderscheidende objecten."
+    }
+  ],
+  "records": [
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 7,
+      "ordinal": 1,
+      "name": "fullscreenIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 153,
+          "source_excerpt": "icon={isFullscreen() ? fullscreenExitIcon : fullscreenIcon}"
+        }
+      ],
+      "sha256": "cd5740cdef4574732e48c1897b3f86ee28355f0d7fea7c7122567b43e7296ec9",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/fullscreen-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 9,
+      "ordinal": 2,
+      "name": "fullscreenExitIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 153,
+          "source_excerpt": "icon={isFullscreen() ? fullscreenExitIcon : fullscreenIcon}"
+        }
+      ],
+      "sha256": "dfdee0f28fe112a8c4d6006ea24ffc69050b764f1483b237daebf58dd8c513ba",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/fullscreen-exit-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 13,
+      "ordinal": 3,
+      "name": "handIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 186,
+          "source_excerpt": "<RibbonButton id=\"dr-pan\" title={t('home.handTool')} icon={handIcon} label={t('home.hand')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 73,
+          "source_excerpt": "<RibbonButton id=\"tool-hand\" title={t('home.handTool')} icon={handIcon} label={t('home.hand')}"
+        }
+      ],
+      "sha256": "ace791825c03d3d96bc7150511170bf3a756f2a63cefa74d279cb14e7566c8ab",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/hand-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 15,
+      "ordinal": 4,
+      "name": "selectTextIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 75,
+          "source_excerpt": "<RibbonButton id=\"tool-select\" title={t('home.select') || 'Select'} icon={selectTextIcon} label={t('home.select') || 'Select'}"
+        }
+      ],
+      "sha256": "a23bcd0772972ac27ba32d3e614b1929ae21797b708d5aa511588d7038373284",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/select-text-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 17,
+      "ordinal": 5,
+      "name": "selectCommentsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 184,
+          "source_excerpt": "<RibbonButton id=\"dr-select\" title={t('home.select')} icon={selectCommentsIcon} label={t('home.select')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 192,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-select-all\" title={t('drawing.selectAll')} icon={selectCommentsIcon} label={t('drawing.selectAll')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 198,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-deselect\" title={t('drawing.deselect')} icon={selectCommentsIcon} label={t('drawing.deselect')}"
+        }
+      ],
+      "sha256": "c428c6d013faa59baa5c9f6aceeadbba29bb641d604f42a1532f4212665615fe",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/select-comments-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 19,
+      "ordinal": 6,
+      "name": "screenshotIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 84,
+          "source_excerpt": "mainIcon={screenshotIcon}"
+        }
+      ],
+      "sha256": "a36e2ff02348c7e1e1ddd8e9988d0faf33c97f367c87229489af090653ee8ddc",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/screenshot-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 21,
+      "ordinal": 7,
+      "name": "screenshotDropdownArrow",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "a16969716a9c218dde2dfc54f3868aff4b434d36fb12cf4ced3774012c33f0c2"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 23,
+      "ordinal": 8,
+      "name": "screenshotPageMenuIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "8ea880a203cb0d103d61dc51aca8150bc41576010efe3acb6a0e54f48b5a91b4"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 25,
+      "ordinal": 9,
+      "name": "screenshotRegionMenuIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "817a29bf00be177e4331db8d35bbc632c4a7bb3f7c0b1896d84d4018ca4b3a22"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 29,
+      "ordinal": 10,
+      "name": "zoomInIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 134,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"zoom-in-ribbon\" title={t('home.zoomIn')} icon={zoomInIcon} label={t('home.zoomIn')}"
+        }
+      ],
+      "sha256": "0649c5b04de80931b192f2b33e092dac57f43d51cd335f9812bc291535882ced",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/zoom-in-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 31,
+      "ordinal": 11,
+      "name": "zoomOutIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 136,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"zoom-out-ribbon\" title={t('home.zoomOut')} icon={zoomOutIcon} label={t('home.zoomOut')}"
+        }
+      ],
+      "sha256": "1454df05c0aec0874abc8f3631b050265b460639f74db1a61fda27c619f39a61",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/zoom-out-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 33,
+      "ordinal": 12,
+      "name": "fitWidthIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 138,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"fit-width\" title={t('home.fitWidth')} icon={fitWidthIcon} label={t('home.fitWidth')}"
+        }
+      ],
+      "sha256": "aaf5b488e4a82f6805cb73029df1cee1b3f3a10784fd1925d72fbe401d39c7ce",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/fit-width-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 35,
+      "ordinal": 13,
+      "name": "actualSizeIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 142,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"actual-size-ribbon\" title={t('home.actualSize')} icon={actualSizeIcon} label={t('home.hundredPercent')}"
+        }
+      ],
+      "sha256": "e6e85924a714eddaa8c844d420a2870ade410999b326e2689b1eefd0ef06b8a9",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/actual-size-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 37,
+      "ordinal": 14,
+      "name": "fitPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 144,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"fit-page-ribbon\" title={t('home.fitPage')} icon={fitPageIcon} label={t('home.fitPageLabel')}"
+        }
+      ],
+      "sha256": "aaf5b488e4a82f6805cb73029df1cee1b3f3a10784fd1925d72fbe401d39c7ce",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/fit-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 39,
+      "ordinal": 15,
+      "name": "rotateLeftIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 86,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"rotate-left\" title={t('home.rotateLeft')} icon={rotateLeftIcon} label={t('home.rotateLeft')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 65,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"view-rotate-left\" title={t('view.rotateViewLeftTitle')} icon={rotateLeftIcon} label={t('view.rotateViewLeft')}"
+        }
+      ],
+      "sha256": "a7c04bb80a446a2bf5ab4fd4db0d98ebf1d142de9fd5013a29d75b39c246841a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rotate-left-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 41,
+      "ordinal": 16,
+      "name": "rotateRightIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 88,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"rotate-right\" title={t('home.rotateRight')} icon={rotateRightIcon} label={t('home.rotateRight')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 67,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"view-rotate-right\" title={t('view.rotateViewRightTitle')} icon={rotateRightIcon} label={t('view.rotateViewRight')}"
+        }
+      ],
+      "sha256": "faa0324f795529bcaa70e06ee540a5b4e236e8c7bd8a1e7b875f092ab5584c30",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rotate-right-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 45,
+      "ordinal": 17,
+      "name": "editTextIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 49,
+          "source_excerpt": "<RibbonButton id=\"ep-edit-text\" title={t('home.editText')} icon={editTextIcon} label={t('home.editText')}"
+        }
+      ],
+      "sha256": "a63ef86600ab359e2e999284548a4e9c1a72c594580b42a8aa80c98fc57b8086",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/edit-text-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 47,
+      "ordinal": 18,
+      "name": "addTextIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 51,
+          "source_excerpt": "<RibbonButton id=\"ep-add-text\" title={t('home.addText')} icon={addTextIcon} label={t('home.addText')}"
+        }
+      ],
+      "sha256": "e2ce0bf041663193b764e82bdf4f7f1f9763dc22e7e105cd744f3c393da1f880",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/add-text-icon.svg",
+      "native_preview_limitation": "Iced omits source SVG <text> glyph"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 49,
+      "ordinal": 19,
+      "name": "ocrIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 55,
+          "source_excerpt": "<RibbonButton id=\"ep-ocr\" title={t('organize.ocr')} icon={ocrIcon} label={t('organize.ocr')}"
+        }
+      ],
+      "sha256": "60a9947458c45849dc2cfb6335ccb80511f1a8d6d43e4e2bc6e47b2946cd1007",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/ocr-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 51,
+      "ordinal": 20,
+      "name": "cropMarginsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 60,
+          "source_excerpt": "<RibbonButton id=\"ep-crop-margins\" title={t('home.cropMargins')} icon={cropMarginsIcon} label={t('home.crop')}"
+        }
+      ],
+      "sha256": "3891e3398f82ef463eb55c18f80880845a84204419d16dde1e4b8004f495fc7a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/crop-margins-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 53,
+      "ordinal": 21,
+      "name": "resizePagesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 75,
+          "source_excerpt": "<RibbonButton id=\"ep-resize-pages\" title={t('home.resizePages')} icon={resizePagesIcon} label={t('home.resize')}"
+        }
+      ],
+      "sha256": "9757f91e5a6c1b22c9377cfa3cd9f905e4d498f5d4b591d744315a98841891c4",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/resize-pages-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 55,
+      "ordinal": 22,
+      "name": "straightenIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 65,
+          "source_excerpt": "<RibbonButton id=\"ep-straighten\" title={t('organize.straighten')} icon={straightenIcon} label={t('organize.straighten')}"
+        }
+      ],
+      "sha256": "e97dd104d39eaffe47e85226b5273cce5277247461030e7db2e493d5ff433a90",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/straighten-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 57,
+      "ordinal": 23,
+      "name": "shiftPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 70,
+          "source_excerpt": "<RibbonButton id=\"ep-shift-page\" title={t('organize.shiftPage')} icon={shiftPageIcon} label={t('organize.shiftPage')}"
+        }
+      ],
+      "sha256": "0c577b8b7096b0c107018c04094d140357b82086e82cedc90ffb4a86ca8c72ae",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/shift-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 61,
+      "ordinal": 24,
+      "name": "firstPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 155,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"first-page\" title={t('home.firstPage')} icon={firstPageIcon} label={t('home.first')}"
+        }
+      ],
+      "sha256": "ca13383507b0416a1826fc5d19393ad98ae23e446d377d2b3a1db482fb940d36",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/first-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 63,
+      "ordinal": 25,
+      "name": "prevPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 157,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"prev-page-ribbon\" title={t('home.previousPage')} icon={prevPageIcon} label={t('home.previous')}"
+        }
+      ],
+      "sha256": "d07cc1c4975efcda7c80cf043c4d6dc279f1b18ad3c0a9c4bbea1e8258bf5f18",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/prev-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 65,
+      "ordinal": 26,
+      "name": "nextPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 161,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"next-page-ribbon\" title={t('home.nextPage')} icon={nextPageIcon} label={t('home.next')}"
+        }
+      ],
+      "sha256": "56d0db5eeddde143413122fd1824c78e42fd3a423627fbfa56b31e29da803764",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/next-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 67,
+      "ordinal": 27,
+      "name": "lastPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 163,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"last-page\" title={t('home.lastPage')} icon={lastPageIcon} label={t('home.last')}"
+        }
+      ],
+      "sha256": "ff516a1432bdaeb93bcf269852c8e417e6c11cd2fd2dd56b76959fb600ca9859",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/last-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 71,
+      "ordinal": 28,
+      "name": "findIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 204,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-find\" title={t('drawing.findReplace')} icon={findIcon} label={t('drawing.findReplace')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 169,
+          "source_excerpt": "<RibbonButton id=\"ribbon-find\" title={t('home.findCtrlF')} icon={findIcon} label={t('home.find')}"
+        }
+      ],
+      "sha256": "e6e85924a714eddaa8c844d420a2870ade410999b326e2689b1eefd0ef06b8a9",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/find-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 75,
+      "ordinal": 29,
+      "name": "highlightIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 106,
+          "source_excerpt": "{ tool: 'highlight', key: 'comment.highlight', icon: highlightIcon, group: 1 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 45,
+          "source_excerpt": "<RibbonButton id=\"tool-highlight\" title={t('comment.highlight')} icon={highlightIcon} label={t('comment.highlight')}"
+        }
+      ],
+      "sha256": "ece77c725043a40f4b67bdc03e1307d61f8df9279bc4112bb8f403409400f8b5",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/highlight-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 77,
+      "ordinal": 30,
+      "name": "freehandIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 107,
+          "source_excerpt": "{ tool: 'draw', key: 'comment.freehand', icon: freehandIcon, group: 1 },"
+        }
+      ],
+      "sha256": "c866cb2a419417c3c663f03ac492a07ecafa7fffe1d4a97f14e3fea03f6311ff",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/freehand-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 79,
+      "ordinal": 31,
+      "name": "lineIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 108,
+          "source_excerpt": "{ tool: 'line', key: 'comment.line', icon: lineIcon, group: 1 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 214,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-line\" title={t('comment.line')} icon={lineIcon}"
+        }
+      ],
+      "sha256": "6016dc591a397319174670f5e2fc43862c76600cbdc24fece01a5da831b70f20",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/line-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 81,
+      "ordinal": 32,
+      "name": "arrowIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 109,
+          "source_excerpt": "{ tool: 'arrow', key: 'comment.arrow', icon: arrowIcon, group: 1 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 216,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-arrow\" title={t('comment.arrow')} icon={arrowIcon}"
+        }
+      ],
+      "sha256": "a6bc285552d57345038befbd27580581c9d951e56291e0c7b2c15b94ee40f18d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/arrow-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 84,
+      "ordinal": 33,
+      "name": "drawIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 220,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-draw\" title={t('comment.freehand')} icon={drawIcon}"
+        }
+      ],
+      "sha256": "d784ad76c9cc0c8257a8cde3e1e5c4a9f4b4222c4c0511c7298bb62c89752512",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/draw-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 86,
+      "ordinal": 34,
+      "name": "eraserIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 222,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-eraser\" title={t('drawing.eraser')} icon={eraserIcon}"
+        }
+      ],
+      "sha256": "319d1c479b369c9d2fd3d4183e0959df0737b0e4198cb71239d3187d44c0e153",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/eraser-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 88,
+      "ordinal": 35,
+      "name": "polylineIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 110,
+          "source_excerpt": "{ tool: 'polyline', key: 'comment.polyline', icon: polylineIcon, group: 1 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 228,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-polyline\" title={`${t('comment.polylineTitle')} — ${t('drawing.dimHint')}`} icon={polylineIcon}"
+        }
+      ],
+      "sha256": "fbfaf775478e17ec3a48307888c6926185d41c2c3261859d7757439481214865",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/polyline-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 92,
+      "ordinal": 36,
+      "name": "rectIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 111,
+          "source_excerpt": "{ tool: 'box', key: 'comment.rect', icon: rectIcon, group: 2 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 224,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-rect\" title={`${t('comment.rectangle')} — ${t('drawing.dimHint')}`} icon={rectIcon}"
+        }
+      ],
+      "sha256": "8b841daaeefcc84cc1debb3eb52b7fbbb97fe372459e95911faade9f2c719e1a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rect-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 94,
+      "ordinal": 37,
+      "name": "circleIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 239,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-circle\" title={`${t('format.circle') || 'Circle'} — ${t('drawing.dimHint')}`} icon={circleIcon}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 243,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-count\" title=\"Tellen\" icon={circleIcon}"
+        }
+      ],
+      "sha256": "1e237ded9e14c817b743a17472cbcc2d6fdf39af6e9d070dcaad3a1fb75bd77c",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/circle-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 95,
+      "ordinal": 38,
+      "name": "ellipseIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 112,
+          "source_excerpt": "{ tool: 'circle', key: 'comment.ellipse', icon: ellipseIcon, group: 2 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 241,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-ellipse\" title={`${t('comment.ellipse') || 'Ellipse'} — ${t('drawing.dimHint')}`} icon={ellipseIcon}"
+        }
+      ],
+      "sha256": "0e37d6108a6c510869431c8ccdfe415ccecd7799f6409c21c15e12694d7c781e",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/ellipse-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 97,
+      "ordinal": 39,
+      "name": "polygonIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 113,
+          "source_excerpt": "{ tool: 'polygon', key: 'comment.polygon', icon: polygonIcon, group: 2 },"
+        }
+      ],
+      "sha256": "ef95ed3b9ba607e5b1c56e697b02e92579b6247ad5bcc0e4f6795ea154385f46",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/polygon-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 99,
+      "ordinal": 40,
+      "name": "cloudIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 114,
+          "source_excerpt": "{ tool: 'cloud', key: 'comment.cloud', icon: cloudIcon, group: 2 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 367,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-cloud\" title={t('comment.cloud')} icon={cloudIcon} label={t('comment.cloud')}"
+        }
+      ],
+      "sha256": "f06679817b9a2f70ca0a22500effd605c7e2ed4111ce46c21b88290fd2d39cc1",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/cloud-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 101,
+      "ordinal": 41,
+      "name": "cloudPolylineIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 115,
+          "source_excerpt": "{ tool: 'cloudPolyline', key: 'comment.cloudPolyline', icon: cloudPolylineIcon, group: 2 },"
+        }
+      ],
+      "sha256": "dfd3e6392281a87140fcddbd887578ccc34ac230e57f4896da1a84011e8d17f6",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/cloud-polyline-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 105,
+      "ordinal": 42,
+      "name": "textAnnotIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "a63ef86600ab359e2e999284548a4e9c1a72c594580b42a8aa80c98fc57b8086"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 107,
+      "ordinal": 43,
+      "name": "textboxIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 116,
+          "source_excerpt": "{ tool: 'textbox', key: 'comment.textBox', icon: textboxIcon, group: 3 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 50,
+          "source_excerpt": "<RibbonButton id=\"tool-textbox\" title={t('comment.textBox')} icon={textboxIcon} label={t('comment.textBox')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 232,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-text\" title={t('comment.textBox')} icon={textboxIcon}"
+        }
+      ],
+      "sha256": "0dacd1a32cd9a666af091332da804db2ca9e7b27ccaa44f5677ef8c0ea3de990",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/textbox-icon.svg",
+      "native_preview_limitation": "Iced omits source SVG <text> glyph"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 109,
+      "ordinal": 44,
+      "name": "noteIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 118,
+          "source_excerpt": "{ tool: 'comment', key: 'comment.note', icon: noteIcon, group: 3 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 54,
+          "source_excerpt": "<RibbonButton id=\"tool-comment\" title={t('comment.note')} icon={noteIcon} label={t('comment.note')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 234,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-note\" title={t('comment.note')} icon={noteIcon}"
+        }
+      ],
+      "sha256": "f0cf36e39e25c93331fac8b63bdb0d07fa76a65eb77e972a82ffd2dd2f1cc6eb",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/note-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 111,
+      "ordinal": 45,
+      "name": "calloutIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 117,
+          "source_excerpt": "{ tool: 'callout', key: 'comment.callout', icon: calloutIcon, group: 3 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 52,
+          "source_excerpt": "<RibbonButton id=\"tool-callout\" title={t('comment.callout')} icon={calloutIcon} label={t('comment.callout')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 358,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-leader\" title={t('comment.callout')} icon={calloutIcon} label={t('drawing.leader')}"
+        }
+      ],
+      "sha256": "6e638f07610286f664fc7f9e0a58ad62c63865d71cbb16c50f345113e012454a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/callout-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 115,
+      "ordinal": 46,
+      "name": "stampIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 119,
+          "source_excerpt": "{ tool: 'stamp', key: 'comment.stamp', icon: stampIcon, group: 4 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 59,
+          "source_excerpt": "<RibbonButton id=\"tool-stamp\" title={t('comment.stamp')} icon={stampIcon} label={t('comment.stamp')}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 64,
+          "source_excerpt": "icon={stampIcon} label={t('comment.parametricSymbol')}"
+        }
+      ],
+      "sha256": "2ebad6367a2cb2eb4f8a401ea38880069b33fc37f256de365ebc04c3c3b9e3b8",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/stamp-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 117,
+      "ordinal": 47,
+      "name": "signatureIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 120,
+          "source_excerpt": "{ tool: 'signature', key: 'comment.signature', icon: signatureIcon, group: 4 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 61,
+          "source_excerpt": "<RibbonButton id=\"tool-signature\" title={t('comment.signature')} icon={signatureIcon} label={t('comment.signature')}"
+        }
+      ],
+      "sha256": "383ac460d42c9a1ee12f0184ec9614ed177144a75f96f5cff1a256dc2c057509",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/signature-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 119,
+      "ordinal": 48,
+      "name": "northArrowIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "6c6ef96b931141d4ce6b3fbe558173fd1d75689b0c3fafd4cb6e8bdcb9d12a98"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 123,
+      "ordinal": 49,
+      "name": "measureDistanceIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 121,
+          "source_excerpt": "{ tool: 'measureDistance', key: 'comment.measureDistance', icon: measureDistanceIcon, group: 5 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 138,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"tool-measure-distance\" title={t('measure.measureDistance') || 'Afstand meten'} icon={measureDistanceIcon} label={t('measure.distance') || 'Afstand'}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 335,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-length\" title={t('measure.measureDistance')} icon={measureDistanceIcon} label={t('drawing.length') || 'Lengte'}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 341,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-dimension\" title={t('measure.measureDistance')} icon={measureDistanceIcon} label={t('drawing.dimension') || 'Maatlijn'}"
+        }
+      ],
+      "sha256": "03143545867c22a5131c79d6460f0d57c842749d9292940b3b8aef383c8f0af9",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/measure-distance-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 125,
+      "ordinal": 50,
+      "name": "measureAreaIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 122,
+          "source_excerpt": "{ tool: 'measureArea', key: 'comment.measureArea', icon: measureAreaIcon, group: 5 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 140,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"tool-measure-area\" title={t('measure.measureArea') || 'Oppervlakte meten'} icon={measureAreaIcon} label={t('measure.area') || 'Oppervlakte'}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 333,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-area\" title={t('measure.measureArea') || 'Oppervlakte meten'} icon={measureAreaIcon} label={t('drawing.area') || 'Oppervlakte'}"
+        }
+      ],
+      "sha256": "ab673ee96d26f8aba3cdedc4a3c7038ad793ca97bf985de7c08619fd8f4df4cf",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/measure-area-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 127,
+      "ordinal": 51,
+      "name": "measurePerimeterIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+          "line": 123,
+          "source_excerpt": "{ tool: 'measurePerimeter', key: 'comment.measurePerimeter', icon: measurePerimeterIcon, group: 5 },"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 144,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"tool-measure-perimeter\" title={t('measure.measurePerimeter') || 'Omtrek meten'} icon={measurePerimeterIcon} label={t('measure.perimeter') || 'Omtrek'"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 369,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-measure\" title={t('measure.measurePerimeter')} icon={measurePerimeterIcon} label={t('drawing.measure')}"
+        }
+      ],
+      "sha256": "7b257267538b2ac571c537d60ca26783530274c306f3ad4b02da010d71a0e06f",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/measure-perimeter-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 129,
+      "ordinal": 52,
+      "name": "measureAngleIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 146,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"tool-measure-angle\" title={t('measure.measureAngle') || 'Hoek meten'} icon={measureAngleIcon} label={t('measure.angle') || 'Hoek'}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 343,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-angular\" title={t('measure.measureAngle')} icon={measureAngleIcon} label={t('drawing.angular')}"
+        }
+      ],
+      "sha256": "66bbbc7a4498fcae88d98620abf8b525e829c38bfef9e30caac7ac393d154405",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/measure-angle-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 131,
+      "ordinal": 53,
+      "name": "calibrateIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "f15f83fd230ba4f7b65a4cc6fc9bf1ff69c7cab1c75d784525a7f268b6e625f6"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 133,
+      "ordinal": 54,
+      "name": "snapToDrawingIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "e61c79fd3a7c544a5c0df95c18d453779a7784ff050d3d0c76c9e9da575b90b1"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 137,
+      "ordinal": 55,
+      "name": "redactionIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 71,
+          "source_excerpt": "<RibbonButton id=\"tool-redaction\" title={t('comment.markForRedaction')} icon={redactionIcon} label={t('comment.redact')}"
+        }
+      ],
+      "sha256": "e636b2b0f4df359cd684d0a8712291304766b29b831aea5d3b78077305b87e6d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/redaction-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 139,
+      "ordinal": 56,
+      "name": "applyRedactionsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 73,
+          "source_excerpt": "<RibbonButton id=\"btn-apply-redactions\" title={t('comment.applyRedactions')} icon={applyRedactionsIcon} label={t('comment.applyLabel')}"
+        }
+      ],
+      "sha256": "a8bed8a62f978ca780b9fa947263cf6805b050fd0875e8743eb2ff20b2971122",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/apply-redactions-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 143,
+      "ordinal": 57,
+      "name": "undoIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "2413314a4d07e0dcd68057097153df0bc056ce90418420ff7e94cc9bb4d306cd"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 145,
+      "ordinal": 58,
+      "name": "clearPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 102,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"tool-clear\" title={t('comment.clearPageAnnotations')} icon={clearPageIcon} label={t('comment.clearPage')}"
+        }
+      ],
+      "sha256": "59fb523dc95ab9c17ec1efdb1dfd07652a9177735343358d0c020a2db71633e6",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/clear-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 147,
+      "ordinal": 59,
+      "name": "clearAllIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+          "line": 120,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"ribbon-clear-all\" title={t('comment.clearAllAnnotations')} icon={clearAllIcon} label={t('comment.clearAll')}"
+        }
+      ],
+      "sha256": "9a5d657c935c730bf97b7613ab73df73264ff61c64966d384641c0b5d2e43750",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/clear-all-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 151,
+      "ordinal": 60,
+      "name": "singlePageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 42,
+          "source_excerpt": "<RibbonButton id=\"single-page\" title={t('view.singlePage')} icon={singlePageIcon} label={t('view.single')}"
+        }
+      ],
+      "sha256": "167cf764b3ab389388ae23ec34a91473648e0611be10d2f0764ca5338ceba44d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/single-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 153,
+      "ordinal": 61,
+      "name": "continuousIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 45,
+          "source_excerpt": "<RibbonButton id=\"continuous\" title={t('view.continuousTitle')} icon={continuousIcon} label={t('view.continuous')}"
+        }
+      ],
+      "sha256": "167cf764b3ab389388ae23ec34a91473648e0611be10d2f0764ca5338ceba44d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/continuous-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 155,
+      "ordinal": 62,
+      "name": "bookViewIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 52,
+          "source_excerpt": "<RibbonButton id=\"book-view\" title={t('view.bookTitle')} icon={bookViewIcon} label={t('view.book')}"
+        }
+      ],
+      "sha256": "31f01ceab3660dec1a9d7e24dfaed8b25513a9e11571692fad13ba36f55fc866",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/book-view-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 160,
+      "ordinal": 63,
+      "name": "facingPagesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 60,
+          "source_excerpt": "<RibbonButton id=\"facing-view\" title={t('view.facingTitle')} icon={facingPagesIcon} label={t('view.facing')}"
+        }
+      ],
+      "sha256": "412ad930f35b52d8595c45d6edab472df6e5aecc99fb0f650a956ccb3a9f381f",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/facing-pages-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 162,
+      "ordinal": 64,
+      "name": "navigationIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 112,
+          "source_excerpt": "<RibbonButton id=\"ribbon-nav-panel\" title={t('view.navigationPanel')} icon={navigationIcon} label={t('view.navigation')}"
+        }
+      ],
+      "sha256": "c7df109919fed3a211afc857baf31010e0a6f7ba814e087d5bf66dffb5b71a53",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/navigation-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 164,
+      "ordinal": 65,
+      "name": "propertiesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 114,
+          "source_excerpt": "<RibbonButton id=\"ribbon-properties-panel\" title={t('view.propertiesPanel')} icon={propertiesIcon} label={t('view.propertiesLabel')}"
+        }
+      ],
+      "sha256": "974c2b1aae83f27528e8a88bb1299cd326306b54eb85c8b8b736f2cadd8122fd",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/properties-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 166,
+      "ordinal": 66,
+      "name": "annotationsListIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 118,
+          "source_excerpt": "<RibbonButton id=\"ribbon-annotations-list\" title={t('view.annotationsList')} icon={annotationsListIcon} label={t('view.annotationsLabel')}"
+        }
+      ],
+      "sha256": "bbaf809d47b7f67b4f2b2ce6d024bb8b3860be6eb3059dc0ae8c835b730751c0",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/annotations-list-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 168,
+      "ordinal": 67,
+      "name": "thinLinesIcon",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "2d75c5ddf5b8afa0d2891b8118b09e4e9c3edad4442e14e2bfbf71e88b0226ac"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 170,
+      "ordinal": 68,
+      "name": "themeDropdownArrow",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "7b416d84d63dd21916354c7cd64becb140f83f25d033f6ba1855177762caf1fb"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 174,
+      "ordinal": 69,
+      "name": "annotationLayersIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 122,
+          "source_excerpt": "<RibbonButton id=\"ribbon-annotation-layers\" title={t('annotationLayers.buttonTitle')} icon={annotationLayersIcon} label={t('annotationLayers.buttonLabel')}"
+        }
+      ],
+      "sha256": "55c3921a4acc8b2afa53f559311e7333f984362ab65c3b6e42e7810e9293650c",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/annotation-layers-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 175,
+      "ordinal": 70,
+      "name": "elementVisibilityIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 120,
+          "source_excerpt": "<RibbonButton id=\"ribbon-element-visibility\" title={t('elementVisibility.buttonTitle')} icon={elementVisibilityIcon} label={t('elementVisibility.buttonLabel')}"
+        }
+      ],
+      "sha256": "86b9921efff5ba645b6c120b28579e2e586e417c07028f585747acf98e866c69",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/element-visibility-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 179,
+      "ordinal": 71,
+      "name": "insertPageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 94,
+          "source_excerpt": "<RibbonButton id=\"insert-page\" title={t('organize.insertPage')} icon={insertPageIcon} label={t('organize.insert')}"
+        }
+      ],
+      "sha256": "acf9c0b53520be8cd6a4378ed2fba2e4fef462054048fd2e993d662e37b3cec7",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/insert-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 181,
+      "ordinal": 72,
+      "name": "deletePageIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 96,
+          "source_excerpt": "<RibbonButton id=\"delete-page\" title={t('organize.deletePage')} icon={deletePageIcon} label={t('organize.deleteLabel')}"
+        }
+      ],
+      "sha256": "59fb523dc95ab9c17ec1efdb1dfd07652a9177735343358d0c020a2db71633e6",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/delete-page-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 183,
+      "ordinal": 73,
+      "name": "extractPagesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 99,
+          "source_excerpt": "<RibbonButton id=\"extract-pages\" title={t('organize.extractPages')} icon={extractPagesIcon} label={t('organize.extractLabel')}"
+        }
+      ],
+      "sha256": "9b562d3088f0d16aa0154a13b5e7c6dfa118f47fe6e36dd813949a0b2480bf68",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/extract-pages-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 185,
+      "ordinal": 74,
+      "name": "mergePdfsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 109,
+          "source_excerpt": "<RibbonButton id=\"merge-pdfs\" title={t('organize.mergePdfs')} icon={mergePdfsIcon} label={t('organize.mergeLabel')}"
+        }
+      ],
+      "sha256": "5bebc690c927e1431aa938191a3dfdb69d871ebfd91566c9a638bd8f5cbf06b6",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/merge-pdfs-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 187,
+      "ordinal": 75,
+      "name": "watermarkIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 127,
+          "source_excerpt": "<RibbonButton id=\"add-watermark\" title={t('organize.addWatermark')} icon={watermarkIcon} label={t('organize.watermarkLabel')}"
+        }
+      ],
+      "sha256": "de941878dbd46d5a87153666d7c39225e70236dd995a3df51535372565c43b27",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/watermark-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 189,
+      "ordinal": 76,
+      "name": "headerFooterIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 129,
+          "source_excerpt": "<RibbonButton id=\"add-header-footer\" title={t('organize.addHeaderFooter')} icon={headerFooterIcon} label={t('organize.headerFooter')}"
+        }
+      ],
+      "sha256": "9928ac95780dbebe34e6299a45c6a98a1150fa2cc924e99032ff65d69bcf3fd7",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/header-footer-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 191,
+      "ordinal": 77,
+      "name": "manageWatermarksIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+          "line": 131,
+          "source_excerpt": "<RibbonButton id=\"manage-watermarks\" title={t('organize.manageWatermarks')} icon={manageWatermarksIcon} label={t('organize.manage')}"
+        }
+      ],
+      "sha256": "c7df109919fed3a211afc857baf31010e0a6f7ba814e087d5bf66dffb5b71a53",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/manage-watermarks-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 195,
+      "ordinal": 78,
+      "name": "aboutIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 50,
+          "source_excerpt": "icon={aboutIcon}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 57,
+          "source_excerpt": "icon={aboutIcon}"
+        }
+      ],
+      "sha256": "5a41c621382566372ff7b140d07739e0ebd66fa6306c0ba31d5ba014f443eb2a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/about-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 197,
+      "ordinal": 79,
+      "name": "shortcutsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 43,
+          "source_excerpt": "icon={shortcutsIcon}"
+        }
+      ],
+      "sha256": "31f01ceab3660dec1a9d7e24dfaed8b25513a9e11571692fad13ba36f55fc866",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/shortcuts-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 200,
+      "ordinal": 80,
+      "name": "previousVersionIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 178,
+          "source_excerpt": "icon={previousVersionIcon} label={t('help.previousVersion')}"
+        }
+      ],
+      "sha256": "b36d4297fe56d02149ccae76d74d05c1913052eb9451983c71d7f3cb47499b61",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/previous-version-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 202,
+      "ordinal": 81,
+      "name": "updatesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 64,
+          "source_excerpt": "icon={updatesIcon}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 71,
+          "source_excerpt": "icon={updatesIcon}"
+        }
+      ],
+      "sha256": "75073748839a26795cc0696fda048f1b55a9cccaab5132c09f0df19db16bf45a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/updates-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 204,
+      "ordinal": 82,
+      "name": "fileAssocIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 33,
+          "source_excerpt": "icon={fileAssocIcon}"
+        }
+      ],
+      "sha256": "167cf764b3ab389388ae23ec34a91473648e0611be10d2f0764ca5338ceba44d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/file-assoc-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 206,
+      "ordinal": 83,
+      "name": "preferencesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+          "line": 175,
+          "source_excerpt": "icon={preferencesIcon} label={t('help.preferences')}"
+        }
+      ],
+      "sha256": "d6052db8db94d59477e1e4d8f8b8579c64a1c5b9040ee01f97d20eed1341b682",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/preferences-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 208,
+      "ordinal": 84,
+      "name": "extensionsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+          "line": 26,
+          "source_excerpt": "icon={extensionsIcon}"
+        }
+      ],
+      "sha256": "1b19b453fd77a17ac9ef705f229f329c014c29f8b79a4c973c7a682ae7bd3269",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/extensions-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 212,
+      "ordinal": 85,
+      "name": "styleMoreArrow",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "4652bdff4c8ed8cb8b40fb475395d46a2d17de660313e3cafc2ee924a8e572c0"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 214,
+      "ordinal": 86,
+      "name": "colorDropdownArrow",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "9f6fd2656341d7796ed17c7d4612d061c9d0c1f9522164b8ef8a4bd77607f680"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 216,
+      "ordinal": 87,
+      "name": "dropdownArrowSmall",
+      "classification": "extension-addressable-only",
+      "uses": [],
+      "sha256": "c79f6f4082d3c8b93590855264aaf7a7594cbb427d0c9b6a13c2935ad4739b48"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 220,
+      "ordinal": 88,
+      "name": "styleToolsIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+          "line": 372,
+          "source_excerpt": "<span ref={el => { el.innerHTML = styleToolsIcon; }} />"
+        }
+      ],
+      "sha256": "2b0854b3625970656a2376d772ec3f409b17de4713c2ec7c7214ff4faee8a68a",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/style-tools-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 222,
+      "ordinal": 89,
+      "name": "resetLocationIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+          "line": 432,
+          "source_excerpt": "<span ref={el => { el.innerHTML = resetLocationIcon; }} />"
+        }
+      ],
+      "sha256": "e735fbfdcab5946613d8c80dd3723228cdaeab4640a3b410d1b8b80d97200ae2",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/reset-location-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 224,
+      "ordinal": 90,
+      "name": "openPropertiesIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+          "line": 451,
+          "source_excerpt": "<span ref={el => { el.innerHTML = openPropertiesIcon; }} />"
+        }
+      ],
+      "sha256": "1d998aa8adaa3eb5680b3883c3f49048afe491221ab313885086c5caff8d9c93",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/open-properties-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 226,
+      "ordinal": 91,
+      "name": "hideAnnotationIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+          "line": 459,
+          "source_excerpt": "<span ref={el => { el.innerHTML = hideAnnotationIcon; }} />"
+        }
+      ],
+      "sha256": "5d742c88b4e80cc80d3ef167ca51bedfec32c086c3b2bdd1f052714b5b77dd62",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/hide-annotation-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 231,
+      "ordinal": 92,
+      "name": "cropIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx",
+          "line": 32,
+          "source_excerpt": "<div class=\"ribbon-btn-icon\" ref={el => { el.innerHTML = cropIcon; }}></div>"
+        }
+      ],
+      "sha256": "62a3554b2bf4673a8a60e8d5a562c4ccdce35a4fb3308ed5b4b548f5065b24d0",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/crop-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 234,
+      "ordinal": 93,
+      "name": "grayscaleIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx",
+          "line": 47,
+          "source_excerpt": "<span ref={el => { el.innerHTML = grayscaleIcon; }} />"
+        }
+      ],
+      "sha256": "cf7f8ecac220ecdd839641e2af035a0179feb1ee3d6cd937371cd9f8f88970db",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/grayscale-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 237,
+      "ordinal": 94,
+      "name": "brightnessIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx",
+          "line": 64,
+          "source_excerpt": "<span class=\"ribbon-slider-icon\" ref={el => { el.innerHTML = brightnessIcon; }} />"
+        }
+      ],
+      "sha256": "6ac85e8bd4eac22b0c386a44a4b79c3c12b012aa68c47ae80c4c36e53d8317a7",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/brightness-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 240,
+      "ordinal": 95,
+      "name": "contrastIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx",
+          "line": 76,
+          "source_excerpt": "<span class=\"ribbon-slider-icon\" ref={el => { el.innerHTML = contrastIcon; }} />"
+        }
+      ],
+      "sha256": "355e2e027dd1d8385a2a81f4261ef4ed9a09b25e42c7cddb1289eef4b1725e25",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/contrast-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 243,
+      "ordinal": 96,
+      "name": "resetAdjustIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ImageTab.jsx",
+          "line": 57,
+          "source_excerpt": "<span ref={el => { el.innerHTML = resetAdjustIcon; }} />"
+        }
+      ],
+      "sha256": "3627a2e7a489800f7105881f25f9c2c9d7ad7957c8b652c054d795fb4f630f37",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/reset-adjust-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 245,
+      "ordinal": 97,
+      "name": "editTypeIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+          "line": 132,
+          "source_excerpt": "<span ref={el => { el.innerHTML = editTypeIcon; }} />"
+        }
+      ],
+      "sha256": "7f049bac6defdd58f98c8ad2319e42c7040100ebee129b4929d5ad0e58205879",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/edit-type-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 249,
+      "ordinal": 98,
+      "name": "alignLeftIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 45,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignLeftIcon; }} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 434,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-align\" title={t('arrange.alignLeft')} icon={alignLeftIcon} label={t('drawing.align')}"
+        }
+      ],
+      "sha256": "6b0aa3aded6ee276b01a24e7cdeb207335d2242e387045ca846b52a03efe6132",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-left-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 251,
+      "ordinal": 99,
+      "name": "alignCenterIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 49,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignCenterIcon; }} />"
+        }
+      ],
+      "sha256": "f2a6b4e9d2b05f104954ba030bafb2e174680512e69648f7e6ebf857260476ec",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-center-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 253,
+      "ordinal": 100,
+      "name": "alignRightIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 53,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignRightIcon; }} />"
+        }
+      ],
+      "sha256": "b7f502d5f7bc40b660b1d2d62bb5b381bd36468f26966bea6d17db8fc044ed36",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-right-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 255,
+      "ordinal": 101,
+      "name": "alignTopIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 59,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignTopIcon; }} />"
+        }
+      ],
+      "sha256": "fe822fc0be6bda59eefa26ceef49e27aed2de4530a1e122467fb82edb2612ae1",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-top-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 257,
+      "ordinal": 102,
+      "name": "alignMiddleIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 63,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignMiddleIcon; }} />"
+        }
+      ],
+      "sha256": "364a380020c5697c38355ae80e6b2f66169f5432771542a130a329c6f9dcfcc3",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-middle-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 259,
+      "ordinal": 103,
+      "name": "alignBottomIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 67,
+          "source_excerpt": "<span ref={el => { el.innerHTML = alignBottomIcon; }} />"
+        }
+      ],
+      "sha256": "802edc445c90d86f12521d5e7989e1b8de9ed43da3b7829dcd9278051ba7e752",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/align-bottom-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 263,
+      "ordinal": 104,
+      "name": "distSpaceHIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 96,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-space-h\" title={t('arrange.spaceHorizontally')} icon={distSpaceHIcon} label={t('arrange.spaceH')}"
+        }
+      ],
+      "sha256": "b94c3b455ef8c72dc25d799593fb9f7f052c812b212285a9b1e919e51770d106",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-space-h-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 265,
+      "ordinal": 105,
+      "name": "distSpaceVIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 98,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-space-v\" title={t('arrange.spaceVertically')} icon={distSpaceVIcon} label={t('arrange.spaceV')}"
+        }
+      ],
+      "sha256": "7c3959c954fa41aefb352a53a1a007b4f7b0ad4c744da63e46f7a6c8dda6cdfd",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-space-v-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 267,
+      "ordinal": 106,
+      "name": "distLeftIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 102,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-left\" title={t('arrange.distributeLeft')} icon={distLeftIcon} label={t('arrange.left')}"
+        }
+      ],
+      "sha256": "756ba38f60e6ad292767c8b11bc3c4e20d7fcff573e0683b71329b6df13b37bd",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-left-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 269,
+      "ordinal": 107,
+      "name": "distTopIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 104,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-top\" title={t('arrange.distributeTop')} icon={distTopIcon} label={t('arrange.top')}"
+        }
+      ],
+      "sha256": "d5661177985244fa269ca0265e308288d506f25f3ebf4d28e8d37c606e810993",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-top-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 271,
+      "ordinal": 108,
+      "name": "distCenterIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 108,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-center\" title={t('arrange.distributeCenter')} icon={distCenterIcon} label={t('arrange.center')}"
+        }
+      ],
+      "sha256": "1eb24939d6a2d3a8e2494d2fdd1396f7a26b6b47ba387813728578c14891506c",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-center-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 273,
+      "ordinal": 109,
+      "name": "distMiddleIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 110,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-middle\" title={t('arrange.distributeMiddle')} icon={distMiddleIcon} label={t('arrange.middle')}"
+        }
+      ],
+      "sha256": "9d441da5bcb4808be1ab19ec52c9a18d89e6df1dbc9081ab8aff057345795c61",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-middle-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 275,
+      "ordinal": 110,
+      "name": "distRightIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 114,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-right\" title={t('arrange.distributeRight')} icon={distRightIcon} label={t('arrange.right')}"
+        }
+      ],
+      "sha256": "fa925acbbd73175f391bb274f25ba32eea0bea4f30e078a70bcbc1bd1d1a0f1e",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-right-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 277,
+      "ordinal": 111,
+      "name": "distBottomIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 116,
+          "source_excerpt": "<RibbonButton size=\"medium\" id=\"arr-dist-bottom\" title={t('arrange.distributeBottom')} icon={distBottomIcon} label={t('arrange.bottom')}"
+        }
+      ],
+      "sha256": "dd5f37d5499d5d688966469264dba5df881934e331b70223679fe76c3472f3b6",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/dist-bottom-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 281,
+      "ordinal": 112,
+      "name": "bringForwardIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 194,
+          "source_excerpt": "<span ref={el => { el.innerHTML = bringForwardIcon; }} />"
+        }
+      ],
+      "sha256": "868a57cfce4edd072295a6236b0cc20ae4b37493c0d46557cb8dff72a9921603",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/bring-forward-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 283,
+      "ordinal": 113,
+      "name": "bringToFrontIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 199,
+          "source_excerpt": "<span ref={el => { el.innerHTML = bringToFrontIcon; }} />"
+        }
+      ],
+      "sha256": "271849662322db11d127cf2c809884df7e640de7f4f641840ffc4e50d0a26e2d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/bring-to-front-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 285,
+      "ordinal": 114,
+      "name": "sendBackwardIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 206,
+          "source_excerpt": "<span ref={el => { el.innerHTML = sendBackwardIcon; }} />"
+        }
+      ],
+      "sha256": "16f5b8341b6cb494834882e8212c72c1b40815bd87a601be59eca8105bb0f49d",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/send-backward-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 287,
+      "ordinal": 115,
+      "name": "sendToBackIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 211,
+          "source_excerpt": "<span ref={el => { el.innerHTML = sendToBackIcon; }} />"
+        }
+      ],
+      "sha256": "ea548fd0029f2f9b2c27cd89bb573ef443405b3c2aa96a26675f0af2dbdf7282",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/send-to-back-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 291,
+      "ordinal": 116,
+      "name": "sameSize16Icon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 122,
+          "source_excerpt": "<div class=\"ribbon-big-icon\" ref={el => { el.innerHTML = sameSize16Icon; }}></div>"
+        }
+      ],
+      "sha256": "21be5517b2af56dfd4b495871fc0ffec8177d53262a80f5eed2746dd3bfbe983",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/same-size16-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 293,
+      "ordinal": 117,
+      "name": "rotateCcwIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 139,
+          "source_excerpt": "<span ref={el => { el.innerHTML = rotateCcwIcon; }} />"
+        }
+      ],
+      "sha256": "017c86de3f61e03527ed34ba7c4b9fcd81b2e93226d53701d4e2caa929c27f3b",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rotate-ccw-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 295,
+      "ordinal": 118,
+      "name": "rotateCwIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 149,
+          "source_excerpt": "<span ref={el => { el.innerHTML = rotateCwIcon; }} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 396,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-rotate\" title={t('drawing.rotate')} icon={rotateCwIcon} label={t('drawing.rotate')}"
+        }
+      ],
+      "sha256": "0b0b7ca2c0faeabab2c7dd20140365785a5bd5e86166936e8215ab86ff986246",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rotate-cw-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 297,
+      "ordinal": 119,
+      "name": "rotate180Icon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 159,
+          "source_excerpt": "<span ref={el => { el.innerHTML = rotate180Icon; }} />"
+        }
+      ],
+      "sha256": "7e6bd7a86652ab3f1bd141f7e62b980aba88d7307e16f67a2b696b4f8da69c32",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/rotate180-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 299,
+      "ordinal": 120,
+      "name": "flipHIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 174,
+          "source_excerpt": "<span ref={el => { el.innerHTML = flipHIcon; }} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 387,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-mirror-h\" title={t('arrange.flipHorizontally')} icon={flipHIcon} label={t('drawing.mirrorH')}"
+        }
+      ],
+      "sha256": "18ba1ede858f376c7bb8d1ed1c93481bd9ac69768ba422ef9b69928c412d74b5",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/flip-h-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 301,
+      "ordinal": 121,
+      "name": "flipVIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+          "line": 184,
+          "source_excerpt": "<span ref={el => { el.innerHTML = flipVIcon; }} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+          "line": 389,
+          "source_excerpt": "<RibbonButton size=\"small\" id=\"dr-mirror-v\" title={t('arrange.flipVertically')} icon={flipVIcon} label={t('drawing.mirrorV')}"
+        }
+      ],
+      "sha256": "1763e5d336ca24657bfe3d0433ff9175da41a7ef25deb16208620e8dc3b1ed04",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/flip-v-icon.svg"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/ribbonIcons.js",
+      "definition_line": 303,
+      "ordinal": 122,
+      "name": "toolPaletteIcon",
+      "classification": "built-in-ui-icon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+          "line": 129,
+          "source_excerpt": "<RibbonButton id=\"ribbon-symbol-palette\" title=\"Toolpalette\" icon={toolPaletteIcon} label=\"Toolpalette\""
+        }
+      ],
+      "sha256": "8b911e0ca0ab75c363b18d831e1116b58752631afedec36e73acd5543d212915",
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-imported/tool-palette-icon.svg"
+    }
+  ]
+}
