@@ -52,7 +52,7 @@ migratie van alle OpenAEC-applicaties.
 - De [naamgenotenreview](icon-name-review.html) vergelijkt 80 exacte naamgroepen met 189 UI-onderbouwde vormen uit meerdere tools, buiten de destijds 27 gedeelde kernbetekenissen. Alle 80 groepen zijn aan de hand van hun bronregels beoordeeld: 43 bevatten verschillende handelingen en 37 verwante handelingen. Zo blijkt `Download` in Pointcloud import te betekenen, maar in Planner, de AEC-extensie en BCF export; `Hand` duidt in PDF en Heatloss wel dezelfde panhandeling aan. De twee groepen met identieke bronbytes (`solid`, `sphere`) blijken zelfs verschillende handelingen te representeren en krijgen daarom geen gedeelde commando-ID. De [beoordelingsdata](icon-name-review.json) bewaart alle kandidaatvormen, bronlinks, 189 ingelezen gebruiksfragmenten en statussen; geen fragment mist een leesbare vastgelegde bronregel.
 - De [FEM/BIM-bronvergelijking](domain-candidate-review.html) toetst alle 58 bestandsnaamkandidaten bij 24 van de 109 iconconcepten aan hun UI-broncodeverwijzing. De voorlopige broncontextbeoordeling vindt 11 dezelfde betekenissen, 28 verwante maar andere commando's en 19 naamtoevallen. `zoom_window` is bijvoorbeeld geen BIM-raam; een Pointcloud-snedebox is geen FEM-profiel. De [beoordelingsdata](domain-candidate-assessment.json) legt per kandidaat de reden vast en valideert dat geen kandidaat stilzwijgend wegvalt bij een nieuwe inventaris. Een iconregistry kan varianten noemen die niet in een huidig scherm zichtbaar zijn. Dit is geen hergebruik- of licentiebesluit: de bronvormen moeten nog op alle gevraagde maten en thema's tegen de concepten worden gewogen.
 - Het [semantische kruisverband](icon-semantic-crosswalk.html) vergelijkt de
-  30 huidige gedeelde iconbetekenissen met 577 bewezen UI-bestanden en 312
+  34 huidige gedeelde iconbetekenissen met 577 bewezen UI-bestanden en 312
   versiegebonden bibliotheekvarianten. 90 naamovereenkomsten zijn kandidaten;
   787 items blijven buiten de kern of vragen een domeinspecifieke betekenis.
   Dit is geen goedkeuring van vorm of functie. Tien Pointcloud-toolacties hebben na
@@ -61,6 +61,7 @@ migratie van alle OpenAEC-applicaties.
   Refresh LOD gebruikt nu zijn eigen Update-symbool in plaats van Fit.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
+- Het [Tauri Style Book-lint](style-book-tauri-ribbon-icon-review.html) toont 38 bronbewezen SVG-vormen uit Home, IFC en Report. De 42-definitie-catalogus bevat negen vormen uit Viewer en Extensions die in de huidige Ribbon-route niet renderen; vijf extra Report-vormen zijn lokaal gedefinieerd. De oogvorm bij Opslaan als is semantisch verkeerd en staat naast de bestaande gedeelde SaveAs-vorm. Klembord-Kopiëren en document-Dupliceren blijven gescheiden.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
   Pointcloud native en de 65 lokaal bewaarde visuele referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.
