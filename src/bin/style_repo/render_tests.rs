@@ -47,6 +47,17 @@ fn export_geotech_source_ribbon_reviews() {
             .save_png(&design.join(format!("style-repo-geotech-source-{suffix}.png")))
             .expect("save Geotechniek source-icon ribbon");
     }
+    for (theme, suffix) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized(
+            &app,
+            theme,
+            false,
+            Some("situatietekening"),
+            Size::new(2200.0, 800.0),
+        )
+        .save_png(&design.join(format!("style-repo-geotech-drawing-wide-{suffix}.png")))
+        .expect("save complete Geotechniek drawing ribbon");
+    }
 }
 
 fn render(app: &StyleRepo, theme: Theme) -> tiny_skia::Pixmap {

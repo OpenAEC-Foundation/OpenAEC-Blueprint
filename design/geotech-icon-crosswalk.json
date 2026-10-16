@@ -6,8 +6,8 @@
     "shared": 19,
     "new-shared": 5,
     "decision": 8,
-    "adopted-domain": 12,
-    "domain": 10
+    "adopted-domain": 15,
+    "domain": 7
   },
   "icons": [
     {
@@ -177,9 +177,9 @@
     },
     {
       "name": "tekening-frame",
-      "status": "domain",
-      "meaning": "geotech.tekening-frame",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "drawing.svg-frame",
+      "decision": "Bronbewezen teken- of kaderactie, in licht en donker op 16/24/32 px beoordeeld; afzonderlijk van OpenCAD Polyline en Underlay Frames.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 45,
       "usage_lines": [
@@ -187,8 +187,8 @@
       ],
       "source_sha256": "fe48bba30de137f85dbd266c74323d7aeb77c7fe42eca820c15cfa34f22cf632",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-frame.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-svg-frame.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-svg-frame.svg"
     },
     {
       "name": "tekening-raster",
@@ -207,9 +207,9 @@
     },
     {
       "name": "tekening-tag",
-      "status": "domain",
-      "meaning": "geotech.tekening-tag",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "geotech.coordinate-tag",
+      "decision": "Bronbewezen teken- of kaderactie, in licht en donker op 16/24/32 px beoordeeld; afzonderlijk van OpenCAD Polyline en Underlay Frames.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 63,
       "usage_lines": [
@@ -217,8 +217,8 @@
       ],
       "source_sha256": "f26251fab24f41ed50466c5d0d5eef8de9c6629870258250f5f7059520253f93",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-tag.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/geotech-coordinate-tag.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/geotech-coordinate-tag.svg"
     },
     {
       "name": "tekening-move",
@@ -358,9 +358,9 @@
     },
     {
       "name": "tekening-vlak",
-      "status": "domain",
-      "meaning": "geotech.tekening-vlak",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "drawing.polygon",
+      "decision": "Bronbewezen teken- of kaderactie, in licht en donker op 16/24/32 px beoordeeld; afzonderlijk van OpenCAD Polyline en Underlay Frames.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 130,
       "usage_lines": [
@@ -368,8 +368,8 @@
       ],
       "source_sha256": "311d0edfe60bfff5a1a7d25a625bd4095c807f04ec2d5df4d62feaaaa2e7a1c1",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-vlak.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-polygon.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-polygon.svg"
     },
     {
       "name": "tekening-note",

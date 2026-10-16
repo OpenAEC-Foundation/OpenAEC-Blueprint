@@ -162,10 +162,13 @@ pub enum DomainIcon {
     DrawingExtend,
     TransformMirror,
     DrawingOffset,
+    GeotechCoordinateTag,
+    DrawingPolygon,
+    DrawingSvgFrame,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 16] = [
+    pub const ALL: [Self; 19] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -182,6 +185,9 @@ impl DomainIcon {
         Self::DrawingExtend,
         Self::TransformMirror,
         Self::DrawingOffset,
+        Self::GeotechCoordinateTag,
+        Self::DrawingPolygon,
+        Self::DrawingSvgFrame,
     ];
 
     pub fn id(self) -> &'static str {
@@ -202,6 +208,9 @@ impl DomainIcon {
             Self::DrawingExtend => "drawing.extend",
             Self::TransformMirror => "transform.mirror",
             Self::DrawingOffset => "drawing.offset",
+            Self::GeotechCoordinateTag => "geotech.coordinate-tag",
+            Self::DrawingPolygon => "drawing.polygon",
+            Self::DrawingSvgFrame => "drawing.svg-frame",
         }
     }
 
@@ -302,6 +311,24 @@ impl DomainIcon {
             }
             (Self::DrawingOffset, false) => {
                 include_bytes!("../assets/domain-icons/drawing-offset.svg")
+            }
+            (Self::GeotechCoordinateTag, true) => {
+                include_bytes!("../assets/domain-icons-small/geotech-coordinate-tag.svg")
+            }
+            (Self::GeotechCoordinateTag, false) => {
+                include_bytes!("../assets/domain-icons/geotech-coordinate-tag.svg")
+            }
+            (Self::DrawingPolygon, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-polygon.svg")
+            }
+            (Self::DrawingPolygon, false) => {
+                include_bytes!("../assets/domain-icons/drawing-polygon.svg")
+            }
+            (Self::DrawingSvgFrame, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-svg-frame.svg")
+            }
+            (Self::DrawingSvgFrame, false) => {
+                include_bytes!("../assets/domain-icons/drawing-svg-frame.svg")
             }
         }
     }

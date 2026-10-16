@@ -816,8 +816,8 @@ fn geotech_groups(
         "Situatietekening" => vec![
             ("Selecteer", vec![("Selecteren", geotech_source_icon!("tekening-select"))]),
             ("Bewerken", vec![("Verplaatsen", DomainIcon::TransformMove.into()), ("Kopiëren", geotech_source_icon!("tekening-copy")), ("Roteren…", DomainIcon::TransformRotate.into()), ("Verwijderen", geotech_source_icon!("tekening-delete")), ("Trim", DomainIcon::DrawingTrim.into()), ("Extend", DomainIcon::DrawingExtend.into()), ("Mirror", DomainIcon::TransformMirror.into()), ("Offset", DomainIcon::DrawingOffset.into())]),
-            ("Plaatsen", vec![("Sondering", DomainIcon::GeotechSondering.into()), ("Boring", DomainIcon::GeotechBoring.into()), ("Sonderingsraster", DomainIcon::GeotechSonderingGrid.into()), ("Lijn", DomainIcon::DrawingLine.into()), ("Maatlijn", DomainIcon::DrawingDimension.into()), ("RD-coördinaat", geotech_source_icon!("tekening-tag")), ("Vlak", geotech_source_icon!("tekening-vlak")), ("Opmerking", DomainIcon::DrawingNote.into())]),
-            ("Overlay", vec![("Image/PDF import", geotech_source_icon!("tekening-overlay")), ("Kader (SVG)", geotech_source_icon!("tekening-frame")), ("Wis alles", geotech_source_icon!("tekening-delete"))]),
+            ("Plaatsen", vec![("Sondering", DomainIcon::GeotechSondering.into()), ("Boring", DomainIcon::GeotechBoring.into()), ("Sonderingsraster", DomainIcon::GeotechSonderingGrid.into()), ("Lijn", DomainIcon::DrawingLine.into()), ("Maatlijn", DomainIcon::DrawingDimension.into()), ("RD-coördinaat", DomainIcon::GeotechCoordinateTag.into()), ("Vlak", DomainIcon::DrawingPolygon.into()), ("Opmerking", DomainIcon::DrawingNote.into())]),
+            ("Overlay", vec![("Image/PDF import", geotech_source_icon!("tekening-overlay")), ("Kader (SVG)", DomainIcon::DrawingSvgFrame.into()), ("Wis alles", geotech_source_icon!("tekening-delete"))]),
             ("Export", vec![("Exporteer DWG", geotech_source_icon!("tekening-dwg")), ("Exporteer PDF", geotech_source_icon!("tekening-export-pdf")), ("Print", Icon::Print.into())]),
         ],
         "Berekeningen" => vec![("Projectberekeningen", vec![("Dynamische berekeningenlijst", Icon::Grid.into())])],
