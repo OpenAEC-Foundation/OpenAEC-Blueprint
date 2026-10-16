@@ -1,0 +1,364 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "The final 34 literal SVG source sites in 22 PDF JSX files. Source-site audit is complete across all 317 literal sites. This is not a count of unique UI icons: three live SVGs are generated editor/overlay/type-preview surfaces, one is in an unmounted MiniLog component, and static empty-state illustrations and compare mode previews are UI visuals rather than generic commands. Imported JavaScript SVG catalogs and external assets remain separate inventories.",
+  "literal_svg_sites": 34,
+  "static_reachable_svg_exports": 30,
+  "generated_non_icon_sites": 3,
+  "unmounted_source_sites": 1,
+  "role_counts": {
+    "command": 16,
+    "drag-affordance": 2,
+    "drop-target": 2,
+    "empty-illustration": 2,
+    "generated-document-overlay": 1,
+    "generated-editor-canvas": 1,
+    "generated-type-preview": 1,
+    "list-marker": 1,
+    "mode-preview": 2,
+    "status-marker": 5,
+    "unmounted-source": 1
+  },
+  "records": [
+    {
+      "name": "extension-grip",
+      "label": "Extensiepalet-sleepgreep",
+      "role": "drag-affordance",
+      "source_file": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+      "source_line": 394,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/extension-grip.svg",
+      "sha256": "37d76e28d5b0a4f2043da5ae88ab38da664375de41495a125d3af550fceccf73"
+    },
+    {
+      "name": "extension-close",
+      "label": "Extensiepalet sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+      "source_line": 405,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/extension-close.svg",
+      "sha256": "0330d5d5248728b48185b11b1ec381ec44c0a444dad3b7b09350ad1a9815e842"
+    },
+    {
+      "name": "extension-undock",
+      "label": "Palet losmaken",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+      "source_line": 478,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/extension-undock.svg",
+      "sha256": "f5515791c5f21cdd10ed1d39dc36cd7ebbd17e0713b0c2765104035ee9c4a51e"
+    },
+    {
+      "name": "extension-dock-left",
+      "label": "Links docken",
+      "role": "drop-target",
+      "source_file": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+      "source_line": 504,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/extension-dock-left.svg",
+      "sha256": "2a66c83c66dfb259f32e4c1569af1e49db19fa624c04280a0f780ec96dabf452"
+    },
+    {
+      "name": "extension-dock-right",
+      "label": "Rechts docken",
+      "role": "drop-target",
+      "source_file": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+      "source_line": 512,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/extension-dock-right.svg",
+      "sha256": "019313c3ab1a90a878fa440d12f1ce48a8712aa913d2145ee9529d50ce66850a"
+    },
+    {
+      "name": "compare-empty",
+      "label": "Geen tweede document",
+      "role": "empty-illustration",
+      "source_file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "source_line": 80,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/compare-empty.svg",
+      "sha256": "686d0e7cedecde5dd3c7b8a5ab98c11aafadb8728bf7af6d9daa68f05e610291"
+    },
+    {
+      "name": "compare-swap",
+      "label": "Documenten omwisselen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "source_line": 135,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/compare-swap.svg",
+      "sha256": "1699a203bcd52cbdc7de4d885db270171ea43fce254bee548f057ca5bba5fd99"
+    },
+    {
+      "name": "compare-overlay",
+      "label": "Over elkaar vergelijken",
+      "role": "mode-preview",
+      "source_file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "source_line": 181,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/compare-overlay.svg",
+      "sha256": "e39438668511dc2a7b295dcb611aa1289c87d42b3c084fe3977381390ef6e0a3"
+    },
+    {
+      "name": "compare-side",
+      "label": "Naast elkaar vergelijken",
+      "role": "mode-preview",
+      "source_file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "source_line": 199,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/compare-side.svg",
+      "sha256": "45d66d684f063d17b83684c1e1d3aace45af4fbc9853ec9281a5a2916634c5fb"
+    },
+    {
+      "name": "properties-color-chevron",
+      "label": "Kleurmenu openen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ColorPalettePicker.jsx",
+      "source_line": 56,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/properties-color-chevron.svg",
+      "sha256": "31b9b6936a7889e94236438aae07253855dd546593032c09aaf590374a034f54"
+    },
+    {
+      "name": "properties-color-none",
+      "label": "Geen kleur",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ColorPalettePicker.jsx",
+      "source_line": 68,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/properties-color-none.svg",
+      "sha256": "6adb08a1462b8d634b7a1f9c6a38d203ed508b1eb26e38ad4880b56ca543064e"
+    },
+    {
+      "name": "properties-color-more",
+      "label": "Meer kleuren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ColorPalettePicker.jsx",
+      "source_line": 116,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/properties-color-more.svg",
+      "sha256": "f288818948244aeb3d2f74baed3e731f28f6efb6eaac9d3ae736e2252a1edbcf"
+    },
+    {
+      "name": "paragraph-left",
+      "label": "Links uitlijnen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ParagraphSection.jsx",
+      "source_line": 21,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/paragraph-left.svg",
+      "sha256": "9912a5b6a54f238383cbc61961661ec258cf51ae0fe976746a0ba19e0af61c29"
+    },
+    {
+      "name": "paragraph-center",
+      "label": "Centreren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ParagraphSection.jsx",
+      "source_line": 29,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/paragraph-center.svg",
+      "sha256": "6f3fb1b6e80136d822189900af8ec9677fc9da567130088f667ef0785ac95fe6"
+    },
+    {
+      "name": "paragraph-right",
+      "label": "Rechts uitlijnen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/ParagraphSection.jsx",
+      "source_line": 37,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/paragraph-right.svg",
+      "sha256": "f6b70869a8c701741492ab6a54a53b683c7bcaf21ca5b0569e52b4b146085752"
+    },
+    {
+      "name": "symbol-editor-close",
+      "label": "Symbooleditor sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/symbol-edit/SymbolTypeEditor.jsx",
+      "source_line": 11,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/symbol-editor-close.svg",
+      "sha256": "32975792ea21ad83c2f5fd7d4a4aa4d9135531f09dbe70a5480dfd3b7a1d3aed"
+    },
+    {
+      "name": "symbol-editor-canvas",
+      "label": "Symbooleditor tekenvlak",
+      "role": "generated-editor-canvas",
+      "source_file": "open-pdf-studio/js/solid/components/symbol-edit/SymbolTypeEditor.jsx",
+      "source_line": 110,
+      "mounted_in_current_ui": true,
+      "source_excerpt": "<svg\n                ref={svgRef}\n                class=\"ste-canvas\"\n                width={CANVAS_PX}\n                height={CANVAS_PX}\n                viewBox={`0 0 ${VIEWBOX} ${VIEWBOX}`}\n              >\n                {/* background + grid */}\n                <rect x=\"0\" y=\"0\" width={VIEWBOX} height={VIEWBOX} fill=\"#ffffff\" stroke=\"#d4d4d4\" stroke-width=\"0.4\" />\n                <For each={gridLines()}>\n                  {(v) => (\n                    <>\n                      <line x1={v} y1",
+      "no_static_icon_reason": "runtime-generated SVG canvas/overlay; not a fixed icon"
+    },
+    {
+      "name": "empty-document",
+      "label": "Leeg documentvenster",
+      "role": "empty-illustration",
+      "source_file": "open-pdf-studio/js/solid/App.jsx",
+      "source_line": 101,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/empty-document.svg",
+      "sha256": "b6c9aeba290b609d8a398d9709e3d8f2d677d361fb00da736ac6c51f6a857aba"
+    },
+    {
+      "name": "bar-password",
+      "label": "Beveiligd document",
+      "role": "status-marker",
+      "source_file": "open-pdf-studio/js/solid/components/BeveiligdBar.jsx",
+      "source_line": 24,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/bar-password.svg",
+      "sha256": "e6694a398ef5cdb21bc9f99bae68d4af4a59ec1b7c261b9e7a0b0a3b297219b8"
+    },
+    {
+      "name": "dialog-close",
+      "label": "Dialoog sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/Dialog.jsx",
+      "source_line": 155,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/dialog-close.svg",
+      "sha256": "a8318d90c9a1c41bc91efdde2037adebb146524599f124cdc182ce9422f97a4b"
+    },
+    {
+      "name": "bar-form-fields",
+      "label": "Interactieve formuliervelden",
+      "role": "status-marker",
+      "source_file": "open-pdf-studio/js/solid/components/FormFieldsBar.jsx",
+      "source_line": 17,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/bar-form-fields.svg",
+      "sha256": "7af99c62d0f5415cb1893765e188d90937c5c2b18f2d931394ecd19985f4b0e8"
+    },
+    {
+      "name": "bar-signature",
+      "label": "Handtekeningstatus",
+      "role": "status-marker",
+      "source_file": "open-pdf-studio/js/solid/components/HandtekeningBar.jsx",
+      "source_line": 46,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/bar-signature.svg",
+      "sha256": "8c62fb2c59247a9192e627edad26c3f88730a7bb0ae384246d9d09769617f3d8"
+    },
+    {
+      "name": "minilog-close",
+      "label": "Historisch MiniLog sluiten",
+      "role": "unmounted-source",
+      "source_file": "open-pdf-studio/js/solid/components/MiniLog.jsx",
+      "source_line": 165,
+      "mounted_in_current_ui": false,
+      "source_excerpt": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 10 10\">\n              <line x1=\"0\" y1=\"0\" x2=\"10\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n              <line x1=\"10\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n            </svg>",
+      "no_static_icon_reason": "unmounted component"
+    },
+    {
+      "name": "bar-notification",
+      "label": "Melding",
+      "role": "status-marker",
+      "source_file": "open-pdf-studio/js/solid/components/NotificationBar.jsx",
+      "source_line": 26,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/bar-notification.svg",
+      "sha256": "a73e7d11e5118e363d4ad3e9bdad537b87d3b032158b024145fe9bf98a8e500a"
+    },
+    {
+      "name": "bar-pdfa",
+      "label": "PDF/A-melding",
+      "role": "status-marker",
+      "source_file": "open-pdf-studio/js/solid/components/PdfABar.jsx",
+      "source_line": 16,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/bar-pdfa.svg",
+      "sha256": "c826a21e7f29d230e3035704f1f4ce60199efcc1ec99d3db1d0a27cc0e4fa852"
+    },
+    {
+      "name": "quantities-close",
+      "label": "Hoeveelheden-eigenschappen sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/QuantitiesProperties.jsx",
+      "source_line": 149,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/quantities-close.svg",
+      "sha256": "e0dd87c7a2c8841641253ce84de33dce3019de6b28f39f22926d7f349950ab02"
+    },
+    {
+      "name": "schedule-close",
+      "label": "Hoeveelhedenstaat sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/SchedulePanel.jsx",
+      "source_line": 130,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/schedule-close.svg",
+      "sha256": "e0dd87c7a2c8841641253ce84de33dce3019de6b28f39f22926d7f349950ab02"
+    },
+    {
+      "name": "schedule-wizard-close",
+      "label": "Hoeveelhedenwizard sluiten",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ScheduleWizard.jsx",
+      "source_line": 149,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/schedule-wizard-close.svg",
+      "sha256": "e0dd87c7a2c8841641253ce84de33dce3019de6b28f39f22926d7f349950ab02"
+    },
+    {
+      "name": "straighten-guide",
+      "label": "Rechtzet-richtlijn",
+      "role": "generated-document-overlay",
+      "source_file": "open-pdf-studio/js/solid/components/StraightenOverlay.jsx",
+      "source_line": 110,
+      "mounted_in_current_ui": true,
+      "source_excerpt": "<svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', 'pointer-events': 'none' }}>\n            <line x1={l().x1} y1={l().y1} x2={l().x2} y2={l().y2} stroke=\"#0078d7\" stroke-width=\"2\" stroke-dasharray=\"6 4\" />\n            <circle cx={l().x1} cy={l().y1} r=\"4\" fill=\"#0078d7\" />\n            <circle cx={l().x2} cy={l().y2} r=\"4\" fill=\"#0078d7\" />\n          </svg>",
+      "no_static_icon_reason": "runtime-generated SVG canvas/overlay; not a fixed icon"
+    },
+    {
+      "name": "destination-item",
+      "label": "Bestemming in lijst",
+      "role": "list-marker",
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/DestinationsPanel.jsx",
+      "source_line": 28,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/destination-item.svg",
+      "sha256": "489e0afafcbb3fdd12c65269fca5eafa3763a57d40fdd6ac8d3e4d1c4be759e1"
+    },
+    {
+      "name": "schedule-grip",
+      "label": "Hoeveelhedenstaat-sleepgreep",
+      "role": "drag-affordance",
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx",
+      "source_line": 202,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/schedule-grip.svg",
+      "sha256": "eef4c2f0282f5d36928281ac2d1624b6e41cc371eb71b0acf5c55b300131a0ca"
+    },
+    {
+      "name": "thumbnail-label",
+      "label": "Paginalabels openen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/ThumbnailsPanel.jsx",
+      "source_line": 66,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/thumbnail-label.svg",
+      "sha256": "0c09595d214a8b6344e56101206263a4ec819ce3a34c73b29c4c5b14da083576"
+    },
+    {
+      "name": "dimension-type-preview",
+      "label": "Maatvoeringtype-voorbeeld",
+      "role": "generated-type-preview",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/DimensionTypeSection.jsx",
+      "source_line": 121,
+      "mounted_in_current_ui": true,
+      "source_excerpt": "<svg width={W} height={H} style={{ border: '1px solid var(--theme-border, #999)', 'flex-shrink': 0, background: 'var(--theme-bg, #fff)' }}>\n      <Show when={kind() === 'filledArea'} fallback={\n        <Show when={kind() === 'measureDistance'} fallback={lineSvg()}>\n          {dimSvg()}\n        </Show>\n      }>\n        {hatchSvg()}\n      </Show>\n    </svg>",
+      "no_static_icon_reason": "runtime-generated SVG canvas/overlay; not a fixed icon"
+    },
+    {
+      "name": "properties-collapse",
+      "label": "Eigenschappenpaneel inklappen",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/properties-panel/PanelHeader.jsx",
+      "source_line": 12,
+      "mounted_in_current_ui": true,
+      "svg": "inline-ui-icons/open-pdf-studio/last-jsx/properties-collapse.svg",
+      "sha256": "e41fe1ec0904f315ae3fc4f923585455608245932439745dd53043d9d444f365"
+    }
+  ]
+}

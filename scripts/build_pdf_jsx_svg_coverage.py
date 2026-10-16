@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expose unreviewed literal JSX SVG sites without calling them UI icons."""
+"""Map every pinned PDF JSX SVG source site to its completed role review."""
 import json
 import re
 import subprocess
@@ -53,6 +53,28 @@ fully_audited = {
     'components/ribbon/ExtensionRibbonTab.jsx',
     'components/ribbon/SplitButton.jsx',
     'components/ribbon/ThemePicker.jsx',
+    'components/ExtensionToolPalette.jsx',
+    'components/compare/CompareDialog.jsx',
+    'components/properties-panel/ColorPalettePicker.jsx',
+    'components/properties-panel/ParagraphSection.jsx',
+    'components/symbol-edit/SymbolTypeEditor.jsx',
+    'App.jsx',
+    'components/BeveiligdBar.jsx',
+    'components/Dialog.jsx',
+    'components/FormFieldsBar.jsx',
+    'components/HandtekeningBar.jsx',
+    'components/MiniLog.jsx',
+    'components/NotificationBar.jsx',
+    'components/PdfABar.jsx',
+    'components/QuantitiesProperties.jsx',
+    'components/SchedulePanel.jsx',
+    'components/ScheduleWizard.jsx',
+    'components/StraightenOverlay.jsx',
+    'components/left-panel/panels/DestinationsPanel.jsx',
+    'components/left-panel/panels/SchedulesPanel.jsx',
+    'components/left-panel/panels/ThumbnailsPanel.jsx',
+    'components/properties-panel/DimensionTypeSection.jsx',
+    'components/properties-panel/PanelHeader.jsx',
 }
 
 def git(*args):
@@ -70,8 +92,6 @@ for path in paths:
     relative = path.removeprefix(prefix)
     if relative in fully_audited:
         state = 'fully-reviewed-literal-sites'
-    elif relative in ('components/ribbon/ArrangeTab.jsx', 'components/ribbon/FormatTab.jsx'):
-        state = 'partial-command-review'
     else:
         state = 'requires-ui-role-review'
     group = ('mobile' if relative == 'MobileApp.jsx' else
@@ -85,12 +105,13 @@ for path in paths:
                  'review_state': state})
 
 assert len(paths) == 172 and len(rows) == 68
+assert len(fully_audited) == 68 and {row['file'].removeprefix(prefix) for row in rows} == fully_audited
 assert sum(row['literal_svg_sites'] for row in rows) == 317
 audited_sites = sum(row['literal_svg_sites'] for row in rows if row['review_state'] == 'fully-reviewed-literal-sites')
-assert audited_sites == 283
+assert audited_sites == 317
 manifest = {
     'repository': 'open-pdf-studio', 'commit': commit,
-    'scope': 'Literal <svg> openings in pinned open-pdf-studio/js/solid JSX/TSX; counts are source sites, not UI icon counts. Component reachability and graphic role remain to be checked for non-audited rows.',
+    'scope': 'Literal <svg> openings in pinned open-pdf-studio/js/solid JSX/TSX; counts are source sites, not UI icon counts. All 317 source sites have a role review; not all are UI icons. Imported JS SVG catalogs and other repositories remain separate scopes.',
     'jsx_tsx_files': len(paths), 'svg_bearing_files': len(rows),
     'literal_svg_sites': 317, 'fully_reviewed_literal_sites': audited_sites,
     'sites_requiring_role_review_or_partial_followup': 317 - audited_sites,
@@ -104,6 +125,6 @@ for row in manifest['files']:
     trs.append(f'<tr data-search="{escape((row["file"]+" "+row["group"]+" "+row["review_state"]).lower())}" data-state="{escape(row["review_state"])}"><td><a href="{escape(url)}">{escape(row["file"].removeprefix(prefix))}</a></td><td>{escape(row["group"])}</td><td>{row["literal_svg_sites"]}</td><td>{escape(row["review_state"])}</td></tr>')
 page = '''<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Open PDF Studio · JSX-SVG-dekking</title><style>
 *{box-sizing:border-box}body{margin:0;background:#f1f1f2;color:#303039;font:13px/1.5 system-ui,sans-serif}header{background:#303039;color:#fff;border-bottom:3px solid #d97706;padding:24px max(20px,calc((100vw - 1150px)/2))}header a{color:#ffc47e}header h1{font-size:27px;margin:8px 0 4px}header p{max-width:1050px;color:#d6d6dd;margin:0}main{max-width:1190px;margin:auto;padding:20px}.note{background:#fff7eb;border-left:3px solid #d97706;padding:12px 16px;margin-bottom:16px}.stats{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.stats span{background:#fff;padding:8px 12px;border:1px solid #d8d8dc}.stats b{color:#ad5b00}input{font:inherit;border:1px solid #c7c7cd;padding:9px 12px;width:min(420px,100%);margin-bottom:16px}table{border-collapse:collapse;background:#fff;width:100%}th,td{border-bottom:1px solid #e1e1e5;text-align:left;padding:8px 10px}th{background:#e9e9ec;position:sticky;top:0}tr[hidden]{display:none}a{color:#9f5200}@media(max-width:700px){main{padding:10px}table{display:block;overflow-x:auto}td{min-width:100px}}
-</style><header><a href="review.html">← Ontwerpreview</a><h1>PDF · JSX-SVG-dekking</h1><p>Gepinde codekaart voor alle 172 Solid JSX/TSX-bestanden. Een letterlijke SVG is pas een UI-icoon na controle van de aanroep en visuele rol.</p></header><main><div class="note"><strong>Huidige grens.</strong> Titelbalk, status, Bestand inclusief Openen, Importeren, Exporteren, Extensies, contextmenu’s, documenttabs, ribbonchevron, Start, Tekenen, Zoekbalk, vijf linkerpanelen, Markeringslagen, het annotatiepaneel, het toolpalet, het symboolpalet, acht dialogen, Voorkeuren, alle letterlijke ribbonplaatsen en de mobiele route zijn per bronplaats beoordeeld. Alle andere rijen blijven zonder icoonclaim totdat hun bereikbaarheid en grafische rol zijn vastgesteld. Mobiele UI is als aparte route per SVG-bronplaats beoordeeld.</div><div class="stats"><span><b>172</b> JSX/TSX-bestanden</span><span><b>68</b> met letterlijke SVG</span><span><b>317</b> SVG-bronplaatsen</span><span><b>283</b> volledig bronplaats-beoordeeld</span><span><b>34</b> nog te classificeren of aanvullen</span></div><input id="q" type="search" placeholder="Zoek bestand of status" aria-label="Zoek bestand of status"><table><thead><tr><th>Bronbestand</th><th>Gebied</th><th>SVG-plaatsen</th><th>Reviewstatus</th></tr></thead><tbody>''' + ''.join(trs) + '''</tbody></table></main><script>const q=document.querySelector('#q');q.oninput=()=>{for(const row of document.querySelectorAll('tbody tr'))row.hidden=!row.dataset.search.includes(q.value.toLowerCase().trim())};</script></html>'''
+</style><header><a href="review.html">← Ontwerpreview</a><h1>PDF · JSX-SVG-dekking</h1><p>Gepinde codekaart voor alle 172 Solid JSX/TSX-bestanden. Een letterlijke SVG is pas een UI-icoon na controle van de aanroep en visuele rol.</p></header><main><div class="note"><strong>Huidige grens.</strong> Titelbalk, status, Bestand inclusief Openen, Importeren, Exporteren, Extensies, contextmenu’s, documenttabs, ribbonchevron, Start, Tekenen, Zoekbalk, vijf linkerpanelen, Markeringslagen, het annotatiepaneel, het toolpalet, het symboolpalet, acht dialogen, Voorkeuren, alle letterlijke ribbonplaatsen en de mobiele route zijn per bronplaats beoordeeld. Ook de laatste 34 plaatsen zijn beoordeeld: drie gegenereerde SVG-vlakken zijn geen vaste iconen en MiniLog wordt niet gemonteerd. Geïmporteerde JavaScript-catalogi en andere repositories blijven aparte scopes. Mobiele UI is als aparte route per SVG-bronplaats beoordeeld.</div><div class="stats"><span><b>172</b> JSX/TSX-bestanden</span><span><b>68</b> met letterlijke SVG</span><span><b>317</b> SVG-bronplaatsen</span><span><b>317</b> volledig bronplaats-beoordeeld</span><span><b>0</b> open in deze JSX-scope</span></div><input id="q" type="search" placeholder="Zoek bestand of status" aria-label="Zoek bestand of status"><table><thead><tr><th>Bronbestand</th><th>Gebied</th><th>SVG-plaatsen</th><th>Reviewstatus</th></tr></thead><tbody>''' + ''.join(trs) + '''</tbody></table></main><script>const q=document.querySelector('#q');q.oninput=()=>{for(const row of document.querySelectorAll('tbody tr'))row.hidden=!row.dataset.search.includes(q.value.toLowerCase().trim())};</script></html>'''
 (root / 'design/pdf-jsx-svg-coverage.html').write_text(page)
-print('PDF JSX: 317 literal SVG sites in 68 files; 283 fully audited, 34 remaining/partial')
+print('PDF JSX: 317 literal SVG sites in 68 files; 317 fully audited, 0 remaining in JSX scope')

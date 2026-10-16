@@ -1,12 +1,12 @@
 {
   "repository": "open-pdf-studio",
   "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
-  "scope": "Literal <svg> openings in pinned open-pdf-studio/js/solid JSX/TSX; counts are source sites, not UI icon counts. Component reachability and graphic role remain to be checked for non-audited rows.",
+  "scope": "Literal <svg> openings in pinned open-pdf-studio/js/solid JSX/TSX; counts are source sites, not UI icon counts. All 317 source sites have a role review; not all are UI icons. Imported JS SVG catalogs and other repositories remain separate scopes.",
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 283,
-  "sites_requiring_role_review_or_partial_followup": 34,
+  "fully_reviewed_literal_sites": 317,
+  "sites_requiring_role_review_or_partial_followup": 0,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -393,7 +393,7 @@
         504,
         512
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/FindBar.jsx",
@@ -456,7 +456,7 @@
         181,
         199
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
@@ -548,7 +548,7 @@
         68,
         116
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/properties-panel/ParagraphSection.jsx",
@@ -559,7 +559,7 @@
         29,
         37
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/AdaptiveGroups.jsx",
@@ -579,7 +579,7 @@
         11,
         110
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/App.jsx",
@@ -588,7 +588,7 @@
       "lines": [
         101
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/BeveiligdBar.jsx",
@@ -597,7 +597,7 @@
       "lines": [
         24
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/Dialog.jsx",
@@ -606,7 +606,7 @@
       "lines": [
         155
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
@@ -624,7 +624,7 @@
       "lines": [
         17
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/HandtekeningBar.jsx",
@@ -633,7 +633,7 @@
       "lines": [
         46
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/MiniLog.jsx",
@@ -642,7 +642,7 @@
       "lines": [
         165
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/NotificationBar.jsx",
@@ -651,7 +651,7 @@
       "lines": [
         26
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/PdfABar.jsx",
@@ -660,7 +660,7 @@
       "lines": [
         16
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/QuantitiesProperties.jsx",
@@ -669,7 +669,7 @@
       "lines": [
         149
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/SchedulePanel.jsx",
@@ -678,7 +678,7 @@
       "lines": [
         130
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ScheduleWizard.jsx",
@@ -687,7 +687,7 @@
       "lines": [
         149
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/StraightenOverlay.jsx",
@@ -696,7 +696,7 @@
       "lines": [
         110
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/dialogs/ConfirmDialog.jsx",
@@ -741,7 +741,7 @@
       "lines": [
         28
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/left-panel/panels/SchedulesPanel.jsx",
@@ -750,7 +750,7 @@
       "lines": [
         202
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/left-panel/panels/ThumbnailsPanel.jsx",
@@ -759,7 +759,7 @@
       "lines": [
         66
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/preferences/LanguageSelect.jsx",
@@ -795,7 +795,7 @@
       "lines": [
         121
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/properties-panel/PanelHeader.jsx",
@@ -804,7 +804,7 @@
       "lines": [
         12
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
