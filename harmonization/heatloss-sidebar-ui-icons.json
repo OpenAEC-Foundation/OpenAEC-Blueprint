@@ -1,0 +1,418 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "scope": "SVG components selected by NAV_GROUPS, web Projects link and group disclosure in the rendered AppShell Sidebar.",
+  "count": 19,
+  "source_use_sites": 25,
+  "sidebar_routes": 24,
+  "nav_groups": 9,
+  "routes_without_sidebar_item": [
+    "/rapport",
+    "/import/thermal"
+  ],
+  "icons": [
+    {
+      "name": "IconAngle",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/angle.svg",
+      "sha256": "3a4635eacb5e5459ad7c710bc778064b11f480f65b21a43805266faf70f566e0",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 152
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 323,
+          "route": "/tools/hoeken",
+          "label_key": "sidebar.hoeken",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconBarChart",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+      "sha256": "14c6dbaf6ae16559a01403cfc92ce969b93a5705d3a802e4c880e047cb87a684",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 40
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 265,
+          "route": "/results",
+          "label_key": "sidebar.results",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 282,
+          "route": "/tojuli",
+          "label_key": "sidebar.tojuli.full",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 287,
+          "route": "/tojuli/quick",
+          "label_key": "sidebar.tojuli.quick",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 299,
+          "route": "/beng",
+          "label_key": "sidebar.beng",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": true
+    },
+    {
+      "name": "IconBook",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/book.svg",
+      "sha256": "7813bd672d88e26f66156e7b7df0bbd51484f0a605efc7880905dad3ea6d3832",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 50
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 333,
+          "route": "/library",
+          "label_key": "sidebar.library",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconChevron",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/chevron.svg",
+      "sha256": "50d05bc4c41a27a8594298a3322bd4a5c6aaeb36dc9bb0447872df14ded5afd2",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 193
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 468,
+          "route": null,
+          "label_key": "group.expand/collapse",
+          "mode": "negen navigatiegroepen"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconClipboardList",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/clipboard-list.svg",
+      "sha256": "3a1a0d8270400b86104df16ddfac8cdd5ac51d4abcfe50e688d987b8770d173f",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 171
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 252,
+          "route": "/constructies",
+          "label_key": "sidebar.constructions",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconCube",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/cube.svg",
+      "sha256": "e285f0be1e29a679091c0c0d7a19f054ef105f2bf49fc77feeaae668e2aef7b0",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 30
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 253,
+          "route": "/modeller",
+          "label_key": "sidebar.modeller",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconDoor",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/door.svg",
+      "sha256": "dde44506cb58f637373a943f47e75feec7d8318b63f0460b236eaa833f4a10d2",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 123
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 274,
+          "route": "/tools/deurspleet",
+          "label_key": "sidebar.doorGap",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconDroplet",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/droplet.svg",
+      "sha256": "be65b577862588b02ebd582689f7925ce0535d4dc8dec9ea330514c540c458f3",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 134
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 321,
+          "route": "/tools/hwa",
+          "label_key": "sidebar.hwa",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconFolder",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/folder.svg",
+      "sha256": "3e5b731ebc93e62489e2390a3b4ca312f568cad241df2be9740e64a3cddd1124",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 80
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 445,
+          "route": "/projects",
+          "label_key": "sidebar.projects",
+          "mode": "alleen web"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconGrid",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/grid.svg",
+      "sha256": "ffed5ef3bff9f73aab913b3d931cd93b419938ce0eaff0f13be08dc450cb385f",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 19
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 261,
+          "route": "/rooms",
+          "label_key": "sidebar.rooms",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconHelpCircle",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/help-circle.svg",
+      "sha256": "1a8383912978717b787aebf140271d123c9441e78649a81ffde4b29fc5760135",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 183
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 341,
+          "route": "/help",
+          "label_key": "sidebar.help",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconHome",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/home.svg",
+      "sha256": "726b046a0a2a98602828b0b7da06ae038d338bbc1ef3a31e9919b5dea1ae16c2",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 10
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 251,
+          "route": "/project",
+          "label_key": "sidebar.project",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconIfc",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/ifc.svg",
+      "sha256": "ff36e6b44159d437bdc18e6eb50ee54e00075c86d5a5ba0862abde869985ddb3",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 88
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 262,
+          "route": "/ifc",
+          "label_key": "sidebar.ifc",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconIfcReconstruction",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/ifc-reconstruction.svg",
+      "sha256": "d5ff69af2f1aa0a176feae3947d1cbd3cf8abb1aba51894ad78978db44b2d98e",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 101
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 263,
+          "route": "/ifc-reconstructie",
+          "label_key": "sidebar.ifcReconstruction",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconLayers",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/layers.svg",
+      "sha256": "7c4bb970eabd8f64f6325db13513934178f6d5fafb5e4569daaa8a4ba2b3f560",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 59
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 264,
+          "route": "/warmteverlies/instellingen",
+          "label_key": "sidebar.warmteverliesInstellingen",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 307,
+          "route": "/rc",
+          "label_key": "sidebar.rcValue",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 308,
+          "route": "/uw",
+          "label_key": "sidebar.uwValue",
+          "mode": "web en Tauri"
+        },
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 309,
+          "route": "/rc-compare",
+          "label_key": "sidebar.rcCompare",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": true
+    },
+    {
+      "name": "IconRamp",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/ramp.svg",
+      "sha256": "9d3e7e2f15923b4e15d1412b34573fa8ec794cf1be713b0ce1f1af7e201c1164",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 142
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 322,
+          "route": "/tools/hellingbaan",
+          "label_key": "sidebar.hellingbaan",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconSwatches",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/swatches.svg",
+      "sha256": "b656648eae731d9193c0fc5d71b5b4058847a9b74dcbe87ffa243fefc74f1ce8",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 69
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 332,
+          "route": "/materialen",
+          "label_key": "sidebar.materials",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconThermometer",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/thermometer.svg",
+      "sha256": "b02010c8ef5321d9e4c6e4d73401feb82fa42924a45fbee9963bd4a9c1699cf0",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 162
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 324,
+          "route": "/tools/uitzetting",
+          "label_key": "sidebar.uitzetting",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    },
+    {
+      "name": "IconWind",
+      "svg": "inline-ui-icons/open-heatloss-sidebar/wind.svg",
+      "sha256": "ceffd86675588c0ef817bc3bbf5311aae71ea6a59ed00165b32f10bad7608f61",
+      "definition": {
+        "file": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 113
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/layout/Sidebar.tsx",
+          "line": 273,
+          "route": "/ventilation",
+          "label_key": "sidebar.ventilationBalance",
+          "mode": "web en Tauri"
+        }
+      ],
+      "semantic_collision": false
+    }
+  ]
+}

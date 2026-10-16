@@ -1,0 +1,480 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "scope": "All App.tsx page routes; source-backed shell, sidebar and ribbon mapping. No source screenshots were found for this repository.",
+  "redirect": {
+    "from": "/",
+    "to": "/project"
+  },
+  "page_routes": 26,
+  "sidebar_routes": 24,
+  "explicit_ribbon_routes": 10,
+  "unmapped_ribbon_routes": 16,
+  "source_screenshots": 0,
+  "unmapped_ribbon_behavior": "Vertrekken on direct entry; previous active tab persists on in-app navigation.",
+  "shell_order": [
+    "TitleBar",
+    "Ribbon",
+    "TabBar",
+    "Sidebar + main",
+    "StatusBar"
+  ],
+  "routes": [
+    {
+      "path": "/project",
+      "component": "ProjectSetup",
+      "component_file": "frontend/src/pages/ProjectSetup.tsx",
+      "app_line": 49,
+      "sidebar_group": "project",
+      "sidebar": {
+        "icon": "IconHome",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/home.svg",
+        "line": 251,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.project"
+      },
+      "ribbon_tab": "vertrekken",
+      "ribbon_tab_label": "Vertrekken",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/rooms",
+      "component": "RoomEditor",
+      "component_file": "frontend/src/pages/RoomEditor.tsx",
+      "app_line": 50,
+      "sidebar_group": "warmteverlies",
+      "sidebar": {
+        "icon": "IconGrid",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/grid.svg",
+        "line": 261,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.rooms"
+      },
+      "ribbon_tab": "vertrekken",
+      "ribbon_tab_label": "Vertrekken",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/constructies",
+      "component": "ProjectConstructions",
+      "component_file": "frontend/src/pages/ProjectConstructions.tsx",
+      "app_line": 51,
+      "sidebar_group": "project",
+      "sidebar": {
+        "icon": "IconClipboardList",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/clipboard-list.svg",
+        "line": 252,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.constructions"
+      },
+      "ribbon_tab": "constructies",
+      "ribbon_tab_label": "Constructies",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/rc",
+      "component": "RcCalculator",
+      "component_file": "frontend/src/pages/RcCalculator.tsx",
+      "app_line": 52,
+      "sidebar_group": "rcwaarde",
+      "sidebar": {
+        "icon": "IconLayers",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/layers.svg",
+        "line": 307,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.rcValue"
+      },
+      "ribbon_tab": "constructies",
+      "ribbon_tab_label": "Constructies",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/rc-compare",
+      "component": "RcCompare",
+      "component_file": "frontend/src/pages/RcCompare.tsx",
+      "app_line": 53,
+      "sidebar_group": "rcwaarde",
+      "sidebar": {
+        "icon": "IconLayers",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/layers.svg",
+        "line": 309,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.rcCompare"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/uw",
+      "component": "UwCalculator",
+      "component_file": "frontend/src/pages/UwCalculator.tsx",
+      "app_line": 54,
+      "sidebar_group": "rcwaarde",
+      "sidebar": {
+        "icon": "IconLayers",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/layers.svg",
+        "line": 308,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.uwValue"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tojuli/quick",
+      "component": "Tojuli",
+      "component_file": "frontend/src/pages/Tojuli.tsx",
+      "app_line": 55,
+      "sidebar_group": "tojuli",
+      "sidebar": {
+        "icon": "IconBarChart",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "line": 287,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.tojuli.quick"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tojuli",
+      "component": "TojuliFull",
+      "component_file": "frontend/src/pages/TojuliFull.tsx",
+      "app_line": 56,
+      "sidebar_group": "tojuli",
+      "sidebar": {
+        "icon": "IconBarChart",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "line": 282,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.tojuli.full"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/beng",
+      "component": "Beng",
+      "component_file": "frontend/src/pages/Beng.tsx",
+      "app_line": 57,
+      "sidebar_group": "beng",
+      "sidebar": {
+        "icon": "IconBarChart",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "line": 299,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.beng"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/ventilation",
+      "component": "VentilationBalance",
+      "component_file": "frontend/src/pages/VentilationBalance.tsx",
+      "app_line": 58,
+      "sidebar_group": "ventilatie",
+      "sidebar": {
+        "icon": "IconWind",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/wind.svg",
+        "line": 273,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.ventilationBalance"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tools/deurspleet",
+      "component": "DoorGapCalculator",
+      "component_file": "frontend/src/pages/DoorGapCalculator.tsx",
+      "app_line": 59,
+      "sidebar_group": "ventilatie",
+      "sidebar": {
+        "icon": "IconDoor",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/door.svg",
+        "line": 274,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.doorGap"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tools/hwa",
+      "component": "HwaCalculator",
+      "component_file": "frontend/src/pages/HwaCalculator.tsx",
+      "app_line": 60,
+      "sidebar_group": "rekentools",
+      "sidebar": {
+        "icon": "IconDroplet",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/droplet.svg",
+        "line": 321,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.hwa"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tools/hellingbaan",
+      "component": "HellingbaanCalculator",
+      "component_file": "frontend/src/pages/HellingbaanCalculator.tsx",
+      "app_line": 61,
+      "sidebar_group": "rekentools",
+      "sidebar": {
+        "icon": "IconRamp",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/ramp.svg",
+        "line": 322,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.hellingbaan"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tools/hoeken",
+      "component": "HoekenCalculator",
+      "component_file": "frontend/src/pages/HoekenCalculator.tsx",
+      "app_line": 62,
+      "sidebar_group": "rekentools",
+      "sidebar": {
+        "icon": "IconAngle",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/angle.svg",
+        "line": 323,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.hoeken"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/tools/uitzetting",
+      "component": "UitzettingCalculator",
+      "component_file": "frontend/src/pages/UitzettingCalculator.tsx",
+      "app_line": 63,
+      "sidebar_group": "rekentools",
+      "sidebar": {
+        "icon": "IconThermometer",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/thermometer.svg",
+        "line": 324,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.uitzetting"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/library",
+      "component": "Library",
+      "component_file": "frontend/src/pages/Library.tsx",
+      "app_line": 64,
+      "sidebar_group": "library",
+      "sidebar": {
+        "icon": "IconBook",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/book.svg",
+        "line": 333,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.library"
+      },
+      "ribbon_tab": "constructies",
+      "ribbon_tab_label": "Constructies",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/materialen",
+      "component": "Library",
+      "component_file": "frontend/src/pages/Library.tsx",
+      "app_line": 65,
+      "sidebar_group": "library",
+      "sidebar": {
+        "icon": "IconSwatches",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/swatches.svg",
+        "line": 332,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.materials"
+      },
+      "ribbon_tab": "constructies",
+      "ribbon_tab_label": "Constructies",
+      "ribbon_mapping": "expliciet",
+      "route_props": "initialSection=\"materialen\""
+    },
+    {
+      "path": "/warmteverlies/instellingen",
+      "component": "WarmteverliesInstellingen",
+      "component_file": "frontend/src/pages/WarmteverliesInstellingen.tsx",
+      "app_line": 66,
+      "sidebar_group": "warmteverlies",
+      "sidebar": {
+        "icon": "IconLayers",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/layers.svg",
+        "line": 264,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.warmteverliesInstellingen"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/results",
+      "component": "Results",
+      "component_file": "frontend/src/pages/Results.tsx",
+      "app_line": 67,
+      "sidebar_group": "warmteverlies",
+      "sidebar": {
+        "icon": "IconBarChart",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "line": 265,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.results"
+      },
+      "ribbon_tab": "resultaten",
+      "ribbon_tab_label": "Resultaten",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/modeller",
+      "component": "Modeller",
+      "component_file": "frontend/src/pages/Modeller.tsx",
+      "app_line": 68,
+      "sidebar_group": "project",
+      "sidebar": {
+        "icon": "IconCube",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/cube.svg",
+        "line": 253,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.modeller"
+      },
+      "ribbon_tab": "modeller",
+      "ribbon_tab_label": "Modeller",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/ifc",
+      "component": "Ifc",
+      "component_file": "frontend/src/pages/Ifc.tsx",
+      "app_line": 69,
+      "sidebar_group": "warmteverlies",
+      "sidebar": {
+        "icon": "IconIfc",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/ifc.svg",
+        "line": 262,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.ifc"
+      },
+      "ribbon_tab": "ifc",
+      "ribbon_tab_label": "IFC",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/ifc-reconstructie",
+      "component": "IfcReconstruction",
+      "component_file": "frontend/src/pages/IfcReconstruction.tsx",
+      "app_line": 70,
+      "sidebar_group": "warmteverlies",
+      "sidebar": {
+        "icon": "IconIfcReconstruction",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/ifc-reconstruction.svg",
+        "line": 263,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.ifcReconstruction"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/rapport",
+      "component": "Rapport",
+      "component_file": "frontend/src/pages/Rapport.tsx",
+      "app_line": 71,
+      "sidebar_group": "buiten-zijbalk",
+      "sidebar": null,
+      "ribbon_tab": "rapport",
+      "ribbon_tab_label": "Rapport",
+      "ribbon_mapping": "expliciet",
+      "route_props": ""
+    },
+    {
+      "path": "/import/thermal",
+      "component": "ThermalImportWizard",
+      "component_file": "frontend/src/components/import/ThermalImportWizard.tsx",
+      "app_line": 72,
+      "sidebar_group": "buiten-zijbalk",
+      "sidebar": null,
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/help",
+      "component": "Help",
+      "component_file": "frontend/src/pages/Help.tsx",
+      "app_line": 73,
+      "sidebar_group": "help",
+      "sidebar": {
+        "icon": "IconHelpCircle",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/help-circle.svg",
+        "line": 341,
+        "mode": "web en Tauri",
+        "label_key": "sidebar.help"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    },
+    {
+      "path": "/projects",
+      "component": "Projects",
+      "component_file": "frontend/src/pages/Projects.tsx",
+      "app_line": 74,
+      "sidebar_group": "web-projecten",
+      "sidebar": {
+        "icon": "IconFolder",
+        "svg": "inline-ui-icons/open-heatloss-sidebar/folder.svg",
+        "line": 445,
+        "mode": "alleen web",
+        "label_key": "sidebar.projects"
+      },
+      "ribbon_tab": null,
+      "ribbon_tab_label": null,
+      "ribbon_mapping": "niet gekoppeld",
+      "route_props": ""
+    }
+  ]
+}
