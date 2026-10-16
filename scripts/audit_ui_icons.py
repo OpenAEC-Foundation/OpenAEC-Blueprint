@@ -32,6 +32,9 @@ def ocondat_ui_source(path):
 def is_ui_code_source(name,path):
  if name=='project-ocondat':return ocondat_ui_source(path)
  if name=='building-py':return path=='apps/GIS2BIM/GIS2BIM_location.py'
+ # These repositories contain training media, drawing styles, or index/validation
+ # scripts. None of those files implement a studio UI.
+ if name in {'blender-bonsai-training','inb-template','open-pdf-studio-library'}:return False
  part=Path(path)
  if part.suffix.lower() not in CODE or any(x in path for x in ('.test.','.spec.','.min.')):return False
  pdfjs_viewer=name=='open-pdf-studio' and path in {
@@ -73,7 +76,7 @@ def scan(item):
 
 if __name__=='__main__':
  # Scan every accessible UI repository, including code-only icon systems.
- selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'open-pdf-studio-library','blender-bonsai-training','inb-template','llvm-project'}]
+ selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n!='llvm-project']
  previous_path=H/'ui-code-references.json'
  previous_order={record['repository']:index for index,record in enumerate(json.loads(previous_path.read_text()))} if previous_path.exists() else {}
  with cf.ThreadPoolExecutor(max_workers=4) as pool:
