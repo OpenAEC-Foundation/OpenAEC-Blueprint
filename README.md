@@ -70,6 +70,8 @@ De [eigenschappenreview](design/property-grid-review.html) toont de rechterpanel
 
 De [icoonbotsingreview](design/icon-collision-review.html) beoordeelt alle 14 paren met exact dezelfde bronbytes. Acht paren koppelen de vorm aan verschillende handelingen; daarvoor staan 16 onderscheidende vectoren in 16/24/32 px op licht en donker. Zes Bouwkunde-paren hergebruiken de vorm voor verwante handelingen bij deur- en kozijnstaten. Vier CAD/Pointcloud-vormen zijn in `DomainIcon` opgenomen; Pointcloud gebruikt er twee. De overige twaalf blijven concepten buiten de publieke Rust-icoon-API.
 
+De [review van 53 onzekere iconassets](design/possible-icon-review.html) houdt SVG's zonder direct UI-codebewijs apart van de 577 bewezen UI-bestanden. Ze zijn lokaal op 16, 24 en 32 px te beoordelen en maken geen deel uit van de Rust-crate. De PDF.js-audit omvat ook `viewer.mjs`; de meegeleverde afbeeldingen kunnen nog dynamisch geladen worden.
+
 ## Via GitHub Desktop publiceren
 
 1. Kies **File → Add local repository** en selecteer deze map: `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.
