@@ -1,0 +1,71 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+  "scope": "3D PDF UI source and CSS states, not a runtime capture or a real U3D model",
+  "source_files": [
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDView.jsx",
+      "sha256": "76fe5fdea60e43f685196b9abc7ef2921459e6176a1398ce09e19931a93eba12",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDView.jsx"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDLazy.jsx",
+      "sha256": "3cd17334a060a4ec71dca59c9c9ad8f475c87aed1ff1f8d2a494038ce3819546",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDLazy.jsx"
+    },
+    {
+      "path": "open-pdf-studio/styles/panels.css",
+      "sha256": "042093cf0f8babe20c94dcb86c2f4912df92deae8a9d3b688f285cac2fbafcca",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/panels.css"
+    }
+  ],
+  "source_css_metrics": {
+    "expanded_tree_width_px": 260,
+    "compact_tree_width_px": 220,
+    "expanded_toolbar_padding_px": [
+      5,
+      10
+    ],
+    "compact_toolbar_padding_px": [
+      3,
+      6
+    ],
+    "expanded_toolbar_gap_px": 10,
+    "compact_toolbar_gap_px": 6,
+    "expanded_toolbar_font_px": 12,
+    "compact_toolbar_font_px": 11
+  },
+  "states": [
+    {
+      "id": "inline",
+      "label": "Ingesloten",
+      "evidence": "InlineHost plaatst de viewer over de /3D-annotatie en dockt toolbar en boom boven/links van het documentvlak."
+    },
+    {
+      "id": "expanded",
+      "label": "Vergroot",
+      "evidence": "expandedHere monteert ThreeDViewer zonder compact; de view vult .main-view."
+    },
+    {
+      "id": "loading",
+      "label": "Laden",
+      "evidence": "De canvas toont de vertaalde voortgangstekst totdat ready of error waar is."
+    },
+    {
+      "id": "error",
+      "label": "Fout",
+      "evidence": "Een decodeer-, laad- of unsupported-formatfout vervangt de laadtekst."
+    },
+    {
+      "id": "snapshot",
+      "label": "Snapshotpagina",
+      "evidence": "ThreeDSnapshotBar toont paginanaam en terugknop alleen op een 3D-markuppagina."
+    }
+  ],
+  "prototype_data": "Fictional model names, geometry, statistics, sheet title and snapshot name; source-linked chrome and controls only.",
+  "limitations": [
+    "No captured running PDF Studio image",
+    "No actual U3D decoding or PDF canvas",
+    "No claim of pixel equality for surrounding app chrome"
+  ]
+}

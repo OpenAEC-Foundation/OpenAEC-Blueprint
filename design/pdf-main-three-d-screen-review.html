@@ -1,0 +1,100 @@
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDF-main · 3D-schermreview</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f4f2;color:#282830;font:14px/1.5 system-ui,sans-serif}header{background:#36363e;color:white;padding:27px max(24px,calc((100vw - 1120px)/2))}header small{color:#f4bd70;letter-spacing:.13em}header h1{font-weight:550;margin:6px 0;font-size:27px}header p{max-width:840px;margin:0;color:#e2e0e5}main{max-width:1168px;margin:auto;padding:24px}.notice{background:#fff4e2;border-left:3px solid #d97706;padding:12px 16px;margin-bottom:16px}.switch{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 15px}.switch button{font:inherit;border:1px solid #bdbbc1;background:white;color:#303038;padding:8px 14px;border-radius:4px;cursor:pointer}.switch button.active{background:#36363e;color:white;border-color:#36363e}.stage{height:650px;background:#b9b8b9;position:relative;overflow:hidden;border:1px solid #aeaaad;box-shadow:0 10px 25px #25232916}.paper{position:absolute;left:17%;top:20px;width:66%;height:750px;background:#fff;box-shadow:0 3px 14px #0003;padding:34px;color:#272730}.paper-head{display:flex;justify-content:space-between;border-bottom:1px solid #bbb;padding-bottom:8px;font-size:12px}.paper h2{font-size:17px;font-weight:500;margin:25px 0 10px}.paper p{color:#777;font-size:12px}.viewer-frame{position:absolute;left:19%;right:19%;top:140px;height:430px;z-index:2;box-shadow:0 0 0 1px #bbb}.stage .threed-view{position:absolute}.stage[data-state="inline"] .viewer-frame,.stage[data-state="snapshot"] .viewer-frame{display:block}.stage[data-state="expanded"] .viewer-frame,.stage[data-state="loading"] .viewer-frame,.stage[data-state="error"] .viewer-frame{inset:0;height:auto;box-shadow:none}.stage[data-state="snapshot"] .viewer-frame{display:none}.stage[data-state="inline"] .threed-view{background:transparent}.stage[data-state="inline"] .threed-toolbar{background:rgba(40,40,46,.85);color:#eee;padding:3px 6px;gap:6px;font-size:11px}.stage[data-state="inline"] .threed-toolbar select,.stage[data-state="inline"] .threed-toolbar button{font-size:11px;padding:1px 6px}.stage[data-state="inline"] .threed-tree{width:220px;background:rgba(40,40,46,.92);color:#eee}.stage[data-state="inline"] .threed-title,.stage[data-state="inline"] .threed-hint{display:none}.stage[data-state="loading"] .model,.stage[data-state="error"] .model{display:none}.stage[data-state="loading"] .threed-loading:not(.threed-error){display:flex}.stage[data-state="error"] .threed-error{display:flex}.stage[data-state="snapshot"] .snapshot{display:flex}.stage[data-state="snapshot"] .viewer-frame{display:none}.stage .threed-loading{display:none}.snapshot{display:none;position:absolute;top:0;left:0;right:0;z-index:3;align-items:center;gap:12px;padding:8px 12px}.snapshot button{margin-left:auto;border:1px solid #bdcbe1;background:#294e7b;color:white;padding:4px 8px}.model{height:100%;display:flex;align-items:center;justify-content:center}.model svg{width:min(80%,520px);height:auto}.model-note{position:absolute;right:14px;bottom:12px;font-size:11px;color:#777;background:#fffd;padding:3px 7px}.threed-canvas{overflow:hidden}.threed-tree-row input{accent-color:#d97706}.evidence{background:white;border:1px solid #ddd9dd;padding:18px;margin-top:18px}.evidence h2{font-size:17px;margin:0 0 6px}.evidence ul{padding-left:20px;margin:6px 0 12px}.evidence li{margin:4px 0}.evidence a{color:#925509}.evidence small{color:#777}.attribution{margin-top:12px;color:#62616b;font-size:12px}@media(max-width:800px){main{padding:14px}.stage{height:530px}.paper{left:6%;width:88%}.viewer-frame{left:7%;right:7%;height:360px}.threed-toolbar{gap:5px}.threed-hint,.threed-stats{display:none}}
+/* ── 3D PDF view (WebGL over the document area) ───────────────────────── */
+/* Covers .main-view (the document area); see ThreeDView.jsx. UI parts keep
+   the default cursor; only the model canvas is part of the document area. */
+.threed-view {
+  position: absolute; inset: 0; z-index: 50;
+  display: flex; flex-direction: column;
+  background: var(--theme-panel-bg, #2b2b30); color: var(--theme-panel-header-text, #ddd);
+  outline: none;
+  cursor: default;
+}
+.threed-toolbar {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 5px 10px; font-size: 12px;
+  border-bottom: 1px solid var(--theme-panel-border, #444);
+}
+.threed-toolbar label { display: inline-flex; align-items: center; gap: 5px; }
+.threed-toolbar select, .threed-toolbar button {
+  font-size: 12px; padding: 2px 8px; cursor: default;
+  background: var(--theme-thumbnail-bg, #3a3a40); color: inherit;
+  border: 1px solid var(--theme-panel-border, #555); border-radius: 0;
+}
+.threed-toolbar button.active { border-color: var(--theme-thumbnail-active-border, #d97706); }
+.threed-toolbar button:disabled, .threed-toolbar select:disabled { opacity: 0.5; cursor: default; }
+.threed-title { font-weight: 600; }
+.threed-stats, .threed-hint { opacity: 0.65; }
+.threed-notice { color: #b45309; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 320px; }
+.threed-view.compact .threed-notice { color: #fbbf24; }
+.threed-close { font-size: 16px !important; line-height: 1; padding: 0 8px !important; }
+.threed-body { flex: 1; display: flex; min-height: 0; }
+.threed-tree {
+  width: 260px; overflow: auto; font-size: 12px; padding: 4px 0;
+  border-right: 1px solid var(--theme-panel-border, #444);
+}
+.threed-tree-row { display: flex; align-items: center; gap: 4px; padding: 1px 6px; white-space: nowrap; }
+.threed-tree-row:hover { background: var(--theme-thumbnail-hover); }
+.threed-tree-model { padding-left: 34px; }
+.threed-tree-arrow { width: 14px; font-size: 8px; cursor: default; text-align: center; flex-shrink: 0; }
+.threed-tree-name { overflow: hidden; text-overflow: ellipsis; flex: 1; }
+.threed-tree-count { opacity: 0.55; font-size: 11px; }
+.threed-canvas { flex: 1; position: relative; min-width: 0; background: #fff; cursor: default; }
+.threed-canvas canvas { display: block; }
+.threed-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  color: #444; font-size: 13px; text-align: center; padding: 20px;
+}
+.threed-error { color: #b91c1c; }
+
+/* 3D view embedded in the page (over the /3D annotation's rectangle) */
+.threed-inline-clip { position: fixed; overflow: hidden; pointer-events: none; z-index: 40; }
+.threed-inline { position: absolute; pointer-events: auto; }
+.threed-view.compact { z-index: auto; background: transparent; }
+.threed-view.compact .threed-toolbar {
+  padding: 3px 6px; gap: 6px; font-size: 11px;
+  background: rgba(40, 40, 46, 0.85); color: #eee;
+}
+.threed-view.compact .threed-toolbar select, .threed-view.compact .threed-toolbar button { font-size: 11px; padding: 1px 6px; }
+.threed-view.compact .threed-tree { width: 220px; background: rgba(40, 40, 46, 0.92); color: #eee; }
+.threed-activate {
+  position: absolute; top: 8px; left: 8px; padding: 4px 12px; font-size: 12px; cursor: default;
+  background: #d97706; color: #fff; border: 1px solid #b45309; border-radius: 0;
+}
+
+/* 3D toolbar docked at the top of the document area, with the sheet's
+   title (left) and date (right) locked underneath it */
+.threed-dock {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 2;
+  pointer-events: auto; display: flex; flex-direction: column; cursor: default;
+}
+.threed-dock-toolbar .threed-toolbar {
+  background: var(--theme-panel-bg, #2b2b30); color: var(--theme-panel-header-text, #ddd);
+  border-bottom: 1px solid var(--theme-panel-border, #444);
+}
+.threed-dock.off .threed-dock-toolbar { display: none; }
+.threed-dock-header {
+  display: flex; justify-content: space-between; gap: 20px;
+  padding: 3px 12px; font-size: 11px;
+  background: rgba(255, 255, 255, 0.92); color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.threed-dock-left, .threed-dock-right { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.threed-dock-left { font-weight: 600; }
+
+/* Model tree docked to the left edge of the document area, below the bar */
+.threed-tree-dock {
+  position: absolute; left: 0; bottom: 0; z-index: 2;
+  pointer-events: auto; display: flex; cursor: default;
+}
+.threed-tree-dock:empty { display: none; }
+.threed-tree-dock .threed-tree {
+  width: 260px; height: 100%;
+  background: var(--theme-panel-bg, #2b2b30); color: var(--theme-panel-header-text, #ddd);
+  border-right: 1px solid var(--theme-panel-border, #444);
+}
+
+/* 3D markup page bar and the Edit button */
+.threed-snapshot-bar { background: #1e3a5f; color: #e0ecff; }
+.threed-toolbar button.threed-markup-btn { border-color: #e11d48; }</style><header><small>OPENAEC · PUBLIEKE PDF-MAIN</small><h1>3D-weergave: scherm- en toestandreview</h1><p>De actuele bron levert een ingesloten model, een vergrote documentweergave, laad- en fouttoestand en een markuppagina met terugkeer naar het model. De toolbar- en boomstijl hieronder komt uit de gepinde CSS.</p></header><main><div class="notice">Brongetrouwe UI-structuur en maten, met fictieve modelinhoud. Zonder draaiende 3D-PDF en bronscreenshot is dit nog geen pixelvalidatie van de volledige app.</div><div class="switch" role="group" aria-label="3D-schermtoestanden"><button type="button" data-state="inline">Ingesloten</button><button type="button" data-state="expanded">Vergroot</button><button type="button" data-state="loading">Laden</button><button type="button" data-state="error">Fout</button><button type="button" data-state="snapshot">Snapshotpagina</button></div><div class="stage" id="stage" data-state="inline"><div class="paper"><div class="paper-head"><strong>TECHNISCHE TEKENING · VOORBEELD</strong><span>16-10-2026</span></div><h2>3D-model op PDF-pagina</h2><p>Voorbeeldpagina voor visuele beoordeling; geen bronbestand.</p></div><div class="snapshot pdfa-bar threed-snapshot-bar"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 1.5l5.5 3v7L8 14.5l-5.5-3v-7z"/><path d="M2.5 4.5L8 7.5l5.5-3M8 7.5v7"/></svg><span>3D markup page: Markup view 1</span><button type="button" id="back">Back to 3D model</button></div><div class="viewer-frame"><div class="threed-view"><div class="threed-toolbar"><span class="threed-title">3D view</span><label>View <select><option>Default view</option><option>Top view</option><option>Markup view 1 (page 2)</option></select></label><button type="button">Fit</button><label>Display <select id="renderMode"><option>Solid</option><option>Solid with edges</option><option>Wireframe</option><option>Transparent</option></select></label><button type="button" class="active" id="treeToggle">Model tree</button><button type="button" class="threed-markup-btn">Edit</button><span class="threed-stats">12 objects, 4,284 triangles</span><span style="flex:1"></span><span class="threed-hint">Left drag: orbit, right drag: pan, wheel: zoom</span><button type="button" id="sizeToggle" title="Fill the document area">⤢</button><button type="button" id="close" class="threed-close" title="Turn off the 3D view">×</button></div><div class="threed-body"><div class="threed-tree" id="tree"><div class="threed-tree-group"><div class="threed-tree-row"><span class="threed-tree-arrow">▼</span><input type="checkbox" checked><span class="threed-tree-name">Example assembly</span><span class="threed-tree-count">3</span></div><div class="threed-tree-row threed-tree-model"><input type="checkbox" checked><span class="threed-tree-name">Housing</span></div><div class="threed-tree-row threed-tree-model"><input type="checkbox" checked><span class="threed-tree-name">Shaft</span></div><div class="threed-tree-row threed-tree-model"><input type="checkbox" checked><span class="threed-tree-name">Base plate</span></div></div></div><div class="threed-canvas"><div class="model"><svg viewBox="0 0 600 400" role="img" aria-label="Fictieve 3D-voorbeeldgeometrie"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff3f8"/><stop offset="1" stop-color="#8995a6"/></linearGradient></defs><path d="M110 260 285 160 490 245 320 350Z" fill="#aab3c0" stroke="#536070" stroke-width="2"/><path d="M160 235 160 150 280 84 410 140 410 245 300 308Z" fill="url(#g)" stroke="#536070" stroke-width="2"/><path d="M160 150 280 215 410 140M280 215v93" fill="none" stroke="#536070" stroke-width="2"/><ellipse cx="285" cy="150" rx="48" ry="20" fill="#eef2f7" stroke="#536070" stroke-width="2"/><path d="M237 150V88c0-26 96-26 96 0v62" fill="url(#g)" stroke="#536070" stroke-width="2"/><ellipse cx="285" cy="88" rx="48" ry="20" fill="#d4dce6" stroke="#536070" stroke-width="2"/><path d="M90 268 315 382 515 269" fill="none" stroke="#7f8b9b" stroke-width="2" opacity=".45"/></svg><span class="model-note">Fictief model · geen U3D-render</span></div><div class="threed-loading">Loading 3D model... 46%</div><div class="threed-loading threed-error">The 3D model could not be read.</div></div></div></div></div></div><div class="evidence"><h2>Toestandbewijs uit de bron</h2><ul><li><strong>Ingesloten</strong> — InlineHost plaatst de viewer over de /3D-annotatie en dockt toolbar en boom boven/links van het documentvlak.</li><li><strong>Vergroot</strong> — expandedHere monteert ThreeDViewer zonder compact; de view vult .main-view.</li><li><strong>Laden</strong> — De canvas toont de vertaalde voortgangstekst totdat ready of error waar is.</li><li><strong>Fout</strong> — Een decodeer-, laad- of unsupported-formatfout vervangt de laadtekst.</li><li><strong>Snapshotpagina</strong> — ThreeDSnapshotBar toont paginanaam en terugknop alleen op een 3D-markuppagina.</li></ul><p>CSS-maten: 260 px modelboom in de vergrote weergave, 220 px ingesloten; toolbar 12/11 px tekst met 10/6 px tussenruimte. De vier weergavemodi en de actie <em>Edit</em> staan in de JSX. De snapshotstatus gebruikt de enige nieuwe letterlijke SVG-vorm in dit scherm: een 16 px statusmarkering, geen lintopdracht.</p><p><a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDView.jsx">ThreeDView.jsx</a> · <a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDLazy.jsx">ThreeDLazy.jsx</a> · <a href="https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/styles/panels.css#L1597">panels.css</a> · <a href="../harmonization/pdf-main-three-d-screen.json">Bronmanifest</a></p><small>De checkboxen, selecties en 3D-afbeelding in deze review voeren geen PDF- of WebGL-functie uit.</small></div></main><script>const stage=document.getElementById('stage'),buttons=[...document.querySelectorAll('[data-state]')].filter(x=>x.tagName==='BUTTON');function select(state){stage.dataset.state=state;for(const b of buttons)b.classList.toggle('active',b.dataset.state===state);document.getElementById('sizeToggle').textContent=state==='inline'?'⤢':'⤡';document.getElementById('tree').style.display=state==='snapshot'?'none':''}for(const b of buttons)b.addEventListener('click',()=>select(b.dataset.state));document.getElementById('sizeToggle').addEventListener('click',()=>select(stage.dataset.state==='inline'?'expanded':'inline'));document.getElementById('back').addEventListener('click',()=>select('inline'));document.getElementById('close').addEventListener('click',()=>select('snapshot'));document.getElementById('treeToggle').addEventListener('click',e=>{const tree=document.getElementById('tree');tree.style.display=tree.style.display==='none'?'':'none';e.currentTarget.classList.toggle('active',tree.style.display!=='none')});select('inline')</script></html>
