@@ -1,6 +1,6 @@
 {
   "source_audit": "harmonization/pdf-ribbon-imported-ui-icons.json",
-  "status": "visual proposal, not approved or installed in the shared crate",
+  "status": "visually reviewed and installed in the shared Rust crate; the source PDF application has not migrated",
   "grid": "24×24, 1.75px round stroke for new candidates; reused crate assets keep their established geometry",
   "collision_groups": 7,
   "semantic_rows": 15,
@@ -16,8 +16,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/fit-width.svg",
       "proposal_small_svg": "harmonization/proposals/pdf-ribbon-semantic/fit-width-small.svg",
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfFitWidth",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-fit-width.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-fit-width.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
@@ -34,8 +36,10 @@
       "built_in_used": true,
       "proposal_svg": "crates/openaec-ui/assets/icons/fit.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "reuse-existing-crate-icon",
-      "reuse_icon": "Icon::Fit",
+      "proposal_kind": "shared-existing-icon",
+      "crate_variant": "Icon::Fit",
+      "crate_svg": "crates/openaec-ui/assets/icons/fit.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/icons/fit.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
@@ -52,8 +56,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/actual-size.svg",
       "proposal_small_svg": "harmonization/proposals/pdf-ribbon-semantic/actual-size-small.svg",
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfActualSize",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-actual-size.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-actual-size.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
@@ -70,8 +76,10 @@
       "built_in_used": true,
       "proposal_svg": "crates/openaec-ui/assets/icons/search.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "reuse-existing-crate-icon",
-      "reuse_icon": "Icon::Search",
+      "proposal_kind": "shared-existing-icon",
+      "crate_variant": "Icon::Search",
+      "crate_svg": "crates/openaec-ui/assets/icons/search.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/icons/search.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -93,8 +101,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/edit-text.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfEditText",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-edit-text.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-edit-text.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
@@ -110,9 +120,11 @@
       "source_svg": null,
       "built_in_used": false,
       "proposal_svg": "crates/openaec-ui/assets/domain-icons/drawing-text.svg",
-      "proposal_small_svg": null,
-      "proposal_kind": "reuse-existing-crate-icon",
-      "reuse_icon": "DomainIcon::DrawingText",
+      "proposal_small_svg": "crates/openaec-ui/assets/domain-icons-small/drawing-text.svg",
+      "proposal_kind": "shared-existing-icon",
+      "crate_variant": "DomainIcon::DrawingText",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/drawing-text.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/drawing-text.svg",
       "source_uses": []
     },
     {
@@ -123,8 +135,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/clear-page.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfClearPage",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-clear-page.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-clear-page.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
@@ -141,8 +155,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/delete-page.svg",
       "proposal_small_svg": "harmonization/proposals/pdf-ribbon-semantic/delete-page-small.svg",
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfDeletePage",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-delete-page.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-delete-page.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
@@ -159,8 +175,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/single-page.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfSinglePage",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-single-page.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-single-page.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
@@ -177,8 +195,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/continuous-pages.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfContinuousPages",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-continuous-pages.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-continuous-pages.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
@@ -195,8 +215,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/file-association.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfFileAssociation",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-file-association.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-file-association.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
@@ -213,8 +235,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/book-view.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfBookView",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-book-view.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-book-view.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
@@ -231,8 +255,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/shortcuts.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfShortcuts",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-shortcuts.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-shortcuts.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
@@ -249,8 +275,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/navigation.svg",
       "proposal_small_svg": null,
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfNavigation",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-navigation.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-navigation.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
@@ -267,8 +295,10 @@
       "built_in_used": true,
       "proposal_svg": "harmonization/proposals/pdf-ribbon-semantic/manage-watermarks.svg",
       "proposal_small_svg": "harmonization/proposals/pdf-ribbon-semantic/manage-watermarks-small.svg",
-      "proposal_kind": "new-draft",
-      "reuse_icon": null,
+      "proposal_kind": "shared-domain-icon",
+      "crate_variant": "DomainIcon::PdfManageWatermarks",
+      "crate_svg": "crates/openaec-ui/assets/domain-icons/pdf-manage-watermarks.svg",
+      "crate_small_svg": "crates/openaec-ui/assets/domain-icons-small/pdf-manage-watermarks.svg",
       "source_uses": [
         {
           "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",

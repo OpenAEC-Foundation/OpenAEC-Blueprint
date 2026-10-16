@@ -187,10 +187,22 @@ pub enum DomainIcon {
     DrawingSvgFrame,
     DrawingText,
     DrawingLeader,
+    PdfFitWidth,
+    PdfActualSize,
+    PdfEditText,
+    PdfClearPage,
+    PdfDeletePage,
+    PdfSinglePage,
+    PdfContinuousPages,
+    PdfFileAssociation,
+    PdfBookView,
+    PdfShortcuts,
+    PdfNavigation,
+    PdfManageWatermarks,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 21] = [
+    pub const ALL: [Self; 33] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -212,6 +224,18 @@ impl DomainIcon {
         Self::DrawingSvgFrame,
         Self::DrawingText,
         Self::DrawingLeader,
+        Self::PdfFitWidth,
+        Self::PdfActualSize,
+        Self::PdfEditText,
+        Self::PdfClearPage,
+        Self::PdfDeletePage,
+        Self::PdfSinglePage,
+        Self::PdfContinuousPages,
+        Self::PdfFileAssociation,
+        Self::PdfBookView,
+        Self::PdfShortcuts,
+        Self::PdfNavigation,
+        Self::PdfManageWatermarks,
     ];
 
     pub fn id(self) -> &'static str {
@@ -237,6 +261,18 @@ impl DomainIcon {
             Self::DrawingSvgFrame => "drawing.svg-frame",
             Self::DrawingText => "drawing.text",
             Self::DrawingLeader => "drawing.leader",
+            Self::PdfFitWidth => "pdf.fit-width",
+            Self::PdfActualSize => "pdf.actual-size",
+            Self::PdfEditText => "pdf.edit-text",
+            Self::PdfClearPage => "pdf.clear-page",
+            Self::PdfDeletePage => "pdf.delete-page",
+            Self::PdfSinglePage => "pdf.single-page",
+            Self::PdfContinuousPages => "pdf.continuous-pages",
+            Self::PdfFileAssociation => "pdf.file-association",
+            Self::PdfBookView => "pdf.book-view",
+            Self::PdfShortcuts => "pdf.shortcuts",
+            Self::PdfNavigation => "pdf.navigation",
+            Self::PdfManageWatermarks => "pdf.manage-watermarks",
         }
     }
 
@@ -367,6 +403,78 @@ impl DomainIcon {
             }
             (Self::DrawingLeader, false) => {
                 include_bytes!("../assets/domain-icons/drawing-leader.svg")
+            }
+            (Self::PdfFitWidth, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-fit-width.svg")
+            }
+            (Self::PdfFitWidth, false) => {
+                include_bytes!("../assets/domain-icons/pdf-fit-width.svg")
+            }
+            (Self::PdfActualSize, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-actual-size.svg")
+            }
+            (Self::PdfActualSize, false) => {
+                include_bytes!("../assets/domain-icons/pdf-actual-size.svg")
+            }
+            (Self::PdfEditText, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-edit-text.svg")
+            }
+            (Self::PdfEditText, false) => {
+                include_bytes!("../assets/domain-icons/pdf-edit-text.svg")
+            }
+            (Self::PdfClearPage, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-clear-page.svg")
+            }
+            (Self::PdfClearPage, false) => {
+                include_bytes!("../assets/domain-icons/pdf-clear-page.svg")
+            }
+            (Self::PdfDeletePage, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-delete-page.svg")
+            }
+            (Self::PdfDeletePage, false) => {
+                include_bytes!("../assets/domain-icons/pdf-delete-page.svg")
+            }
+            (Self::PdfSinglePage, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-single-page.svg")
+            }
+            (Self::PdfSinglePage, false) => {
+                include_bytes!("../assets/domain-icons/pdf-single-page.svg")
+            }
+            (Self::PdfContinuousPages, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-continuous-pages.svg")
+            }
+            (Self::PdfContinuousPages, false) => {
+                include_bytes!("../assets/domain-icons/pdf-continuous-pages.svg")
+            }
+            (Self::PdfFileAssociation, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-file-association.svg")
+            }
+            (Self::PdfFileAssociation, false) => {
+                include_bytes!("../assets/domain-icons/pdf-file-association.svg")
+            }
+            (Self::PdfBookView, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-book-view.svg")
+            }
+            (Self::PdfBookView, false) => {
+                include_bytes!("../assets/domain-icons/pdf-book-view.svg")
+            }
+            (Self::PdfShortcuts, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-shortcuts.svg")
+            }
+            (Self::PdfShortcuts, false) => {
+                include_bytes!("../assets/domain-icons/pdf-shortcuts.svg")
+            }
+            (Self::PdfNavigation, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-navigation.svg")
+            }
+            (Self::PdfNavigation, false) => {
+                include_bytes!("../assets/domain-icons/pdf-navigation.svg")
+            }
+            (Self::PdfManageWatermarks, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-manage-watermarks.svg")
+            }
+            (Self::PdfManageWatermarks, false) => {
+                include_bytes!("../assets/domain-icons/pdf-manage-watermarks.svg")
             }
         }
     }

@@ -635,8 +635,56 @@ fn export_pdf_ribbon_imported_icon_contact_sheets() {
     }
 }
 
+fn pdf_semantic_icon_bytes(variant: &str, size: u16) -> &'static [u8] {
+    use openaec_ui::icons::{DomainIcon, Icon};
+    match variant {
+        "Icon::Fit" => Icon::Fit.bytes(),
+        "Icon::Search" => Icon::Search.bytes(),
+        "DomainIcon::DrawingText" => DomainIcon::DrawingText.bytes(size),
+        "DomainIcon::PdfFitWidth" => DomainIcon::PdfFitWidth.bytes(size),
+        "DomainIcon::PdfActualSize" => DomainIcon::PdfActualSize.bytes(size),
+        "DomainIcon::PdfEditText" => DomainIcon::PdfEditText.bytes(size),
+        "DomainIcon::PdfClearPage" => DomainIcon::PdfClearPage.bytes(size),
+        "DomainIcon::PdfDeletePage" => DomainIcon::PdfDeletePage.bytes(size),
+        "DomainIcon::PdfSinglePage" => DomainIcon::PdfSinglePage.bytes(size),
+        "DomainIcon::PdfContinuousPages" => DomainIcon::PdfContinuousPages.bytes(size),
+        "DomainIcon::PdfFileAssociation" => DomainIcon::PdfFileAssociation.bytes(size),
+        "DomainIcon::PdfBookView" => DomainIcon::PdfBookView.bytes(size),
+        "DomainIcon::PdfShortcuts" => DomainIcon::PdfShortcuts.bytes(size),
+        "DomainIcon::PdfNavigation" => DomainIcon::PdfNavigation.bytes(size),
+        "DomainIcon::PdfManageWatermarks" => DomainIcon::PdfManageWatermarks.bytes(size),
+        _ => panic!("unmapped PDF semantic: {variant}"),
+    }
+}
+
 #[test]
-#[ignore = "regenerate native PDF ribbon semantic candidate comparisons on demand"]
+fn shared_pdf_ribbon_icons_match_reviewed_artwork() {
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/proposals/pdf-ribbon-semantic/review.json"))
+            .expect("PDF ribbon semantic review"),
+    )
+    .expect("valid PDF ribbon semantic review");
+    let records = manifest["rows"].as_array().expect("PDF semantic rows");
+    assert_eq!(records.len(), 15);
+    assert_eq!(records.iter().filter(|item| item["proposal_kind"] == "shared-domain-icon").count(), 12);
+    for item in records {
+        let variant = item["crate_variant"].as_str().expect("typed Rust icon");
+        for size in [16, 24] {
+            let path = if size == 16 {
+                item["proposal_small_svg"].as_str().or(item["proposal_svg"].as_str())
+            } else {
+                item["proposal_svg"].as_str()
+            }
+            .expect("review SVG path");
+            assert_eq!(pdf_semantic_icon_bytes(variant, size), std::fs::read(root.join(path)).expect("reviewed SVG"),
+                "{variant} at {size} px diverged from visual review");
+        }
+    }
+}
+
+#[test]
+#[ignore = "regenerate native PDF ribbon semantic Rust icon comparisons on demand"]
 fn export_pdf_ribbon_semantic_review() {
     use iced::widget::{column, container, row, svg, text};
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
@@ -656,17 +704,22 @@ fn export_pdf_ribbon_semantic_review() {
         let mut rows = column![].spacing(6).padding(12);
         for item in records {
             let label = item["label"].as_str().expect("PDF semantic label");
+            let variant = item["crate_variant"].as_str().expect("typed PDF semantic icon");
             let candidate = item["proposal_svg"].as_str().expect("PDF semantic proposal path");
             let candidate_small = item["proposal_small_svg"].as_str().unwrap_or(candidate);
             let mut icons = row![text(label).size(11).color(foreground).width(190)].spacing(8);
-            for (path, size) in [
-                (item["source_svg"].as_str(), 24),
-                (Some(candidate_small), 16),
-                (Some(candidate), 24),
-                (Some(candidate), 32),
+            for (path, size, shared) in [
+                (item["source_svg"].as_str(), 24, false),
+                (Some(candidate_small), 16, true),
+                (Some(candidate), 24, true),
+                (Some(candidate), 32, true),
             ] {
                 let content: iced::Element<'_, Message<Action>> = if let Some(path) = path {
-                    let bytes = std::fs::read(root.join(path)).expect("PDF semantic SVG");
+                    let bytes = if shared {
+                        pdf_semantic_icon_bytes(variant, size).to_vec()
+                    } else {
+                        std::fs::read(root.join(path)).expect("PDF source SVG")
+                    };
                     svg(svg::Handle::from_memory(bytes))
                         .width(size)
                         .height(size)
@@ -1572,7 +1625,7 @@ fn export_native_icon_atlas() {
     app.show(Page::Icons);
     for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
         save_render(&app, theme, &design.join(format!("style-repo-icons-{name}.png")));
-        render_sized(&app, theme, false, None, Size::new(1280.0, 1500.0))
+        render_sized(&app, theme, false, None, Size::new(1280.0, 2400.0))
             .save_png(&design.join(format!("style-repo-ribbon-icons-{name}.png")))
             .expect("save typed ribbon-icon review");
     }
