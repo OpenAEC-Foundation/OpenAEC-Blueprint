@@ -636,6 +636,68 @@ fn export_pdf_ribbon_imported_icon_contact_sheets() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF ribbon semantic candidate comparisons on demand"]
+fn export_pdf_ribbon_semantic_review() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/proposals/pdf-ribbon-semantic/review.json"))
+            .expect("PDF ribbon semantic proposal manifest"),
+    )
+    .expect("valid PDF ribbon proposal manifest");
+    let records = manifest["rows"].as_array().expect("PDF ribbon proposal rows");
+    assert_eq!(records.len(), 15);
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut rows = column![].spacing(6).padding(12);
+        for item in records {
+            let label = item["label"].as_str().expect("PDF semantic label");
+            let candidate = item["proposal_svg"].as_str().expect("PDF semantic proposal path");
+            let candidate_small = item["proposal_small_svg"].as_str().unwrap_or(candidate);
+            let mut icons = row![text(label).size(11).color(foreground).width(190)].spacing(8);
+            for (path, size) in [
+                (item["source_svg"].as_str(), 24),
+                (Some(candidate_small), 16),
+                (Some(candidate), 24),
+                (Some(candidate), 32),
+            ] {
+                let content: iced::Element<'_, Message<Action>> = if let Some(path) = path {
+                    let bytes = std::fs::read(root.join(path)).expect("PDF semantic SVG");
+                    svg(svg::Handle::from_memory(bytes))
+                        .width(size)
+                        .height(size)
+                        .style(move |_, _| svg::Style {
+                            color: Some(foreground),
+                        })
+                        .into()
+                } else {
+                    text("—").size(18).color(foreground).into()
+                };
+                icons = icons.push(
+                    container(content).width(100).height(42)
+                        .center_x(iced::Fill)
+                        .center_y(iced::Fill)
+                        .style(move |_| container::Style::default().background(background)),
+                );
+            }
+            rows = rows.push(icons);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(660.0, 740.0))
+            .save_png(&root.join(format!("design/pdf-ribbon-semantic-{suffix}.png")))
+            .expect("save PDF ribbon semantic review");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));
