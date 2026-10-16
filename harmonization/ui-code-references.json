@@ -6797,7 +6797,7 @@
   {
     "repository": "pile-plan-studio",
     "status": "source-scanned",
-    "code_files": 124,
+    "code_files": 125,
     "matches": [
       {
         "source": "apps/pile-plan-studio/src/components/domain/imports/PilePlanImportPanel.tsx",
@@ -8991,7 +8991,7 @@
   {
     "repository": "open-frame-studio",
     "status": "source-scanned",
-    "code_files": 89,
+    "code_files": 93,
     "matches": [
       {
         "source": "ui/src/App.svelte",
@@ -10845,8 +10845,33 @@
   {
     "repository": "monty-ifc-viewer",
     "status": "source-scanned",
-    "code_files": 11,
+    "code_files": 12,
     "matches": [
+      {
+        "source": "debug-tools.mjs",
+        "line": 37,
+        "text": "await page.screenshot({ path: \"debug-section-on.png\" });"
+      },
+      {
+        "source": "debug-tools.mjs",
+        "line": 62,
+        "text": "await page.screenshot({ path: \"debug-before-reset.png\" });"
+      },
+      {
+        "source": "debug-tools.mjs",
+        "line": 72,
+        "text": "await page.screenshot({ path: \"debug-after-reset.png\" });"
+      },
+      {
+        "source": "debug-tools.mjs",
+        "line": 76,
+        "text": "  const activeButtons = document.querySelectorAll(\".toolbar-btn.active\");"
+      },
+      {
+        "source": "debug-tools.mjs",
+        "line": 88,
+        "text": "await page.screenshot({ path: \"debug-reset-final.png\" });"
+      },
       {
         "source": "landing/index.html",
         "line": 90,
@@ -15368,7 +15393,7 @@
   {
     "repository": "Open-Calculations-Studio",
     "status": "source-scanned",
-    "code_files": 136,
+    "code_files": 215,
     "matches": [
       {
         "source": "packages/desktop/src/components/TitleBar.css",
@@ -16881,6 +16906,31 @@
         "text": "export const linkIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71\"/></svg>`;"
       },
       {
+        "source": "scripts/generate-icons.mjs",
+        "line": 3,
+        "text": " * Render packages/desktop/src/assets/ocs-logo.svg → a 1024×1024 PNG that"
+      },
+      {
+        "source": "scripts/generate-icons.mjs",
+        "line": 4,
+        "text": " * Tauri's `tauri icon` command can consume to generate the full icon set."
+      },
+      {
+        "source": "scripts/generate-icons.mjs",
+        "line": 13,
+        "text": "const svgPath = resolve(root, \"packages/desktop/src/assets/ocs-logo.svg\");"
+      },
+      {
+        "source": "scripts/generate-icons.mjs",
+        "line": 15,
+        "text": "const outPng = resolve(outDir, \"icon-source.png\");"
+      },
+      {
+        "source": "scripts/generate-icons.mjs",
+        "line": 22,
+        "text": "  .png()"
+      },
+      {
         "source": "packages/desktop/src/components/DocumentBar.css",
         "line": 52,
         "text": ".document-tab-icon {"
@@ -17099,6 +17149,56 @@
         "source": "packages/desktop/src/components/wizards/types.ts",
         "line": 49,
         "text": "  icon: string;"
+      },
+      {
+        "source": "scripts/check-balklaag-vlijn.mjs",
+        "line": 193,
+        "text": "    const vlakken = [...svg.matchAll(/<polygon points=\"([^\"]+)\" style=\"(fill:rgba\\(59,130,246,[^\"]*)\"/g)];"
+      },
+      {
+        "source": "scripts/check-balklaag-vlijn.mjs",
+        "line": 206,
+        "text": "    const teksten = [...svg.matchAll(/<text x=\"([^\"]+)\" y=\"([^\"]+)\"([^>]*)>(-?[\\d.]+)<\\/text>/g)]"
+      },
+      {
+        "source": "scripts/check-bureauprofiel.mjs",
+        "line": 43,
+        "text": "const fout = normaliseerBureau({ naam: 12, logo: false });"
+      },
+      {
+        "source": "scripts/check-bureauprofiel.mjs",
+        "line": 44,
+        "text": "toets(\"verkeerd type → standaard\", fout.naam === \"\" && fout.logo === \"\", fout);"
+      },
+      {
+        "source": "scripts/check-mechanica.mjs",
+        "line": 610,
+        "text": "  const lijnen = [...svg.matchAll(/<line x1=\"([-\\d.]+)\" y1=\"([-\\d.]+)\" x2=\"([-\\d.]+)\" y2=\"([-\\d.]+)\" style=\"stroke:(#[0-9a-f]+)/g)].map((m) => ({ x1: +m[1], y1: +m[2], x2: +m[3], y2: +m[4], kleur: m[5] }));"
+      },
+      {
+        "source": "scripts/check-modulebeelden.mjs",
+        "line": 8,
+        "text": "const map = \"packages/desktop/src/assets/module-beelden\";"
+      },
+      {
+        "source": "scripts/check-modulebeelden.mjs",
+        "line": 9,
+        "text": "const ontbrekend = ids.filter((id) => !existsSync(join(map, `${id}.webp`)));"
+      },
+      {
+        "source": "scripts/check-modulebeelden.mjs",
+        "line": 10,
+        "text": "const teGroot = ids.filter((id) => existsSync(join(map, `${id}.webp`)) && statSync(join(map, `${id}.webp`)).size > 200_000);"
+      },
+      {
+        "source": "scripts/check-modulebeelden.mjs",
+        "line": 13,
+        "text": "for (const id of ids) namen.delete(`${id}.webp`);"
+      },
+      {
+        "source": "scripts/check-modulebeelden.mjs",
+        "line": 14,
+        "text": "namen.delete(\"schijfwerking.webp\"); // Oud blad blijft beschikbaar in bestaande projecten."
       }
     ]
   },
@@ -32342,8 +32442,93 @@
   {
     "repository": "open-pdf-studio",
     "status": "source-scanned",
-    "code_files": 265,
+    "code_files": 316,
     "matches": [
+      {
+        "source": "mcp-server/decode-screenshot.mjs",
+        "line": 4,
+        "text": "const OUT = process.argv[2] || 'C:/Users/rickd/AppData/Local/Temp/claude/screenshot.png';"
+      },
+      {
+        "source": "mcp-server/decode-screenshot.mjs",
+        "line": 17,
+        "text": "const buf = Buffer.from(obj.png_base64, 'base64');"
+      },
+      {
+        "source": "mcp-server/test-text-edit.mjs",
+        "line": 23,
+        "text": "  const b64 = res?.png_base64 || res?.image || res?.base64 || res?.png;"
+      },
+      {
+        "source": "mcp-server/test-text-edit.mjs",
+        "line": 48,
+        "text": "    console.log('SHOT_BEFORE:', saveShot(await tool('app_screenshot_view', {}), TMP + '/opds-edit-before.png'));"
+      },
+      {
+        "source": "mcp-server/test-text-edit.mjs",
+        "line": 65,
+        "text": "    console.log('SHOT_EDITING:', saveShot(await tool('app_screenshot_view', {}), TMP + '/opds-edit-during.png'));"
+      },
+      {
+        "source": "mcp-server/test-text-edit.mjs",
+        "line": 72,
+        "text": "    console.log('SHOT_AFTER:', saveShot(await tool('app_screenshot_view', {}), TMP + '/opds-edit-after.png'));"
+      },
+      {
+        "source": "mcp-server/vector-zoom-benchmark.mjs",
+        "line": 187,
+        "text": "  const encoded = shot?.png_base64 ?? shot?.base64 ?? shot?.data;"
+      },
+      {
+        "source": "mcp-server/vector-zoom-benchmark.mjs",
+        "line": 194,
+        "text": "    const file = join(outputDir, `${stem}.png`);"
+      },
+      {
+        "source": "mcp-server/verify-compare-sync.mjs",
+        "line": 108,
+        "text": "  await page.screenshot({ path: `${SHOTS}/compare-sync-side-zoomed.png` });"
+      },
+      {
+        "source": "mcp-server/verify-compare-sync.mjs",
+        "line": 129,
+        "text": "  await page.screenshot({ path: `${SHOTS}/compare-sync-side-zoom-anchor.png` });"
+      },
+      {
+        "source": "mcp-server/verify-compare-sync.mjs",
+        "line": 160,
+        "text": "  await page.screenshot({ path: `${SHOTS}/compare-sync-overlay.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 76,
+        "text": "  await page.screenshot({ path: `${SHOTS}/cont-1-continuous.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 100,
+        "text": "  await page.screenshot({ path: `${SHOTS}/cont-2-nav.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 122,
+        "text": "  await page.screenshot({ path: `${SHOTS}/cont-3-zoomed.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 139,
+        "text": "  await page.screenshot({ path: `${SHOTS}/cont-4-annotation.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 150,
+        "text": "  await page.screenshot({ path: `${SHOTS}/cont-5-back-single.png` });"
+      },
+      {
+        "source": "mcp-server/verify-continuous.mjs",
+        "line": 153,
+        "text": "  const relevantErrors = errors.filter(t => !/favicon|ResizeObserver|Accounts|401/i.test(t));"
+      },
       {
         "source": "open-pdf-studio/create-icon.js",
         "line": 4,
@@ -33160,246 +33345,6 @@
         "text": "  // mousedown on document handles clicks on ribbon, panels, title bar, etc."
       },
       {
-        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
-        "line": 246,
-        "text": "let _dragIconPromise = null;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
-        "line": 251,
-        "text": "  if (!_dragIconPromise) {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
-        "line": 252,
-        "text": "    _dragIconPromise = invoke('drag_icon_path').catch(() => '');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
-        "line": 299,
-        "text": "  const icon = await _dragIconPromise;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
-        "line": 340,
-        "text": "    await mod.startDrag({ item: [pdfPath], icon }, (payload) => {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 18,
-        "text": "import { paletteIconSize, showPaletteCtxMenu } from './ToolPalette.jsx';"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 200,
-        "text": "      innerHTML={props.icon}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 207,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 332,
-        "text": "        innerHTML={activeSub().icon}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 349,
-        "text": "                    innerHTML={sub.icon}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 363,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 379,
-        "text": "                <ExtToolBtn tool={item.tool} title={title} icon={item.icon} overrides={item.overrides || null} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 392,
-        "text": "function GripIcon() {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 403,
-        "text": "function CloseIcon() {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 424,
-        "text": "      <div class={`tp-docked tp-ext tp-docked-${side()}${paletteIconSize() === 'large' ? ' tp-large' : ''}${props.descriptor.cssClass ? ' ' + props.descriptor.cssClass : ''}`} onContextMenu={showPaletteCtxMenu}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 426,
-        "text": "          <GripIcon />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 428,
-        "text": "        <Show when={props.descriptor.logo}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 429,
-        "text": "          <div class=\"tp-logo\" innerHTML={props.descriptor.logo} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 439,
-        "text": "          <CloseIcon />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 448,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 464,
-        "text": "        class={`tp-float tp-ext${paletteIconSize() === 'large' ? ' tp-large' : ''}${props.descriptor.cssClass ? ' ' + props.descriptor.cssClass : ''}`}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 484,
-        "text": "        <Show when={props.descriptor.logo}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 485,
-        "text": "          <div class=\"tp-logo\" innerHTML={props.descriptor.logo} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 503,
-        "text": "        <div class=\"tp-dock-target-icon\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-        "line": 511,
-        "text": "        <div class=\"tp-dock-target-icon\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/FindBar.jsx",
-        "line": 131,
-        "text": "          {/* Toggle buttons (icon-only) */}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx",
-        "line": 6,
-        "text": "// on the panels. Toggled from the Beeld (View) ribbon tab."
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/PrintQueueWindow.jsx",
-        "line": 260,
-        "text": "      <div class=\"pq-toolbar\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/PrintQueueWindow.jsx",
-        "line": 265,
-        "text": "        <div class=\"pq-toolbar-spacer\" />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SketchModeBar.jsx",
-        "line": 6,
-        "text": "// Floating sketch toolbar for the filled-area tool — makes the existing"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/StatusBar.jsx",
-        "line": 67,
-        "text": "// Paginaweergave-modi (issue #164): dezelfde knoppen als in de Beeld-ribbon,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
-        "line": 13,
-        "text": "// Icon name to label mapping"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
-        "line": 14,
-        "text": "const ICON_LABELS = {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
-        "line": 287,
-        "text": "  const iconLabel = () => ICON_LABELS[(ann()?.icon || 'comment').toLowerCase()] || 'Note';"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
-        "line": 341,
-        "text": "            <b>{iconLabel()}</b> - [{ann()?.author || 'User'}]"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 138,
-        "text": "  const effectiveSvg = resolveSymbolSvg(symbol.svg);"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 142,
-        "text": "    stampBaseSvg: symbol.svg,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 172,
-        "text": "// Grip icon (6 dots)"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 259,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 265,
-        "text": "          <div class=\"sp-search-icon\" innerHTML={searchSvg} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 290,
-        "text": "                  <div class=\"sp-cat-icon\" style={{ color: cat.color || '#333' }} innerHTML={cat.icon} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 319,
-        "text": "                          class={`sp-symbol-btn${state.toolOverrides?.stampSvg === sym.svg ? ' active' : ''}${isCatalogusFamilie(sym) ? ' sp-symbol-named' : ''}`}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 323,
-        "text": "                          <span class=\"sp-symbol-icon\" innerHTML={colorizeSvg(sym.svg, cat.color)} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 429,
-        "text": "      if (file.type === 'image/svg+xml' || file.name.endsWith('.svg')) {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 503,
-        "text": "        if (sym.name && sym.svg) {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 504,
-        "text": "          addSymbolToGroup(groupId, sym.name, sym.svg);"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 519,
-        "text": "      <input ref={fileInputRef} type=\"file\" accept=\".svg,image/*\" multiple"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
-        "line": 609,
-        "text": "                          innerHTML={colorizeSvg(sym.svg, cat.color)} />"
-      },
-      {
         "source": "open-pdf-studio/js/solid/components/TitleBar.jsx",
         "line": 9,
         "text": "import appIcoon from '/icon.png';"
@@ -33413,276 +33358,6 @@
         "source": "open-pdf-studio/js/solid/components/TitleBar.jsx",
         "line": 77,
         "text": "          <img src={appIcoon} class=\"app-icon\" alt={tCommon('appName')} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 6,
-        "text": "  highlightIcon, freehandIcon, lineIcon, arrowIcon, polylineIcon,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 7,
-        "text": "  rectIcon, ellipseIcon, polygonIcon, cloudIcon, cloudPolylineIcon,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 8,
-        "text": "  textboxIcon, calloutIcon, noteIcon,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 9,
-        "text": "  stampIcon, signatureIcon,"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 10,
-        "text": "  measureDistanceIcon, measureAreaIcon, measurePerimeterIcon"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 11,
-        "text": "} from '../data/ribbonIcons.js';"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 17,
-        "text": "const handIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11\"/></svg>`;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 18,
-        "text": "const selectIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122\"/></svg>`;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 27,
-        "text": "// Tool palette icon size: 'small' (default) or 'large'"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 28,
-        "text": "const storedPaletteIconSize = leesOpslag('paletteIconSize') || 'small';"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 29,
-        "text": "const [paletteIconSize, setPaletteIconSizeRaw] = createSignal(storedPaletteIconSize);"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 31,
-        "text": "function setPaletteIconSize(size) {"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 32,
-        "text": "  setPaletteIconSizeRaw(size);"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 33,
-        "text": "  try { schrijfOpslag('paletteIconSize', size); } catch { /* alleen deze sessie */ }"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 36,
-        "text": "export { paletteVisible, paletteMode, paletteIconSize, showPaletteCtxMenu, PaletteContextMenu };"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 104,
-        "text": "  { tool: 'hand', key: 'home.hand', icon: handIcon, group: 0 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 105,
-        "text": "  { tool: 'select', key: 'home.select', icon: selectIcon, group: 0 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 106,
-        "text": "  { tool: 'highlight', key: 'comment.highlight', icon: highlightIcon, group: 1 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 107,
-        "text": "  { tool: 'draw', key: 'comment.freehand', icon: freehandIcon, group: 1 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 108,
-        "text": "  { tool: 'line', key: 'comment.line', icon: lineIcon, group: 1 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 109,
-        "text": "  { tool: 'arrow', key: 'comment.arrow', icon: arrowIcon, group: 1 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 110,
-        "text": "  { tool: 'polyline', key: 'comment.polyline', icon: polylineIcon, group: 1 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 111,
-        "text": "  { tool: 'box', key: 'comment.rect', icon: rectIcon, group: 2 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 112,
-        "text": "  { tool: 'circle', key: 'comment.ellipse', icon: ellipseIcon, group: 2 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 113,
-        "text": "  { tool: 'polygon', key: 'comment.polygon', icon: polygonIcon, group: 2 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 114,
-        "text": "  { tool: 'cloud', key: 'comment.cloud', icon: cloudIcon, group: 2 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 115,
-        "text": "  { tool: 'cloudPolyline', key: 'comment.cloudPolyline', icon: cloudPolylineIcon, group: 2 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 116,
-        "text": "  { tool: 'textbox', key: 'comment.textBox', icon: textboxIcon, group: 3 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 117,
-        "text": "  { tool: 'callout', key: 'comment.callout', icon: calloutIcon, group: 3 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 118,
-        "text": "  { tool: 'comment', key: 'comment.note', icon: noteIcon, group: 3 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 119,
-        "text": "  { tool: 'stamp', key: 'comment.stamp', icon: stampIcon, group: 4 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 120,
-        "text": "  { tool: 'signature', key: 'comment.signature', icon: signatureIcon, group: 4 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 121,
-        "text": "  { tool: 'measureDistance', key: 'comment.measureDistance', icon: measureDistanceIcon, group: 5 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 122,
-        "text": "  { tool: 'measureArea', key: 'comment.measureArea', icon: measureAreaIcon, group: 5 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 123,
-        "text": "  { tool: 'measurePerimeter', key: 'comment.measurePerimeter', icon: measurePerimeterIcon, group: 5 },"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 194,
-        "text": "// --- Context menu for icon size toggle ---"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 228,
-        "text": "          class={`tp-ctx-menu-item${paletteIconSize() === 'small' ? ' checked' : ''}`}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 229,
-        "text": "          onClick={() => { setPaletteIconSize('small'); setPaletteCtxMenu(null); }}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 231,
-        "text": "          <span class=\"tp-ctx-check\">{paletteIconSize() === 'small' ? '\\u2713' : ''}</span>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 232,
-        "text": "          <span>Small Icons</span>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 235,
-        "text": "          class={`tp-ctx-menu-item${paletteIconSize() === 'large' ? ' checked' : ''}`}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 236,
-        "text": "          onClick={() => { setPaletteIconSize('large'); setPaletteCtxMenu(null); }}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 238,
-        "text": "          <span class=\"tp-ctx-check\">{paletteIconSize() === 'large' ? '\\u2713' : ''}</span>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 239,
-        "text": "          <span>Large Icons</span>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 258,
-        "text": "      innerHTML={props.icon}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 264,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 274,
-        "text": "            <ToolBtn tool={item.tool} title={t(item.key)} icon={item.icon} />"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 298,
-        "text": "      const threshold = paletteIconSize() === 'large' ? SINGLE_COL_HEIGHT_LARGE : SINGLE_COL_HEIGHT_SMALL;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 303,
-        "text": "    const threshold = paletteIconSize() === 'large' ? SINGLE_COL_HEIGHT_LARGE : SINGLE_COL_HEIGHT_SMALL;"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 309,
-        "text": "      <div class={`tp-docked tp-docked-${side()}${paletteIconSize() === 'large' ? ' tp-large' : ''}`} ref={bindRef} onContextMenu={showPaletteCtxMenu}>"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 340,
-        "text": "  const { t } = useTranslation('ribbon');"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 348,
-        "text": "        class={`tp-float${paletteIconSize() === 'large' ? ' tp-large' : ''}`}"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 377,
-        "text": "        <div class=\"tp-dock-target-icon\">"
-      },
-      {
-        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-        "line": 385,
-        "text": "        <div class=\"tp-dock-target-icon\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/app-menu/AppMenu.jsx",
@@ -38595,6 +38270,51 @@
         "text": "export const toolPaletteIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"1\" stroke-width=\"2\"/><line x1=\"3\" y1=\"8\" x2=\"21\" y2=\"8\" stroke-width=\"2\"/><rect x=\"5\" y=\"11\" width=\"4\" height=\"4\" rx=\"0.5\" stroke-width=\"1.5\"/><rect x=\"11\" y=\"11\" width=\"4\" height=\"4\" rx=\"0.5\" stroke-width=\"1.5\"/><rect x=\"5\" y=\"17\" width=\"4\" height=\"2\" rx=\"0.5\" stroke-width=\"1\"/></svg>`;"
       },
       {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 14,
+        "text": "    const { activeTab, setActiveTab } = await import('/js/solid/stores/ribbonStore.js');"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 18,
+        "text": "      ribbonCollapsed: state.preferences.ribbonCollapsed,"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 21,
+        "text": "    state.preferences.ribbonCollapsed = false;"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 30,
+        "text": "      const groupFor = selector => document.querySelector(selector)?.closest('.ribbon-group');"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 37,
+        "text": "        editLabel: editGroup?.querySelector('.ribbon-group-label')?.textContent?.trim(),"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 38,
+        "text": "        pagesLabel: pagesGroup?.querySelector('.ribbon-group-label')?.textContent?.trim(),"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 57,
+        "text": "    console.log(`Page rotate ribbon location test passed: both controls are in ${placement.editLabel}`);"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 60,
+        "text": "      const { setActiveTab } = await import('/js/solid/stores/ribbonStore.js');"
+      },
+      {
+        "source": "open-pdf-studio/scripts/test-page-rotate-ribbon-location.mjs",
+        "line": 62,
+        "text": "      state.preferences.ribbonCollapsed = snapshot.ribbonCollapsed;"
+      },
+      {
         "source": "open-pdf-studio/styles/app-menu.css",
         "line": 85,
         "text": ".app-menu-item.active .app-menu-item-icon svg {"
@@ -40653,6 +40373,516 @@
         "source": "open-pdf-studio/styles/titlebar.css",
         "line": 53,
         "text": ".quick-access-toolbar {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+        "line": 246,
+        "text": "let _dragIconPromise = null;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+        "line": 251,
+        "text": "  if (!_dragIconPromise) {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+        "line": 252,
+        "text": "    _dragIconPromise = invoke('drag_icon_path').catch(() => '');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+        "line": 299,
+        "text": "  const icon = await _dragIconPromise;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/DocumentTabs.jsx",
+        "line": 340,
+        "text": "    await mod.startDrag({ item: [pdfPath], icon }, (payload) => {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 18,
+        "text": "import { paletteIconSize, showPaletteCtxMenu } from './ToolPalette.jsx';"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 200,
+        "text": "      innerHTML={props.icon}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 207,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 332,
+        "text": "        innerHTML={activeSub().icon}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 349,
+        "text": "                    innerHTML={sub.icon}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 363,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 379,
+        "text": "                <ExtToolBtn tool={item.tool} title={title} icon={item.icon} overrides={item.overrides || null} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 392,
+        "text": "function GripIcon() {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 403,
+        "text": "function CloseIcon() {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 424,
+        "text": "      <div class={`tp-docked tp-ext tp-docked-${side()}${paletteIconSize() === 'large' ? ' tp-large' : ''}${props.descriptor.cssClass ? ' ' + props.descriptor.cssClass : ''}`} onContextMenu={showPaletteCtxMenu}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 426,
+        "text": "          <GripIcon />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 428,
+        "text": "        <Show when={props.descriptor.logo}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 429,
+        "text": "          <div class=\"tp-logo\" innerHTML={props.descriptor.logo} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 439,
+        "text": "          <CloseIcon />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 448,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 464,
+        "text": "        class={`tp-float tp-ext${paletteIconSize() === 'large' ? ' tp-large' : ''}${props.descriptor.cssClass ? ' ' + props.descriptor.cssClass : ''}`}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 484,
+        "text": "        <Show when={props.descriptor.logo}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 485,
+        "text": "          <div class=\"tp-logo\" innerHTML={props.descriptor.logo} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 503,
+        "text": "        <div class=\"tp-dock-target-icon\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+        "line": 511,
+        "text": "        <div class=\"tp-dock-target-icon\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/FindBar.jsx",
+        "line": 131,
+        "text": "          {/* Toggle buttons (icon-only) */}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx",
+        "line": 6,
+        "text": "// on the panels. Toggled from the Beeld (View) ribbon tab."
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/PrintQueueWindow.jsx",
+        "line": 260,
+        "text": "      <div class=\"pq-toolbar\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/PrintQueueWindow.jsx",
+        "line": 265,
+        "text": "        <div class=\"pq-toolbar-spacer\" />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SketchModeBar.jsx",
+        "line": 6,
+        "text": "// Floating sketch toolbar for the filled-area tool — makes the existing"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/StatusBar.jsx",
+        "line": 67,
+        "text": "// Paginaweergave-modi (issue #164): dezelfde knoppen als in de Beeld-ribbon,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
+        "line": 13,
+        "text": "// Icon name to label mapping"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
+        "line": 14,
+        "text": "const ICON_LABELS = {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
+        "line": 287,
+        "text": "  const iconLabel = () => ICON_LABELS[(ann()?.icon || 'comment').toLowerCase()] || 'Note';"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/StickyNotePopup.jsx",
+        "line": 341,
+        "text": "            <b>{iconLabel()}</b> - [{ann()?.author || 'User'}]"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 138,
+        "text": "  const effectiveSvg = resolveSymbolSvg(symbol.svg);"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 142,
+        "text": "    stampBaseSvg: symbol.svg,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 172,
+        "text": "// Grip icon (6 dots)"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 259,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 265,
+        "text": "          <div class=\"sp-search-icon\" innerHTML={searchSvg} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 290,
+        "text": "                  <div class=\"sp-cat-icon\" style={{ color: cat.color || '#333' }} innerHTML={cat.icon} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 319,
+        "text": "                          class={`sp-symbol-btn${state.toolOverrides?.stampSvg === sym.svg ? ' active' : ''}${isCatalogusFamilie(sym) ? ' sp-symbol-named' : ''}`}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 323,
+        "text": "                          <span class=\"sp-symbol-icon\" innerHTML={colorizeSvg(sym.svg, cat.color)} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 429,
+        "text": "      if (file.type === 'image/svg+xml' || file.name.endsWith('.svg')) {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 503,
+        "text": "        if (sym.name && sym.svg) {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 504,
+        "text": "          addSymbolToGroup(groupId, sym.name, sym.svg);"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 519,
+        "text": "      <input ref={fileInputRef} type=\"file\" accept=\".svg,image/*\" multiple"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 609,
+        "text": "                          innerHTML={colorizeSvg(sym.svg, cat.color)} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 6,
+        "text": "  highlightIcon, freehandIcon, lineIcon, arrowIcon, polylineIcon,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 7,
+        "text": "  rectIcon, ellipseIcon, polygonIcon, cloudIcon, cloudPolylineIcon,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 8,
+        "text": "  textboxIcon, calloutIcon, noteIcon,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 9,
+        "text": "  stampIcon, signatureIcon,"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 10,
+        "text": "  measureDistanceIcon, measureAreaIcon, measurePerimeterIcon"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 11,
+        "text": "} from '../data/ribbonIcons.js';"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 17,
+        "text": "const handIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11\"/></svg>`;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 18,
+        "text": "const selectIcon = `<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122\"/></svg>`;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 27,
+        "text": "// Tool palette icon size: 'small' (default) or 'large'"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 28,
+        "text": "const storedPaletteIconSize = leesOpslag('paletteIconSize') || 'small';"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 29,
+        "text": "const [paletteIconSize, setPaletteIconSizeRaw] = createSignal(storedPaletteIconSize);"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 31,
+        "text": "function setPaletteIconSize(size) {"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 32,
+        "text": "  setPaletteIconSizeRaw(size);"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 33,
+        "text": "  try { schrijfOpslag('paletteIconSize', size); } catch { /* alleen deze sessie */ }"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 36,
+        "text": "export { paletteVisible, paletteMode, paletteIconSize, showPaletteCtxMenu, PaletteContextMenu };"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 104,
+        "text": "  { tool: 'hand', key: 'home.hand', icon: handIcon, group: 0 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 105,
+        "text": "  { tool: 'select', key: 'home.select', icon: selectIcon, group: 0 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 106,
+        "text": "  { tool: 'highlight', key: 'comment.highlight', icon: highlightIcon, group: 1 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 107,
+        "text": "  { tool: 'draw', key: 'comment.freehand', icon: freehandIcon, group: 1 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 108,
+        "text": "  { tool: 'line', key: 'comment.line', icon: lineIcon, group: 1 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 109,
+        "text": "  { tool: 'arrow', key: 'comment.arrow', icon: arrowIcon, group: 1 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 110,
+        "text": "  { tool: 'polyline', key: 'comment.polyline', icon: polylineIcon, group: 1 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 111,
+        "text": "  { tool: 'box', key: 'comment.rect', icon: rectIcon, group: 2 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 112,
+        "text": "  { tool: 'circle', key: 'comment.ellipse', icon: ellipseIcon, group: 2 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 113,
+        "text": "  { tool: 'polygon', key: 'comment.polygon', icon: polygonIcon, group: 2 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 114,
+        "text": "  { tool: 'cloud', key: 'comment.cloud', icon: cloudIcon, group: 2 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 115,
+        "text": "  { tool: 'cloudPolyline', key: 'comment.cloudPolyline', icon: cloudPolylineIcon, group: 2 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 116,
+        "text": "  { tool: 'textbox', key: 'comment.textBox', icon: textboxIcon, group: 3 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 117,
+        "text": "  { tool: 'callout', key: 'comment.callout', icon: calloutIcon, group: 3 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 118,
+        "text": "  { tool: 'comment', key: 'comment.note', icon: noteIcon, group: 3 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 119,
+        "text": "  { tool: 'stamp', key: 'comment.stamp', icon: stampIcon, group: 4 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 120,
+        "text": "  { tool: 'signature', key: 'comment.signature', icon: signatureIcon, group: 4 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 121,
+        "text": "  { tool: 'measureDistance', key: 'comment.measureDistance', icon: measureDistanceIcon, group: 5 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 122,
+        "text": "  { tool: 'measureArea', key: 'comment.measureArea', icon: measureAreaIcon, group: 5 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 123,
+        "text": "  { tool: 'measurePerimeter', key: 'comment.measurePerimeter', icon: measurePerimeterIcon, group: 5 },"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 194,
+        "text": "// --- Context menu for icon size toggle ---"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 228,
+        "text": "          class={`tp-ctx-menu-item${paletteIconSize() === 'small' ? ' checked' : ''}`}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 229,
+        "text": "          onClick={() => { setPaletteIconSize('small'); setPaletteCtxMenu(null); }}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 231,
+        "text": "          <span class=\"tp-ctx-check\">{paletteIconSize() === 'small' ? '\\u2713' : ''}</span>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 232,
+        "text": "          <span>Small Icons</span>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 235,
+        "text": "          class={`tp-ctx-menu-item${paletteIconSize() === 'large' ? ' checked' : ''}`}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 236,
+        "text": "          onClick={() => { setPaletteIconSize('large'); setPaletteCtxMenu(null); }}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 238,
+        "text": "          <span class=\"tp-ctx-check\">{paletteIconSize() === 'large' ? '\\u2713' : ''}</span>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 239,
+        "text": "          <span>Large Icons</span>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 258,
+        "text": "      innerHTML={props.icon}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 264,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 274,
+        "text": "            <ToolBtn tool={item.tool} title={t(item.key)} icon={item.icon} />"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 298,
+        "text": "      const threshold = paletteIconSize() === 'large' ? SINGLE_COL_HEIGHT_LARGE : SINGLE_COL_HEIGHT_SMALL;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 303,
+        "text": "    const threshold = paletteIconSize() === 'large' ? SINGLE_COL_HEIGHT_LARGE : SINGLE_COL_HEIGHT_SMALL;"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 309,
+        "text": "      <div class={`tp-docked tp-docked-${side()}${paletteIconSize() === 'large' ? ' tp-large' : ''}`} ref={bindRef} onContextMenu={showPaletteCtxMenu}>"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 340,
+        "text": "  const { t } = useTranslation('ribbon');"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 348,
+        "text": "        class={`tp-float${paletteIconSize() === 'large' ? ' tp-large' : ''}`}"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 377,
+        "text": "        <div class=\"tp-dock-target-icon\">"
+      },
+      {
+        "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+        "line": 385,
+        "text": "        <div class=\"tp-dock-target-icon\">"
       },
       {
         "source": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
@@ -44385,9 +44615,504 @@
         "text": "            <input type=\"password\" id=\"password\" class=\"toolbarField\">"
       },
       {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 1997,
+        "text": "/* harmony import */ var web_secondary_toolbar__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(1544);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 1998,
+        "text": "/* harmony import */ var web_toolbar__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(276);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2000,
+        "text": "var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([pdfjs_lib__WEBPACK_IMPORTED_MODULE_1__, web_alt_text_manager__WEBPACK_IMPORTED_MODULE_5__, web_annotation_editor_params__WEBPACK_IMPORTED_MODULE_6__, _password_prompt_js__WEBPACK_IMPORTED_MODULE_7__, web_pdf_attachment_viewer__WEBPACK_IMPORTED_MODULE_8__, web_pdf_cursor_tools__WEBPACK_IMPORTED_MODULE_9__, web_pdf_document_properties__WEBPACK_IMPORTED_MODULE_10__, web_pdf_find_bar__WEBPACK_IMPORTED_MODULE_11__, _pdf_find_controller_js__WEBPACK_IMPORTED_MODULE_12__, web_pdf_outline_viewer__WEBPACK_IMPORTED_MODULE_15__, web_pdf_presentation_mode__WEBPACK_IMPORTED_MODULE_16__, _pdf_rendering_queue_js__WEBPACK_IMPORTED_MODULE_17__, _pdf_scripting_manager_js__WEBPACK_IMPORTED_MODULE_18__, web_pdf_thumbnail_viewer__WEBPAC"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2001,
+        "text": "([pdfjs_lib__WEBPACK_IMPORTED_MODULE_1__, web_alt_text_manager__WEBPACK_IMPORTED_MODULE_5__, web_annotation_editor_params__WEBPACK_IMPORTED_MODULE_6__, _password_prompt_js__WEBPACK_IMPORTED_MODULE_7__, web_pdf_attachment_viewer__WEBPACK_IMPORTED_MODULE_8__, web_pdf_cursor_tools__WEBPACK_IMPORTED_MODULE_9__, web_pdf_document_properties__WEBPACK_IMPORTED_MODULE_10__, web_pdf_find_bar__WEBPACK_IMPORTED_MODULE_11__, _pdf_find_controller_js__WEBPACK_IMPORTED_MODULE_12__, web_pdf_outline_viewer__WEBPACK_IMPORTED_MODULE_15__, web_pdf_presentation_mode__WEBPACK_IMPORTED_MODULE_16__, _pdf_rendering_queue_js__WEBPACK_IMPORTED_MODULE_17__, _pdf_scripting_manager_js__WEBPACK_IMPORTED_MODULE_18__, web_pdf_thumbnail_viewer__WEBPACK_IMPORTED_MODULE_20__, _pdf_viewer_js__WEBPACK_IMPORTED_MODULE_21__, web_"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2086,
+        "text": "  toolbar: null,"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2087,
+        "text": "  secondaryToolbar: null,"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2309,
+        "text": "          appConfig.toolbar?.editorStampButton?.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2311,
+        "text": "        const editorHighlightButton = appConfig.toolbar?.editorHighlightButton;"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2325,
+        "text": "    if (appConfig.secondaryToolbar?.cursorHandToolButton) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2332,
+        "text": "    if (appConfig.toolbar) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2333,
+        "text": "      this.toolbar = new web_toolbar__WEBPACK_IMPORTED_MODULE_23__.Toolbar(appConfig.toolbar, eventBus);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2335,
+        "text": "    if (appConfig.secondaryToolbar) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2336,
+        "text": "      this.secondaryToolbar = new web_secondary_toolbar__WEBPACK_IMPORTED_MODULE_22__.SecondaryToolbar(appConfig.secondaryToolbar, eventBus);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2338,
+        "text": "    if (this.supportsFullscreen && appConfig.secondaryToolbar?.presentationModeButton) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2439,
+        "text": "      appConfig.toolbar?.print?.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2440,
+        "text": "      appConfig.secondaryToolbar?.printButton.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2443,
+        "text": "      appConfig.secondaryToolbar?.presentationModeButton.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2446,
+        "text": "      appConfig.toolbar?.viewFind?.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2555,
+        "text": "      secondaryToolbar"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2557,
+        "text": "    secondaryToolbar?.viewBookmarkButton.classList.add(\"hidden\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2558,
+        "text": "    if (secondaryToolbar?.presentationModeButton.classList.contains(\"hidden\")) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2604,
+        "text": "    this.toolbar?.reset();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2605,
+        "text": "    this.secondaryToolbar?.reset();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2779,
+        "text": "    this.toolbar?.setPagesCount(pdfDocument.numPages, false);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 2780,
+        "text": "    this.secondaryToolbar?.setPagesCount(pdfDocument.numPages);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3048,
+        "text": "      toolbar"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3052,
+        "text": "    toolbar?.setPagesCount(numLabels, true);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3053,
+        "text": "    toolbar?.setPageNumber(pdfViewer.currentPageNumber, pdfViewer.currentPageLabel);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3139,
+        "text": "    this.toolbar?.setPageNumber(this.pdfViewer.currentPageNumber, this.pdfViewer.currentPageLabel);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3140,
+        "text": "    this.secondaryToolbar?.setPageNumber(this.pdfViewer.currentPageNumber);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3520,
+        "text": "    PDFViewerApplication.toolbar?.updateLoadingIndicatorState(true);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3528,
+        "text": "    PDFViewerApplication.toolbar?.updateLoadingIndicatorState(false);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3573,
+        "text": "      PDFViewerApplication.appConfig.toolbar?.pageNumber.select();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3611,
+        "text": "  if (PDFViewerApplication.appConfig.secondaryToolbar) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3613,
+        "text": "    PDFViewerApplication.appConfig.secondaryToolbar.viewBookmarkButton.href = href;"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3716,
+        "text": "    PDFViewerApplication.toolbar?.setPageNumber(pdfViewer.currentPageNumber, pdfViewer.currentPageLabel);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3779,
+        "text": "  PDFViewerApplication.toolbar?.setPageScale(evt.presetValue, evt.scale);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3793,
+        "text": "  PDFViewerApplication.toolbar?.setPageNumber(pageNumber, pageLabel);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3794,
+        "text": "  PDFViewerApplication.secondaryToolbar?.setPageNumber(pageNumber);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3799,
+        "text": "  PDFViewerApplication.toolbar?.updateLoadingIndicatorState(currentPage?.renderingState === _ui_utils_js__WEBPACK_IMPORTED_MODULE_0__.RenderingStates.RUNNING);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3991,
+        "text": "  if (!PDFViewerApplication.secondaryToolbar?.isOpen) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3995,
+        "text": "  if (PDFViewerApplication.pdfViewer.containsElement(evt.target) || appConfig.toolbar?.container.contains(evt.target) && evt.target !== appConfig.secondaryToolbar?.toggleButton) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 3996,
+        "text": "    PDFViewerApplication.secondaryToolbar.close();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 4113,
+        "text": "        if (PDFViewerApplication.appConfig.toolbar) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 4114,
+        "text": "          PDFViewerApplication.appConfig.toolbar.pageNumber.select();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 4160,
+        "text": "        if (PDFViewerApplication.secondaryToolbar?.isOpen) {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 4161,
+        "text": "          PDFViewerApplication.secondaryToolbar.close();"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 5736,
+        "text": "    this.eventBus._on(\"secondarytoolbarreset\", evt => {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 8506,
+        "text": "        this.div.classList.add(\"loadingIcon\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 8514,
+        "text": "        this.div.classList.remove(\"loadingIcon\", \"loading\");"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 12893,
+        "text": "/* harmony export */   SecondaryToolbar: () => (/* binding */ SecondaryToolbar)"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 12901,
+        "text": "class SecondaryToolbar {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13143,
+        "text": "      toolbar"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13145,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_0__.toggleExpandedBtn)(toggleButton, true, toolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13154,
+        "text": "      toolbar"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13156,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_0__.toggleExpandedBtn)(toggleButton, false, toolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13854,
+        "text": "/* harmony export */   Toolbar: () => (/* binding */ Toolbar)"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 13862,
+        "text": "class Toolbar {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14034,
+        "text": "      editorFreeTextParamsToolbar,"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14036,
+        "text": "      editorHighlightParamsToolbar,"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14038,
+        "text": "      editorInkParamsToolbar,"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14040,
+        "text": "      editorStampParamsToolbar"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14042,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_1__.toggleCheckedBtn)(editorFreeTextButton, mode === pdfjs_lib__WEBPACK_IMPORTED_MODULE_0__.AnnotationEditorType.FREETEXT, editorFreeTextParamsToolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14043,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_1__.toggleCheckedBtn)(editorHighlightButton, mode === pdfjs_lib__WEBPACK_IMPORTED_MODULE_0__.AnnotationEditorType.HIGHLIGHT, editorHighlightParamsToolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14044,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_1__.toggleCheckedBtn)(editorInkButton, mode === pdfjs_lib__WEBPACK_IMPORTED_MODULE_0__.AnnotationEditorType.INK, editorInkParamsToolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14045,
+        "text": "    (0,_ui_utils_js__WEBPACK_IMPORTED_MODULE_1__.toggleCheckedBtn)(editorStampButton, mode === pdfjs_lib__WEBPACK_IMPORTED_MODULE_0__.AnnotationEditorType.STAMP, editorStampParamsToolbar);"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14757,
+        "text": "    toolbar: {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14758,
+        "text": "      container: document.getElementById(\"toolbarViewer\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14770,
+        "text": "      editorFreeTextParamsToolbar: document.getElementById(\"editorFreeTextParamsToolbar\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14772,
+        "text": "      editorHighlightParamsToolbar: document.getElementById(\"editorHighlightParamsToolbar\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14775,
+        "text": "      editorInkParamsToolbar: document.getElementById(\"editorInkParamsToolbar\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14777,
+        "text": "      editorStampParamsToolbar: document.getElementById(\"editorStampParamsToolbar\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14780,
+        "text": "    secondaryToolbar: {"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14781,
+        "text": "      toolbar: document.getElementById(\"secondaryToolbar\"),"
+      },
+      {
+        "source": "open-pdf-studio/public/pdfjs/web/viewer.mjs",
+        "line": 14782,
+        "text": "      toggleButton: document.getElementById(\"secondaryToolbarToggle\"),"
+      },
+      {
         "source": "open-pdf-studio/styles.css",
         "line": 6,
         "text": "@import './styles/ribbon.css';"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 84,
+        "text": "    await page.screenshot({ path: 'test-e2e-fail.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 91,
+        "text": "  await page.screenshot({ path: 'test-e2e-1-loaded.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 93,
+        "text": "  console.log('   Screenshot: test-e2e-1-loaded.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 148,
+        "text": "  await page.screenshot({ path: 'test-e2e-2-zoomed.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 149,
+        "text": "  console.log('   Screenshot: test-e2e-2-zoomed.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 172,
+        "text": "  await page.screenshot({ path: 'test-e2e-3-zoomout.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-e2e.mjs",
+        "line": 173,
+        "text": "  console.log('   Screenshot: test-e2e-3-zoomout.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-integration.mjs",
+        "line": 165,
+        "text": "    !e.includes('plugin-manager') && !e.includes('favicon')"
+      },
+      {
+        "source": "open-pdf-studio/test-performance-cdp.mjs",
+        "line": 35,
+        "text": "  await page.screenshot({ path: 'perf-1-loaded.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-performance-cdp.mjs",
+        "line": 66,
+        "text": "  await page.screenshot({ path: 'perf-2-zoomed.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-performance-cdp.mjs",
+        "line": 171,
+        "text": "  await page.screenshot({ path: 'perf-3-final.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-real-pdf.mjs",
+        "line": 98,
+        "text": "    await page.screenshot({ path: 'test-mupdf-real.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-real-pdf.mjs",
+        "line": 99,
+        "text": "    console.log('Screenshot saved: test-mupdf-real.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-symbols-cdp.mjs",
+        "line": 132,
+        "text": "  await page.screenshot({ path: 'test-symbols-result.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-symbols-cdp.mjs",
+        "line": 133,
+        "text": "  console.log('\\n6. Screenshot: test-symbols-result.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-tauri-cdp.mjs",
+        "line": 64,
+        "text": "    await page.screenshot({ path: 'test-tauri-fail.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-tauri-cdp.mjs",
+        "line": 71,
+        "text": "  await page.screenshot({ path: 'test-tauri-loaded.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-tauri-cdp.mjs",
+        "line": 72,
+        "text": "  console.log('   Saved: test-tauri-loaded.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-tauri-cdp.mjs",
+        "line": 117,
+        "text": "  await page.screenshot({ path: 'test-tauri-zoomed.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-tauri-cdp.mjs",
+        "line": 128,
+        "text": "  await page.screenshot({ path: 'test-tauri-normal.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-zoom.mjs",
+        "line": 55,
+        "text": "  await page.screenshot({ path: 'test-before-zoom.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-zoom.mjs",
+        "line": 56,
+        "text": "  console.log('   Screenshot: test-before-zoom.png');"
+      },
+      {
+        "source": "open-pdf-studio/test-zoom.mjs",
+        "line": 91,
+        "text": "  await page.screenshot({ path: 'test-after-zoom.png' });"
+      },
+      {
+        "source": "open-pdf-studio/test-zoom.mjs",
+        "line": 123,
+        "text": "  await page.screenshot({ path: 'test-after-zoomout.png' });"
       },
       {
         "source": "open-pdf-studio/vite.config.js",
@@ -44535,6 +45260,21 @@
         "text": "    out = ROOT / f\"_iter23_render_p{page}.png\""
       },
       {
+        "source": "scripts/verify-annotatie-plaatsing.mjs",
+        "line": 122,
+        "text": "        rij.png = path.join(UIT, `${rij.slug}__annlaag.png`);"
+      },
+      {
+        "source": "scripts/verify-annotatie-plaatsing.mjs",
+        "line": 123,
+        "text": "        fs.writeFileSync(rij.png, Buffer.from(b64, 'base64'));"
+      },
+      {
+        "source": "scripts/verify-annotatie-plaatsing.mjs",
+        "line": 136,
+        "text": "console.log(`\\nklaar — ${rapport.filter((r) => r.png).length} annotatielagen vastgelegd in ${UIT}`);"
+      },
+      {
         "source": "scripts/verify-annotatie-plaatsing.py",
         "line": 43,
         "text": "    masker.save(os.path.join(UIT, f\"{slug}__ref.png\"))"
@@ -44543,6 +45283,206 @@
         "source": "scripts/verify-annotatie-plaatsing.py",
         "line": 95,
         "text": "        Image.fromarray(verschil).save(os.path.join(UIT, f\"{rij['slug']}__vergelijk.png\"))"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 51,
+        "text": "  if (api.features?.ribbonTabs !== true) throw new Error('ribbon tabs not supported');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 53,
+        "text": "  api.registerToolPalette({ id: '${ID}.palet', label: 'Kozijnen', icon: null, translationKey: null, tools: [],"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 55,
+        "text": "  tab = api.registerRibbonTab({"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 56,
+        "text": "    id: 'main', label: ${JSON.stringify(tabLabel)}, icon: SVG,"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 58,
+        "text": "      { type: 'action', id: 'frame', label: ${JSON.stringify(actieLabel)}, title: 'Place a frame', icon: SVG,"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 77,
+        "text": "    code: `export function activate(api) {\\n  api.registerRibbonTab({ id: 'main', label: 'Kapot', groups: [{ id: 'g', label: 'G', items: [{ type: 'status', id: 's', label: 'S', text: '' }] }] });\\n  throw new Error('kapot in 1.2.0');\\n}\\n` }),"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 187,
+        "text": "  const een = await ui(`.ribbon-tab[data-tab=\"${TAB}\"]`);"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 188,
+        "text": "  const twee = await ui('.ribbon-tab[data-tab^=\"nl.voorbeeld.\"] ~ .ribbon-tab[data-tab^=\"nl.voorbeeld.\"]');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 234,
+        "text": "await mcp('app_click_element', { selector: `.ribbon-tab[data-tab=\"${TAB}\"]`, searchTabs: false });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 238,
+        "text": "controleer((await ui(`button[data-ext-command=\"ext:${ID}:frame\"] .ribbon-btn-icon svg`)).found === true, 'SVG-pictogram op de actie');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 246,
+        "text": "  await mcp('app_click_element', { selector: `.ribbon-tab[data-tab=\"${t}\"]`, searchTabs: false });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 248,
+        "text": "  controleer((await ui(`.ribbon-tab.active[data-tab=\"${t}\"]`)).found === true, `tabblad ${t} actief`);"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 250,
+        "text": "await mcp('app_click_element', { selector: '#ribbon-collapse-toggle', searchTabs: false });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 252,
+        "text": "controleer((await ui('.ribbon-ext-content')).found === false, 'lint ingeklapt');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 255,
+        "text": "await mcp('app_click_element', { selector: '#ribbon-collapse-toggle', searchTabs: false });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 257,
+        "text": "controleer((await ui('.ribbon-ext-content')).found === true, 'lint weer uitgeklapt');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 263,
+        "text": "const label = await ui(`.ribbon-tab[data-tab=\"${TAB}\"]`);"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 270,
+        "text": "await mcp('app_click_element', { selector: `.ribbon-tab[data-tab=\"${TAB}\"]`, searchTabs: false });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 277,
+        "text": "controleer(e3?.contributions?.palettes?.length === 1 && e3?.contributions?.ribbonTabs?.length === 1, 'één palet en één tabblad in de bijdragen', e3?.contributions);"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 279,
+        "text": "controleer((await ui(`.ribbon-tab.active[data-tab=\"${TAB}\"]`)).found === true, 'het extensietabblad is nog actief');"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 317,
+        "text": "await mcp('app_click_element', { selector: '#ribbon-extensions', searchTabs: true });"
+      },
+      {
+        "source": "scripts/verify-extensies.mjs",
+        "line": 321,
+        "text": "controleer((await ui(`.ribbon-tab[data-tab=\"${TAB}\"]`)).found === false, 'het extensietabblad is weg');"
+      },
+      {
+        "source": "scripts/verify-issues-1-94.mjs",
+        "line": 65,
+        "text": "  writeFileSync(path.join(UIT, naam + '.png'), Buffer.from(s.result.data, 'base64'));"
+      },
+      {
+        "source": "scripts/verify-issues-1-94.mjs",
+        "line": 129,
+        "text": "    const pngPad = path.join(WERK, 'handtekening.png');"
+      },
+      {
+        "source": "scripts/verify-issues-1-94.mjs",
+        "line": 205,
+        "text": "    await mcp('app_click_element', { selector: '#ribbon-symbol-palette' });"
+      },
+      {
+        "source": "scripts/verify-mupdf-compare.mjs",
+        "line": 90,
+        "text": "      const ref = path.join(fileDir, `ref-p${p.page}.png`);"
+      },
+      {
+        "source": "scripts/verify-mupdf-compare.mjs",
+        "line": 91,
+        "text": "      const app = path.join(fileDir, `app-p${p.page}.png`);"
+      },
+      {
+        "source": "scripts/verify-mupdf-compare.mjs",
+        "line": 155,
+        "text": "    const b64 = s?.png_base64 || s?.image || (typeof s === 'string' ? s : null);"
+      },
+      {
+        "source": "scripts/verify-mupdf-compare.mjs",
+        "line": 270,
+        "text": "        const shotPath = path.join(fileDir, `app-p${pno}.png`);"
+      },
+      {
+        "source": "scripts/verify-mupdf-compare.mjs",
+        "line": 274,
+        "text": "          try { cmp = py(['compare', path.join(fileDir, `ref-p${pno}.png`), shotPath]); }"
+      },
+      {
+        "source": "scripts/verify-prestaties.mjs",
+        "line": 135,
+        "text": "    // App-start: tot de ribbon in de DOM staat"
+      },
+      {
+        "source": "scripts/verify-prestaties.mjs",
+        "line": 138,
+        "text": "      const klaar = await evalJs(`!!document.querySelector('.ribbon, [class*=ribbon]')`).catch(() => false);"
+      },
+      {
+        "source": "scripts/verify-prestaties.mjs",
+        "line": 160,
+        "text": "        const k = [...document.querySelectorAll('button, [role=button], .ribbon-button')].find((b) => /volgende|next/i.test((b.title || '') + ' ' + (b.textContent || '')) && b.offsetParent);"
+      },
+      {
+        "source": "scripts/verify-rotation-sweep.mjs",
+        "line": 66,
+        "text": "    const b64 = s?.png_base64 || s?.image || (typeof s === 'string' ? s : null);"
+      },
+      {
+        "source": "scripts/verify-rotation-sweep.mjs",
+        "line": 95,
+        "text": "      await shoot(`${base}-p1.png`);"
+      },
+      {
+        "source": "scripts/verify-rotation-sweep.mjs",
+        "line": 101,
+        "text": "        await shoot(`${base}-p${mid}.png`);"
+      },
+      {
+        "source": "scripts/verify-zoeken.mjs",
+        "line": 72,
+        "text": "// beginnen, onder een \"logo\"-blok linksboven."
+      },
+      {
+        "source": "scripts/verify-zoeken.mjs",
+        "line": 75,
+        "text": "  { naam: 'liggend', box: [0, 0, A4[1], A4[0]], rot: 0, logo: [40, 505, 110, 55], regels: ["
+      },
+      {
+        "source": "scripts/verify-zoeken.mjs",
+        "line": 104,
+        "text": "    if (def.logo) page.drawRectangle({ x: def.logo[0], y: def.logo[1], width: def.logo[2], height: def.logo[3], borderWidth: 1 });"
+      },
+      {
+        "source": "scripts/verify-zoeken.mjs",
+        "line": 282,
+        "text": "  const pad = path.join(UIT, `${String(++schotNr).padStart(2, '0')}-${label.replace(/[^A-Za-z0-9._-]+/g, '_')}.png`);"
       }
     ]
   },
@@ -45903,7 +46843,7 @@
   {
     "repository": "open-calc-studio",
     "status": "source-scanned",
-    "code_files": 106,
+    "code_files": 113,
     "matches": [
       {
         "source": "index.html",
@@ -45911,9 +46851,79 @@
         "text": "    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/app-icon.svg\" />"
       },
       {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 4,
+        "text": "//   <naam>-1-imported.png    de begroting in Open Calc Studio na import"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 5,
+        "text": "//   <naam>-2-file.png        het originele .bc3-bestand en onze export naast elkaar"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 6,
+        "text": "//   <naam>-3-reimported.png  de begroting na herimport van onze export"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 118,
+        "text": "  await page.locator('.ribbon-tab', { hasText: /^File$|^Bestand$/ }).first().click();"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 144,
+        "text": "  await gridShot(`${OUT}/${name}-1-imported.png`);"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 156,
+        "text": "  await p2.screenshot({ path: `${OUT}/${name}-2-file.png`, fullPage: true });"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 161,
+        "text": "  await gridShot(`${OUT}/${name}-3-reimported.png`);"
+      },
+      {
+        "source": "scripts/bc3-evidence.mjs",
+        "line": 166,
+        "text": "  console.log(`   ${name}-1-imported.png, -2-file.png, -3-reimported.png`);"
+      },
+      {
         "source": "scripts/check-i18n.py",
         "line": 21,
         "text": "NS = [\"common\", \"ribbon\", \"backstage\", \"settings\", \"feedback\", \"grid\", \"dialogs\", \"releases\", \"report\", \"units\"]"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 4,
+        "text": "// 50 euro logo variants"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 66,
+        "text": "variants.push({ title: '22. Filled — rounded', svg: variants[20].svg.replace('stroke-linejoin','stroke-linejoin=\"round\"'), bg: 0 });"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 106,
+        "text": "  svg: variants[35].svg.replace(/M 280 120/,'M 280 140').replace(/C 180 120/,'C 180 140'),"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 176,
+        "text": "    ${v.svg}"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 180,
+        "text": "const html = `<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Euro Logo Varianten — 50</title>"
+      },
+      {
+        "source": "scripts/euro-variants.mjs",
+        "line": 193,
+        "text": "<h1>🎨 50 Euro Logo Varianten</h1>"
       },
       {
         "source": "src/App.tsx",
@@ -45934,71 +46944,6 @@
         "source": "src/App.tsx",
         "line": 576,
         "text": "            <div className=\"right-panel-toolbar\">"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 92,
-        "text": ".backstage-item-icon {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 101,
-        "text": ".backstage-item-icon svg { stroke: var(--theme-text-secondary); }"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 102,
-        "text": ".backstage-item:hover .backstage-item-icon svg,"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 103,
-        "text": ".backstage-item.active .backstage-item-icon svg { stroke: var(--theme-text); }"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 184,
-        "text": ".cloud-row .cloud-icon { flex-shrink: 0; display: flex; align-items: center; }"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 226,
-        "text": ".bs-about-logo {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 235,
-        "text": ".bs-about-logo svg { width: 48px; height: 48px; }"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 351,
-        "text": ".bs-panel-option-icon {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 360,
-        "text": ".bs-panel-option-icon svg {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 366,
-        "text": ".bs-panel-option:hover .bs-panel-option-icon svg {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 422,
-        "text": ".bs-recent-item-icon {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 431,
-        "text": ".bs-recent-item-icon svg {"
-      },
-      {
-        "source": "src/components/backstage/Backstage.css",
-        "line": 435,
-        "text": ".bs-recent-item:hover .bs-recent-item-icon svg {"
       },
       {
         "source": "src/components/backstage/Backstage.tsx",
@@ -46229,21 +47174,6 @@
         "source": "src/components/backstage/CloudPanel.tsx",
         "line": 268,
         "text": "              <span className=\"cloud-icon\">{FileIcon}</span>"
-      },
-      {
-        "source": "src/components/backstage/ExtensionManagerPanel.css",
-        "line": 14,
-        "text": ".ext-manager-toolbar {"
-      },
-      {
-        "source": "src/components/backstage/ExtensionManagerPanel.css",
-        "line": 146,
-        "text": ".ext-card-icon {"
-      },
-      {
-        "source": "src/components/backstage/ExtensionManagerPanel.css",
-        "line": 156,
-        "text": ".ext-card-icon svg {"
       },
       {
         "source": "src/components/backstage/ExtensionManagerPanel.tsx",
@@ -48801,6 +49731,86 @@
         "text": "                <span className=\"wizard-card-icon\">{w.icon}</span>"
       },
       {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 92,
+        "text": ".backstage-item-icon {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 101,
+        "text": ".backstage-item-icon svg { stroke: var(--theme-text-secondary); }"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 102,
+        "text": ".backstage-item:hover .backstage-item-icon svg,"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 103,
+        "text": ".backstage-item.active .backstage-item-icon svg { stroke: var(--theme-text); }"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 184,
+        "text": ".cloud-row .cloud-icon { flex-shrink: 0; display: flex; align-items: center; }"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 226,
+        "text": ".bs-about-logo {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 235,
+        "text": ".bs-about-logo svg { width: 48px; height: 48px; }"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 351,
+        "text": ".bs-panel-option-icon {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 360,
+        "text": ".bs-panel-option-icon svg {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 366,
+        "text": ".bs-panel-option:hover .bs-panel-option-icon svg {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 422,
+        "text": ".bs-recent-item-icon {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 431,
+        "text": ".bs-recent-item-icon svg {"
+      },
+      {
+        "source": "src/components/backstage/Backstage.css",
+        "line": 435,
+        "text": ".bs-recent-item:hover .bs-recent-item-icon svg {"
+      },
+      {
+        "source": "src/components/backstage/ExtensionManagerPanel.css",
+        "line": 14,
+        "text": ".ext-manager-toolbar {"
+      },
+      {
+        "source": "src/components/backstage/ExtensionManagerPanel.css",
+        "line": 146,
+        "text": ".ext-card-icon {"
+      },
+      {
+        "source": "src/components/backstage/ExtensionManagerPanel.css",
+        "line": 156,
+        "text": ".ext-card-icon svg {"
+      },
+      {
         "source": "src/components/common/ExcelCellPicker.css",
         "line": 11,
         "text": ".excel-picker-toolbar {"
@@ -48930,8 +49940,33 @@
   {
     "repository": "open-energy-studio",
     "status": "source-scanned",
-    "code_files": 197,
+    "code_files": 204,
     "matches": [
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 4,
+        "text": "// SVG icon: Building with energy bolt on gradient background"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 79,
+        "text": "writeFileSync('scripts/icon.svg', svg);"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 84,
+        "text": "  .png()"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 85,
+        "text": "  .toFile('scripts/icon.png');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 87,
+        "text": "console.log('Icon generated: scripts/icon.png');"
+      },
       {
         "source": "src/App.tsx",
         "line": 481,
@@ -49378,6 +50413,66 @@
         "text": "import { Plus, Trash2, Copy, Check, GripVertical, ChevronUp, ChevronDown } from 'lucide-react';"
       },
       {
+        "source": "index.html",
+        "line": 7,
+        "text": "    <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />"
+      },
+      {
+        "source": "index.html",
+        "line": 21,
+        "text": "          if (target && target.tagName === 'SCRIPT' && (target.src || '').indexOf('/assets/') >= 0) reload();"
+      },
+      {
+        "source": "scripts/bump-version.js",
+        "line": 21,
+        "text": "  const tauriConf = JSON.parse(files['src-tauri/tauri.conf.json']);"
+      },
+      {
+        "source": "scripts/bump-version.js",
+        "line": 22,
+        "text": "  tauriConf.version = version;"
+      },
+      {
+        "source": "scripts/bump-version.js",
+        "line": 25,
+        "text": "    'src-tauri/tauri.conf.json': JSON.stringify(tauriConf, null, 2) + '\\n',"
+      },
+      {
+        "source": "scripts/nta-manual.mjs",
+        "line": 22,
+        "text": "const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.gif': 'image/gif', '.webp': 'image/webp' };"
+      },
+      {
+        "source": "src/components/Building3DView/Building3DView.css",
+        "line": 9,
+        "text": ".building-3d-toolbar {"
+      },
+      {
+        "source": "src/components/Building3DView/Building3DView.css",
+        "line": 19,
+        "text": ".building-3d-toolbar button {"
+      },
+      {
+        "source": "src/components/Building3DView/Building3DView.css",
+        "line": 33,
+        "text": ".building-3d-toolbar button:hover {"
+      },
+      {
+        "source": "src/components/Building3DView/Building3DView.css",
+        "line": 37,
+        "text": ".building-3d-toolbar .toolbar-separator {"
+      },
+      {
+        "source": "src/components/Building3DView/Building3DView.css",
+        "line": 44,
+        "text": ".building-3d-toolbar .toolbar-label {"
+      },
+      {
+        "source": "src/components/EvidenceLink/EvidenceLink.css",
+        "line": 50,
+        "text": ".evidence-link__icon { width: 16px; height: 16px; flex: none; }"
+      },
+      {
         "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
         "line": 8,
         "text": "import { Building, Building2, Caravan, Home, HousePlus, Search, Ship } from 'lucide-react';"
@@ -49446,91 +50541,6 @@
         "source": "src/components/WelcomeScreen/NewProjectDialog.tsx",
         "line": 196,
         "text": "          <span aria-hidden=\"true\">{item.icon}</span>{t(`newProject.group.${item.id}`)}"
-      },
-      {
-        "source": "index.html",
-        "line": 7,
-        "text": "    <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />"
-      },
-      {
-        "source": "index.html",
-        "line": 21,
-        "text": "          if (target && target.tagName === 'SCRIPT' && (target.src || '').indexOf('/assets/') >= 0) reload();"
-      },
-      {
-        "source": "scripts/bump-version.js",
-        "line": 21,
-        "text": "  const tauriConf = JSON.parse(files['src-tauri/tauri.conf.json']);"
-      },
-      {
-        "source": "scripts/bump-version.js",
-        "line": 22,
-        "text": "  tauriConf.version = version;"
-      },
-      {
-        "source": "scripts/bump-version.js",
-        "line": 25,
-        "text": "    'src-tauri/tauri.conf.json': JSON.stringify(tauriConf, null, 2) + '\\n',"
-      },
-      {
-        "source": "src/components/Building3DView/Building3DView.css",
-        "line": 9,
-        "text": ".building-3d-toolbar {"
-      },
-      {
-        "source": "src/components/Building3DView/Building3DView.css",
-        "line": 19,
-        "text": ".building-3d-toolbar button {"
-      },
-      {
-        "source": "src/components/Building3DView/Building3DView.css",
-        "line": 33,
-        "text": ".building-3d-toolbar button:hover {"
-      },
-      {
-        "source": "src/components/Building3DView/Building3DView.css",
-        "line": 37,
-        "text": ".building-3d-toolbar .toolbar-separator {"
-      },
-      {
-        "source": "src/components/Building3DView/Building3DView.css",
-        "line": 44,
-        "text": ".building-3d-toolbar .toolbar-label {"
-      },
-      {
-        "source": "src/components/EvidenceLink/EvidenceLink.css",
-        "line": 50,
-        "text": ".evidence-link__icon { width: 16px; height: 16px; flex: none; }"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 25,
-        "text": "/* Compact variant for table rows (UI redesign F5): quiet icon buttons. */"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 27,
-        "text": ".item-actions__icon {"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 32,
-        "text": ".item-actions__icon svg { width: 14px; height: 14px; }"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 33,
-        "text": ".item-actions__icon:hover { background: var(--surface-hover); color: var(--fg-1); }"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 34,
-        "text": ".item-actions__icon--danger:hover { color: var(--error-text); }"
-      },
-      {
-        "source": "src/components/ItemActions/ItemActions.css",
-        "line": 35,
-        "text": ".item-actions__icon:focus-visible { outline: none; box-shadow: var(--focus-ring); }"
       },
       {
         "source": "src/components/WelcomeScreen/WelcomeScreen.tsx",
@@ -50418,6 +51428,36 @@
         "text": "      <button type=\"button\" className=\"ui-iconbtn ui-iconbtn--sm\" aria-label={closeLabel} onClick={() => onDismiss(toast.id)}>"
       },
       {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 25,
+        "text": "/* Compact variant for table rows (UI redesign F5): quiet icon buttons. */"
+      },
+      {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 27,
+        "text": ".item-actions__icon {"
+      },
+      {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 32,
+        "text": ".item-actions__icon svg { width: 14px; height: 14px; }"
+      },
+      {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 33,
+        "text": ".item-actions__icon:hover { background: var(--surface-hover); color: var(--fg-1); }"
+      },
+      {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 34,
+        "text": ".item-actions__icon--danger:hover { color: var(--error-text); }"
+      },
+      {
+        "source": "src/components/ItemActions/ItemActions.css",
+        "line": 35,
+        "text": ".item-actions__icon:focus-visible { outline: none; box-shadow: var(--focus-ring); }"
+      },
+      {
         "source": "src/components/SurveyWizard/SurveyWizard.css",
         "line": 59,
         "text": ".survey-choice-icon {"
@@ -50980,7 +52020,7 @@
   {
     "repository": "dynlex",
     "status": "source-scanned",
-    "code_files": 228,
+    "code_files": 235,
     "matches": [
       {
         "source": "tools/fbx_to_obj.cpp",
@@ -51244,7 +52284,7 @@
   {
     "repository": "open-2D-studio-AEC-extension",
     "status": "source-scanned",
-    "code_files": 21,
+    "code_files": 23,
     "matches": [
       {
         "source": "src/dialogs.tsx",
@@ -55134,8 +56174,188 @@
   {
     "repository": "open-planner-studio",
     "status": "source-scanned",
-    "code_files": 258,
+    "code_files": 289,
     "matches": [
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 5,
+        "text": "// Open Planner Studio icon: A stylized Gantt chart within a rounded square"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 137,
+        "text": "async function generateIcons() {"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 138,
+        "text": "  const iconsDir = path.resolve('src-tauri/icons');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 139,
+        "text": "  if (!fs.existsSync(iconsDir)) fs.mkdirSync(iconsDir, { recursive: true });"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 142,
+        "text": "  const masterPng = path.resolve('app-icon.png');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 143,
+        "text": "  await sharp(Buffer.from(svg)).png().toFile(masterPng);"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 144,
+        "text": "  console.log('Created app-icon.png (1024x1024)');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 146,
+        "text": "  // Generate PNG icons at various sizes."
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 148,
+        "text": "  // icon.png (512) staat vooraan in bundle.icon en is daardoor het runtime-venstericoon"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 149,
+        "text": "  // (Tauri-codegen pakt op Linux de eerste .png uit de lijst — 32px gaf een wazig dock-icoon)."
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 151,
+        "text": "    { size: 32, name: '32x32.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 152,
+        "text": "    { size: 64, name: '64x64.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 153,
+        "text": "    { size: 128, name: '128x128.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 154,
+        "text": "    { size: 256, name: '128x128@2x.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 155,
+        "text": "    { size: 256, name: '256x256.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 156,
+        "text": "    { size: 512, name: '512x512.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 157,
+        "text": "    { size: 512, name: 'icon.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 161,
+        "text": "    await sharp(Buffer.from(svg)).resize(size, size).png().toFile(path.join(iconsDir, name));"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 165,
+        "text": "  // Snap-store/desktop-icoon (snapcraft pakt snap/gui/icon.png automatisch op)"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 168,
+        "text": "  await sharp(Buffer.from(svg)).resize(512, 512).png().toFile(path.join(snapGui, 'icon.png'));"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 169,
+        "text": "  console.log('Created snap/gui/icon.png (512x512)');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 181,
+        "text": "  fs.writeFileSync(path.join(iconsDir, 'icon.ico'), icoFile);"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 182,
+        "text": "  console.log('Created icon.ico (multi-size)');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 185,
+        "text": "  // Tauri's `tauri icon` command can do this better, but let's provide what we can"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 187,
+        "text": "    { size: 16, name: '16x16.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 188,
+        "text": "    { size: 32, name: '32x32.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 189,
+        "text": "    { size: 64, name: '64x64.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 190,
+        "text": "    { size: 128, name: '128x128.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 191,
+        "text": "    { size: 256, name: '256x256.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 192,
+        "text": "    { size: 512, name: '512x512.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 193,
+        "text": "    { size: 1024, name: '1024x1024.png' },"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 199,
+        "text": "    const buf = await sharp(Buffer.from(svg)).resize(size, size).png().toBuffer();"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 204,
+        "text": "  fs.writeFileSync(path.join(iconsDir, 'icon.icns'), icnsFile);"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 205,
+        "text": "  console.log('Created icon.icns (macOS)');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 207,
+        "text": "  console.log('\\nAll icons generated successfully!');"
+      },
+      {
+        "source": "scripts/generate-icon.mjs",
+        "line": 341,
+        "text": "generateIcons().catch(console.error);"
+      },
       {
         "source": "src/App.tsx",
         "line": 13,
@@ -56140,11 +57360,6 @@
         "source": "src/components/dialogs/SiteOpenDialog.tsx",
         "line": 3,
         "text": "import { ChevronDown, ChevronRight, FileText, HardDrive, RefreshCw } from 'lucide-react';"
-      },
-      {
-        "source": "src/components/dialogs/SiteSaveDialog.tsx",
-        "line": 3,
-        "text": "import { HardDrive } from 'lucide-react';"
       },
       {
         "source": "src/components/layout/Ribbon/Ribbon.css",
@@ -59727,6 +60942,11 @@
         "text": "  const result = computeSanitizedIcon(raw);"
       },
       {
+        "source": "src/components/dialogs/SiteSaveDialog.tsx",
+        "line": 3,
+        "text": "import { HardDrive } from 'lucide-react';"
+      },
+      {
         "source": "src/components/dialogs/StatsDialog.tsx",
         "line": 2,
         "text": "import { BarChart3 } from 'lucide-react';"
@@ -60292,9 +61512,34 @@
         "text": "import { Lock } from 'lucide-react';"
       },
       {
-        "source": "src/components/task-sections/shared.tsx",
-        "line": 8,
-        "text": " * paneel-bestand) omdat zowel `TaskPropertiesPanel` als `TaskDialog` als `Ribbon.tsx`"
+        "source": "scripts/bench-task-grid-product.mjs",
+        "line": 354,
+        "text": "      const start = [...document.querySelectorAll('button.ribbon-tab')].find(button => ['Start', 'Home'].includes(button.textContent?.trim()));"
+      },
+      {
+        "source": "scripts/bench-task-grid-product.mjs",
+        "line": 357,
+        "text": "      while (window.__OPS__.store.getState().ui.activeRibbonTab !== 'start') await new Promise(requestAnimationFrame);"
+      },
+      {
+        "source": "scripts/bench-task-grid-product.mjs",
+        "line": 364,
+        "text": "      const table = [...document.querySelectorAll('button.ribbon-tab')].find(button => ['Tabel', 'Table'].includes(button.textContent?.trim()));"
+      },
+      {
+        "source": "scripts/bench-task-grid-product.mjs",
+        "line": 368,
+        "text": "      while (window.__OPS__.store.getState().ui.activeRibbonTab !== 'table') await new Promise(requestAnimationFrame);"
+      },
+      {
+        "source": "scripts/build-platform.mjs",
+        "line": 4,
+        "text": "//   npm run build:platform -- --base /assets/openaec/planner/"
+      },
+      {
+        "source": "scripts/build-platform.mjs",
+        "line": 21,
+        "text": "const EXAMPLE = 'npm run build:platform -- --base /assets/openaec/planner/';"
       },
       {
         "source": "scripts/build-release-highlights-json.ts",
@@ -60310,6 +61555,41 @@
         "source": "scripts/build-release-highlights-json.ts",
         "line": 64,
         "text": "            icon: block.secondary[index]!.icon,"
+      },
+      {
+        "source": "scripts/generate-docs-screenshots.mjs",
+        "line": 12,
+        "text": "// WebP (alleen licht thema). Pas als ALLES groen is, vervangt dit script `<map>/img/<taal>/tut-*.webp`"
+      },
+      {
+        "source": "scripts/generate-docs-screenshots.mjs",
+        "line": 16,
+        "text": "// tutorialtekst verwijst naar `img/{lang}/<naam>.webp`."
+      },
+      {
+        "source": "scripts/generate-docs-screenshots.mjs",
+        "line": 62,
+        "text": "const ours = name => /^tut-\\d+-.*\\.webp$/.test(name) && (!prefixes || prefixes.some(p => name.startsWith(p)));"
+      },
+      {
+        "source": "scripts/publish-wiki.mjs",
+        "line": 20,
+        "text": "//   screenshot*.png                                    → image assets for the Home page"
+      },
+      {
+        "source": "scripts/publish-wiki.mjs",
+        "line": 33,
+        "text": "const SCREENSHOTS = ['screenshot.png', 'screenshot-rapport.png', 'screenshot-context-menu.png'];"
+      },
+      {
+        "source": "scripts/release-notes.mjs",
+        "line": 32,
+        "text": "  '- **macOS**: Download the `.dmg` file (universal - supports Intel and Apple Silicon)',"
+      },
+      {
+        "source": "scripts/verify-cycles.mjs",
+        "line": 43,
+        "text": "    '.css': 'empty', '.png': 'empty', '.svg': 'empty', '.jpg': 'empty',"
       },
       {
         "source": "scripts/verify-docs.ts",
@@ -60417,6 +61697,31 @@
         "text": ".cancel-icon:hover { background: var(--theme-hover); color: var(--error); }"
       },
       {
+        "source": "src/components/task-sections/shared.tsx",
+        "line": 8,
+        "text": " * paneel-bestand) omdat zowel `TaskPropertiesPanel` als `TaskDialog` als `Ribbon.tsx`"
+      },
+      {
+        "source": "src/components/tour/TourOverlay.tsx",
+        "line": 73,
+        "text": " * klikken vlak bij het anker, niet de rest van de pagina (een klik op bv. de Report-ribbontab"
+      },
+      {
+        "source": "src/components/tour/TourOverlay.tsx",
+        "line": 126,
+        "text": "        activeRibbonTab: ui.activeRibbonTab,"
+      },
+      {
+        "source": "src/components/viewControls/LevelListEditor.tsx",
+        "line": 2,
+        "text": "import { X } from 'lucide-react';"
+      },
+      {
+        "source": "src/components/viewControls/LevelListEditor.tsx",
+        "line": 29,
+        "text": "      {levels.length === 0 && <span className=\"ribbon-info\">{emptyLabel}</span>}"
+      },
+      {
         "source": "src/components/common/Tooltip.css",
         "line": 3,
         "text": "   de ribbon-strook (die clipt via overflow). De horizontale positie (`left`) wordt in JS geklemd;"
@@ -60470,16 +61775,6 @@
         "source": "src/components/settings/applySetting.ts",
         "line": 5,
         "text": "// Bewust een losse module zonder `@/i18n/config`: het lint (ribbonWidgets) gebruikt dit ook, en"
-      },
-      {
-        "source": "src/components/tour/TourOverlay.tsx",
-        "line": 73,
-        "text": " * klikken vlak bij het anker, niet de rest van de pagina (een klik op bv. de Report-ribbontab"
-      },
-      {
-        "source": "src/components/tour/TourOverlay.tsx",
-        "line": 126,
-        "text": "        activeRibbonTab: ui.activeRibbonTab,"
       },
       {
         "source": "src/components/tour/tourAnchor.ts",
@@ -60570,16 +61865,6 @@
         "source": "src/components/tour/tourSteps.ts",
         "line": 71,
         "text": "      useAppStore.getState().setUI({ activeRibbonTab: 'file', backstageSection: 'examples' });"
-      },
-      {
-        "source": "src/components/viewControls/LevelListEditor.tsx",
-        "line": 2,
-        "text": "import { X } from 'lucide-react';"
-      },
-      {
-        "source": "src/components/viewControls/LevelListEditor.tsx",
-        "line": 29,
-        "text": "      {levels.length === 0 && <span className=\"ribbon-info\">{emptyLabel}</span>}"
       },
       {
         "source": "src/components/viewControls/builtinLayouts.ts",
@@ -63535,8 +64820,13 @@
   {
     "repository": "open-3d-studio",
     "status": "source-scanned",
-    "code_files": 13,
+    "code_files": 15,
     "matches": [
+      {
+        "source": "scripts/make-icon.mjs",
+        "line": 66,
+        "text": "const out = join(dirname(fileURLToPath(import.meta.url)), \"..\", \"app-icon.png\");"
+      },
       {
         "source": "src/App.tsx",
         "line": 10,
@@ -64007,7 +65297,7 @@
   {
     "repository": "website",
     "status": "source-scanned",
-    "code_files": 90,
+    "code_files": 91,
     "matches": [
       {
         "source": "404.html",
@@ -67735,6 +69025,36 @@
         "text": "    && typeof h.icon === 'string';"
       },
       {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 4,
+        "text": "// Bron: de lint-tabbladen (js/solid/components/ribbon/*Tab.jsx), de"
+      },
+      {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 39,
+        "text": "const KNOP_TAGS = ['RibbonButton', 'SplitButton', 'ColorPickerButton'];"
+      },
+      {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 113,
+        "text": "  const bron = readFileSync(join(APP, 'js', 'solid', 'components', 'ribbon', tab.bestand), 'utf8');"
+      },
+      {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 117,
+        "text": "  const re = new RegExp(`<(RibbonGroup|${KNOP_TAGS.join('|')})\\\\b`, 'g');"
+      },
+      {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 121,
+        "text": "    if (m[1] === 'RibbonGroup') {"
+      },
+      {
+        "source": "scripts/genereer-opds-functies.mjs",
+        "line": 151,
+        "text": "    label: vertaal('ribbon', `tabs.${tab.key}`),"
+      },
+      {
         "source": "shared/opds-functies.js",
         "line": 18,
         "text": "      intro: (d) => `The complete ribbon of version ${d.versie}: ${d.aantallen.functies} features across ${d.aantallen.tabbladen} tabs. This list is generated from the source code, so it always matches the app.`,"
@@ -68444,8 +69764,148 @@
   {
     "repository": "open-pointcloud-studio",
     "status": "source-scanned",
-    "code_files": 155,
+    "code_files": 156,
     "matches": [
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 8,
+        "text": "const svgPath = path.join(rootDir, 'public', 'logo.svg');"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 9,
+        "text": "const iconsDir = path.join(rootDir, 'src-tauri', 'icons');"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 15,
+        "text": "  { name: '32x32.png', size: 32 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 16,
+        "text": "  { name: '64x64.png', size: 64 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 17,
+        "text": "  { name: '128x128.png', size: 128 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 18,
+        "text": "  { name: '128x128@2x.png', size: 256 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 19,
+        "text": "  { name: 'icon.png', size: 512 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 20,
+        "text": "  // Windows Store logos"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 21,
+        "text": "  { name: 'Square30x30Logo.png', size: 30 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 22,
+        "text": "  { name: 'Square44x44Logo.png', size: 44 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 23,
+        "text": "  { name: 'Square71x71Logo.png', size: 71 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 24,
+        "text": "  { name: 'Square89x89Logo.png', size: 89 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 25,
+        "text": "  { name: 'Square107x107Logo.png', size: 107 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 26,
+        "text": "  { name: 'Square142x142Logo.png', size: 142 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 27,
+        "text": "  { name: 'Square150x150Logo.png', size: 150 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 28,
+        "text": "  { name: 'Square284x284Logo.png', size: 284 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 29,
+        "text": "  { name: 'Square310x310Logo.png', size: 310 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 30,
+        "text": "  { name: 'StoreLogo.png', size: 50 },"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 39,
+        "text": "  const outPath = path.join(iconsDir, name);"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 83,
+        "text": "  return Buffer.concat([header, ...dirEntries, ...pngDataArr]);"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 87,
+        "text": "fs.writeFileSync(path.join(iconsDir, 'icon.ico'), icoBuffer);"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 88,
+        "text": "console.log('Generated icon.ico');"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 95,
+        "text": "  const iconSize = 8 + pngData512.length; // type(4) + size(4) + data"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 96,
+        "text": "  const totalSize = 8 + iconSize; // 'icns'(4) + fileSize(4) + icon"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 102,
+        "text": "  buf.writeUInt32BE(iconSize, 12);"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 112,
+        "text": "fs.writeFileSync(path.join(iconsDir, 'icon.icns'), icnsBuffer);"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 113,
+        "text": "console.log('Generated icon.icns');"
+      },
+      {
+        "source": "classic/scripts/generate-icons.mjs",
+        "line": 115,
+        "text": "console.log('\\nAll icons generated successfully!');"
+      },
       {
         "source": "classic/src/App.tsx",
         "line": 2,

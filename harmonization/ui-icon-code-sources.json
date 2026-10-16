@@ -908,34 +908,6 @@
   },
   {
     "repo": "open-pdf-studio",
-    "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
-    "kind": "icon-component",
-    "lines": [
-      392,
-      403
-    ],
-    "names": [
-      "GripIcon",
-      "CloseIcon"
-    ],
-    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx"
-  },
-  {
-    "repo": "open-pdf-studio",
-    "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
-    "kind": "inline-svg",
-    "lines": [
-      17,
-      18
-    ],
-    "names": [
-      "handIcon",
-      "selectIcon"
-    ],
-    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ToolPalette.jsx"
-  },
-  {
-    "repo": "open-pdf-studio",
     "source": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
     "kind": "inline-svg",
     "lines": [
@@ -1272,6 +1244,34 @@
       "distSpaceVIcon"
     ],
     "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/data/ribbonIcons.js"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx",
+    "kind": "icon-component",
+    "lines": [
+      392,
+      403
+    ],
+    "names": [
+      "GripIcon",
+      "CloseIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ExtensionToolPalette.jsx"
+  },
+  {
+    "repo": "open-pdf-studio",
+    "source": "open-pdf-studio/js/solid/components/ToolPalette.jsx",
+    "kind": "inline-svg",
+    "lines": [
+      17,
+      18
+    ],
+    "names": [
+      "handIcon",
+      "selectIcon"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ToolPalette.jsx"
   },
   {
     "repo": "open-pdf-studio",
@@ -3057,18 +3057,6 @@
   },
   {
     "repo": "open-planner-studio",
-    "source": "src/components/dialogs/SiteSaveDialog.tsx",
-    "kind": "icon-library",
-    "lines": [
-      3
-    ],
-    "names": [
-      "HardDrive"
-    ],
-    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/SiteSaveDialog.tsx"
-  },
-  {
-    "repo": "open-planner-studio",
     "source": "src/components/layout/Ribbon/Ribbon.tsx",
     "kind": "icon-library",
     "lines": [
@@ -3289,6 +3277,18 @@
       "layoutIcon"
     ],
     "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx"
+  },
+  {
+    "repo": "open-planner-studio",
+    "source": "src/components/dialogs/SiteSaveDialog.tsx",
+    "kind": "icon-library",
+    "lines": [
+      3
+    ],
+    "names": [
+      "HardDrive"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/SiteSaveDialog.tsx"
   },
   {
     "repo": "open-planner-studio",
