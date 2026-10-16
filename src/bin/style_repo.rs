@@ -2699,8 +2699,14 @@ mod tests {
         assert_eq!((place[0].label.as_str(), place[1].label.as_str()), ("Sondering", "Boring"));
         assert!(matches!((place[0].icon, place[1].icon),
             (CommandIcon::Svg(sondering), CommandIcon::Svg(boring)) if sondering != boring));
+        assert!(matches!(drawing.groups[4].commands[2].icon, CommandIcon::Canonical(Icon::Print)));
         assert!(drawing.groups.iter().flat_map(|group| &group.commands)
+            .filter(|command| command.label != "Print")
             .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
+        let home = tabs.iter().find(|tab| tab.id == "home").unwrap();
+        assert!(matches!(home.groups[0].commands[0].icon, CommandIcon::Canonical(Icon::Settings)));
+        assert!(matches!(home.groups[1].commands[0].icon, CommandIcon::Canonical(Icon::ZoomOut)));
+        assert!(matches!(home.groups[1].commands[1].icon, CommandIcon::Canonical(Icon::Fit)));
     }
 
     #[test]

@@ -20,6 +20,17 @@ fn load_fonts() {
 }
 
 #[test]
+#[ignore = "regenerate shared Rust icon catalogue on demand"]
+fn export_canonical_icon_reviews() {
+    let mut app = StyleRepo::default();
+    app.show(Page::Icons);
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        save_render(&app, theme, &design.join(format!("style-repo-icons-{name}.png")));
+    }
+}
+
+#[test]
 #[ignore = "regenerate source-icon Geotechniek ribbon previews on demand"]
 fn export_geotech_source_ribbon_reviews() {
     let mut app = StyleRepo::default();

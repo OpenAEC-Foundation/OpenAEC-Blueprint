@@ -436,6 +436,149 @@
       ]
     },
     {
+      "id": "save-as",
+      "aliases": [
+        "saveas",
+        "save_as"
+      ],
+      "candidates": []
+    },
+    {
+      "id": "print",
+      "aliases": [
+        "print",
+        "printer",
+        "toolbarbuttonprint"
+      ],
+      "candidates": [
+        {
+          "kind": "ui-asset",
+          "repo": "open-pdf-studio",
+          "name": "toolbarButton-print",
+          "repositories": [
+            "open-pdf-studio"
+          ],
+          "path": "open-pdf-studio/public/pdfjs/web/images/toolbarButton-print.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio/open-pdf-studio/public/pdfjs/web/images/toolbarButton-print.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "open-pdf-studio/public/pdfjs/web/viewer.css",
+              "line": 2363,
+              "reference": "images/toolbarButton-print.svg"
+            }
+          ],
+          "sha256": "267745d6c176afe038630c3f7c0fcda78141fc7634f73898ffc6cbb1262c77ab",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/public/pdfjs/web/viewer.css#L2363"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "open-pdf-studio-v3",
+          "name": "print",
+          "repositories": [
+            "open-pdf-studio-v3"
+          ],
+          "path": "crates/app/ui/icons/print.svg",
+          "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/print.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "crates/app/ui/backstage.slint",
+              "line": 169,
+              "reference": "icons/print.svg"
+            },
+            {
+              "source": "crates/app/ui/preferences.slint",
+              "line": 113,
+              "reference": "icons/print.svg"
+            }
+          ],
+          "sha256": "64c66d1638728d8b840ebcf125f465331d77e8ac60c21aba0486b16d3fa3dfbf",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L169"
+        },
+        {
+          "kind": "ui-asset",
+          "repo": "OpenCADStudio",
+          "name": "print",
+          "repositories": [
+            "OpenCADStudio"
+          ],
+          "path": "assets/icons/ui/print.svg",
+          "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/ui/print.svg",
+          "evidence": "direct-path",
+          "references": [
+            {
+              "source": "src/ui/icons.rs",
+              "line": 89,
+              "reference": "../../assets/icons/ui/print.svg"
+            }
+          ],
+          "sha256": "acfc708a401517959cf09cc0ec854903ec2bfedcf00f1211a70fc5ff0bb09799",
+          "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L89"
+        },
+        {
+          "kind": "code-import",
+          "repo": "open-planner-studio",
+          "repositories": [
+            "open-planner-studio"
+          ],
+          "name": "Printer",
+          "path": "lucide-static@0.575.0/Printer",
+          "preview": "../harmonization/library-icons/lucide-static/0.575.0/Printer.svg",
+          "evidence": "jsx-render",
+          "references": [
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/backstage/Backstage.tsx",
+              "line": 3,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            },
+            {
+              "repo": "open-planner-studio",
+              "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
+              "line": 3,
+              "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
+            }
+          ],
+          "sha256": "23fc14557cbdadf66adb88da09c54af42f40fa3b55e1dd7a68c2499a14b527f9",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L127"
+        },
+        {
+          "kind": "code-import",
+          "repo": "open-energy-studio",
+          "repositories": [
+            "open-energy-studio"
+          ],
+          "name": "Printer",
+          "path": "lucide-static@0.577.0/Printer",
+          "preview": "../harmonization/library-icons/lucide-static/0.577.0/Printer.svg",
+          "evidence": "jsx-render",
+          "references": [
+            {
+              "repo": "open-energy-studio",
+              "source": "src/components/SurveyWizard/SurveyReport.tsx",
+              "line": 9,
+              "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
+            },
+            {
+              "repo": "open-energy-studio",
+              "source": "src/components/shell/StepRouter.tsx",
+              "line": 7,
+              "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
+            },
+            {
+              "repo": "open-energy-studio",
+              "source": "src/components/shell/pages/DeliveryPages.tsx",
+              "line": 8,
+              "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
+            }
+          ],
+          "sha256": "724b1c186f6fad628db302cb83a0d11b6a8140af44648df909c07281cfd73bf9",
+          "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyReport.tsx#L123"
+        }
+      ]
+    },
+    {
       "id": "import",
       "aliases": [
         "import",
@@ -1381,6 +1524,14 @@
           "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L221"
         }
       ]
+    },
+    {
+      "id": "restore",
+      "aliases": [
+        "restore",
+        "restorewindow"
+      ],
+      "candidates": []
     },
     {
       "id": "panel-left",
@@ -3331,26 +3482,6 @@
     {
       "kind": "ui-asset",
       "repo": "open-pdf-studio",
-      "name": "toolbarButton-print",
-      "repositories": [
-        "open-pdf-studio"
-      ],
-      "path": "open-pdf-studio/public/pdfjs/web/images/toolbarButton-print.svg",
-      "preview": "../harmonization/ui-icons/open-pdf-studio/open-pdf-studio/public/pdfjs/web/images/toolbarButton-print.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "open-pdf-studio/public/pdfjs/web/viewer.css",
-          "line": 2363,
-          "reference": "images/toolbarButton-print.svg"
-        }
-      ],
-      "sha256": "267745d6c176afe038630c3f7c0fcda78141fc7634f73898ffc6cbb1262c77ab",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/public/pdfjs/web/viewer.css#L2363"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pdf-studio",
       "name": "toolbarButton-secondaryToolbarToggle",
       "repositories": [
         "open-pdf-studio"
@@ -4202,31 +4333,6 @@
       ],
       "sha256": "537370d3b52fc42264e9c0aaf53806a8c63637230d789c694dd703dab2580f3b",
       "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L119"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "open-pdf-studio-v3",
-      "name": "print",
-      "repositories": [
-        "open-pdf-studio-v3"
-      ],
-      "path": "crates/app/ui/icons/print.svg",
-      "preview": "../harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/print.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "crates/app/ui/backstage.slint",
-          "line": 169,
-          "reference": "icons/print.svg"
-        },
-        {
-          "source": "crates/app/ui/preferences.slint",
-          "line": 113,
-          "reference": "icons/print.svg"
-        }
-      ],
-      "sha256": "64c66d1638728d8b840ebcf125f465331d77e8ac60c21aba0486b16d3fa3dfbf",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/backstage.slint#L169"
     },
     {
       "kind": "ui-asset",
@@ -11911,26 +12017,6 @@
     {
       "kind": "ui-asset",
       "repo": "OpenCADStudio",
-      "name": "print",
-      "repositories": [
-        "OpenCADStudio"
-      ],
-      "path": "assets/icons/ui/print.svg",
-      "preview": "../harmonization/ui-icons/OpenCADStudio/assets/icons/ui/print.svg",
-      "evidence": "direct-path",
-      "references": [
-        {
-          "source": "src/ui/icons.rs",
-          "line": 89,
-          "reference": "../../assets/icons/ui/print.svg"
-        }
-      ],
-      "sha256": "acfc708a401517959cf09cc0ec854903ec2bfedcf00f1211a70fc5ff0bb09799",
-      "source_url": "https://github.com/HakanSeven12/OpenCADStudio/blob/77f19dafd01776947934e71563dd3d92a77c4f94/src/ui/icons.rs#L89"
-    },
-    {
-      "kind": "ui-asset",
-      "repo": "OpenCADStudio",
       "name": "refresh",
       "repositories": [
         "OpenCADStudio"
@@ -16383,33 +16469,6 @@
       "repositories": [
         "open-planner-studio"
       ],
-      "name": "Printer",
-      "path": "lucide-static@0.575.0/Printer",
-      "preview": "../harmonization/library-icons/lucide-static/0.575.0/Printer.svg",
-      "evidence": "jsx-render",
-      "references": [
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/backstage/Backstage.tsx",
-          "line": 3,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        },
-        {
-          "repo": "open-planner-studio",
-          "source": "src/components/layout/Ribbon/ribbonConfig.tsx",
-          "line": 3,
-          "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d"
-        }
-      ],
-      "sha256": "23fc14557cbdadf66adb88da09c54af42f40fa3b55e1dd7a68c2499a14b527f9",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L127"
-    },
-    {
-      "kind": "code-import",
-      "repo": "open-planner-studio",
-      "repositories": [
-        "open-planner-studio"
-      ],
       "name": "RefreshCw",
       "path": "lucide-static@0.575.0/RefreshCw",
       "preview": "../harmonization/library-icons/lucide-static/0.575.0/RefreshCw.svg",
@@ -19490,39 +19549,6 @@
       ],
       "sha256": "f1123de1ad1ac07e230d993a0649534437534d196e3bea9a7e927e5890a09211",
       "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx#L118"
-    },
-    {
-      "kind": "code-import",
-      "repo": "open-energy-studio",
-      "repositories": [
-        "open-energy-studio"
-      ],
-      "name": "Printer",
-      "path": "lucide-static@0.577.0/Printer",
-      "preview": "../harmonization/library-icons/lucide-static/0.577.0/Printer.svg",
-      "evidence": "jsx-render",
-      "references": [
-        {
-          "repo": "open-energy-studio",
-          "source": "src/components/SurveyWizard/SurveyReport.tsx",
-          "line": 9,
-          "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
-        },
-        {
-          "repo": "open-energy-studio",
-          "source": "src/components/shell/StepRouter.tsx",
-          "line": 7,
-          "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
-        },
-        {
-          "repo": "open-energy-studio",
-          "source": "src/components/shell/pages/DeliveryPages.tsx",
-          "line": 8,
-          "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6"
-        }
-      ],
-      "sha256": "724b1c186f6fad628db302cb83a0d11b6a8140af44648df909c07281cfd73bf9",
-      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyReport.tsx#L123"
     },
     {
       "kind": "code-import",

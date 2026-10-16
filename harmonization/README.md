@@ -22,6 +22,8 @@ Hetzelfde broncommit levert [elf gebruikte iconen in Bestand](../design/geotech-
 
 De [titel- en documentreview](../design/geotech-chrome-icon-review.html) bevat dertien gerenderde JSX-SVG-vormen uit `TitleBar.tsx` en `DocumentBar.tsx`. De [index](geotech-chrome-ui-icons.json) koppelt elke vorm aan het zichtbare element of de aangeroepen component, noteert de bronmaat en bewaart SHA-256. Het titelbalkbeeldmerk is branding; de vier zichtbare sneltoetsiconen zonder `onClick` worden expliciet als nog niet gekoppelde bediening gemarkeerd.
 
+De [kruisverwijzing van 54 Geotechniek-vormen](../design/geotech-icon-crosswalk.html) koppelt deze drie bronaudits aan de gedeelde Rust-kern, drie nieuw beoordeelde algemene betekenissen en de domein- en twijfelgevallen. De [gestructureerde beslisdata](../design/geotech-icon-crosswalk.json) bewaren de bronhash en beide gebruiksregels waar een vorm meer dan één actie afbeeldt. De ontwerpen voor Print, Opslaan als en Herstellen staan als beoordeelde schetsen onder `design/icon-core-drafts/` en als definitieve bytes in `crates/openaec-ui/assets/icons/`.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |
