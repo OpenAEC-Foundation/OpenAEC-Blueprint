@@ -20,6 +20,8 @@ De [Geotechniek-review](../design/geotech-inline-icon-review.html) bevat dertig 
 
 Hetzelfde broncommit levert [elf gebruikte iconen in Bestand](../design/geotech-backstage-icon-review.html). De [Bestand-index](geotech-backstage-ui-icons.json) verwijst voor elke `ICONS`-string naar zijn `MenuItem`-aanroep en SHA-256. Het overige SVG-gebruik in `Backstage.tsx`, waaronder het applicatielogo, valt buiten deze elf menu-iconen.
 
+De [titel- en documentreview](../design/geotech-chrome-icon-review.html) bevat dertien gerenderde JSX-SVG-vormen uit `TitleBar.tsx` en `DocumentBar.tsx`. De [index](geotech-chrome-ui-icons.json) koppelt elke vorm aan het zichtbare element of de aangeroepen component, noteert de bronmaat en bewaart SHA-256. Het titelbalkbeeldmerk is branding; de vier zichtbare sneltoetsiconen zonder `onClick` worden expliciet als nog niet gekoppelde bediening gemarkeerd.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |

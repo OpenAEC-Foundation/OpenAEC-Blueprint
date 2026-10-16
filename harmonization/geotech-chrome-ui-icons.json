@@ -1,0 +1,166 @@
+{
+  "repository": "open-geotechniek-studio",
+  "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+  "scope": "Rendered titlebar and document-tab JSX SVG controls, including both maximize states",
+  "count": 13,
+  "icons": [
+    {
+      "name": "title-save",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 95,
+      "usage_lines": [
+        89
+      ],
+      "source_size": "16",
+      "interactive": false,
+      "sha256": "6c0ee3c31a8359f6c21fb59df32088eec4f5ed4688ac2cf8a4d9a42e4669d6e7",
+      "svg": "inline-ui-icons/open-geotechniek-studio/title-save.svg"
+    },
+    {
+      "name": "title-undo",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 107,
+      "usage_lines": [
+        101
+      ],
+      "source_size": "16",
+      "interactive": false,
+      "sha256": "2a1214939e46b0414340a189145e520fbc6602ecb36722c3b8ed34ca952ecc1c",
+      "svg": "inline-ui-icons/open-geotechniek-studio/title-undo.svg"
+    },
+    {
+      "name": "title-redo",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 118,
+      "usage_lines": [
+        112
+      ],
+      "source_size": "16",
+      "interactive": false,
+      "sha256": "d12f1efaea4f39760e709196156eda464fe51eea43a71a5a20fd9d1f982d38e1",
+      "svg": "inline-ui-icons/open-geotechniek-studio/title-redo.svg"
+    },
+    {
+      "name": "title-print",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 129,
+      "usage_lines": [
+        123
+      ],
+      "source_size": "16",
+      "interactive": false,
+      "sha256": "a4a9f69e32afddda299be5dd983535d9214374be5203a787ac5eb8dd8b44eb1d",
+      "svg": "inline-ui-icons/open-geotechniek-studio/title-print.svg"
+    },
+    {
+      "name": "title-settings",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 142,
+      "usage_lines": [
+        135
+      ],
+      "source_size": "16",
+      "interactive": true,
+      "sha256": "21380d2207ef6cf04a170d3d61eec1094a4c0c670f1c6d4066315a31600b321d",
+      "svg": "inline-ui-icons/open-geotechniek-studio/title-settings.svg"
+    },
+    {
+      "name": "window-minimize",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 169,
+      "usage_lines": [
+        163
+      ],
+      "source_size": "10",
+      "interactive": true,
+      "sha256": "a32941b6e6d369d06f8ca02fef2bf3236dc3caf1553b3b70180ea95d7224dbfa",
+      "svg": "inline-ui-icons/open-geotechniek-studio/window-minimize.svg"
+    },
+    {
+      "name": "window-restore",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 181,
+      "usage_lines": [
+        174
+      ],
+      "source_size": "10",
+      "interactive": true,
+      "sha256": "3ea783ee7ba4fb84dc1311109a8f42657f9aafcbf1a407c6160435da53d5272b",
+      "svg": "inline-ui-icons/open-geotechniek-studio/window-restore.svg"
+    },
+    {
+      "name": "window-maximize",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 186,
+      "usage_lines": [
+        174
+      ],
+      "source_size": "10",
+      "interactive": true,
+      "sha256": "5e19f4480efb966760960c84eb8b8038528a246197312a38648d0505ce651c55",
+      "svg": "inline-ui-icons/open-geotechniek-studio/window-maximize.svg"
+    },
+    {
+      "name": "window-close",
+      "source": "apps/desktop/src/components/TitleBar.tsx",
+      "source_line": 198,
+      "usage_lines": [
+        192
+      ],
+      "source_size": "10",
+      "interactive": true,
+      "sha256": "073a442b0a679a07ae912192fc85dae4ae6eee97f5ef63200bf669dc5e92df94",
+      "svg": "inline-ui-icons/open-geotechniek-studio/window-close.svg"
+    },
+    {
+      "name": "document-close",
+      "source": "apps/desktop/src/components/DocumentBar.tsx",
+      "source_line": 42,
+      "usage_lines": [
+        33
+      ],
+      "source_size": "10",
+      "interactive": true,
+      "sha256": "2187877b387e6572b92948b908eb94daca949984d4222939838f3d0e1b8cd8b7",
+      "svg": "inline-ui-icons/open-geotechniek-studio/document-close.svg"
+    },
+    {
+      "name": "document-add",
+      "source": "apps/desktop/src/components/DocumentBar.tsx",
+      "source_line": 65,
+      "usage_lines": [
+        60
+      ],
+      "source_size": "12",
+      "interactive": true,
+      "sha256": "136b1d4bbf09d6cf489ea20c867baa5eae0110ccd3664bce0c3f12356c01def6",
+      "svg": "inline-ui-icons/open-geotechniek-studio/document-add.svg"
+    },
+    {
+      "name": "document-file",
+      "source": "apps/desktop/src/components/DocumentBar.tsx",
+      "source_line": 87,
+      "usage_lines": [
+        29
+      ],
+      "source_size": "12",
+      "interactive": true,
+      "sha256": "b9f99a241922a45a54da3458452d28ee72d137af8c26695daf66d8c3763804c6",
+      "svg": "inline-ui-icons/open-geotechniek-studio/document-file.svg"
+    },
+    {
+      "name": "document-folder",
+      "source": "apps/desktop/src/components/DocumentBar.tsx",
+      "source_line": 105,
+      "usage_lines": [
+        29
+      ],
+      "source_size": "12",
+      "interactive": true,
+      "sha256": "23fd3b111cd1d433711e89d31e7893db5668cd9aba7fb764ce7786d20e809ef6",
+      "svg": "inline-ui-icons/open-geotechniek-studio/document-folder.svg"
+    }
+  ],
+  "excluded_branding_svg_count": 1,
+  "note": "Save, undo, redo and print quick-access buttons are visible but have no onClick handler in the pinned source"
+}
