@@ -4,8 +4,7 @@
   "count": 38,
   "status_counts": {
     "nieuw domeincommando": 32,
-    "betekenis splitsen": 1,
-    "gedeelde kandidaat": 3,
+    "gedeelde kandidaat": 4,
     "bestaande domeinkandidaat": 1,
     "bronfout vervangen": 1
   },
@@ -26,9 +25,9 @@
     {
       "name": "settingsIcon",
       "tab": "Home",
-      "status": "betekenis splitsen",
-      "target": "Icon::Settings / Icon::Controls",
-      "rationale": "Tauri tekent een tandwiel voor instellingen; de huidige Rust-Settings is een schuifregelaar. Beoordeel vensterinstellingen en beeldregelaars apart.",
+      "status": "gedeelde kandidaat",
+      "target": "Icon::Settings",
+      "rationale": "Zelfde handeling; behoud één Rust-variant na controle van kleine maat en context.",
       "source_svg": "inline-ui-icons/style-book-tauri-ribbon/settings.svg",
       "source_file": "project-templates/Tauri+React/src/components/ribbon/HomeTab.tsx",
       "source_line": 51,

@@ -12,6 +12,7 @@ pub enum Icon {
     Undo,
     Redo,
     Settings,
+    Controls,
     Close,
     Minimize,
     Maximize,
@@ -38,7 +39,7 @@ pub enum Icon {
     DisclosureCollapsed,
 }
 impl Icon {
-    pub const ALL: [Self; 34] = [
+    pub const ALL: [Self; 35] = [
         Self::New,
         Self::Open,
         Self::Save,
@@ -49,6 +50,7 @@ impl Icon {
         Self::Undo,
         Self::Redo,
         Self::Settings,
+        Self::Controls,
         Self::Close,
         Self::Minimize,
         Self::Maximize,
@@ -86,6 +88,7 @@ impl Icon {
             Self::Undo => "undo",
             Self::Redo => "redo",
             Self::Settings => "settings",
+            Self::Controls => "controls",
             Self::Close => "close",
             Self::Minimize => "minimize",
             Self::Maximize => "maximize",
@@ -124,6 +127,7 @@ impl Icon {
             Self::Undo => include_bytes!("../assets/icons/undo.svg"),
             Self::Redo => include_bytes!("../assets/icons/redo.svg"),
             Self::Settings => include_bytes!("../assets/icons/settings.svg"),
+            Self::Controls => include_bytes!("../assets/icons/controls.svg"),
             Self::Close => include_bytes!("../assets/icons/close.svg"),
             Self::Minimize => include_bytes!("../assets/icons/minimize.svg"),
             Self::Maximize => include_bytes!("../assets/icons/maximize.svg"),

@@ -4,8 +4,8 @@
   "source_index": "../harmonization/planner-ribbon-ui-icons.json",
   "count": 85,
   "status_counts": {
-    "betekenis scheiden": 12,
-    "gedeelde kandidaat": 13,
+    "betekenis scheiden": 11,
+    "gedeelde kandidaat": 14,
     "eigen Planner-context": 60
   },
   "decisions": [
@@ -1511,11 +1511,11 @@
         }
       ],
       "meaning": "Projectinstellingen openen",
-      "status": "betekenis scheiden",
+      "status": "gedeelde kandidaat",
       "proposed_target": "Icon::Settings",
-      "rationale": "De Planner-bron gebruikt een tandwiel; de huidige gedeelde Settings-vorm tekent schuifregelaars.",
+      "rationale": "Vervang de bronvorm pas na controle van knopmaat en context.",
       "rust_candidate_svg": "../crates/openaec-ui/assets/icons/settings.svg",
-      "shared_core_candidate": false,
+      "shared_core_candidate": true,
       "planner_command_integrated": false
     },
     {

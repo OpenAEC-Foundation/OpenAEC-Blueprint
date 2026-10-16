@@ -48,7 +48,7 @@ unused = sorted(set(definitions) - {name for name, *_ in usage})
 assert len(unused) == 9
 
 candidates = {
-    "settingsIcon": ("settings.svg", "Zelfde instellingenroute, maar tandwiel tegenover schuifregelaars; eerst context onderscheiden."),
+    "settingsIcon": ("settings.svg", "Dezelfde instellingenroute; de Rust-kern gebruikt nu ook een tandwiel. Beeldregelaars behouden een eigen Controls-vorm."),
     "helpIcon": ("help.svg", "Zelfde hulpfunctie; lijnvorm en kleine maat nog vergelijken."),
     "undoIcon": ("undo.svg", "Dezelfde terugdraai-opdracht; pijlbaan verschilt."),
     "redoIcon": ("redo.svg", "Dezelfde herhaal-opdracht; pijlbaan verschilt."),

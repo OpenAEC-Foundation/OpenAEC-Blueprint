@@ -275,7 +275,7 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
             else if name.contains("Zoek") { Icon::Search }
             else if name.contains("Afstand") || name.contains("Oppervlakte") || name.contains("Hoek") || name.contains("Maat") { Icon::Measure }
             else if name.contains("Export") || name.contains("Samenvoegen") { Icon::Export }
-            else if name.contains("Eigenschap") || name.contains("keuze") || name.contains("controls") { Icon::Settings }
+            else if name.contains("Eigenschap") || name.contains("keuze") || name.contains("controls") { Icon::Controls }
             else if name.contains("Pagina") || name.contains("Beeld") || name.contains("Volledig") { Icon::Fit }
             else { Icon::Grid };
         Command::new(*name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
@@ -284,7 +284,7 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
         groups[0].commands.push(Command::new("Croppen", pdf_image_icon!("cropIcon"), Action::PdfCrop).selected(image.crop));
         groups[1].commands.push(Command::new("Grijswaarden", pdf_image_icon!("grayscaleIcon"), Action::PdfGrayscale).selected(image.grayscale));
         groups[1].commands.push(Command::new("Herstellen", pdf_image_icon!("resetAdjustIcon"), Action::PdfResetImage));
-        groups[1].commands.push(Command::new("Beeldregelaars", Icon::Settings, Action::PdfResetImage)
+        groups[1].commands.push(Command::new("Beeldregelaars", Icon::Controls, Action::PdfResetImage)
             .control(RibbonControl::Sliders { minimum: 0.0, maximum: 200.0, step: 1.0, unit: "%", width: 226.0,
                 items: vec![
                     RibbonSlider { label: "Helderheid".into(), icon: pdf_image_icon!("brightnessIcon"), value: image.brightness, on_change: Action::PdfBrightness },
@@ -390,7 +390,7 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
     let colors = |action: fn(usize) -> Action| PDF_FORMAT_PALETTE.iter().enumerate()
         .map(|(index, hex)| (hex.to_string(), pdf_color(hex), action(index))).collect();
     let pick = |label: &str, choices: &[&str], index: usize, action: fn(usize) -> Action, width: f32| {
-        Command::new(label, Icon::Settings, action(index)).control(RibbonControl::Select {
+        Command::new(label, Icon::Controls, action(index)).control(RibbonControl::Select {
             options: choices.iter().enumerate().map(|(i, label)| (label.to_string(), action(i))).collect(),
             selected: index, width, show_label: true })
     };
@@ -452,7 +452,7 @@ fn pdf_format_groups(selected: Option<&str>, format: PdfFormatState) -> Vec<Ribb
                 ], width: 235.0, label_width: 58.0 }),
         ] },
         RibbonGroup { label: "Pijlen".into(), commands: vec![
-            Command::new("Pijlpunten", Icon::Settings, Action::PdfFormatArrowStart(format.arrow_start))
+            Command::new("Pijlpunten", Icon::Controls, Action::PdfFormatArrowStart(format.arrow_start))
                 .control(RibbonControl::FormStack { fields: vec![
                     form_select("Begin", &arrows, format.arrow_start, Action::PdfFormatArrowStart),
                     form_select("Einde", &arrows, format.arrow_end, Action::PdfFormatArrowEnd),

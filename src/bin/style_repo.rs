@@ -95,7 +95,7 @@ impl Page {
             Self::Overview => Icon::Cube,
             Self::Components => Icon::Grid,
             Self::Icons => Icon::Search,
-            Self::Themes => Icon::Settings,
+            Self::Themes => Icon::Controls,
             Self::Layouts => Icon::PanelLeft,
             Self::Studios => Icon::Cube,
             Self::Sources => Icon::Grid,
@@ -2118,7 +2118,7 @@ impl Application for StyleRepo {
                         commands: vec![
                             Command::new(
                                 l.text("Thema's", "Themes"),
-                                Icon::Settings,
+                                Icon::Controls,
                                 Action::Show(Page::Themes),
                             )
                             .selected(self.page == Page::Themes),
