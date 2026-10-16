@@ -1,0 +1,304 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 14 literal SVG source sites in source-reachable desktop AnnotationsPanel.jsx; all are UI symbols, including always-disabled commands. Imported contextMenuIcons.js SVGs are counted in their separate catalog.",
+  "literal_svg_sites": 14,
+  "ui_placements": 15,
+  "exported_state_svgs": 16,
+  "always_disabled_placements": 4,
+  "shared_geometry": [
+    [
+      "menu-expand-all",
+      "toolbar-expand-all"
+    ],
+    [
+      "menu-collapse-all",
+      "toolbar-collapse-all"
+    ],
+    [
+      "group-submenu-chevron",
+      "show-submenu-chevron"
+    ],
+    [
+      "color-group-chevron",
+      "other-group-chevron"
+    ]
+  ],
+  "records": [
+    {
+      "ordinal": 1,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 13,
+      "name": "menu-expand-all",
+      "label": "Alles uitklappen · menu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "enabled",
+      "render_lines": [
+        251
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-expand-all.svg",
+          "sha256": "9c2327133815d728ec5f6a6f6b88098c9b2872070f4eec258eb73ad5c66e8072"
+        }
+      }
+    },
+    {
+      "ordinal": 2,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 14,
+      "name": "menu-collapse-all",
+      "label": "Alles inklappen · menu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "enabled",
+      "render_lines": [
+        255
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-collapse-all.svg",
+          "sha256": "696b4f803f98beec40194ec4aaa86ce9da3a00240c36d4560a19531363d37045"
+        }
+      }
+    },
+    {
+      "ordinal": 3,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 15,
+      "name": "menu-summarize",
+      "label": "Samenvatten · menu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "always-disabled",
+      "render_lines": [
+        263
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-summarize.svg",
+          "sha256": "8a53d4e327e03295d1979ee718ec558ab3af3f1b58fa685e8ee626fd202b60c7"
+        }
+      }
+    },
+    {
+      "ordinal": 4,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 16,
+      "name": "menu-import-comments",
+      "label": "Opmerkingen importeren · menu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "always-disabled",
+      "render_lines": [
+        267
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-import-comments.svg",
+          "sha256": "a85c96477271ff87fdd52455187236afcc4cb3d929c429fce7b550dd6987c33d"
+        }
+      }
+    },
+    {
+      "ordinal": 5,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 17,
+      "name": "menu-export-comments",
+      "label": "Opmerkingen exporteren · twee menuacties",
+      "role": "command",
+      "placement": "menu",
+      "availability": "always-disabled",
+      "render_lines": [
+        271,
+        275
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-export-comments.svg",
+          "sha256": "77ce53102979e0bd847b1f5a177ab318357aa962b9a96f3631f5d3a55a0ed9fd"
+        }
+      }
+    },
+    {
+      "ordinal": 6,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 18,
+      "name": "menu-group-by",
+      "label": "Groeperen op · submenu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "enabled",
+      "render_lines": [
+        283
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-group-by.svg",
+          "sha256": "168fbfe456ac17aa4728c03060c1eb90974e1d4107cff9fd1c12d139307b7142"
+        }
+      }
+    },
+    {
+      "ordinal": 7,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 19,
+      "name": "menu-show",
+      "label": "Tonen · submenu",
+      "role": "command",
+      "placement": "menu",
+      "availability": "enabled",
+      "render_lines": [
+        303
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/menu-show.svg",
+          "sha256": "6815dd213df5988a42625971f1eff77cc2975e924f5682d715ac6f8a811a3da7"
+        }
+      }
+    },
+    {
+      "ordinal": 8,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 203,
+      "name": "toolbar-menu",
+      "label": "Annotatiemenu openen",
+      "role": "command",
+      "placement": "toolbar",
+      "availability": "enabled",
+      "render_lines": [
+        203
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/toolbar-menu.svg",
+          "sha256": "cd98e8492718a260939a43ecc780d42178bed6c757d4b910d224f3d134deb9cb"
+        }
+      }
+    },
+    {
+      "ordinal": 9,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 285,
+      "name": "group-submenu-chevron",
+      "label": "Groeperen op · submenu openen",
+      "role": "disclosure",
+      "placement": "menu",
+      "availability": "menu-open",
+      "render_lines": [
+        285
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/group-submenu-chevron.svg",
+          "sha256": "11fc9d3cedb122c3d11e0d2cd043e1e3b76c767943259eb5281227680b5cbf93"
+        }
+      }
+    },
+    {
+      "ordinal": 10,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 305,
+      "name": "show-submenu-chevron",
+      "label": "Tonen · submenu openen",
+      "role": "disclosure",
+      "placement": "menu",
+      "availability": "menu-open",
+      "render_lines": [
+        305
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/show-submenu-chevron.svg",
+          "sha256": "11fc9d3cedb122c3d11e0d2cd043e1e3b76c767943259eb5281227680b5cbf93"
+        }
+      }
+    },
+    {
+      "ordinal": 11,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 369,
+      "name": "toolbar-expand-all",
+      "label": "Alles uitklappen · werkbalk",
+      "role": "command",
+      "placement": "toolbar",
+      "availability": "enabled",
+      "render_lines": [
+        369
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/toolbar-expand-all.svg",
+          "sha256": "9c2327133815d728ec5f6a6f6b88098c9b2872070f4eec258eb73ad5c66e8072"
+        }
+      }
+    },
+    {
+      "ordinal": 12,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 378,
+      "name": "toolbar-collapse-all",
+      "label": "Alles inklappen · werkbalk",
+      "role": "command",
+      "placement": "toolbar",
+      "availability": "enabled",
+      "render_lines": [
+        378
+      ],
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/toolbar-collapse-all.svg",
+          "sha256": "696b4f803f98beec40194ec4aaa86ce9da3a00240c36d4560a19531363d37045"
+        }
+      }
+    },
+    {
+      "ordinal": 13,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 430,
+      "name": "color-group-chevron",
+      "label": "Kleurgroep in-/uitklappen",
+      "role": "disclosure",
+      "placement": "group-header",
+      "availability": "color-sort",
+      "render_lines": [
+        430
+      ],
+      "variants": {
+        "expanded": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/color-group-chevron-expanded.svg",
+          "sha256": "33f782f780093745b51bdd99596681ea6d79e32fa26ad8e17c54caf3766b4b66"
+        },
+        "collapsed": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/color-group-chevron-collapsed.svg",
+          "sha256": "98b07b7eb39f8db262ada15817776f685030008e91757fe76b9bd8cd8daaa5e9"
+        }
+      }
+    },
+    {
+      "ordinal": 14,
+      "source_file": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "source_line": 442,
+      "name": "other-group-chevron",
+      "label": "Andere groep in-/uitklappen",
+      "role": "disclosure",
+      "placement": "group-header",
+      "availability": "other-sort",
+      "render_lines": [
+        442
+      ],
+      "variants": {
+        "expanded": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/other-group-chevron-expanded.svg",
+          "sha256": "33f782f780093745b51bdd99596681ea6d79e32fa26ad8e17c54caf3766b4b66"
+        },
+        "collapsed": {
+          "path": "inline-ui-icons/open-pdf-studio/annotations-panel/other-group-chevron-collapsed.svg",
+          "sha256": "98b07b7eb39f8db262ada15817776f685030008e91757fe76b9bd8cd8daaa5e9"
+        }
+      }
+    }
+  ]
+}
