@@ -31,9 +31,14 @@
       "availability": "no-pdf-disabled",
       "source_file": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
       "source_line": 25,
-      "review_note": "Broncomment noemt uitgaande pijl, maar SVG toont alleen een kubus; betekenis moet in harmonisatie expliciet worden ontworpen.",
+      "review_note": "Broncomment noemt uitgaande pijl, maar SVG toont alleen een kubus; de Rust-variant voegt die pijl toe.",
       "svg": "inline-ui-icons/open-pdf-studio/home-tab/ifc-report.svg",
-      "sha256": "1866157850fed9da9d9d98be1be2e9c539b5ec5679e1a3c5d977da5a27472b0a"
+      "sha256": "1866157850fed9da9d9d98be1be2e9c539b5ec5679e1a3c5d977da5a27472b0a",
+      "harmonized_rust_icon": "DomainIcon::PdfIfcReportExport",
+      "harmonized_assets": {
+        "standard": "crates/openaec-ui/assets/domain-icons/pdf-ifc-report-export.svg",
+        "small": "crates/openaec-ui/assets/domain-icons-small/pdf-ifc-report-export.svg"
+      }
     },
     {
       "ordinal": 3,

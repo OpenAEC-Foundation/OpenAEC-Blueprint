@@ -278,6 +278,11 @@ fn pdf_groups(studio: &StudioLayout, tab: &str, selected: Option<&str>, image: P
             else if name.contains("Eigenschap") || name.contains("keuze") || name.contains("controls") { Icon::Controls }
             else if name.contains("Pagina") || name.contains("Beeld") || name.contains("Volledig") { Icon::Fit }
             else { Icon::Grid };
+        let icon: CommandIcon = if tab == "Start" && *name == "IFC-report" {
+            DomainIcon::PdfIfcReportExport.into()
+        } else {
+            icon.into()
+        };
         Command::new(*name, icon, Action::SelectPreviewCommand(id.clone())).selected(selected == Some(id.as_str()))
     }).collect() }).collect();
     if tab == "Afbeelding" {

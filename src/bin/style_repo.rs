@@ -3036,6 +3036,9 @@ mod tests {
         assert_eq!(tabs.len(), 9);
         assert_eq!(tabs[0].groups.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),
             ["Document", "Hulpmiddelen", "Beeld", "Navigeren", "Zoeken", "Instellingen"]);
+        assert_eq!(tabs[0].groups[0].commands[2].label, "IFC-report");
+        assert!(matches!(tabs[0].groups[0].commands[2].icon,
+            CommandIcon::Domain(DomainIcon::PdfIfcReportExport)));
         assert!(tabs[3].groups.iter().any(|group| group.label == "METEN"));
         let format = &tabs[6].groups;
         assert_eq!(format.iter().map(|group| group.label.as_str()).collect::<Vec<_>>(),

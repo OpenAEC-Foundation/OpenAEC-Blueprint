@@ -199,10 +199,11 @@ pub enum DomainIcon {
     PdfShortcuts,
     PdfNavigation,
     PdfManageWatermarks,
+    PdfIfcReportExport,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 33] = [
+    pub const ALL: [Self; 34] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -236,6 +237,7 @@ impl DomainIcon {
         Self::PdfShortcuts,
         Self::PdfNavigation,
         Self::PdfManageWatermarks,
+        Self::PdfIfcReportExport,
     ];
 
     pub fn id(self) -> &'static str {
@@ -273,6 +275,7 @@ impl DomainIcon {
             Self::PdfShortcuts => "pdf.shortcuts",
             Self::PdfNavigation => "pdf.navigation",
             Self::PdfManageWatermarks => "pdf.manage-watermarks",
+            Self::PdfIfcReportExport => "pdf.ifc-report-export",
         }
     }
 
@@ -475,6 +478,12 @@ impl DomainIcon {
             }
             (Self::PdfManageWatermarks, false) => {
                 include_bytes!("../assets/domain-icons/pdf-manage-watermarks.svg")
+            }
+            (Self::PdfIfcReportExport, true) => {
+                include_bytes!("../assets/domain-icons-small/pdf-ifc-report-export.svg")
+            }
+            (Self::PdfIfcReportExport, false) => {
+                include_bytes!("../assets/domain-icons/pdf-ifc-report-export.svg")
             }
         }
     }

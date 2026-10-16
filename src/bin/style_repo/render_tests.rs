@@ -1006,6 +1006,21 @@ fn export_pdf_ribbon_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF Home ribbon review on demand"]
+fn export_pdf_home_ribbon_review() {
+    let mut app = StyleRepo::default();
+    let pdf = studios().iter().position(|studio| studio.id == "pdf").unwrap();
+    let _ = app.update(Action::SelectStudio(pdf));
+    let _ = app.update(Action::SelectScreen(1));
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_with_options(&app, theme, false, Some("start"))
+            .save_png(&std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join(format!("design/style-repo-pdf-home-{name}.png")))
+            .expect("save PDF Home ribbon review");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native PDF image-tab review on demand"]
 fn export_pdf_image_ribbon_review() {
     let mut app = StyleRepo::default();
