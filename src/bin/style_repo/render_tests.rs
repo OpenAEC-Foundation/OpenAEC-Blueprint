@@ -20,6 +20,28 @@ fn load_fonts() {
 }
 
 #[test]
+#[ignore = "regenerate native Reports screen review on demand"]
+fn export_reports_native_screen_review() {
+    let mut app = StyleRepo::default();
+    let reports = studios().iter().position(|studio| studio.id == "reports").unwrap();
+    let _ = app.update(Action::SelectStudio(reports));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (route, theme, hide_sidebar, name) in [
+        (4, Theme::Light, false, "metadata-light"),
+        (2, Theme::Light, false, "projects-light"),
+        (3, Theme::Forge, false, "admin-forge"),
+        (12, Theme::Light, true, "split-light"),
+        (13, Theme::Forge, true, "preview-forge"),
+    ] {
+        let _ = app.update(Action::SelectReportsRoute(route));
+        app.reports_sidebar_visible = !hide_sidebar;
+        render_sized(&app, theme, false, None, Size::new(1280.0, 800.0))
+            .save_png(&design.join(format!("style-repo-reports-{name}.png")))
+            .expect("save native Reports screen");
+    }
+}
+
+#[test]
 #[ignore = "regenerate native PDF find-bar review on demand"]
 fn export_pdf_native_find_bar_review() {
     use openaec_ui::find_bar::{self, FindBarActions, FindBarState, ResultGroup};

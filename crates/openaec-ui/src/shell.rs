@@ -41,7 +41,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         widgets::title_action(Icon::Close.view(16,t.text).into(),l.text("Sluiten","Close"),Some(Message::Ui(UiEvent::CloseWindow)),theme),
     ].align_y(iced::Alignment::Center)).height(metrics::TITLE).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
     let mut tabs = Row::new().spacing(if slots.mode == ChromeMode::CanvasRibbon { 6 } else { 2 });
-    if !matches!(slots.mode, ChromeMode::TopNav | ChromeMode::CanvasRibbon) {
+    if !matches!(slots.mode, ChromeMode::TopNav | ChromeMode::CanvasRibbon | ChromeMode::Plain) {
         let label = l.text("Bestand", "File");
         tabs = tabs.push(widgets::ribbon_tab(
             text(label).font(fonts::STRONG).size(12).into(),
@@ -136,8 +136,15 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             widgets::backstage_nav_with(pages, Vec::new(), footer, move |_| theme),
             (slots.content)(Region::Workspace),
         ].height(Fill).width(Fill).into()
-    } else if slots.mode == ChromeMode::TopNav {
+    } else if matches!(slots.mode, ChromeMode::TopNav | ChromeMode::Plain) {
         (slots.content)(Region::Workspace)
+    } else if slots.mode == ChromeMode::RibbonWorkspace {
+        (slots.content)(Region::Workspace)
+    } else if slots.mode == ChromeMode::RibbonSidebar {
+        row![
+            container((slots.content)(Region::Explorer)).width(288).height(Fill),
+            container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
+        ].height(Fill).width(Fill).into()
     } else if slots.mode == ChromeMode::CanvasRibbon {
         row![
             container((slots.content)(Region::Explorer)).width(255).height(Fill),
@@ -168,6 +175,8 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
             documents: None, content: body, status: status.into(),
         })
+    } else if slots.mode == ChromeMode::Plain {
+        crate::frame::workflow_frame(titlebar.into(), None, body, status.into())
     } else if slots.mode == ChromeMode::TopNav {
         crate::frame::frame(crate::frame::FrameSlots {
             titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,

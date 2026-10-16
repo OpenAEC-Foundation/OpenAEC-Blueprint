@@ -34,6 +34,8 @@ mod speech_more;
 mod source_interfaces;
 #[path = "style_repo/ribbon_preview.rs"]
 mod ribbon_preview;
+#[path = "style_repo/reports_native.rs"]
+mod reports_native;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -128,6 +130,10 @@ enum Action {
     SampleDialogSave,
     SelectStudio(usize),
     SelectScreen(usize),
+    SelectReportsRoute(usize),
+    SelectReportsAdminTab(usize),
+    SelectReportsPdfState(usize),
+    ToggleReportsSidebar,
     SelectSourceApp(usize),
     SelectSourceRoute(usize),
     SourceSearch(String),
@@ -295,6 +301,10 @@ struct StyleRepo {
     sample_dialog_input: String,
     selected_studio: usize,
     selected_screen: usize,
+    reports_route: usize,
+    reports_admin_tab: usize,
+    reports_pdf_state: usize,
+    reports_sidebar_visible: bool,
     source_app: usize,
     source_route: usize,
     source_search: String,
@@ -356,6 +366,10 @@ impl Default for StyleRepo {
             sample_dialog_input: String::new(),
             selected_studio: 0,
             selected_screen: 0,
+            reports_route: 4,
+            reports_admin_tab: 0,
+            reports_pdf_state: 2,
+            reports_sidebar_visible: true,
             source_app: 0,
             source_route: 0,
             source_search: String::new(),
@@ -1116,6 +1130,9 @@ impl StyleRepo {
         }
         if selected.id == "field" {
             return self.field_page(theme, l);
+        }
+        if selected.id == "reports" {
+            return self.reports_native_page(theme, l);
         }
         if selected.id == "geotech" && self.selected_screen == 1 {
             return geotech_native::workspace(self.geotech_layer, theme, l);
@@ -2114,6 +2131,15 @@ impl Application for StyleRepo {
             ChromeMode::TopNav
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "cad" {
             ChromeMode::CanvasRibbon
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" {
+            let route = reports_native::data().routes.get(self.reports_route);
+            if route.is_some_and(|route| matches!(route.id.as_str(), "loading" | "sso")) {
+                ChromeMode::Plain
+            } else if self.reports_sidebar_visible && route.is_some_and(|route| !matches!(route.id.as_str(), "projects" | "admin")) {
+                ChromeMode::RibbonSidebar
+            } else {
+                ChromeMode::RibbonWorkspace
+            }
         } else {
             ChromeMode::Ribbon
         }
@@ -2264,7 +2290,8 @@ impl Application for StyleRepo {
             Page::Bim => self.domains(theme, l, "bim"),
         };
         let bg = theme.tokens().bg;
-        container(scrollable(container(content).padding(28).width(Fill)).height(Fill))
+        let padding = if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" { 14 } else { 28 };
+        container(scrollable(container(content).padding(padding).width(Fill)).height(Fill))
             .width(Fill)
             .height(Fill)
             .style(move |_| container::Style::default().background(bg))
@@ -2299,6 +2326,9 @@ impl Application for StyleRepo {
         else { self.sample_dialog.then_some(Action::SampleDialog(false)) }
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" {
+            return self.reports_sidebar(theme);
+        }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
             return geotech_native::explorer(theme);
         }
@@ -2467,6 +2497,16 @@ impl Application for StyleRepo {
                 self.field_review_notice = None;
                 self.speech_notice = None;
             }
+            Action::SelectReportsRoute(index) => {
+                self.reports_route = index.min(reports_native::data().routes.len().saturating_sub(1));
+            }
+            Action::SelectReportsAdminTab(index) => {
+                self.reports_admin_tab = index.min(reports_native::data().admin_tabs.len().saturating_sub(1));
+            }
+            Action::SelectReportsPdfState(index) => {
+                self.reports_pdf_state = index.min(reports_native::data().preview_states.len().saturating_sub(1));
+            }
+            Action::ToggleReportsSidebar => self.reports_sidebar_visible = !self.reports_sidebar_visible,
             Action::SelectSourceApp(index) => {
                 self.source_app = index.min(1);
                 self.source_route = 0;
@@ -2717,7 +2757,7 @@ mod tests {
         assert!(proposals()
             .iter()
             .all(|proposal| domain_drafts::get(&proposal.id).is_some()));
-        assert_eq!(domain_drafts::SMALL.len(), 13);
+        assert_eq!(domain_drafts::SMALL.len(), 17);
         assert!(domain_drafts::SMALL
             .iter()
             .all(|(id, bytes)| domain_drafts::get(id).is_some()
@@ -2762,6 +2802,29 @@ mod tests {
     }
 
     #[test]
+    fn reports_native_routes_use_source_inventory_and_single_sidebar_shell() {
+        let inventory = reports_native::data();
+        assert_eq!(inventory.routes.len(), 14);
+        assert_eq!(inventory.admin_tabs.len(), 6);
+        assert_eq!(inventory.preview_states.len(), 3);
+        let mut app = StyleRepo::default();
+        let reports = studios().iter().position(|studio| studio.id == "reports").unwrap();
+        let _ = app.update(Action::SelectStudio(reports));
+        for index in 0..inventory.routes.len() {
+            let _ = app.update(Action::SelectReportsRoute(index));
+            let route = &inventory.routes[index];
+            assert_eq!(app.chrome_mode(), if matches!(route.id.as_str(), "loading" | "sso") {
+                ChromeMode::Plain
+            } else if matches!(route.id.as_str(), "projects" | "admin") {
+                ChromeMode::RibbonWorkspace
+            } else { ChromeMode::RibbonSidebar });
+            let _ = app.studios_page(Theme::Light, Language::Dutch);
+        }
+        let _ = app.update(Action::ToggleReportsSidebar);
+        assert_eq!(app.chrome_mode(), ChromeMode::RibbonWorkspace);
+    }
+
+    #[test]
     fn native_ribbon_uses_proposed_tabs_except_workflow_studios() {
         let mut app = StyleRepo::default();
         app.show(Page::Studios);
@@ -2779,7 +2842,7 @@ mod tests {
                 assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
                 continue;
             }
-            assert_eq!(app.chrome_mode(), if studio.id == "cad" { ChromeMode::CanvasRibbon } else { ChromeMode::Ribbon });
+            assert_eq!(app.chrome_mode(), if studio.id == "cad" { ChromeMode::CanvasRibbon } else if studio.id == "reports" { ChromeMode::RibbonSidebar } else { ChromeMode::Ribbon });
             let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
             assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
             for (actual, label) in tabs.iter().zip(expected) {

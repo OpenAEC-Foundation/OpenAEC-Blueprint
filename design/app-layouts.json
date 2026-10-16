@@ -433,9 +433,9 @@
       "Invoegen",
       "Beeld"
     ],
-    "left_panel": "Rapportstructuur",
-    "right_panel": "Sectie-eigenschappen",
-    "workspace": "Rapportblad",
+    "left_panel": "Documentnavigatie (standaard 288 px, inklapbaar)",
+    "right_panel": "",
+    "workspace": "Rapporteditor / PDF-preview / projecten / beheer",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -444,7 +444,6 @@
       "document-tabs",
       "explorer",
       "workspace",
-      "properties",
       "status"
     ],
     "screens": [
@@ -458,7 +457,7 @@
       "empty",
       "error"
     ],
-    "notes": "Linttabs gecontroleerd tegen frontend/src/components/chrome/ribbon/Ribbon.tsx op commit 818e58118c0f: naast Bestand zijn alleen Start, Invoegen en Beeld zichtbaar. De broncomponenten tonen Start-groepen Klembord, Blokken, Pagina, Controle en Uitvoer; Invoegen heeft Secties en Inhoud; Beeld heeft Weergave en Panelen. Geen bruikbare UI-screenshots in de repository gevonden; werkgebied en rechterpaneel blijven voorstel."
+    "notes": "Linttabs gecontroleerd tegen frontend/src/components/chrome/ribbon/Ribbon.tsx op commit 818e58118c0f: naast Bestand zijn alleen Start, Invoegen en Beeld zichtbaar. AppShell en MainPanel tonen een inklapbare documentzijbalk van standaard 288 px, zonder vast rechter eigenschappenpaneel, en afzonderlijke project-, beheer-, editor- en PDF-routes. De native Rust-schermreview volgt 14 brongepinde bestemmingen. Geen bruikbare runtime-screenshots in de repository: geometrie buiten de zijbalk en paginavorm zijn nog ontwerpvoorstellen."
   },
   {
     "id": "frame",
