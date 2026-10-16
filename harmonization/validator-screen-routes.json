@@ -1,0 +1,358 @@
+{
+  "repository": "OpenAEC-BIM-validator",
+  "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+  "url_routes": [
+    {
+      "path": "/ en /viewer",
+      "branch": "viewer",
+      "evidence": {
+        "file": "viewer/src/App.tsx",
+        "line": 37,
+        "marker": "return <AppShell />;",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/App.tsx#L37"
+      }
+    },
+    {
+      "path": "/validate",
+      "branch": "legacy",
+      "evidence": {
+        "file": "viewer/src/App.tsx",
+        "line": 34,
+        "marker": "return <LegacyValidationView />;",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/App.tsx#L34"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "viewer-empty",
+      "label": "Viewer · leeg",
+      "branch": "viewer",
+      "note": "Geen project of model; 3D-engine laadt afzonderlijk.",
+      "evidence": {
+        "file": "viewer/src/components/layout/LeftPanel.tsx",
+        "line": 32,
+        "marker": "Upload een IFC bestand",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/LeftPanel.tsx#L32"
+      }
+    },
+    {
+      "id": "viewer-model",
+      "label": "Viewer · model",
+      "branch": "viewer",
+      "note": "Drie panelen: modellen/eigenschappen links, 3D midden, validatie rechts.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 371,
+        "marker": "hasLoadedModel = project?.models.some",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L371"
+      }
+    },
+    {
+      "id": "viewer-submitting",
+      "label": "Validatie · upload",
+      "branch": "viewer",
+      "note": "Rechter validatiepaneel toont de submit-status.",
+      "evidence": {
+        "file": "viewer/src/components/validation/ValidationPanel.tsx",
+        "line": 402,
+        "marker": "Bestanden uploaden...",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/validation/ValidationPanel.tsx#L402"
+      }
+    },
+    {
+      "id": "viewer-polling",
+      "label": "Validatie · voortgang",
+      "branch": "viewer",
+      "note": "Rechter validatiepaneel toont voortgang en annuleren.",
+      "evidence": {
+        "file": "viewer/src/components/validation/ValidationPanel.tsx",
+        "line": 312,
+        "marker": "phase === \"polling\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/validation/ValidationPanel.tsx#L312"
+      }
+    },
+    {
+      "id": "viewer-results",
+      "label": "Validatie · resultaten",
+      "branch": "viewer",
+      "note": "Resultatenboom en geselecteerd detail staan rechts van de 3D-canvas.",
+      "evidence": {
+        "file": "viewer/src/components/validation/ValidationPanel.tsx",
+        "line": 408,
+        "marker": "{validationResult && (",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/validation/ValidationPanel.tsx#L408"
+      }
+    },
+    {
+      "id": "viewer-error",
+      "label": "Validatie · fout",
+      "branch": "viewer",
+      "note": "Compacte foutweergave in het rechterpaneel.",
+      "evidence": {
+        "file": "viewer/src/components/validation/ValidationPanel.tsx",
+        "line": 372,
+        "marker": "{validationError && (",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/validation/ValidationPanel.tsx#L372"
+      }
+    },
+    {
+      "id": "viewer-clashes",
+      "label": "Clashes · binnenkort",
+      "branch": "viewer",
+      "note": "Tab bestaat, maar clashdetectie is nog een lege toestand.",
+      "evidence": {
+        "file": "viewer/src/components/layout/RightPanel.tsx",
+        "line": 52,
+        "marker": "Clash detection — binnenkort beschikbaar",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/RightPanel.tsx#L52"
+      }
+    },
+    {
+      "id": "viewer-bcf",
+      "label": "BCF · wachtrij",
+      "branch": "viewer",
+      "note": "BCF-tab met wachtrij; lokale export verschijnt alleen bij issues.",
+      "evidence": {
+        "file": "viewer/src/components/bcf/BcfPanel.tsx",
+        "line": 22,
+        "marker": "<BcfIssueQueue />",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/bcf/BcfPanel.tsx#L22"
+      }
+    },
+    {
+      "id": "legacy-idle",
+      "label": "Legacy · invoer",
+      "branch": "legacy",
+      "note": "Zelfstandig upload- en IDS-scherm op /validate, zonder ribbon of 3D-paneel.",
+      "evidence": {
+        "file": "viewer/src/LegacyValidationView.tsx",
+        "line": 36,
+        "marker": "type AppPhase = \"idle\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/LegacyValidationView.tsx#L36"
+      }
+    },
+    {
+      "id": "legacy-submitting",
+      "label": "Legacy · upload",
+      "branch": "legacy",
+      "note": "Zelfstandige upload-/submitstatus.",
+      "evidence": {
+        "file": "viewer/src/LegacyValidationView.tsx",
+        "line": 361,
+        "marker": "Uploading files and starting validation...",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/LegacyValidationView.tsx#L361"
+      }
+    },
+    {
+      "id": "legacy-polling",
+      "label": "Legacy · voortgang",
+      "branch": "legacy",
+      "note": "Voortgang met annuleeractie.",
+      "evidence": {
+        "file": "viewer/src/LegacyValidationView.tsx",
+        "line": 332,
+        "marker": "phase === \"polling\" || phase === \"submitting\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/LegacyValidationView.tsx#L332"
+      }
+    },
+    {
+      "id": "legacy-completed",
+      "label": "Legacy · resultaat",
+      "branch": "legacy",
+      "note": "Samenvatting met specificatielijst en JSON-download.",
+      "evidence": {
+        "file": "viewer/src/LegacyValidationView.tsx",
+        "line": 367,
+        "marker": "{validationResult && (",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/LegacyValidationView.tsx#L367"
+      }
+    },
+    {
+      "id": "legacy-error",
+      "label": "Legacy · fout",
+      "branch": "legacy",
+      "note": "Foutkaart met opnieuw proberen en sluiten.",
+      "evidence": {
+        "file": "viewer/src/LegacyValidationView.tsx",
+        "line": 314,
+        "marker": "{error && (",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/LegacyValidationView.tsx#L314"
+      }
+    }
+  ],
+  "right_tabs": [
+    {
+      "id": "validation",
+      "label": "Validatie",
+      "branch": "tab",
+      "note": "IDS, status, resultaten en detail.",
+      "evidence": {
+        "file": "viewer/src/components/layout/RightPanel.tsx",
+        "line": 14,
+        "marker": "{ id: \"validation\", label: \"Validatie\" }",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/RightPanel.tsx#L14"
+      }
+    },
+    {
+      "id": "clashes",
+      "label": "Clashes",
+      "branch": "tab",
+      "note": "Huidige lege toestand.",
+      "evidence": {
+        "file": "viewer/src/components/layout/RightPanel.tsx",
+        "line": 15,
+        "marker": "{ id: \"clashes\", label: \"Clashes\" }",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/RightPanel.tsx#L15"
+      }
+    },
+    {
+      "id": "bcf",
+      "label": "BCF",
+      "branch": "tab",
+      "note": "Lokale issue-wachtrij en export.",
+      "evidence": {
+        "file": "viewer/src/components/layout/RightPanel.tsx",
+        "line": 16,
+        "marker": "{ id: \"bcf\", label: \"BCF\" }",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/RightPanel.tsx#L16"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "id": "backstage",
+      "label": "Bestand",
+      "branch": "overlay",
+      "note": "Bestand-weergave.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 467,
+        "marker": "<Backstage",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L467"
+      }
+    },
+    {
+      "id": "settings",
+      "label": "Instellingen",
+      "branch": "overlay",
+      "note": "Thema en voorkeuren.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 482,
+        "marker": "<SettingsDialog",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L482"
+      }
+    },
+    {
+      "id": "feedback",
+      "label": "Feedback",
+      "branch": "overlay",
+      "note": "Feedbackdialoog.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 489,
+        "marker": "<FeedbackDialog",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L489"
+      }
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud",
+      "branch": "overlay",
+      "note": "Openen/opslaan via cloud.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 494,
+        "marker": "<CloudDialog",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L494"
+      }
+    },
+    {
+      "id": "save-as",
+      "label": "Opslaan als",
+      "branch": "overlay",
+      "note": "Lokale/cloud opslaandialoog.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 503,
+        "marker": "<SaveAsDialog",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L503"
+      }
+    },
+    {
+      "id": "open",
+      "label": "Openen",
+      "branch": "overlay",
+      "note": "Lokale/cloud opendialoog.",
+      "evidence": {
+        "file": "viewer/src/components/layout/AppShell.tsx",
+        "line": 510,
+        "marker": "<OpenDialog",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L510"
+      }
+    }
+  ],
+  "layout": {
+    "left_default_percent": 25,
+    "left_min_percent": 15,
+    "center_min_percent": 30,
+    "right_default_percent": 25,
+    "right_min_percent": 15,
+    "left_models_default_percent": 35,
+    "left_properties_percent": 65,
+    "left_evidence": {
+      "file": "viewer/src/components/layout/AppShell.tsx",
+      "line": 49,
+      "marker": "const LEFT_PANEL_DEFAULT = \"25%\";",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L49"
+    },
+    "right_evidence": {
+      "file": "viewer/src/components/layout/AppShell.tsx",
+      "line": 51,
+      "marker": "const RIGHT_PANEL_DEFAULT = \"25%\";",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L51"
+    },
+    "center_evidence": {
+      "file": "viewer/src/components/layout/AppShell.tsx",
+      "line": 53,
+      "marker": "const CENTER_PANEL_MIN = \"30%\";",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L53"
+    },
+    "vertical_evidence": {
+      "file": "viewer/src/components/layout/LeftPanel.tsx",
+      "line": 21,
+      "marker": "defaultSize=\"35%\"",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/LeftPanel.tsx#L21"
+    },
+    "left_properties_evidence": {
+      "file": "viewer/src/components/layout/LeftPanel.tsx",
+      "line": 49,
+      "marker": "<PropertiesPanel />",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/LeftPanel.tsx#L49"
+    },
+    "right_tabs_evidence": {
+      "file": "viewer/src/components/layout/RightPanel.tsx",
+      "line": 13,
+      "marker": "const TABS:",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/RightPanel.tsx#L13"
+    },
+    "viewer_evidence": {
+      "file": "viewer/src/components/layout/CenterPanel.tsx",
+      "line": 550,
+      "marker": "<div ref={containerRef} className=\"viewer-container__canvas\" />",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/CenterPanel.tsx#L550"
+    },
+    "shell_css_evidence": {
+      "file": "viewer/src/components/layout/AppShell.css",
+      "line": 4,
+      "marker": "TitleBar (32px) + Ribbon (122px) + Panels + StatusBar (22px)",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.css#L4"
+    }
+  },
+  "limits": [
+    "No runtime UI screenshots were found in the pinned repository; this is a source-grounded schematic, not a pixel diff.",
+    "The 3D model, results and backend-dependent dialogs use illustrative data; the actual viewer and validation engine are not ported.",
+    "The older /validate route is distinct from the platform validation tab; they must not be counted as one screen."
+  ]
+}

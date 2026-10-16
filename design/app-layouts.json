@@ -546,9 +546,9 @@
       "Start",
       "Beeld"
     ],
-    "left_panel": "IFC-modellen & controles",
-    "right_panel": "Controle-eigenschappen",
-    "workspace": "Model + bevindingen",
+    "left_panel": "Modellen (boven 35%) en eigenschappen (onder 65%)",
+    "right_panel": "Validatie / Clashes / BCF",
+    "workspace": "3D IFC-viewer",
     "fixed_regions": [
       "titlebar",
       "quick-access",
@@ -557,7 +557,7 @@
       "document-tabs",
       "explorer",
       "workspace",
-      "properties",
+      "properties-left",
       "status"
     ],
     "screens": [
@@ -571,7 +571,7 @@
       "empty",
       "error"
     ],
-    "notes": "Viewer-lint gecontroleerd tegen viewer/src/components/chrome/ribbon/Ribbon.tsx op commit 8f837dd9a56e: naast Bestand bestaan alleen Start en Beeld. Start heeft Project, Modellen, Validatie en BCF; Beeld heeft Panelen, 3D Beeld en Doorsnede. BCF Push/Inloggen wisselen volgens verbindingsstatus en Cloud-acties verschijnen alleen wanneer ingeschakeld. Er zijn geen bruikbare UI-screenshots in de repository gevonden; model-/bevindingenscherm blijft visueel onbeoordeeld."
+    "notes": "Bron App.tsx, AppShell.tsx, LeftPanel.tsx en RightPanel.tsx op commit 8f837dd9a56e: / en /viewer tonen een driepaneelsviewer (25/50/25% standaard), met modellen/eigenschappen links en Validatie, Clashes, BCF rechts. /validate is een zelfstandige oudere upload- en IDS-werkstroom zonder ribbon of 3D-canvas. Viewer-lint: Bestand, Start, Beeld. BCF Push/Inloggen wisselen volgens verbindingsstatus; Cloud verschijnt alleen wanneer ingeschakeld. De bron bevat geen bruikbare runtime-screenshots; de routekaart is een structurele beoordeling."
   },
   {
     "id": "speech",
