@@ -1,0 +1,351 @@
+{
+  "repository": "openaec-reports",
+  "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+  "scope": "Source-reachable frontend screen destinations and conditional variants. No runtime screenshots in the pinned repository.",
+  "routes": [
+    {
+      "id": "loading",
+      "label": "Sessie laden",
+      "category": "access",
+      "evidence": {
+        "file": "frontend/src/App.tsx",
+        "line": 106,
+        "marker": "if (isAuthLoading) {",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/App.tsx#L106"
+      },
+      "note": "Tijdelijke laadweergave vóór sessiecontrole."
+    },
+    {
+      "id": "sso",
+      "label": "SSO-doorsturen",
+      "category": "access",
+      "evidence": {
+        "file": "frontend/src/App.tsx",
+        "line": 112,
+        "marker": "return <LoginPage />;",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/App.tsx#L112"
+      },
+      "note": "Fallback-splash; productie stuurt doorgaans eerder via Caddy/Authentik door."
+    },
+    {
+      "id": "projects",
+      "label": "Projectbrowser",
+      "category": "primary",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 247,
+        "marker": "viewMode === \"projects\"",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L247"
+      },
+      "note": "Projectlijst links; rapportentabel rechts. Data en acties vereisen de server."
+    },
+    {
+      "id": "admin",
+      "label": "Beheer",
+      "category": "primary",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 251,
+        "marker": "viewMode === \"admin\"",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L251"
+      },
+      "note": "Zes beheertabs onder één Beheer-pagina; hun inhoud is afhankelijk van account/API."
+    },
+    {
+      "id": "rapport",
+      "label": "Rapportinstellingen",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 472,
+        "marker": "activePanel === 'rapport' && <MetadataForm />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L472"
+      },
+      "note": "Standaard documentpaneel uit de zijbalk."
+    },
+    {
+      "id": "voorblad",
+      "label": "Voorblad",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 473,
+        "marker": "activePanel === 'voorblad' && <CoverForm />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L473"
+      },
+      "note": "Documentformulier voor titelblad en afbeelding."
+    },
+    {
+      "id": "colofon",
+      "label": "Colofon",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 474,
+        "marker": "activePanel === 'colofon' && <ColofonForm />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L474"
+      },
+      "note": "Documentformulier voor colofon en revisies."
+    },
+    {
+      "id": "opties",
+      "label": "Opties",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 475,
+        "marker": "activePanel === 'opties' && <OptionsPanel />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L475"
+      },
+      "note": "Documentopties; niet hetzelfde als app-instellingen."
+    },
+    {
+      "id": "field-group",
+      "label": "Formuliergroep",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 454,
+        "marker": "return <FieldGroupForm groupKey={activeFieldGroup} />;",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L454"
+      },
+      "note": "Voorwaardelijk: alleen wanneer het template veldgroepen bevat."
+    },
+    {
+      "id": "section",
+      "label": "Hoofdstukeditor",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 487,
+        "marker": "<SectionHeader section={section} chapterNumber={chapterNumber} />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L487"
+      },
+      "note": "Sorteerbare inhoudsblokken met een eigen invoegtoolbox."
+    },
+    {
+      "id": "appendix",
+      "label": "Bijlage-editor",
+      "category": "editor",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 459,
+        "marker": "return <AppendixEditor appendixId={activeAppendix} />;",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L459"
+      },
+      "note": "Voorwaardelijk: alleen bij een geselecteerde bijlage."
+    },
+    {
+      "id": "json",
+      "label": "JSON-editor",
+      "category": "mode",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 379,
+        "marker": "if (viewMode === 'json') {",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L379"
+      },
+      "note": "Bewerkbare ruwe JSON met Toepassen en Formatteren."
+    },
+    {
+      "id": "split",
+      "label": "Editor + PDF",
+      "category": "mode",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 389,
+        "marker": "if (viewMode === 'split') {",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L389"
+      },
+      "note": "Editor links en PDF-preview rechts, elk een eigen scroll-/werkvlak."
+    },
+    {
+      "id": "preview",
+      "label": "PDF-preview",
+      "category": "mode",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 384,
+        "marker": "if (viewMode === 'preview') {",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L384"
+      },
+      "note": "Auto-preview, paginakeuze, regenereren en een iframe bij beschikbare PDF."
+    }
+  ],
+  "admin_tabs": [
+    {
+      "id": "tenants",
+      "label": "Tenants",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 76,
+        "marker": "activeTab === \"tenants\" && <TenantManagement />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L76"
+      }
+    },
+    {
+      "id": "users",
+      "label": "Gebruikers",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 77,
+        "marker": "activeTab === \"users\" && <UserManagement />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L77"
+      }
+    },
+    {
+      "id": "api-keys",
+      "label": "API Keys",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 79,
+        "marker": "activeTab === \"api-keys\" && <ApiKeyManagement />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L79"
+      }
+    },
+    {
+      "id": "templates",
+      "label": "YAML Bestanden",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 80,
+        "marker": "activeTab === \"templates\" && <TemplateManagement />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L80"
+      }
+    },
+    {
+      "id": "brand",
+      "label": "Brand",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 81,
+        "marker": "activeTab === \"brand\" && <BrandManagement />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L81"
+      }
+    },
+    {
+      "id": "help",
+      "label": "Help",
+      "evidence": {
+        "file": "frontend/src/components/admin/AdminPanel.tsx",
+        "line": 82,
+        "marker": "activeTab === \"help\" && <HelpPanel />",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/admin/AdminPanel.tsx#L82"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "id": "backstage",
+      "label": "Bestand",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 268,
+        "marker": "<Backstage",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L268"
+      }
+    },
+    {
+      "id": "settings",
+      "label": "Instellingen",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 278,
+        "marker": "<SettingsDialog",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L278"
+      }
+    },
+    {
+      "id": "feedback",
+      "label": "Feedback",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 286,
+        "marker": "<FeedbackDialog",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L286"
+      }
+    },
+    {
+      "id": "shortcuts",
+      "label": "Sneltoetsen",
+      "evidence": {
+        "file": "frontend/src/components/layout/AppShell.tsx",
+        "line": 289,
+        "marker": "<ShortcutHelp",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L289"
+      }
+    }
+  ],
+  "preview_states": [
+    {
+      "id": "offline",
+      "label": "Geen API",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 778,
+        "marker": "{!connected ? (",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L778"
+      }
+    },
+    {
+      "id": "empty",
+      "label": "Nog geen PDF",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 795,
+        "marker": "Nog geen PDF gegenereerd",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L795"
+      }
+    },
+    {
+      "id": "generated",
+      "label": "PDF beschikbaar",
+      "evidence": {
+        "file": "frontend/src/components/layout/MainPanel.tsx",
+        "line": 767,
+        "marker": "{lastPdfUrl ? (",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L767"
+      }
+    }
+  ],
+  "sample": {
+    "project": "Kijkduin Reddingspost",
+    "number": "2024-031",
+    "status": "CONCEPT",
+    "sections": [
+      "Uitgangspunten",
+      "Belastingen",
+      "Eigen gewicht",
+      "Veranderlijke belasting",
+      "Staalligger L1 — HEA 200",
+      "Situering"
+    ]
+  },
+  "layout_evidence": {
+    "sidebar_default_width_px": 288,
+    "sidebar_min_width_px": 200,
+    "sidebar_max_width_px": 480,
+    "sidebar_source": {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 24,
+      "marker": "const SIDEBAR_DEFAULT_WIDTH = 288;",
+      "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/Sidebar.tsx#L24"
+    },
+    "sidebar_visibility_source": {
+      "file": "frontend/src/components/layout/AppShell.tsx",
+      "line": 257,
+      "marker": "{sidebarVisible && <Sidebar />}",
+      "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/AppShell.tsx#L257"
+    },
+    "split_source": {
+      "file": "frontend/src/components/layout/MainPanel.tsx",
+      "line": 389,
+      "marker": "if (viewMode === 'split') {",
+      "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/layout/MainPanel.tsx#L389"
+    }
+  },
+  "limits": [
+    "The HTML uses shared OpenAEC colors and measured sidebar constraints, but title/ribbon/workspace sizes are design approximations.",
+    "Backend data, PDF rendering, SSO redirection and form mutations are illustrative in the review."
+  ]
+}
