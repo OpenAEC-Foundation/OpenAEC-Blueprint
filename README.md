@@ -8,7 +8,7 @@ Start de Style Repo met:
 cargo run --bin style_repo
 ```
 
-De map is een zelfstandige Git-repository op branch `main`, met lokale commits en een schone werkboom. In GitHub Desktop kan hij via **File → Add Local Repository** worden toegevoegd met pad `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`; daarna maakt **Publish repository** de eerste GitHub-remote aan. Er is nog geen remote ingesteld, dus een gewone Push-knop verschijnt pas na publiceren of koppelen aan een bestaande lege repository.
+De map is een zelfstandige Git-repository op branch `main`, gekoppeld aan de private [OpenAEC-Style-Repo](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo) als `origin`. De bestaande geschiedenis staat op GitHub. Voeg `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie` via **File → Add Local Repository** toe aan GitHub Desktop; nieuwe commits kunnen daarna met **Push origin** worden verstuurd.
 
 De app laat componenten, vijf thema's, de gedeelde layout, 19 toolinterfaces, twee aanvullende broninterfaces, 577 onderzochte UI-iconbestanden en 109 getekende FEM/BIM-iconconcepten zien. De broniconen en domeinconcepten zijn bedoeld voor beoordeling; de 35 iconen in [`crates/openaec-ui/assets/icons/`](crates/openaec-ui/assets/icons/) vormen de huidige semantische kern van de crate. De gelijkgehouden kopie in `assets/icons/` bedient de HTML-review. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
 
@@ -81,8 +81,8 @@ Alle 666 gevonden screenshotkandidaten zijn rechtstreeks uit hun vastgelegde Git
 
 De vijf vaste vensterbanden, 24 px-paneelwerkbalken en de standaardbreedte van beide zijpanelen zijn vastgelegd in [`design/layout-spec.json`](design/layout-spec.json) met een exacte Tauri-broncommit. `python3 scripts/check_layout_metrics.py` vergelijkt de Rust-crate en het HTML-prototype met die maten, en met de lokale Tauri-bron wanneer die naast deze repo staat.
 `python3 scripts/check_icon_adoptions.py` controleert de bronbeoordeelde iconbesluiten en identieke SVG-inhoud in de lokale Pointcloud-integratie.
-`python3 scripts/check_portable_ui.py` vergelijkt de volledige portable crate met deze bron: Rust-code na formattering, alle 28 gebundelde fonts/iconen en de runtime-dependencies.
-`python3 scripts/check_crate_package.py` controleert de pakketgrens en `cargo package -p openaec-ui` bouwt de zelfstandige crate uit het verpakte archief. Het pakket bevat de 35 canonieke bedieningsiconen en 21 beoordeelde domeinbetekenissen met aparte 16 px-vectoren, naast de Rust-bronnen, zes fonts en drie OFL-licentieteksten. De Style Repo-app staat als afzonderlijk, niet-publiceerbaar Cargo-package in dezelfde workspace. De 577 onderzoeksiconen, FEM/BIM-concepten en reviewbeelden gaan niet mee in het `openaec-ui`-pakket. Voor gebruik in een andere Git-checkout kan de crate via een Git-dependency of een lokale path-dependency worden toegevoegd; er is nog geen remote voor deze repository ingesteld.
+`python3 scripts/check_portable_ui.py` vergelijkt de volledige portable crate met deze bron: Rust-code na formattering, alle 150 gebundelde assets en de runtime-dependencies.
+`python3 scripts/check_crate_package.py` controleert de pakketgrens en `cargo package -p openaec-ui` bouwt de zelfstandige crate uit het verpakte archief. Het pakket bevat de 35 canonieke bedieningsiconen en 36 beoordeelde domeinbetekenissen met aparte 16 px-vectoren, naast de Rust-bronnen, zes fonts, drie OFL-licentieteksten en een Apache-2.0-vermelding. De Style Repo-app staat als afzonderlijk, niet-publiceerbaar Cargo-package in dezelfde workspace. De 577 onderzoeksiconen, FEM/BIM-concepten en reviewbeelden gaan niet mee in het `openaec-ui`-pakket. De private Git-remote is beschikbaar voor checkouts met organisatietoegang. Publieke tools kunnen voorlopig de geverifieerde lokale snapshot of een path-dependency gebruiken; een directe private Git-dependency zou hun openbare build breken.
 
 De eerste productintegratie staat in de lokale `open-pointcloud-studio`-checkout op branch `feat/shared-rust-ui`. Daar draait een portable snapshot van deze crate als `native/ui`; de Pointcloud-titelbalk, [tien algemene toolacties, zes domeinacties en de Extensions-bestandspagina](design/icon-adoptions.json) gebruiken de gedeelde iconen, naast de gebundelde lettertypen, knoppen, invoervelden, keuzelijsten, checkboxen, sliders, voortgangsbalken, scrollbalken, tooltips en 77 gedeelde Tauri-kleurvelden per thema. De stevige randkleur voor sliders en voortgangsbalken komt aanvullend uit de vastgelegde Style Book-merktokens. De [Extensions-iconreview](design/extensions-icon-review.html) onderbouwt waarom die pagina een puzzelstuk krijgt in plaats van een 3D-kubus. Vier extra gedeelde verkennericonen voor Dupliceren, Hernoemen en beide uitklapstanden staan in de [Pile Plan × Pointcloud-review](design/pile-pointcloud-explorer-review.html) en worden in Pointcloud uit de Rust-crate getekend. De vier beoordeelde navigatie-iconen staan in de [Light/Forge-review](design/navigation-icon-review.html); de nieuwe 3D BAG- en EDL-vormen staan op 16, 24 en 32 px in de [botsingsreview](design/icon-collision-review.html). De overige domeinribbon en panelen worden na de visuele en semantische beoordeling verder overgezet.
 
@@ -108,12 +108,12 @@ De [icoonbotsingreview](design/icon-collision-review.html) beoordeelt alle 14 pa
 
 De [review van 53 onzekere iconassets](design/possible-icon-review.html) houdt SVG's zonder direct UI-codebewijs apart van de 577 bewezen UI-bestanden. Ze zijn lokaal op 16, 24 en 32 px te beoordelen en maken geen deel uit van de Rust-crate. De PDF.js-audit omvat ook `viewer.mjs`; de meegeleverde afbeeldingen kunnen nog dynamisch geladen worden.
 
-## Via GitHub Desktop publiceren
+## Via GitHub Desktop pushen
 
-1. Kies **File → Add local repository** en selecteer deze map: `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.
-2. De lokale startcommit staat al klaar. Kies **Publish repository** in GitHub Desktop.
-3. Kies de gewenste eigenaar, repositorynaam en zichtbaarheid. Controleer die keuzes en publiceer.
+1. Kies **File → Add local repository** en selecteer `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.
+2. Meld je in GitHub Desktop aan met een account dat toegang heeft tot de private [OpenAEC-Style-Repo](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo).
+3. Commit je wijzigingen en gebruik **Push origin**. De lokale `main` volgt al `origin/main`.
 
-Latere wijzigingen kun je in GitHub Desktop committen en met **Push origin** versturen. De Git-geschiedenis begint lokaal; er is nog geen GitHub-remote ingesteld. De bestaande repository `OpenAEC-style-book` wordt hierdoor niet gewijzigd.
+De remote staat voorlopig op privé. Pointcloud gebruikt een gelijkgehouden lokale crate-kopie zodat een publieke checkout zonder toegang tot deze private repository kan bouwen. `python3 scripts/check_portable_ui.py` controleert de inhoudelijke gelijkheid. De bestaande repository `OpenAEC-style-book` is niet gewijzigd.
 
 De lokale map `harmonization/sources/` en Rust-buildmap `target/` staan in `.gitignore`, zodat ze niet per ongeluk meegepusht worden. Controleer licenties van bronassets vóór definitief gebruik in een gedeelde crate.
