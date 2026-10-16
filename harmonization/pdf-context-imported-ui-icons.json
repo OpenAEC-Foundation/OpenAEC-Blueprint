@@ -1,0 +1,1011 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All exports of contextMenuIcons.js are imported by source-reachable ContextMenu.jsx. Uses are token occurrences in its menu functions after imports. The later local selectAllIcon shadows the imported name in ThumbnailMenuContent and is excluded here. Two dynamic lock/unlock alternatives share JSX sites.",
+  "catalog_exports": 52,
+  "used_exports": 52,
+  "symbol_references": 69,
+  "distinct_source_lines_with_use": 67,
+  "same_exact_svg_groups": [
+    [
+      "pasteIcon",
+      "pagePasteIcon"
+    ],
+    [
+      "deleteIcon",
+      "pageDeleteIcon"
+    ],
+    [
+      "duplicateIcon",
+      "pageCopyIcon"
+    ]
+  ],
+  "records": [
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 7,
+      "ordinal": 1,
+      "name": "openPopupIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 442,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={openPopupIcon} label={t('annotation.openPopUpNote')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/open-popup-icon.svg",
+      "sha256": "fa7124c60da70c6512b01b18f77b377a17af9ec23336a7769833a06caf719b52"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 9,
+      "ordinal": 2,
+      "name": "hidePopupIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 446,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={hidePopupIcon} label={t('annotation.hidePopUpNote')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/hide-popup-icon.svg",
+      "sha256": "3ec8a2ff40173ce494fabd2ad2cc105ccc6ee9559a4976f8527adc2fbb6a5b1f"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 11,
+      "ordinal": 3,
+      "name": "resetPopupIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 450,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={resetPopupIcon} label={t('annotation.resetPopUpLocation')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/reset-popup-icon.svg",
+      "sha256": "e532a7af5d8973e5f01e73ee244efea3ac6e6f1117686bb7ef0c9b61da044c9f"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 13,
+      "ordinal": 4,
+      "name": "cutIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 493,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={cutIcon} label={tCommon('cut')} shortcut=\"Ctrl+X\" disabled={isPaarVergrendeld()} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 824,
+          "menu": "MultiAnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={cutIcon} label={t('multiSelect.cutAnnotations', { count: count() })} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/cut-icon.svg",
+      "sha256": "610056fa5d38f183b7c73027e391aa9fb1c97338fcc90790fbf270938fa07a07"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 15,
+      "ordinal": 5,
+      "name": "copyIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 504,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={copyIcon} label={tCommon('copy')} shortcut=\"Ctrl+C\" onClick={() => copyAnnotation(ann())} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 820,
+          "menu": "MultiAnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={copyIcon} label={t('multiSelect.copyAnnotations', { count: count() })} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 1200,
+          "menu": "TextSelectionMenuContent",
+          "source_excerpt": "<MenuItem icon={copyIcon} label={tCommon('copy')} onClick={async () => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/copy-icon.svg",
+      "sha256": "04e028765467187c084a51cd0dd37bf6ada9a995f40f0addab2d5296b1090490"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 17,
+      "ordinal": 6,
+      "name": "pasteIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 505,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={pasteIcon} label={tCommon('paste')} shortcut=\"Ctrl+V\" onClick={() => pasteFromClipboard()} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 506,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={pasteIcon} label={tCommon('pasteInPlace')} shortcut=\"Ctrl+Shift+V\" onClick={() => pasteAnnotationsInPlace()} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/paste-icon.svg",
+      "sha256": "da990fc85498ce090b12f9f0b6182a93e0ef0de814ad8d652cfd2092cd6bb167"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 19,
+      "ordinal": 7,
+      "name": "deleteIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 428,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={deleteIcon} label={deleteLabel} onClick={handleDelete} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 524,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={deleteIcon} label={tCommon('delete')} shortcut=\"Delete\" disabled={isPaarVergrendeld()} onClick={async () => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 886,
+          "menu": "MultiAnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={deleteIcon} label={t('multiSelect.deleteAnnotations', { count: count() })} onClick={async () => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/delete-icon.svg",
+      "sha256": "4f1c035cc5c9a0ba6a5f65dc808c63b07a1d2e64d640230cf55beaf06bcf4a26"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 21,
+      "ordinal": 8,
+      "name": "flattenIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 538,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={flattenIcon} label={tCommon('flatten')} disabled={isPaarVergrendeld()} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/flatten-icon.svg",
+      "sha256": "e57789b01c3015929ef8dbe0887b7c5e3ca7192ae00bda760342bf0e85918b00"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 23,
+      "ordinal": 9,
+      "name": "addReplyIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 548,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={addReplyIcon} label={t('annotation.addReply')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/add-reply-icon.svg",
+      "sha256": "e724cd6de8da33146ab07acfc8fa0421f1c8292ab67c5d3f945355dd3ea08794"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 25,
+      "ordinal": 10,
+      "name": "lockedIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 299,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={status === 'dicht' ? unlockedIcon : lockedIcon}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 562,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={isLocked() ? lockedIcon : unlockedIcon} label={t('annotation.locked')} checkbox={true} checked={isLocked()} onClick={() => {"
+        }
+      ],
+      "condition": "dynamic-alternative",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/locked-icon.svg",
+      "sha256": "458ea343472b74657a7947ab6534fa739c6364521319a39e7dc6d28c6d8586a5"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 26,
+      "ordinal": 11,
+      "name": "unlockedIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 299,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={status === 'dicht' ? unlockedIcon : lockedIcon}"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 562,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={isLocked() ? lockedIcon : unlockedIcon} label={t('annotation.locked')} checkbox={true} checked={isLocked()} onClick={() => {"
+        }
+      ],
+      "condition": "dynamic-alternative",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/unlocked-icon.svg",
+      "sha256": "9efd0f1554bc8c356bf067e19f23c0522de5d55eb23242a22e4f044e5d69d05e"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 28,
+      "ordinal": 12,
+      "name": "markedIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 569,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={markedIcon} label={t('annotation.marked')} checkbox={true} checked={ann()?.marked || false} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/marked-icon.svg",
+      "sha256": "4673fbfa4ddf5914ba65bb6e378e6edc8fd9766cd66243375de68147bcd45483"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 30,
+      "ordinal": 13,
+      "name": "printableIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 573,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={printableIcon} label={t('annotation.printable')} checkbox={true} checked={ann()?.printable !== false} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/printable-icon.svg",
+      "sha256": "d5cb5a3b7e731600a7421964f581f8691f985141b7920759739bf6e64519da63"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 32,
+      "ordinal": 14,
+      "name": "statusIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 580,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<Submenu icon={statusIcon} label={t('annotation.status')}>"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 597,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<Submenu icon={statusIcon} label={t('annotation.showByStatus')}>"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/status-icon.svg",
+      "sha256": "79e91b75480f8064894007c42227c3afe9cbd9967c721d33cef424df71057497"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 34,
+      "ordinal": 15,
+      "name": "reviewHistoryIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 607,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={reviewHistoryIcon} label={t('annotation.reviewHistory')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/review-history-icon.svg",
+      "sha256": "2fc0e37d3a2074efc7b675f0f8326e1b70c333590947b348eebba8c5d57633a6"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 36,
+      "ordinal": 16,
+      "name": "layerIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 135,
+          "menu": "LayerSubmenu",
+          "source_excerpt": "<Submenu icon={layerIcon} label={<>{t('annotation.layer')} <span class=\"context-menu-value\">{waarde()}</span></>}"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/layer-icon.svg",
+      "sha256": "cb7acbfce2e7a7145514f7ee32a0eefe3ffba294630c8b94c5a2c34000f3b308"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 38,
+      "ordinal": 17,
+      "name": "arrangeIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 616,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<Submenu icon={arrangeIcon} label={t('annotation.arrange')}>"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/arrange-icon.svg",
+      "sha256": "87f91ce7a87c3521357094f61a5104290e77229a74251b8e3646806db1ae3bff"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 40,
+      "ordinal": 18,
+      "name": "flipLineIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 662,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={flipLineIcon} label={t('annotation.flipLine')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/flip-line-icon.svg",
+      "sha256": "c0a8becbe514f21fc02dc65682ff6dabd54c1f2b6b59b9eaba62f03a08679c83"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 42,
+      "ordinal": 19,
+      "name": "convertMeasurementIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 677,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.convertToMeasurement')} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 714,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.calibrateFromLine')} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 723,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.setScale')} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 736,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.dimChainAdd')} disabled={isLocked()} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 745,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.dimChainRemove')} disabled={isLocked()} onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 759,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.selectRoom')} shortcut=\"Tab\" onClick={() => {"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 767,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertMeasurementIcon} label={t('annotation.addHole')} disabled={isLocked()} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/convert-measurement-icon.svg",
+      "sha256": "e7bf8a4e767de3b63333b341d8d411cf6b759d0a00e737eec546d5c0ad052c8d"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 44,
+      "ordinal": 20,
+      "name": "convertPolylineIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 684,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertPolylineIcon} label={t('annotation.convertToPolyline')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/convert-polyline-icon.svg",
+      "sha256": "322ebde092ae294e944cf7151cef3f2531148af87eaca16716383e40de353a11"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 46,
+      "ordinal": 21,
+      "name": "convertPolygonIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 697,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={convertPolygonIcon} label={t('annotation.convertToPolygon')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/convert-polygon-icon.svg",
+      "sha256": "4ca4118c77b7cc60ccfe389cab5de9685e139dc181bef854bd3a2c204372cc27"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 48,
+      "ordinal": 22,
+      "name": "styleToolsIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 778,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<Submenu icon={styleToolsIcon} label={t('annotation.styleTools')}>"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/style-tools-icon.svg",
+      "sha256": "e9bc4dd462253fb3d871162d811348376ea1d4f09e1bc96660739a9a1fc203ee"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 50,
+      "ordinal": 23,
+      "name": "exportIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 789,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<Submenu icon={exportIcon} label={t('annotation.exportSubmenu')}>"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/export-icon.svg",
+      "sha256": "5f4d30fe78b8c16006eaca680756c6a888c8850d86dcc7928c2dae0f0342bb51"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 52,
+      "ordinal": 24,
+      "name": "propertiesIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 801,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={propertiesIcon} label={t('annotation.properties')} onClick={() => showProperties(ann())} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 991,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={propertiesIcon} label={t('page.propertiesMenu')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/properties-icon.svg",
+      "sha256": "8a17adb4414d67024945b35004b456b83e9bec3db1035d4beaa0242ec427d8e4"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 54,
+      "ordinal": 25,
+      "name": "transformIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 650,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={transformIcon} label={t('annotation.transform')} onClick={() => showProperties(ann())} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/transform-icon.svg",
+      "sha256": "6db86d5c3cb746b5791a2ddd6fccbc09ae0b02eeb3297b3c9661ddc5bb74b864"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 56,
+      "ordinal": 26,
+      "name": "duplicateIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 651,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<MenuItem icon={duplicateIcon} label={tCommon('duplicate')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/duplicate-icon.svg",
+      "sha256": "423b50e446799e315d0e16b1a9f6c3bcc0a86c9ace9e82ced8f781229a7617a3"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 60,
+      "ordinal": 27,
+      "name": "bookmarkIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 912,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={bookmarkIcon} label={t('page.addBookmark')} shortcut=\"Ctrl+Shift+B\" onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/bookmark-icon.svg",
+      "sha256": "311f89c0749f14bca985d4b90848caee4239e0272744813db26cd8a3a509da32"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 62,
+      "ordinal": 28,
+      "name": "stickyNoteIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 917,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={stickyNoteIcon} label={t('page.addStickyNote')} onClick={() => setTool('stickyNote')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/sticky-note-icon.svg",
+      "sha256": "6804f91e7714ec1b44f4e6210f284a9926a141771b539b4f1830afdae7729743"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 64,
+      "ordinal": 29,
+      "name": "imageIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 921,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={imageIcon} label={t('page.addImage')} onClick={() => setTool('image')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/image-icon.svg",
+      "sha256": "a851e69258ccf702d37783e2234323b0f6c48a0aacdbd15b0ad1016e228879a0"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 66,
+      "ordinal": 30,
+      "name": "qrCodeIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 922,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={qrCodeIcon} label={t('page.addQrCode')} onClick={() => setTool('qrCode')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/qr-code-icon.svg",
+      "sha256": "6977cf94441c096b704ea00d8c511af43dd61af39e2012225b527855ef2eea9a"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 68,
+      "ordinal": 31,
+      "name": "handToolIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 926,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={handToolIcon} label={t('page.handTool')} checkbox={true} checked={isCurrentTool('hand')} onClick={() => setTool('hand')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/hand-tool-icon.svg",
+      "sha256": "cea723dbab7f8d040cfa6a4888afa76beaca1b4c9e229945314538a1044afc15"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 70,
+      "ordinal": 32,
+      "name": "snapshotIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 927,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={snapshotIcon} label={t('page.snapshotTool')} checkbox={true} checked={isCurrentTool('snapshot')} onClick={() => setTool('snapshot')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/snapshot-icon.svg",
+      "sha256": "c090ab9a61603817867b450825d464e47bafa9cae310abdb54107fd39f3cce00"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 72,
+      "ordinal": 33,
+      "name": "selectTextPageIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 928,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={selectTextPageIcon} label={t('page.selectText')} checkbox={true} checked={isCurrentTool('selectText')} onClick={() => setTool('selectText')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/select-text-page-icon.svg",
+      "sha256": "c3ec8a9ada706808eaa5f50eb5ed02752c25e29c48c6fef6446c272f0655e769"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 74,
+      "ordinal": 34,
+      "name": "zoomIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 929,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={zoomIcon} label={t('page.zoomInOutTool')} checkbox={true} checked={isCurrentTool('zoom')} onClick={() => setTool('zoom')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/zoom-icon.svg",
+      "sha256": "1376ff46074c9134feaa5c566f3dac3b5c52f106149ea6ab7d434c67afe25302"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 76,
+      "ordinal": 35,
+      "name": "pageCutIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 933,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={pageCutIcon} label={tCommon('cut')} shortcut=\"Ctrl+X\" disabled={true} />"
+        }
+      ],
+      "condition": "always-disabled-page-action",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/page-cut-icon.svg",
+      "sha256": "41d3b7f0fed6a01c1a9da356a8a85814787aaa248e518bae39b6e71a881f8a73"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 78,
+      "ordinal": 36,
+      "name": "pageCopyIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 934,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={pageCopyIcon} label={tCommon('copy')} shortcut=\"Ctrl+C\" disabled={true} />"
+        }
+      ],
+      "condition": "always-disabled-page-action",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/page-copy-icon.svg",
+      "sha256": "423b50e446799e315d0e16b1a9f6c3bcc0a86c9ace9e82ced8f781229a7617a3"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 80,
+      "ordinal": 37,
+      "name": "pagePasteIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 935,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={pagePasteIcon} label={tCommon('paste')} shortcut=\"Ctrl+V\" onClick={() => pasteFromClipboard()} />"
+        },
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 936,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={pagePasteIcon} label={tCommon('pasteInPlace')} shortcut=\"Ctrl+Shift+V\" onClick={() => pasteAnnotationsInPlace()} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/page-paste-icon.svg",
+      "sha256": "da990fc85498ce090b12f9f0b6182a93e0ef0de814ad8d652cfd2092cd6bb167"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 82,
+      "ordinal": 38,
+      "name": "pageDeleteIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 940,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={pageDeleteIcon} label={tCommon('delete')} shortcut=\"Delete\" disabled={true} />"
+        }
+      ],
+      "condition": "always-disabled-page-action",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/page-delete-icon.svg",
+      "sha256": "4f1c035cc5c9a0ba6a5f65dc808c63b07a1d2e64d640230cf55beaf06bcf4a26"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 84,
+      "ordinal": 39,
+      "name": "selectAllIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 944,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={selectAllIcon} label={tCommon('select')} onClick={() => setTool('select')} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/select-all-icon.svg",
+      "sha256": "5f45dcda99ca862042fb7301c5dd5164f2b36153a9a80e9e80c13a40dab37c45"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 86,
+      "ordinal": 40,
+      "name": "deselectIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 945,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={deselectIcon} label={tCommon('deselect')} onClick={() => clearSelection()} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/deselect-icon.svg",
+      "sha256": "40a36325fd8db9e44fbd55d8453b521e7daa6c561ab2b70dccc1a6822d773e7a"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 88,
+      "ordinal": 41,
+      "name": "goToIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 949,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<Submenu icon={goToIcon} label={t('page.goTo')}>"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/go-to-icon.svg",
+      "sha256": "c4e4cc99655b2516272f41653f085193e81a4590e2a7f76c410785235e528c75"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 90,
+      "ordinal": 42,
+      "name": "printIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 975,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={printIcon} label={t('page.printMenu')} shortcut=\"Ctrl+P\" onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/print-icon.svg",
+      "sha256": "2d62d6913681c1c56d871f08146231ecddf7809aa3e198ce8db7ebe77bf40acc"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 92,
+      "ordinal": 43,
+      "name": "findIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 978,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={findIcon} label={t('page.findMenu')} shortcut=\"Ctrl+F\" onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/find-icon.svg",
+      "sha256": "5859b960144a391f83540d597e6d6514b3993fc37b76eace1327f1ecf9b3758d"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 94,
+      "ordinal": 44,
+      "name": "searchIcon",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 983,
+          "menu": "PageMenuContent",
+          "source_excerpt": "<MenuItem icon={searchIcon} label={t('page.searchMenu')} shortcut=\"Ctrl+Shift+F\" onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/search-icon.svg",
+      "sha256": "f7a9801f47d4f56ce7d4a6743f5addf934466279a7192a1ab686ffcef213dc40"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 98,
+      "ordinal": 45,
+      "name": "bringToFrontSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 618,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={bringToFrontSvg} title={t('annotation.bringToFront')} onClick={() => bringToFront(ann())} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/bring-to-front-svg.svg",
+      "sha256": "c84a2f492b28a62a75af587f63053f573641d643f472f53ba5e992008e0fd5fc"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 100,
+      "ordinal": 46,
+      "name": "sendToBackSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 619,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={sendToBackSvg} title={t('annotation.sendToBack')} onClick={() => sendToBack(ann())} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/send-to-back-svg.svg",
+      "sha256": "8ef5b5953ef2cc24872c34476f29e7fdeecffe123616fa7ce1c8a0926f0dca29"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 102,
+      "ordinal": 47,
+      "name": "bringForwardSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 620,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={bringForwardSvg} title={t('annotation.bringForward')} onClick={() => bringForward(ann())} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/bring-forward-svg.svg",
+      "sha256": "039a7be17a3aa7e3c25d528bd435fa23e91e4454eef3459c3d46377becd96d23"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 104,
+      "ordinal": 48,
+      "name": "sendBackwardSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 621,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={sendBackwardSvg} title={t('annotation.sendBackward')} onClick={() => sendBackward(ann())} />"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/send-backward-svg.svg",
+      "sha256": "cb84933c977c4725e89e1a905bdda976e964e080b7a30356a96d4821f164b086"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 106,
+      "ordinal": 49,
+      "name": "rotateLeftSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 624,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={rotateLeftSvg} title={t('annotation.rotateLeft90')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/rotate-left-svg.svg",
+      "sha256": "733ac4b39e351305b0f37dfce8acbbb4cdc2bc95b09f509b094d0cf263375b81"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 108,
+      "ordinal": 50,
+      "name": "rotateRightSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 630,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={rotateRightSvg} title={t('annotation.rotateRight90')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/rotate-right-svg.svg",
+      "sha256": "cb87ccd9e46c591cbe4756f1922dff0d06c0a16bf17ef172f823dc95b4199603"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 110,
+      "ordinal": 51,
+      "name": "flipHorizontalSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 636,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={flipHorizontalSvg} title={t('annotation.flipHorizontal')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/flip-horizontal-svg.svg",
+      "sha256": "c2861aa267ce349282e9b921b029b29fe70c94fc4a7fe652575f7b57901999e7"
+    },
+    {
+      "catalog_file": "open-pdf-studio/js/solid/data/contextMenuIcons.js",
+      "definition_line": 112,
+      "ordinal": 52,
+      "name": "flipVerticalSvg",
+      "uses": [
+        {
+          "file": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+          "line": 642,
+          "menu": "AnnotationMenuContent",
+          "source_excerpt": "<ArrangeButton svg={flipVerticalSvg} title={t('annotation.flipVertical')} onClick={() => {"
+        }
+      ],
+      "condition": "conditional-menu-or-selection",
+      "svg": "inline-ui-icons/open-pdf-studio/context-imported/flip-vertical-svg.svg",
+      "sha256": "3580ba6a54b48ef436272480a842307b57e4a96bdada8e33d2b12be8b918be26"
+    }
+  ]
+}

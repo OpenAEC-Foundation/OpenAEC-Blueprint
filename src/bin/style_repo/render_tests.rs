@@ -513,6 +513,67 @@ fn export_pdf_drawing_text_fallback_review() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF imported context-menu icon sheets on demand"]
+fn export_pdf_context_imported_icon_contact_sheets() {
+    use iced::widget::{column, container, row, svg, text};
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+    let manifest: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("harmonization/pdf-context-imported-ui-icons.json"))
+            .expect("PDF context import manifest"),
+    )
+    .expect("valid PDF context import manifest");
+    let records = manifest["records"].as_array().expect("PDF context records");
+    assert_eq!(records.len(), 52);
+    load_fonts();
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(48, 48, 57)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut cells: Vec<iced::Element<'_, Message<Action>>> = Vec::new();
+        for item in records {
+            let name = item["name"].as_str().expect("PDF icon name");
+            let path = item["svg"].as_str().expect("PDF icon path");
+            let bytes = std::fs::read(root.join("harmonization").join(path))
+                .expect("PDF context imported SVG");
+            let glyph = svg(svg::Handle::from_memory(bytes))
+                .width(24)
+                .height(24)
+                .style(move |_, _| svg::Style {
+                    color: if name.ends_with("Svg") { None } else { Some(foreground) },
+                });
+            cells.push(
+                container(column![text(name).size(10).color(foreground), glyph].spacing(7))
+                    .width(170)
+                    .height(72)
+                    .padding(7)
+                    .style(move |_| container::Style::default().background(background))
+                    .into(),
+            );
+        }
+        let mut cells = cells.into_iter();
+        let mut rows = column![].spacing(5).padding(10);
+        for _ in 0..8 {
+            let mut line = row![].spacing(5);
+            for _ in 0..7 {
+                if let Some(cell) = cells.next() {
+                    line = line.push(cell);
+                }
+            }
+            rows = rows.push(line);
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(1250.0, 650.0))
+            .save_png(&root.join(format!("design/pdf-context-imported-icons-{suffix}.png")))
+            .expect("save PDF context imported icon sheet");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));
