@@ -300,6 +300,62 @@ fn export_frame_shell_geometry_review() {
 }
 
 #[test]
+#[ignore = "regenerate Pointcloud annotation icon comparison on demand"]
+fn export_pointcloud_annotation_icon_review() {
+    use iced::widget::{column, container, row, svg, text};
+    use openaec_ui::icons::DomainIcon;
+
+    fn swatch<'a>(glyph: iced::Element<'a, Message<Action>>, background: Color) -> iced::Element<'a, Message<Action>> {
+        container(glyph)
+            .width(120)
+            .height(72)
+            .center_x(iced::Fill)
+            .center_y(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into()
+    }
+
+    load_fonts();
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, suffix, background) in [
+        (Theme::Light, "light", Color::from_rgb8(250, 250, 249)),
+        (Theme::Forge, "forge", Color::from_rgb8(54, 54, 62)),
+    ] {
+        let foreground = theme.tokens().text;
+        let mut rows = column![] .spacing(12).padding(18);
+        for (label, icon, source) in [
+            ("Tekst", DomainIcon::DrawingText, include_bytes!("../../../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_text.svg").as_slice()),
+            ("Leidlijn", DomainIcon::DrawingLeader, include_bytes!("../../../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_leader.svg").as_slice()),
+        ] {
+            let source_icon: iced::Element<'_, Message<Action>> = svg(svg::Handle::from_memory(source))
+                .width(24)
+                .height(24)
+                .style(move |_, _| svg::Style { color: (theme == Theme::Forge).then_some(foreground) })
+                .into();
+            rows = rows.push(
+                column![
+                    text(label).size(15).color(foreground),
+                    row![
+                        swatch(source_icon, background),
+                        swatch(icon.view(16, foreground).into(), background),
+                        swatch(icon.view(24, foreground).into(), background),
+                        swatch(icon.view(32, foreground).into(), background),
+                    ].spacing(12),
+                ].spacing(7),
+            );
+        }
+        let page: iced::Element<'_, Message<Action>> = container(rows)
+            .width(iced::Fill)
+            .height(iced::Fill)
+            .style(move |_| container::Style::default().background(background))
+            .into();
+        render_element(page, theme, Size::new(560.0, 230.0))
+            .save_png(&design.join(format!("pointcloud-annotation-icons-{suffix}.png")))
+            .expect("save annotation comparison");
+    }
+}
+
+#[test]
 fn source_interfaces_keep_their_non_ribbon_routes_and_modal() {
     let mut app = StyleRepo::default();
     let _ = app.update(Action::Show(Page::Sources));

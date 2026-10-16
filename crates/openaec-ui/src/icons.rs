@@ -185,10 +185,12 @@ pub enum DomainIcon {
     GeotechCoordinateTag,
     DrawingPolygon,
     DrawingSvgFrame,
+    DrawingText,
+    DrawingLeader,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 19] = [
+    pub const ALL: [Self; 21] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -208,6 +210,8 @@ impl DomainIcon {
         Self::GeotechCoordinateTag,
         Self::DrawingPolygon,
         Self::DrawingSvgFrame,
+        Self::DrawingText,
+        Self::DrawingLeader,
     ];
 
     pub fn id(self) -> &'static str {
@@ -231,6 +235,8 @@ impl DomainIcon {
             Self::GeotechCoordinateTag => "geotech.coordinate-tag",
             Self::DrawingPolygon => "drawing.polygon",
             Self::DrawingSvgFrame => "drawing.svg-frame",
+            Self::DrawingText => "drawing.text",
+            Self::DrawingLeader => "drawing.leader",
         }
     }
 
@@ -349,6 +355,18 @@ impl DomainIcon {
             }
             (Self::DrawingSvgFrame, false) => {
                 include_bytes!("../assets/domain-icons/drawing-svg-frame.svg")
+            }
+            (Self::DrawingText, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-text.svg")
+            }
+            (Self::DrawingText, false) => {
+                include_bytes!("../assets/domain-icons/drawing-text.svg")
+            }
+            (Self::DrawingLeader, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-leader.svg")
+            }
+            (Self::DrawingLeader, false) => {
+                include_bytes!("../assets/domain-icons/drawing-leader.svg")
             }
         }
     }

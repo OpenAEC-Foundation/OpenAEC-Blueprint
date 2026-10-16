@@ -1,0 +1,21 @@
+{
+  "source_commit": "c9da7fe",
+  "items": [
+    {
+      "command": "text",
+      "source": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_text.svg",
+      "source_sha256": "1bbb66b9eb3f82cc0ab4c2ecebf6e185fd871472a1596419d23b7ddfdfee9980",
+      "source_use": "native/desktop/src/drawing_notes.rs:1831",
+      "candidate_24": "crates/openaec-ui/assets/domain-icons/drawing-text.svg",
+      "candidate_16": "crates/openaec-ui/assets/domain-icons-small/drawing-text.svg"
+    },
+    {
+      "command": "leader",
+      "source": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_leader.svg",
+      "source_sha256": "7dbccc3c4fafc9c6fdfa4431dfdf256ae78a4159d6b1b0ffdf8a2b3f65fa65eb",
+      "source_use": "native/desktop/src/drawing_notes.rs:1833",
+      "candidate_24": "crates/openaec-ui/assets/domain-icons/drawing-leader.svg",
+      "candidate_16": "crates/openaec-ui/assets/domain-icons-small/drawing-leader.svg"
+    }
+  ]
+}

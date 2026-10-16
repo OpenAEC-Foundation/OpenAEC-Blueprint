@@ -95,6 +95,8 @@ Voor Opmaak is de [HTML-layoutstudie](pdf-format-layout-review.html) uit `Format
 
 De huidige native Pointcloud-bron op lokale branch `feat/shared-rust-ui` (`native/desktop/src/main.rs`, gecontroleerd op `3ce530c`) heeft `RibbonTab::CORE = [Start]`, naast de Bestand-weergave. De tien Start-panelen zijn in de Nederlandse locale Bestand, Navigatie, Selectie, Snedebox, Oppervlak, Tekening, Meten, Annotatie, Index en Export. View-cube-bediening zit buiten de ribbon. Oudere screenshots tonen nog Beeld/Selecteren/Tools; die zijn historisch en bepalen de huidige tabtaxonomie niet. De [native atlasrender](style-repo-pointcloud-ribbon-forge.png) controleert labels, volgorde en iconbetekenissen; de echte Pointcloud-ribbon gebruikt compactere stapels en is dus nog niet pixelgelijk aan de generieke crate-ribbon.
 
+De [Pointcloud-annotatie-icoonreview](pointcloud-annotation-icon-review.html) vult de gedeelde Maatlijn-, Opmerking- en Lijnvormen aan met Tekst en Leidlijn. Hun actieve aanroepen in `drawing_notes.rs` en oorspronkelijke SVG-hashes staan in de [beslisdata](../harmonization/pointcloud-annotation-icon-review.json). De aparte 16px-vectoren en 24/32px-vormen zijn in [Light](pointcloud-annotation-icons-light.png) en [Forge](pointcloud-annotation-icons-forge.png) met de echte Rust-renderer bekeken. De tweekleurige bronaccenten worden één thematisch getinte lijnkleur; de Leidlijn houdt een pijl en knik om van Maatlijn te verschillen. Beide nieuwe `DomainIcon`-varianten zijn in de native Pointcloud-aanroepen opgenomen. Dit is een iconbesluit, geen pixelgelijke herbouw van de complete annotatiewerkbalk.
+
 De statusband is nu als `openaec_ui::frame::status_bar` in de gedeelde Rust-crate ondergebracht en wordt door de Style Repo-shell én Pointcloud gebruikt. Pointcloud behoudt de contextafhankelijke tellingen, zichtnaam, RAM, importannulering en compacte weergave; de crate tekent de 22 px-band met bovenrand en themakleuren. De vijf Pointcloud-statusbalktests en de vijf-thema-shelltest slagen. Alle zes opnieuw gerenderde Pointcloud-beelden zijn bytegelijk aan de eerdere beelden, inclusief Light en Forge met lege en geopende scan en de Extensions-pagina.
 
 De 30 px-documentband wordt door de crate getekend volgens de gepinde Tauri-`DocumentBar.css`: 1 px boven- en onderrand, 4 px zijruimte en het thematische achtergrondtoken. Transparante CSS-randkleuren zijn vooraf met de documentachtergrond gemengd; een native pixeltest controleert de exacte Light- en Forge-randkleuren. De individuele tabstijl is nu eveneens gedeeld: 24 px hoogte, 1 px tussenruimte, actieve accent-soft-achtergrond en thematische omtrek. De [documentbalkreview](document-bar-review.html) vergelijkt vier echte Pointcloud-tabs met de CSS-reconstructie. Pointcloud behoudt tabidentiteit, middenklik, sluiting, ellipsis, scrollpositie en toetsenbordnavigatie; zeventien tabtests slagen. De actieve sluitknop houdt volle tekstkleur voor contrast. Een gedeelde 2 px-maskerlaag maakt nu ook in de native tab de onderrand transparant. Een renderregressietest controleert de actieve tab in Light en Forge op de exacte onderrandpixels. De sluitknop blijft voor contrast bewust helderder dan in de CSS-bron. De volledige huidige Pointcloud-suite sluit af met 686 geslaagde tests, nul fouten en drie genegeerde tests.
@@ -237,9 +239,9 @@ geen geverifieerde productfuncties.
 
 De herbruikbare `openaec-ui` is nu een afzonderlijk Cargo-package onder
 `crates/openaec-ui/`. `cargo package -p openaec-ui` heeft het uitgepakte
-pakket zelfstandig gecompileerd: 65 verpakte bestanden, waaronder 13
-Rust-bronnen, zes fonts, drie OFL-licentieteksten, 35 canonieke iconen en
-acht domein-SVGs voor vier betekenissen op twee maten. De onderzoeksiconen,
+pakket zelfstandig gecompileerd; de huidige pakketgrens bevat 141 bestanden,
+waaronder 15 Rust-bronnen, zes fonts, drie OFL-licentieteksten, 35 canonieke
+iconen en 42 domein-SVG’s voor 21 betekenissen op twee maten. De onderzoeksiconen,
 FEM/BIM-concepten en reviewbeelden blijven in het niet-publiceerbare
 Style Repo-package. De Root/Pointcloud-kopieën van code en assets worden
 met `scripts/check_portable_ui.py` op inhoud gecontroleerd.
