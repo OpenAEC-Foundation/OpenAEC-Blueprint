@@ -135,6 +135,8 @@ ART = {"fem": FEM, "bim": BIM}
 # glyphs retain the same metaphor with fewer strokes; all others use the 24 px
 # drawing at smaller scale until they have been individually reviewed.
 SMALL = {
+    "fem.local-axes": '<path d="M5 19V5m0 14h14M5 19l8-8M3 8l2-3 2 3m9 9 3 2-3 2"/>',
+    "fem.wind-load": '<path d="M19 3v18M3 8h11m-3-3 3 3-3 3M3 16h11m-3-3 3 3-3 3"/>',
     "fem.diaphragm": '<path d="M4 5h16v14H4zM4 5l16 14"/><circle cx="4" cy="5" r="1.3" fill="currentColor" stroke="none"/><circle cx="20" cy="19" r="1.3" fill="currentColor" stroke="none"/>',
     "fem.mesh": '<path d="M3 4h18v16H3zM3 4l18 16M3 20l9-8"/>',
     "fem.mesh-refine": '<path d="M3 20 12 4l9 16H3ZM8 20l4-8 4 8"/>',
@@ -142,9 +144,11 @@ SMALL = {
     "bim.federate": '<path d="M3 4h12v12H3zM9 10h12v12H9z"/>',
     "bim.curtain-wall": '<path d="M3 3h18v18H3zM12 3v18M3 12h18"/>',
     "bim.opening": '<path d="M3 3h18v18H3zM8 8h8v13H8z"/>',
+    "bim.space": '<path d="M3 3h18v18H3V3Zm9 0v8M3 15h8"/><circle cx="15" cy="15" r="2" fill="currentColor" stroke="none"/>',
     "bim.zone": '<path d="M3 3h18v18H3zM12 3v18"/><circle cx="8" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="1.2" fill="currentColor" stroke="none"/>',
     "bim.array": '<path d="M3 5h8v9H3zM13 10h8v9h-8z"/>',
     "bim.revision": '<path d="M3 4h12v15H3zM9 7h12v15H9zM12 12h6"/>',
+    "bim.section-box": '<path d="M12 2 21 7v10l-9 5-9-5V7l9-5ZM3 7l9 5 9-5M12 12v10"/><path d="M4 15h16" stroke-dasharray="2 2"/>',
     "bim.level": '<path d="M3 12h12"/><circle cx="18" cy="12" r="3"/>',
     "bim.survey-point": '<path d="M12 21s-7-7-7-12a7 7 0 1 1 14 0c0 5-7 12-7 12Z"/><circle cx="12" cy="9" r="2"/>',
     "bim.project-origin": '<path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>',

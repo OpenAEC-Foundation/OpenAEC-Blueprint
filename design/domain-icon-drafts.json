@@ -97,7 +97,9 @@
     "visual_metaphor": "Drie gelabelde lokale assen",
     "file": "icon-drafts/fem/local-axes.svg",
     "sha256": "fe0f712f3bf62c6bc90cf2ad0202b0cbd3d0fbe5ef7de9c9fbfa774badadf1cf",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/local-axes.svg",
+    "small_sha256": "88647e45fb01777f0e3d0a88ef68b3304aa41b4cff7308341b81fec82d274a40"
   },
   {
     "id": "fem.section",
@@ -321,7 +323,9 @@
     "visual_metaphor": "Horizontale pijlen op gevel",
     "file": "icon-drafts/fem/wind-load.svg",
     "sha256": "227123f4fefe265992b2efcde4526660f5bf5e7fce3fccb5c5eaf60914b85c8d",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/fem/wind-load.svg",
+    "small_sha256": "7f7d87847098e8b5ec8fc6d6ee5d1b355d2472d90d756e46c8c2b589811c16cc"
   },
   {
     "id": "fem.mass",
@@ -777,7 +781,9 @@
     "visual_metaphor": "Omsloten plattegrond met ruimtemarkering",
     "file": "icon-drafts/bim/space.svg",
     "sha256": "8a284a2b544ae23a99e652299b868a94cc34e5f8127517012cd720ceb31a6014",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/space.svg",
+    "small_sha256": "c625eb842eb80582a4789e1ac9354c40bdea09fe3f7fe86e4e7de4748f565059"
   },
   {
     "id": "bim.zone",
@@ -1113,6 +1119,8 @@
     "visual_metaphor": "Kubus met afgesneden hoek",
     "file": "icon-drafts/bim/section-box.svg",
     "sha256": "f9c782bfaa0b2bb2c0bfd15998fe1e14922dd9d3bc465b832f710ad088e7e8be",
-    "status": "visual-draft"
+    "status": "visual-draft",
+    "small_file": "icon-drafts-small/bim/section-box.svg",
+    "small_sha256": "04ebf6f07e7d3372732cfe968de9a2c07c9c46d463e3f912928baf35d4868efa"
   }
 ]

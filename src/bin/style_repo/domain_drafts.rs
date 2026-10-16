@@ -111,9 +111,11 @@ pub const ALL: [(&str, &[u8]); 109] = [
     ("bim.section-box", include_bytes!("../../../design/icon-drafts/bim/section-box.svg")),
 ];
 
-pub const SMALL: [(&str, &[u8]); 13] = [
+pub const SMALL: [(&str, &[u8]); 17] = [
+    ("fem.local-axes", include_bytes!("../../../design/icon-drafts-small/fem/local-axes.svg")),
     ("fem.diaphragm", include_bytes!("../../../design/icon-drafts-small/fem/diaphragm.svg")),
     ("fem.surface-load", include_bytes!("../../../design/icon-drafts-small/fem/surface-load.svg")),
+    ("fem.wind-load", include_bytes!("../../../design/icon-drafts-small/fem/wind-load.svg")),
     ("fem.mesh", include_bytes!("../../../design/icon-drafts-small/fem/mesh.svg")),
     ("fem.mesh-refine", include_bytes!("../../../design/icon-drafts-small/fem/mesh-refine.svg")),
     ("bim.level", include_bytes!("../../../design/icon-drafts-small/bim/level.svg")),
@@ -122,9 +124,11 @@ pub const SMALL: [(&str, &[u8]); 13] = [
     ("bim.federate", include_bytes!("../../../design/icon-drafts-small/bim/federate.svg")),
     ("bim.curtain-wall", include_bytes!("../../../design/icon-drafts-small/bim/curtain-wall.svg")),
     ("bim.opening", include_bytes!("../../../design/icon-drafts-small/bim/opening.svg")),
+    ("bim.space", include_bytes!("../../../design/icon-drafts-small/bim/space.svg")),
     ("bim.zone", include_bytes!("../../../design/icon-drafts-small/bim/zone.svg")),
     ("bim.array", include_bytes!("../../../design/icon-drafts-small/bim/array.svg")),
     ("bim.revision", include_bytes!("../../../design/icon-drafts-small/bim/revision.svg")),
+    ("bim.section-box", include_bytes!("../../../design/icon-drafts-small/bim/section-box.svg")),
 ];
 
 pub fn get(id: &str) -> Option<&'static [u8]> {

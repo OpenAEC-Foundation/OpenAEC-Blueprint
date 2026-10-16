@@ -1,0 +1,38 @@
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEM/BIM · 16px-verfijning</title><style>
+@font-face{font-family:Inter;src:url("../assets/fonts/Inter-Regular.ttf")}@font-face{font-family:Inter;src:url("../assets/fonts/Inter-SemiBold.ttf");font-weight:600}
+*{box-sizing:border-box}body{margin:0;background:#f1f2f4;color:#36363e;font:13px/1.5 Inter,system-ui,sans-serif}
+header{background:#272b32;color:white;border-bottom:4px solid #d97706;padding:26px max(20px,calc((100vw - 1140px)/2))}
+header a{color:#f6bb73;font-size:12px}h1{margin:7px 0;font-size:27px}header p{margin:0;color:#c8cbd0}
+main{max-width:1180px;margin:auto;padding:22px 20px 50px}.intro,.rejected,article{background:white;border:1px solid #d9dce0}
+.intro{border-left:4px solid #d97706;padding:14px 18px}.intro p{margin:4px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:16px 0}
+article{padding:15px}.head{display:flex;justify-content:space-between;gap:10px;align-items:center}.head strong{font-size:15px}.head span{font-size:11px;color:#a05a0a}
+.samples{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0}figure{margin:0;border:1px solid #e0e2e5;background:#f7f8f9;min-height:92px;text-align:center}
+figure>div{height:62px;display:grid;place-items:center}figure img{display:block}figcaption{font-size:10px;color:#69707a;padding:0 3px}
+figure.dark{background:#30363e}figure.dark img{filter:brightness(0) invert(1)}figure.dark figcaption{color:#d1d5d9}
+article p{min-height:40px;margin:5px 0}article small{color:#69707a}.rejected{padding:14px 18px}.rejected h2{font-size:16px;margin:0 0 6px}.rejected ul{margin:0;padding-left:20px}.rejected li{margin:4px 0}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.samples{grid-template-columns:repeat(2,1fr)}}
+</style><header><a href="review.html">← Ontwerpreview</a><h1>FEM/BIM · 16px-verfijning</h1><p>Visuele controle van vier voorlopig behouden vereenvoudigingen en twee afgewezen pogingen.</p></header>
+<main><div class="intro"><strong>Wat wordt vergeleken?</strong><p>Links staat de gewone 24px-vector op echte 16px, daarnaast de afzonderlijke 16px-vector. De derde kolom toont de 24px-vorm op zijn bedoelde maat. De donkere kolom is een kleurinversie ter contrastcontrole, geen native Iced-render. Dit zijn nog ontwerpvoorstellen: herkenbaarheid in een echte FEM- of BIM-ribbon en productiecontrast zijn niet bewezen.</p></div>
+<div class="grid"><article><div class="head"><strong>fem.local-axes</strong><span>16 px herzien</span></div>
+<div class="samples"><figure><div><img src="icon-drafts/fem/local-axes.svg" width="16" height="16" alt=""></div><figcaption>24px-vorm op 16px</figcaption></figure>
+<figure><div><img src="icon-drafts-small/fem/local-axes.svg" width="16" height="16" alt=""></div><figcaption>Nieuwe 16px-vorm</figcaption></figure>
+<figure><div><img src="icon-drafts/fem/local-axes.svg" width="24" height="24" alt=""></div><figcaption>24px-bronvorm</figcaption></figure>
+<figure class="dark"><div><img src="icon-drafts-small/fem/local-axes.svg" width="16" height="16" alt=""></div><figcaption>16px · donker</figcaption></figure></div>
+<p>Drie assen blijven zichtbaar; kleine pijlpunten vervangen de drukke bronuiteinden.</p><small>SHA-256 16px: 88647e45fb01777f…</small></article><article><div class="head"><strong>fem.wind-load</strong><span>16 px herzien</span></div>
+<div class="samples"><figure><div><img src="icon-drafts/fem/wind-load.svg" width="16" height="16" alt=""></div><figcaption>24px-vorm op 16px</figcaption></figure>
+<figure><div><img src="icon-drafts-small/fem/wind-load.svg" width="16" height="16" alt=""></div><figcaption>Nieuwe 16px-vorm</figcaption></figure>
+<figure><div><img src="icon-drafts/fem/wind-load.svg" width="24" height="24" alt=""></div><figcaption>24px-bronvorm</figcaption></figure>
+<figure class="dark"><div><img src="icon-drafts-small/fem/wind-load.svg" width="16" height="16" alt=""></div><figcaption>16px · donker</figcaption></figure></div>
+<p>Twee belastingspijlen zijn op 16 px te onderscheiden van de wand; de 24px-vorm behoudt er drie.</p><small>SHA-256 16px: 7f7d87847098e8b5…</small></article><article><div class="head"><strong>bim.space</strong><span>16 px herzien</span></div>
+<div class="samples"><figure><div><img src="icon-drafts/bim/space.svg" width="16" height="16" alt=""></div><figcaption>24px-vorm op 16px</figcaption></figure>
+<figure><div><img src="icon-drafts-small/bim/space.svg" width="16" height="16" alt=""></div><figcaption>Nieuwe 16px-vorm</figcaption></figure>
+<figure><div><img src="icon-drafts/bim/space.svg" width="24" height="24" alt=""></div><figcaption>24px-bronvorm</figcaption></figure>
+<figure class="dark"><div><img src="icon-drafts-small/bim/space.svg" width="16" height="16" alt=""></div><figcaption>16px · donker</figcaption></figure></div>
+<p>De ruimteomtrek, binnenwand en ruimtepunt blijven leesbaar met minder binnenlijnen.</p><small>SHA-256 16px: c625eb842eb80582…</small></article><article><div class="head"><strong>bim.section-box</strong><span>16 px herzien</span></div>
+<div class="samples"><figure><div><img src="icon-drafts/bim/section-box.svg" width="16" height="16" alt=""></div><figcaption>24px-vorm op 16px</figcaption></figure>
+<figure><div><img src="icon-drafts-small/bim/section-box.svg" width="16" height="16" alt=""></div><figcaption>Nieuwe 16px-vorm</figcaption></figure>
+<figure><div><img src="icon-drafts/bim/section-box.svg" width="24" height="24" alt=""></div><figcaption>24px-bronvorm</figcaption></figure>
+<figure class="dark"><div><img src="icon-drafts-small/bim/section-box.svg" width="16" height="16" alt=""></div><figcaption>16px · donker</figcaption></figure></div>
+<p>De snedebox houdt zijn 3D-vorm en één stippellijn voor het snijvlak.</p><small>SHA-256 16px: 04ebf6f07e7d3372…</small></article></div><div class="rejected"><h2>Afgewezen in deze ronde</h2><ul><li><strong>bim.site</strong> — De proef met een vlag en contour leek op lokale assen en verloor het terreinmotief; de 24px-vorm blijft ook op 16px zichtbaar.</li><li><strong>bim.clash</strong> — Twee overlappende vierkanten met een gevuld snijvlak lazen als één blok; de eerdere gekruiste 3D-vorm blijft voorlopig.</li></ul><p>De volledige <a href="fem-icon-small-review.png">FEM-</a> en <a href="bim-icon-small-review.png">BIM-contactbladen</a> tonen alle 109 concepten, inclusief de niet aangepaste iconen.</p></div></main></html>
