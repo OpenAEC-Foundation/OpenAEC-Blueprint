@@ -1,6 +1,6 @@
 # Fase 2: het ontwerp voor versie 0.4
 
-Status: **gestart** op 2026-10-16. Dit is het werkplan voor fase 2 uit [`STAPPENPLAN.md`](../../STAPPENPLAN.md).
+Status: **vastgesteld** op 2026-10-16, behalve de iconen (2.2). Dit is het werkplan voor fase 2 uit [`STAPPENPLAN.md`](../../STAPPENPLAN.md).
 
 ## Doel
 
@@ -21,11 +21,11 @@ Scope: de 15 actieve apps. Open FEM Studio volgt later en gebruikt dan hetzelfde
 | Nr. | Onderdeel | Status | Specificatie | Bouwt voort op |
 | --- | --- | --- | --- | --- |
 | 2.1 | Fundament: thema's, kleuren, contrast, typografie, maten, toestanden | **Besloten** | [`01-fundament.md`](01-fundament.md), [`tokens-0.4.json`](tokens-0.4.json), [review](fundament-review.html), [websiteanalyse](bron-website.md), [voorbeelden voor het overleg](overleg-voorbeelden.html) | Style Book-tokens, `assets/themes.css`, [`assessment.md`](../assessment.md) |
-| 2.2 | Iconen: stijl, kernset, vaksets, app-iconen | Voorwerk: Codex maakt een icoonoverzicht per functie | | Iconreviews, [kruisverband](../icon-semantic-crosswalk.html), [botsingsreview](../icon-collision-review.html) |
+| 2.2 | Iconen: stijl, kernset, vaksets, app-iconen | **Bij Codex.** Stijl B gekozen, eerste 31 iconen goedgekeurd, tweede serie ter beoordeling. De voorbeeldpagina's gebruiken deze set al; alleen ontbrekende functies tonen nog een oud icoon | [Eerste serie](../icon-set-b2/index.html), [tweede serie](../icon-set-b2/series-2.html) | Iconreviews, [kruisverband](../icon-semantic-crosswalk.html), [botsingsreview](../icon-collision-review.html) |
 | 2.3 | Tegels en kaarten | **Besloten** | [`03-tegels.md`](03-tegels.md), [review](tegels-review.html) | [Bestand-review](../backstage-review.html), [taaktegelreview](../backstage-task-review.html) |
 | 2.4 | Componenten | **Besloten** | [`04-componenten.md`](04-componenten.md), [review](componenten-review.html) | Reviews van lint, documentbalk, eigenschappen, dialogen en instellingen |
 | 2.5 | Layouts voor lint- en werkstroomapps | **Besloten** | [`05-layouts.md`](05-layouts.md), [review](layouts-review.html) | [`harmonized.html`](../harmonized.html), [Energy-werkstroom](../energy-workflow.html), [Field-routes](../field-route-review.html) |
-| 2.6 | Vaststellen en bevriezen als 0.4 | Nog niet gestart | | Alle bovenstaande |
+| 2.6 | Vaststellen en bevriezen als 0.4 | **Vastgesteld** op 2026-10-16, behalve de iconen: [samenvatting](samenvatting.html) | | Alle bovenstaande |
 
 ## Volgorde
 

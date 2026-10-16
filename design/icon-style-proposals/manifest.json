@@ -1,0 +1,817 @@
+{
+  "status": "B gekozen; accentgeometrie revisie 2; nog geen volledige of geharmoniseerde set",
+  "selected_style": "b",
+  "geometry_revision": 2,
+  "construction_model": "model-b.json",
+  "date": "2026-10-16",
+  "reference": {
+    "url": "https://www.open-aec.com/",
+    "stylesheet": "https://www.open-aec.com/shared/style.css?v=20261015",
+    "stylesheet_sha256": "40a08ab440ba11e2f791860509fcbc166ada516796d64fb89fdc1d3f0929c55d"
+  },
+  "authorship": "Nieuwe SVG-geometrie voor deze stijlproef; geen overgenomen bibliotheekpaden.",
+  "rules": [
+    "Eén functie-ID voor dezelfde vastgestelde handeling, ongeacht app.",
+    "Kopiëren/dupliceren, import/export, afstand meten/maatlijn en verplaatsen/pannen blijven afzonderlijk.",
+    "16px heeft eigen geometrie en minder details; 32px gebruikt de 24px-master.",
+    "currentColor is de hoofdkleur; --icon-accent en --icon-tint zijn optionele CSS-tokens.",
+    "Themapaletten op de proefpagina zijn voorbeelden; Claude beheert de echte thema’s.",
+    "Geen kleur is nodig om de functie te onderscheiden; monochroom blijft beschikbaar.",
+    "B gebruikt één constructiemodel: gedeelde hoekpunten, exclusieve kleursegmenten en gevulde contouren.",
+    "Alle 28 B-masters blijven binnen hun kader en hebben geen geometrische overlap tussen hoofd- en accentkleur."
+  ],
+  "styles": {
+    "a": {
+      "label": "Rustig",
+      "tag": "Eenvoudige lijn",
+      "detail": "Laag",
+      "stroke24": 1.7,
+      "stroke16": 1.25,
+      "cap": "round",
+      "join": "round",
+      "description": "Open contouren, afgeronde uiteinden en weinig binnenlijnen. De stilste richting voor een dicht lint.",
+      "tradeoff": "Rustig op 16 px; minder uitgesproken als eigen OpenAEC-familie."
+    },
+    "b": {
+      "label": "Constructief",
+      "tag": "Geometrie + accent",
+      "detail": "Middel",
+      "stroke24": 1.75,
+      "stroke16": 1.25,
+      "cap": "butt",
+      "join": "miter",
+      "rendering": "filled-outline-from-construction-model",
+      "description": "Afgeschuinde hoeken, rechte verbindingen en één gericht accent. Geïnspireerd op de constructieve geometrie van het merk.",
+      "tradeoff": "Gekozen richting. De accentdelen worden uit dezelfde ankerpunten berekend als de hoofdvorm."
+    },
+    "c": {
+      "label": "Gelaagd",
+      "tag": "Vlak + contour",
+      "detail": "Hoog",
+      "stroke24": 1.5,
+      "stroke16": 1.3,
+      "cap": "round",
+      "join": "round",
+      "description": "Vlakken, overlappende onderdelen en extra binnenlijnen. Twee kleurlagen benadrukken de constructie of handeling.",
+      "tradeoff": "Rijker op 24–32 px. Op 16 px verdwijnen bewust de kleine details; één kleur blijft mogelijk."
+    }
+  },
+  "records": [
+    {
+      "style": "a",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 16,
+      "path": "a/16/open.svg",
+      "sha256": "d6d26f491936e2c24e780354205b01e71592c76d9ea9d3fb219dfdd0ad80e144"
+    },
+    {
+      "style": "a",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 24,
+      "path": "a/24/open.svg",
+      "sha256": "f3ac771a63238521c88463aa6fc6f32e3585a24b297e22f742fa8f75460c10a1"
+    },
+    {
+      "style": "a",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 16,
+      "path": "a/16/save.svg",
+      "sha256": "c9ad64fb8d074405163865a7c8f67cde2f450b609cac46fbd94a9c5161cc5ef7"
+    },
+    {
+      "style": "a",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 24,
+      "path": "a/24/save.svg",
+      "sha256": "bbaec2259affd412e084f3a68500ae9f941fd7f685b588bd76e31614b5caac31"
+    },
+    {
+      "style": "a",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 16,
+      "path": "a/16/import.svg",
+      "sha256": "b196b8568374c72f11bcef1359b32905436ee97e639af23f49092fe350cb8166"
+    },
+    {
+      "style": "a",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 24,
+      "path": "a/24/import.svg",
+      "sha256": "f554a2b5f72d32405922ff65cca6323da8288c44bd257dd0a915b052feb97c3f"
+    },
+    {
+      "style": "a",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 16,
+      "path": "a/16/export.svg",
+      "sha256": "80aa48505c6332844b2a56de03a0b5eca451a4424c9a9f5994a6ffb1d841f2fe"
+    },
+    {
+      "style": "a",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 24,
+      "path": "a/24/export.svg",
+      "sha256": "11e6160231189d61e90cf0d320591e864b4d54f510c7d68a660de56750ea917e"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 16,
+      "path": "a/16/undo.svg",
+      "sha256": "30d831f9dd283374ee2cb2afae1091198dc2c7a1e907d8b5f2c7ce707a7f2faa"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 24,
+      "path": "a/24/undo.svg",
+      "sha256": "20988b84ffaf06410302c8491921ba02c3859765b53ccbcad4d9d711bacdc041"
+    },
+    {
+      "style": "a",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 16,
+      "path": "a/16/search.svg",
+      "sha256": "d75bdc1a990d67f4fb7e8d593bcb11b55d6cb1c909eeec0abbdab3dc7da646fa"
+    },
+    {
+      "style": "a",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 24,
+      "path": "a/24/search.svg",
+      "sha256": "90996e00219e6402b9cd6d5f5fbe9090a8a366582aab51d00118c4fd2c89d2a6"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 16,
+      "path": "a/16/select.svg",
+      "sha256": "31a126bca4b0d405da9d5e9eaa88f9664e0965fa5cad9b3899a4d74156423b1e"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 24,
+      "path": "a/24/select.svg",
+      "sha256": "216dc72b9b94a9de2db93a656368edeb9d5a291d29375f806350e31bdb814a39"
+    },
+    {
+      "style": "a",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 16,
+      "path": "a/16/move.svg",
+      "sha256": "0ac2e179450727c4f168ff1989d365ef667a18eb5854302ca2ed60d1a3a3d275"
+    },
+    {
+      "style": "a",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 24,
+      "path": "a/24/move.svg",
+      "sha256": "d3de7ab48d7c989272b4bcd76e6b82e9639f469f2158326ea37b2b7ca1688ef4"
+    },
+    {
+      "style": "a",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 16,
+      "path": "a/16/measure.svg",
+      "sha256": "2a6fbfc2ac2ad41a5b94792460e6e4db778a7e9456ce27bc022ae87f651f5e9d"
+    },
+    {
+      "style": "a",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 24,
+      "path": "a/24/measure.svg",
+      "sha256": "fe123d530a10f5eff93f099b4392de19899fed529a6d097d92f2e884d3e8e8db"
+    },
+    {
+      "style": "a",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 16,
+      "path": "a/16/layers.svg",
+      "sha256": "11341800168f3d1b5e4d0f78e92f42656ea86f6146c6cd3b989f84fd29796d38"
+    },
+    {
+      "style": "a",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 24,
+      "path": "a/24/layers.svg",
+      "sha256": "2e92ed2626365ca948c9aeb47bb746a3c87d778d52cd66be5731234bc51ae439"
+    },
+    {
+      "style": "a",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 16,
+      "path": "a/16/note.svg",
+      "sha256": "1beb7c515b032072ca070f1129cb3cca7cea3acd070ea080862861e9a9ae1bc5"
+    },
+    {
+      "style": "a",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 24,
+      "path": "a/24/note.svg",
+      "sha256": "9361ff8a726369dbac6270a254e83978cbda01c3f8ecb6c2fec576479729b062"
+    },
+    {
+      "style": "a",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 16,
+      "path": "a/16/cpt.svg",
+      "sha256": "48fbfd5de0e08bca47103a6c374ce46f019889c1505b87a23842c585b14ad56e"
+    },
+    {
+      "style": "a",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 24,
+      "path": "a/24/cpt.svg",
+      "sha256": "2eb8bd776f264e548ff97a9cb0663000241618f1f75dcc6d8ba0db7cc552dc5b"
+    },
+    {
+      "style": "a",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 16,
+      "path": "a/16/cloud.svg",
+      "sha256": "f9f10068a1ca183a482a89ed1148f30c4437d2af03661e1f561edfea69590579"
+    },
+    {
+      "style": "a",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 24,
+      "path": "a/24/cloud.svg",
+      "sha256": "a21568a7e18387b60b20a6c7ff2522d5059f21a8898d27384db3c4f4acc97a65"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 16,
+      "path": "a/16/delete.svg",
+      "sha256": "055baaeb69de0099757a55e560eb3d61c38020e40212a5ca8999daa873626d28"
+    },
+    {
+      "style": "a",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 24,
+      "path": "a/24/delete.svg",
+      "sha256": "4ae0140dab58bbb58b466e4d82b047da5eafa1d37039f23f7502efcb042bfaf2"
+    },
+    {
+      "style": "b",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 16,
+      "path": "b/16/open.svg",
+      "sha256": "42eeaeb58cd0854b00c9f81befd0d4af48bb353c0d566a72f4d33a0afc65e956"
+    },
+    {
+      "style": "b",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 24,
+      "path": "b/24/open.svg",
+      "sha256": "55f9c07e75faeebea7de915abc80c15e1e3d0c39aa5149823f5bf392470a55d7"
+    },
+    {
+      "style": "b",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 16,
+      "path": "b/16/save.svg",
+      "sha256": "371d982b12011c68c2e9cc3836a254fd3299d88499aa9a9d3161fcac2af539a4"
+    },
+    {
+      "style": "b",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 24,
+      "path": "b/24/save.svg",
+      "sha256": "d1515f66749d03107f25d4c288376360029435d9c714c009dac60a086e15735c"
+    },
+    {
+      "style": "b",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 16,
+      "path": "b/16/import.svg",
+      "sha256": "262842a4556372c6b841dff09730d56f0c36159e860fb5956fdf7e813b236275"
+    },
+    {
+      "style": "b",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 24,
+      "path": "b/24/import.svg",
+      "sha256": "808443b699c547eefdcac462e8044123459d9a4f80b13555f51281913c1d96a0"
+    },
+    {
+      "style": "b",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 16,
+      "path": "b/16/export.svg",
+      "sha256": "708602c9182e21eeb7ff5317763a7fc59e22850d96818ed1e6bf3d2571724de4"
+    },
+    {
+      "style": "b",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 24,
+      "path": "b/24/export.svg",
+      "sha256": "05ab0571bc44c6107780a0419a6211070b607b314d7dbf087278e9fccb90dd1c"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 16,
+      "path": "b/16/undo.svg",
+      "sha256": "0b298b9e32346c5c3864c3fdc296a16695642fba0536f49b39f4a3a3181c1e60"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 24,
+      "path": "b/24/undo.svg",
+      "sha256": "82536659a5ad6234368da4bd0384131000d0cc00f407f0a04de51bb74956f226"
+    },
+    {
+      "style": "b",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 16,
+      "path": "b/16/search.svg",
+      "sha256": "ea87498ab36f22fbfc9029ce55055d17c2d865789f8d6f4de6ec11eaa835dbbd"
+    },
+    {
+      "style": "b",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 24,
+      "path": "b/24/search.svg",
+      "sha256": "29139993df8f4c8769c2ed579760fea84e66f474c45d83d2d996afc410f66da2"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 16,
+      "path": "b/16/select.svg",
+      "sha256": "656ce6246786c5e5c887fc7f18c4d2272eb2bd2d97608148183b97e36ef35529"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 24,
+      "path": "b/24/select.svg",
+      "sha256": "8d484702d3b5693b72c66c516e90213d7cfaf79a1481919da95cef1febf2ee25"
+    },
+    {
+      "style": "b",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 16,
+      "path": "b/16/move.svg",
+      "sha256": "26b12100b89724c655bed60635234877680f6a8cd2e3e709aa0e7d145f405db8"
+    },
+    {
+      "style": "b",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 24,
+      "path": "b/24/move.svg",
+      "sha256": "5bf9dd9cbe4a22cd4149d2305f3753e0268fedf6b66a17fcddf79ff5efea4ea7"
+    },
+    {
+      "style": "b",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 16,
+      "path": "b/16/measure.svg",
+      "sha256": "80be3a03dac731313224a95e0cd342fce9296c17be37a45417e076527f67d872"
+    },
+    {
+      "style": "b",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 24,
+      "path": "b/24/measure.svg",
+      "sha256": "d4e6d1db8dec0f321e23feb173956c3092977192b518b03725f237c31b484e69"
+    },
+    {
+      "style": "b",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 16,
+      "path": "b/16/layers.svg",
+      "sha256": "23facd2b47a36823eb8e987dddfd781b01b2cb15acadd8af50a31392e641262e"
+    },
+    {
+      "style": "b",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 24,
+      "path": "b/24/layers.svg",
+      "sha256": "3c7cae723733ac5056121107a9f91253ed7acdf666be8d5fad7ceed9758fe5ca"
+    },
+    {
+      "style": "b",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 16,
+      "path": "b/16/note.svg",
+      "sha256": "71e05acf3456caf1f2d6caa06bcb433860f128e6d576c354fa94dab21d51b8ac"
+    },
+    {
+      "style": "b",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 24,
+      "path": "b/24/note.svg",
+      "sha256": "198671ef8c3fb6e25738d7d277632084d98278abf80fd023ec75f4ce1af3aae2"
+    },
+    {
+      "style": "b",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 16,
+      "path": "b/16/cpt.svg",
+      "sha256": "e2824e4ab6585022d60b78d00b757a73a588a175cb2ccd6c9bbcffff8cb0450a"
+    },
+    {
+      "style": "b",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 24,
+      "path": "b/24/cpt.svg",
+      "sha256": "a1b92d0be03923c25b0f1562d09e5f6ddffd15ee5cd15761812c72b1e2b66681"
+    },
+    {
+      "style": "b",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 16,
+      "path": "b/16/cloud.svg",
+      "sha256": "163b70ac8497cd93681552ffad3c2d30b54d4ecc9cd454c56d747c8861986d3d"
+    },
+    {
+      "style": "b",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 24,
+      "path": "b/24/cloud.svg",
+      "sha256": "75dfd7b516e3fdf46609234d6422450a8968450b852fb52dd83630a9943e6926"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 16,
+      "path": "b/16/delete.svg",
+      "sha256": "2ca2b719739dee765f1a1b5f3e2445810ab54a59f856b5b2181cc8effc16c416"
+    },
+    {
+      "style": "b",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 24,
+      "path": "b/24/delete.svg",
+      "sha256": "14275b4ee42bfa17afdcad34cf24009163119122dfc8f9ce2b3726039375fa9b"
+    },
+    {
+      "style": "c",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 16,
+      "path": "c/16/open.svg",
+      "sha256": "ba25c6b803443d910f4c704d7aa49d7d472cbccfce702591749aa8ac843c0a26"
+    },
+    {
+      "style": "c",
+      "function_id": "file.open",
+      "label": "Openen",
+      "meaning": "Bestand of project openen",
+      "master_px": 24,
+      "path": "c/24/open.svg",
+      "sha256": "7992ba682dfa3cc10f95e09416cda1b19a50047b36314a36b81313675259848e"
+    },
+    {
+      "style": "c",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 16,
+      "path": "c/16/save.svg",
+      "sha256": "ad8dfd536885fd95b638a1e9e9c4e00bb95ab4afe82ac142680f1fa13c766bd3"
+    },
+    {
+      "style": "c",
+      "function_id": "file.save",
+      "label": "Opslaan",
+      "meaning": "De huidige wijzigingen bewaren",
+      "master_px": 24,
+      "path": "c/24/save.svg",
+      "sha256": "8af721a9ebc20451fa8990b5e4f7e62f3e3f18ca6a2fa1a7278eba861df34226"
+    },
+    {
+      "style": "c",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 16,
+      "path": "c/16/import.svg",
+      "sha256": "58fbcfea94d6c6abbbd01db49c4737f48baeaf0c6e24f15dedbfd3036fa194c5"
+    },
+    {
+      "style": "c",
+      "function_id": "file.import",
+      "label": "Importeren",
+      "meaning": "Gegevens de app in brengen",
+      "master_px": 24,
+      "path": "c/24/import.svg",
+      "sha256": "9f3f0690f3703ccd3e4d01d269b911fefe379655ceea6dd9538d6389965bf5d5"
+    },
+    {
+      "style": "c",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 16,
+      "path": "c/16/export.svg",
+      "sha256": "26c466cfde14fb37c57c69ebdbdb78bf78299f3cbd6cc67963f4f5ef0b38569d"
+    },
+    {
+      "style": "c",
+      "function_id": "file.export",
+      "label": "Exporteren",
+      "meaning": "Gegevens de app uit brengen",
+      "master_px": 24,
+      "path": "c/24/export.svg",
+      "sha256": "5a74fc87e81bf5b03d178507dfc68d400832cc1fce88005673ee9e606ba8d887"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 16,
+      "path": "c/16/undo.svg",
+      "sha256": "6dddfb7d741d7be5e508744c5636ab9fdb4193875bafc68f3fa01f30da75154f"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.undo",
+      "label": "Ongedaan",
+      "meaning": "De laatste bewerking terugnemen",
+      "master_px": 24,
+      "path": "c/24/undo.svg",
+      "sha256": "3009e0dc5252535708df5da12c7d3b25387a8c7809a54befa6dcf17ac54c454f"
+    },
+    {
+      "style": "c",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 16,
+      "path": "c/16/search.svg",
+      "sha256": "c3b21d7daa927dbe15f3ea1ddd4d03c2d26d5d9b1b01274b26edfb97e6c340b8"
+    },
+    {
+      "style": "c",
+      "function_id": "view.search",
+      "label": "Zoeken",
+      "meaning": "Inhoud opzoeken",
+      "master_px": 24,
+      "path": "c/24/search.svg",
+      "sha256": "89a7bae3e4e17468ed325480009558e731eff21799387456f7d623c8833ffeea"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 16,
+      "path": "c/16/select.svg",
+      "sha256": "ba6fb52921f2ea01a13cd5a78be6e2080861fef3f55685a9f2c31b1c365c8c65"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.select",
+      "label": "Selecteren",
+      "meaning": "Een object aanwijzen of selecteren",
+      "master_px": 24,
+      "path": "c/24/select.svg",
+      "sha256": "78b44e7f5f42c0e6e2c956d0e873133e5da213350a53eb5948adfce6929e38a4"
+    },
+    {
+      "style": "c",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 16,
+      "path": "c/16/move.svg",
+      "sha256": "2f50a5f15332536323fe32eeaa3604e86d333b561efbec42cf590b9b224520ca"
+    },
+    {
+      "style": "c",
+      "function_id": "transform.move",
+      "label": "Verplaatsen",
+      "meaning": "Een object verplaatsen; geen beeldpan",
+      "master_px": 24,
+      "path": "c/24/move.svg",
+      "sha256": "cff56c5b7e06608e926afac384bd8da3bf2ac88846ce210b5c84119675370739"
+    },
+    {
+      "style": "c",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 16,
+      "path": "c/16/measure.svg",
+      "sha256": "24e9367b7b17d060c923fba5c0c8142e8ab2679097570c581bf120c5e8efab66"
+    },
+    {
+      "style": "c",
+      "function_id": "measure.distance",
+      "label": "Afstand meten",
+      "meaning": "Afstand meten; geen maatlijn plaatsen",
+      "master_px": 24,
+      "path": "c/24/measure.svg",
+      "sha256": "0d70a1e5d04c0d3cb0b6f81e4ef5e91ca602e948fba3f1e8b6e85bd090309595"
+    },
+    {
+      "style": "c",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 16,
+      "path": "c/16/layers.svg",
+      "sha256": "9bc567c89faaca6bc690968ea0ee81520f0f68d50eaaf55478b91c727f94815f"
+    },
+    {
+      "style": "c",
+      "function_id": "object.layers",
+      "label": "Lagen",
+      "meaning": "Lagen tonen of beheren",
+      "master_px": 24,
+      "path": "c/24/layers.svg",
+      "sha256": "e9434c6b1a675f38dca3bab1721490d4163cd6b31d7f50d80f4e877f060f5c80"
+    },
+    {
+      "style": "c",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 16,
+      "path": "c/16/note.svg",
+      "sha256": "a2aa9cf684f1e9d6e2e98e945eeb5197ed5e537e047d9dd99f874bc763f2d5cf"
+    },
+    {
+      "style": "c",
+      "function_id": "draw.note",
+      "label": "Opmerking",
+      "meaning": "Een opmerking plaatsen",
+      "master_px": 24,
+      "path": "c/24/note.svg",
+      "sha256": "b5f2b6c219cf7615dc05c77b16209dff5837d7813338e944c32b4a70461244d5"
+    },
+    {
+      "style": "c",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 16,
+      "path": "c/16/cpt.svg",
+      "sha256": "e95cf90e022c5717d8ef6ff6e1fe00447849b816fd8b3fbd00f510a0c1e1579d"
+    },
+    {
+      "style": "c",
+      "function_id": "geo.sondering",
+      "label": "Sondering",
+      "meaning": "Een sondering plaatsen; eigen domeinbetekenis",
+      "master_px": 24,
+      "path": "c/24/cpt.svg",
+      "sha256": "87b8989df222f362bf08f4f4d9eca48022b4513a0260ac7e568c552a6c297e4b"
+    },
+    {
+      "style": "c",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 16,
+      "path": "c/16/cloud.svg",
+      "sha256": "a7e991ef0ca11e7daaaae4476f04f3531a83f01aad1a6539eb5b921ff071c43a"
+    },
+    {
+      "style": "c",
+      "function_id": "cloud.points",
+      "label": "Puntenwolk",
+      "meaning": "Een puntenwolk herkennen of tonen",
+      "master_px": 24,
+      "path": "c/24/cloud.svg",
+      "sha256": "8ef640caf16946b64de6823f0120bcf71dedc2a479c8fdf5f0eb64c39ff90675"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 16,
+      "path": "c/16/delete.svg",
+      "sha256": "5ba6ee1b822b36bdd323dcb8c8aec7001927f64a281bc070993b561d5c2e549e"
+    },
+    {
+      "style": "c",
+      "function_id": "edit.delete",
+      "label": "Verwijderen",
+      "meaning": "De selectie verwijderen; niet alles wissen",
+      "master_px": 24,
+      "path": "c/24/delete.svg",
+      "sha256": "55204d97bd11964b0886ca564d4cda129c9af0c8f6f00ce2340c1abe7c490145"
+    }
+  ]
+}

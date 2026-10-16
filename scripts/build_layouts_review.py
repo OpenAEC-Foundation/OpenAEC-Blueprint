@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_tokens_04 import mix  # noqa: E402
+from review_icons import SPRITE_MARK, icon, sprite, usage  # noqa: E402
 
 TOKENS = json.loads((ROOT / "design/ontwerp-0.4/tokens-0.4.json").read_text(encoding="utf-8"))
 OUT = ROOT / "design/ontwerp-0.4/layouts-review.html"
@@ -26,12 +27,6 @@ THEMES = TOKENS["themes"]
 
 def esc(s):
     return html.escape(str(s))
-
-
-def icon(name, size=16):
-    svg = (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8")
-    svg = svg.replace('stroke="#000"', 'stroke="currentColor"').replace('fill="#000"', 'fill="currentColor"')
-    return re.sub(r"<svg ", f'<svg width="{size}" height="{size}" aria-hidden="true" ', svg, count=1)
 
 
 def theme_vars(th):
@@ -78,7 +73,7 @@ def ribbon(disabled=False):
 <div class="rb">
   <div class="g"><div class="gb">{big("save", "Opslaan", d)}<div class="col3">{small("undo", "Ongedaan", d)}{small("redo", "Opnieuw", d)}{small("duplicate", "Dupliceren", d)}</div></div><div class="gl">Bestand</div></div>
   <div class="g"><div class="gb">{big("new", "Post", d)}{big("grid", "Hoofdstuk", d)}{big("import", "Importeren")}</div><div class="gl">Invoegen</div></div>
-  <div class="g"><div class="gb">{big("measure", "Hoeveelheid", d)}{big("export", "Exporteren", d)}</div><div class="gl">Begroting</div></div>
+  <div class="g"><div class="gb">{big("measure.area", "Hoeveelheid", d)}{big("export", "Exporteren", d)}</div><div class="gl">Begroting</div></div>
   <div class="g"><div class="gb">{big("panelleft", "Verkenner", " on")}{big("panelright", "Eigenschappen", " on")}</div><div class="gl">Panelen</div></div>
 </div>"""
 
@@ -95,9 +90,9 @@ def docs(tabs):
 def explorer(empty=False):
     if empty:
         return '<div class="pnl"><div class="ph"><span>Verkenner</span></div><div class="pempty">Geen project geopend</div></div>'
-    rows = [("disclosure-expanded", "cube", "Kade 12", "", 0), ("disclosure-collapsed", "grid", "21 Fundering", "sel", 1),
-            ("disclosure-collapsed", "grid", "22 Vloeren", "", 1), ("disclosure-collapsed", "grid", "23 Gevels", "", 1),
-            ("disclosure-collapsed", "grid", "24 Daken", "", 1), ("disclosure-collapsed", "grid", "30 Installaties", "", 1)]
+    rows = [("tree.collapse", "cube", "Kade 12", "", 0), ("tree.expand", "grid", "21 Fundering", "sel", 1),
+            ("tree.expand", "grid", "22 Vloeren", "", 1), ("tree.expand", "grid", "23 Gevels", "", 1),
+            ("tree.expand", "grid", "24 Daken", "", 1), ("tree.expand", "grid", "30 Installaties", "", 1)]
     items = "".join(f'<div class="tn {cls} l{lvl}">{icon(a, 12)}{icon(b, 14)}<span>{esc(t)}</span></div>' for a, b, t, cls, lvl in rows)
     return f'<div class="pnl"><div class="ph"><span>Verkenner</span><span class="ib">{icon("search", 14)}</span></div>{items}</div>'
 
@@ -106,13 +101,13 @@ def properties(empty=False):
     if empty:
         return '<div class="pnl right"><div class="ph"><span>Eigenschappen</span></div><div class="pempty">Geen selectie</div></div>'
     return f"""<div class="pnl right"><div class="ph"><span>Eigenschappen</span></div>
-<div class="sec">{icon("disclosure-expanded", 12)}<span>Post</span></div>
+<div class="sec">{icon("tree.collapse", 12)}<span>Post</span></div>
 <div class="pr"><span>Code</span><code>21.20</code></div>
 <div class="pr"><span>Omschrijving</span><span class="fld">Poeren</span></div>
 <div class="pr"><span>Eenheid</span><span class="fld sel">st{icon("disclosure-expanded", 12)}</span></div>
 <div class="pr"><span>Hoeveelheid</span><code>12</code></div>
 <div class="pr"><span>Eenheidsprijs</span><code>€ 290,00</code></div>
-<div class="sec">{icon("disclosure-expanded", 12)}<span>Berekening</span></div>
+<div class="sec">{icon("tree.collapse", 12)}<span>Berekening</span></div>
 <div class="pr"><span>Meenemen</span><span class="box on">{icon("check", 12)}</span></div>
 <div class="pr"><span>Totaal</span><code>€ 3.480</code></div>
 </div>"""
@@ -188,9 +183,9 @@ def scr_empty():
 
 
 def scr_progress():
-    banner = f'<div class="ban">{icon("close", 16)}<span><b>Fout.</b> Export naar IFC mislukt: 3 posten hebben geen classificatie.</span><span class="lnk">Toon posten</span><span class="ib">{icon("close", 12)}</span></div>'
+    banner = f'<div class="ban">{icon("status.error", 16)}<span><b>Fout.</b> Export naar IFC mislukt: 3 posten hebben geen classificatie.</span><span class="lnk">Toon posten</span><span class="ib">{icon("close", 12)}</span></div>'
     body = f'<div class="body">{explorer()}<div class="ws"><div class="doc">{banner}{table()}</div></div>{properties()}</div>'
-    toast = f'<div class="toast"><span class="ti">{icon("check", 16)}</span><span><b>PDF opgeslagen</b><br><small>Kade 12.pdf · 16:42</small></span><span class="lnk">Openen</span></div>'
+    toast = f'<div class="toast"><span class="ti">{icon("status.success", 16)}</span><span><b>PDF opgeslagen</b><br><small>Kade 12.pdf · 16:42</small></span><span class="lnk">Openen</span></div>'
     return frame(titlebar("Open Calc Studio") + ribbon() + docs([("Kade 12.ocs", True), ("Variant B.ocs", False)]) + body
                  + status("Exporteren", "91 posten", ("Excel", 64)) + toast,
                  "5 · Voortgang, fout en melding", "Voortgang in de statusbalk, een fout bovenaan het document en een melding rechtsonder.", "rel")
@@ -331,6 +326,11 @@ main{max-width:1460px;margin:auto;padding:23px 22px 46px}p{max-width:980px}
 .shot figcaption{margin-top:8px;font-size:13px;color:#55555f;max-width:1000px}.shot figcaption b{display:block;color:#303039;font-size:15px}
 code{font-family:'JetBrains Mono',monospace;font-size:var(--fl)}
 footer{color:#6b6b75;font-size:12px;margin-top:34px}
+/* B2 icons: primary part follows currentColor, accent part follows the theme accent */
+.pane,.win,.app{--icon-accent:var(--accent)}
+.dis .b2,.b2.dis,.dis.b2{--icon-accent:currentColor}
+.ban .b2,.bi .b2,.ti .b2,.ban>.b2{--icon-accent:currentColor}
+
 
 /* app frame */
 .app{width:1180px;height:700px;display:flex;flex-direction:column;background:var(--frame);color:var(--text);font-size:var(--fb);line-height:1.35;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,.12);overflow:hidden}
@@ -467,7 +467,7 @@ page = f"""<!doctype html>
   <h1>Layouts · concept</h1>
   <p>Stap 2.5. Volledige schermen met alle besloten onderdelen uit het fundament, de tegels en de componenten. Kies hieronder een thema. De regels staan in <a href="05-layouts.md">05-layouts.md</a>.</p>
 </header>
-<main>
+<main>{SPRITE_MARK}
   <div class="switch"><span>Thema</span>{theme_buttons}</div>
   <div class="screens" id="screens">
   <h2>Lint-app: Open Calc Studio</h2>
@@ -503,5 +503,6 @@ apply(THEMES[start] ? start : 'light');
 </html>
 """
 
+page = page.replace(SPRITE_MARK, sprite(), 1)
 OUT.write_text(page, encoding="utf-8")
-print(f"Wrote {OUT.relative_to(ROOT)}: 8 screens, {len(THEMES)} themes")
+print(f"Wrote {OUT.relative_to(ROOT)}: 8 screens, {len(THEMES)} themes; {usage()}")

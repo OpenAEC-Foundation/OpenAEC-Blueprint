@@ -1,0 +1,839 @@
+[
+  {
+    "id": "file.new",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.new.svg",
+          "sha256": "b8019cf71bd178760a37373117e3953ffea0775ae05040575f9f382001c05e0c"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.new.svg",
+          "sha256": "b51f5a5ad60172fdd6ea817223c1b14a3d6fa978516f0e182d8d95a76908a31c"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.new.svg",
+          "sha256": "ebb50e7279a02313d37ec9b1a2ba51169120f3848520a93937cd3b052dea1c7d"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.new.svg",
+          "sha256": "623f6f6bc1d0a61e54260bf8b8533373630576fa23f7128499bf7430322ddfcd"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.open",
+    "foreground": "primary",
+    "difference": 5.717596828102998,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.open.svg",
+          "sha256": "d21529c9a19e0a4228facf5e5994e97ba2ce5c7b39bf96412fa4e3c95ffae0f2"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.open.svg",
+          "sha256": "61e2cd45f872fe6ecb20db81e86e3b6d7f81564f811932667e80e6381e37006d"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.open.svg",
+          "sha256": "3e47271021911797869d5ed3caf50dd6adedcb6657633f328065e4af79520cf1"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.open.svg",
+          "sha256": "e1d6ec25279c56ef0a3911f55557bea816197319745d65ef67056b6bb6f798e8"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.save",
+    "foreground": "primary",
+    "difference": 5.655047672711503,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.save.svg",
+          "sha256": "69ed149ca24a874347ff97a28ba700e6ab32d7373be4f89c4fdd9204d9bfb258"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.save.svg",
+          "sha256": "c8250e3d9515d357c908710857a9260d921824c163060db0ed70e3d8a77cb4ee"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.save.svg",
+          "sha256": "67370a37b872babef81324644b419cf5b223ea21c61d777b2e4ba13567f37cd6"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.save.svg",
+          "sha256": "d560883586049f2ecabd9fcbb5b1a5c246b13aef59b49d66547312dd87ba3972"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.save-as",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.save-as.svg",
+          "sha256": "e7e7800e792ff207913c91f134bb35535ab5bdd586c931d1c4ea2efd7af6b21b"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.save-as.svg",
+          "sha256": "40ec4724091ea80675db5d6cb9624230b36836ec54c64cec56f5195339946f44"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.save-as.svg",
+          "sha256": "e871743c5781973a79077b2a896b65375d4122bd615862bb785888dbac45d2fd"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.save-as.svg",
+          "sha256": "39796bd4bb411f020775027e87d2034507604d78f8cd6ad4eefa04c05b8c7869"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.import",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.import.svg",
+          "sha256": "edd010e1e7717f1ee029f84f76bf49f931f56a8adec1f441408e54beefa2af70"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.import.svg",
+          "sha256": "00cb60936ff129287c57e623e188bea93e19f9d2748c3cd195332f51df5cfc57"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.import.svg",
+          "sha256": "4769a220e99502fcb0c5ad56043841f0aa478da471dfcba84751cf4d15103d33"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.import.svg",
+          "sha256": "02fbf05d6ba8a34addbd5869aa9d64a1db778fce621eeb8113dbc2b6a13891b8"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.export",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.export.svg",
+          "sha256": "291d00cff0cf7cb8ca0393a54c598de2f1e7c4aa6513d2372dab6bb762575215"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.export.svg",
+          "sha256": "1bf6280783caf079ae6055a66f572da4b24de16c85107500d3eca8ee743bd2c8"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.export.svg",
+          "sha256": "776b96b2cdb55c29b8240c1acc1328d6b64332bf9702e81a206afd06f7189674"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.export.svg",
+          "sha256": "d3e3339eec001a65abcc563a3d8f6907c9134e20085eb1fe05fb9c95150bc176"
+        }
+      }
+    }
+  },
+  {
+    "id": "file.print",
+    "foreground": "accent",
+    "difference": 5.465396924035998,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/file.print.svg",
+          "sha256": "89d6ad00af35bb08601a8a912815deb84a1407e3edc92a3617c9a31343c70c80"
+        },
+        "24": {
+          "path": "review/layers/primary/24/file.print.svg",
+          "sha256": "f63be0f3093f38fa2bc04f29eb4920b41f7a019370e1e7e020f0e3375f009af9"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/file.print.svg",
+          "sha256": "f4d58cfa227492bd8514316a07cbe5bdbc00867f440c3796bc4ef3d40391bb42"
+        },
+        "24": {
+          "path": "review/layers/accent/24/file.print.svg",
+          "sha256": "4447dcaf3f48b4683216ac7f286f9d74b16bb062c3fceabd3060c7f58d4d519d"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.undo",
+    "foreground": "accent",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.undo.svg",
+          "sha256": "001a9ccd4a803e54903d62701c915955e4e679b084558e6550b1a1b07efb71b5"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.undo.svg",
+          "sha256": "39dfb8b344665c00439db0dd142a5a9177108115a665052b2a478b4ea6714363"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.undo.svg",
+          "sha256": "0a1cafe7cbdb8b588996454f9c7ae961cab28f9977e289f36649465f839ff46a"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.undo.svg",
+          "sha256": "25aabb241e77972d54f95fe913088e1d2d745187fe831537d54e26c4cb0400da"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.redo",
+    "foreground": "accent",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.redo.svg",
+          "sha256": "19fcab96a0881110cecca5a767b11323f23f7f89a1660498d64fec61a80e5ff5"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.redo.svg",
+          "sha256": "d5d7265e42e23c534dadabd7eb13761c1c2d627a64fb37eeb3bfb2cb996957f0"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.redo.svg",
+          "sha256": "eadc354ecfc1e137f458dfc78f4f5fb89d75071ca516330171adec183c27a946"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.redo.svg",
+          "sha256": "d88dc207ccca10b6237bfeabe5873c5bc69372c8c7421f169422256c830e61fd"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.cut",
+    "foreground": "primary",
+    "difference": 5.542011026290003,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.cut.svg",
+          "sha256": "d21d218525a349ad89be3148ecd55b66cfd4ba91689e2d8172c5679603fc52eb"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.cut.svg",
+          "sha256": "374f1e040f5a85bf4f81faf1bcbcc5e14c8edf144fad6b12a0317affa6812fb5"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.cut.svg",
+          "sha256": "b80fbecb4688640224db11fc65cdb0e602ad1681d2d2e9a69b127c955558ad6f"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.cut.svg",
+          "sha256": "a10a9fb817966cabde054e0b818b5692defd105212bc714c087e71b787a42eea"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.copy",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.copy.svg",
+          "sha256": "e5cc2625385d6d066d8582da8c19c4dc0ac76b986bfb76584cbf56acfc4dc87d"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.copy.svg",
+          "sha256": "67bc9cc9d997ff5d4ece78dc431a2c35a3726c3727521d3b8ca6ddd5426477cf"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.copy.svg",
+          "sha256": "530b1261d85c43d9b9d064876ec0f7ca488e6920f362cc55f4756ee0c8753899"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.copy.svg",
+          "sha256": "1cb52ab4b315aac4b172ca040b195c4c2a153cffd24ab652289ee6bd02971556"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.paste",
+    "foreground": "accent",
+    "difference": 3.2203736303930004,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.paste.svg",
+          "sha256": "8f06a56afd74e612997a230a25a02df70381cb9ed943de17522ec311178a9bcd"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.paste.svg",
+          "sha256": "ea1559e26b8c7a20bb0591d11c02b2aa86d8975d0aeb97bcbc07dfb9720f7039"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.paste.svg",
+          "sha256": "1a8a2110a9c0085df51c91d324477a15a25674ea5ccdcc35d85728e533c49b0e"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.paste.svg",
+          "sha256": "3341860cfe0a3af8dccda12d0edff51178ac4077a0134771f96628f9651c00fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.duplicate",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.duplicate.svg",
+          "sha256": "ef28f3d5267a5c1251acf475686e51b70903a9551e377d3953f9335e8f6b5891"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.duplicate.svg",
+          "sha256": "87f8935887ef6483089e28ecf1d714b6b65c7c1426d3551fd2f5ba1a29a4fa69"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.duplicate.svg",
+          "sha256": "d8415527e6c9b7aba1d8827617d1b351d0e28eeec5df448986bee4eba8f4be6b"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.duplicate.svg",
+          "sha256": "a7560f1ef116b122cb1a9b1305df1cdcd75314f8c62bb31011084c271816872e"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.delete",
+    "foreground": "primary",
+    "difference": 5.46564241116,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.delete.svg",
+          "sha256": "fb05f5b11060635ddc6d09c297a58d6957134473afc0b93a4bae04ad0a836d54"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.delete.svg",
+          "sha256": "3f1131afe8b8127eb3e9d49947ae19a8fdbcb807ea903efd575885782f6d391d"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.delete.svg",
+          "sha256": "fa3dfc09847bc35f0dd9c7dd112462a2e000f9c4fa1869e8e30fe18c3495d94c"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.delete.svg",
+          "sha256": "a5cb8be0208465491dbe6344ba1adb47105992bbba16dd016da3b1abb2999e07"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.clear-all",
+    "foreground": "primary",
+    "difference": 5.46564241116,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.clear-all.svg",
+          "sha256": "bd657eccbc5f026d2368913ec273f5b01fa081cc503df22e91204b59c428acb2"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.clear-all.svg",
+          "sha256": "9926148df56a983fcce278fbb32de567c01f2a04ff1d4dd3bfa94a826ea8e2ab"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.clear-all.svg",
+          "sha256": "7eb7af09be2119afb29721bb87345659609fed0a40c35a3d9504bfa663803040"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.clear-all.svg",
+          "sha256": "ffc5698234aa55d0f827502b772672befaa7f50577f56a9bfdb040bac544f1ec"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.select",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.select.svg",
+          "sha256": "25ba378b19e3af8f6d1749fe59624e6679d1ca20c577d13ddde338b7ed80a853"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.select.svg",
+          "sha256": "d10a6cc4dfbdbc34355a085031a56983758018ae4d9a8381ce10262e17fa85d8"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.select.svg",
+          "sha256": "b91f335ca68804d252ba8f05614a589558d3c6287871190ebbe7e8d45424b173"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.select.svg",
+          "sha256": "59b7c1702203712312460e7c859ea8e1cc88f8b0b7bf1656373d6abd86f3e9d0"
+        }
+      }
+    }
+  },
+  {
+    "id": "edit.select-all",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/edit.select-all.svg",
+          "sha256": "f2fe016e6e620cad5ea4f1d20b7d896401178cb68176ffa57c56165aac57de69"
+        },
+        "24": {
+          "path": "review/layers/primary/24/edit.select-all.svg",
+          "sha256": "cfdba1da4c0156562d8bd90eee87948e49bb26bd4cc4c6c31701b5ff3d61a988"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/edit.select-all.svg",
+          "sha256": "6d86956bfbaab565a71be0c03e3e169fce97c18b47708975384b1099f9c80bd7"
+        },
+        "24": {
+          "path": "review/layers/accent/24/edit.select-all.svg",
+          "sha256": "d99f626a181d4c1a20de0773fd358a27ca752fbcf48a65f0b285669c6694a749"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.search",
+    "foreground": "primary",
+    "difference": 2.6805440467135,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.search.svg",
+          "sha256": "d94cbaf29c566de7fe67b43647e51183ae0aaec6b12dc8f01e0606b5561ecc2d"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.search.svg",
+          "sha256": "af896fb4d5b9b6b5e0ca2f853fc92773475fa24ed97cd8b58f2c29105740e231"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.search.svg",
+          "sha256": "a79d501703095cd6f3948ae7f29a3a2c570bc58697f7dde8170c0c271ba1c980"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.search.svg",
+          "sha256": "6acc725d741284a2e3c4fdd37fd81fa68c066116bec179fa2602c4547890f0e6"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.zoom-in",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.zoom-in.svg",
+          "sha256": "9e75c5528394d63a1c8df5156c4514b8d2e7cc6ac6c9c3a8268ac6b2f5f06df6"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.zoom-in.svg",
+          "sha256": "14622983ffb463288346a96de68ebf4175af98a94643bdb1aef0ac32108d5870"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.zoom-in.svg",
+          "sha256": "da9902e7a5ded069d734df81ccbc8aa8199809c6a7139796c62f7e77c9528587"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.zoom-in.svg",
+          "sha256": "57445a010d59f165aaf9617c3aa5b4737467435cce52e165f767dc18fb8c3e1e"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.zoom-out",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.zoom-out.svg",
+          "sha256": "f505b27023b673aaf6cfd48f0dd9bf120734b79aa5e5af86ca65d06e79e36cd5"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.zoom-out.svg",
+          "sha256": "409f1204b0a1e50480477d651f25280b8e877a14209af36ab9ffbb8b9d3276d6"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.zoom-out.svg",
+          "sha256": "ae536949fc75c344d922fea52b8f13dd63a9cc824e2f23bf3a356869e94630f2"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.zoom-out.svg",
+          "sha256": "8d8d416728fe53fb5b2c503c1ec374e994c79127ef514abd38572d247269fb9c"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.fit",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.fit.svg",
+          "sha256": "4abdde7013a30efce299524df0e5e0e3efe370913e609ddf3a1a1234ee6a9287"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.fit.svg",
+          "sha256": "11b4e0cb01513bc43c147ae4ab642a89b32c9f776709f00f8e4aa64f37334c37"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.fit.svg",
+          "sha256": "ca64a473670017cc75934ecc6e28c38020c4d3239e82fa3edaf11e180e0e845c"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.fit.svg",
+          "sha256": "82b59d1b6c1e73517407657a9ea4cddfcd2714467bee22387f1967c94af069ed"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.fit-selection",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.fit-selection.svg",
+          "sha256": "e39ee9d314fec80bfdb9197743159357f19d846ea9fd6b4ece5a65f36527b109"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.fit-selection.svg",
+          "sha256": "4e5f18bc2fc9aabec6dda942d3c1d23da89199134be192066fe7a76100d5f266"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.fit-selection.svg",
+          "sha256": "c75d1a2e02393debbb25e271ab228bcf93ee77cb38fb9066ba9ec76fdd746254"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.fit-selection.svg",
+          "sha256": "8b8cc2884173c003b618a791c34376a27c51e89e4268f739eb86f1c21ca76d43"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.fit-page",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.fit-page.svg",
+          "sha256": "57d1ae4940af6573d2b44b3c69b289d2bc2b20ce04d20e724e13706d2943945a"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.fit-page.svg",
+          "sha256": "797539e93c9fd3312d9843cb71823263a18fbce1a3a2e11326af029747624f2f"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.fit-page.svg",
+          "sha256": "12b6deae595fb8de6a086c2dc6ed5f75c9a1fe7378a281a401309d779d43876a"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.fit-page.svg",
+          "sha256": "a8bea90f37bd60afae7f713f10ae1a7a95374aed112f4b13eb773648c3c3f2ae"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.fit-width",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.fit-width.svg",
+          "sha256": "149189c29a9eb6662e3cadbf6211a7bab447e7977ac140b8b6eaaa34690772c2"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.fit-width.svg",
+          "sha256": "b9947deef9119c0a8f7d3cafb6db7ecea5136049903b1dff9e7cf8a366dd5df0"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.fit-width.svg",
+          "sha256": "b37242c6257b81459859663600d1238215b202be1e3fd5a21f00f3e5f7d51b5c"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.fit-width.svg",
+          "sha256": "c1e81206dc95fa657d8c9c715fce02cf3627a4ba06bb2042d1823f85b25781e5"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.pan",
+    "foreground": "primary",
+    "difference": 2.296603955707998,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.pan.svg",
+          "sha256": "9e28ddc2d7f7355c46171a83e29c9f3635ee72c46f975cb180fd30ff77d6459c"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.pan.svg",
+          "sha256": "ab5a4e89dcce790e97cf5860bfdad37540d4554146fb1ee2ed02354b59b2b9b0"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.pan.svg",
+          "sha256": "68b0963d6ae7dcdccc18b62d765b8458ef0b99c17a6eeb1a82430f0c55325fbe"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.pan.svg",
+          "sha256": "920790e6eee9da293f991e29abd2978c432b1cc26c81de4a3b24cdd64bcabf2f"
+        }
+      }
+    }
+  },
+  {
+    "id": "view.orbit",
+    "foreground": "primary",
+    "difference": 16.912958513491496,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/view.orbit.svg",
+          "sha256": "acaa8df7a0673ab310a9817524cbbe6caa74bb898f08bf680ea7bdb2207a64a1"
+        },
+        "24": {
+          "path": "review/layers/primary/24/view.orbit.svg",
+          "sha256": "0b0deb832af97c53925f2a8cbf37fb1518c4a494b12ff42a075c95d67cdbe407"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/view.orbit.svg",
+          "sha256": "8fd6da1201cddc32a6d42aef015240b8cff5bcca4755dc19b1932d1b282aaa59"
+        },
+        "24": {
+          "path": "review/layers/accent/24/view.orbit.svg",
+          "sha256": "12460afea12111a73e018a7906ae2a8847ed148902d3f8e9a887af321c7d4720"
+        }
+      }
+    }
+  },
+  {
+    "id": "nav.back",
+    "foreground": "accent",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/nav.back.svg",
+          "sha256": "28ddb04fd116035ce776632716fcb69b06a647d7075001583e4c3061bfbaab26"
+        },
+        "24": {
+          "path": "review/layers/primary/24/nav.back.svg",
+          "sha256": "aec58fa2f7d43302c1da207dd3e037d00e7e967e29388e3e0e10a6d99d35c436"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/nav.back.svg",
+          "sha256": "c37b530ebf6a0471ea5d26ab0a3fe8567fc43049208bf0b3d0ab8e681af68418"
+        },
+        "24": {
+          "path": "review/layers/accent/24/nav.back.svg",
+          "sha256": "5969e01c24b05743efa6517dcdbab7f428227ed2f98f8328103d489d0904a481"
+        }
+      }
+    }
+  },
+  {
+    "id": "nav.forward",
+    "foreground": "accent",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/nav.forward.svg",
+          "sha256": "b6193b312831cbd6e329777d0c804c30ff7d3b4ff4dcb7745438ecc0052b3d5b"
+        },
+        "24": {
+          "path": "review/layers/primary/24/nav.forward.svg",
+          "sha256": "9d06bdd964ef3fcbd21f7c7cd1e8f9b2f09a1e3d090277a8b714ad375963c02d"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/nav.forward.svg",
+          "sha256": "c8acd369669583b977cd2843f568a5b9c5c35273649075d57c95c1406021eb3d"
+        },
+        "24": {
+          "path": "review/layers/accent/24/nav.forward.svg",
+          "sha256": "4a15f453f09fc9dee88cb9ca6e84346a3341e532a53f55cae1298fbce98eae3b"
+        }
+      }
+    }
+  },
+  {
+    "id": "nav.home",
+    "foreground": "primary",
+    "difference": 5.465647668142999,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/nav.home.svg",
+          "sha256": "871ba7b6079f0eca11d1eb2e29e7b55e80fc9fb85f9cf0c6d773f72d797af0be"
+        },
+        "24": {
+          "path": "review/layers/primary/24/nav.home.svg",
+          "sha256": "02a1e6391ed8c16e27cd999267a56171a59a0d524bec3de7e01302d3fbf81a81"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/nav.home.svg",
+          "sha256": "078940e19876527a8a414592f414cbca531e5f0d200dba3c34c91d93b074de6c"
+        },
+        "24": {
+          "path": "review/layers/accent/24/nav.home.svg",
+          "sha256": "151e7f316ed2538962b043802762ffe92418b1055a51a16b4bb97de769832e38"
+        }
+      }
+    }
+  },
+  {
+    "id": "draw.note",
+    "foreground": "primary",
+    "difference": 0.0,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/draw.note.svg",
+          "sha256": "fd54e2e17a71e0249fe2ae4f6a49e454fefab7dba8b99282ff919751edf94159"
+        },
+        "24": {
+          "path": "review/layers/primary/24/draw.note.svg",
+          "sha256": "64e9c6fd17aa27e2726277cb4d6c106cb787a2e6ae9f2a607ad4d56694de3f3f"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/draw.note.svg",
+          "sha256": "bec3dedf3621d0274a8c61560d27c83e9cfc26750df183542756bb2c9caba460"
+        },
+        "24": {
+          "path": "review/layers/accent/24/draw.note.svg",
+          "sha256": "8f20a325165421723838234319b35fc03834f3a67a5f7eec5e2524b89115db4a"
+        }
+      }
+    }
+  },
+  {
+    "id": "measure.distance",
+    "foreground": "primary",
+    "difference": 5.466259900995497,
+    "variants": {
+      "primary": {
+        "16": {
+          "path": "review/layers/primary/16/measure.distance.svg",
+          "sha256": "326f9ebd2ec79e6ceda267a4037ea7874035fe0a88f917fbc5154de40b77514d"
+        },
+        "24": {
+          "path": "review/layers/primary/24/measure.distance.svg",
+          "sha256": "9929c3cad28b9b766bf5192af5d2ef22bf40ba72090369747b47b9b7b345eb05"
+        }
+      },
+      "accent": {
+        "16": {
+          "path": "review/layers/accent/16/measure.distance.svg",
+          "sha256": "ad70e1811ce135091a21269dc56eab9eb45769b97660914bccd9e8c3be613b29"
+        },
+        "24": {
+          "path": "review/layers/accent/24/measure.distance.svg",
+          "sha256": "fab9897339ba1a40ec4520545016057281137d94bf248ee953df53d7d7dac5ea"
+        }
+      }
+    }
+  }
+]

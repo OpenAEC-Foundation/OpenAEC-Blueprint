@@ -1,0 +1,2504 @@
+{
+  "revision": 2,
+  "format": "OpenAEC 2D construction model",
+  "icons": [
+    {
+      "function_key": "open",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "folder",
+          "anchors": [
+            [
+              2.0,
+              6.0
+            ],
+            [
+              2.0,
+              2.0
+            ],
+            [
+              6.0,
+              2.0
+            ],
+            [
+              9.0,
+              5.0
+            ],
+            [
+              12.0,
+              5.0
+            ],
+            [
+              14.0,
+              7.0
+            ],
+            [
+              14.0,
+              12.0
+            ],
+            [
+              12.0,
+              14.0
+            ],
+            [
+              2.0,
+              14.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            2
+          ]
+        },
+        {
+          "name": "lip",
+          "anchors": [
+            [
+              2.0,
+              7.5
+            ],
+            [
+              12.0,
+              7.5
+            ],
+            [
+              14.0,
+              7.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "open",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "folder",
+          "anchors": [
+            [
+              3.0,
+              8.0
+            ],
+            [
+              3.0,
+              4.0
+            ],
+            [
+              9.0,
+              4.0
+            ],
+            [
+              12.0,
+              7.0
+            ],
+            [
+              19.0,
+              7.0
+            ],
+            [
+              21.0,
+              9.0
+            ],
+            [
+              21.0,
+              18.0
+            ],
+            [
+              18.0,
+              21.0
+            ],
+            [
+              3.0,
+              21.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            2
+          ]
+        },
+        {
+          "name": "lip",
+          "anchors": [
+            [
+              3.0,
+              10.0
+            ],
+            [
+              18.0,
+              10.0
+            ],
+            [
+              21.0,
+              9.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "save",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "case",
+          "anchors": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              11.0,
+              2.0
+            ],
+            [
+              14.0,
+              5.0
+            ],
+            [
+              14.0,
+              14.0
+            ],
+            [
+              2.0,
+              14.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": []
+        },
+        {
+          "name": "storage-slot",
+          "anchors": [
+            [
+              5.0,
+              2.0
+            ],
+            [
+              5.0,
+              6.0
+            ],
+            [
+              10.0,
+              6.0
+            ],
+            [
+              10.0,
+              2.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "label",
+          "anchors": [
+            [
+              5.0,
+              14.0
+            ],
+            [
+              5.0,
+              9.0
+            ],
+            [
+              11.0,
+              9.0
+            ],
+            [
+              11.0,
+              14.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "save",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "case",
+          "anchors": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              17.0,
+              3.0
+            ],
+            [
+              21.0,
+              7.0
+            ],
+            [
+              21.0,
+              21.0
+            ],
+            [
+              3.0,
+              21.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": []
+        },
+        {
+          "name": "storage-slot",
+          "anchors": [
+            [
+              7.0,
+              3.0
+            ],
+            [
+              7.0,
+              10.0
+            ],
+            [
+              17.0,
+              10.0
+            ],
+            [
+              17.0,
+              3.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "label",
+          "anchors": [
+            [
+              7.0,
+              21.0
+            ],
+            [
+              7.0,
+              14.0
+            ],
+            [
+              17.0,
+              14.0
+            ],
+            [
+              17.0,
+              21.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "import",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "tray",
+          "anchors": [
+            [
+              2.0,
+              10.0
+            ],
+            [
+              2.0,
+              12.0
+            ],
+            [
+              4.0,
+              14.0
+            ],
+            [
+              12.0,
+              14.0
+            ],
+            [
+              14.0,
+              12.0
+            ],
+            [
+              14.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "shaft",
+          "anchors": [
+            [
+              8.0,
+              2.0
+            ],
+            [
+              8.0,
+              9.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "arrowhead",
+          "anchors": [
+            [
+              5.0,
+              6.0
+            ],
+            [
+              8.0,
+              9.0
+            ],
+            [
+              11.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "import",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "tray",
+          "anchors": [
+            [
+              3.0,
+              15.0
+            ],
+            [
+              3.0,
+              19.0
+            ],
+            [
+              5.0,
+              21.0
+            ],
+            [
+              19.0,
+              21.0
+            ],
+            [
+              21.0,
+              19.0
+            ],
+            [
+              21.0,
+              15.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "shaft",
+          "anchors": [
+            [
+              12.0,
+              3.0
+            ],
+            [
+              12.0,
+              15.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "arrowhead",
+          "anchors": [
+            [
+              8.0,
+              11.0
+            ],
+            [
+              12.0,
+              15.0
+            ],
+            [
+              16.0,
+              11.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "export",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "tray",
+          "anchors": [
+            [
+              2.0,
+              10.0
+            ],
+            [
+              2.0,
+              12.0
+            ],
+            [
+              4.0,
+              14.0
+            ],
+            [
+              12.0,
+              14.0
+            ],
+            [
+              14.0,
+              12.0
+            ],
+            [
+              14.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "shaft",
+          "anchors": [
+            [
+              8.0,
+              10.0
+            ],
+            [
+              8.0,
+              2.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "arrowhead",
+          "anchors": [
+            [
+              5.0,
+              5.0
+            ],
+            [
+              8.0,
+              2.0
+            ],
+            [
+              11.0,
+              5.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "export",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "tray",
+          "anchors": [
+            [
+              3.0,
+              15.0
+            ],
+            [
+              3.0,
+              19.0
+            ],
+            [
+              5.0,
+              21.0
+            ],
+            [
+              19.0,
+              21.0
+            ],
+            [
+              21.0,
+              19.0
+            ],
+            [
+              21.0,
+              15.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "shaft",
+          "anchors": [
+            [
+              12.0,
+              15.0
+            ],
+            [
+              12.0,
+              3.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "arrowhead",
+          "anchors": [
+            [
+              8.0,
+              7.0
+            ],
+            [
+              12.0,
+              3.0
+            ],
+            [
+              16.0,
+              7.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "undo",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "return-head",
+          "anchors": [
+            [
+              6.0,
+              2.0
+            ],
+            [
+              2.0,
+              6.0
+            ],
+            [
+              6.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "return-neck",
+          "anchors": [
+            [
+              2.0,
+              6.0
+            ],
+            [
+              7.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "return-body",
+          "anchors": [
+            [
+              7.0,
+              6.0
+            ],
+            [
+              9.0,
+              6.0
+            ],
+            [
+              13.0,
+              10.0
+            ],
+            [
+              13.0,
+              14.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "undo",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "return-head",
+          "anchors": [
+            [
+              9.0,
+              4.0
+            ],
+            [
+              3.0,
+              10.0
+            ],
+            [
+              9.0,
+              16.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "return-neck",
+          "anchors": [
+            [
+              3.0,
+              10.0
+            ],
+            [
+              10.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "return-body",
+          "anchors": [
+            [
+              10.0,
+              10.0
+            ],
+            [
+              14.0,
+              10.0
+            ],
+            [
+              20.0,
+              16.0
+            ],
+            [
+              20.0,
+              21.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "search",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "lens",
+          "anchors": [
+            [
+              5.0,
+              2.0
+            ],
+            [
+              9.0,
+              2.0
+            ],
+            [
+              12.0,
+              5.0
+            ],
+            [
+              12.0,
+              9.0
+            ],
+            [
+              9.0,
+              12.0
+            ],
+            [
+              5.0,
+              12.0
+            ],
+            [
+              2.0,
+              9.0
+            ],
+            [
+              2.0,
+              5.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "handle",
+          "anchors": [
+            [
+              10.5,
+              10.5
+            ],
+            [
+              14.0,
+              14.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "search",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "lens",
+          "anchors": [
+            [
+              6.0,
+              3.0
+            ],
+            [
+              13.0,
+              3.0
+            ],
+            [
+              17.0,
+              7.0
+            ],
+            [
+              17.0,
+              14.0
+            ],
+            [
+              13.0,
+              18.0
+            ],
+            [
+              6.0,
+              18.0
+            ],
+            [
+              2.0,
+              14.0
+            ],
+            [
+              2.0,
+              7.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            0
+          ]
+        },
+        {
+          "name": "handle",
+          "anchors": [
+            [
+              15.5,
+              15.5
+            ],
+            [
+              21.0,
+              21.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "select",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "pointer",
+          "anchors": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              6.0,
+              3.4000000000000004
+            ],
+            [
+              12.0,
+              5.5
+            ],
+            [
+              12.0,
+              7.0
+            ],
+            [
+              8.0,
+              8.0
+            ],
+            [
+              12.0,
+              12.0
+            ],
+            [
+              9.0,
+              14.0
+            ],
+            [
+              6.0,
+              10.0
+            ],
+            [
+              2.0,
+              14.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            0
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "select",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "pointer",
+          "anchors": [
+            [
+              4.0,
+              3.0
+            ],
+            [
+              10.0,
+              5.4
+            ],
+            [
+              19.0,
+              9.0
+            ],
+            [
+              19.0,
+              11.0
+            ],
+            [
+              13.0,
+              12.0
+            ],
+            [
+              18.0,
+              18.0
+            ],
+            [
+              15.0,
+              21.0
+            ],
+            [
+              10.0,
+              15.0
+            ],
+            [
+              4.0,
+              21.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            0
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "move",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "north",
+          "anchors": [
+            [
+              8.0,
+              2.0
+            ],
+            [
+              8.0,
+              7.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "south",
+          "anchors": [
+            [
+              8.0,
+              9.0
+            ],
+            [
+              8.0,
+              14.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "west",
+          "anchors": [
+            [
+              2.0,
+              8.0
+            ],
+            [
+              7.0,
+              8.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "east",
+          "anchors": [
+            [
+              9.0,
+              8.0
+            ],
+            [
+              14.0,
+              8.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-0",
+          "anchors": [
+            [
+              6.0,
+              4.0
+            ],
+            [
+              8.0,
+              2.0
+            ],
+            [
+              10.0,
+              4.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-1",
+          "anchors": [
+            [
+              6.0,
+              12.0
+            ],
+            [
+              8.0,
+              14.0
+            ],
+            [
+              10.0,
+              12.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-2",
+          "anchors": [
+            [
+              4.0,
+              6.0
+            ],
+            [
+              2.0,
+              8.0
+            ],
+            [
+              4.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-3",
+          "anchors": [
+            [
+              12.0,
+              6.0
+            ],
+            [
+              14.0,
+              8.0
+            ],
+            [
+              12.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": [
+        {
+          "name": "joint",
+          "anchors": [
+            [
+              7.0,
+              7.0
+            ],
+            [
+              9.0,
+              7.0
+            ],
+            [
+              9.0,
+              9.0
+            ],
+            [
+              7.0,
+              9.0
+            ]
+          ],
+          "tone": "accent"
+        }
+      ]
+    },
+    {
+      "function_key": "move",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "north",
+          "anchors": [
+            [
+              12.0,
+              3.0
+            ],
+            [
+              12.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "south",
+          "anchors": [
+            [
+              12.0,
+              14.0
+            ],
+            [
+              12.0,
+              21.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "west",
+          "anchors": [
+            [
+              3.0,
+              12.0
+            ],
+            [
+              10.0,
+              12.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "east",
+          "anchors": [
+            [
+              14.0,
+              12.0
+            ],
+            [
+              21.0,
+              12.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-0",
+          "anchors": [
+            [
+              9.0,
+              6.0
+            ],
+            [
+              12.0,
+              3.0
+            ],
+            [
+              15.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-1",
+          "anchors": [
+            [
+              9.0,
+              18.0
+            ],
+            [
+              12.0,
+              21.0
+            ],
+            [
+              15.0,
+              18.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-2",
+          "anchors": [
+            [
+              6.0,
+              9.0
+            ],
+            [
+              3.0,
+              12.0
+            ],
+            [
+              6.0,
+              15.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "head-3",
+          "anchors": [
+            [
+              18.0,
+              9.0
+            ],
+            [
+              21.0,
+              12.0
+            ],
+            [
+              18.0,
+              15.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": [
+        {
+          "name": "joint",
+          "anchors": [
+            [
+              10.0,
+              10.0
+            ],
+            [
+              14.0,
+              10.0
+            ],
+            [
+              14.0,
+              14.0
+            ],
+            [
+              10.0,
+              14.0
+            ]
+          ],
+          "tone": "accent"
+        }
+      ]
+    },
+    {
+      "function_key": "measure",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "ruler",
+          "anchors": [
+            [
+              2.0,
+              10.0
+            ],
+            [
+              10.0,
+              2.0
+            ],
+            [
+              12.0,
+              2.0
+            ],
+            [
+              14.0,
+              4.0
+            ],
+            [
+              14.0,
+              6.0
+            ],
+            [
+              6.0,
+              14.0
+            ],
+            [
+              4.0,
+              14.0
+            ],
+            [
+              2.0,
+              12.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "tick-0",
+          "anchors": [
+            [
+              6.0,
+              6.0
+            ],
+            [
+              8.0,
+              8.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "measure",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "ruler",
+          "anchors": [
+            [
+              3.0,
+              16.0
+            ],
+            [
+              16.0,
+              3.0
+            ],
+            [
+              18.0,
+              3.0
+            ],
+            [
+              21.0,
+              6.0
+            ],
+            [
+              21.0,
+              8.0
+            ],
+            [
+              8.0,
+              21.0
+            ],
+            [
+              6.0,
+              21.0
+            ],
+            [
+              3.0,
+              18.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "tick-0",
+          "anchors": [
+            [
+              8.0,
+              11.0
+            ],
+            [
+              10.0,
+              13.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "tick-1",
+          "anchors": [
+            [
+              11.0,
+              8.0
+            ],
+            [
+              13.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "layers",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "top-layer",
+          "anchors": [
+            [
+              2.0,
+              5.0
+            ],
+            [
+              8.0,
+              2.0
+            ],
+            [
+              14.0,
+              5.0
+            ],
+            [
+              8.0,
+              8.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "layer-0",
+          "anchors": [
+            [
+              2.0,
+              10.0
+            ],
+            [
+              8.0,
+              13.0
+            ],
+            [
+              14.0,
+              10.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "layers",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "top-layer",
+          "anchors": [
+            [
+              3.0,
+              7.0
+            ],
+            [
+              12.0,
+              3.0
+            ],
+            [
+              21.0,
+              7.0
+            ],
+            [
+              12.0,
+              11.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "layer-0",
+          "anchors": [
+            [
+              3.0,
+              12.0
+            ],
+            [
+              12.0,
+              16.0
+            ],
+            [
+              21.0,
+              12.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "layer-1",
+          "anchors": [
+            [
+              3.0,
+              17.0
+            ],
+            [
+              12.0,
+              21.0
+            ],
+            [
+              21.0,
+              17.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "note",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "note",
+          "anchors": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              12.0,
+              2.0
+            ],
+            [
+              14.0,
+              4.0
+            ],
+            [
+              14.0,
+              11.0
+            ],
+            [
+              6.0,
+              11.0
+            ],
+            [
+              2.0,
+              14.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "text-0",
+          "anchors": [
+            [
+              5.0,
+              6.0
+            ],
+            [
+              11.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "note",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "note",
+          "anchors": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              18.0,
+              3.0
+            ],
+            [
+              21.0,
+              6.0
+            ],
+            [
+              21.0,
+              17.0
+            ],
+            [
+              9.0,
+              17.0
+            ],
+            [
+              3.0,
+              21.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "text-0",
+          "anchors": [
+            [
+              7.0,
+              8.0
+            ],
+            [
+              17.0,
+              8.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "text-1",
+          "anchors": [
+            [
+              7.0,
+              12.0
+            ],
+            [
+              13.0,
+              12.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "cpt",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "cone",
+          "anchors": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              13.0,
+              3.0
+            ],
+            [
+              8.0,
+              11.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": []
+        },
+        {
+          "name": "friction-mark",
+          "anchors": [
+            [
+              5.0,
+              14.0
+            ],
+            [
+              11.0,
+              14.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "cpt",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "cone",
+          "anchors": [
+            [
+              5.0,
+              4.0
+            ],
+            [
+              19.0,
+              4.0
+            ],
+            [
+              12.0,
+              17.0
+            ]
+          ],
+          "closed": true,
+          "accent_edges": []
+        },
+        {
+          "name": "friction-mark",
+          "anchors": [
+            [
+              8.0,
+              21.0
+            ],
+            [
+              16.0,
+              21.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            0
+          ]
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "cloud",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [],
+      "faces": [
+        {
+          "name": "point-0",
+          "anchors": [
+            [
+              2.25,
+              5.25
+            ],
+            [
+              3.75,
+              5.25
+            ],
+            [
+              3.75,
+              6.75
+            ],
+            [
+              2.25,
+              6.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-1",
+          "anchors": [
+            [
+              6.25,
+              2.25
+            ],
+            [
+              7.75,
+              2.25
+            ],
+            [
+              7.75,
+              3.75
+            ],
+            [
+              6.25,
+              3.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-2",
+          "anchors": [
+            [
+              10.25,
+              1.25
+            ],
+            [
+              11.75,
+              1.25
+            ],
+            [
+              11.75,
+              2.75
+            ],
+            [
+              10.25,
+              2.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-3",
+          "anchors": [
+            [
+              2.25,
+              9.25
+            ],
+            [
+              3.75,
+              9.25
+            ],
+            [
+              3.75,
+              10.75
+            ],
+            [
+              2.25,
+              10.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-4",
+          "anchors": [
+            [
+              6.25,
+              6.25
+            ],
+            [
+              7.75,
+              6.25
+            ],
+            [
+              7.75,
+              7.75
+            ],
+            [
+              6.25,
+              7.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-5",
+          "anchors": [
+            [
+              10.25,
+              5.25
+            ],
+            [
+              11.75,
+              5.25
+            ],
+            [
+              11.75,
+              6.75
+            ],
+            [
+              10.25,
+              6.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-6",
+          "anchors": [
+            [
+              6.25,
+              11.25
+            ],
+            [
+              7.75,
+              11.25
+            ],
+            [
+              7.75,
+              12.75
+            ],
+            [
+              6.25,
+              12.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-7",
+          "anchors": [
+            [
+              10.25,
+              9.25
+            ],
+            [
+              11.75,
+              9.25
+            ],
+            [
+              11.75,
+              10.75
+            ],
+            [
+              10.25,
+              10.75
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-8",
+          "anchors": [
+            [
+              12.25,
+              12.25
+            ],
+            [
+              13.75,
+              12.25
+            ],
+            [
+              13.75,
+              13.75
+            ],
+            [
+              12.25,
+              13.75
+            ]
+          ],
+          "tone": "accent"
+        }
+      ]
+    },
+    {
+      "function_key": "cloud",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [],
+      "faces": [
+        {
+          "name": "point-0",
+          "anchors": [
+            [
+              4.0,
+              7.0
+            ],
+            [
+              6.0,
+              7.0
+            ],
+            [
+              6.0,
+              9.0
+            ],
+            [
+              4.0,
+              9.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-1",
+          "anchors": [
+            [
+              9.0,
+              4.0
+            ],
+            [
+              11.0,
+              4.0
+            ],
+            [
+              11.0,
+              6.0
+            ],
+            [
+              9.0,
+              6.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-2",
+          "anchors": [
+            [
+              14.0,
+              2.0
+            ],
+            [
+              16.0,
+              2.0
+            ],
+            [
+              16.0,
+              4.0
+            ],
+            [
+              14.0,
+              4.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-3",
+          "anchors": [
+            [
+              4.0,
+              12.0
+            ],
+            [
+              6.0,
+              12.0
+            ],
+            [
+              6.0,
+              14.0
+            ],
+            [
+              4.0,
+              14.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-4",
+          "anchors": [
+            [
+              9.0,
+              9.0
+            ],
+            [
+              11.0,
+              9.0
+            ],
+            [
+              11.0,
+              11.0
+            ],
+            [
+              9.0,
+              11.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-5",
+          "anchors": [
+            [
+              14.0,
+              7.0
+            ],
+            [
+              16.0,
+              7.0
+            ],
+            [
+              16.0,
+              9.0
+            ],
+            [
+              14.0,
+              9.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-6",
+          "anchors": [
+            [
+              19.0,
+              5.0
+            ],
+            [
+              21.0,
+              5.0
+            ],
+            [
+              21.0,
+              7.0
+            ],
+            [
+              19.0,
+              7.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-7",
+          "anchors": [
+            [
+              9.0,
+              15.0
+            ],
+            [
+              11.0,
+              15.0
+            ],
+            [
+              11.0,
+              17.0
+            ],
+            [
+              9.0,
+              17.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-8",
+          "anchors": [
+            [
+              14.0,
+              12.0
+            ],
+            [
+              16.0,
+              12.0
+            ],
+            [
+              16.0,
+              14.0
+            ],
+            [
+              14.0,
+              14.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-9",
+          "anchors": [
+            [
+              19.0,
+              10.0
+            ],
+            [
+              21.0,
+              10.0
+            ],
+            [
+              21.0,
+              12.0
+            ],
+            [
+              19.0,
+              12.0
+            ]
+          ],
+          "tone": "primary"
+        },
+        {
+          "name": "point-10",
+          "anchors": [
+            [
+              14.0,
+              18.0
+            ],
+            [
+              16.0,
+              18.0
+            ],
+            [
+              16.0,
+              20.0
+            ],
+            [
+              14.0,
+              20.0
+            ]
+          ],
+          "tone": "accent"
+        },
+        {
+          "name": "point-11",
+          "anchors": [
+            [
+              19.0,
+              15.0
+            ],
+            [
+              21.0,
+              15.0
+            ],
+            [
+              21.0,
+              17.0
+            ],
+            [
+              19.0,
+              17.0
+            ]
+          ],
+          "tone": "primary"
+        }
+      ]
+    },
+    {
+      "function_key": "delete",
+      "master_px": 16,
+      "line_width": 1.25,
+      "strokes": [
+        {
+          "name": "handle",
+          "anchors": [
+            [
+              6.0,
+              4.0
+            ],
+            [
+              6.0,
+              2.0
+            ],
+            [
+              10.0,
+              2.0
+            ],
+            [
+              10.0,
+              4.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "lid",
+          "anchors": [
+            [
+              2.0,
+              4.0
+            ],
+            [
+              14.0,
+              4.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "bin",
+          "anchors": [
+            [
+              3.0,
+              4.0
+            ],
+            [
+              3.0,
+              12.0
+            ],
+            [
+              5.0,
+              14.0
+            ],
+            [
+              11.0,
+              14.0
+            ],
+            [
+              13.0,
+              12.0
+            ],
+            [
+              13.0,
+              4.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "rib-0",
+          "anchors": [
+            [
+              8.0,
+              7.0
+            ],
+            [
+              8.0,
+              11.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    },
+    {
+      "function_key": "delete",
+      "master_px": 24,
+      "line_width": 1.75,
+      "strokes": [
+        {
+          "name": "handle",
+          "anchors": [
+            [
+              9.0,
+              6.0
+            ],
+            [
+              9.0,
+              3.0
+            ],
+            [
+              15.0,
+              3.0
+            ],
+            [
+              15.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": [
+            1
+          ]
+        },
+        {
+          "name": "lid",
+          "anchors": [
+            [
+              3.0,
+              6.0
+            ],
+            [
+              21.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "bin",
+          "anchors": [
+            [
+              5.0,
+              6.0
+            ],
+            [
+              5.0,
+              18.0
+            ],
+            [
+              8.0,
+              21.0
+            ],
+            [
+              16.0,
+              21.0
+            ],
+            [
+              19.0,
+              18.0
+            ],
+            [
+              19.0,
+              6.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "rib-0",
+          "anchors": [
+            [
+              9.0,
+              10.0
+            ],
+            [
+              9.0,
+              17.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        },
+        {
+          "name": "rib-1",
+          "anchors": [
+            [
+              15.0,
+              10.0
+            ],
+            [
+              15.0,
+              17.0
+            ]
+          ],
+          "closed": false,
+          "accent_edges": []
+        }
+      ],
+      "faces": []
+    }
+  ]
+}

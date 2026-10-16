@@ -6,30 +6,79 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Formaat: - **Assistent** – taak – bestanden/mappen – sinds JJJJ-MM-DD -->
 
-- **Codex** – tweede B2-serie tekenen/objecten/transformaties/status en kernset uitbreiden; scripts/*b2*, scripts/*icon_set_b2.py, design/icon-set-b2/, harmonization/icon-set-b2/ en README.md – sinds 2026-10-16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Open punten
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
-- B2: eerste familie staat in `design/icon-set-b2/index.html`: 31 functies en 62 gevulde masters. Revisie 5: steel van Ongedaan/Opnieuw/Terug/Vooruit loopt in de hoofdkleur tot in de aanwijzer, met afgeronde gedeelde kleurgrens en zonder verloop. Vier voor/na-vergelijkingen in `shapes.html`, vorige revisie in `review/stem-before/`. Alle andere iconen behouden. Terug/Vooruit-buitenvorm en Afdrukken zijn goedgekeurd; de nieuwste aansluiting nog geen gebruikersakkoord. Daarna resterende bronplaatsen beoordelen en vakgerichte groepen uitwerken. 1.487 clusters blijven een werklijst, geen unieke telling; 28 bronvoorbeelden en 15 conflicten beoordeeld, rest open. Startpagina/Vooruit/Orbit zijn ontwerpcontracten zonder bevestigde app-aanroep. Rust-integratie volgt later.
+- Waarschuwingskleur: gebruiker wil oranje volgens overleg met Claude, maar `tokens-0.4.json` bevat nog geel. B2-review toont expliciet een oranje voorstel (Donker/Blueprint/HC donker `#FDBA74`, Licht `#9A3412`, HC licht `#7C2D12`). Gedeelde tokens en Claude-componenten zijn niet aangepast. Bij definitieve tokenkeuze voorstel vervangen door de gedeelde warning-rol.
+
+- B2: dertien series, 116 ontwerpen/232 masters, revisie 23. Series 11–13 op `design/icon-set-b2/next-three-2.html`: Energie 3, Paalplan 7, Spraak/audio 5. Bepalende relatie nu geheel accent, geometrie behouden; andere 100 eerdere iconen bytegelijk behouden in `review/retained-series-1-10/`. 106 bronvoorbeelden, negen hergebruikkeuzes, 62 conflicten (177 records). Spraakiconen openen werkruimtes; thermische import heeft twee stapindicatoren en één deurgereedschap. Gedeelde broncluster DoorOpen heeft expliciet twee betekenissen via `canonical_functions`. Grote illustraties, paalsymbolen en app-logo’s zijn geen vaste bedieningsiconen. Vorige vormkeuzes behouden; warning-kleur blijft voorstel. Nog geen Rust-/app-integratie.
 
 - Custom iconenset: gebruiker heeft B Constructief gekozen. De accentgeometrie van de 14 voorbeeldfuncties (28 masters voor 16/24 px) is herbouwd vanuit een vast 2D-vectormodel; voor/na staat in `design/icon-style-proposals/b-review.html`. Volgende stap: de gekozen familie uitbreiden per functioneel beoordeelde functie; dezelfde handeling mag over apps gecombineerd worden. A en C blijven referenties. Paletten op de proefpagina zijn losse voorbeelden, niet de thema’s die Claude beheert. De volledige iconenfamilie en Rust-integratie zijn nog niet gebouwd.
 
 - Icoonset: het centrale overzicht staat in `design/function-icon-catalog.html`. De 2.854 bronrecords uit 6.326 vastgelegde bron-/assetbestanden zijn verzameld en technisch gevalideerd. Naam-/labelclusters en automatisch gevonden bronrollen vragen nog functionele beoordeling voordat de nieuwe set wordt vastgelegd; runtime-extensies en FEM blijven expliciete dekkingsgrenzen. De 1.487 clusters zijn geen telling van unieke functies of goedgekeurde iconen.
 
-- Iconen voor waarschuwing en informatie ontbreken in de kernset; nodig voor meldingen (2.4). Hoort bij 2.2 (Codex).
-- Fase 2.1 fundament is besloten en staat in `design/ontwerp-0.4/tokens-0.4.json`. Volgende stappen: 2.2 iconen (Codex). 2.3 tegels is besloten, zie `design/ontwerp-0.4/03-tegels.md`. 2.4 componenten is besloten, inclusief het lint (variant B), ook de meldingen in Donker (Z2). 2.5 layouts staat als concept in `design/ontwerp-0.4/05-layouts.md` en is besloten. Fase 2 heeft daarna alleen nog 2.2 iconen (Codex) en 2.6 vaststellen. Waar de tokens uiteindelijk komen te staan, hoort bij fase 3.
-- Gaan de webachtige tools (Open Field Studio, Open Energy) ook naar de nieuwe Rust-UI, of krijgen ze een webvariant van de stijl?
-- Vallen de installer en Y-Next/Z-Next echt buiten de scope? Ze stonden in de uitleg van de leidinggevende, maar niet op de harmonisatiepagina.
-- Welke licentie krijgt de bibliotheek? Het prototype gebruikt CC-BY-SA-4.0, die niet voor software bedoeld is.
+- Waarschuwing en informatie zijn nu beschikbaar als B2-SVG-ontwerp, samen met fout/geslaagd/bezig; meldingskleur via `currentColor` en de themarol. Opname in de nieuwe Rust-bibliotheek/componenten (2.4) volgt nog. Hoort bij 2.2 (Codex).
+- Fase 2.1 fundament is besloten en staat in `design/ontwerp-0.4/tokens-0.4.json`. Volgende stappen: 2.2 iconen (Codex). 2.3 tegels is besloten, zie `design/ontwerp-0.4/03-tegels.md`. 2.4 componenten is besloten, inclusief het lint (variant B), ook de meldingen in Donker (Z2). 2.5 layouts staat als concept in `design/ontwerp-0.4/05-layouts.md` en is besloten. Fase 2 wacht nog op 2.2 iconen (Codex) en het overleg met de leidinggevende (2.6, samenvatting in `design/ontwerp-0.4/samenvatting.html`). De iconen van Codex worden de definitieve set en vervangen de tijdelijke iconen in alle voorbeeldpagina's. Waar de tokens uiteindelijk komen te staan, hoort bij fase 3.
+- Welke licentie krijgt de bibliotheek? Het prototype gebruikt CC-BY-SA-4.0, die niet voor software bedoeld is. Voorstel Claude: LGPL-3.0, zoals de Foundation wil (repo-cleaner). Wacht op bevestiging.
 - Open FEM Studio: repository gaf een 404 op GitHub. De gebruiker komt hier later op terug.
-- Waar komt de bibliotheek te staan? De Style Repo is privé, en publieke tools kunnen niet bouwen op een private Git-dependency.
 
 ## Besluiten
 
+- 2026-10-16: Screenshotronde serie 11–13: Openingen, Deur, Nieuw paalplan, Hernoemen, Kolommen en Coderingsconflicten anders; microfoon herkenbaarder, geluidsbogen ronder en vergaderaccent herstellen. Gebruiker sluit de opmerkingen af met "klaar".
+
+- 2026-10-16: Bepalende relatie geheel in accentkleur; daarna de volgende drie onderwerpen uitwerken (Energie en warmte, Paalplan, Spraak en audio). Gebruiker vraagt opnieuw sneller door te werken.
+
+- 2026-10-16: De eerste drie resterende onderwerpen samen uitwerken: Lijsten en bomen, Planning, Geotechniek. Gebruiker wil een hoger werktempo.
+
+- 2026-10-16: Rapporten goedgekeurd ("perfect volgende"); volgende categorie maken en resterende categorieën met aantallen tonen. IFC-kubussen moeten betere, regelmatige vlakken krijgen, zo nodig vanuit een model (de gebruiker).
+
 <!-- Vastgestelde uitgangspunten. Nieuwste bovenaan. Formaat: - JJJJ-MM-DD: besluit (bron). -->
+
+- 2026-10-16: Energy en Field gaan naar de Rust-UI (keuze van Claude op verzoek van de gebruiker; Field opnieuw bekijken als tablet- of telefoongebruik nodig blijkt).
+- 2026-10-16: PDF, Speech, Composer en Frame gaan naar de Rust-UI; alleen hun Solid- of Svelte-scherm wordt vervangen (de gebruiker).
+- 2026-10-16: De gebruiker beslist zelf over het ontwerp; de 33 besluiten van fase 2 zijn vastgesteld en het ontwerp is bevroren als 0.4, behalve de iconen (lopen door bij Codex) (de gebruiker).
+- 2026-10-16: De bron van tokens en ontwerp blijft de Style Repo (de gebruiker).
+- 2026-10-16: De bibliotheek blijft voorlopig privé en wordt later openbaar (de gebruiker).
+- 2026-10-16: De OpenAEC Installer hoort bij de harmonisatie. De Y/Z-app (Y-Next/Z-Next) doet de gebruiker los, apart van dit traject (de gebruiker).
+- 2026-10-16: Tabelweergave: de bovenste horizontale rasterlijn aan de binnenkant moet accentkleur krijgen (de gebruiker).
+
+- 2026-10-16: Projectmap zonder accent; Tabelweergave-accent gaat fout; alle grafiekstaafjes in accent en tabel/assen in hoofdkleur (de gebruiker).
+
+- 2026-10-16: Tekstopmaak met aangepaste OpenAEC-lettervormen is goedgekeurd ("perfect door naar de volgende") (de gebruiker).
+
+- 2026-10-16: De letters van Vet, Cursief, Onderstrepen en Tekstkleur moeten meer aansluiten op het OpenAEC-thema en lettertype (de gebruiker). Codex gebruikt de gebundelde Space Grotesk als contourbron; B Bold, I/U/A Medium, I synthetisch schuin.
+
+- 2026-10-16: Vensters en panelen is goedgekeurd ("perfect volgende"); doorgaan met de volgende functiegroep (de gebruiker).
+
+- 2026-10-16: Resterende functiegroepen één voor één uitwerken en beoordelen (de gebruiker). Codex begint met Vensters en panelen, daarna volgende groep op basis van de review.
+
+- 2026-10-16: Tekst toevoegen: alternatief met de gehele T in accentkleur. Cirkel tekenen: B met constructiestraal in accent. Gebruiker sluit af met "en dan is deze oke" (de gebruiker).
+
+- 2026-10-16: Tweede screenshotronde: Tekst toevoegen geheel in hoofdkleur of geheel in accent, geen gedeeltelijk accent; Raster kiest het alternatief met alle binnenlijnen accent; Hulp-vraagteken iets kleiner voor meer marge; kwartsegment bij Cirkel nog niet de juiste oplossing (de gebruiker).
+
+- 2026-10-16: Screenshotfeedback serie 2: aangesloten arcering voor oppervlak, ander cirkelaccent, tekstaccent herstellen, hele T in tekstvak accent, hulplijnen vrij van maatpijlen, ronde oogvormen, uitlijnas accent links/rechts, raster buitenrand of alle binnenlijnen accent, alle drie instellingsknoppen accent, oranje waarschuwing, Bezig eventueel klok/animatie, vloeiend vraagteken. Aanvullend: Veelhoek anders dan vierkant en Rechthoek met de vier accenthoekpunten (de gebruiker).
+
+- 2026-10-16: Vierkante dingen in B2 mogen strakker: een vierkant moet gewoon een vierkant zijn, minder losjes (de gebruiker). Toegepast als haakse, regelmatige vormen met kleinere zachte hoeken in serie 2.
+
+- 2026-10-16: Gebruiker geeft opdracht door te gaan na de nieuwste pijlaansluiting; eerste 31 B2-iconen vormen de behouden basis voor uitbreiding (de gebruiker).
 
 - 2026-10-16: Werkstroom-apps: zijbalk of stappen via instelling Navigatie, standaard zijbalk. Statusbalk volgt het thema (in Licht licht); instelling Statusbalk kan hem altijd donker maken (de gebruiker; de statusbalkinstelling is door Claude toegevoegd naar het voorbeeld van de werkruimte).
 - 2026-10-16: Startscherm bij het openen, met instelling "Laatste project direct openen"; start de app vanuit een bestand, dan opent dat bestand direct (de gebruiker).
@@ -73,6 +122,52 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 ## Logboek
 
 <!-- Nieuwste bovenaan. Formaat: - JJJJ-MM-DD **Assistent**: wat er gedaan is. -->
+
+- 2026-10-16 **Codex**: gebruiker vraagt alle huidige wijzigingen samen te committen en na het weekend verder te gaan. Hervatten bij review `design/icon-set-b2/next-three-2.html`, 116 iconen, revisie 23; potloden van Hernoemen en Legenda zijn als laatste aangepast. Overige bronkandidaten en Rust-/app-integratie blijven open. Werk van Claude wordt meegenomen. Geen push en geen automatische vervolgtaak. Tokencontrole: vijf thema’s en 190 contrastparen slagen. Bron-SVG’s behouden oorspronkelijke witruimte voor hun exacte hashes; staged witruimtecontrole slaagt buiten die bronkopieën. `.gitattributes` bewaart exacte bytes van iconen, metadata en nieuwe scripts, zodat Git de SHA-256-invoer niet door regeleinden verandert.
+
+
+- 2026-10-16 **Codex**: Hernoemen en Legenda krijgen één gedeeld potloodmodel: parallelle schacht, gelijke hoek, punt op dezelfde as; op 16 px minder detail. Naamveld 1 eenheid smaller voor vrije ruimte naast potlood. Vorige 116 in `review/before-pencil-fix/`, overige 114 bytegelijk behouden. Revisie 23, review/manifest/ZIP/README bijgewerkt. Checker slaagt voor 232 masters, behoud, bron/hash/ZIP en bestaande geometrie-/contrastcontroles. Visueel op 16/24/32 px in donker bekeken; `preview-pencils.png`. Claude-werk behouden; geen Rust/Cargo-wijziging; niets gecommit/gepusht.
+
+
+- 2026-10-16 **Codex**: negen iconen herzien op screenshotfeedback, revisie 22. Raamopening in gevel, frontale deur met knop, funderingspaal/grondlijn, naamveld met potlood, kolomkeuze met vinkje, dubbele codes met uitroepteken, capsulemicrofoon, echte cirkelbogen voor geluid en volledige tweede persoon in accent. Vorige 116 iconen in `review/before-round-11-13/`; exportchecker toetst behoud van de overige 107. Review/manifest/ZIP/README vernieuwd; negen iconen visueel op 16/24/32 px in donker bekeken, `preview-feedback-11-13.png` opgeslagen. Claude-werk behouden, Rust ongewijzigd; geen Cargo nodig, niets gecommit/gepusht.
+
+
+- 2026-10-16 **Codex**: Bepalende relatie geheel accent via rootkleur, vorm vergeleken met vorige masters. Series 11–13 toegevoegd: 15 ontwerpen uit Heatloss/Pile Plan/Speech, met zeven extra hergebruikkeuzes en elf bronconflicten. Broncluster met meerdere functies expliciet als lijst gemodelleerd; filters bijgewerkt. Eerste 100 overige ontwerpen bytegelijk behouden. Gecombineerde en afzonderlijke seriepagina’s, manifest/ZIP en README vernieuwd. Nieuwe iconen visueel op 16/24/32 px bekeken in donker; screenshot `preview-next-three-2.png`. JS-syntax en `git diff --check` slagen. Exportcontrole apart uitgevoerd. Claude-werk behouden, Rust niet gewijzigd, geen Cargo nodig; niets gecommit/gepusht.
+
+
+- 2026-10-16 **Claude**: B2-iconen `tree.expand` en `tree.collapse` (serie 8) gebruikt in de boom en de inklapbare secties van `componenten-review.html` en `layouts-review.html`. Tijdelijk blijven: vinkje, keuzelijstpijl, submenupijl, hernoemen, kubus, raster-als-onderdeel, recente bestanden en de navigatie-iconen van Energy en Field; daar heeft B2 nog geen icoon met dezelfde betekenis.
+- 2026-10-16 **Codex**: series 8–10 gebouwd via `b2_tree_planning_geo.py`, 13 nieuwe ontwerpen/26 masters. Twee expliciete hergebruikkeuzes; veertien bronconflicten apart gezet. Boring, sonderingsraster en RD-coördinaat uit verkeerd ingedeelde bronclusters toegevoegd. Eén gezamenlijke review plus drie afzonderlijke seriepagina’s. Canonieke functie-ID’s gekoppeld aan oorspronkelijke broncluster-ID’s in manifest/werklijst; gecombineerde serie-/bronfilters toegevoegd. Ongewijzigde oude ontwerpen worden bij identiek model en SHA-256 behouden voor snellere generatie; onafhankelijke exportchecker controleert alle bytes. Checker slaagt: 202 exporten, behoud eerdere 88, 124 laagvarianten, acht alternatieven, drie foutcontroles, 40 contrasten, hashes/brondekking/fontlicentie en ZIP 205 bestanden. JS-syntax en `git diff --check` slagen. Nieuwe iconen visueel bekeken op 16/24/32 px in donker/licht en monochroom; `preview-next-three.png`. README bijgewerkt inclusief Claude’s 0.4-HTML-themaopmerking; Claude-werk behouden. Rust ongewijzigd, geen Cargo nodig; niets gecommit/gepusht.
+
+
+- 2026-10-16 **Claude**: besluiten over Energy, Field en de Solid/Svelte-apps vastgelegd in `STAPPENPLAN.md`; licentievoorstel LGPL-3.0.
+- 2026-10-16 **Claude**: antwoorden op de overlegvragen verwerkt in `STAPPENPLAN.md`, `APP-OVERZICHT.md`, `tokens-0.4.json` (versie 0.4.0) en de samenvatting. Installer in scope; Y/Z-app doet de gebruiker apart.
+- 2026-10-16 **Codex**: serie 6 Rapporten afgerond (revisie 17) en door gebruiker goedgekeurd. Serie 7 IFC en BIM toegevoegd via `b2_ifc_series.py`; drie concrete bronvoorbeelden uit Frame/Calc/BIM Validator, twee foutieve validatiebetekenissen apart gezet. Op screenshotfeedback kubus vanuit orthografisch isometrisch eenheidsmodel herbouwd (revisie 19); gelijke ribben en identieke geometrie voor drie functies gecontroleerd. Eerste 85 mastersparen bytegelijk behouden, eerdere IFC-vormen in `review/ifc-before/`. Checker slaagt: 176 exportmasters, 124 historische laagvarianten, acht alternatieven, drie foutcontroles, bron-/generator-/font-/ZIP-hashes, 40 contrasten en ZIP met 179 bestanden. JavaScript-syntax slaagt. Drie iconen op 16/24/32 px visueel gecontroleerd in donker/licht en monochroom; `preview-series-7.png` vernieuwd. Resterende categorieën geteld: 1.400 bronkandidaten, nadrukkelijk geen unieke iconen. README bijgewerkt. Claude-wijzigingen behouden, Rust ongewijzigd, geen Cargo nodig; niets gecommit/gepusht.
+
+
+- 2026-10-16 **Claude**: `design/harmonized.html` gebruikt nu ontwerp 0.4. `scripts/build_harmonized_prototype.py` vult de oude `--theme-*`-variabelen uit `tokens-0.4.json` (vijf nieuwe thema's), voegt lint B, hoeken, mono-labels en paneelkoppen toe, en leest en schrijft nu in UTF-8. De sjabloonpagina is ongewijzigd; een herbouw zonder 0.4-toevoegingen leverde exact de oude pagina op.
+- 2026-10-16 **Codex**: revisie 16 geeft de bovenste tabelbinnenlijn een ononderbroken accent. Accent vóór kolomverdelers, eindpunten binnen de hoofdgekleurde buitenrand. Alleen tabel gewijzigd; eerdere masters in `review/data-header-before/`. Silhouetbehoud, doorlopend accent bij elke kolom en hoofdgekleurde buitenrand op beide masters gecontroleerd. Checker slaagt voor 166 masters, behoud eerste 80, hashes/font/licentie/ZIP, 124 laagvarianten, acht alternatieven, 40 contrasten en drie foutcontroles. Visueel op 16/24/32 px bekeken; screenshot `preview-table-header.png`. Claude-werk en Rust behouden; geen Cargo-controle; niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: revisie 15 corrigeert de kleurverdeling van de drie gegevensiconen: Projectmap/Tabelweergave geheel hoofdkleur, Grafiekweergave drie accentstaafjes en hoofdgekleurde assen. Vorige masters in `review/data-accent-before/`; silhouetten op 16/24 px gecontroleerd en behouden. Hoofdreviews/manifest/ZIP vernieuwd. Checker slaagt voor 166 masters, behoud eerste 80, hashes/font/licentie/ZIP, 124 laagvarianten, acht alternatieven, 40 contrasten en drie foutcontroles. Visueel op 16/24/32 px bekeken; screenshot `preview-data-accents.png`. Claude-werk en Rust behouden; geen Cargo-controle; niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: serie 5 Projecten en gegevens: Projectmap, Tabelweergave en Grafiekweergave (zes masters) met drie expliciet gelezen bronaanroepen. Vier afwijkende aanroepen voor tabel invoegen/downloadstatistieken/urenverdeling apart gezet. Totaal 83 functies/166 masters, manifest revisie 14, ZIP 169 bestanden; eerste 80 iconen bytegelijk behouden. Checker slaagt voor exporten, font-/generatorhashes, 124 laagvarianten, acht alternatieven, 40 contrasten, bron/ZIP/licentie en drie foutcontroles; JS-syntax slaagt. Drie iconen op 16/24/32 px in donker/licht en monochroom bekeken; screenshot `preview-series-5.png`. Claude-claim en werk behouden; geen Rust-wijziging/Cargo-controle; niets gecommit/gepusht. Volgende groep nog niet gestart.
+
+- 2026-10-16 **Claude**: tegel-, componenten- en layoutpagina gebruiken nu de B2-iconen van Codex via `scripts/review_icons.py` (alleen lezen uit `design/icon-set-b2/svg/`, als `<symbol>` één keer per pagina). Oude prototype-iconen alleen nog voor cube, grid, check, controls, rename, measure en de uitklappijltjes. Statusiconen voor meldingen komen nu uit B2.
+- 2026-10-16 **Codex**: vier lettericonen herbouwd uit gebundelde Space Grotesk-fonts; gevulde vectorcontouren zonder runtime-font. `b2_font_geometry.py`, FontTools 4.60.1 gepind, glyph/gewicht/font-SHA/helling in manifest revisie 13, SIL OFL 1.1-licentie mee in ZIP (163 bestanden). Vorige vier masters in `review/typography-before/`; overige 76 iconen behouden, waaronder de drie tekstuitlijningen. Checker slaagt voor 160 masters, font-/generatorhashes, 124 laagvarianten, acht alternatieven, 40 contrasten, ZIP/licentie en drie foutcontroles. B/A-binnenruimtes gecontroleerd; op 16/24/32 px in donker/licht en monochroom bekeken; screenshot `preview-typography.png`. Claude-werk en Rust behouden; geen Cargo-controle nodig; niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: serie 4 Tekstopmaak gebouwd: zeven functies/14 masters, zes expliciete bronvoorbeelden; tekstkleur als ontwerpcontract, twee Planner-kleurplaatsen als betekenisbotsing gemarkeerd. Tekstuitlijning apart van objectuitlijning. Totaal 80 functies/160 masters, manifest revisie 12, ZIP 162 bestanden. Eerste 73 iconen bytegelijk behouden. Checker slaagt voor exporten, 124 laagvarianten, acht alternatieven, 40 contrasten, bron/hashes/ZIP en drie foutcontroles; JS-syntax slaagt. B-contour verbonden en U vrij van onderstreping gecontroleerd; zeven iconen visueel bekeken op 16/24/32 px in donker/licht en monochroom, screenshot `preview-series-4.png`. Claude-werk en Rust behouden; geen Cargo-controle nodig; niets gecommit/gepusht. Volgende groep nog niet gestart.
+
+- 2026-10-16 **Codex**: serie 3 Vensters en panelen gebouwd (acht functies/16 masters), met acht expliciet gelezen bronaanroepen. Maximaliseren/herstellen/volledig scherm onderscheiden; generieke Sluiten-cluster niet automatisch overgenomen. `scripts/b2_window_series.py`, eigen seriefilter en `series-3.html`; totaal 73 functies/146 masters, manifest revisie 11 en ZIP 148 bestanden. Alle eerste 65 masters bytegelijk behouden. Checker slaagt voor 146 masters, 124 laagvarianten, acht alternatieven, 40 contrasten, bron/hashes/ZIP en drie foutcontroles. JS-syntax slaagt; alle acht op 16/24/32 px in donker/licht en monochroom bekeken, seriefilters 8/34/73 gecontroleerd; screenshot `preview-series-3.png`. Claude-werk en Rust behouden, geen Cargo-controle nodig; niets gecommit/gepusht. Volgende functiegroep nog niet gestart.
+
+- 2026-10-16 **Codex**: keuzes vastgelegd in revisie 10: Cirkel B bytegelijk aan het gekozen alternatief op 16/24 px; T krijgt volledige accentkleur via SVG-kleurrol (`whole_icon_accent` in manifest), met fallback en monochroom. Eerdere twee ontwerpen bewaard in `review/selected-before/`. Hoofdoverzicht, feedback, manifest en ZIP vernieuwd. Checker slaagt voor 130 masters, 124 laagvarianten, acht alternatiefmasters, hashes/ZIP, drie foutcontroles en 40 contrasten. Hoofdoverzicht visueel bekeken; paarse accentkleur en monochrome T in browser gecontroleerd, screenshot `preview-selected.png`. Gedeelde thema’s/Claude-werk behouden; geen Rust/Cargo-wijziging; niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: revisie 9: Raster bytegelijk aan gekozen binnenlijnen-alternatief; Hulp-vraagteken 20% verkleind met gelijk buitenkader en lijndikte; Tekst één kleur met geheel-accentvariant via kleurrol; Cirkel drie opties (geen/straal/middelpunt), neutrale export voorlopig zonder accent. Vier iconen gewijzigd, overige 61 bytegelijk, inclusief de eerste 31. Snapshot `review/feedback-round-2-before/`; hoofdreview/feedback/manifest/ZIP vernieuwd. Checker slaagt voor 130 masters, 124 laagvarianten, acht alternatiefmasters, hashes/ZIP, drie foutcontroles en 40 contrasten; JavaScript-syntax slaagt. Op 16/24/32 px visueel bekeken, licht/donker en tekstmonochroom gecontroleerd; screenshot `preview-feedback-round-2.png`. Claude-werk behouden; geen Rust-wijziging/Cargo-controle; niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: revisie 8 verwerkt alle screenshotfeedback: veertien SVG-vormen herzien, 51 iconen bytegelijk behouden (inclusief eerste 31); waarschuwing als oranje reviewvoorstel, Bezig met CSS-animatie/uitknop/minder-beweging-regel. Zestien voor/na-kaarten in `feedback.html`, vier alternatiefmasters voor raster-binnenlijnen en klokje, eerdere SVG’s in `review/feedback-before/`. Arceringsfragmenten bij de buitenhoeken gevonden en hersteld; drie aangesloten binnenlijnen en vrije maatpijlen op beide masters gecontroleerd. Checker slaagt voor 130 SVG’s, 124 laagvarianten, vier alternatiefmasters, hashes/ZIP, drie foutcontroles en 40 contrasten. JavaScript-syntax gecontroleerd; alle zestien reviewkaarten visueel bekeken op 16/24/32 px, licht/donker, vijf themawaarden, monochroom en animatie aan/uit gecontroleerd. Screenshot `preview-feedback.png`. Geen Rust-wijzigingen/Cargo-controle; Claude-bestanden behouden, kleurafstemming staat open. Niets gecommit/gepusht.
+
+- 2026-10-16 **Codex**: revisie 7 maakt tien iconen van serie 2 strakker: haakse polylijn/veelhoek, vierkant bij rechthoek en oppervlak, kleinere vaste hoekafronding voor tekstvak/leidlijn/rotatie/slot/raster. Vorige masters bewaard in `review/square-before/`; overige 55 iconen behouden, inclusief alle 31 kerniconen. Hoofdreviews, manifest en ZIP vernieuwd. Checker slaagt voor 130 masters, 124 laagvarianten, hashes/ZIP, brondekking, drie foutcontroles en 35 contrasten. Visueel bekeken op 16/24/32 px in de relevante groepen, oppervlak ook in licht; `preview-squared.png`. Alleen iconen en eigen documentatie aangepast; Claude-werk behouden. Geen Rust-wijziging of Cargo-controle; niets gecommit/gepusht.
+
+- 2026-10-16 **Claude**: stap 2.6: `scripts/build_samenvatting_04.py` maakt `design/ontwerp-0.4/samenvatting.html` uit de besluittabellen (33 besluiten), met open punten voor het overleg en voorwaarden om te bevriezen.
+- 2026-10-16 **Codex**: tweede B2-serie met 34 functies gebouwd (65 totaal, 130 masters), eigen seriefilter/review, 29 extra bronvoorbeelden en twaalf extra betekenisconflicten. Eén nieuw informatie-meldingscontract apart van de 1.487 oorspronkelijke clusters. Statusiconen gebruiken uitsluitend de semantische themakleur. Eerste 31 masters bytegelijk behouden. Checker slaagt voor 130 exporten, 124 laagvarianten, bron/hash/ZIP-controles, drie foutcontroles en 35 contrasten. Nieuwe groepen visueel op 16/24/32 px bekeken; statuskleuren in de vijf thema’s en seriefilters gecontroleerd. Geen Rust- of Claude-themawijzigingen, geen Cargo-controle nodig; niets gecommit of gepusht.
 
 - 2026-10-16 **Claude**: statusbalk in Licht is nu `panel` met `text-secondary` en een lijn erboven; `statusbar-setting` toegevoegd aan `tokens-0.4.json`. Instellingen Werkruimte, Statusbalk en Navigatie beschreven in `04-componenten.md`; stap 2.5 besloten in `05-layouts.md`. Controle: 190 kleurparen, alles haalt het minimum.
 - 2026-10-16 **Claude**: `layouts-review.html` heeft nu een vergelijking van Energy en Field in beide werkstroomvormen, en een vergelijking van een donkere en lichte statusbalk in Licht.

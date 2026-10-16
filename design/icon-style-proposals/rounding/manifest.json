@@ -1,0 +1,32 @@
+{
+  "status": "B2 gekozen; nog geen definitieve masters",
+  "selected_style": "round",
+  "paint_order": [
+    "accent",
+    "primary"
+  ],
+  "source": "scripts/icon_geometry.py",
+  "generator": "scripts/build_icon_rounding_review.py",
+  "functions": [
+    "open",
+    "note",
+    "undo",
+    "search",
+    "measure"
+  ],
+  "styles": [
+    "original",
+    "soft",
+    "round"
+  ],
+  "accent_modes": [
+    "old",
+    "logical"
+  ],
+  "svg_files": 60,
+  "masters": [
+    16,
+    24
+  ],
+  "renderer": "SVG quadratic curves with shared tangent seams; strokes, not production filled outlines"
+}

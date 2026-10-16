@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_tokens_04 import contrast, luminance, mix  # noqa: E402
+from review_icons import SPRITE_MARK, icon, sprite, usage  # noqa: E402
 
 TOKENS = json.loads((ROOT / "design/ontwerp-0.4/tokens-0.4.json").read_text(encoding="utf-8"))
 OUT = ROOT / "design/ontwerp-0.4/componenten-review.html"
@@ -29,12 +30,6 @@ def esc(s):
 
 def fmt(r):
     return f"{r:.2f}".replace(".", ",")
-
-
-def icon(name, size=16):
-    svg = (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8")
-    svg = svg.replace('stroke="#000"', 'stroke="currentColor"').replace('fill="#000"', 'fill="currentColor"')
-    return re.sub(r"<svg ", f'<svg width="{size}" height="{size}" aria-hidden="true" ', svg, count=1)
 
 
 def tvars(th):
@@ -235,7 +230,7 @@ ribbon = f"""
 <div class="rtabs"><span class="rt file">Bestand</span><span class="rt on">Start</span><span class="rt">Invoegen</span><span class="rt hov">Beeld</span></div>
 <div class="ribbon">
   <div class="rgrp"><div class="rbody">{rbtn("save", "Opslaan", "on")}{rbtn("open", "Openen", "hov")}<div class="rstack">{rsm("undo", "Ongedaan")}{rsm("redo", "Opnieuw")}{rsm("duplicate", "Dupliceren", "dis")}</div></div><div class="rlbl">Bestand</div></div>
-  <div class="rgrp"><div class="rbody">{rbtn("grid", "Raster", "foc")}{rbtn("measure", "Meten")}{rbtn("export", "Export", "dis")}</div><div class="rlbl">Beeld</div></div>
+  <div class="rgrp"><div class="rbody">{rbtn("view.grid", "Raster", "foc")}{rbtn("measure.distance", "Meten")}{rbtn("export", "Export", "dis")}</div><div class="rlbl">Beeld</div></div>
 </div>
 <div class="doc"><span class="dt on">{esc("Begroting.ocs")}<i class="mod"></i><span class="x">{icon("close", 12)}</span></span><span class="dt hov">Variant B<span class="x">{icon("close", 12)}</span></span><span class="dt">Schoolgebouw<span class="x">{icon("close", 12)}</span></span></div>
 """
@@ -245,15 +240,15 @@ panels = f"""
   <div class="pnl">
     <div class="ph"><span>Verkenner</span><span class="ib sm">{icon("panelleft", 14)}</span></div>
     <div class="tree">
-      <div class="tn">{icon("disclosure-expanded", 12)}{icon("cube", 14)}<span>Kade 12</span></div>
-      <div class="tn l1 sel">{icon("disclosure-collapsed", 12)}{icon("grid", 14)}<span>Fundering</span></div>
-      <div class="tn l1 hov">{icon("disclosure-collapsed", 12)}{icon("grid", 14)}<span>Ruwbouw</span></div>
-      <div class="tn l1">{icon("disclosure-collapsed", 12)}{icon("grid", 14)}<span>Afbouw</span></div>
+      <div class="tn">{icon("tree.collapse", 12)}{icon("cube", 14)}<span>Kade 12</span></div>
+      <div class="tn l1 sel">{icon("tree.expand", 12)}{icon("grid", 14)}<span>Fundering</span></div>
+      <div class="tn l1 hov">{icon("tree.expand", 12)}{icon("grid", 14)}<span>Ruwbouw</span></div>
+      <div class="tn l1">{icon("tree.expand", 12)}{icon("grid", 14)}<span>Afbouw</span></div>
     </div>
   </div>
   <div class="pnl">
     <div class="ph"><span>Eigenschappen</span></div>
-    <div class="sec">{icon("disclosure-expanded", 12)}<span>Algemeen</span></div>
+    <div class="sec">{icon("tree.collapse", 12)}<span>Algemeen</span></div>
     <div class="pr"><span>Naam</span><span class="fld sm"><span>Fundering</span></span></div>
     <div class="pr"><span>Eenheid</span><span class="fld sm sel"><span>m³</span>{icon("disclosure-expanded", 12)}</span></div>
     <div class="pr"><span>Hoeveelheid</span><code class="num">48,50</code></div>
@@ -277,12 +272,12 @@ def banner(k, ic, title, text):
 
 messages = f"""
 <div class="stack">
-  {banner("error", "close", "Fout.", "Het bestand kan niet worden geopend.")}
-  {banner("success", "check", "Gelukt.", "De begroting is opgeslagen.")}
-  {banner("warning", "help", "Let op.", "Twee posten hebben geen eenheid.")}
-  {banner("info", "help", "Info.", "Er is een nieuwe versie beschikbaar.")}
+  {banner("error", "status.error", "Fout.", "Het bestand kan niet worden geopend.")}
+  {banner("success", "status.success", "Gelukt.", "De begroting is opgeslagen.")}
+  {banner("warning", "status.warning", "Let op.", "Twee posten hebben geen eenheid.")}
+  {banner("info", "status.info", "Info.", "Er is een nieuwe versie beschikbaar.")}
   <div class="lbl">Melding rechtsonder</div>
-  <div class="toast"><span class="bi" style="color:var(--success)">{icon("check", 16)}</span><span><b>Opgeslagen</b><br><small>Begroting.ocs · 16:42</small></span><span class="lnk">Openen</span><span class="ib sm">{icon("close", 12)}</span></div>
+  <div class="toast"><span class="bi" style="color:var(--success)">{icon("status.success", 16)}</span><span><b>Opgeslagen</b><br><small>Begroting.ocs · 16:42</small></span><span class="lnk">Openen</span><span class="ib sm">{icon("close", 12)}</span></div>
 </div>"""
 
 dialog = f"""
@@ -373,7 +368,7 @@ def lint(tid, variant, focus=False):
     <div class="tabs"><span class="t file">Bestand</span><span class="t on">Start</span><span class="t">Invoegen</span><span class="t">Beeld</span></div>
     <div class="rb">
       <div class="g"><div class="gb">{big("save", "Opslaan", "on")}{big("open", "Openen", "hov")}<div class="col3">{small("undo", "Ongedaan")}{small("redo", "Opnieuw")}{small("duplicate", "Dupliceren", "dis")}</div></div><div class="gl">Bestand</div></div>
-      <div class="g"><div class="gb">{big("grid", "Raster", "foc" if focus else "")}{big("measure", "Meten")}{big("export", "Export", "dis")}</div><div class="gl">Beeld</div></div>
+      <div class="g"><div class="gb">{big("view.grid", "Raster", "foc" if focus else "")}{big("measure.distance", "Meten")}{big("export", "Export", "dis")}</div><div class="gl">Beeld</div></div>
     </div>
     <div class="docs"><span class="d on">Begroting.ocs<i class="mod"></i><span class="x">{icon("close", 12)}</span></span><span class="d">Variant B<span class="x">{icon("close", 12)}</span></span><span class="d">Schoolgebouw<span class="x">{icon("close", 12)}</span></span></div>
     <div class="ws"></div>
@@ -392,10 +387,10 @@ lint_sections = "".join(
 # ---------- dark banner comparison (section 10b) ----------
 DEEP_BG = {"error": "#7F1D1D", "success": "#14532D", "warning": "#78350F", "info": "#1E3A8A"}
 MID = {"error": "#DC2626", "success": "#16A34A", "warning": "#CA8A04", "info": "#2563EB"}
-BANNERS = [("error", "close", "Fout.", "Het bestand kan niet worden geopend."),
-           ("success", "check", "Gelukt.", "De begroting is opgeslagen."),
-           ("warning", "help", "Let op.", "Twee posten hebben geen eenheid."),
-           ("info", "help", "Info.", "Er is een nieuwe versie beschikbaar.")]
+BANNERS = [("error", "status.error", "Fout.", "Het bestand kan niet worden geopend."),
+           ("success", "status.success", "Gelukt.", "De begroting is opgeslagen."),
+           ("warning", "status.warning", "Let op.", "Twee posten hebben geen eenheid."),
+           ("info", "status.info", "Info.", "Er is een nieuwe versie beschikbaar.")]
 
 
 def dark_banners(kind):
@@ -573,6 +568,11 @@ code{font-family:'JetBrains Mono',monospace;font-size:var(--fl)}
 .ctab{border-collapse:collapse;background:#fff;width:100%;min-width:640px}.ctab th,.ctab td{border:1px solid #dedee2;padding:6px 9px;text-align:left}.ctab th{background:#f5f5f4}
 .ctab td.ok{background:#f0fdf4}.ctab td.bad{background:#fef2f2}.sw2{display:inline-block;width:12px;height:12px;border:1px solid #bbb;vertical-align:-2px;margin-right:6px}
 footer{color:#6b6b75;font-size:12px;margin-top:34px}
+/* B2 icons: primary part follows currentColor, accent part follows the theme accent */
+.pane,.win,.app{--icon-accent:var(--accent)}
+.dis .b2,.b2.dis,.dis.b2{--icon-accent:currentColor}
+.ban .b2,.bi .b2,.ti .b2,.ban>.b2{--icon-accent:currentColor}
+
 
 .pane{background:var(--panel);color:var(--text);border:1px solid var(--border);padding:16px;font-size:var(--fb);line-height:1.4;overflow-x:auto}
 .pane svg{flex:0 0 auto}
@@ -789,7 +789,7 @@ page = f"""<!doctype html>
   <h1>Componenten · besloten</h1>
   <p>Stap 2.4. Alle bedieningselementen in hun toestanden, gemaakt uit <code>tokens-0.4.json</code>. De maten en regels staan in <a href="04-componenten.md">04-componenten.md</a>.</p>
 </header>
-<main>
+<main>{SPRITE_MARK}
   <div class="facts"><span>23 componenten</span><span>{len(THEMES)} thema's</span><span>{len(rows)} contrastparen</span><span>{'Alle paren halen hun minimum' if not problems else str(len(problems)) + ' paren te laag'}</span></div>
 
   <h2>1. Knoppen</h2>
@@ -872,7 +872,8 @@ page = f"""<!doctype html>
 </html>
 """
 
+page = page.replace(SPRITE_MARK, sprite(), 1)
 OUT.write_text(page, encoding="utf-8")
 for p in problems:
     print("TE LAAG  " + p)
-print(f"Wrote {OUT.relative_to(ROOT)}: {len(rows)} component contrast pairs, {len(problems)} too low")
+print(f"Wrote {OUT.relative_to(ROOT)}: {len(rows)} component contrast pairs, {len(problems)} too low; {usage()}")

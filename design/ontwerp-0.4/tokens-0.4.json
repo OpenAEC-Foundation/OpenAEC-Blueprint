@@ -1,10 +1,11 @@
 {
   "meta": {
     "name": "OpenAEC UI design tokens",
-    "version": "0.4.0-concept",
+    "version": "0.4.0",
     "date": "2026-10-16",
     "source": "design/ontwerp-0.4/01-fundament.md, besluiten 1 tot en met 20",
-    "notes": "Kleuren zijn vaste hexwaarden zonder doorzichtigheid, zodat Rust en CSS exact dezelfde kleur krijgen. Alleen schaduwen en de overlay gebruiken doorzichtigheid. Hover en ingedrukt blijven in dezelfde kleur: lichter bij hover, donkerder bij ingedrukt (besluit 2.4, variant A). Statustinten zijn vaste kleuren per thema. In Licht de statuskleur voor 10% over het paneel; in Donker en Blueprint een volle statuskleur voor 28% over het paneel (besluit 2.4, Z2); in High contrast geen tint. De werkruimte volgt standaard het thema; de instelling Werkruimte kan dat overschrijven (besluit 11, herzien). De statusbalk volgt standaard het thema; de instelling Statusbalk kan hem altijd donker maken (besluit 2.5)."
+    "notes": "Kleuren zijn vaste hexwaarden zonder doorzichtigheid, zodat Rust en CSS exact dezelfde kleur krijgen. Alleen schaduwen en de overlay gebruiken doorzichtigheid. Hover en ingedrukt blijven in dezelfde kleur: lichter bij hover, donkerder bij ingedrukt (besluit 2.4, variant A). Statustinten zijn vaste kleuren per thema. In Licht de statuskleur voor 10% over het paneel; in Donker en Blueprint een volle statuskleur voor 28% over het paneel (besluit 2.4, Z2); in High contrast geen tint. De werkruimte volgt standaard het thema; de instelling Werkruimte kan dat overschrijven (besluit 11, herzien). De statusbalk volgt standaard het thema; de instelling Statusbalk kan hem altijd donker maken (besluit 2.5).",
+    "status": "Vastgesteld door de gebruiker op 2026-10-16. Wijzigingen gaan naar een volgende versie. De iconen vallen hierbuiten en lopen nog door."
   },
   "font": {
     "family": {

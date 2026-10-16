@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_tokens_04 import contrast, mix  # noqa: E402
+from review_icons import SPRITE_MARK, icon, sprite, usage  # noqa: E402
 
 TOKENS = json.loads((ROOT / "design/ontwerp-0.4/tokens-0.4.json").read_text(encoding="utf-8"))
 OUT = ROOT / "design/ontwerp-0.4/tegels-review.html"
@@ -28,12 +29,6 @@ def esc(s):
 
 def fmt(r):
     return f"{r:.2f}".replace(".", ",")
-
-
-def icon(name, size=20):
-    svg = (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8")
-    svg = svg.replace('stroke="#000"', 'stroke="currentColor"').replace('fill="#000"', 'fill="currentColor"')
-    return re.sub(r"<svg ", f'<svg width="{size}" height="{size}" aria-hidden="true" ', svg, count=1)
 
 
 # ---------- derived tile colours ----------
@@ -237,6 +232,11 @@ td.ok{{background:#f0fdf4}}td.bad{{background:#fef2f2}}.tablewrap{{overflow-x:au
 .sw{{display:inline-block;width:12px;height:12px;border:1px solid #bbb;vertical-align:-2px;margin-right:6px}}
 .facts{{display:flex;gap:9px;flex-wrap:wrap}}.facts span{{background:#fff;border:1px solid #d8d8dd;padding:8px 11px}}
 footer{{color:#6b6b75;font-size:12px;margin-top:34px}}
+/* B2 icons: primary part follows currentColor, accent part follows the theme accent */
+.pane,.win,.app{{--icon-accent:var(--accent)}}
+.dis .b2,.b2.dis,.dis.b2{{--icon-accent:currentColor}}
+.ban .b2,.bi .b2,.ti .b2,.ban>.b2{{--icon-accent:currentColor}}
+
 
 /* themed panes */
 .pane,.win{{background:var(--frame);color:var(--text);padding:16px;border:1px solid var(--border);font-size:{F['body']}px;line-height:1.4}}
@@ -318,7 +318,7 @@ page = f"""<!doctype html>
   <h1>Tegels en kaarten · besloten</h1>
   <p>Stap 2.3. Alle kleuren, hoeken en maten komen uit <code>tokens-0.4.json</code>. De onderbouwing staat in <a href="03-tegels.md">03-tegels.md</a>.</p>
 </header>
-<main>
+<main>{SPRITE_MARK}
   <div class="facts"><span>5 soorten tegels en kaarten</span><span>{len(themes)} thema's</span><span>{len(check_rows)} contrastparen</span><span>{'Alle paren halen hun minimum' if not problems else str(len(problems)) + ' paren te laag'}</span></div>
 
   <h2>1. Zo ziet het Bestand-menu eruit</h2>
@@ -351,7 +351,8 @@ page = f"""<!doctype html>
 </html>
 """
 
+page = page.replace(SPRITE_MARK, sprite(), 1)
 OUT.write_text(page, encoding="utf-8")
 for p in problems:
     print("TE LAAG  " + p)
-print(f"Wrote {OUT.relative_to(ROOT)}: {len(check_rows)} tile contrast pairs, {len(problems)} too low")
+print(f"Wrote {OUT.relative_to(ROOT)}: {len(check_rows)} tile contrast pairs, {len(problems)} too low; {usage()}")

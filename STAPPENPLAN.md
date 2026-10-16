@@ -4,7 +4,7 @@ Status: **concept voor overleg**, bijgewerkt op 2026-10-16. Besluiten en open vr
 
 ## Doel
 
-Elke app uit de harmonisatiepagina [`design/harmonized.html`](design/harmonized.html) krijgt dezelfde stijl, in welke taal of techniek hij ook geschreven is. Een gebruiker moet aan elke app zien dat hij bij OpenAEC hoort. Open CAD Studio, Open BIM Studio en de Open 2D Studio AEC-extensie vallen hierbuiten, dus het gaat om 16 apps.
+Elke app uit de harmonisatiepagina [`design/harmonized.html`](design/harmonized.html) krijgt dezelfde stijl, in welke taal of techniek hij ook geschreven is. Een gebruiker moet aan elke app zien dat hij bij OpenAEC hoort. Open CAD Studio, Open BIM Studio en de Open 2D Studio AEC-extensie vallen hierbuiten. De installer hoort er wel bij. Het gaat om 17 apps.
 
 Dat betekent dezelfde:
 
@@ -24,7 +24,7 @@ Dat betekent dezelfde:
                   │
    Eén bron: tokens + iconen + tegels
                   │
-        ┌─────────┴─────────┐
+             ┌─────────┴─────────┐
    Rust-bibliotheek      Webpakket
    (Iced)                (CSS, iconen, React)
 ```
@@ -38,15 +38,16 @@ Het volledige overzicht per app, met interface, status in de Style Repo en licen
 | Techniek | Apps | Hoe de stijl erin komt |
 | --- | --- | --- |
 | **Tauri + React** | Calc, Calculations, Planner, Geotechniek, Heatloss, Pile Plan, Reports, Energy, Field | Ombouwen naar de Rust-UI (besluit). Tot dan het webpakket |
-| **Tauri + Solid** | PDF, Speech, Workspace Composer | Ombouwen of webpakket, te overleggen |
-| **Tauri + Svelte** | Frame | Ombouwen of webpakket, te overleggen |
+| **Tauri + Solid** | PDF, Speech, Workspace Composer | Ombouwen naar de Rust-UI (besluit). De Rust-kant blijft |
+| **Tauri + Svelte** | Frame | Ombouwen naar de Rust-UI (besluit). De Rust-kant blijft |
 | **Rust + Iced** | Pointcloud | Rust-bibliotheek 0.4 |
 | **Webapp, React** | BIM Validator | Webpakket |
+| **Installer, Tauri + React** | OpenAEC Installer | Rust-UI, met een eigen wizardlayout |
 | **Later** | FEM | Repository gaf een 404. Hier komen we later op terug |
 
 Twaalf apps hebben een lint. Energy, Field, Speech en Workspace Composer hebben een werkstroom.
 
-**Buiten de harmonisatie:** Open CAD Studio, waar niets aan verandert, Open BIM Studio, die niet hoeft, en de Open 2D Studio AEC-extensie, omdat Open 2D Studio is gestopt. Apps die niet op de harmonisatiepagina staan, vallen ook buiten de scope. Daaronder vallen de installer en Y-Next/Z-Next, die wel in de uitleg van de leidinggevende stonden.
+**Buiten de harmonisatie:** Open CAD Studio, waar niets aan verandert, Open BIM Studio, die niet hoeft, en de Open 2D Studio AEC-extensie, omdat Open 2D Studio is gestopt. Apps die niet op de harmonisatiepagina staan, vallen ook buiten de scope, behalve de installer. De Y/Z-app doet de gebruiker apart.
 
 ## Wat er al ligt
 
@@ -116,13 +117,20 @@ Een app is geharmoniseerd als hij:
 - De leidinggevende en de gebruiker nemen de ontwerpbesluiten en keuren goed.
 - ChatGPT en Claude maken inventarissen, genereren reviewpagina's, schrijven code en draaien controles. Ze werken volgens [`AGENTS.md`](AGENTS.md) en houden [`NOTES.md`](NOTES.md) bij.
 
-## Voor het overleg
+## Besloten na het overleg
 
-1. **Wat wordt de bron?** Style Book, `openaec-ui` of de Style Repo.
-2. **Welke apps worden echt herbouwd in Rust?** Geldt dat voor alle Tauri-desktopapps, ook de Solid- en Svelte-apps? Of krijgen sommige alleen de stijl in hun eigen techniek?
-3. **Vallen de installer en Y-Next/Z-Next echt buiten de scope?** Ze stonden in de uitleg, maar niet op de harmonisatiepagina.
-4. **Open FEM Studio.** Wanneer komen we hierop terug, en in welke techniek is hij gebouwd?
-5. **Waarin ontwerpen we:** direct in de Style Repo, of eerst in een ontwerptool zoals Figma of Penpot?
-6. **Welke thema's blijven er?**
-7. **Licentie en publicatie.** Het Rust-prototype gebruikt CC-BY-SA-4.0, die niet voor software bedoeld is. Het Style Book-tokenpakket gebruikt MIT. Kies één softwarelicentie en een openbare plek.
-8. **Wie is eigenaar** van het ontwerp, van elke uitvoering en van elke app?
+Op 2026-10-16 door de gebruiker, die over het ontwerp beslist.
+
+1. **De besluiten van fase 2 zijn vastgesteld.** Het ontwerp is bevroren als versie 0.4. De iconen lopen nog door bij Codex.
+2. **De bron is de Style Repo.** Tokens en ontwerp staan in [`design/ontwerp-0.4/`](design/ontwerp-0.4/).
+3. **De bibliotheek blijft voorlopig privé** en wordt later openbaar.
+4. **De installer hoort erbij.** De Y/Z-app doet de gebruiker apart, buiten dit traject.
+5. **Thema's, ontwerpwerkwijze en Open FEM Studio** zijn eerder besloten: vijf thema's, ontwerpen in de Style Repo, en FEM komt later.
+6. **Energy en Field gaan naar de Rust-UI.** Energy heeft al een Rust-rekenkern. Voor Field is dat de keuze van Claude, op verzoek van de gebruiker.
+7. **PDF, Speech, Composer en Frame gaan naar de Rust-UI.** Alleen hun scherm in Solid of Svelte wordt vervangen. De Rust-kant blijft.
+
+## Nog open
+
+1. **Licentie.** Voorstel: LGPL-3.0 voor de bibliotheek, zoals de OpenAEC Foundation voor al zijn repositories wil (zie `repo-cleaner`). De lettertypen houden hun OFL-licentie. Wacht op bevestiging.
+2. **Field op tablet of telefoon.** Field gaat naar de Rust-UI, die voor desktop is. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket.
+3. **Eigenaarschap.** Wie is eigenaar van het ontwerp, van elke uitvoering en van elke app?

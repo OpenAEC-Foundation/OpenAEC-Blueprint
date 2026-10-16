@@ -2,7 +2,7 @@
 
 Status: bijgewerkt op 2026-10-16 voor het overleg over [`STAPPENPLAN.md`](STAPPENPLAN.md).
 
-**Scope:** alleen de apps uit de harmonisatiepagina [`design/harmonized.html`](design/harmonized.html). Open CAD Studio, Open BIM Studio en de Open 2D Studio AEC-extensie staan daar ook op, maar vallen buiten de harmonisatie. Er blijven 16 apps over.
+**Scope:** alleen de apps uit de harmonisatiepagina [`design/harmonized.html`](design/harmonized.html). Open CAD Studio, Open BIM Studio en de Open 2D Studio AEC-extensie staan daar ook op, maar vallen buiten de harmonisatie. Daarnaast hoort de OpenAEC Installer erbij. Dat geeft 17 apps.
 
 Bronnen: de harmonisatiepagina, de broncatalogus in [`harmonization/repositories/`](harmonization/repositories/), de reviewpagina's in [`design/`](design/) en een controle op GitHub.
 
@@ -52,6 +52,14 @@ Bronnen: de harmonisatiepagina, de broncatalogus in [`harmonization/repositories
 | --- | --- | --- | --- |
 | Open BIM Validator Studio | Lint | Lint voorgesteld, routereview | Onbekend |
 
+## Installer
+
+Toegevoegd op 2026-10-16: de installer staat niet op de harmonisatiepagina, maar hoort wel bij de harmonisatie.
+
+| App | Techniek | Interface | Style Repo | Licentie |
+| --- | --- | --- | --- | --- |
+| OpenAEC Installer | Tauri + React | Installer | Nog niets | CC-BY-SA-4.0 |
+
 ## Later
 
 | App | Interface | Style Repo | Wat we weten |
@@ -66,6 +74,6 @@ Bronnen: de harmonisatiepagina, de broncatalogus in [`harmonization/repositories
 | Open BIM Studio | Besluit: hoeft niet |
 | Open 2D Studio AEC-extensie | Open 2D Studio is gestopt |
 
-**Niet op de harmonisatiepagina, en daarom buiten de scope:** OpenAEC Installer, Y-Next/Z-Next, Open 3D Studio, OpenAEC Cloud Desktop, het BCF-platform, OpenAEC Docs, Zaagplan, Project OconDat, IfcGit voor Nextcloud, de Open-Monuments-apps, Dynlex en de BuildingPy-dialoog.
+**Niet op de harmonisatiepagina, en daarom buiten de scope:** Y-Next/Z-Next, die de gebruiker apart doet, Open 3D Studio, OpenAEC Cloud Desktop, het BCF-platform, OpenAEC Docs, Zaagplan, Project OconDat, IfcGit voor Nextcloud, de Open-Monuments-apps, Dynlex en de BuildingPy-dialoog.
 
-De installer en Y-Next/Z-Next stonden wel in de uitleg van de leidinggevende. Bevestig in het overleg dat ze buiten de scope vallen.
+De installer en Y-Next/Z-Next stonden in de uitleg van de leidinggevende. De installer hoort erbij; de Y/Z-app doet de gebruiker apart.

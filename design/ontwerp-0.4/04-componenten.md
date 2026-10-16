@@ -166,7 +166,7 @@ In het instellingenvenster, onder Weergave, staan na de themakeuze drie instelli
 
 ## Wat nog ontbreekt
 
-- **Iconen voor waarschuwing en informatie.** De huidige kernset heeft die niet. De reviewpagina gebruikt daarom tijdelijk het help-icoon. Deze iconen horen bij stap 2.2, waar Codex aan werkt.
+- **Iconen.** De reviewpagina gebruikt de iconen van Codex, ook voor fout, gelukt, waarschuwing en info. Waar Codex nog geen icoon heeft, staat tijdelijk een oud icoon uit het prototype.
 
 ## Besluiten
 
