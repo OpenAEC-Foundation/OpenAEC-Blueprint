@@ -1,0 +1,205 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Twelve literal UI SVGs across five source-reachable preferences components. Six are tab icons; four are instances of one selector-chevron geometry; two are color-picker actions. The 42 palette color swatches are CSS blocks, not SVG icons. The current App.jsx mobile branch renders MobileApp instead of DialogHost, so the isMobile tab filter inside PreferencesDialog is not evidence that this desktop dialog appears on mobile.",
+  "literal_svg_sites": 12,
+  "ui_symbol_sites": 12,
+  "tab_icons": 6,
+  "identical_chevron_sites": 4,
+  "palette_columns": [
+    [
+      "#ffffff",
+      "#d9d9d9",
+      "#999999",
+      "#666666",
+      "#333333",
+      "#000000"
+    ],
+    [
+      "#f4cccc",
+      "#ea9999",
+      "#e06666",
+      "#ff0000",
+      "#cc0000",
+      "#660000"
+    ],
+    [
+      "#fce5cd",
+      "#f9cb9c",
+      "#ffff00",
+      "#ffd966",
+      "#f1c232",
+      "#bf9000"
+    ],
+    [
+      "#d9ead3",
+      "#b6d7a8",
+      "#93c47d",
+      "#00ff00",
+      "#38761d",
+      "#274e13"
+    ],
+    [
+      "#d0e0e3",
+      "#a2c4c9",
+      "#76a5af",
+      "#00ffff",
+      "#45818e",
+      "#134f5c"
+    ],
+    [
+      "#c9daf8",
+      "#6d9eeb",
+      "#4a86e8",
+      "#0000ff",
+      "#1155cc",
+      "#073763"
+    ],
+    [
+      "#d9d2e9",
+      "#b4a7d6",
+      "#9900ff",
+      "#ff00ff",
+      "#a64d79",
+      "#741b47"
+    ]
+  ],
+  "palette_color_cells": 42,
+  "layout": {
+    "desktop_dialog_px": [
+      600,
+      520
+    ],
+    "tab_sidebar_px": 140,
+    "tab_icon_px": 14,
+    "selector_chevron_px": 12,
+    "language_dropdown_width_px": 260,
+    "language_dropdown_max_height_px": 280,
+    "color_picker_width_px": 140,
+    "color_dropdown_width_px": 200,
+    "color_swatch_px": 20
+  },
+  "route_note": "App.jsx chooses MobileApp when isMobile() is true; this desktop PreferencesDialog is shown through DialogHost and AppMenu.",
+  "records": [
+    {
+      "name": "pref-general",
+      "label": "Algemeen",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 30,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-general.svg",
+      "sha256": "4e66a12674c2e0876abbbeeca89d6b04dc02a59630c6eb98e5100af1abdaba49"
+    },
+    {
+      "name": "pref-annotations",
+      "label": "Annotaties",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 35,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-annotations.svg",
+      "sha256": "538933ae179cf6ee1f8fd4e69bd458adb6a3a8f1e8d3efe31e9e6f0e1a0ed4bf"
+    },
+    {
+      "name": "pref-behavior",
+      "label": "Gedrag",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 40,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-behavior.svg",
+      "sha256": "620939ebaf7464291a3b84dbf3bee37d2974c7e3f9e6a26af78e5f47b7869b63"
+    },
+    {
+      "name": "pref-fileassoc",
+      "label": "Bestandskoppeling",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 45,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-fileassoc.svg",
+      "sha256": "c6e0f366044f60725a75690f24704b7614448d9a569ad12227b781373f393fc1"
+    },
+    {
+      "name": "pref-page-display",
+      "label": "Paginaweergave",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 50,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-page-display.svg",
+      "sha256": "84dc90ad587350d953f73b3732e8ba08e2899b9c4ccc4c58a1d7a0b488abf3f6"
+    },
+    {
+      "name": "pref-vprinter",
+      "label": "Virtuele printer",
+      "area": "Tabs",
+      "role": "tab-icon",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "source_line": 55,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/pref-vprinter.svg",
+      "sha256": "79425d9ae92087cfc64dc29898535b821b11b497824bb7757db6d0ab46d7a412"
+    },
+    {
+      "name": "color-dropdown",
+      "label": "Kleurkeuze openen",
+      "area": "Kleurkiezer",
+      "role": "selector-chevron",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PrefColorPicker.jsx",
+      "source_line": 79,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/color-dropdown.svg",
+      "sha256": "31b9b6936a7889e94236438aae07253855dd546593032c09aaf590374a034f54"
+    },
+    {
+      "name": "color-none",
+      "label": "Geen kleur",
+      "area": "Kleurkiezer",
+      "role": "picker-action",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PrefColorPicker.jsx",
+      "source_line": 86,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/color-none.svg",
+      "sha256": "6adb08a1462b8d634b7a1f9c6a38d203ed508b1eb26e38ad4880b56ca543064e"
+    },
+    {
+      "name": "color-more",
+      "label": "Meer kleuren",
+      "area": "Kleurkiezer",
+      "role": "picker-action",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PrefColorPicker.jsx",
+      "source_line": 117,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/color-more.svg",
+      "sha256": "f288818948244aeb3d2f74baed3e731f28f6efb6eaac9d3ae736e2252a1edbcf"
+    },
+    {
+      "name": "language-dropdown",
+      "label": "Taalkeuze openen",
+      "area": "Taalkeuze",
+      "role": "selector-chevron",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/LanguageSelect.jsx",
+      "source_line": 82,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/language-dropdown.svg",
+      "sha256": "4ed3bfb48c7feefd4af6c11a5fcccd5d9c1b1b5b1ee66a50c0e8c81668a3c029"
+    },
+    {
+      "name": "combo-dropdown",
+      "label": "Waardenlijst openen",
+      "area": "Numerieke keuze",
+      "role": "selector-chevron",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PrefComboBox.jsx",
+      "source_line": 75,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/combo-dropdown.svg",
+      "sha256": "4ed3bfb48c7feefd4af6c11a5fcccd5d9c1b1b5b1ee66a50c0e8c81668a3c029"
+    },
+    {
+      "name": "select-dropdown",
+      "label": "Opties openen",
+      "area": "Lijstkeuze",
+      "role": "selector-chevron",
+      "source_file": "open-pdf-studio/js/solid/components/preferences/PrefSelect.jsx",
+      "source_line": 26,
+      "svg": "inline-ui-icons/open-pdf-studio/preferences/select-dropdown.svg",
+      "sha256": "4ed3bfb48c7feefd4af6c11a5fcccd5d9c1b1b5b1ee66a50c0e8c81668a3c029"
+    }
+  ]
+}
