@@ -50,14 +50,18 @@ out.mkdir(parents=True, exist_ok=True)
 entries = []
 for name, path, role, pattern, use_marker, use_path in specs:
     source = show(path)
-    matches = re.findall(pattern, source, re.S)
+    matches = list(re.finditer(pattern, source, re.S))
     assert len(matches) == 1, (name, len(matches))
-    svg = matches[0].strip().replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1) + '\n'
+    source_svg = matches[0].group(1)
+    svg = source_svg.strip().replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1) + '\n'
     ET.fromstring(svg)
     target = out / f'{name}.svg'
     target.write_text(svg)
+    source_line = source.count('\n', 0, matches[0].start(1)) + 1
     entries.append({'name': name, 'role': role,
-                    'source_evidence': evidence(path, matches[0].splitlines()[0].strip()),
+                    'source_evidence': {'file': path, 'line': source_line,
+                                        'marker': source_svg.splitlines()[0].strip(),
+                                        'url': f'https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/{COMMIT}/{path}#L{source_line}'},
                     'ui_usage_evidence': evidence(use_path, use_marker),
                     'local': str(target.relative_to(ROOT)),
                     'sha256': hashlib.sha256(svg.encode()).hexdigest()})
