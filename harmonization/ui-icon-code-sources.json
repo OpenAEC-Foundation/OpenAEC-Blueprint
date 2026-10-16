@@ -4059,5 +4059,303 @@
     ],
     "names": [],
     "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/extensions/check_tests.rs"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/App.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      98,
+      110,
+      122,
+      135,
+      148,
+      162,
+      175,
+      186
+    ],
+    "names": [
+      "2D Editor",
+      "3D Viewer",
+      "Kozijnstaat",
+      "Productie",
+      "Calculatie",
+      "Analyse",
+      "Indeling (proto)",
+      "Profiel editor",
+      "Productieplan",
+      "Energie",
+      "Circulariteit",
+      "Plausibiliteit",
+      "Offertes",
+      "BCF",
+      "Zaagplan",
+      "CNC",
+      "Inkoop",
+      "Combinaties",
+      "IDS Validatie",
+      "Certificering",
+      "Linkerpaneel inklappen",
+      "AI-paneel",
+      "Rechterpaneel inklappen",
+      "Linkerpaneel inklappen (3D)",
+      "Rechterpaneel inklappen (3D)"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/App.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/panels/AiAssistant.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      56,
+      65,
+      71,
+      172
+    ],
+    "names": [
+      "AI Assistent",
+      "Chat wissen",
+      "AI-instellingen",
+      "Bericht versturen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/panels/AiAssistant.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/panels/ShapeManager.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      439
+    ],
+    "names": [
+      "Vormbeheer sluiten"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/panels/ShapeManager.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/profile-editor/ProfileCanvas.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      303
+    ],
+    "names": [
+      "Zoom passend"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileCanvas.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      53,
+      61,
+      91,
+      105,
+      129
+    ],
+    "names": [
+      "Nieuw profiel",
+      "Zoek profiel...",
+      "Kopieer",
+      "Categorie uitklappen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileLibrary.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/profile-editor/ProfileParams.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      204
+    ],
+    "names": [
+      "Opslaan"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileParams.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      39,
+      49,
+      61,
+      69,
+      86,
+      100,
+      107
+    ],
+    "names": [
+      "Selecteren",
+      "Punt verwijderen",
+      "Spiegel horizontaal",
+      "Spiegel verticaal",
+      "Snap aan raster",
+      "Ongedaan",
+      "Opnieuw"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileToolbar.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/AppMenu.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      54,
+      63,
+      73,
+      80,
+      89,
+      102,
+      108,
+      115
+    ],
+    "names": [
+      "Terug",
+      "Nieuw",
+      "Openen",
+      "Opslaan",
+      "Opslaan als...",
+      "GitHub",
+      "Probleem melden",
+      "Documentatie"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/AppMenu.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/Ribbon.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      217,
+      225,
+      232,
+      239,
+      247,
+      255,
+      262,
+      271
+    ],
+    "names": [
+      "Leeg",
+      "Draaikiep",
+      "Dubbel",
+      "Schuifpui",
+      "Voordeur",
+      "Klapraam",
+      "Hefschuif",
+      "Pivot",
+      "Stolp",
+      "+ Kolom",
+      "+ Rij",
+      "Dupliceer",
+      "Verwijder",
+      "Nieuw profiel",
+      "Profiel DXF",
+      "Catalogus",
+      "Kolom",
+      "Rij",
+      "Vast glas",
+      "Schuifraam",
+      "Deur",
+      "Paneel",
+      "Stijl-regel",
+      "Element",
+      "IFC",
+      "DXF",
+      "IFC Import",
+      "IFC Roundtrip",
+      "IFC vergelijken",
+      "IDS Validatie",
+      "Certificering",
+      "Kozijnstaat PDF",
+      "Kozijnstaat Excel",
+      "Tekening PDF",
+      "glTF/GLB",
+      "Naar Blender",
+      "Verbinding testen",
+      "PDF",
+      "Excel",
+      "CSV",
+      "CNC G-code",
+      "Labels PDF",
+      "Zaagplan",
+      "Planning",
+      "CNC",
+      "Inkoop",
+      "Ongedaan",
+      "Opnieuw",
+      "Inzoomen",
+      "Uitzoomen"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/Settings.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      46,
+      55,
+      62
+    ],
+    "names": [
+      "Instellingen sluiten",
+      "Algemeen",
+      "Over"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Settings.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/StatusBar.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      49
+    ],
+    "names": [
+      "Ontbrekende hardware"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/StatusBar.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/TitleBar.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      61,
+      68,
+      74,
+      88,
+      92,
+      97,
+      101
+    ],
+    "names": [
+      "Instellingen",
+      "Ongedaan",
+      "Opnieuw",
+      "Minimaliseren",
+      "Herstellen",
+      "Maximaliseren",
+      "Sluiten"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/TitleBar.svelte"
+  },
+  {
+    "repo": "open-frame-studio",
+    "source": "ui/src/components/shell/Toast.svelte",
+    "kind": "inline-svg",
+    "lines": [
+      9
+    ],
+    "names": [
+      "Melding sluiten"
+    ],
+    "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Toast.svelte"
   }
 ]

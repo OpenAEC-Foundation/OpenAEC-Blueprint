@@ -50,6 +50,23 @@ for repo,lines in source_lines.items():
         r=next((x for x in repos if x['name']==repo),None)
         if r and r.get('commit'):
             code_icon_sources.append({'repo':repo,'source':src,'kind':kind,'lines':nums[:8],'names':code_icon_names(repo,src,kind),'url':r['url'].rstrip('/')+'/blob/'+r['commit']+'/'+urllib.parse.quote(src)})
+# The generic line heuristic intentionally does not call every Svelte SVG an
+# icon. Include Open Frame only after its 127 sites have been role-reviewed.
+frame_audit_path=H/'frame-svelte-svg-audit.json'
+if frame_audit_path.exists():
+    frame_audit=json.loads(frame_audit_path.read_text())
+    frame_repo=next(r for r in repos if r['name']=='open-frame-studio')
+    assert frame_repo['commit']==frame_audit['commit']
+    frame_by_file=collections.defaultdict(list)
+    for item in frame_audit['records']:
+        if item['kind']=='ui-icon':frame_by_file[item['file']].append(item)
+    assert sum(map(len,frame_by_file.values()))==118
+    for src,items in sorted(frame_by_file.items()):
+        assert not any(x['repo']=='open-frame-studio' and x['source']==src and x['kind']=='inline-svg' for x in code_icon_sources)
+        code_icon_sources.append({'repo':'open-frame-studio','source':src,'kind':'inline-svg',
+                                  'lines':[x['line'] for x in items[:8]],
+                                  'names':list(dict.fromkeys(x['label'] for x in items))[:100],
+                                  'url':frame_repo['url'].rstrip('/')+'/blob/'+frame_repo['commit']+'/'+urllib.parse.quote(src)})
 def asset_family(repo,path):
     low=path.lower(); parts=low.split('/'); name=parts[-1]
     if repo=='dynlex' and low.startswith('web/'):

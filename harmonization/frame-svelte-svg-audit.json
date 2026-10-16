@@ -1,0 +1,1657 @@
+{
+  "repository": "open-frame-studio",
+  "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+  "scope": "Every literal SVG in pinned ui/src/**/*.svelte, including source-reachable ribbon and workspace controls; technical geometry and empty-state illustrations excluded from icon count.",
+  "svg_sites": 127,
+  "ui_icon_sites": 118,
+  "excluded_content_graphics": 9,
+  "workspace_tabs": 20,
+  "ribbon_icon_sites": 52,
+  "unique_source_shapes": 110,
+  "reused_source_shapes": [
+    {
+      "sha256": "6ecac46521237e171c575e844e878ae7442b9ec1ce57aa33c8d54b2a975be351",
+      "uses": [
+        {
+          "label": "Linkerpaneel inklappen",
+          "file": "ui/src/App.svelte",
+          "line": 341
+        },
+        {
+          "label": "Linkerpaneel inklappen (3D)",
+          "file": "ui/src/App.svelte",
+          "line": 399
+        }
+      ]
+    },
+    {
+      "sha256": "f36487fc8410fff048cf3795e0c0f3e84ac78b7f780525c881d15d0e3a374418",
+      "uses": [
+        {
+          "label": "Rechterpaneel inklappen",
+          "file": "ui/src/App.svelte",
+          "line": 375
+        },
+        {
+          "label": "Rechterpaneel inklappen (3D)",
+          "file": "ui/src/App.svelte",
+          "line": 419
+        }
+      ]
+    },
+    {
+      "sha256": "291b9da578f918952c372ddadd55b1667c2655e072d625203799d10287dd7003",
+      "uses": [
+        {
+          "label": "Kopieer",
+          "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+          "line": 91
+        },
+        {
+          "label": "Kopieer",
+          "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "sha256": "5c8e93a7fd929a0d15974d3cc23d471b1d383f4628db39403c15687c5ffb71ce",
+      "uses": [
+        {
+          "label": "Opslaan",
+          "file": "ui/src/components/shell/AppMenu.svelte",
+          "line": 80
+        },
+        {
+          "label": "Opslaan als...",
+          "file": "ui/src/components/shell/AppMenu.svelte",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "sha256": "39eb2b589fe9d0d34d00abfc230064b64bb8bc707f59b5dde73478c78fdd74c4",
+      "uses": [
+        {
+          "label": "+ Kolom",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 296
+        },
+        {
+          "label": "Kolom",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 366
+        }
+      ]
+    },
+    {
+      "sha256": "e57c39211e3fdbd0511c9e93dfcdcef9a72d0de2f587f541cdfec4780a03b6ff",
+      "uses": [
+        {
+          "label": "+ Rij",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 303
+        },
+        {
+          "label": "Rij",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 373
+        }
+      ]
+    },
+    {
+      "sha256": "9a764246d99a694167ddf2a61cb8f69cd9730d8d20b21094a02c239b4b4bddcd",
+      "uses": [
+        {
+          "label": "IFC",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 449
+        },
+        {
+          "label": "DXF",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 456
+        }
+      ]
+    },
+    {
+      "sha256": "98abe9f729e1f4cafb0b12dc0ae84229a3e016d79aaf201bffcebc887a20b83d",
+      "uses": [
+        {
+          "label": "CNC G-code",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 644
+        },
+        {
+          "label": "CNC",
+          "file": "ui/src/components/shell/Ribbon.svelte",
+          "line": 686
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "file": "ui/src/App.svelte",
+      "line": 98,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "2D Editor",
+      "translation_keys": [
+        "tabs.editor"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-01.svg",
+      "sha256": "176dabf944b236c0df86d50a4bf3cfc0f18fc83b2cd0904cd7799becdc255ef9"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 110,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "3D Viewer",
+      "translation_keys": [
+        "tabs.viewer3d"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-02.svg",
+      "sha256": "962094ca1542c084324d8d5d39cf7118f3c02bb7c4fe52e92a03e151b9cb3b1c"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 122,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Kozijnstaat",
+      "translation_keys": [
+        "tabs.kozijnstaat"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-03.svg",
+      "sha256": "b0782ccd2a62a38c85f93fd17b58724e98814fcd3dcd92340c59d20aec73323b"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 135,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Productie",
+      "translation_keys": [
+        "tabs.production"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-04.svg",
+      "sha256": "570c7f2afa7ba4e9258f4b387591e2153a492c808f8170e21e0de7e037f3907c"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 148,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Calculatie",
+      "translation_keys": [
+        "tabs.calculation"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-05.svg",
+      "sha256": "fd0bf114ec52ec8330cb204b900502bb369f5854f30e617c6635db8b31d3f199"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 162,
+      "ordinal": 6,
+      "kind": "ui-icon",
+      "label": "Analyse",
+      "translation_keys": [
+        "tabs.dashboard"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-06.svg",
+      "sha256": "5fe37a90166e47bdb0d73496310a186386a5d1469c1f66fdfd4249c85b1e9d46"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 175,
+      "ordinal": 7,
+      "kind": "ui-icon",
+      "label": "Indeling (proto)",
+      "translation_keys": [
+        "tabs.layoutProto"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-07.svg",
+      "sha256": "00a68299934d75ed9e0641ef1976c1ebf5389dbea514f91720673cccfea54687"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 186,
+      "ordinal": 8,
+      "kind": "ui-icon",
+      "label": "Profiel editor",
+      "translation_keys": [
+        "tabs.profiles"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-08.svg",
+      "sha256": "b0c59607a412bf7aa9e30a637bb5b529640d333868532ff54a819522c1a4695e"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 198,
+      "ordinal": 9,
+      "kind": "ui-icon",
+      "label": "Productieplan",
+      "translation_keys": [
+        "tabs.planning"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-09.svg",
+      "sha256": "2d8aac6a03720631e2cb00252a9db3876cc6ec703e1e94786e57556cc21d3367"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 210,
+      "ordinal": 10,
+      "kind": "ui-icon",
+      "label": "Energie",
+      "translation_keys": [
+        "tabs.energy"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-10.svg",
+      "sha256": "e84f0cb10b6434e1f6dae712ccb75ba2a518216ff1c7238955c6dbfd57fb13dd"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 220,
+      "ordinal": 11,
+      "kind": "ui-icon",
+      "label": "Circulariteit",
+      "translation_keys": [
+        "tabs.circularity"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-11.svg",
+      "sha256": "454eb9c2b94ae1ec0b526c8e7b02b9e25e69e63c929351abcd6570b66bf44c72"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 231,
+      "ordinal": 12,
+      "kind": "ui-icon",
+      "label": "Plausibiliteit",
+      "translation_keys": [
+        "tabs.plausibility"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-12.svg",
+      "sha256": "dfd76a056d3e27c64a2ddc502d01c17be3811df0b5da1ea1059613d891d76129"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 242,
+      "ordinal": 13,
+      "kind": "ui-icon",
+      "label": "Offertes",
+      "translation_keys": [
+        "tabs.quotation"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-13.svg",
+      "sha256": "073b63f228f50f76a6ed53920f95bface01fc9bd6ed94fa253ec08c848ee513c"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 255,
+      "ordinal": 14,
+      "kind": "ui-icon",
+      "label": "BCF",
+      "translation_keys": [
+        "tabs.bcf"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-14.svg",
+      "sha256": "727b12c137f613a8136b2d2d16f08e4e9ce835eec093b93e163fa55b697bd679"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 267,
+      "ordinal": 15,
+      "kind": "ui-icon",
+      "label": "Zaagplan",
+      "translation_keys": [
+        "tabs.optimization"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-15.svg",
+      "sha256": "d4828e8e85f757ffcc4981089b0e52f5c116360dc5d0235056ad7eac4caa8738"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 279,
+      "ordinal": 16,
+      "kind": "ui-icon",
+      "label": "CNC",
+      "translation_keys": [
+        "tabs.cnc"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-16.svg",
+      "sha256": "dcd015985f733ba483601cb7c33911b86c088efe68ff67e02cc47c49e46e4043"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 292,
+      "ordinal": 17,
+      "kind": "ui-icon",
+      "label": "Inkoop",
+      "translation_keys": [
+        "tabs.procurement"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-17.svg",
+      "sha256": "e9d35c198a4dfe55be3ca60c18928a1e35b25fc247ce2bd8a561308ae5c16be1"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 304,
+      "ordinal": 18,
+      "kind": "ui-icon",
+      "label": "Combinaties",
+      "translation_keys": [
+        "tabs.combination"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-18.svg",
+      "sha256": "d447a08315c58d7c228540e4b66422ffda97e46808fdb85c8be5aef003589a1c"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 315,
+      "ordinal": 19,
+      "kind": "ui-icon",
+      "label": "IDS Validatie",
+      "translation_keys": [
+        "tabs.ids"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-19.svg",
+      "sha256": "3e2539be86fdbf8607090756e137b999075cade4a502df24f2483ca3e6fc5617"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 326,
+      "ordinal": 20,
+      "kind": "ui-icon",
+      "label": "Certificering",
+      "translation_keys": [
+        "tabs.certification"
+      ],
+      "group": "workspace",
+      "svg": "inline-ui-icons/open-frame-studio/app-20.svg",
+      "sha256": "c4c98f6dbc6f6c96c8f0abb8f556f69c2a1f43780d31c1167fa29bc19506b0cc"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 341,
+      "ordinal": 21,
+      "kind": "ui-icon",
+      "label": "Linkerpaneel inklappen",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/app-21.svg",
+      "sha256": "6ecac46521237e171c575e844e878ae7442b9ec1ce57aa33c8d54b2a975be351"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 368,
+      "ordinal": 22,
+      "kind": "ui-icon",
+      "label": "AI-paneel",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/app-22.svg",
+      "sha256": "9781d445f1ffd4da45f6039ba02f7ffda95265a9c6889856bc87942aa369713e"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 375,
+      "ordinal": 23,
+      "kind": "ui-icon",
+      "label": "Rechterpaneel inklappen",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/app-23.svg",
+      "sha256": "f36487fc8410fff048cf3795e0c0f3e84ac78b7f780525c881d15d0e3a374418"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 399,
+      "ordinal": 24,
+      "kind": "ui-icon",
+      "label": "Linkerpaneel inklappen (3D)",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/app-24.svg",
+      "sha256": "6ecac46521237e171c575e844e878ae7442b9ec1ce57aa33c8d54b2a975be351"
+    },
+    {
+      "file": "ui/src/App.svelte",
+      "line": 419,
+      "ordinal": 25,
+      "kind": "ui-icon",
+      "label": "Rechterpaneel inklappen (3D)",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/app-25.svg",
+      "sha256": "f36487fc8410fff048cf3795e0c0f3e84ac78b7f780525c881d15d0e3a374418"
+    },
+    {
+      "file": "ui/src/components/editor/KozijnEditor.svelte",
+      "line": 231,
+      "ordinal": 1,
+      "kind": "editable-geometry",
+      "label": "KozijnEditor 01",
+      "translation_keys": []
+    },
+    {
+      "file": "ui/src/components/editor/KozijnEditor.svelte",
+      "line": 284,
+      "ordinal": 2,
+      "kind": "empty-state-illustration",
+      "label": "Maak een nieuw kozijn via de ribbon toolbar",
+      "translation_keys": [
+        "editor.newKozijnHint",
+        "editor.shortcutHint"
+      ]
+    },
+    {
+      "file": "ui/src/components/editor/VliesgevelEditor.svelte",
+      "line": 47,
+      "ordinal": 1,
+      "kind": "editable-geometry",
+      "label": "Selecteer of maak een vliesgevel aan",
+      "translation_keys": [
+        "editor.selectVliesgevel"
+      ]
+    },
+    {
+      "file": "ui/src/components/panels/AiAssistant.svelte",
+      "line": 56,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "AI Assistent",
+      "translation_keys": [
+        "ai.title",
+        "ai.clear"
+      ],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/aiassistant-01.svg",
+      "sha256": "0040f619ea242325ded503093648d59bcdf153a5b85b65839fc5b7d97075b3cd"
+    },
+    {
+      "file": "ui/src/components/panels/AiAssistant.svelte",
+      "line": 65,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Chat wissen",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/aiassistant-02.svg",
+      "sha256": "acd4d24a564cfda7e68e26f365960df480809fed6e8a0383e416b3004c9e0c6f"
+    },
+    {
+      "file": "ui/src/components/panels/AiAssistant.svelte",
+      "line": 71,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "AI-instellingen",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/aiassistant-03.svg",
+      "sha256": "26060c250d2262ca6ef971bf0b9f14472dc6508f0502d7cf6cd14d95d50d52e1"
+    },
+    {
+      "file": "ui/src/components/panels/AiAssistant.svelte",
+      "line": 118,
+      "ordinal": 4,
+      "kind": "empty-state-illustration",
+      "label": "Stel een vraag of geef een opdracht.",
+      "translation_keys": [
+        "ai.emptyHint"
+      ]
+    },
+    {
+      "file": "ui/src/components/panels/AiAssistant.svelte",
+      "line": 172,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Bericht versturen",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/aiassistant-05.svg",
+      "sha256": "8bd2c2e68ba7a3d66afd759318917e6304185ebd0b1dc7dce9bb56ebbbb6d21c"
+    },
+    {
+      "file": "ui/src/components/panels/ProfileCrossSection.svelte",
+      "line": 34,
+      "ordinal": 1,
+      "kind": "technical-profile",
+      "label": "Geen doorsnede",
+      "translation_keys": [
+        "crossSection.none"
+      ]
+    },
+    {
+      "file": "ui/src/components/panels/ProfilePreview.svelte",
+      "line": 63,
+      "ordinal": 1,
+      "kind": "technical-profile",
+      "label": "ProfilePreview 01",
+      "translation_keys": []
+    },
+    {
+      "file": "ui/src/components/panels/ShapeManager.svelte",
+      "line": 439,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Vormbeheer sluiten",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/shapemanager-01.svg",
+      "sha256": "7ac18dacc1112afb20a6d2ba17b3c12f61913adea5aae5219c37cacfe71cde81"
+    },
+    {
+      "file": "ui/src/components/panels/ShapeManager.svelte",
+      "line": 461,
+      "ordinal": 2,
+      "kind": "technical-preview",
+      "label": "Punt",
+      "translation_keys": [
+        "shapeManager.point"
+      ]
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileCanvas.svelte",
+      "line": 209,
+      "ordinal": 1,
+      "kind": "editable-geometry",
+      "label": "ProfileCanvas 01",
+      "translation_keys": []
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileCanvas.svelte",
+      "line": 303,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Zoom passend",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilecanvas-02.svg",
+      "sha256": "473dcebe44da8ee10a6397c43600553962ee7a348c8e03fd1e24bf4d6b3dafdf"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+      "line": 53,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Nieuw profiel",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilelibrary-01.svg",
+      "sha256": "4980254e3e960153e808323c51a4d8a672a79b097f9ba8483c35a0d3ec5b60e3"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+      "line": 61,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Zoek profiel...",
+      "translation_keys": [
+        "profileEditor.searchProfiles"
+      ],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilelibrary-02.svg",
+      "sha256": "f5f33603ccae0a582afc8a36ee89dee57237f0c16af89024ca669ce4634c25ef"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+      "line": 91,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Kopieer",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilelibrary-03.svg",
+      "sha256": "291b9da578f918952c372ddadd55b1667c2655e072d625203799d10287dd7003"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+      "line": 105,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Categorie uitklappen",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilelibrary-04.svg",
+      "sha256": "66da78409c22ed3b846150e7180835b7533ed4c7c200afadf68e4501274d56ba"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileLibrary.svelte",
+      "line": 129,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Kopieer",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profilelibrary-05.svg",
+      "sha256": "291b9da578f918952c372ddadd55b1667c2655e072d625203799d10287dd7003"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileParams.svelte",
+      "line": 204,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Opslaan",
+      "translation_keys": [
+        "profileEditor.save"
+      ],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profileparams-01.svg",
+      "sha256": "f6eed5a3a366c9c8c93e15934c85c3cbc6d5e716e220cb9458c46d5dea032097"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 39,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Selecteren",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-01.svg",
+      "sha256": "f2e5eda07d3f8ed193224bc580ee523cc34a059675a1b08ecdb68e2d567fb49d"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 49,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Punt verwijderen",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-02.svg",
+      "sha256": "3edc55957e3c02e1e6297ade7849c00cf708e65f6675dab95174f30969156246"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 61,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Spiegel horizontaal",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-03.svg",
+      "sha256": "53d9f4647c5f4fc890aacb0d5da09f91a9beefaeff73dd0063159e7215080f24"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 69,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Spiegel verticaal",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-04.svg",
+      "sha256": "aadec33ebe5059c7e90db302d0a6a864d7fdacb8baa9865fe3479f369bcd106d"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 86,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Snap aan raster",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-05.svg",
+      "sha256": "1339443609a6c67535d4c3b81e11223a34ebb02ff569d1cf3f81f168d0ca4089"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 100,
+      "ordinal": 6,
+      "kind": "ui-icon",
+      "label": "Ongedaan",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-06.svg",
+      "sha256": "517bdee2363df487617fe8b453fe5de9e169aff7c5876320c40c352b5bef4d9b"
+    },
+    {
+      "file": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+      "line": 107,
+      "ordinal": 7,
+      "kind": "ui-icon",
+      "label": "Opnieuw",
+      "translation_keys": [],
+      "group": "editor",
+      "svg": "inline-ui-icons/open-frame-studio/profiletoolbar-07.svg",
+      "sha256": "415a8d0f665e7d41359531c0ac3bdfad8c99481d7ab222d93a608fe0915517d8"
+    },
+    {
+      "file": "ui/src/components/project/LayoutProtoView.svelte",
+      "line": 208,
+      "ordinal": 1,
+      "kind": "technical-layout",
+      "label": "LayoutProtoView 01",
+      "translation_keys": []
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 54,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Terug",
+      "translation_keys": [
+        "backstage.back"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-01.svg",
+      "sha256": "7270af497e8da4665ac029ee67a86b9af21761ced3321425eb92bc3d05d83e3c"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 63,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Nieuw",
+      "translation_keys": [
+        "backstage.newProject"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-02.svg",
+      "sha256": "6d8aaf44233ae33d92e7dc407da8451b60d1120be7e012eda2a057c2af3cf3e2"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 73,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Openen",
+      "translation_keys": [
+        "backstage.open"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-03.svg",
+      "sha256": "af4e0e312d5039f206d838d6753d2156dec6d5f048d2902527fbbaf1477ceb3e"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 80,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Opslaan",
+      "translation_keys": [
+        "backstage.save"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-04.svg",
+      "sha256": "5c8e93a7fd929a0d15974d3cc23d471b1d383f4628db39403c15687c5ffb71ce"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 89,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Opslaan als...",
+      "translation_keys": [
+        "backstage.saveAs"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-05.svg",
+      "sha256": "5c8e93a7fd929a0d15974d3cc23d471b1d383f4628db39403c15687c5ffb71ce"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 102,
+      "ordinal": 6,
+      "kind": "ui-icon",
+      "label": "GitHub",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-06.svg",
+      "sha256": "d7df1724c98cde6111f41c033002e3196ff1ef972a9689f2b5e787f9dde18697"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 108,
+      "ordinal": 7,
+      "kind": "ui-icon",
+      "label": "Probleem melden",
+      "translation_keys": [
+        "backstage.reportIssue"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-07.svg",
+      "sha256": "0b5047b3e931598ac83614ad35fb1fd03a7c36372805d64fe327dc80dd6a33ce"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 115,
+      "ordinal": 8,
+      "kind": "ui-icon",
+      "label": "Documentatie",
+      "translation_keys": [
+        "backstage.documentation"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-08.svg",
+      "sha256": "b8ebc3580e50b55fde359e602002b9a1e8872dacc3f2c8773ebe41436e23bc2c"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 142,
+      "ordinal": 9,
+      "kind": "ui-icon",
+      "label": "Nieuw",
+      "translation_keys": [
+        "backstage.newProject"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-09.svg",
+      "sha256": "1f7c035fa89d88d2f646b0d158d79d6f86866cf3b5928552099dc15b903b0ce5"
+    },
+    {
+      "file": "ui/src/components/shell/AppMenu.svelte",
+      "line": 151,
+      "ordinal": 10,
+      "kind": "ui-icon",
+      "label": "Openen",
+      "translation_keys": [
+        "backstage.open"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/appmenu-10.svg",
+      "sha256": "0539082f0f1f5e5ab671c4cb717531ebe5f6bdf5e7992317ac9d0532b10eccfc"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 217,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Leeg",
+      "translation_keys": [
+        "ribbon.empty"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-01.svg",
+      "sha256": "72d0d1e37fc6e18e31fd5ad9e4fef9da276b2e4e8ba7b73c4e11e6b0fcb7b7ec"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 225,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Draaikiep",
+      "translation_keys": [
+        "ribbon.turnTilt"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-02.svg",
+      "sha256": "53cc33b4857c15ad444f3f6bb15e28129b8d0bfca97ac4789720ff0b47fa89db"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 232,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Dubbel",
+      "translation_keys": [
+        "ribbon.double"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-03.svg",
+      "sha256": "9ce4526d158bf461a1a3cb0ffd4e85d06e07ed38e775f2ea7d6f664d45760511"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 239,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Schuifpui",
+      "translation_keys": [
+        "ribbon.slidingDoor"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-04.svg",
+      "sha256": "b11c09a8b6d8b3d2c9ddc78949e4fec89545b5bca6614d315262c0ae62132936"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 247,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Voordeur",
+      "translation_keys": [
+        "ribbon.frontDoor"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-05.svg",
+      "sha256": "3b2750dec714a903299db1ff03bc5055b01970e4b66cb511c43adce9b42b27c2"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 255,
+      "ordinal": 6,
+      "kind": "ui-icon",
+      "label": "Klapraam",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-06.svg",
+      "sha256": "a1a0e94541877c13c985fd870f2dae85f17cbfdaa74ecd459f41ba9671f40f54"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 262,
+      "ordinal": 7,
+      "kind": "ui-icon",
+      "label": "Hefschuif",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-07.svg",
+      "sha256": "b5b241f43da21d42bee0bf138156baa6457b28eb7446279f359b20940f98d757"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 271,
+      "ordinal": 8,
+      "kind": "ui-icon",
+      "label": "Pivot",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-08.svg",
+      "sha256": "22353df30862a6808b144f3eb99305151cc23aeae89b63e919655a81a549006f"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 279,
+      "ordinal": 9,
+      "kind": "ui-icon",
+      "label": "Stolp",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-09.svg",
+      "sha256": "c2380e813df807c4f767b978ba811f3939ffa710663cd4a78828957285c83711"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 296,
+      "ordinal": 10,
+      "kind": "ui-icon",
+      "label": "+ Kolom",
+      "translation_keys": [
+        "ribbon.addColumn"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-10.svg",
+      "sha256": "39eb2b589fe9d0d34d00abfc230064b64bb8bc707f59b5dde73478c78fdd74c4"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 303,
+      "ordinal": 11,
+      "kind": "ui-icon",
+      "label": "+ Rij",
+      "translation_keys": [
+        "ribbon.addRow"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-11.svg",
+      "sha256": "e57c39211e3fdbd0511c9e93dfcdcef9a72d0de2f587f541cdfec4780a03b6ff"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 310,
+      "ordinal": 12,
+      "kind": "ui-icon",
+      "label": "Dupliceer",
+      "translation_keys": [
+        "ribbon.duplicate"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-12.svg",
+      "sha256": "abc0458d591a0fb0eca37098fe404b7019864ca795e0ff9e560dd1e9cde900dd"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 317,
+      "ordinal": 13,
+      "kind": "ui-icon",
+      "label": "Verwijder",
+      "translation_keys": [
+        "ribbon.remove"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-13.svg",
+      "sha256": "fe462732b7c955b84acb9199efb7561f5be4abecb11e890c4e75d1eb3f0efce9"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 334,
+      "ordinal": 14,
+      "kind": "ui-icon",
+      "label": "Nieuw profiel",
+      "translation_keys": [
+        "ribbon.newProfile"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-14.svg",
+      "sha256": "3bf7e4537b1dc907c7d36d8e5065648052d4fdd4643b10af5c78bf9c194e9515"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 343,
+      "ordinal": 15,
+      "kind": "ui-icon",
+      "label": "Profiel DXF",
+      "translation_keys": [
+        "ribbon.profileDxf"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-15.svg",
+      "sha256": "cf2466dc50b13161669e6ba5c8886e8fc251987cc45036a5eff3d1df80f80bab"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 350,
+      "ordinal": 16,
+      "kind": "ui-icon",
+      "label": "Catalogus",
+      "translation_keys": [
+        "ribbon.catalog"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-16.svg",
+      "sha256": "5bd588d2ff40d8b4864d0f47c2ebcf5313961899189d33a2f7e62a7da3b586e4"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 366,
+      "ordinal": 17,
+      "kind": "ui-icon",
+      "label": "Kolom",
+      "translation_keys": [
+        "ribbon.column"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-17.svg",
+      "sha256": "39eb2b589fe9d0d34d00abfc230064b64bb8bc707f59b5dde73478c78fdd74c4"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 373,
+      "ordinal": 18,
+      "kind": "ui-icon",
+      "label": "Rij",
+      "translation_keys": [
+        "ribbon.row"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-18.svg",
+      "sha256": "e57c39211e3fdbd0511c9e93dfcdcef9a72d0de2f587f541cdfec4780a03b6ff"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 388,
+      "ordinal": 19,
+      "kind": "ui-icon",
+      "label": "Vast glas",
+      "translation_keys": [
+        "ribbon.fixedGlass"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-19.svg",
+      "sha256": "5fcad355db20c8f9c7abff602ea81f65cfb617f831360ce3a1d840ca3e734c3c"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 392,
+      "ordinal": 20,
+      "kind": "ui-icon",
+      "label": "Draaikiep",
+      "translation_keys": [
+        "ribbon.turnTilt"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-20.svg",
+      "sha256": "f9179b3ff6dc342846568e323bed6fceafa41c4987a4f3a5a487cb0fe2ffb35a"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 396,
+      "ordinal": 21,
+      "kind": "ui-icon",
+      "label": "Schuifraam",
+      "translation_keys": [
+        "panel.sliding"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-21.svg",
+      "sha256": "b9c5266380e9a3760708846ebc83c99f9e4dc22ce577a298110b565c6e28ceac"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 400,
+      "ordinal": 22,
+      "kind": "ui-icon",
+      "label": "Deur",
+      "translation_keys": [
+        "panel.door"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-22.svg",
+      "sha256": "6fa4d1bf26f43906291fde953bfe0d93e26cabf2f3cba1c452de11e418b76d1c"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 404,
+      "ordinal": 23,
+      "kind": "ui-icon",
+      "label": "Paneel",
+      "translation_keys": [
+        "ribbon.panel"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-23.svg",
+      "sha256": "95d8221956fe014609718d341a5a500f023035809b3f3f9fc4d8e52b235cbb99"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 416,
+      "ordinal": 24,
+      "kind": "ui-icon",
+      "label": "Leeg",
+      "translation_keys": [
+        "ribbon.empty"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-24.svg",
+      "sha256": "063d70acfda62e38e60fc2405ab1be1948d44a16b1c5e02776f022a8920dfa2c"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 422,
+      "ordinal": 25,
+      "kind": "ui-icon",
+      "label": "Stijl-regel",
+      "translation_keys": [
+        "ribbon.stickSystem"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-25.svg",
+      "sha256": "7f8d9818e65640e01885c975280f8388ffe6f7cc101f05136a12c5712e0b4f44"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 432,
+      "ordinal": 26,
+      "kind": "ui-icon",
+      "label": "Element",
+      "translation_keys": [
+        "ribbon.unitized"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-26.svg",
+      "sha256": "a6d4f58d8d7c59259e5571816f5479f0dc6c581a25c29b799b0c01a6c4c28e73"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 449,
+      "ordinal": 27,
+      "kind": "ui-icon",
+      "label": "IFC",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-27.svg",
+      "sha256": "9a764246d99a694167ddf2a61cb8f69cd9730d8d20b21094a02c239b4b4bddcd"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 456,
+      "ordinal": 28,
+      "kind": "ui-icon",
+      "label": "DXF",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-28.svg",
+      "sha256": "9a764246d99a694167ddf2a61cb8f69cd9730d8d20b21094a02c239b4b4bddcd"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 476,
+      "ordinal": 29,
+      "kind": "ui-icon",
+      "label": "IFC Import",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-29.svg",
+      "sha256": "7b94bae1fc47efc4052db82a534e663fcbc8a84edc285ce2830f299c3aff2975"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 483,
+      "ordinal": 30,
+      "kind": "ui-icon",
+      "label": "IFC Roundtrip",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-30.svg",
+      "sha256": "c7866649e2674030d14400a11ea2529e1352ff5466f04f3a577898bba471d1c3"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 492,
+      "ordinal": 31,
+      "kind": "ui-icon",
+      "label": "IFC vergelijken",
+      "translation_keys": [
+        "ribbon.compareIfc"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-31.svg",
+      "sha256": "64340e6a5962562ac1806ce472fc9ddd9e5963063972f5d2b1ee9277f23abc9d"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 508,
+      "ordinal": 32,
+      "kind": "ui-icon",
+      "label": "IDS Validatie",
+      "translation_keys": [
+        "tabs.ids"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-32.svg",
+      "sha256": "52739ddaa31f0d2284cb0ed30cc38ebd14f46f69f7cd9097cb057a6abf0679b6"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 515,
+      "ordinal": 33,
+      "kind": "ui-icon",
+      "label": "Certificering",
+      "translation_keys": [
+        "tabs.certification"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-33.svg",
+      "sha256": "df74fbc0bd2200270f37400b41aecd1bb73581607dae46b67a4908f86a0f46f8"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 530,
+      "ordinal": 34,
+      "kind": "ui-icon",
+      "label": "Kozijnstaat PDF",
+      "translation_keys": [
+        "ribbon.kozijnstaatPdf"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-34.svg",
+      "sha256": "84ec82bc2e2e857e231e2aa9d08bc6f3fc3bb2d3528b3c468908c4f22bb696e0"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 539,
+      "ordinal": 35,
+      "kind": "ui-icon",
+      "label": "Kozijnstaat Excel",
+      "translation_keys": [
+        "ribbon.kozijnstaatExcel"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-35.svg",
+      "sha256": "0eeefc7012ff40ea49e1f8687190666eb3f5f42fb294afff978f0e696b3bbf2d"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 557,
+      "ordinal": 36,
+      "kind": "ui-icon",
+      "label": "Tekening PDF",
+      "translation_keys": [
+        "ribbon.drawingPdf"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-36.svg",
+      "sha256": "f5738358ccd6436c353147bf9f5d40e5f847f9aa9d94f5e5dc9ae79227f82ee6"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 574,
+      "ordinal": 37,
+      "kind": "ui-icon",
+      "label": "glTF/GLB",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-37.svg",
+      "sha256": "26da01e4b9ed4afa4c11be3488c6f2697828045def03bc99c1a72bc035a6a542"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 590,
+      "ordinal": 38,
+      "kind": "ui-icon",
+      "label": "Naar Blender",
+      "translation_keys": [
+        "ribbon.toBlender"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-38.svg",
+      "sha256": "1f2c3bab75d58e3639f97ec9868e43bacf28b6428fad0f3aaad352e13dc3e59c"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 597,
+      "ordinal": 39,
+      "kind": "ui-icon",
+      "label": "Verbinding testen",
+      "translation_keys": [
+        "ribbon.testBlender"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-39.svg",
+      "sha256": "b36c8bf4053e67b0ed1501e28cf229ee4768cbeed13d2140fa44d818e3c83d35"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 610,
+      "ordinal": 40,
+      "kind": "ui-icon",
+      "label": "PDF",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-40.svg",
+      "sha256": "985643e87c9fcec8cecf37af43ecd3f90b54ab7fed939fd6a1f5f89bdab21654"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 617,
+      "ordinal": 41,
+      "kind": "ui-icon",
+      "label": "Excel",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-41.svg",
+      "sha256": "a2ada44d8c8232635a97dd89c8f80904c842abd6f20d822e81be95b7fc37ca78"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 627,
+      "ordinal": 42,
+      "kind": "ui-icon",
+      "label": "CSV",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-42.svg",
+      "sha256": "a3e1b77476071ab0d8ce199d3e71c8d496ba50efb01bdb34f3a35d744e660d3c"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 644,
+      "ordinal": 43,
+      "kind": "ui-icon",
+      "label": "CNC G-code",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-43.svg",
+      "sha256": "98abe9f729e1f4cafb0b12dc0ae84229a3e016d79aaf201bffcebc887a20b83d"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 653,
+      "ordinal": 44,
+      "kind": "ui-icon",
+      "label": "Labels PDF",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-44.svg",
+      "sha256": "63cc2acbf8246d68a56985d3ea7f4dfc3f40d8b00370b2190b405f6b2069f56a"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 670,
+      "ordinal": 45,
+      "kind": "ui-icon",
+      "label": "Zaagplan",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-45.svg",
+      "sha256": "6299bf1290acab7afd8be6767df67b58898e1179ef70c944cd0fe96298cff042"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 678,
+      "ordinal": 46,
+      "kind": "ui-icon",
+      "label": "Planning",
+      "translation_keys": [],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-46.svg",
+      "sha256": "ba71aeea972e544abe5e046f51373a7d5764411293212d344f7f5fc8867404ab"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 686,
+      "ordinal": 47,
+      "kind": "ui-icon",
+      "label": "CNC",
+      "translation_keys": [
+        "tabs.cnc"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-47.svg",
+      "sha256": "98abe9f729e1f4cafb0b12dc0ae84229a3e016d79aaf201bffcebc887a20b83d"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 695,
+      "ordinal": 48,
+      "kind": "ui-icon",
+      "label": "Inkoop",
+      "translation_keys": [
+        "tabs.procurement"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-48.svg",
+      "sha256": "3592af6f2c88e595599c81a15a6c26a8f4885613994ac1b2e42aab4512d9b341"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 710,
+      "ordinal": 49,
+      "kind": "ui-icon",
+      "label": "Ongedaan",
+      "translation_keys": [
+        "ribbon.undo"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-49.svg",
+      "sha256": "4c4ce9d03c5636d9c84eff9e7edd17c8d8663c4ffb4c7f1a0edf317f74ef71f2"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 717,
+      "ordinal": 50,
+      "kind": "ui-icon",
+      "label": "Opnieuw",
+      "translation_keys": [
+        "ribbon.redo"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-50.svg",
+      "sha256": "17c49fccbf87850711c4651a53930320e3511af237ed769dc85f891f9351be7f"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 732,
+      "ordinal": 51,
+      "kind": "ui-icon",
+      "label": "Inzoomen",
+      "translation_keys": [
+        "ribbon.zoomIn"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-51.svg",
+      "sha256": "06234d6f937ee7709e472536ad6258fe9dd6b2a03021d67de873bd7dd5089838"
+    },
+    {
+      "file": "ui/src/components/shell/Ribbon.svelte",
+      "line": 739,
+      "ordinal": 52,
+      "kind": "ui-icon",
+      "label": "Uitzoomen",
+      "translation_keys": [
+        "ribbon.zoomOut"
+      ],
+      "group": "ribbon",
+      "svg": "inline-ui-icons/open-frame-studio/ribbon-52.svg",
+      "sha256": "e633c4c5db97f19a30cf6dede164e1a8506445714a23934ac00e8c70d70a3121"
+    },
+    {
+      "file": "ui/src/components/shell/Settings.svelte",
+      "line": 46,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Instellingen sluiten",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/settings-01.svg",
+      "sha256": "68fb509c6345baa9bceffb928e8fc6e35b0430ff063683c5f9a3bf3d8f4b8710"
+    },
+    {
+      "file": "ui/src/components/shell/Settings.svelte",
+      "line": 55,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Algemeen",
+      "translation_keys": [
+        "settings.cat.general"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/settings-02.svg",
+      "sha256": "a4a36a5ce0afebd82653a3443a5a80a85a949c40c96904d5681d6a8463c7a650"
+    },
+    {
+      "file": "ui/src/components/shell/Settings.svelte",
+      "line": 62,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Over",
+      "translation_keys": [
+        "settings.cat.about"
+      ],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/settings-03.svg",
+      "sha256": "8ef32cfbfd6dddfc437bf6855c313fc9fd3185b3bf5a9746b701ce2f8aa19576"
+    },
+    {
+      "file": "ui/src/components/shell/StatusBar.svelte",
+      "line": 49,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Ontbrekende hardware",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/statusbar-01.svg",
+      "sha256": "482992f1067f7bd41f37ead9953f63879120670d1e04feada06a2ae8f642dba3"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 61,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Instellingen",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-01.svg",
+      "sha256": "1672ed51c8b4e299be373a211f4fac3ebaa52d028088a385f85d2a3bbcc999f3"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 68,
+      "ordinal": 2,
+      "kind": "ui-icon",
+      "label": "Ongedaan",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-02.svg",
+      "sha256": "a4beefa00b726eb1155db2f805f3b9cd8b2cad3d5b434cc725705b7eff0902ac"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 74,
+      "ordinal": 3,
+      "kind": "ui-icon",
+      "label": "Opnieuw",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-03.svg",
+      "sha256": "e29db2aaffa0881979b2919e4b8a98e8f40d20c63ecf2eccc6abbf2c0ffaad84"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 88,
+      "ordinal": 4,
+      "kind": "ui-icon",
+      "label": "Minimaliseren",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-04.svg",
+      "sha256": "19786270d8190efdef25c7e42be861fa2f2abd3915f485d0032df41bea15342f"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 92,
+      "ordinal": 5,
+      "kind": "ui-icon",
+      "label": "Herstellen",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-05.svg",
+      "sha256": "693c02079b36405c3c10408fd02562759a80904f02f478cc797a75e0efeea7d1"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 97,
+      "ordinal": 6,
+      "kind": "ui-icon",
+      "label": "Maximaliseren",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-06.svg",
+      "sha256": "debd8a7ba8ab256fbdfe944034dc50a17df2867658579ec8bbaba28bf63556ea"
+    },
+    {
+      "file": "ui/src/components/shell/TitleBar.svelte",
+      "line": 101,
+      "ordinal": 7,
+      "kind": "ui-icon",
+      "label": "Sluiten",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/titlebar-07.svg",
+      "sha256": "bfb56154976b5d3a3643c4d050a7e8b9e66c88b6116e5e416df2f49b3d714aab"
+    },
+    {
+      "file": "ui/src/components/shell/Toast.svelte",
+      "line": 9,
+      "ordinal": 1,
+      "kind": "ui-icon",
+      "label": "Melding sluiten",
+      "translation_keys": [],
+      "group": "shell",
+      "svg": "inline-ui-icons/open-frame-studio/toast-01.svg",
+      "sha256": "bf1d7e8d6e5d664d2295c7e642cfb16351efc76d7d732ffea976ab9917f53b04"
+    }
+  ]
+}

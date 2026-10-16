@@ -1,0 +1,340 @@
+{
+  "repository": "open-frame-studio",
+  "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+  "scope": "App.svelte workspace tab destinations and conditional Svelte components; structural source review, not screenshots.",
+  "workspace_tabs": 20,
+  "default_workspace": "editor",
+  "ribbon_tabs": [
+    "home",
+    "insert",
+    "ifc",
+    "production",
+    "view"
+  ],
+  "default_ribbon_tab": "home",
+  "editor_canvas_variants": 2,
+  "source_screenshots": 0,
+  "shell": [
+    "TitleBar",
+    "Ribbon",
+    "AppMenu",
+    "Settings",
+    "WorkspaceTabs",
+    "Workspace",
+    "StatusBar",
+    "Toast"
+  ],
+  "screens": [
+    {
+      "id": "editor",
+      "label": "2D Editor",
+      "tab_line": 96,
+      "icon": "inline-ui-icons/open-frame-studio/app-01.svg",
+      "icon_line": 98,
+      "primary_screens": [
+        {
+          "component": "VliesgevelEditor",
+          "file": "ui/src/components/editor/VliesgevelEditor.svelte"
+        },
+        {
+          "component": "KozijnEditor",
+          "file": "ui/src/components/editor/KozijnEditor.svelte"
+        }
+      ],
+      "shared_panels": [
+        "ProjectOverview",
+        "PropertiesPanel",
+        "AiAssistant"
+      ],
+      "conditional_editor_variants": true
+    },
+    {
+      "id": "viewer3d",
+      "label": "3D Viewer",
+      "tab_line": 108,
+      "icon": "inline-ui-icons/open-frame-studio/app-02.svg",
+      "icon_line": 110,
+      "primary_screens": [
+        {
+          "component": "Viewer3D",
+          "file": "ui/src/components/viewer3d/Viewer3D.svelte"
+        }
+      ],
+      "shared_panels": [
+        "ProjectOverview",
+        "PropertiesPanel"
+      ],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "kozijnstaat",
+      "label": "Kozijnstaat",
+      "tab_line": 120,
+      "icon": "inline-ui-icons/open-frame-studio/app-03.svg",
+      "icon_line": 122,
+      "primary_screens": [
+        {
+          "component": "KozijnstaatView",
+          "file": "ui/src/components/project/KozijnstaatView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "production",
+      "label": "Productie",
+      "tab_line": 133,
+      "icon": "inline-ui-icons/open-frame-studio/app-04.svg",
+      "icon_line": 135,
+      "primary_screens": [
+        {
+          "component": "ProductionListsView",
+          "file": "ui/src/components/project/ProductionListsView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "calculation",
+      "label": "Calculatie",
+      "tab_line": 146,
+      "icon": "inline-ui-icons/open-frame-studio/app-05.svg",
+      "icon_line": 148,
+      "primary_screens": [
+        {
+          "component": "CalculationView",
+          "file": "ui/src/components/project/CalculationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "dashboard",
+      "label": "Analyse",
+      "tab_line": 160,
+      "icon": "inline-ui-icons/open-frame-studio/app-06.svg",
+      "icon_line": 162,
+      "primary_screens": [
+        {
+          "component": "DashboardView",
+          "file": "ui/src/components/project/DashboardView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "layoutProto",
+      "label": "Indeling (proto)",
+      "tab_line": 173,
+      "icon": "inline-ui-icons/open-frame-studio/app-07.svg",
+      "icon_line": 175,
+      "primary_screens": [
+        {
+          "component": "LayoutProtoView",
+          "file": "ui/src/components/project/LayoutProtoView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "profiles",
+      "label": "Profiel editor",
+      "tab_line": 184,
+      "icon": "inline-ui-icons/open-frame-studio/app-08.svg",
+      "icon_line": 186,
+      "primary_screens": [
+        {
+          "component": "ProfileEditorView",
+          "file": "ui/src/components/profile-editor/ProfileEditorView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "planning",
+      "label": "Productieplan",
+      "tab_line": 196,
+      "icon": "inline-ui-icons/open-frame-studio/app-09.svg",
+      "icon_line": 198,
+      "primary_screens": [
+        {
+          "component": "PlanningView",
+          "file": "ui/src/components/project/PlanningView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "energy",
+      "label": "Energie",
+      "tab_line": 208,
+      "icon": "inline-ui-icons/open-frame-studio/app-10.svg",
+      "icon_line": 210,
+      "primary_screens": [
+        {
+          "component": "EnergyView",
+          "file": "ui/src/components/project/EnergyView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "circularity",
+      "label": "Circulariteit",
+      "tab_line": 218,
+      "icon": "inline-ui-icons/open-frame-studio/app-11.svg",
+      "icon_line": 220,
+      "primary_screens": [
+        {
+          "component": "CircularityView",
+          "file": "ui/src/components/project/CircularityView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "plausibility",
+      "label": "Plausibiliteit",
+      "tab_line": 229,
+      "icon": "inline-ui-icons/open-frame-studio/app-12.svg",
+      "icon_line": 231,
+      "primary_screens": [
+        {
+          "component": "PlausibilityView",
+          "file": "ui/src/components/project/PlausibilityView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "quotation",
+      "label": "Offertes",
+      "tab_line": 240,
+      "icon": "inline-ui-icons/open-frame-studio/app-13.svg",
+      "icon_line": 242,
+      "primary_screens": [
+        {
+          "component": "QuotationView",
+          "file": "ui/src/components/project/QuotationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "bcf",
+      "label": "BCF",
+      "tab_line": 253,
+      "icon": "inline-ui-icons/open-frame-studio/app-14.svg",
+      "icon_line": 255,
+      "primary_screens": [
+        {
+          "component": "BcfView",
+          "file": "ui/src/components/project/BcfView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "optimization",
+      "label": "Zaagplan",
+      "tab_line": 265,
+      "icon": "inline-ui-icons/open-frame-studio/app-15.svg",
+      "icon_line": 267,
+      "primary_screens": [
+        {
+          "component": "CutOptimizationView",
+          "file": "ui/src/components/project/CutOptimizationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "cnc",
+      "label": "CNC",
+      "tab_line": 277,
+      "icon": "inline-ui-icons/open-frame-studio/app-16.svg",
+      "icon_line": 279,
+      "primary_screens": [
+        {
+          "component": "CncView",
+          "file": "ui/src/components/project/CncView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "procurement",
+      "label": "Inkoop",
+      "tab_line": 290,
+      "icon": "inline-ui-icons/open-frame-studio/app-17.svg",
+      "icon_line": 292,
+      "primary_screens": [
+        {
+          "component": "ProcurementView",
+          "file": "ui/src/components/project/ProcurementView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "combination",
+      "label": "Combinaties",
+      "tab_line": 302,
+      "icon": "inline-ui-icons/open-frame-studio/app-18.svg",
+      "icon_line": 304,
+      "primary_screens": [
+        {
+          "component": "CombinationView",
+          "file": "ui/src/components/project/CombinationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "ids",
+      "label": "IDS Validatie",
+      "tab_line": 313,
+      "icon": "inline-ui-icons/open-frame-studio/app-19.svg",
+      "icon_line": 315,
+      "primary_screens": [
+        {
+          "component": "IdsValidationView",
+          "file": "ui/src/components/project/IdsValidationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    },
+    {
+      "id": "certification",
+      "label": "Certificering",
+      "tab_line": 324,
+      "icon": "inline-ui-icons/open-frame-studio/app-20.svg",
+      "icon_line": 326,
+      "primary_screens": [
+        {
+          "component": "CertificationView",
+          "file": "ui/src/components/project/CertificationView.svelte"
+        }
+      ],
+      "shared_panels": [],
+      "conditional_editor_variants": false
+    }
+  ]
+}
