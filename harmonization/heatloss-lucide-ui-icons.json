@@ -1,0 +1,622 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "lucide_version": "0.577.0",
+  "lucide_integrity": "sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==",
+  "scope": "Direct JSX, icon props and icon registries in eight active UI files. Legacy components/modeller/Ribbon.tsx is excluded because the app ribbon renders components/ribbon/ModellerTab.tsx.",
+  "reachability": {
+    "routes": [
+      "/import/thermal",
+      "/library",
+      "/constructies"
+    ],
+    "ribbon": "frontend/src/components/ribbon/Ribbon.tsx \u2192 ModellerTab",
+    "wizard_steps": [
+      "FileUploadStep",
+      "RoomImportStep",
+      "ConstructionImportStep",
+      "ImportSummary"
+    ]
+  },
+  "files": 8,
+  "count": 35,
+  "kind_counts": {
+    "jsx": 23,
+    "icon-prop": 12,
+    "icon-registry": 17
+  },
+  "icons": [
+    {
+      "name": "AlertCircle",
+      "svg": "ui-icons/open-heatloss-studio/alert-circle.svg",
+      "sha256": "cc41a52a3b9b2f5378a07a40bd2e04420111241a651c5b0a2041dcbef0f4c6a3",
+      "source_module": "package/dist/esm/icons/circle-alert.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/FileUploadStep.tsx",
+          "line": 153,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/RoomImportStep.tsx",
+          "line": 141,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "AlertTriangle",
+      "svg": "ui-icons/open-heatloss-studio/alert-triangle.svg",
+      "sha256": "cca49331f1f7bc18e5e002e48af7961a61c57e58cf23b04a17351550181da319",
+      "source_module": "package/dist/esm/icons/triangle-alert.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 255,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 299,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 95,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "ArrowRight",
+      "svg": "ui-icons/open-heatloss-studio/arrow-right.svg",
+      "sha256": "95bbd7cc9f71df46d434476b42d781961e076cab62b118d22a9bc337df633673",
+      "source_module": "package/dist/esm/icons/arrow-right.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 127,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "Check",
+      "svg": "ui-icons/open-heatloss-studio/check.svg",
+      "sha256": "20fa9a219a369a7b8933ea5147ffce1a0478b2d09aa0420e23240246aee42cc6",
+      "source_module": "package/dist/esm/icons/check.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 302,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "CheckCircle2",
+      "svg": "ui-icons/open-heatloss-studio/check-circle-2.svg",
+      "sha256": "05b603e582f4a8a1bc4a031889975aabda0cf68099d471db7059fc50796e4b7b",
+      "source_module": "package/dist/esm/icons/circle-check.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/FileUploadStep.tsx",
+          "line": 120,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 115,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "ChevronDown",
+      "svg": "ui-icons/open-heatloss-studio/chevron-down.svg",
+      "sha256": "942296f13ef58d02dd718f5cb157b1cd119582a2d258c0e994cb15a8b35c693d",
+      "source_module": "package/dist/esm/icons/chevron-down.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 288,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "ChevronLeft",
+      "svg": "ui-icons/open-heatloss-studio/chevron-left.svg",
+      "sha256": "4481f990b94ed5971bb60a286c39e74bbb8f6d642e60e6c8ab5fc6fbc9d38265",
+      "source_module": "package/dist/esm/icons/chevron-left.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 395,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "ChevronRight",
+      "svg": "ui-icons/open-heatloss-studio/chevron-right.svg",
+      "sha256": "73cc92190a6c85fd74115cf9a31d3fd580508b2695bcceb15405d0cc8fd11313",
+      "source_module": "package/dist/esm/icons/chevron-right.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 290,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 406,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "Circle",
+      "svg": "ui-icons/open-heatloss-studio/circle.svg",
+      "sha256": "d0912abeddf2661378cac1be2d5f1ae2c91b489595ad9994654b5ca3984b5af8",
+      "source_module": "package/dist/esm/icons/circle.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 50,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "ClipboardCheck",
+      "svg": "ui-icons/open-heatloss-studio/clipboard-check.svg",
+      "sha256": "489bff2035e40c21f35bff97efaeda873a89d0c96e64e0061f38a7cfafaa6208",
+      "source_module": "package/dist/esm/icons/clipboard-check.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 56,
+          "kind": "icon-registry",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "CornerRightDown",
+      "svg": "ui-icons/open-heatloss-studio/corner-right-down.svg",
+      "sha256": "31782f96af5a59eba20f2f1c843c6f9b7840e98d59cfe54a5b717ce4b07aa715",
+      "source_module": "package/dist/esm/icons/corner-right-down.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 62,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "DoorOpen",
+      "svg": "ui-icons/open-heatloss-studio/door-open.svg",
+      "sha256": "24be4d28e112ddd8c6b11b9ea30d857fa6ed837c8cadb42926557930667e7734",
+      "source_module": "package/dist/esm/icons/door-open.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 82,
+          "kind": "icon-prop",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 55,
+          "kind": "icon-registry",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 55,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "svg": "ui-icons/open-heatloss-studio/download.svg",
+      "sha256": "eedf3c539e58d67107b7a6c8c75592bebf77b73863cdc58739ec5a58e38f60db",
+      "source_module": "package/dist/esm/icons/download.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 316,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "FileDown",
+      "svg": "ui-icons/open-heatloss-studio/file-down.svg",
+      "sha256": "30749d27591abb36e15424f4bd2ef916330b07ff58a95bf49cdaeeb595b0b4ef",
+      "source_module": "package/dist/esm/icons/file-down.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 322,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "FileImage",
+      "svg": "ui-icons/open-heatloss-studio/file-image.svg",
+      "sha256": "5ee9eaffbbc6c6bf6f2af4f4410916b35396e2a999c901ed10c43ac239244191",
+      "source_module": "package/dist/esm/icons/file-image.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 310,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "FileJson",
+      "svg": "ui-icons/open-heatloss-studio/file-json.svg",
+      "sha256": "1028186edac43a7a6db1175eb6275abd2f728e13bdf6a409f49b373cc38c0e74",
+      "source_module": "package/dist/esm/icons/file-braces.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/FileUploadStep.tsx",
+          "line": 166,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "FileText",
+      "svg": "ui-icons/open-heatloss-studio/file-text.svg",
+      "sha256": "454545bbfb937a589ac56977ca983809e766ebc030b0f7a082fc05472aa39c70",
+      "source_module": "package/dist/esm/icons/file-text.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 311,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "FileUp",
+      "svg": "ui-icons/open-heatloss-studio/file-up.svg",
+      "sha256": "7614c5f8f3b3541f50af20a9084aa832608212aa8722c4bef2e66522d6d2b1b9",
+      "source_module": "package/dist/esm/icons/file-up.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 323,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Grid2x2",
+      "svg": "ui-icons/open-heatloss-studio/grid-2x2.svg",
+      "sha256": "dde3c53797bcb6338d7c6fedd9c499853860a6b070952daf6d685136bcbb10aa",
+      "source_module": "package/dist/esm/icons/grid-2x2.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 54,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Hand",
+      "svg": "ui-icons/open-heatloss-studio/hand.svg",
+      "sha256": "cb5866729e7481b2158757df7135aa85be2f26656afb6620ac4170d8369f0245",
+      "source_module": "package/dist/esm/icons/hand.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 44,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "svg": "ui-icons/open-heatloss-studio/home.svg",
+      "sha256": "b42b6602337b72ad9885e08fd49a30cc1af7e97ad4c4e7e558d064407293c2af",
+      "source_module": "package/dist/esm/icons/house.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 70,
+          "kind": "icon-prop",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 53,
+          "kind": "icon-registry",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "svg": "ui-icons/open-heatloss-studio/layers.svg",
+      "sha256": "35554150a4f2b333bb75f673cc9c5cfc650ea79a0d65f3081cab77a25b48fd6e",
+      "source_module": "package/dist/esm/icons/layers.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 325,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ImportSummary.tsx",
+          "line": 76,
+          "kind": "icon-prop",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 54,
+          "kind": "icon-registry",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "Loader2",
+      "svg": "ui-icons/open-heatloss-studio/loader-2.svg",
+      "sha256": "37866487a141f3cab09002c5c2d3e7889945f148e044840fa70bde0ca0d09c66",
+      "source_module": "package/dist/esm/icons/loader-circle.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 333,
+          "kind": "jsx",
+          "area": "Importwizard"
+        }
+      ]
+    },
+    {
+      "name": "MousePointer2",
+      "svg": "ui-icons/open-heatloss-studio/mouse-pointer-2.svg",
+      "sha256": "d3ca3cd26e0c8f36cabcdc22cf195a21d8658b051ffe01b4dcec5c73617f7737",
+      "source_module": "package/dist/esm/icons/mouse-pointer-2.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 43,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "MoveHorizontal",
+      "svg": "ui-icons/open-heatloss-studio/move-horizontal.svg",
+      "sha256": "dfdf01ed93e081501f19b0d7512b2cf6b294080c45bb4174670c8710b2f052de",
+      "source_module": "package/dist/esm/icons/move-horizontal.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 60,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Pencil",
+      "svg": "ui-icons/open-heatloss-studio/pencil.svg",
+      "sha256": "41aaf00d3ee8eed87115b8a84540795433177d83eb1e109d461a3443b6ce6652",
+      "source_module": "package/dist/esm/icons/pencil.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 248,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ConstructionImportStep.tsx",
+          "line": 386,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/pages/Library.tsx",
+          "line": 1034,
+          "kind": "jsx",
+          "area": "Projectschermen"
+        },
+        {
+          "file": "frontend/src/pages/ProjectConstructions.tsx",
+          "line": 415,
+          "kind": "jsx",
+          "area": "Projectschermen"
+        },
+        {
+          "file": "frontend/src/pages/ProjectConstructions.tsx",
+          "line": 459,
+          "kind": "jsx",
+          "area": "Projectschermen"
+        },
+        {
+          "file": "frontend/src/pages/ProjectConstructions.tsx",
+          "line": 703,
+          "kind": "jsx",
+          "area": "Projectschermen"
+        }
+      ]
+    },
+    {
+      "name": "Pentagon",
+      "svg": "ui-icons/open-heatloss-studio/pentagon.svg",
+      "sha256": "bc80aaefcddb02d7309b8a3f21d1360138412b38bd4af5d5c72da74fdee04b78",
+      "source_module": "package/dist/esm/icons/pentagon.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 49,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Redo2",
+      "svg": "ui-icons/open-heatloss-studio/redo-2.svg",
+      "sha256": "33d49d6322fbaebdc35ebdddf37ecba57e2f62b14d96fee9ed5e06c3a233b862",
+      "source_module": "package/dist/esm/icons/redo-2.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 137,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Ruler",
+      "svg": "ui-icons/open-heatloss-studio/ruler.svg",
+      "sha256": "705b99661bbc4ab0377737c6512c6fd59ea0cf0f7abc9e3bb1b3cf9a9378b5e6",
+      "source_module": "package/dist/esm/icons/ruler.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 63,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Scissors",
+      "svg": "ui-icons/open-heatloss-studio/scissors.svg",
+      "sha256": "21b4d58542965e1f4e55d2854777245fe0f93e0fa082a96ab29b2ea906b84da4",
+      "source_module": "package/dist/esm/icons/scissors.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 56,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Square",
+      "svg": "ui-icons/open-heatloss-studio/square.svg",
+      "sha256": "9e35d2d8fc09d8f91c7e5e82c3970446e540066eb7521a0004b0c17b902c5176",
+      "source_module": "package/dist/esm/icons/square.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 48,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Trash2",
+      "svg": "ui-icons/open-heatloss-studio/trash-2.svg",
+      "sha256": "d47d14737206170dd22671f0fce9ef4dedd52daac9cc71d1fb2872c52dfe66dd",
+      "source_module": "package/dist/esm/icons/trash-2.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 138,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "svg": "ui-icons/open-heatloss-studio/type.svg",
+      "sha256": "b9590bfffe99629d533a82928f0a08cc44787800d471f3f8a2f15080b44a69c6",
+      "source_module": "package/dist/esm/icons/type.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 61,
+          "kind": "icon-registry",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Undo2",
+      "svg": "ui-icons/open-heatloss-studio/undo-2.svg",
+      "sha256": "1e45ee4841f76d14c90ac0bbab51a3aafa958c610243b0c6e6498b3ebe52ba21",
+      "source_module": "package/dist/esm/icons/undo-2.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 136,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    },
+    {
+      "name": "Upload",
+      "svg": "ui-icons/open-heatloss-studio/upload.svg",
+      "sha256": "0155c6a54bbd7e5ec9e7096b4598197ff65cc18018219bf48214f3a29ca420af",
+      "source_module": "package/dist/esm/icons/upload.js",
+      "uses": [
+        {
+          "file": "frontend/src/components/import/FileUploadStep.tsx",
+          "line": 138,
+          "kind": "jsx",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/import/ThermalImportWizard.tsx",
+          "line": 52,
+          "kind": "icon-registry",
+          "area": "Importwizard"
+        },
+        {
+          "file": "frontend/src/components/ribbon/ModellerTab.tsx",
+          "line": 317,
+          "kind": "icon-prop",
+          "area": "Modeller-lint"
+        }
+      ]
+    }
+  ]
+}

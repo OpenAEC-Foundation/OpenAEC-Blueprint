@@ -1,0 +1,127 @@
+{
+  "repository": "open-heatloss-studio",
+  "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+  "scope": "Inline SVG strings passed to icon props in four active ribbon tabs; unused definitions and legacy modeller/Ribbon.tsx excluded.",
+  "definition_count": 10,
+  "count": 6,
+  "ui_uses": 9,
+  "excluded_definitions": [
+    "chartIcon",
+    "cubeIcon",
+    "navigateIcon",
+    "thermometerIcon"
+  ],
+  "icons": [
+    {
+      "name": "buildingIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/building.svg",
+      "sha256": "25649c753546b420c9610d937179c3fff658f0dab3797f4a036fc5d53a211ef6",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 19
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/VertrekkenTab.tsx",
+          "line": 52,
+          "tab": "Vertrekken"
+        }
+      ]
+    },
+    {
+      "name": "calculatorIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/calculator.svg",
+      "sha256": "3cc748bebc7127b572d4b8b8048e57293c33d0d5eecb40e6201f3de2ca65a101",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 7
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/VertrekkenTab.tsx",
+          "line": 63,
+          "tab": "Vertrekken"
+        }
+      ]
+    },
+    {
+      "name": "exportIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/export.svg",
+      "sha256": "62b55c097f77caab58cd4bf0648c3be5a317bcb9301c876f85e5a141368a37ad",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 13
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ResultatenTab.tsx",
+          "line": 88,
+          "tab": "Resultaten"
+        },
+        {
+          "file": "frontend/src/components/ribbon/RapportTab.tsx",
+          "line": 110,
+          "tab": "Rapport"
+        }
+      ]
+    },
+    {
+      "name": "layersIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/layers.svg",
+      "sha256": "8b52191ce397b0b2980cf05cd13f365b25e8eef6ee95031ab2906bfde93de10d",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 10
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ConstructiesTab.tsx",
+          "line": 21,
+          "tab": "Constructies"
+        }
+      ]
+    },
+    {
+      "name": "plusIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/plus.svg",
+      "sha256": "acf9c0b53520be8cd6a4378ed2fba2e4fef462054048fd2e993d662e37b3cec7",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 4
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/VertrekkenTab.tsx",
+          "line": 43,
+          "tab": "Vertrekken"
+        },
+        {
+          "file": "frontend/src/components/ribbon/ConstructiesTab.tsx",
+          "line": 16,
+          "tab": "Constructies"
+        }
+      ]
+    },
+    {
+      "name": "reportIcon",
+      "svg": "inline-ui-icons/open-heatloss-ribbon/report.svg",
+      "sha256": "167cf764b3ab389388ae23ec34a91473648e0611be10d2f0764ca5338ceba44d",
+      "definition": {
+        "file": "frontend/src/components/ribbon/icons.ts",
+        "line": 16
+      },
+      "uses": [
+        {
+          "file": "frontend/src/components/ribbon/ResultatenTab.tsx",
+          "line": 80,
+          "tab": "Resultaten"
+        },
+        {
+          "file": "frontend/src/components/ribbon/RapportTab.tsx",
+          "line": 104,
+          "tab": "Rapport"
+        }
+      ]
+    }
+  ]
+}
