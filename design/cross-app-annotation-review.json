@@ -1,0 +1,52 @@
+{
+  "icons": [
+    {
+      "meaning": "drawing.dimension",
+      "label": "Maatlijn / Dimension",
+      "geotechniek": {
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "usage_lines": [
+          344
+        ],
+        "sha256": "d279352502708bb4159330065cdf3400c7ac2a585fc3d14e6da406840b4267c7",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-dimension.svg"
+      },
+      "pointcloud": {
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
+        "source": "native/assets/opencad-icons/annotation_dimension.svg",
+        "sha256": "c282608517b34ca3eaeae6fbffb205f1dbaf6a12cc337881247bb14d82c98dc3",
+        "svg": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_dimension.svg",
+        "usage": "native/desktop/src/main.rs · ToolIcon::Dimension"
+      },
+      "rust": {
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-dimension.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-dimension.svg"
+      }
+    },
+    {
+      "meaning": "drawing.note",
+      "label": "Opmerking / Note",
+      "geotechniek": {
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "usage_lines": [
+          362
+        ],
+        "sha256": "4940ed279fa295972743ffa98ec6ad562db3e46936f013ad3672f560b887e536",
+        "svg": "../harmonization/inline-ui-icons/open-geotechniek-studio/tekening-note.svg"
+      },
+      "pointcloud": {
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
+        "source": "native/assets/opencad-icons/annotation_note.svg",
+        "sha256": "20e3e8a5253443daa42b1cd51dd7524ed166382e74cd17032b29e269e8ab3e60",
+        "svg": "../harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/annotation_note.svg",
+        "usage": "native/desktop/src/main.rs · ToolIcon::Note"
+      },
+      "rust": {
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-note.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-note.svg"
+      }
+    }
+  ]
+}

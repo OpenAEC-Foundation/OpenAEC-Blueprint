@@ -3,7 +3,7 @@
   "source_commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
   "integration_branch": "feat/shared-rust-ui",
   "status": "native-adopted",
-  "note": "Ten reviewed general commands use the shared icon core, and two reviewed Pointcloud commands use the domain icon layer. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. The BAG panel and Eye Dome Lighting icons were reviewed at 16/24/32 px on light and dark in icon-collision-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece.",
+  "note": "Ten reviewed general commands use the shared icon core, and four reviewed Pointcloud commands use the domain icon layer. Legacy SVGs remain archived as source evidence. Zoom in, Zoom out, Pan and Fit selection were reviewed at 16/24/32 px on Light and Forge in navigation-icon-review.html. The BAG panel and Eye Dome Lighting icons were reviewed at 16/24/32 px on light and dark in icon-collision-review.html. Other Pointcloud domain icons retain their original semantics pending visual review. Loading detail and refreshing LOD use Update rather than Fit. The Extensions page uses a separately drawn puzzle piece. Dimension and Note use the drawing-domain icons shared with Geotechniek, compared in cross-app-annotation-review.html.",
   "decisions": [
     {
       "tool_icon": "Open",
@@ -80,6 +80,20 @@
       "asset": "pointcloud-edl.svg",
       "legacy_asset": "native/assets/opencad-icons/sphere.svg",
       "reason": "SetEyeDome changes Eye Dome Lighting; sphere.svg was byte-identical to CAD's sphere primitive icon."
+    },
+    {
+      "tool_icon": "Dimension",
+      "shared_icon": "DrawingDimension",
+      "asset": "drawing-dimension.svg",
+      "legacy_asset": "native/assets/opencad-icons/annotation_dimension.svg",
+      "reason": "Creates a drawing dimension, the same UI meaning as Geotechniek Maatlijn; both tools use a reviewed 16/24 px Rust domain icon."
+    },
+    {
+      "tool_icon": "Note",
+      "shared_icon": "DrawingNote",
+      "asset": "drawing-note.svg",
+      "legacy_asset": "native/assets/opencad-icons/annotation_note.svg",
+      "reason": "Creates a drawing note, the same UI meaning as Geotechniek Opmerking; both tools use a reviewed 16/24 px Rust domain icon."
     }
   ],
   "chrome_decisions": [

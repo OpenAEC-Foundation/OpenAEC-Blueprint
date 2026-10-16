@@ -6,8 +6,8 @@
     "shared": 19,
     "new-shared": 5,
     "decision": 8,
-    "adopted-domain": 3,
-    "domain": 19
+    "adopted-domain": 5,
+    "domain": 17
   },
   "icons": [
     {
@@ -373,9 +373,9 @@
     },
     {
       "name": "tekening-note",
-      "status": "domain",
-      "meaning": "geotech.tekening-note",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "drawing.note",
+      "decision": "Bronbewezen tekenopdracht, gedeeld met Pointcloud; beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 135,
       "usage_lines": [
@@ -383,14 +383,14 @@
       ],
       "source_sha256": "4940ed279fa295972743ffa98ec6ad562db3e46936f013ad3672f560b887e536",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-note.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-note.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-note.svg"
     },
     {
       "name": "tekening-dimension",
-      "status": "domain",
-      "meaning": "geotech.tekening-dimension",
-      "decision": "Behoud eigen betekenis; harmoniseer raster en lijnvoering vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "drawing.dimension",
+      "decision": "Bronbewezen tekenopdracht, gedeeld met Pointcloud; beoordeelde 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 140,
       "usage_lines": [
@@ -398,8 +398,8 @@
       ],
       "source_sha256": "d279352502708bb4159330065cdf3400c7ac2a585fc3d14e6da406840b4267c7",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-dimension.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-dimension.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-dimension.svg"
     },
     {
       "name": "tekening-trim",
