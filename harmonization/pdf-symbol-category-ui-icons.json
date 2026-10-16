@@ -1,0 +1,95 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Category-header SVGs passed as cat.icon to the source-reachable SymbolPalette.jsx. Five NL categories, one NEN1414 template instantiated for seven prefixes, and one optional custom-group template. Empty built-in/INB arrays have no rendered categories. Placeable sym.svg thumbnails are document content and excluded.",
+  "svg_definition_sites": 7,
+  "built_in_category_instances": 12,
+  "optional_custom_category_instances": "one per created group",
+  "non_icon_symbol_thumbnails_excluded": true,
+  "records": [
+    {
+      "name": "nl-ifc-bouw",
+      "label": "NL IFC Bouw",
+      "source_file": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+      "source_line": 118,
+      "category_instances": 1,
+      "availability": "built-in-category; locale-filtered",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nl-ifc-bouw.svg",
+      "sha256": "5b179ba35e3de12846323831fe9c11457c16e103ef3278b05dab886281632301",
+      "native_preview_limitation": null
+    },
+    {
+      "name": "nl-elektra",
+      "label": "NL Elektra",
+      "source_file": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+      "source_line": 185,
+      "category_instances": 1,
+      "availability": "built-in-category; locale-filtered",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nl-elektra.svg",
+      "sha256": "b633e3de92dafc0a9d5f99e7370e25fd53a75f0a6aa1f485aeeaa181a4469e66",
+      "native_preview_limitation": null
+    },
+    {
+      "name": "nl-bouwplaats",
+      "label": "NL Bouwplaats",
+      "source_file": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+      "source_line": 198,
+      "category_instances": 1,
+      "availability": "built-in-category; locale-filtered",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nl-bouwplaats.svg",
+      "sha256": "7467e214a8107649c0410bc60e0381292aca17d5276578f1675b33b705f48f4f",
+      "native_preview_limitation": null
+    },
+    {
+      "name": "nl-sanitair",
+      "label": "NL Sanitair",
+      "source_file": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+      "source_line": 215,
+      "category_instances": 1,
+      "availability": "built-in-category; locale-filtered",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nl-sanitair.svg",
+      "sha256": "7bbe64cf4cee0f084dfebb04d50c2edfeb27f957f0a67d4adef0e922189a14ac",
+      "native_preview_limitation": null
+    },
+    {
+      "name": "nl-keuken",
+      "label": "NL Keuken",
+      "source_file": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+      "source_line": 232,
+      "category_instances": 1,
+      "availability": "built-in-category; locale-filtered",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nl-keuken.svg",
+      "sha256": "4ca529ab85f115565e522301e55a16a196f3745c386e14ad10a5bfce3303bbcb",
+      "native_preview_limitation": null
+    },
+    {
+      "name": "nen1414-category",
+      "label": "NL NEN 1414 · categorieletter N",
+      "source_file": "open-pdf-studio/js/solid/data/nen1414Library.js",
+      "source_line": 167,
+      "category_instances": 7,
+      "availability": "seven-built-in-locale-filtered-categories",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/nen1414-category.svg",
+      "sha256": "9829b87dda10c3a7f16c80052314058b7537c2e6efce5c729925b5f06a1fb5f8",
+      "native_preview_limitation": "SVG <text> may disappear in the Iced software renderer; use vector paths before canonical adoption"
+    },
+    {
+      "name": "custom-group",
+      "label": "Eigen symboolgroep",
+      "source_file": "open-pdf-studio/js/solid/stores/symbolStore.js",
+      "source_line": 109,
+      "category_instances": "one per user-created group",
+      "availability": "only-when-custom-group-exists",
+      "render_expression": "cat.icon in SymbolPalette.jsx:290",
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-categories/custom-group.svg",
+      "sha256": "3aca459d76ee1c75c3aa7e92f8843feafe5f42fed380526fbdbff27829c1ec58",
+      "native_preview_limitation": null
+    }
+  ]
+}

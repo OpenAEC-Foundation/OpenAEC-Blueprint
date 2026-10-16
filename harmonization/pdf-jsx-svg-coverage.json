@@ -5,8 +5,8 @@
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 142,
-  "sites_requiring_role_review_or_partial_followup": 175,
+  "fully_reviewed_literal_sites": 150,
+  "sites_requiring_role_review_or_partial_followup": 167,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -235,7 +235,7 @@
         309,
         441
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ToolPalette.jsx",

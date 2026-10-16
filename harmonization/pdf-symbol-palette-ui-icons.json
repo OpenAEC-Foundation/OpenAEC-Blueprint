@@ -1,0 +1,133 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All eight literal SVG source sites in App.jsx-reachable SymbolPalette.jsx. Seven draw UI affordances at eleven placements. The eighth wraps a user-uploaded raster image as annotation symbol content and is not a UI icon. Dynamic sym.svg and cat.icon catalog content are outside the literal-SVG count and require separate catalog inspection.",
+  "literal_svg_sites": 8,
+  "ui_icon_or_affordance_sites": 7,
+  "ui_placements": 11,
+  "non_icon_svg_sites": 1,
+  "excluded": [
+    {
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 441,
+      "role": "uploaded-raster-to-svg-content-wrapper",
+      "reason": "The SVG contains an <image> href bound to uploaded data and is passed to addSymbolToGroup as document/symbol content, not to a UI control."
+    }
+  ],
+  "dynamic_content_not_counted_as_literal_svg": [
+    {
+      "source_line": 290,
+      "expression": "cat.icon",
+      "role": "category artwork, separately catalog-driven"
+    },
+    {
+      "source_line": 323,
+      "expression": "colorizeSvg(sym.svg, cat.color)",
+      "role": "placeable symbol thumbnail/content, not a fixed UI control icon"
+    }
+  ],
+  "records": [
+    {
+      "ordinal": 1,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 173,
+      "name": "drag-grip",
+      "label": "Palet verslepen",
+      "role": "control-affordance",
+      "availability": "docked",
+      "render_lines": [
+        354
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/drag-grip.svg",
+      "sha256": "50b70ec07b62e38424e3c3adb0556f174fa7720a43a270969c3ac63e2db4b545"
+    },
+    {
+      "ordinal": 2,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 175,
+      "name": "search",
+      "label": "Symbolen zoeken",
+      "role": "search",
+      "availability": "docked-or-floating",
+      "render_lines": [
+        265
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/search.svg",
+      "sha256": "e6021adb06e14affb3b66240b4126316b36c052544f402ddd645333f32edda97"
+    },
+    {
+      "ordinal": 3,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 177,
+      "name": "settings",
+      "label": "Instellingen openen",
+      "role": "control",
+      "availability": "docked-or-floating-or-category",
+      "render_lines": [
+        300,
+        356,
+        380
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/settings.svg",
+      "sha256": "937e96d8c29a0fe20b960d12740492cb2ea907ca99d507690a3ba3d87cc7e358"
+    },
+    {
+      "ordinal": 4,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 179,
+      "name": "close",
+      "label": "Palet of bibliotheekdialoog sluiten",
+      "role": "control",
+      "availability": "docked-or-floating-or-dialog",
+      "render_lines": [
+        357,
+        381,
+        527
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/close.svg",
+      "sha256": "0330d5d5248728b48185b11b1ec381ec44c0a444dad3b7b09350ad1a9815e842"
+    },
+    {
+      "ordinal": 5,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 181,
+      "name": "category-disclosure",
+      "label": "Symboolcategorie in-/uitklappen",
+      "role": "disclosure",
+      "availability": "category",
+      "render_lines": [
+        289
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/category-disclosure.svg",
+      "sha256": "be5ad118a592d2abb4d94fecbaed86ab54b469a980baa13cfae39003eba6a1a1"
+    },
+    {
+      "ordinal": 6,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 236,
+      "name": "scale-combo-arrow",
+      "label": "Plaatsingsschaalkeuze openen",
+      "role": "disclosure",
+      "availability": "docked-or-floating",
+      "render_lines": [
+        236
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/scale-combo-arrow.svg",
+      "sha256": "4ed3bfb48c7feefd4af6c11a5fcccd5d9c1b1b5b1ee66a50c0e8c81668a3c029"
+    },
+    {
+      "ordinal": 7,
+      "source_file": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+      "source_line": 309,
+      "name": "system-types",
+      "label": "Systeemtypen beheren",
+      "role": "control",
+      "availability": "nl-ifc-bouw-category",
+      "render_lines": [
+        309
+      ],
+      "svg": "inline-ui-icons/open-pdf-studio/symbol-palette/system-types.svg",
+      "sha256": "af7bd179271d1255a00201097633f98db3769002760ba4b1d68b55d20988577d"
+    }
+  ]
+}
