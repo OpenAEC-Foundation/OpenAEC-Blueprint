@@ -92,8 +92,11 @@ for name in sorted(uses):
                               'fill': 'none', 'stroke': 'currentColor', 'stroke-width': '2',
                               'stroke-linecap': 'round', 'stroke-linejoin': 'round'})
     for tag, attributes in nodes:
-        attrs = dict(re.findall(r'([A-Za-z]+):\s*"([^"]*)"', attributes))
+        attrs = dict(re.findall(r'([A-Za-z][A-Za-z0-9]*):\s*"([^"]*)"', attributes))
+        assert not re.sub(r'[A-Za-z][A-Za-z0-9]*:\s*"[^"]*"', '', attributes).strip(' ,\n\t'), (name, attributes)
         attrs.pop('key', None)
+        if tag == 'line':
+            assert {'x1', 'x2', 'y1', 'y2'} <= attrs.keys(), (name, attrs)
         ET.SubElement(root, tag, attrs)
     payload = ET.tostring(root, encoding='unicode') + '\n'
     dest = TARGET / f'{slug}.svg'

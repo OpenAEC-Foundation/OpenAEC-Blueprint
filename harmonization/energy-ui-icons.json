@@ -1,0 +1,2547 @@
+{
+  "repository": "open-energy-studio",
+  "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+  "lucide_version": "0.577.0",
+  "lucide_integrity": "sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==",
+  "scope": "Actual Lucide JSX tags and status-table choices in 41 UI component files; direct imports without UI use are excluded.",
+  "files": 41,
+  "count": 84,
+  "jsx_uses": 251,
+  "dynamic_status_uses": 6,
+  "sections": {
+    "Panelen en bediening": 45,
+    "Resultaten": 11,
+    "Schermroutes": 40,
+    "Start en project": 56,
+    "Shell en navigatie": 47,
+    "Opname en advies": 58
+  },
+  "icons": [
+    {
+      "name": "AlertCircle",
+      "svg": "ui-icons/open-energy-studio/alert-circle.svg",
+      "sha256": "cc41a52a3b9b2f5378a07a40bd2e04420111241a651c5b0a2041dcbef0f4c6a3",
+      "source_module": "package/dist/esm/icons/circle-alert.js",
+      "sections": [
+        "Panelen en bediening",
+        "Resultaten"
+      ],
+      "uses": [
+        {
+          "file": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+          "line": 61,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 111,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 132,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 145,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 158,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 173,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 150,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "AlertTriangle",
+      "svg": "ui-icons/open-energy-studio/alert-triangle.svg",
+      "sha256": "cca49331f1f7bc18e5e002e48af7961a61c57e58cf23b04a17351550181da319",
+      "source_module": "package/dist/esm/icons/triangle-alert.js",
+      "sections": [
+        "Panelen en bediening",
+        "Schermroutes"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 110,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/ui/DataTable.tsx",
+          "line": 134,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 12,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Toast.tsx",
+          "line": 38,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Archive",
+      "svg": "ui-icons/open-energy-studio/archive.svg",
+      "sha256": "0d031e7b29af1156d297422dd7c81208b1de202f1c4ab5c92d96c3aa21bc0c9f",
+      "source_module": "package/dist/esm/icons/archive.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 206,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 248,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "ArrowLeft",
+      "svg": "ui-icons/open-energy-studio/arrow-left.svg",
+      "sha256": "fc00dcc9b4112844522b033ec42ab33682c9af2e0c0c3867e45e7d63ddd70103",
+      "source_module": "package/dist/esm/icons/arrow-left.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 431,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "ArrowRight",
+      "svg": "ui-icons/open-energy-studio/arrow-right.svg",
+      "sha256": "95bbd7cc9f71df46d434476b42d781961e076cab62b118d22a9bc337df633673",
+      "source_module": "package/dist/esm/icons/arrow-right.js",
+      "sections": [
+        "Opname en advies",
+        "Panelen en bediening",
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+          "line": 196,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 183,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 434,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/InstallationsPage.tsx",
+          "line": 267,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 152,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 161,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/ui/DataTable.tsx",
+          "line": 158,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Ban",
+      "svg": "ui-icons/open-energy-studio/ban.svg",
+      "sha256": "63a5c40c366148e2d81b4d51d6708b2e135edc51d4002e4aebec476ced16ad71",
+      "source_module": "package/dist/esm/icons/ban.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 44,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 49,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "BookOpen",
+      "svg": "ui-icons/open-energy-studio/book-open.svg",
+      "sha256": "92742c5089be177d543a64d69c08d871eee521954a5124ef55906cc08a3bb8be",
+      "source_module": "package/dist/esm/icons/book-open.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/PageHeader.tsx",
+          "line": 25,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 290,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Box",
+      "svg": "ui-icons/open-energy-studio/box.svg",
+      "sha256": "ea116c9befdc5e155a02ec78d9a922b9288ce005b6e2774411381e5facdb1aff",
+      "source_module": "package/dist/esm/icons/box.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 106,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 124,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 126,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 286,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 275,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 277,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Building",
+      "svg": "ui-icons/open-energy-studio/building.svg",
+      "sha256": "502ba972c2103c6e9eae22aa1ae785bcdeeae3ea152b393efaddae04af4471d4",
+      "source_module": "package/dist/esm/icons/building.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 22,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 74,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Building2",
+      "svg": "ui-icons/open-energy-studio/building-2.svg",
+      "sha256": "c84f169c75241b15097b857ccf2e188cc814e9c237d346234149695079e5dd7a",
+      "source_module": "package/dist/esm/icons/building-2.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 217,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 48,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 56,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 631,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 20,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 32,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 78,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 279,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 281,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Calculator",
+      "svg": "ui-icons/open-energy-studio/calculator.svg",
+      "sha256": "df50c0d60ab8703645dd61319da04db2f15b85cf0f97f9acb0d62d4831f1761e",
+      "source_module": "package/dist/esm/icons/calculator.js",
+      "sections": [
+        "Panelen en bediening",
+        "Resultaten",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 102,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/SettingsDialog/SettingsDialog.tsx",
+          "line": 137,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 273,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Camera",
+      "svg": "ui-icons/open-energy-studio/camera.svg",
+      "sha256": "6c1e0a92b94e93f0cef9cff9e05158892e958100b9d7160afeb3f16ecaa6fa97",
+      "source_module": "package/dist/esm/icons/camera.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/EvidenceLink/EvidenceLink.tsx",
+          "line": 158,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Caravan",
+      "svg": "ui-icons/open-energy-studio/caravan.svg",
+      "sha256": "1503c323630e2f6817f8f80878239fd67c6a8559836204faf003564e7f15f697",
+      "source_module": "package/dist/esm/icons/caravan.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 56,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 73,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Check",
+      "svg": "ui-icons/open-energy-studio/check.svg",
+      "sha256": "20fa9a219a369a7b8933ea5147ffce1a0478b2d09aa0420e23240246aee42cc6",
+      "source_module": "package/dist/esm/icons/check.js",
+      "sections": [
+        "Panelen en bediening",
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/StatusBar/StatusBar.tsx",
+          "line": 25,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 193,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 40,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 135,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 51,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 121,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/ui/Navigation.tsx",
+          "line": 100,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "CheckCircle2",
+      "svg": "ui-icons/open-energy-studio/check-circle-2.svg",
+      "sha256": "05b603e582f4a8a1bc4a031889975aabda0cf68099d471db7059fc50796e4b7b",
+      "source_module": "package/dist/esm/icons/circle-check.js",
+      "sections": [
+        "Opname en advies",
+        "Panelen en bediening",
+        "Resultaten",
+        "Schermroutes"
+      ],
+      "uses": [
+        {
+          "file": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+          "line": 61,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRegistration.tsx",
+          "line": 25,
+          "kind": "dynamic-status",
+          "status": "done",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRelabel.tsx",
+          "line": 285,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRelabel.tsx",
+          "line": 92,
+          "kind": "dynamic-status",
+          "status": "done",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/pages/RegistrationPage.tsx",
+          "line": 57,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/results/ResultsDashboard.tsx",
+          "line": 208,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 11,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Toast.tsx",
+          "line": 36,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "ChevronDown",
+      "svg": "ui-icons/open-energy-studio/chevron-down.svg",
+      "sha256": "942296f13ef58d02dd718f5cb157b1cd119582a2d258c0e994cb15a8b35c693d",
+      "source_module": "package/dist/esm/icons/chevron-down.js",
+      "sections": [
+        "Panelen en bediening",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 285,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 151,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "ChevronRight",
+      "svg": "ui-icons/open-energy-studio/chevron-right.svg",
+      "sha256": "73cc92190a6c85fd74115cf9a31d3fd580508b2695bcceb15405d0cc8fd11313",
+      "source_module": "package/dist/esm/icons/chevron-right.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 265,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 139,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "ChevronUp",
+      "svg": "ui-icons/open-energy-studio/chevron-up.svg",
+      "sha256": "39df4d19bc2959b24c85bb12ba02e05c2b668f8ca99ac16ccf77b23a088cc7c5",
+      "source_module": "package/dist/esm/icons/chevron-up.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 276,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "CircleAlert",
+      "svg": "ui-icons/open-energy-studio/circle-alert.svg",
+      "sha256": "cc41a52a3b9b2f5378a07a40bd2e04420111241a651c5b0a2041dcbef0f4c6a3",
+      "source_module": "package/dist/esm/icons/circle-alert.js",
+      "sections": [
+        "Schermroutes"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/pages/RegistrationPage.tsx",
+          "line": 58,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "CircleHelp",
+      "svg": "ui-icons/open-energy-studio/circle-help.svg",
+      "sha256": "8df9588b611e90e028f70ebc99cd6ca0b7b07f3258c149527c33a8269f74a0ec",
+      "source_module": "package/dist/esm/icons/circle-question-mark.js",
+      "sections": [
+        "Opname en advies",
+        "Panelen en bediening",
+        "Resultaten"
+      ],
+      "uses": [
+        {
+          "file": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+          "line": 55,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/NtaPerformancePanel/NtaPerformancePanel.tsx",
+          "line": 118,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 142,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 150,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "CircleX",
+      "svg": "ui-icons/open-energy-studio/circle-x.svg",
+      "sha256": "295e82c6c65ef69b065d5ce4820c132a9223dfc455dc06683dcb21efcd38b29d",
+      "source_module": "package/dist/esm/icons/circle-x.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyRegistration.tsx",
+          "line": 25,
+          "kind": "dynamic-status",
+          "status": "open",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRelabel.tsx",
+          "line": 285,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRelabel.tsx",
+          "line": 92,
+          "kind": "dynamic-status",
+          "status": "open",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "ClipboardList",
+      "svg": "ui-icons/open-energy-studio/clipboard-list.svg",
+      "sha256": "0058329f7d59de93d7c67b953e56d66fd4460406eecabce4cc954ccfaf56b090",
+      "source_module": "package/dist/esm/icons/clipboard-list.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 398,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 404,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 763,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Clock",
+      "svg": "ui-icons/open-energy-studio/clock.svg",
+      "sha256": "f510eff7b931896a9cef7d66e798e37c16c1ac7dd92b1fb3c3ed32b28990c1eb",
+      "source_module": "package/dist/esm/icons/clock.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyRegistration.tsx",
+          "line": 25,
+          "kind": "dynamic-status",
+          "status": "waiting",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyRelabel.tsx",
+          "line": 92,
+          "kind": "dynamic-status",
+          "status": "waiting",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "svg": "ui-icons/open-energy-studio/copy.svg",
+      "sha256": "88e5cdbe419c8f22a51cac7b8b62af3d68062f4dfaceacd539730c887ad08ebb",
+      "source_module": "package/dist/esm/icons/copy.js",
+      "sections": [
+        "Panelen en bediening",
+        "Shell en navigatie",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 193,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 204,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 186,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "svg": "ui-icons/open-energy-studio/download.svg",
+      "sha256": "eedf3c539e58d67107b7a6c8c75592bebf77b73863cdc58739ec5a58e38f60db",
+      "source_module": "package/dist/esm/icons/download.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 241,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 278,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 282,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 271,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 272,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 273,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 276,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Droplet",
+      "svg": "ui-icons/open-energy-studio/droplet.svg",
+      "sha256": "08857d5febea523f06b05b147c6675b9f46fccf8992e3e819e2e873a72f80b0e",
+      "source_module": "package/dist/esm/icons/droplet.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 34,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Factory",
+      "svg": "ui-icons/open-energy-studio/factory.svg",
+      "sha256": "dfccde23d8de820a4e213349a7ca86b3a0b8eb25ad9debee988f71d0ce2b8f97",
+      "source_module": "package/dist/esm/icons/factory.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 221,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 44,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Fan",
+      "svg": "ui-icons/open-energy-studio/fan.svg",
+      "sha256": "8bfcf3c6e25237358761ce69a8c44c75da53c547f98a6f5e0a5bdf9767261903",
+      "source_module": "package/dist/esm/icons/fan.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 52,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 52,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 52,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 159,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "FileArchive",
+      "svg": "ui-icons/open-energy-studio/file-archive.svg",
+      "sha256": "0a761a344faa11dca65b54a2502583d526b5b65eb05a68e863aadb65469c4c84",
+      "source_module": "package/dist/esm/icons/file-archive.js",
+      "sections": [
+        "Schermroutes"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 90,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 267,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 268,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "FileDown",
+      "svg": "ui-icons/open-energy-studio/file-down.svg",
+      "sha256": "30749d27591abb36e15424f4bd2ef916330b07ff58a95bf49cdaeeb595b0b4ef",
+      "source_module": "package/dist/esm/icons/file-down.js",
+      "sections": [
+        "Opname en advies",
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 880,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyReport.tsx",
+          "line": 133,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 238,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 58,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 254,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 262,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 265,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "FileInput",
+      "svg": "ui-icons/open-energy-studio/file-input.svg",
+      "sha256": "cd865b5973582922ed91175baf3ded70645966986da337b5a44111cc9af7d7cb",
+      "source_module": "package/dist/esm/icons/file-input.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 285,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "FilePlus",
+      "svg": "ui-icons/open-energy-studio/file-plus.svg",
+      "sha256": "613ae47a67cf3eb769de306b89f6defcbadb13aa824e8c60384706213184bccd",
+      "source_module": "package/dist/esm/icons/file-plus.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 156,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "FileText",
+      "svg": "ui-icons/open-energy-studio/file-text.svg",
+      "sha256": "454545bbfb937a589ac56977ca983809e766ebc030b0f7a082fc05472aa39c70",
+      "source_module": "package/dist/esm/icons/file-text.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 425,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 252,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 261,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 264,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Flame",
+      "svg": "ui-icons/open-energy-studio/flame.svg",
+      "sha256": "3c140c2817c14f55a8ee19870a5ffab744faac268b92a02403f4e2762ea8f412",
+      "source_module": "package/dist/esm/icons/flame.js",
+      "sections": [
+        "Opname en advies",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 43,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 44,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 47,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 47,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 273,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Folder",
+      "svg": "ui-icons/open-energy-studio/folder.svg",
+      "sha256": "5120e7eaf97b3f205bb3704df1486bf3dfafde072245db9a092863109362023b",
+      "source_module": "package/dist/esm/icons/folder.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 205,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 249,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "FolderOpen",
+      "svg": "ui-icons/open-energy-studio/folder-open.svg",
+      "sha256": "e20535ef209f3b788bb834602faaa6bc9865236ada0d8b75c8c090838e8f5ae9",
+      "source_module": "package/dist/esm/icons/folder-open.js",
+      "sections": [
+        "Opname en advies",
+        "Shell en navigatie",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+          "line": 137,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 249,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 284,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 157,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "FolderPlus",
+      "svg": "ui-icons/open-energy-studio/folder-plus.svg",
+      "sha256": "9ee817352b9876d59ca814c39fe00453e21b88db55c4b4f4a8c0feccef7cbdea",
+      "source_module": "package/dist/esm/icons/folder-plus.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 236,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 343,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "GraduationCap",
+      "svg": "ui-icons/open-energy-studio/graduation-cap.svg",
+      "sha256": "9f95c997a6ae69b1c9c4fa179f2f9e6c4962c2bc1cd4b90cfd75e5754bb1efb6",
+      "source_module": "package/dist/esm/icons/graduation-cap.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 218,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "GripVertical",
+      "svg": "ui-icons/open-energy-studio/grip-vertical.svg",
+      "sha256": "ed3ec6d5fdf4c32faa983c80f7ef814977a449b92ea917783f688e53517bb545",
+      "source_module": "package/dist/esm/icons/grip-vertical.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 278,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "HeartPulse",
+      "svg": "ui-icons/open-energy-studio/heart-pulse.svg",
+      "sha256": "ba51b0c29e16d0f04bb6811312ba13f53ac353605b88be54febaaee8209d27f0",
+      "source_module": "package/dist/esm/icons/heart-pulse.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 219,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "svg": "ui-icons/open-energy-studio/history.svg",
+      "sha256": "27ea0455762195679f008bdbfd161d4c00f113c7758465d371a778a9d87c29fb",
+      "source_module": "package/dist/esm/icons/history.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 185,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "svg": "ui-icons/open-energy-studio/home.svg",
+      "sha256": "b42b6602337b72ad9885e08fd49a30cc1af7e97ad4c4e7e558d064407293c2af",
+      "source_module": "package/dist/esm/icons/house.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 216,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 124,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 626,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 19,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 31,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 76,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 278,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "HousePlus",
+      "svg": "ui-icons/open-energy-studio/house-plus.svg",
+      "sha256": "85463a512f63ac61f43b893a092f6612e8f353ab96c311e2daf87adc3bf61875",
+      "source_module": "package/dist/esm/icons/house-plus.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 21,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 77,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 280,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Info",
+      "svg": "ui-icons/open-energy-studio/info.svg",
+      "sha256": "a6b5c71ae8865a66cd75dbb2cb158087e6c1c7652d12e38cd16b7c34035a9652",
+      "source_module": "package/dist/esm/icons/info.js",
+      "sections": [
+        "Panelen en bediening",
+        "Resultaten"
+      ],
+      "uses": [
+        {
+          "file": "src/components/CalculationNotice/CalculationNotice.tsx",
+          "line": 14,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/SettingsDialog/SettingsDialog.tsx",
+          "line": 138,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/pages/results/ResultsDashboard.tsx",
+          "line": 356,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/ui/DataTable.tsx",
+          "line": 135,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 14,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Toast.tsx",
+          "line": 37,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "svg": "ui-icons/open-energy-studio/layers.svg",
+      "sha256": "35554150a4f2b333bb75f673cc9c5cfc650ea79a0d65f3081cab77a25b48fd6e",
+      "source_module": "package/dist/esm/icons/layers.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "LayoutGrid",
+      "svg": "ui-icons/open-energy-studio/layout-grid.svg",
+      "sha256": "7e8860e2975d8cf2ace55873c48fe5dd09a251be0c5bd39a576425c9351982db",
+      "source_module": "package/dist/esm/icons/layout-grid.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 249,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 290,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "List",
+      "svg": "ui-icons/open-energy-studio/list.svg",
+      "sha256": "d0a19c33713e5c79902ecd72738df2ef7cec28b7f5078122210908a235b02273",
+      "source_module": "package/dist/esm/icons/list.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 291,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "MessageSquare",
+      "svg": "ui-icons/open-energy-studio/message-square.svg",
+      "sha256": "dce3e69e4aca00b3352b2086249023da8ecab6286ff95e8108420d05cf861cfb",
+      "source_module": "package/dist/esm/icons/message-square.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 168,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 292,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Minus",
+      "svg": "ui-icons/open-energy-studio/minus.svg",
+      "sha256": "450f84cef9d2223f3720ffe5c80ebe45db1891fb79eab7823897b86cacb26af8",
+      "source_module": "package/dist/esm/icons/minus.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 184,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "MoreHorizontal",
+      "svg": "ui-icons/open-energy-studio/more-horizontal.svg",
+      "sha256": "142b34e85e277f1d116485064829c9317f2c047b34644c9c7dca56f027699cb7",
+      "source_module": "package/dist/esm/icons/ellipsis.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 222,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 310,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 323,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "MoreVertical",
+      "svg": "ui-icons/open-energy-studio/more-vertical.svg",
+      "sha256": "395c0f31a05a7e83007fbc4344c0275446c50c8f7573f1e1dea2f70bc69094e6",
+      "source_module": "package/dist/esm/icons/ellipsis-vertical.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 235,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 253,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Network",
+      "svg": "ui-icons/open-energy-studio/network.svg",
+      "sha256": "38d28523a3f85f24e65b2686efb2cc0d8818ffda9166d7d16a4087b176fa694a",
+      "source_module": "package/dist/esm/icons/network.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 43,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 48,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 48,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "PanelRight",
+      "svg": "ui-icons/open-energy-studio/panel-right.svg",
+      "sha256": "d23f0a16ce472ca789283a957cc0bcec3063c4a085881d2a817c965095b6396b",
+      "source_module": "package/dist/esm/icons/panel-right.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 177,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "PanelRightClose",
+      "svg": "ui-icons/open-energy-studio/panel-right-close.svg",
+      "sha256": "b60440d8086160bf3d2188b639c1e6347a3aeb7def297046bf55e7c792da4662",
+      "source_module": "package/dist/esm/icons/panel-right-close.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/PreviewPanel/PreviewPanel.tsx",
+          "line": 117,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/PropertiesPanel/PropertiesPanel.tsx",
+          "line": 114,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "PanelTop",
+      "svg": "ui-icons/open-energy-studio/panel-top.svg",
+      "sha256": "7fbf250ed7eb1e9fbbf0fdc53a394941224a974caafab2e747b78251db3f4aa5",
+      "source_module": "package/dist/esm/icons/panel-top.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 33,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Paperclip",
+      "svg": "ui-icons/open-energy-studio/paperclip.svg",
+      "sha256": "f29f39c9e34212588438dd9e1cb02494612cc969eb45fe3f2d279584b3f39bbd",
+      "source_module": "package/dist/esm/icons/paperclip.js",
+      "sections": [
+        "Panelen en bediening",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/EvidenceLink/EvidenceLink.tsx",
+          "line": 93,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/EvidenceLink/EvidenceLink.tsx",
+          "line": 158,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/EvidenceLink/EvidenceLink.tsx",
+          "line": 222,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 177,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Pencil",
+      "svg": "ui-icons/open-energy-studio/pencil.svg",
+      "sha256": "41aaf00d3ee8eed87115b8a84540795433177d83eb1e109d461a3443b6ce6652",
+      "source_module": "package/dist/esm/icons/pencil.js",
+      "sections": [
+        "Panelen en bediening",
+        "Schermroutes"
+      ],
+      "uses": [
+        {
+          "file": "src/components/ItemActions/ItemActions.tsx",
+          "line": 46,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 141,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 101,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 187,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/existing/MwaViews.tsx",
+          "line": 196,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Plug",
+      "svg": "ui-icons/open-energy-studio/plug.svg",
+      "sha256": "1d549ac08ef1a8268b0c0b66444567b833bfda80141ba682efebfff71c68dd42",
+      "source_module": "package/dist/esm/icons/plug.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 47,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Plus",
+      "svg": "ui-icons/open-energy-studio/plus.svg",
+      "sha256": "c0c9490e8f33a47cc4d5d776838365a3b02b84555d5b3441ea7c2279c48c3ccf",
+      "source_module": "package/dist/esm/icons/plus.js",
+      "sections": [
+        "Opname en advies",
+        "Panelen en bediening",
+        "Schermroutes",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx",
+          "line": 118,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 832,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 239,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 276,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 277,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 313,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/pages/BuildingPages.tsx",
+          "line": 67,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/BuildingPages.tsx",
+          "line": 412,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/InstallationsPage.tsx",
+          "line": 199,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Printer",
+      "svg": "ui-icons/open-energy-studio/printer.svg",
+      "sha256": "65c48a580d7d88e34075628529dcd50a7dcba64d67efc85305d0e38a7bc0ba70",
+      "source_module": "package/dist/esm/icons/printer.js",
+      "sections": [
+        "Opname en advies",
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyReport.tsx",
+          "line": 123,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/StepRouter.tsx",
+          "line": 239,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/DeliveryPages.tsx",
+          "line": 256,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "RefreshCw",
+      "svg": "ui-icons/open-energy-studio/refresh-cw.svg",
+      "sha256": "ae50489a9427818e80bf8ba7a1ddd90b39201d5023d8b5e733727fb8095055eb",
+      "source_module": "package/dist/esm/icons/refresh-cw.js",
+      "sections": [
+        "Opname en advies",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+          "line": 809,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 175,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "RotateCcw",
+      "svg": "ui-icons/open-energy-studio/rotate-ccw.svg",
+      "sha256": "50c61ce52f72896b7753dece5c686e47fbf33242152d8095b371a747c8b0dadd",
+      "source_module": "package/dist/esm/icons/rotate-ccw.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 200,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "svg": "ui-icons/open-energy-studio/save.svg",
+      "sha256": "f754770907bc8f2d35030b491fab1e1efc9b962123b5e81c8fff3e8da07642d8",
+      "source_module": "package/dist/esm/icons/save.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 159,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 160,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 173,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/RegistrationForm.tsx",
+          "line": 311,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "svg": "ui-icons/open-energy-studio/search.svg",
+      "sha256": "1f1d65aadcccf4450f3a6ec4a27964b58b7ec38c90fbb3c83af5a6af5cf5d75f",
+      "source_module": "package/dist/esm/icons/search.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 161,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 273,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/CommandPalette.tsx",
+          "line": 160,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 144,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/BuildingPages.tsx",
+          "line": 203,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "svg": "ui-icons/open-energy-studio/settings.svg",
+      "sha256": "c8e8459a004fb68c15362c9cf40f5275eb5978406c0600dc1d4965047eb09693",
+      "source_module": "package/dist/esm/icons/settings.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 167,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "ShieldCheck",
+      "svg": "ui-icons/open-energy-studio/shield-check.svg",
+      "sha256": "53beffbbf6000462adfa9f49045a9f1d0d997d2b51bff36f139deb402a23cf0c",
+      "source_module": "package/dist/esm/icons/shield-check.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+          "line": 45,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "ShieldQuestion",
+      "svg": "ui-icons/open-energy-studio/shield-question.svg",
+      "sha256": "0e8233b4f35e3e42508b316b6c8e580ac60def9b16d890c0155aefec18148639",
+      "source_module": "package/dist/esm/icons/shield-question-mark.js",
+      "sections": [
+        "Panelen en bediening"
+      ],
+      "uses": [
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 15,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "Ship",
+      "svg": "ui-icons/open-energy-studio/ship.svg",
+      "sha256": "d6fe1cd428feba55afcf2d5b42625cb78dc77b05a43c0e2dc799f7d3532fa33d",
+      "source_module": "package/dist/esm/icons/ship.js",
+      "sections": [
+        "Opname en advies",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 56,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 56,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/WelcomeScreen/NewProjectDialog.tsx",
+          "line": 34,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 72,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "ShoppingBag",
+      "svg": "ui-icons/open-energy-studio/shopping-bag.svg",
+      "sha256": "4660b1a42f6a518c215c357e7f6374344eecc439d288d3ee388107e5af5aa3a9",
+      "source_module": "package/dist/esm/icons/shopping-bag.js",
+      "sections": [
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 220,
+          "kind": "jsx",
+          "section": "Start en project"
+        }
+      ]
+    },
+    {
+      "name": "SlidersHorizontal",
+      "svg": "ui-icons/open-energy-studio/sliders-horizontal.svg",
+      "sha256": "15abd761c8d86fffd7f8acd01feb2855b34703fef3f8a1fbf9b412703144be4c",
+      "source_module": "package/dist/esm/icons/sliders-horizontal.js",
+      "sections": [
+        "Panelen en bediening",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SettingsDialog/SettingsDialog.tsx",
+          "line": 136,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 296,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Square",
+      "svg": "ui-icons/open-energy-studio/square.svg",
+      "sha256": "9e35d2d8fc09d8f91c7e5e82c3970446e540066eb7521a0004b0c17b902c5176",
+      "source_module": "package/dist/esm/icons/square.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 186,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Sun",
+      "svg": "ui-icons/open-energy-studio/sun.svg",
+      "sha256": "e186eb03a81f3018aad838ac4be650ff6caa68cf2a39c30fd15e3182c94ebf6f",
+      "source_module": "package/dist/esm/icons/sun.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 34,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Table2",
+      "svg": "ui-icons/open-energy-studio/table-2.svg",
+      "sha256": "ae91835acc04ef767a438a5f71af8a826a08fcf0bab5459615dbb53eca429c35",
+      "source_module": "package/dist/esm/icons/table-2.js",
+      "sections": [
+        "Resultaten"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/pages/results/MonthlyChart.tsx",
+          "line": 110,
+          "kind": "jsx",
+          "section": "Resultaten"
+        }
+      ]
+    },
+    {
+      "name": "Thermometer",
+      "svg": "ui-icons/open-energy-studio/thermometer.svg",
+      "sha256": "6587dd7ca286a2d223acb4d5cd000eb0b99815f098f016e97d05afb46d2569a7",
+      "source_module": "package/dist/esm/icons/thermometer.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 43,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 48,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Trash2",
+      "svg": "ui-icons/open-energy-studio/trash-2.svg",
+      "sha256": "d47d14737206170dd22671f0fce9ef4dedd52daac9cc71d1fb2872c52dfe66dd",
+      "source_module": "package/dist/esm/icons/trash-2.js",
+      "sections": [
+        "Panelen en bediening",
+        "Schermroutes",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/HeatPumpInventoryPanel/HeatPumpInventoryPanel.tsx",
+          "line": 168,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ItemActions/ItemActions.tsx",
+          "line": 49,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/UValueCalculator/UValueCalculator.tsx",
+          "line": 358,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 201,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 208,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 209,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 248,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 296,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/pages/existing/MwaViews.tsx",
+          "line": 199,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "TreePine",
+      "svg": "ui-icons/open-energy-studio/tree-pine.svg",
+      "sha256": "bc291998da7e71674e775eff3f2a56fc4c5a5b5f1cfb1c0f665d03b1b5eb3179",
+      "source_module": "package/dist/esm/icons/tree-pine.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 43,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Undo2",
+      "svg": "ui-icons/open-energy-studio/undo-2.svg",
+      "sha256": "1e45ee4841f76d14c90ac0bbab51a3aafa958c610243b0c6e6498b3ebe52ba21",
+      "source_module": "package/dist/esm/icons/undo-2.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/NtaStepPage.tsx",
+          "line": 428,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/RegistrationForm.tsx",
+          "line": 308,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Upload",
+      "svg": "ui-icons/open-energy-studio/upload.svg",
+      "sha256": "0155c6a54bbd7e5ec9e7096b4598197ff65cc18018219bf48214f3a29ca420af",
+      "source_module": "package/dist/esm/icons/upload.js",
+      "sections": [
+        "Schermroutes",
+        "Shell en navigatie",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 252,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/BuildFlow/BuildFlow.tsx",
+          "line": 253,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 164,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 165,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 280,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 284,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 102,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 103,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        }
+      ]
+    },
+    {
+      "name": "Wind",
+      "svg": "ui-icons/open-energy-studio/wind.svg",
+      "sha256": "d486e086d17aaa27cb6c8456c76339e0dac8f4974687b847e927824bccbe51a6",
+      "source_module": "package/dist/esm/icons/wind.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyMwa.tsx",
+          "line": 34,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 44,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 52,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    },
+    {
+      "name": "Wrench",
+      "svg": "ui-icons/open-energy-studio/wrench.svg",
+      "sha256": "84c55b95f3dcb75b8778c123b790949580d0c2c9e7ebe1dd1294d2986050d050",
+      "source_module": "package/dist/esm/icons/wrench.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/WorkflowNav.tsx",
+          "line": 265,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "X",
+      "svg": "ui-icons/open-energy-studio/x.svg",
+      "sha256": "3a7cdc04f135d19fe1482154d1e55f292b374908c71e30c5a2322f639edb6cab",
+      "source_module": "package/dist/esm/icons/x.js",
+      "sections": [
+        "Panelen en bediening",
+        "Schermroutes",
+        "Shell en navigatie",
+        "Start en project"
+      ],
+      "uses": [
+        {
+          "file": "src/components/EvidenceLink/EvidenceLink.tsx",
+          "line": 108,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/StatusBar/StatusBar.tsx",
+          "line": 26,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+          "line": 338,
+          "kind": "jsx",
+          "section": "Start en project"
+        },
+        {
+          "file": "src/components/shell/Inspector.tsx",
+          "line": 77,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 187,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        },
+        {
+          "file": "src/components/shell/pages/ProjectOverview.tsx",
+          "line": 51,
+          "kind": "jsx",
+          "section": "Schermroutes"
+        },
+        {
+          "file": "src/components/ui/Toast.tsx",
+          "line": 94,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "XCircle",
+      "svg": "ui-icons/open-energy-studio/x-circle.svg",
+      "sha256": "295e82c6c65ef69b065d5ce4820c132a9223dfc455dc06683dcb21efcd38b29d",
+      "source_module": "package/dist/esm/icons/circle-x.js",
+      "sections": [
+        "Panelen en bediening",
+        "Resultaten"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/pages/results/ResultsDashboard.tsx",
+          "line": 211,
+          "kind": "jsx",
+          "section": "Resultaten"
+        },
+        {
+          "file": "src/components/ui/DataTable.tsx",
+          "line": 133,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Display.tsx",
+          "line": 13,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        },
+        {
+          "file": "src/components/ui/Toast.tsx",
+          "line": 39,
+          "kind": "jsx",
+          "section": "Panelen en bediening"
+        }
+      ]
+    },
+    {
+      "name": "XSquare",
+      "svg": "ui-icons/open-energy-studio/x-square.svg",
+      "sha256": "71d4b2e80f03c781a2867efcabc3754060bbd7ee6fca5c5e5fda11cf6d93678f",
+      "source_module": "package/dist/esm/icons/square-x.js",
+      "sections": [
+        "Shell en navigatie"
+      ],
+      "uses": [
+        {
+          "file": "src/components/shell/TopBar.tsx",
+          "line": 161,
+          "kind": "jsx",
+          "section": "Shell en navigatie"
+        }
+      ]
+    },
+    {
+      "name": "Zap",
+      "svg": "ui-icons/open-energy-studio/zap.svg",
+      "sha256": "33bdcca10f648ca0a12a18f3cef0fed49293ddd62e42d1229402b6e6f1902040",
+      "source_module": "package/dist/esm/icons/zap.js",
+      "sections": [
+        "Opname en advies"
+      ],
+      "uses": [
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 43,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        },
+        {
+          "file": "src/components/SurveyWizard/SurveyWizard.tsx",
+          "line": 47,
+          "kind": "jsx",
+          "section": "Opname en advies"
+        }
+      ]
+    }
+  ]
+}

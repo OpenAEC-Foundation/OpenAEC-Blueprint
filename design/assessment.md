@@ -155,6 +155,13 @@ zou die werkstroom verliezen. Het gedeelde Rust-frame ondersteunt nu een
 werkstroomvariant met navigatie links en zonder ribbon of permanent
 eigenschappenpaneel. De Energy-preview in de native atlas gebruikt die variant;
 de algemene HTML-ribbon blijft een vergelijking met de andere studio's.
+De [Energy-icoonreview](energy-ui-icon-review.html) toont 84 in 41
+UI-componenten aangeroepen Lucide-vormen op 16/24/32 px in licht en donker.
+De [index](../harmonization/energy-ui-icons.json) koppelt 251 JSX-aanroepen en
+zes statuskeuzes via `ICON`-tabellen aan bronregels en hashes. Dit is een
+broninventaris, nog geen goedgekeurde semantische Rust-iconenset. De routes
+geven de schermstructuur aan; de atlas bewijst afzonderlijk welke iconvormen
+in UI-code gebruikt worden.
 Een software-render liet zien dat de horizontale scrollbar de groepsnamen
 overlapte. De gedeelde Rust-shell reserveert nu de volledige ribbonhoogte voor
 de scrollbar; een renderregressietest controleert dat de groepsnaam leesbaar

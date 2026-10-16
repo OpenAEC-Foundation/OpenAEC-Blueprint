@@ -8,6 +8,8 @@ Dit is een breed archief van visuele bronbestanden, geen telling van gebruikte U
 
 De [Open Planner-lintindex](planner-ribbon-ui-icons.json) is een gerichte uitzondering voor een extern iconpackage: 85 bronbewezen Lucide-vectoren zijn uit de in `package-lock.json` vastgezette versie 0.575.0 geëxtraheerd, na SHA-512-verificatie van het pakket. De [visuele review](../design/planner-ribbon-icon-review.html) toont 16/24/32 px op licht en donker. De ISC/MIT-notice staat naast de kopieën in `ui-icons/open-planner-ribbon/`. Dit telt niet als 85 originele OpenAEC-ontwerpen of als onderdeel van de 577 bestandsassets.
 
+De [Open Energy-index](energy-ui-icons.json) bevat 84 `lucide-react`-vectoren uit versie 0.577.0, na verificatie tegen de gepinde lockfile. In 41 UI-componenten zijn 251 JSX-aanroepen en zes dynamische statuskeuzes gevonden; elke vorm heeft een bronregel en SHA-256. De [review](../design/energy-ui-icon-review.html) toont alle vormen in drie maten op lichte en donkere ondergrond. De pakketnotice staat in `ui-icons/open-energy-studio/LUCIDE-LICENSE.txt`. Bibliotheekvectoren zijn geen originele OpenAEC-iconen en behoren niet tot de 577 bestandsassets of de goedgekeurde Rust-kern.
+
 BuildingPy heeft een [aparte bronreview](../design/building-py-location-review.html) voor zijn PySide2/Qt-locatiedialoog; `construction/panel.py` is geometrische modelcode, geen paneel in de gebruikersinterface.
 
 Project OconDat is apart op zijn twee webinterfaces geauditeerd: 19 UI-codebestanden en 74 bronregels. De [schermreview](../design/ocondat-ui-review.html) beschrijft de componentenbrowser, Nederlandse standaardenbibliotheek en iconclassificatie. De duizenden SVG-bestanden met bouwcomponenten en tekenpatronen zijn technische inhoud, geen UI-iconen.
