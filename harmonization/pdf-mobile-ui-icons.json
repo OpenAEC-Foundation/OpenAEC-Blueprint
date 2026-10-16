@@ -1,0 +1,454 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 25 literal SVG sites in isMobile()-reachable MobileApp.jsx. Twenty-four sites are UI symbols, one large empty-state document is an illustration. Toolbar disclosure and ToolIcon produce conditional variants. Mobile tool list contains exactly five reachable tools.",
+  "literal_svg_sites": 25,
+  "ui_icon_sites": 24,
+  "empty_state_illustrations": 1,
+  "exported_ui_state_svgs": 29,
+  "tool_menu_variants": 5,
+  "semantic_collisions": [
+    {
+      "sites": [
+        "drawer-save",
+        "drawer-save-as"
+      ],
+      "issue": "identical geometry for Save and Save As"
+    },
+    {
+      "sites": [
+        "page-previous",
+        "preferences-back"
+      ],
+      "issue": "identical geometry for page navigation and leaving settings"
+    }
+  ],
+  "source_repetitions": [
+    [
+      "topbar-open",
+      "drawer-open"
+    ]
+  ],
+  "records": [
+    {
+      "ordinal": 1,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 326,
+      "name": "topbar-menu",
+      "label": "Navigatiemenu openen",
+      "area": "topbar",
+      "kind": "ui-icon",
+      "availability": "always",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/topbar-menu.svg",
+          "sha256": "ca223ddff08fbfc0c3036e62440e8f6c7b98e8ef3f4a00ea3c667225329fa912"
+        }
+      }
+    },
+    {
+      "ordinal": 2,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 335,
+      "name": "theme-moon",
+      "label": "Donkere modus inschakelen",
+      "area": "topbar",
+      "kind": "ui-icon",
+      "availability": "when-light",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/theme-moon.svg",
+          "sha256": "e02ce2c0e0879bf77c919d44d0f45cc3c7a2053999631d0395f2a623f71d576a"
+        }
+      }
+    },
+    {
+      "ordinal": 3,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 339,
+      "name": "theme-sun",
+      "label": "Lichte modus inschakelen",
+      "area": "topbar",
+      "kind": "ui-icon",
+      "availability": "when-dark",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/theme-sun.svg",
+          "sha256": "3e40c725876ced53982400e89d13b0eb43950a8df0879b2043f1cd5250efeb81"
+        }
+      }
+    },
+    {
+      "ordinal": 4,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 353,
+      "name": "topbar-open",
+      "label": "Bestand openen",
+      "area": "topbar",
+      "kind": "ui-icon",
+      "availability": "always",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/topbar-open.svg",
+          "sha256": "5eb3ce3fa93ce5d98f7fe0409e3e92c64747e38466d865b2013c54a183580cac"
+        }
+      }
+    },
+    {
+      "ordinal": 5,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 363,
+      "name": "empty-document",
+      "label": "Lege staat: document",
+      "area": "empty-state",
+      "kind": "illustration",
+      "availability": "no-document",
+      "variants": {
+        "default": {
+          "path": "ui-graphics/open-pdf-studio/mobile/empty-document.svg",
+          "sha256": "851ef1bfc3f778de3ef987e8d867561a8689f5e6414ffbd928966f7fe000e64d"
+        }
+      }
+    },
+    {
+      "ordinal": 6,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 391,
+      "name": "toolbar-disclosure",
+      "label": "Onderste werkbalk in-/uitklappen",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "expanded": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/toolbar-disclosure-expanded.svg",
+          "sha256": "b9b676566c4c6d6c87ed446556f81bf4c327e89fb337a96196039a809a9d4a92"
+        },
+        "collapsed": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/toolbar-disclosure-collapsed.svg",
+          "sha256": "953fe69cabe9deb29b4a38e70eb5778ca0530ee3260e31a7ee55ee7d1a8506b8"
+        }
+      }
+    },
+    {
+      "ordinal": 7,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 402,
+      "name": "page-previous",
+      "label": "Vorige pagina",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open; RTL-swaps-action",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/page-previous.svg",
+          "sha256": "b65de2bdfebb5dbe311334541a03fef1e292f79a58d7325115a50f59f07113d5"
+        }
+      }
+    },
+    {
+      "ordinal": 8,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 412,
+      "name": "page-next",
+      "label": "Volgende pagina",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open; RTL-swaps-action",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/page-next.svg",
+          "sha256": "a83ee35d2a264c51219542ce112be8d9eee33206033053ed6f7e44cfa813c28c"
+        }
+      }
+    },
+    {
+      "ordinal": 9,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 420,
+      "name": "zoom-out",
+      "label": "Uitzoomen",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/zoom-out.svg",
+          "sha256": "7b0769176a5063773dae17664eba2c173b8ee2a9c40e46f7d5c516fcec6d2dd5"
+        }
+      }
+    },
+    {
+      "ordinal": 10,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 427,
+      "name": "zoom-in",
+      "label": "Inzoomen",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/zoom-in.svg",
+          "sha256": "28dc5cd1da34cefeaef3c11e3b0672fa846c824b6911631363fdeb4f8988c6ff"
+        }
+      }
+    },
+    {
+      "ordinal": 11,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 438,
+      "name": "rotate-page",
+      "label": "Pagina draaien",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/rotate-page.svg",
+          "sha256": "d9736f5bca16dd91683f556ae208d4b378094aab934ae6afe7fdd6879c430a70"
+        }
+      }
+    },
+    {
+      "ordinal": 12,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 447,
+      "name": "enter-fullscreen",
+      "label": "Volledig scherm",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "not-fullscreen",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/enter-fullscreen.svg",
+          "sha256": "483b5c1d6707c7063c7a80a864393d2305ffe169f65f4806ec2bba6dc10610c9"
+        }
+      }
+    },
+    {
+      "ordinal": 13,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 454,
+      "name": "exit-fullscreen",
+      "label": "Volledig scherm verlaten",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "fullscreen",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/exit-fullscreen.svg",
+          "sha256": "17d264e559b1ad6238182ef01d6c91b87375da1e0e6529ffe7cbc67295b67264"
+        }
+      }
+    },
+    {
+      "ordinal": 14,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 466,
+      "name": "annotation-tools",
+      "label": "Annotatiegereedschappen openen",
+      "area": "toolbar",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tools.svg",
+          "sha256": "c314118437fffaefff5eaab963520c87bb05e230c4a1ce5859221f4b57131464"
+        }
+      }
+    },
+    {
+      "ordinal": 15,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 521,
+      "name": "copy-selection",
+      "label": "Geselecteerde tekst kopiëren",
+      "area": "floating-action",
+      "kind": "ui-icon",
+      "availability": "text-selected",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/copy-selection.svg",
+          "sha256": "92d7787cf61aaf11391bed9e88f85b4f32fceb4aa432a1cc18e4852db1181e96"
+        }
+      }
+    },
+    {
+      "ordinal": 16,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 535,
+      "name": "drawer-close",
+      "label": "Menu sluiten",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "drawer-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-close.svg",
+          "sha256": "2f6892f77d8428ff3461e011d01d091fb41410702a4fb37f1c8dba209fa7eafd"
+        }
+      }
+    },
+    {
+      "ordinal": 17,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 543,
+      "name": "drawer-open",
+      "label": "Bestand openen",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "drawer-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-open.svg",
+          "sha256": "3aa2372da04e251c5550d0275f040fabd57489c9e4ac8fb46189d29fdf07ceb9"
+        }
+      }
+    },
+    {
+      "ordinal": 18,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 550,
+      "name": "drawer-save",
+      "label": "Opslaan",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-save.svg",
+          "sha256": "e79f1e18047d136a1962298b6bb6a7a69b1c9e66c3d50f370f8e01e234e232d8"
+        }
+      }
+    },
+    {
+      "ordinal": 19,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 558,
+      "name": "drawer-save-as",
+      "label": "Opslaan als",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "document-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-save-as.svg",
+          "sha256": "e79f1e18047d136a1962298b6bb6a7a69b1c9e66c3d50f370f8e01e234e232d8"
+        }
+      }
+    },
+    {
+      "ordinal": 20,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 574,
+      "name": "recent-document",
+      "label": "Recent bestand",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "recent-entry-exists; re-pick-prompt",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/recent-document.svg",
+          "sha256": "2c4790d4259c915a6857ea858a9d2f4aa266c21063f4833e144f9e94c935f1b1"
+        }
+      }
+    },
+    {
+      "ordinal": 21,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 588,
+      "name": "drawer-settings",
+      "label": "Voorkeuren",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "drawer-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-settings.svg",
+          "sha256": "82c5eb430a2ed52b0b701c8ea39c20bfba151ce11c4e2c8e524d28915b82ac35"
+        }
+      }
+    },
+    {
+      "ordinal": 22,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 601,
+      "name": "drawer-feedback",
+      "label": "Feedback",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "drawer-open; guest-disabled",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-feedback.svg",
+          "sha256": "1fd6b0fcaac1326e0fc60bbe46c8f5ff6d99644d21d731b8c7c75a56e112b9f1"
+        }
+      }
+    },
+    {
+      "ordinal": 23,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 607,
+      "name": "drawer-about",
+      "label": "Over",
+      "area": "drawer",
+      "kind": "ui-icon",
+      "availability": "drawer-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/drawer-about.svg",
+          "sha256": "d06353c267d82de4da750f25f154808e982e1f18428e2b0b09e9510eab1162d6"
+        }
+      }
+    },
+    {
+      "ordinal": 24,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 640,
+      "name": "annotation-tool",
+      "label": "Gereedschap in keuzemenu",
+      "area": "tool-menu",
+      "kind": "ui-icon",
+      "availability": "tool-menu-open",
+      "variants": {
+        "select": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tool-select.svg",
+          "sha256": "a9587b062a6d2d84c4ca95ffd3c9f0fa5b4bb3b1825473fe079127eef9c6dee9"
+        },
+        "highlight": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tool-highlight.svg",
+          "sha256": "941d4d2f5525f825d297f26d83c4a3a4dac39d88a9c44e749d7aa4494eb3ef98"
+        },
+        "draw": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tool-draw.svg",
+          "sha256": "54c1c1e1a908a35fd09cc1c807baca4068d47b5e7b9892dcd67899b4d4f2124d"
+        },
+        "textbox": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tool-textbox.svg",
+          "sha256": "ed0f2ffae33e63807ce99705d842d65f5192e3ca7364a6ff0a94ddc409f077f4"
+        },
+        "comment": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/annotation-tool-comment.svg",
+          "sha256": "1fd6b0fcaac1326e0fc60bbe46c8f5ff6d99644d21d731b8c7c75a56e112b9f1"
+        }
+      }
+    },
+    {
+      "ordinal": 25,
+      "source_file": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "source_line": 669,
+      "name": "preferences-back",
+      "label": "Terug uit voorkeuren",
+      "area": "preferences",
+      "kind": "ui-icon",
+      "availability": "preferences-open",
+      "variants": {
+        "default": {
+          "path": "inline-ui-icons/open-pdf-studio/mobile/preferences-back.svg",
+          "sha256": "b65de2bdfebb5dbe311334541a03fef1e292f79a58d7325115a50f59f07113d5"
+        }
+      }
+    }
+  ]
+}

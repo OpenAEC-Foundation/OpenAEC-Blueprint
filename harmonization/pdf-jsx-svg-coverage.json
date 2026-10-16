@@ -5,8 +5,8 @@
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 150,
-  "sites_requiring_role_review_or_partial_followup": 167,
+  "fully_reviewed_literal_sites": 175,
+  "sites_requiring_role_review_or_partial_followup": 142,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -85,7 +85,7 @@
         640,
         669
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",

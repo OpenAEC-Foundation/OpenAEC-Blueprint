@@ -1,0 +1,61 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "source_jsx": "open-pdf-studio/js/solid/MobileApp.jsx",
+  "source_css": "open-pdf-studio/styles/mobile.css",
+  "scope": "Four source-reachable mobile screen states. Dimensions are taken from mobile.css, with zero safe-area insets in the static study. PDF page artwork is schematic, not a screenshot. Theme/accent controls compare source blue against a harmonized amber proposal, not a finished product pixel match.",
+  "source_dimensions_px": {
+    "topbar_height": 48,
+    "bottom_toolbar_min_height": 52,
+    "collapsed_toolbar_min_height": 24,
+    "topbar_button": 44,
+    "toolbar_button_min_width": 32,
+    "toolbar_button_max_width": 48,
+    "toolbar_content_max_width": 480,
+    "drawer_width": 280,
+    "drawer_max_viewport_percent": 80,
+    "drawer_header_height": 56
+  },
+  "states": [
+    {
+      "id": "empty",
+      "label": "Leeg",
+      "trigger": "Geen document",
+      "regions": [
+        "48px topbar",
+        "werkgebied met illustratie",
+        "geen onderste werkbalk"
+      ]
+    },
+    {
+      "id": "document",
+      "label": "Document",
+      "trigger": "PDF geladen",
+      "regions": [
+        "48px topbar",
+        "PDF-canvas",
+        "minimaal 52px werkbalk"
+      ]
+    },
+    {
+      "id": "drawer",
+      "label": "Bestandmenu",
+      "trigger": "Menu geopend",
+      "regions": [
+        "280px drawer, maximaal 80vw",
+        "56px drawerheader",
+        "document achter 40% scrim"
+      ]
+    },
+    {
+      "id": "preferences",
+      "label": "Voorkeuren",
+      "trigger": "Voorkeuren geopend",
+      "regions": [
+        "schermvullende pagina",
+        "48px header",
+        "scrollende formuliersecties"
+      ]
+    }
+  ]
+}
