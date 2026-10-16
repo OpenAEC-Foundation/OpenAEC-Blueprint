@@ -75,8 +75,8 @@
     {
       "name": "tekening-rotate",
       "label": "Roteren",
-      "status": "shared-candidate",
-      "decision": "Rotatie van een geselecteerd object met opgegeven hoek.",
+      "status": "adopted-domain",
+      "decision": "Rotatie van een geselecteerd object met opgegeven hoek; de Rust-vorm toont ook het te roteren object.",
       "geotechniek": {
         "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
         "line": 248,
@@ -98,13 +98,17 @@
         "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
       },
       "pointcloud": null,
-      "rust": null
+      "rust": {
+        "meaning": "transform.rotate",
+        "large": "../crates/openaec-ui/assets/domain-icons/transform-rotate.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/transform-rotate.svg"
+      }
     },
     {
       "name": "tekening-trim",
       "label": "Trim",
-      "status": "shared-candidate",
-      "decision": "Lijn inkorten tegen een referentie of snijpunt.",
+      "status": "adopted-domain",
+      "decision": "Lijn inkorten tegen een referentie; de Rust-vorm vereenvoudigt de knipvorm van de bron.",
       "geotechniek": {
         "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
         "line": 276,
@@ -136,13 +140,17 @@
         "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
       },
       "pointcloud": null,
-      "rust": null
+      "rust": {
+        "meaning": "drawing.trim",
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-trim.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-trim.svg"
+      }
     },
     {
       "name": "tekening-extend",
       "label": "Extend",
-      "status": "shared-candidate",
-      "decision": "Lijn verlengen tot een grens of referentie.",
+      "status": "adopted-domain",
+      "decision": "Lijn verlengen tot een grens; de pijl wijst naar de grenslijn.",
       "geotechniek": {
         "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
         "line": 286,
@@ -164,13 +172,17 @@
         "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
       },
       "pointcloud": null,
-      "rust": null
+      "rust": {
+        "meaning": "drawing.extend",
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-extend.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-extend.svg"
+      }
     },
     {
       "name": "tekening-mirror",
       "label": "Mirror",
-      "status": "shared-candidate",
-      "decision": "Object spiegelen langs een getekende as.",
+      "status": "adopted-domain",
+      "decision": "Object spiegelen langs een getekende as; de as blijft ook op 16 px zichtbaar.",
       "geotechniek": {
         "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
         "line": 296,
@@ -192,13 +204,17 @@
         "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
       },
       "pointcloud": null,
-      "rust": null
+      "rust": {
+        "meaning": "transform.mirror",
+        "large": "../crates/openaec-ui/assets/domain-icons/transform-mirror.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/transform-mirror.svg"
+      }
     },
     {
       "name": "tekening-offset",
       "label": "Offset",
-      "status": "shared-candidate",
-      "decision": "Parallelle kopie van een lijn op afstand.",
+      "status": "adopted-domain",
+      "decision": "Parallelle kopie van een lijn op afstand; twee lijnen en een maatpijl.",
       "geotechniek": {
         "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
         "line": 306,
@@ -220,7 +236,11 @@
         "commit": "77f19dafd01776947934e71563dd3d92a77c4f94"
       },
       "pointcloud": null,
-      "rust": null
+      "rust": {
+        "meaning": "drawing.offset",
+        "large": "../crates/openaec-ui/assets/domain-icons/drawing-offset.svg",
+        "small": "../crates/openaec-ui/assets/domain-icons-small/drawing-offset.svg"
+      }
     },
     {
       "name": "tekening-line",

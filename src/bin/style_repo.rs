@@ -2708,9 +2708,14 @@ mod tests {
         assert!(matches!(place[4].icon, CommandIcon::Domain(DomainIcon::DrawingDimension)));
         assert!(matches!(place[7].icon, CommandIcon::Domain(DomainIcon::DrawingNote)));
         assert!(matches!(drawing.groups[1].commands[0].icon, CommandIcon::Domain(DomainIcon::TransformMove)));
+        assert!(matches!(drawing.groups[1].commands[2].icon, CommandIcon::Domain(DomainIcon::TransformRotate)));
+        assert!(matches!(drawing.groups[1].commands[4].icon, CommandIcon::Domain(DomainIcon::DrawingTrim)));
+        assert!(matches!(drawing.groups[1].commands[5].icon, CommandIcon::Domain(DomainIcon::DrawingExtend)));
+        assert!(matches!(drawing.groups[1].commands[6].icon, CommandIcon::Domain(DomainIcon::TransformMirror)));
+        assert!(matches!(drawing.groups[1].commands[7].icon, CommandIcon::Domain(DomainIcon::DrawingOffset)));
         assert!(matches!(drawing.groups[4].commands[2].icon, CommandIcon::Canonical(Icon::Print)));
         assert!(drawing.groups.iter().flat_map(|group| &group.commands)
-            .filter(|command| !["Print", "Sondering", "Boring", "Sonderingsraster", "Verplaatsen", "Lijn", "Maatlijn", "Opmerking"].contains(&command.label.as_str()))
+            .filter(|command| !["Print", "Sondering", "Boring", "Sonderingsraster", "Verplaatsen", "Roteren…", "Trim", "Extend", "Mirror", "Offset", "Lijn", "Maatlijn", "Opmerking"].contains(&command.label.as_str()))
             .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
         let home = tabs.iter().find(|tab| tab.id == "home").unwrap();
         assert!(matches!(home.groups[0].commands[0].icon, CommandIcon::Canonical(Icon::Settings)));

@@ -157,10 +157,15 @@ pub enum DomainIcon {
     DrawingNote,
     TransformMove,
     DrawingLine,
+    TransformRotate,
+    DrawingTrim,
+    DrawingExtend,
+    TransformMirror,
+    DrawingOffset,
 }
 
 impl DomainIcon {
-    pub const ALL: [Self; 11] = [
+    pub const ALL: [Self; 16] = [
         Self::PointcloudBagPanel,
         Self::PointcloudEyeDome,
         Self::CadShadedView,
@@ -172,6 +177,11 @@ impl DomainIcon {
         Self::DrawingNote,
         Self::TransformMove,
         Self::DrawingLine,
+        Self::TransformRotate,
+        Self::DrawingTrim,
+        Self::DrawingExtend,
+        Self::TransformMirror,
+        Self::DrawingOffset,
     ];
 
     pub fn id(self) -> &'static str {
@@ -187,6 +197,11 @@ impl DomainIcon {
             Self::DrawingNote => "drawing.note",
             Self::TransformMove => "transform.move",
             Self::DrawingLine => "drawing.line",
+            Self::TransformRotate => "transform.rotate",
+            Self::DrawingTrim => "drawing.trim",
+            Self::DrawingExtend => "drawing.extend",
+            Self::TransformMirror => "transform.mirror",
+            Self::DrawingOffset => "drawing.offset",
         }
     }
 
@@ -257,6 +272,36 @@ impl DomainIcon {
             }
             (Self::DrawingLine, false) => {
                 include_bytes!("../assets/domain-icons/drawing-line.svg")
+            }
+            (Self::TransformRotate, true) => {
+                include_bytes!("../assets/domain-icons-small/transform-rotate.svg")
+            }
+            (Self::TransformRotate, false) => {
+                include_bytes!("../assets/domain-icons/transform-rotate.svg")
+            }
+            (Self::DrawingTrim, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-trim.svg")
+            }
+            (Self::DrawingTrim, false) => {
+                include_bytes!("../assets/domain-icons/drawing-trim.svg")
+            }
+            (Self::DrawingExtend, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-extend.svg")
+            }
+            (Self::DrawingExtend, false) => {
+                include_bytes!("../assets/domain-icons/drawing-extend.svg")
+            }
+            (Self::TransformMirror, true) => {
+                include_bytes!("../assets/domain-icons-small/transform-mirror.svg")
+            }
+            (Self::TransformMirror, false) => {
+                include_bytes!("../assets/domain-icons/transform-mirror.svg")
+            }
+            (Self::DrawingOffset, true) => {
+                include_bytes!("../assets/domain-icons-small/drawing-offset.svg")
+            }
+            (Self::DrawingOffset, false) => {
+                include_bytes!("../assets/domain-icons/drawing-offset.svg")
             }
         }
     }

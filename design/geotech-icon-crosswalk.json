@@ -6,8 +6,8 @@
     "shared": 19,
     "new-shared": 5,
     "decision": 8,
-    "adopted-domain": 7,
-    "domain": 15
+    "adopted-domain": 12,
+    "domain": 10
   },
   "icons": [
     {
@@ -282,9 +282,9 @@
     },
     {
       "name": "tekening-rotate",
-      "status": "domain",
-      "meaning": "geotech.tekening-rotate",
-      "decision": "Bronbewezen OpenCAD-rotatie is een gedeelde kandidaat; harmoniseer 16px-vorm vóór opname.",
+      "status": "adopted-domain",
+      "meaning": "transform.rotate",
+      "decision": "Bronbewezen CAD-bewerking, naast OpenCAD beoordeeld; 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 103,
       "usage_lines": [
@@ -292,8 +292,8 @@
       ],
       "source_sha256": "6f66f69fa73d8d3d3d60737e5742f768dd74e3071cb9f9e4ccbb9862e0183480",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-rotate.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/transform-rotate.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/transform-rotate.svg"
     },
     {
       "name": "tekening-copy",
@@ -403,9 +403,9 @@
     },
     {
       "name": "tekening-trim",
-      "status": "domain",
-      "meaning": "geotech.tekening-trim",
-      "decision": "Bronbewezen OpenCAD-Trim is een gedeelde kandidaat; beide bronvormen verschillen sterk op 16 px.",
+      "status": "adopted-domain",
+      "meaning": "drawing.trim",
+      "decision": "Bronbewezen CAD-bewerking, naast OpenCAD beoordeeld; 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 152,
       "usage_lines": [
@@ -413,14 +413,14 @@
       ],
       "source_sha256": "e0e3dc0fcf2acd5365ed384c15d9a1e118cacbeb6323aeab7e1662456dcb610b",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-trim.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-trim.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-trim.svg"
     },
     {
       "name": "tekening-extend",
-      "status": "domain",
-      "meaning": "geotech.tekening-extend",
-      "decision": "Bronbewezen OpenCAD-Extend is een gedeelde kandidaat; beoordeel de richting en grensweergave.",
+      "status": "adopted-domain",
+      "meaning": "drawing.extend",
+      "decision": "Bronbewezen CAD-bewerking, naast OpenCAD beoordeeld; 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 161,
       "usage_lines": [
@@ -428,14 +428,14 @@
       ],
       "source_sha256": "e5b4491617b8066aa3ac67ab03371c8745640986cffef30c2b049ba9aa241e19",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-extend.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-extend.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-extend.svg"
     },
     {
       "name": "tekening-mirror",
-      "status": "domain",
-      "meaning": "geotech.tekening-mirror",
-      "decision": "Bronbewezen OpenCAD-Mirror is een gedeelde kandidaat; harmoniseer de as op 16 px.",
+      "status": "adopted-domain",
+      "meaning": "transform.mirror",
+      "decision": "Bronbewezen CAD-bewerking, naast OpenCAD beoordeeld; 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 170,
       "usage_lines": [
@@ -443,14 +443,14 @@
       ],
       "source_sha256": "104a972fbfa714d76a3286c8a32efd6f0d55cd2415eb22fa07f7b298c0c36b90",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-mirror.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/transform-mirror.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/transform-mirror.svg"
     },
     {
       "name": "tekening-offset",
-      "status": "domain",
-      "meaning": "geotech.tekening-offset",
-      "decision": "Bronbewezen OpenCAD-Offset is een gedeelde kandidaat; behoud het afstands- en parallelbetekenisverschil.",
+      "status": "adopted-domain",
+      "meaning": "drawing.offset",
+      "decision": "Bronbewezen CAD-bewerking, naast OpenCAD beoordeeld; 24px- en vereenvoudigde 16px-Rust-vorm.",
       "source": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
       "source_line": 178,
       "usage_lines": [
@@ -458,8 +458,8 @@
       ],
       "source_sha256": "e2262a4438e739493ef2b71aa5c73fe482c624011f7695ed130b8d28bd8a2573",
       "source_svg": "inline-ui-icons/open-geotechniek-studio/tekening-offset.svg",
-      "candidate_svg": null,
-      "candidate_small_svg": null
+      "candidate_svg": "../crates/openaec-ui/assets/domain-icons/drawing-offset.svg",
+      "candidate_small_svg": "../crates/openaec-ui/assets/domain-icons-small/drawing-offset.svg"
     },
     {
       "name": "backstage-new",
