@@ -1,0 +1,2574 @@
+{
+  "checked_at_utc": "2026-10-16T07:04:36.674164+00:00",
+  "repositories": [
+    {
+      "repository": "open-pdf-studio",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio",
+      "main": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+      "public_branch_count": 45,
+      "requested_branches": {
+        "dynlex": null,
+        "feat/rust-native": null
+      }
+    },
+    {
+      "repository": "open-pdf-studio-v3",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3",
+      "main": "380706f5820c6090a36461663b076cec4f324fc3",
+      "public_branch_count": 1,
+      "requested_branches": {
+        "dynlex": null,
+        "feat/rust-native": null
+      }
+    }
+  ],
+  "pinned_pdf_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "current_public_main": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+  "changed_file_count": 404,
+  "ui_code_candidate_count": 34,
+  "icon_or_chrome_candidate_count": 18,
+  "changed_files": [
+    {
+      "status": "M",
+      "path": ".github/workflows/release.yml",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "Cargo.lock",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "mcpb/manifest.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-render/src/tile_render.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/index.html",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading-apply.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading-apply.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading-overlay.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading-wiring.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/proofreading.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/text-model.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/corrections/text-model.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/opmerkingen-export.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/opmerkingen-export.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/papiermaat-eenheid.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/papiermaat-eenheid.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/annotations/rendering.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/annotations/stramien-koppeling-mcp.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/xfdf-pagina.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/annotations/xfdf-pagina.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/annotations/xfdf.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/assistant-i18n.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/assistant-skills.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/compare/change-detect-protocol.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/compare/change-detect-worker.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/compare/change-detect.worker.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/compare/compare-store.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/compare/compare-viewport.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/compare/split-line.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/compare/split-line.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/constructieoverzicht/skill.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/constructieoverzicht/skill.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/bestandsnaam.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/bestandsnaam.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/constants.ts",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/fout-bericht.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/fout-bericht.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/opslag.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/opslag.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/oude-webview-start.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/oude-webview.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/core/oude-webview.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/platform.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/preferences.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/stores/document-helpers.ts",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/core/undo-manager.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/drafting/constructie/symbool-koppeling.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ar/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bg/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/bn/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ca/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/cs/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/da/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/de/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/el/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/en/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/es/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fa/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fi/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/fr/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/he/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hi/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hr/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/hu/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/id/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/it/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ja/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ko/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/lo/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ms/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nb/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/nl/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pl/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/pt/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ro/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ru/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sk/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sr/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sv/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/sw/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ta/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/th/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/tr/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/uk/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/ur/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/vi/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/common.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/dialogs.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/preferences.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/properties.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/ribbon.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/i18n/locales/zh/statusbar.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/main.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/mobile/ipc-wekker.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/mobile/ipc-wekker.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/bitmap-orchestrator.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/engine-router.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/loader.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/page-bitmap-cache.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/page-manager.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/print-boekje.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/print-boekje.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/print-job.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/print-opdracht.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/print-opdracht.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/print-poster-voorbeeld.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/print-poster.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/print-poster.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/progressive-render.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/proofreading-roundtrip.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/renderer.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/save-document.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/saver.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-app.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-document.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-document.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-i18n.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-logica.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/splits-logica.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/thin-lines.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/thin-lines.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/camera.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/camera.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/decoded-cache.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/decoded-cache.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/pdf-3d.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/pdf-3d.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/snapshot-page.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/snapshot-page.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-fixture.testhulp.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-reader.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-reader.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-scene.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-scene.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/pdf/three-d/u3d-worker.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/tile-cache.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/pdf/vector-renderer.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/plattegrond/skill.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/plattegrond/skill.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/App.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/AssistantPanel.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/DialogHost.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/components/ThreeDLazy.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/components/ThreeDView.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/compare/CompareView.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/dialogs/ParametricSymbolPicker.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/preferences/AnnotationsTab.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/properties-panel/GeneralSection.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/properties-panel/ImageSection.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PapierMaat.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PropertiesPanel.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/stores/papier-eenheid-paneel.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/solid/stores/papierEenheidStore.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/stores/print-instellingen.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/stores/print-instellingen.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/solid/stores/propertiesStore.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/tools/keyboard-handlers.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/tools/proofreading-mode.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/tools/tools/index.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/types/preferences.ts",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/ui/chrome/context-menus.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/ui/chrome/tabs.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/js/ui/panels/left-panel.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/js/ui/ui-lettertype.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/package-lock.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/package.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/scripts/android-config.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/scripts/android-project.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/scripts/oude-webview.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/scripts/oude-webview.test.mjs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/scripts/unit-testlijst.txt",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/.gitignore",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/Cargo.lock",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/Cargo.toml",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "open-pdf-studio/src-tauri/android/MainActivity.kt",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/capabilities/mobile.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/src/datamap.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/src/lib.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/src/pdfium_renderer.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/src/worker_pool/mod.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/src-tauri/tauri.conf.json",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/assistant.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/base.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/dialogs.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/find-bar.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/fonts.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/form-layer.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/handtekening.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/mini-log.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/panels.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/properties-panel.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": true
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/styles/text-layer.css",
+      "ui_code_candidate": true,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "open-pdf-studio/vite.config.js",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "pdfium-worker/src/main.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "pdfium-worker/src/protocol.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "M",
+      "path": "pdfium-worker/src/render.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    },
+    {
+      "status": "A",
+      "path": "pdfium-worker/src/thin_lines.rs",
+      "ui_code_candidate": false,
+      "icon_or_chrome_candidate": false
+    }
+  ],
+  "jsx_literal_svg_counts": [
+    {
+      "path": "open-pdf-studio/js/solid/App.jsx",
+      "old_literal_svg_tags": 1,
+      "new_literal_svg_tags": 1
+    },
+    {
+      "path": "open-pdf-studio/js/solid/MobileApp.jsx",
+      "old_literal_svg_tags": 25,
+      "new_literal_svg_tags": 25
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/AssistantPanel.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/DialogHost.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/KeystrokeOverlay.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDLazy.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ThreeDView.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 1
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/TypeLengthHUD.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+      "old_literal_svg_tags": 4,
+      "new_literal_svg_tags": 5
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/compare/CompareView.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/ParametricSymbolPicker.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/PrintDialog.jsx",
+      "old_literal_svg_tags": 4,
+      "new_literal_svg_tags": 4
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/dialogs/SplitDocumentDialog.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+      "old_literal_svg_tags": 14,
+      "new_literal_svg_tags": 14
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/preferences/AnnotationsTab.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
+      "old_literal_svg_tags": 6,
+      "new_literal_svg_tags": 6
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/GeneralSection.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/ImageSection.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PapierMaat.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/properties-panel/PropertiesPanel.jsx",
+      "old_literal_svg_tags": 0,
+      "new_literal_svg_tags": 0
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+      "old_literal_svg_tags": 1,
+      "new_literal_svg_tags": 2
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "old_literal_svg_tags": 4,
+      "new_literal_svg_tags": 5
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "old_literal_svg_tags": 4,
+      "new_literal_svg_tags": 4
+    }
+  ],
+  "conclusion": "Prior PDF inventories remain pinned evidence; changed main files require a new UI-role audit before current-state claims."
+}

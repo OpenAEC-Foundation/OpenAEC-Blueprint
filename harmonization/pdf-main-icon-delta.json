@@ -1,0 +1,86 @@
+{
+  "repository": "open-pdf-studio",
+  "previous_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "current_commit": "ae1d787e95e70dbf0b24501a7ca0275e61deb92f",
+  "scope": "four added literal JSX SVG source places in changed files; unchanged shapes and imported icon catalogs require separate delta review",
+  "entries": [
+    {
+      "name": "three-d-snapshot",
+      "role": "snapshot-status-icon",
+      "source_evidence": {
+        "file": "open-pdf-studio/js/solid/components/ThreeDView.jsx",
+        "line": 94,
+        "marker": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\">",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ThreeDView.jsx#L94"
+      },
+      "ui_usage_evidence": {
+        "file": "open-pdf-studio/js/solid/App.jsx",
+        "line": 117,
+        "marker": "<ThreeDSnapshotBar />",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/App.jsx#L117"
+      },
+      "local": "harmonization/inline-ui-icons/open-pdf-studio-main-delta/three-d-snapshot.svg",
+      "sha256": "4d9e93af5e6f2a78a3ac24c238cf6f1e26d6dfe90d68a2d3594fdb7408b2df55"
+    },
+    {
+      "name": "compare-split-choice",
+      "role": "mode-choice-illustration",
+      "source_evidence": {
+        "file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+        "line": 181,
+        "marker": "<svg viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"none\" stroke-width=\"2\">",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/compare/CompareDialog.jsx#L181"
+      },
+      "ui_usage_evidence": {
+        "file": "open-pdf-studio/js/solid/components/compare/CompareDialog.jsx",
+        "line": 212,
+        "marker": "value=\"split\"",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/compare/CompareDialog.jsx#L212"
+      },
+      "local": "harmonization/inline-ui-icons/open-pdf-studio-main-delta/compare-split-choice.svg",
+      "sha256": "5f483b309db656c676280665dadb004a24bc5cfc37a2daa641a7dc54fdd1e865"
+    },
+    {
+      "name": "proofread",
+      "role": "ribbon-command-icon",
+      "source_evidence": {
+        "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+        "line": 33,
+        "marker": "<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><line x1=\"3\" y1=\"5\" x2=\"21\" y2=\"5\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"11\" x2=\"8\" y2=\"11\" stroke-width=\"1.5\"/><line x1=\"10\" y1=\"11\" x2=\"21\" y2=\"11\" stroke-width=\"1.5\"/><line x1=\"10\" y1=\"11\" x2=\"16\" y2=\"11\" stroke=\"#FF0000\" stroke-width=\"2\"/><line x1=\"3\" y1=\"17\" x2=\"21\" y2=\"17\" stroke-width=\"1.5\"/><path d=\"M6 21.5 L8.5 17.5 L11 21.5\" stroke=\"#0066FF\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/></svg>",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx#L33"
+      },
+      "ui_usage_evidence": {
+        "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+        "line": 63,
+        "marker": "id=\"tool-proofread\"",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx#L63"
+      },
+      "local": "harmonization/inline-ui-icons/open-pdf-studio-main-delta/proofread.svg",
+      "sha256": "7c6420236cb7d705e52e96b0a8ddbbd44788cb89602aa1e9fcd41861a6381623"
+    },
+    {
+      "name": "split-document",
+      "role": "ribbon-command-icon",
+      "source_evidence": {
+        "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+        "line": 21,
+        "marker": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M4 3h7v7H4z\"/><path d=\"M13 14h7v7h-7z\"/><path d=\"M11 6.5h3.5a2 2 0 012 2V12\" stroke-linecap=\"round\"/><path d=\"M14.5 10l2 2 2-2\" stroke-linecap=\"round\"/></svg>",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx#L21"
+      },
+      "ui_usage_evidence": {
+        "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+        "line": 104,
+        "marker": "id=\"split-document\"",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/ae1d787e95e70dbf0b24501a7ca0275e61deb92f/open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx#L104"
+      },
+      "local": "harmonization/inline-ui-icons/open-pdf-studio-main-delta/split-document.svg",
+      "sha256": "059abe2a60596b66292a7213b5860f66391f302669301ebbbd8d22c096fcbb27"
+    }
+  ],
+  "count": 4,
+  "role_counts": {
+    "mode-choice-illustration": 1,
+    "ribbon-command-icon": 2,
+    "snapshot-status-icon": 1
+  }
+}
