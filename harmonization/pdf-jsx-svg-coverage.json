@@ -5,8 +5,8 @@
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 194,
-  "sites_requiring_role_review_or_partial_followup": 123,
+  "fully_reviewed_literal_sites": 226,
+  "sites_requiring_role_review_or_partial_followup": 91,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -324,7 +324,7 @@
         25,
         26
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/left-panel/panels/AttachmentsPanel.jsx",
@@ -338,7 +338,7 @@
         55,
         79
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/left-panel/panels/FormFieldsPanel.jsx",
@@ -352,7 +352,7 @@
         11,
         12
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/left-panel/panels/LinksPanel.jsx",
@@ -366,7 +366,7 @@
         99,
         104
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/preferences/PreferencesDialog.jsx",
@@ -432,7 +432,7 @@
         195,
         203
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
@@ -526,7 +526,7 @@
         16,
         23
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/preferences/PrefColorPicker.jsx",
