@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAEC · Bestand op 720 × 480</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#f3f3f2;color:#303039;font:14px/1.5 Inter,system-ui,sans-serif}
+  header{background:#303039;color:white;padding:26px max(22px,calc((100vw - 1460px)/2));border-bottom:3px solid #dc7900}
+  header a{color:#ffc180}h1{font-size:29px;margin:12px 0 7px}header p{margin:0;color:#dddde3;max-width:950px}
+  main{max-width:1480px;margin:auto;padding:23px 22px 42px}.facts{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:19px}
+  .facts span{background:white;border:1px solid #d8d8dd;padding:8px 11px}.note{background:#fffaf2;border-left:3px solid #dc7900;padding:14px 16px;max-width:1050px;margin-bottom:22px}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}figure{margin:0;padding:10px;background:white;border:1px solid #d8d8dd;min-width:0}
+  figure img{display:block;width:100%;max-width:720px;height:auto;border:1px solid #e1e1e3}figcaption{padding:10px 2px 1px;font-weight:600}figure a{color:#a75200}
+  h2{font-size:19px;margin:28px 0 7px}p{max-width:1000px}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<header><a href="backstage-review.html">← Bestand-navigatie</a><h1>Bestand op de minimale venstergrootte</h1><p>Native Rust-renders van de Style Repo en Open Pointcloud Studio op 720 × 480 pixels, in Light en Forge.</p></header>
+<main>
+  <div class="facts"><span>720 × 480 px</span><span>2 apps</span><span>2 thema's</span><span>Native software-render</span></div>
+  <div class="note"><strong>Beoordeling.</strong> De gedeelde Bestand-kolom blijft scrolbaar en de footer blijft zichtbaar; taakinhoud past zonder horizontale afsnijding. De Style Repo liep op deze maat eerst vast bij vier knoppen in één rij. Twee compacte rijen verhelpen dat; de regressietest rendert zowel Bestand als de normale componentenpagina in beide thema's.</div>
+  <div class="grid">
+    <figure><img src="style-repo-backstage-small-light.png" alt="Style Repo Bestand op 720 bij 480, Light"><figcaption>Style Repo · Bestand · Light</figcaption><a href="style-repo-backstage-small-light.png">Origineel ↗</a></figure>
+    <figure><img src="pointcloud-file-small-light.png" alt="Pointcloud Open op 720 bij 480, Light"><figcaption>Pointcloud · Open · Light</figcaption><a href="pointcloud-file-small-light.png">Origineel ↗</a></figure>
+    <figure><img src="style-repo-backstage-small-forge.png" alt="Style Repo Bestand op 720 bij 480, Forge"><figcaption>Style Repo · Bestand · Forge</figcaption><a href="style-repo-backstage-small-forge.png">Origineel ↗</a></figure>
+    <figure><img src="pointcloud-file-small-forge.png" alt="Pointcloud Open op 720 bij 480, Forge"><figcaption>Pointcloud · Open · Forge</figcaption><a href="pointcloud-file-small-forge.png">Origineel ↗</a></figure>
+  </div>
+  <h2>Ook de normale werkruimte getest</h2><p>De Style Repo-componentenpagina rendert op dezelfde maat in <a href="style-repo-components-small-light.png">Light</a> en <a href="style-repo-components-small-forge.png">Forge</a>. De zijpanelen worden daar erg smal en sommige labels breken onrustig af. Dat is een resterende responsive-opmaaktaak; de huidige toets bewijst alleen dat deze toestand niet meer crasht.</p>
+</main>
+</html>

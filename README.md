@@ -74,6 +74,8 @@ De [Bestand-navigatie](design/backstage-review.html) gebruikt nu in Style Repo e
 
 De [Bestand-taakreview](design/backstage-task-review.html) toont ook de gedeelde paginakop, groepslabels en actiekaarten. Pointcloud gebruikt ze voor New, Open, Import en Export; de Style Repo toont een werkende en uitgeschakelde variant. Vier New/Open-renders bleven na de omzetting pixel voor pixel gelijk.
 
+De [review op 720 × 480 px](design/backstage-minimum-review.html) vergelijkt de twee native Bestand-weergaven in Light en Forge. Bij die minimale venstergrootte is een rendercrash in de Style Repo verholpen door de vier voorbeeldknoppen in twee rijen te zetten. Regressietests renderen Bestand en de normale componentenpagina; in de normale werkruimte hebben de zijpaneellabels op deze maat nog een responsive-opmaakslag nodig.
+
 De [icoonbotsingreview](design/icon-collision-review.html) beoordeelt alle 14 paren met exact dezelfde bronbytes. Acht paren koppelen de vorm aan verschillende handelingen; daarvoor staan 16 onderscheidende vectoren in 16/24/32 px op licht en donker. Zes Bouwkunde-paren hergebruiken de vorm voor verwante handelingen bij deur- en kozijnstaten. Vier CAD/Pointcloud-vormen zijn in `DomainIcon` opgenomen; Pointcloud gebruikt er twee. De overige twaalf blijven concepten buiten de publieke Rust-icoon-API.
 
 De [review van 53 onzekere iconassets](design/possible-icon-review.html) houdt SVG's zonder direct UI-codebewijs apart van de 577 bewezen UI-bestanden. Ze zijn lokaal op 16, 24 en 32 px te beoordelen en maken geen deel uit van de Rust-crate. De PDF.js-audit omvat ook `viewer.mjs`; de meegeleverde afbeeldingen kunnen nog dynamisch geladen worden.

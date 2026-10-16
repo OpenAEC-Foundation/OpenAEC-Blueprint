@@ -755,6 +755,38 @@ fn export_backstage_task_tiles_review() {
 }
 
 #[test]
+#[ignore = "regenerate minimum-size File view on demand"]
+fn export_backstage_minimum_window_review() {
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::Show(Page::Components));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized_with_reset(
+            &app, theme, false, None, Size::new(720.0, 480.0), false, true,
+        )
+        .save_png(&design.join(format!("style-repo-backstage-small-{name}.png")))
+        .expect("save minimum-size File view");
+        render_sized(&app, theme, false, None, Size::new(720.0, 480.0))
+            .save_png(&design.join(format!("style-repo-components-small-{name}.png")))
+            .expect("save minimum-size components view");
+    }
+}
+
+#[test]
+fn minimum_window_renders_file_and_component_states() {
+    let mut app = StyleRepo::default();
+    let _ = app.update(Action::Show(Page::Components));
+    for theme in [Theme::Light, Theme::Forge] {
+        let file = render_sized_with_reset(
+            &app, theme, false, None, Size::new(720.0, 480.0), false, true,
+        );
+        let workspace = render_sized(&app, theme, false, None, Size::new(720.0, 480.0));
+        assert_eq!((file.width(), file.height()), (720, 480));
+        assert_eq!((workspace.width(), workspace.height()), (720, 480));
+    }
+}
+
+#[test]
 #[ignore = "regenerate native review images on demand"]
 fn export_native_style_repo_previews() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");

@@ -467,36 +467,42 @@ impl StyleRepo {
                     text(l.text("Acties", "Actions"))
                         .font(fonts::STRONG)
                         .size(16),
-                    row![
-                        widgets::dialog_button(
-                            l.text("Primair", "Primary"),
-                            move |_, status| widgets::primary_button_style(theme, status),
-                        )
-                        .width(110)
-                        .height(27)
-                        .on_press(Action::Toggle),
-                        widgets::dialog_button(
-                            l.text("Secundair", "Secondary"),
-                            move |_, status| widgets::secondary_button_style(theme, status),
-                        )
-                        .width(110)
-                        .height(27)
-                        .on_press(Action::Show(Page::Layouts)),
-                        widgets::dialog_button(
-                            l.text("Uitgeschakeld", "Disabled"),
-                            move |_, status| widgets::secondary_button_style(theme, status),
-                        )
-                        .width(140)
-                        .height(27),
-                        widgets::dialog_button(
-                            l.text("Dialoog", "Dialog"),
-                            move |_, status| widgets::secondary_button_style(theme, status),
-                        )
-                        .width(110)
-                        .height(27)
-                        .on_press(Action::SampleDialog(true)),
+                    column![
+                        row![
+                            widgets::dialog_button(
+                                l.text("Primair", "Primary"),
+                                move |_, status| widgets::primary_button_style(theme, status),
+                            )
+                            .width(110)
+                            .height(27)
+                            .on_press(Action::Toggle),
+                            widgets::dialog_button(
+                                l.text("Secundair", "Secondary"),
+                                move |_, status| widgets::secondary_button_style(theme, status),
+                            )
+                            .width(110)
+                            .height(27)
+                            .on_press(Action::Show(Page::Layouts)),
+                        ]
+                        .spacing(10),
+                        row![
+                            widgets::dialog_button(
+                                l.text("Uitgeschakeld", "Disabled"),
+                                move |_, status| widgets::secondary_button_style(theme, status),
+                            )
+                            .width(140)
+                            .height(27),
+                            widgets::dialog_button(
+                                l.text("Dialoog", "Dialog"),
+                                move |_, status| widgets::secondary_button_style(theme, status),
+                            )
+                            .width(110)
+                            .height(27)
+                            .on_press(Action::SampleDialog(true)),
+                        ]
+                        .spacing(10),
                     ]
-                    .spacing(10),
+                    .spacing(8),
                     text(l.text(
                         "Primair wijzigt de voorbeeldschakelaar; secundair opent Layouts.",
                         "Primary toggles the sample switch; secondary opens Layouts."

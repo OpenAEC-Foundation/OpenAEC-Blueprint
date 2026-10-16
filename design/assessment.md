@@ -219,6 +219,15 @@ placeholder is geen pixelgetrouwe PDF-, BIM- of Pointcloud-canvas. De bronindex
 en deze beoordeling voorkomen dat die mockup als voltooide productscreenshot
 wordt behandeld.
 
+De [minimumvensterreview](backstage-minimum-review.html) zet de native Bestand-
+weergaven van Style Repo en Pointcloud op 720 × 480 px naast elkaar in Light en
+Forge. De gedeelde scrolbare navigatie en de footer blijven op die maat zichtbaar.
+De Style Repo-componentenpagina gaf aanvankelijk een rendercrash door vier
+voorbeeldknoppen op één rij. De knoppen staan nu op twee rijen; een regressietest
+rendert Bestand en de normale componentenpagina in beide thema's. In de normale
+werkruimte breken labels in de smalle zijpanelen nog onrustig af. Die responsieve
+paneelindeling is nog geen goedgekeurde pixelgelijke vorm.
+
 ## FEM/BIM iconbeoordeling · ronde 1 en 2
 
 De [visuele atlas](domain-icon-atlas.html) bevat 109 verschillende vectorvormen
