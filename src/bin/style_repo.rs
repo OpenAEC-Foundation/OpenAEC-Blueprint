@@ -2693,6 +2693,14 @@ mod tests {
         assert_eq!(map.groups[0].commands.len(), 2);
         let drawing = tabs.iter().find(|tab| tab.id == "situatietekening").unwrap();
         assert_eq!(drawing.groups.len(), 5);
+        assert_eq!(drawing.groups.iter().map(|group| group.commands.len()).collect::<Vec<_>>(),
+            [1, 8, 8, 3, 3]);
+        let place = &drawing.groups[2].commands;
+        assert_eq!((place[0].label.as_str(), place[1].label.as_str()), ("Sondering", "Boring"));
+        assert!(matches!((place[0].icon, place[1].icon),
+            (CommandIcon::Svg(sondering), CommandIcon::Svg(boring)) if sondering != boring));
+        assert!(drawing.groups.iter().flat_map(|group| &group.commands)
+            .all(|command| matches!(command.icon, CommandIcon::Svg(bytes) if !bytes.is_empty())));
     }
 
     #[test]

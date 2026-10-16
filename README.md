@@ -28,6 +28,7 @@ Het [interactieve native 7×6-kleurraster](design/style-repo-pdf-format-palette-
 De [Calc-ribbon](design/style-repo-calc-ribbon-light.png) volgt de echte linttabs en commandogroepen op broncommit b470427; de Nederlandse begroting en het rapport zijn als aparte referenties in de review opgenomen. De tafelinhoud in de atlas is nog een stijlproef.
 
 De [Geotechniek-ribbon](design/style-repo-geotech-ribbon-light.png) volgt de kern- en extensietabs van de actuele bron. Kaart, sonderingsgrafiek en boorprofiel staan als afzonderlijke schermreferenties in de review.
+De [native bronicoonreview](design/geotech-native-source-ribbon-review.html) toont Home en Situatietekening nu met hun daadwerkelijk gebruikte SVG-vormen in Light en Forge. De 23 standaard zichtbare tekenacties gebruiken 22 verschillende bronvormen; de Offertes-actie blijft extensieafhankelijk. De gedeelde Rust-ribbon tekent de opmaak, terwijl de broniconen app-eigen reviewmateriaal blijven.
 
 De [Heatloss-ribbon](design/style-repo-heatloss-ribbon-light.png) gebruikt de actuele route-tabs; zijn IFC-lint is bewust leeg. Voor deze app ontbreken nog echte schermcaptures.
 

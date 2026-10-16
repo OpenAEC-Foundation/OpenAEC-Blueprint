@@ -26,6 +26,15 @@ macro_rules! pdf_format_icon {
         CommandIcon::Svg(include_bytes!(concat!("../../../design/pdf-format-icons/", $name, ".svg")))
     };
 }
+macro_rules! geotech_source_icon {
+    ($name:literal) => {
+        CommandIcon::Svg(include_bytes!(concat!(
+            "../../../harmonization/inline-ui-icons/open-geotechniek-studio/",
+            $name,
+            ".svg"
+        )))
+    };
+}
 
 #[derive(Debug, Clone, Copy)]
 pub(super) struct PileViewState {
@@ -797,23 +806,22 @@ fn geotech_groups(
     if studio.id != "geotech" {
         return None;
     }
-    use Icon::*;
     let spec: Vec<(&str, Vec<(&str, CommandIcon)>)> = match tab {
         "Home" => vec![
-            ("Project", vec![("Projectinfo", Settings.into())]),
-            ("Weergave", vec![("Zoom -", planner_source_icon!("ZoomOut")), ("Passend", Fit.into())]),
+            ("Project", vec![("Projectinfo", geotech_source_icon!("start-settings"))]),
+            ("Weergave", vec![("Zoom -", geotech_source_icon!("start-zoom-out")), ("Passend", geotech_source_icon!("start-zoom-fit"))]),
         ],
-        "Kaart" => vec![("Kaart", vec![("Meten", Measure.into()), ("Exporteer als afbeelding", Export.into())])],
-        "Rapport" => vec![("Output", vec![("Genereer PDF", Export.into()), ("Open PDF", Open.into())])],
+        "Kaart" => vec![("Kaart", vec![("Meten", geotech_source_icon!("kaart-measure")), ("Exporteer als afbeelding", geotech_source_icon!("kaart-export-image"))])],
+        "Rapport" => vec![("Output", vec![("Genereer PDF", geotech_source_icon!("rapport-download")), ("Open PDF", geotech_source_icon!("rapport-open"))])],
         "Situatietekening" => vec![
-            ("Selecteer", vec![("Selecteren", planner_source_icon!("CircleDot"))]),
-            ("Bewerken", vec![("Verplaatsen", planner_source_icon!("MoveHorizontal")), ("Kopiëren", planner_source_icon!("Copy")), ("Roteren", planner_source_icon!("RotateCw")), ("Verwijderen", planner_source_icon!("Trash2")), ("Trim", planner_source_icon!("Scissors")), ("Mirror", planner_source_icon!("GitCompareArrows"))]),
-            ("Plaatsen", vec![("Sondering", planner_source_icon!("Compass")), ("Boring", planner_source_icon!("Compass")), ("Lijn", planner_source_icon!("Minus")), ("Maatlijn", Measure.into()), ("Vlak", planner_source_icon!("Square")), ("Opmerking", planner_source_icon!("Pen"))]),
-            ("Overlay", vec![("Image/PDF import", Import.into()), ("Kader (SVG)", planner_source_icon!("Square")), ("Wis alles", planner_source_icon!("Eraser"))]),
-            ("Export", vec![("Exporteer DWG", Export.into()), ("Exporteer PDF", Export.into()), ("Print", planner_source_icon!("Printer"))]),
+            ("Selecteer", vec![("Selecteren", geotech_source_icon!("tekening-select"))]),
+            ("Bewerken", vec![("Verplaatsen", geotech_source_icon!("tekening-move")), ("Kopiëren", geotech_source_icon!("tekening-copy")), ("Roteren…", geotech_source_icon!("tekening-rotate")), ("Verwijderen", geotech_source_icon!("tekening-delete")), ("Trim", geotech_source_icon!("tekening-trim")), ("Extend", geotech_source_icon!("tekening-extend")), ("Mirror", geotech_source_icon!("tekening-mirror")), ("Offset", geotech_source_icon!("tekening-offset"))]),
+            ("Plaatsen", vec![("Sondering", geotech_source_icon!("tekening-sondering")), ("Boring", geotech_source_icon!("tekening-bore")), ("Sonderingsraster", geotech_source_icon!("tekening-raster")), ("Lijn", geotech_source_icon!("tekening-line")), ("Maatlijn", geotech_source_icon!("tekening-dimension")), ("RD-coördinaat", geotech_source_icon!("tekening-tag")), ("Vlak", geotech_source_icon!("tekening-vlak")), ("Opmerking", geotech_source_icon!("tekening-note"))]),
+            ("Overlay", vec![("Image/PDF import", geotech_source_icon!("tekening-overlay")), ("Kader (SVG)", geotech_source_icon!("tekening-frame")), ("Wis alles", geotech_source_icon!("tekening-delete"))]),
+            ("Export", vec![("Exporteer DWG", geotech_source_icon!("tekening-dwg")), ("Exporteer PDF", geotech_source_icon!("tekening-export-pdf")), ("Print", geotech_source_icon!("tekening-print"))]),
         ],
-        "Berekeningen" => vec![("Projectberekeningen", vec![("Dynamische berekeningenlijst", Grid.into())])],
-        "IFC" => vec![("Automatisch gegenereerd", vec![("Live IFC4x3 + IFCX", Cube.into())])],
+        "Berekeningen" => vec![("Projectberekeningen", vec![("Dynamische berekeningenlijst", Icon::Grid.into())])],
+        "IFC" => vec![("Automatisch gegenereerd", vec![("Live IFC4x3 + IFCX", Icon::Cube.into())])],
         _ => return None,
     };
     Some(spec.into_iter().map(|(label, items)| RibbonGroup {

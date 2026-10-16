@@ -19,6 +19,25 @@ fn load_fonts() {
     });
 }
 
+#[test]
+#[ignore = "regenerate source-icon Geotechniek ribbon previews on demand"]
+fn export_geotech_source_ribbon_reviews() {
+    let mut app = StyleRepo::default();
+    let geotech = studios().iter().position(|studio| studio.id == "geotech").unwrap();
+    let _ = app.update(Action::SelectStudio(geotech));
+    let _ = app.update(Action::SelectScreen(1));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (tab, theme, suffix) in [
+        ("home", Theme::Light, "home-light"),
+        ("situatietekening", Theme::Light, "drawing-light"),
+        ("situatietekening", Theme::Forge, "drawing-forge"),
+    ] {
+        render_with_options(&app, theme, false, Some(tab))
+            .save_png(&design.join(format!("style-repo-geotech-source-{suffix}.png")))
+            .expect("save Geotechniek source-icon ribbon");
+    }
+}
+
 fn render(app: &StyleRepo, theme: Theme) -> tiny_skia::Pixmap {
     render_with_options(app, theme, false, None)
 }
