@@ -1,0 +1,198 @@
+{
+  "repository": "open-calc-studio",
+  "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "classification": "screen_role groups visual purposes; localization does not imply a distinct layout",
+  "screens": [
+    {
+      "source": "docs/screenshots/de/1-leistungsverzeichnis.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/de/1-leistungsverzeichnis.png",
+      "locale": "de",
+      "screen_role": "estimate-grid",
+      "dimensions": [
+        2700,
+        1500
+      ],
+      "sha256": "890f2282c31f6b036e016ba92b8504337bf4861155181d10fd51fe31814311d6",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/de/1-leistungsverzeichnis.png"
+    },
+    {
+      "source": "docs/screenshots/de/2-leistungsbuch-hochbau.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/de/2-leistungsbuch-hochbau.png",
+      "locale": "de",
+      "screen_role": "construction-catalog",
+      "dimensions": [
+        2700,
+        1500
+      ],
+      "sha256": "2d6a1375051f285d0cc7c0590c7eee11efd64b1d1a1ea0882f7c165670a5cc06",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/de/2-leistungsbuch-hochbau.png"
+    },
+    {
+      "source": "docs/screenshots/en/1-estimate.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/en/1-estimate.png",
+      "locale": "en",
+      "screen_role": "estimate-grid",
+      "dimensions": [
+        2700,
+        1500
+      ],
+      "sha256": "246c7b477cd658aa060d1ea5c6c5adc6d942b7d8f1d5a6ffa08651fc30edefdd",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/1-estimate.png"
+    },
+    {
+      "source": "docs/screenshots/en/2-grid.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/en/2-grid.png",
+      "locale": "en",
+      "screen_role": "estimate-grid-detail",
+      "dimensions": [
+        1818,
+        1157
+      ],
+      "sha256": "febcac7f24ab3a87bb6dfd0b6f9d154dd2d624e875d65190af34998f94290df1",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/2-grid.png"
+    },
+    {
+      "source": "docs/screenshots/en/3-report.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/en/3-report.png",
+      "locale": "en",
+      "screen_role": "report",
+      "dimensions": [
+        2100,
+        1500
+      ],
+      "sha256": "093c1ff839b94081a1b9cc05ae182b059081a5113524f6670e799b60d2896884",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/en/3-report.png"
+    },
+    {
+      "source": "docs/screenshots/es/1-presupuesto.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/es/1-presupuesto.png",
+      "locale": "es",
+      "screen_role": "estimate-grid",
+      "dimensions": [
+        3360,
+        2100
+      ],
+      "sha256": "89b50c7e053b58ca2ff4ba7e826cdde963995f188fbab9687bc9bfc2ed0a5c77",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/1-presupuesto.png"
+    },
+    {
+      "source": "docs/screenshots/es/2-partidas.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/es/2-partidas.png",
+      "locale": "es",
+      "screen_role": "estimate-grid-detail",
+      "dimensions": [
+        2184,
+        1642
+      ],
+      "sha256": "c2920716bfa3f00fdf3044db61032e7efd0898067b5a1409a432b3bd23ee1f11",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/2-partidas.png"
+    },
+    {
+      "source": "docs/screenshots/es/3-informe.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/es/3-informe.png",
+      "locale": "es",
+      "screen_role": "report",
+      "dimensions": [
+        2800,
+        2000
+      ],
+      "sha256": "a835b5badd2072dd631ddfa9c4844a656664dd124eb1882948e7f5b027266a3b",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/3-informe.png"
+    },
+    {
+      "source": "docs/screenshots/es/4-idiomas.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/es/4-idiomas.png",
+      "locale": "es",
+      "screen_role": "language-selection",
+      "dimensions": [
+        3360,
+        2100
+      ],
+      "sha256": "3e4b7925890d6667124641d01562add6d6fd6e7bfd5bb57222ecdd84340562b3",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/es/4-idiomas.png"
+    },
+    {
+      "source": "docs/screenshots/nl/1-begroting.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/nl/1-begroting.png",
+      "locale": "nl",
+      "screen_role": "estimate-grid",
+      "dimensions": [
+        2700,
+        1500
+      ],
+      "sha256": "0b5f65722472ceeb981a6ed4ff7bfdc9ed577906313ae95fb804bb839f178cb7",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/nl/1-begroting.png"
+    },
+    {
+      "source": "docs/screenshots/nl/2-rapport.png",
+      "local": "harmonization/references/open-calc-studio/docs/screenshots/nl/2-rapport.png",
+      "locale": "nl",
+      "screen_role": "report",
+      "dimensions": [
+        2100,
+        1500
+      ],
+      "sha256": "e0bf13ed890266e1cb26bd1e155ccc9fe14c0c315769d01739b5c8fa04857b0a",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/docs/screenshots/nl/2-rapport.png"
+    }
+  ],
+  "count": 11,
+  "roles": [
+    "construction-catalog",
+    "estimate-grid",
+    "estimate-grid-detail",
+    "language-selection",
+    "report"
+  ],
+  "sample_data": {
+    "source": "public/data/voorbeeld.ifcCalc",
+    "local": "harmonization/references/open-calc-studio/public/data/voorbeeld.ifcCalc",
+    "sha256": "42a7285d307faa377d31412de3e919e5020723847e27e61ead683d83bbfb6ae0",
+    "item_count": 21,
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/public/data/voorbeeld.ifcCalc"
+  },
+  "layout": {
+    "title_height_px": 32,
+    "title_evidence": {
+      "file": "src/components/layout/TitleBar.css",
+      "line": 6,
+      "marker": "height: 32px;",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/layout/TitleBar.css#L6"
+    },
+    "tabs_height_px": 28,
+    "tabs_evidence": {
+      "file": "src/components/ribbon/Ribbon.css",
+      "line": 18,
+      "marker": "height: 28px;",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/Ribbon.css#L18"
+    },
+    "ribbon_height_px": 94,
+    "ribbon_evidence": {
+      "file": "src/components/ribbon/Ribbon.css",
+      "line": 91,
+      "marker": "height: 94px;",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/Ribbon.css#L91"
+    },
+    "status_height_px": 22,
+    "status_evidence": {
+      "file": "src/components/layout/StatusBar.css",
+      "line": 6,
+      "marker": "height: 22px;",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/layout/StatusBar.css#L6"
+    },
+    "left_panel_width_px": 220,
+    "left_evidence": {
+      "file": "src/App.tsx",
+      "line": 371,
+      "marker": "useState(220)",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx#L371"
+    },
+    "right_panel_width_px": 240,
+    "right_evidence": {
+      "file": "src/App.tsx",
+      "line": 376,
+      "marker": "useState(240)",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx#L376"
+    }
+  }
+}

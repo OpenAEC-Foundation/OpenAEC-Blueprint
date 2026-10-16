@@ -87,6 +87,21 @@ fn export_composer_native_screen_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Open Calc Studio budget grid review on demand"]
+fn export_calc_native_screen_review() {
+    let mut app = StyleRepo::default();
+    let calc = studios().iter().position(|studio| studio.id == "calc").unwrap();
+    let _ = app.update(Action::SelectStudio(calc));
+    let _ = app.update(Action::SelectScreen(1));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        render_sized(&app, theme, false, Some("begroting"), Size::new(1800.0, 1000.0))
+            .save_png(&design.join(format!("style-repo-calc-budget-{name}.png")))
+            .expect("save native Calc budget review");
+    }
+}
+
+#[test]
 fn validator_three_pane_shell_keeps_quarter_half_quarter_geometry() {
     let mut app = StyleRepo::default();
     let validator = studios().iter().position(|studio| studio.id == "validator").unwrap();
@@ -288,13 +303,13 @@ fn render_sized_with_reset(
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
                 Region::Explorer if app.chrome_mode() == ChromeMode::SidebarCompact => app.explorer(theme, language).map(Message::Command),
-                Region::Explorer if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. }) => app.explorer(theme, language).map(Message::Command),
+                Region::Explorer if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. } | ChromeMode::ThreePaneFixed { .. }) => app.explorer(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
                     if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else if app.chrome_mode() == ChromeMode::Sidebar { language.text("Navigatie", "Navigation") } else if app.chrome_mode() == ChromeMode::CanvasRibbon { language.text("Eigenschappen", "Properties") } else { language.text("Verkenner", "Explorer") },
                     app.explorer(theme, language).map(Message::Command),
                     theme,
                 ),
-                Region::Properties if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. }) => app.properties(theme, language).map(Message::Command),
+                Region::Properties if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. } | ChromeMode::ThreePaneFixed { .. }) => app.properties(theme, language).map(Message::Command),
                 Region::Properties => widgets::panel(
                     language.text("Eigenschappen", "Properties"),
                     app.properties(theme, language).map(Message::Command),

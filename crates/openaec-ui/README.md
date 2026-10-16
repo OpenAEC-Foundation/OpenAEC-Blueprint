@@ -6,6 +6,8 @@ For a Frame Studio-style workspace, use `frame::workspace_frame` with `Workspace
 
 For sidebar-first tools without a ribbon, `frame::sidebar_frame` and `SidebarFrameProfile::WORKSPACE_COMPOSER` provide the source-measured 32 px title, 220 px sidebar, and 22 px status bands. `ChromeMode::SidebarCompact` uses this frame in the shared runtime and passes the application's navigation through `Application::explorer` without adding a generic panel heading. The Style Repo's Workspace Composer review exercises Simple/Advanced navigation and all 18 pinned routes. Its package and preset cards are review interactions, not an installer backend or a pixel-matched migration.
 
+`ChromeMode::ThreePaneFixed { left_width, right_width }` gives source-specific tools exact native pane widths while retaining the shared ribbon, document and status bands. The Calc screen review uses 320/240 px to reproduce the panel widths visible in the pinned Dutch capture; `App.tsx` initializes the left panel at 220 px, so this is a capture-state choice, not a changed Calc default.
+
 `frame::status_bar` owns the shared 22 px status band, one-pixel top rule, theme colors and horizontal padding. An existing application supplies its own status cells and actions as an Iced `Element`; the same component is used by the Style Repo shell and Pointcloud Studio.
 
 `widgets::title_action` owns the 30 × 26 px quick-access control, hover color and tooltip for the title strip. The Style Repo and Pointcloud supply their own command icons, labels and messages through this same Rust widget.

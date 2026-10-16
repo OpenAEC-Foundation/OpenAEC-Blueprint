@@ -40,6 +40,8 @@ mod reports_native;
 mod validator_native;
 #[path = "style_repo/composer_native.rs"]
 mod composer_native;
+#[path = "style_repo/calc_native.rs"]
+mod calc_native;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -145,6 +147,7 @@ enum Action {
     ComposerAdvanced(bool),
     ComposerPackage(String),
     ComposerPreset(String),
+    CalcSelectRow(usize),
     SelectSourceApp(usize),
     SelectSourceRoute(usize),
     SourceSearch(String),
@@ -323,6 +326,7 @@ struct StyleRepo {
     composer_advanced: bool,
     composer_packages: Vec<String>,
     composer_preset: Option<String>,
+    calc_selected_row: usize,
     source_app: usize,
     source_route: usize,
     source_search: String,
@@ -395,6 +399,7 @@ impl Default for StyleRepo {
             composer_advanced: false,
             composer_packages: Vec::new(),
             composer_preset: None,
+            calc_selected_row: 5,
             source_app: 0,
             source_route: 0,
             source_search: String::new(),
@@ -1164,6 +1169,9 @@ impl StyleRepo {
         }
         if selected.id == "composer" {
             return self.composer_native_page(theme);
+        }
+        if selected.id == "calc" && self.selected_screen == 1 {
+            return self.calc_native_page(theme);
         }
         if selected.id == "geotech" && self.selected_screen == 1 {
             return geotech_native::workspace(self.geotech_layer, theme, l);
@@ -2151,6 +2159,8 @@ impl Application for StyleRepo {
     fn title(&self) -> String {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
             "OpenAEC Workspace Composer · Rust Style Repo".into()
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            "Voorbeeldbegroting · Open Calc Studio · Rust Style Repo".into()
         } else {
             "OpenAEC Style Repo  ·  Rust".into()
         }
@@ -2183,6 +2193,8 @@ impl Application for StyleRepo {
             } else {
                 ChromeMode::ThreePaneRibbon { left: self.validator_left_visible, right: self.validator_right_visible }
             }
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            ChromeMode::ThreePaneFixed { left_width: 320, right_width: 240 }
         } else {
             ChromeMode::Ribbon
         }
@@ -2339,6 +2351,9 @@ impl Application for StyleRepo {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
             return content;
         }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return content;
+        }
         let padding = if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" { 14 } else { 28 };
         container(scrollable(container(content).padding(padding).width(Fill)).height(Fill))
             .width(Fill)
@@ -2380,6 +2395,9 @@ impl Application for StyleRepo {
         }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
             return self.composer_sidebar(theme);
+        }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return self.calc_explorer(theme);
         }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" {
             return self.reports_sidebar(theme);
@@ -2466,6 +2484,9 @@ impl Application for StyleRepo {
     fn properties(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
             return self.validator_right_panel(theme);
+        }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return self.calc_properties(theme);
         }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
             return geotech_native::properties(self.geotech_layer, theme);
@@ -2591,6 +2612,9 @@ impl Application for StyleRepo {
             }
             Action::ComposerPreset(id) => {
                 self.composer_preset = Some(id);
+            }
+            Action::CalcSelectRow(index) => {
+                self.calc_selected_row = index.min(calc_native::items().len().saturating_sub(1));
             }
             Action::SelectSourceApp(index) => {
                 self.source_app = index.min(1);
@@ -2755,6 +2779,9 @@ impl Application for StyleRepo {
         Task::none()
     }
     fn documents(&self) -> Vec<Document> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return vec![Document { id: "calc-budget".into(), title: "Voorbeeldbegroting".into(), dirty: false }];
+        }
         self.open_pages
             .iter()
             .map(|p| Document {
@@ -2765,16 +2792,24 @@ impl Application for StyleRepo {
             .collect()
     }
     fn active_document(&self) -> Option<String> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return Some("calc-budget".into());
+        }
         Some(self.page.id().into())
     }
     fn document_event(&mut self, event: DocumentEvent) -> Task<Action> {
         match event {
             DocumentEvent::Activate(id) => {
+                if id == "calc-budget" { self.selected_screen = 1; }
                 if let Some(page) = Page::from_id(&id) {
                     self.show(page)
                 }
             }
             DocumentEvent::CloseRequested(id) => {
+                if id == "calc-budget" {
+                    self.selected_screen = 0;
+                    return Task::none();
+                }
                 self.open_pages.retain(|p| p.id() != id);
                 if self.page.id() == id {
                     self.page = self.open_pages.last().copied().unwrap_or(Page::Overview)
@@ -2786,6 +2821,9 @@ impl Application for StyleRepo {
     fn status(&self, l: Language) -> String {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
             return format!("Ready  ·  {} packages selected  ·  {} routes", self.composer_packages.len(), composer_native::data().routes.len());
+        }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "calc" && self.selected_screen == 1 {
+            return format!("DRAFT  ·  {} bronregels  ·  item {} geselecteerd", calc_native::items().len(), self.calc_selected_row + 1);
         }
         format!(
             "{}  ·  {} UI-iconen  ·  109 FEM/BIM-voorstellen",

@@ -158,6 +158,12 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             panes = panes.push(container((slots.content)(Region::Properties)).width(iced::FillPortion(1)).height(Fill));
         }
         panes.height(Fill).width(Fill).into()
+    } else if let ChromeMode::ThreePaneFixed { left_width, right_width } = slots.mode {
+        row![
+            container((slots.content)(Region::Explorer)).width(left_width).height(Fill),
+            container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
+            container((slots.content)(Region::Properties)).width(right_width).height(Fill),
+        ].height(Fill).width(Fill).into()
     } else if slots.mode == ChromeMode::CanvasRibbon {
         row![
             container((slots.content)(Region::Explorer)).width(255).height(Fill),

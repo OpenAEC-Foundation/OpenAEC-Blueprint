@@ -80,9 +80,9 @@ impl<A:Application> Runtime<A> {
             content:Box::new(move |region| match region {
                 Region::Workspace => self.app.workspace(theme,language).map(Message::Command),
                 Region::Explorer if mode == ChromeMode::SidebarCompact => self.app.explorer(theme,language).map(Message::Command),
-                Region::Explorer if matches!(mode, ChromeMode::ThreePaneRibbon { .. }) => self.app.explorer(theme,language).map(Message::Command),
+                Region::Explorer if matches!(mode, ChromeMode::ThreePaneRibbon { .. } | ChromeMode::ThreePaneFixed { .. }) => self.app.explorer(theme,language).map(Message::Command),
                 Region::Explorer => widgets::panel(if mode == ChromeMode::Workflow { language.text("Werkstroom","Workflow") } else if mode == ChromeMode::Sidebar { language.text("Navigatie","Navigation") } else if mode == ChromeMode::CanvasRibbon { language.text("Eigenschappen","Properties") } else { language.text("Verkenner","Explorer") },self.app.explorer(theme,language).map(Message::Command),theme),
-                Region::Properties if matches!(mode, ChromeMode::ThreePaneRibbon { .. }) => self.app.properties(theme,language).map(Message::Command),
+                Region::Properties if matches!(mode, ChromeMode::ThreePaneRibbon { .. } | ChromeMode::ThreePaneFixed { .. }) => self.app.properties(theme,language).map(Message::Command),
                 Region::Properties => widgets::panel(language.text("Eigenschappen","Properties"),self.app.properties(theme,language).map(Message::Command),theme),
             }),
         })
