@@ -1068,6 +1068,17 @@ fn export_native_style_repo_previews() {
 }
 
 #[test]
+#[ignore = "regenerate native icon atlas after shared icon changes"]
+fn export_native_icon_atlas() {
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    let mut app = StyleRepo::default();
+    app.show(Page::Icons);
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        save_render(&app, theme, &design.join(format!("style-repo-icons-{name}.png")));
+    }
+}
+
+#[test]
 #[ignore = "regenerate shared property-grid component images on demand"]
 fn export_shared_property_grid_review() {
     let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");

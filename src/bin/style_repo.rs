@@ -681,9 +681,14 @@ impl StyleRepo {
         for chunk in Icon::ALL.chunks(8) {
             let mut icons_row = Row::new().spacing(5);
             for &icon in chunk {
+                let caption = match icon {
+                    Icon::DisclosureExpanded => "expanded",
+                    Icon::DisclosureCollapsed => "collapsed",
+                    _ => icon.id(),
+                };
                 icons_row = icons_row.push(
                     container(
-                        column![icon.view(24, t.accent), text(icon.id()).size(10)]
+                        column![icon.view(24, t.accent), text(caption).size(10)]
                             .spacing(6)
                             .align_x(Alignment::Center),
                     )

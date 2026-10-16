@@ -18,7 +18,11 @@
         200
       ],
       "source_sha256": "86798b451dcd2644d26c9e98a52f7b0a28343f25c67cd546caf806c96080dd50",
-      "asset_sha256": "e293ed2000e01b5120e55eb431cd700a32eb9aaee454733d33b8e4226fca7305",
+      "css_file": "App.css",
+      "css_line": 301,
+      "native_px": 12,
+      "source_paint": "currentColor stroke 1.5px",
+      "asset_sha256": "13a170e1b7a5d7e7ed0036791e23e3c4a08154d9f0333744837c8aaf95e7bfb5",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-expand.svg"
     },
     {
@@ -33,7 +37,11 @@
         200
       ],
       "source_sha256": "86798b451dcd2644d26c9e98a52f7b0a28343f25c67cd546caf806c96080dd50",
-      "asset_sha256": "bb75fa0d61bbad5ff2474a4349b6545e38d35ab6d2e76c2425ca802492e57ab6",
+      "css_file": "App.css",
+      "css_line": 301,
+      "native_px": 12,
+      "source_paint": "currentColor stroke 1.5px",
+      "asset_sha256": "8042e9fd16fff0769346cfffea8abd2fd4988e10964bef8ad417796a455d3d15",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-collapse.svg"
     },
     {
@@ -47,6 +55,10 @@
         231
       ],
       "source_sha256": "1e3f15cf99a2f0abf975bc2930d94083358e7bfe3fa8fb97ea585ef89dd0eebb",
+      "css_file": "App.css",
+      "css_line": 761,
+      "native_px": 16,
+      "source_paint": "currentColor stroke 1.8px",
       "asset_sha256": "6da958599c87ab4a3e079eab5047e5fe3e4afffd18ead509334d11c02bc0e9fc",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-edit.svg"
     },
@@ -61,6 +73,10 @@
         232
       ],
       "source_sha256": "0b4df940bfe539c1f1f6de34f321d0dd868804d85123047a1ffc5a550418e2e4",
+      "css_file": "App.css",
+      "css_line": 761,
+      "native_px": 16,
+      "source_paint": "currentColor stroke 1.8px",
       "asset_sha256": "48313ce1a7d57fc2a3f5b321d16d53f6a7d3010720646db1a1b1efc29fb07570",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-copy.svg"
     },
@@ -75,6 +91,10 @@
         233
       ],
       "source_sha256": "3f2c6f62392b4eee20b7e17e853a2c206a87918e27326a11aec8da497987d7ec",
+      "css_file": "App.css",
+      "css_line": 761,
+      "native_px": 16,
+      "source_paint": "currentColor stroke 1.8px",
       "asset_sha256": "ef912e03798c2a0814d1c4ad6c9b88454fc274491bef2809ff1edc365a3aa32a",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-delete.svg"
     },
@@ -89,7 +109,11 @@
         234
       ],
       "source_sha256": "7ae6aff96f58d0d30be2a15dd02f9fcfa90c415e7519581858a1c1688970341e",
-      "asset_sha256": "225ae4d48412aa158ca055882aef38f0dce66402bebf1dc7675c1de0c3f31d85",
+      "css_file": "App.css",
+      "css_line": 718,
+      "native_px": 11,
+      "source_paint": "browser default black fill",
+      "asset_sha256": "2789f1828bb13761566275e346a341ba4a4a7ef4214610fc766ce125059288a8",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-warning.svg"
     },
     {
@@ -103,6 +127,10 @@
         235
       ],
       "source_sha256": "3fd05c5d982d8cdbbf80662a0071b7ca8db050d2419ba7c6bc82f22f7a5df920",
+      "css_file": "App.css",
+      "css_line": 761,
+      "native_px": 16,
+      "source_paint": "currentColor stroke 1.8px",
       "asset_sha256": "9934aaa2910b4d50f7b1211027e615b674ec5db6c02200a79f6a7c78396c1759",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/explorer-plus.svg"
     },
@@ -116,7 +144,11 @@
         78
       ],
       "source_sha256": "c96457d56f64b745949d265bfa1e88c1593ed61f7c69e28d02812f644bbb80e8",
-      "asset_sha256": "712c40e09c2de64321eb5571c443966e136a9897d4c6058cf39d90f60055385a",
+      "css_file": "components/domain/pile-plans/LegendEditor.css",
+      "css_line": 490,
+      "native_px": 11,
+      "source_paint": "currentColor stroke 1.25px",
+      "asset_sha256": "8b3eb971fe603d8692fc1bccafe97056f4f603aa6f9eb3107af338755ee9e994",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/legend-info.svg",
       "other_usage_sites": [
         {
@@ -138,6 +170,9 @@
         415,
         420
       ],
+      "css_file": "components/domain/imports/projectImport.css",
+      "css_line": 289,
+      "native_px": 15,
       "source_sha256": "5107f921b502f91899c4476c375ea4f57fd155ce3db3dddbb65e01293fd78e64",
       "asset_sha256": "c4eefa8683813d78bee6350207247a6db29da231f71cf76cf2d344f7b8a5c79b",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/import-ifc.svg"
@@ -152,6 +187,9 @@
       "usage_lines": [
         171
       ],
+      "css_file": "components/domain/imports/projectImport.css",
+      "css_line": 112,
+      "native_px": 12,
       "source_sha256": "49a4db5904dc434ca24ba31de7e152eb36572a12dd63e12530c94517ed6c5dfd",
       "asset_sha256": "5a41c621382566372ff7b140d07739e0ebd66fa6306c0ba31d5ba014f443eb2a",
       "svg": "inline-ui-icons/pile-plan-studio-workarea/import-help.svg"

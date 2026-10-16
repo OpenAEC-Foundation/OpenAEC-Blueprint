@@ -32,9 +32,13 @@ pub enum Icon {
     Check,
     Grid,
     Microphone,
+    Duplicate,
+    Rename,
+    DisclosureExpanded,
+    DisclosureCollapsed,
 }
 impl Icon {
-    pub const ALL: [Self; 30] = [
+    pub const ALL: [Self; 34] = [
         Self::New,
         Self::Open,
         Self::Save,
@@ -65,6 +69,10 @@ impl Icon {
         Self::Check,
         Self::Grid,
         Self::Microphone,
+        Self::Duplicate,
+        Self::Rename,
+        Self::DisclosureExpanded,
+        Self::DisclosureCollapsed,
     ];
     pub fn id(self) -> &'static str {
         match self {
@@ -98,6 +106,10 @@ impl Icon {
             Self::Check => "check",
             Self::Grid => "grid",
             Self::Microphone => "microphone",
+            Self::Duplicate => "duplicate",
+            Self::Rename => "rename",
+            Self::DisclosureExpanded => "disclosure-expanded",
+            Self::DisclosureCollapsed => "disclosure-collapsed",
         }
     }
     pub fn bytes(self) -> &'static [u8] {
@@ -132,6 +144,10 @@ impl Icon {
             Self::Check => include_bytes!("../assets/icons/check.svg"),
             Self::Grid => include_bytes!("../assets/icons/grid.svg"),
             Self::Microphone => include_bytes!("../assets/icons/microphone.svg"),
+            Self::Duplicate => include_bytes!("../assets/icons/duplicate.svg"),
+            Self::Rename => include_bytes!("../assets/icons/rename.svg"),
+            Self::DisclosureExpanded => include_bytes!("../assets/icons/disclosure-expanded.svg"),
+            Self::DisclosureCollapsed => include_bytes!("../assets/icons/disclosure-collapsed.svg"),
         }
     }
     pub fn view<'a>(self, size: u16, color: Color) -> svg::Svg<'a> {

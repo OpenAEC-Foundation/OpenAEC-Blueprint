@@ -1,0 +1,48 @@
+{
+  "pairs": [
+    {
+      "id": "duplicate",
+      "label": "Dupliceren",
+      "pile_svg": "harmonization/inline-ui-icons/pile-plan-studio-workarea/explorer-copy.svg",
+      "pointcloud_svg": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/browser_duplicate.svg",
+      "pile_sha256": "48313ce1a7d57fc2a3f5b321d16d53f6a7d3010720646db1a1b1efc29fb07570",
+      "pointcloud_sha256": "7e7811ece250821791529549d30f6349f31849e75c36a6b8d241abf7aa2c291a",
+      "assessment": "Pile Plan gebruikt twee overlappende bladen; Pointcloud voegt blauw en een plus toe. De handeling is dezelfde.",
+      "candidate": "Pile Plan source geometry with CSS stroke captured in extracted SVG",
+      "decision": "adopted-in-shared-rust-crate-and-pointcloud"
+    },
+    {
+      "id": "rename",
+      "label": "Hernoemen",
+      "pile_svg": "harmonization/inline-ui-icons/pile-plan-studio-workarea/explorer-edit.svg",
+      "pointcloud_svg": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/browser_rename.svg",
+      "pile_sha256": "6da958599c87ab4a3e079eab5047e5fe3e4afffd18ead509334d11c02bc0e9fc",
+      "pointcloud_sha256": "ffb2cdd90bf927549af502db773af02c475249fd31b6ed4f181dfb88725bf610",
+      "assessment": "Beide bronnen gebruiken een potlood. Eén monochrome lijnvorm maakt de bediening in Light en Forge gelijk.",
+      "candidate": "Pile Plan source geometry with CSS stroke captured in extracted SVG",
+      "decision": "adopted-in-shared-rust-crate-and-pointcloud"
+    },
+    {
+      "id": "disclosure-expanded",
+      "label": "Groep uitgeklapt",
+      "pile_svg": "harmonization/inline-ui-icons/pile-plan-studio-workarea/explorer-collapse.svg",
+      "pointcloud_svg": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/chevron_open.svg",
+      "pile_sha256": "8042e9fd16fff0769346cfffea8abd2fd4988e10964bef8ad417796a455d3d15",
+      "pointcloud_sha256": "390ab0b727b3f74b6c1270b6a6719200b4e0bfb6a5b3922102c9e467de18062d",
+      "assessment": "De pijl omlaag duidt in beide verkenners de huidige open toestand aan.",
+      "candidate": "Pile Plan source geometry with CSS stroke captured in extracted SVG",
+      "decision": "adopted-in-shared-rust-crate-and-pointcloud"
+    },
+    {
+      "id": "disclosure-collapsed",
+      "label": "Groep ingeklapt",
+      "pile_svg": "harmonization/inline-ui-icons/pile-plan-studio-workarea/explorer-expand.svg",
+      "pointcloud_svg": "harmonization/ui-icons/open-pointcloud-studio/native/assets/opencad-icons/chevron_closed.svg",
+      "pile_sha256": "13a170e1b7a5d7e7ed0036791e23e3c4a08154d9f0333744837c8aaf95e7bfb5",
+      "pointcloud_sha256": "369fe1fcc611e3879793c977488eacb06941a1494960d7b9bc5271ec960cf1af",
+      "assessment": "De pijl naar rechts duidt in beide verkenners de huidige gesloten toestand aan.",
+      "candidate": "Pile Plan source geometry with CSS stroke captured in extracted SVG",
+      "decision": "adopted-in-shared-rust-crate-and-pointcloud"
+    }
+  ]
+}
