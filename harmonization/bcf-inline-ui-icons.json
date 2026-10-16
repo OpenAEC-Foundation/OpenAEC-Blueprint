@@ -1,0 +1,234 @@
+{
+  "repository": "openaec-bcf-platform",
+  "commit": "e98fb97f5f23bc9c9f3b80de18acd721440f7597",
+  "scope": "UI-rendered inline SVG definitions only; not standalone assets or all SVG occurrences",
+  "count": 18,
+  "icons": [
+    {
+      "name": "ribbon-new-project",
+      "identifier": "iconNewProject",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 3,
+      "usage": "frontend/src/components/shell/Ribbon.tsx",
+      "usage_lines": [
+        94
+      ],
+      "sha256": "26d68f02f907c4e74557ed06f40c621412e19205777a0e4a4931af4e38676366",
+      "svg": "inline-ui-icons/openaec-bcf-platform/ribbon-new-project.svg"
+    },
+    {
+      "name": "ribbon-import-bcf",
+      "identifier": "iconImportBcf",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 5,
+      "usage": "frontend/src/components/shell/Ribbon.tsx",
+      "usage_lines": [
+        100
+      ],
+      "sha256": "b7eedbf2a2340603ae5fdf71da725f61ecc4ee79857df6596ee45d0440efde83",
+      "svg": "inline-ui-icons/openaec-bcf-platform/ribbon-import-bcf.svg"
+    },
+    {
+      "name": "ribbon-export-bcf",
+      "identifier": "iconExportBcf",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 7,
+      "usage": "frontend/src/components/shell/Ribbon.tsx",
+      "usage_lines": [
+        106,
+        122
+      ],
+      "sha256": "0bad84278278cee91e3e1ca50b8a6ed8b23441c7d4d2c5c3c1d006022a9bf11a",
+      "svg": "inline-ui-icons/openaec-bcf-platform/ribbon-export-bcf.svg"
+    },
+    {
+      "name": "ribbon-new-issue",
+      "identifier": "iconNewIssue",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 9,
+      "usage": "frontend/src/components/shell/Ribbon.tsx",
+      "usage_lines": [
+        115
+      ],
+      "sha256": "f94dd322577b055bf6ff781272158a1dbc859c4ec2ee619a425ea34487eacca2",
+      "svg": "inline-ui-icons/openaec-bcf-platform/ribbon-new-issue.svg"
+    },
+    {
+      "name": "cloud-upload",
+      "identifier": "iconCloudUpload",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 19,
+      "usage": "frontend/src/components/shell/CloudPanel.tsx",
+      "usage_lines": [
+        212
+      ],
+      "sha256": "4172dd6734ad845102e0fcc70b0c14cfb3c82a83705456c0b8f52dfbbe1f3e31",
+      "svg": "inline-ui-icons/openaec-bcf-platform/cloud-upload.svg"
+    },
+    {
+      "name": "cloud-download",
+      "identifier": "iconCloudDownload",
+      "source": "frontend/src/components/shell/icons.ts",
+      "source_line": 21,
+      "usage": "frontend/src/components/shell/CloudPanel.tsx",
+      "usage_lines": [
+        221
+      ],
+      "sha256": "1f6a0ce26d65a5722f6b96eb615dabd9abc0cf32b6900935fb7b9fc622fdffdf",
+      "svg": "inline-ui-icons/openaec-bcf-platform/cloud-download.svg"
+    },
+    {
+      "name": "title-save",
+      "identifier": "iconSave",
+      "source": "frontend/src/components/shell/AppBar.tsx",
+      "source_line": 4,
+      "usage": "frontend/src/components/shell/AppBar.tsx",
+      "usage_lines": [
+        22
+      ],
+      "sha256": "d61afbc17c145515ba7062b9027bd8d3a1d77df7a4c5c8e48cb5b2c6cb36d5a6",
+      "svg": "inline-ui-icons/openaec-bcf-platform/title-save.svg"
+    },
+    {
+      "name": "title-settings",
+      "identifier": "iconSettingsSmall",
+      "source": "frontend/src/components/shell/AppBar.tsx",
+      "source_line": 6,
+      "usage": "frontend/src/components/shell/AppBar.tsx",
+      "usage_lines": [
+        27
+      ],
+      "sha256": "368f945bfc6c668fea8b61ea7961c4d3cad5fb976335ea9481fc4063c405c396",
+      "svg": "inline-ui-icons/openaec-bcf-platform/title-settings.svg"
+    },
+    {
+      "name": "file-new",
+      "identifier": "new",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 11,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        410
+      ],
+      "sha256": "26132fc1a9127230323576b584065c672ae4902529df7b43ecb86e3d807e289a",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-new.svg"
+    },
+    {
+      "name": "file-open",
+      "identifier": "open",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 12,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        418
+      ],
+      "sha256": "7918dd354f4c16a4bff579d559457dfe00847c9d2fd71e619570c9a60b8309e9",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-open.svg"
+    },
+    {
+      "name": "file-save",
+      "identifier": "save",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 13,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        442,
+        450
+      ],
+      "sha256": "5e1dd15e63ed77f1ea26b6b997fa89d01ac071f3216b5c40c81581e46bcdfa3f",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-save.svg"
+    },
+    {
+      "name": "file-save-as",
+      "identifier": "saveAs",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 14,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        450
+      ],
+      "sha256": "4352c3d4c32f9fa73e11c1583e42bf7cf43c1cd3ddb855e23ac4f9fe039b78d5",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-save-as.svg"
+    },
+    {
+      "name": "file-close",
+      "identifier": "close",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 15,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        476
+      ],
+      "sha256": "b682925c71b8e71f2a0dd96130a1549ed096837aee4b4db9341d7d14c76060f0",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-close.svg"
+    },
+    {
+      "name": "file-preferences",
+      "identifier": "preferences",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 16,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        485
+      ],
+      "sha256": "36c6375e78698c23ddb230f1fe715e70aac7c41cf8bec236d00a14c79fb22d3b",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-preferences.svg"
+    },
+    {
+      "name": "file-about",
+      "identifier": "about",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 17,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        498
+      ],
+      "sha256": "12f9b1dd70faee6caa95e0c3b3a696c8d831d09ed2b5a0e8ba6f90ef6ab2a08c",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-about.svg"
+    },
+    {
+      "name": "file-exit",
+      "identifier": "exit",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 18,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        508
+      ],
+      "sha256": "0dc1d252d64276a25859b5a14e4f8605e8236cb446660efa06c067491482128f",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-exit.svg"
+    },
+    {
+      "name": "file-server",
+      "identifier": "server",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 19,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        427,
+        459
+      ],
+      "sha256": "84e8f459da038ad8fecbe4555bc953987758172686dc142277ad64cbe0aa75fd",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-server.svg"
+    },
+    {
+      "name": "file-document",
+      "identifier": "file",
+      "source": "frontend/src/components/shell/Backstage.tsx",
+      "source_line": 20,
+      "usage": "frontend/src/components/shell/Backstage.tsx",
+      "usage_lines": [
+        433,
+        465
+      ],
+      "sha256": "c0478a0bbed932ffcbb0751e641cbe66a9c867e699386aa9a7eecf2fe5bafd94",
+      "svg": "inline-ui-icons/openaec-bcf-platform/file-document.svg"
+    }
+  ],
+  "excluded_unused_definitions": [
+    "iconSettings",
+    "iconAbout",
+    "iconClose",
+    "iconCloud"
+  ]
+}

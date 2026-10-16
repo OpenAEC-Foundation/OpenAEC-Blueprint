@@ -10,6 +10,8 @@ BuildingPy heeft een [aparte bronreview](../design/building-py-location-review.h
 
 Project OconDat is apart op zijn twee webinterfaces geauditeerd: 19 UI-codebestanden en 74 bronregels. De [schermreview](../design/ocondat-ui-review.html) beschrijft de componentenbrowser, Nederlandse standaardenbibliotheek en iconclassificatie. De duizenden SVG-bestanden met bouwcomponenten en tekenpatronen zijn technische inhoud, geen UI-iconen.
 
+Een eerste aparte audit voor SVG's die direct in UI-code staan heeft [18 gebruikte BCF Platform-iconen](../design/bcf-inline-icon-review.html) geëxtraheerd. Hun [index](bcf-inline-ui-icons.json) bevat de definitieregel, de aanroepregel en de hash op commit `e98fb97f5f23`; de zelfstandige SVG-reviewkopieën staan onder `inline-ui-icons/openaec-bcf-platform/`. Deze vormen zijn nog geen canonieke crate-iconen en worden niet bij de 577 bestandsassets opgeteld zonder de categorie te vermelden. Vier ongebruikte BCF-definities blijven buiten de telling.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |
