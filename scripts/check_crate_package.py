@@ -12,7 +12,7 @@ result = subprocess.run(
     [cargo, "package", "-p", "openaec-ui", "--allow-dirty", "--list"],
     cwd=root, check=True, capture_output=True, text=True,
 )
-files = set(result.stdout.splitlines())
+files = {line.replace("\\", "/") for line in result.stdout.splitlines()}
 assert all(not name.startswith(("design/", "harmonization/", "src/bin/")) for name in files)
 icons = {f"assets/icons/{p.name}" for p in (root / "crates/openaec-ui/assets/icons").glob("*.svg")}
 domain_icons = {f"assets/{group}/{p.name}" for group in ("domain-icons", "domain-icons-small") for p in (root / "crates/openaec-ui/assets" / group).glob("*.svg")}
