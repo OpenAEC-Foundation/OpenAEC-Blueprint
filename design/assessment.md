@@ -162,6 +162,11 @@ zes statuskeuzes via `ICON`-tabellen aan bronregels en hashes. Dit is een
 broninventaris, nog geen goedgekeurde semantische Rust-iconenset. De routes
 geven de schermstructuur aan; de atlas bewijst afzonderlijk welke iconvormen
 in UI-code gebruikt worden.
+De [Energy-kruistabel](energy-icon-crosswalk.html) deelt alle 84 vormen in: vijftien
+gedeelde kandidaten, dertien betekenisbotsingen en 56 Energy- of
+toestandsspecifieke vormen. `Save` staat zowel voor Opslaan als Opslaan als;
+`Copy` staat voor klembordkopie, projectduplicatie en vensterherstel. Hun
+verschillende acties krijgen pas na een contextreview een Rust-koppeling.
 Een software-render liet zien dat de horizontale scrollbar de groepsnamen
 overlapte. De gedeelde Rust-shell reserveert nu de volledige ribbonhoogte voor
 de scrollbar; een renderregressietest controleert dat de groepsnaam leesbaar
