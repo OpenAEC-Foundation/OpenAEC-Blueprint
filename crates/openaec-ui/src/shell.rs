@@ -145,6 +145,17 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             container((slots.content)(Region::Explorer)).width(288).height(Fill),
             container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
         ].height(Fill).width(Fill).into()
+    } else if let ChromeMode::ThreePaneRibbon { left, right } = slots.mode {
+        let mut panes = Row::new().spacing(2);
+        if left {
+            panes = panes.push(container((slots.content)(Region::Explorer)).width(iced::FillPortion(1)).height(Fill));
+        }
+        panes = panes.push(container((slots.content)(Region::Workspace))
+            .width(iced::FillPortion(if left && right { 2 } else if left || right { 3 } else { 4 })).height(Fill));
+        if right {
+            panes = panes.push(container((slots.content)(Region::Properties)).width(iced::FillPortion(1)).height(Fill));
+        }
+        panes.height(Fill).width(Fill).into()
     } else if slots.mode == ChromeMode::CanvasRibbon {
         row![
             container((slots.content)(Region::Explorer)).width(255).height(Fill),

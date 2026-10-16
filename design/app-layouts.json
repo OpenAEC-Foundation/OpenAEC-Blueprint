@@ -571,7 +571,7 @@
       "empty",
       "error"
     ],
-    "notes": "Bron App.tsx, AppShell.tsx, LeftPanel.tsx en RightPanel.tsx op commit 8f837dd9a56e: / en /viewer tonen een driepaneelsviewer (25/50/25% standaard), met modellen/eigenschappen links en Validatie, Clashes, BCF rechts. /validate is een zelfstandige oudere upload- en IDS-werkstroom zonder ribbon of 3D-canvas. Viewer-lint: Bestand, Start, Beeld. BCF Push/Inloggen wisselen volgens verbindingsstatus; Cloud verschijnt alleen wanneer ingeschakeld. De bron bevat geen bruikbare runtime-screenshots; de routekaart is een structurele beoordeling."
+    "notes": "Bron App.tsx, AppShell.tsx, LeftPanel.tsx en RightPanel.tsx op commit 8f837dd9a56e: / en /viewer tonen een driepaneelsviewer (25/50/25% standaard), met modellen/eigenschappen links en Validatie, Clashes, BCF rechts. /validate is een zelfstandige oudere upload- en IDS-werkstroom zonder ribbon of 3D-canvas. Viewer-lint: Bestand, Start, Beeld. BCF Push/Inloggen wisselen volgens verbindingsstatus; Cloud verschijnt alleen wanneer ingeschakeld. De native Rust Style Repo heeft nu de 13 brongepinde toestanden als selecteerbare schermproef in een vaste 1:2:1-indeling; de bronpanelen zijn wel versleepbaar. Er zijn geen bruikbare runtime-screenshots, en 3D/validatie blijven voorbeeldinhoud."
   },
   {
     "id": "speech",

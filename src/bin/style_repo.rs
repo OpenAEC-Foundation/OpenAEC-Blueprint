@@ -36,6 +36,8 @@ mod source_interfaces;
 mod ribbon_preview;
 #[path = "style_repo/reports_native.rs"]
 mod reports_native;
+#[path = "style_repo/validator_native.rs"]
+mod validator_native;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -134,6 +136,9 @@ enum Action {
     SelectReportsAdminTab(usize),
     SelectReportsPdfState(usize),
     ToggleReportsSidebar,
+    SelectValidatorRoute(usize),
+    ToggleValidatorLeft,
+    ToggleValidatorRight,
     SelectSourceApp(usize),
     SelectSourceRoute(usize),
     SourceSearch(String),
@@ -305,6 +310,9 @@ struct StyleRepo {
     reports_admin_tab: usize,
     reports_pdf_state: usize,
     reports_sidebar_visible: bool,
+    validator_route: usize,
+    validator_left_visible: bool,
+    validator_right_visible: bool,
     source_app: usize,
     source_route: usize,
     source_search: String,
@@ -370,6 +378,9 @@ impl Default for StyleRepo {
             reports_admin_tab: 0,
             reports_pdf_state: 2,
             reports_sidebar_visible: true,
+            validator_route: 0,
+            validator_left_visible: true,
+            validator_right_visible: true,
             source_app: 0,
             source_route: 0,
             source_search: String::new(),
@@ -1133,6 +1144,9 @@ impl StyleRepo {
         }
         if selected.id == "reports" {
             return self.reports_native_page(theme, l);
+        }
+        if selected.id == "validator" {
+            return self.validator_native_page(theme);
         }
         if selected.id == "geotech" && self.selected_screen == 1 {
             return geotech_native::workspace(self.geotech_layer, theme, l);
@@ -2140,6 +2154,12 @@ impl Application for StyleRepo {
             } else {
                 ChromeMode::RibbonWorkspace
             }
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
+            if validator_native::data().routes[self.validator_route].branch == "legacy" {
+                ChromeMode::Plain
+            } else {
+                ChromeMode::ThreePaneRibbon { left: self.validator_left_visible, right: self.validator_right_visible }
+            }
         } else {
             ChromeMode::Ribbon
         }
@@ -2290,6 +2310,9 @@ impl Application for StyleRepo {
             Page::Bim => self.domains(theme, l, "bim"),
         };
         let bg = theme.tokens().bg;
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
+            return content;
+        }
         let padding = if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" { 14 } else { 28 };
         container(scrollable(container(content).padding(padding).width(Fill)).height(Fill))
             .width(Fill)
@@ -2326,6 +2349,9 @@ impl Application for StyleRepo {
         else { self.sample_dialog.then_some(Action::SampleDialog(false)) }
     }
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
+            return self.validator_left_panel(theme);
+        }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" {
             return self.reports_sidebar(theme);
         }
@@ -2409,6 +2435,9 @@ impl Application for StyleRepo {
         nav.into()
     }
     fn properties(&self, theme: Theme, l: Language) -> Element<'_, Action> {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
+            return self.validator_right_panel(theme);
+        }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "geotech" && self.selected_screen == 1 {
             return geotech_native::properties(self.geotech_layer, theme);
         }
@@ -2507,6 +2536,11 @@ impl Application for StyleRepo {
                 self.reports_pdf_state = index.min(reports_native::data().preview_states.len().saturating_sub(1));
             }
             Action::ToggleReportsSidebar => self.reports_sidebar_visible = !self.reports_sidebar_visible,
+            Action::SelectValidatorRoute(index) => {
+                self.validator_route = index.min(validator_native::data().routes.len().saturating_sub(1));
+            }
+            Action::ToggleValidatorLeft => self.validator_left_visible = !self.validator_left_visible,
+            Action::ToggleValidatorRight => self.validator_right_visible = !self.validator_right_visible,
             Action::SelectSourceApp(index) => {
                 self.source_app = index.min(1);
                 self.source_route = 0;
@@ -2825,6 +2859,27 @@ mod tests {
     }
 
     #[test]
+    fn validator_native_routes_preserve_viewer_and_legacy_shells() {
+        let inventory = validator_native::data();
+        assert_eq!(inventory.routes.len(), 13);
+        assert_eq!(inventory.right_tabs.len(), 3);
+        let mut app = StyleRepo::default();
+        let validator = studios().iter().position(|studio| studio.id == "validator").unwrap();
+        let _ = app.update(Action::SelectStudio(validator));
+        for (index, route) in inventory.routes.iter().enumerate() {
+            let _ = app.update(Action::SelectValidatorRoute(index));
+            assert_eq!(app.chrome_mode(), if route.branch == "legacy" {
+                ChromeMode::Plain
+            } else { ChromeMode::ThreePaneRibbon { left: true, right: true } });
+            let _ = app.studios_page(Theme::Light, Language::Dutch);
+        }
+        let _ = app.update(Action::SelectValidatorRoute(4));
+        let _ = app.update(Action::ToggleValidatorLeft);
+        let _ = app.update(Action::ToggleValidatorRight);
+        assert_eq!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { left: false, right: false });
+    }
+
+    #[test]
     fn native_ribbon_uses_proposed_tabs_except_workflow_studios() {
         let mut app = StyleRepo::default();
         app.show(Page::Studios);
@@ -2842,7 +2897,7 @@ mod tests {
                 assert!(tabs.iter().all(|tab| tab.groups.is_empty()));
                 continue;
             }
-            assert_eq!(app.chrome_mode(), if studio.id == "cad" { ChromeMode::CanvasRibbon } else if studio.id == "reports" { ChromeMode::RibbonSidebar } else { ChromeMode::Ribbon });
+            assert_eq!(app.chrome_mode(), if studio.id == "cad" { ChromeMode::CanvasRibbon } else if studio.id == "reports" { ChromeMode::RibbonSidebar } else if studio.id == "validator" { ChromeMode::ThreePaneRibbon { left: true, right: true } } else { ChromeMode::Ribbon });
             let expected: Vec<_> = studio.tabs.iter().filter(|tab| *tab != "Bestand").collect();
             assert_eq!(tabs.len(), expected.len(), "{}", studio.name);
             for (actual, label) in tabs.iter().zip(expected) {

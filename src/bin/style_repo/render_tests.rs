@@ -42,6 +42,53 @@ fn export_reports_native_screen_review() {
 }
 
 #[test]
+#[ignore = "regenerate native BIM Validator screen review on demand"]
+fn export_validator_native_screen_review() {
+    let mut app = StyleRepo::default();
+    let validator = studios().iter().position(|studio| studio.id == "validator").unwrap();
+    let _ = app.update(Action::SelectStudio(validator));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (route, theme, name) in [
+        (0, Theme::Light, "empty-light"),
+        (1, Theme::Forge, "model-forge"),
+        (4, Theme::Light, "results-light"),
+        (6, Theme::Forge, "clashes-forge"),
+        (7, Theme::Light, "bcf-light"),
+        (8, Theme::Light, "legacy-input-light"),
+        (11, Theme::Forge, "legacy-results-forge"),
+    ] {
+        let _ = app.update(Action::SelectValidatorRoute(route));
+        render_sized(&app, theme, false, None, Size::new(1280.0, 800.0))
+            .save_png(&design.join(format!("style-repo-validator-{name}.png")))
+            .expect("save native BIM Validator screen");
+    }
+}
+
+#[test]
+fn validator_three_pane_shell_keeps_quarter_half_quarter_geometry() {
+    let mut app = StyleRepo::default();
+    let validator = studios().iter().position(|studio| studio.id == "validator").unwrap();
+    let _ = app.update(Action::SelectStudio(validator));
+    let picture = render_sized(&app, Theme::Light, false, None, Size::new(1280.0, 800.0));
+    let pixel = |x: usize| {
+        let at = ((500 * picture.width() as usize + x) * 4) as usize;
+        &picture.data()[at..at + 3]
+    };
+    assert_ne!(pixel(200), &[30, 35, 43]);
+    assert_eq!(pixel(600), &[30, 35, 43]);
+    assert_ne!(pixel(1100), &[30, 35, 43]);
+    assert_eq!(pixel(321), &[33, 37, 45]);
+    assert_eq!(pixel(958), &[33, 37, 45]);
+    let _ = app.update(Action::ToggleValidatorLeft);
+    let _ = app.update(Action::ToggleValidatorRight);
+    let full = render_sized(&app, Theme::Light, false, None, Size::new(1280.0, 800.0));
+    for x in [200usize, 600, 1100] {
+        let at = ((500 * full.width() as usize + x) * 4) as usize;
+        assert_eq!(&full.data()[at..at + 3], &[30, 35, 43]);
+    }
+}
+
+#[test]
 #[ignore = "regenerate native PDF find-bar review on demand"]
 fn export_pdf_native_find_bar_review() {
     use openaec_ui::find_bar::{self, FindBarActions, FindBarState, ResultGroup};
@@ -218,11 +265,13 @@ fn render_sized_with_reset(
             overlay: app.overlay(theme, language).map(|element| element.map(Message::Command)),
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
+                Region::Explorer if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. }) => app.explorer(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
                     if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else if app.chrome_mode() == ChromeMode::Sidebar { language.text("Navigatie", "Navigation") } else if app.chrome_mode() == ChromeMode::CanvasRibbon { language.text("Eigenschappen", "Properties") } else { language.text("Verkenner", "Explorer") },
                     app.explorer(theme, language).map(Message::Command),
                     theme,
                 ),
+                Region::Properties if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. }) => app.properties(theme, language).map(Message::Command),
                 Region::Properties => widgets::panel(
                     language.text("Eigenschappen", "Properties"),
                     app.properties(theme, language).map(Message::Command),
