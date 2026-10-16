@@ -5,8 +5,8 @@
   "jsx_tsx_files": 172,
   "svg_bearing_files": 68,
   "literal_svg_sites": 317,
-  "fully_reviewed_literal_sites": 263,
-  "sites_requiring_role_review_or_partial_followup": 54,
+  "fully_reviewed_literal_sites": 283,
+  "sites_requiring_role_review_or_partial_followup": 34,
   "files": [
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
@@ -480,7 +480,7 @@
         168,
         374
       ],
-      "review_state": "partial-command-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
@@ -492,7 +492,7 @@
         20,
         116
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
@@ -504,7 +504,7 @@
         140,
         159
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx",
@@ -569,7 +569,7 @@
         232,
         240
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/symbol-edit/SymbolTypeEditor.jsx",
@@ -813,7 +813,7 @@
       "lines": [
         78
       ],
-      "review_state": "partial-command-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
@@ -822,7 +822,7 @@
       "lines": [
         80
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
@@ -831,7 +831,7 @@
       "lines": [
         31
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/ExtensionRibbonTab.jsx",
@@ -840,7 +840,7 @@
       "lines": [
         154
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/Ribbon.jsx",
@@ -858,7 +858,7 @@
       "lines": [
         30
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     },
     {
       "file": "open-pdf-studio/js/solid/components/ribbon/ThemePicker.jsx",
@@ -867,7 +867,7 @@
       "lines": [
         66
       ],
-      "review_state": "requires-ui-role-review"
+      "review_state": "fully-reviewed-literal-sites"
     }
   ]
 }

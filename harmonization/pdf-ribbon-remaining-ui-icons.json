@@ -1,0 +1,230 @@
+{
+  "repository": "open-pdf-studio",
+  "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "All 20 literal SVG openings in ten remaining ribbon JSX files. Two FormatTab sites are dynamic color-dependent SVG templates and deliberately have no static SVG export. The 18 other sites are UI controls, including conditional overflow and extension-tab controls. Imported ribbonIcons.js assets are audited separately.",
+  "literal_svg_sites": 20,
+  "static_svg_exports": 18,
+  "dynamic_color_templates": 2,
+  "role_counts": {
+    "command": 9,
+    "disclosure": 9,
+    "dynamic-color-template": 2
+  },
+  "identical_geometry_groups": [
+    [
+      "organize-compare",
+      "view-compare"
+    ],
+    [
+      "format-tools-chevron",
+      "arrange-align-chevron",
+      "color-picker-chevron"
+    ],
+    [
+      "split-chevron",
+      "theme-chevron"
+    ]
+  ],
+  "records": [
+    {
+      "name": "format-fill-template",
+      "label": "Vulkleur",
+      "area": "Opmaak",
+      "role": "dynamic-color-template",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+      "source_line": 76,
+      "template": "<svg viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"14\" height=\"11\" rx=\"1\" id=\"fmt-fill-icon-rect\" fill=\"${fc}\" stroke=\"${hasFillColor ? 'none' : '#999'}\" stroke-width=\"1\"/><rect x=\"2\" y=\"14\" width=\"14\" height=\"2.5\" rx=\"0.5\" id=\"fmt-fill-indicator\" fill=\"${fc}\" stroke=\"${hasFillColor ? 'none' : '#ccc'}\" stroke-width=\"0.5\"/></svg>",
+      "reason_no_static_svg": "The rendered fill/stroke and indicator colors come from the active format store."
+    },
+    {
+      "name": "format-stroke-template",
+      "label": "Lijnkleur",
+      "area": "Opmaak",
+      "role": "dynamic-color-template",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+      "source_line": 81,
+      "template": "<svg viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"12\" height=\"9\" rx=\"1\" fill=\"none\" id=\"fmt-stroke-icon-rect\" stroke=\"${sc}\" stroke-width=\"2.5\"/><rect x=\"2\" y=\"14\" width=\"14\" height=\"2.5\" rx=\"0.5\" id=\"fmt-stroke-indicator\" fill=\"${sc}\"/></svg>",
+      "reason_no_static_svg": "The rendered fill/stroke and indicator colors come from the active format store."
+    },
+    {
+      "name": "format-gallery-more",
+      "label": "Meer stijlen",
+      "area": "Opmaak",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+      "source_line": 168,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/format-gallery-more.svg",
+      "sha256": "4652bdff4c8ed8cb8b40fb475395d46a2d17de660313e3cafc2ee924a8e572c0"
+    },
+    {
+      "name": "format-tools-chevron",
+      "label": "Stijlgereedschappen",
+      "area": "Opmaak",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/FormatTab.jsx",
+      "source_line": 374,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/format-tools-chevron.svg",
+      "sha256": "c79f6f4082d3c8b93590855264aaf7a7594cbb427d0c9b6a13c2935ad4739b48"
+    },
+    {
+      "name": "organize-reorder",
+      "label": "Pagina’s herschikken",
+      "area": "Organiseren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "source_line": 17,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/organize-reorder.svg",
+      "sha256": "0a675b90192aa8401f9f89761f789149ce5f2e73e169df38102454128a04a8b4"
+    },
+    {
+      "name": "organize-compress",
+      "label": "PDF comprimeren",
+      "area": "Organiseren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "source_line": 18,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/organize-compress.svg",
+      "sha256": "b9854b9ffedf96d4dc87e28a7433d5fc364ac5c417589f353f1e34ca1863cf43"
+    },
+    {
+      "name": "organize-scan-text",
+      "label": "Tekst herkennen",
+      "area": "Organiseren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "source_line": 20,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/organize-scan-text.svg",
+      "sha256": "a4cbaf0c9486e19e3b322544e0b2a2238a55c3c961c909714ac4ad8bc5a30013"
+    },
+    {
+      "name": "organize-compare",
+      "label": "PDF’s vergelijken",
+      "area": "Organiseren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/OrganizeTab.jsx",
+      "source_line": 116,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/organize-compare.svg",
+      "sha256": "4ba45695e77f06e105158ac6aaacd075a454d771c6c86ebfca3412e8ef25bc0a"
+    },
+    {
+      "name": "view-thin-lines",
+      "label": "Dunne lijnen",
+      "area": "Beeld",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "source_line": 75,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/view-thin-lines.svg",
+      "sha256": "e9a97e2614ccebe7414c10798455ffd0a7c5b1b806a476c78fd25f4d1dd2a9a2"
+    },
+    {
+      "name": "view-reader",
+      "label": "Leesmodus",
+      "area": "Beeld",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "source_line": 89,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/view-reader.svg",
+      "sha256": "bac784256299afe57417d62100d689214256cf5f35a335023eb2f4183b7b92e3"
+    },
+    {
+      "name": "view-compare",
+      "label": "PDF’s vergelijken",
+      "area": "Beeld",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "source_line": 140,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/view-compare.svg",
+      "sha256": "4ba45695e77f06e105158ac6aaacd075a454d771c6c86ebfca3412e8ef25bc0a"
+    },
+    {
+      "name": "view-keystrokes",
+      "label": "Toetsaanslagen tonen",
+      "area": "Beeld",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ViewTab.jsx",
+      "source_line": 159,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/view-keystrokes.svg",
+      "sha256": "29f486e35f8438b806884fcefb36d638acdc26d1d96cb33244be66d49d20791f"
+    },
+    {
+      "name": "overflow-more",
+      "label": "Meer groepen",
+      "area": "Ribbon-overloop",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/AdaptiveGroups.jsx",
+      "source_line": 232,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/overflow-more.svg",
+      "sha256": "19dc4752729666adade40f8f387d001a5ec5d6421009d7917092d1646186041e"
+    },
+    {
+      "name": "overflow-chevron",
+      "label": "Overloop openen",
+      "area": "Ribbon-overloop",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/AdaptiveGroups.jsx",
+      "source_line": 240,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/overflow-chevron.svg",
+      "sha256": "fc6dd75f572f376c6e907278958150822c6c4df2e2085eac97beaca34a6061c9"
+    },
+    {
+      "name": "arrange-align-chevron",
+      "label": "Uitlijnmenu openen",
+      "area": "Schikken",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+      "source_line": 78,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/arrange-align-chevron.svg",
+      "sha256": "c79f6f4082d3c8b93590855264aaf7a7594cbb427d0c9b6a13c2935ad4739b48"
+    },
+    {
+      "name": "color-picker-chevron",
+      "label": "Kleurenpalet openen",
+      "area": "Ribbon-kleurkiezer",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ColorPickerButton.jsx",
+      "source_line": 80,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/color-picker-chevron.svg",
+      "sha256": "9f6fd2656341d7796ed17c7d4612d061c9d0c1f9522164b8ef8a4bd77607f680"
+    },
+    {
+      "name": "comment-schedule",
+      "label": "Hoeveelheden",
+      "area": "Annoteren",
+      "role": "command",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/CommentTab.jsx",
+      "source_line": 31,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/comment-schedule.svg",
+      "sha256": "fc2156270634baf09849cb68f7a5e291a9efef29e31e3197fd615b68191c47d2"
+    },
+    {
+      "name": "extension-more-tabs",
+      "label": "Verborgen extensietabs",
+      "area": "Extensietabs",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ExtensionRibbonTab.jsx",
+      "source_line": 154,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/extension-more-tabs.svg",
+      "sha256": "1558a7739954ad0ca6de838e76103e043a75ebedecbbd5be98eb8fd9d7cd0771"
+    },
+    {
+      "name": "split-chevron",
+      "label": "Actiemenu openen",
+      "area": "Gesplitste knop",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/SplitButton.jsx",
+      "source_line": 30,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/split-chevron.svg",
+      "sha256": "a16969716a9c218dde2dfc54f3868aff4b434d36fb12cf4ced3774012c33f0c2"
+    },
+    {
+      "name": "theme-chevron",
+      "label": "Themamenu openen",
+      "area": "Themakeuze",
+      "role": "disclosure",
+      "source_file": "open-pdf-studio/js/solid/components/ribbon/ThemePicker.jsx",
+      "source_line": 66,
+      "svg": "inline-ui-icons/open-pdf-studio/ribbon-remaining/theme-chevron.svg",
+      "sha256": "7b416d84d63dd21916354c7cd64becb140f83f25d033f6ba1855177762caf1fb"
+    }
+  ]
+}
