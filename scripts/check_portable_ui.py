@@ -49,7 +49,7 @@ for name, source in canonical_sources.items():
     assert formatted(source) == formatted(portable_sources[name]), f"Portable Rust source differs: {name}"
 
 asset_count = 0
-for group in ("fonts", "icons", "domain-icons", "domain-icons-small", "ribbon-icons"):
+for group in ("fonts", "icons", "domain-icons", "domain-icons-small", "ribbon-icons", "find-bar"):
     canonical_assets = {p.name: p for p in (canonical / "assets" / group).iterdir() if p.is_file()}
     portable_assets = {p.name: p for p in (portable / "assets" / group).iterdir() if p.is_file()}
     assert canonical_assets.keys() == portable_assets.keys(), f"Portable {group} set differs"

@@ -5,7 +5,7 @@ edition = "2021"
 description = "Shared native OpenAEC desktop shell, design tokens and components"
 license = "CC-BY-SA-4.0"
 readme = "README.md"
-include = ["src/**", "assets/fonts/**", "assets/icons/**", "assets/domain-icons/**", "assets/domain-icons-small/**", "assets/ribbon-icons/**", "licenses/**", "Cargo.toml", "README.md", "LICENSE", "NOTICE.md"]
+include = ["src/**", "assets/fonts/**", "assets/icons/**", "assets/find-bar/**", "assets/domain-icons/**", "assets/domain-icons-small/**", "assets/ribbon-icons/**", "licenses/**", "Cargo.toml", "README.md", "LICENSE", "NOTICE.md"]
 
 [features]
 gpu-renderer = ["iced/wgpu"]

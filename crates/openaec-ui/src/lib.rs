@@ -7,6 +7,7 @@ pub mod fonts;
 pub mod icons;
 pub mod ribbon_icons;
 pub mod frame;
+pub mod find_bar;
 pub mod locale;
 pub mod model;
 pub mod theme;

@@ -1,5 +1,6 @@
 //! Native Rust showcase for the shared OpenAEC desktop UI.
 use openaec_ui::{
+    find_bar::{self, FindBarActions, FindBarState, ResultGroup},
     fonts,
     iced::{
         self,
@@ -116,6 +117,9 @@ enum Action {
     Next,
     SelectIcon(usize),
     Input(String),
+    FindQuery(String), FindPrevious, FindNext, FindMatchCase, FindWholeWord,
+    FindHighlightAll, FindText, FindAnnotations, FindResults, FindPage(usize),
+    FindOpen(bool), FindNarrow,
     Toggle,
     Slider(f32),
     Reset,
@@ -282,6 +286,9 @@ struct StyleRepo {
     icon_page: usize,
     selected_icon: Option<usize>,
     sample_input: String,
+    find: FindBarState,
+    find_open: bool,
+    find_narrow: bool,
     sample_toggle: bool,
     sample_value: f32,
     sample_dialog: bool,
@@ -339,6 +346,10 @@ impl Default for StyleRepo {
             icon_page: 0,
             selected_icon: None,
             sample_input: String::new(),
+            find: FindBarState { search_text: true, search_annotations: true,
+                highlight_all: true, ..FindBarState::default() },
+            find_open: true,
+            find_narrow: false,
             sample_toggle: false,
             sample_value: 35.0,
             sample_dialog: false,
@@ -390,6 +401,22 @@ impl Default for StyleRepo {
     }
 }
 impl StyleRepo {
+    fn refresh_find_demo(&mut self) {
+        self.find.groups.clear();
+        let query = self.find.query.to_lowercase();
+        if query.contains("construct") || query.contains("struct") {
+            if self.find.search_text {
+                self.find.groups.push(ResultGroup { page: 2, count: 4,
+                    kinds: "Tekst".into(), current: true });
+            }
+            if self.find.search_annotations {
+                self.find.groups.push(ResultGroup { page: 5, count: 3,
+                    kinds: "Annotaties".into(), current: !self.find.search_text });
+            }
+        }
+        self.find.total = self.find.groups.iter().map(|group| group.count).sum();
+        self.find.current = usize::from(self.find.total > 0);
+    }
     fn show(&mut self, page: Page) {
         self.page = page;
         if !self.open_pages.contains(&page) {
@@ -494,6 +521,24 @@ impl StyleRepo {
     }
     fn components(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         let t = theme.tokens();
+        let find_width = if self.find_narrow { 300.0 } else { 620.0 };
+        let find_demo: Element<'_, Action> = if self.find_open {
+            find_bar::view(&self.find, FindBarActions {
+                query_changed: Action::FindQuery,
+                previous: Action::FindPrevious, next: Action::FindNext,
+                toggle_match_case: Action::FindMatchCase,
+                toggle_whole_word: Action::FindWholeWord,
+                toggle_highlight_all: Action::FindHighlightAll,
+                toggle_text: Action::FindText,
+                toggle_annotations: Action::FindAnnotations,
+                toggle_results: Action::FindResults,
+                select_page: Action::FindPage,
+                close: Action::FindOpen(false),
+            }, theme, l, find_width)
+        } else {
+            widgets::action(l.text("Zoekbalk openen", "Open find bar"), Icon::Search,
+                Some(Action::FindOpen(true)), theme)
+        };
         column![
             self.heading(
                 "UI PRIMITIVES",
@@ -672,6 +717,19 @@ impl StyleRepo {
                 .spacing(0),
                 theme
             ),
+            self.card(column![
+                text(l.text("Document zoeken", "Document search")).font(fonts::STRONG).size(16),
+                text(l.text("Native PDF-zoekbalk · vijf broniconen · zoek op ‘constructie’.",
+                    "Native PDF find bar · five source icons · search for ‘structure’."))
+                    .size(12).color(t.text_secondary),
+                button(text(if self.find_narrow { l.text("Breed documentvlak", "Wide document") }
+                    else { l.text("Smal documentvlak", "Narrow document") }))
+                    .on_press(Action::FindNarrow)
+                    .style(move |_, status| widgets::secondary_button_style(theme, status)),
+                container(row![Space::new(Fill, 1), find_demo])
+                    .width(find_width).height(178).padding([4, 12])
+                    .style(move |_| container::Style::default().background(theme.tokens().content_bg)),
+            ].spacing(12), theme),
         ]
         .spacing(18)
         .into()
@@ -2358,6 +2416,22 @@ impl Application for StyleRepo {
             Action::Next => self.icon_page += 1,
             Action::SelectIcon(index) => self.selected_icon = Some(index),
             Action::Input(value) => self.sample_input = value,
+            Action::FindQuery(value) => { self.find.query = value; self.refresh_find_demo(); }
+            Action::FindPrevious => if self.find.total > 0 {
+                self.find.current = if self.find.current <= 1 { self.find.total } else { self.find.current - 1 };
+            },
+            Action::FindNext => if self.find.total > 0 {
+                self.find.current = self.find.current % self.find.total + 1;
+            },
+            Action::FindMatchCase => self.find.match_case = !self.find.match_case,
+            Action::FindWholeWord => self.find.whole_word = !self.find.whole_word,
+            Action::FindHighlightAll => self.find.highlight_all = !self.find.highlight_all,
+            Action::FindText => { self.find.search_text = !self.find.search_text; self.refresh_find_demo(); }
+            Action::FindAnnotations => { self.find.search_annotations = !self.find.search_annotations; self.refresh_find_demo(); }
+            Action::FindResults => self.find.results_open = !self.find.results_open,
+            Action::FindPage(page) => for group in &mut self.find.groups { group.current = group.page == page; },
+            Action::FindOpen(open) => self.find_open = open,
+            Action::FindNarrow => self.find_narrow = !self.find_narrow,
             Action::Toggle => self.sample_toggle = !self.sample_toggle,
             Action::Slider(value) => self.sample_value = value,
             Action::SampleDialog(open) => {
@@ -2607,6 +2681,23 @@ fn main() -> iced::Result {
 mod tests {
     use super::*;
     use std::collections::HashSet;
+
+    #[test]
+    fn native_find_bar_demo_filters_results_and_stays_reopenable() {
+        let mut app = StyleRepo::default();
+        let _ = app.update(Action::Show(Page::Components));
+        let _ = app.update(Action::FindQuery("constructie".into()));
+        assert_eq!(app.find.total, 7);
+        let _ = app.update(Action::FindText);
+        assert_eq!(app.find.total, 3);
+        let _ = app.update(Action::FindAnnotations);
+        assert_eq!(app.find.total, 0);
+        let _ = app.update(Action::FindOpen(false));
+        let _ = app.update(Action::FindOpen(true));
+        let _ = app.update(Action::FindNarrow);
+        assert!(app.find_open && app.find_narrow);
+        let _ = app.components(Theme::Forge, Language::Dutch);
+    }
 
     #[test]
     fn research_catalog_is_complete_and_unique() {

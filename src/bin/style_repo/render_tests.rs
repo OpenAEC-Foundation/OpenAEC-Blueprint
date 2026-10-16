@@ -20,6 +20,75 @@ fn load_fonts() {
 }
 
 #[test]
+#[ignore = "regenerate native PDF find-bar review on demand"]
+fn export_pdf_native_find_bar_review() {
+    use openaec_ui::find_bar::{self, FindBarActions, FindBarState, ResultGroup};
+    load_fonts();
+    let state = FindBarState {
+        query: "constructie".into(),
+        current: 1,
+        total: 7,
+        search_text: true,
+        search_annotations: true,
+        highlight_all: true,
+        results_open: true,
+        groups: vec![
+            ResultGroup {
+                page: 2,
+                count: 4,
+                kinds: "Tekst".into(),
+                current: true,
+            },
+            ResultGroup {
+                page: 5,
+                count: 3,
+                kinds: "Annotaties".into(),
+                current: false,
+            },
+        ],
+        ..FindBarState::default()
+    };
+    let actions = || FindBarActions {
+        query_changed: |_| (),
+        previous: (),
+        next: (),
+        toggle_match_case: (),
+        toggle_whole_word: (),
+        toggle_highlight_all: (),
+        toggle_text: (),
+        toggle_annotations: (),
+        toggle_results: (),
+        select_page: |_| (),
+        close: (),
+    };
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
+        for (width, size_name) in [(620.0, "wide"), (300.0, "narrow")] {
+            let bar = find_bar::view(&state, actions(), theme, Language::Dutch, width)
+                .map(|_| Message::Command(Action::SelectScreen(0)));
+            let element = iced::widget::container(
+                iced::widget::column![
+                    iced::widget::row![iced::widget::Space::new(iced::Fill, 1), bar],
+                    iced::widget::Space::new(iced::Fill, 24),
+                    iced::widget::text("Voorbeeld document").size(20),
+                ]
+                .spacing(8),
+            )
+            .width(width)
+            .height(330)
+            .padding([4, 12])
+            .style(move |_| {
+                iced::widget::container::Style::default().background(theme.tokens().content_bg)
+            })
+            .into();
+            render_element(element, theme, Size::new(width, 330.0))
+                .save_png(&design.join(format!("pdf-find-bar-native-{name}-{size_name}.png")))
+                .expect("save native find bar");
+        }
+    }
+}
+
+#[test]
 #[ignore = "regenerate shared Rust icon catalogue on demand"]
 fn export_canonical_icon_reviews() {
     let mut app = StyleRepo::default();
