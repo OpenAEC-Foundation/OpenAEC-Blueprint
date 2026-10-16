@@ -673,7 +673,7 @@
       "empty",
       "error"
     ],
-      "notes": "Tabs gecontroleerd tegen apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx op commit ffe979d3b859: Bestand, Plan en Weergave. Plan heeft Project, Inspecteren, Selecteren, Instellingen, Vergrendelen en Optimalisatie. Weergave bevat niet alleen knoppen maar ook sliders voor symboolgrootte en benuttingsbereik plus een voorgrondkeuze. De drie broncaptures tonen een donker themalint, verkenner links, 2D-palenplan midden en een wisselend taakpaneel rechts (import, optimalisatie, paalopties). De gedeelde native ribbon heeft nu herbruikbare sliders en keuzeknoppen voor Weergave, inclusief één rail met twee duimen en een geselecteerde band; het 2D-palenplan is nog een cataloguspreview."
+    "notes": "Tabs gecontroleerd tegen apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx op commit ffe979d3b859: Bestand, Plan en Weergave. Plan heeft Project, Inspecteren, Selecteren, Instellingen, Vergrendelen en Optimalisatie. Weergave bevat niet alleen knoppen maar ook sliders voor symboolgrootte en benuttingsbereik plus een voorgrondkeuze. De drie broncaptures tonen een donker themalint, verkenner links, 2D-palenplan midden en een wisselend taakpaneel rechts (import, optimalisatie, paalopties). De gedeelde native ribbon heeft nu herbruikbare sliders en keuzeknoppen voor Weergave, inclusief één rail met twee duimen en een geselecteerde band; het 2D-palenplan is nog een cataloguspreview."
   },
   {
     "id": "2d",
@@ -710,5 +710,41 @@
       "error"
     ],
     "notes": "Alleen de AEC-extensie is toegankelijk, bron src/ribbonTabs.tsx op commit fd22965ed28a: registreert AEC en Pile Plan als extra tabs en voegt Export IFCX/Copy IFCX toe aan de bestaande IFC-tab van open-2d-studio. Deze repository definieert geen volledige hostschil of eigen screenshots. Bestand in de geharmoniseerde shell is een voorstel; de IFC-hosttab is alleen via de extensieaanroep bekend."
+  },
+  {
+    "id": "composer",
+    "name": "OpenAEC Workspace Composer",
+    "proposed": false,
+    "tabs": [],
+    "left_panel": "Simple/Advanced navigatie",
+    "right_panel": "Geen",
+    "workspace": "Pakketselectie en configuratie",
+    "fixed_regions": [
+      "titlebar",
+      "sidebar",
+      "workspace",
+      "status"
+    ],
+    "screens": [
+      "/workspace",
+      "/dashboard",
+      "/configure",
+      "/permissions",
+      "/hooks",
+      "/mcp",
+      "/templates",
+      "/install",
+      "/gpu-server",
+      "/about",
+      "/commands",
+      "/memory",
+      "/prompts",
+      "/core-files",
+      "/auth",
+      "/git",
+      "/presets",
+      "/teams"
+    ],
+    "notes": "Broncommit 33327e001d6a. 18 geregistreerde routes, 3 broncaptures. Eigen 220 px sidebar, 32 px titelbalk en 22 px statusbalk; geen ribbon of documenttabs. De native review toont ontbrekende captures expliciet."
   }
 ]

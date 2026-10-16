@@ -117,6 +117,8 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         documents = documents.push(widgets::document_tab_bottom_gap(theme, tab.into()));
     }
     let document_bar=crate::frame::document_bar(theme, horizontal(documents));
+    let compact_sidebar = (slots.mode == ChromeMode::SidebarCompact)
+        .then(|| (slots.content)(Region::Explorer));
     let body: Element<'a,Message<M>> = if state.backstage {
         let pages = slots.file_commands.into_iter().map(|command| {
             let active = slots.file_active_label.as_ref() == Some(&command.label);
@@ -166,6 +168,8 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             container((slots.content)(Region::Explorer)).width(260).height(Fill),
             container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
         ].height(Fill).width(Fill).into()
+    } else if slots.mode == ChromeMode::SidebarCompact {
+        (slots.content)(Region::Workspace)
     } else {
         pane_grid::PaneGrid::new(&state.panes, move |_, region, _| pane_grid::Content::new((slots.content)(*region)))
             .spacing(2).on_resize(6,|e|Message::Ui(UiEvent::Resize(e))).height(Fill).into()
@@ -186,6 +190,14 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
             titlebar: titlebar.into(), tabs: tabs.into(), ribbon: None,
             documents: None, content: body, status: status.into(),
         })
+    } else if slots.mode == ChromeMode::SidebarCompact {
+        crate::frame::sidebar_frame(
+            crate::frame::SidebarFrameProfile::WORKSPACE_COMPOSER,
+            titlebar.into(),
+            compact_sidebar.expect("compact sidebar"),
+            body,
+            status.into(),
+        )
     } else if slots.mode == ChromeMode::Plain {
         crate::frame::workflow_frame(titlebar.into(), None, body, status.into())
     } else if slots.mode == ChromeMode::TopNav {

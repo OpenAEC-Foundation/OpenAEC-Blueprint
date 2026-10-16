@@ -16,6 +16,45 @@ pub struct WorkspaceFrameProfile {
     pub panel_header_height: u16,
 }
 
+/// Source-measured shell for navigation-first tools without a permanent ribbon.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct SidebarFrameProfile {
+    pub title_height: u16,
+    pub sidebar_width: u16,
+    pub status_height: u16,
+}
+
+impl SidebarFrameProfile {
+    /// Workspace Composer at source commit 33327e0.
+    pub const WORKSPACE_COMPOSER: Self = Self {
+        title_height: 32,
+        sidebar_width: 220,
+        status_height: 22,
+    };
+}
+
+/// Keep navigation, application content, and status in a reusable native frame.
+pub fn sidebar_frame<'a, M: 'a>(
+    profile: SidebarFrameProfile,
+    titlebar: Element<'a, M>,
+    sidebar: Element<'a, M>,
+    content: Element<'a, M>,
+    status: Element<'a, M>,
+) -> Element<'a, M> {
+    column![
+        container(titlebar).width(Fill).height(profile.title_height),
+        Row::new()
+            .push(container(sidebar).width(profile.sidebar_width).height(Fill))
+            .push(container(content).width(Fill).height(Fill))
+            .width(Fill)
+            .height(Fill),
+        container(status).width(Fill).height(profile.status_height),
+    ]
+    .width(Fill)
+    .height(Fill)
+    .into()
+}
+
 impl WorkspaceFrameProfile {
     /// Source-measured Open Frame Studio defaults at commit eb77f9e.
     pub const OPEN_FRAME: Self = Self {
@@ -251,5 +290,27 @@ mod tests {
         assert_eq!(panes[0].width, 220.0);
         assert_eq!(panes[1].width, 690.0);
         assert_eq!(panes[2].width, 290.0);
+    }
+
+    #[test]
+    fn composer_sidebar_frame_preserves_source_geometry() {
+        let profile = SidebarFrameProfile::WORKSPACE_COMPOSER;
+        let element = sidebar_frame(profile, band(1), band(1), band(1), band(1));
+        let renderer = iced_tiny_skia::Renderer::new(crate::fonts::BODY, iced::Pixels(12.0));
+        let mut tree = Tree::new(&element);
+        let node = element.as_widget().layout(
+            &mut tree,
+            &renderer,
+            &layout::Limits::new(Size::ZERO, Size::new(1200.0, 800.0)),
+        );
+        let bands = node.children();
+        assert_eq!(bands.len(), 3);
+        assert_eq!(bands[0].bounds().height, 32.0);
+        assert_eq!(bands[1].bounds().height, 746.0);
+        assert_eq!(bands[2].bounds().height, 22.0);
+        let panes = bands[1].children();
+        assert_eq!(panes.len(), 2);
+        assert_eq!(panes[0].bounds().width, 220.0);
+        assert_eq!(panes[1].bounds().width, 980.0);
     }
 }

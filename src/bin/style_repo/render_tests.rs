@@ -65,6 +65,28 @@ fn export_validator_native_screen_review() {
 }
 
 #[test]
+#[ignore = "regenerate native Workspace Composer screen review on demand"]
+fn export_composer_native_screen_review() {
+    let mut app = StyleRepo::default();
+    let studio = studios().iter().position(|s| s.id == "composer").unwrap();
+    let _ = app.update(Action::SelectStudio(studio));
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (path, advanced, theme, name) in [
+        ("/workspace", false, Theme::Forge, "workspace-forge"),
+        ("/presets", false, Theme::Forge, "presets-forge"),
+        ("/install", false, Theme::Light, "install-light"),
+        ("/dashboard", true, Theme::Forge, "dashboard-evidence-gap"),
+    ] {
+        let _ = app.update(Action::ComposerAdvanced(advanced));
+        let index = composer_native::data().routes.iter().position(|r| r.path == path).unwrap();
+        let _ = app.update(Action::ComposerRoute(index));
+        render_sized(&app, theme, false, None, Size::new(1280.0, 800.0))
+            .save_png(&design.join(format!("style-repo-composer-{name}.png")))
+            .expect("save native Composer screen");
+    }
+}
+
+#[test]
 fn validator_three_pane_shell_keeps_quarter_half_quarter_geometry() {
     let mut app = StyleRepo::default();
     let validator = studios().iter().position(|studio| studio.id == "validator").unwrap();
@@ -265,6 +287,7 @@ fn render_sized_with_reset(
             overlay: app.overlay(theme, language).map(|element| element.map(Message::Command)),
             content: Box::new(|region| match region {
                 Region::Workspace => app.workspace(theme, language).map(Message::Command),
+                Region::Explorer if app.chrome_mode() == ChromeMode::SidebarCompact => app.explorer(theme, language).map(Message::Command),
                 Region::Explorer if matches!(app.chrome_mode(), ChromeMode::ThreePaneRibbon { .. }) => app.explorer(theme, language).map(Message::Command),
                 Region::Explorer => widgets::panel(
                     if app.chrome_mode() == ChromeMode::Workflow { language.text("Werkstroom", "Workflow") } else if app.chrome_mode() == ChromeMode::Sidebar { language.text("Navigatie", "Navigation") } else if app.chrome_mode() == ChromeMode::CanvasRibbon { language.text("Eigenschappen", "Properties") } else { language.text("Verkenner", "Explorer") },

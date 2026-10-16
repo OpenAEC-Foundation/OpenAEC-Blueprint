@@ -38,6 +38,8 @@ mod ribbon_preview;
 mod reports_native;
 #[path = "style_repo/validator_native.rs"]
 mod validator_native;
+#[path = "style_repo/composer_native.rs"]
+mod composer_native;
 #[cfg(test)]
 #[path = "style_repo/render_tests.rs"]
 mod render_tests;
@@ -139,6 +141,10 @@ enum Action {
     SelectValidatorRoute(usize),
     ToggleValidatorLeft,
     ToggleValidatorRight,
+    ComposerRoute(usize),
+    ComposerAdvanced(bool),
+    ComposerPackage(String),
+    ComposerPreset(String),
     SelectSourceApp(usize),
     SelectSourceRoute(usize),
     SourceSearch(String),
@@ -313,6 +319,10 @@ struct StyleRepo {
     validator_route: usize,
     validator_left_visible: bool,
     validator_right_visible: bool,
+    composer_route: usize,
+    composer_advanced: bool,
+    composer_packages: Vec<String>,
+    composer_preset: Option<String>,
     source_app: usize,
     source_route: usize,
     source_search: String,
@@ -381,6 +391,10 @@ impl Default for StyleRepo {
             validator_route: 0,
             validator_left_visible: true,
             validator_right_visible: true,
+            composer_route: 0,
+            composer_advanced: false,
+            composer_packages: Vec::new(),
+            composer_preset: None,
             source_app: 0,
             source_route: 0,
             source_search: String::new(),
@@ -535,7 +549,7 @@ impl StyleRepo {
             ].spacing(12),
             row![
                 self.nav_card(Page::Layouts, l.text("Vaste regio's en ribbon", "Fixed regions and ribbon"), theme, l),
-                self.nav_card(Page::Studios, l.text("18 studio-indelingen", "18 studio layouts"), theme, l),
+                self.nav_card(Page::Studios, l.text("19 toolinterfaces", "19 tool interfaces"), theme, l),
                 self.nav_card(Page::Fem, l.text("Constructieve pictogrammen", "Structural icon proposals"), theme, l),
             ].spacing(12),
             row![
@@ -1147,6 +1161,9 @@ impl StyleRepo {
         }
         if selected.id == "validator" {
             return self.validator_native_page(theme);
+        }
+        if selected.id == "composer" {
+            return self.composer_native_page(theme);
         }
         if selected.id == "geotech" && self.selected_screen == 1 {
             return geotech_native::workspace(self.geotech_layer, theme, l);
@@ -2132,7 +2149,11 @@ impl StyleRepo {
 impl Application for StyleRepo {
     type Command = Action;
     fn title(&self) -> String {
-        "OpenAEC Style Repo  ·  Rust".into()
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
+            "OpenAEC Workspace Composer · Rust Style Repo".into()
+        } else {
+            "OpenAEC Style Repo  ·  Rust".into()
+        }
     }
     fn chrome_mode(&self) -> ChromeMode {
         if self.page == Page::Sources {
@@ -2141,6 +2162,8 @@ impl Application for StyleRepo {
             ChromeMode::Workflow
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "speech" {
             ChromeMode::Sidebar
+        } else if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
+            ChromeMode::SidebarCompact
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "field" {
             ChromeMode::TopNav
         } else if self.page == Page::Studios && studios()[self.selected_studio].id == "cad" {
@@ -2176,7 +2199,7 @@ impl Application for StyleRepo {
     }
     fn ribbon(&self, l: Language) -> Vec<RibbonTab<Action>> {
         if self.page == Page::Studios {
-            if matches!(self.chrome_mode(), ChromeMode::Workflow | ChromeMode::Sidebar) {
+            if matches!(self.chrome_mode(), ChromeMode::Workflow | ChromeMode::Sidebar | ChromeMode::SidebarCompact) {
                 return Vec::new();
             }
             return ribbon_preview::studio_tabs_with_controls(
@@ -2313,6 +2336,9 @@ impl Application for StyleRepo {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
             return content;
         }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
+            return content;
+        }
         let padding = if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" { 14 } else { 28 };
         container(scrollable(container(content).padding(padding).width(Fill)).height(Fill))
             .width(Fill)
@@ -2351,6 +2377,9 @@ impl Application for StyleRepo {
     fn explorer(&self, theme: Theme, l: Language) -> Element<'_, Action> {
         if self.page == Page::Studios && studios()[self.selected_studio].id == "validator" {
             return self.validator_left_panel(theme);
+        }
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
+            return self.composer_sidebar(theme);
         }
         if self.page == Page::Studios && studios()[self.selected_studio].id == "reports" {
             return self.reports_sidebar(theme);
@@ -2541,6 +2570,28 @@ impl Application for StyleRepo {
             }
             Action::ToggleValidatorLeft => self.validator_left_visible = !self.validator_left_visible,
             Action::ToggleValidatorRight => self.validator_right_visible = !self.validator_right_visible,
+            Action::ComposerRoute(index) => {
+                self.composer_route = index.min(composer_native::data().routes.len().saturating_sub(1));
+                if composer_native::data().routes[self.composer_route].mode == "advanced" {
+                    self.composer_advanced = true;
+                }
+            }
+            Action::ComposerAdvanced(advanced) => {
+                self.composer_advanced = advanced;
+                if !advanced && composer_native::data().routes[self.composer_route].mode == "advanced" {
+                    self.composer_route = 0;
+                }
+            }
+            Action::ComposerPackage(id) => {
+                if let Some(index) = self.composer_packages.iter().position(|p| p == &id) {
+                    self.composer_packages.remove(index);
+                } else {
+                    self.composer_packages.push(id);
+                }
+            }
+            Action::ComposerPreset(id) => {
+                self.composer_preset = Some(id);
+            }
             Action::SelectSourceApp(index) => {
                 self.source_app = index.min(1);
                 self.source_route = 0;
@@ -2733,6 +2784,9 @@ impl Application for StyleRepo {
         Task::none()
     }
     fn status(&self, l: Language) -> String {
+        if self.page == Page::Studios && studios()[self.selected_studio].id == "composer" {
+            return format!("Ready  ·  {} packages selected  ·  {} routes", self.composer_packages.len(), composer_native::data().routes.len());
+        }
         format!(
             "{}  ·  {} UI-iconen  ·  109 FEM/BIM-voorstellen",
             self.page.title(l),
@@ -2796,7 +2850,7 @@ mod tests {
             .iter()
             .all(|(id, bytes)| domain_drafts::get(id).is_some()
                 && domain_drafts::get_small(id) == Some(*bytes)));
-        assert_eq!(studios().len(), 18);
+        assert_eq!(studios().len(), 19);
         let required_screens = [
             "start",
             "workspace",
@@ -2810,7 +2864,7 @@ mod tests {
         ];
         assert!(studios()
             .iter()
-            .filter(|studio| !matches!(studio.id.as_str(), "speech" | "field"))
+            .filter(|studio| !matches!(studio.id.as_str(), "speech" | "field" | "composer"))
             .all(|studio| studio.screens.len() == required_screens.len()
                 && required_screens
                     .iter()
@@ -2819,6 +2873,7 @@ mod tests {
             ["speech", "transcribe", "meeting", "mic-test", "models", "dictionary", "tts", "settings", "about"]);
         assert_eq!(studios().iter().find(|studio| studio.id == "field").unwrap().screens,
             ["project", "plattegrond", "ifc", "opname", "inspectie", "oplevering", "dashboard", "export", "koppelingen", "handleiding"]);
+        assert_eq!(studios().iter().find(|studio| studio.id == "composer").unwrap().screens.len(), 18);
     }
 
     #[test]
@@ -2833,6 +2888,30 @@ mod tests {
                 let _ = app.studios_page(Theme::Light, Language::Dutch);
             }
         }
+    }
+
+    #[test]
+    fn composer_native_routes_and_sidebar_modes_follow_pinned_source() {
+        let d = composer_native::data();
+        assert_eq!(d.routes.len(), 18);
+        assert_eq!(d.screenshots.len(), 3);
+        assert_eq!(d.presets.len(), 24);
+        assert_eq!(d.packages.len(), 19);
+        let mut app = StyleRepo::default();
+        let studio = studios().iter().position(|s| s.id == "composer").unwrap();
+        let _ = app.update(Action::SelectStudio(studio));
+        assert_eq!(app.chrome_mode(), ChromeMode::SidebarCompact);
+        assert!(!app.composer_advanced);
+        let advanced = d.routes.iter().position(|r| r.path == "/dashboard").unwrap();
+        let _ = app.update(Action::ComposerRoute(advanced));
+        assert!(app.composer_advanced);
+        assert_eq!(app.composer_route, advanced);
+        let _ = app.update(Action::ComposerAdvanced(false));
+        assert_eq!(app.composer_route, 0);
+        let _ = app.update(Action::ComposerPackage("blender-bonsai".into()));
+        assert_eq!(app.composer_packages, ["blender-bonsai"]);
+        let _ = app.update(Action::ComposerPackage("blender-bonsai".into()));
+        assert!(app.composer_packages.is_empty());
     }
 
     #[test]
@@ -2888,6 +2967,11 @@ mod tests {
             let tabs = app.ribbon(Language::Dutch);
             if studio.id == "energy" || studio.id == "speech" {
                 assert_eq!(app.chrome_mode(), if studio.id == "energy" { ChromeMode::Workflow } else { ChromeMode::Sidebar });
+                assert!(tabs.is_empty());
+                continue;
+            }
+            if studio.id == "composer" {
+                assert_eq!(app.chrome_mode(), ChromeMode::SidebarCompact);
                 assert!(tabs.is_empty());
                 continue;
             }

@@ -79,10 +79,32 @@ for path, route, state in [
                         'route': route, 'state': state, 'sha256': hashlib.sha256(raw).hexdigest(),
                         'url': f'https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/{COMMIT}/{source}'})
 
+preset_path = 'src/lib/presets.ts'
+preset_source = show(preset_path).decode()
+preset_matches = re.findall(
+    r'\n  \{\s*id: "([^"]+)",\s*name: "([^"]+)",\s*description: "([^"]+)",'
+    r'\s*packages: \[([^]]*)\],\s*color: "([^"]+)"', preset_source)
+assert len(preset_matches) == 24, len(preset_matches)
+presets = [{'id': id_, 'name': name, 'description': description,
+            'packages': re.findall(r'"([^"]+)"', package_list), 'color': color,
+            'evidence': evidence(preset_path, f'id: "{id_}"')}
+           for id_, name, description, package_list, color in preset_matches]
+
+package_path = 'src/lib/packages.ts'
+package_source = show(package_path).decode()
+package_matches = re.findall(
+    r'\n  \{\s*id: "([^"]+)",\s*name: "([^"]+)",\s*description: "([^"]+)",'
+    r'\s*category: "([^"]+)",\s*skillCount: (\d+)', package_source)
+assert len(package_matches) == 19, len(package_matches)
+packages = [{'id': id_, 'name': name, 'description': description, 'category': category,
+             'skill_count': int(skill_count), 'evidence': evidence(package_path, f'id: "{id_}"')}
+            for id_, name, description, category, skill_count in package_matches]
+
 manifest = {
     'repository': 'OpenAEC-Workspace-Composer', 'commit': COMMIT,
     'routes': routes, 'redirects': redirects, 'orphan_pages': orphan_pages,
     'unmatched_link': unmatched_link, 'screenshots': screenshots,
+    'presets': presets, 'packages': packages,
     'modes': {
         'default': 'simple', 'default_evidence': evidence('src/stores/app.store.ts', 'createSignal<AppMode>("simple")'),
         'simple_evidence': evidence('src/layouts/AppLayout.tsx', '<Show when={!advanced()}>'),
@@ -104,6 +126,7 @@ manifest = {
     },
     'limits': ['Three captured screens cover two simple-mode pages and the completed install state, not all 18 routes.',
                'The captured UI is dark and may predate current source; layout evidence is pinned to the source commit.',
+               'The Presets screenshot displays a count of 20, while the pinned source defines 24 preset entries.',
                'Package and skill data are not reproduced by the review mock.'],
 }
 (ROOT / 'harmonization/composer-screen-routes.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')

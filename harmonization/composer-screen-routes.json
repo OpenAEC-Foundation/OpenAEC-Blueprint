@@ -486,6 +486,632 @@
       "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/docs/screenshots/install-complete.png"
     }
   ],
+  "presets": [
+    {
+      "id": "bim-core",
+      "name": "BIM Core",
+      "description": "3D modeling + IFC bestandsbeheer met Blender en Bonsai BIM plugin",
+      "packages": [
+        "blender-bonsai"
+      ],
+      "color": "#3498db",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 19,
+        "marker": "id: \"bim-core\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L19"
+      }
+    },
+    {
+      "id": "bim-web",
+      "name": "BIM Web",
+      "description": "BIM modellen bekijken in de browser. IFC laden, navigeren en inspecteren",
+      "packages": [
+        "thatopen",
+        "threejs"
+      ],
+      "color": "#1abc9c",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 27,
+        "marker": "id: \"bim-web\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L27"
+      }
+    },
+    {
+      "id": "aec-gis",
+      "name": "AEC + GIS",
+      "description": "Combineer 3D bouwmodellen met geografische data en kaarten",
+      "packages": [
+        "blender-bonsai",
+        "qgis"
+      ],
+      "color": "#9b59b6",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 35,
+        "marker": "id: \"aec-gis\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L35"
+      }
+    },
+    {
+      "id": "speckle-collab",
+      "name": "Speckle Collaboration",
+      "description": "Deel BIM data tussen teams. Connectors voor Revit, Rhino, Blender, AutoCAD",
+      "packages": [
+        "speckle",
+        "cross-tech-aec"
+      ],
+      "color": "#8e44ad",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 43,
+        "marker": "id: \"speckle-collab\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L43"
+      }
+    },
+    {
+      "id": "frappe-core",
+      "name": "Frappe / ERPNext",
+      "description": "ERP systeem bouwen. Doctypes, API's, workflows, rapportages",
+      "packages": [
+        "frappe"
+      ],
+      "color": "#2ecc71",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 53,
+        "marker": "id: \"frappe-core\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L53"
+      }
+    },
+    {
+      "id": "nextcloud-core",
+      "name": "Nextcloud",
+      "description": "Apps bouwen voor Nextcloud. PHP backend, Vue.js frontend, WebDAV API",
+      "packages": [
+        "nextcloud"
+      ],
+      "color": "#0082C9",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 61,
+        "marker": "id: \"nextcloud-core\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L61"
+      }
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "description": "Workflows automatiseren. Triggers, nodes, API koppelingen, credentials",
+      "packages": [
+        "n8n"
+      ],
+      "color": "#e67e22",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 69,
+        "marker": "id: \"automation\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L69"
+      }
+    },
+    {
+      "id": "tauri-app",
+      "name": "Tauri Desktop",
+      "description": "Native desktop app voor Windows/Mac/Linux. Rust backend, web frontend",
+      "packages": [
+        "tauri-2",
+        "solidjs",
+        "vite"
+      ],
+      "color": "#FFC131",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 79,
+        "marker": "id: \"tauri-app\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L79"
+      }
+    },
+    {
+      "id": "react-app",
+      "name": "React App",
+      "description": "React componenten, hooks, Server Components, testing en performance",
+      "packages": [
+        "react",
+        "vite"
+      ],
+      "color": "#61DAFB",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 87,
+        "marker": "id: \"react-app\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L87"
+      }
+    },
+    {
+      "id": "pdf-tools",
+      "name": "PDF Tools",
+      "description": "PDF bestanden renderen, bewerken en genereren. Formulieren, annotaties, fonts",
+      "packages": [
+        "pdfjs",
+        "pdf-lib"
+      ],
+      "color": "#e74c3c",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 95,
+        "marker": "id: \"pdf-tools\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L95"
+      }
+    },
+    {
+      "id": "3d-web",
+      "name": "3D Web",
+      "description": "Interactieve 3D scenes in de browser. WebGL, materialen, loaders, shaders",
+      "packages": [
+        "threejs"
+      ],
+      "color": "#2980b9",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 103,
+        "marker": "id: \"3d-web\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L103"
+      }
+    },
+    {
+      "id": "docker-core",
+      "name": "Docker",
+      "description": "Containers bouwen en orchestreren. Dockerfile, Compose, multi-stage builds",
+      "packages": [
+        "docker"
+      ],
+      "color": "#0db7ed",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 113,
+        "marker": "id: \"docker-core\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L113"
+      }
+    },
+    {
+      "id": "diagrams",
+      "name": "Diagrams",
+      "description": "Automatisch architectuur- en flowdiagrammen genereren met Draw.io/mxGraph",
+      "packages": [
+        "drawio"
+      ],
+      "color": "#F08705",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 121,
+        "marker": "id: \"diagrams\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L121"
+      }
+    },
+    {
+      "id": "open-pdf-studio",
+      "name": "Open PDF Studio",
+      "description": "Complete desktop PDF editor. Rendering, creatie, annotaties en meertaligheid in Tauri",
+      "packages": [
+        "tauri-2",
+        "solidjs",
+        "pdfjs",
+        "pdf-lib",
+        "fluent-i18n",
+        "open-pdf-studio"
+      ],
+      "color": "#D32F2F",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 131,
+        "marker": "id: \"open-pdf-studio\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L131"
+      }
+    },
+    {
+      "id": "i18n-web",
+      "name": "i18n Web App",
+      "description": "Meertalige web applicatie met React, Vite en Mozilla Fluent vertaalsysteem",
+      "packages": [
+        "react",
+        "vite",
+        "fluent-i18n"
+      ],
+      "color": "#7B1FA2",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 139,
+        "marker": "id: \"i18n-web\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L139"
+      }
+    },
+    {
+      "id": "bim-validator",
+      "name": "BIM Validator",
+      "description": "IFC modellen valideren en controleren. Cross-technology integratie voor kwaliteitsborging",
+      "packages": [
+        "blender-bonsai",
+        "cross-tech-aec"
+      ],
+      "color": "#1565C0",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 147,
+        "marker": "id: \"bim-validator\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L147"
+      }
+    },
+    {
+      "id": "ifc-web-platform",
+      "name": "IFC Web Platform",
+      "description": "Volledige BIM web stack. IFC laden, 3D weergave, Speckle samenwerking en Docker deployment",
+      "packages": [
+        "thatopen",
+        "threejs",
+        "speckle",
+        "docker"
+      ],
+      "color": "#00695C",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 155,
+        "marker": "id: \"ifc-web-platform\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L155"
+      }
+    },
+    {
+      "id": "erp-automation",
+      "name": "ERP + Automation",
+      "description": "ERPNext met geautomatiseerde workflows. Doctypes, API koppelingen en n8n triggers",
+      "packages": [
+        "frappe",
+        "n8n",
+        "docker"
+      ],
+      "color": "#E65100",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 163,
+        "marker": "id: \"erp-automation\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L163"
+      }
+    },
+    {
+      "id": "nextcloud-stack",
+      "name": "Nextcloud Stack",
+      "description": "Nextcloud apps en integraties. PHP backend, Vue.js frontend, geautomatiseerde workflows",
+      "packages": [
+        "nextcloud",
+        "n8n",
+        "docker"
+      ],
+      "color": "#0082C9",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 171,
+        "marker": "id: \"nextcloud-stack\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L171"
+      }
+    },
+    {
+      "id": "solidjs-app",
+      "name": "SolidJS App",
+      "description": "Reactieve web applicatie met SolidJS en Vite. Signals, stores en fine-grained reactivity",
+      "packages": [
+        "solidjs",
+        "vite"
+      ],
+      "color": "#4169E1",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 179,
+        "marker": "id: \"solidjs-app\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L179"
+      }
+    },
+    {
+      "id": "tauri-1-to-2",
+      "name": "Tauri 1 → 2",
+      "description": "Plugin system, IPC, capabilities migratie",
+      "packages": [],
+      "color": "#FFC131",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 190,
+        "marker": "id: \"tauri-1-to-2\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L190"
+      }
+    },
+    {
+      "id": "react-18-to-19",
+      "name": "React 18 → 19",
+      "description": "Compiler, actions, nieuwe hooks",
+      "packages": [],
+      "color": "#61DAFB",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 200,
+        "marker": "id: \"react-18-to-19\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L200"
+      }
+    },
+    {
+      "id": "erpnext-14-to-15",
+      "name": "ERPNext 14 → 15",
+      "description": "UI framework, API changes",
+      "packages": [],
+      "color": "#0089FF",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 210,
+        "marker": "id: \"erpnext-14-to-15\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L210"
+      }
+    },
+    {
+      "id": "custom-upgrade",
+      "name": "Custom Upgrade",
+      "description": "Upgrade workspace voor elk framework",
+      "packages": [],
+      "color": "#95a5a6",
+      "evidence": {
+        "file": "src/lib/presets.ts",
+        "line": 220,
+        "marker": "id: \"custom-upgrade\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/presets.ts#L220"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "id": "blender-bonsai",
+      "name": "Blender-Bonsai-IfcOpenShell-Sverchok",
+      "description": "73 deterministic Claude AI skills for Blender, Bonsai, IfcOpenShell and Sverchok. AEC Python development",
+      "category": "aec-bim",
+      "skill_count": 73,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 15,
+        "marker": "id: \"blender-bonsai\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L15"
+      }
+    },
+    {
+      "id": "thatopen",
+      "name": "ThatOpen Engine",
+      "description": "Production-ready Claude Code skills for ThatOpen Engine 3.3.x. 18 skills for building web-based BIM applications",
+      "category": "aec-bim",
+      "skill_count": 18,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 25,
+        "marker": "id: \"thatopen\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L25"
+      }
+    },
+    {
+      "id": "speckle",
+      "name": "Speckle",
+      "description": "25 deterministic Claude AI skills for Speckle Data Platform. Object model, GraphQL API, Python/C# SDKs, connectors",
+      "category": "aec-bim",
+      "skill_count": 25,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 35,
+        "marker": "id: \"speckle\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L35"
+      }
+    },
+    {
+      "id": "qgis",
+      "name": "QGIS",
+      "description": "19 deterministic Claude Code skills for QGIS/PyQGIS spatial analysis, map creation, geoprocessing, and plugin development",
+      "category": "aec-bim",
+      "skill_count": 19,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 45,
+        "marker": "id: \"qgis\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L45"
+      }
+    },
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "description": "24 deterministic Claude AI skills for Three.js 3D/WebGL/WebGPU development",
+      "category": "aec-bim",
+      "skill_count": 24,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 55,
+        "marker": "id: \"threejs\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L55"
+      }
+    },
+    {
+      "id": "frappe",
+      "name": "Frappe Framework",
+      "description": "60 deterministic Claude AI skills for Frappe Framework & ERPNext v14-v16 development and operations",
+      "category": "erp-business",
+      "skill_count": 60,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 67,
+        "marker": "id: \"frappe\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L67"
+      }
+    },
+    {
+      "id": "nextcloud",
+      "name": "Nextcloud",
+      "description": "24 deterministic Claude AI skills for Nextcloud 28+ development. PHP, TypeScript, Vue.js, OCS API, WebDAV",
+      "category": "erp-business",
+      "skill_count": 24,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 77,
+        "marker": "id: \"nextcloud\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L77"
+      }
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "description": "21 deterministic Claude AI skills for n8n v1.x workflow automation",
+      "category": "erp-business",
+      "skill_count": 21,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 87,
+        "marker": "id: \"n8n\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L87"
+      }
+    },
+    {
+      "id": "tauri-2",
+      "name": "Tauri 2",
+      "description": "27 deterministic Claude AI skills for Tauri 2 desktop app development. Rust + TypeScript full-stack",
+      "category": "web-dev",
+      "skill_count": 27,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 99,
+        "marker": "id: \"tauri-2\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L99"
+      }
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "description": "24 deterministic Claude skills for React 18 and 19 development. Hooks, components, Server Components, testing",
+      "category": "web-dev",
+      "skill_count": 24,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 109,
+        "marker": "id: \"react\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L109"
+      }
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "description": "22 deterministic Claude AI skills for Vite 6, 7 and 8. Config, plugin API, HMR, SSR, library mode",
+      "category": "web-dev",
+      "skill_count": 22,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 119,
+        "marker": "id: \"vite\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L119"
+      }
+    },
+    {
+      "id": "solidjs",
+      "name": "SolidJS",
+      "description": "16 deterministic Claude AI skills for SolidJS reactive framework development",
+      "category": "web-dev",
+      "skill_count": 16,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 129,
+        "marker": "id: \"solidjs\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L129"
+      }
+    },
+    {
+      "id": "pdfjs",
+      "name": "PDF.js",
+      "description": "15 deterministic Claude AI skills for PDF.js (pdfjs-dist 5.x). Rendering, viewer development, error handling",
+      "category": "web-dev",
+      "skill_count": 15,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 139,
+        "marker": "id: \"pdfjs\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L139"
+      }
+    },
+    {
+      "id": "pdf-lib",
+      "name": "pdf-lib",
+      "description": "17 deterministic skills that teach Claude to write correct pdf-lib code for PDF document generation",
+      "category": "web-dev",
+      "skill_count": 17,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 149,
+        "marker": "id: \"pdf-lib\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L149"
+      }
+    },
+    {
+      "id": "fluent-i18n",
+      "name": "Fluent i18n",
+      "description": "16 deterministic Claude AI skills for Project Fluent (Mozilla i18n). FTL syntax + TypeScript integration",
+      "category": "web-dev",
+      "skill_count": 16,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 159,
+        "marker": "id: \"fluent-i18n\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L159"
+      }
+    },
+    {
+      "id": "open-pdf-studio",
+      "name": "Open PDF Studio",
+      "description": "6 deterministic Claude skills for open-pdf-studio technology boundaries. PDF.js, pdf-lib, SolidJS, Tauri 2",
+      "category": "cross-tech",
+      "skill_count": 6,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 169,
+        "marker": "id: \"open-pdf-studio\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L169"
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "description": "Docker and Docker Compose skill package. Dockerfile best practices, multi-stage builds, Compose orchestration, container security",
+      "category": "devops",
+      "skill_count": 22,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 181,
+        "marker": "id: \"docker\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L181"
+      }
+    },
+    {
+      "id": "drawio",
+      "name": "Draw.io",
+      "description": "22 deterministic Claude skills for Draw.io diagram generation",
+      "category": "devops",
+      "skill_count": 22,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 191,
+        "marker": "id: \"drawio\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L191"
+      }
+    },
+    {
+      "id": "cross-tech-aec",
+      "name": "Cross-Tech AEC",
+      "description": "15 deterministic Claude skills for cross-technology AEC integration. Bridging IFC, ERPNext, FreeCAD, Speckle, QGIS, Three.js, n8n, Docker",
+      "category": "cross-tech",
+      "skill_count": 15,
+      "evidence": {
+        "file": "src/lib/packages.ts",
+        "line": 203,
+        "marker": "id: \"cross-tech-aec\"",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/lib/packages.ts#L203"
+      }
+    }
+  ],
   "modes": {
     "default": "simple",
     "default_evidence": {
@@ -566,6 +1192,7 @@
   "limits": [
     "Three captured screens cover two simple-mode pages and the completed install state, not all 18 routes.",
     "The captured UI is dark and may predate current source; layout evidence is pinned to the source commit.",
+    "The Presets screenshot displays a count of 20, while the pinned source defines 24 preset entries.",
     "Package and skill data are not reproduced by the review mock."
   ]
 }
