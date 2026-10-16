@@ -12,6 +12,8 @@ Project OconDat is apart op zijn twee webinterfaces geauditeerd: 19 UI-codebesta
 
 Een eerste aparte audit voor SVG's die direct in UI-code staan heeft [18 gebruikte BCF Platform-iconen](../design/bcf-inline-icon-review.html) geëxtraheerd. Hun [index](bcf-inline-ui-icons.json) bevat de definitieregel, de aanroepregel en de hash op commit `e98fb97f5f23`; de zelfstandige SVG-reviewkopieën staan onder `inline-ui-icons/openaec-bcf-platform/`. Deze vormen zijn nog geen canonieke crate-iconen en worden niet bij de 577 bestandsassets opgeteld zonder de categorie te vermelden. Vier ongebruikte BCF-definities blijven buiten de telling.
 
+Ook [47 gebruikte Open Calc Studio-linticonen](../design/calc-inline-icon-review.html) zijn geëxtraheerd. Hun [index](calc-inline-ui-icons.json) volgt `icons.ts` naar concrete aanroepen in Home, Offerte, Rapportage en Tekstopmaak op commit `b47042704efa`; de SVG-reviewkopieën staan onder `inline-ui-icons/open-calc-studio/`. Andere codegetekende SVG's, bijvoorbeeld diagrammen en concepttekeningen, zijn hierdoor niet automatisch UI-iconen.
+
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
 
 | Repository | UI-techniek (manifest) | Visuele bronbestanden | Icon-gerelateerde bronbestanden | Fouten |

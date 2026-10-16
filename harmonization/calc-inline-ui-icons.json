@@ -1,0 +1,754 @@
+{
+  "repository": "open-calc-studio",
+  "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "scope": "47 UI-rendered ribbon SVG definitions, excluding other code or technical SVGs",
+  "count": 47,
+  "icons": [
+    {
+      "name": "company",
+      "identifier": "companyIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 4,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 377
+        }
+      ],
+      "sha256": "954dea0461de6f59fc1923fede48d2fa73b7c5bf058672547a631580eb09aa1b",
+      "svg": "inline-ui-icons/open-calc-studio/company.svg"
+    },
+    {
+      "name": "clipboard",
+      "identifier": "clipboardIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 8,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 230
+        }
+      ],
+      "sha256": "617ce4a2f7b1a7ffaabf6b3715b93cd2378a08f373821f300af8c7a94accdb0b",
+      "svg": "inline-ui-icons/open-calc-studio/clipboard.svg"
+    },
+    {
+      "name": "cut",
+      "identifier": "cutIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 9,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 232
+        }
+      ],
+      "sha256": "0c5d9ee729990086b4acbe9775c6962a002182e1358d5d3f43beb021b0d00d1e",
+      "svg": "inline-ui-icons/open-calc-studio/cut.svg"
+    },
+    {
+      "name": "copy",
+      "identifier": "copyIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 10,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 233
+        }
+      ],
+      "sha256": "60d793372b1807101a0d571bd67e5944d0b263913a758ff309c6ff7d653d3597",
+      "svg": "inline-ui-icons/open-calc-studio/copy.svg"
+    },
+    {
+      "name": "undo",
+      "identifier": "undoIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 11,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 238
+        }
+      ],
+      "sha256": "14db4927eb96eac8b39940750fc2a8596cb42b9790d986b3e8944a9616c2e637",
+      "svg": "inline-ui-icons/open-calc-studio/undo.svg"
+    },
+    {
+      "name": "redo",
+      "identifier": "redoIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 12,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 263
+        }
+      ],
+      "sha256": "50d21335dc3e00e5e3e0b688f6ee2f0c6db6654039b8d2d146e088ed9041923c",
+      "svg": "inline-ui-icons/open-calc-studio/redo.svg"
+    },
+    {
+      "name": "add-chapter",
+      "identifier": "addChapterIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 15,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 211
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 64
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 65
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 66
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 67
+        }
+      ],
+      "sha256": "773676d73c94c76b47d7566ffb8a21562c9325f631c4bc22eba2bfc839940bd3",
+      "svg": "inline-ui-icons/open-calc-studio/add-chapter.svg"
+    },
+    {
+      "name": "add-begrotingspost",
+      "identifier": "addBegrotingspostIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 16,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 212
+        }
+      ],
+      "sha256": "bc069a77c65943cbab4a8c39082a1aee3695fbd8f5e12be8f73d6fcf4a3ed861",
+      "svg": "inline-ui-icons/open-calc-studio/add-begrotingspost.svg"
+    },
+    {
+      "name": "add-bewakingspost",
+      "identifier": "addBewakingspostIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 17,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 213
+        },
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 299
+        }
+      ],
+      "sha256": "2ebad6367a2cb2eb4f8a401ea38880069b33fc37f256de365ebc04c3c3b9e3b8",
+      "svg": "inline-ui-icons/open-calc-studio/add-bewakingspost.svg"
+    },
+    {
+      "name": "add-regel",
+      "identifier": "addRegelIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 18,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 216
+        },
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 221
+        }
+      ],
+      "sha256": "796f33fcd4f6a61c7ba4f65fe153dbc99a9e13b4c9a969d75191ffdfe6fc4025",
+      "svg": "inline-ui-icons/open-calc-studio/add-regel.svg"
+    },
+    {
+      "name": "add-tekstregel",
+      "identifier": "addTekstregelIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 19,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 217
+        }
+      ],
+      "sha256": "b92be054eaf9ecee1f690744d1e8ffdea3cd7b57e6001edf997b2b0feacd4915",
+      "svg": "inline-ui-icons/open-calc-studio/add-tekstregel.svg"
+    },
+    {
+      "name": "add-witregel",
+      "identifier": "addWitregelIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 20,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 218
+        }
+      ],
+      "sha256": "f8e1d156a90cdbd9b6b61ad625b90c51e962eb902a65d63347a476d6d257fb2d",
+      "svg": "inline-ui-icons/open-calc-studio/add-witregel.svg"
+    },
+    {
+      "name": "delete",
+      "identifier": "deleteIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 21,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 226
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 69
+        }
+      ],
+      "sha256": "59fb523dc95ab9c17ec1efdb1dfd07652a9177735343358d0c020a2db71633e6",
+      "svg": "inline-ui-icons/open-calc-studio/delete.svg"
+    },
+    {
+      "name": "export",
+      "identifier": "exportIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 24,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 402
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 211
+        }
+      ],
+      "sha256": "3e57fd346ca7b8e81d7d7b01477ffc92313832b4383b665881624a950eee93a0",
+      "svg": "inline-ui-icons/open-calc-studio/export.svg"
+    },
+    {
+      "name": "report",
+      "identifier": "reportIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 25,
+      "usage": [
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 44
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 50
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 56
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 89
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 97
+        }
+      ],
+      "sha256": "167cf764b3ab389388ae23ec34a91473648e0611be10d2f0764ca5338ceba44d",
+      "svg": "inline-ui-icons/open-calc-studio/report.svg"
+    },
+    {
+      "name": "report-werkbeschrijving",
+      "identifier": "reportWerkbeschrijvingIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 33,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 52
+        }
+      ],
+      "sha256": "818d48be1433765530abe07e4cfd993a53b9a234824e54b0177a20617904360b",
+      "svg": "inline-ui-icons/open-calc-studio/report-werkbeschrijving.svg"
+    },
+    {
+      "name": "report-hoofdaanneming",
+      "identifier": "reportHoofdaannemingIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 36,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 53
+        }
+      ],
+      "sha256": "1a6b23c531f5a35078b92fb67785340317d56760576009075f56aab41c307e79",
+      "svg": "inline-ui-icons/open-calc-studio/report-hoofdaanneming.svg"
+    },
+    {
+      "name": "report-onderaanneming",
+      "identifier": "reportOnderaannemingIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 39,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 54
+        }
+      ],
+      "sha256": "d1e783053cee3556e02760a29aabfc2b74f1d94b7cdbd76e9fd80647d985ef14",
+      "svg": "inline-ui-icons/open-calc-studio/report-onderaanneming.svg"
+    },
+    {
+      "name": "report-inschrijfstaat",
+      "identifier": "reportInschrijfstaatIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 42,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 55
+        }
+      ],
+      "sha256": "73b6652f65095f7e8b1e811035e22b74c9c92a5710f16bad4e61fb31437b10fe",
+      "svg": "inline-ui-icons/open-calc-studio/report-inschrijfstaat.svg"
+    },
+    {
+      "name": "report-nacalculatie",
+      "identifier": "reportNacalculatieIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 45,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 56
+        }
+      ],
+      "sha256": "2839e7d7ded01bf0f6dc9b2c3975670f88fb9a8eb01b0d2b177b154e2f44fc2e",
+      "svg": "inline-ui-icons/open-calc-studio/report-nacalculatie.svg"
+    },
+    {
+      "name": "report-bouw1",
+      "identifier": "reportBouw1Icon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 48,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 57
+        }
+      ],
+      "sha256": "e51faa3eda92bf57463a0ff93b6b23238b76462d3f89962196a82f80e3ff8c5e",
+      "svg": "inline-ui-icons/open-calc-studio/report-bouw1.svg"
+    },
+    {
+      "name": "report-bouw2",
+      "identifier": "reportBouw2Icon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 51,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 58
+        }
+      ],
+      "sha256": "ac5ab5e3e888d7075af0d611ad2432f3436ee2e98a5f3fa2ce7454c28ab5989d",
+      "svg": "inline-ui-icons/open-calc-studio/report-bouw2.svg"
+    },
+    {
+      "name": "report-directie",
+      "identifier": "reportDirectieIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 54,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 59
+        }
+      ],
+      "sha256": "335d8fc2c64779c48eb62c24425873392ab4280f54ec5186342b8368e9723e67",
+      "svg": "inline-ui-icons/open-calc-studio/report-directie.svg"
+    },
+    {
+      "name": "text-bold",
+      "identifier": "textBoldIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 57,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 90
+        }
+      ],
+      "sha256": "09822d40151f414df09d38fdf4b85df1169c356b359ae22fd90e4b08259f3455",
+      "svg": "inline-ui-icons/open-calc-studio/text-bold.svg"
+    },
+    {
+      "name": "text-italic",
+      "identifier": "textItalicIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 58,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 93
+        }
+      ],
+      "sha256": "27d461d175e7530bdd9a52cb93cd268ea0167b3f233953faa1b2d126aa05905a",
+      "svg": "inline-ui-icons/open-calc-studio/text-italic.svg"
+    },
+    {
+      "name": "text-underline",
+      "identifier": "textUnderlineIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 59,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 96
+        }
+      ],
+      "sha256": "0f01fce635d2e37a99d2b2daf8c2af72f5a9035565a1437f6aaa286d3aaf649a",
+      "svg": "inline-ui-icons/open-calc-studio/text-underline.svg"
+    },
+    {
+      "name": "text-align-left",
+      "identifier": "textAlignLeftIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 60,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 109
+        }
+      ],
+      "sha256": "3d85f4b346bbe2e418dfbf4e7e4d0b8d119f6abf49e81b1d4fc26c406acb8116",
+      "svg": "inline-ui-icons/open-calc-studio/text-align-left.svg"
+    },
+    {
+      "name": "text-align-center",
+      "identifier": "textAlignCenterIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 61,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 112
+        }
+      ],
+      "sha256": "82d65cd12ef0715f03c01d43fbcae1709720b80d5da127cf233eca1d67467e40",
+      "svg": "inline-ui-icons/open-calc-studio/text-align-center.svg"
+    },
+    {
+      "name": "text-align-right",
+      "identifier": "textAlignRightIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 62,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 115
+        }
+      ],
+      "sha256": "5513a160b9e5212bff01feb535a97856433bf7a254cb2433649cbc6ff93af678",
+      "svg": "inline-ui-icons/open-calc-studio/text-align-right.svg"
+    },
+    {
+      "name": "text-size-up",
+      "identifier": "textSizeUpIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 63,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 102
+        }
+      ],
+      "sha256": "a067ec2e161c10a0a7ce68cfe2019430adad8ba4f52613f7d73a9055d6256635",
+      "svg": "inline-ui-icons/open-calc-studio/text-size-up.svg"
+    },
+    {
+      "name": "text-size-down",
+      "identifier": "textSizeDownIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 64,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 104
+        }
+      ],
+      "sha256": "a48c8d2e57a57e757954413ec82c1a88cb1086326380c177ed6f33b0b19f51ef",
+      "svg": "inline-ui-icons/open-calc-studio/text-size-down.svg"
+    },
+    {
+      "name": "text-clear",
+      "identifier": "textClearIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 65,
+      "usage": [
+        {
+          "path": "src/components/ribbon/TekstopmaakTab.tsx",
+          "line": 121
+        }
+      ],
+      "sha256": "4bbad2d7df37d5b9c6391faa6cd0a4cf2cae33800d9e85113b0244d1ff97b2cf",
+      "svg": "inline-ui-icons/open-calc-studio/text-clear.svg"
+    },
+    {
+      "name": "print",
+      "identifier": "printIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 68,
+      "usage": [
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 165
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 204
+        }
+      ],
+      "sha256": "8fcfcb7a2f11817d2d2b4c0d63b21895ded0f85bc5f5cbc471eca09f14da97d1",
+      "svg": "inline-ui-icons/open-calc-studio/print.svg"
+    },
+    {
+      "name": "pdf-export",
+      "identifier": "pdfExportIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 69,
+      "usage": [
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 132
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 208
+        }
+      ],
+      "sha256": "092d111b1253dc41027a0512604e0cd4e591393d088320beda62cc7918dad87a",
+      "svg": "inline-ui-icons/open-calc-studio/pdf-export.svg"
+    },
+    {
+      "name": "excel-export",
+      "identifier": "excelExportIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 70,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 210
+        }
+      ],
+      "sha256": "3a558ccde5f5ad2d4767fb7ea5fcab5e6e9069fdcf98c1d2082b35554fd9b2ca",
+      "svg": "inline-ui-icons/open-calc-studio/excel-export.svg"
+    },
+    {
+      "name": "settings",
+      "identifier": "settingsIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 73,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 268
+        },
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 330
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 82
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 83
+        },
+        {
+          "path": "src/components/ribbon/OfferteTab.tsx",
+          "line": 84
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 165
+        }
+      ],
+      "sha256": "6744c12b2610aed8520100eba3fafeabbb65aabcb6de92f60d85074e07701f08",
+      "svg": "inline-ui-icons/open-calc-studio/settings.svg"
+    },
+    {
+      "name": "portrait",
+      "identifier": "portraitIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 76,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 184
+        }
+      ],
+      "sha256": "06586500e845d6f80ec042cf74c512f77537707e1c0be89fb2e7b9c641731fc0",
+      "svg": "inline-ui-icons/open-calc-studio/portrait.svg"
+    },
+    {
+      "name": "landscape",
+      "identifier": "landscapeIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 77,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 190
+        }
+      ],
+      "sha256": "69c7adb35c05b7f8372c747c82f5ec2bf4e80cd196609d835d0b58def6225729",
+      "svg": "inline-ui-icons/open-calc-studio/landscape.svg"
+    },
+    {
+      "name": "page-size",
+      "identifier": "pageSizeIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 78,
+      "usage": [
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 172
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 178
+        },
+        {
+          "path": "src/components/ribbon/RapportageTab.tsx",
+          "line": 196
+        }
+      ],
+      "sha256": "bfb33621833fc73d80cb8800f4e14e9ddbdcae01b2acf92f95995e570e570ef3",
+      "svg": "inline-ui-icons/open-calc-studio/page-size.svg"
+    },
+    {
+      "name": "view-st",
+      "identifier": "viewStIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 83,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 277
+        },
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 291
+        }
+      ],
+      "sha256": "2ea6b91e09e2d6d7430d83513ad95c6110799f9aeee5af348462b4a6e56ad381",
+      "svg": "inline-ui-icons/open-calc-studio/view-st.svg"
+    },
+    {
+      "name": "view-wp-calc",
+      "identifier": "viewWpCalcIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 84,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 284
+        }
+      ],
+      "sha256": "07d7f83ca6f62a69db4707b4b897b991484310a0d00985e028c3f2b813224860",
+      "svg": "inline-ui-icons/open-calc-studio/view-wp-calc.svg"
+    },
+    {
+      "name": "track-changes",
+      "identifier": "trackChangesIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 87,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 339
+        }
+      ],
+      "sha256": "295ddfb265fc98466884564e332c88947ada714c61165833c7c4cca2af597bc2",
+      "svg": "inline-ui-icons/open-calc-studio/track-changes.svg"
+    },
+    {
+      "name": "clear-marks",
+      "identifier": "clearMarksIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 89,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 348
+        }
+      ],
+      "sha256": "490a8481318aeac44d91df10ab33719f152a4e08c10d4c57f9ef5262d457930a",
+      "svg": "inline-ui-icons/open-calc-studio/clear-marks.svg"
+    },
+    {
+      "name": "row-highlight",
+      "identifier": "rowHighlightIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 91,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 357
+        }
+      ],
+      "sha256": "67ad60eb06006219c37d2cb5b69053f06b4b8f45ed530f68cde60b3d60edee41",
+      "svg": "inline-ui-icons/open-calc-studio/row-highlight.svg"
+    },
+    {
+      "name": "cell-highlight",
+      "identifier": "cellHighlightIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 93,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 365
+        }
+      ],
+      "sha256": "96ce92f68a126d19b42c8b089e314abf58cfbd2b77a4e5cfe0fc3026536995ef",
+      "svg": "inline-ui-icons/open-calc-studio/cell-highlight.svg"
+    },
+    {
+      "name": "branch",
+      "identifier": "branchIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 95,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 386
+        }
+      ],
+      "sha256": "c885eafa45768a488cbf3c301f5aefe968849319737a2c61e62eddb0c9c2635f",
+      "svg": "inline-ui-icons/open-calc-studio/branch.svg"
+    },
+    {
+      "name": "option-set",
+      "identifier": "optionSetIcon",
+      "source": "src/components/ribbon/icons.ts",
+      "source_line": 97,
+      "usage": [
+        {
+          "path": "src/components/ribbon/HomeTab.tsx",
+          "line": 393
+        }
+      ],
+      "sha256": "2303a6bc40f0b78fd6cfc8abf24142881e89ee8fc5c8e88bf8174a1b24aee709",
+      "svg": "inline-ui-icons/open-calc-studio/option-set.svg"
+    }
+  ]
+}
