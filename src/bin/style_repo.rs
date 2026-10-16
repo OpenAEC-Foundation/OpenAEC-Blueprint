@@ -484,13 +484,13 @@ impl StyleRepo {
                             .height(27)
                             .on_press(Action::Show(Page::Layouts)),
                         ]
-                        .spacing(10),
+                        .spacing(8),
                         row![
                             widgets::dialog_button(
                                 l.text("Uitgeschakeld", "Disabled"),
                                 move |_, status| widgets::secondary_button_style(theme, status),
                             )
-                            .width(140)
+                            .width(110)
                             .height(27),
                             widgets::dialog_button(
                                 l.text("Dialoog", "Dialog"),
@@ -500,7 +500,7 @@ impl StyleRepo {
                             .height(27)
                             .on_press(Action::SampleDialog(true)),
                         ]
-                        .spacing(10),
+                        .spacing(8),
                     ]
                     .spacing(8),
                     text(l.text(

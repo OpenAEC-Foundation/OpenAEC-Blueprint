@@ -224,9 +224,12 @@ weergaven van Style Repo en Pointcloud op 720 × 480 px naast elkaar in Light en
 Forge. De gedeelde scrolbare navigatie en de footer blijven op die maat zichtbaar.
 De Style Repo-componentenpagina gaf aanvankelijk een rendercrash door vier
 voorbeeldknoppen op één rij. De knoppen staan nu op twee rijen; een regressietest
-rendert Bestand en de normale componentenpagina in beide thema's. In de normale
-werkruimte breken labels in de smalle zijpanelen nog onrustig af. Die responsieve
-paneelindeling is nog geen goedgekeurde pixelgelijke vorm.
+rendert Bestand en de normale componentenpagina in beide thema's. De gedeelde
+shell bewaart op 720 px minimaal 190 px voor de verkenner, 210 px voor
+Eigenschappen en 300 px voor het werkgebied. De bewaarde paneelverhoudingen
+keren terug bij verbreden. De normale componentenpagina toont nu volledige
+zijpaneellabels; compacte schermen van de andere tools vragen nog een eigen
+visuele beoordeling.
 
 ## FEM/BIM iconbeoordeling · ronde 1 en 2
 

@@ -10,8 +10,12 @@ pub mod metrics {
     pub const DOCUMENTS: u16 = 30;
     pub const STATUS: u16 = 22;
     pub const PANEL_DEFAULT: u16 = 240;
+    pub const PANEL_NARROW_MIN: u16 = 190;
+    pub const PROPERTY_PANEL_NARROW_MIN: u16 = 210;
+    pub const WORKSPACE_NARROW_MIN: u16 = 300;
     pub const PANEL_TOOLBAR: u16 = 24;
     pub const WINDOW_DEFAULT_WIDTH: u16 = 1280;
+    pub const WINDOW_MIN_WIDTH: u16 = 720;
     pub const CONTROL: u16 = 30;
     pub const ICON: u16 = 20;
     pub const GAP: u16 = 8;
@@ -136,7 +140,7 @@ pub enum Message<M> { Ui(UiEvent), Command(M), Document(DocumentEvent) }
 pub enum UiEvent {
     Tab(String), Backstage(bool), Settings(bool), SettingsSave, SettingsResetPrompt(bool), SettingsReset,
     SettingsEscape, SettingsPage(SettingsPage), SettingsThemeMenu(bool), Theme(Theme), Language(Language),
-    Scale(f64), ToggleLeft, ToggleRight, Resize(pane_grid::ResizeEvent),
+    Scale(f64), ToggleLeft, ToggleRight, Resize(pane_grid::ResizeEvent), WindowWidth(f32),
     DragWindow, Minimize, Maximize, CloseWindow,
 }
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
@@ -210,25 +214,48 @@ pub struct ShellState {
     pub(crate) panes: pane_grid::State<Region>,
     left_split: Option<pane_grid::Split>,
     right_split: Option<pane_grid::Split>,
+    window_width: f32,
 }
 impl Default for ShellState { fn default() -> Self { Self::new(Preferences::default()) } }
 impl ShellState {
     pub fn new(mut preferences: Preferences) -> Self {
         preferences.normalize();
         let (panes, _) = pane_grid::State::new(Region::Workspace);
-        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, settings_page:SettingsPage::General, settings_theme_open:false, settings_reset_confirm:false, settings_original:None, panes, left_split:None, right_split:None };
+        let mut state = Self { preferences, active_tab: String::new(), backstage:false, settings:false, settings_page:SettingsPage::General, settings_theme_open:false, settings_reset_confirm:false, settings_original:None, panes, left_split:None, right_split:None, window_width: metrics::WINDOW_DEFAULT_WIDTH as f32 };
         state.rebuild(); state
     }
+    /// Keep side panel labels readable when the window is narrowed, without
+    /// changing the ratios the user saved for a wider window.
+    pub fn set_window_width(&mut self, width: f32) {
+        if width.is_finite() && width >= metrics::WINDOW_MIN_WIDTH as f32 && (self.window_width - width).abs() >= 0.5 {
+            self.window_width = width;
+            self.rebuild();
+        }
+    }
     fn rebuild(&mut self) {
+        let width = self.window_width;
+        let minimum = metrics::PANEL_NARROW_MIN as f32;
+        let properties_minimum = metrics::PROPERTY_PANEL_NARROW_MIN as f32;
+        let workspace_minimum = metrics::WORKSPACE_NARROW_MIN as f32;
+        let left = if self.preferences.explorer_visible {
+            (width * self.preferences.explorer_ratio).max(minimum).min(
+                width - workspace_minimum - if self.preferences.properties_visible { properties_minimum } else { 0.0 }
+            )
+        } else { 0.0 };
+        let remaining = width - left;
+        let right = if self.preferences.properties_visible {
+            (remaining * (1.0 - self.preferences.properties_ratio))
+                .max(properties_minimum).min(remaining - workspace_minimum)
+        } else { 0.0 };
         let (mut panes, first) = pane_grid::State::new(if self.preferences.explorer_visible { Region::Explorer } else { Region::Workspace });
         self.left_split = None; self.right_split = None;
         let workspace = if self.preferences.explorer_visible {
             let (workspace, split) = panes.split(pane_grid::Axis::Vertical, first, Region::Workspace).expect("existing pane");
-            panes.resize(split, self.preferences.explorer_ratio); self.left_split = Some(split); workspace
+            panes.resize(split, left / width); self.left_split = Some(split); workspace
         } else { first };
         if self.preferences.properties_visible {
             let (_, split) = panes.split(pane_grid::Axis::Vertical, workspace, Region::Properties).expect("existing pane");
-            panes.resize(split, self.preferences.properties_ratio); self.right_split = Some(split);
+            panes.resize(split, 1.0 - right / remaining); self.right_split = Some(split);
         }
         self.panes = panes;
     }
@@ -285,6 +312,7 @@ impl ShellState {
                 if Some(event.split) == self.left_split { self.preferences.explorer_ratio = ratio; }
                 if Some(event.split) == self.right_split { self.preferences.properties_ratio = ratio; }
             }
+            UiEvent::WindowWidth(width) => self.set_window_width(*width),
             _ => {}
         }
     }
@@ -293,6 +321,28 @@ impl ShellState {
 #[cfg(test)]
 mod settings_tests {
     use super::*;
+
+    #[test]
+    fn narrow_window_keeps_panels_legible_and_restores_saved_ratios() {
+        let mut shell = ShellState::default();
+        let saved = (shell.preferences.explorer_ratio, shell.preferences.properties_ratio);
+        let pane_widths = |shell: &ShellState, width: f32| {
+            let regions = shell.panes.layout().pane_regions(2.0, iced::Size::new(width, 480.0));
+            shell.panes.iter().map(|(pane, region)| (*region, regions[pane].width)).collect::<Vec<_>>()
+        };
+        shell.set_window_width(720.0);
+        let narrow = pane_widths(&shell, 720.0);
+        assert!(narrow.iter().any(|(region, width)| *region == Region::Explorer && *width >= 185.0));
+        assert!(narrow.iter().any(|(region, width)| *region == Region::Properties && *width >= 205.0));
+        assert!(narrow.iter().any(|(region, width)| *region == Region::Workspace && *width >= 300.0));
+        assert_eq!((shell.preferences.explorer_ratio, shell.preferences.properties_ratio), saved);
+
+        shell.set_window_width(1280.0);
+        let wide = pane_widths(&shell, 1280.0);
+        for region in [Region::Explorer, Region::Properties] {
+            assert!(wide.iter().any(|(item, width)| *item == region && (*width - 240.0).abs() < 5.0));
+        }
+    }
 
     #[test]
     fn theme_choice_closes_its_menu_and_other_pages_do_not_leave_it_open() {

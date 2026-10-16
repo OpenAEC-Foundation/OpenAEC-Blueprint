@@ -59,6 +59,7 @@ fn render_sized_with_reset(
     let mut preferences = Preferences::default();
     preferences.theme = theme;
     let mut state = ShellState::new(preferences);
+    state.set_window_width(size.width);
     state.settings = show_settings;
     state.settings_reset_confirm = reset_confirm;
     state.backstage = backstage;

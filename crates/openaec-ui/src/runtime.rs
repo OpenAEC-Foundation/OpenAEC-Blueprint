@@ -88,6 +88,7 @@ impl<A:Application> Runtime<A> {
         Subscription::batch([
             self.app.subscription().map(Message::Command),
             iced::window::close_requests().map(|_|Message::Ui(UiEvent::CloseWindow)),
+            iced::window::resize_events().map(|(_, size)|Message::Ui(UiEvent::WindowWidth(size.width))),
             iced::keyboard::on_key_press(|key,mods| {
                 use iced::keyboard::{Key,key::Named};
                 match key {
@@ -112,7 +113,7 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
         .scale_factor(|state:&Runtime<A>|state.shell.preferences.scale)
         .default_font(fonts::BODY).font(fonts::FILES[0]).font(fonts::FILES[1]).font(fonts::FILES[2])
         .font(fonts::FILES[3]).font(fonts::FILES[4]).font(fonts::FILES[5])
-        .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(720.0,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
+        .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(model::metrics::WINDOW_MIN_WIDTH as f32,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
         .run_with(||(Runtime{app,shell:ShellState::new(preferences),preferences_path,error},Task::none()))
 }
 
