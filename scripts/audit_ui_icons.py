@@ -31,6 +31,7 @@ def ocondat_ui_source(path):
 
 def is_ui_code_source(name,path):
  if name=='project-ocondat':return ocondat_ui_source(path)
+ if name=='building-py':return path=='apps/GIS2BIM/GIS2BIM_location.py'
  part=Path(path)
  if part.suffix.lower() not in CODE or any(x in path for x in ('.test.','.spec.','.min.')):return False
  pdfjs_viewer=name=='open-pdf-studio' and path in {
@@ -61,7 +62,8 @@ def scan(item):
  try:
   matches=[]
   for offset in range(0,len(code),80):
-   cp=subprocess.run(['git','-C',str(repo),'grep','-I','-i','-n','-E',PATTERN,'HEAD','--',*code[offset:offset+80]],capture_output=True,text=True,timeout=180)
+   pattern=PATTERN+(r'|QDialog|QWebEngineView|QPushButton|QCheckBox|QComboBox|QLineEdit|QGroupBox|QMessageBox|setWindowTitle' if name=='building-py' else '')
+   cp=subprocess.run(['git','-C',str(repo),'grep','-I','-i','-n','-E',pattern,'HEAD','--',*code[offset:offset+80]],capture_output=True,text=True,timeout=180)
    if cp.returncode not in (0,1):raise RuntimeError(cp.stderr[:200])
    for line in cp.stdout.splitlines():
     m=re.match(r'HEAD:(.*?):(\d+):(.*)',line)
@@ -71,7 +73,7 @@ def scan(item):
 
 if __name__=='__main__':
  # Scan every accessible UI repository, including code-only icon systems.
- selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'open-pdf-studio-library','blender-bonsai-training','inb-template','building-py','llvm-project'}]
+ selection=[(n,r) for n,r in ARCHIVED.items() if r.get('commit') and n not in {'open-pdf-studio-library','blender-bonsai-training','inb-template','llvm-project'}]
  previous_path=H/'ui-code-references.json'
  previous_order={record['repository']:index for index,record in enumerate(json.loads(previous_path.read_text()))} if previous_path.exists() else {}
  with cf.ThreadPoolExecutor(max_workers=4) as pool:

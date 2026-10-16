@@ -75824,5 +75824,97 @@
         "text": "                <span class=\"toggle-icon\">&#9660;</span>"
       }
     ]
+  },
+  {
+    "repository": "building-py",
+    "status": "source-scanned",
+    "code_files": 1,
+    "matches": [
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 32,
+        "text": "from PySide2.QtWebEngineWidgets import QWebEngineView"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 47,
+        "text": "class GISLocation_Dialog(QtWidgets.QDialog):"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 93,
+        "text": "        self.setWindowTitle(\"Set Geographic Location\")"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 116,
+        "text": "        groupBox = QtWidgets.QGroupBox(\"Location\")"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 120,
+        "text": "        self.search = QtWidgets.QLineEdit(self)"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 124,
+        "text": "        searchbtn = QtWidgets.QPushButton(\"Search\")"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 129,
+        "text": "        self.cboCRS = QtWidgets.QComboBox(self)"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 143,
+        "text": "        self.bboxWidth = QtWidgets.QLineEdit()"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 149,
+        "text": "        self.bboxHeight = QtWidgets.QLineEdit()"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 154,
+        "text": "        self.CBGeoOrigin = QtWidgets.QCheckBox(\"Create/Update GeoOrigin Object\", self)"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 158,
+        "text": "        self.CBAerialphoto = QtWidgets.QCheckBox(\"Import Aerialphoto\", self)"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 186,
+        "text": "        self.webPage.runJavaScript(JS2)  # update bboxWidth in mapview"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 193,
+        "text": "        self.webPage.runJavaScript(JS3)  # update bboxHeight in mapview"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 204,
+        "text": "            dialog = QtWidgets.QMessageBox()"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 206,
+        "text": "            dialog.setWindowTitle(\"Warning\")"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 214,
+        "text": "            self.webPage.runJavaScript(JS)  # set view"
+      },
+      {
+        "source": "apps/GIS2BIM/GIS2BIM_location.py",
+        "line": 257,
+        "text": "                                                            \"http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png\")"
+      }
+    ]
   }
 ]

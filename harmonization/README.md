@@ -4,6 +4,8 @@ Een brongepind onderzoeksarchief met 63 publiek beschikbare repositories in de O
 
 Dit is een breed archief van visuele bronbestanden, geen telling van gebruikte UI-iconen: alle SVG/ICO/ICNS/XPM-bestanden en rasterbestanden met icon/logo/favicon/pictogram/toolbar/ribbon in het pad. Het omvat ook technische symbolen, tekeningen en branding. Inline iconen zijn als bronbestanden bewaard; externe iconpackages zijn geregistreerd, niet volledig gespiegeld. Voor UI-gebruik zie `asset-index.json`, `ui-code-references.json` en `../design/review.html`. Privérepositories zijn niet toegankelijk; buiten de ene genoemde OpenCADStudio-referentie zijn externe repositories niet geïnventariseerd.
 
+BuildingPy heeft een [aparte bronreview](../design/building-py-location-review.html) voor zijn PySide2/Qt-locatiedialoog; `construction/panel.py` is geometrische modelcode, geen paneel in de gebruikersinterface.
+
 Project OconDat is apart op zijn twee webinterfaces geauditeerd: 19 UI-codebestanden en 74 bronregels. De [schermreview](../design/ocondat-ui-review.html) beschrijft de componentenbrowser, Nederlandse standaardenbibliotheek en iconclassificatie. De duizenden SVG-bestanden met bouwcomponenten en tekenpatronen zijn technische inhoud, geen UI-iconen.
 
 Gedownloade bronbestanden staan in `sources/` en worden **niet** meegeleverd in de Rust-crate. De repositorylicentie is een aanwijzing; afwijkende assetlicenties moeten bij selectie worden gecontroleerd.
