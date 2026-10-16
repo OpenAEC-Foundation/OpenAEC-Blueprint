@@ -112,7 +112,7 @@ fn render_sized_with_reset(
         state.active_tab = tab.into();
     }
     let language = Language::Dutch;
-    let mut element = openaec_ui::shell(
+    let element = openaec_ui::shell(
         &state,
         Slots {
             title: app.title(),
@@ -140,6 +140,14 @@ fn render_sized_with_reset(
             }),
         },
     );
+    render_element(element, theme, size)
+}
+
+fn render_element(
+    mut element: iced::Element<'_, Message<Action>>,
+    theme: Theme,
+    size: Size,
+) -> tiny_skia::Pixmap {
     let mut renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
     let mut tree = Tree::new(&element);
     let node =
@@ -158,14 +166,18 @@ fn render_sized_with_reset(
         mouse::Cursor::Unavailable,
         &Rectangle::with_size(size),
     );
-    if let Some(mut overlay) = element.as_widget_mut().overlay(
-        &mut tree, Layout::new(&node), &renderer, Vector::ZERO,
-    ) {
+    if let Some(mut overlay) =
+        element
+            .as_widget_mut()
+            .overlay(&mut tree, Layout::new(&node), &renderer, Vector::ZERO)
+    {
         let popup_node = overlay.layout(&renderer, size);
         overlay.draw(
             &mut renderer,
             &iced_theme,
-            &renderer::Style { text_color: iced_theme.palette().text },
+            &renderer::Style {
+                text_color: iced_theme.palette().text,
+            },
             Layout::new(&popup_node),
             mouse::Cursor::Unavailable,
         );
@@ -198,6 +210,93 @@ fn save_render(app: &StyleRepo, theme: Theme, path: &std::path::Path) {
     render(app, theme)
         .save_png(path)
         .expect("save native review image");
+}
+
+fn source_band<'a>(
+    label: &'static str,
+    height: u16,
+    background: Color,
+    foreground: Color,
+) -> iced::Element<'a, Message<Action>> {
+    iced::widget::container(iced::widget::text(label).size(12))
+        .width(iced::Fill)
+        .height(height)
+        .padding([0, 12])
+        .align_y(iced::Alignment::Center)
+        .style(move |_| {
+            iced::widget::container::Style::default()
+                .background(background)
+                .color(foreground)
+        })
+        .into()
+}
+
+fn source_pane<'a>(
+    label: &'static str,
+    background: Color,
+    foreground: Color,
+) -> iced::Element<'a, Message<Action>> {
+    iced::widget::container(iced::widget::text(label).size(12))
+        .width(iced::Fill)
+        .height(iced::Fill)
+        .padding(12)
+        .style(move |_| {
+            iced::widget::container::Style::default()
+                .background(background)
+                .color(foreground)
+        })
+        .into()
+}
+
+#[test]
+#[ignore = "regenerate native Open Frame shell geometry review on demand"]
+fn export_frame_shell_geometry_review() {
+    load_fonts();
+    let profile = openaec_ui::frame::WorkspaceFrameProfile::OPEN_FRAME;
+    let design = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design");
+    for (width, height, tabs_height, suffix) in
+        [(1200.0, 800.0, 73, "wide"), (720.0, 600.0, 145, "narrow")]
+    {
+        let ink = Color::from_rgb8(236, 236, 239);
+        let body = Color::from_rgb8(40, 40, 47);
+        let panels = openaec_ui::frame::workspace_panes(
+            profile,
+            Some(source_pane(
+                "Explorer · 220 px",
+                Color::from_rgb8(48, 48, 56),
+                ink,
+            )),
+            source_pane("Werkgebied", body, ink),
+            Some(source_pane(
+                "Properties · 290 px",
+                Color::from_rgb8(48, 48, 56),
+                ink,
+            )),
+        );
+        let shell = openaec_ui::frame::workspace_frame(
+            openaec_ui::frame::WorkspaceFrameSlots {
+                titlebar: source_band("Title · 36 px", 36, Color::from_rgb8(54, 54, 62), ink),
+                ribbon: source_band(
+                    "Ribbon · inhoudshoogte 132 px",
+                    132,
+                    Color::from_rgb8(68, 68, 76),
+                    ink,
+                ),
+                workspace_tabs: source_band(
+                    "Workspace tabs · omvouwende hoogte",
+                    tabs_height,
+                    Color::from_rgb8(58, 58, 66),
+                    ink,
+                ),
+                content: panels,
+                status: source_band("Status · 28 px", 28, Color::from_rgb8(54, 54, 62), ink),
+            },
+            profile,
+        );
+        render_element(shell, Theme::Forge, Size::new(width, height))
+            .save_png(&design.join(format!("frame-native-shell-{suffix}.png")))
+            .expect("save native frame geometry");
+    }
 }
 
 #[test]
