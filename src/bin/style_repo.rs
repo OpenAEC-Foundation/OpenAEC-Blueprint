@@ -10,6 +10,7 @@ use openaec_ui::{
         Alignment, Element, Fill, Task,
     },
     icons::{DomainIcon, Icon},
+    ribbon_icons::RibbonIcon,
     model::metrics,
     run, widgets, Application, ChromeMode, Command, CommandIcon, Document, DocumentEvent, Language, RibbonControl, RibbonGroup, RibbonSlider, RibbonTab,
     Theme,
@@ -709,6 +710,38 @@ impl StyleRepo {
             }
             canonical = canonical.push(icons_row);
         }
+        let mut ribbon_icons = Column::new().spacing(7);
+        for chunk in RibbonIcon::ALL.chunks(4) {
+            let mut ribbon_row = Row::new().spacing(7);
+            for &icon in chunk {
+                ribbon_row = ribbon_row.push(
+                    container(
+                        column![
+                            row![icon.view(16, t.accent), icon.view(24, t.accent)]
+                                .spacing(12)
+                                .align_y(Alignment::Center),
+                            text(icon.id()).size(10),
+                        ]
+                        .spacing(7)
+                        .align_x(Alignment::Center),
+                    )
+                    .padding(8)
+                    .width(155)
+                    .height(74)
+                    .align_x(Alignment::Center)
+                    .style(move |_| container::Style {
+                        background: Some(t.bg.into()),
+                        border: iced::Border {
+                            color: t.border,
+                            width: 1.0,
+                            radius: 4.0.into(),
+                        },
+                        ..Default::default()
+                    }),
+                );
+            }
+            ribbon_icons = ribbon_icons.push(ribbon_row);
+        }
         let mut domain = Column::new().spacing(7);
         for chunk in DomainIcon::ALL.chunks(4) {
             let mut domain_row = Row::new().spacing(7);
@@ -826,6 +859,19 @@ impl StyleRepo {
                     .font(fonts::STRONG)
                     .size(14),
                     canonical,
+                ]
+                .spacing(10),
+                theme,
+            ),
+            self.card(
+                column![
+                    text(l.text(
+                        "Tauri-lintopdrachten · 16 / 24 px",
+                        "Tauri ribbon commands · 16 / 24 px"
+                    ))
+                    .font(fonts::STRONG)
+                    .size(14),
+                    ribbon_icons,
                 ]
                 .spacing(10),
                 theme,

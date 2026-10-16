@@ -11,7 +11,7 @@ canonical = root / "crates/openaec-ui"
 portable = root.parent / "open-pointcloud-studio/native/ui"
 rustfmt = shutil.which("rustfmt") or str(Path.home() / ".cargo/bin/rustfmt")
 
-for group in ("fonts", "icons", "domain-icons", "domain-icons-small"):
+for group in ("fonts", "icons", "domain-icons", "domain-icons-small", "ribbon-icons"):
     canonical_assets = {p.name: p for p in (canonical / "assets" / group).iterdir() if p.is_file()}
     review_assets = {p.name: p for p in (root / "assets" / group).iterdir() if p.is_file()}
     assert canonical_assets.keys() == review_assets.keys(), f"Review {group} set differs"
@@ -49,7 +49,7 @@ for name, source in canonical_sources.items():
     assert formatted(source) == formatted(portable_sources[name]), f"Portable Rust source differs: {name}"
 
 asset_count = 0
-for group in ("fonts", "icons", "domain-icons", "domain-icons-small"):
+for group in ("fonts", "icons", "domain-icons", "domain-icons-small", "ribbon-icons"):
     canonical_assets = {p.name: p for p in (canonical / "assets" / group).iterdir() if p.is_file()}
     portable_assets = {p.name: p for p in (portable / "assets" / group).iterdir() if p.is_file()}
     assert canonical_assets.keys() == portable_assets.keys(), f"Portable {group} set differs"

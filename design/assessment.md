@@ -61,7 +61,7 @@ migratie van alle OpenAEC-applicaties.
   Refresh LOD gebruikt nu zijn eigen Update-symbool in plaats van Fit.
   De Extensions-bestandspagina heeft een [eigen iconreview](extensions-icon-review.html):
   een nieuw getekend puzzelstuk vervangt de semantisch onjuiste 3D-kubus.
-- Het [Tauri Style Book-lint](style-book-tauri-ribbon-icon-review.html) toont 38 bronbewezen SVG-vormen uit Home, IFC en Report. De 42-definitie-catalogus bevat negen vormen uit Viewer en Extensions die in de huidige Ribbon-route niet renderen; vijf extra Report-vormen zijn lokaal gedefinieerd. De oogvorm bij Opslaan als is semantisch verkeerd en staat naast de bestaande gedeelde SaveAs-vorm. Klembord-Kopiëren en document-Dupliceren blijven gescheiden.
+- Het [Tauri Style Book-lint](style-book-tauri-ribbon-icon-review.html) toont 38 bronbewezen SVG-vormen uit Home, IFC en Report. De 42-definitie-catalogus bevat negen vormen uit Viewer en Extensions die in de huidige Ribbon-route niet renderen; vijf extra Report-vormen zijn lokaal gedefinieerd. De oogvorm bij Opslaan als is semantisch verkeerd en staat naast de bestaande gedeelde SaveAs-vorm. Klembord-Kopiëren en document-Dupliceren blijven gescheiden. De [Rust-kruisverwijzing](style-book-tauri-ribbon-crosswalk.html) beoordeelt alle 38 UI-aanroepen; 32 eigen vormen zijn nu als getypeerde `RibbonIcon` in de gedeelde Rust-crate opgenomen. De schermen en opdrachten zelf zijn daarmee nog niet gemigreerd.
 - De eerste visuele vergelijking gebruikt het Tauri Style Book, PDF Studio v2,
   Pointcloud native en de 65 lokaal bewaarde visuele referenties. De
   interactieve index laat de andere bronbeelden per repository inspecteren.

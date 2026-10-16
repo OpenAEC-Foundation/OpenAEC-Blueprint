@@ -1075,6 +1075,9 @@ fn export_native_icon_atlas() {
     app.show(Page::Icons);
     for (theme, name) in [(Theme::Light, "light"), (Theme::Forge, "forge")] {
         save_render(&app, theme, &design.join(format!("style-repo-icons-{name}.png")));
+        render_sized(&app, theme, false, None, Size::new(1280.0, 1500.0))
+            .save_png(&design.join(format!("style-repo-ribbon-icons-{name}.png")))
+            .expect("save typed ribbon-icon review");
     }
 }
 
