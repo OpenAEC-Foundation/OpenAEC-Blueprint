@@ -4,8 +4,11 @@ Since 2026-10-16 the page uses the UI 0.4 design: colours come from
 design/ontwerp-0.4/tokens-0.4.json (five themes) and the ribbon follows
 variant B from design/ontwerp-0.4/04-componenten.md. The template keeps its
 original --theme-* variables; they are filled from the 0.4 tokens here.
+Ribbon and title bar icons come from Codex's B2 set where the meaning matches;
+other commands keep their source or prototype icon.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -94,5 +97,84 @@ page = page.replace(OLD_OPTIONS, THEME_OPTIONS, 1)
 assert "</style>" in page
 page = page.replace("</style>", THEME_CSS + SHAPE_CSS + "</style>", 1)
 
+# ---------- UI 0.4: B2 icons by Codex where the meaning is the same ----------
+# Per app only commands whose source call Codex reviewed for that function
+# (harmonization/icon-set-b2/function-plan.json); no automatic approval of
+# other calls with the same label. Generic shell commands use a fixed list.
+B2_DIR = root / "design/icon-set-b2/svg"
+APP_NAMES = {"pdf": "PDF", "pointcloud": "Pointcloud", "planner": "Planner", "calc": "Calc",
+             "geotech": "Geotechniek", "heatloss": "Heatloss", "energy": "Energy",
+             "calculations": "Calculations", "reports": "Reports", "frame": "Frame", "field": "Field",
+             "validator": "BIM Validator", "speech": "Speech", "composer": "Workspace Composer", "pile": "Pile Plan"}
+GENERIC = {"Nieuw": "file.new", "Openen": "file.open", "Opslaan": "file.save", "Importeren": "file.import",
+           "Exporteren": "file.export", "Zoeken": "view.search", "Passend": "view.fit",
+           "Eigenschappen": "panel.right", "Instellingen": "ui.settings", "Help": "ui.help",
+           "Ongedaan": "edit.undo", "Opnieuw": "edit.redo"}
+# Same label, different command elsewhere in the same ribbon.
+EXCLUDE = {("pdf", "Samenvoegen"), ("pdf", "Verwijderen"), ("calc", "Verwijder")}
+QUICK = {"new": "file.new", "open": "file.open", "save": "file.save", "undo": "edit.undo", "settings": "ui.settings"}
+
+
+def has_b2(fid):
+    return (B2_DIR / "16" / f"{fid}.svg").exists() and (B2_DIR / "24" / f"{fid}.svg").exists()
+
+
+plan = json.loads(read("harmonization/icon-set-b2/function-plan.json"))
+records = {r["id"]: r for r in json.loads(read("harmonization/function-icon-catalog.json"))["records"]}
+reviewed, rejected = {}, set()
+for a in plan["record_assessments"]:
+    r = records[a["record_id"]]
+    key = (r["app"], r["label"])
+    if a["assessment"] == "niet samenvoegen":
+        rejected.add(key)
+    elif a["canonical_function"] and a["assessment"] in ("bronvoorbeeld beoordeeld", "bestaand B2-ontwerp hergebruiken"):
+        reviewed.setdefault(key, set()).add(a["canonical_function"])
+
+b2_map = {"*": {k: v for k, v in GENERIC.items() if has_b2(v)}}
+for app_id, name in APP_NAMES.items():
+    m = {}
+    ribbon = root / f"design/{app_id}-ribbon.js"
+    # Commands drawn with a source icon file are also reviewed under that file name.
+    src = ribbon.read_text(encoding="utf-8") if ribbon.exists() else ""
+    files = dict(re.findall(r"'([^']+)':\s*'([A-Z][A-Za-z0-9]+)'", src))
+    # Only commands that this page actually draws on the ribbon.
+    shown = {a or b for a, b in re.findall(r"'([^']+)'|\"([^\"]+)\"", src)}
+    labels = ({lab for (app, lab) in reviewed if app == name} & shown) | set(GENERIC) | set(files)
+    for lab in labels:
+        funcs = reviewed.get((name, lab)) or reviewed.get((name, files.get(lab, "")))
+        if (app_id, lab) in EXCLUDE or (name, lab) in rejected or (funcs and len(funcs) > 1):
+            m[lab] = None
+        elif funcs and has_b2(next(iter(funcs))):
+            m[lab] = next(iter(funcs))
+    b2_map[app_id] = {k: v for k, v in m.items() if not (v is None and k not in GENERIC)}
+
+used_cmd = {v for m in b2_map.values() for v in m.values() if v}
+used_quick = {v for v in QUICK.values() if has_b2(v)}
+used = used_cmd | used_quick
+symbols = []
+for master, ids in (("24", used_cmd), ("16", used_quick)):
+    for fid in sorted(ids):
+        svg = (B2_DIR / master / f"{fid}.svg").read_text(encoding="utf-8")
+        inner = re.search(r"<svg[^>]*>(.*)</svg>", svg, re.S).group(1)
+        symbols.append(f'<symbol id="b2-{master}-{fid}" viewBox="0 0 {master} {master}">{inner}</symbol>')
+SPRITE = '<svg width="0" height="0" style="position:absolute" aria-hidden="true">' + "".join(symbols) + "</svg>"
+
+OLD_CMD = "const cmdIcon=c=>domainIndex[c]?"
+OLD_END = "icon(iconMap[c]||'grid');"
+assert page.count(OLD_CMD) == 1 and page.count(OLD_END) == 1, "cmdIcon not found in template"
+b2_js = ("const b2Map=" + json.dumps(b2_map, ensure_ascii=False) + ";"
+         "const b2Cmd=c=>{const m=b2Map[apps[+E('studio').value].id]||{};const id=c in m?m[c]:b2Map['*'][c];"
+         "return id?'<svg class=\"b2i\" aria-hidden=\"true\"><use href=\"#b2-24-'+id+'\"/></svg>':''};")
+page = page.replace(OLD_CMD, b2_js + "const cmdIcon=c=>b2Cmd(c)||(domainIndex[c]?", 1).replace(OLD_END, "icon(iconMap[c]||'grid'));", 1)
+for old, fid in QUICK.items():
+    tag = f'<img src="../assets/icons/{old}.svg" alt="">'
+    if has_b2(fid) and tag in page:
+        page = page.replace(tag, f'<svg class="b2i" aria-hidden="true"><use href="#b2-16-{fid}"/></svg>')
+page = page.replace("</style>", ".b2i{--icon-accent:var(--theme-accent);flex:none}.quick .b2i{width:16px;height:16px}"
+                    ".cmd .b2i{width:22px;height:22px}</style>", 1)
+page = page.replace("</body>", SPRITE + "</body>", 1) if "</body>" in page else page + SPRITE
+
 (root / "design/harmonized.html").write_text(page, encoding="utf-8")
-print(f"Generated shared shell for {len(apps)} tool interfaces with UI 0.4 tokens ({len(tokens['themes'])} themes)")
+n_cmd = sum(1 for k, m in b2_map.items() if k != "*" for v in m.values() if v)
+print(f"Generated shared shell for {len(apps)} tool interfaces with UI 0.4 tokens ({len(tokens['themes'])} themes); "
+      f"{len(used)} B2-iconen van Codex: {n_cmd} beoordeelde appknoppen en {len(b2_map['*'])} algemene knoppen")

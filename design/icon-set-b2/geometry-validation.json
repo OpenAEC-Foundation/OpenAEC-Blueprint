@@ -2782,5 +2782,4805 @@
     ],
     "overlap_area": 0.0,
     "accent_area": 53.67242207699849
+  },
+  {
+    "id": "page.first",
+    "master": 16,
+    "bounds": [
+      2.70833,
+      2.70833,
+      11.29167,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.892701847075493
+  },
+  {
+    "id": "page.first",
+    "master": 24,
+    "bounds": [
+      4.125,
+      4.125,
+      16.874996,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.903089141172504
+  },
+  {
+    "id": "page.previous",
+    "master": 16,
+    "bounds": [
+      5.611242,
+      3.375016,
+      10.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "page.previous",
+    "master": 24,
+    "bounds": [
+      8.479309,
+      5.125,
+      15.875,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "page.next",
+    "master": 16,
+    "bounds": [
+      5.375,
+      3.375005,
+      10.388758,
+      12.624997
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "page.next",
+    "master": 24,
+    "bounds": [
+      8.125002,
+      5.125018,
+      15.520691,
+      18.874996
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "page.last",
+    "master": 16,
+    "bounds": [
+      4.70833,
+      2.70833,
+      13.29167,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.892702191724505
+  },
+  {
+    "id": "page.last",
+    "master": 24,
+    "bounds": [
+      7.125,
+      4.125038,
+      19.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.903205678491496
+  },
+  {
+    "id": "page.view-single",
+    "master": 16,
+    "bounds": [
+      3.375,
+      1.375,
+      12.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.1189333793465
+  },
+  {
+    "id": "page.view-single",
+    "master": 24,
+    "bounds": [
+      5.125,
+      2.125,
+      18.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.806450550859992
+  },
+  {
+    "id": "page.view-continuous",
+    "master": 16,
+    "bounds": [
+      3.375,
+      0.70833,
+      12.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.27988922032601
+  },
+  {
+    "id": "page.view-continuous",
+    "master": 24,
+    "bounds": [
+      5.125,
+      1.125,
+      18.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 67.78795451251604
+  },
+  {
+    "id": "page.view-book",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 36.446539220326045
+  },
+  {
+    "id": "page.view-book",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 76.53795451251601
+  },
+  {
+    "id": "page.view-facing",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.770701723303002
+  },
+  {
+    "id": "page.view-facing",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.9357922259005
+  },
+  {
+    "id": "page.reset-view-rotation",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      15.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 37.7081217193911
+  },
+  {
+    "id": "page.reset-view-rotation",
+    "master": 24,
+    "bounds": [
+      3.125064,
+      3.125064,
+      23.375,
+      20.874991
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 79.29494459365745
+  },
+  {
+    "id": "page.insert",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.958329,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.223260191148503
+  },
+  {
+    "id": "page.insert",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.243721167629
+  },
+  {
+    "id": "page.delete",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.31769009280498
+  },
+  {
+    "id": "page.delete",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.54308674161052
+  },
+  {
+    "id": "page.extract",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.31301680053047
+  },
+  {
+    "id": "page.extract",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.119278942897516
+  },
+  {
+    "id": "document.merge",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.784424563314
+  },
+  {
+    "id": "document.merge",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 39.3028457723526
+  },
+  {
+    "id": "page.rotate-left",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      1.375027,
+      13.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.33553941690903
+  },
+  {
+    "id": "page.rotate-left",
+    "master": 24,
+    "bounds": [
+      1.625,
+      2.125038,
+      19.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.135673921200976
+  },
+  {
+    "id": "page.rotate-right",
+    "master": 16,
+    "bounds": [
+      2.708341,
+      1.375027,
+      14.958326,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.33574897635153
+  },
+  {
+    "id": "page.rotate-right",
+    "master": 24,
+    "bounds": [
+      4.125025,
+      2.125038,
+      22.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.135873287613066
+  },
+  {
+    "id": "page.crop",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      13.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.916964535356023
+  },
+  {
+    "id": "page.crop",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 60.8358700648636
+  },
+  {
+    "id": "page.resize",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      13.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.753241461984505
+  },
+  {
+    "id": "page.resize",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.14341402199996
+  },
+  {
+    "id": "page.straighten",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.552331,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.6348734745055
+  },
+  {
+    "id": "page.straighten",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.390977,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 49.670596537124005
+  },
+  {
+    "id": "page.shift",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 13.301315210837503
+  },
+  {
+    "id": "page.shift",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.894873487198982
+  },
+  {
+    "id": "annotate.highlight",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.179563,
+      13.815015,
+      15.29167
+    ],
+    "overlap_area": 1.1713499996435382e-08,
+    "accent_area": 14.796032511853998
+  },
+  {
+    "id": "annotate.highlight",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.331819,
+      20.660052,
+      22.875
+    ],
+    "overlap_area": 8.43549997870245e-09,
+    "accent_area": 30.9061203952945
+  },
+  {
+    "id": "annotate.stamp",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      13.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.893169788559005
+  },
+  {
+    "id": "annotate.stamp",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.903061093729008
+  },
+  {
+    "id": "annotate.signature",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.7988,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 31.992529052153472
+  },
+  {
+    "id": "annotate.signature",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.2607,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 67.5149471910984
+  },
+  {
+    "id": "annotate.redact",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.559421310263003
+  },
+  {
+    "id": "annotate.redact",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.903061204194994
+  },
+  {
+    "id": "annotate.apply-redactions",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      15.29167,
+      14.85998
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.136711705755012
+  },
+  {
+    "id": "annotate.apply-redactions",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      22.875,
+      22.22747
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.812816015132995
+  },
+  {
+    "id": "annotate.clear-page",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.16109596393896
+  },
+  {
+    "id": "annotate.clear-page",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 74.05803888174552
+  },
+  {
+    "id": "measure.perimeter",
+    "master": 16,
+    "bounds": [
+      2.5,
+      2.5,
+      13.5,
+      13.5
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.592005793768994
+  },
+  {
+    "id": "measure.perimeter",
+    "master": 24,
+    "bounds": [
+      3.75,
+      3.75,
+      20.25,
+      20.25
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 41.02987800323601
+  },
+  {
+    "id": "measure.angle",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.52435033786051
+  },
+  {
+    "id": "measure.angle",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.420743697845502
+  },
+  {
+    "id": "draw.freehand",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.99961,
+      14.624999,
+      13.05241
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "draw.freehand",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.561938,
+      21.875,
+      19.51611
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "draw.eraser",
+    "master": 16,
+    "bounds": [
+      1.516962,
+      2.183632,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 6.6870822438419975
+  },
+  {
+    "id": "draw.eraser",
+    "master": 24,
+    "bounds": [
+      2.337889,
+      3.337889,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.261610342062504
+  },
+  {
+    "id": "draw.ellipse",
+    "master": 16,
+    "bounds": [
+      1.375027,
+      3.375018,
+      14.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.2887686559515
+  },
+  {
+    "id": "draw.ellipse",
+    "master": 24,
+    "bounds": [
+      2.125038,
+      5.125025,
+      21.875,
+      18.875
+    ],
+    "overlap_area": 6.552000008181297e-09,
+    "accent_area": 15.342060116685003
+  },
+  {
+    "id": "draw.arrow",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      13.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.021112801300516
+  },
+  {
+    "id": "draw.arrow",
+    "master": 24,
+    "bounds": [
+      3.12512,
+      3.125,
+      20.875,
+      20.87494
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.980516210107478
+  },
+  {
+    "id": "draw.spline",
+    "master": 16,
+    "bounds": [
+      1.0,
+      3.0,
+      15.0,
+      13.0
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 2.7302927837845
+  },
+  {
+    "id": "draw.spline",
+    "master": 24,
+    "bounds": [
+      1.5,
+      4.5,
+      22.5,
+      19.5
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 6.797566451467501
+  },
+  {
+    "id": "transform.fillet",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.721706703015016
+  },
+  {
+    "id": "transform.fillet",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 39.14427216374781
+  },
+  {
+    "id": "transform.chamfer",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.24555224507099
+  },
+  {
+    "id": "transform.chamfer",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 38.14528528675506
+  },
+  {
+    "id": "draw.image",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.012773684961502
+  },
+  {
+    "id": "draw.image",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 44.82779497553503
+  },
+  {
+    "id": "object.align-top",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.226273443757986
+  },
+  {
+    "id": "object.align-top",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 33.90364138655753
+  },
+  {
+    "id": "object.align-middle",
+    "master": 16,
+    "bounds": [
+      1.375021,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.226123743869522
+  },
+  {
+    "id": "object.align-middle",
+    "master": 24,
+    "bounds": [
+      2.125029,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 33.90308100734305
+  },
+  {
+    "id": "object.align-bottom",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.226400319455493
+  },
+  {
+    "id": "object.align-bottom",
+    "master": 24,
+    "bounds": [
+      2.125387,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 33.9031964649155
+  },
+  {
+    "id": "object.distribute-horizontal",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.22010244931749
+  },
+  {
+    "id": "object.distribute-horizontal",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      23.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.58470424826651
+  },
+  {
+    "id": "object.distribute-vertical",
+    "master": 16,
+    "bounds": [
+      2.70833,
+      1.375,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.220102449317476
+  },
+  {
+    "id": "object.distribute-vertical",
+    "master": 24,
+    "bounds": [
+      4.125,
+      2.125,
+      23.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.5847042482665
+  },
+  {
+    "id": "object.bring-forward",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.75833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 42.3739429842085
+  },
+  {
+    "id": "object.bring-forward",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.575,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 88.94766915179352
+  },
+  {
+    "id": "object.bring-front",
+    "master": 16,
+    "bounds": [
+      1.375,
+      0.70833,
+      15.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.933876213194004
+  },
+  {
+    "id": "object.bring-front",
+    "master": 24,
+    "bounds": [
+      2.125,
+      1.125,
+      23.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 98.3515503682799
+  },
+  {
+    "id": "object.send-backward",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.75833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 42.37399874103352
+  },
+  {
+    "id": "object.send-backward",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.575,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 88.94724751423651
+  },
+  {
+    "id": "object.send-back",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.933628283551
+  },
+  {
+    "id": "object.send-back",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 98.35018742450947
+  },
+  {
+    "id": "image.crop",
+    "master": 16,
+    "bounds": [
+      1.375011,
+      1.375011,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.0200370016765
+  },
+  {
+    "id": "image.crop",
+    "master": 24,
+    "bounds": [
+      2.125015,
+      2.125015,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 4.299999992604523e-10,
+    "accent_area": 21.272594312237995
+  },
+  {
+    "id": "image.grayscale",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      2.041667,
+      13.958333,
+      13.958333
+    ],
+    "overlap_area": 2.9500000035691615e-10,
+    "accent_area": 25.551123281857496
+  },
+  {
+    "id": "image.grayscale",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 1.21749999633201e-09,
+    "accent_area": 54.33385856854105
+  },
+  {
+    "id": "image.brightness",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 20.941848489100042
+  },
+  {
+    "id": "image.brightness",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      1.12512,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 43.977879516435905
+  },
+  {
+    "id": "image.contrast",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      2.041667,
+      13.958333,
+      13.958333
+    ],
+    "overlap_area": 2.9500000035691615e-10,
+    "accent_area": 38.309318250487
+  },
+  {
+    "id": "image.contrast",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 1.21749999633201e-09,
+    "accent_area": 81.647182897168
+  },
+  {
+    "id": "image.reset",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      0.37531,
+      13.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 40.43264994413235
+  },
+  {
+    "id": "image.reset",
+    "master": 24,
+    "bounds": [
+      3.125064,
+      0.625433,
+      20.874991,
+      20.874991
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 84.90486217000615
+  },
+  {
+    "id": "extensions.manage",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.446564220325993
+  },
+  {
+    "id": "extensions.manage",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.037954512515995
+  },
+  {
+    "id": "ui.about",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.272788457526502
+  },
+  {
+    "id": "ui.about",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 25.843076544558507
+  },
+  {
+    "id": "ui.shortcuts",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      2.70833,
+      15.29167,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.8926636761825035
+  },
+  {
+    "id": "ui.shortcuts",
+    "master": 24,
+    "bounds": [
+      1.125,
+      4.125,
+      22.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.403654602621
+  },
+  {
+    "id": "ui.check-updates",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      0.37531,
+      13.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.813108738768001
+  },
+  {
+    "id": "ui.check-updates",
+    "master": 24,
+    "bounds": [
+      3.125064,
+      0.625433,
+      20.874991,
+      20.874991
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.869707973724005
+  },
+  {
+    "id": "ui.file-associations",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.146284747932507
+  },
+  {
+    "id": "ui.file-associations",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.369353973036496
+  },
+  {
+    "id": "draw.spline-arrow",
+    "master": 16,
+    "bounds": [
+      1.375065,
+      2.81614,
+      14.42966,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.570068143379012
+  },
+  {
+    "id": "draw.spline-arrow",
+    "master": 24,
+    "bounds": [
+      2.125091,
+      4.28671,
+      21.58198,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.868647022689526
+  },
+  {
+    "id": "draw.cloud",
+    "master": 16,
+    "bounds": [
+      1.74878,
+      2.36427,
+      14.25122,
+      13.63573
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "draw.cloud",
+    "master": 24,
+    "bounds": [
+      2.68567,
+      3.60891,
+      21.31433,
+      20.39109
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "draw.l-shape",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.545027020753004
+  },
+  {
+    "id": "draw.l-shape",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 38.78162225261848
+  },
+  {
+    "id": "draw.coordinate",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.223066146442497
+  },
+  {
+    "id": "draw.coordinate",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 29.744310325577928
+  },
+  {
+    "id": "measure.radius",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      2.041667,
+      13.958333,
+      13.958333
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.815381807118996
+  },
+  {
+    "id": "measure.radius",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.6764233701265
+  },
+  {
+    "id": "measure.diameter",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      2.041667,
+      13.958333,
+      13.958333
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 20.404837104943038
+  },
+  {
+    "id": "measure.diameter",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 42.95009275193307
+  },
+  {
+    "id": "measure.count",
+    "master": 16,
+    "bounds": [
+      1.375086,
+      1.375009,
+      14.624994,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.785663461570017
+  },
+  {
+    "id": "measure.count",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125013,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 64.30704740697605
+  },
+  {
+    "id": "draw.vector-clip",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.46341320383799
+  },
+  {
+    "id": "draw.vector-clip",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 37.31860307961897
+  },
+  {
+    "id": "transform.array",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.112802317018
+  },
+  {
+    "id": "transform.array",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 63.23726717971997
+  },
+  {
+    "id": "transform.stretch",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.979744216143523
+  },
+  {
+    "id": "transform.stretch",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.61947147186001
+  },
+  {
+    "id": "transform.explode",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.046254724334506
+  },
+  {
+    "id": "transform.explode",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 39.31016401038302
+  },
+  {
+    "id": "transform.join",
+    "master": 16,
+    "bounds": [
+      1.375011,
+      3.375,
+      14.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.915666368424
+  },
+  {
+    "id": "transform.join",
+    "master": 24,
+    "bounds": [
+      2.125015,
+      5.125,
+      21.875,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.256750696401998
+  },
+  {
+    "id": "transform.split",
+    "master": 16,
+    "bounds": [
+      1.375021,
+      2.04167,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.466383118684506
+  },
+  {
+    "id": "transform.split",
+    "master": 24,
+    "bounds": [
+      2.125029,
+      3.125038,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.30739933009052
+  },
+  {
+    "id": "transform.break",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 3.3786175990639986
+  },
+  {
+    "id": "transform.break",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.601889708896
+  },
+  {
+    "id": "transform.scale",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.110140446973997
+  },
+  {
+    "id": "transform.scale",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 40.09311223900302
+  },
+  {
+    "id": "edit.paste-in-place",
+    "master": 16,
+    "bounds": [
+      1.375,
+      0.70833,
+      15.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.889454372323993
+  },
+  {
+    "id": "edit.paste-in-place",
+    "master": 24,
+    "bounds": [
+      2.125,
+      1.125,
+      23.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.743340047864503
+  },
+  {
+    "id": "object.collection-create",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.44656422032599
+  },
+  {
+    "id": "object.collection-create",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.53795451251601
+  },
+  {
+    "id": "object.collection-explode",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.44656422032599
+  },
+  {
+    "id": "object.collection-explode",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.53795451251601
+  },
+  {
+    "id": "edit.paste-vector-clip",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.825,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 25.486214449317515
+  },
+  {
+    "id": "edit.paste-vector-clip",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      23.675,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 53.37090372240249
+  },
+  {
+    "id": "measure.scale-region",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.18270969345401
+  },
+  {
+    "id": "measure.scale-region",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.95869280947203
+  },
+  {
+    "id": "measure.scale-page",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.18270969345401
+  },
+  {
+    "id": "measure.scale-page",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.95869280947203
+  },
+  {
+    "id": "edit.deselect",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.031560213853497
+  },
+  {
+    "id": "edit.deselect",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 31.4419701801445
+  },
+  {
+    "id": "annotate.clear-all",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.17167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.706190717407495
+  },
+  {
+    "id": "annotate.clear-all",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.195,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 52.15743454182195
+  },
+  {
+    "id": "object.distribute-left",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      4.04167,
+      15.29167,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.21992117128999
+  },
+  {
+    "id": "object.distribute-left",
+    "master": 24,
+    "bounds": [
+      3.125,
+      6.125,
+      22.875,
+      23.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.58535187922606
+  },
+  {
+    "id": "object.distribute-center",
+    "master": 16,
+    "bounds": [
+      1.70833,
+      4.04167,
+      14.625,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.22010244931749
+  },
+  {
+    "id": "object.distribute-center",
+    "master": 24,
+    "bounds": [
+      2.625,
+      6.125,
+      21.875,
+      23.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.58470424826651
+  },
+  {
+    "id": "object.distribute-right",
+    "master": 16,
+    "bounds": [
+      1.375,
+      4.04167,
+      13.95833,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.219955528640998
+  },
+  {
+    "id": "object.distribute-right",
+    "master": 24,
+    "bounds": [
+      2.125,
+      6.125,
+      20.875,
+      23.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.58417569354798
+  },
+  {
+    "id": "object.distribute-top",
+    "master": 16,
+    "bounds": [
+      4.04167,
+      2.04167,
+      15.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.219921171289997
+  },
+  {
+    "id": "object.distribute-top",
+    "master": 24,
+    "bounds": [
+      6.125,
+      3.125,
+      23.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.58535187922597
+  },
+  {
+    "id": "object.distribute-middle",
+    "master": 16,
+    "bounds": [
+      4.04167,
+      1.70833,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.220102449317476
+  },
+  {
+    "id": "object.distribute-middle",
+    "master": 24,
+    "bounds": [
+      6.125,
+      2.625,
+      23.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.5847042482665
+  },
+  {
+    "id": "object.distribute-bottom",
+    "master": 16,
+    "bounds": [
+      4.04167,
+      1.375,
+      15.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.21995552864098
+  },
+  {
+    "id": "object.distribute-bottom",
+    "master": 24,
+    "bounds": [
+      6.125,
+      2.125,
+      23.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.5842765279715
+  },
+  {
+    "id": "object.same-size",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.715613889339032
+  },
+  {
+    "id": "object.same-size",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 39.39988057744765
+  },
+  {
+    "id": "transform.flip-vertical",
+    "master": 16,
+    "bounds": [
+      1.375021,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.22612374386951
+  },
+  {
+    "id": "transform.flip-vertical",
+    "master": 24,
+    "bounds": [
+      2.125029,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 33.90308100734303
+  },
+  {
+    "id": "document.watermark-add",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      13.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 20.160753525495505
+  },
+  {
+    "id": "document.watermark-add",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 42.36262760889393
+  },
+  {
+    "id": "document.watermarks",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.558333,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.180588871068
+  },
+  {
+    "id": "document.watermarks",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      23.275,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 71.81038432087448
+  },
+  {
+    "id": "document.header-footer",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      0.70833,
+      13.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.785865720668996
+  },
+  {
+    "id": "document.header-footer",
+    "master": 24,
+    "bounds": [
+      3.125,
+      1.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.80665471142052
+  },
+  {
+    "id": "document.edit-text",
+    "master": 16,
+    "bounds": [
+      1.375005,
+      2.70833,
+      15.334884,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.699127236206017
+  },
+  {
+    "id": "document.edit-text",
+    "master": 24,
+    "bounds": [
+      2.125015,
+      4.125,
+      22.93986,
+      20.874962
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 58.405855678894
+  },
+  {
+    "id": "document.ocr",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.269649495177006
+  },
+  {
+    "id": "document.ocr",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.31917751020202
+  },
+  {
+    "id": "document.edit-scanned-text",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.801549,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.699128925351502
+  },
+  {
+    "id": "document.edit-scanned-text",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      23.63986,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 58.40583488642145
+  },
+  {
+    "id": "document.compress",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.337728627101022
+  },
+  {
+    "id": "document.compress",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 36.33603370878651
+  },
+  {
+    "id": "page.reorder",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.24683168791101
+  },
+  {
+    "id": "page.reorder",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      23.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 71.83961176889304
+  },
+  {
+    "id": "capture.page",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.397520507164987
+  },
+  {
+    "id": "capture.page",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.234793824916046
+  },
+  {
+    "id": "capture.region",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.779914220326013
+  },
+  {
+    "id": "capture.region",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 52.037954512515945
+  },
+  {
+    "id": "capture.overlay",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.77986422032599
+  },
+  {
+    "id": "capture.overlay",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 73.03795451251607
+  },
+  {
+    "id": "export.cad",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.668814686310496
+  },
+  {
+    "id": "export.cad",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.168496176956506
+  },
+  {
+    "id": "export.raster-pdf",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.668814686310496
+  },
+  {
+    "id": "export.raster-pdf",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.168496176956506
+  },
+  {
+    "id": "export.ifc-report",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.668814686310496
+  },
+  {
+    "id": "export.ifc-report",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.168496176956506
+  },
+  {
+    "id": "document.email",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.763933250516992
+  },
+  {
+    "id": "document.email",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.52926316873747
+  },
+  {
+    "id": "view.actual-size",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.7102264070895
+  },
+  {
+    "id": "view.actual-size",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.43142210223548
+  },
+  {
+    "id": "view.rotate-left",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      1.375027,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.335539416908958
+  },
+  {
+    "id": "view.rotate-left",
+    "master": 24,
+    "bounds": [
+      1.625,
+      2.125038,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.135673921201125
+  },
+  {
+    "id": "view.rotate-right",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375027,
+      14.958326,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.33574897635148
+  },
+  {
+    "id": "view.rotate-right",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125038,
+      22.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.135873287613045
+  },
+  {
+    "id": "object.properties",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.891667,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.420516573251003
+  },
+  {
+    "id": "object.properties",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.275,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 34.489300200101496
+  },
+  {
+    "id": "panel.annotations",
+    "master": 16,
+    "bounds": [
+      2.0,
+      2.666667,
+      14.625,
+      12.0
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 4.1883697268010005
+  },
+  {
+    "id": "panel.annotations",
+    "master": 24,
+    "bounds": [
+      3.0,
+      4.0,
+      21.875,
+      18.0
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.423832199687999
+  },
+  {
+    "id": "panel.element-visibility",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.439139413867963
+  },
+  {
+    "id": "panel.element-visibility",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.95050586401994
+  },
+  {
+    "id": "panel.symbol-library",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.55603856227899
+  },
+  {
+    "id": "panel.symbol-library",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.243776165080032
+  },
+  {
+    "id": "view.thin-lines",
+    "master": 16,
+    "bounds": [
+      1.375021,
+      3.333333,
+      14.625,
+      12.333333
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.99999599999999
+  },
+  {
+    "id": "view.thin-lines",
+    "master": 24,
+    "bounds": [
+      2.125029,
+      5.0,
+      21.875,
+      18.5
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 36.0
+  },
+  {
+    "id": "view.remember-reading",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.929147048718477
+  },
+  {
+    "id": "view.remember-reading",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      23.874992
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 52.48340617424998
+  },
+  {
+    "id": "document.compare",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.452621671471997
+  },
+  {
+    "id": "document.compare",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.306185359809
+  },
+  {
+    "id": "view.show-keystrokes",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      2.70833,
+      15.29167,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.314946299200463
+  },
+  {
+    "id": "view.show-keystrokes",
+    "master": 24,
+    "bounds": [
+      1.125,
+      4.125,
+      22.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 25.83487380788598
+  },
+  {
+    "id": "measure.takeoff",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.047625910278002
+  },
+  {
+    "id": "measure.takeoff",
+    "master": 24,
+    "bounds": [
+      2.125387,
+      3.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.378616335757
+  },
+  {
+    "id": "symbol.parametric-picker",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.225,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.614800515039033
+  },
+  {
+    "id": "symbol.parametric-picker",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.275,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.57591445766745
+  },
+  {
+    "id": "object.reset-location",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.10340770312349
+  },
+  {
+    "id": "object.reset-location",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 67.38150733931504
+  },
+  {
+    "id": "ui.whats-new",
+    "master": 16,
+    "bounds": [
+      1.375,
+      0.375,
+      15.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.179315981431992
+  },
+  {
+    "id": "ui.whats-new",
+    "master": 24,
+    "bounds": [
+      2.125,
+      0.625103,
+      23.375,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.145458412574005
+  },
+  {
+    "id": "bookmark.navigate",
+    "master": 16,
+    "bounds": [
+      3.375,
+      1.375,
+      12.625,
+      14.521827
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "bookmark.navigate",
+    "master": 24,
+    "bounds": [
+      5.125,
+      2.125,
+      18.875,
+      21.720246
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "bookmark.add",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.95833,
+      14.511252
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.88955617654899
+  },
+  {
+    "id": "bookmark.add",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      23.875,
+      21.704432
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.743995141477946
+  },
+  {
+    "id": "bookmark.add-child",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.5
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.179795739600006
+  },
+  {
+    "id": "bookmark.add-child",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.687498
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 63.492025694191994
+  },
+  {
+    "id": "bookmark.edit",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.334884,
+      14.50588
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.699127236206017
+  },
+  {
+    "id": "bookmark.edit",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.93986,
+      21.696319
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 58.405855678894
+  },
+  {
+    "id": "attachment.add",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      2.09327,
+      15.95833,
+      13.90673
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.88955617654899
+  },
+  {
+    "id": "attachment.add",
+    "master": 24,
+    "bounds": [
+      1.625,
+      3.2024,
+      23.875,
+      20.7976
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.743995141477946
+  },
+  {
+    "id": "attachment.open",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      2.09327,
+      15.29167,
+      13.90673
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.394633151886993
+  },
+  {
+    "id": "attachment.open",
+    "master": 24,
+    "bounds": [
+      1.625,
+      3.2024,
+      22.875,
+      20.7976
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.793034206283995
+  },
+  {
+    "id": "attachment.save",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      2.09327,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.115795713063985
+  },
+  {
+    "id": "attachment.save",
+    "master": 24,
+    "bounds": [
+      1.625,
+      3.2024,
+      23.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.45314869437446
+  },
+  {
+    "id": "attachment.save-all",
+    "master": 16,
+    "bounds": [
+      1.04167,
+      2.09327,
+      15.95833,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.758445587364463
+  },
+  {
+    "id": "attachment.save-all",
+    "master": 24,
+    "bounds": [
+      1.625,
+      3.2024,
+      23.875,
+      23.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 64.23117339934046
+  },
+  {
+    "id": "layer.add",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.652931,
+      15.625,
+      11.013729
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.222869825319515
+  },
+  {
+    "id": "layer.add",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      2.541877,
+      23.375,
+      16.458123
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.243459100645502
+  },
+  {
+    "id": "layer.raise",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.652931,
+      14.95833,
+      11.013729
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.29580256710801
+  },
+  {
+    "id": "layer.raise",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      2.541877,
+      22.374996,
+      16.458123
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.683482124176503
+  },
+  {
+    "id": "layer.lower",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.652931,
+      14.95833,
+      11.013729
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.295774533657484
+  },
+  {
+    "id": "layer.lower",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      2.541877,
+      22.375,
+      16.458123
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.683246417616527
+  },
+  {
+    "id": "layer.assign-selection",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      15.013729
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.631864258441004
+  },
+  {
+    "id": "layer.assign-selection",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      22.458123
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.495367691288987
+  },
+  {
+    "id": "link.locate",
+    "master": 16,
+    "bounds": [
+      1.042003,
+      3.04167,
+      14.553748,
+      12.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.159154601740992
+  },
+  {
+    "id": "link.locate",
+    "master": 24,
+    "bounds": [
+      1.625038,
+      4.625,
+      21.768172,
+      18.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.97377292440751
+  },
+  {
+    "id": "link.open-external",
+    "master": 16,
+    "bounds": [
+      1.042003,
+      3.04167,
+      15.29167,
+      12.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.394633151886993
+  },
+  {
+    "id": "link.open-external",
+    "master": 24,
+    "bounds": [
+      1.625038,
+      4.625,
+      22.875,
+      18.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.793034206283995
+  },
+  {
+    "id": "link.export-list",
+    "master": 16,
+    "bounds": [
+      1.042003,
+      2.70833,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.115795713063985
+  },
+  {
+    "id": "link.export-list",
+    "master": 24,
+    "bounds": [
+      1.625038,
+      4.125029,
+      23.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.45314869437446
+  },
+  {
+    "id": "list.group-by",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 25.88559678244801
+  },
+  {
+    "id": "list.group-by",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 54.55435972235153
+  },
+  {
+    "id": "list.filter",
+    "master": 16,
+    "bounds": [
+      1.53408,
+      2.04167,
+      14.46592,
+      14.501199
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.892865522242007
+  },
+  {
+    "id": "list.filter",
+    "master": 24,
+    "bounds": [
+      2.363622,
+      3.125,
+      21.636378,
+      21.689301
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.903449803197507
+  },
+  {
+    "id": "annotate.flatten",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.025,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.590718272852996
+  },
+  {
+    "id": "annotate.flatten",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.475,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 59.83153335102702
+  },
+  {
+    "id": "format.font-increase",
+    "master": 16,
+    "bounds": [
+      2.922667,
+      3.333333,
+      15.625,
+      12.666667
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.223122850482486
+  },
+  {
+    "id": "format.font-increase",
+    "master": 24,
+    "bounds": [
+      4.384,
+      5.0,
+      23.375,
+      19.0
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.24403108050052
+  },
+  {
+    "id": "format.font-decrease",
+    "master": 16,
+    "bounds": [
+      2.922667,
+      3.333333,
+      15.625,
+      12.666667
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 5.3928835248250016
+  },
+  {
+    "id": "format.font-decrease",
+    "master": 24,
+    "bounds": [
+      4.384,
+      5.0,
+      23.375,
+      19.0
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.153056301360492
+  },
+  {
+    "id": "format.clear",
+    "master": 16,
+    "bounds": [
+      2.922667,
+      3.333333,
+      15.875298,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.795327831059524
+  },
+  {
+    "id": "format.clear",
+    "master": 24,
+    "bounds": [
+      4.384,
+      5.0,
+      23.750501,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 39.659641531998496
+  },
+  {
+    "id": "format.fill-color",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 55.559833788559004
+  },
+  {
+    "id": "format.fill-color",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 122.903061093729
+  },
+  {
+    "id": "format.stroke-color",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      13.95833,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 48.11318922032602
+  },
+  {
+    "id": "format.stroke-color",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 101.03795451251602
+  },
+  {
+    "id": "style.gallery",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.446564220326003
+  },
+  {
+    "id": "style.gallery",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.03795451251599
+  },
+  {
+    "id": "style.tools",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 13.712459536625989
+  },
+  {
+    "id": "style.tools",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 29.618061258012013
+  },
+  {
+    "id": "symbol.edit-type",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.483851,
+      15.334884,
+      13.594629
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 26.699127236206017
+  },
+  {
+    "id": "symbol.edit-type",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.288253,
+      22.93986,
+      20.329464
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 58.405855678894
+  },
+  {
+    "id": "budget.add-chapter",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      11.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.996547122754516
+  },
+  {
+    "id": "budget.add-chapter",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.983785818784504
+  },
+  {
+    "id": "budget.add-item",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      11.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 13.221515778078494
+  },
+  {
+    "id": "budget.add-item",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.66310941672304
+  },
+  {
+    "id": "budget.add-monitor",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      11.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.591084473008998
+  },
+  {
+    "id": "budget.add-monitor",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.35647443099755
+  },
+  {
+    "id": "budget.add-formula",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      11.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.342013012663017
+  },
+  {
+    "id": "budget.add-formula",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 38.049688306691
+  },
+  {
+    "id": "budget.add-text",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      11.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.114511299292516
+  },
+  {
+    "id": "budget.add-text",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 33.567280823276995
+  },
+  {
+    "id": "budget.add-blank",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 13.782669462292999
+  },
+  {
+    "id": "budget.add-blank",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      23.874992,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.64726372256804
+  },
+  {
+    "id": "project.properties",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      15.291667,
+      15.291667
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 29.908928394781476
+  },
+  {
+    "id": "project.properties",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 62.700399050632015
+  },
+  {
+    "id": "project.variants",
+    "master": 16,
+    "bounds": [
+      1.866667,
+      1.2,
+      14.758333,
+      15.425
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.659955968405
+  },
+  {
+    "id": "project.variants",
+    "master": 24,
+    "bounds": [
+      2.8,
+      1.8,
+      22.075,
+      23.075
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.85714710547002
+  },
+  {
+    "id": "project.option-set",
+    "master": 16,
+    "bounds": [
+      1.866667,
+      1.2,
+      14.758333,
+      15.425
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.216215424828015
+  },
+  {
+    "id": "project.option-set",
+    "master": 24,
+    "bounds": [
+      2.8,
+      1.8,
+      22.075,
+      23.075
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 63.70048653409802
+  },
+  {
+    "id": "review.track-changes",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      13.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.452283608437005
+  },
+  {
+    "id": "review.track-changes",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      20.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.306483575875493
+  },
+  {
+    "id": "review.clear-marks",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.875298,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.9507640006245
+  },
+  {
+    "id": "review.clear-marks",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      23.750501,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 38.25237787385646
+  },
+  {
+    "id": "review.highlight-row",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.44443555555599
+  },
+  {
+    "id": "review.highlight-row",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 64.0
+  },
+  {
+    "id": "review.highlight-cell",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.111107555555997
+  },
+  {
+    "id": "review.highlight-cell",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.0
+  },
+  {
+    "id": "export.page-images",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      2.04167,
+      15.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.668918999033483
+  },
+  {
+    "id": "export.page-images",
+    "master": 24,
+    "bounds": [
+      1.125,
+      3.125,
+      23.874998,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.168513643383
+  },
+  {
+    "id": "document.flatten-copy",
+    "master": 16,
+    "bounds": [
+      1.375027,
+      1.208491,
+      15.825,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.894946498835505
+  },
+  {
+    "id": "document.flatten-copy",
+    "master": 24,
+    "bounds": [
+      2.125,
+      1.875207,
+      23.675,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 52.07209544578401
+  },
+  {
+    "id": "export.pdfx",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.668814686310496
+  },
+  {
+    "id": "export.pdfx",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.168496176956506
+  },
+  {
+    "id": "object.rotate-left-90",
+    "master": 16,
+    "bounds": [
+      4.70833,
+      0.375335,
+      13.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.501866971705017
+  },
+  {
+    "id": "object.rotate-left-90",
+    "master": 24,
+    "bounds": [
+      7.125,
+      0.625468,
+      20.874991,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 40.95012300002202
+  },
+  {
+    "id": "object.rotate-right-90",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      0.37531,
+      11.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.501860442588015
+  },
+  {
+    "id": "object.rotate-right-90",
+    "master": 24,
+    "bounds": [
+      3.125038,
+      0.625433,
+      16.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 40.950254927841506
+  },
+  {
+    "id": "object.rotate-180",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375027,
+      15.025,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 29.137109342749536
+  },
+  {
+    "id": "object.rotate-180",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125038,
+      22.475,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 61.15216181523827
+  },
+  {
+    "id": "note.open",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      15.29167,
+      12.459257
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.509760514671498
+  },
+  {
+    "id": "note.open",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      22.875,
+      18.626387
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.83282036980949
+  },
+  {
+    "id": "note.hide",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      15.29167,
+      12.459257
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 4.559510878116002
+  },
+  {
+    "id": "note.hide",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      22.875,
+      18.626387
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.403145239574489
+  },
+  {
+    "id": "note.reset-position",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      15.29167,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.215349406181456
+  },
+  {
+    "id": "note.reset-position",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      22.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 36.120598597081994
+  },
+  {
+    "id": "note.reply",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      15.625,
+      13.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.222918439468003
+  },
+  {
+    "id": "note.reply",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      23.375,
+      20.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.24354879054501
+  },
+  {
+    "id": "annotate.printable",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.95833,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 7.7966338571254985
+  },
+  {
+    "id": "annotate.printable",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      23.874992,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.39108121563648
+  },
+  {
+    "id": "line.reverse",
+    "master": 16,
+    "bounds": [
+      1.6,
+      3.6,
+      14.4,
+      15.025
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 31.39500565784948
+  },
+  {
+    "id": "line.reverse",
+    "master": 24,
+    "bounds": [
+      2.4,
+      5.4,
+      21.6,
+      22.475
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 65.85671302522107
+  },
+  {
+    "id": "line.to-measure",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.628799437990494
+  },
+  {
+    "id": "line.to-measure",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 47.1401893343255
+  },
+  {
+    "id": "measure.calibrate-line",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.461687037468014
+  },
+  {
+    "id": "measure.calibrate-line",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.47730140148493
+  },
+  {
+    "id": "measure.set-scale",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.12464045412151
+  },
+  {
+    "id": "measure.set-scale",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 45.10946877269948
+  },
+  {
+    "id": "measure.chain-add",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      15.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.889690682863018
+  },
+  {
+    "id": "measure.chain-add",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      23.874992
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.74401726449147
+  },
+  {
+    "id": "measure.chain-remove",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 6.2260831027164985
+  },
+  {
+    "id": "measure.chain-remove",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.903292276447504
+  },
+  {
+    "id": "room.select-from-tag",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.940038140321997
+  },
+  {
+    "id": "room.select-from-tag",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 31.48886256027098
+  },
+  {
+    "id": "measure.add-hole",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 18.113214220325986
+  },
+  {
+    "id": "measure.add-hole",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 38.03795451251601
+  },
+  {
+    "id": "line.to-polyline",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 36.69256987829699
+  },
+  {
+    "id": "line.to-polyline",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 76.87273087045547
+  },
+  {
+    "id": "line.to-polygon",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.04167,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 46.51586978831109
+  },
+  {
+    "id": "line.to-polygon",
+    "master": 24,
+    "bounds": [
+      2.125,
+      3.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 97.70650580830656
+  },
+  {
+    "id": "search.previous",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      1.375,
+      13.958333,
+      15.825
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.836127044621954
+  },
+  {
+    "id": "search.previous",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      23.675
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 37.41886670128853
+  },
+  {
+    "id": "search.next",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      1.375,
+      13.95833,
+      15.825
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 17.835703716986494
+  },
+  {
+    "id": "search.next",
+    "master": 24,
+    "bounds": [
+      3.125,
+      2.125,
+      20.875,
+      23.675
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 37.41836627441801
+  },
+  {
+    "id": "search.whole-word",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.150381181307
+  },
+  {
+    "id": "search.whole-word",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 73.51200745909648
+  },
+  {
+    "id": "search.highlight-all",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 13.678626607220993
+  },
+  {
+    "id": "search.highlight-all",
+    "master": 24,
+    "bounds": [
+      2.125015,
+      4.125,
+      21.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.209060157038486
+  },
+  {
+    "id": "workspace.ribbon-toggle",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.159212030803491
+  },
+  {
+    "id": "workspace.ribbon-toggle",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.973635260722975
+  },
+  {
+    "id": "workspace.dock-left",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.099684536046505
+  },
+  {
+    "id": "workspace.dock-left",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.17293789137651
+  },
+  {
+    "id": "workspace.dock-right",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.099671879142988
+  },
+  {
+    "id": "workspace.dock-right",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 21.1731632088915
+  },
+  {
+    "id": "workspace.toolbar-toggle",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 8.159317853599486
+  },
+  {
+    "id": "workspace.toolbar-toggle",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.973570446414502
+  },
+  {
+    "id": "workspace.navigation-menu",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.70833,
+      13.95833,
+      13.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 14.559513811541011
+  },
+  {
+    "id": "workspace.navigation-menu",
+    "master": 24,
+    "bounds": [
+      3.125015,
+      4.125,
+      20.875,
+      19.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.40335984413951
+  },
+  {
+    "id": "field.text",
+    "master": 16,
+    "bounds": [
+      1.375,
+      3.375,
+      14.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.057862684964
+  },
+  {
+    "id": "field.text",
+    "master": 24,
+    "bounds": [
+      2.125,
+      5.125,
+      21.875,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.073353189881484
+  },
+  {
+    "id": "field.checkbox",
+    "master": 16,
+    "bounds": [
+      2.04167,
+      2.04167,
+      13.95833,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.085392500715463
+  },
+  {
+    "id": "field.checkbox",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.1202736770215
+  },
+  {
+    "id": "field.radio",
+    "master": 16,
+    "bounds": [
+      2.041667,
+      2.041667,
+      13.958333,
+      13.958333
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.565109621676003
+  },
+  {
+    "id": "field.radio",
+    "master": 24,
+    "bounds": [
+      3.125,
+      3.125,
+      20.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 28.271495702864026
+  },
+  {
+    "id": "field.combo",
+    "master": 16,
+    "bounds": [
+      1.375,
+      3.375,
+      14.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 4.987774024625999
+  },
+  {
+    "id": "field.combo",
+    "master": 24,
+    "bounds": [
+      2.125,
+      5.125,
+      21.875,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.483493033182492
+  },
+  {
+    "id": "field.list",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 9.559626477059012
+  },
+  {
+    "id": "field.list",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 19.903061204194994
+  },
+  {
+    "id": "field.button",
+    "master": 16,
+    "bounds": [
+      1.375,
+      3.375,
+      14.625,
+      12.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 10.697667094844002
+  },
+  {
+    "id": "field.button",
+    "master": 24,
+    "bounds": [
+      2.125,
+      5.125,
+      21.875,
+      18.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 22.42840000767551
+  },
+  {
+    "id": "document.properties",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.958333,
+      15.291667
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.933621015180485
+  },
+  {
+    "id": "document.properties",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      23.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.14110280824009
+  },
+  {
+    "id": "page.properties",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      1.375,
+      15.958333,
+      15.291667
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.933621015180485
+  },
+  {
+    "id": "page.properties",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      23.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.14110280824009
+  },
+  {
+    "id": "file.reveal",
+    "master": 16,
+    "bounds": [
+      1.375,
+      2.70833,
+      14.625,
+      13.95833
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.76568711056202
+  },
+  {
+    "id": "file.reveal",
+    "master": 24,
+    "bounds": [
+      2.125,
+      4.125,
+      21.875,
+      20.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.222900618778475
+  },
+  {
+    "id": "page.labels",
+    "master": 16,
+    "bounds": [
+      0.04167,
+      1.375,
+      15.863508,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.807585384163005
+  },
+  {
+    "id": "page.labels",
+    "master": 24,
+    "bounds": [
+      0.125,
+      2.125,
+      23.732821,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 58.51439161677801
+  },
+  {
+    "id": "document.open-url",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.102143099996004
+  },
+  {
+    "id": "document.open-url",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.278033767166516
+  },
+  {
+    "id": "workspace.sessions",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.375,
+      14.625,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 16.723065021876995
+  },
+  {
+    "id": "workspace.sessions",
+    "master": 24,
+    "bounds": [
+      2.125,
+      2.125,
+      21.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 35.11863358985999
+  },
+  {
+    "id": "document.compare-swap",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.375074,
+      15.29167,
+      15.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.089841314303
+  },
+  {
+    "id": "document.compare-swap",
+    "master": 24,
+    "bounds": [
+      1.125,
+      0.625468,
+      22.875,
+      23.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 50.73688363705098
+  },
+  {
+    "id": "theme.dark",
+    "master": 16,
+    "bounds": [
+      2.0,
+      2.007482,
+      15.0,
+      13.992518
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 3.111111822222002
+  },
+  {
+    "id": "theme.dark",
+    "master": 24,
+    "bounds": [
+      3.0,
+      3.011223,
+      22.5,
+      20.988777
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 6.999999999999997
+  },
+  {
+    "id": "theme.light",
+    "master": 16,
+    "bounds": [
+      0.70833,
+      0.70833,
+      15.29167,
+      15.29167
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 23.142142359960005
+  },
+  {
+    "id": "theme.light",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      1.12512,
+      22.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 47.22591099244999
+  },
+  {
+    "id": "format.no-color",
+    "master": 16,
+    "bounds": [
+      1.493392,
+      1.375,
+      15.29167,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 6.2260657205794985
+  },
+  {
+    "id": "format.no-color",
+    "master": 24,
+    "bounds": [
+      2.302538,
+      2.125,
+      22.875,
+      21.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.903294778115992
   }
 ]

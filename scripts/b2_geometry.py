@@ -26,6 +26,12 @@ from b2_report_series import extend as extend_report
 from b2_ifc_series import extend as extend_ifc
 from b2_tree_planning_geo import extend as extend_next
 from b2_energy_pile_audio import extend as extend_later
+from b2_page_views import extend as extend_pages
+from b2_bulk_series import extend as extend_bulk
+from b2_session_two import extend as extend_session
+from b2_document_navigation import extend as extend_document_navigation
+from b2_session_three import extend as extend_third
+from b2_session_four import extend as extend_fourth
 
 WHOLE_ACCENT={'draw.text','planning.driving'}
 
@@ -39,6 +45,31 @@ ACCENT_FOREGROUND={
     'file.print':'Het gekleurde papier ligt vóór de printeropening.',
 }
 ACCENT_FOREGROUND.update(ACCENT_FRONT)
+ACCENT_FOREGROUND.update({
+    'page.extract':'De extractiepijl loopt ononderbroken vóór de paginarand.',
+    'page.resize':'De formaatpijl loopt ononderbroken vóór de paginacontouren.',
+    'draw.arrow':'De accentpijlpunt ligt ononderbroken vóór de steel.',
+    'object.align-middle':'De accentas blijft ononderbroken vóór de objectcontouren.',
+})
+ACCENT_FOREGROUND.update({k:reason for k,reason in {
+    'draw.spline-arrow':'De gebogen pijl heeft een volledige accentpunt vóór de curve.',
+    'draw.coordinate':'De puntmarkering en leidlijn blijven volledig zichtbaar.',
+    'measure.count':'De dwarsstrepen van het telteken blijven ononderbroken vóór de schuine staanders.',
+    'transform.join':'De gekleurde verbinding en beide aansluitpunten liggen volledig vóór de twee lijndelen.',
+    'transform.stretch':'De uitrekpijl loopt ononderbroken vóór de kadergrens.',
+    'transform.break':'De twee breekpunten blijven volledig in accentkleur zichtbaar.',
+    'transform.scale':'De schaalpijl blijft ononderbroken bij de kaderkruising.',
+    'document.compress':'De twee compressiepijlen lopen ononderbroken vóór de paginarand.',
+    'edit.paste-in-place':'De plaatsmarkering staat vrij naast het klembord.',
+    'edit.deselect':'De accentstreep ligt vóór de selectiemarkeringen.',
+    'document.compare':'De vergelijkingslijnen blijven vóór de paginaranden zichtbaar.',
+    'view.remember-reading':'Het volledige accentbladwijzertje blijft vóór de boekcontour.',
+    'panel.element-visibility':'De zichtbaarheidsschuine streep blijft ononderbroken vóór de oogcontour.',
+    'object.reset-location':'De richtpijlen blijven volledig zichtbaar vóór het centrale object.',
+    'view.rotate-left':'De weergavepijl blijft een ononderbroken accentvorm.',
+    'view.rotate-right':'De gespiegelde weergavepijl behoudt de ononderbroken accentvorm.',
+}.items()})
+ACCENT_FOREGROUND['line.to-measure']='De oranje maatbegrenzingen liggen ononderbroken voor de horizontale maatlijn.'
 ACCENT_FOREGROUND['data.table']='De bovenste binnenlijn loopt ononderbroken vóór de kolomverdelers; het accent blijft binnen de hoofdgekleurde buitenrand.'
 ACCENT_FOREGROUND.update({
     'planning.cut-list':'De snijmarkeringen lopen ononderbroken over de materiaalregels.',
@@ -264,7 +295,7 @@ def construction(key,size):
         c.line([(20,12),(6,12)])
         c.line([(10,6),(4,12),(10,18)],True,radius=2)
         if key=='nav.forward':c.mirror()
-    elif not extend(c,key) and not extend_windows(c,key) and not extend_text(c,key) and not extend_data(c,key) and not extend_report(c,key) and not extend_ifc(c,key) and not extend_next(c,key) and not extend_later(c,key):raise ValueError(key)
+    elif not extend(c,key) and not extend_windows(c,key) and not extend_text(c,key) and not extend_data(c,key) and not extend_report(c,key) and not extend_ifc(c,key) and not extend_next(c,key) and not extend_later(c,key) and not extend_pages(c,key) and not extend_bulk(c,key) and not extend_session(c,key) and not extend_document_navigation(c,key) and not extend_third(c,key) and not extend_fourth(c,key):raise ValueError(key)
     return c
 
 

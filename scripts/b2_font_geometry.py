@@ -12,7 +12,8 @@ from fontTools.pens.basePen import BasePen
 FONT_SPECS={'format.bold':('B','Bold',4,20,0),
             'format.italic':('I','Medium',4,20,.22),
             'format.underline':('U','Medium',3,17,0),
-            'format.color':('A','Medium',3,17,0)}
+            'format.color':('A','Medium',3,17,0),
+            'search.whole-word':('M','Medium',7,17,0)}
 
 
 class OutlinePen(BasePen):

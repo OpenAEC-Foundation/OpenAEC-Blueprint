@@ -30,6 +30,40 @@ SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**LATER_SOURCES}
 EVIDENCE={**EVIDENCE,**LATER_EVIDENCE}
 REUSED={**REUSED,**LATER_REUSED}
 
+from b2_page_views import (DEFINITIONS as PAGE_DEFINITIONS, EXAMPLES as PAGE_EXAMPLES,
+    SOURCE_FUNCTIONS as PAGE_SOURCES, REUSED as PAGE_REUSED, KEYS as PAGE_KEYS)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**PAGE_SOURCES}
+REUSED={**REUSED,**PAGE_REUSED}
+
+from b2_bulk_series import (DEFINITIONS as BULK_DEFINITIONS, EXAMPLES as BULK_EXAMPLES,
+    SOURCE_FUNCTIONS as BULK_SOURCES, SERIES as BULK_SERIES, REUSED as BULK_REUSED, GROUPS as BULK_GROUPS, AVAILABLE_SERIES)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**BULK_SOURCES}
+REUSED={**REUSED,**BULK_REUSED}
+
+from b2_session_two import (DEFINITIONS as SESSION_DEFINITIONS, EXAMPLES as SESSION_EXAMPLES,
+    SOURCE_FUNCTIONS as SESSION_SOURCES, SERIES as SESSION_SERIES, REUSED as SESSION_REUSED,
+    GROUPS as SESSION_GROUPS, AVAILABLE_SERIES as SESSION_AVAILABLE)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**SESSION_SOURCES}
+REUSED={**REUSED,**SESSION_REUSED}
+from b2_document_navigation import (DEFINITIONS as NAV_DEFINITIONS, EXAMPLES as NAV_EXAMPLES,
+    SOURCE_FUNCTIONS as NAV_SOURCES, SERIES as NAV_SERIES, REUSED as NAV_REUSED,
+    GROUPS as NAV_GROUPS, AVAILABLE_SERIES as NAV_AVAILABLE)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**NAV_SOURCES}
+REUSED={**REUSED,**NAV_REUSED}
+from b2_session_three import (DEFINITIONS as THIRD_DEFINITIONS, EXAMPLES as THIRD_EXAMPLES,
+    SOURCE_FUNCTIONS as THIRD_SOURCES, SERIES as THIRD_SERIES, REUSED as THIRD_REUSED,
+    GROUPS as THIRD_GROUPS, AVAILABLE_SERIES as THIRD_AVAILABLE, ISSUES as THIRD_ISSUES, TYPOGRAPHY as THIRD_TYPOGRAPHY)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**THIRD_SOURCES}
+REUSED={**REUSED,**THIRD_REUSED}
+from b2_session_four import (DEFINITIONS as FOURTH_DEFINITIONS, EXAMPLES as FOURTH_EXAMPLES,
+    SOURCE_FUNCTIONS as FOURTH_SOURCES, SERIES as FOURTH_SERIES, REUSED as FOURTH_REUSED,
+    GROUPS as FOURTH_GROUPS, AVAILABLE_SERIES as FOURTH_AVAILABLE, EVIDENCE as FOURTH_EVIDENCE, ISSUES as FOURTH_ISSUES)
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**FOURTH_SOURCES}
+REUSED={**REUSED,**FOURTH_REUSED}
+EVIDENCE={**EVIDENCE,**FOURTH_EVIDENCE}
+FONT_METADATA={**font_sources(),**THIRD_TYPOGRAPHY}
+ALL_AVAILABLE=(*AVAILABLE_SERIES,*SESSION_AVAILABLE,*NAV_AVAILABLE,*THIRD_AVAILABLE,*FOURTH_AVAILABLE)
+
 OUT=ROOT/'design/icon-set-b2'
 AUDIT=ROOT/'harmonization/icon-set-b2'
 CATALOG=ROOT/'harmonization/function-icon-catalog.json'
@@ -100,7 +134,7 @@ ISSUES={
  'cb92de9a3d2a3547':'Projectroute; niet zonder beoordeling naar startpagina omzetten.',
  '7ba47aad8fc33b84':'Feedback naar ontwikkelaar; geen documentannotatie.',
 }
-DEFINITIONS+=SECOND_DEFINITIONS+WINDOW_DEFINITIONS+TEXT_DEFINITIONS+DATA_DEFINITIONS+REPORT_DEFINITIONS+IFC_DEFINITIONS+NEXT_DEFINITIONS+LATER_DEFINITIONS
+DEFINITIONS+=SECOND_DEFINITIONS+WINDOW_DEFINITIONS+TEXT_DEFINITIONS+DATA_DEFINITIONS+REPORT_DEFINITIONS+IFC_DEFINITIONS+NEXT_DEFINITIONS+LATER_DEFINITIONS+PAGE_DEFINITIONS+BULK_DEFINITIONS+SESSION_DEFINITIONS+NAV_DEFINITIONS+THIRD_DEFINITIONS+FOURTH_DEFINITIONS
 EXAMPLES.update(SECOND_EXAMPLES)
 EXAMPLES.update(WINDOW_EXAMPLES)
 EXAMPLES.update(TEXT_EXAMPLES)
@@ -109,6 +143,12 @@ EXAMPLES.update(REPORT_EXAMPLES)
 EXAMPLES.update(IFC_EXAMPLES)
 EXAMPLES.update(NEXT_EXAMPLES)
 EXAMPLES.update(LATER_EXAMPLES)
+EXAMPLES.update(PAGE_EXAMPLES)
+EXAMPLES.update(BULK_EXAMPLES)
+EXAMPLES.update(SESSION_EXAMPLES)
+EXAMPLES.update(NAV_EXAMPLES)
+EXAMPLES.update(THIRD_EXAMPLES)
+EXAMPLES.update(FOURTH_EXAMPLES)
 ISSUES.update(SECOND_ISSUES)
 ISSUES.update(TEXT_ISSUES)
 ISSUES.update(DATA_ISSUES)
@@ -116,6 +156,8 @@ ISSUES.update(REPORT_ISSUES)
 ISSUES.update(IFC_ISSUES)
 ISSUES.update(NEXT_ISSUES)
 ISSUES.update(LATER_ISSUES)
+ISSUES.update(THIRD_ISSUES)
+ISSUES.update(FOURTH_ISSUES)
 
 
 def digest(data):return hashlib.sha256(data).hexdigest()
@@ -128,7 +170,7 @@ def main():
     by_id={r['id']:r for r in catalog['records']}
     clusters={f['id']:f for f in catalog['functions']}
     previous=json.loads((OUT/'manifest.json').read_text(encoding='utf-8')) if (OUT/'manifest.json').exists() else {'icons':[]}
-    retained={i['id']:i for i in previous['icons'] if i['series']<14}
+    retained={i['id']:i for i in previous['icons'] }
     previous_geometry={(i['id'],i['master']):i for i in json.loads((OUT/'geometry-validation.json').read_text())} if (OUT/'geometry-validation.json').exists() else {}
     records=[];entries=[];geometry=[]
     for key,label,group,meaning in DEFINITIONS:
@@ -145,8 +187,8 @@ def main():
                'foreground':foreground(key),'layer_reason':layer_reason(key),
                'paint_order':['primary','accent'] if foreground(key)=='accent' else ['accent','primary'],
                'shape_revision':SHAPE_REVISIONS.get(key),'rounded_joint':key in ROUNDED_JOINTS,
-               'series':LATER_SERIES[key] if key in LATER_SERIES else NEXT_SERIES[key] if key in NEXT_SERIES else 7 if key in IFC_KEYS else 6 if key in REPORT_KEYS else 5 if key in DATA_KEYS else 4 if key in TEXT_KEYS else 3 if key in WINDOW_KEYS else 2 if key in SECOND_KEYS else 1,'semantic_color':SEMANTIC.get(key),
-               'whole_icon_accent':key in WHOLE_ACCENT,'typography':font_sources().get(key)}
+               'series':FOURTH_SERIES[key] if key in FOURTH_SERIES else THIRD_SERIES[key] if key in THIRD_SERIES else NAV_SERIES[key] if key in NAV_SERIES else SESSION_SERIES[key] if key in SESSION_SERIES else BULK_SERIES[key] if key in BULK_SERIES else 14 if key in PAGE_KEYS else LATER_SERIES[key] if key in LATER_SERIES else NEXT_SERIES[key] if key in NEXT_SERIES else 7 if key in IFC_KEYS else 6 if key in REPORT_KEYS else 5 if key in DATA_KEYS else 4 if key in TEXT_KEYS else 3 if key in WINDOW_KEYS else 2 if key in SECOND_KEYS else 1,'semantic_color':SEMANTIC.get(key),
+               'whole_icon_accent':key in WHOLE_ACCENT,'typography':FONT_METADATA.get(key)}
         for size in (16,24):
             model=construction(key,size)
             model_data={'width':model.width,'paths':model.paths,'circles':model.circles,'fills':model.fills,'clear_primary':model.clear_primary}
@@ -193,7 +235,7 @@ def main():
                         'canonical_function':REUSED[r['id']][0] if r['id'] in REUSED else example_targets.get(r['id'])})
     queue=[{**f,'canonical_function':canonical.get(f['id']),'canonical_functions':canonical_lists.get(f['id'],[]),'design_status':'B2-ontwerp beschikbaar' if f['id'] in canonical else 'nog te beoordelen/te tekenen',
             'mapping_status':'alleen expliciete bronvoorbeelden beoordeeld; overige bronplaatsen open'} for f in catalog['functions']]
-    manifest={'family':'OpenAEC B2','revision':23,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
+    manifest={'family':'OpenAEC B2','revision':52,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
               'function_count':len(entries),'svg_count':2*len(entries),'masters':[16,24],
               'paint_order':'per icoon vastgelegd','export':'gevulde contouren; achterste kleur minus voorste kleur',
               'curve_sampling':'12 stappen per halve kwadratische hoek; buffer 20 segmenten per kwadrant; cirkels 64',
@@ -201,7 +243,13 @@ def main():
               'generator_sha256':digest(Path(__file__).read_bytes()),
               'geometry_generator_sha256':digest((ROOT/'scripts/b2_geometry.py').read_bytes()),
               'font_generator_sha256':digest((ROOT/'scripts/b2_font_geometry.py').read_bytes()),
-              'font_sources':font_sources(),'license_files':['licenses/SpaceGrotesk-OFL.txt'],
+              'font_sources':FONT_METADATA,'license_files':['licenses/SpaceGrotesk-OFL.txt'],
+              'session_four_generator_sha256':digest((ROOT/'scripts/b2_session_four.py').read_bytes()),
+              'session_three_generator_sha256':digest((ROOT/'scripts/b2_session_three.py').read_bytes()),
+              'document_navigation_generator_sha256':digest((ROOT/'scripts/b2_document_navigation.py').read_bytes()),
+              'session_two_generator_sha256':digest((ROOT/'scripts/b2_session_two.py').read_bytes()),
+              'bulk_generator_sha256':digest((ROOT/'scripts/b2_bulk_series.py').read_bytes()),
+              'page_views_generator_sha256':digest((ROOT/'scripts/b2_page_views.py').read_bytes()),
               'later_groups_generator_sha256':digest((ROOT/'scripts/b2_energy_pile_audio.py').read_bytes()),
               'next_groups_generator_sha256':digest((ROOT/'scripts/b2_tree_planning_geo.py').read_bytes()),
               'ifc_generator_sha256':digest((ROOT/'scripts/b2_ifc_series.py').read_bytes()),
@@ -239,11 +287,61 @@ def main():
           'assessed':sum(r['assessment']!='nog te beoordelen' for r in records)}
     page=PAGE.replace('/* DATA */',json.dumps(data,ensure_ascii=False).replace('</','<\\/'))
     (OUT/'index.html').write_text(page,encoding='utf-8')
+    bulk_batches=','.join(str(b) for b in AVAILABLE_SERIES)
+    bulk_count=len(BULK_DEFINITIONS)
+    bulk=page.replace('theme();render();',f'theme();$("#batch").value="{bulk_batches}";render();')
+    links=' · '.join(f'<a href="series-{b}.html">{BULK_GROUPS[b]} ({sum(v==b for v in BULK_SERIES.values())})</a>' for b in AVAILABLE_SERIES)
+    bulk=bulk.replace('</h1>',f'</h1><div class="note"><b>Nieuwe reviewronde: {bulk_count} iconen klaar.</b><p>{links}</p><label><input type="checkbox" id="live-update" checked> Nieuwe groepen automatisch laden</label><p>Controle op aanvullingen elke 15 seconden. Filters en leespositie blijven bewaard. Serie 14 is goedgekeurd.</p></div>',1)
+    live="""<script>
+const reviewRevision=__REVISION__;
+const savedReview=sessionStorage.getItem('b2-bulk-view');
+if(savedReview){try{const q=JSON.parse(savedReview);for(const id of ['theme','group','search','batch']){const el=document.getElementById(id);if(el&&q[id]!==undefined&&(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===q[id])))el.value=q[id]}theme();render();document.getElementById('mono').checked=q.mono;document.body.classList.toggle('mono',q.mono);requestAnimationFrame(()=>scrollTo(0,q.scroll||0));}catch(e){}sessionStorage.removeItem('b2-bulk-view');}
+setInterval(async()=>{if(!document.getElementById('live-update').checked)return;try{const r=await fetch('manifest.json',{cache:'no-store'});if(!r.ok)return;const m=await r.json();if(m.revision!==reviewRevision){const q={scroll:scrollY,mono:document.getElementById('mono').checked};for(const id of ['theme','group','search','batch'])q[id]=document.getElementById(id).value;if(q.batch===__BATCHES__)delete q.batch;sessionStorage.setItem('b2-bulk-view',JSON.stringify(q));location.reload();}}catch(e){}},15000);
+</script>""".replace('__REVISION__',str(manifest['revision'])).replace('__BATCHES__',json.dumps(bulk_batches))
+    intro_start=bulk.index('<p>Ronde vormen,')
+    intro_end=bulk.index('<div class="stats">',intro_start)
+    bulk=bulk[:intro_start]+'<p>Nieuwe B2-ontwerpen ter beoordeling op 16, 24 en 32 px. Kies hieronder een serie of bekijk alles samen.</p>'+bulk[intro_end:]
+    bulk=bulk.replace('const groups=[...new Set(d.icons.map(i=>i.group))];','const groups=[...new Set([...d.icons.filter(i=>i.series>=15),...d.icons].map(i=>i.group))];')
+    bulk=bulk.replace('</html>',live+'</html>')
+    next_batches=','.join(map(str,SESSION_AVAILABLE))
+    next_links=' · '.join(f'<a href="series-{b}.html">{SESSION_GROUPS[b]} ({sum(v==b for v in SESSION_SERIES.values())})</a>' for b in SESSION_AVAILABLE)
+    next_bulk=bulk.replace(f'.value="{bulk_batches}";render();',f'.value="{next_batches}";render();').replace('q.batch==='+json.dumps(bulk_batches),'q.batch==='+json.dumps(next_batches)).replace('b2-bulk-view','b2-session-two-view')
+    next_bulk=next_bulk.replace(f'Nieuwe reviewronde: {bulk_count} iconen klaar.',f'Tweede grote reviewronde: {len(SESSION_DEFINITIONS)} iconen klaar.')
+    next_bulk=next_bulk.replace(links,next_links).replace('Serie 14 is goedgekeurd.','Series 15–20 zijn goedgekeurd.')
+    next_bulk=next_bulk.replace('filter(i=>i.series>=15)','filter(i=>i.series>=21)')
+    (OUT/'bulk-review-2.html').write_text(next_bulk,encoding='utf-8')
+    nav_batches=','.join(map(str,NAV_AVAILABLE))
+    nav_links=' · '.join(f'<a href="series-{b}.html">{NAV_GROUPS[b]} ({sum(v==b for v in NAV_SERIES.values())})</a>' for b in NAV_AVAILABLE)
+    nav_bulk=bulk.replace(f'.value="{bulk_batches}";render();',f'.value="{nav_batches}";render();').replace('q.batch==='+json.dumps(bulk_batches),'q.batch==='+json.dumps(nav_batches)).replace('b2-bulk-view','b2-document-navigation-view')
+    nav_bulk=nav_bulk.replace(f'Nieuwe reviewronde: {bulk_count} iconen klaar.',f'Bladwijzers en bijlagen: {len(NAV_DEFINITIONS)} nieuwe iconen klaar.')
+    nav_bulk=nav_bulk.replace(links,nav_links).replace('Serie 14 is goedgekeurd.','De eerdere 231 ontwerpen blijven behouden.')
+    nav_bulk=nav_bulk.replace('filter(i=>i.series>=15)','filter(i=>i.series>=29)')
+    (OUT/'bulk-review-3.html').write_text(nav_bulk,encoding='utf-8')
+    third_batches=','.join(map(str,THIRD_AVAILABLE))
+    third_links=' · '.join(f'<a href="series-{b}.html">{THIRD_GROUPS[b]} ({sum(v==b for v in THIRD_SERIES.values())})</a>' for b in THIRD_AVAILABLE)
+    third_bulk=bulk.replace(f'.value="{bulk_batches}";render();',f'.value="{third_batches}";render();').replace('q.batch==='+json.dumps(bulk_batches),'q.batch==='+json.dumps(third_batches)).replace('b2-bulk-view','b2-session-three-view')
+    third_bulk=third_bulk.replace(f'Nieuwe reviewronde: {bulk_count} iconen klaar.',f'Grote vervolglijst: {len(THIRD_DEFINITIONS)} nieuwe iconen klaar.')
+    third_bulk=third_bulk.replace(links,third_links).replace('Serie 14 is goedgekeurd.','De eerdere 239 ontwerpen blijven behouden.')
+    third_bulk=third_bulk.replace('filter(i=>i.series>=15)','filter(i=>i.series>=31)')
+    (OUT/'bulk-review-4.html').write_text(third_bulk,encoding='utf-8')
+    fourth_batches=','.join(map(str,FOURTH_AVAILABLE))
+    fourth_links=' · '.join(f'<a href="series-{b}.html">{FOURTH_GROUPS[b]} ({sum(v==b for v in FOURTH_SERIES.values())})</a>' for b in FOURTH_AVAILABLE)
+    fourth_bulk=bulk.replace(f'.value="{bulk_batches}";render();',f'.value="{fourth_batches}";render();').replace('q.batch==='+json.dumps(bulk_batches),'q.batch==='+json.dumps(fourth_batches)).replace('b2-bulk-view','b2-session-four-view')
+    fourth_bulk=fourth_bulk.replace(f'Nieuwe reviewronde: {bulk_count} iconen klaar.',f'Volgende reeks: {len(FOURTH_DEFINITIONS)} nieuwe iconen klaar.')
+    fourth_bulk=fourth_bulk.replace(links,fourth_links).replace('Serie 14 is goedgekeurd.','De eerdere 276 ontwerpen blijven behouden. Formuliersymbolen zijn typeaanduidingen; dockingsymbolen zijn sleepdoelen.')
+    fourth_bulk=fourth_bulk.replace('filter(i=>i.series>=15)','filter(i=>i.series>=39)')
+    (OUT/'bulk-review-5.html').write_text(fourth_bulk,encoding='utf-8')
+
+
+
+    bulk=bulk.replace('Serie 14 is goedgekeurd.','Deze ronde is goedgekeurd. <a href="bulk-review-2.html">Open de volgende grote reviewronde</a>.')
+    (OUT/'bulk-review.html').write_text(bulk,encoding='utf-8')
+
     (OUT/'series-2.html').write_text(page.replace('theme();render();','theme();$("#batch").value="2";render();'),encoding='utf-8')
     (OUT/'series-3.html').write_text(page.replace('theme();render();','theme();$("#batch").value="3";render();'),encoding='utf-8')
     (OUT/'series-4.html').write_text(page.replace('theme();render();','theme();$("#batch").value="4";render();'),encoding='utf-8')
     (OUT/'series-5.html').write_text(page.replace('theme();render();','theme();$("#batch").value="5";render();'),encoding='utf-8')
-    for batch in (8,9,10,11,12,13):
+    for batch in (8,9,10,11,12,13,14,*ALL_AVAILABLE):
         (OUT/f'series-{batch}.html').write_text(page.replace('theme();render();',f'theme();$("#batch").value="{batch}";render();'),encoding='utf-8')
     combined=page.replace('theme();render();','theme();$("#batch").value="8,9,10";render();')
     combined=combined.replace('</h1>','</h1><p><b>Drie nieuwe groepen: 13 ontwerpen.</b> <a href="series-8.html">Lijsten en bomen (2)</a> · <a href="series-9.html">Planning (7)</a> · <a href="series-10.html">Geotechniek (4)</a>. Taakaantekeningen gebruiken Opmerking; GeoJSON-export gebruikt Exporteren. Verkeerd ingedeelde plattegrond-/meshfuncties en appillustraties zijn apart gezet.</p>',1)
@@ -283,16 +381,16 @@ PAGE=PAGE.replace('function resized(s,n){','let svgInstance=0;function resized(s
     'Drie vormen herzien: Nieuw document, Opslaan als en 3D-beeld draaien','Vormen en kleurovergangen verfijnd')
 
 
-PAGE=PAGE.replace('De eerste serie bevat 31 functies.',f'De dertien series bevatten {len(DEFINITIONS)} functies.').replace(
+PAGE=PAGE.replace('De eerste serie bevat 31 functies.',f'De {14+len(ALL_AVAILABLE)} series bevatten {len(DEFINITIONS)} functies.').replace(
     '31 functies · 62 SVG-masters',f'{len(DEFINITIONS)} functies · {len(DEFINITIONS)*2} SVG-masters').replace(
     'Download 62 SVG’s',f'Download {len(DEFINITIONS)*2} SVG’s').replace(
     '1.487 bronclusters in de werklijst','1.487 bronclusters + 1 nieuw functiecontract').replace(
     '<label>Groep <select',
-    '<label>Serie <select id="batch"><option value="">Alles</option><option value="1">1 · Basis (31)</option><option value="2">2 · Tekenen en objecten (34)</option><option value="3">3 · Vensters en panelen (8)</option><option value="4">4 · Tekstopmaak (7)</option><option value="5">5 · Projecten en gegevens (3)</option><option value="6">6 · Rapporten (2)</option><option value="7">7 · IFC en BIM (3)</option><option value="8,9,10">8–10 · Drie nieuwe groepen (13)</option><option value="8">8 · Lijsten en bomen (2)</option><option value="9">9 · Planning (7)</option><option value="10">10 · Geotechniek (4)</option><option value="11,12,13">11–13 · Drie volgende groepen (15)</option><option value="11">11 · Energie en warmte (3)</option><option value="12">12 · Paalplan (7)</option><option value="13">13 · Spraak en audio (5)</option></select></label><label>Groep <select').replace(
+    '<label>Serie <select id="batch"><option value="">Alles</option><option value="1">1 · Basis (31)</option><option value="2">2 · Tekenen en objecten (34)</option><option value="3">3 · Vensters en panelen (8)</option><option value="4">4 · Tekstopmaak (7)</option><option value="5">5 · Projecten en gegevens (3)</option><option value="6">6 · Rapporten (2)</option><option value="7">7 · IFC en BIM (3)</option><option value="8,9,10">8–10 · Drie nieuwe groepen (13)</option><option value="8">8 · Lijsten en bomen (2)</option><option value="9">9 · Planning (7)</option><option value="10">10 · Geotechniek (4)</option><option value="11,12,13">11–13 · Drie volgende groepen (15)</option><option value="11">11 · Energie en warmte (3)</option><option value="12">12 · Paalplan (7)</option><option value="13">13 · Spraak en audio (5)</option><option value="14">14 · Paginanavigatie en weergaven (9)</option></select></label><label>Groep <select').replace(
     'let icons=d.icons.filter(i=>','let icons=d.icons.filter(i=>(!$("#batch").value||$("#batch").value.split(",").includes(String(i.series)))&&').replace(
     "$('#group').onchange=render;","$('#group').onchange=render;$('#batch').onchange=render;").replace(
     '<article class="card">','<article class="card" data-series="${i.series}" ${i.semantic_color?`data-semantic="${i.semantic_color}" style="--semantic-color:var(--status-${i.semantic_color})"`:""}>').replace(
-    '<code>${i.id}</code>','<code>${i.id}</code>${i.series>=11?"<span class=new-badge>NIEUW</span>":""}').replace(
+    '<code>${i.id}</code>','<code>${i.id}</code>${i.series>=21?"<span class=new-badge>NIEUW</span>":""}').replace(
     'r.style.colorScheme=t.kind;',
     'r.style.colorScheme=t.kind;for(const role of ["info","warning","error","success","text-secondary"])r.style.setProperty("--status-"+role,c[role]);').replace(
     "let queue=d.queue.filter(f=>","let queue=d.queue.filter(f=>(!$('#batch').value||d.icons.some(i=>(f.canonical_functions?.length?f.canonical_functions:[f.canonical_function||f.id]).includes(i.id)&&$('#batch').value.split(',').includes(String(i.series))))&&").replace(
@@ -311,5 +409,14 @@ PAGE=PAGE.replace('data-series="${i.series}"','data-icon="${i.id}" data-series="
     '</style>', '.card[data-icon="status.busy"] .hero svg,.card[data-icon="status.busy"] .native svg{animation:b2spin 1.4s linear infinite;transform-origin:center;transform-box:fill-box}.paused .card[data-icon="status.busy"] svg{animation:none}@keyframes b2spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.card[data-icon="status.busy"] svg{animation:none!important}}</style>').replace(
     'Eigen accentkleur geldt voor actieiconen.', 'Eigen accentkleur geldt voor actieiconen. De ring Bezig draait alleen in deze review; de SVG zelf is statisch. Oranje waarschuwing is een voorstel, nog geen gedeelde tokenwijziging.')
 
+
+PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {BULK_GROUPS[batch]} ({sum(v==batch for v in BULK_SERIES.values())})</option>' for batch in AVAILABLE_SERIES) + f'<option value="{",".join(map(str,AVAILABLE_SERIES))}">Nieuwe reviewronde ({len(BULK_DEFINITIONS)})</option></select></label><label>Groep',1)
+PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {SESSION_GROUPS[batch]} ({sum(v==batch for v in SESSION_SERIES.values())})</option>' for batch in SESSION_AVAILABLE) + f'<option value="{",".join(map(str,SESSION_AVAILABLE))}">Tweede grote reviewronde ({len(SESSION_DEFINITIONS)})</option></select></label><label>Groep',1)
+PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {NAV_GROUPS[batch]} ({sum(v==batch for v in NAV_SERIES.values())})</option>' for batch in NAV_AVAILABLE) + f'<option value="{",".join(map(str,NAV_AVAILABLE))}">Bladwijzers en bijlagen ({len(NAV_DEFINITIONS)})</option></select></label><label>Groep',1)
+PAGE=PAGE.replace('<div class="stats">','<p><a href="bulk-review-5.html">Volgende reeks · 40 iconen</a> · <a href="bulk-review-4.html">Vorige grote vervolglijst</a> · <a href="bulk-review-3.html">Bladwijzers en bijlagen</a> · <a href="bulk-review-2.html">Tweede grote reviewronde</a> · <a href="bulk-review.html">Vorige ronde (goedgekeurd)</a></p><div class="stats">',1)
+
+PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {THIRD_GROUPS[batch]} ({sum(v==batch for v in THIRD_SERIES.values())})</option>' for batch in THIRD_AVAILABLE) + f'<option value="{",".join(map(str,THIRD_AVAILABLE))}">Grote vervolglijst ({len(THIRD_DEFINITIONS)})</option></select></label><label>Groep',1)
+
+PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {FOURTH_GROUPS[batch]} ({sum(v==batch for v in FOURTH_SERIES.values())})</option>' for batch in FOURTH_AVAILABLE) + f'<option value="{",".join(map(str,FOURTH_AVAILABLE))}">Volgende reeks ({len(FOURTH_DEFINITIONS)})</option></select></label><label>Groep',1)
 
 if __name__=='__main__':main()

@@ -19,6 +19,21 @@ from b2_energy_pile_audio import SOURCE_FUNCTIONS as LATER_SOURCES, SERIES as LA
 SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**LATER_SOURCES}
 REUSED={**REUSED,**LATER_REUSED}
 
+from b2_page_views import SOURCE_FUNCTIONS as PAGE_SOURCES, REUSED as PAGE_REUSED, KEYS as PAGE_KEYS
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**PAGE_SOURCES}
+REUSED={**REUSED,**PAGE_REUSED}
+
+from b2_bulk_series import SOURCE_FUNCTIONS as BULK_SOURCES, SERIES as BULK_SERIES, REUSED as BULK_REUSED, AVAILABLE_SERIES
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**BULK_SOURCES}
+REUSED={**REUSED,**BULK_REUSED}
+
+from b2_session_two import SOURCE_FUNCTIONS as SESSION_SOURCES, SERIES as SESSION_SERIES, REUSED as SESSION_REUSED, AVAILABLE_SERIES as SESSION_AVAILABLE
+from b2_document_navigation import SOURCE_FUNCTIONS as NAV_SOURCES, SERIES as NAV_SERIES, REUSED as NAV_REUSED, AVAILABLE_SERIES as NAV_AVAILABLE
+from b2_session_three import SOURCE_FUNCTIONS as THIRD_SOURCES, SERIES as THIRD_SERIES, REUSED as THIRD_REUSED, AVAILABLE_SERIES as THIRD_AVAILABLE
+from b2_session_four import SOURCE_FUNCTIONS as FOURTH_SOURCES, SERIES as FOURTH_SERIES, REUSED as FOURTH_REUSED, AVAILABLE_SERIES as FOURTH_AVAILABLE
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**SESSION_SOURCES,**NAV_SOURCES,**THIRD_SOURCES,**FOURTH_SOURCES}
+REUSED={**REUSED,**SESSION_REUSED,**NAV_REUSED,**THIRD_REUSED,**FOURTH_REUSED}
+
 OUT=ROOT/'design/icon-set-b2'
 
 
@@ -80,6 +95,12 @@ def main():
     assert sha((ROOT/'scripts/b2_font_geometry.py').read_bytes())==manifest['font_generator_sha256']
     for font in manifest['font_sources'].values():assert sha((ROOT/font['source']).read_bytes())==font['sha256']
     assert sha((ROOT/'scripts/b2_data_series.py').read_bytes())==manifest['data_generator_sha256']
+    assert sha((ROOT/'scripts/b2_session_three.py').read_bytes())==manifest['session_three_generator_sha256']
+    assert sha((ROOT/'scripts/b2_session_four.py').read_bytes())==manifest['session_four_generator_sha256']
+    assert sha((ROOT/'scripts/b2_document_navigation.py').read_bytes())==manifest['document_navigation_generator_sha256']
+    assert sha((ROOT/'scripts/b2_session_two.py').read_bytes())==manifest['session_two_generator_sha256']
+    assert sha((ROOT/'scripts/b2_bulk_series.py').read_bytes())==manifest['bulk_generator_sha256']
+    assert sha((ROOT/'scripts/b2_page_views.py').read_bytes())==manifest['page_views_generator_sha256']
     assert sha((ROOT/'scripts/b2_energy_pile_audio.py').read_bytes())==manifest['later_groups_generator_sha256']
     assert sha((ROOT/'scripts/b2_tree_planning_geo.py').read_bytes())==manifest['next_groups_generator_sha256']
     assert sha((ROOT/'scripts/b2_ifc_series.py').read_bytes())==manifest['ifc_generator_sha256']
@@ -106,6 +127,18 @@ def main():
             assert style==('color:var(--icon-accent,currentColor)' if icon['id'] in WHOLE_ACCENT else None),'unexpected whole-icon colour'
             assert icon['whole_icon_accent']==(icon['id'] in WHOLE_ACCENT)
             overlap,layers=check_svg(content,size,icon['foreground']);maximum=max(maximum,overlap);count+=1
+            if icon['id'] in {'page.insert','page.delete'}:
+                assert layers['primary'].distance(layers['accent'])>=size/16,'page badge too close'
+            crossing={'page.extract':(15,12),'page.resize':(16,7),'draw.arrow':(20,4),'object.align-middle':(5,12)}
+            if icon['id'] in crossing:
+                x,y=crossing[icon['id']]
+                assert layers['accent'].covers(Point(x*size/24,y*size/24)),'accent interrupted at crossing'
+            if icon['id']=='draw.freehand':assert layers['accent'].is_empty,'freehand must use one colour'
+            if icon['id'] in {'image.reset','ui.check-updates'}:
+                ring=layers['accent' if icon['id']=='image.reset' else 'primary']
+                for x,y in ((13.5,2.75),(13.5,5.25),(15,4),(12.75,4)):
+                    assert ring.covers(Point(x*size/24,y*size/24)),'incomplete symmetric ring arrowhead'
+
             if icon['id'] in ROUNDED_JOINTS:
                 x=18 if icon['id'] in {'edit.redo','nav.forward'} else 6
                 y=10 if icon['id'].startswith('edit.') else 12
@@ -120,10 +153,20 @@ def main():
             if icon['id']=='planning.driving':
                 before=(OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_text(encoding='utf-8')
                 assert content.replace(' style="color:var(--icon-accent,currentColor)"','')==before,'driving shape changed'
-            if icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:
+            if icon['series']<14 and icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:
                 assert (OUT/'review/before-round-11-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested icon changed'
-            if icon['id'] not in {'object.rename','pile.legend-edit'}:
+            if icon['series']<14 and icon['id'] not in {'object.rename','pile.legend-edit'}:
                 assert (OUT/'review/before-pencil-fix'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested pencil-round change'
+            if icon['series']<14:
+                assert (OUT/'review/retained-series-1-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous family changed'
+            if icon['series']<=14:
+                assert (OUT/'review/retained-series-1-14'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 125 designs changed'
+            if icon['series']<=20:
+                assert (OUT/'review/retained-series-1-20'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted 170 changed'
+            if icon['series']<=28:
+                assert (OUT/'review/retained-series-1-28'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 231 designs changed'
+            if icon['series']<=30:
+                assert (OUT/'review/retained-series-1-30'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 239 designs changed'
             if icon['id']=='file.open' and size==24:sample=content
     # Failure controls make sure layering, overshoot and overlap are actually rejected.
     controls=0
@@ -189,6 +232,28 @@ def main():
     assert {i['id'] for i in manifest['icons'] if i['series']==5}==DATA_KEYS
     assert {i['id'] for i in manifest['icons'] if i['series']==6}==REPORT_KEYS
     assert {i['id'] for i in manifest['icons'] if i['series']==7}==IFC_KEYS
+    assert {i['id'] for i in manifest['icons'] if i['series']==14}==PAGE_KEYS
+    nav_review=(OUT/'bulk-review-3.html').read_text(encoding='utf-8')
+    assert '<option value="29,30">' in nav_review,'missing combined review filter'
+    assert '.value="29,30";render();' in nav_review,'wrong default review filter'
+    fourth_review=(OUT/'bulk-review-5.html').read_text(encoding='utf-8')
+    combined=','.join(map(str,FOURTH_AVAILABLE))
+    assert f'<option value="{combined}">' in fourth_review,'missing next review filter'
+    assert f'.value="{combined}";render();' in fourth_review,'wrong next review default'
+    assert len(FOURTH_SERIES)==40
+    for batch in FOURTH_AVAILABLE:
+        assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in FOURTH_SERIES.items() if v==batch}
+    third_review=(OUT/'bulk-review-4.html').read_text(encoding='utf-8')
+    combined=','.join(map(str,THIRD_AVAILABLE))
+    assert f'<option value="{combined}">' in third_review,'missing large review filter'
+    for batch in THIRD_AVAILABLE:
+        assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in THIRD_SERIES.items() if v==batch}
+    for batch in NAV_AVAILABLE:
+        assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in NAV_SERIES.items() if v==batch}
+    for batch in SESSION_AVAILABLE:
+        assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in SESSION_SERIES.items() if v==batch}
+    for batch in AVAILABLE_SERIES:
+        assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in BULK_SERIES.items() if v==batch}
     for batch in (11,12,13):
         assert {i['id'] for i in manifest['icons'] if i['series']==batch}=={k for k,v in LATER_SERIES.items() if v==batch}
     for batch in (8,9,10):
