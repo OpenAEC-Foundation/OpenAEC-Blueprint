@@ -177,13 +177,10 @@ ${renderVarBlock(lightVars)}
   --color-muted:     var(--color-surface-muted);
 
   --color-text:           var(--color-text-primary);
-  --color-text-secondary: var(--color-text-secondary);
-  --color-text-muted:     var(--color-text-muted);
-  --color-text-inverse:   var(--color-text-inverse);
-
-  --color-border:        var(--color-border-default);
-  --color-border-strong: var(--color-border-strong);
-  --color-border-focus:  var(--color-border-focus);
+  --color-border:         var(--color-border-default);
+  /* --color-text-secondary/-muted/-inverse en --color-border-strong/-focus
+     bestaan al als thema-variabele onder exact die naam; een alias zou naar
+     zichzelf verwijzen en de waarde ongeldig maken. */
 }
 
 /* Expliciete dark-mode via attribuut */
