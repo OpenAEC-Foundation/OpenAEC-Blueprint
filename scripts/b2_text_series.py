@@ -5,7 +5,7 @@ DEFINITIONS=[
  ('format.bold','Vet','Tekstopmaak','Vette tekstopmaak aan- of uitzetten; de actieve knoptoestand toont de huidige opmaak.'),
  ('format.italic','Cursief','Tekstopmaak','Cursieve tekstopmaak aan- of uitzetten; geen object schuin trekken.'),
  ('format.underline','Onderstrepen','Tekstopmaak','Tekst onderstrepen; geen losse lijn in een tekening plaatsen.'),
- ('format.color','Tekstkleur','Tekstopmaak','Tekstkleur kiezen; schermkleuren en resourceaccenten blijven apart. Ontwerpcontract zonder passend bronvoorbeeld in dit cluster.'),
+ ('format.color','Tekstkleur','Tekstopmaak','Tekstkleur kiezen; schermkleuren en resourceaccenten blijven apart. De tekstkleurinvoer van PDF ondersteunt de functie; geen bestaande B2-icoonadoptie.'),
  ('format.align-left','Tekst links uitlijnen','Tekstopmaak','Tekst links uitlijnen; geen objecten langs een verticale as uitlijnen.'),
  ('format.align-center','Tekst centreren','Tekstopmaak','Tekst horizontaal centreren; geen camerabeweging of objectuitlijning.'),
  ('format.align-right','Tekst rechts uitlijnen','Tekstopmaak','Tekst rechts uitlijnen; geen objecten langs een verticale as uitlijnen.'),

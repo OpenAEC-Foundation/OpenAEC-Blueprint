@@ -217,9 +217,7 @@ def extend(c,key):
         star=[(20,3.5),(20.7,5.3),(22.5,6),(20.7,6.7),(20,8.5),(19.3,6.7),(17.5,6),(19.3,5.3)]
         c.fills.append({'tone':'accent','rings':[[(x*scale,y*scale) for x,y in star]]})
     elif key=='format.no-color':
-        # Paint bucket and separate minus: remove the chosen colour.
-        c.line([(3,10),(10,3),(17,10),(10,17)],closed=True,radius=.5)
-        c.line([(5,8),(5,3),(8,3)],radius=.5)
-        c.line([(17,10),(20,13),(20,15)],radius=.5)
-        c.line([(16,21),(22,21)],True,radius=0)
+        # Empty colour swatch with a continuous slash: explicitly no fill.
+        box(c,4,4,16,16)
+        c.line([(3,21),(21,3)],True,radius=0)
     return True

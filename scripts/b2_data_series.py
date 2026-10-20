@@ -2,7 +2,7 @@
 from b2_second_series import box
 
 DEFINITIONS=[
- ('project.folder','Projectmap','Projecten en gegevens','Een map binnen de projectbibliotheek bekijken; geen bestand openen of nieuwe map aanmaken.'),
+ ('project.folder','Projectmap','Projecten en gegevens','Een map binnen een projectbibliotheek of bestandslocatielijst bekijken; geen bestand openen of nieuwe map aanmaken.'),
  ('data.table','Tabelweergave','Projecten en gegevens','Gegevens als tabel bekijken of de tabelweergave omschakelen; een tabelblok invoegen is een andere opdracht.'),
  ('data.chart','Grafiekweergave','Projecten en gegevens','Een grafiek of histogram met gegevens tonen; geen specifieke statistiekendialoog of urenverdeling bewerken.'),
 ]

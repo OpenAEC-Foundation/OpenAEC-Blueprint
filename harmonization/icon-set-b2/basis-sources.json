@@ -1,0 +1,166 @@
+{
+  "draw.dimension": {
+    "description": "De Maatlijn-knop activeert de tweepuntsplaatsing van een blijvende maatannotatie.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-geotechniek-studio",
+        "commit": "8182b48afc3f662e8d78650c7a1f21a7780d7e5f",
+        "path": "apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx",
+        "line": 344,
+        "description": "De Maatlijn-knop activeert de tweepuntsplaatsing van een blijvende maatannotatie.",
+        "sha256": "23d5349cc8bd44e22552f9efb2fc477a799dc065ec76db75965bf65a3a210460",
+        "git_blob": "8b0fc52083eb82743faa1d937d3639ab7c572c3c",
+        "url": "https://github.com/OpenAEC-Foundation/open-geotechniek-studio/blob/8182b48afc3f662e8d78650c7a1f21a7780d7e5f/apps/desktop/src/components/ribbon/SonderingstekeningTab.tsx#L344"
+      }
+    ]
+  },
+  "transform.mirror": {
+    "description": "De profielknop roept mirrorH aan voor de geselecteerde profielgeometrie.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-frame-studio",
+        "commit": "eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f",
+        "path": "ui/src/components/profile-editor/ProfileToolbar.svelte",
+        "line": 61,
+        "description": "De profielknop roept mirrorH aan voor de geselecteerde profielgeometrie.",
+        "sha256": "9107c05462cdc9ffe1f6d3e2c5f065af761c288d3b50c2e1c0ffdb28913122c3",
+        "git_blob": "48b84393d537c2431899b45a82e53efd96d6ecf1",
+        "url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileToolbar.svelte#L61"
+      }
+    ]
+  },
+  "object.align-center": {
+    "description": "De knop roept alignCenter op de selectie aan.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+        "line": 49,
+        "description": "De knop roept alignCenter op de selectie aan.",
+        "sha256": "52cc2af1675931ec9aec2322b52736a72383ed866bdecc2339c6686780f0391b",
+        "git_blob": "49d3aea9592b2ab1fc737e2ad527033693250e3b",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx#L49"
+      }
+    ]
+  },
+  "object.align-right": {
+    "description": "De knop roept alignRight op de selectie aan.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx",
+        "line": 53,
+        "description": "De knop roept alignRight op de selectie aan.",
+        "sha256": "52cc2af1675931ec9aec2322b52736a72383ed866bdecc2339c6686780f0391b",
+        "git_blob": "49d3aea9592b2ab1fc737e2ad527033693250e3b",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/ArrangeTab.jsx#L53"
+      }
+    ]
+  },
+  "view.orbit": {
+    "description": "Functioneel camerabewijs: de actieve sleeproute produceert Message::Orbit; turn_orbit wijzigt yaw/pitch om het orbitpunt. Dit is een invoergebaar, geen claim dat de bron dit B2-icoon al gebruikt.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-pointcloud-studio",
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
+        "path": "native/desktop/src/main.rs",
+        "line": 13700,
+        "description": "Actief orbit-sleepgebaar naar Message::Orbit.",
+        "sha256": "9ec6875804f7acf146b09fdf515943088c66181d813e2b7ff6392d702edcea3d",
+        "git_blob": "a9f6d89c5df77001dd13efe8f540fabd833fef19",
+        "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L13700"
+      },
+      {
+        "repository": "open-pointcloud-studio",
+        "commit": "cf209fe7a265aea7d692d710d70709c35b5b2b2c",
+        "path": "native/desktop/src/main.rs",
+        "line": 8811,
+        "description": "Message::Orbit roept turn_orbit aan; functie op regel 3475 draait de camera.",
+        "sha256": "9ec6875804f7acf146b09fdf515943088c66181d813e2b7ff6392d702edcea3d",
+        "git_blob": "a9f6d89c5df77001dd13efe8f540fabd833fef19",
+        "url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L8811"
+      }
+    ]
+  },
+  "format.color": {
+    "description": "De tekstkleurkiezer in TextFormatSection werkt updateAnnotProp(textColor,color) bij en is bij vergrendeling disabled; geen schermthemakleur. De bron heeft hier een kleurinvoer, geen B2-A-pictogram.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/properties-panel/TextFormatSection.jsx",
+        "line": 28,
+        "description": "Tekstkleurveld met de concrete updateAnnotProp-handler.",
+        "sha256": "2172ba6b7219379d5804ad10e4c23b30ab050be333d5a09dcc0b65f0205e5917",
+        "git_blob": "1c95870fee736ed1cefdaca2b9eff043e4edea7e",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/properties-panel/TextFormatSection.jsx#L28"
+      }
+    ]
+  },
+  "report.template": {
+    "description": "TemplateSelector kiest een rapportopzet via handleChange/loadScaffold, met bevestiging bij bestaande inhoud. De bron gebruikt een select, geen B2-pictogram.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "openaec-reports",
+        "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+        "path": "frontend/src/components/forms/TemplateSelector.tsx",
+        "line": 20,
+        "description": "Een gekozen template laadt het bijbehorende scaffold, direct of na bevestiging.",
+        "sha256": "cb73b54e1411964416276219b277bf7e6cea8614e14a1404f126200eca90f466",
+        "git_blob": "6eca0cc4f40b6d423420dc5b62aefe49e24ebade",
+        "url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/forms/TemplateSelector.tsx#L20"
+      }
+    ]
+  },
+  "nav.forward": {
+    "description": "GEPLAND ONTWERP (behouden basis): de bronknop Volgende weergave is permanent disabled en heeft geen callback. Het eerder getekende pictogram blijft behouden; geen actieve navigatiegeschiedenis claimen.",
+    "planned": true,
+    "sources": [
+      {
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/TitleBar.jsx",
+        "line": 158,
+        "description": "De bronknop heeft geen werkende callback.",
+        "sha256": "5e889d158da1603ad9cc1e5f0ef96875f00da82a5116a52a5adbda2ed50432d4",
+        "git_blob": "85c180894e3f29e1a5608156e7ae3b6dccb83dc2",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/TitleBar.jsx#L158"
+      }
+    ]
+  },
+  "nav.home": {
+    "description": "GEPLAND ONTWERP (behouden basis): Backstage vraagt onNavigate(/), maar AppShell logt dit verzoek alleen. De bron toont dus de bedoelde home-route zonder werkende navigatie; geen projectreset of startpagina openen bewezen.",
+    "planned": true,
+    "sources": [
+      {
+        "repository": "OpenAEC-BIM-validator",
+        "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "path": "viewer/src/components/chrome/backstage/Backstage.tsx",
+        "line": 181,
+        "description": "handleNew vraagt de home-route en sluit het menu; reset is TODO.",
+        "sha256": "fe3215c6a3ad6060bcf377f72d3af10307172c47a552b03733fd2661cc60b35d",
+        "git_blob": "41e5cffc7c9a58151fb728a1d552626c1dcfa7d3",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/backstage/Backstage.tsx#L181"
+      },
+      {
+        "repository": "OpenAEC-BIM-validator",
+        "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "path": "viewer/src/components/layout/AppShell.tsx",
+        "line": 471,
+        "description": "De gemonteerde onNavigate-callback logt alleen het verzoek.",
+        "sha256": "69d3e209c7ae8a844c42eff46f3e5b230153b2f3966253b7a1406b0f3ef6f100",
+        "git_blob": "0a24a66e7de1b46d6358196edd16d563c5f8982b",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/layout/AppShell.tsx#L471"
+      }
+    ]
+  }
+}

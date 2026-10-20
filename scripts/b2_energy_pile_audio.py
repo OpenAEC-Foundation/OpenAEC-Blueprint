@@ -6,7 +6,7 @@ DEFINITIONS=[
  ('thermal.summary','Importsamenvatting','Energie en warmte','De samenvattingsstap van de thermische import aanduiden; geen algemene succesmelding.'),
  ('thermal.door','Deur plaatsen','Energie en warmte','Het deurgereedschap in de Heatloss-modelleur activeren; apart van de importstap Openingen.'),
  ('pile.new','Nieuw paalplan','Paalplan','Een paalplan binnen het project toevoegen; geen nieuw projectbestand.'),
- ('object.rename','Paalplan hernoemen','Paalplan','Een bestaand plan hernoemen; niet Opslaan als of een extra exemplaar maken.'),
+ ('object.rename','Object hernoemen','Naam en eigenschappen','De naam van een bestaand object, persoonlijk taaktype of lokaal objectconcept wijzigen; geen extra exemplaar maken of Opslaan als.'),
  ('pile.legend-edit','Legenda bewerken','Paalplan','De legenda-editor openen om codering van paaltypen te wijzigen.'),
  ('pile.legend-used','Gebruikte typen activeren','Paalplan','Alleen de gebruikte paaltypen in de legenda activeren; geen algemene filterweergave.'),
  ('pile.columns','Paalkolommen kiezen','Paalplan','Kiezen welke kolommen bij de paalopties worden getoond; geen tabelgegevens invoegen.'),

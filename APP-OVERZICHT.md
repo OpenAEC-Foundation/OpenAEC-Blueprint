@@ -58,7 +58,7 @@ Toegevoegd op 2026-10-16: de installer staat niet op de harmonisatiepagina, maar
 
 | App | Techniek | Interface | Style Repo | Licentie |
 | --- | --- | --- | --- | --- |
-| OpenAEC Installer | Tauri + React | Installer | Nog niets | CC-BY-SA-4.0 |
+| OpenAEC Installer | Tauri + React | Installer | B2-functieontwerpen en gepinde bronreview; geen app-integratie | CC-BY-SA-4.0 |
 
 ## Later
 

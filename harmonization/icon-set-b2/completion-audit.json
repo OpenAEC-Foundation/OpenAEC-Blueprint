@@ -1,0 +1,92 @@
+{
+  "status": "klaar voor menselijke beoordeling",
+  "checked_at_utc": "2026-10-19T19:06:35.076547+00:00",
+  "revision": 86,
+  "designs": 945,
+  "masters": 1890,
+  "retained_designs": 316,
+  "retained_masters_byte_identical": 632,
+  "night_additions": 629,
+  "planned_designs": 16,
+  "source_records": 2894,
+  "source_apps": [
+    "BIM Validator",
+    "Calc",
+    "Calculations",
+    "Energy",
+    "Field",
+    "Frame",
+    "Geotechniek",
+    "Heatloss",
+    "Installer",
+    "PDF",
+    "Pile Plan",
+    "Planner",
+    "Pointcloud",
+    "Reports",
+    "Speech",
+    "Workspace Composer"
+  ],
+  "unresolved_sources": 0,
+  "unresolved_conflicts": 0,
+  "scope_audit": {
+    "excluded_sources_reviewed": 514,
+    "visible_placeholders_with_design": 173,
+    "missing_designs": 0
+  },
+  "native_contact_sheets": 108,
+  "native_preview_sizes": [
+    16,
+    24,
+    32
+  ],
+  "original_catalog_preserved": true,
+  "svg_check": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.9561660479552473e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 480
+  },
+  "repository_checks": {
+    "layout": "Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels",
+    "adoptions": "Reviewed shared SVGs exist; local Pointcloud integration unavailable",
+    "portable": "Canonical and review assets agree; local Pointcloud snapshot unavailable",
+    "package": "Reusable crate package: 177 files, 35 core icons, 72 domain SVGs, 32 typed ribbon icons, 6 fonts, 3 font notices, no research assets",
+    "tokens": "Tokens 0.4: 5 thema's, 190 kleurparen, alle paren halen hun minimum"
+  },
+  "ui_checks": [
+    "Online review: 945 functies / 1890 masters, seriekeuze en native voorbeelden zichtbaar.",
+    "Scopepagina: 514 / 173 / 16 / 0; gerichte nav.home-filter en oorspronkelijke uitvoeringsgrens gecontroleerd.",
+    "Offline viewer: native SVGs, seriekeuze en monochroom bekeken; definitieve font ingebed met licentie."
+  ],
+  "deliverables": {
+    "OpenAEC-B2-iconen-en-review.zip": {
+      "bytes": 44958032,
+      "sha256": "f2f47215993b1c4a2c0dd4c357af59aef2d16d8f96a2911958fe55b2cad5b147"
+    },
+    "OpenAEC-B2-review.html": {
+      "bytes": 59843518,
+      "sha256": "11fae4fc2b4a1532e36b48aa386d70897eb039e819bbcc171c80316ece5d9542"
+    },
+    "LEESMIJ-B2-iconen.txt": {
+      "bytes": 1635,
+      "sha256": "18061cb3f89f02bc9bee6feb18a8b8a8e8ff13d365ed433de12a6164876b1f0b"
+    }
+  },
+  "bounds": [
+    "FEM volgens afspraak later; bron was ontoegankelijk.",
+    "Dynamische modelinhoud, illustraties, beeldmerken en niet-gerenderde definities buiten de vaste functie-iconen.",
+    "16 geplande ontwerpen: 14 nieuw en 2 behouden basiscontracten; bronbediening nog niet aangesloten.",
+    "Geen Rust-/app-integratie; Rust niet gewijzigd, Cargo niet uitgevoerd.",
+    "Pointcloud-integratie en -snapshot lokaal niet aanwezig bij de twee algemene controles."
+  ],
+  "git_head": "bd8b453ccd1bccce206913741b078ba6efb6ae3a",
+  "committed": false,
+  "pushed": false
+}

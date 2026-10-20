@@ -3,10 +3,10 @@ from b2_second_series import box
 from b2_energy_pile_audio import arc_points
 
 DEFINITIONS=[
- ('page.first','Eerste pagina','Paginanavigatie en weergaven','Naar de eerste pagina van het actieve document gaan; geen startpagina van de app.'),
- ('page.previous','Vorige pagina','Paginanavigatie en weergaven','Eén documentpagina teruggaan; geen navigatiegeschiedenis of ongedaan maken. Spiegelen bij rechts-naar-links lezen gebeurt in de app.'),
- ('page.next','Volgende pagina','Paginanavigatie en weergaven','Eén documentpagina vooruitgaan; geen navigatiegeschiedenis of opnieuw uitvoeren. Spiegelen bij rechts-naar-links lezen gebeurt in de app.'),
- ('page.last','Laatste pagina','Paginanavigatie en weergaven','Naar de laatste pagina van het actieve document gaan; geen export of download.'),
+ ('page.first','Eerste pagina','Paginanavigatie en weergaven','Naar de eerste pagina of het eerste vel in de document- of afdrukvoorbeeldweergave gaan; geen startpagina van de app.'),
+ ('page.previous','Vorige pagina','Paginanavigatie en weergaven','Eén pagina of afdrukvoorbeeldvel teruggaan; geen navigatiegeschiedenis of ongedaan maken. Spiegelen bij rechts-naar-links lezen gebeurt in de app.'),
+ ('page.next','Volgende pagina','Paginanavigatie en weergaven','Eén pagina of afdrukvoorbeeldvel vooruitgaan; geen navigatiegeschiedenis of opnieuw uitvoeren. Spiegelen bij rechts-naar-links lezen gebeurt in de app.'),
+ ('page.last','Laatste pagina','Paginanavigatie en weergaven','Naar de laatste pagina of het laatste vel in de document- of afdrukvoorbeeldweergave gaan; geen export of download.'),
  ('page.view-single','Enkele pagina','Paginanavigatie en weergaven','Eén pagina tegelijk tonen; geen nieuwe pagina toevoegen.'),
  ('page.view-continuous','Doorlopende pagina’s','Paginanavigatie en weergaven','Pagina’s onder elkaar in een doorlopende documentweergave tonen.'),
  ('page.view-book','Boekweergave','Paginanavigatie en weergaven','Een doorlopende boekweergave met bookSpread activeren. Dit is een andere modus dan één dubbele pagina tegelijk.'),

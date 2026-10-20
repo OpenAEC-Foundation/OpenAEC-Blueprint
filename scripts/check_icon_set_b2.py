@@ -6,6 +6,9 @@ import re
 import hashlib
 import xml.etree.ElementTree as ET
 import zipfile
+from b2_source_catalog import load_catalog, source_hashes, supplemental_catalog
+from b2_completion import PLANNED_KEYS, PLANNED, EXCLUDED as SCOPE_EXCLUDED
+from b2_scope_audit import audit_hash, validate_scope_audit
 from b2_geometry import ROOT, Polygon, Point, unary_union, foreground, ROUNDED_JOINTS, CURRENT_CHANGES, WHOLE_ACCENT
 from b2_second_series import KEYS as SECOND_KEYS, SEMANTIC
 from b2_window_series import KEYS as WINDOW_KEYS
@@ -33,6 +36,11 @@ from b2_session_three import SOURCE_FUNCTIONS as THIRD_SOURCES, SERIES as THIRD_
 from b2_session_four import SOURCE_FUNCTIONS as FOURTH_SOURCES, SERIES as FOURTH_SERIES, REUSED as FOURTH_REUSED, AVAILABLE_SERIES as FOURTH_AVAILABLE
 SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**SESSION_SOURCES,**NAV_SOURCES,**THIRD_SOURCES,**FOURTH_SOURCES}
 REUSED={**REUSED,**SESSION_REUSED,**NAV_REUSED,**THIRD_REUSED,**FOURTH_REUSED}
+
+from b2_completion import SOURCE_FUNCTIONS as COMPLETION_SOURCES, REUSED as COMPLETION_REUSED, DISPATCHERS as COMPLETION_DISPATCHERS, SEMANTIC as COMPLETION_SEMANTIC
+SOURCE_FUNCTIONS={**SOURCE_FUNCTIONS,**COMPLETION_SOURCES}
+REUSED={**REUSED,**COMPLETION_REUSED}
+SEMANTIC={**SEMANTIC,**COMPLETION_SEMANTIC}
 
 OUT=ROOT/'design/icon-set-b2'
 
@@ -85,6 +93,8 @@ def luminance(colour):
 
 def main():
     manifest=json.loads((OUT/'manifest.json').read_text(encoding='utf-8'))
+    for name,expected in manifest['completion_modules_sha256'].items():assert sha((ROOT/'scripts'/name).read_bytes())==expected
+    assert sha((ROOT/'scripts/b2_completion.py').read_bytes())==manifest['completion_generator_sha256']
     assert sha((ROOT/'scripts/build_icon_set_b2.py').read_bytes())==manifest['generator_sha256']
     assert sha((ROOT/'scripts/b2_geometry.py').read_bytes())==manifest['geometry_generator_sha256']
     assert sha((ROOT/'scripts/b2_second_series.py').read_bytes())==manifest['extension_generator_sha256']
@@ -109,13 +119,38 @@ def main():
     assert sha(source.read_bytes())==manifest['source_catalog_sha256']
     assert sha((ROOT/'design/ontwerp-0.4/tokens-0.4.json').read_bytes())==manifest['theme_tokens_sha256']
     audit=json.loads((ROOT/'harmonization/icon-set-b2/function-plan.json').read_text(encoding='utf-8'))
-    catalog=json.loads(source.read_text(encoding='utf-8'))
+    catalog=load_catalog()
+    assert manifest['source_catalogs_sha256']==source_hashes()
+    assert audit['source_catalogs_sha256']==source_hashes()
+    assert {r['id'] for r in supplemental_catalog()['records']}<={r['record_id'] for r in audit['record_assessments']}
+    for rid,reason in PLANNED.items():
+        a=next(r for r in audit['record_assessments'] if r['record_id']==rid)
+        assert a['assessment']=='gepland ontwerp; bronbediening ontbreekt' and reason in a['reason']
     assert {r['record_id'] for r in audit['record_assessments']}=={r['id'] for r in catalog['records']}
     assert len(audit['record_assessments'])==len(catalog['records'])
     assert {f['id'] for f in audit['clusters']}=={f['id'] for f in catalog['functions']}
     by_id={r['id']:r for r in catalog['records']}
+    icon_keys={i['id'] for i in manifest['icons']}
+    assert manifest['scope_audit_sha256']==audit_hash()
+    basis_path=ROOT/'harmonization/icon-set-b2/basis-sources.json'
+    assert manifest['basis_sources_sha256']==sha(basis_path.read_bytes())
+    basis=json.loads(basis_path.read_text(encoding='utf-8'))
+    for row in audit['record_assessments']:assert set(row['canonical_functions'])<=icon_keys
+    validate_scope_audit(SCOPE_EXCLUDED,icon_keys,PLANNED,PLANNED_KEYS)
+    for record,targets in COMPLETION_DISPATCHERS.items():
+        a=next(r for r in audit['record_assessments'] if r['record_id']==record)
+        assert a['assessment']=='typeafhankelijk hergebruik'
+        assert a['canonical_functions']==list(targets) and set(targets)<=icon_keys
     maximum=0;count=0;sample=None
     for icon in manifest['icons']:
+        assert icon['source_support']==basis.get(icon['id'])
+        assert icon['source_example'] or icon['source_support'],'missing functional evidence'
+        if icon['source_support']:
+            assert icon['planned']==icon['source_support']['planned']
+            for s in icon['source_support']['sources']:
+                assert len(s['commit'])==40 and len(s['sha256'])==64 and s['url'].endswith('#L'+str(s['line']))
+        assert icon['planned']==(icon['id'] in PLANNED_KEYS)
+        if icon['planned']:assert 'GEPLAND ONTWERP' in icon['evidence_status'] and 'nog niet aangesloten' in icon['status']
         assert icon['rounded_joint']==(icon['id'] in ROUNDED_JOINTS)
         assert icon['foreground']==foreground(icon['id'])
         example=icon['source_example']
@@ -167,6 +202,8 @@ def main():
                 assert (OUT/'review/retained-series-1-28'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 231 designs changed'
             if icon['series']<=30:
                 assert (OUT/'review/retained-series-1-30'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 239 designs changed'
+            if icon['series']<=45:
+                assert (OUT/'review/retained-series-1-45'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'nightly work changed existing master'
             if icon['id']=='file.open' and size==24:sample=content
     # Failure controls make sure layering, overshoot and overlap are actually rejected.
     controls=0

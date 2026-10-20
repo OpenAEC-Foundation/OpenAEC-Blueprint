@@ -54,7 +54,7 @@ ROWS = [
  (19,'image.reset','Beeldcorrecties herstellen','De beeldcorrecties terugzetten via resetImageAdjustments; geen pagina- of objectrotatie.','6eeb56efc8f8ce8a'),
  (20,'extensions.manage','Extensies beheren','Het venster voor extensies openen; geen uitvoering van een specifieke extensie.','e6b024f6ba1a48a0'),
  (20,'ui.about','Over deze app','Het informatievenster over de toepassing openen; geen informatiemelding.','492b54d0123dd6dd'),
- (20,'ui.shortcuts','Sneltoetsen','Het overzicht van toetsencombinaties openen.','dc3b5589f685173b'),
+ (20,'ui.shortcuts','Sneltoetsen','Het overzicht van toetsencombinaties openen of als vaste kop aanduiden.','dc3b5589f685173b'),
  (20,'ui.check-updates','Updates controleren','Handmatig op appupdates controleren; geen startupdiagnostiek.','e7f468df7094a54b'),
  (20,'ui.file-associations','Bestandskoppelingen','Voorkeuren voor bestandsassociaties openen.','2e432b6f83171c60'),
 ]

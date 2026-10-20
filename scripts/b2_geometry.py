@@ -32,6 +32,7 @@ from b2_session_two import extend as extend_session
 from b2_document_navigation import extend as extend_document_navigation
 from b2_session_three import extend as extend_third
 from b2_session_four import extend as extend_fourth
+from b2_completion import extend as extend_completion, ACCENT_FRONT as COMPLETION_ACCENT_FRONT
 
 WHOLE_ACCENT={'draw.text','planning.driving'}
 
@@ -45,6 +46,8 @@ ACCENT_FOREGROUND={
     'file.print':'Het gekleurde papier ligt vóór de printeropening.',
 }
 ACCENT_FOREGROUND.update(ACCENT_FRONT)
+ACCENT_FOREGROUND.update(COMPLETION_ACCENT_FRONT)
+ACCENT_FOREGROUND['format.no-color']='De diagonale accentstreep loopt ononderbroken voor het lege kleurvlak.'
 ACCENT_FOREGROUND.update({
     'page.extract':'De extractiepijl loopt ononderbroken vóór de paginarand.',
     'page.resize':'De formaatpijl loopt ononderbroken vóór de paginacontouren.',
@@ -295,13 +298,19 @@ def construction(key,size):
         c.line([(20,12),(6,12)])
         c.line([(10,6),(4,12),(10,18)],True,radius=2)
         if key=='nav.forward':c.mirror()
-    elif not extend(c,key) and not extend_windows(c,key) and not extend_text(c,key) and not extend_data(c,key) and not extend_report(c,key) and not extend_ifc(c,key) and not extend_next(c,key) and not extend_later(c,key) and not extend_pages(c,key) and not extend_bulk(c,key) and not extend_session(c,key) and not extend_document_navigation(c,key) and not extend_third(c,key) and not extend_fourth(c,key):raise ValueError(key)
+    elif not extend(c,key) and not extend_windows(c,key) and not extend_text(c,key) and not extend_data(c,key) and not extend_report(c,key) and not extend_ifc(c,key) and not extend_next(c,key) and not extend_later(c,key) and not extend_pages(c,key) and not extend_bulk(c,key) and not extend_session(c,key) and not extend_document_navigation(c,key) and not extend_third(c,key) and not extend_fourth(c,key) and not extend_completion(c,key):raise ValueError(key)
     return c
 
 
 def path_data(geometry):
     if geometry.is_empty:return ''
-    polygons=[geometry] if geometry.geom_type=='Polygon' else list(geometry.geoms)
+    # A precise contour difference may leave zero-area line fragments at tangencies.
+    # SVG fills contain polygon areas only; preserve every polygon and its holes.
+    def polygon_parts(g):
+        if g.geom_type=='Polygon':yield g
+        elif hasattr(g,'geoms'):
+            for part in g.geoms:yield from polygon_parts(part)
+    polygons=list(polygon_parts(geometry))
     def ring(coords):return 'M'+'L'.join(f'{x:.6f} {y:.6f}' for x,y in list(coords)[:-1])+'Z'
     return ''.join(ring(p.exterior.coords)+''.join(ring(i.coords) for i in p.interiors) for p in polygons)
 
