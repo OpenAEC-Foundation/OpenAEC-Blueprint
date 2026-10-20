@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/paths.mjs";
@@ -42,6 +42,19 @@ steps.push(["icons-rust", (root) => [
   writeGenerated(join(root, "crates", "openaec-icons", "src", "generated.rs"),
     renderIconsRust(loadIconManifest(join(root, "design", "icons")))),
 ]]);
+
+// Licenties van overgenomen iconensets (design/icons/LICENSE-*.txt) gaan mee in package en crate.
+steps.push(["icons-licenses", (root) => {
+  const src = join(root, "design", "icons");
+  const files = readdirSync(src).filter((f) => /^LICENSE-.+\.txt$/.test(f)).sort();
+  return files.flatMap((f) => {
+    const text = readFileSync(join(src, f), "utf8");
+    return [
+      writeGenerated(join(root, "packages", "icons", f), text),
+      writeGenerated(join(root, "crates", "openaec-icons", f), text),
+    ];
+  });
+}]);
 
 steps.push(["i18n", (root) => {
   const src = join(root, "design", "i18n");

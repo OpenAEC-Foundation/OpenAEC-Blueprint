@@ -24,4 +24,7 @@ Alles in deze map wordt met de hand bewerkt. Alles daarbuiten in `packages/`,
    `label = { nl, en }`, `tags` en `source = "openaec"`.
 3. `npm run generate` en `npm test`; voor de Rust-snapshots eenmalig
    `UPDATE_SNAPSHOTS=1 cargo test -p openaec-icons`.
-4. PR openen. Na merge en release krijgen alle apps het icoon via hun versie-update.
+4. Overgenomen iconen uit een open-source set: zet `source` op de naam van de set en
+   leg de licentietekst vast als `design/icons/LICENSE-<set>.txt` (gaat automatisch mee
+   in `@openaec/icons` en `openaec-icons`). Nu: Lucide (ISC/MIT) voor de UI-basisset.
+5. PR openen. Na merge en release krijgen alle apps het icoon via hun versie-update.

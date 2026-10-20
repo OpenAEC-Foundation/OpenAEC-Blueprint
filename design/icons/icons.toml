@@ -179,6 +179,120 @@ tags = ["text"]
 source = "openaec"
 
 [[icon]]
+id = "ui/ai"
+label = { nl = "AI", en = "AI" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/apps"
+label = { nl = "Apps", en = "Apps" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/billing"
+label = { nl = "Facturering", en = "Billing" }
+tags = ["ui", "account"]
+source = "lucide"
+
+[[icon]]
+id = "ui/chart"
+label = { nl = "Grafiek", en = "Chart" }
+tags = ["ui", "report"]
+source = "lucide"
+
+[[icon]]
+id = "ui/chevron-down"
+label = { nl = "Omlaag", en = "Down" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/chevron-left"
+label = { nl = "Naar links", en = "Left" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/chevron-right"
+label = { nl = "Naar rechts", en = "Right" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/chevron-up"
+label = { nl = "Omhoog", en = "Up" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/close"
+label = { nl = "Sluiten", en = "Close" }
+tags = ["ui", "window"]
+source = "lucide"
+
+[[icon]]
+id = "ui/cloud"
+label = { nl = "Cloud", en = "Cloud" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/collapse"
+label = { nl = "Inklappen", en = "Collapse" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/database"
+label = { nl = "Opslag", en = "Storage" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/delete"
+label = { nl = "Verwijderen", en = "Delete" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/document"
+label = { nl = "Document", en = "Document" }
+tags = ["ui", "file"]
+source = "lucide"
+
+[[icon]]
+id = "ui/domain"
+label = { nl = "Domein", en = "Domain" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/download"
+label = { nl = "Downloaden", en = "Download" }
+tags = ["ui", "file"]
+source = "lucide"
+
+[[icon]]
+id = "ui/edit"
+label = { nl = "Bewerken", en = "Edit" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/error"
+label = { nl = "Fout", en = "Error" }
+tags = ["ui", "status"]
+source = "lucide"
+
+[[icon]]
+id = "ui/expand"
+label = { nl = "Uitklappen", en = "Expand" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
 id = "ui/extension-browse"
 label = { nl = "Extensies zoeken", en = "Browse extensions" }
 tags = ["ui", "extension"]
@@ -197,6 +311,18 @@ tags = ["ui", "extension"]
 source = "openaec"
 
 [[icon]]
+id = "ui/external-link"
+label = { nl = "Openen in nieuw venster", en = "Open externally" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/filter"
+label = { nl = "Filteren", en = "Filter" }
+tags = ["ui", "data"]
+source = "lucide"
+
+[[icon]]
 id = "ui/help"
 label = { nl = "Help", en = "Help" }
 tags = ["ui"]
@@ -209,10 +335,154 @@ tags = ["ui"]
 source = "openaec"
 
 [[icon]]
+id = "ui/invoice"
+label = { nl = "Factuur", en = "Invoice" }
+tags = ["ui", "account"]
+source = "lucide"
+
+[[icon]]
+id = "ui/license"
+label = { nl = "Licentie", en = "License" }
+tags = ["ui", "account", "security"]
+source = "lucide"
+
+[[icon]]
+id = "ui/lock"
+label = { nl = "Vergrendeld", en = "Locked" }
+tags = ["ui", "security"]
+source = "lucide"
+
+[[icon]]
+id = "ui/log"
+label = { nl = "Logboek", en = "Log" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/mail"
+label = { nl = "E-mail", en = "Email" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/menu"
+label = { nl = "Menu", en = "Menu" }
+tags = ["ui", "navigation"]
+source = "lucide"
+
+[[icon]]
+id = "ui/minus"
+label = { nl = "Verwijderen uit", en = "Remove" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/more"
+label = { nl = "Meer", en = "More" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/notifications"
+label = { nl = "Meldingen", en = "Notifications" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/plus"
+label = { nl = "Toevoegen", en = "Add" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/question"
+label = { nl = "Vraag", en = "Question" }
+tags = ["ui", "help"]
+source = "lucide"
+
+[[icon]]
+id = "ui/refresh"
+label = { nl = "Vernieuwen", en = "Refresh" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/search"
+label = { nl = "Zoeken", en = "Search" }
+tags = ["ui"]
+source = "lucide"
+
+[[icon]]
+id = "ui/security"
+label = { nl = "Beveiliging", en = "Security" }
+tags = ["ui", "security"]
+source = "lucide"
+
+[[icon]]
 id = "ui/settings"
 label = { nl = "Instellingen", en = "Settings" }
 tags = ["ui"]
 source = "openaec"
+
+[[icon]]
+id = "ui/sort-asc"
+label = { nl = "Oplopend sorteren", en = "Sort ascending" }
+tags = ["ui", "data"]
+source = "lucide"
+
+[[icon]]
+id = "ui/sort-desc"
+label = { nl = "Aflopend sorteren", en = "Sort descending" }
+tags = ["ui", "data"]
+source = "lucide"
+
+[[icon]]
+id = "ui/status"
+label = { nl = "Servicestatus", en = "Service status" }
+tags = ["ui", "status"]
+source = "lucide"
+
+[[icon]]
+id = "ui/success"
+label = { nl = "Gelukt", en = "Success" }
+tags = ["ui", "status"]
+source = "lucide"
+
+[[icon]]
+id = "ui/support"
+label = { nl = "Ondersteuning", en = "Support" }
+tags = ["ui", "help"]
+source = "lucide"
+
+[[icon]]
+id = "ui/upload"
+label = { nl = "Uploaden", en = "Upload" }
+tags = ["ui", "file"]
+source = "lucide"
+
+[[icon]]
+id = "ui/user"
+label = { nl = "Gebruiker", en = "User" }
+tags = ["ui", "account"]
+source = "lucide"
+
+[[icon]]
+id = "ui/user-add"
+label = { nl = "Gebruiker toevoegen", en = "Add user" }
+tags = ["ui", "account"]
+source = "lucide"
+
+[[icon]]
+id = "ui/users"
+label = { nl = "Gebruikers", en = "Users" }
+tags = ["ui", "account"]
+source = "lucide"
+
+[[icon]]
+id = "ui/warning"
+label = { nl = "Waarschuwing", en = "Warning" }
+tags = ["ui", "status"]
+source = "lucide"
 
 [[icon]]
 id = "view/fit-all"

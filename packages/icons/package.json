@@ -17,7 +17,7 @@
     ".": "./src/index.ts",
     "./by-id": "./src/generated/by-id.ts"
   },
-  "files": ["src/", "README.md"],
+  "files": ["src/", "README.md", "LICENSE-*.txt"],
   "peerDependencies": { "react": ">=18" },
   "devDependencies": { "@types/react": "^19.0.0", "typescript": "^5.6.0" }
 }
