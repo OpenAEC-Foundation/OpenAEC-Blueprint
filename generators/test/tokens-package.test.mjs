@@ -12,6 +12,20 @@ test("packages/tokens bouwt uit design/tokens en kopieert de JSON mee", () => {
   assert.ok(existsSync(repoPath("packages", "tokens", "extensions", "warmteverlies.json")));
 });
 
+test("uitgeschakelde knoppen hebben een eigen gedempte stijl, niet alleen opacity", () => {
+  const css = readFileSync(repoPath("packages", "tokens", "src", "components.css"), "utf8");
+  const rule = /\.oa-btn:disabled,\s*\.oa-btn\[aria-disabled="true"\]\s*\{([^}]*)\}/.exec(css);
+  assert.ok(rule, "regel voor .oa-btn:disabled ontbreekt");
+  assert.match(rule[1], /background:\s*var\(--color-surface-muted\)/);
+  assert.match(rule[1], /color:\s*var\(--color-text-muted\)/);
+  assert.match(rule[1], /cursor:\s*not-allowed/);
+  assert.doesNotMatch(rule[1], /opacity/);
+  // Hover mag een uitgeschakelde knop niet weer actief laten ogen.
+  for (const m of css.matchAll(/\.oa-btn--\w+:hover[^{]*\{/g)) {
+    assert.match(m[0], /:not\(:disabled\):not\(\[aria-disabled="true"\]\)/, m[0]);
+  }
+});
+
 test("tokens.css bevat geen CSS-variabelen die (via een keten) naar zichzelf verwijzen", () => {
   execFileSync(process.execPath, ["build.js"], { cwd: repoPath("packages", "tokens") });
   const css = readFileSync(repoPath("packages", "tokens", "dist", "tokens.css"), "utf8");
