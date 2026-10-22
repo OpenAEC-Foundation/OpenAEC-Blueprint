@@ -89,13 +89,16 @@ Gestart op 2026-10-16. Werkplan en voortgang staan in [`design/ontwerp-0.4/READM
 - **Rust-bibliotheek 0.4**, vanaf nul gebouwd. Architectuur, fundament, componenten, schil, layouts, documentatie en release. Het Rust-prototype dient als referentie.
   - **Klaar (2026-10-22):** fundament, componenten, tegels en kaarten, en de navigatie van werkstroom-apps in `openaec_ui::design`. De galerij `cargo run --release --features gpu --bin ui04` toont een lint-app met startscherm, Bestand-scherm en instellingen, en een werkstroom-app met zijbalk of stappen.
   - **Klaar (2026-10-22):** de eigen titelbalk met werkende vensterknoppen (slepen, dubbelklikken, minimaliseren, maximaliseren, sluiten met de vraag om op te slaan), versleepbare panelen en menu's (rechtermuisknop op tabel, boom en documenttabs, en het menu in de titelbalk).
-  - Nog te doen: de iconen van Codex als vaste set in de crate, en de eerste app die de bibliotheek echt gebruikt.
+  - **Klaar (2026-10-22):** de iconen van Codex als vaste set in de crate [`crates/openaec-icons`](crates/openaec-icons/): 945 iconen in 16 en 24 px, per app een feature, zodat een app alleen haar eigen iconen meeneemt. Gemaakt door [`scripts/generate_icon_crate.py`](scripts/generate_icon_crate.py) uit de verliesvrije export.
+  - Nog te doen: de eerste app die de bibliotheek echt gebruikt (fase 5).
 - **Webpakket.** CSS en iconen die in elk webframework werken, met componenten voor React. Dit bouwt voort op het Style Book of vervangt het, afhankelijk van fase 3.
+  - **Klaar (2026-10-22):** [`web/openaec-components.css`](web/openaec-components.css) met de componenten van 0.4 en de websitestijl van de installer, voor webtools zoals BIM Validator. Overzicht in vijf thema's: [`web/componenten.html`](web/componenten.html).
+  - Nog te doen: de iconen als los webbestand en de React-componenten.
 - **Resultaat:** per techniek een uitvoering met een voorbeeld en een korte handleiding.
 
 ### Fase 5: apps harmoniseren
 
-- **Testversie van de hele nieuwe UI.** Zodra de bibliotheek 0.4 en de iconen klaar zijn, bouwen we één app als testversie met de volledige nieuwe UI: thema's, lint, panelen, tegels, startscherm, instellingen en iconen. Die beoordeelt de gebruiker als geheel voordat de andere apps volgen. Welke app dat wordt, kiest de gebruiker later; Open Calc Studio is niet vanzelfsprekend de eerste.
+- **Testversie van de hele nieuwe UI.** Zodra de bibliotheek 0.4 en de iconen klaar zijn, bouwen we één app als testversie met de volledige nieuwe UI: thema's, lint, panelen, tegels, startscherm, instellingen en iconen. Die beoordeelt de gebruiker als geheel voordat de andere apps volgen. Gekozen (2026-10-22): Open Planner Studio, Open PDF Studio en Open Calc Studio. Fase 5 begint later.
 - **Proefproject:** Open Calc Studio ombouwen naar de Rust-UI. Wat ontbreekt, gaat terug naar de bibliotheek.
 - **Daarna per groep**, in deze volgorde:
   1. Pointcloud, die al dezelfde techniek gebruikt;

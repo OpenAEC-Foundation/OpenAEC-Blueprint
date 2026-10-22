@@ -8,7 +8,7 @@ readme = "README.md"
 publish = false
 
 [workspace]
-members = ["crates/openaec-ui"]
+members = ["crates/openaec-ui", "crates/openaec-icons"]
 resolver = "2"
 
 [features]

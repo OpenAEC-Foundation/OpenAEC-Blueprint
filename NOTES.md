@@ -51,10 +51,13 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
-- Installer (Claude): voorstel E staat in de galerij `ui04 -- installer` en is voorlopig goedgekeurd (2026-10-22); het team kijkt er later naar. Daarna vastleggen in `05-layouts.md` als derde soort app (hub). In iced 0.13 ontsnapt een bijgesneden afbeelding (`ContentFit::Cover`) aan de scrollgrens; daarom zijn de screenshots vooraf bijgesneden.
-- Iconen B2 (Codex) zijn ongeveer 31 KB per stuk door coördinaten met zes decimalen; voor opname in de crate eerst verkleinen.
+- Niet vergeten: de Pointcloud-kopie van de crate (`open-pointcloud-studio/native/ui`) bijwerken met `LICENSE.md` (LGPL-3.0-only), `NOTICE.md` en de map `licenses/`; `scripts/check_portable_ui.py` meldt het verschil zodra de repository lokaal staat. Komt later (de gebruiker).
+- Eigenaarschap en Field op tablet of telefoon: komen later.
 
-- Fase 4 bibliotheek 0.4 (Claude): fundament en componenten staan in `openaec_ui::design`. Volgende stap: schil (titelbalk, vensterknoppen), startscherm met tegels, instellingenvenster, menu's en werkstroomlayout, iconen van Codex koppelen en een testversie van één app met de hele nieuwe UI. Welke app eerst komt, kiest de gebruiker later (niet per se Calc).
+- Installer (Claude): voorstel E staat in de galerij `ui04 -- installer` en is voorlopig goedgekeurd (2026-10-22); het team kijkt er later naar. Daarna vastleggen in `05-layouts.md` als derde soort app (hub). In iced 0.13 ontsnapt een bijgesneden afbeelding (`ContentFit::Cover`) aan de scrollgrens; daarom zijn de screenshots vooraf bijgesneden.
+- Iconen B2 (Claude): staan sinds 2026-10-22 in de crate `crates/openaec-icons` als byte-kopie van de SVGZ-export (25 MB, 945 iconen in 16 en 24 px, per app een feature). De licentie van de iconen is nog open; de crate staat voorlopig op LGPL-3.0-only. Na een nieuwe export van Codex: `python scripts/generate_icon_crate.py`. Nog niet gekoppeld aan de galerij `ui04` of aan een app.
+
+- Fase 4 bibliotheek 0.4 (Claude): fundament en componenten staan in `openaec_ui::design`. Schil, startscherm, instellingen, menu's en werkstroomlayout zijn klaar, de iconen staan in `openaec-icons` en het webpakket heeft CSS-componenten (`web/openaec-components.css`). Volgende stap (fase 5, later): testversies van Planner, PDF en Calc met de hele nieuwe UI.
 
 - Waarschuwingskleur blijft geel (besluit 2026-10-19); sinds B2-revisie 54 volgt de review de warning-rol uit `tokens-0.4.json`.
 
@@ -87,6 +90,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Vastgestelde uitgangspunten. Nieuwste bovenaan. Formaat: - JJJJ-MM-DD: besluit (bron). -->
 
+- 2026-10-22: De testversie met de hele nieuwe UI komt voor Open Planner Studio, Open PDF Studio en Open Calc Studio; fase 5 begint later. De installer (voorstel E) is voorlopig goed (de gebruiker).
 - 2026-10-19: De waarschuwingskleur blijft geel zoals in `tokens-0.4.json`; geen oranje. Oranje lag te dicht bij de foutkleur (de gebruiker, op advies van Claude).
 - 2026-10-16: Energy en Field gaan naar de Rust-UI (keuze van Claude op verzoek van de gebruiker; Field opnieuw bekijken als tablet- of telefoongebruik nodig blijkt).
 - 2026-10-16: PDF, Speech, Composer en Frame gaan naar de Rust-UI; alleen hun Solid- of Svelte-scherm wordt vervangen (de gebruiker).
@@ -156,6 +160,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+
+- 2026-10-22 **Claude**: iconen B2 in de nieuwe crate `crates/openaec-icons` gezet: generator `scripts/generate_icon_crate.py` (met `--check`) kopieert de 1.890 SVGZ-bestanden van Codex byte voor byte (hash gecontroleerd) en maakt een getypte `Icon`-lijst met id, label, groep en per app een feature (`all` voor alles). `Icon::svg(Size)` pakt één keer uit; de test controleert alle 945 × 2 tegen de SVG-masters. Webpakket: `web/openaec-components.css` (knoppen, velden, labels, pillen, tegels, kaarten, websitestijl van installer E, meldingen, menu, dialoog, paneel, tabel, tabs, werkstroom, statusbalk, hoog contrast) en overzicht `web/componenten.html` uit `scripts/build_web_components.py`, bekeken in Licht, Donker en Hoog contrast donker. Geen commit.
 
 - 2026-10-20 **Codex**: alle afgeronde B2-wijzigingen klaargezet voor commit en push op expliciet verzoek van de gebruiker. Dit verzoek vervangt voor deze handeling het standaard pushverbod uit AGENTS.md. 945 ontwerpen / 1.890 masters met bronbesluiten, scripts en reviews; broncaches en target blijven uitgesloten. Eerder afgeronde B2- en vijf algemene Python-controles groen; diff-whitespace opnieuw gecontroleerd. Geen nieuwe iconengeometrie of Rust-wijzigingen.
 

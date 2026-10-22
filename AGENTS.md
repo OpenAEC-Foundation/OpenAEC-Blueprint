@@ -44,7 +44,10 @@ python scripts/check_portable_ui.py
 python scripts/check_crate_package.py
 python scripts/check_tokens_04.py
 python scripts/generate_tokens_04.py --check
+python scripts/generate_icon_crate.py --check
+python scripts/build_web_components.py --check
 cargo test
+cargo test -p openaec-icons --features all
 cargo package -p openaec-ui
 ```
 
