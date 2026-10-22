@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-22",
+  "policy": "Slotakkoord: voor de rest is alles goed. Alle onbesproken voorstellen toepassen; RAW en IBIS behouden, Bouw 1 hertekend; alleen platformsync opnieuw gecorrigeerd.",
+  "batches": {
+    "proposals-1": {
+      "status": "complete",
+      "choices": {
+        "quotation.type-raw": {
+          "choice": "keep-current",
+          "note": "Huidige opsomming behouden; het getekende alternatief is afgewezen."
+        },
+        "report.view-build": {
+          "choice": "redraw-current",
+          "note": "Rapportkader behouden; huisje opnieuw getekend met een symmetrisch zadeldak in accent, gesloten gevel en herkenbare deur. Het cijfer-1-voorstel is afgewezen."
+        },
+        "report.view-ibis": {
+          "choice": "keep-current",
+          "note": "Huidige regels met accentmarkeringen behouden; het cijfer-2-voorstel is afgewezen."
+        },
+        "thermal.window": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "thermal.room-split": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "construction.studs-toggle": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "pile.load-points": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "pile.cpts": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "pile.optimization": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "pile.tip-regions": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "pile.load-groups": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "quotation.type-private": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "quotation.payment-terms": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "report.view-main-contract": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "report.view-subcontract": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "report.view-tender": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        }
+      }
+    },
+    "proposals-2": {
+      "choices": {
+        "report.view-estimate": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.quantities-visible": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.grid-standard": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.grid-wpcalc": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.grid-simple": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.chapter": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "workspace.dock-back": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calc.hsb-wizard": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "symbol.category-electric": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "symbol.category-custom": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "assistant.translate": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "assistant.summarize": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "format.custom-color": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "page.replace": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "page.insert-file": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "image.embedded-edit": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        }
+      },
+      "status": "complete"
+    },
+    "proposals-3": {
+      "choices": {
+        "panel.attachments": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "file.place-add": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "drawing.settings": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "bcf.import": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "planning.calculate": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "report.workspace": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "wbs.auto-number": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "panel.warnings": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "table.columns": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "planning.status-date": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "layout.manage": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "company.library": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calendar.promote-menu": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calendar.edit": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "resource.unlink-library": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "ai.read-only-toggle": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        }
+      },
+      "status": "complete"
+    },
+    "proposals-4": {
+      "choices": {
+        "backup.auto": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "backup.create": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "backup.folder": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "update.install": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "documents.overview": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "documents.new-or-open": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "capture.annotate": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.schedule-preview": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.schedule-last-result": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "library.link-recognized": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.library-item-missing": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.library-item-deviated": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.hour-data": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "status.structure-locked": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calendar.holiday-add": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        },
+        "calendar.copy-workdays": {
+          "choice": "apply-proposal",
+          "note": "Goedgekeurd met het slotakkoord; beide masters exact gelijk aan het beoordeelde voorstel."
+        }
+      },
+      "status": "complete"
+    }
+  },
+  "last_icons": {
+    "status": "approved_except_new_correction",
+    "pending_visual": [
+      "integration.platform-sync"
+    ]
+  }
+}

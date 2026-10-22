@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-20",
+  "revision": 91,
+  "baseline_revision": 90,
+  "id": "snap.grid",
+  "label": "Aan raster snappen",
+  "ui_call": "profileEditor.toggleSnap schakelt geometrische rasteraantrekking.",
+  "source_record": "ae4bb2be68b278f7",
+  "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileToolbar.svelte#L86",
+  "change": "Magneet vervangen door een regelmatig raster met één gemarkeerd centraal snappunt.",
+  "related_review": "Raster tonen is een afzonderlijke weergavefunctie en blijft behouden; geen andere magneetconstructies in de B2-scripts.",
+  "changed_designs": 1,
+  "unchanged_designs": 944,
+  "changed_masters": 2,
+  "unchanged_masters": 1888,
+  "human_review": "open",
+  "sizes_visually_checked": [
+    16,
+    24,
+    32
+  ],
+  "themes_visually_checked": [
+    "donker met accent",
+    "licht monochroom"
+  ],
+  "live_review_verified": true,
+  "assets": {
+    "16": {
+      "before": "d926fb7a8562f20e9146d6511f2346333e6cb71823bcdb88276d0388b6eeb00a",
+      "after": "cd91f50a61d7a5fce2096b180f39419177145dc3a25db8f9f3d2a67328f04450",
+      "gap_px": 0.875003
+    },
+    "24": {
+      "before": "bb934d7269345aed10fb6d75a28d72cb267065b076037479f9cdc0d4462c9853",
+      "after": "4518b717d3c96c3604d20500e6908c4fafa2f8dc0848d986f8d6d81ae92c5490",
+      "gap_px": 1.375
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "design/icon-set-b2/completion-preview-7-dark.png",
+      "sha256": "1ba608ea59ece45965f3585704cfba4255e5bd3ab7b109deeb1c058b8f667452"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-dark-mono.png",
+      "sha256": "2e385ab9f0959cb8cabe52de7e62da5748e37235e131abd4ddf9507820475423"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-light.png",
+      "sha256": "ab9361f07f829e5fa69a64d42b83b2b430649817102e72902b4549c8ca8bc0e2"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-light-mono.png",
+      "sha256": "7cb302094d55329828766630843ff1a9c846c7a0ab8822f8e9b4bc44f2cefef1"
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.9561660479552473e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "manifest_sha256": "2887f13de3539441039a9d3111f9fc719d99942f43ddbb24db7101f0b154de4f",
+  "python_compile": "geslaagd",
+  "source_docs_whitespace": "geslaagd met CRLF-toegestaan",
+  "rust_checks": "Niet herhaald: geen Rust- of cratewijzigingen."
+}

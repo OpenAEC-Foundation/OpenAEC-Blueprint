@@ -1,0 +1,896 @@
+{
+  "date": "2026-10-22",
+  "scope": "Kern van de zichtbare gebruikersberichten in dit gesprek, in volgorde. Herhaalde identieke screenshots zijn samengevoegd. Oudere opgeslagen rondes zijn afzonderlijk opgenomen; dit is geen volledige chattranscriptie.",
+  "principles": [
+    "Hoofdvormen herkenbaar en natuurlijk van verhouding houden; geen smalle of platte vorm afdwingen om een badge kwijt te kunnen.",
+    "Accenten vrij en logisch plaatsen; onder elkaar zetten is geen algemene regel.",
+    "Accentkleur behouden; monochroom is een bewuste weergavekeuze, geen automatische regel op basis van een statusnaam.",
+    "Cirkelpijlen als één geheel beoordelen: ronde boog, korte rechte aansluiting vóór de brede open pijlpunt, goede richting en vrije binnenste puntarm. Bij iedere volgende ronde ook op verwante iconen controleren.",
+    "Een echt potlood toont punt, parallelle schacht en eindkap; dezelfde uitvoering bij afbeelding, kalender en schermafbeelding.",
+    "Betekenis uit de concrete functie halen: onder meer rekenen, deur, printer, HWA, IFC, kraan, openen en toevoegen onderscheiden.",
+    "16, 24 en 32 px bekijken; een geometrisch geldige export is nog geen visuele goedkeuring.",
+    "Een getekend voorstel is afzonderlijk herkenbaar en wordt pas als toegepast vermeld wanneer de canonieke master is gewijzigd."
+  ],
+  "feedback": [
+    {
+      "number": 1,
+      "feedback": "Niet geverifieerd: mooier schild, met meer rondingen.",
+      "icons": [
+        "status.unverified"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 2,
+      "feedback": "Resultaat bij eerdere invoer: accent verder van de hoofdvorm; meenemen bij verwante iconen.",
+      "icons": [
+        "status.stale-result"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 3,
+      "feedback": "Rc/U- en koudebrugrekenhulp: mooier en herkenbaarder maken.",
+      "icons": [
+        "tool.uvalue",
+        "tool.thermal-bridge"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 4,
+      "feedback": "Warmtepompdimensionering: meer centreren en beter binnen het vlak laten passen.",
+      "icons": [
+        "tool.heat-pump-sizing"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 5,
+      "feedback": "Gereedschapmenu: idee goed, meer rondingen.",
+      "icons": [
+        "ui.tools"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 6,
+      "feedback": "Project herberekenen: cirkelpijl rond het hoofdvlak klopt niet.",
+      "icons": [
+        "calculation.recalculate"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 7,
+      "feedback": "Kaartweergave: betekenis niet duidelijk.",
+      "icons": [
+        "view.cards"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 8,
+      "feedback": "Bewerken, toevoegen, toepassen en verwerpen: meer ruimte rond de accenten.",
+      "icons": [
+        "object.edit",
+        "object.add",
+        "data.apply",
+        "data.discard"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 9,
+      "feedback": "Rekenvoorkeuren: ander accent dat bij rekenen past.",
+      "icons": [
+        "calculation.settings"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 10,
+      "feedback": "Maatwerkadvies berekenen: icoon moet berekenen en maatwerkadvies uitdrukken.",
+      "icons": [
+        "calculation.advice"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 11,
+      "feedback": "Berekeningsdocument: binnenkant te veel opgepropt.",
+      "icons": [
+        "report.calculation-document"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 12,
+      "feedback": "Projectdossier: idee goed, uitvoering nog niet mooi.",
+      "icons": [
+        "report.project-dossier"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 13,
+      "feedback": "Uitvoerkeuzes openen: betekenis niet duidelijk.",
+      "icons": [
+        "file.export-options"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 14,
+      "feedback": "Referentieproject vergelijken: overloop van de vormen is lelijk.",
+      "icons": [
+        "project.compare-reference"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 15,
+      "feedback": "Printereigenschappen: naar eerdere printers kijken; accent onduidelijk.",
+      "icons": [
+        "printer.properties"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 16,
+      "feedback": "Printereigenschappen: printer is veel te smal.",
+      "icons": [
+        "printer.properties"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 17,
+      "feedback": "Vertrekken en thermische modelbewerker: accenten en vormen zitten door elkaar.",
+      "icons": [
+        "thermal.rooms",
+        "thermal.modeller"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 18,
+      "feedback": "Constructiebibliotheek: accentlijntjes kloppen niet.",
+      "icons": [
+        "construction.library"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 19,
+      "feedback": "Printereigenschappen: rare bolletjes aan de accentstreepjes.",
+      "icons": [
+        "printer.properties"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 20,
+      "feedback": "IFC-werkruimte: relatie met IFC is niet herkenbaar.",
+      "icons": [
+        "ifc.workspace"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 21,
+      "feedback": "IFC-reconstructiewerkruimte: hele bovenste vlak in accentkleur.",
+      "icons": [
+        "ifc.reconstruction-workspace"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 22,
+      "feedback": "TOjuli-werkruimtes: accenten los van de hoofdvorm.",
+      "icons": [
+        "thermal.overheating",
+        "thermal.overheating-quick"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 23,
+      "feedback": "Deurspleetrekenhulp: geen duidelijke deur en accent opgepropt.",
+      "icons": [
+        "tool.door-gap"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 24,
+      "feedback": "Uw-rekenhulp: berekenen ontbreekt in het beeld.",
+      "icons": [
+        "tool.uw-window"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 25,
+      "feedback": "HWA-rekenhulp: hemelwaterafvoer niet herkenbaar.",
+      "icons": [
+        "tool.rainwater"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 26,
+      "feedback": "Hellingbaanrekenhulp: rekenmachine toevoegen en die het accent geven.",
+      "icons": [
+        "tool.ramp"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 27,
+      "feedback": "Hoekrekenhulp: rekenmachine toevoegen en die het accent geven.",
+      "icons": [
+        "tool.angle"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 28,
+      "feedback": "Uitzettingsrekenhulp: accenten opnieuw beoordelen.",
+      "icons": [
+        "tool.thermal-expansion"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 29,
+      "feedback": "Zelf een analyse uitvoeren op basis van eerdere feedback; eerst 50/60 iconen en alleen zekere correcties toepassen.",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 30,
+      "feedback": "Gekoppelde Excel-waarde: het paperclip- of koppelteken moet anders.",
+      "icons": [
+        "data.excel-link"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 31,
+      "feedback": "Subblad toevoegen en Excel-koppelingen bijwerken: hoofdvorm hoeft niet zoveel smaller, dat wordt opgepropt.",
+      "icons": [
+        "spreadsheet.sheet-add",
+        "data.excel-refresh"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 32,
+      "feedback": "Brede hoofdvormen met rustige losse accenten bevallen; doorgaan met een grote ronde.",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 33,
+      "feedback": "Bij de 22 voorstellen direct een getekend voorbeeld van de wijziging tonen.",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 34,
+      "feedback": "Bijlagenpaneel: andere opbouw en andere paperclip.",
+      "icons": [
+        "panel.attachments"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 35,
+      "feedback": "Maplocatie toevoegen: de map is raar en te plat geworden.",
+      "icons": [
+        "file.place-add"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 36,
+      "feedback": "Waarschuwingenpaneel: hoofdvorm is te plat geworden.",
+      "icons": [
+        "panel.warnings"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 37,
+      "feedback": "Peildatum: accentkleur weg en klokje te klein.",
+      "icons": [
+        "planning.status-date"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 38,
+      "feedback": "AI alleen-lezen: onder elkaar zetten is raar en het slot lelijk.",
+      "icons": [
+        "ai.read-only-toggle"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 39,
+      "feedback": "Tijdelijke en laatste berekende bezetting: accenten verdwenen.",
+      "icons": [
+        "status.schedule-preview",
+        "status.schedule-last-result"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 40,
+      "feedback": "Bibliotheekstatus, uurgegevens en structuurbeperking: accenten verdwenen.",
+      "icons": [
+        "status.library-item-missing",
+        "status.library-item-deviated",
+        "status.hour-data",
+        "status.structure-locked"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 41,
+      "feedback": "Geotechniek: geometrie van de bovenste laag en onderlagen klopt niet.",
+      "icons": [
+        "tools.category-geotechniek"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 42,
+      "feedback": "Projecten herstellen: cirkelpijl klopt niet.",
+      "icons": [
+        "backup.recover"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 43,
+      "feedback": "Het werk duurt te lang en moet sneller.",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 44,
+      "feedback": "Waar zijn alle eerder gegeven feedbackpunten?",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 45,
+      "feedback": "Ingebedde afbeelding bewerken: lelijk potlood.",
+      "icons": [
+        "image.embedded-edit"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 46,
+      "feedback": "Automatische WBS-nummering: pijltje gaat nog niet goed.",
+      "icons": [
+        "wbs.auto-number"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 47,
+      "feedback": "Resourcekalender bewerken: lelijk potlood.",
+      "icons": [
+        "calendar.edit"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 48,
+      "feedback": "Back-upmap openen: pijltje gaat nog niet goed; meerdere keren gemeld.",
+      "icons": [
+        "backup.folder"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 49,
+      "feedback": "Schermopname annoteren: lelijk potlood.",
+      "icons": [
+        "capture.annotate"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 50,
+      "feedback": "Tijdelijk doorgerekende bezetting: pijltje gaat nog niet goed.",
+      "icons": [
+        "status.schedule-preview"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 51,
+      "feedback": "Pijlfouten ook meenemen bij de volgende verbeteringen en controles.",
+      "icons": [],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 52,
+      "feedback": "App bijwerken: pijl niet goed.",
+      "icons": [
+        "software.update"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 53,
+      "feedback": "Projecten herstellen: pijl ook na de nacorrectie nog niet goed.",
+      "icons": [
+        "backup.recover"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 54,
+      "feedback": "Extensie vervangen: pijl niet goed.",
+      "icons": [
+        "extension.reinstall-file"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 55,
+      "feedback": "Sessie herstellen: pijl niet goed.",
+      "icons": [
+        "session.restore"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 56,
+      "feedback": "Bouwplaatssymbolen: hijskraan niet herkenbaar.",
+      "icons": [
+        "symbol.category-site"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 57,
+      "feedback": "Deurherkenning vragen: deur niet mooi.",
+      "icons": [
+        "assistant.detect-doors"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 58,
+      "feedback": "Geen leveranciersbinding: slot niet mooi.",
+      "icons": [
+        "product.no-vendor-lock"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 59,
+      "feedback": "Koppelingenpaneel: raar koppelteken.",
+      "icons": [
+        "panel.links"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 60,
+      "feedback": "Systeemtypen beheren: Raar accent.",
+      "icons": [
+        "symbol.system-types"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 61,
+      "feedback": "Interne documentkoppeling: Binnen het vlak blijven.",
+      "icons": [
+        "link.open-internal"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 62,
+      "feedback": "Vorige versie downloaden: Accent en hoofd lopen over.",
+      "icons": [
+        "update.previous-download"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 63,
+      "feedback": "Projectdatums verschuiven: Accenten staan raar in de hoofdvorm.",
+      "icons": [
+        "planning.move-date"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 64,
+      "feedback": "Resourcewerkruimte: Poppetje moet accent krijgen.",
+      "icons": [
+        "resource.workspace"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 65,
+      "feedback": "Resourceoverbelasting: Poppetje moet accent krijgen.",
+      "icons": [
+        "status.resource-overallocated"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 66,
+      "feedback": "Voorbeeldprojecten: Geometrisch niet helemaal goed.",
+      "icons": [
+        "file.examples"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 67,
+      "feedback": "Rondleiding starten: Teken heeft niets met functie te maken.",
+      "icons": [
+        "ui.tour"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 68,
+      "feedback": "Materieelindeling herkennen: Accent op andere plek.",
+      "icons": [
+        "layout.equipment"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 69,
+      "feedback": "Gereedschapsindeling herkennen: Maak er mooi gereedschap van.",
+      "icons": [
+        "layout.tools"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 70,
+      "feedback": "Nieuw verbindingstoken: Pijl niet goed.",
+      "icons": [
+        "credential.regenerate"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 71,
+      "feedback": "Verbindingsinstellingen: Accent en vorm in elkaar.",
+      "icons": [
+        "ai.connection-menu"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 72,
+      "feedback": "Verbindingsgegevens: Accent en vorm in elkaar.",
+      "icons": [
+        "ai.connection-details"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 73,
+      "feedback": "Bridge actief: Waar zijn de accenten?",
+      "icons": [
+        "status.bridge-live"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 74,
+      "feedback": "Bridge uit: Waar zijn de accenten?",
+      "icons": [
+        "status.bridge-off"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 75,
+      "feedback": "Extensiecontext desktop: Waar zijn de accenten?",
+      "icons": [
+        "extension.runtime-desktop"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 76,
+      "feedback": "Extensiecontext browser: Waar zijn de accenten?",
+      "icons": [
+        "extension.runtime-browser"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 77,
+      "feedback": "Begeleiding compact tonen: Accent en hoofd lopen in elkaar over.",
+      "icons": [
+        "guide.compact"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 78,
+      "feedback": "Kolom al zichtbaar: Waar zijn de accenten?",
+      "icons": [
+        "status.column-present"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 79,
+      "feedback": "Korte toelichting: Waar zijn de accenten?",
+      "icons": [
+        "help.context-hint"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 80,
+      "feedback": "Voorgesteld bibliotheekitem: Accenten?",
+      "icons": [
+        "status.library-suggestion"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 81,
+      "feedback": "Conceptinvoer bevestigen: Loopt over in elkaar.",
+      "icons": [
+        "input.confirm-draft"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 82,
+      "feedback": "Installatiepakket kleiner: Accenten?",
+      "icons": [
+        "status.install-size-smaller"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 83,
+      "feedback": "Installatiepakket groter: Accenten?",
+      "icons": [
+        "status.install-size-larger"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 84,
+      "feedback": "Relaties tekenen actief: Accenten verdwenen.",
+      "icons": [
+        "planning.dependency-draw-mode"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 85,
+      "feedback": "Vastgelegde datums tonen: Accenten verdwenen.",
+      "icons": [
+        "status.recorded-dates"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 86,
+      "feedback": "Appversie geïnstalleerd: Accenten weg en loopt over in elkaar.",
+      "icons": [
+        "status.software-installed"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 87,
+      "feedback": "Beschikbare opvolgversie: Accenten weg.",
+      "icons": [
+        "status.version-upgrade"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 88,
+      "feedback": "Standaardkolommen herstellen: het aanwijsgedeelte blijft verkeerd. Neem deze pijlpuntcorrectie ook mee bij alle eerder aangewezen cirkelpijlen.",
+      "icons": [
+        "table.columns-reset",
+        "data.excel-refresh",
+        "session.restore",
+        "extension.reinstall-file",
+        "software.update",
+        "backup.recover",
+        "credential.regenerate",
+        "wbs.auto-number",
+        "backup.auto",
+        "backup.folder",
+        "status.schedule-preview"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 89,
+      "feedback": "Gereedschapsindeling herkennen: de losse hamerkop en steel lijken nergens op.",
+      "icons": [
+        "layout.tools"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 90,
+      "feedback": "Relaties tekenen actief: cursor, accent en taakvormen lopen in elkaar over; ontwerp is lelijk.",
+      "icons": [
+        "planning.dependency-draw-mode"
+      ],
+      "origin": "Gebruikersfeedback in dit gesprek; kort weergegeven."
+    },
+    {
+      "number": 91,
+      "feedback": "RAW-offerte: huidige icoon behouden.",
+      "icons": [
+        "quotation.type-raw"
+      ],
+      "origin": "Gebruikerskeuze in groep 1; kort weergegeven."
+    },
+    {
+      "number": 92,
+      "feedback": "Bouw 1: huidige opzet behouden; alleen het huisje opnieuw tekenen.",
+      "icons": [
+        "report.view-build"
+      ],
+      "origin": "Gebruikerskeuze in groep 1; kort weergegeven."
+    },
+    {
+      "number": 93,
+      "feedback": "IBIS: huidige icoon behouden.",
+      "icons": [
+        "report.view-ibis"
+      ],
+      "origin": "Gebruikerskeuze in groep 1; kort weergegeven."
+    },
+    {
+      "number": 94,
+      "feedback": "Platform synchroniseren: vierkant rechtsboven herstellen. Voor de rest is alles goed.",
+      "icons": [
+        "integration.platform-sync"
+      ],
+      "origin": "Slotakkoord en gerichte correctie van de gebruiker."
+    }
+  ],
+  "approved_icons": [
+    "layout.tools",
+    "data.excel-refresh",
+    "symbol.category-site",
+    "assistant.detect-doors",
+    "product.no-vendor-lock",
+    "panel.links",
+    "session.restore",
+    "symbol.system-types",
+    "extension.reinstall-file",
+    "link.open-internal",
+    "update.previous-download",
+    "planning.move-date",
+    "resource.workspace",
+    "status.resource-overallocated",
+    "file.examples",
+    "ui.tour",
+    "layout.equipment",
+    "credential.regenerate",
+    "ai.connection-menu",
+    "ai.connection-details",
+    "status.bridge-live",
+    "status.bridge-off",
+    "extension.runtime-desktop",
+    "extension.runtime-browser",
+    "guide.compact",
+    "table.columns-reset",
+    "status.column-present",
+    "help.context-hint",
+    "status.library-suggestion",
+    "input.confirm-draft",
+    "status.install-size-smaller",
+    "status.install-size-larger",
+    "planning.dependency-draw-mode",
+    "status.recorded-dates",
+    "backup.recover",
+    "software.update",
+    "status.software-installed",
+    "status.version-upgrade",
+    "thermal.window",
+    "thermal.room-split",
+    "construction.studs-toggle",
+    "pile.load-points",
+    "pile.cpts",
+    "pile.optimization",
+    "pile.tip-regions",
+    "pile.load-groups",
+    "quotation.type-private",
+    "quotation.type-raw",
+    "quotation.payment-terms",
+    "report.view-main-contract",
+    "report.view-subcontract",
+    "report.view-tender",
+    "report.view-build",
+    "report.view-ibis",
+    "report.view-estimate",
+    "calc.quantities-visible",
+    "calc.grid-standard",
+    "calc.grid-wpcalc",
+    "calc.grid-simple",
+    "calc.chapter",
+    "workspace.dock-back",
+    "calc.hsb-wizard",
+    "symbol.category-electric",
+    "symbol.category-custom",
+    "assistant.translate",
+    "assistant.summarize",
+    "format.custom-color",
+    "page.replace",
+    "page.insert-file",
+    "image.embedded-edit",
+    "panel.attachments",
+    "file.place-add",
+    "drawing.settings",
+    "bcf.import",
+    "planning.calculate",
+    "report.workspace",
+    "wbs.auto-number",
+    "panel.warnings",
+    "table.columns",
+    "planning.status-date",
+    "layout.manage",
+    "company.library",
+    "calendar.promote-menu",
+    "calendar.edit",
+    "resource.unlink-library",
+    "ai.read-only-toggle",
+    "backup.auto",
+    "backup.create",
+    "backup.folder",
+    "update.install",
+    "documents.overview",
+    "documents.new-or-open",
+    "capture.annotate",
+    "status.schedule-preview",
+    "status.schedule-last-result",
+    "library.link-recognized",
+    "status.library-item-missing",
+    "status.library-item-deviated",
+    "status.hour-data",
+    "status.structure-locked",
+    "calendar.holiday-add",
+    "calendar.copy-workdays",
+    "view.web-reload",
+    "format.decimals-increase",
+    "draw.qr-code",
+    "draw.schedule-table",
+    "view.zoom-tool",
+    "comments.summarize",
+    "comments.import",
+    "comments.export",
+    "validation.select-specification",
+    "validation.reset",
+    "panel.document-navigation",
+    "panel.tool-palette",
+    "preferences.printing",
+    "panel.model-tree",
+    "edit.select-text"
+  ]
+}

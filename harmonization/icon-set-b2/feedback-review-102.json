@@ -1,0 +1,824 @@
+{
+  "date": "2026-10-22",
+  "revision": 102,
+  "baseline_revision": 101,
+  "verdict": "Pijlpunt opnieuw hertekend op gebruikersfeedback; visuele beoordeling staat open.",
+  "review_page": "feedback-analysis-101.html",
+  "changed_designs": 7,
+  "changed_masters": 14,
+  "unchanged_designs": 938,
+  "retained_original_designs": 316,
+  "changed_proposals": [
+    "wbs.auto-number",
+    "backup.auto",
+    "backup.folder",
+    "status.schedule-preview"
+  ],
+  "proposal_masters": 8,
+  "proposal_checks": [
+    {
+      "id": "wbs.auto-number",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.428211052379538
+    },
+    {
+      "id": "wbs.auto-number",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 42.82494770640901
+    },
+    {
+      "id": "backup.auto",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.428211052379538
+    },
+    {
+      "id": "backup.auto",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 42.82494770640901
+    },
+    {
+      "id": "backup.folder",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 23.556897506318492
+    },
+    {
+      "id": "backup.folder",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 49.40806874889839
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.912261189591586
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 54.35384666717694
+    }
+  ],
+  "remaining": {
+    "registered_feedback_points": 88,
+    "unprocessed_registered_feedback_points": [],
+    "proposals_97": 22,
+    "proposals_99": 42,
+    "proposals_total": 64,
+    "not_yet_in_consecutive_analysis": 16,
+    "current_canonical_changes_for_user_review": 38,
+    "current_proposal_changes_included_in_64": 7,
+    "next_analysis_icons": [
+      "view.web-reload",
+      "format.decimals-increase",
+      "draw.qr-code",
+      "draw.schedule-table",
+      "view.zoom-tool",
+      "comments.summarize",
+      "comments.import",
+      "comments.export",
+      "integration.platform-sync",
+      "validation.select-specification",
+      "validation.reset",
+      "panel.document-navigation",
+      "panel.tool-palette",
+      "preferences.printing",
+      "panel.model-tree",
+      "edit.select-text"
+    ],
+    "note": "Deze aantallen overlappen niet automatisch tot één totaal: de 7 voorbeeldwijzigingen zitten al in de 64 voorstellen. Aangepast is geen menselijke goedkeuring; historische visuele goedkeuring van alle 945 ontwerpen wordt niet uit deze telling afgeleid.",
+    "arrow_followup_canonical": 7,
+    "arrow_followup_proposals": 4
+  },
+  "icons": [
+    {
+      "id": "table.columns-reset",
+      "label": "Standaardkolommen herstellen",
+      "ui_call": "De tabelkolommen via de gedeelde commitroute op een kopie van defaultColumns terugzetten; geen tabellen of taken wissen.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "RotateCcw",
+        "label": "RotateCcw",
+        "path": "src/components/task-grid/ColumnChooser.tsx",
+        "line": 333,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n            type=\"button\"\n            className=\"task-grid-column-chooser-reset\"\n            disabled={resetDisabled}\n            onClick={reset}\n          >\n            <RotateCcw size={13} aria-hidden=\"true\" />\n            <span>{labels.resetDefault}</span>\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/ColumnChooser.tsx#L333",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/RotateCcw.svg",
+        "exact_hash": "800e040587906a393bd9db4192574a1be77ca5a4e3229820c765155165b884da",
+        "geometry_hash": "a3ca7b16b5c506b3231fff56df48558c14606f662af70627629eee6038a17646",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.rotateccw",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "41f0991d4d3e0c7e",
+        "function_label": "Rotate Ccw",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/table.columns-reset.svg",
+          "sha256": "3f5d93572fff90356f6d21172cc2905e01deea3cbdc6f2674f9fa75295cd513a"
+        },
+        "24": {
+          "path": "svg/24/table.columns-reset.svg",
+          "sha256": "9f85532664a1273f7e28f3665e2ff1e993f44292fbca93111e6ed316b0a6faa4"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/table.columns-reset.svg",
+          "sha256": "b2d320e07cbc8b6bc9f71a98d0d67724fe237de0d7c8fd8a63472f909797a74d"
+        },
+        "24": {
+          "path": "svg/24/table.columns-reset.svg",
+          "sha256": "e4218677a500a4259acc2ddf874e10595d99076c570246c399ee4e8824187f13"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "data.excel-refresh",
+      "label": "Excel-koppelingen bijwerken",
+      "ui_call": "updateAllExcelLinks leest de gekoppelde werkboeken/cellen en werkt quantity bij; schrijft geen Excel-export.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "export",
+        "label": "Update Excel",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 402,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton icon={exportIcon} label={t('home.updateExcel')} onClick={handleUpdateExcel} />\n          </RibbonGroup>\n        )}\n\n      </div>\n\n      <Modal open={showProject} onClose={() => setShowProject(false)} title={t('home.projectData')}>\n        <ProjectInfoSettings />\n      </Modal>\n\n      <Modal open={showPriceDialog} onClose={() => setShowPriceDialog(false)} title={t('home.priceDialogTitle')} className=\"rapport-props-dialog\">\n        <div className=\"rapport-props\">\n          <label className=\"rapport-props-row\">\n            <span>\n              <strong>{t('home.percentage')}</strong>\n              <em>{t('home.percentageHelp')}</em>\n            </span>\n          </label>\n          <div className=\"price-scale-row\">\n            <input\n              type=\"number\"\n              step=\"0.1\"\n              value={pricePct}\n              autoFocus\n              onChange={(e) => setPricePct(e.target.value)}\n              onKeyDown={(e) => { if (e.key === 'Enter') handleScalePrices(); }}\n              className=\"price-scale-input\"\n            />\n            <span className=\"price-scale-pct\">%</span>\n            <button",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L402",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/export.svg",
+        "exact_hash": "f1c0673eb129ae628691aac9c6cc57337843bc71d161a2555a7f7f8286ccc390",
+        "geometry_hash": "59013f0aa1ee98d873d714446211d51b81f5741edf37602d91fbe38a9d7b07cb",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "file.export",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "f422a43648ca2b57",
+        "function_label": "Exporteren",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/data.excel-refresh.svg",
+          "sha256": "3f5d93572fff90356f6d21172cc2905e01deea3cbdc6f2674f9fa75295cd513a"
+        },
+        "24": {
+          "path": "svg/24/data.excel-refresh.svg",
+          "sha256": "9f85532664a1273f7e28f3665e2ff1e993f44292fbca93111e6ed316b0a6faa4"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/data.excel-refresh.svg",
+          "sha256": "b2d320e07cbc8b6bc9f71a98d0d67724fe237de0d7c8fd8a63472f909797a74d"
+        },
+        "24": {
+          "path": "svg/24/data.excel-refresh.svg",
+          "sha256": "e4218677a500a4259acc2ddf874e10595d99076c570246c399ee4e8824187f13"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "session.restore",
+      "label": "Opgeslagen sessie herstellen",
+      "ui_call": "De gekozen sessie herstellen via restoreSession; geen sessieoverzicht of nieuw leeg document openen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "session-tile",
+        "label": "Opgeslagen sessie",
+        "path": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+        "line": 382,
+        "role": "object",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "conditional",
+        "origin": "pdf-open-panel-ui-icons.json",
+        "context": "                    <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/>\n                      <rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx#L382",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/open-panel/session-tile.svg",
+        "exact_hash": "e0b94d5596fd0ee7246dd0d930c00b3a039d14a9783a24c733e609feff506b94",
+        "geometry_hash": "f42f3be3b4ac490fdceb5385147396e80eb6fe91c6fa820d16ae0b231d3063d8",
+        "origins": [
+          "pdf-open-panel-ui-icons.json"
+        ],
+        "function_id": "review.opgeslagensessie",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "6d3f9c7a2614d1b7",
+        "function_label": "Opgeslagen sessie",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/session.restore.svg",
+          "sha256": "5af799ee317327fc1672c0ad347564b502124672592b1c8b5313bc7fb0eb46db"
+        },
+        "24": {
+          "path": "svg/24/session.restore.svg",
+          "sha256": "24bc81fc46af0570471f8fc1eafaf439e1e7772beb946a85d85b21ad91ad06bb"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/session.restore.svg",
+          "sha256": "52257e5be19708ab40f052a1e7a12f0f526ef379d3ec1b70a7a97cbacfb01ab1"
+        },
+        "24": {
+          "path": "svg/24/session.restore.svg",
+          "sha256": "3fa84a389b049860468a56dde78c39bc6bb9f36742df56245474f37bb8cc1262"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "extension.reinstall-file",
+      "label": "Extensie uit bestand vervangen",
+      "ui_call": "Een oppx-pakket kiezen om een bestaande extensie opnieuw te installeren; de levenscyclus kan naar de vorige versie terugrollen bij activeringsfouten.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "extension-reload",
+        "label": "Extensie herladen",
+        "path": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+        "line": 165,
+        "role": "extension-action",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "only-when-installed",
+        "origin": "pdf-transfer-panel-ui-icons.json",
+        "context": "<button class=\"ext-reload-btn\" onClick={() => handleReload(plugin.id, plugin.name || plugin.id)} title={t('extensionsPanel.reload') || 'Reload'}>\n                    <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <polyline points=\"23 4 23 10 17 10\"/>\n                      <path d=\"M20.49 15a9 9 0 11-2.12-9.36L23 10\"/>\n                    </svg>\n                  </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx#L165",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/transfer-panels/extension-reload.svg",
+        "exact_hash": "724f2ac481386752d7c13b93f5e4ed6473258961fca000bfda3dfe39cb12a0ca",
+        "geometry_hash": "03aab94a0ff40e707990faddd832a263f558f7ce4f1ce4c7e6abfa47d19e9a25",
+        "origins": [
+          "pdf-transfer-panel-ui-icons.json"
+        ],
+        "function_id": "review.extensieherladen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "75a05038339ebace",
+        "function_label": "Extensie herladen",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/extension.reinstall-file.svg",
+          "sha256": "7341d8870663ca9b4b4b32b81602cb40fe4f3c81716e4f1af43adf9a7a9362f2"
+        },
+        "24": {
+          "path": "svg/24/extension.reinstall-file.svg",
+          "sha256": "81abc220430ae3f465f97f7490f16fcc26462f7cd450b9677b27c6434c62441e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/extension.reinstall-file.svg",
+          "sha256": "bbb356b9644473f6d75da52494e8bbd04b83e9e6ac949d074a2d799b1796c132"
+        },
+        "24": {
+          "path": "svg/24/extension.reinstall-file.svg",
+          "sha256": "a2a26de4f7a8acf2e71c0d24dc7274ea42f8772f449d3e853b25108b685a6f51"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "software.update",
+      "label": "App met releasepakket bijwerken",
+      "ui_call": "Het beschikbare opvolgpakket downloaden en het bestaande platforminstallatiepad volgen. Bij eigen AppImage-vervanging volgt een herstartinstructie; geen automatische herstart of backupflush beloven.",
+      "source_example": {
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "name": "self-update",
+        "label": "Installer bijwerken",
+        "path": "src/components/SelfUpdateBanner.tsx",
+        "line": 91,
+        "role": "expliciete UI-bronplaats",
+        "evidence": "aanvullende gepinde bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "b2-supplemental-source-review",
+        "context": "onUpdate volgt handleSelfUpdate en downloadAndRunInstaller; Linux vervangt eigen AppImage en vraagt daarna herstart.",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/SelfUpdateBanner.tsx#L91",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "b2-supplemental-source-review"
+        ],
+        "function_id": "supplement.8f3d438453b1fd05",
+        "function_status": "afzonderlijk beoordeeld in B2",
+        "id": "8f3d438453b1fd05",
+        "function_label": "Installer bijwerken",
+        "category": "Aanvullende bronplaatsen",
+        "source_file_sha256": "09efe0b4ed516cd9c03a10770c86171a595aec46df0b2913ff4b6e9594c7d976",
+        "source_git_blob": "4d6678bd24348a3cf333adb4dc59d7e50cb4117f"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/software.update.svg",
+          "sha256": "7341d8870663ca9b4b4b32b81602cb40fe4f3c81716e4f1af43adf9a7a9362f2"
+        },
+        "24": {
+          "path": "svg/24/software.update.svg",
+          "sha256": "81abc220430ae3f465f97f7490f16fcc26462f7cd450b9677b27c6434c62441e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/software.update.svg",
+          "sha256": "bbb356b9644473f6d75da52494e8bbd04b83e9e6ac949d074a2d799b1796c132"
+        },
+        "24": {
+          "path": "svg/24/software.update.svg",
+          "sha256": "a2a26de4f7a8acf2e71c0d24dc7274ea42f8772f449d3e853b25108b685a6f51"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "backup.recover",
+      "label": "Projecten herstellen",
+      "ui_call": "De aangeboden projectherstel-snapshots via restoreDocuments terugzetten. Opruimen volgt pas na herstel; onbruikbare snapshots blijven bewaard. Geen PDF-lezersessie herstellen.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "RotateCcw",
+        "label": "Herstellen",
+        "path": "src/components/dialogs/RecoveryDialog.tsx",
+        "line": 120,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n            onClick={onRestore}\n            className=\"btn btn--sm btn--primary shadow-[var(--shadow-glow)] flex items-center gap-1.5\"\n          >\n            <RotateCcw size={13} />\n            {t('recovery.restore')}\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/RecoveryDialog.tsx#L120",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/RotateCcw.svg",
+        "exact_hash": "800e040587906a393bd9db4192574a1be77ca5a4e3229820c765155165b884da",
+        "geometry_hash": "a3ca7b16b5c506b3231fff56df48558c14606f662af70627629eee6038a17646",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.herstellen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "f08c872839f1823f",
+        "function_label": "Herstellen",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/backup.recover.svg",
+          "sha256": "1d0b021e517e7aaa424593ec1b76051c883ca7c9832969adc9eb4b5ddf86e1a2"
+        },
+        "24": {
+          "path": "svg/24/backup.recover.svg",
+          "sha256": "eecdcb2893d294e89e48810a0717d5bdd9f54c4947f3974ef35300a85924956f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/backup.recover.svg",
+          "sha256": "d451f549e12a6e48af61dfb94186ce7b0facdd7223ec1ff706876d6e7b3bc323"
+        },
+        "24": {
+          "path": "svg/24/backup.recover.svg",
+          "sha256": "037ad9fd8d77d151301c8cfa810fda61c9d77904a051ba6dd280e940dd30224a"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    },
+    {
+      "id": "credential.regenerate",
+      "label": "Nieuw verbindingstoken",
+      "ui_call": "De bevestiging voor tokenvernieuwing openen; na bevestiging wordt het token vervangen en een actieve desktopbridge herstart om het oude token in te trekken.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "RefreshCw",
+        "label": "Nieuw token",
+        "path": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+        "line": 145,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "AI-verbinding vernieuwen",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<button\n        type=\"button\"\n        style={iconBtnStyle}\n        title={t('ai.regenerate')}\n        aria-label={t('ai.regenerate')}\n        onClick={() => setConfirming(true)}\n      >\n        <RefreshCw size={13} />\n      </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L145",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/refresh-cw.svg",
+        "exact_hash": "7b858128cc6af897f969165d644017cb97f7cae10637743fac11027bc025c4e8",
+        "geometry_hash": "a94220c6890c557b29ca605c79b2793358a85d8a2460a8a5ec219a3992fd7282",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "ui.refresh",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "24eb6e894d43d89f",
+        "function_label": "Vernieuwen",
+        "category": "Instellingen en hulp"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/credential.regenerate.svg",
+          "sha256": "d27855317a42930261eaa0ecd39c341af6d5ab4b6b0f1269b9d0af83f39fe301"
+        },
+        "24": {
+          "path": "svg/24/credential.regenerate.svg",
+          "sha256": "2ae8c5767622300014703cc93b39cd28df2f5b64b45c5202c819e4cad31844b2"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/credential.regenerate.svg",
+          "sha256": "30ce2f48f7d8588d98dd39413dc3aa4c0379fb02e38839bb5d248553424ed7f6"
+        },
+        "24": {
+          "path": "svg/24/credential.regenerate.svg",
+          "sha256": "69564173d662288b82b80baa987d1e9d7bc423ecf8dcf8362bbe949ff825188c"
+        }
+      },
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast."
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "theme_contrasts": [
+      {
+        "theme": "light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.231,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.186,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.702,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.47,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.342,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 10.509,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.925,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.934,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.588,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.175,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.67,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.028,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 6.798,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "info",
+        "on": "panel",
+        "contrast": 9.285,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "error",
+        "on": "panel",
+        "contrast": 9.107,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "success",
+        "on": "panel",
+        "contrast": 9.919,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 8.92,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 9.778,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 12.595,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.651,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 12.051,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 7.09,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 10.358,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.31,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      }
+    ],
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "review_checks": {
+    "analysis_cards": 300,
+    "svg_samples_equal_to_assets": 2208,
+    "javascript_syntax": "geslaagd",
+    "shared_payload_initialization": "geslaagd",
+    "http": [
+      {
+        "url": "feedback-overview.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 158514
+      },
+      {
+        "url": "analysis-review-97.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 13315124
+      },
+      {
+        "url": "analysis-review-99.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 45047689
+      },
+      {
+        "url": "feedback-analysis-101.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 11609907
+      },
+      {
+        "url": "review-data.js?revision=102",
+        "status": 200,
+        "content_type": "text/javascript",
+        "bytes": 59329447
+      }
+    ],
+    "visual": "11 cirkelpijlontwerpen/voorbeelden op 16/24/32 en grote proefmaat bekeken in donker met accent en licht monochroom. Geen browserwaarneming geclaimd.",
+    "general_python_checks": "Niet herhaald: alleen B2-ontwerp en review gewijzigd.",
+    "rust_checks": "Niet uitgevoerd: geen Rust-/cratewijzigingen in deze ronde.",
+    "current_feedback_cards": 45
+  },
+  "primary_contours_unchanged": 14
+}

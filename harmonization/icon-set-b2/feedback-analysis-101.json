@@ -1,0 +1,4220 @@
+{
+  "title": "Jouw laatste icooncorrecties",
+  "date": "2026-10-22",
+  "revision": 106,
+  "baseline_revision": 98,
+  "status": "Slotakkoord verwerkt; alleen de nieuwe platformsync-correctie nog visueel te bekijken.",
+  "range": {
+    "first": "data.excel-refresh",
+    "last": "status.schedule-preview",
+    "count": 45,
+    "series": "104–161"
+  },
+  "summary": {
+    "corrected": 45,
+    "proposed": 0,
+    "retain": 0
+  },
+  "criteria": [
+    "Betekenis van de concrete bronfunctie; openen, bekijken, toevoegen en berekenen onderscheiden.",
+    "Losse actie- en statusaccenten krijgen vrije ruimte; een bewuste bladhoek, verbinding of gemarkeerd vlak mag aansluiten.",
+    "Rustige binnenvormen en zichtbare details op 16, 24 en 32 px.",
+    "Verhoudingen en centrering behouden; geen onnodig smalle hoofdvorm om een badge passend te krijgen.",
+    "De eerder gekozen ronde schildvorm, instellingenstreepjes en samenhangende accentvlakken toepassen waar die dezelfde betekenis hebben.",
+    "Verwante iconen samen beoordelen; vormvoorstellen zonder zekere oplossing blijven ongewijzigd.",
+    "Vervolgfeedback 100: natuurlijke hoofdverhoudingen behouden; accenten niet standaard onder elkaar zetten of op basis van een statusnaam weghalen."
+  ],
+  "checks": {
+    "html_cards": 45,
+    "source_links": 45,
+    "canonical_designs_changed": 38,
+    "canonical_masters_changed": 76,
+    "separate_proposal_designs": 7,
+    "separate_proposal_masters": 14,
+    "native_sizes": [
+      16,
+      24,
+      32
+    ],
+    "analysis_generator_sha256": "fcbb220686f29fa88274a989ccd2f5aede8e559791dce9a96583dcf0a8c32bd1",
+    "canonical_revision": 106,
+    "revision_102_validation": {
+      "status": "geslaagd",
+      "functions": 945,
+      "exported_masters": 1890,
+      "max_exported_overlap_area": 2.0545458416174274e-06,
+      "rejected_failure_controls": 3,
+      "source_clusters": 1527,
+      "source_records": 2894,
+      "theme_contrasts": [
+        {
+          "theme": "light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.231,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.186,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.702,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.47,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.342,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 10.509,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.925,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.934,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.588,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.175,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.67,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.028,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 6.798,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "info",
+          "on": "panel",
+          "contrast": 9.285,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "error",
+          "on": "panel",
+          "contrast": 9.107,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "success",
+          "on": "panel",
+          "contrast": 9.919,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 8.92,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 9.778,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 12.595,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.651,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 12.051,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 7.09,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 10.358,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.31,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        }
+      ],
+      "zip_entries": 1893,
+      "layer_comparison_masters": 124,
+      "accent_foreground_icons": 481
+    },
+    "revision_103_validation": {
+      "status": "geslaagd",
+      "functions": 945,
+      "exported_masters": 1890,
+      "max_exported_overlap_area": 2.0545458416174274e-06,
+      "rejected_failure_controls": 3,
+      "source_clusters": 1527,
+      "source_records": 2894,
+      "theme_contrasts": [
+        {
+          "theme": "light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.231,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.186,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.702,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.47,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.342,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 10.509,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.925,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.934,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.588,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.175,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.67,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.028,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 6.798,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "info",
+          "on": "panel",
+          "contrast": 9.285,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "error",
+          "on": "panel",
+          "contrast": 9.107,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "success",
+          "on": "panel",
+          "contrast": 9.919,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 8.92,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 9.778,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 12.595,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.651,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 12.051,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 7.09,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 10.358,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.31,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        }
+      ],
+      "zip_entries": 1893,
+      "layer_comparison_masters": 124,
+      "accent_foreground_icons": 481
+    },
+    "revision_104_validation": {
+      "status": "geslaagd",
+      "functions": 945,
+      "exported_masters": 1890,
+      "max_exported_overlap_area": 2.0545458416174274e-06,
+      "rejected_failure_controls": 3,
+      "source_clusters": 1527,
+      "source_records": 2894,
+      "theme_contrasts": [
+        {
+          "theme": "light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.231,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.186,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.702,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.47,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.342,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 10.509,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.925,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.934,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.588,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.175,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.67,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.028,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 6.798,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "info",
+          "on": "panel",
+          "contrast": 9.285,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "error",
+          "on": "panel",
+          "contrast": 9.107,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "success",
+          "on": "panel",
+          "contrast": 9.919,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 8.92,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 9.778,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 12.595,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.651,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 12.051,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 7.09,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 10.358,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.31,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        }
+      ],
+      "zip_entries": 1893,
+      "layer_comparison_masters": 124,
+      "accent_foreground_icons": 481
+    },
+    "revision_105_validation": {
+      "status": "geslaagd",
+      "functions": 945,
+      "exported_masters": 1890,
+      "max_exported_overlap_area": 2.0545458416174274e-06,
+      "rejected_failure_controls": 3,
+      "source_clusters": 1527,
+      "source_records": 2894,
+      "theme_contrasts": [
+        {
+          "theme": "light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.231,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.186,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.702,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.47,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.342,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 10.509,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.925,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.934,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.588,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.175,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.67,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.028,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 6.798,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "info",
+          "on": "panel",
+          "contrast": 9.285,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "error",
+          "on": "panel",
+          "contrast": 9.107,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "success",
+          "on": "panel",
+          "contrast": 9.919,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 8.92,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 9.778,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 12.595,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.651,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 12.051,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 7.09,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 10.358,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.31,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        }
+      ],
+      "zip_entries": 1893,
+      "layer_comparison_masters": 124,
+      "accent_foreground_icons": 481
+    },
+    "full_validation": {
+      "status": "geslaagd",
+      "functions": 945,
+      "exported_masters": 1890,
+      "max_exported_overlap_area": 2.0545458416174274e-06,
+      "rejected_failure_controls": 3,
+      "source_clusters": 1527,
+      "source_records": 2894,
+      "theme_contrasts": [
+        {
+          "theme": "light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.231,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.186,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.702,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.47,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.342,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 10.509,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 3.925,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 6.934,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 6.588,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.175,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 6.67,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text",
+          "on": "panel",
+          "contrast": 14.028,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 6.798,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "info",
+          "on": "panel",
+          "contrast": 9.285,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "error",
+          "on": "panel",
+          "contrast": 9.107,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "success",
+          "on": "panel",
+          "contrast": 9.919,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 8.92,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 9.778,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "info",
+          "on": "panel",
+          "contrast": 12.595,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.651,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "success",
+          "on": "panel",
+          "contrast": 12.051,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "accent",
+          "on": "panel",
+          "contrast": 7.09,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "info",
+          "on": "panel",
+          "contrast": 10.358,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "error",
+          "on": "panel",
+          "contrast": 8.31,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "success",
+          "on": "panel",
+          "contrast": 7.13,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "text-secondary",
+          "on": "panel",
+          "contrast": 21.0,
+          "minimum": 3
+        },
+        {
+          "theme": "light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 6.851,
+          "minimum": 3
+        },
+        {
+          "theme": "dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.165,
+          "minimum": 3
+        },
+        {
+          "theme": "blueprint",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 11.286,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-dark",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 15.93,
+          "minimum": 3
+        },
+        {
+          "theme": "high-contrast-light",
+          "role": "warning-review",
+          "on": "panel",
+          "contrast": 8.671,
+          "minimum": 3
+        }
+      ],
+      "zip_entries": 1893,
+      "layer_comparison_masters": 124,
+      "accent_foreground_icons": 481
+    }
+  },
+  "icons": [
+    {
+      "number": 1,
+      "id": "data.excel-refresh",
+      "label": "Excel-koppelingen bijwerken",
+      "series": 104,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "updateAllExcelLinks leest de gekoppelde werkboeken/cellen en werkt quantity bij; schrijft geen Excel-export.",
+      "source": {
+        "id": "f422a43648ca2b57",
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 402,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L402",
+        "context": "<RibbonButton icon={exportIcon} label={t('home.updateExcel')} onClick={handleUpdateExcel} />\n          </RibbonGroup>\n        )}\n\n      </div>\n\n      <Modal open={showProject} onClose={() => setShowProject(false)} title={t('home.projectData')}>\n        <ProjectInfoSettings />\n      </Modal>\n\n      <Modal open={showPriceDialog} onClose={() => setShowPriceDialog(false)} title={t('home.priceDialogTitle')} className=\"rapport-props-dialog\">\n        <div className=\"rapport-props\">\n          <label className=\"rapport-props-row\">\n            <span>\n              <strong>{t('home.percentage')}</strong>\n              <em>{t('home.percentageHelp')}</em>\n            </span>\n          </label>\n          <div className=\"price-scale-row\">\n            <input\n              type=\"number\"\n              step=\"0.1\"\n              value={pricePct}\n              autoFocus\n              onChange={(e) => setPricePct(e.target.value)}\n              onKeyDown={(e) => { if (e.key === 'Enter') handleScalePrices(); }}\n              className=\"price-scale-input\"\n            />\n            <span className=\"price-scale-pct\">%</span>\n            <button"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.62482,
+            15.2804
+          ],
+          "raw_overlap_area": 1.7141149882554991,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            23.37473,
+            22.8581
+          ],
+          "raw_overlap_area": 3.1130877549185,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/data.excel-refresh.svg",
+          "before_sha256": "d967f4d52e8e5348577fd99495d48c57147dc2a0b0ad22ff516bef7e2e341a53",
+          "after_path": "svg/16/data.excel-refresh.svg",
+          "after_sha256": "b2d320e07cbc8b6bc9f71a98d0d67724fe237de0d7c8fd8a63472f909797a74d"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/data.excel-refresh.svg",
+          "before_sha256": "1e1b9ce363199821eb2e3466bfb10b602a77edfd155450cdf5088d52e738c9ed",
+          "after_path": "svg/24/data.excel-refresh.svg",
+          "after_sha256": "e4218677a500a4259acc2ddf874e10595d99076c570246c399ee4e8824187f13"
+        }
+      },
+      "refined_in_revision": 98,
+      "user_approved": true
+    },
+    {
+      "number": 2,
+      "id": "symbol.category-site",
+      "label": "Bouwplaatssymbolen",
+      "series": 107,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "De eerdere vorm werd niet als hijskraan herkend.",
+      "action": "Een duidelijke torenkraan met mast, lange giek, trekverband, contragewicht en vrije oranje hijslijn met ronde haak.",
+      "ui_call": "De categorie NL Bouwplaats in de symboolbibliotheek in- of uitklappen; geen bouwkraan plaatsen.",
+      "source": {
+        "id": "9880d66d102acd2d",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+        "line": 198,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/data/nlSymbolLibrary.js#L198",
+        "context": "    icon: `<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"8\" cy=\"9\" r=\"6\" stroke-dasharray=\"2.5 2\"/><line x1=\"8\" y1=\"9\" x2=\"14\" y2=\"9\"/><rect x=\"6.7\" y=\"7.7\" width=\"2.6\" height=\"2.6\"/></svg>`,\n    symbols: [\n      { id: 'param-bouwkraan', name: 'Bouwkraan (zwenkstraal)', parametricId: 'bouwkraan', svg: bouwkraanPreview },\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            2.04167,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 1.5625,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            3.125007,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 3.0625,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/symbol.category-site.svg",
+          "before_sha256": "36b5d3d7fe8cf7b6e818ef98c805c6521452823a765abad5ab3c85ae859749ab",
+          "after_path": "svg/16/symbol.category-site.svg",
+          "after_sha256": "a86d994e0fc30f24cee8b57b03c788210ba80a2067d5d1f8e578f3b90400c1d9"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/symbol.category-site.svg",
+          "before_sha256": "50911dd3992de532735dda8c0e5add0f16a73fead3b12a9c4158f91a01937b5d",
+          "after_path": "svg/24/symbol.category-site.svg",
+          "after_sha256": "b48a8c58edf71857b390c59d66dfbbcb20cd32264a1ae06b69eafb0ff996c7d7"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 3,
+      "id": "assistant.detect-doors",
+      "label": "Deurherkenning vragen",
+      "series": 109,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "De deurvleugel was te hoekig en onduidelijk.",
+      "action": "Een normale deur met afgerond kozijn, zichtbare klink en vier losse scanhoeken voor deurherkenning.",
+      "ui_call": "De opdracht voor het herkennen en markeren van deuren aan de assistent aanbieden; geen lokale detector direct uitvoeren.",
+      "source": {
+        "id": "011ddd1d3c6de08d",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/assistant-skills.js",
+        "line": 36,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/assistant-skills.js#L36",
+        "context": "    icon: '🚪',\n    label: 'Herken deuren',\n    hint: 'Detecteer de deuren in de plattegrond en markeer ze',\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            2.04167,
+            0.70833,
+            15.29167,
+            15.29167
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.4987816707489459
+        },
+        "24": {
+          "bounds": [
+            3.125,
+            1.125,
+            22.875,
+            22.875
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 2.3731171421033967
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/assistant.detect-doors.svg",
+          "before_sha256": "510b394bdda366e31cddfd0bcc2ddd20197d1fa8c7c5d6f0cdf170c5961d14ed",
+          "after_path": "svg/16/assistant.detect-doors.svg",
+          "after_sha256": "8e037e38b3228fb8106a79fe7d1048732af8d244c4356a2170ccb22653e0adc5"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/assistant.detect-doors.svg",
+          "before_sha256": "33469dd7b5de737f3f5335a9537cd4d39b9d1caea2b1eee74298d3a0908bb5bd",
+          "after_path": "svg/24/assistant.detect-doors.svg",
+          "after_sha256": "e4ac5757b7c5d4e202a1fe089cdb55653d9de8aa17c74d943266156a02f86b85"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 4,
+      "id": "product.no-vendor-lock",
+      "label": "Geen leveranciersbinding",
+      "series": 111,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Het smalle open slot had geen overtuigende kast of beugel.",
+      "action": "Een groter open slot met normale kastverhoudingen en ronde, zichtbaar geopende beugel bij de vrije documenthoek.",
+      "ui_call": "Vaste productkenmerkaanduiding Geen vergrendeling in Over; geen object ontgrendelen of PDF-wachtwoord verwijderen.",
+      "source": {
+        "id": "70c13805a0b12bd0",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx",
+        "line": 52,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/dialogs/AboutDialog.jsx#L52",
+        "context": "            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg>\n            <span>{t('aboutPanel.featureNoLock')}</span>\n          </div>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.95833,
+            14.625
+          ],
+          "raw_overlap_area": 3.3073352399090017,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            23.875,
+            21.875
+          ],
+          "raw_overlap_area": 6.241841399563998,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/product.no-vendor-lock.svg",
+          "before_sha256": "d49193c63c7d6d920f945e3646aadc1f51e93ecfa534e28da716ddec2ff0e92c",
+          "after_path": "svg/16/product.no-vendor-lock.svg",
+          "after_sha256": "d490e6c2f78197e809611ec24ad04b9f379af3ac16a740e0b55685d01d7c4739"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/product.no-vendor-lock.svg",
+          "before_sha256": "bea4ce061cf9fedc5f28535b78ded7fcc6d6c2d5aa6b49413167895028b746a9",
+          "after_path": "svg/24/product.no-vendor-lock.svg",
+          "after_sha256": "33bf8b308d7dc6ec59c385a38c5da288fca673592473d7fa7532a5f7a0924c24"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 5,
+      "id": "panel.links",
+      "label": "Koppelingenpaneel",
+      "series": 119,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "De twee dicht op elkaar liggende rondjes werden niet als koppeling herkend.",
+      "action": "Het goedgekeurde koppelteken met twee ruime open schakels en korte verbinding in een paneel met normale verhoudingen.",
+      "ui_call": "Het paneel met interne en externe PDF-koppelingen openen; nog geen URL volgen.",
+      "source": {
+        "id": "3303d097851fabe9",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/left-panel/LeftPanel.jsx",
+        "line": 36,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/left-panel/LeftPanel.jsx#L36",
+        "context": "    { panelId: 'links', title: () => t('leftPanel.links'), label: () => t('leftPanel.links'), icon: linksIcon },\n    { panelId: 'measurements', title: () => t('leftPanel.measurements') || 'Measurements', label: () => t('leftPanel.measurements') || 'Measurements', icon: measurementsIcon },\n    { panelId: 'schedules', title: () => t('leftPanel.schedules') || 'Schedules', label: () => t('leftPanel.schedules') || 'Schedules', icon: schedulesIcon },\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.41666999999999993
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.7500019999999986
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/panel.links.svg",
+          "before_sha256": "1337ca27258808abc7c88834ebc64ae6d0435af2e3a7824d54a5fb1fd1c829bf",
+          "after_path": "svg/16/panel.links.svg",
+          "after_sha256": "a3de90de4661dfbf6bc1a4f0afb5012073d751b92b20c6ec76447c7ba47cf60e"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/panel.links.svg",
+          "before_sha256": "54e7cc746556a609c8dbadacdae76886c110b30ff614f6b69217824bb82d1e63",
+          "after_path": "svg/24/panel.links.svg",
+          "after_sha256": "61f5573ae584cf257341618c33392bb207cf3bc8a41309d62d4ad25a67411575"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 6,
+      "id": "session.restore",
+      "label": "Opgeslagen sessie herstellen",
+      "series": 121,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "De gekozen sessie herstellen via restoreSession; geen sessieoverzicht of nieuw leeg document openen.",
+      "source": {
+        "id": "6d3f9c7a2614d1b7",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+        "line": 382,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx#L382",
+        "context": "                    <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/>\n                      <rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29147,
+            14.625
+          ],
+          "raw_overlap_area": 3.2277122604389996,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.8747,
+            21.875
+          ],
+          "raw_overlap_area": 6.397618714311502,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/session.restore.svg",
+          "before_sha256": "fb1cbf61b14a28ac21200249bc4dd17057e0df55504314202e1bfb8b20ebc450",
+          "after_path": "svg/16/session.restore.svg",
+          "after_sha256": "52257e5be19708ab40f052a1e7a12f0f526ef379d3ec1b70a7a97cbacfb01ab1"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/session.restore.svg",
+          "before_sha256": "8a33cd72b48a7c3d1a5debc591e19b8497e128f742fe2fc5bab9865d0aed98b6",
+          "after_path": "svg/24/session.restore.svg",
+          "after_sha256": "3fa84a389b049860468a56dde78c39bc6bb9f36742df56245474f37bb8cc1262"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 7,
+      "id": "symbol.system-types",
+      "label": "Systeemtypen beheren",
+      "series": 122,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Raar accent.",
+      "action": "Vier gelijke afgeronde typevakjes; rechtsonder dezelfde vierkante vorm in accent, zonder afwijkende ruit.",
+      "ui_call": "Het dialoog systeemtypen openen voor onder meer systeemraster/plafondtypen; geen nieuw type direct toevoegen.",
+      "source": {
+        "id": "fb93b6b132734f6f",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 309,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/SymbolPalette.jsx#L309",
+        "context": "<button\n                      id=\"btn-systeemtypen\"\n                      class=\"sp-settings-btn\"\n                      title=\"Systeemtypen beheren\"\n                      onClick={(e) => { e.stopPropagation(); openDialog('systeemtypen'); }}\n                      innerHTML={`<svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"><rect x=\"1\" y=\"1\" width=\"10\" height=\"10\"/><line x1=\"4.3\" y1=\"1\" x2=\"4.3\" y2=\"11\"/><line x1=\"7.6\" y1=\"1\" x2=\"7.6\" y2=\"11\"/><line x1=\"1\" y1=\"4.3\" x2=\"11\" y2=\"4.3\"/><line x1=\"1\" y1=\"7.6\" x2=\"11\" y2=\"7.6\"/></svg>`}\n                    />\n                  </Show>\n                  <span class=\"sp-cat-count\">{cat.symbols.length}</span>\n                </div>\n                <Show when={isCategoryExpanded(cat.id)}>\n                  <div class=\"sp-grid\">\n                    <For each={cat.symbols}>\n                      {(sym) => (\n                        <button"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.553748,
+            15.213739
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.476425000000001
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.768172,
+            22.758146
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 2.339627
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/symbol.system-types.svg",
+          "before_sha256": "942af92f9dfdf3ebd2a16f8f95cc10db15a17e28ae6eef3b90e73f63f274ccf9",
+          "after_path": "svg/16/symbol.system-types.svg",
+          "after_sha256": "e3d82acfb85b87984558086d0ffbacc0d6b99ab06f1e050a0e7d11ab81e4160b"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/symbol.system-types.svg",
+          "before_sha256": "be9a20d810d7e7d40ea5219215c3f355f7d8fb422ace4f1659551cf4f6c08144",
+          "after_path": "svg/24/symbol.system-types.svg",
+          "after_sha256": "ba2f8542ead4817bb7bd17efb670c94937fbecd5bf110c5b5d4a0e94730efd3f"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 8,
+      "id": "extension.reinstall-file",
+      "label": "Extensie uit bestand vervangen",
+      "series": 123,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "Een oppx-pakket kiezen om een bestaande extensie opnieuw te installeren; de levenscyclus kan naar de vorige versie terugrollen bij activeringsfouten.",
+      "source": {
+        "id": "75a05038339ebace",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+        "line": 165,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx#L165",
+        "context": "<button class=\"ext-reload-btn\" onClick={() => handleReload(plugin.id, plugin.name || plugin.id)} title={t('extensionsPanel.reload') || 'Reload'}>\n                    <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <polyline points=\"23 4 23 10 17 10\"/>\n                      <path d=\"M20.49 15a9 9 0 11-2.12-9.36L23 10\"/>\n                    </svg>\n                  </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29087,
+            14.625
+          ],
+          "raw_overlap_area": 4.0709677249985,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.87381,
+            21.875
+          ],
+          "raw_overlap_area": 7.847851048832998,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/extension.reinstall-file.svg",
+          "before_sha256": "09a9a92867404d67b177cbe5edcbb2eae91ce6f0aad4f1161f1e327a8b655b4b",
+          "after_path": "svg/16/extension.reinstall-file.svg",
+          "after_sha256": "bbb356b9644473f6d75da52494e8bbd04b83e9e6ac949d074a2d799b1796c132"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/extension.reinstall-file.svg",
+          "before_sha256": "93edb339d2054277ba8aceb5993daeaa2b0986b256563a2fa173c34af26bb0b0",
+          "after_path": "svg/24/extension.reinstall-file.svg",
+          "after_sha256": "a2a26de4f7a8acf2e71c0d24dc7274ea42f8772f449d3e853b25108b685a6f51"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 9,
+      "id": "link.open-internal",
+      "label": "Interne documentkoppeling",
+      "series": 124,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Binnen het vlak blijven.",
+      "action": "De volledige omgebogen pijl met zichtbare binnenmarge binnen het document gehouden.",
+      "ui_call": "Aanduiding bij een interne PDF-koppeling; de rij selecteert de koppeling en dubbelklik volgt haar interne bestemming.",
+      "source": {
+        "id": "a330c71ed8472986",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/left-panel/panels/LinksPanel.jsx",
+        "line": 99,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/left-panel/panels/LinksPanel.jsx#L99",
+        "context": "                  <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                    <path d=\"M15 7h3a5 5 0 0 1 0 10h-3m-6 0H6a5 5 0 0 1 0-10h3\"/>\n                    <line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"/>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 0.593087828461,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 1.028273700799001,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/link.open-internal.svg",
+          "before_sha256": "e5be5a3ae428591351003259ffc80d81a47d7a8d2defa7f1082f6c71b329d893",
+          "after_path": "svg/16/link.open-internal.svg",
+          "after_sha256": "b27d4a130376b991cc91f64c094ff19c418e2655fb4215298a12888d80436d58"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/link.open-internal.svg",
+          "before_sha256": "b1d87b25523c8e96248a150b951714ea5def9a60e3953e13433e720875fdf89b",
+          "after_path": "svg/24/link.open-internal.svg",
+          "after_sha256": "fd79533f3156ffb9c6a011c31b82c9396534f76aef9758cf833382d7c4d07c8e"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 10,
+      "id": "update.previous-download",
+      "label": "Vorige versie downloaden",
+      "series": 125,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accent en hoofd lopen over.",
+      "action": "Document en downloadpijl naast elkaar vrijgezet; pijlpunt blijft buiten de documentrand.",
+      "ui_call": "De voorgaande gepubliceerde versie bepalen en de passende download in de browser openen. De app installeert niets stil.",
+      "source": {
+        "id": "9575c5d275cccb43",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx",
+        "line": 178,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/HomeTab.jsx#L178",
+        "context": "icon={previousVersionIcon} label={t('help.previousVersion')}"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 2.177611277746499,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 4.286580552271498,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/update.previous-download.svg",
+          "before_sha256": "7eaf5afdfe970381d312329bd5c067eb37b265f435d54b9d927ea99344c4fad5",
+          "after_path": "svg/16/update.previous-download.svg",
+          "after_sha256": "4246541c8252e40b62039fa9f246bfd4f2de2fe125d7abce821130cdd6a25756"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/update.previous-download.svg",
+          "before_sha256": "4e900074659f667910b3bf69f30845aecb2bf9ecf431877721d99214670cd6cd",
+          "after_path": "svg/24/update.previous-download.svg",
+          "after_sha256": "d7c23a027fcee33ecbad7ccb18f41f54c3945068927fa4aca81ddf8882eaa7a8"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 11,
+      "id": "planning.move-date",
+      "label": "Projectdatums verschuiven",
+      "series": 126,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten staan raar in de hoofdvorm.",
+      "action": "Vrije verschuifpijl boven de planningsregels; het onterechte toevoegplusje verwijderd.",
+      "ui_call": "De dialoog Project verplaatsen openen voor de projectstart; uitgeschakeld zonder projectstartdatum.",
+      "source": {
+        "id": "8f2ccbc37c36f78c",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 355,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L355",
+        "context": "  kind: 'button', id: 'moveProject', icon: <CalendarClock size={20} />, labelKey: 'menu:ribbon.moveProject',\n  use: () => {\n    const setUI = useAppStore(s => s.setUI);\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.5611397162455003,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.9835502200219999,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/planning.move-date.svg",
+          "before_sha256": "dbe20ea6c6f13c61e362f2baf5504243089f721aa04819bd89e50a2615598ade",
+          "after_path": "svg/16/planning.move-date.svg",
+          "after_sha256": "e26303bb3eae43ac640e887e4b4143005db2f7f3ee5e12a93a2d6631e64ef02c"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/planning.move-date.svg",
+          "before_sha256": "0a94056b475cb5e1876e26200b627bef7a5f569853c86a6722e5772999ceeabf",
+          "after_path": "svg/24/planning.move-date.svg",
+          "after_sha256": "899c255d8f2cf8f2ae39c7ba289f37ff41166d7590f75bcb8a2963f470ccbad6"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 12,
+      "id": "resource.workspace",
+      "label": "Resourcewerkruimte",
+      "series": 128,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Poppetje moet accent krijgen.",
+      "action": "Persoon in accentkleur, met vrije ruimte binnen het brede werkruimtepaneel.",
+      "ui_call": "De resourcebeheerweergave over de volledige werkruimte openen via showResourcePanel=true en resourcePanelDocked=false.",
+      "source": {
+        "id": "9f0942b9c58b35e2",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 508,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L508",
+        "context": "  kind: 'button', id: 'openResourcePanel', icon: <Users size={20} />, labelKey: 'menu:ribbon.openResourcePanel',\n  use: () => {\n    const setUI = useAppStore(s => s.setUI);\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/resource.workspace.svg",
+          "before_sha256": "43658dc2222791debb7c78d36fd5f5d33085ccdf63b12e4b1d82638e721438ca",
+          "after_path": "svg/16/resource.workspace.svg",
+          "after_sha256": "50a8d2c620d43c98ec1d09bae30f8a96c5c2526b37c78872f4f949cdcceba2c6"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/resource.workspace.svg",
+          "before_sha256": "d455926828ff443a833a025f0e72f05456147ccf6617723723120c5877cfc428",
+          "after_path": "svg/24/resource.workspace.svg",
+          "after_sha256": "f2311ddf60414d5b4e35225f5e5b01cb88eb18f881182a76a728fa04f832d319"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 13,
+      "id": "status.resource-overallocated",
+      "label": "Resourceoverbelasting",
+      "series": 132,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Poppetje moet accent krijgen.",
+      "action": "Persoon in accentkleur; waarschuwingcontour en bestaande foutrol behouden.",
+      "ui_call": "Alleen bij overbelaste resources naast hun aantal tonen; dit is een foutgekleurde overbelastingsstatus, geen opdracht of waarschuwingenpaneel.",
+      "source": {
+        "id": "1ad22a16a4c8ca66",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+        "line": 1179,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L1179",
+        "context": "      {overallocatedCount > 0 && <AlertTriangle size={16} />}\n      <span>\n        {overallocatedCount > 0\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.153829,
+            0.85257,
+            15.846171,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            0.293158,
+            1.34136,
+            23.706842,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.resource-overallocated.svg",
+          "before_sha256": "f915aa8f33e0065d72dc081f12233e4b17e4f873f363625c96a6cf41045278b3",
+          "after_path": "svg/16/status.resource-overallocated.svg",
+          "after_sha256": "7b7fa1bb8ab577cceb786865f170117cc39f8e231b05d8dc292f2e01ed94ba9e"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.resource-overallocated.svg",
+          "before_sha256": "287bd8e81aaa42a45e9c6c491653a678313454468f3a3fd8b285abc521f12ee2",
+          "after_path": "svg/24/status.resource-overallocated.svg",
+          "after_sha256": "a0c28849db95e9eac5bce65abe65aa74267829116d04cb63cc0fed6515c7c2ca"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 14,
+      "id": "file.examples",
+      "label": "Voorbeeldprojecten",
+      "series": 133,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Geometrisch niet helemaal goed.",
+      "action": "Symmetrisch open boek met gelijke paginahoogten en tekst die de twee paginavlakken volgt.",
+      "ui_call": "Het paneel met meegeleverde voorbeeldprojecten tonen; pas een voorbeeldkaart haalt het bestand op en opent het als voorbeeld.",
+      "source": {
+        "id": "30ce5906f2aa1ed2",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/backstage/Backstage.tsx",
+        "line": 119,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L119",
+        "context": "        <NavItem icon={<BookOpen size={14} />} label={tMenu('backstage.examples')} active={section === 'examples'} onClick={() => goTo('examples')} tourAnchor=\"backstage-examples\" />\n        <ActionItem icon={<Save size={14} />} label={tMenu('ribbon.save')} onClick={() => leave(() => { handleSave(); closeBackstage(); })} />\n        <ActionItem icon={<SaveAll size={14} />} label={tMenu('backstage.saveAs')} onClick={() => leave(() => { handleSaveAs(); closeBackstage(); })} />\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.424607,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.7499999999999999
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.199402,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.2499999999999998
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/file.examples.svg",
+          "before_sha256": "08055545683c148b5fc0e88b1f4573b908dd38fbd94f8fce7ae891f840f33286",
+          "after_path": "svg/16/file.examples.svg",
+          "after_sha256": "33edb30ad5de20861b5f3dde8148cb1f4282ad132d8d8b919c9360b814ec6ea4"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/file.examples.svg",
+          "before_sha256": "695a0b07146d71d93e38d529b0f7daa0f8d1fe0a61616eb470651ab761fdf222",
+          "after_path": "svg/24/file.examples.svg",
+          "after_sha256": "b451f2161d1eca98e6c62da81474e60bddf11c1e5dc53c2138223e5733a18143"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 15,
+      "id": "ui.tour",
+      "label": "Rondleiding starten",
+      "series": 133,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Teken heeft niets met functie te maken.",
+      "action": "Begeleide stappen binnen een interfacevenster met drie stapmarkeringen en een voortgangspijl.",
+      "ui_call": "Backstage sluiten en de begeleide rondleiding vanaf stap nul tonen via showTourOverlay en tourStepIndex.",
+      "source": {
+        "id": "973e9ab120076663",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/backstage/Backstage.tsx",
+        "line": 150,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L150",
+        "context": "          icon={<Compass size={14} />}\n          label={tCommon('tour.backstageRestart')}\n          onClick={() => leave(() => { closeBackstage(); setUI({ showTourOverlay: true, tourStepIndex: 0 }); })}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.041667,
+            2.041667,
+            14.625,
+            15.291667
+          ],
+          "raw_overlap_area": 6.1330092806605006,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            0.125,
+            3.125,
+            21.875,
+            22.875
+          ],
+          "raw_overlap_area": 12.697413022978997,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/ui.tour.svg",
+          "before_sha256": "6e941595b68c3e92ca626b84bd89ba2645d72787ace69daf9f36721a9f0f1c3b",
+          "after_path": "svg/16/ui.tour.svg",
+          "after_sha256": "542b8da21fe6d5026ad3aa26140da78d597cde9e99d7fd51631548d1b358993d"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/ui.tour.svg",
+          "before_sha256": "53b748f4bc8442f874e4d84ac36129cc141fdc84210b1afd95475fc15fc03c85",
+          "after_path": "svg/24/ui.tour.svg",
+          "after_sha256": "9b62d49e0b054b457404f3f96704b121034869aab30434ad4b31c4915404f144"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 16,
+      "id": "layout.equipment",
+      "label": "Materieelindeling herkennen",
+      "series": 135,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accent op andere plek.",
+      "action": "Accent op de laadbak; cabine en wielen in hoofdkleur, met zichtbare scheiding.",
+      "ui_call": "Herkenningsteken equipment voor een eigen opgeslagen indeling; icoonkeuze beheert geen materieel.",
+      "source": {
+        "id": "5d4057bd24b918fa",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/viewControls/layoutIcons.tsx",
+        "line": 19,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx#L19",
+        "context": "  equipment: Truck,\n  tools: Wrench,\n  critical: Route,\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            2.70833,
+            15.29167,
+            14.291667
+          ],
+          "raw_overlap_area": 7.545606775616001,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            4.125,
+            22.875,
+            21.375
+          ],
+          "raw_overlap_area": 14.740202305325,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/layout.equipment.svg",
+          "before_sha256": "f640a2a7d5b89d6a0c11e2bb274234b96bf02cef2817ecee6d83a6537cefaf5b",
+          "after_path": "svg/16/layout.equipment.svg",
+          "after_sha256": "13d553fea330734f4db31aeb963b330ebbd161febc9e2f36107056ee60472dec"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/layout.equipment.svg",
+          "before_sha256": "0b6a569a9496eee400b3037ff07b571d0450531452ea0d4f6e89d0117a932508",
+          "after_path": "svg/24/layout.equipment.svg",
+          "after_sha256": "c3b7c1e985737e43b135045f29c106f0a50edfd0e8c1707c4218cd142751943e"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 17,
+      "id": "layout.tools",
+      "label": "Gereedschapsindeling herkennen",
+      "series": 135,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: de losse hamerkop en handgreep vormen geen herkenbaar gereedschap.",
+      "action": "Eén doorlopende steeksleutel met open bek in accentkleur en een lange aangesloten handgreep in hoofdkleur. De losse hamerkop en steel zijn vervangen; het blijft een herkenningsteken voor een opgeslagen gereedschapsindeling.",
+      "ui_call": "Herkenningsteken tools voor een eigen opgeslagen indeling; icoonkeuze voert geen gereedschap uit.",
+      "source": {
+        "id": "6eedad8e3e95fab0",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/viewControls/layoutIcons.tsx",
+        "line": 20,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx#L20",
+        "context": "  tools: Wrench,\n  critical: Route,\n  milestone: Milestone,\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.378652,
+            2.196803,
+            14.958333,
+            14.958333
+          ],
+          "raw_overlap_area": 1.3201680851449997,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.130483,
+            3.357701,
+            22.375,
+            22.375
+          ],
+          "raw_overlap_area": 2.5857302856269992,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-103-before/16/layout.tools.svg",
+          "before_sha256": "a9c4e0bd44d30e6c7608fb505e83c2f9dff0af69825e1548a0b85c213c765e00",
+          "after_path": "svg/16/layout.tools.svg",
+          "after_sha256": "70efe1d35b2fd06caa668994c3def55ad7f32f107f83b44a00176fdd8e798554"
+        },
+        "24": {
+          "before_path": "review/feedback-103-before/24/layout.tools.svg",
+          "before_sha256": "a1878340473d923fbc00823f3652692f83829765fbfd476368dca17f5ea1b10f",
+          "after_path": "svg/24/layout.tools.svg",
+          "after_sha256": "8c9d43197593483fb1fc757949231af92c7f1d2886dda23585b339d90b8c576b"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 18,
+      "id": "credential.regenerate",
+      "label": "Nieuw verbindingstoken",
+      "series": 141,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "De bevestiging voor tokenvernieuwing openen; na bevestiging wordt het token vervangen en een actieve desktopbridge herstart om het oude token in te trekken.",
+      "source": {
+        "id": "24eb6e894d43d89f",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+        "line": 145,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L145",
+        "context": "<button\n        type=\"button\"\n        style={iconBtnStyle}\n        title={t('ai.regenerate')}\n        aria-label={t('ai.regenerate')}\n        onClick={() => setConfirming(true)}\n      >\n        <RefreshCw size={13} />\n      </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            15.29084
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.7508300000000006
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            22.87376
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.2512399999999992
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/credential.regenerate.svg",
+          "before_sha256": "51769040b11eeaca403f082f31f40100ad1a05b8bb3286e9c9c960b1d5dde474",
+          "after_path": "svg/16/credential.regenerate.svg",
+          "after_sha256": "30ce2f48f7d8588d98dd39413dc3aa4c0379fb02e38839bb5d248553424ed7f6"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/credential.regenerate.svg",
+          "before_sha256": "7e515b96f50f551b3c47cba941bcdf569829989cf7365366f24038121f2c0d68",
+          "after_path": "svg/24/credential.regenerate.svg",
+          "after_sha256": "69564173d662288b82b80baa987d1e9d7bc423ecf8dcf8362bbe949ff825188c"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 19,
+      "id": "ai.connection-menu",
+      "label": "Verbindingsinstellingen",
+      "series": 141,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accent en vorm in elkaar.",
+      "action": "Stekker en menupijltje met binnenmarge in het paneel; de stekker raakt de onderrand niet.",
+      "ui_call": "Het compacte menu met poort, token en de ingang naar verbindingsgegevens openen; start zelf geen verbinding.",
+      "source": {
+        "id": "65be4b6089c98832",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+        "line": 185,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L185",
+        "context": "              icon={<Plug size={14} />}\n              title={t('ai.connectHint')}\n              ariaLabel={t('ai.connect')}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 1.1540970433705005,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 2.0118217937544998,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/ai.connection-menu.svg",
+          "before_sha256": "026e8488a52b1d5e2950dca5e198778ca765c8715545f393d2f5002d4c4f6366",
+          "after_path": "svg/16/ai.connection-menu.svg",
+          "after_sha256": "ac3fb262031f9cd0ac2b12d95f14f8ff95f9163db0de2995fbd7f7c7a7686531"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/ai.connection-menu.svg",
+          "before_sha256": "4e3952ff5176c18d1dc5e65c1e3f4f46989315752b70a26ae53befb1937c53d6",
+          "after_path": "svg/24/ai.connection-menu.svg",
+          "after_sha256": "0385c9277b96ffd7a8a35a1774d2a8215e04bfcbed07d435fd2101135dd43faf"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 20,
+      "id": "ai.connection-details",
+      "label": "Verbindingsgegevens",
+      "series": 141,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accent en vorm in elkaar.",
+      "action": "Stekker en informatieteken met binnenmarge in het paneel; de stekker raakt de onderrand niet.",
+      "ui_call": "De dialoog met endpoint, token, configuratiefragment en koppelprompt openen; de Plug-knop start zelf geen server of cliënt.",
+      "source": {
+        "id": "452fdf10697a94e5",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiConnectionGroup.tsx",
+        "line": 200,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiConnectionGroup.tsx#L200",
+        "context": "<button\n            className=\"ribbon-btn small\"\n            style={{ width: '100%' }}\n            onClick={() => { setShowDetails(true); setPopoverOpen(false); }}\n          >\n            <span className=\"ribbon-btn-icon\"><Plug size={14} /></span>\n            <span className=\"ribbon-btn-label\">{t('ai.connect')}</span>\n          </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.5610301368980002,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.9836732152304999,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/ai.connection-details.svg",
+          "before_sha256": "3f3ada66bb618847bef707eed11123525c6e5a5a97467a24b53ab02a0489d95f",
+          "after_path": "svg/16/ai.connection-details.svg",
+          "after_sha256": "8042dd85367d22eafb10f72ed4113fd464e0500a534d6b11bf03896501325548"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/ai.connection-details.svg",
+          "before_sha256": "839827be931b389c179e7601fd59efe1fcca560be07d72472f866fc679dbb08a",
+          "after_path": "svg/24/ai.connection-details.svg",
+          "after_sha256": "d655fecee9ff2ed81155690f20db72ad6d27ff9e3c7dcee88e508c6ca1924373"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 21,
+      "id": "status.bridge-live",
+      "label": "Bridge actief",
+      "series": 145,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Stekker in accentkleur, vrij van het vinkje; live blijft een gerapporteerde toestand, geen bewijs van aangesloten cliënt.",
+      "ui_call": "De door de bridge gerapporteerde live-toestand aanduiden; bewijst niet dat een externe cliënt al verbonden is.",
+      "source": {
+        "id": "018088f9b6c21732",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiServerGroup.tsx",
+        "line": 87,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiServerGroup.tsx#L87",
+        "context": "<RibbonButton\n      icon={running ? <Square size={20} /> : <Play size={20} />}\n      label={running ? t('ai.stop') : t('ai.start')}\n      primary={!running}\n      active={running}\n      disabled={!tauri}\n      onClick={onToggle}\n    />\n  );\n\n  if (compact) {\n    return (\n      // Wrapper-span draagt de native tooltip met de volledige status (zie statusHint hierboven).\n      <span title={statusHint}>{toggleButton}</span>\n    );\n  }\n\n  return (\n    <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>\n      {/* Wrapper-span draagt de native tooltip: RibbonButton kent zelf geen title-prop, en op een\n          disabled knop vuurt onClick sowieso niet — de tooltip legt uit waaróm (alleen desktop). */}\n      <span title={!tauri ? t('ai.desktopOnly') : undefined}>{toggleButton}</span>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 130 }}>\n        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>\n          <Circle size={10} fill={AI_STATUS_COLOR[status.state]} color={AI_STATUS_COLOR[status.state]} />\n          <span className=\"ribbon-info\">{statusText}</span>\n        </div>\n        {!tauri && (\n          <span className=\"ribbon-info\" style={{ opacity: 0.7 }}>{t('ai.desktopOnly')}</span>\n        )}\n        {status.state === 'port-busy' && status.message && (\n          <span className=\"ribbon-info\" style={{ color: 'var(--theme-warning-text)' }}>{status.message}</span>\n        )}\n      </div>\n    </div>\n  );\n}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            2.70833,
+            4.04167,
+            15.95833,
+            15.21563
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            4.125,
+            6.125,
+            23.874989,
+            22.760993
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.bridge-live.svg",
+          "before_sha256": "a9048bcc2d79115741653e20ce0ae8cf95b85a6c90560539038a3255c558acec",
+          "after_path": "svg/16/status.bridge-live.svg",
+          "after_sha256": "52fb393fda4789ef221527a482ccc4ecaa66a5cb611df02717f1c7d0800a7fa0"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.bridge-live.svg",
+          "before_sha256": "0cc909e0167592aafe1b95dc5196aad2f3e9353261026121d94dd7c0125bdb2f",
+          "after_path": "svg/24/status.bridge-live.svg",
+          "after_sha256": "3bd59eaa561647551475db6ab4e713e219d0c53759023b422f6ec78f1e6997c8"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 22,
+      "id": "status.bridge-off",
+      "label": "Bridge uit",
+      "series": 145,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Stekker in accentkleur met een vrij uitteken ernaast; geen schuine streep door de hoofdvorm.",
+      "ui_call": "De gerapporteerde off-toestand van de bridge aanduiden; geen verbindingsfout suggereren.",
+      "source": {
+        "id": "018088f9b6c21732",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiServerGroup.tsx",
+        "line": 87,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiServerGroup.tsx#L87",
+        "context": "<RibbonButton\n      icon={running ? <Square size={20} /> : <Play size={20} />}\n      label={running ? t('ai.stop') : t('ai.start')}\n      primary={!running}\n      active={running}\n      disabled={!tauri}\n      onClick={onToggle}\n    />\n  );\n\n  if (compact) {\n    return (\n      // Wrapper-span draagt de native tooltip met de volledige status (zie statusHint hierboven).\n      <span title={statusHint}>{toggleButton}</span>\n    );\n  }\n\n  return (\n    <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>\n      {/* Wrapper-span draagt de native tooltip: RibbonButton kent zelf geen title-prop, en op een\n          disabled knop vuurt onClick sowieso niet — de tooltip legt uit waaróm (alleen desktop). */}\n      <span title={!tauri ? t('ai.desktopOnly') : undefined}>{toggleButton}</span>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 130 }}>\n        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>\n          <Circle size={10} fill={AI_STATUS_COLOR[status.state]} color={AI_STATUS_COLOR[status.state]} />\n          <span className=\"ribbon-info\">{statusText}</span>\n        </div>\n        {!tauri && (\n          <span className=\"ribbon-info\" style={{ opacity: 0.7 }}>{t('ai.desktopOnly')}</span>\n        )}\n        {status.state === 'port-busy' && status.message && (\n          <span className=\"ribbon-info\" style={{ color: 'var(--theme-warning-text)' }}>{status.message}</span>\n        )}\n      </div>\n    </div>\n  );\n}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.bridge-off.svg",
+          "before_sha256": "bcc14907474af7520a6f18f34f5884c3548e5ace1ae94f7fb0903b87cbb214eb",
+          "after_path": "svg/16/status.bridge-off.svg",
+          "after_sha256": "746592c90fc02f30cddf92e5df6d67580d9eafa75e911f7776cd83dc9a928b3d"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.bridge-off.svg",
+          "before_sha256": "1b0e0e2d51c04d4ae2ba33157554926eecc582a5ff3494501424b651988738a1",
+          "after_path": "svg/24/status.bridge-off.svg",
+          "after_sha256": "352938bd069858f3456417d8497621b09f1cda9cea3841ef0e65e4aead4816da"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 23,
+      "id": "extension.runtime-desktop",
+      "label": "Extensiecontext desktop",
+      "series": 147,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Scherminhoud in accent; monitorcontour en voet in hoofdkleur. Vaste omgevingsaanduiding behouden.",
+      "ui_call": "Vaste aanduiding bij de desktop-risicotekst in extensietoestemming; dit beeld verleent geen bestandsrechten en belooft geen sandbox.",
+      "source": {
+        "id": "e3663ce3c7bbf208",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/ExtensionConsentDialog.tsx",
+        "line": 97,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ExtensionConsentDialog.tsx#L97",
+        "context": "            {pending.isDesktop ? <HardDrive size={13} className=\"shrink-0 mt-0.5\" /> : <Globe size={13} className=\"shrink-0 mt-0.5\" />}\n            <span>{pending.isDesktop ? t('extConsent.riskDesktop') : t('extConsent.riskBrowser')}</span>\n          </p>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/extension.runtime-desktop.svg",
+          "before_sha256": "54778a9e3337c3775470da7cd88ab4c2b4f6f3c5b9cbf709c5ab11257d040672",
+          "after_path": "svg/16/extension.runtime-desktop.svg",
+          "after_sha256": "0b6b7abc969d11be22c2b6c5b1ecea2791dc517fe1d2707b8116fce3aa456594"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/extension.runtime-desktop.svg",
+          "before_sha256": "777fe3376eb92ed4fca3925e7fb6e91674c2d5eee5bc915ded584509e7181104",
+          "after_path": "svg/24/extension.runtime-desktop.svg",
+          "after_sha256": "a7d2644408924c64e1c67024a6fe97f30c70595fc112be0ebf816e1052be7132"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 24,
+      "id": "extension.runtime-browser",
+      "label": "Extensiecontext browser",
+      "series": 147,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Wereldbol in accent binnen de browser; vaste omgevingsaanduiding behouden.",
+      "ui_call": "Vaste aanduiding bij de browser-risicotekst in extensietoestemming; geen internetverbinding openen of specifieke netwerktoestemming verlenen.",
+      "source": {
+        "id": "eb044b8887a9c8bb",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/ExtensionConsentDialog.tsx",
+        "line": 97,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ExtensionConsentDialog.tsx#L97",
+        "context": "            {pending.isDesktop ? <HardDrive size={13} className=\"shrink-0 mt-0.5\" /> : <Globe size={13} className=\"shrink-0 mt-0.5\" />}\n            <span>{pending.isDesktop ? t('extConsent.riskDesktop') : t('extConsent.riskBrowser')}</span>\n          </p>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/extension.runtime-browser.svg",
+          "before_sha256": "1f45193bcd3025abd8c57ceec24b02525b5946cdf0dcbc82414c8ede4cbde293",
+          "after_path": "svg/16/extension.runtime-browser.svg",
+          "after_sha256": "5642a2deebc79db7e93f46948809feb3ad81e0ccac26f99b4ee2476220b382ee"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/extension.runtime-browser.svg",
+          "before_sha256": "b4452a285a0aa96431263f5544a74139e336704005aaec6eb67deb0aa0db6ee6",
+          "after_path": "svg/24/extension.runtime-browser.svg",
+          "after_sha256": "f39a63ac475cf557fcf01af247a9ad981997b92f1b1c4c37ce37866730013afe"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 25,
+      "id": "guide.compact",
+      "label": "Begeleiding compact tonen",
+      "series": 148,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accent en hoofd lopen in elkaar over.",
+      "action": "Compact-chevron vrij binnen het brede paneel met voldoende afstand tot bovenbalk, rand en tekst.",
+      "ui_call": "Het begeleidingspaneel tussen compacte en uitgebreide weergave wisselen via de lokale override; de stap en sessie blijven gelijk.",
+      "source": {
+        "id": "72e0334f57318b3d",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/guide/GuidePanel.tsx",
+        "line": 197,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/guide/GuidePanel.tsx#L197",
+        "context": "<button\n            type=\"button\"\n            className=\"guide-panel-pill text-small leading-4\"\n            onClick={() => setOverride({ key: stepKey, auto: autoCompact, mode: 'expanded' })}\n            title={t('extGuide.expand')}\n            aria-label={`${t('extGuide.expand')}: ${progress}`}\n            aria-expanded={false}\n            data-ops-guide-action=\"expand\"\n          >\n            <ChevronUp size={14} />\n            <span data-ops-guide-progress>{progress}</span>\n            {view.done && <CheckCircle2 size={12} className=\"guide-panel-done\" data-ops-guide-done-badge />}\n          </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            2.70833,
+            15.29167,
+            13.29167
+          ],
+          "raw_overlap_area": 1.7180130433399996,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            4.125,
+            22.875,
+            19.875
+          ],
+          "raw_overlap_area": 3.3671950331280014,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/guide.compact.svg",
+          "before_sha256": "0f9bddc6d567353dd2d84c7cc33fae2e8a712a310f2fc3eeb318c05d6bd8dc7f",
+          "after_path": "svg/16/guide.compact.svg",
+          "after_sha256": "f9d09367aff6988a183318f9301a322ef34ef695f9eb4186cbf24a227379d8f9"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/guide.compact.svg",
+          "before_sha256": "2ef06b7b35c4cf0847d9853ce1c56d371a274f8efa17aebef7d5f727d8d2a3e7",
+          "after_path": "svg/24/guide.compact.svg",
+          "after_sha256": "0d186d0792556a427669828f8a81d3f514721a187c1e2b349d78bf6ac342e97f"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 26,
+      "id": "table.columns-reset",
+      "label": "Standaardkolommen herstellen",
+      "series": 149,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "De tabelkolommen via de gedeelde commitroute op een kopie van defaultColumns terugzetten; geen tabellen of taken wissen.",
+      "source": {
+        "id": "41f0991d4d3e0c7e",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/task-grid/ColumnChooser.tsx",
+        "line": 333,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/ColumnChooser.tsx#L333",
+        "context": "<button\n            type=\"button\"\n            className=\"task-grid-column-chooser-reset\"\n            disabled={resetDisabled}\n            onClick={reset}\n          >\n            <RotateCcw size={13} aria-hidden=\"true\" />\n            <span>{labels.resetDefault}</span>\n          </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 9.6129847863755,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 19.321863855266,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/table.columns-reset.svg",
+          "before_sha256": "d967f4d52e8e5348577fd99495d48c57147dc2a0b0ad22ff516bef7e2e341a53",
+          "after_path": "svg/16/table.columns-reset.svg",
+          "after_sha256": "b2d320e07cbc8b6bc9f71a98d0d67724fe237de0d7c8fd8a63472f909797a74d"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/table.columns-reset.svg",
+          "before_sha256": "1e1b9ce363199821eb2e3466bfb10b602a77edfd155450cdf5088d52e738c9ed",
+          "after_path": "svg/24/table.columns-reset.svg",
+          "after_sha256": "e4218677a500a4259acc2ddf874e10595d99076c570246c399ee4e8824187f13"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 27,
+      "id": "status.column-present",
+      "label": "Kolom al zichtbaar",
+      "series": 149,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Vinkje in accent met binnenmarge in het kolomvak; het blijft de reeds-zichtbaar-toestand.",
+      "ui_call": "Vaste Check in de kolommenkiezer wanneer de kolom al zichtbaar is; de optie is dan disabled om dubbel toevoegen te voorkomen.",
+      "source": {
+        "id": "12b43c3642f5b53e",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/task-grid/ColumnChooser.tsx",
+        "line": 256,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/ColumnChooser.tsx#L256",
+        "context": "<button\n          key={`${prefix}:${item.id}`}\n          type=\"button\"\n          role=\"menuitemcheckbox\"\n          aria-checked={item.selected}\n          disabled={item.disabled}\n          className=\"task-grid-column-chooser-item\"\n          onClick={() => choose(item)}\n        >\n          <span className=\"task-grid-column-chooser-check\" aria-hidden=\"true\">\n            {item.selected ? <Check size={13} /> : null}\n          </span>\n          <span>{item.label}</span>\n        </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.column-present.svg",
+          "before_sha256": "7f309c5c79b7a5f64355b64c2dec58cad3ea540e200d669b3df3121cd1f2dc43",
+          "after_path": "svg/16/status.column-present.svg",
+          "after_sha256": "f9787f4b5771fb946ecd277471bc63373b06fee2b177b9e9403c5b174fc5a3c9"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.column-present.svg",
+          "before_sha256": "49f0b106cb465713ba501f1b9f72e6d7feee0cfe11c9fff3fd451a1650b2573e",
+          "after_path": "svg/24/status.column-present.svg",
+          "after_sha256": "60a6135f592f55726ec5b919cd43a1a1b4177725b552e65a5e7977b10886c37d"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 28,
+      "id": "help.context-hint",
+      "label": "Korte toelichting",
+      "series": 150,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Waar zijn de accenten?",
+      "action": "Informatieletter en punt in accent, tekstballon in hoofdkleur.",
+      "ui_call": "Een korte title- of hovertoelichting bij de huidige instelling of het veld aanduiden; geen algemeen helpartikel of zelfstandige dialoog.",
+      "source": {
+        "id": "da667c4f2ba3b045",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/settings/SchedulingProfileSection.tsx",
+        "line": 473,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/settings/SchedulingProfileSection.tsx#L473",
+        "context": "<button type=\"button\"\n                          className=\"mt-0.5 shrink-0 inline-flex rounded-[4px] text-text-secondary hover:text-text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent\"\n                          title={t(conventionHelpKey(c.id))} aria-label={t('schedulingProfile.showHelp', { name })}\n                          data-tooltip-instant=\"true\" data-ops-convention-help={c.id}>\n                          <Info size={14} aria-hidden />\n                        </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            15.153541
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            22.667811
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/help.context-hint.svg",
+          "before_sha256": "59844ef421a48375b5ccbf333d03ee32bab9192b4265ba45baf1975648cda340",
+          "after_path": "svg/16/help.context-hint.svg",
+          "after_sha256": "c99c2f45309f7c38ea4297630006ad3ccdf7507ff6509902cd29cdfa817f0dfd"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/help.context-hint.svg",
+          "before_sha256": "a6446acf6b89152557cbe14dcc6659b7d9206258b10c28ab86436690a9807429",
+          "after_path": "svg/24/help.context-hint.svg",
+          "after_sha256": "e0320ed4676340353fd16b173695cf0448467a951ccc8e0fa1bdfe22b1634385"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 29,
+      "id": "status.library-suggestion",
+      "label": "Voorgesteld bibliotheekitem",
+      "series": 151,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten?",
+      "action": "Koppelrichting in accent tussen twee vrije bibliotheekitems; geen automatische toepasactie toegevoegd.",
+      "ui_call": "De vaste pijl tussen een projectnaam en de voorgestelde poolnaam aanduiden; geen vooruitnavigatie of directe koppeling.",
+      "source": {
+        "id": "c450e1fbdecb4faf",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/LibraryLinkDialog.tsx",
+        "line": 87,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L87",
+        "context": "                      ? <span className=\"text-text-secondary flex items-center gap-1\"><ArrowRight size={11} /> {t('companyLibrary.suggestedMatch', { name: c.suggestedPoolName })}</span>\n                      : <span className=\"text-text-secondary italic\">{t('companyLibrary.noMatch')}</span>}\n                  </span>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            3.375,
+            15.29167,
+            12.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            5.125,
+            22.875,
+            18.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.library-suggestion.svg",
+          "before_sha256": "44e9d6a8f4f1c55d5964a348c9c4b07e2f62b6288cb7821e3137c6f9bcbd37a8",
+          "after_path": "svg/16/status.library-suggestion.svg",
+          "after_sha256": "c98971a1bf89499d312296cc3c080509845c74cea45ff582ff60cc9d2e4ef7fe"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.library-suggestion.svg",
+          "before_sha256": "a61a995aca4958bb05ff94ec612c050bc03928f848d9c4472132f0abdb5adfbc",
+          "after_path": "svg/24/status.library-suggestion.svg",
+          "after_sha256": "539cf68d9b825f446aa538ea197e891f13a8810299c25556640d4a8af49e90f7"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 30,
+      "id": "input.confirm-draft",
+      "label": "Conceptinvoer bevestigen",
+      "series": 151,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Loopt over in elkaar.",
+      "action": "Vinkje in accent volledig binnen het invoervlak, vrij van tekst en omtrek.",
+      "ui_call": "De lokale invoer voor een nieuwe bibliotheeknaam bevestigen en de naameditie sluiten; pas het hele projectformulier toepassen maakt de bibliotheek aan.",
+      "source": {
+        "id": "899af3928ea01a03",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/settings/ProjectInfoPanelContent.tsx",
+        "line": 505,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/settings/ProjectInfoPanelContent.tsx#L505",
+        "context": "<button\n                  type=\"button\"\n                  onClick={confirmNewCompany}\n                  className=\"p-1 hover:bg-surface-hover rounded-[6px] shrink-0\"\n                  title={tCommon('ok')}\n                  data-ops-project-new-company-confirm\n                >\n                  <Check size={14} />\n                </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 1.7995032062214988,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 3.5269565046265026,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/input.confirm-draft.svg",
+          "before_sha256": "fd85a0ac94dd0c2fc8c96e167aa383c3dde7c155bb16066ab98ee6d40445beaa",
+          "after_path": "svg/16/input.confirm-draft.svg",
+          "after_sha256": "b7e8b4af2eea63f9dcdabf3a707bc2ee3e77b6fac5248cf67cb38cb3698079ab"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/input.confirm-draft.svg",
+          "before_sha256": "e57640e64eae1ce2351b6a73ca140f8d2f72330633ff70adb7eeb693cc932c32",
+          "after_path": "svg/24/input.confirm-draft.svg",
+          "after_sha256": "37fdcc1b75873bb0bc914c011892665ecc173e6c0a6e4dc90f90b16a316118ee"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 31,
+      "id": "status.install-size-smaller",
+      "label": "Installatiepakket kleiner",
+      "series": 152,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten?",
+      "action": "Dalende grootte-indicator in accent vrij naast het pakket; vaste vergelijking, geen downloadopdracht.",
+      "ui_call": "Een negatieve pakketgrootteverandering in de getoonde releasevergelijking aanduiden; geen download of verkleinopdracht.",
+      "source": {
+        "id": "71cc93d4f9ed5731",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/JustUpdatedDialog.tsx",
+        "line": 113,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/JustUpdatedDialog.tsx#L113",
+        "context": "              {sizeDelta !== null && <div><strong className=\"block text-large leading-6 inline-flex gap-1 items-center\">{showSmaller ? <ArrowDown size={14} /> : showLarger ? <ArrowUp size={14} /> : null}{formatBytes(Math.abs(sizeDelta))}</strong><span className=\"text-text-secondary\">{showSmaller ? t('updates.justUpdated.smallerLabel') : showLarger ? t('updates.justUpdated.largerLabel') : t('updates.justUpdated.sameSize')}</span></div>}\n            </div>\n          </section>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            15.95833,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            23.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.install-size-smaller.svg",
+          "before_sha256": "a23a8fa699999f336e9adf9481c24d4e5b8549f7ea6db4db776ffab96c0bb75f",
+          "after_path": "svg/16/status.install-size-smaller.svg",
+          "after_sha256": "e6d225f85e90484e7e29cb56a8fea27b4096f883ad2b4265ff4098a4361671f0"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.install-size-smaller.svg",
+          "before_sha256": "7e7d39324915efd496e840e05b44596088ca4d28b85eac29c47fc238605458b8",
+          "after_path": "svg/24/status.install-size-smaller.svg",
+          "after_sha256": "e0e760f028f2d09691d384e159c4104e4cff29456e8cb09d88f0f89c10a256db"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 32,
+      "id": "status.install-size-larger",
+      "label": "Installatiepakket groter",
+      "series": 152,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten?",
+      "action": "Stijgende grootte-indicator in accent vrij naast het pakket; vaste vergelijking, geen uploadopdracht.",
+      "ui_call": "Een positieve pakketgrootteverandering in de getoonde releasevergelijking aanduiden; geen download of vergrootopdracht.",
+      "source": {
+        "id": "31a60d97c3af6078",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/JustUpdatedDialog.tsx",
+        "line": 113,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/JustUpdatedDialog.tsx#L113",
+        "context": "              {sizeDelta !== null && <div><strong className=\"block text-large leading-6 inline-flex gap-1 items-center\">{showSmaller ? <ArrowDown size={14} /> : showLarger ? <ArrowUp size={14} /> : null}{formatBytes(Math.abs(sizeDelta))}</strong><span className=\"text-text-secondary\">{showSmaller ? t('updates.justUpdated.smallerLabel') : showLarger ? t('updates.justUpdated.largerLabel') : t('updates.justUpdated.sameSize')}</span></div>}\n            </div>\n          </section>\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            15.95833,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            23.874996,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.install-size-larger.svg",
+          "before_sha256": "0d94f3bf3908f2a9f797b4b9ed10602c46bbfd1cce63d4874df24438c831d7e4",
+          "after_path": "svg/16/status.install-size-larger.svg",
+          "after_sha256": "c2ea68f0aa6e11d939e45c8eff92705a4a66490ca9625bc12ba7229738ca9363"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.install-size-larger.svg",
+          "before_sha256": "d8daabf41b9dd738edfd7e819a0f176705bd471a59450964e58448a30e6607d6",
+          "after_path": "svg/24/status.install-size-larger.svg",
+          "after_sha256": "c6d67e3ff46a8d3d7935c0fb1d34db77266f7c13d40d92dac8de033a23866b95"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 33,
+      "id": "planning.dependency-draw-mode",
+      "label": "Relaties tekenen actief",
+      "series": 154,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: cursor, relatiepijl en taakblokken lopen in elkaar over. De nieuwe vorm is rustiger en houdt de actieve relatiemodus herkenbaar.",
+      "action": "Twee ruime taakblokken met één vrije haakse relatiepijl in accentkleur. De cursor is verwijderd; pijl en blokken hebben zichtbare tussenruimte.",
+      "ui_call": "Vaste aanduiding van de actieve afhankelijkheidstekenmodus; het aparte Stoppen beëindigt de modus. Het beeld maakt zelf geen relatie.",
+      "source": {
+        "id": "a437cc141d15ac12",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/DependencyModeNotice.tsx",
+        "line": 26,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DependencyModeNotice.tsx#L26",
+        "context": "      icon={Link}\n      text={t('view.dependencyModeHint')}\n      actionLabel={t('view.dependencyModeStop')}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-104-before/16/planning.dependency-draw-mode.svg",
+          "before_sha256": "b89d37218c8abb41f7281b608dbeaa915c839555994e6e00beea45f4a612eaa3",
+          "after_path": "svg/16/planning.dependency-draw-mode.svg",
+          "after_sha256": "18f2786085e76de8548167b813b554217e06cd66643fecbaefdb3844aa39db21"
+        },
+        "24": {
+          "before_path": "review/feedback-104-before/24/planning.dependency-draw-mode.svg",
+          "before_sha256": "2cc377f95767fbd87a404ecd4de7b75e854f4a322efb81a8c6336933294f18e8",
+          "after_path": "svg/24/planning.dependency-draw-mode.svg",
+          "after_sha256": "956810d1ed1a5ea1d994303c3dccd202acec11c70f045d16b143079abf2b3d5b"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 34,
+      "id": "status.recorded-dates",
+      "label": "Vastgelegde datums tonen",
+      "series": 154,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten verdwenen.",
+      "action": "Datumtarget in accent binnen de kalender; vaste toestand behouden.",
+      "ui_call": "Vaste toestand datesAsRecorded: toon de uit het bestand overgenomen datums. De afzonderlijke herberekenactie kiest opnieuw CPM.",
+      "source": {
+        "id": "9fa1d41a7f11b2c7",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/RecordedDatesNotice.tsx",
+        "line": 45,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/RecordedDatesNotice.tsx#L45",
+        "context": "        icon={CircleDot}\n        text={recordedDates && recordedDates.shifted !== undefined\n          ? t(recordedDatesActiveKey(recordedDates.origin), { count: recordedDates.shifted })\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.recorded-dates.svg",
+          "before_sha256": "d3ab92d846489b2f50c88ce294f20492e8af9f2769b22fc9a352b49e7296fa68",
+          "after_path": "svg/16/status.recorded-dates.svg",
+          "after_sha256": "d723b05bf41e531cc344df9024de0cf07a5784d7cb80f3c5976d2526192ddcbe"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.recorded-dates.svg",
+          "before_sha256": "061a8dcdf0b8d1870bcbbc325f21a56ed854868dff28851e1097b5e8af3707e1",
+          "after_path": "svg/24/status.recorded-dates.svg",
+          "after_sha256": "3ec4cb53374fdd985d12603ab74c043d3a0d80fd81b4aa28a776632185888fe4"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 35,
+      "id": "backup.recover",
+      "label": "Projecten herstellen",
+      "series": 156,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "De aangeboden projectherstel-snapshots via restoreDocuments terugzetten. Opruimen volgt pas na herstel; onbruikbare snapshots blijven bewaard. Geen PDF-lezersessie herstellen.",
+      "source": {
+        "id": "f08c872839f1823f",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/RecoveryDialog.tsx",
+        "line": 120,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/RecoveryDialog.tsx#L120",
+        "context": "<button\n            onClick={onRestore}\n            className=\"btn btn--sm btn--primary shadow-[var(--shadow-glow)] flex items-center gap-1.5\"\n          >\n            <RotateCcw size={13} />\n            {t('recovery.restore')}\n          </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            15.29167,
+            15.29167
+          ],
+          "raw_overlap_area": 0.27408988529150013,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            22.875,
+            22.875
+          ],
+          "raw_overlap_area": 0.4063293121585,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/backup.recover.svg",
+          "before_sha256": "cf6e4656fd212fe463124d998c4c80a9dbcb2ca84da38a9eeb54b69588d7a078",
+          "after_path": "svg/16/backup.recover.svg",
+          "after_sha256": "d451f549e12a6e48af61dfb94186ce7b0facdd7223ec1ff706876d6e7b3bc323"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/backup.recover.svg",
+          "before_sha256": "a6501619c2e70709d72bb8f67664a82fd97de336054c7bcd243993a31e974ff8",
+          "after_path": "svg/24/backup.recover.svg",
+          "after_sha256": "037ad9fd8d77d151301c8cfa810fda61c9d77904a051ba6dd280e940dd30224a"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 36,
+      "id": "software.update",
+      "label": "App met releasepakket bijwerken",
+      "series": 161,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruiker: het aanwijsgedeelte van de cirkelpijl klopt nog niet; ook op eerder aangewezen pijlen toepassen.",
+      "action": "Ronde boog met een korte rechte aansluiting vóór de brede open pijlpunt. De binnenste puntarm eindigt in de vrije cirkelruimte en versmelt niet met de boog. In revisie 102 op alle eerder besproken cirkelpijlen toegepast.",
+      "ui_call": "Het beschikbare opvolgpakket downloaden en het bestaande platforminstallatiepad volgen. Bij eigen AppImage-vervanging volgt een herstartinstructie; geen automatische herstart of backupflush beloven.",
+      "source": {
+        "id": "8f3d438453b1fd05",
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "path": "src/components/SelfUpdateBanner.tsx",
+        "line": 91,
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/SelfUpdateBanner.tsx#L91",
+        "context": "onUpdate volgt handleSelfUpdate en downloadAndRunInstaller; Linux vervangt eigen AppImage en vraagt daarna herstart."
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            2.70833,
+            15.95833,
+            15.29063
+          ],
+          "raw_overlap_area": 4.857646359221501,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            4.125,
+            23.875,
+            22.87345
+          ],
+          "raw_overlap_area": 9.528535762756496,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/software.update.svg",
+          "before_sha256": "09a9a92867404d67b177cbe5edcbb2eae91ce6f0aad4f1161f1e327a8b655b4b",
+          "after_path": "svg/16/software.update.svg",
+          "after_sha256": "bbb356b9644473f6d75da52494e8bbd04b83e9e6ac949d074a2d799b1796c132"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/software.update.svg",
+          "before_sha256": "93edb339d2054277ba8aceb5993daeaa2b0986b256563a2fa173c34af26bb0b0",
+          "after_path": "svg/24/software.update.svg",
+          "after_sha256": "a2a26de4f7a8acf2e71c0d24dc7274ea42f8772f449d3e853b25108b685a6f51"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 37,
+      "id": "status.software-installed",
+      "label": "Appversie geïnstalleerd",
+      "series": 161,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten weg en loopt over in elkaar.",
+      "action": "Vinkje in accent met vrije binnenmarge in het pakket; geïnstalleerd betekent niet actueel.",
+      "ui_call": "De lokaal aangetroffen versie aanduiden; deze vaste toestand zegt niet dat de versie actueel is.",
+      "source": {
+        "id": "b9c006b6a3625a00",
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "path": "src/components/ToolCard.tsx",
+        "line": 179,
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/ToolCard.tsx#L179",
+        "context": "Vaste Check naast installed.version; dit bewijst niet dat de geïnstalleerde versie de nieuwste is."
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            22.874975,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.software-installed.svg",
+          "before_sha256": "35a4a11fed5d1d23b8d3204305e7c6ed87130a26b2a6d421a45dda4d61493b9a",
+          "after_path": "svg/16/status.software-installed.svg",
+          "after_sha256": "80dcdc25c31816f23898d977bac386b9b2893bb54ddd94ff4bc02a7949a673c0"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.software-installed.svg",
+          "before_sha256": "ca93933d5842cf2189d004fa61c814057620655e9bd7d3e04aed676557f7eaa7",
+          "after_path": "svg/24/status.software-installed.svg",
+          "after_sha256": "35d07c3ec3967b666f55591b8f5428cc2b7f5b9d5ae23a734c5f7c655e7bc6ef"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 38,
+      "id": "status.version-upgrade",
+      "label": "Beschikbare opvolgversie",
+      "series": 161,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Gebruikersfeedback: Accenten weg.",
+      "action": "Richting naar de opvolgversie in accent tussen twee vrije versievakjes; geen installatieactie toegevoegd.",
+      "ui_call": "Vaste richting van geïnstalleerde naar beschikbare nieuwere versie in de versievergelijking; geen updateactie op dit beeld.",
+      "source": {
+        "id": "40fec2574f811bb8",
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "path": "src/components/ToolCard.tsx",
+        "line": 190,
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/ToolCard.tsx#L190",
+        "context": "De tekstpijl tussen installed en latest verschijnt uitsluitend bij update_available."
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            4.04167,
+            15.29167,
+            11.95833
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            6.125,
+            22.875,
+            17.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-101-before/16/status.version-upgrade.svg",
+          "before_sha256": "45a45699df10128e951f9b344a668a68e187240c529d1293ac786b70ce37842a",
+          "after_path": "svg/16/status.version-upgrade.svg",
+          "after_sha256": "c98971a1bf89499d312296cc3c080509845c74cea45ff582ff60cc9d2e4ef7fe"
+        },
+        "24": {
+          "before_path": "review/feedback-101-before/24/status.version-upgrade.svg",
+          "before_sha256": "9d151f691f10d395555e217b4380f526ca8a70cc74fff5b9f8b7694d034907ed",
+          "after_path": "svg/24/status.version-upgrade.svg",
+          "after_sha256": "539cf68d9b825f446aa538ea197e891f13a8810299c25556640d4a8af49e90f7"
+        }
+      },
+      "user_approved": true
+    },
+    {
+      "number": 39,
+      "id": "image.embedded-edit",
+      "label": "Ingebedde afbeelding bewerken",
+      "series": 118,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "Een raster-XObject in PDF-paginainhoud kiezen en daarna verplaatsen, schalen, vervangen of verwijderen. De toolnaam removeImage is historisch; geen directe verwijderactie of afbeeldingsannotatie.",
+      "source": {
+        "id": "92144aca8d87de21",
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "path": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+        "line": 249,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx#L249",
+        "context": "<RibbonButton size=\"small\" id=\"dr-remove-image\" title={t('drawing.removeImage')} icon={removeImageIcon}\n            disabled={ro()} active={state.currentTool === 'removeImage'} onClick={() => startRemoveImageTool()} />\n        </RibbonGroup>\n\n        {/* LIJN-OPTIES — alleen zichtbaar bij het lijn-gereedschap. Bevat het\n            'Doorlopend'-vinkje dat de doorlopende (keten) tekenmodus schakelt.\n            Deelt exact dezelfde preference (state.preferences.lineContinue) als\n            het vinkje in het eigenschappen-paneel — één bron van waarheid. */}\n        <Show when={state.currentTool === 'line'}>\n          <RibbonGroup label={t('comment.line') || 'Lijn'}>\n            <label class=\"ribbon-checkbox-option\" title={t('drawing.lineContinueTip') || 'Elke klik verbindt het volgende segment met het vorige'}>\n              <input\n                type=\"checkbox\"\n      "
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.220418,
+            15.252713
+          ],
+          "raw_overlap_area": 8.725208286533,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.768172,
+            22.816585
+          ],
+          "raw_overlap_area": 17.558474876433998,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/image.embedded-edit.svg",
+          "before_sha256": "5de004c67a6db35fa84e08fe4944a1f88fb67f81d5c3d5b08ef8115cb316e169",
+          "after_path": "svg/16/image.embedded-edit.svg",
+          "after_sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/image.embedded-edit.svg",
+          "before_sha256": "d7e5178b7cdb002d9cd7a1d3e3bb47719fd387fe42c9861fdc4fb3546d07f650",
+          "after_path": "svg/24/image.embedded-edit.svg",
+          "after_sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/image.embedded-edit.svg",
+          "sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/image.embedded-edit.svg",
+          "sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 40,
+      "id": "wbs.auto-number",
+      "label": "Automatische WBS-nummering",
+      "series": 127,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "Automatische taaknummering omschakelen; inschakelen past de WBS-nummering onmiddellijk toe.",
+      "source": {
+        "id": "b53cd197e52819b3",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 441,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L441",
+        "context": "            kind: 'small', id: 'wbsAuto', icon: <Hash size={14} />, labelKey: 'menu:ribbon.wbsAuto',\n            use: () => {\n              const wbsAutoNumber = useAppStore(s => !!s.project.wbsAutoNumber);\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            2.0,
+            2.0,
+            14.28279,
+            14.0
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.0937599999999996
+        },
+        "24": {
+          "bounds": [
+            3.0,
+            3.0,
+            21.36168,
+            21.0
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 1.7656299999999998
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/wbs.auto-number.svg",
+          "before_sha256": "f0d3b488834a31f060352f8d4bbb87775861656da481d12541df7e9823df4b7d",
+          "after_path": "svg/16/wbs.auto-number.svg",
+          "after_sha256": "c01b55bdaab414eb0a4bf8b88f7e6d2f73d76d9590515349acb50e3eee2e9771"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/wbs.auto-number.svg",
+          "before_sha256": "65cbbfb5ddcf553eca7c6ad83509366a7e8d34f50ae84523eacf62e02902305b",
+          "after_path": "svg/24/wbs.auto-number.svg",
+          "after_sha256": "fe60c31c15ae8a9dcf28891139dab36461aed9a64295204dd49cb6ead4199a1b"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/wbs.auto-number.svg",
+          "sha256": "c01b55bdaab414eb0a4bf8b88f7e6d2f73d76d9590515349acb50e3eee2e9771"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/wbs.auto-number.svg",
+          "sha256": "fe60c31c15ae8a9dcf28891139dab36461aed9a64295204dd49cb6ead4199a1b"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 41,
+      "id": "calendar.edit",
+      "label": "Resourcekalender bewerken",
+      "series": 138,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "De ResourceCalendarDialog voor de gekozen bestaande project- of poolkalender openen; de bewerkte kopie wordt pas bij Toepassen vastgelegd.",
+      "source": {
+        "id": "a330d3eee827ba9e",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/panels/ResourcePanel.tsx",
+        "line": 945,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourcePanel.tsx#L945",
+        "context": "<button\n              onClick={onEditCalendar}\n              disabled={!resource.calendarId}\n              title={t('resource.editCalendar')}\n              className=\"p-0.5 rounded hover:bg-surface-hover text-text-secondary disabled:opacity-30 flex-shrink-0\"\n            >\n              <Pencil size={12} />\n            </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            15.95833
+          ],
+          "raw_overlap_area": 6.0249527183835,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125018,
+            21.875,
+            23.875
+          ],
+          "raw_overlap_area": 11.783675774399496,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/calendar.edit.svg",
+          "before_sha256": "def2069651ed7ee2b936f123bd6bbc71133788bfff47aed3fbbee6b47594d904",
+          "after_path": "svg/16/calendar.edit.svg",
+          "after_sha256": "c1a7d1255b24fb6ff197bd4764b577d87daa33b481bec5f5854b4d2080060894"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/calendar.edit.svg",
+          "before_sha256": "1dade35942d8d8f5d118dee6558d4975c443209fdfe43216f47a7dae77d471db",
+          "after_path": "svg/24/calendar.edit.svg",
+          "after_sha256": "11acd0d711b40a9c8fc2db941be523a353f65c79053ebb0f30bf933726292162"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/calendar.edit.svg",
+          "sha256": "c1a7d1255b24fb6ff197bd4764b577d87daa33b481bec5f5854b4d2080060894"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/calendar.edit.svg",
+          "sha256": "11acd0d711b40a9c8fc2db941be523a353f65c79053ebb0f30bf933726292162"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 42,
+      "id": "backup.auto",
+      "label": "Automatische AI-back-up",
+      "series": 140,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "De voorkeur voor een herstelsnapshot vóór de eerste muterende AI-aanroep per document en serversessie omschakelen; geen periodieke bestandsautosave.",
+      "source": {
+        "id": "49ef7231249a4bfd",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 115,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L115",
+        "context": "<RibbonButton\n            icon={<DatabaseBackup size={20} />}\n            label={autoBackup ? t('aiSafety.autoBackupOn') : t('aiSafety.autoBackupOff')}\n            active={autoBackup}\n            onClick={onToggleAutoBackup}\n          />\n        </span>\n        <span title={!tauri ? t('ai.desktopOnly') : undefined}>\n          <RibbonButton"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 8.766750967049001,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 17.85324735873751,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/backup.auto.svg",
+          "before_sha256": "ecc39c65e3a77c33c515eb55c9b200b4742f9b3824f66b6c237f158d5a062494",
+          "after_path": "svg/16/backup.auto.svg",
+          "after_sha256": "7230dd8d71a3db2ec1f263f79cad60742d83ea310a51624cc58c91f8c29b4edd"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/backup.auto.svg",
+          "before_sha256": "0f80615b2547043d3a87106b0b437350522f4369c1c7b63e2ccc47cb5dad9bba",
+          "after_path": "svg/24/backup.auto.svg",
+          "after_sha256": "b6e587b0d3cb4acde3756d752b93f0648972068a76dd0436ee20ba5927457203"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/backup.auto.svg",
+          "sha256": "7230dd8d71a3db2ec1f263f79cad60742d83ea310a51624cc58c91f8c29b4edd"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/backup.auto.svg",
+          "sha256": "b6e587b0d3cb4acde3756d752b93f0648972068a76dd0436ee20ba5927457203"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 43,
+      "id": "backup.folder",
+      "label": "Back-upmap openen",
+      "series": 140,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "De AI-back-upmap zo nodig aanmaken en in de desktopbestandsbeheerder openen; geen projectbestand inladen.",
+      "source": {
+        "id": "92c9fb031590a014",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 131,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L131",
+        "context": "<RibbonButton\n            icon={<FolderOpen size={20} />}\n            label={t('aiSafety.openFolder')}\n            disabled={!tauri}\n            onClick={onOpenFolder}\n          />\n        </span>\n      </div>\n\n      {/* Feedback-regel (handmatige backup succes/fout). */}\n      {feedback && (\n        <div\n          className=\"!text-body\"\n          style={{\n            display: 'flex', alignItems: 'center', gap: 4, maxWidth: 200,\n            color: feedback.kind === 'ok' ? 'var(--success)' : 'var(--theme-critical-text)',\n          }}\n        >\n          {feedback.kind === 'ok' ? <Check size={13} /> : <AlertTriangle size={13} />}\n          <span>{feedback.text}</span>\n        </div>\n      )}\n    </div>\n  );\n}\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            2.04167,
+            15.29167,
+            14.625
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.08416000000000068
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            3.125,
+            22.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0,
+          "raw_gap_px": 0.25123999999999924
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/backup.folder.svg",
+          "before_sha256": "3bddae1647705864d13cc681f398ee9b54c0d5bf3770aed51b1459296a2e329a",
+          "after_path": "svg/16/backup.folder.svg",
+          "after_sha256": "ee97937998c299a3e04fe9890e3cf45e7e57af20961688d60cc1959fe97888e2"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/backup.folder.svg",
+          "before_sha256": "b77e26b78127d77fefaf43f89d9fb0c1d408e9335d0898176474336279468dd0",
+          "after_path": "svg/24/backup.folder.svg",
+          "after_sha256": "f9a0ea944dffe2779aa2f7dab23bbaa9933ce75e95e63f34db2048771561be18"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/backup.folder.svg",
+          "sha256": "ee97937998c299a3e04fe9890e3cf45e7e57af20961688d60cc1959fe97888e2"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/backup.folder.svg",
+          "sha256": "f9a0ea944dffe2779aa2f7dab23bbaa9933ce75e95e63f34db2048771561be18"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 44,
+      "id": "capture.annotate",
+      "label": "Schermopname annoteren",
+      "series": 144,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "De editor voor de bestaande schermafbeelding openen; bij sluiten worden de zichtbare annotaties naar een PNG samengevoegd en via onChange teruggegeven.",
+      "source": {
+        "id": "4bf22288928451e0",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/dialogs/ScreenshotAnnotator.tsx",
+        "line": 354,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L354",
+        "context": "<button\n          className=\"screenshot-annotator-open-btn\"\n          onClick={openEditor}\n          title={t('feedback.annotate')}\n        >\n          <Pencil size={16} />\n          <span>{t('feedback.annotate')}</span>\n        </button>"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            0.70833,
+            1.375,
+            15.29167,
+            15.252713
+          ],
+          "raw_overlap_area": 5.988139250444501,
+          "raw_gap_px": 0.0
+        },
+        "24": {
+          "bounds": [
+            1.125,
+            2.125,
+            22.875,
+            22.816585
+          ],
+          "raw_overlap_area": 11.710573981856996,
+          "raw_gap_px": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/capture.annotate.svg",
+          "before_sha256": "3bb4542887e795e845c2f35c2ce65d27270d7a54f46e03226a2279b4c3a3f10a",
+          "after_path": "svg/16/capture.annotate.svg",
+          "after_sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/capture.annotate.svg",
+          "before_sha256": "dab5146f76822ebe745c6bfdcb47b21c5008dff65d9a00966cfb5490c6e0a438",
+          "after_path": "svg/24/capture.annotate.svg",
+          "after_sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/capture.annotate.svg",
+          "sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/capture.annotate.svg",
+          "sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    },
+    {
+      "number": 45,
+      "id": "status.schedule-preview",
+      "label": "Tijdelijk doorgerekende bezetting",
+      "series": 149,
+      "decision": "corrected",
+      "priority": "hoog",
+      "finding": "Goedgekeurd bij het slotakkoord van de gebruiker; eerdere individuele uitzonderingen blijven behouden.",
+      "action": "Het getekende voorstel is exact overgenomen in beide icoonmasters.",
+      "ui_call": "Het document is nog als verouderd gemarkeerd, maar de getelde bezettingscijfers zijn op een kloon tijdelijk doorgerekend. Dit is informatief, geen waarschuwing of F5-actie.",
+      "source": {
+        "id": "6f26090b63e67a9e",
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "path": "src/components/panels/ResourceOccupancyView.tsx",
+        "line": 487,
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourceOccupancyView.tsx#L487",
+        "context": "                                  <AlertTriangle size={12} aria-hidden />\n                                  <span className=\"!text-small\">\n                                    {doc.ephemeralComputed\n"
+      },
+      "metrics_before": {
+        "16": {
+          "bounds": [
+            1.375,
+            1.375,
+            14.625,
+            14.625
+          ],
+          "raw_overlap_area": 0.0
+        },
+        "24": {
+          "bounds": [
+            2.125,
+            2.125,
+            21.875,
+            21.875
+          ],
+          "raw_overlap_area": 0.0
+        }
+      },
+      "assets": {
+        "16": {
+          "before_path": "review/feedback-106-before/16/status.schedule-preview.svg",
+          "before_sha256": "288a9b6ac26c775b6a646635a72a19a8b31947c03e2f4c3709fa1592f9693ebc",
+          "after_path": "svg/16/status.schedule-preview.svg",
+          "after_sha256": "901c3e39a8399a3647da8cbf05e432c0657edbc91ba79fc9f85628f13bfd3d3a"
+        },
+        "24": {
+          "before_path": "review/feedback-106-before/24/status.schedule-preview.svg",
+          "before_sha256": "44077c64dc6649c79a65c5763e13c5922bf26a72668566600c154fb6e15b1e29",
+          "after_path": "svg/24/status.schedule-preview.svg",
+          "after_sha256": "aa419e2ea7dba4ab695cdef98da31ecca8915111a292800c4be4638634321f76"
+        }
+      },
+      "proposal_assets": {
+        "16": {
+          "path": "review/analysis-99-drafts/svg/16/status.schedule-preview.svg",
+          "sha256": "901c3e39a8399a3647da8cbf05e432c0657edbc91ba79fc9f85628f13bfd3d3a"
+        },
+        "24": {
+          "path": "review/analysis-99-drafts/svg/24/status.schedule-preview.svg",
+          "sha256": "aa419e2ea7dba4ab695cdef98da31ecca8915111a292800c4be4638634321f76"
+        }
+      },
+      "proposal_status": "Goedgekeurd en toegepast op de canonieke masters in revisie 106.",
+      "user_decision": {
+        "date": "2026-10-22",
+        "choice": "apply-proposal",
+        "authorization": "Voor de rest is alles goed; eerdere afspraak over onbesproken voorstellen."
+      },
+      "user_approved": true
+    }
+  ],
+  "analysis_revision": 99,
+  "refinements": [
+    {
+      "revision": 100,
+      "changed_canonical_designs": 7,
+      "changed_proposal_designs": 14,
+      "reason": "Screenshotfeedback op verhoudingen, accenten, paperclip, slot, grondlagen en cirkelpijlen."
+    },
+    {
+      "revision": 101,
+      "canonical_designs": 38,
+      "proposal_designs": 7,
+      "reason": "Screenshotfeedback, teruggebrachte accenten en gedeelde reviewgegevens."
+    }
+  ]
+}

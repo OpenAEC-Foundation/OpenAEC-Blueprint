@@ -4,7 +4,8 @@ Vectors are original. Choice categories preserve their field/route context;
 status symbols do not become commands merely because their source is an icon.
 """
 import math
-from b2_second_series import box
+from b2_second_series import box, lightning, cubic
+from b2_workspace_completion import shield
 from b2_energy_pile_audio import arc_points
 from b2_frame_completion import circular_arrow
 from b2_session_two import dimension_arrow
@@ -192,9 +193,49 @@ EXCLUDED['61a5cd76a4cd7a7f']='Grote EmptyState-illustratie bij een nog niet gest
 EXCLUDED['c913e2dda861a13e']='Vaste decoratieve FolderPlus in de bibliotheektoelichting, geen recente-verwijzing verwijderen en geen mappenknop.'
 
 
+def cubic_points(points,n=24):
+    a,b,c,d=points
+    return [tuple((1-t)**3*a[j]+3*(1-t)**2*t*b[j]+3*(1-t)*t*t*c[j]+t**3*d[j] for j in (0,1)) for t in (i/n for i in range(n+1))]
+
+
+def flame(c,x=12,y=12,w=8,h=14):
+    segments=[[(12,3),(13,7),(18,10),(17,15)],[(17,15),(16,21),(7,21),(7,15)],[(7,15),(7,12),(9,10),(10,8)],[(10,8),(9,12),(13,12),(12,3)]]
+    scale=c.size/24
+    ring=[(scale*(x+(px-12)*w/10),scale*(y+(py-12)*h/18)) for seg in segments for px,py in cubic_points(seg)[:-1]]
+    c.fills.append({'tone':'accent','rings':[ring]})
+
+
+def droplet(c,x,y,w,h):
+    segments=[[(0,-.5),(-.12,-.25),(-.5,.03),(-.5,.18)],[(-.5,.18),(-.5,.65),(.5,.65),(.5,.18)],[(.5,.18),(.5,.03),(.12,-.25),(0,-.5)]]
+    c.line([(x+px*w,y+py*h) for seg in segments for px,py in cubic_points(seg)[:-1]],True,closed=True,radius=0)
+
+
+def hall(c):
+    c.line([(3,21),(3,9),(10,4),(10,9),(17,4),(17,10),(21,10),(21,21)],closed=True,radius=.35)
+    scale=c.size/24
+    c.fills.append({'tone':'accent','rings':[[(x*scale,y*scale) for x,y in ((9,12),(15,12),(15,17),(9,17))]]})
+
+
+def tower(c,balconies=False):
+    box(c,8,2,12,20)
+    c.line([(2,22),(2,12),(8,12),(8,22)],closed=True,radius=.5)
+    if balconies:
+        for y in (7,11,15):c.line([(11,y),(17,y)],True,radius=0)
+    else:
+        scale=c.size/24
+        for x in (11.5,16.5):
+            for y in (6,11,16):c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((x-1,y-1),(x+1,y-1),(x+1,y+1),(x-1,y+1))]]})
+
+
+def vent_fan(c):
+    c.circle(8,12,5)
+    for a in (0,120,240):
+        t=math.radians(a);c.line([(8,12),(8+4*math.cos(t),12+4*math.sin(t))],radius=0)
+
+
 def house(c):
     c.line([(3,10),(12,3),(21,10),(21,21),(3,21)],closed=True,radius=.4)
-    c.line([(9,21),(9,14),(15,14),(15,21)],radius=.3)
+    c.line([(9,17),(9,13),(15,13),(15,17)],radius=.3)
 
 
 def block(c,tall=False):
@@ -204,12 +245,19 @@ def block(c,tall=False):
 
 
 def bolt(c,accent=True):
-    c.line([(13,5),(8,13),(12,13),(10,20),(17,10),(13,10)],accent,closed=True,radius=.2)
+    lightning(c,accent=accent)
 
 
 def question(c,accent=True):
     pts=arc_points(12,8,3,180,400,28)+[(12,13),(12,14)]
     c.line(pts,accent,radius=.5);c.circle(12,18,.8,accent,True)
+
+
+def calculator(c,x,y,w,h,accent=False):
+    box(c,x,y,w,h,accent)
+    c.line([(x+w*.28,y+h*.27),(x+w*.72,y+h*.27)],accent,radius=0)
+    for px in (.3,.7):
+        for py in (.58,.8):c.circle(x+w*px,y+h*py,.5,accent,True)
 
 
 def tank(c):box(c,6,2,12,20)
@@ -224,14 +272,16 @@ def extend(c,key):
     if key.startswith('building.'):
         kind=key.split('.')[1]
         if kind in {'housing','new-housing'}:house(c)
-        elif kind in {'utility','new-utility','office','apartment'}:block(c,kind=='apartment')
+        elif kind in {'utility','new-utility'}:hall(c)
+        elif kind in {'office','apartment'}:tower(c,kind=='apartment')
         elif kind=='caravan':
             c.line([(2,16),(2,6),(18,6),(18,16),(22,16)],radius=.5)
             box(c,5,9,5,4,True);c.circle(7,18,2);c.circle(17,18,2)
         elif kind=='houseboat':
-            c.line([(5,14),(5,8),(12,3),(19,8),(19,14)],radius=.4)
-            c.line([(2,14),(22,14),(18,19),(6,19)],closed=True,radius=.4)
-            c.line([(3,22),(8,21),(13,22),(18,21),(22,22)],True,radius=.4)
+            c.line([(2,15),(5,15),(5,5),(17,5),(20,8),(20,15),(22,15),(19,21),(5,21)],closed=True,radius=.5)
+            c.line([(5,15),(20,15)],radius=0)
+            scale=c.size/24
+            for x in (8,14):c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((x,8),(x+3,8),(x+3,12),(x,12))]]})
         elif kind=='education':
             c.line([(2,8),(12,3),(22,8),(12,13)],closed=True,radius=.3)
             c.line([(6,10),(6,17),(12,20),(18,17),(18,10)],radius=.3)
@@ -248,23 +298,23 @@ def extend(c,key):
         elif kind=='other':
             box(c,3,5,18,16)
             for x in (7,12,17):c.circle(x,13,.9,True,True)
-        if kind=='housing':c.line([(9,21),(9,14),(15,14),(15,21)],True,radius=.3)
-        elif kind=='office':c.line([(3,12),(21,12)],True,radius=0)
-        elif kind.startswith('new-'):
+        if kind in {'housing','new-housing'}:c.paths[-1]['tone']='accent'
+        if kind.startswith('new-'):
             for p in c.paths:p['points']=[(.7*x,.7*y) for x,y in p['points']]
             for p in c.circles:p.update(x=p['x']*.7,y=p['y']*.7,r=p['r']*.7)
+            for fill in c.fills:fill['rings']=[[(.7*x,.7*y) for x,y in ring] for ring in fill['rings']]
             c.plus(19,19,3,True)
     elif key.startswith('energy.'):
         kind=key.split('.')[1]
         if kind=='fired-generator':
             tank(c)
-            c.line([(12,6),(15,12),(14,17),(10,18),(8,15),(10,11)],True,closed=True,radius=1)
+            flame(c)
         elif kind=='heat-pump':
-            box(c,3,5,18,16);c.circle(11,13,5)
-            for a in (0,120,240):
-                t=math.radians(a);c.line([(11,13),(11+4*math.cos(t),13+4*math.sin(t))],True,radius=0)
+            box(c,3,4,12,17)
+            for y in (8,12,16):c.line([(6,y),(12,y)],radius=0)
+            dimension_arrow(c,(21,20),(21,5),1.8)
         elif kind=='heat-network':
-            c.line([(3,4),(3,12),(21,12),(21,20)],radius=.4)
+            c.line([(3,6),(3,12),(21,12),(21,18)],radius=.4)
             c.line([(12,3),(12,21)],True,radius=0)
             for x,y in ((3,4),(21,20)):c.circle(x,y,2)
         elif kind in {'electric-generator','electric-storage'}:
@@ -276,42 +326,51 @@ def extend(c,key):
             c.line([(12,14),(12,23)],True,radius=0)
         elif kind=='chp':
             c.line([(3,21),(3,9),(10,4),(10,9),(17,4),(17,21)],closed=True,radius=.3)
-            bolt(c)
+            lightning(c,11,14.5,6,9)
         elif kind=='warm-air':
-            box(c,2,5,7,15)
-            for y in (7,12,17):flow(c,12,22,y)
+            box(c,2,2,13,20);flame(c,8.5,12,6,13)
+            for y in (7,12,17):c.line([(19,y),(23,y)],radius=0)
         elif kind=='no-system':
-            c.circle(12,12,9);c.line([(5,19),(19,5)],True,radius=0)
+            c.line([(5,5),(19,19)],radius=0);c.line([(5,19),(19,5)],radius=0)
         elif kind=='collective-hot-water':
-            block(c)
-            c.line([(7,3),(7,18),(12,18)],True,radius=.4)
+            c.line([(2,21),(2,6),(7,6),(7,3),(12,3),(12,21)],closed=True,radius=.4)
+            for y in (9,13,17):c.line([(5,y),(9,y)],radius=0)
+            droplet(c,19,14.5,7,12)
         elif kind=='heating-measure':
-            box(c,3,6,18,14)
-            for x in (7,12,17):c.line([(x,6),(x,20)],True,radius=0)
-            c.line([(3,3),(3,6),(21,6),(21,3)],radius=.4)
+            box(c,3,9,18,11)
+            for x in (8,13,18):c.line([(x,9),(x,20)],radius=0)
+            for x in (6,18):c.line([(x,20),(x,23)],radius=0)
+            for x in (7,12,17):
+                c.line(cubic_points([(x,6),(x-2,4.5),(x+2,3.5),(x,2)]),True,radius=0)
         elif kind=='hot-water-measure':
-            c.line([(3,5),(12,5),(12,10),(18,10)],radius=.4)
-            c.line([(8,2),(8,5)],radius=0)
-            c.line([(18,14),(21,19),(18,22),(15,19)],True,closed=True,radius=1)
+            c.line([(4,21),(4,11),(7,8),(15,8),(19,11)],radius=2)
+            c.line([(8,8),(8,3)],radius=0)
+            c.line([(4.5,3),(11.5,3)],radius=0)
+            c.line([(1.5,21),(7,21)],radius=0)
+            droplet(c,19,18.5,6,7)
         elif kind=='ventilation-measure':
             box(c,3,3,18,18);c.circle(12,12,6)
             for a in (0,120,240):
                 t=math.radians(a);c.line([(12,12),(12+5*math.cos(t),12+5*math.sin(t))],True,radius=0)
         elif kind=='pv-measure':
-            c.line([(3,10),(17,10),(21,21),(2,21)],closed=True,radius=.3)
-            c.line([(3,16),(19,16)],True,radius=0);c.line([(9,10),(10,21)],True,radius=0)
-            c.circle(19,4.5,1.5,True)
+            c.line([(3,12),(17,12),(21,21),(1,21)],closed=True,radius=.4)
+            c.line([(8,12),(7,21)],radius=0);c.line([(12,12),(14,21)],radius=0)
+            c.line([(2,16.5),(19,16.5)],radius=0)
+            c.circle(18,5,1.8,True,True)
             for a in (0,90,180,270):
                 t=math.radians(a)
-                c.line([(19+2.8*math.cos(t),4.5+2.8*math.sin(t)),(19+3.3*math.cos(t),4.5+3.3*math.sin(t))],True,radius=0)
+                c.line([(18+3.2*math.cos(t),5+3.2*math.sin(t)),(18+3.6*math.cos(t),5+3.6*math.sin(t))],True,radius=0)
     elif key.startswith('ventilation.'):
         kind=key.split('.')[1]
-        box(c,3,4,14,16)
         if kind=='natural':
-            c.line([(9,4),(9,20)],radius=0);flow(c,6,22,12)
-        elif kind=='extract':flow(c,7,22,12)
-        elif kind=='supply':flow(c,22,7,12)
-        else:flow(c,7,22,8);flow(c,22,7,16)
+            box(c,3,5,10,14)
+            for x in (6.5,9.5):c.line([(x,8),(x,16)],radius=0)
+        else:vent_fan(c)
+        if kind in {'natural','extract'}:dimension_arrow(c,(17,12),(23,12),1.4)
+        elif kind=='supply':dimension_arrow(c,(23,12),(17,12),1.4)
+        else:
+            dimension_arrow(c,(17,8),(23,8),1.4)
+            dimension_arrow(c,(23,16),(17,16),1.4)
     elif key.startswith('envelope.'):
         kind=key.split('.')[1]
         if kind=='roof-measure':house(c);c.line([(3,10),(12,3),(21,10)],True,radius=.4)
@@ -324,7 +383,11 @@ def extend(c,key):
             c.line([(3,14),(9,19),(22,14)],radius=.3)
             c.line([(3,18),(9,23),(22,18)],radius=.3)
         else:
-            box(c,3,3,18,18);c.line([(12,3),(12,21)],radius=0);c.line([(3,10),(21,10)],True,radius=0)
+            box(c,3,2,18,19)
+            c.line([(12,2),(12,21)],radius=0)
+            c.line([(3,22.5),(21,22.5)],radius=0)
+            c.line([(6,10),(9,6)],True,radius=0)
+            c.line([(15,16),(18,12)],True,radius=0)
 
     elif key.startswith('project.'):
         kind=key.split('.')[1]
@@ -343,16 +406,20 @@ def extend(c,key):
         elif kind=='library':
             for x,y in ((3,3),(14,3),(3,14),(14,14)):box(c,x,y,7,7,x==14 and y==3)
         elif kind=='compare-reference':
-            box(c,2,2,10,16);box(c,12,6,10,16)
-            dimension_arrow(c,(7,10),(18,10),2)
-            dimension_arrow(c,(18,16),(7,16),2)
+            box(c,2,2,7,10);box(c,15,2,7,10)
+            dimension_arrow(c,(5,17),(19,17),1.6)
+            dimension_arrow(c,(19,21),(5,21),1.6)
         elif kind=='forget-recent':
             c.circle(9,10,6);c.line([(9,6),(9,10),(12,12)],radius=.3)
             c.line([(14,20),(22,20)],True,radius=0);c.line([(3,20),(9,20)],radius=0)
     elif key in {'view.cards','view.list'}:
         if key=='view.cards':
-            for x,y in ((3,3),(14,3),(3,14),(14,14)):box(c,x,y,7,7)
-            c.line([(3,7),(10,7)],True,radius=0)
+            for x in (2,14):
+                box(c,x,3,8,18)
+                c.line([(x+2.5,15),(x+5.5,15)],radius=0)
+                c.line([(x+2.5,18),(x+5.5,18)],radius=0)
+                scale=c.size/24
+                c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((x+2.5,6),(x+5.5,6),(x+5.5,11),(x+2.5,11))]]})
         else:
             for y in (5,12,19):
                 c.circle(4,y,1,True,True);c.line([(9,y),(21,y)],radius=0)
@@ -360,27 +427,26 @@ def extend(c,key):
         c.line([(3,5),(21,5),(21,19),(3,19)],closed=True,radius=.6)
         for x in (7,12,17):c.circle(x,12,.8,True,True)
     elif key in {'object.edit','object.add'}:
-        box(c,3,3,13,18)
-        if key=='object.add':c.plus(19,17,3,True)
+        box(c,2,3,10,18)
+        if key=='object.add':c.plus(19,15,3,True)
         else:
-            c.line([(10,19),(12,13),(20,5),(23,8),(15,16)],True,closed=True,radius=.3)
+            c.line([(16,20),(16.5,16),(20.5,10),(23,12),(19,18)],True,closed=True,radius=.5)
     elif key in {'data.apply','data.discard'}:
-        box(c,3,3,14,18)
-        for y in (7,11):c.line([(6,y),(13,y)],radius=0)
-        if key=='data.apply':c.line([(11,17),(15,21),(22,13)],True,radius=.3)
-        else:circular_arrow(c,17,17,5,0,270,1.5)
+        box(c,2,3,10,18)
+        for y in (7,11):c.line([(5,y),(9,y)],radius=0)
+        if key=='data.apply':c.line([(16,16),(18.5,19),(23,12)],True,radius=.5)
+        else:circular_arrow(c,19.5,16.5,3,0,270,1.3)
     elif key=='evidence.unlink':
         paperclip(c)
         c.line([(17,15),(23,21)],True,radius=0);c.line([(17,21),(23,15)],True,radius=0)
     elif key=='calculation.settings':
-        box(c,3,3,14,18)
-        c.line([(6,7),(14,7)],radius=0)
-        c.line([(20,5),(20,20)],True,radius=0);c.circle(20,11,2.5,True)
+        calculator(c,2,3,11,18)
+        for y in (7,16):c.line([(17,y),(23,y)],True,radius=0)
+        c.line([(19,5.5),(19,8.5)],True,radius=0);c.line([(21,14.5),(21,17.5)],True,radius=0)
     elif key=='calculation.advice':
-        box(c,3,4,12,16)
-        for y in (8,12,16):c.line([(6,y),(12,y)],radius=0)
-        c.line([(18,21),(18,14),(22,14),(22,21)],True,radius=.2)
-        c.line([(17,21),(23,21)],radius=0)
+        c.line([(2,19),(2,9),(6.5,5),(11,9),(11,19)],closed=True,radius=.7)
+        c.line([(5,18),(5,14),(8,14),(8,18)],radius=.4)
+        calculator(c,16,7,7,14,True)
     elif key in {'calculation.performance','advice.workspace'}:
         box(c,4,3,16,18)
         if key=='calculation.performance':
@@ -389,31 +455,37 @@ def extend(c,key):
             box(c,8,1.5,8,4)
             c.line([(7,12),(10,15),(17,8)],True,radius=.3)
     elif key=='data.pending-changes':
-        box(c,3,2,16,20)
-        for y in (7,12,17):c.line([(7,y),(15,y)],radius=0)
-        c.circle(20,17,2.5,True,True)
+        box(c,2,2,10,20)
+        for y in (7,12,17):c.line([(5,y),(9,y)],radius=0)
+        c.circle(19,17,2.5,True,True)
     elif key.startswith('report.'):
         kind=key.split('.')[1]
         if kind=='project-dossier':
-            box(c,3,5,18,16);c.line([(3,11),(21,11)],radius=0)
-            box(c,9,8,6,6,True)
+            box(c,3,7,18,14)
+            c.line([(8,7),(8,3),(16,3),(16,7)],radius=1)
+            c.line([(3,12),(21,12)],radius=0)
+            c.line([(10,16),(14,16)],True,radius=0)
         else:
             c.line([(4,22),(4,2),(14,2),(20,8),(20,22)],closed=True,radius=.4)
             c.line([(14,2),(14,8),(20,8)],radius=.3)
             if kind=='document':
                 for y in (12,16,19):c.line([(8,y),(16,y)],True,radius=0)
             elif kind=='calculation-document':
-                c.line([(8,12),(16,12)],True,radius=0);c.line([(12,9),(12,15)],True,radius=0)
-                for y in (18,20):c.line([(8,y),(16,y)],True,radius=0)
+                c.line([(8,13),(16,13)],True,radius=0)
+                for x in (9,15):c.circle(x,17.5,.65,True,True)
             else:
                 box(c,7,11,10,8,True);c.line([(7,15),(17,15)],True,radius=0)
     elif key=='file.export-options':
-        for x in (2,9,16):c.line([(x,20),(x,5),(x+2,5),(x+5,8),(x+5,20)],closed=True,radius=.2)
-        c.line([(3,2),(21,2)],True,radius=0)
+        box(c,2,3,10,18)
+        for y in (7,12,17):c.line([(5,y),(9,y)],radius=0)
+        dimension_arrow(c,(16,9),(23,9),2)
+        for x in (17,20,23):c.circle(x,18,.7,True,True)
     elif key=='printer.properties':
-        c.line([(3,17),(3,8),(18,8),(18,17),(15,17)],radius=.5)
-        box(c,6,2,10,6);box(c,6,13,8,9)
-        c.line([(20,13),(20,22)],True,radius=0);c.circle(20,17,2,True)
+        c.line([(7,15),(3,15),(3,7),(21,7),(21,15),(17,15)],radius=1)
+        box(c,7,2,10,5);box(c,7,11,10,6)
+        for x in (3,15):c.line([(x,22),(x+6,22)],True,radius=0)
+        c.line([(5,20.5),(5,23)],True,radius=0)
+        c.line([(19,20.5),(19,23)],True,radius=0)
     elif key.startswith('status.'):
         kind=key.split('.')[1]
         if kind=='pending':c.circle(12,12,9);c.line([(12,6),(12,12),(17,15)],True,radius=.3)
@@ -422,43 +494,42 @@ def extend(c,key):
             for a in (290,320,350):c.circle(12+9*math.cos(math.radians(a)),12+9*math.sin(math.radians(a)),.7,True,True)
         elif kind in {'unknown','unverified'}:
             if kind=='unknown':c.circle(12,12,10)
-            else:c.line([(3,5),(12,2),(21,5),(20,15),(12,22),(4,15)],closed=True,radius=.6)
+            else:shield(c)
             question(c)
         elif kind=='unavailable':
             box(c,5,5,14,14)
             for x in (8,16):c.line([(x,2),(x,5)],radius=0);c.line([(x,19),(x,22)],radius=0)
             c.line([(8,8),(16,16)],True,radius=0);c.line([(8,16),(16,8)],True,radius=0)
         else:
-            box(c,3,2,14,18);c.line([(6,6),(13,6)],radius=0)
-            c.circle(17,17,5,True);c.line([(17,14),(17,17),(20,18)],True,radius=.3)
+            box(c,2,2,10,18);c.line([(5,6),(9,6)],radius=0)
+            c.circle(19,17,3.5,True);c.line([(19,15),(19,17),(21,18)],True,radius=.5)
     elif key=='calculation.audit':
-        box(c,3,2,13,19)
-        for y in (6,10):c.line([(6,y),(12,y)],radius=0)
-        c.circle(17,16,4,True);c.line([(20,19),(23,22)],True,radius=0)
+        box(c,2,2,10,19)
+        for y in (6,10):c.line([(5,y),(9,y)],radius=0)
+        c.circle(19,15.5,3,True);c.line([(21.2,17.7),(23,20)],True,radius=0)
     elif key=='calculation.recalculate':
-        box(c,6,4,12,16)
-        c.line([(9,8),(15,8)],radius=0)
-        for x,y in ((9,13),(15,13),(9,17),(15,17)):c.circle(x,y,.6,False,True)
-        circular_arrow(c,12,12,10,220,490,2)
+        calculator(c,8.5,7.5,7,10)
+        circular_arrow(c,12,12,10.5,215,505,1.7)
     elif key.startswith('tool.'):
         name=key.split('.')[1]
         if name=='uvalue':
-            for x in (4,10,16):box(c,x,3,4,18)
-            c.line([(2,12),(22,12)],True,radius=0)
+            box(c,3,3,19,18)
+            for x in (8,13):c.line([(x,3),(x,21)],radius=0)
+            for y in (7,12,17):c.line([(17,y),(19,y)],True,radius=0)
         elif name=='thermal-bridge':
-            c.line([(3,3),(9,3),(9,15),(21,15),(21,21),(3,21)],closed=True,radius=.3)
-            c.line([(5,7),(15,17)],True,radius=0)
+            c.line([(3,3),(9,3),(9,15),(21,15),(21,21),(3,21)],closed=True,radius=1.2)
+            c.line([(13,4),(13,11),(20,11)],True,radius=2)
         else:
-            box(c,3,5,18,16);c.circle(9,13,4)
-            dimension_arrow(c,(18,19),(18,7),2)
+            box(c,2,3,20,18);c.circle(8.5,12,3.5)
+            dimension_arrow(c,(17,17),(17,7),1.4)
     elif key=='ui.tools':
         # An original open-jaw wrench: circular head joined to a diagonal handle.
         pts=[(16,1.5),(16,6),(17,7),(21.5,7)]
         pts+=arc_points(16,7,5.5,0,90,12)[1:]
         pts += [(6,22),(2,18),(10.5,7)]
         pts+=arc_points(16,7,5.5,180,270,12)[1:-1]
-        c.line(pts,closed=True,radius=.3)
-        c.line([(16,1.5),(16,6),(17,7),(21.5,7)],True,radius=.3)
+        c.line(pts,closed=True,radius=1.7)
+        c.line([(16,1.5),(16,6),(17,7),(21.5,7)],True,radius=1.7)
     elif key=='nav.go-to':
         c.line([(12,3),(21,3),(21,21),(12,21)],radius=.5)
         dimension_arrow(c,(2,12),(16,12),3)

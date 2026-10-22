@@ -8,18 +8,24 @@ from functools import lru_cache
 import cairosvg
 from PIL import Image, ImageDraw, ImageFont
 from b2_completion import ROWS, SEMANTIC
-from b2_geometry import construction, export_svg, ROOT
+from b2_icon_placement_refinements import ACCENT_ROLES
+ROOT=Path(__file__).resolve().parents[1]
 
 
 @lru_cache(maxsize=None)
-def svg_master(key,size):return export_svg(construction(key,size))
+def svg_master(key,size):
+    return (ROOT/f'design/icon-set-b2/svg/{size}/{key}.svg').read_text(encoding='utf-8')
 
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--from-series',type=int,default=0)
+    parser.add_argument('--icons',nargs='+',help='Only rebuild sheets containing these reviewed icon IDs.')
     args=parser.parse_args()
-    themes = json.loads((ROOT/'design/ontwerp-0.4/tokens-0.4.json').read_text())['themes']
+    if args.icons:
+        unknown=set(args.icons)-{row[1] for row in ROWS}
+        if unknown:parser.error('Unknown icon IDs: '+', '.join(sorted(unknown)))
+    themes = json.loads((ROOT/'design/ontwerp-0.4/tokens-0.4.json').read_text(encoding='utf-8'))['themes']
     font = ImageFont.truetype(str(ROOT/'assets/fonts/Inter-Regular.ttf'), 14)
     wrapfont = ImageFont.truetype(str(ROOT/'assets/fonts/Inter-Regular.ttf'), 12)
     smallfont = ImageFont.truetype(str(ROOT/'assets/fonts/Inter-Regular.ttf'), 11)
@@ -27,6 +33,7 @@ def main():
     for start in range(0, len(ROWS), 24):
         rows = ROWS[start:start+24]
         if not any(row[0]>=args.from_series for row in rows):continue
+        if args.icons and not any(row[1] in args.icons for row in rows):continue
         for theme in ('dark','light'):
             for mono in (False, True):
                 colors = themes[theme]['color']
@@ -51,7 +58,7 @@ def main():
                     for px,dx,dy in ((48,110,62),(16,58,123),(24,116,115),(32,180,107)):
                         svg=svg_master(key,16 if px==16 else 24)
                         ink=colors['text'] if mono else colors.get(SEMANTIC.get(key),colors['text'])
-                        accent=ink if mono or key in SEMANTIC else colors['accent']
+                        accent=ink if mono or (key in SEMANTIC and key not in ACCENT_ROLES) else colors['accent']
                         svg=svg.replace('var(--icon-accent,currentColor)',accent).replace('currentColor',ink)
                         data=cairosvg.svg2png(bytestring=svg.encode(),output_width=px,output_height=px)
                         image=Image.open(io.BytesIO(data)).convert('RGBA')

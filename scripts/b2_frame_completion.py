@@ -1,6 +1,6 @@
 """Frame controls traced through mounted Svelte views and their callbacks."""
 import math
-from b2_second_series import box
+from b2_second_series import box, cubic
 from b2_session_two import dimension_arrow
 from b2_energy_pile_audio import arc_points
 from b2_bim_completion import cube
@@ -136,22 +136,27 @@ def chat(c):
 
 def window_type(c,kind):
     frame(c)
-    if kind in {'double','sliding','lift-slide'}:c.line([(12,3),(12,21)],radius=0)
-    if kind in {'turn-tilt','double','french'}:
-        c.line([(5,5),(11 if kind!='turn-tilt' else 19,12),(5,19)],True,radius=0)
-        if kind=='turn-tilt':c.line([(5,19),(12,5),(19,19)],True,radius=0)
-        if kind in {'double','french'}:c.line([(19,5),(13,12),(19,19)],True,radius=0)
-    elif kind in {'sliding','lift-slide'}:
-        dimension_arrow(c,(5,12),(10,12),1.6)
-        dimension_arrow(c,(19,16),(14,16),1.6)
-        if kind=='lift-slide':dimension_arrow(c,(16,9),(16,5),1.6)
+    if kind=='double':c.line([(12,3),(12,21)],radius=0)
+    if kind=='turn-tilt':
+        # Two opening indicators in separate lanes, without crossing triangles.
+        c.line([(7,10),(10,13),(7,16)],True,radius=0)
+        c.line([(13,7),(15,10),(17,7)],True,radius=0)
+    elif kind in {'double','french'}:
+        c.line([(6.8,7.5),(8,12),(6.8,16.5)],True,radius=0)
+        c.line([(17.2,7.5),(16,12),(17.2,16.5)],True,radius=0)
+    elif kind=='sliding':
+        dimension_arrow(c,(7,9),(16,9),1.2)
+        dimension_arrow(c,(17,15),(8,15),1.2)
+    elif kind=='lift-slide':
+        dimension_arrow(c,(7,16),(12,16),1.2)
+        dimension_arrow(c,(16.2,16),(16.2,7),1)
     elif kind=='door':
-        c.line([(7,21),(7,6),(17,6),(17,21)],True,radius=.3)
-        c.circle(14,14,.7,True,True)
-    elif kind=='top-hung':c.line([(5,5),(12,19),(19,5)],True,radius=0)
+        c.line([(7,17),(7,7),(17,7),(17,17)],True,radius=.3)
+        c.circle(14,13,.7,True,True)
+    elif kind=='top-hung':c.line([(7,7),(12,17),(17,7)],True,radius=0)
     elif kind=='pivot':
-        c.line([(12,3),(12,21)],True,radius=0)
-        c.line([(7,6),(17,18)],True,radius=0)
+        c.line([(12,7),(12,17)],True,radius=0)
+        c.line([(8,9),(16,15)],True,radius=0)
     elif kind=='fixed':
         c.line([(7,17),(17,7)],True,radius=0)
         if c.size!=16:c.line([(11,18),(18,11)],True,radius=0)
@@ -181,8 +186,9 @@ def extend(c,key):
         c.plus(19,19,3,True)
     elif key.startswith('frame.cell-'):window_type(c,key.removeprefix('frame.cell-'))
     elif key=='frame.editor':
-        frame(c);c.line([(3,12),(12,12),(12,21)],radius=0)
-        c.line([(15,9),(20,4)],True,radius=0);c.line([(14,10),(16,10)],True,radius=0)
+        box(c,2,8,14,14)
+        c.line([(2,15),(9,15),(9,22)],radius=0)
+        dimension_arrow(c,(22,2),(18,6),1.8)
     elif key=='frame.schedule':
         box(c,3,3,18,18)
         c.line([(3,9),(21,9)],True,radius=0)
@@ -234,8 +240,8 @@ def extend(c,key):
         c.line([(12,4),(12,10),(9,10),(12,15),(15,10),(12,10)],True,radius=.2)
         c.line([(6,18),(18,18)],radius=0)
     elif key=='frame.procurement':
-        c.line([(3,7),(21,7),(19,21),(5,21)],closed=True,radius=.5)
-        c.line([(8,9),(8,3),(16,3),(16,9)],True,radius=.5)
+        c.line([(3,11),(21,11),(19,22),(5,22)],closed=True,radius=.7)
+        cubic(c,[(8,7),(8,1),(16,1),(16,7)],True)
     elif key=='frame.combination':
         box(c,2,5,8,14);box(c,14,5,8,14)
         c.line([(8,12),(16,12)],True,radius=0)
@@ -245,9 +251,11 @@ def extend(c,key):
         c.line([(9,9),(11,11),(15,7)],True,radius=.3)
     elif key in {'frame.column-add','frame.row-add'}:
         frame(c)
-        if key=='frame.column-add':c.line([(12,3),(12,21)],True,radius=0)
-        else:c.line([(3,12),(21,12)],True,radius=0)
-        c.plus(18,6,2,True)
+        # An inset divider and a detached add marker share one layout.
+        for path in c.paths:path['points']=[(.72*x,.72*y) for x,y in path['points']]
+        if key=='frame.column-add':c.line([(8.64,5),(8.64,12.3)],True,radius=0)
+        else:c.line([(5,8.64),(12.3,8.64)],True,radius=0)
+        c.plus(20,20,2.5,True)
     elif key.startswith('curtain.'):
         frame(c)
         if key!='curtain.new':
@@ -258,13 +266,19 @@ def extend(c,key):
                     for y in (6,18):c.circle(x,y,1.6,False,True)
         else:c.plus(12,12,3,True)
     elif key=='profile.point-delete':
-        c.line([(3,20),(8,8),(17,5),(21,14)],radius=.4)
-        for x,y in ((3,20),(8,8),(21,14)):c.circle(x,y,1.2)
-        c.line([(14,2),(20,8)],True,radius=0);c.line([(14,8),(20,2)],True,radius=0)
+        c.line([(4,21),(4,5),(14,5)],radius=0)
+        for x,y in ((4,21),(4,5),(14,5)):c.circle(x,y,1.3,filled=True)
+        c.line([(16,14),(22,20)],True,radius=0)
+        c.line([(16,20),(22,14)],True,radius=0)
     elif key=='snap.grid':
-        for x in (4,12,20):
-            for y in (4,12,20):c.circle(x,y,.7,False,True)
-        c.line([(5,16),(12,12),(16,5)],True,radius=0);c.circle(12,12,2,True)
+        # Snap to one explicit grid intersection; reserve clear space around it.
+        for t in (5,19):
+            c.line([(t,3),(t,21)],radius=0)
+            c.line([(3,t),(21,t)],radius=0)
+        for a,b in ((3,8),(16,21)):
+            c.line([(12,a),(12,b)],radius=0)
+            c.line([(a,12),(b,12)],radius=0)
+        c.circle(12,12,1.75,True,filled=True)
     elif key=='assistant.workspace':
         chat(c)
         c.circle(8,8,.8,True,True);c.circle(16,8,.8,True,True)

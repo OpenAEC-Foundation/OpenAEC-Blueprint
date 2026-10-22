@@ -209,3 +209,9 @@ def extend(c,key):
             c.line([(8,8),(16,16)]);c.line([(16,8),(8,16)])
         else:c.line([(7,12),(10.5,15.5),(17,8.5)],radius=1)
     return True
+
+
+def lightning(c,x=12.5,y=12.5,w=8,h=15,accent=True):
+    points=[(.65,0),(0,.57),(.42,.57),(.32,1),(1,.38),(.58,.38)]
+    scale=c.size/24
+    c.fills.append({'tone':'accent' if accent else 'primary','rings':[[((x-w/2+u*w)*scale,(y-h/2+v*h)*scale) for u,v in points]]})

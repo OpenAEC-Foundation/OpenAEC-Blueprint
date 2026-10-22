@@ -6,7 +6,7 @@ Keep explicit record decisions; never map all occurrences of a name automaticall
 import json
 import math
 from pathlib import Path
-from b2_second_series import box
+from b2_second_series import box, cubic, lightning
 from b2_bulk_series import page
 from b2_energy_pile_audio import arc_points, microphone
 from b2_session_two import dimension_arrow
@@ -272,6 +272,7 @@ ACCENT_FRONT.update(PLANNER_DIALOGS_ACCENT_FRONT)
 ACCENT_FRONT.update(PLANNER_PANELS_ACCENT_FRONT)
 ACCENT_FRONT.update(PLANNER_FINAL_ACCENT_FRONT)
 ACCENT_FRONT.update(SCOPE_ACCENT_FRONT)
+ACCENT_FRONT['package.catalog']='Alleen de verpakkingstape is accent; de doosribben blijven hoofdkleur.'
 ACCENT_FRONT['report.properties']='De ronde schuifknoppen blijven ononderbroken voor de rails.'
 EVIDENCE = {k: 'Concrete UI-aanroep en omliggende implementatie gelezen op de vastgelegde broncommit.' for k in KEYS}
 EVIDENCE.update(POINTCLOUD_EXAMPLE_EVIDENCE)
@@ -418,7 +419,7 @@ def extend(c, key):
     elif key == 'account.menu':
         c.circle(10,7,3.5)
         c.line(arc_points(10,20,7,180,360,24),radius=0)
-        c.line([(17,17),(20,20),(23,17)],True,radius=.5)
+        c.line([(17,10),(20,13),(23,10)],True,radius=.5)
     elif key == 'audio.microphone':
         microphone(c,12)
     elif key == 'audio.models':
@@ -451,7 +452,7 @@ def extend(c, key):
         c.line([(12,12),(12,22)],True,radius=0)
     elif key == 'field.survey':
         pin(c,12,8,5,True)
-        c.line([(3,21),(7,19),(17,19),(21,21)],radius=.4)
+        cubic(c,[(3,23),(8,20.5),(16,20.5),(21,23)])
     elif key == 'field.inspections':
         box(c,4,4,16,18);box(c,8,2,8,4)
         c.line([(7,13),(10,16),(17,9)],True,radius=.4)
@@ -472,7 +473,7 @@ def extend(c, key):
     elif key == 'energy.fetch-label':
         c.line([(3,5),(14,5),(21,12),(14,19),(3,19)],closed=True,radius=.5)
         c.circle(6,9,.8,filled=True)
-        c.line([(12,7),(9,13),(13,13),(11,17),(17,10),(13,10)],True,closed=True,radius=.2)
+        lightning(c,12.5,12,6.5,10)
     elif key in {'camera.open','camera.capture'}:
         camera(c)
         if key == 'camera.open':

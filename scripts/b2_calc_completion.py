@@ -1,6 +1,7 @@
 """Calc source contracts: quotation state, report modes, sheet actions and extensions."""
 import math
 from b2_second_series import box
+from b2_workspace_completion import shield
 from b2_bulk_series import page
 from b2_reports_completion import glyph
 from b2_font_geometry import font_sources
@@ -143,19 +144,19 @@ def extend(c,key):
             c.line([(8,8),(16,8)],True,radius=0)
             c.line([(8,15),(14,15)],radius=0)
     elif key.startswith('quotation.section-'):
-        page(c,2,3,12,18);c.plus(20,17,3,True)
+        page(c,2,3,10,18);c.plus(20,17,3,True)
         kind=key.removeprefix('quotation.section-')
         if kind=='technical':
-            for y in ((8,12,16) if not small else (8,13)):c.line([(5,y),(11,y)],radius=0)
+            for y in ((8,12,16) if not small else (8,13)):c.line([(5,y),(9,y)],radius=0)
         elif kind=='options':
-            c.line([(5,7),(5,16),(11,16)],radius=.4)
-            c.line([(5,10),(11,10)],True,radius=0)
+            c.line([(5,7),(5,16),(9,16)],radius=.4)
+            c.line([(8.5,8),(8.5,12.5)],True,radius=0)
         elif kind=='extra':
-            box(c,5,7,6,6,True)
-            c.line([(5,17),(11,17)],radius=0)
+            box(c,5,7,4,5,True)
+            c.line([(5,17),(9,17)],radius=0)
     elif key=='quotation.metadata':
-        doc(c);c.circle(12,8,2.5,True)
-        c.line(arc_points(12,17,5,180,360,24),True,radius=0)
+        doc(c);c.circle(12,7,1.8,True)
+        c.line(arc_points(12,15.5,4,180,360,24),True,radius=0)
         c.line([(8,19),(16,19)],radius=0)
     elif key=='quotation.payment-terms':
         box(c,2,4,20,16)
@@ -165,18 +166,20 @@ def extend(c,key):
             c.line([(x,8),(x,10)],True,radius=0)
         if not small:c.line([(8,17),(16,17)],radius=0)
     elif key=='quotation.warranties':
-        page(c,2,3,12,18)
-        c.line([(15,9),(22,12),(22,17),(18.5,22),(15,17)],True,closed=True,radius=.5)
-        c.line([(17,15),(18.5,17),(21,13)],True,radius=.2)
-        c.line([(5,7),(10,7)],radius=0)
+        page(c,2,3,10,18)
+        c.line([(5,7),(9,7)],radius=0)
+        start=len(c.paths);shield(c);scale=c.size/24
+        for path in c.paths[start:]:
+            path['points']=[(.38*x+14.94*scale,.46*y+9.94*scale) for x,y in path['points']]
+            path['tone']='accent'
     elif key in {'quotation.snapshot-sent','quotation.snapshot-draft'}:
-        page(c,3,5,12,16)
-        c.line([(6,2),(18,2),(18,8)],radius=.4)
-        c.line([(6,10),(11,10)],radius=0)
+        page(c,2,5,10,16)
+        c.line([(5,2),(14,2),(14,8)],radius=.5)
+        c.line([(5,10),(9,10)],radius=0)
         if key.endswith('sent'):
-            box(c,14,13,8,8,True)
-            c.line([(16,17),(18,19),(21,15)],True,radius=.2)
-        else:small_pencil(c)
+            c.line([(16,16),(18.5,19),(23,12)],True,radius=.5)
+        else:
+            c.line([(16,20),(16.5,16),(20.5,10),(23,12),(19,18)],True,closed=True,radius=.5)
     elif key.startswith('report.view-'):
         doc(c);kind=key.removeprefix('report.view-')
         if kind=='specification':
@@ -254,7 +257,7 @@ def extend(c,key):
                 c.line([(8,17),(11,17)],radius=0)
     elif key=='tree.collapse-level':
         for x,y in ((3,5),(7,12),(11,19)):
-            c.line([(x,y),(16,y)],radius=0)
+            c.line([(x,y),(14,y)],radius=0)
             c.circle(x,y,.7,filled=True)
         dimension_arrow(c,(20,4),(20,20),2.3)
     elif key=='calc.chapter':
@@ -262,28 +265,30 @@ def extend(c,key):
         c.line([(3,8),(21,8)],True,radius=0)
         for x,y in ((7,12),(10,17)):c.line([(x,y),(17,y)],radius=0)
     elif key=='spreadsheet.sheet-add':
-        box(c,2,3,15,18)
-        c.line([(2,8),(17,8)],radius=0)
-        c.line([(8,3),(8,21)],radius=0)
-        c.plus(20,17,3,True)
+        box(c,3,2,18,12)
+        c.line([(3,6),(21,6)],radius=0)
+        c.line([(9,2),(9,14)],radius=0)
+        c.line([(3,10),(21,10)],radius=0)
+        c.plus(12,20,2.5,True)
     elif key=='format.decimals-decrease':
         c.circle(3,14,.9,filled=True)
         glyph(c,'0',7,3,8,11)
         dimension_arrow(c,(21,20),(3,20),2.5)
-    elif key=='data.excel-refresh':
-        box(c,2,3,12,18)
-        c.line([(2,8),(14,8)],radius=0)
-        c.line([(7,8),(7,18)],radius=0)
-        c.line([(2,13),(14,13)],radius=0)
-        from b2_frame_completion import circular_arrow
-        circular_arrow(c,18,16,4.5,220,490,1.8)
-    elif key=='data.excel-link':
-        box(c,2,3,12,18)
-        c.line([(2,8),(14,8)],radius=0)
-        c.line([(7,8),(7,18)],radius=0)
-        c.line([(2,13),(14,13)],radius=0)
-        c.line([(16,9),(20,9),(22,11),(22,14),(19,17),(16,17)],True,radius=1.5)
-        c.line([(18,12),(14,12),(12,14),(12,17),(15,20),(18,20)],True,radius=1.5)
+    elif key in {'data.excel-refresh','data.excel-link'}:
+        box(c,3,2,18,12)
+        c.line([(3,6),(21,6)],radius=0)
+        c.line([(9,2),(9,14)],radius=0)
+        c.line([(3,10),(21,10)],radius=0)
+        if key=='data.excel-refresh':
+            from b2_frame_completion import circular_arrow
+            circular_arrow(c,12,20,2.7,135,405,1.3)
+            c.paths.pop()
+            scale=c.size/24
+            c.fills.append({'tone':'accent','rings':[[(x*scale,y*scale) for x,y in ((12.3,23),(12.3,19.4),(15.9,23))]]})
+        else:
+            c.line([(10.5,17),*arc_points(7.5,20,3,270,90,24),(10.5,23)],True,radius=0)
+            c.line([(13.5,17),*arc_points(16.5,20,3,270,450,24),(13.5,23)],True,radius=0)
+            c.line([(9,20),(15,20)],True,radius=0)
     elif key.startswith('extension.'):
         extension_box(c)
         if key=='extension.item':

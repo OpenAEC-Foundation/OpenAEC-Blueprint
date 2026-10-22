@@ -1,0 +1,1608 @@
+{
+  "date": "2026-10-20",
+  "revision": 90,
+  "baseline_commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "verdict": "Technische controles geslaagd; ontwerpen wachten op menselijke beoordeling.",
+  "changed_designs": 60,
+  "changed_masters": 120,
+  "unchanged_designs": 885,
+  "unchanged_masters": 1770,
+  "retained_original_designs": 316,
+  "feedback_scope": "Screenshotfeedback plus relevante varianten; goedgekeurde oorspronkelijke ontwerpen behouden.",
+  "checks": {
+    "detached_colour_pairs": 70,
+    "open_git_nodes": 20,
+    "equal_page_break_gaps": 2,
+    "svg_rounding_tolerance": 5e-05,
+    "minimum_measured_gap_px": 0.59933
+  },
+  "spacing": [
+    {
+      "id": "account.menu",
+      "master": 16,
+      "gap_px": 1.494116
+    },
+    {
+      "id": "account.menu",
+      "master": 24,
+      "gap_px": 2.36613
+    },
+    {
+      "id": "account.admin",
+      "master": 16,
+      "gap_px": 0.772828
+    },
+    {
+      "id": "account.admin",
+      "master": 24,
+      "gap_px": 1.284222
+    },
+    {
+      "id": "account.login",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "account.login",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "account.logout",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "account.logout",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "mcp.manage",
+      "master": 16,
+      "gap_px": 0.908333
+    },
+    {
+      "id": "mcp.manage",
+      "master": 24,
+      "gap_px": 1.425
+    },
+    {
+      "id": "server.gpu",
+      "master": 16,
+      "gap_px": 0.908333
+    },
+    {
+      "id": "server.gpu",
+      "master": 24,
+      "gap_px": 1.425
+    },
+    {
+      "id": "server.metrics",
+      "master": 16,
+      "gap_px": 0.908333
+    },
+    {
+      "id": "server.metrics",
+      "master": 24,
+      "gap_px": 1.425
+    },
+    {
+      "id": "bcf.export",
+      "master": 16,
+      "gap_px": 1.585865
+    },
+    {
+      "id": "bcf.export",
+      "master": 24,
+      "gap_px": 2.503774
+    },
+    {
+      "id": "bcf.push",
+      "master": 16,
+      "gap_px": 2.21666
+    },
+    {
+      "id": "bcf.push",
+      "master": 24,
+      "gap_px": 3.45
+    },
+    {
+      "id": "cloud.save",
+      "master": 16,
+      "gap_px": 1.71167
+    },
+    {
+      "id": "cloud.save",
+      "master": 24,
+      "gap_px": 2.67501
+    },
+    {
+      "id": "cloud.open",
+      "master": 16,
+      "gap_px": 1.71167
+    },
+    {
+      "id": "cloud.open",
+      "master": 24,
+      "gap_px": 2.675
+    },
+    {
+      "id": "feedback.github-issue",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "feedback.github-issue",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "geo.cadastral",
+      "master": 16,
+      "gap_px": 1.515291
+    },
+    {
+      "id": "geo.cadastral",
+      "master": 24,
+      "gap_px": 2.397924
+    },
+    {
+      "id": "frame.editor",
+      "master": 16,
+      "gap_px": 0.989708
+    },
+    {
+      "id": "frame.editor",
+      "master": 24,
+      "gap_px": 1.609516
+    },
+    {
+      "id": "frame.procurement",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "frame.procurement",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "frame.column-add",
+      "master": 16,
+      "gap_px": 0.630006
+    },
+    {
+      "id": "frame.column-add",
+      "master": 24,
+      "gap_px": 1.07
+    },
+    {
+      "id": "frame.row-add",
+      "master": 16,
+      "gap_px": 0.630006
+    },
+    {
+      "id": "frame.row-add",
+      "master": 24,
+      "gap_px": 1.07
+    },
+    {
+      "id": "frame.new-turn-tilt",
+      "master": 16,
+      "gap_px": 0.69667
+    },
+    {
+      "id": "frame.new-turn-tilt",
+      "master": 24,
+      "gap_px": 1.17
+    },
+    {
+      "id": "frame.new-double",
+      "master": 16,
+      "gap_px": 0.59933
+    },
+    {
+      "id": "frame.new-double",
+      "master": 24,
+      "gap_px": 1.024
+    },
+    {
+      "id": "frame.new-sliding",
+      "master": 16,
+      "gap_px": 0.69667
+    },
+    {
+      "id": "frame.new-sliding",
+      "master": 24,
+      "gap_px": 1.17
+    },
+    {
+      "id": "frame.new-door",
+      "master": 16,
+      "gap_px": 0.69667
+    },
+    {
+      "id": "frame.new-door",
+      "master": 24,
+      "gap_px": 1.17
+    },
+    {
+      "id": "frame.new-top-hung",
+      "master": 16,
+      "gap_px": 0.69667
+    },
+    {
+      "id": "frame.new-top-hung",
+      "master": 24,
+      "gap_px": 1.17
+    },
+    {
+      "id": "frame.new-lift-slide",
+      "master": 16,
+      "gap_px": 0.59933
+    },
+    {
+      "id": "frame.new-lift-slide",
+      "master": 24,
+      "gap_px": 1.024
+    },
+    {
+      "id": "frame.new-pivot",
+      "master": 16,
+      "gap_px": 0.69667
+    },
+    {
+      "id": "frame.new-pivot",
+      "master": 24,
+      "gap_px": 1.17
+    },
+    {
+      "id": "frame.new-french",
+      "master": 16,
+      "gap_px": 0.59933
+    },
+    {
+      "id": "frame.new-french",
+      "master": 24,
+      "gap_px": 1.024
+    },
+    {
+      "id": "frame.cell-turn-tilt",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "frame.cell-turn-tilt",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "frame.cell-door",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "frame.cell-door",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "frame.cell-sliding",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "frame.cell-sliding",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "profile.point-delete",
+      "master": 16,
+      "gap_px": 4.654777
+    },
+    {
+      "id": "profile.point-delete",
+      "master": 24,
+      "gap_px": 7.044603
+    },
+    {
+      "id": "snap.grid",
+      "master": 16,
+      "gap_px": 3.07742
+    },
+    {
+      "id": "snap.grid",
+      "master": 24,
+      "gap_px": 4.678672
+    },
+    {
+      "id": "section.plane-x",
+      "master": 16,
+      "gap_px": 0.674035
+    },
+    {
+      "id": "section.plane-x",
+      "master": 24,
+      "gap_px": 1.073553
+    },
+    {
+      "id": "section.plane-y",
+      "master": 16,
+      "gap_px": 0.674035
+    },
+    {
+      "id": "section.plane-y",
+      "master": 24,
+      "gap_px": 1.073553
+    },
+    {
+      "id": "section.plane-z",
+      "master": 16,
+      "gap_px": 0.674039
+    },
+    {
+      "id": "section.plane-z",
+      "master": 24,
+      "gap_px": 1.073556
+    },
+    {
+      "id": "validation.clear-highlights",
+      "master": 16,
+      "gap_px": 3.104632
+    },
+    {
+      "id": "validation.clear-highlights",
+      "master": 24,
+      "gap_px": 4.781953
+    },
+    {
+      "id": "energy.chp",
+      "master": 16,
+      "gap_px": 0.653727
+    },
+    {
+      "id": "energy.chp",
+      "master": 24,
+      "gap_px": 1.043085
+    }
+  ],
+  "icons": [
+    {
+      "id": "account.admin",
+      "label": "Beheeromgeving",
+      "series": 56,
+      "ui_call": "onAdmin opent de beheeromgeving voor een beheerder.",
+      "source_record": "1018237a0e8e8455",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/TitleBar.tsx#L214",
+      "assets": {
+        "16": {
+          "before": "bbe609dfc1cd719e16e8639f0f0ec0fbdc84529d796f216de7a0f62f4f14ba8e",
+          "after": "f0100cdf111bd2992859f0df9bb1f5dc33ba5f5da598cd2cc08c3a73023fe050"
+        },
+        "24": {
+          "before": "7c15eb39f32c93cbf40d6f3d36f611abad49b017f9baecb3cce3a3e47b420755",
+          "after": "7a619a9758871439d86d1e150900ffed3a5cb29c6e2384d4db7cd772a24203a0"
+        }
+      }
+    },
+    {
+      "id": "account.login",
+      "label": "Aanmelden met SSO",
+      "series": 56,
+      "ui_call": "loginWithSso start de SSO-aanmeldroute.",
+      "source_record": "666617ca3d059ad5",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/auth/LoginPage.tsx#L59",
+      "assets": {
+        "16": {
+          "before": "c4f3546e819cd1d474514c09ea6364dbf4bb38e2289ba497d7fab1b80e83e296",
+          "after": "be18b0ad5bc56124bff026a1223163876467746dbf448f1ad382b1f8a74547a5"
+        },
+        "24": {
+          "before": "0397037f2a9eb5ee7a4adcce5250a961ff17d945e93c2bfde1125b45040eac53",
+          "after": "3f6ad014c80e2d11e79e195eae65fc71ee99096dec3d9ca903d9465600e4c445"
+        }
+      }
+    },
+    {
+      "id": "account.logout",
+      "label": "Afmelden",
+      "series": 56,
+      "ui_call": "logout beeindigt de aanmeldsessie; geen venster sluiten.",
+      "source_record": "3a00defe1c26d317",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/TitleBar.tsx#L224",
+      "assets": {
+        "16": {
+          "before": "bfde3e9e671cda4707b24ada5484de17ae9142df430ce961271abe110478eff4",
+          "after": "7a1c0fbfca62efc3cdb8c645481ede0d16c4e584c29eb34c268e2097676f10b8"
+        },
+        "24": {
+          "before": "11b61571bc40c87b70d513749c3015112481bd58c70fc4b182c138571087a75a",
+          "after": "1cddc55ec5063042a2eea55173fbd5e0ebe2faaace867737ea5f50fb7e924109"
+        }
+      }
+    },
+    {
+      "id": "account.menu",
+      "label": "Accountmenu openen",
+      "series": 46,
+      "ui_call": "openMenu opent de accountkeuzes; de avatar is geen directe aanmeldopdracht.",
+      "source_record": "1352dd021291e310",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-speech-studio/blob/4e8aa6176ae352b85f8da4afeaf87ef06b3fbf17/src/components/TitleBar.tsx#L156",
+      "assets": {
+        "16": {
+          "before": "6f31b100d836ecd2f675d0e89a9b116ac00dcf5151582bdf9a4528048151c2ce",
+          "after": "44b9b6d17d4ec578a4cd8240c7ef1310d8285023d6e7fad6295ef40fb81c1cfc"
+        },
+        "24": {
+          "before": "719145e2f24fa05febb86624ac0fd497897430675af184ec8390022b5197dd55",
+          "after": "2b71a35463f5dac2d533f9bcf57eadb5e3530281c7af2545d13560718d8dad41"
+        }
+      }
+    },
+    {
+      "id": "bcf.export",
+      "label": "BCF exporteren",
+      "series": 62,
+      "ui_call": "De huidige issues of PDF-markeringen als BCF-pakket uitvoeren; geen issues naar een server pushen.",
+      "source_record": "b84ade848ad77378",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L136",
+      "assets": {
+        "16": {
+          "before": "d9e083bea0285f76132dab1bf92f39aab1ce50164df033fe99e600a7628544ff",
+          "after": "6c5c07720ab69fb273b65a7f0b6324d4db55d3372f6f06960e6e97218f060a7c"
+        },
+        "24": {
+          "before": "b7bead821abc51123cf0b7c8d4b9797235c242ffefb00cb09e0b4f34f604c8b3",
+          "after": "1d1faf8c991a8bcdc9856fb0557f6673fbde1baec46a0ee12043cfb64f3b1880"
+        }
+      }
+    },
+    {
+      "id": "bcf.push",
+      "label": "BCF-issues verzenden",
+      "series": 62,
+      "ui_call": "bcfPushIssues verstuurt de klaarstaande issues naar het geselecteerde verbonden BCF-project.",
+      "source_record": "46817b2402a9a42c",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L149",
+      "assets": {
+        "16": {
+          "before": "666275f9fcacad5e2a1c0af7440507b5492242b713ab1fc065cf6b016c22b883",
+          "after": "38a9282b64adceef0adcef13dc53d0e0dd26030cfe6f3027e974f34d4975e4bb"
+        },
+        "24": {
+          "before": "a453864e99b0dcd6672989663cb337b7d979e32bf92040e50a92e83c7dad51d7",
+          "after": "03380a36b3565446bb517209967a4361c8ec42d7f1bbe967339ca4c3d3c1914d"
+        }
+      }
+    },
+    {
+      "id": "cloud.open",
+      "label": "Cloudbestand kiezen",
+      "series": 62,
+      "ui_call": "Het cloudbestandspaneel of cloudvenster in open-modus tonen; nog geen bestand downloaden of lokaal project openen.",
+      "source_record": "15fc3480ed94a030",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L172",
+      "assets": {
+        "16": {
+          "before": "b1cc9af9396f6d14fd6adcc5ef045e9ca66c15b2c9a2f36cb1cc18ffc851ca12",
+          "after": "919fbace05ceacc1abdb598b12280e1e77377d90993d11d8f6da95576a053132"
+        },
+        "24": {
+          "before": "90d58d3a0db8b0ce3a86a36f0c31b2e277741339809350808833499021e0eafb",
+          "after": "9422e045b26cb881ce0c7b61d568208f5d9276db585f9b1734b2525e774c697c"
+        }
+      }
+    },
+    {
+      "id": "cloud.save",
+      "label": "Cloudbestand opslaan",
+      "series": 62,
+      "ui_call": "Een BCF-bestand voorbereiden en het cloudvenster in save-modus openen; nog een bestemming kiezen.",
+      "source_record": "b4b2e0d81788b2d8",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L166",
+      "assets": {
+        "16": {
+          "before": "607e9e925af6dd4be06803672358410064401d04c09b7e3cf4f27512c916d747",
+          "after": "8bcc8af4a97a49760217bac76a7572c147b1c910c7130e1bc1733b8ebd653f22"
+        },
+        "24": {
+          "before": "44c99a7c95f5c2dce8895006b0e1a4c1c7f3c110db2de9347aff2c60c6199b38",
+          "after": "8abfc8152337019c4bfbac09932aabc35b2d68edd6c8447b1858794b0f260a28"
+        }
+      }
+    },
+    {
+      "id": "energy.chp",
+      "label": "Warmte-krachtkoppeling",
+      "series": 79,
+      "ui_call": "De generatorsoort chp kiezen; geen industriele gebruiksfunctie.",
+      "source_record": "089371c50770eea2",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L44",
+      "assets": {
+        "16": {
+          "before": "61c7bb703a0420f4f58d8209501b1c5550945bc598efabb2b153b1c4e5b6f11b",
+          "after": "0b12122f08aed29ed43c343821eb416b2207cff2f533b0fc0129486012e93c91"
+        },
+        "24": {
+          "before": "44d98a17131f770986ef6e8189c665852af5a603ea0ccf70a14fb8d339df1331",
+          "after": "56958d8cbd9d5f7362d04822525ecc9749cfd745739c06ee629234583dbad5ad"
+        }
+      }
+    },
+    {
+      "id": "energy.electric-generator",
+      "label": "Elektrische opwekker",
+      "series": 79,
+      "ui_call": "Een elektrisch direct verwarmingstoestel of doorstroomtoestel kiezen; geen elektriciteitsmeting starten.",
+      "source_record": "7c830641bcf7b648",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43",
+      "assets": {
+        "16": {
+          "before": "67d35c519952937006ec589ecac1eb6372eadc320054262c3f669a1d883d3f3d",
+          "after": "d89ec970a729e6c57a341ee69f75d2a318bf40afd63f33757dbf15d6d19de2ed"
+        },
+        "24": {
+          "before": "58a93b2b1463c7eeee18f2bff6cb427090419602c8067bc009c9325bc291b9cf",
+          "after": "867422ad2e4475df18cbeed66e585285b17ca517b9f3ccbff548626c0e2f5605"
+        }
+      }
+    },
+    {
+      "id": "energy.electric-storage",
+      "label": "Elektrische voorraadboiler",
+      "series": 79,
+      "ui_call": "De warmwatergenerator electric_boiler kiezen.",
+      "source_record": "64fdb259d15b50cf",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L47",
+      "assets": {
+        "16": {
+          "before": "e01d5a20187570411101f32de4f6f563d7d58d0d5e0d8f4a9ea01c94ad73d252",
+          "after": "489469b2cb64f90ce1033b4b38fa1fa98ce8dd783252da353beeb9d3b77122ca"
+        },
+        "24": {
+          "before": "4953cb425c020da09b760064702431b2c5696b27ff9a58db99baaaa63f7b99ca",
+          "after": "4d41c4ef8cd432f3f82a7fbffb968a15734981364f50849db22a4832da3f45e2"
+        }
+      }
+    },
+    {
+      "id": "energy.fetch-label",
+      "label": "Energielabel ophalen",
+      "series": 49,
+      "ui_call": "lookupEnergyLabel haalt de gekoppelde labelgegevens voor het project op.",
+      "source_record": "db301c559138fdd7",
+      "source_url": "https://github.com/OpenAEC-Foundation/Open-Field-Studio/blob/8a4f104106b208ad053c73fa9390786d805058b8/index.html#L175",
+      "assets": {
+        "16": {
+          "before": "faedfc16e349b2f43dcced5316fda594ddb3634f29e6e45d835ab8a4ce6ea2aa",
+          "after": "85d01fbc8f79b2b2a0ccb043d2ee1bbb932ccb48fed8d5ebcbbe4175cff0d860"
+        },
+        "24": {
+          "before": "52db9434e35fa39ce642aca97407301562c59a274827e749b9d5f27762c29dbb",
+          "after": "62741b6a41cbe6d28456cae1387eb2d8c782d67d656e972e733078d017c7a8c7"
+        }
+      }
+    },
+    {
+      "id": "feedback.github-issue",
+      "label": "GitHub-issue voorbereiden",
+      "series": 61,
+      "ui_call": "handleSubmit opent een vooraf ingevuld GitHub-issueformulier; publiceert het issue nog niet.",
+      "source_record": "5481ae8b0e72df53",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/feedback/FeedbackDialog.tsx#L88",
+      "assets": {
+        "16": {
+          "before": "4804242865cdecc39b8b385d0c0a9f02c6ac945fee7fae67a5d2abeedc03cb8f",
+          "after": "cec9221d51a40887ec851521adeadcf5786a7f3249f3fcb62290aa49ee012ac9"
+        },
+        "24": {
+          "before": "e27adb16be34490ae3225c3545fa9657b290db01fed75f39ce4ec9e4800efff9",
+          "after": "304aca79876bd493671b47e5d6e28b1333ed20d4c570934d425792a29cf43e18"
+        }
+      }
+    },
+    {
+      "id": "field.survey",
+      "label": "Opname ter plaatse",
+      "series": 48,
+      "ui_call": "De opname-werkruimte voor veldgegevens openen; geen audio-opname.",
+      "source_record": "0b1110670625ab5e",
+      "source_url": "https://github.com/OpenAEC-Foundation/Open-Field-Studio/blob/8a4f104106b208ad053c73fa9390786d805058b8/index.html#L102",
+      "assets": {
+        "16": {
+          "before": "81815752bc01e44d83abb9b90f1f9bb74e51cad99a4e8a2662351fdcfff7a39d",
+          "after": "ad4222796f270fdfacb7fb032ddf1972d4bbea6685e136a547918442daa5b8f9"
+        },
+        "24": {
+          "before": "493d04bffcdfe171e0444deb00bfa148bec31389cae55c8d5c9d0063f46a2df1",
+          "after": "e9d23678283d2ff50055f8b65906fb97d6a50e6908efe0c84ef4ee764759851c"
+        }
+      }
+    },
+    {
+      "id": "file.structure",
+      "label": "Mappenstructuur",
+      "series": 55,
+      "ui_call": "Aanduiding bij de getoonde bestandsstructuur; geen map openen.",
+      "source_record": "edb1530dd20cb99f",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/MemoryPage.tsx#L424",
+      "assets": {
+        "16": {
+          "before": "390188a96b23b180f939b139426057cfebf5427cd2f4f23ecc5f651c37d64e2d",
+          "after": "a7e7a3362e2989747710d5d93c86cdf060bd56a566e8b1e4da911024175aa62d"
+        },
+        "24": {
+          "before": "0e61311bcbf71c236b12e02b98838c54456207428763b9a5faa9320ffe2a1d2c",
+          "after": "43d01728b9d65eca0a0a2a236279451cbd4cdf79b47faf10d33fd20b1f9a1d3b"
+        }
+      }
+    },
+    {
+      "id": "frame.cell-door",
+      "label": "Vak deur",
+      "series": 68,
+      "ui_call": "quickSetPanel door wijzigt het geselecteerde vak in een deur.",
+      "source_record": "b220fc2a7f07bd5d",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L400",
+      "assets": {
+        "16": {
+          "before": "6bf0db7ce168c9849c0deb0e5741fc2208314f1f8874768a3b473f445b943b3f",
+          "after": "3bceeb3af46ead99cb7319f981f3c2ba68746ac64edddf49ad3875e3961f88ff"
+        },
+        "24": {
+          "before": "ed09aa0a59979141da0ef4aa3a75ed5e78fd76bf837267c503f750c3c231186d",
+          "after": "f2302fc7f816f8a40f60137e034994b841348a11df0417d79fc82eabdb4c59e1"
+        }
+      }
+    },
+    {
+      "id": "frame.cell-sliding",
+      "label": "Vak schuifraam",
+      "series": 68,
+      "ui_call": "quickSetPanel sliding wijzigt het geselecteerde vak in een schuifraam.",
+      "source_record": "2476187eeb8d2331",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L396",
+      "assets": {
+        "16": {
+          "before": "ae4cfe3c6c8af55c3ffe21e7c751c2dfd594cac5d8124362add439783d229b9d",
+          "after": "3b069e59f8e6fb113535293dfcaf89842b7a7750628c9d35ffe6932e3174cb29"
+        },
+        "24": {
+          "before": "67c28d73ef2b55a4c28becf0f05a7f70786a9bd472069b83649bb0d88a2ceff3",
+          "after": "b5220e4da05dfd002a5c4d507e43adc584453f2a00a666b6d1e8c4851a6005e9"
+        }
+      }
+    },
+    {
+      "id": "frame.cell-turn-tilt",
+      "label": "Vak draaikiep",
+      "series": 68,
+      "ui_call": "quickSetPanel turn_tilt wijzigt het geselecteerde vak; geen nieuw kozijn.",
+      "source_record": "1a1e88899b19fffa",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L392",
+      "assets": {
+        "16": {
+          "before": "fed70b8bdc59fd071e48bd2e4b8b3eb4ee311990d9c1621980a3c3c628e792e9",
+          "after": "1064ef5a27cde0dd945e228de5a3812ac75dc76a1ddc78a7f923e9e230df17fb"
+        },
+        "24": {
+          "before": "b821154de7edc899a1de87b485e96c1176cd94b68b7decd8d89ea91dfb4d6955",
+          "after": "806146aa2bde8778f15197f2733a7f3bd2a1dd8d997d33b4a3abb1dc3c14502f"
+        }
+      }
+    },
+    {
+      "id": "frame.column-add",
+      "label": "Kozijnkolom toevoegen",
+      "series": 68,
+      "ui_call": "addColumn verdeelt het actieve kozijn met een extra verticale stijl.",
+      "source_record": "a97f10bb84fb4d5e",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L296",
+      "assets": {
+        "16": {
+          "before": "5616f0c7fb3708f192d5d2cada57823d13eec1e96ff54dfa499b01f874e6748a",
+          "after": "a121d6d1b6d79b88b00c5067f8ef43e3fe84e57dd171a087b7e6623eab69413f"
+        },
+        "24": {
+          "before": "545dba52f0cee7f6e76dfebfc92be292ee6210b926a27e316ca1926e7e9767a5",
+          "after": "ff148394d31935bf42565518ade0c367517f2faf7c3f675ee876d3dfea3968d5"
+        }
+      }
+    },
+    {
+      "id": "frame.editor",
+      "label": "Kozijneditor",
+      "series": 65,
+      "ui_call": "De 2D-kozijneditor openen via activeView editor.",
+      "source_record": "4abb9addf40e06bd",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/App.svelte#L98",
+      "assets": {
+        "16": {
+          "before": "958ad8633cd8826bb7071dad254570d47d34c79dc92cff9baab851f6ec2414c8",
+          "after": "625a0e75802fc87cae143c7c03096fbb8378781c195b2e5cd5a437a65d5eea29"
+        },
+        "24": {
+          "before": "ce89f5555e1507fdafc6751bb1b523ed3e582f8216a9cde4bf12ff591026ad5b",
+          "after": "b34812c3afdb5b8c121b47ecd795aae0c4314504fea264577d0ffc4bc59f8111"
+        }
+      }
+    },
+    {
+      "id": "frame.new-door",
+      "label": "Nieuwe voordeur",
+      "series": 67,
+      "ui_call": "createFromTemplate front_door maakt een nieuw deurkozijn.",
+      "source_record": "6c0261d544c81941",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L247",
+      "assets": {
+        "16": {
+          "before": "73768aadae538aa62f737516ad23bd6c52c417ba9ac3618ce9982009a8c89496",
+          "after": "0aedc106fdf1263e3462a7dfd9828926f757a4bca78b93263cbe38a31b57da42"
+        },
+        "24": {
+          "before": "bfe3d0731c40b3b2cc563515ec6837b9f9a55e2be912ff547d12ad1b0ee0a0f4",
+          "after": "02a2b919f9e90aad6fed63a07e05ddd9e3059de82238d103802a97e35727aff5"
+        }
+      }
+    },
+    {
+      "id": "frame.new-double",
+      "label": "Nieuw dubbel draaikiepkozijn",
+      "series": 67,
+      "ui_call": "createFromTemplate double_turn_tilt maakt een nieuw dubbel kozijn.",
+      "source_record": "85ecc65d8f4638dd",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L232",
+      "assets": {
+        "16": {
+          "before": "7c6ebc87fc771374c03b845596ae0734662989688354ff7bd7ddb81f344a2c93",
+          "after": "647f51d815f9a5f4d054a4b5a8836043f96109775ad56038520adee0e37a08d3"
+        },
+        "24": {
+          "before": "150f74212a59b18f247ecd9647617ba299aac42d81570c61fc2be85fb5f4cccc",
+          "after": "62878d761a298a450503199454ec33303740129d577d7698bf34f42491ff6cf9"
+        }
+      }
+    },
+    {
+      "id": "frame.new-french",
+      "label": "Nieuw stolpkozijn",
+      "series": 67,
+      "ui_call": "createFromTemplate stolp maakt een nieuw stolpkozijn.",
+      "source_record": "59701edfd93a9cae",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L279",
+      "assets": {
+        "16": {
+          "before": "13175c12c9bc4850c2e194cd7f9d9af2ac9c6d034b1c56cf4f8c676665d84c9b",
+          "after": "d2af0cc727abae85b4012842782767d790a5b041b1f8fec1fe11d422e889c840"
+        },
+        "24": {
+          "before": "ba128f2531ea8a506dc4947848e485e54fdc36258b0d254018104b455d917c37",
+          "after": "223e9a2a8291a1fcd88540bb86c7474e1a80d377b21514746c339f80b9cd41dc"
+        }
+      }
+    },
+    {
+      "id": "frame.new-lift-slide",
+      "label": "Nieuwe hefschuifpui",
+      "series": 67,
+      "ui_call": "createFromTemplate hefschuif maakt een nieuwe hefschuifpui.",
+      "source_record": "47af817f5d4f8498",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L262",
+      "assets": {
+        "16": {
+          "before": "7bdaa016763a62b27b292d12ad1e3bf5a3193a7c9b6c9aa8a3ebe87074159a5b",
+          "after": "086b082178a24774f3da4901881ebea4af38ff9e1e14211b7f7e7bf00688f93f"
+        },
+        "24": {
+          "before": "de02484ebd5775c2d4c75c463f913542804c83dce51fa19d14f63a04680d244b",
+          "after": "23cf61a73dacd6e766b421741335b38fa9ba3f8754995df83f3adec3c43d3ff6"
+        }
+      }
+    },
+    {
+      "id": "frame.new-pivot",
+      "label": "Nieuw pivotraam",
+      "series": 67,
+      "ui_call": "createFromTemplate pivot maakt een nieuw pivotraam.",
+      "source_record": "e8804e2725da710e",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L271",
+      "assets": {
+        "16": {
+          "before": "b48a05ce7c2bc420a40c85dd3b3eb4f37edaca7d295f68cbdb6a3d2f0b365f74",
+          "after": "6ef7a1d2bc18fdedd5d5b92d29e4a8c477047de9468782a30ea8bf5153467d61"
+        },
+        "24": {
+          "before": "3b67f473d1fef0dad83d1f624726a79183c579893646eaa6dee7b2386c043263",
+          "after": "f3ff95cefc3f65e144ced96b9d9fdbe904f10d75f6032826013006368ba691f4"
+        }
+      }
+    },
+    {
+      "id": "frame.new-sliding",
+      "label": "Nieuwe schuifpui",
+      "series": 67,
+      "ui_call": "createFromTemplate sliding_door maakt een nieuwe schuifpui.",
+      "source_record": "58980f630cfa40ec",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L239",
+      "assets": {
+        "16": {
+          "before": "502a195c22b273a6cdb7faeaf0c60fd47daf4f1b54d1977141c94a97b99082e9",
+          "after": "cbead2120101bddbe2d12cc503c9344bc16407a18ddc39a985d41f363f681896"
+        },
+        "24": {
+          "before": "0abe3282e200ff16693fc9649a2aecb5b7899c9b46894bc5355d39411ec3f568",
+          "after": "3857d38697ff0e738ab65740d1ac6c9a94a1f1f449a41317e2dcf8c4211fb23d"
+        }
+      }
+    },
+    {
+      "id": "frame.new-top-hung",
+      "label": "Nieuw klapraam",
+      "series": 67,
+      "ui_call": "createFromTemplate klapraam maakt een nieuw klapraam.",
+      "source_record": "a59659d5f8cfc727",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L255",
+      "assets": {
+        "16": {
+          "before": "573a07e9e0c31ae98c87204b515b0333e75d48511a93d837cc4bc30939f03208",
+          "after": "728c179379bffc48df32b628054bd3eb9f5137084bf136168e7c1a3b5cae6ac3"
+        },
+        "24": {
+          "before": "aedf58a497f8e4a4fd95de14b9d8b9f7a10488e44923c49891a0ad48e4c28cb8",
+          "after": "ef7920c4a23b077fdfda339b8127b127fe30acdb354f7a6c238509326161645a"
+        }
+      }
+    },
+    {
+      "id": "frame.new-turn-tilt",
+      "label": "Nieuw draaikiepkozijn",
+      "series": 67,
+      "ui_call": "createFromTemplate single_turn_tilt maakt een nieuw draaikiepkozijn.",
+      "source_record": "6450e39eab440eef",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L225",
+      "assets": {
+        "16": {
+          "before": "954fb39875a61ddb8bdcdd34dafaa9153b9d19e61aa653e35a226f8a954bbacc",
+          "after": "269b41ed84a39d8e6bbca594c3c2e068eed8f4746e00b30477b1436fb015edae"
+        },
+        "24": {
+          "before": "cfd9eaeaecb5c03d7aeeb66d904400f3c0811c820f3eef2cd78181e4488053c7",
+          "after": "7db3c26dbee7abde48cbbc150ad9bec4f7d564599f6c43997e58163a0713685d"
+        }
+      }
+    },
+    {
+      "id": "frame.procurement",
+      "label": "Inkoopwerkruimte",
+      "series": 66,
+      "ui_call": "De ProcurementView openen voor inkoopgegevens.",
+      "source_record": "7d49f7690835651a",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/App.svelte#L292",
+      "assets": {
+        "16": {
+          "before": "6eb7d0accafb7c7389af569af97afd449f82a645050c444e511452da058c64d3",
+          "after": "e62fb54cd5109790ef2711c4d7958c354d8763857ea5cef462e271f1dc398704"
+        },
+        "24": {
+          "before": "6660627af94fa4b12dc77a313ff2f9d3a92748f485c72cb630b6ad1067dd703a",
+          "after": "16e353a810d86d5c407b9a18a42a7e822d98d8cb946f6630034d290d1ecfe58e"
+        }
+      }
+    },
+    {
+      "id": "frame.row-add",
+      "label": "Kozijnrij toevoegen",
+      "series": 68,
+      "ui_call": "addRow verdeelt het actieve kozijn met een extra horizontale regel.",
+      "source_record": "1a6dc6448cc7ce24",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/shell/Ribbon.svelte#L303",
+      "assets": {
+        "16": {
+          "before": "fc2666d9827ac433c32b13cde14633af13db4c04ec0e860dfeee10b0e063e421",
+          "after": "885bc367cf65554664a048fe5222cabcc9d9022f18b8d715d0256a6c1da57bb4"
+        },
+        "24": {
+          "before": "db58646cc698ae3fe96d56ed9e005018227f30ff846b8ce677c16c56f47345f1",
+          "after": "eb5f3235d1d0b02b4d9aabad42bb8ee2dff14143078f8bfba3ca700b2eee76c3"
+        }
+      }
+    },
+    {
+      "id": "geo.cadastral",
+      "label": "Kadastergegevens ophalen",
+      "series": 61,
+      "ui_call": "lookupCadastral haalt perceelgegevens op voor de gekozen coordinaten.",
+      "source_record": "5391a219dde49812",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/blocks/MapEditor.tsx#L500",
+      "assets": {
+        "16": {
+          "before": "95c69f30e825188cdfc3de985665614c9909951fa8ae297a9d4350bed0cb8d17",
+          "after": "0b637584ec35c48be44a0076fe6a471c846cbc086c8e1697b4bd3c7e04972d9b"
+        },
+        "24": {
+          "before": "b1f214128421b5514f19be97b2a8bd7cd2f3561d060334215ddca1b7cdf8e99f",
+          "after": "f65f20052869bdeda7a998c823fc16461d57f03aabb8c526ca62d843a2cad3ff"
+        }
+      }
+    },
+    {
+      "id": "git.branches",
+      "label": "Git-branches",
+      "series": 54,
+      "ui_call": "Kopaanduiding bij de branchlijst; geen branch aanmaken.",
+      "source_record": "8963a930cbaef811",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L579",
+      "assets": {
+        "16": {
+          "before": "6a24e9b505c7b0d193293521f41e8b0b1e25ae8badcb9ba819da4f2277782259",
+          "after": "354957b7426c0a61347ba1d6b55e8cbd583e3c3b6330970a9ea5dc8d7a64bf63"
+        },
+        "24": {
+          "before": "b1868cde70f3407a323084a8f3c5f49ca57e94cfafdff508ce350032d165c096",
+          "after": "10dc1876c10f261d653c9379a717cf2d9e5735f9b51d5aac5f41d48a561c06c1"
+        }
+      }
+    },
+    {
+      "id": "git.init",
+      "label": "Git-repository initialiseren",
+      "series": 54,
+      "ui_call": "handleInit initialiseert een repository in de gekozen werkruimte.",
+      "source_record": "f43883729ef883c9",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L343",
+      "assets": {
+        "16": {
+          "before": "7e953cfa1b98f58cb4c7668930a247bd45239139a781be091e72586c993967c9",
+          "after": "223f3aaa494f2c93e504f379f99b59dde4a4f01c671c2bac5453dd066b968dc0"
+        },
+        "24": {
+          "before": "d6ac70e35aff97b5df97738ee029cd40aa353c7d616d294df2a2f32a44e6ca0e",
+          "after": "4d6a05ed41d4d31ea8f3934a923e4c07e831a3745b7ba87b867b82ccb7bd11ee"
+        }
+      }
+    },
+    {
+      "id": "git.repository",
+      "label": "Git-repositorystatus",
+      "series": 54,
+      "ui_call": "Kopaanduiding bij de gecontroleerde repository en huidige branch.",
+      "source_record": "e01212f2e503917b",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L275",
+      "assets": {
+        "16": {
+          "before": "90c05ae2ab693b5a86586272699a59c265b3d57df8a66b7a802797d8bc016a5a",
+          "after": "38cae5d5e1bb69b4b6d8a9739c5d1984f31532e99609f3ab27d2105eb4835c58"
+        },
+        "24": {
+          "before": "4dd78ae1939ad79752f9853075c82b73c533ff8b89ef48f7257682c380b827ea",
+          "after": "c2c33aa13f643c794b4a0090451ce5c53a50436c146054cf9272b6a5f013f7a6"
+        }
+      }
+    },
+    {
+      "id": "git.stage-all",
+      "label": "Alle wijzigingen klaarzetten",
+      "series": 54,
+      "ui_call": "handleStageAll zet alle repositorywijzigingen klaar voor een commit.",
+      "source_record": "dbe5743370555d73",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GitPage.tsx#L364",
+      "assets": {
+        "16": {
+          "before": "9ea42442ae185a0f5d2f43ff909f02c86c96b98f74c1a41453a570b6df675df3",
+          "after": "e9a0eb3448ec2cd29242e268f8fb49c7d4eba1f04cf0ab3a8dfb561141d08858"
+        },
+        "24": {
+          "before": "6adfe9813b1ab05a5f26a6c7141d87ff9e396c9199ad570e1a23c1c009854ca1",
+          "after": "c4d3461abb6d6c8cfaafff9e27266ab4b00042e53554c6d775b8c18126a35f56"
+        }
+      }
+    },
+    {
+      "id": "hooks.manage",
+      "label": "Gebeurteniskoppelingen",
+      "series": 53,
+      "ui_call": "Navigatie naar de hooks-instellingen; geen shellopdracht uitvoeren.",
+      "source_record": "5581a3a729d1e13b",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L103",
+      "assets": {
+        "16": {
+          "before": "752a9d4b86de1511c0982a21bcbfcb326892f7594668915c6b74cab58ec4b7ed",
+          "after": "f7a5d2fc80da0da189c51681a718dfb24fd6142eabb404aa75eecc97e87391d4"
+        },
+        "24": {
+          "before": "4a5aea0b6eea46a63583b9cd6871c6647f4bc8191efe664ed43d2a46625c47e8",
+          "after": "2537b65bf3e14e6715509f62f65cb737b348da76f236dd9f53387b0c58cdadf9"
+        }
+      }
+    },
+    {
+      "id": "mcp.manage",
+      "label": "MCP-servers",
+      "series": 53,
+      "ui_call": "Navigatie naar de MCP-serverconfiguratie; geen server toevoegen of starten.",
+      "source_record": "438252482cd441a8",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L111",
+      "assets": {
+        "16": {
+          "before": "8a5e7fac5c9e300245186c74ec8e836a0577a05b03e443800f4b860f9b7b8979",
+          "after": "6ab0eeccac547a47e719359dc82c52e1b6fbf42949fb2bb8a62eabaa98709aa4"
+        },
+        "24": {
+          "before": "c969de788cf4900408270e53f35d2672db2199fdc157de672f0533a30ba7d05a",
+          "after": "825f20ae073fd167463c42566869c73702a9fd6386c52ab3c67e6c2ec4fa7b92"
+        }
+      }
+    },
+    {
+      "id": "package.catalog",
+      "label": "Pakkettencatalogus",
+      "series": 51,
+      "ui_call": "Navigatie naar de werkruimte met beschikbare skillpakketten.",
+      "source_record": "33a30a64efcf3782",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L53",
+      "assets": {
+        "16": {
+          "before": "db603373e447f70844d83f7e3d40a3bdbefe8f1b6d4a8057314ff0b6d6985a4e",
+          "after": "52526c18b5addf07904ec27fc7b368c20ae62657a8c27bc1ac6116cb8c8ad9f1"
+        },
+        "24": {
+          "before": "ad764d2e66d1f1b57956efb010f26a4982ed9d6bf3b9c9147193f1fb3fb1724f",
+          "after": "6823c4551a308db5886c0ec976afe7865a762d2fcc6725dc89f73ef7bf39657f"
+        }
+      }
+    },
+    {
+      "id": "permission.add",
+      "label": "Eigen toegangsregel",
+      "series": 52,
+      "ui_call": "Kopaanduiding van het formulier voor een eigen allow- of deny-patroon.",
+      "source_record": "adc78db675fd284d",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L511",
+      "assets": {
+        "16": {
+          "before": "2e44ed1cfe9c012f3aa47f75c81157bc0d54485339cff5ab6c28d97d00bac156",
+          "after": "b28c9e34c89428ccd7e164f5d19bf89ba4702fb7415266ed932c4e72448deb80"
+        },
+        "24": {
+          "before": "f599c6044df621f29d3dbe0ccd96389fb8fb36c8e9a83bc126ea6e7246c6796c",
+          "after": "02235bb445600d06ea854cf084b81d5b74378d0cf7e734b6db2b67a4231db2a9"
+        }
+      }
+    },
+    {
+      "id": "permission.allow",
+      "label": "Toegestane regels",
+      "series": 52,
+      "ui_call": "Kopaanduiding van de lijst met toegestane gereedschappen en opdrachten.",
+      "source_record": "9bbc0f69526843c8",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L392",
+      "assets": {
+        "16": {
+          "before": "784ec227df2ce5340fd77393eeadad1d6ebb69302af25dbceec41bbd636d42f2",
+          "after": "7cba782d58d4a2faca498ccb7c3c8e98649feb5d3413f65b5eb083e3aeef36aa"
+        },
+        "24": {
+          "before": "9808b54b7c0772f8306be3c03e2686f919d403ac8a3426b39d8dfb792cfabc6e",
+          "after": "c0acbb9cb60acb0a223ac1dbd3dd27190672bbc359a3bef46e0831e370845908"
+        }
+      }
+    },
+    {
+      "id": "permission.bypass",
+      "label": "Toestemmingsvragen overslaan",
+      "series": 52,
+      "ui_call": "De modus bypass kiezen; de waarschuwende tekst en gevaarstatus blijven bij de bediening.",
+      "source_record": "23c40999c9eef489",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L292",
+      "assets": {
+        "16": {
+          "before": "e4599ad4a009413a57dc46f42e449d1398dc988ff4b91443697eca46faf979f1",
+          "after": "a9326fe76ac7ea54e38d0873839ef3c1b325571d9b73f16015337bea1e11a3e5"
+        },
+        "24": {
+          "before": "2528a716b4b387fac4adafd55e1630502f4d59a1288f91240b078e7689db91b5",
+          "after": "12f55c5e3581d278aee6bfcae496198ca56f1943f89f67d0a5e81d06a8bc38c4"
+        }
+      }
+    },
+    {
+      "id": "permission.default",
+      "label": "Toestemming per gereedschap",
+      "series": 52,
+      "ui_call": "De modus default kiezen: vragen bij het eerste gebruik van een gereedschap.",
+      "source_record": "9d0e456df29a17c0",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L292",
+      "assets": {
+        "16": {
+          "before": "fc5420357413cb535ac9a9729170fd92488830ea6918cf40cb6c4baed58aeb56",
+          "after": "02bae1314e41f0283f3e9d1f4cce62bdb13f86b4ebf915a163fea7adce104bb9"
+        },
+        "24": {
+          "before": "0da60b8ae8b4593c4b1080f04adfd6a60e99a5651b911126984df258c689bdbf",
+          "after": "23536c940316b54fcfd48df1fbf2076d97ad8b7b0a656f1106b137525615f0aa"
+        }
+      }
+    },
+    {
+      "id": "permission.deny",
+      "label": "Geblokkeerde regels",
+      "series": 52,
+      "ui_call": "Kopaanduiding van de lijst met geblokkeerde patronen.",
+      "source_record": "e76603d624afb539",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L469",
+      "assets": {
+        "16": {
+          "before": "535d6c0f0d4cb8fd41d65af7b9fb77adf41c3ca3ea9213cf6af44245b8ec164b",
+          "after": "562bbbe3252471916c579c9a90d7d31edfc1de3de67f382530b157e6a8b880e3"
+        },
+        "24": {
+          "before": "dfbf3139c5911e77204259df0fa439fa100284af0ac7bc178d5e4b8570da91a6",
+          "after": "2ae799ee98fc9ba11c85d511272a7c918d01c203994440bea1eb80adbe4dbd8e"
+        }
+      }
+    },
+    {
+      "id": "permission.edits",
+      "label": "Bestandswijzigingen toestaan",
+      "series": 52,
+      "ui_call": "De modus accept-edits kiezen; shellopdrachten blijven om toestemming vragen.",
+      "source_record": "ce282cdf7715f279",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L292",
+      "assets": {
+        "16": {
+          "before": "bbe73d8ac686756b11ac84848c29becf8fd890c4324aa1b7275168ed16bd2817",
+          "after": "18aeb54eb07686753edb09b0ee157f24eb30d78e50ac34e7f1eb9c2a4c84cc74"
+        },
+        "24": {
+          "before": "79e988a6036810b19cab024e03beb3d33993cc0f8208f5265892a29db0029daa",
+          "after": "d3d9c8e7b44e51a5d2af0f619848ccdf22a3376ca529157a6050be22a83212d2"
+        }
+      }
+    },
+    {
+      "id": "permission.manage",
+      "label": "Machtigingen",
+      "series": 52,
+      "ui_call": "Navigatie naar het overzicht van toelatingsmodi en regels; wijzigt zelf geen toegang.",
+      "source_record": "a6a9fb6390d95d94",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L95",
+      "assets": {
+        "16": {
+          "before": "94ca107c8ea1e6b0af74a207df633291115a627b5ba911685df09ea16bb09bdb",
+          "after": "9ac28050dfeec4b5eac41ef25323ff9833f13e665da1d9c33b3640c4574397e0"
+        },
+        "24": {
+          "before": "c1ef2b481b315b6a501e7381f39c1db2832a97f3eb7e28f83f467bb2c2ef8c57",
+          "after": "ce60384cf5839c28abf5e619adb4dc21ef40624289fd8cdf79676d78a8818108"
+        }
+      }
+    },
+    {
+      "id": "permission.plan",
+      "label": "Alleen analyseren",
+      "series": 52,
+      "ui_call": "De modus plan kiezen; bestandswijzigingen zijn daarbij niet toegestaan.",
+      "source_record": "618bacea6f65c110",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PermissionsPage.tsx#L292",
+      "assets": {
+        "16": {
+          "before": "2cceaf11e92c0659f26994b0dcc75c6cd533f817b69dbea15b70a1a82dd85bdd",
+          "after": "ddea78deebe4db79d74b7ef4eb488f1341114f40831f45c8d1e72da41d61839f"
+        },
+        "24": {
+          "before": "8e05836882ac0298d8be383c47e91c31a2b786db41cac12c3ebaf0b4a7195466",
+          "after": "cdd7222430922c25e948bf9c24ff0963b5a454b126e95ab5a56acae135ec113e"
+        }
+      }
+    },
+    {
+      "id": "profile.point-delete",
+      "label": "Profielpunten verwijderen",
+      "series": 69,
+      "ui_call": "De editor in gereedschap delete zetten; volgende puntklikken verwijderen punten.",
+      "source_record": "752e35b040dfa1bc",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileToolbar.svelte#L49",
+      "assets": {
+        "16": {
+          "before": "ddd79f523ccc9041230683252868148ad630d91175c9645ae54dfa5f90bc1006",
+          "after": "f5454faca8037cf945372711880757b5c03c7c1ec5e811abfd6073de9297fa1b"
+        },
+        "24": {
+          "before": "cdb5cb03125d18b7087018b05c5c854ab45e79f01eb2b184178c0d0aa1a5a5f2",
+          "after": "c2fd321e103e2b7869d4953d2cef2af4462859414420f5f5afba6c680ea9e525"
+        }
+      }
+    },
+    {
+      "id": "prompt.builder",
+      "label": "Prompt samenstellen",
+      "series": 55,
+      "ui_call": "Kopaanduiding bij het formulier voor eigen prompts; geen prompt uitvoeren.",
+      "source_record": "f2cb3d7230af5b98",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/PromptsPage.tsx#L396",
+      "assets": {
+        "16": {
+          "before": "4892ddd74eaef71889757432fc92b5e965dd0c56ed290d5ec9fb2a1c053275df",
+          "after": "bd0545ff7bfef67f1381a09df75db47772031e72782b79c3bd4f6d81d3fffcab"
+        },
+        "24": {
+          "before": "a174ba4aab5949481f7f610c71e4e9e0bd50ce48fab4b731cb227b006f07572f",
+          "after": "ffa9ead428d68ff907fd781f8f14dc96e530aaf6c1c5adab9294a2af0cc57f31"
+        }
+      }
+    },
+    {
+      "id": "report.page-break",
+      "label": "Pagina-einde invoegen",
+      "series": 57,
+      "ui_call": "addBlock(page_break) voegt een expliciet pagina-einde in.",
+      "source_record": "ca96995d5ddc93d5",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/HomeTab.tsx#L75",
+      "assets": {
+        "16": {
+          "before": "ab586413364522b90dcefef574ba9ef221324a868a05dae8ca1fba75ff3c8444",
+          "after": "3cfdf30b35b9917b6c1e1e82180ec9a64fb036440903b64ffacb5b191b800421"
+        },
+        "24": {
+          "before": "92155d5b234cb04b5888c8a9bef2e96088de6ea38696b9292138a673754bed85",
+          "after": "2cd7363ff844e4d16608115775f8183a249f329c2375dedeefb4eb0ba83df37e"
+        }
+      }
+    },
+    {
+      "id": "report.unlink-project",
+      "label": "Rapport uit project",
+      "series": 59,
+      "ui_call": "handleMoveReport met null verwijdert de projecttoewijzing van het rapport.",
+      "source_record": "4e6f28fa2f57b2fb",
+      "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/projects/ProjectBrowser.tsx#L316",
+      "assets": {
+        "16": {
+          "before": "00add156b247403a4c387dd12812d33575df067bf2aeb3a2c80289a23c6c2923",
+          "after": "f61b574a533ba481b29fdad6e75c83b441b87a7649178f6e4ce3f67135ed779c"
+        },
+        "24": {
+          "before": "d180a86c81fcd84e48d0d0b625d1f196253962383f5d3fd504366f6e723470ac",
+          "after": "c51b52bb81ef84687eafd83fe57ea2e7a591841368fab543f517a50892371601"
+        }
+      }
+    },
+    {
+      "id": "section.plane-x",
+      "label": "Snijvlak X",
+      "series": 63,
+      "ui_call": "add-section-plane versturen met axis x; het snijvlak staat loodrecht op X.",
+      "source_record": "14980082f2387cbe",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/ViewTab.tsx#L79",
+      "assets": {
+        "16": {
+          "before": "c27f45a47817d8fc36ae83160cb8f235ab63400d5a2579fbb2f938007050c146",
+          "after": "8cb6b51c1e38d51274e8806b18eb9993f9c6d19f0f7d2a464f223788d9ea6d23"
+        },
+        "24": {
+          "before": "d3120873d90e83e25143809b5e13ad596652a0124df28a051060035cb85d909e",
+          "after": "a1dc8b85dd44cb32c15a3bd784ab616ad3b7abb24484dd5a32e5de5a7240e64c"
+        }
+      }
+    },
+    {
+      "id": "section.plane-y",
+      "label": "Snijvlak Y",
+      "series": 63,
+      "ui_call": "add-section-plane versturen met axis y; het snijvlak staat loodrecht op Y.",
+      "source_record": "2dc3a6ed5dad3dd5",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/ViewTab.tsx#L85",
+      "assets": {
+        "16": {
+          "before": "137f2655905430e291e0f815955742c661f25f61ec41b1cc4e8a4b3a5e02e6b7",
+          "after": "981a50bbc6d41f7161fe4193c1194341a2497ee2c6fe8e1378b29f4827125965"
+        },
+        "24": {
+          "before": "2f8df13b0f7c949ee190dd5b222678917671d99a985ca206d7cf31e18da84a91",
+          "after": "71ce17f1edc65fb25f89aa6419043c0459dd82f07825f4cb3197b2f899d6a3d0"
+        }
+      }
+    },
+    {
+      "id": "section.plane-z",
+      "label": "Snijvlak Z",
+      "series": 63,
+      "ui_call": "add-section-plane versturen met axis z; het snijvlak staat loodrecht op Z.",
+      "source_record": "e6433ae2a060d8cc",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/ViewTab.tsx#L91",
+      "assets": {
+        "16": {
+          "before": "163744ea925329dce9a2944dc792244500b0fd1c66caec826edd17701cbff94b",
+          "after": "cbf8bdc0dafae54a244108dd28b64f2c771f167c1c29523cac4656c4502eb9e7"
+        },
+        "24": {
+          "before": "a2875221adb6efadaa0d41a5ba08fb5db6241d06c5f5cb7b20d63b6bdf6d7e45",
+          "after": "fbf2551513bcc39fffda30f45cbf6db2462a4f732da464aa4a8be22d18285403"
+        }
+      }
+    },
+    {
+      "id": "server.gpu",
+      "label": "GPU-server",
+      "series": 53,
+      "ui_call": "Navigatie naar de GPU-serverpagina met verbindingsinstellingen.",
+      "source_record": "30234f8dda086496",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/DashboardPage.tsx#L128",
+      "assets": {
+        "16": {
+          "before": "2c0bdcce17e9174f7233019b0e40b777465ed12e767b890859038593df2b8cdc",
+          "after": "3cb025b50f31f834503a0179a9f635cd9bd483adb14b3cf75432cbbe2416d57e"
+        },
+        "24": {
+          "before": "7690da9c070c48219e24b54929a53356412b5a2de526a5fbcb75d42e798afd62",
+          "after": "b8da13339574bdd01b8ecbedbabcccec1068549ee3d855c91faca1b6f444da42"
+        }
+      }
+    },
+    {
+      "id": "server.metrics",
+      "label": "Serverstatistieken",
+      "series": 53,
+      "ui_call": "Kopaanduiding bij beschikbare server-, VRAM- en schijfgegevens.",
+      "source_record": "98b19f93cb530555",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/GpuServerPage.tsx#L174",
+      "assets": {
+        "16": {
+          "before": "d9254cf0b545d529aa95d7a7e4236b5cd8ea5945ffb4c96608e1dd1cdb89e470",
+          "after": "91f84eb8a68eaa3becbc7d77a1881c90171bd5084340cd784ace430134424000"
+        },
+        "24": {
+          "before": "0e176899a97ac37874a50a36600d240f78bf7b066321a8f7ee558e5e8f67dba4",
+          "after": "f8c61eab2c84310d2a58825f714f6a57b1e1afaa823a116cc95128b1b8e5a2f7"
+        }
+      }
+    },
+    {
+      "id": "snap.grid",
+      "label": "Aan raster snappen",
+      "series": 69,
+      "ui_call": "profileEditor.toggleSnap schakelt geometrische rasteraantrekking.",
+      "source_record": "ae4bb2be68b278f7",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-frame-studio/blob/eb77f9e4c5d3f5b9b081aef5dd3dcf07dbdaf43f/ui/src/components/profile-editor/ProfileToolbar.svelte#L86",
+      "assets": {
+        "16": {
+          "before": "22f8cbbffdd1bc3084c633f49e4b1fd8e57e33873b6ee66455c52ae7ce7fc42f",
+          "after": "d926fb7a8562f20e9146d6511f2346333e6cb71823bcdb88276d0388b6eeb00a"
+        },
+        "24": {
+          "before": "f71391b6aa045e1afaba764fae524579c40c6b899514ecd6cacc6420d87b4989",
+          "after": "bb934d7269345aed10fb6d75a28d72cb267065b076037479f9cdc0d4462c9853"
+        }
+      }
+    },
+    {
+      "id": "team.add",
+      "label": "Team samenstellen",
+      "series": 55,
+      "ui_call": "De New Team-kaart opent de teambouwer via setBuilding.",
+      "source_record": "792b79dba5a01815",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/TeamsPage.tsx#L245",
+      "assets": {
+        "16": {
+          "before": "e2c20fe2f145d2fd54f69bed87b7be5900fa0b45b36e8ea0ead1073e35b3294c",
+          "after": "ded9ce6b76264bdd558537f3aba9d4968dc2037801f10ceea443fda60d6ec412"
+        },
+        "24": {
+          "before": "92a4f479b72c819c0fd43dfc1b5601d9bb1012f8980bb05ca7299e22f0ffbf37",
+          "after": "e26822b33843b147f24d27cca3c50fce79fb750466aca8f4249288a47cec8cac"
+        }
+      }
+    },
+    {
+      "id": "template.preview",
+      "label": "Sjabloonvoorbeeld",
+      "series": 55,
+      "ui_call": "Aanduiding bij het live tekstvoorbeeld; geen objectzichtbaarheid schakelen.",
+      "source_record": "9f286a15bb09ca22",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/pages/TemplatesPage.tsx#L610",
+      "assets": {
+        "16": {
+          "before": "5b10435318925adca7ba4aab6e5628f5e628c71982450c681a02cdecadb61bde",
+          "after": "62fb2bd109cce7b42c887085f0371bc763949618644ab1462b12e97d4e8e23a4"
+        },
+        "24": {
+          "before": "d149391be869b7d6f0a6a57c3e8def32462378cedec909cf513408d165e7ce82",
+          "after": "3ecf012e6c15b0feeb51db226f8a36fb5d014315807d1cdd1efe7463214b12f4"
+        }
+      }
+    },
+    {
+      "id": "validation.clear-highlights",
+      "label": "Validatiemarkeringen wissen",
+      "series": 64,
+      "ui_call": "clearHighlights verwijdert de 3D-kleurmarkeringen; validatieresultaten blijven bestaan.",
+      "source_record": "a81ae086eceb71f1",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/validation/ValidationPanel.tsx#L437",
+      "assets": {
+        "16": {
+          "before": "3807b5c5d29f6a9bcdb03c71222f4dcc903f034057647112be4de9a022b14985",
+          "after": "7a4e7eacaec2d40511cbf45c25754942070825cc184cba0acd2f0504adb7e650"
+        },
+        "24": {
+          "before": "e80d2bfa4fa236d824a492545cf338520aae7522f9b5fb6253ae23f7ab0611cc",
+          "after": "ebe6659d4360d0063e4068b93dc77439315944800abdaac200ca31ea5960aad9"
+        }
+      }
+    },
+    {
+      "id": "workflow.skills",
+      "label": "Skillpakket-werkstroom",
+      "series": 51,
+      "ui_call": "De werkstroom voor skillpakketten kiezen via onSelect.",
+      "source_record": "576bb1390b474823",
+      "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-Workspace-Composer/blob/33327e001d6ad917356920060b8c7016fcbd6de5/src/components/WorkflowTypeSelector.tsx#L12",
+      "assets": {
+        "16": {
+          "before": "c05d8ec5e12a80bd8ce06f37ec1d2fbca993897304d49594bb763e1b278c0f16",
+          "after": "8229780fa31dfac95bd747821caa19e7629bde2146cf87ae7b5317a6196851a0"
+        },
+        "24": {
+          "before": "e69f6ce78484cb2cca18a2428db5f8d00fbf1b9916654abe8c0a2755a7267f6b",
+          "after": "9e82e4cd7ec17f9e3718ccc99f4ed12e6c9c0c93a0cda09dedb0bfaeef36cfcb"
+        }
+      }
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "design/icon-set-b2/completion-preview-1-dark.png",
+      "sha256": "63d02cd3c0a7838116ec7ae95564873dfbdabc267e02cbda07a686891243bcc2"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-1-dark-mono.png",
+      "sha256": "4f7411a9911e1497ff982d46d046394af0ad5d3d80f3c885016dbc6a7def9ac7"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-1-light.png",
+      "sha256": "883fdba76eee93f831cd6cd917125796cd38cc80e022742c0b4a5d6ef112cc35"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-1-light-mono.png",
+      "sha256": "8c50ed2338607dd663fcc6b4bc12eb907d2b73ea1e0dc1b599353329d799915f"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-2-dark.png",
+      "sha256": "c5887e0546f0fd0d5a645a81b44728fce0829839b88c2c0bccf4c6f1e9c4743e"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-2-dark-mono.png",
+      "sha256": "fc5175ce439fa21d7c1d1a6edbb5aae1da51143e7a522e679ba2744327a5a80f"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-2-light.png",
+      "sha256": "db9c9c00d7e95a534302d745d638eb955823c9ace753009b8b83fd8f8afd805b"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-2-light-mono.png",
+      "sha256": "7fec62fa6bd644782d3246f06b70d796d544ccfe824b140c88ae05c9fc12a698"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-3-dark.png",
+      "sha256": "3dcfbfbe04201f15986f81924d6a1d8a9f6d82ba7d81f0689c7663420c0f435a"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-3-dark-mono.png",
+      "sha256": "d9af3c7c95acab227f6b6d1b564b91bc5973ef9822707a188ccdab5c10e01e16"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-3-light.png",
+      "sha256": "f53242c06c5c3d70958ed2537095cf34312348a80f98274851fdc6f497eec8b3"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-3-light-mono.png",
+      "sha256": "129afef77094207dd5be6638fa27f02340476a5cb84bf5e30ab46d9316250624"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-dark.png",
+      "sha256": "ab8864b87d48147341ba0f1428fbcac3a481bbeb54d09363d60f851b51a39adc"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-dark-mono.png",
+      "sha256": "142b31322e2c854e861bf95a6552b2e0bba21609335481e4ae2aa01e4ef28457"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-light.png",
+      "sha256": "5d79817e05971aebbbb80ff065e74425aea5f56390ea4a23d694984aef90f6e8"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-light-mono.png",
+      "sha256": "3494991dd1adf6bef375a2b7feb19ec3684b395e852eab1a87fcfebad56f43c6"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-dark.png",
+      "sha256": "8656152182e8a7a897d7f7e03f581c77d1a80df0b6e1623523c8fa8f01b4ea99"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-dark-mono.png",
+      "sha256": "74994428c14642273d706d9e816b697ebd356175e8b866c01622b8916a32b5a5"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-light.png",
+      "sha256": "56d5d5fa4b20b62f9c529a60b59816a6fcd4e1fc3c132504683326a62fd79a2d"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-light-mono.png",
+      "sha256": "0f964f2a0486c0c7675028c66dcf18cb0c464a0e11d6ac81a5e0c7651cff217b"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-6-dark.png",
+      "sha256": "f411217119e0b2033dff9fa63f21300e4eef09b9234336527c703c4a00d88ec3"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-6-dark-mono.png",
+      "sha256": "89d9755908bdc096c58897a912424c8a9ccb987ec9006026c6d42443fe636dd9"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-6-light.png",
+      "sha256": "09bbf9d79a00bea6a19f739fa0bc124513006253948b3cc675004b51ed6dd4c6"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-6-light-mono.png",
+      "sha256": "6dd2d3c3d52de924f6f4053034d3193caffc1ce55d90ead55445a6df6cf964db"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-dark.png",
+      "sha256": "943be46bba6530249129c5331816aeaa4acfe5c0b60ec8b0ef003589d7ed1086"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-dark-mono.png",
+      "sha256": "e80a968b85a93476eb2031e8a9cd3d2abdd4f644b18e5dcde5713a06665d20e3"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-light.png",
+      "sha256": "d693bc5333a22899b30b4cef366f468c22a140776b1ab252d339bf90f6d55530"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-7-light-mono.png",
+      "sha256": "19502b2537cb63b6aa211918cca0ab8c85a72eec72e7987dff378301c6f72cff"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-dark.png",
+      "sha256": "c10f8fe98ec0d9cc5ef8b41fd05b697558df14ecec53cebb3a458f1399f185ba"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-dark-mono.png",
+      "sha256": "6908f4438120ed1deea910a08b0f23d56b45423ed36caebcbac0f41d626f5f41"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-light.png",
+      "sha256": "f91b466656b7dfc8fd5cc56c46166b484de1523a2a6623580e7f7165ef0596f0"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-light-mono.png",
+      "sha256": "a83324da38955c48ad4df5810538da610e0b2c9dcb51122fc882e0b0e755e7ad"
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.9561660479552473e-06,
+    "rejected_failure_controls": 3,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124
+  },
+  "manifest_sha256": "ebc06d9716020cd386017db0c85363d7aa296cd0125e4a618d71282fbc28dad8",
+  "general_checks": {
+    "layout": "Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels",
+    "icons": "Reviewed shared SVGs exist; local Pointcloud integration unavailable",
+    "portable": "Canonical and review assets agree; local Pointcloud snapshot unavailable",
+    "package": "Reusable crate package: 177 files, 35 core icons, 72 domain SVGs, 32 typed ribbon icons, 6 fonts, 3 font notices, no research assets",
+    "tokens": "Tokens 0.4: 5 thema's, 190 kleurparen, alle paren halen hun minimum"
+  },
+  "rendering": "32 betrokken contactplaten met Pillow en de gebundelde Sharp-rasterizer via lokale CairoSVG-compatibiliteitsadapter; CairoSVG is op Windows niet beschikbaar.",
+  "rust_checks": "Niet uitgevoerd: Rust en crate zijn ongewijzigd.",
+  "checked_sizes": [
+    16,
+    24,
+    32
+  ]
+}

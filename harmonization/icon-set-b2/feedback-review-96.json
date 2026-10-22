@@ -1,0 +1,2498 @@
+{
+  "date": "2026-10-22",
+  "revision": 96,
+  "baseline_revision": 93,
+  "base_head": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "verdict": "Technische controles geslaagd; ontwerpen ter menselijke beoordeling.",
+  "changed_designs": 42,
+  "changed_masters": 84,
+  "unchanged_designs": 903,
+  "retained_original_designs": 316,
+  "visually_checked_sizes": [
+    16,
+    24,
+    32
+  ],
+  "visually_checked_modes": [
+    "donker met accent",
+    "licht monochroom"
+  ],
+  "live_review": {
+    "matching_canonical_masters": 84
+  },
+  "spacing": [
+    {
+      "id": "report.chapter-add",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "report.chapter-add",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "report.appendix-add",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "report.appendix-add",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "report.revision-add",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "report.revision-add",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "report.validate",
+      "master": 16,
+      "gap_px": 1.416667
+    },
+    {
+      "id": "report.validate",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "energy.pv-measure",
+      "master": 16,
+      "gap_px": 1.170533
+    },
+    {
+      "id": "energy.pv-measure",
+      "master": 24,
+      "gap_px": 1.880777
+    },
+    {
+      "id": "envelope.window-measure",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "envelope.window-measure",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "calculation.audit",
+      "master": 16,
+      "gap_px": 1.416667
+    },
+    {
+      "id": "calculation.audit",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "status.stale-result",
+      "master": 16,
+      "gap_px": 1.083333,
+      "same_semantic_colour": true
+    },
+    {
+      "id": "status.stale-result",
+      "master": 24,
+      "gap_px": 1.75,
+      "same_semantic_colour": true
+    },
+    {
+      "id": "tool.uvalue",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "tool.uvalue",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "tool.thermal-bridge",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "tool.thermal-bridge",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "tool.heat-pump-sizing",
+      "master": 16,
+      "gap_px": 1.15
+    },
+    {
+      "id": "tool.heat-pump-sizing",
+      "master": 24,
+      "gap_px": 1.85
+    },
+    {
+      "id": "calculation.recalculate",
+      "master": 16,
+      "gap_px": 0.960391
+    },
+    {
+      "id": "calculation.recalculate",
+      "master": 24,
+      "gap_px": 1.565612
+    },
+    {
+      "id": "view.cards",
+      "master": 16,
+      "gap_px": 1.04167
+    },
+    {
+      "id": "view.cards",
+      "master": 24,
+      "gap_px": 1.625
+    },
+    {
+      "id": "object.edit",
+      "master": 16,
+      "gap_px": 1.453705
+    },
+    {
+      "id": "object.edit",
+      "master": 24,
+      "gap_px": 2.30556
+    },
+    {
+      "id": "object.add",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "object.add",
+      "master": 24,
+      "gap_px": 2.250008
+    },
+    {
+      "id": "data.apply",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "data.apply",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "data.discard",
+      "master": 16,
+      "gap_px": 1.75
+    },
+    {
+      "id": "data.discard",
+      "master": 24,
+      "gap_px": 2.75
+    },
+    {
+      "id": "calculation.settings",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "calculation.settings",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "calculation.advice",
+      "master": 16,
+      "gap_px": 2.08334
+    },
+    {
+      "id": "calculation.advice",
+      "master": 24,
+      "gap_px": 3.25
+    },
+    {
+      "id": "data.pending-changes",
+      "master": 16,
+      "gap_px": 2.375
+    },
+    {
+      "id": "data.pending-changes",
+      "master": 24,
+      "gap_px": 3.625
+    },
+    {
+      "id": "report.calculation-document",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "report.calculation-document",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "report.project-dossier",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "report.project-dossier",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "file.export-options",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "file.export-options",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "project.compare-reference",
+      "master": 16,
+      "gap_px": 1.01667
+    },
+    {
+      "id": "project.compare-reference",
+      "master": 24,
+      "gap_px": 1.65
+    },
+    {
+      "id": "printer.properties",
+      "master": 16,
+      "gap_px": 1.764325
+    },
+    {
+      "id": "printer.properties",
+      "master": 24,
+      "gap_px": 2.77196
+    },
+    {
+      "id": "thermal.rooms",
+      "master": 16,
+      "gap_px": 2.416663
+    },
+    {
+      "id": "thermal.rooms",
+      "master": 24,
+      "gap_px": 3.75
+    },
+    {
+      "id": "thermal.modeller",
+      "master": 16,
+      "gap_px": 1.45278
+    },
+    {
+      "id": "thermal.modeller",
+      "master": 24,
+      "gap_px": 2.304161
+    },
+    {
+      "id": "construction.library",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "construction.library",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "thermal.overheating",
+      "master": 16,
+      "gap_px": 3.083333
+    },
+    {
+      "id": "thermal.overheating",
+      "master": 24,
+      "gap_px": 4.75
+    },
+    {
+      "id": "thermal.overheating-quick",
+      "master": 16,
+      "gap_px": 2.041667
+    },
+    {
+      "id": "thermal.overheating-quick",
+      "master": 24,
+      "gap_px": 3.125
+    },
+    {
+      "id": "tool.door-gap",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "tool.door-gap",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "tool.uw-window",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "tool.uw-window",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "tool.rainwater",
+      "master": 16,
+      "gap_px": 1.083335
+    },
+    {
+      "id": "tool.rainwater",
+      "master": 24,
+      "gap_px": 1.750059
+    },
+    {
+      "id": "tool.ramp",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "tool.ramp",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "tool.angle",
+      "master": 16,
+      "gap_px": 1.531599
+    },
+    {
+      "id": "tool.angle",
+      "master": 24,
+      "gap_px": 2.422394
+    },
+    {
+      "id": "tool.thermal-expansion",
+      "master": 16,
+      "gap_px": 1.151016
+    },
+    {
+      "id": "tool.thermal-expansion",
+      "master": 24,
+      "gap_px": 1.851388
+    },
+    {
+      "id": "diagnostics.startup-log",
+      "master": 16,
+      "gap_px": 1.416667
+    },
+    {
+      "id": "diagnostics.startup-log",
+      "master": 24,
+      "gap_px": 2.25
+    }
+  ],
+  "icons": [
+    {
+      "id": "report.chapter-add",
+      "label": "Rapporthoofdstuk toevoegen",
+      "ui_call": "addNewSection voegt een rapporthoofdstuk toe; geen begrotingshoofdstuk.",
+      "source_example": {
+        "app": "Reports",
+        "repository": "openaec-reports",
+        "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+        "name": "newSectionIcon",
+        "label": "Nieuw hoofdstuk",
+        "path": "frontend/src/components/chrome/ribbon/InsertTab.tsx",
+        "line": 36,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:50",
+        "context": "<RibbonButton icon={newSectionIcon} label={t(\"insert.newSection\")} onClick={() => addNewSection()} />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/InsertTab.tsx#L36",
+        "asset": "harmonization/function-icon-assets/a51660fbc63f6240911fbc1f6144d96c88d715433ae0c43a82b6b296798ec6c5.svg",
+        "exact_hash": "a51660fbc63f6240911fbc1f6144d96c88d715433ae0c43a82b6b296798ec6c5",
+        "geometry_hash": "f53e69d25dc7edebc33c25fd0f67072b998443f04ef06231a295a7782129595f",
+        "origins": [
+          "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:50"
+        ],
+        "function_id": "review.nieuwhoofdstuk",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "febc928aace343e8",
+        "function_label": "Nieuw hoofdstuk",
+        "category": "Appspecifieke opdrachten"
+      },
+      "assets": {
+        "16": {
+          "before": "dc136f04de120537008056e036126317cc7691d951de7a777e9e8aee60f3f8d9",
+          "after": "77f49cdb6e5d0e104f882d9efce48af4f246d969f4063d2c913fe6be8d1af8b3"
+        },
+        "24": {
+          "before": "36ea4a55695fab43134e7f519ff920e494a8916393e22f060d495e2e3c914d60",
+          "after": "5706667983527e8e41779e2bd498e930a767bfe20e7030fe8311867a46c6234b"
+        }
+      }
+    },
+    {
+      "id": "report.appendix-add",
+      "label": "Rapportbijlage toevoegen",
+      "ui_call": "addNewAppendix voegt een rapportbijlage als inhoudsstructuur toe; geen bestand bijvoegen.",
+      "source_example": {
+        "app": "Reports",
+        "repository": "openaec-reports",
+        "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+        "name": "newAppendixIcon",
+        "label": "Nieuwe bijlage",
+        "path": "frontend/src/components/chrome/ribbon/InsertTab.tsx",
+        "line": 37,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:52",
+        "context": "<RibbonButton icon={newAppendixIcon} label={t(\"insert.newAppendix\")} onClick={() => addNewAppendix()} />\n        </RibbonGroup>\n\n        <RibbonGroup label={t(\"insert.content\")}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/InsertTab.tsx#L37",
+        "asset": "harmonization/function-icon-assets/932e10ed0db129f099e766a00a8d6c12c2b32b19f50d27917e1c29f536781d5a.svg",
+        "exact_hash": "932e10ed0db129f099e766a00a8d6c12c2b32b19f50d27917e1c29f536781d5a",
+        "geometry_hash": "4af262d2b5fe8441059d562207307e9b6f424f0e30d251595a60724fa29381f7",
+        "origins": [
+          "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:52"
+        ],
+        "function_id": "review.nieuwebijlage",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "523c48707977c3ce",
+        "function_label": "Nieuwe bijlage",
+        "category": "Appspecifieke opdrachten"
+      },
+      "assets": {
+        "16": {
+          "before": "117f3a88b44f93d1316771a3192704e20892f122a7f7513a29b820258df32d10",
+          "after": "6764ccdb060f9c3f9967440ccf554cf91e3b1b240aa5632385098500bf07b216"
+        },
+        "24": {
+          "before": "55c33a7ac2cf44e85240c25950146c9309d14d382d9f7ba1489e14fe8daba162",
+          "after": "db1a626162f6e9cf4ca7e2216041cfea11a4d937c51a6ad2a9acca186933f159"
+        }
+      }
+    },
+    {
+      "id": "report.revision-add",
+      "label": "Rapportrevisie toevoegen",
+      "ui_call": "addRevision voegt een revisieregel toe aan het colofon.",
+      "source_example": {
+        "app": "Reports",
+        "repository": "openaec-reports",
+        "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+        "name": "ColofonForm:svg-411",
+        "label": "Revisie toevoegen",
+        "path": "frontend/src/components/forms/ColofonForm.tsx",
+        "line": 411,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd",
+        "origin": "volledige clientbronscan",
+        "context": "<button\n              onClick={addRevision}\n              className=\"mt-2 flex items-center gap-1 rounded px-2 py-1 text-xs text-oaec-text-faint hover:bg-oaec-accent-soft hover:text-oaec-accent transition-colors\"\n            >\n              <svg className=\"h-3.5 w-3.5\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth={2} stroke=\"currentColor\">\n                <path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M12 4.5v15m7.5-7.5h-15\" />\n              </svg>\n              Revisie toevoegen\n            </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/forms/ColofonForm.tsx#L411",
+        "asset": "harmonization/function-icon-assets/96ff09e008bce3462cc66fc70048caecd61a4089e4af19d900de4903a1e23aae.svg",
+        "exact_hash": "2316b30913a2d7842bd3dd8970690ba503a4333ba29fe9e1fed80152d90f3fd3",
+        "geometry_hash": "c0db620bb322179b8a5b24bfc68deca6d33bb6f06af34698a0d11fc8eb3adbc8",
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.revisietoevoegen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "ae01c23637299b40",
+        "function_label": "Revisie toevoegen",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "cf410ad0c0e2d396b160db545becf5bfa275ce72640c848a0c6c260a92ed3be5",
+          "after": "5fb2f2f2ffe8a6571098ccc05bca972dea2aa626d623baf1a8a7bfe93280070d"
+        },
+        "24": {
+          "before": "698010f8645f720785203084e0d4b54d058003dbff8ba94a25d3b6c31e3c4d70",
+          "after": "b6bbbbb2bae974b2f03541c3f4cc820508f855a712f4b9effeebb0f36068fe97"
+        }
+      }
+    },
+    {
+      "id": "report.validate",
+      "label": "Rapport controleren",
+      "ui_call": "onValidate laat de rapportdefinitie controleren; geen IFC-model valideren.",
+      "source_example": {
+        "app": "Reports",
+        "repository": "openaec-reports",
+        "commit": "818e58118c0f046410137a3f5a948e4871d21e77",
+        "name": "validateIcon",
+        "label": "Valideren",
+        "path": "frontend/src/components/chrome/ribbon/HomeTab.tsx",
+        "line": 81,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:28",
+        "context": "<RibbonButton\n            icon={validateIcon}\n            label={t(\"home.validate\")}\n            onClick={onValidate}\n            disabled={!connected || isValidating}\n          />\n        </RibbonGroup>\n\n        <RibbonGroup label={t(\"home.output\")}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-reports/blob/818e58118c0f046410137a3f5a948e4871d21e77/frontend/src/components/chrome/ribbon/HomeTab.tsx#L81",
+        "asset": "harmonization/function-icon-assets/239d76c892df90d61d4addeaf9d0cb153e19f89c7ecd1a174ee2b04cd38b7648.svg",
+        "exact_hash": "239d76c892df90d61d4addeaf9d0cb153e19f89c7ecd1a174ee2b04cd38b7648",
+        "geometry_hash": "cf0ed6aa5262b9bca8491e20296ce7ec34912289fe3f5951a4a4e76d9716d923",
+        "origins": [
+          "clientbronscan: frontend/src/components/chrome/ribbon/icons.ts:28"
+        ],
+        "function_id": "ifc.validate",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "07694e578e0da59b",
+        "function_label": "IFC valideren",
+        "category": "IFC en BIM"
+      },
+      "assets": {
+        "16": {
+          "before": "78d3e67299f4223e5a59465fc9a5647d7a347933e9c4ac838cea2404612a401a",
+          "after": "b06f38c05222bd10aa16ce0567901caef681b2a6eb765d200c6ae3b8664dffb1"
+        },
+        "24": {
+          "before": "d71d92ad5cb8f1ffd7a75fe488b0e23002db746c9d3a29c46163e5dd81693fbd",
+          "after": "3f25ffbfbede367691c09efe7a84f96e896abcf84500708a3730599bb0d1dff4"
+        }
+      }
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "label": "Warmwatermaatregel",
+      "ui_call": "In SurveyMwa een maatregel van kind hotWater toevoegen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Droplet",
+        "label": "Droplet",
+        "path": "src/components/SurveyWizard/SurveyMwa.tsx",
+        "line": 34,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Warm tapwater",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "  hotWater: <Droplet />, ventilation: <Wind />, pv: <Sun />,\n};\nconst LIFETIME: Record<SurveyMeasureKind, number> = { roof: 40, facade: 40, floor: 40, windows: 30, heating: 15, hotWater: 15, ventilation: 15, pv: 25 };\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L34",
+        "asset": "harmonization/ui-icons/open-energy-studio/droplet.svg",
+        "exact_hash": "db3e5b200c4e1ef56a11ae9828064c36eb77a1b3af49c2d4f3b6e3ef336c1a9a",
+        "geometry_hash": "0f00494b3a3e36672c25ce0247b98588efbaf165f5c4175941938c187a87cc08",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.droplet",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "8d5f3f68dc1f00c1",
+        "function_label": "Droplet",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "1c67a783862134730a478c69546c2932949cf008afc58eaa1485f0642cd7860d",
+          "after": "361e41068a4e612214e110d00b0bf4ec98715f5bc7f2e8ec6705f9721d0df1c0"
+        },
+        "24": {
+          "before": "cf89acf58173096008cd2d29fcc93fef5e9da2c47a92c99a770280f6b2167008",
+          "after": "bf81bbc4db2d7be420bc86dc29ae447254898f200086c09973a18fdec2e818ba"
+        }
+      }
+    },
+    {
+      "id": "energy.pv-measure",
+      "label": "PV-maatregel",
+      "ui_call": "In SurveyMwa een maatregel van kind pv toevoegen; geen licht thema.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Sun",
+        "label": "Sun",
+        "path": "src/components/SurveyWizard/SurveyMwa.tsx",
+        "line": 34,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Zonnepanelen",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "  hotWater: <Droplet />, ventilation: <Wind />, pv: <Sun />,\n};\nconst LIFETIME: Record<SurveyMeasureKind, number> = { roof: 40, facade: 40, floor: 40, windows: 30, heating: 15, hotWater: 15, ventilation: 15, pv: 25 };\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L34",
+        "asset": "harmonization/ui-icons/open-energy-studio/sun.svg",
+        "exact_hash": "3eaf38aeb0994c34a9d01471e57d986267b80e2e01e42f865a018995f359e56c",
+        "geometry_hash": "8a5523c72aca9b0750334204acbf8f6c6c965b1a97740a1fb42d31bbd1b8fab3",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.sun",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "dce1b9f63a847b87",
+        "function_label": "Sun",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "fc1ac10d2c23c02865907ae65fd3983edb6ff4fac018b5ea76a2a7270bfa1347",
+          "after": "3801a90c22af9d0dfd6b153e4f0e480d44390ccab4fe0eb9664af18fbbb21bae"
+        },
+        "24": {
+          "before": "c6bcabee29cf6311ddb5a0e1ccdfd7b9a3bec5f8ba54583512a823c65406792f",
+          "after": "66e861d27fbfa85172fec7eba483c1e70598b6cb0e29a9cb5f37f3355c9cbc43"
+        }
+      }
+    },
+    {
+      "id": "envelope.window-measure",
+      "label": "Raammaatregel",
+      "ui_call": "Een verbetermaatregel voor ramen toevoegen; geen paneel verbergen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "PanelTop",
+        "label": "PanelTop",
+        "path": "src/components/SurveyWizard/SurveyMwa.tsx",
+        "line": 33,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Raamconstructie",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "  roof: <Home />, facade: <LayoutGrid />, floor: <Layers />, windows: <PanelTop />, heating: <Flame />,\n  hotWater: <Droplet />, ventilation: <Wind />, pv: <Sun />,\n};\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L33",
+        "asset": "harmonization/ui-icons/open-energy-studio/panel-top.svg",
+        "exact_hash": "4102e614813a31e1e318b051f8b2b72c58d1736f565ea3c782fa3e5101f9af25",
+        "geometry_hash": "8be5d4cc6a2e46e83a671fd08539b521284bbc9910181c9705f720ef16cb488c",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.paneltop",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a946a52c2a68381f",
+        "function_label": "Panel Top",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "47e5a66b8b76f12e2c50be50297853b6dccadf5c649011247c665d6e2b02a0b2",
+          "after": "7e3ce983da7f55be28d46820867c4f71fa5a843a6e385cc211c1ae56f33117be"
+        },
+        "24": {
+          "before": "5297d0b384b4b57976dec4ca3a9a978818c375015c3be005388e0e0a08e6c576",
+          "after": "41d4d62a4384060d93bc919600c2cecc7097a73572acf88a9f6e18e09920cfb2"
+        }
+      }
+    },
+    {
+      "id": "calculation.audit",
+      "label": "Rekenkerncontrole",
+      "ui_call": "Vaste kop van de NTA-rekenkernaudit; geen IFC-validatie starten.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "ShieldCheck",
+        "label": "ShieldCheck",
+        "path": "src/components/KernelAuditPanel/KernelAuditPanel.tsx",
+        "line": 45,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Geslaagde kerncontrole",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <div className=\"kernel-audit-title\"><ShieldCheck size={19} /><div>\n          <h3>{t('kernel.title')}</h3>\n          <p>{t('kernel.subtitle')}</p>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/KernelAuditPanel/KernelAuditPanel.tsx#L45",
+        "asset": "harmonization/ui-icons/open-energy-studio/shield-check.svg",
+        "exact_hash": "24ee30ab30b9cac652f121d5a20a54904a78a3fbc57f155e2e706569cd431db7",
+        "geometry_hash": "266f34884ec30beb89d2bd6f213f52cc2482ed0fae1880b506db251d4e55a7aa",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "ifc.validate",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "1f0f0ba95c5bb04d",
+        "function_label": "IFC valideren",
+        "category": "IFC en BIM"
+      },
+      "assets": {
+        "16": {
+          "before": "c45bed74deb75745fb15c9dde1f7a7e5d70ef25735dfa656e7d951c8cd986af3",
+          "after": "cb61bd300819c1091bd9a9dbe519ab5b7febac025926e1a3c2b81878d4edd91b"
+        },
+        "24": {
+          "before": "2da715b2adaa20f7925fa7b774a006b42052cbeb3408faa841c2a8eaddca3a76",
+          "after": "a130d0711b825808ded5cdc8b511b3f4f4a7c2a5ea2580005fb969c196c5b977"
+        }
+      }
+    },
+    {
+      "id": "status.unverified",
+      "label": "Niet geverifieerd",
+      "ui_call": "De unv-toestand van een indicatief, ongeverifieerd resultaat aanduiden.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "ShieldQuestion",
+        "label": "ShieldQuestion",
+        "path": "src/components/ui/Display.tsx",
+        "line": 15,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Niet-geverifieerde toestand",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "  unv: <ShieldQuestion aria-hidden=\"true\" />,\n};\n\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ui/Display.tsx#L15",
+        "asset": "harmonization/ui-icons/open-energy-studio/shield-question.svg",
+        "exact_hash": "3007162b477444d5e514baff9936600e03bd04d56f4e280c14c2f3f2cb7b1671",
+        "geometry_hash": "f6fd25a82a6df9f389014310c4ef598039df67ffcacdffb5b85ce967f93a8188",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.shieldquestion",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "f1eb114086c91e50",
+        "function_label": "Shield Question",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "4a1ad4f65103231f370b386656a0c79fdac8d7238873bdec6f996b85bfaa31db",
+          "after": "fa7100bebc9ae30d36c4ce96c750e4932ea004b1be6eaeabef0f905beed65fa1"
+        },
+        "24": {
+          "before": "0c4f703afaafb6055af3b6b13f53d140dd1093231a1c1f0591add1defaa7a0b8",
+          "after": "a76feb53ad92c4eafe470d9bda93bc7ef06defed64b6cea2fb25fbb95e764582"
+        }
+      }
+    },
+    {
+      "id": "status.stale-result",
+      "label": "Resultaat hoort bij eerdere invoer",
+      "ui_call": "StaleBanner meldt dat het getoonde resultaat bij eerdere gegevens hoort.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "History",
+        "label": "History",
+        "path": "src/components/ui/Display.tsx",
+        "line": 185,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Historie of terugblikmelding",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "      <span className=\"ui-banner__icon\"><History aria-hidden=\"true\" /></span>\n      <div className=\"ui-banner__text\">\n        <strong>{t('ui.stale.title')}</strong> {children ?? t('ui.stale.text')}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ui/Display.tsx#L185",
+        "asset": "harmonization/ui-icons/open-energy-studio/history.svg",
+        "exact_hash": "7dfa0430b50fcf16450b782cf917436652d6d282216b8260285a1925c9a411d0",
+        "geometry_hash": "0a27024c610144612b2ddf4d2a4d983d578a9bc5659cdf0154fd8f089257ed69",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.history",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "22cd49cb2d602f70",
+        "function_label": "History",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "f871965d7eae8c831b23d66a49f914798250e5e412e0e47cec9ca8843a11b6b4",
+          "after": "f3a03519b5bda73972e5db85a16aafe7648699f9cf4c6e2badd5772e43df510b"
+        },
+        "24": {
+          "before": "64c0ad5588a40e09d59e17e3388edf8dbd2a418242b0696fac2d9f6a70beff6b",
+          "after": "2f071c040093a4e3643e0751195954ab6c24b2cc8214a0159310520c8c283cf8"
+        }
+      }
+    },
+    {
+      "id": "tool.uvalue",
+      "label": "Rc/U-rekenhulp",
+      "ui_call": "De werkruimte tool/uvalue openen; nog geen projectberekening starten.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Calculator",
+        "label": "Calculator",
+        "path": "src/components/shell/WorkflowNav.tsx",
+        "line": 273,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Berekening, prestatie of rekentool",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<button key={sub.id} type=\"button\" role=\"menuitem\" className=\"shell-menu-item\"\n                onClick={tools.select(() => actions.navigate({ step: 'tool', sub: sub.id }))}>\n                {sub.id === 'heat-pump-sizing' ? <Flame aria-hidden=\"true\" /> : <Calculator aria-hidden=\"true\" />}<span>{t(sub.labelKey)}</span>\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L273",
+        "asset": "harmonization/ui-icons/open-energy-studio/calculator.svg",
+        "exact_hash": "71c204dc4a35fd946acc438bfdb953093ccf8f326fa4550485a319fba3abb96a",
+        "geometry_hash": "b84a92eecc82db63fa4192a003575b3ab4c55110d779d8c9e7feeffd9c7756bb",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.calculator",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "4a788dbae13f93a9",
+        "function_label": "Calculator",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "064b3b3a66a0140769e40f90d1b2d1e2196b4915393d1ac58207ef24b45ba1b3",
+          "after": "63a827a6e13db87d98a95afd6c9c04c731f3b26ef0b760853ba5562f4c28cfc6"
+        },
+        "24": {
+          "before": "5cff6d78b8b412df3cccfafc5f6d862c394aeb47d3ee0368e02afd2e7caaa185",
+          "after": "bd4c4211f8278ff3c5312dc5c0190f180ad9ea199377fa026131b0876ffed98c"
+        }
+      }
+    },
+    {
+      "id": "tool.thermal-bridge",
+      "label": "Koudebrugrekenhulp",
+      "ui_call": "De werkruimte tool/thermal-bridge openen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Calculator",
+        "label": "Calculator",
+        "path": "src/components/shell/WorkflowNav.tsx",
+        "line": 273,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Berekening, prestatie of rekentool",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<button key={sub.id} type=\"button\" role=\"menuitem\" className=\"shell-menu-item\"\n                onClick={tools.select(() => actions.navigate({ step: 'tool', sub: sub.id }))}>\n                {sub.id === 'heat-pump-sizing' ? <Flame aria-hidden=\"true\" /> : <Calculator aria-hidden=\"true\" />}<span>{t(sub.labelKey)}</span>\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L273",
+        "asset": "harmonization/ui-icons/open-energy-studio/calculator.svg",
+        "exact_hash": "71c204dc4a35fd946acc438bfdb953093ccf8f326fa4550485a319fba3abb96a",
+        "geometry_hash": "b84a92eecc82db63fa4192a003575b3ab4c55110d779d8c9e7feeffd9c7756bb",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.calculator",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "4a788dbae13f93a9",
+        "function_label": "Calculator",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "f42151719612a5cb15bd7431938dd1ea8a9550ae425a5454d09abc2a0130051f",
+          "after": "058c4c63ff10405d863404561101e561e7ae88c6059c39f09035243d58e814e5"
+        },
+        "24": {
+          "before": "a4f4503b3d4da0f086fbb6dca7126073cbd1969bea0ed2a5fe50d8e18de1f839",
+          "after": "af71a86a81ff5130b2badcef555c27e1cbf3c4d7b37b05e28b0dddee2619a7b9"
+        }
+      }
+    },
+    {
+      "id": "tool.heat-pump-sizing",
+      "label": "Warmtepompdimensionering",
+      "ui_call": "De werkruimte tool/heat-pump-sizing openen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Flame",
+        "label": "Flame",
+        "path": "src/components/shell/WorkflowNav.tsx",
+        "line": 273,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Verwarming of gasgestookt systeem",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<button key={sub.id} type=\"button\" role=\"menuitem\" className=\"shell-menu-item\"\n                onClick={tools.select(() => actions.navigate({ step: 'tool', sub: sub.id }))}>\n                {sub.id === 'heat-pump-sizing' ? <Flame aria-hidden=\"true\" /> : <Calculator aria-hidden=\"true\" />}<span>{t(sub.labelKey)}</span>\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L273",
+        "asset": "harmonization/ui-icons/open-energy-studio/flame.svg",
+        "exact_hash": "8d8a1fe00f55bec6beeb0833ce8a3148389dddc7231de158d94c9553580212f1",
+        "geometry_hash": "09c68dc9238139a5ba63ae55eaa5a3a96310982d02988c8055f671364724729b",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.flame",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "ee8d229e37f0fc7e",
+        "function_label": "Flame",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "cdda07e69309c55cb851882dc95a74faf5a38aac03f14377025a56d20ef3195f",
+          "after": "25dab8ea8673a0b4ac860873da18266dd7b49e342a517299355ee5702a434310"
+        },
+        "24": {
+          "before": "dd4f118c6306d12953b5fd6bc95cfee8a85194fd80af46676fb8ab1c2c7ef2ad",
+          "after": "50ea373f3ceceb716d9046e7806fec6d95569e441df1e3d874223e26ece40a04"
+        }
+      }
+    },
+    {
+      "id": "ui.tools",
+      "label": "Gereedschapmenu",
+      "ui_call": "Het gereedschapmenu met rekenhulpen en uitwisseling openen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Wrench",
+        "label": "tools",
+        "path": "src/components/shell/WorkflowNav.tsx",
+        "line": 265,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Gereedschappen openen",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<button type=\"button\" ref={tools.buttonRef} className=\"nav-step\" aria-haspopup=\"menu\" aria-expanded={tools.open}\n          aria-current={route.step === 'tool' ? 'page' : undefined} onClick={() => tools.setOpen(!tools.open)}>\n          <Wrench aria-hidden=\"true\" /><span className=\"nav-step-label\">{t('nav.tools')}</span><ChevronRight aria-hidden=\"true\" />\n        </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/WorkflowNav.tsx#L265",
+        "asset": "harmonization/ui-icons/open-energy-studio/wrench.svg",
+        "exact_hash": "e36f93cdd0448ca519629b9cfdd452a10d9574332b4d0d89199ca71a63133846",
+        "geometry_hash": "6a3aee3aa16fc28a6e05be5058d8ac1b25e07a906eadcceb5373fd6657ab272f",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.tools",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "e873549e652feb6f",
+        "function_label": "tools",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "dfa78f62fa910826962670c308b3425ae213f638c26bcff918de67952628f3ee",
+          "after": "c83c2bfde75eaad9a57da3e84ec32041011c43731ba01fd252f24247eb8eba2e"
+        },
+        "24": {
+          "before": "791a61e9249c1b289d55c29a342780dcb22b4a4dacc809a42bacc7ce3da60658",
+          "after": "c72163d627cd561797170a6747945a4812310e93eb84ed73086d5826fd2ecb09"
+        }
+      }
+    },
+    {
+      "id": "calculation.recalculate",
+      "label": "Project herberekenen",
+      "ui_call": "De berekening voor het huidige project uitvoeren of verversen; de Energy-bron ververst de kernel en berekent de indicatieve BENG-uitkomst met invoercontroles.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "RefreshCw",
+        "label": "feedback",
+        "path": "src/components/shell/TopBar.tsx",
+        "line": 175,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Berekening opnieuw uitvoeren",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<MenuItem icon={<MessageSquare aria-hidden=\"true\" />} label={t('nav.feedback')} onSelect={fileMenu.select(props.onOpenFeedback)} />\n            </div>\n          )}\n        </div>\n        {props.hasDocument && <>\n          <Button icon={<Save aria-hidden=\"true\" />} onClick={props.onSaveProject} title={`${t('ribbon.save')} (Ctrl+S)`}\n            aria-keyshortcuts=\"Control+S\"><span className=\"top-bar-label\">{t('shell.save')}</span></Button>\n          <Button variant=\"primary\" icon={<RefreshCw aria-hidden=\"true\" />} kbd=\"Ctrl ↵\" onClick={props.onRecalculate}\n            loading={props.recalculating} aria-keyshortcuts=\"Control+Enter\"><span className=\"top-bar-label\">{t('shell.recalculate')}</span></Button>\n          <IconButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/TopBar.tsx#L175",
+        "asset": "harmonization/ui-icons/open-energy-studio/refresh-cw.svg",
+        "exact_hash": "7b858128cc6af897f969165d644017cb97f7cae10637743fac11027bc025c4e8",
+        "geometry_hash": "a94220c6890c557b29ca605c79b2793358a85d8a2460a8a5ec219a3992fd7282",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "file.save",
+        "function_status": "functie uit label; controleren",
+        "id": "3a00cfe83ca46f9d",
+        "function_label": "Opslaan",
+        "category": "Bestanden"
+      },
+      "assets": {
+        "16": {
+          "before": "00e1450f202e540dae40215f63054de70f7064397a4dc690333dea874f2a50b7",
+          "after": "231d0a6ecf4c69710156225e66c4b0f639bbd6b0d7f52b79b06df9648037a15f"
+        },
+        "24": {
+          "before": "21c2ec7e656d7f94dd6a62759ad9ae496f4a934f0fdf48ed4338dd221166eafd",
+          "after": "a6698ff922257f1315321385f15a33ddbc294999208b980fb1cc2b04078d37a7"
+        }
+      }
+    },
+    {
+      "id": "view.cards",
+      "label": "Kaartweergave",
+      "ui_call": "chooseView cards toont de bibliotheek als projectkaarten.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "LayoutGrid",
+        "label": "cards",
+        "path": "src/components/WelcomeScreen/WelcomeScreen.tsx",
+        "line": 290,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Gevel, alle mappen of rasterweergave",
+          "status": "betekenis scheiden",
+          "rationale": "Bouwdeel, bibliotheekfilter en weergaveknop zijn drie betekenissen van hetzelfde raster.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<IconButton size=\"sm\" icon={<LayoutGrid aria-hidden=\"true\" />} aria-label={t('library.view.cards')} aria-pressed={view === 'cards'} onClick={() => chooseView('cards')} />\n                <IconButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/WelcomeScreen.tsx#L290",
+        "asset": "harmonization/ui-icons/open-energy-studio/layout-grid.svg",
+        "exact_hash": "2b87de2066adecb96d508a1e6c176ebaa0f159c8b7a08e37b0f4479963a00d7b",
+        "geometry_hash": "c55bdcebe52f8e9feda06f44aacb88107ae6385516cb2c4d626d27ba9ed462ae",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.cards",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "24c392036496d263",
+        "function_label": "cards",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "cbc392c6eeb0b2803d5cf1bd8ffa4d91476933f7fdee82a2b0634e742f9b9e90",
+          "after": "93d6e6c0a9ca76cda6a43ed88a7d40eb8564007bce64de318cbbfd52c977903a"
+        },
+        "24": {
+          "before": "3885a3c0f2362a782d05bbcf33684426339ee36473750ef9f19ce4b11e714270",
+          "after": "b6e64d961b333448986d81626462158fe7b55293396752720e41b5ad2258ea07"
+        }
+      }
+    },
+    {
+      "id": "object.edit",
+      "label": "Gegevens bewerken",
+      "ui_call": "De editor of het gegevensformulier van het benoemde onderdeel openen.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Pencil",
+        "label": "edit",
+        "path": "src/components/ItemActions/ItemActions.tsx",
+        "line": 46,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Item bewerken of projectinformatie openen",
+          "status": "betekenis scheiden",
+          "rationale": "Een projectinformatiedialoog openen vraagt een eigen contextbesluit naast item bewerken.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "<button type=\"button\" className={compact ? 'item-actions__icon' : 'btn btn-sm'} aria-label={`${t('dialog.edit')}: ${name}`}\n      title={compact ? t('dialog.edit') : undefined}\n      onClick={() => dispatch(edit)}>{compact ? <Pencil aria-hidden=\"true\" /> : t('dialog.edit')}</button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/ItemActions/ItemActions.tsx#L46",
+        "asset": "harmonization/ui-icons/open-energy-studio/pencil.svg",
+        "exact_hash": "cd27545b01b09814e9ed320289f43dc06870cf965d4ec36bf508726fbd9bd778",
+        "geometry_hash": "22b85d5eeeb1bf3fdd7b0343c8413e23498cf4f587a69c8ca2074e1f8b231334",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.edit",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "12fccfa42f0c1d69",
+        "function_label": "edit",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "3517f7f3c36f06bcc5eca0b677179ed72bb2b046dd3a3603307036a08d390c10",
+          "after": "cd618d7f711b3002a3be2537f851faca2ff5ec26641f27364e29f5e65c001f7d"
+        },
+        "24": {
+          "before": "99e12b761a35e6c82f0ef7bd99cbc0dc8b833c1f7a5d47fd81f99c7d88ddc2e4",
+          "after": "41262dd2c3bad11ca8ded2725c4a977e9214cdc851d53b0e1b2d55ea7eacbc47"
+        }
+      }
+    },
+    {
+      "id": "object.add",
+      "label": "Onderdeel toevoegen",
+      "ui_call": "Het toevoegen van een benoemd projectonderdeel starten, via invoerformulier of een nieuw standaarditem.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Plus",
+        "label": "Plus",
+        "path": "src/components/shell/pages/BuildingPages.tsx",
+        "line": 67,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Wisselende entiteit toevoegen",
+          "status": "betekenis scheiden",
+          "rationale": "Een generieke plus is niet automatisch `Icon::New` voor een document; houd de entiteit in de knoptekst.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <Button key={entry.dialog} size=\"sm\" variant={entry.primary ? 'primary' : undefined} icon={<Plus aria-hidden=\"true\" />}\n          title={t(entry.labelKey)} onClick={() => open(entry.dialog)}>{t(entry.labelKey)}</Button>\n      ))}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/BuildingPages.tsx#L67",
+        "asset": "harmonization/ui-icons/open-energy-studio/plus.svg",
+        "exact_hash": "0cad78fc7bd7e12fbe33b74c0b1542dd24964a70b9f527b453821cd2b89da622",
+        "geometry_hash": "34283165cdac13c957fc894905b0a3319acecc57fee001f300d3974f280a2612",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.plus",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "aa85854b8c78dc4e",
+        "function_label": "Plus-vorm: toevoegen of menu controleren",
+        "category": "Betekenisconflicten"
+      },
+      "assets": {
+        "16": {
+          "before": "6409ff186cd94dae16309af9586d5cd258639a6ea5ba5f8477446a48aee8c14e",
+          "after": "68fdaf0b34f5184b5f5fa1c83fe3ba0311e1d902e599b7659e9bd1b35b76ab0e"
+        },
+        "24": {
+          "before": "e759c2d13363ee69a8d546b6a1f30bd7dedef6a4f5a5113005a8cc67bc6accc1",
+          "after": "eddfbf24e507fb6b953f65bd746b1614f72a2d662c767622cfa3daa192437f6c"
+        }
+      }
+    },
+    {
+      "id": "data.apply",
+      "label": "Invoer toepassen",
+      "ui_call": "De bewerkte invoer vastleggen in het actieve project of de gekozen bibliotheek; het label benoemt welke gegevens worden toegepast.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Save",
+        "label": "Save",
+        "path": "src/components/shell/pages/RegistrationForm.tsx",
+        "line": 311,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Project opslaan én Opslaan als",
+          "status": "betekenis scheiden",
+          "rationale": "De bron gebruikt één diskette voor twee commando’s; `Icon::SaveAs` heeft een eigen vorm.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <Button type=\"submit\" variant=\"primary\" icon={<Save aria-hidden=\"true\" />} disabled={!canSave}\n          aria-describedby={canSave ? undefined : `${formId}-clean`}>{t('registration.form.save')}</Button>\n      </div>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/RegistrationForm.tsx#L311",
+        "asset": "harmonization/ui-icons/open-energy-studio/save.svg",
+        "exact_hash": "40d697c5494dc0667f3c7bb9b1683307699102f5fc63edbbcb49e76a3b3c1ce2",
+        "geometry_hash": "b6530ad399bd73fd493f6afedaa08f8c18e56083e82079664942a52df40d60dc",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "file.save",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "a50fb8d5141360ae",
+        "function_label": "Opslaan",
+        "category": "Bestanden"
+      },
+      "assets": {
+        "16": {
+          "before": "0b82c3fde0d69ba1e3efb069d1eaee20acac8472b3f41191073ea10ccdc83f2b",
+          "after": "0b7db77c279c9eb8ebea903607cb841dd8ce3039b7f842b51814a7d3aafd01d7"
+        },
+        "24": {
+          "before": "52dca2e01deb21f653351e3c6f58a35a7b54b7918548343ae528568942ee3d63",
+          "after": "8f76e47ce8ce47131f61a0be057b27e9aab5ecb7cc941900380bca6ede611fa2"
+        }
+      }
+    },
+    {
+      "id": "data.discard",
+      "label": "Invoer verwerpen",
+      "ui_call": "Niet-toegepaste invoerwijzigingen verwerpen en de bewerkingsronde of het formulier terugzetten naar de opgeslagen toestand.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Undo2",
+        "label": "Undo2",
+        "path": "src/components/shell/pages/RegistrationForm.tsx",
+        "line": 308,
+        "role": "",
+        "evidence": "bronreview",
+        "review": {
+          "semantic_target": "Icon::Undo"
+        },
+        "assessment": {
+          "meaning": "Bewerking terugdraaien",
+          "status": "gedeelde kandidaat",
+          "rationale": "Vergelijk knopmaat en toestand in de native Energy-schermreview vóór vervanging.",
+          "source": "energy-icon-crosswalk.json",
+          "semantic_target": "Icon::Undo"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <Button type=\"button\" variant=\"ghost\" icon={<Undo2 aria-hidden=\"true\" />} disabled={!dirty}\n          onClick={discard}>{t('registration.form.discard')}</Button>\n        {/* Nothing changed, nothing to save (UX finding 8). */}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/RegistrationForm.tsx#L308",
+        "asset": "harmonization/ui-icons/open-energy-studio/undo-2.svg",
+        "exact_hash": "186162d71ba4fe4b765dd3292afa3ce7b03c771dc63fb223c94c3a4179cef330",
+        "geometry_hash": "793c92f00b8d4c738e7638d67f9f4f6425b76257312337e9fb34574d5a48b7b2",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "edit.undo",
+        "function_status": "bronreview van functie",
+        "id": "7d2416e0953012ea",
+        "function_label": "Ongedaan maken",
+        "category": "Bewerken"
+      },
+      "assets": {
+        "16": {
+          "before": "983d93c265245284af093876e7250bb5c472ce92d188444904cec6601a9ce81b",
+          "after": "24db737a43a3b06c181389484497d20718c599e68d56a6abf8657134e705cc90"
+        },
+        "24": {
+          "before": "419f230cceac505542df08a29978a2cbba3d4f45a3c926f41c7dcbad243f8137",
+          "after": "27bdd7645c7ba7312f33965ea96d513e7afba50e54918882c771faf6536c0451"
+        }
+      }
+    },
+    {
+      "id": "calculation.settings",
+      "label": "Rekenvoorkeuren",
+      "ui_call": "Het paneel met rekenvoorkeuren openen; Energy gebruikt hiervoor het tabblad calculation.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Calculator",
+        "label": "Calculator",
+        "path": "src/components/SettingsDialog/SettingsDialog.tsx",
+        "line": 137,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Berekening, prestatie of rekentool",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "    { id: 'calculation', label: t('settings.calculation'), icon: <Calculator aria-hidden=\"true\" /> },\n    { id: 'about', label: t('settings.about'), icon: <Info aria-hidden=\"true\" /> },\n  ];\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SettingsDialog/SettingsDialog.tsx#L137",
+        "asset": "harmonization/ui-icons/open-energy-studio/calculator.svg",
+        "exact_hash": "71c204dc4a35fd946acc438bfdb953093ccf8f326fa4550485a319fba3abb96a",
+        "geometry_hash": "b84a92eecc82db63fa4192a003575b3ab4c55110d779d8c9e7feeffd9c7756bb",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.calculator",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "aeff5f860c136110",
+        "function_label": "Calculator",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "99367deb4fce25491357d4dbd8db7a4f7b31ba4c521eadf60c89c3976e57da14",
+          "after": "5827696f9193352bf4e5c383f2e22d5647fc7b80531a21b8acb14e7701ec0d5a"
+        },
+        "24": {
+          "before": "2e5245a3b449b7c2f3d3577c24fd6e44b62340ce6a08caceeed92bd415faa341",
+          "after": "9d334446f1a27eb7ecd773e03f8d43be5f9c897e0d55e0b3f05eadd2802b7690"
+        }
+      }
+    },
+    {
+      "id": "calculation.advice",
+      "label": "Maatwerkadvies berekenen",
+      "ui_call": "calculate berekent de huidige maatregelvarianten en pakketten voor het maatwerkadvies.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "RefreshCw",
+        "label": "RefreshCw",
+        "path": "src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx",
+        "line": 809,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Berekening opnieuw uitvoeren",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <Button variant=\"primary\" icon={<RefreshCw aria-hidden=\"true\" />} loading={busy} disabled={busy}\n          onClick={() => { void calculate(); }}>{busy ? t('mwa.calculating') : t('mwa.calculate')}</Button>\n      </div>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/MaatwerkadviesPanel.tsx#L809",
+        "asset": "harmonization/ui-icons/open-energy-studio/refresh-cw.svg",
+        "exact_hash": "7b858128cc6af897f969165d644017cb97f7cae10637743fac11027bc025c4e8",
+        "geometry_hash": "a94220c6890c557b29ca605c79b2793358a85d8a2460a8a5ec219a3992fd7282",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "ui.refresh",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "cedd5304a944cc34",
+        "function_label": "Vernieuwen",
+        "category": "Instellingen en hulp"
+      },
+      "assets": {
+        "16": {
+          "before": "c1981fafa2d635fef7e603ea5a521fdd42d3e049d46635b6a838c596f71c0297",
+          "after": "d0507b41e83be868a218f9df461df8feae5d57486c59cb11ce4305d317a3fa61"
+        },
+        "24": {
+          "before": "b5ebc34474d36ec6e2f3a5ada06156902d858135e1eb75a59d0b98a00439677e",
+          "after": "bebb9090e73df9b15f8374836dcd633274f3c9aced1653d0ee1cac394a7ffbec"
+        }
+      }
+    },
+    {
+      "id": "data.pending-changes",
+      "label": "Gewijzigde invoervelden",
+      "ui_call": "Vaste aanduiding bij de lijst nog toe te passen invoervelden; geen rapportopdracht.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "FileText",
+        "label": "FileText",
+        "path": "src/components/shell/NtaStepPage.tsx",
+        "line": 425,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Rapport, berekening of bestandsnamen",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "        <FileText aria-hidden=\"true\" /> {names.slice(0, 3).join(', ')}{names.length > 3 ? ` +${names.length - 3}` : ''}\n      </p>}\n      <div className=\"nta-apply-bar__actions\">\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/NtaStepPage.tsx#L425",
+        "asset": "harmonization/ui-icons/open-energy-studio/file-text.svg",
+        "exact_hash": "d97f88093fdeb7c6f906d745f4594bf0aa6b84035a6e3435745124001dfca0c7",
+        "geometry_hash": "1c53e88cce6732104019d9b0ac1395e2ae02f8e7389e339ade1b36a7c5d6342e",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.filetext",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a7332afe9f52683e",
+        "function_label": "File Text",
+        "category": "Pagina’s"
+      },
+      "assets": {
+        "16": {
+          "before": "f8d7b3c5f670165f6286377c9cb97bbd82d9f8498b307d51c79c8523b20511f0",
+          "after": "c9918a859eec6fbccdb6f6fd461eb499ca2eafd19de8e8d43d859dc2d5ac4cc2"
+        },
+        "24": {
+          "before": "d586a5bd3608dcd4201d2b60bc448ee85d6cb3a098178fd456f5b1c7bd883ce6",
+          "after": "5dc0df20e8ab5f76cdcd29c5ce11137dcd0fa61190f255d24eefd76dc10cffe7"
+        }
+      }
+    },
+    {
+      "id": "report.calculation-document",
+      "label": "Berekeningsdocument",
+      "ui_call": "Documenttypeaanduiding bij het NTA-berekeningsrapport.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "FileText",
+        "label": "calculation",
+        "path": "src/components/shell/pages/DeliveryPages.tsx",
+        "line": 261,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Rapport, berekening of bestandsnamen",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "      <ExportCard icon={<FileText aria-hidden=\"true\" />} title={t('delivery.exports.calculation')} hint={t('report.ntaCalculationScope')}>\n        <Button icon={<FileDown aria-hidden=\"true\" />} onClick={exportCalculation}>{t('report.exportNtaCalculation')}</Button>\n      </ExportCard>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/DeliveryPages.tsx#L261",
+        "asset": "harmonization/ui-icons/open-energy-studio/file-text.svg",
+        "exact_hash": "d97f88093fdeb7c6f906d745f4594bf0aa6b84035a6e3435745124001dfca0c7",
+        "geometry_hash": "1c53e88cce6732104019d9b0ac1395e2ae02f8e7389e339ade1b36a7c5d6342e",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.calculation",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "fc00eceb9f73957a",
+        "function_label": "calculation",
+        "category": "Pagina’s"
+      },
+      "assets": {
+        "16": {
+          "before": "cacedc5a655e654b66a2da26409e571dd853cab7d10a2dd33e7c1f663d952b5b",
+          "after": "7335f56bcb36540c9af204c855fc807b65344189bade484b13ae8f20b04f66c0"
+        },
+        "24": {
+          "before": "2aaadb1e7cac1294cf05dbfc17240ebb71db10f31769cac1f3e4182b095e7124",
+          "after": "576b3778db731aad264249c809328d3e624e79c832db7e022536649e4a958065"
+        }
+      }
+    },
+    {
+      "id": "report.project-dossier",
+      "label": "Projectdossier",
+      "ui_call": "Documenttypeaanduiding bij het samengestelde projectdossier.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "FileArchive",
+        "label": "dossier",
+        "path": "src/components/shell/pages/DeliveryPages.tsx",
+        "line": 267,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Projectdossier exporteren",
+          "status": "Energy- of toestandsspecifiek",
+          "rationale": "Domeinobject, informatiestatus of bediening zonder vastgesteld algemeen commandodoel.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "      <ExportCard icon={<FileArchive aria-hidden=\"true\" />} title={t('delivery.exports.dossier')} hint={t('report.projectDossierScope')}>\n        <Button icon={<FileArchive aria-hidden=\"true\" />} onClick={dossier.exportDossier} disabled={dossier.busy}>\n          {t('report.exportProjectDossier')}</Button>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/pages/DeliveryPages.tsx#L267",
+        "asset": "harmonization/ui-icons/open-energy-studio/file-archive.svg",
+        "exact_hash": "74d2e1e486874ff81f86b24df3cb0d4bb64b88715620b3f8b9d2c8b631901d2a",
+        "geometry_hash": "00ebf5872b0ec12158b479e2a715c5961418ea05ff245890fb286456472e6e5f",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "review.dossier",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "bc8da5e2f1781208",
+        "function_label": "dossier",
+        "category": "Pagina’s"
+      },
+      "assets": {
+        "16": {
+          "before": "8e6ad6457be4342d2d1582970048c5775e4c2205fce72d266182991c61c0c3c6",
+          "after": "b0c92cf7f131d0b38feb29977cd706167404fc904a94aaff0c700ee3a06a42f3"
+        },
+        "24": {
+          "before": "8b804142ac1b298f24c70eaee91a45cc76ac5ccf0b0b3986b0b8a10f0629f1f4",
+          "after": "bcb144d2ed6e75ecd786ace14a26ced992b121535e1bb2b17c51e99827964836"
+        }
+      }
+    },
+    {
+      "id": "file.export-options",
+      "label": "Uitvoerkeuzes openen",
+      "ui_call": "Het uitvoerkeuzemenu of -paneel openen voor document, project of annotatieselectie. De concrete uitvoerkeuze schrijft pas daarna een bestand.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "Download",
+        "label": "Download",
+        "path": "src/components/shell/StepRouter.tsx",
+        "line": 241,
+        "role": "",
+        "evidence": "bronreview",
+        "review": {
+          "semantic_target": "Icon::Export"
+        },
+        "assessment": {
+          "meaning": "Gegevensuitwisseling of export",
+          "status": "gedeelde kandidaat",
+          "rationale": "Vergelijk knopmaat en toestand in de native Energy-schermreview vóór vervanging.",
+          "source": "energy-icon-crosswalk.json",
+          "semantic_target": "Icon::Export"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "              <Button variant=\"ghost\" icon={<Download aria-hidden=\"true\" />}\n                onClick={() => actions.navigate({ step: 'report', sub: 'exports' })}>{t('report.page.exports')}</Button>\n            )}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/shell/StepRouter.tsx#L241",
+        "asset": "harmonization/ui-icons/open-energy-studio/download.svg",
+        "exact_hash": "0f0aa2eba222ab9775cd4c8bff9da1b6ed2d514b73d1888a43c58733324b6e82",
+        "geometry_hash": "2243b6d9f28c64f7267e28b9392f5e3cb03a8604c5648054cf0ae293b74f0a9d",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "file.export",
+        "function_status": "bronreview van functie",
+        "id": "d1d9de922703d58e",
+        "function_label": "Exporteren",
+        "category": "Bestanden"
+      },
+      "assets": {
+        "16": {
+          "before": "71c99eabb99f984c50771bfd532a4b43249fda4214d903d584246eff2e77d9ca",
+          "after": "29121aaa2afaffbeee13edf019f57b7aa4f39c56c05e72c33330b7b9a7f2973f"
+        },
+        "24": {
+          "before": "34f04eb37ff0835eeaef056057fff4acef483638584ec925180b1298f1c37848",
+          "after": "3c5739c22a3d6ef4b48e94e093a89be5a72b3e97456c96302b5abc29e07616ff"
+        }
+      }
+    },
+    {
+      "id": "project.compare-reference",
+      "label": "Referentieproject vergelijken",
+      "ui_call": "Het originele projectbestand kiezen, met het huidige project via assessRelabelWithRust vergelijken en de vergelijking bewaren.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "FolderOpen",
+        "label": "chooseFile",
+        "path": "src/components/MaatwerkadviesPanel/RelabelPanel.tsx",
+        "line": 137,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Projectbestand openen of gekozen map",
+          "status": "betekenis scheiden",
+          "rationale": "Dezelfde vorm is een opdracht én een maptoestand; `Icon::Open` geldt alleen voor de opdracht.",
+          "source": "energy-icon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "energy-ui-icons.json",
+        "context": "              icon={<FolderOpen aria-hidden=\"true\" />} label={t('relabel.page.chooseFile')}\n              onChange={(event) => { const file = event.target.files?.[0]; if (file) void compare(file); }} />\n            {busy && <span className=\"relabel-busy\" role=\"status\">{t('relabel.page.comparing')}</span>}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/MaatwerkadviesPanel/RelabelPanel.tsx#L137",
+        "asset": "harmonization/ui-icons/open-energy-studio/folder-open.svg",
+        "exact_hash": "27453b7ce89bd06a21d46643780dba3f82cca51cde230e74a52a43d72111efcd",
+        "geometry_hash": "2bc8e33a82a14cd1d927610a6fc4f70675009d6ae812878642b00c1dc8054f5e",
+        "origins": [
+          "energy-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "file.open",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "83176ae90969514c",
+        "function_label": "Bestand openen",
+        "category": "Bestanden"
+      },
+      "assets": {
+        "16": {
+          "before": "d3f24ea7c6122db5b34bd8519362baf6e51ff0dad7f071a900c05bddf0afea42",
+          "after": "9507d7461510a6242eb35ee4d0c9b547ed2e2147dc9b8734a0cb12737bbaea74"
+        },
+        "24": {
+          "before": "38d739e31dce34553d5d106dccf7a96e0860f7da800e9b04621b6d93639a8e48",
+          "after": "c2d4a135a57640656d0418659bc2267e13223db0eed3d317d772f217887e243a"
+        }
+      }
+    },
+    {
+      "id": "printer.properties",
+      "label": "Printereigenschappen",
+      "ui_call": "handlePrinterProperties opent de eigenschappen van de geselecteerde printer.",
+      "source_example": {
+        "app": "Energy",
+        "repository": "open-energy-studio",
+        "commit": "e9a485db4ac695ff502a48cd2ded50dec5b5a1a6",
+        "name": "PrintPreviewDialog:svg-365",
+        "label": "printerProperties",
+        "path": "src/components/dialogs/PrintPreviewDialog/PrintPreviewDialog.tsx",
+        "line": 365,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd",
+        "origin": "volledige clientbronscan",
+        "context": "<button\n                className=\"btn pp-props-btn\"\n                onClick={handlePrinterProperties}\n                disabled={!selectedPrinter}\n                title={t('report.printerProperties')}\n              >\n                <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\">\n                  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n                  <path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\" />\n                </svg>\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/dialogs/PrintPreviewDialog/PrintPreviewDialog.tsx#L365",
+        "asset": "harmonization/function-icon-assets/ab6f8ccfd6f36164a8e09fa38db77e00b17940d33a4daa6f2357470c0e04a792.svg",
+        "exact_hash": "9337ae2e9fd0b12377be96726dd0644467f34c8bda1c1e97949c6b77f2f58535",
+        "geometry_hash": "cdaa980aba8eb29c36bf54b044e864412ca1168b463a01a80a45079ad9a045f0",
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "ui.settings",
+        "function_status": "vormkandidaat; functie controleren",
+        "id": "12e8cecfc5b161f2",
+        "function_label": "Instellingen",
+        "category": "Instellingen en hulp"
+      },
+      "assets": {
+        "16": {
+          "before": "2985092330ef560384830850891782fedb4873ee342b55617ef7ce48c41f12dd",
+          "after": "68726028c1ac81f845ba606273f66874deebb33a500189be34ca75329d156d94"
+        },
+        "24": {
+          "before": "19a3727b143c15b260edfec09ec03524ec7dd6007436eed17fe17b5d94ebd4c5",
+          "after": "de97f2ba83ed86e77184d1d001620897005414dc8495f8ad2d9e5b0e09bd97b3"
+        }
+      }
+    },
+    {
+      "id": "thermal.rooms",
+      "label": "Vertrekken",
+      "ui_call": "De vertrekkenlijst of het importonderdeel Ruimtes aanduiden/openen; geen startpagina.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconGrid",
+        "label": "IconGrid",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 261,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/rooms\", labelKey: \"sidebar.rooms\", Icon: IconGrid },\n      { to: \"/ifc\", labelKey: \"sidebar.ifc\", Icon: IconIfc },\n      { to: \"/ifc-reconstructie\", labelKey: \"sidebar.ifcReconstruction\", Icon: IconIfcReconstruction },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L261",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/grid.svg",
+        "exact_hash": "d39a765fe2a520f2b5737961db8a14ac70db5a15fc2e77a65e996cd2a1071567",
+        "geometry_hash": "f42f3be3b4ac490fdceb5385147396e80eb6fe91c6fa820d16ae0b231d3063d8",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "view.grid",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "2407c86db3b4ea05",
+        "function_label": "Raster tonen",
+        "category": "Objecten en lagen"
+      },
+      "assets": {
+        "16": {
+          "before": "3c2d65729371640cb6c7e8136b59f2738b0269cbb13c255c7921ffc8852d4922",
+          "after": "56ca70610ff5be0dda20fcb0856dfc9d46a647343903e964ef0f20cf0dcfc6ff"
+        },
+        "24": {
+          "before": "0e884c43c349b3a88f8c129c36720cae1282fbdeb61e4e7d1c5a0ec414dc42af",
+          "after": "7d86885e2f0ba9048945bde098ad77538bab5dc6366f1d3107d3c09073743430"
+        }
+      }
+    },
+    {
+      "id": "thermal.modeller",
+      "label": "Thermische modelbewerker",
+      "ui_call": "De gemonteerde modellerwerkruimte met 2D/3D-model en eigenschappen openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconCube",
+        "label": "IconCube",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 253,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/modeller\", labelKey: \"sidebar.modeller\", Icon: IconCube },\n    ],\n  },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L253",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/cube.svg",
+        "exact_hash": "135f5a156e3a76ad4def4efa9bb2148bb532a06c7b8b3f9cd71545489f43a342",
+        "geometry_hash": "10bd183a826e011614c3c43fae4d73b5c651f9ab921cf296250c4f622ed8a138",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.cube",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "b4d9855e13de1cc1",
+        "function_label": "Kubus: object of paneel controleren",
+        "category": "Betekenisconflicten"
+      },
+      "assets": {
+        "16": {
+          "before": "478fca72573aa61c66019ef8283337f48e38211d7a219b6538f80903515f2ad0",
+          "after": "48307df9da6ba828abbfe4f49a96208eaff720b8ac6d31691d9c40ab0aa45d17"
+        },
+        "24": {
+          "before": "043725f199a89b49cd64ba3a909f448e370e5a1842e4d6f9cfc7cce9f256d716",
+          "after": "14f0bb3a040807d39e7817ef96c381ec075f2d3508dc93a00f9f98cec3c79839"
+        }
+      }
+    },
+    {
+      "id": "construction.library",
+      "label": "Constructiebibliotheek",
+      "ui_call": "De catalogusbibliotheek met beschikbare constructieopbouwen openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconBook",
+        "label": "IconBook",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 333,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/library\", labelKey: \"sidebar.library\", Icon: IconBook },\n    ],\n  },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L333",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/book.svg",
+        "exact_hash": "4c8d4f2593f6c23f917dd935e985fec016574a879a4d68f25676da522a6b9105",
+        "geometry_hash": "3c042d4e731b7c347a721632ee79d63374d29afb0e30e4f628f86bb9ca7dbb4d",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.book",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "7fe56362526ba4dd",
+        "function_label": "Icon Book",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "c22f97bb3f6e9f0ee18e72ae3f7847aaedc1e512175689ccccb76cb354e4bc53",
+          "after": "3dd511abf14ed391c4f86f939427a73709bf60179a9832ba63eb5e2e1e6365ff"
+        },
+        "24": {
+          "before": "25f5bf047dc3ea3ea87437501cda23cf598921dd4ddc66cf183af9553335a81b",
+          "after": "17c34b520d4cd3fc37e5c5353dbf4ccf8397a7310723d1f28879abc2b4017467"
+        }
+      }
+    },
+    {
+      "id": "ifc.workspace",
+      "label": "IFC-werkruimte",
+      "ui_call": "Naar de IFC-werkruimte navigeren; nog geen specifiek bestand inlezen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconIfc",
+        "label": "IconIfc",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 262,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/ifc\", labelKey: \"sidebar.ifc\", Icon: IconIfc },\n      { to: \"/ifc-reconstructie\", labelKey: \"sidebar.ifcReconstruction\", Icon: IconIfcReconstruction },\n      { to: \"/warmteverlies/instellingen\", labelKey: \"sidebar.warmteverliesInstellingen\", Icon: IconLayers },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L262",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/ifc.svg",
+        "exact_hash": "5d845338a6c433a70bae84c5d662b5a2dc3e3c08c05558b137e4ba687d628c62",
+        "geometry_hash": "96de55499ad2865ce41ee57dac27d686e7c7dd7fb6c34d780d3dcb8737fc0c4d",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.ifc",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "e8626f52f0d480db",
+        "function_label": "ifc",
+        "category": "Pagina’s"
+      },
+      "assets": {
+        "16": {
+          "before": "ead6402b94b242276cdc37d574a076f53a230ad0c11df965c250641a3b4fe48c",
+          "after": "006f176f9c68eb2e283fcf1a4d05e8ca2aa41bb5c80620ce6a52a6712363d91a"
+        },
+        "24": {
+          "before": "9e578d4b94436acdd7ecffa024e72d6c32b47088701295431cf7aea710cb8d39",
+          "after": "ce2a9a12978cb8da5da977498570304fa987819466412471ab500eaa2561b5e4"
+        }
+      }
+    },
+    {
+      "id": "ifc.reconstruction-workspace",
+      "label": "IFC-reconstructiewerkruimte",
+      "ui_call": "De route ifc-reconstructie openen; nog geen reconstructie uitvoeren.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconIfcReconstruction",
+        "label": "IconIfcReconstruction",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 263,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/ifc-reconstructie\", labelKey: \"sidebar.ifcReconstruction\", Icon: IconIfcReconstruction },\n      { to: \"/warmteverlies/instellingen\", labelKey: \"sidebar.warmteverliesInstellingen\", Icon: IconLayers },\n      { to: \"/results\", labelKey: \"sidebar.results\", Icon: IconBarChart },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L263",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/ifc-reconstruction.svg",
+        "exact_hash": "3a442869daa8e8d9d04d38091b1cd3154c36f75c2e78efff79812853d2984dae",
+        "geometry_hash": "22d7ef3af891487f67ebbb934391fd8358c7fa0f425c56bd96226a125248256a",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.ifcreconstruction",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "cc743dbfe82c9295",
+        "function_label": "Icon Ifc Reconstruction",
+        "category": "IFC en BIM"
+      },
+      "assets": {
+        "16": {
+          "before": "266c6d41d4b7c7fd314282d544ab3035cbb61626cf09e2f9a3c7109baa9fe87b",
+          "after": "6fa54cbf28822b32eb3a420014aa7218d76c069b0f9f3cd28b03391963625e62"
+        },
+        "24": {
+          "before": "f38dad267a6c91dcb84c3da8fac540e4951c242d7be8baeb7cd5c55c0df0ee5f",
+          "after": "48453027bfc2f806ea03e157973b8d73d9457ed0716e7a73b391b0f0c4eea34d"
+        }
+      }
+    },
+    {
+      "id": "thermal.overheating",
+      "label": "Volledige TOjuli-werkruimte",
+      "ui_call": "De als volledig gelabelde TOjuli-route openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconBarChart",
+        "label": "IconBarChart",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 282,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      {\n        to: \"/tojuli\",\n        labelKey: \"sidebar.tojuli.full\",\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L282",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "exact_hash": "19ad76b334d5fc234eaf45674e41565f3d445fc335eb92f52ada85b858094faf",
+        "geometry_hash": "6d4b2b9a7bc3ab494a22ac0726798bfa2b9bd702ecf543bab6f5d5d19a672ae6",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "data.chart",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "09c6734ae8ebf961",
+        "function_label": "Grafiek",
+        "category": "Project en gegevens"
+      },
+      "assets": {
+        "16": {
+          "before": "ea62249557df4802f7cdc5df0ec50efe908acd3b888e90450839c1fe3315fec8",
+          "after": "8fdeeea5f6af48accc981ecab7f52f62504d93617ff3714fa358015f37f359d3"
+        },
+        "24": {
+          "before": "054d612d230e5678c20eab4c680e332f0fb7558de9249a4ed0b349499c6ba928",
+          "after": "93c8b714e52d913dd5bdbfcebf5e9e52af226ef063a120d5482f2ca4bd60e786"
+        }
+      }
+    },
+    {
+      "id": "thermal.overheating-quick",
+      "label": "Snelle TOjuli-werkruimte",
+      "ui_call": "De afzonderlijke quick-route voor TOjuli openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconBarChart",
+        "label": "IconBarChart",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 287,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      {\n        to: \"/tojuli/quick\",\n        labelKey: \"sidebar.tojuli.quick\",\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L287",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/bar-chart.svg",
+        "exact_hash": "19ad76b334d5fc234eaf45674e41565f3d445fc335eb92f52ada85b858094faf",
+        "geometry_hash": "6d4b2b9a7bc3ab494a22ac0726798bfa2b9bd702ecf543bab6f5d5d19a672ae6",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "data.chart",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "e899701055a971e8",
+        "function_label": "Grafiek",
+        "category": "Project en gegevens"
+      },
+      "assets": {
+        "16": {
+          "before": "70efcf3479ba7a3c5d0a4c23269105f0bc5430a1e808edba02c4524b328af5a1",
+          "after": "adbad63b90fd313737cca04438ffbd6601e9eb139d6c26ddd224ec63b65bea6f"
+        },
+        "24": {
+          "before": "4e12a2d809e505f18d7baf40804d3f9f26e211a06de41283a272fa2696805bcf",
+          "after": "262dcf6d43213118b8897c1e7a689560367509fc174c7972a937bfba5ece416e"
+        }
+      }
+    },
+    {
+      "id": "tool.door-gap",
+      "label": "Deurspleetrekenhulp",
+      "ui_call": "De rekenhulp tools/deurspleet openen; geen deur plaatsen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconDoor",
+        "label": "IconDoor",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 274,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/tools/deurspleet\", labelKey: \"sidebar.doorGap\", Icon: IconDoor },\n    ],\n  },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L274",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/door.svg",
+        "exact_hash": "4f01d27e163f4bf95adefbcaaa55336c40c6d5656f2bc0c7a4b49814700aa043",
+        "geometry_hash": "199fb716670fde4cee79480d3e1e2feeeb5c9367b6554e83e0587d6ab12a747f",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.door",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "63a42688dfd28926",
+        "function_label": "Icon Door",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "fcc55071d5427c15e0a4aa2131d95ab540202a228ff0e910c1d2024d8f3f76b8",
+          "after": "cc86f3752ba9c63cc3335845306b669e69d48fa69fc9ca0fa4079b6b8a4dedd3"
+        },
+        "24": {
+          "before": "f523dfd7e74cfe8f9ae45e03f23f31a7da67a4448643603c68e53eda934fa5ae",
+          "after": "43e97b25dc0c92356ef2cc2a95c7d72365e073c707a2436f5b44e3932017e127"
+        }
+      }
+    },
+    {
+      "id": "tool.uw-window",
+      "label": "Uw-rekenhulp",
+      "ui_call": "De rekenhulp voor de volledige raamwaarde openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconLayers",
+        "label": "IconLayers",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 308,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/uw\", labelKey: \"sidebar.uwValue\", Icon: IconLayers },\n      {\n        to: \"/rc-compare\",\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L308",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/layers.svg",
+        "exact_hash": "4a44afa471b96488bc90fc15ac9784ae01d9aeb896beb99c4ffd039c504841c4",
+        "geometry_hash": "605037ff7b57f0f576c2e0a49d83179377d79024da1b9e310c98d6c4c946b963",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "object.layers",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "444d55ed0764f251",
+        "function_label": "Lagen",
+        "category": "Objecten en lagen"
+      },
+      "assets": {
+        "16": {
+          "before": "bc8dadf47a89c17d1422475d7986b7339283237a317d1619f1e214fa2a7243a9",
+          "after": "ef317832ba8a7a27ba4906db81aa395ea808efe208fb44334f4b057da8a2331a"
+        },
+        "24": {
+          "before": "5afd9253bce6f0a5f3174baa453554474a3c55fb362a0e43e0770d7adfb28df6",
+          "after": "762dd6d1f7ef63c93001c7fc1a3f6c1c73eec800eeacf4c4a7aa7c25036032fe"
+        }
+      }
+    },
+    {
+      "id": "tool.rainwater",
+      "label": "HWA-rekenhulp",
+      "ui_call": "De hemelwaterafvoerrekenhulp openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconDroplet",
+        "label": "IconDroplet",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 321,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/tools/hwa\", labelKey: \"sidebar.hwa\", Icon: IconDroplet },\n      { to: \"/tools/hellingbaan\", labelKey: \"sidebar.hellingbaan\", Icon: IconRamp },\n      { to: \"/tools/hoeken\", labelKey: \"sidebar.hoeken\", Icon: IconAngle },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L321",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/droplet.svg",
+        "exact_hash": "464760df480aed6b8cd69a0de1907384a36bb96ce3d8299e4da643723e9fd1e2",
+        "geometry_hash": "380e54279491a110bbc3d9e4c62a71e9e14c43c9efc33691f5681862432dcb16",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.droplet",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "95ce10e627008113",
+        "function_label": "Droplet",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "a0c1661e3ae92afa2a42d8f4977189b9cdec023d3e87093a9fad1a8cfddf3d0e",
+          "after": "89703f0135a2a7be76f042b0198982031c072da957dbacdd6db9e5f0bd37fa60"
+        },
+        "24": {
+          "before": "0ea9e6496c11044a3c7c6df6ce6cc6ad1348a65ad21870c42eebaa66b38035c9",
+          "after": "6c79761888e978f6184fe959841e2ea5ad0c6fedbd807509e0d3e894fadb2eae"
+        }
+      }
+    },
+    {
+      "id": "tool.ramp",
+      "label": "Hellingbaanrekenhulp",
+      "ui_call": "De rekenhulp voor een hellingbaan openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconRamp",
+        "label": "IconRamp",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 322,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/tools/hellingbaan\", labelKey: \"sidebar.hellingbaan\", Icon: IconRamp },\n      { to: \"/tools/hoeken\", labelKey: \"sidebar.hoeken\", Icon: IconAngle },\n      { to: \"/tools/uitzetting\", labelKey: \"sidebar.uitzetting\", Icon: IconThermometer },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L322",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/ramp.svg",
+        "exact_hash": "2c00caf51d137b2de089ac83904ec454bdb77ccced6a876e4d513bac255fc785",
+        "geometry_hash": "1a56b8b95f772f5bac6b51015117d9ee47a5e7963a8050c932cdcf82d10e67ff",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.ramp",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "c562a8d596e847c7",
+        "function_label": "Icon Ramp",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "f0f7aa764692c1c613232b9e4da604318061eafeee2c00989d9432469ede2ca3",
+          "after": "16a49e7b94d45542f87fab4591a626d0fd03a597ada6e162252350f77cb8569f"
+        },
+        "24": {
+          "before": "9e9d96277fd4dace34e24fe1d451aefd4ff315ad7bf12d9d77ad076c3dce7fa5",
+          "after": "e506379000b8c794fa614c01c8c9df08adc32789a37429cb58f367cbb9f1c448"
+        }
+      }
+    },
+    {
+      "id": "tool.angle",
+      "label": "Hoekenrekenhulp",
+      "ui_call": "De hoekenrekenhulp openen; geen meetgereedschap op een tekening activeren.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconAngle",
+        "label": "IconAngle",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 323,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/tools/hoeken\", labelKey: \"sidebar.hoeken\", Icon: IconAngle },\n      { to: \"/tools/uitzetting\", labelKey: \"sidebar.uitzetting\", Icon: IconThermometer },\n    ],\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L323",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/angle.svg",
+        "exact_hash": "b7eaf1ca35c5a02cad9b1e42444f5249215647bf21d5c2d80015592e384bf4cb",
+        "geometry_hash": "26bccb652d50897de93a1d5f0f22224948d3b067376711dea09b95413c012037",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.angle",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "f8c606572877fdbe",
+        "function_label": "Icon Angle",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "6d06e7e6f7bade11218b2d58a7430a23ebf0fecec50f10ba88d0cc525efbbc66",
+          "after": "07cb42386d53ff0b132599f4b009c0d9536da8c41be89c10f5a9845dddead835"
+        },
+        "24": {
+          "before": "cde0cdd515243f22035418a3e0d70f211010de1b6aad059e8006bb743810c633",
+          "after": "2dd6b4c8a11cc850c328e0bf07097aee227f815b0e3a3205ce58e677621cf545"
+        }
+      }
+    },
+    {
+      "id": "tool.thermal-expansion",
+      "label": "Uitzettingsrekenhulp",
+      "ui_call": "De werkruimte tools/uitzetting openen.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "IconThermometer",
+        "label": "IconThermometer",
+        "path": "frontend/src/components/layout/Sidebar.tsx",
+        "line": 324,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-sidebar-ui-icons.json",
+        "context": "      { to: \"/tools/uitzetting\", labelKey: \"sidebar.uitzetting\", Icon: IconThermometer },\n    ],\n  },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/layout/Sidebar.tsx#L324",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-sidebar/thermometer.svg",
+        "exact_hash": "29749111b83140b79fb33f79363132bac1695ca5d68ed6a3b51fdc1cfca03f28",
+        "geometry_hash": "dc377dc631038176d98edad6652a1d4d8db59b56daaca7ea0c154de84c28e49c",
+        "origins": [
+          "heatloss-sidebar-ui-icons.json"
+        ],
+        "function_id": "review.thermometer",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "19e5a7c55ddf9a05",
+        "function_label": "Thermometer",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "9a212d52f2f3f4fbed6aa7fdff03d40f2797a860a681c5d6d8ba0524f7fb4d8b",
+          "after": "4cef08bed0820a0cd2fad1c01f923ec97616fd799304b48dbdc743b6a297b59f"
+        },
+        "24": {
+          "before": "a3d53678e5c2bc41c05a3056f09678535183a4e5e2c02017fa8146562c59e6d5",
+          "after": "537af260e88b25ebb55fb69b9cc0a4692596424487d1f7ce0332b1225ccc6986"
+        }
+      }
+    },
+    {
+      "id": "diagnostics.startup-log",
+      "label": "Opstartdiagnostiek tonen",
+      "ui_call": "Het pad van de opstartdiagnostiek opvragen en in de bestandsbeheerder tonen; geen logbestand versturen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "updatesIcon",
+        "label": "updatesIcon",
+        "path": "open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx",
+        "line": 71,
+        "role": "built-in-ui-icon",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pdf-ribbon-imported-ui-icons.json",
+        "context": "icon={updatesIcon}",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/HelpTab.jsx#L71",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/ribbon-imported/updates-icon.svg",
+        "exact_hash": "189a22c863f140854ebf4afdfeef0a9b9c500c67446da03ff0f01353e845215e",
+        "geometry_hash": "8bfde6f692ebd4078016ec64d80074710e54821416e0ac2efb0b2cbf73beb198",
+        "origins": [
+          "pdf-ribbon-imported-ui-icons.json"
+        ],
+        "function_id": "review.updates",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "798edea0b9d21ca3",
+        "function_label": "updates Icon",
+        "category": "Appspecifieke opdrachten"
+      },
+      "assets": {
+        "16": {
+          "before": "d8d5c184af2c74c2f9391927b759405abd2c15e2ba2028fba05b736b8e7c5968",
+          "after": "618dad2b4682dd6e158d82337f90db4c03c04f0c0e2d2bba39b47a521b6b87cb"
+        },
+        "24": {
+          "before": "8781a2acd204d7bc13112b74858165d3d5c2a1a5a114ddd27f2048e86377b7e3",
+          "after": "95f66772645c29325c3372d4480e9e4626a285147c830f5e8fbe47bd345b4c39"
+        }
+      }
+    }
+  ],
+  "general_python_checks": {
+    "check_layout_metrics": "geslaagd",
+    "check_icon_adoptions": "geslaagd; lokale Pointcloud-integratie ontbreekt",
+    "check_portable_ui": "geslaagd; lokale Pointcloud-snapshot ontbreekt",
+    "check_crate_package": "geslaagd",
+    "check_tokens_04": "geslaagd"
+  },
+  "cargo": "Niet uitgevoerd: deze ronde wijzigt geen Rust/crate.",
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "manifest_sha256": "52217a4543085690b038f3ce2b2c86f4967d031f0402ef201222a83d534548f5",
+  "contact_sheets": [
+    {
+      "path": "design/icon-set-b2/completion-preview-4-dark.png",
+      "sha256": "ed1170cc064bc4779695774a2f536a47316c89759c1b34481ad927b2c3fa62a2"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-dark-mono.png",
+      "sha256": "54d5cfd94da28168ad6586390776745dd194649a54fabc79e521b2bdd2aa59e5"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-light.png",
+      "sha256": "3eacece6def6255f9e24f4a109cb55648eeb93b240cec5d71b7279a057e93a5d"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-4-light-mono.png",
+      "sha256": "7db98681dce051089ca46f171d5bb0501bb6cde541fef9b0a26e51599691a7c9"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-dark.png",
+      "sha256": "b4602477609f38b48a3d58add58ea860b920bc529b7ed82db7c7b314876c05e9"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-dark-mono.png",
+      "sha256": "fa94e726e2a4c26f609e193abce8bbf087b5b1533f2059b899e24393ad9ea656"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-light.png",
+      "sha256": "054b527da87de770e43284a2cfe53839ba5db11f13194a16110a8e8353c107a0"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-5-light-mono.png",
+      "sha256": "062b45affddd4842b2866a73c54ba4cc631ed18ec9ec3521b781a3a143cb1662"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-dark.png",
+      "sha256": "054a5fcdc32cc17b5a4804709635dd7f177db2b5136dfdd9ae5c1fd57f4b59f1"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-dark-mono.png",
+      "sha256": "4192542af2ee1cb0a7741e5e55c7c7cb60557325e2af8c4f5436f4e771cc4ec9"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-light.png",
+      "sha256": "798aa26156368fe0cd62c1c92cb68f899f1ae1cae863ed582612ea978c7982ce"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-light-mono.png",
+      "sha256": "15233a0d333e6b51f93a9d0bca76e6fdf74ea3505d03f8ada5ac4d6be82c0386"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-12-dark.png",
+      "sha256": "ba053b755c1640db91c1ad6a7f85ecb36ebd3d984b664ad18fb25cea00052b18"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-12-dark-mono.png",
+      "sha256": "df3f242b068f4c8bdc5708df01952e77c4a397f2d2a376d53bf7201b6515fd53"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-12-light.png",
+      "sha256": "e958f29e466b053ce1e57ff6881f32384f6fd65f6ed543e467d1fead77f71789"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-12-light-mono.png",
+      "sha256": "57cbeb7dc8637f154d49135eae92f35c451a9565212f42773af8f412e7057400"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-13-dark.png",
+      "sha256": "1df887404570d2ae703a955b0b20a1d8c931c4a428a406d1a296160fa915d45d"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-13-dark-mono.png",
+      "sha256": "138446724a3070f609ca95f1d06c2eb0a8bec0f66516a933f41e329f084a0d6f"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-13-light.png",
+      "sha256": "386681079c1a7e59e2c5eecb62aa1c71043e5d8dcb0908eedcc490f3e4c8a9b3"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-13-light-mono.png",
+      "sha256": "5b6e0e7722ef052941bb3bd2e283971d832a91113637d4969831fed0bb0d5e31"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-14-dark.png",
+      "sha256": "7c23949b24edae3c3201f7125a4c6e27a39ef1a9c867063fd405ab4e6620c9b6"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-14-dark-mono.png",
+      "sha256": "78a1fa41acffac15e8b87faf9c77aafdf9a3ac72b5364ee172fd055cb3674c87"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-14-light.png",
+      "sha256": "f4144af2d21a441ff8051065264672309b4b2d2f214ac49def17f74b81b48da5"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-14-light-mono.png",
+      "sha256": "f5b405bb3ab859f6b526228bbfbd5e1d19c0d89f0ac2912d43de1c96bd64f6ab"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-19-dark.png",
+      "sha256": "83114568bd9c422d05b69ef1eb701d44c9a5665853fa6f8d1d248548e6800878"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-19-dark-mono.png",
+      "sha256": "c76587a9a1cd9e621ba060351faa8d8defdfcc9ad3b2b98b74d3f6613eab4081"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-19-light.png",
+      "sha256": "c5c190329cdf028f30a19f645eea45741ede5031a8489bfe713737c9748b844e"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-19-light-mono.png",
+      "sha256": "86ad890b557262a3f9d1c40ff72124ee663acefc143d1f8de8c9eeb17f650d46"
+    }
+  ],
+  "python_compile": "geslaagd",
+  "source_docs_whitespace": "geslaagd; CRLF toegestaan",
+  "minimum_free_gap_px": 0.75,
+  "unchanged_masters": 1806
+}

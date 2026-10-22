@@ -1,6 +1,7 @@
 """Heatloss source audit: mounted routes, tools, import and construction controls."""
 import math
-from b2_second_series import box
+from b2_second_series import box, lightning
+from b2_energy_completion import droplet, calculator
 from b2_bim_completion import cube
 from b2_session_two import dimension_arrow
 from b2_energy_pile_audio import arc_points
@@ -151,19 +152,19 @@ def extend(c,key):
     if key not in KEYS:return False
     small=c.size==16
     if key=='thermal.rooms':
-        box(c,2,4,14,17)
-        c.line([(8,4),(8,21)],True,radius=0);c.line([(8,12),(16,12)],True,radius=0)
-        c.line([(21,5),(21,16)],radius=0);c.circle(21,19,2,True)
+        box(c,2,3,11,18)
+        c.line([(7,3),(7,21)],radius=0);c.line([(7,12),(13,12)],radius=0)
+        c.line([(20.5,5),(20.5,17)],True,radius=0);c.circle(20.5,19,2,True)
     elif key=='thermal.modeller':
-        c.line([(2,21),(2,3),(12,3),(12,9),(17,9),(17,21)],closed=True,radius=.4)
-        c.line([(8,21),(10,15),(19,6),(22,9),(13,18)],True,closed=True,radius=.3)
+        c.line([(2,21),(2,3),(8,3),(8,9),(12,9),(12,21)],closed=True,radius=.6)
+        c.line([(16,20),(16.5,16),(20.5,10),(23,12),(19,18)],True,closed=True,radius=.5)
     elif key=='construction.types':
         slabs(c,3,3,12)
         for y in (5,11,17):c.circle(20,y,1,True,True)
     elif key=='construction.library':
         c.line([(3,21),(3,4),(11,2),(21,4),(21,21),(11,19)],closed=True,radius=.4)
         c.line([(11,2),(11,19)],radius=0)
-        for y in (8,12,16):c.line([(14,y),(18,y)],True,radius=0)
+        for y in (7,11,15):c.line([(14,y),(18,y+.8)],True,radius=0)
     elif key=='material.library':
         box(c,2,4,6,16);box(c,9,4,6,16);box(c,16,4,6,16)
         for x in (5,12,19):c.line([(x-1,9),(x+1,9)],True,radius=0)
@@ -172,53 +173,55 @@ def extend(c,key):
         c.circle(9,9,6);c.line([(9,5),(9,9),(12,11)],radius=.3)
         for y,w in ((18,21),(22,17)):c.line([(3,y),(w,y)],True,radius=0)
     elif key=='ifc.workspace':
-        cube(c)
-        for p in c.paths:p['points']=[(.65*x,.65*y) for x,y in p['points']]
-        c.line([(14,22),(14,10),(19,10),(23,14),(23,22)],True,closed=True,radius=.3)
+        c.line([(12,2),(20,6),(20,18),(12,22),(4,18),(4,6)],closed=True,radius=.3)
+        c.line([(4,6),(12,10),(20,6)],radius=0)
+        c.line([(12,10),(12,22)],radius=0)
+        c.line([(4,12),(12,16),(20,12)],radius=0)
+        scale=c.size/24
+        c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((12,2),(20,6),(12,10),(4,6))]]})
     elif key=='ifc.reconstruction-workspace':
-        cube(c);x=5*math.sqrt(3)
-        c.line([(12-x,7),(12,2),(12+x,7)],True,radius=.3)
+        cube(c);x=5*math.sqrt(3);scale=c.size/24
+        c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((12,2),(12+x,7),(12,12),(12-x,7))]]})
     elif key=='thermal.results':
         box(c,3,3,18,18);c.line([(3,8),(21,8)],radius=0)
         for x,h in ((7,5),(12,9),(17,7)):c.line([(x,19),(x,19-h)],True,radius=0)
     elif key in {'thermal.overheating','thermal.overheating-quick'}:
-        house(c)
+        c.line([(2,10),(7,5),(12,10),(12,21),(2,21)],closed=True,radius=.6)
         if key=='thermal.overheating':
-            c.line([(21,8),(21,16)],True,radius=0);c.circle(21,19,2,True)
-        else:
-            c.line([(17,6),(12,14),(17,14),(14,21),(22,11),(17,11)],True,closed=True,radius=.2)
+            c.line([(20.5,5),(20.5,17)],True,radius=0);c.circle(20.5,19,2,True)
+        else:lightning(c,19.5,12,7,16)
     elif key=='tool.ventilation-balance':
         box(c,4,3,16,18)
         dimension_arrow(c,(2,8),(16,8),2)
         dimension_arrow(c,(22,16),(8,16),2)
     elif key=='tool.door-gap':
-        c.line([(4,2),(17,2),(17,16),(4,16)],closed=True,radius=.5)
-        c.line([(2,22),(23,22)],radius=0);c.line([(18,16),(23,16)],radius=0)
-        dimension_arrow(c,(21,16),(21,22),1.5)
-        c.line([(19.5,17.5),(21,16),(22.5,17.5)],True,radius=0)
+        c.line([(2,18),(2,2),(12,2),(12,18)],radius=.7)
+        c.line([(5,18),(5,5),(10,5),(10,18)],radius=.5)
+        c.circle(8,11,.6,filled=True)
+        c.line([(1,23),(13,23)],radius=0)
+        c.line([(17,18),(21,18),(21,23),(17,23)],True,radius=.4)
     elif key=='tool.uw-window':
-        box(c,3,3,18,18);box(c,7,7,10,10)
-        c.line([(3,3),(21,3),(21,21)],True,radius=.4)
+        box(c,2,3,10,18);c.line([(7,3),(7,21)],radius=0)
+        calculator(c,16,7,7,14,True)
     elif key=='construction.compare':
         slabs(c,2,3,7);slabs(c,15,3,7)
         dimension_arrow(c,(10,8),(14,8),1.5)
         dimension_arrow(c,(14,16),(10,16),1.5)
     elif key=='tool.rainwater':
-        c.line([(3,4),(15,4),(15,18),(21,18)],radius=.4)
-        c.line([(6,8),(9,13),(6,17),(3,13)],True,closed=True,radius=1)
-        c.line([(20,15),(20,21)],radius=0)
+        c.line([(2,9),(8,4),(14,9)],radius=.6)
+        c.line([(2,12),(13,12),(13,20),(19,20)],radius=1.4)
+        droplet(c,5,18.5,5,6)
     elif key=='tool.ramp':
-        c.line([(3,21),(21,21),(21,5)],closed=True,radius=.3)
-        c.line([(3,21),(21,5)],True,radius=0)
-        c.line([(16,21),(16,16),(21,16)],radius=0)
+        c.line([(2,21),(12,21),(12,6)],closed=True,radius=.5)
+        calculator(c,16,7,7,14,True)
     elif key=='tool.angle':
-        c.line([(3,21),(21,21),(14,3)],closed=True,radius=.3)
-        c.line(arc_points(3,21,7,math.degrees(math.atan2(-18,11)),0,24),True,radius=0)
+        c.line([(2,4),(2,21),(12,21)],radius=.5)
+        c.line(arc_points(2,21,5,-90,0,24),radius=0)
+        calculator(c,16,7,7,14,True)
     elif key=='tool.thermal-expansion':
         box(c,3,8,18,8)
-        dimension_arrow(c,(12,4),(22,4),2)
-        dimension_arrow(c,(12,21),(2,21),2)
-        c.line([(7,8),(7,16)],True,radius=0)
+        dimension_arrow(c,(3,3),(21,3),1.4)
+        dimension_arrow(c,(21,21),(3,21),1.4)
     elif key=='thermal.window':
         for x1,x2 in ((2,8),(16,22)):
             c.line([(x1,11),(x2,11)],radius=0);c.line([(x1,15),(x2,15)],radius=0)
@@ -231,12 +234,12 @@ def extend(c,key):
         for y in (9,15):c.line([(3,y),(21,y)],radius=0)
         for x in (9,15):c.line([(x,4),(x,20)],True,radius=0)
     elif key=='thermal.room-ventilation':
-        box(c,2,4,11,17)
-        for y in (7,12,17):dimension_arrow(c,(15,y),(22,y),1.5)
+        box(c,2,4,10,17)
+        for y in (7,12,17):dimension_arrow(c,(17,y),(23,y),1.4)
     elif key=='thermal.import-source':
         box(c,3,2,18,20)
-        c.line([(9,7),(7,7),(7,11),(5,12),(7,13),(7,17),(9,17)],True,radius=.4)
-        c.line([(15,7),(17,7),(17,11),(19,12),(17,13),(17,17),(15,17)],True,radius=.4)
+        c.line([(9,7),(7,7),(7,11),(6,12),(7,13),(7,17),(9,17)],True,radius=.4)
+        c.line([(15,7),(17,7),(17,11),(18,12),(17,13),(17,17),(15,17)],True,radius=.4)
     elif key=='nav.next-step':
         dimension_arrow(c,(3,10),(21,10),3)
         for x in (5,12,19):c.circle(x,20,.8,x==19,True)

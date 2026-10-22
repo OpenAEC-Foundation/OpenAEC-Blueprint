@@ -1,0 +1,439 @@
+{
+  "date": "2026-10-22",
+  "revision": 103,
+  "baseline_revision": 102,
+  "verdict": "Losse hamer vervangen door een doorlopende steeksleutel; visuele beoordeling door gebruiker staat open.",
+  "review_page": "feedback-analysis-101.html",
+  "changed_designs": 1,
+  "changed_masters": 2,
+  "unchanged_designs": 944,
+  "retained_original_designs": 316,
+  "remaining": {
+    "registered_feedback_points": 89,
+    "unprocessed_registered_feedback_points": [],
+    "proposals_97": 22,
+    "proposals_99": 42,
+    "proposals_total": 64,
+    "not_yet_in_consecutive_analysis": 16,
+    "current_canonical_changes_for_user_review": 38,
+    "current_proposal_changes_included_in_64": 7,
+    "next_analysis_icons": [
+      "view.web-reload",
+      "format.decimals-increase",
+      "draw.qr-code",
+      "draw.schedule-table",
+      "view.zoom-tool",
+      "comments.summarize",
+      "comments.import",
+      "comments.export",
+      "integration.platform-sync",
+      "validation.select-specification",
+      "validation.reset",
+      "panel.document-navigation",
+      "panel.tool-palette",
+      "preferences.printing",
+      "panel.model-tree",
+      "edit.select-text"
+    ],
+    "note": "Deze aantallen overlappen niet automatisch tot één totaal: de 7 voorbeeldwijzigingen zitten al in de 64 voorstellen. Aangepast is geen menselijke goedkeuring; historische visuele goedkeuring van alle 945 ontwerpen wordt niet uit deze telling afgeleid.",
+    "arrow_followup_canonical": 7,
+    "arrow_followup_proposals": 4
+  },
+  "icons": [
+    {
+      "id": "layout.tools",
+      "label": "Gereedschapsindeling herkennen",
+      "ui_call": "Herkenningsteken tools voor een eigen opgeslagen indeling; icoonkeuze voert geen gereedschap uit.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Wrench",
+        "label": "Wrench",
+        "path": "src/components/viewControls/layoutIcons.tsx",
+        "line": 20,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Gereedschappenlayout",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "  tools: Wrench,\n  critical: Route,\n  milestone: Milestone,\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/viewControls/layoutIcons.tsx#L20",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/wrench.svg",
+        "exact_hash": "e36f93cdd0448ca519629b9cfdd452a10d9574332b4d0d89199ca71a63133846",
+        "geometry_hash": "6a3aee3aa16fc28a6e05be5058d8ac1b25e07a906eadcceb5373fd6657ab272f",
+        "origins": [
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.wrench",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "6eedad8e3e95fab0",
+        "function_label": "Wrench",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/layout.tools.svg",
+          "sha256": "a9c4e0bd44d30e6c7608fb505e83c2f9dff0af69825e1548a0b85c213c765e00"
+        },
+        "24": {
+          "path": "svg/24/layout.tools.svg",
+          "sha256": "a1878340473d923fbc00823f3652692f83829765fbfd476368dca17f5ea1b10f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/layout.tools.svg",
+          "sha256": "70efe1d35b2fd06caa668994c3def55ad7f32f107f83b44a00176fdd8e798554"
+        },
+        "24": {
+          "path": "svg/24/layout.tools.svg",
+          "sha256": "8c9d43197593483fb1fc757949231af92c7f1d2886dda23585b339d90b8c576b"
+        }
+      },
+      "action": "Eén doorlopende steeksleutel met open bek in accentkleur en een lange aangesloten handgreep in hoofdkleur. De losse hamerkop en steel zijn vervangen; het blijft een herkenningsteken voor een opgeslagen gereedschapsindeling."
+    }
+  ],
+  "related_check": "De los getekende hamerconstructie kwam uitsluitend bij layout.tools voor; andere eerder beoordeelde gereedschapsiconen en alle cirkelpijlen bytegelijk behouden.",
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "theme_contrasts": [
+      {
+        "theme": "light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.231,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.186,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.702,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.47,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.342,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 10.509,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.925,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.934,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.588,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.175,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.67,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.028,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 6.798,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "info",
+        "on": "panel",
+        "contrast": 9.285,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "error",
+        "on": "panel",
+        "contrast": 9.107,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "success",
+        "on": "panel",
+        "contrast": 9.919,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 8.92,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 9.778,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 12.595,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.651,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 12.051,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 7.09,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 10.358,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.31,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      }
+    ],
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "review_checks": {
+    "analysis_cards": 300,
+    "svg_samples_equal_to_assets": 2208,
+    "javascript_syntax": "geslaagd",
+    "shared_payload_initialization": "geslaagd",
+    "http": [
+      {
+        "url": "feedback-overview.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 160544
+      },
+      {
+        "url": "analysis-review-97.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 13315124
+      },
+      {
+        "url": "analysis-review-99.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 45126532
+      },
+      {
+        "url": "feedback-analysis-101.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 11507389
+      },
+      {
+        "url": "review-data.js?revision=103",
+        "status": 200,
+        "content_type": "text/javascript",
+        "bytes": 59375412
+      }
+    ],
+    "visual": "De steeksleutel op 16/24/32 en grote proefmaat bekeken in donker met accent en licht monochroom. Geen browserwaarneming geclaimd.",
+    "general_python_checks": "Niet herhaald: alleen B2-ontwerp en review gewijzigd.",
+    "rust_checks": "Niet uitgevoerd: geen Rust-/cratewijzigingen in deze ronde."
+  }
+}

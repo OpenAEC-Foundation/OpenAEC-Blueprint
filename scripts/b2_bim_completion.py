@@ -101,14 +101,18 @@ def extend(c,key):
     if key not in KEYS:return False
     small=c.size==16
     if key in {'bcf.export','bcf.push'}:
-        c.line([(2,20),(2,4),(15,4),(15,16),(8,16),(4,20)],closed=True,radius=.6)
+        c.line([(2,20),(2,4),(13,4),(13,16),(8,16),(4,20)],closed=True,radius=.6)
         for y,w in ((8,11),(12,9)):c.line([(6,y),(w,y)],radius=0)
-        if key=='bcf.export':dimension_arrow(c,(14,17),(22,17),2.5)
-        else:dimension_arrow(c,(20,21),(20,8),2.5)
+        if key=='bcf.export':dimension_arrow(c,(17,17),(23,17),1.8)
+        else:dimension_arrow(c,(20,21),(20,8),1.8)
     elif key in {'cloud.save','cloud.open'}:
         cloud(c)
-        if key=='cloud.save':dimension_arrow(c,(12,22),(12,11),2.8)
-        else:dimension_arrow(c,(12,11),(12,22),2.8)
+        # A complete cloud and a detached arrow below its base.
+        scale=c.size/24
+        for fill in c.fills:
+            fill['rings']=[[(x,.72*y+.3*scale) for x,y in ring] for ring in fill['rings']]
+        if key=='cloud.save':dimension_arrow(c,(12,23),(12,16),1.8)
+        else:dimension_arrow(c,(12,16),(12,23),1.8)
     elif key=='ui.file-menu':
         c.line([(3,20),(3,7),(8,7),(11,10),(21,10),(21,20)],closed=True,radius=.6)
         c.line([(6,3),(18,3)],True,radius=0)
@@ -119,11 +123,13 @@ def extend(c,key):
     elif key.startswith('section.plane-'):
         cube(c)
         axis=key[-1]
-        def project(x,y,z):return (12+5*math.sqrt(3)*(x-y),12+5*(x+y)-10*z)
-        if axis=='x':points=[project(.5,y,z) for y,z in ((0,1),(1,1),(1,0),(0,0))]
-        elif axis=='y':points=[project(x,.5,z) for x,z in ((0,1),(1,1),(1,0),(0,0))]
-        else:points=[project(x,y,.5) for x,y in ((0,0),(1,0),(1,1),(0,1))]
-        c.line(points,True,closed=True,radius=.3)
+        x=5*math.sqrt(3)
+        if axis=='x':face=[(12,12),(12+x,7),(12+x,17),(12,22)]
+        elif axis=='y':face=[(12-x,7),(12,12),(12,22),(12-x,17)]
+        else:face=[(12,2),(12+x,7),(12,12),(12-x,7)]
+        cx=sum(p[0] for p in face)/4;cy=sum(p[1] for p in face)/4
+        scale=c.size/24
+        c.fills.append({'tone':'accent','rings':[[(scale*(cx+.55*(px-cx)),scale*(cy+.55*(py-cy))) for px,py in face]]})
     elif key=='section.clear':
         c.line([(3,7),(12,2),(21,7),(12,12)],closed=True,radius=.4)
         c.line([(3,13),(12,18),(21,13)],radius=.4)
@@ -145,7 +151,11 @@ def extend(c,key):
         c.line([(20,7),(20,14)],True,radius=0);c.circle(20,18.5,.9,True,True)
     elif key=='validation.clear-highlights':
         cube(c)
-        c.line([(4,20),(20,4)],True,radius=0)
+        # Remove only the markings: a complete model beside a separate eraser.
+        scale=c.size/24
+        for path in c.paths:path['points']=[(.58*x,.58*y+scale) for x,y in path['points']]
+        c.line([(15,19),(15,17),(19,13),(23,17),(19,21),(17,21)],True,closed=True,radius=.4)
+        if not small:c.line([(17,15),(21,19)],True,radius=0)
     elif key=='image.placeholder':
         box(c,3,3,18,18)
         c.line([(7,12),(17,12)],True,radius=0)

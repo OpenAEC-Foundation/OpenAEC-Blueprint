@@ -1,0 +1,4027 @@
+{
+  "date": "2026-10-22",
+  "revision": 106,
+  "baseline_revision": 105,
+  "verdict": "Slotakkoord verwerkt; 61 goedgekeurde varianten toegepast, platformsync-vierkant hertekend.",
+  "review_page": "final-review-104.html",
+  "changed_designs": 62,
+  "changed_masters": 124,
+  "unchanged_designs": 883,
+  "retained_original_designs": 316,
+  "applied_proposals": [
+    "ai.read-only-toggle",
+    "assistant.summarize",
+    "assistant.translate",
+    "backup.auto",
+    "backup.create",
+    "backup.folder",
+    "bcf.import",
+    "calc.chapter",
+    "calc.grid-simple",
+    "calc.grid-standard",
+    "calc.grid-wpcalc",
+    "calc.hsb-wizard",
+    "calc.quantities-visible",
+    "calendar.copy-workdays",
+    "calendar.edit",
+    "calendar.holiday-add",
+    "calendar.promote-menu",
+    "capture.annotate",
+    "company.library",
+    "construction.studs-toggle",
+    "documents.new-or-open",
+    "documents.overview",
+    "drawing.settings",
+    "file.place-add",
+    "format.custom-color",
+    "image.embedded-edit",
+    "layout.manage",
+    "library.link-recognized",
+    "page.insert-file",
+    "page.replace",
+    "panel.attachments",
+    "panel.warnings",
+    "pile.cpts",
+    "pile.load-groups",
+    "pile.load-points",
+    "pile.optimization",
+    "pile.tip-regions",
+    "planning.calculate",
+    "planning.status-date",
+    "quotation.payment-terms",
+    "quotation.type-private",
+    "report.view-estimate",
+    "report.view-main-contract",
+    "report.view-subcontract",
+    "report.view-tender",
+    "report.workspace",
+    "resource.unlink-library",
+    "status.hour-data",
+    "status.library-item-deviated",
+    "status.library-item-missing",
+    "status.schedule-last-result",
+    "status.schedule-preview",
+    "status.structure-locked",
+    "symbol.category-custom",
+    "symbol.category-electric",
+    "table.columns",
+    "thermal.room-split",
+    "thermal.window",
+    "update.install",
+    "wbs.auto-number",
+    "workspace.dock-back"
+  ],
+  "remaining": {
+    "registered_feedback_points": 94,
+    "unprocessed_registered_feedback_points": [],
+    "proposals_97": 0,
+    "proposals_99": 0,
+    "proposals_total": 0,
+    "not_yet_in_consecutive_analysis": 0,
+    "current_canonical_changes_for_user_review": 1,
+    "current_proposal_changes_included_in_64": 0,
+    "approved_icons": [
+      "layout.tools",
+      "data.excel-refresh",
+      "symbol.category-site",
+      "assistant.detect-doors",
+      "product.no-vendor-lock",
+      "panel.links",
+      "session.restore",
+      "symbol.system-types",
+      "extension.reinstall-file",
+      "link.open-internal",
+      "update.previous-download",
+      "planning.move-date",
+      "resource.workspace",
+      "status.resource-overallocated",
+      "file.examples",
+      "ui.tour",
+      "layout.equipment",
+      "credential.regenerate",
+      "ai.connection-menu",
+      "ai.connection-details",
+      "status.bridge-live",
+      "status.bridge-off",
+      "extension.runtime-desktop",
+      "extension.runtime-browser",
+      "guide.compact",
+      "table.columns-reset",
+      "status.column-present",
+      "help.context-hint",
+      "status.library-suggestion",
+      "input.confirm-draft",
+      "status.install-size-smaller",
+      "status.install-size-larger",
+      "planning.dependency-draw-mode",
+      "status.recorded-dates",
+      "backup.recover",
+      "software.update",
+      "status.software-installed",
+      "status.version-upgrade",
+      "thermal.window",
+      "thermal.room-split",
+      "construction.studs-toggle",
+      "pile.load-points",
+      "pile.cpts",
+      "pile.optimization",
+      "pile.tip-regions",
+      "pile.load-groups",
+      "quotation.type-private",
+      "quotation.type-raw",
+      "quotation.payment-terms",
+      "report.view-main-contract",
+      "report.view-subcontract",
+      "report.view-tender",
+      "report.view-build",
+      "report.view-ibis",
+      "report.view-estimate",
+      "calc.quantities-visible",
+      "calc.grid-standard",
+      "calc.grid-wpcalc",
+      "calc.grid-simple",
+      "calc.chapter",
+      "workspace.dock-back",
+      "calc.hsb-wizard",
+      "symbol.category-electric",
+      "symbol.category-custom",
+      "assistant.translate",
+      "assistant.summarize",
+      "format.custom-color",
+      "page.replace",
+      "page.insert-file",
+      "image.embedded-edit",
+      "panel.attachments",
+      "file.place-add",
+      "drawing.settings",
+      "bcf.import",
+      "planning.calculate",
+      "report.workspace",
+      "wbs.auto-number",
+      "panel.warnings",
+      "table.columns",
+      "planning.status-date",
+      "layout.manage",
+      "company.library",
+      "calendar.promote-menu",
+      "calendar.edit",
+      "resource.unlink-library",
+      "ai.read-only-toggle",
+      "backup.auto",
+      "backup.create",
+      "backup.folder",
+      "update.install",
+      "documents.overview",
+      "documents.new-or-open",
+      "capture.annotate",
+      "status.schedule-preview",
+      "status.schedule-last-result",
+      "library.link-recognized",
+      "status.library-item-missing",
+      "status.library-item-deviated",
+      "status.hour-data",
+      "status.structure-locked",
+      "calendar.holiday-add",
+      "calendar.copy-workdays",
+      "view.web-reload",
+      "format.decimals-increase",
+      "draw.qr-code",
+      "draw.schedule-table",
+      "view.zoom-tool",
+      "comments.summarize",
+      "comments.import",
+      "comments.export",
+      "validation.select-specification",
+      "validation.reset",
+      "panel.document-navigation",
+      "panel.tool-palette",
+      "preferences.printing",
+      "panel.model-tree",
+      "edit.select-text"
+    ],
+    "reviewed_recent_corrections": 37,
+    "last_icons_analyzed": 16,
+    "last_icons_corrected": 9,
+    "last_icons_retained": 7,
+    "note": "Alle 61 nog open alternatieven toegepast volgens het slotakkoord. De drie eerdere uitzonderingen blijven behouden. Alleen de nieuwe platformsync-correctie nog visueel te bekijken; bibliotheek- en appintegratie volgen afzonderlijk.",
+    "batch_1_pending": 0,
+    "batch_1_status": "complete",
+    "pending_visual": [
+      "integration.platform-sync"
+    ]
+  },
+  "icons": [
+    {
+      "id": "thermal.window",
+      "label": "Raamopening plaatsen",
+      "ui_call": "draw_window activeren; FloorCanvas plaatst op de gekozen wand een raamopening.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "Grid2x2",
+        "label": "Grid2x2",
+        "path": "frontend/src/components/ribbon/ModellerTab.tsx",
+        "line": 54,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-lucide-ui-icons.json",
+        "context": "  { id: \"draw_window\", labelKey: \"modeller.window\", icon: Grid2x2, shortcut: \"N\" },\n  { id: \"draw_door\", labelKey: \"modeller.door\", icon: DoorOpen },\n  { id: \"split_room\", labelKey: \"modeller.split\", icon: Scissors, shortcut: \"S\" },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/ModellerTab.tsx#L54",
+        "asset": "harmonization/ui-icons/open-heatloss-studio/grid-2x2.svg",
+        "exact_hash": "0d9c0153c4439d8bd89abbf3735dc46ea736e2478ec505d0151fdc4506352229",
+        "geometry_hash": "b704c3e052ff3039da5708b46c28860aa5c7da647e992d00037fa9f1f4bed251",
+        "origins": [
+          "heatloss-lucide-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "view.grid",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "fb3f86f1255aed40",
+        "function_label": "Raster tonen",
+        "category": "Objecten en lagen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/thermal.window.svg",
+          "sha256": "4d418fc6c529b9a2301703a1d4b2f7ffd2ff892237c92ecbae5247a84cca4226"
+        },
+        "24": {
+          "path": "svg/24/thermal.window.svg",
+          "sha256": "36036bc978e9ce15ac6aff63ec6a6b83e1017378beb683d8244808713820a2c7"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/thermal.window.svg",
+          "sha256": "44557014568cacf36e97ede4a8c80ebdca61f1d1f45b70841ca95d91d8509ec6"
+        },
+        "24": {
+          "path": "svg/24/thermal.window.svg",
+          "sha256": "ad29a36965731b51518b3304f5e88b0b0c73d774e6f785a0d163bef9ed504265"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "thermal.room-split",
+      "label": "Vertrek splitsen",
+      "ui_call": "split_room activeren en via splitPolygon een vertrek in nieuwe polygonen verdelen; geen klembordknipactie.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "Scissors",
+        "label": "Scissors",
+        "path": "frontend/src/components/ribbon/ModellerTab.tsx",
+        "line": 56,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-lucide-ui-icons.json",
+        "context": "  { id: \"split_room\", labelKey: \"modeller.split\", icon: Scissors, shortcut: \"S\" },\n];\n\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/components/ribbon/ModellerTab.tsx#L56",
+        "asset": "harmonization/ui-icons/open-heatloss-studio/scissors.svg",
+        "exact_hash": "26fc76d60789471c53bb2fd03c39fcde73f57d2ba417191f7a22e1fc8b0c1c27",
+        "geometry_hash": "5499961b13e6396f60ee872a4df46200544836d892f898c7b65df43420d7aade",
+        "origins": [
+          "heatloss-lucide-ui-icons.json",
+          "lucide-react@0.577.0"
+        ],
+        "function_id": "edit.cut",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "32aa70772556335b",
+        "function_label": "Knippen",
+        "category": "Bewerken"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/thermal.room-split.svg",
+          "sha256": "48cc0ef138e95d400b77fb72ae32129b5059a070d95e896d56f9420b170b9d25"
+        },
+        "24": {
+          "path": "svg/24/thermal.room-split.svg",
+          "sha256": "60cfaf7038bd5a84a3354c21f93a8b713095d78d34f2ca4bb8132823477aeacd"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/thermal.room-split.svg",
+          "sha256": "499db130ccdf1903d3a27fe01622716368f9b10fc94429d31d08697043d720d5"
+        },
+        "24": {
+          "path": "svg/24/thermal.room-split.svg",
+          "sha256": "e2657bfbea4fb0257b5b70b8fafd26e01f7bb1e3c9440a4d73ad6b3df63580a4"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "construction.studs-toggle",
+      "label": "Stijlen in constructielaag",
+      "ui_call": "handleToggleStud voegt de heterogene stijlgegevens aan een materiaallaag toe of verwijdert ze.",
+      "source_example": {
+        "app": "Heatloss",
+        "repository": "open-heatloss-studio",
+        "commit": "e233aec70e16771ecb42a57d6eab3ca6cb0e75a8",
+        "name": "StudToggle",
+        "label": "StudToggle",
+        "path": "frontend/src/pages/RcCalculator.tsx",
+        "line": 774,
+        "role": "icon",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "heatloss-remaining-svg-audit.json",
+        "context": "<button\n                              onClick={() => handleToggleStud(index)}\n                              className={`rounded p-1 text-xs ${\n                                isInhomogeneous\n                                  ? \"bg-[var(--theme-hover-strong)] text-[var(--theme-accent)]\"\n                                  : \"text-on-surface-muted hover:bg-[var(--oaec-hover)] hover:text-on-surface-secondary\"\n                              }`}\n                              title={isInhomogeneous ? \"Stijlen verwijderen\" : \"Stijlen toevoegen\"}\n                            >\n                              <svg className=\"h-4 w-4\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\">\n                                <path d=\"M4 6h16M4 12h16M4 18h16\" />\n                              </svg>\n                            </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-heatloss-studio/blob/e233aec70e16771ecb42a57d6eab3ca6cb0e75a8/frontend/src/pages/RcCalculator.tsx#L774",
+        "asset": "harmonization/inline-ui-icons/open-heatloss-remaining/stud-toggle.svg",
+        "exact_hash": "556d2c45a8a3ff44f1946c35ca675bb0456275ac448b267b97c5bb6c6c775c49",
+        "geometry_hash": "7d968f46ed9971cf24ab44d95c88e71aff6915373ee16f428a4980fe6e2481a5",
+        "origins": [
+          "heatloss-remaining-svg-audit.json"
+        ],
+        "function_id": "review.studtoggle",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "beab9b650adec10d",
+        "function_label": "Stud Toggle",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/construction.studs-toggle.svg",
+          "sha256": "5635af0e5b0cae7f2484deed4a0abb18c23ab8fad37ca15ab658ebd89dc0b229"
+        },
+        "24": {
+          "path": "svg/24/construction.studs-toggle.svg",
+          "sha256": "c50ab3be83e24e7c5ad684ad669f0c867e8f4ea30739fa49232c451b3dec7356"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/construction.studs-toggle.svg",
+          "sha256": "42617363526a1d08bc25784a34f22305a8c707ac844df73ac5ae8b6f3674a02c"
+        },
+        "24": {
+          "path": "svg/24/construction.studs-toggle.svg",
+          "sha256": "6c6bc38b953420199c882f36ff2edb3f37fc5b86f868982836a12e9545199458"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "pile.load-points",
+      "label": "Belastinglocaties inspecteren",
+      "ui_call": "Het rechterpaneel load-point met de belastinglocaties openen; geen locatie plaatsen.",
+      "source_example": {
+        "app": "Pile Plan",
+        "repository": "pile-plan-studio",
+        "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+        "name": "loadPointIcon",
+        "label": "Belastinglocaties",
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "line": 162,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pile-inline-ui-icons.json",
+        "context": "<RibbonButton icon={loadPointIcon} label={t(\"plan.loadPoints\")} wide onClick={() => onOpenRightPanel?.(\"load-point\")} />\n                <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx#L162",
+        "asset": "harmonization/inline-ui-icons/pile-plan-studio/loadPointIcon.svg",
+        "exact_hash": "e033c9d95444dc62528db2dfd44a33f12e5bb8d3e26010efe2fc4775a70639ca",
+        "geometry_hash": "ae46ef708c95f9cdf24387749b79ee55c426fe5e32cf55d9b5386c3791b6f8df",
+        "origins": [
+          "pile-inline-ui-icons.json"
+        ],
+        "function_id": "review.belastinglocaties",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "0c59a530634a23f9",
+        "function_label": "Belastinglocaties",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/pile.load-points.svg",
+          "sha256": "1b601d69ff095f9ded19f56651c9f9a1af9d287b6d8ed7749788de92c7b70f4a"
+        },
+        "24": {
+          "path": "svg/24/pile.load-points.svg",
+          "sha256": "bd868002be262d6c5755b980f4f7f5107e163caf1fff6cd902df092268511c14"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/pile.load-points.svg",
+          "sha256": "4e118c2550991c792f9cef6dee00715c20917e694e66c1a26a14fde17addfb4a"
+        },
+        "24": {
+          "path": "svg/24/pile.load-points.svg",
+          "sha256": "48f304de25fa1fff3fa0e36584dd9889cbd231515a4573ded5836bab88fba3b4"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "pile.cpts",
+      "label": "Sonderingen inspecteren",
+      "ui_call": "Het rechterpaneel cpts openen; geen sondering in de tekening plaatsen.",
+      "source_example": {
+        "app": "Pile Plan",
+        "repository": "pile-plan-studio",
+        "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+        "name": "cptIcon",
+        "label": "Sonderingen",
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "line": 163,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pile-inline-ui-icons.json",
+        "context": "<RibbonButton icon={cptIcon} label={t(\"plan.cpts\")} onClick={() => onOpenRightPanel?.(\"cpts\")} />\n              </RibbonGroup>\n              <RibbonGroup label={t(\"plan.selection\")}>\n                <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx#L163",
+        "asset": "harmonization/inline-ui-icons/pile-plan-studio/cptIcon.svg",
+        "exact_hash": "5c0db37d0ec0c5c2675aa7a28478c3a9c00586908b6a470f1e64d3353393c034",
+        "geometry_hash": "375f2f0d71953e95c82c0171a24ad9c79a4a8a14045a7c9e4e11df60e0f2b606",
+        "origins": [
+          "pile-inline-ui-icons.json"
+        ],
+        "function_id": "edit.select",
+        "function_status": "functie uit label; controleren",
+        "id": "97f9f80540eb01f1",
+        "function_label": "Selecteren",
+        "category": "Selecteren"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/pile.cpts.svg",
+          "sha256": "405611108838383cc820b5a6047969f835e45ec110de90befaaabb34faa83493"
+        },
+        "24": {
+          "path": "svg/24/pile.cpts.svg",
+          "sha256": "8ba5d2352eb126b463df39cf1c1f9b3e4544c6a8afe1ef67ea68fea5e8427f42"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/pile.cpts.svg",
+          "sha256": "afa144a6da661fb7612c78ceb3bd049ad57a99c85988d90be89eb253ddce3654"
+        },
+        "24": {
+          "path": "svg/24/pile.cpts.svg",
+          "sha256": "24be0ff5534e5f839a34e5e06d0addb40cb24a603737e38145d5db8e956dad9e"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "pile.optimization",
+      "label": "ILP-optimalisatiepaneel",
+      "ui_call": "Het taakpaneel ilp-optimization openen; de berekening start pas met de afzonderlijke opdracht in dat paneel.",
+      "source_example": {
+        "app": "Pile Plan",
+        "repository": "pile-plan-studio",
+        "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+        "name": "optimizeIcon",
+        "label": "Optimaliseren",
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "line": 197,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pile-inline-ui-icons.json",
+        "context": "<RibbonButton icon={optimizeIcon} label={t(\"ilp.run\")} onClick={() => onOpenTaskPanel?.(\"ilp-optimization\")} />\n              </RibbonGroup>\n            </div>\n          </div>\n        );\n      case \"view\":\n        return (\n          <div className=\"ribbon-content\">\n            <div className=\"ribbon-groups\">\n              <RibbonGroup label={t(\"view.symbols\")}>\n                <label className=\"ribbon-slider-control\">\n                  <span>{t(\"view.symbolSize\")}</span>\n                  <strong>{symbolScalePercent}%</strong>\n                  <input\n                    aria-label={t(\"view.symbolSize\")}\n                    max=\"200\"\n                    min=\"10\"\n                    step=\"1\"\n                    type=\"range\"\n                    value={symbolScalePercent}\n                    onChange={(ev",
+        "source_url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx#L197",
+        "asset": "harmonization/inline-ui-icons/pile-plan-studio/optimizeIcon.svg",
+        "exact_hash": "8be8a4c458b7aeec57408ed3029c9eed3975bf22392bad71a6d0179b91710607",
+        "geometry_hash": "93763b44b17bf4ee9aaa0cbd4be3ef23204e598f8b170f7981f2f628977fe3d5",
+        "origins": [
+          "pile-inline-ui-icons.json"
+        ],
+        "function_id": "review.optimaliseren",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "878dcaefee22db8e",
+        "function_label": "Optimaliseren",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/pile.optimization.svg",
+          "sha256": "eb65b837c992d5ff0d32def3f4a70952cb3fed8e5f0b2adbd335540d1b9b8367"
+        },
+        "24": {
+          "path": "svg/24/pile.optimization.svg",
+          "sha256": "5febc49214856cb5651cdc14874eea6cd6605f64f20ccb3327745716f0596c40"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/pile.optimization.svg",
+          "sha256": "3d3cd79a0ce55a12da76ff958826f0e14b67a599bcafc040e35bd41f1eeb3dad"
+        },
+        "24": {
+          "path": "svg/24/pile.optimization.svg",
+          "sha256": "65acd9a026946451c3fe2f215e6a24f0eb24d384ee644d518facd9e85ce07104"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "pile.tip-regions",
+      "label": "Paalpuntniveaugebieden tonen of verbergen",
+      "ui_call": "showTipLevelRegions omschakelen; de actie en zichtbaarheid staan in het dynamische label.",
+      "source_example": {
+        "app": "Pile Plan",
+        "repository": "pile-plan-studio",
+        "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+        "name": "tipLevelRegionsIcon",
+        "label": "tipLevelRegionsIcon",
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "line": 297,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pile-inline-ui-icons.json",
+        "context": "<RibbonButton\n                  className=\"tip-level-regions-toggle\"\n                  icon={tipLevelRegionsIcon}\n                  label={t(tipLevelRegionToggle.labelKey)}\n                  onClick={() => onTipLevelRegionVisibilityChange(tipLevelRegionToggle.nextVisible)}\n                />\n                <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx#L297",
+        "asset": "harmonization/inline-ui-icons/pile-plan-studio/tipLevelRegionsIcon.svg",
+        "exact_hash": "10745b4af9bb5f692d98c279c3852a679ad7415ccbd47864d27ca6c421a41141",
+        "geometry_hash": "18fed09d08b7f4bc5c628027c618cd1a5ed7e17568c85525e9f2113fa70d87c2",
+        "origins": [
+          "pile-inline-ui-icons.json"
+        ],
+        "function_id": "review.tiplevelregions",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "2d68fd5c3f51d38e",
+        "function_label": "tip Level Regions Icon",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/pile.tip-regions.svg",
+          "sha256": "f516b20ce80a8278b4ad6ce8b5ffe8e0e69ca802c0a529ceebedb7e6240c5a95"
+        },
+        "24": {
+          "path": "svg/24/pile.tip-regions.svg",
+          "sha256": "9cadae40c4c4ae7724910e60ed16fd85fbb88606c0858d1070ed6f22f754cf79"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/pile.tip-regions.svg",
+          "sha256": "65a08f0a436ef82b7e50cc01478737273f6afec8dc929dd6c1e60720055b2d31"
+        },
+        "24": {
+          "path": "svg/24/pile.tip-regions.svg",
+          "sha256": "0a65d436a97b7821fcb3a8bbae2ee78072298ef0b383d3055a44f0556c1288ee"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "pile.load-groups",
+      "label": "Belastinggroepen tonen of verbergen",
+      "ui_call": "showLoadPointGroups omschakelen; geen groep maken of instellingen openen.",
+      "source_example": {
+        "app": "Pile Plan",
+        "repository": "pile-plan-studio",
+        "commit": "ffe979d3b85976fe1f523d31a411c97ebd331e2f",
+        "name": "groupsIcon",
+        "label": "Groepen verbergen",
+        "path": "apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx",
+        "line": 303,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pile-inline-ui-icons.json",
+        "context": "<RibbonButton\n                  active={showLoadPointGroups}\n                  icon={groupsIcon}\n                  label={showLoadPointGroups ? t(\"view.hideGroups\") : t(\"view.showGroups\")}\n                  onClick={() => onLoadPointGroupVisibilityChange(!showLoadPointGroups)}\n                />\n              </RibbonGroup>\n              <RibbonGroup label={t(\"view.windows\")}>\n                <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/pile-plan-studio/blob/ffe979d3b85976fe1f523d31a411c97ebd331e2f/apps/pile-plan-studio/src/components/template/ribbon/Ribbon.tsx#L303",
+        "asset": "harmonization/inline-ui-icons/pile-plan-studio/groupsIcon.svg",
+        "exact_hash": "b187ad5802a3f41f5bdd8059a1b57ba2a7692b6ffb8e6d32d58f001803739be7",
+        "geometry_hash": "0b2af9606a89b9d48d073854c491cf0dad5052509901a452cc9b324d57e442fe",
+        "origins": [
+          "pile-inline-ui-icons.json"
+        ],
+        "function_id": "review.groepenverbergen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "c66ad5ebba56d8cb",
+        "function_label": "Groepen verbergen",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/pile.load-groups.svg",
+          "sha256": "6262714ab39307c00b710fe1e84d9ffdfbc092ad2557196d92fcef1b8bd9b8bd"
+        },
+        "24": {
+          "path": "svg/24/pile.load-groups.svg",
+          "sha256": "55f3ceac1735b998633f425a44109054b1905094ddcf3a561e3c063e46ba8e18"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/pile.load-groups.svg",
+          "sha256": "d3a8c76c726941d813f727f451d8685f124eba99b5cf7ea70c5ee6bab3655fa3"
+        },
+        "24": {
+          "path": "svg/24/pile.load-groups.svg",
+          "sha256": "4270733be71ac8d8925159f13a86f9551c45ad69b7a640083ef4648ad1ac0ba6"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "quotation.type-private",
+      "label": "Particuliere offerte",
+      "ui_call": "setOfferteType particulier selecteert het particuliere offertetype; geen rapport genereren.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "report",
+        "label": "Particulier",
+        "path": "src/components/ribbon/OfferteTab.tsx",
+        "line": 44,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton\n            icon={reportIcon}\n            label={t(\"offerte.particulier\")}\n            onClick={() => setOfferteType('particulier')}\n            active={offerte.type === 'particulier'}\n          />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/OfferteTab.tsx#L44",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/report.svg",
+        "exact_hash": "704dd028fff3ca2e6feb7142a12a53d7850fdfb773d622467fcb499777755a10",
+        "geometry_hash": "610c8a90e34dfd45523e48a4b10b1ef12d058ab2d64696e588d76b4468d91166",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.particulier",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "1819ba24a47eec10",
+        "function_label": "Particulier",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/quotation.type-private.svg",
+          "sha256": "48497ff41a1b65541b4b79aad2986833b0624eb296d807d8d3e975f8b8fcc262"
+        },
+        "24": {
+          "path": "svg/24/quotation.type-private.svg",
+          "sha256": "f695e1455797a64d590c647ed8e3a3b90be10cc5a2ebb6a922fa6c672510998d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/quotation.type-private.svg",
+          "sha256": "5d8787dfb9c494359e3cbd779024c88f975ef9d364076dd38c7ca2422011e703"
+        },
+        "24": {
+          "path": "svg/24/quotation.type-private.svg",
+          "sha256": "59c7d9df006ae16a8377b5892e558a7004d0301a78544d5ef5863ff6e628a67f"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "quotation.payment-terms",
+      "label": "Betalingstermijnen",
+      "ui_call": "Het offerteonderdeel __termijnen met percentages, omschrijvingen en toelichting openen.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "settings",
+        "label": "Termijnen",
+        "path": "src/components/ribbon/OfferteTab.tsx",
+        "line": 83,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton icon={settingsIcon} label={t(\"offerte.termijnen\")} onClick={() => setActiveSectionId('__termijnen')} />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/OfferteTab.tsx#L83",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/settings.svg",
+        "exact_hash": "a9951adaec8558e7db8e2dbe64d3ea502e569d92d5eb50005842f81c87db8e9c",
+        "geometry_hash": "bd33b6b133ed187e303e5ccca324662d18c32f7368a23228ebe1a50d5854bd5b",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "ui.settings",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "2623be96a2352308",
+        "function_label": "Instellingen",
+        "category": "Instellingen en hulp"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/quotation.payment-terms.svg",
+          "sha256": "6a43db0edbfcefeb02eb4455cfb0f3bb635d6f8be4af3be7ad308f4ad9983d2c"
+        },
+        "24": {
+          "path": "svg/24/quotation.payment-terms.svg",
+          "sha256": "1ab324cb46edbf6b7096b277f8587d80249277a6c69dfe6db2489a6a72c0a73c"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/quotation.payment-terms.svg",
+          "sha256": "084ac0f996cdaab4a6a2b1cd17bc6040b340a0f16c43a183baa47d2c011077bd"
+        },
+        "24": {
+          "path": "svg/24/quotation.payment-terms.svg",
+          "sha256": "f31c7557446ed784d8c6b35a5d65e0c04386c32340720d234939ec7bee1669ff"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "report.view-main-contract",
+      "label": "Hoofdaannemingsrapport",
+      "ui_call": "REPORT_VIEWS kiest hoofdaanneming voor de rapportpreview.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "report-hoofdaanneming",
+        "label": "report-hoofdaanneming",
+        "path": "src/components/ribbon/RapportageTab.tsx",
+        "line": 53,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "  { value: 'hoofdaanneming', labelKey: 'rapportage.viewHoofdaanneming', icon: reportHoofdaannemingIcon, titleKey: 'rapportage.viewHoofdaannemingTitle' },\n  { value: 'onderaanneming', labelKey: 'rapportage.viewOnderaanneming', icon: reportOnderaannemingIcon, titleKey: 'rapportage.viewOnderaannemingTitle' },\n  { value: 'inschrijfstaat', labelKey: 'rapportage.viewInschrijfstaat', icon: reportInschrijfstaatIcon, titleKey: 'rapportage.viewInschrijfstaatTitle' },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RapportageTab.tsx#L53",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/report-hoofdaanneming.svg",
+        "exact_hash": "eaedce776d97f7483b7c7d8bc74293b71c0fa8e634a9eb39281bae85e823be21",
+        "geometry_hash": "b9cdce286a27c8a07d88dc42d4617c3a2a2ac0a58b13046f56ac9dbe2703212c",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.reporthoofdaanneming",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "8604b1e54568c00c",
+        "function_label": "report hoofdaanneming",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/report.view-main-contract.svg",
+          "sha256": "80715f3ec809cd9c655b8d3d8546ab5607b6f6c7d36533d26a39a2ed2e56850b"
+        },
+        "24": {
+          "path": "svg/24/report.view-main-contract.svg",
+          "sha256": "f57e32a086ef662e545caba005dd0dc25f8e06455ba275c486355ba38807952e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/report.view-main-contract.svg",
+          "sha256": "a8a2a1bb6f0f27e4ad49c09a00439b67b99a34bd8d88ce54cd651c1f3f09acc8"
+        },
+        "24": {
+          "path": "svg/24/report.view-main-contract.svg",
+          "sha256": "6b1782bdd32bd24dec47fc8bab2e6d066fe318b979b58bfc86a56cbd64747ef6"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "report.view-subcontract",
+      "label": "Onderaannemingsrapport",
+      "ui_call": "REPORT_VIEWS kiest onderaanneming voor de rapportpreview.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "report-onderaanneming",
+        "label": "report-onderaanneming",
+        "path": "src/components/ribbon/RapportageTab.tsx",
+        "line": 54,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "  { value: 'onderaanneming', labelKey: 'rapportage.viewOnderaanneming', icon: reportOnderaannemingIcon, titleKey: 'rapportage.viewOnderaannemingTitle' },\n  { value: 'inschrijfstaat', labelKey: 'rapportage.viewInschrijfstaat', icon: reportInschrijfstaatIcon, titleKey: 'rapportage.viewInschrijfstaatTitle' },\n  { value: 'nacalculatie', labelKey: 'rapportage.viewNacalculatie', icon: reportNacalculatieIcon, titleKey: 'rapportage.viewNacalculatieTitle' },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RapportageTab.tsx#L54",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/report-onderaanneming.svg",
+        "exact_hash": "30a542baf1651e3d9973d88268c2bc971e6b61d09dea6a53471462e1e7b4f5f9",
+        "geometry_hash": "38081622ad9394bd8540e931b7a70e3d9b17e7d16f7d784939d7383752673871",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.reportonderaanneming",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "ab479d5c2fb50734",
+        "function_label": "report onderaanneming",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/report.view-subcontract.svg",
+          "sha256": "5d6161fcdb648abd3ed15ed37c6bfd86486b0593bd91a11d3123a1ee37e56950"
+        },
+        "24": {
+          "path": "svg/24/report.view-subcontract.svg",
+          "sha256": "5801c8d85b8da53e3b5bdc796154b2b23663fddd394f6ba68a55c19796dafd3e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/report.view-subcontract.svg",
+          "sha256": "1d0eef421e26f03082a73d3f4e720153a98a5b7662d1f91b14e8d75ecf722842"
+        },
+        "24": {
+          "path": "svg/24/report.view-subcontract.svg",
+          "sha256": "dfde7c0593715c1e0404c826bc0620178d306d3cc0a3290351d7d9f82cc92d22"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "report.view-tender",
+      "label": "Inschrijfstaatweergave",
+      "ui_call": "REPORT_VIEWS kiest inschrijfstaat; geen Excel-bestand exporteren.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "report-inschrijfstaat",
+        "label": "report-inschrijfstaat",
+        "path": "src/components/ribbon/RapportageTab.tsx",
+        "line": 55,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "  { value: 'inschrijfstaat', labelKey: 'rapportage.viewInschrijfstaat', icon: reportInschrijfstaatIcon, titleKey: 'rapportage.viewInschrijfstaatTitle' },\n  { value: 'nacalculatie', labelKey: 'rapportage.viewNacalculatie', icon: reportNacalculatieIcon, titleKey: 'rapportage.viewNacalculatieTitle' },\n  { value: 'bouw1', labelKey: 'rapportage.viewBouw1', icon: reportBouw1Icon, titleKey: 'rapportage.viewBouw1Title' },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RapportageTab.tsx#L55",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/report-inschrijfstaat.svg",
+        "exact_hash": "44cc27f15578f98cae6de81b7c6e9c171f10eec6b77a5ab872be5b345708d953",
+        "geometry_hash": "88863a58236c95ecdd40af52af0617dcf1fb7da01aabe3fc906250a59ce13f41",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.reportinschrijfstaat",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "31d750e4c3278179",
+        "function_label": "report inschrijfstaat",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/report.view-tender.svg",
+          "sha256": "ed97532070d2d29e973bfa2f091879011f7f22a167ce7cc3190c57618c2fb123"
+        },
+        "24": {
+          "path": "svg/24/report.view-tender.svg",
+          "sha256": "a8ba68faa4349431cd8f23579dd1a0dde97a80d50bcd2d4fbae8308426a81b4d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/report.view-tender.svg",
+          "sha256": "22944625deed2b1a983337bf24abc7398ddddb41a277e04494238155b74e8df6"
+        },
+        "24": {
+          "path": "svg/24/report.view-tender.svg",
+          "sha256": "be68e81b181e0b26f7cea8fa33e50fc1d3c7f948e1b35e0a7b96c1725bba091a"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "report.view-estimate",
+      "label": "Directiebegrotingsrapport",
+      "ui_call": "REPORT_VIEWS kiest directie voor de rapportpreview; geen offerteaanvraag verzenden.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "report-directie",
+        "label": "report-directie",
+        "path": "src/components/ribbon/RapportageTab.tsx",
+        "line": 59,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "  { value: 'directie', labelKey: 'rapportage.viewDirectie', icon: reportDirectieIcon, titleKey: 'rapportage.viewDirectieTitle' },\n];\n\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/RapportageTab.tsx#L59",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/report-directie.svg",
+        "exact_hash": "6a7acff16bca275f4769b4258ad14d758acc6e2bf79342240a1a7cc91a02d64b",
+        "geometry_hash": "1e749495485dbe74846d60beb968a405b444ec8cc7f8379292c57f695e714109",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.reportdirectie",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "e634aa83ac6cdf95",
+        "function_label": "report directie",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/report.view-estimate.svg",
+          "sha256": "a26fe9b3ec439ec936437f71bd69530240cdc82c6597d52934d8f5100db1c928"
+        },
+        "24": {
+          "path": "svg/24/report.view-estimate.svg",
+          "sha256": "593bf6df9622f661ceac0d49c7adcbfaeefb6fa5588106a27518c1e3094d5205"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/report.view-estimate.svg",
+          "sha256": "55dcd3899837348dc7237aca3fe3ef0a53af74a0a070e958c493205a06f14000"
+        },
+        "24": {
+          "path": "svg/24/report.view-estimate.svg",
+          "sha256": "30a4e1c8ccd149f19a050a7811123b4efe5876d6d8653720d1621ba38d813891"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.quantities-visible",
+      "label": "Hoeveelheden tonen",
+      "ui_call": "toggleHoeveelheid schakelt de hoeveelheidkolom/-weergave in begroting en rapporten.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "settings",
+        "label": "Hoeveelheid",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 268,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton\n            icon={settingsIcon}\n            label={t('home.quantity')}\n            onClick={toggleHoeveelheid}\n            active={showHoeveelheid}\n          />\n        </RibbonGroup>\n\n        <RibbonGroup label={t('home.display')}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L268",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/settings.svg",
+        "exact_hash": "a9951adaec8558e7db8e2dbe64d3ea502e569d92d5eb50005842f81c87db8e9c",
+        "geometry_hash": "bd33b6b133ed187e303e5ccca324662d18c32f7368a23228ebe1a50d5854bd5b",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "ui.settings",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "0cc80121d0b1fb17",
+        "function_label": "Instellingen",
+        "category": "Instellingen en hulp"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.quantities-visible.svg",
+          "sha256": "ed3a19c2c8b4521059655a60b1d84a014fb76100689ebe725f9958346141fa9d"
+        },
+        "24": {
+          "path": "svg/24/calc.quantities-visible.svg",
+          "sha256": "942e536e235df197ebd75d08b7a86e8a0cbcddf042308a8a0e39e1118ec0ec55"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.quantities-visible.svg",
+          "sha256": "9bebc73a76aaa99b331fadff8d61aa7c1e5e04216d46223974c4601c0f9ed962"
+        },
+        "24": {
+          "path": "svg/24/calc.quantities-visible.svg",
+          "sha256": "88489ca069281ee6755697a4118772c3627c9d05d679cd4e4eb75f0e66b171fe"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.grid-standard",
+      "label": "Standaard begrotingsweergave",
+      "ui_call": "setGridView st kiest GRID_COLUMN_DEFS; geen geheel nieuw document maken.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "view-st",
+        "label": "UI-1",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 277,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton\n            icon={viewStIcon}\n            label={t('home.viewUi1')}\n            size=\"small\"\n            onClick={() => setGridView('st')}\n            active={gridView === 'st'}\n          />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L277",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/view-st.svg",
+        "exact_hash": "ddae8d9f0fca1035f5b9c855c59a9895cc07b9ce5f1b770d1eb7d1d4ab88b222",
+        "geometry_hash": "f06193977ad1c75cdc6790bf6225db506cff3ae42cb636da1b197bfb09a1af42",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.ui1",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "9ef187cdbc0fbd0e",
+        "function_label": "UI 1",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.grid-standard.svg",
+          "sha256": "060201b081173e1dd11f179d443c26711e605bac2817cc71f6e852693db43afa"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-standard.svg",
+          "sha256": "da441dfec237c317876000c7395ae76bb9058a4a385e30d5afe2c3413542b3de"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.grid-standard.svg",
+          "sha256": "0e6a5e8100c6fd24f2470865d9f87ae18c3cea8af7fc0838a5b458557fa7b962"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-standard.svg",
+          "sha256": "c65b3369b5d9f8161f359fd8d45733fb4b23f4aaddf88d2ee6de70be32b65c4c"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.grid-wpcalc",
+      "label": "WpCalc-begrotingsweergave",
+      "ui_call": "setGridView wpcalc kiest WPCALC_COLUMN_DEFS en de bijbehorende hiërarchische groepering.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "view-wp-calc",
+        "label": "UI-2",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 284,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton\n            icon={viewWpCalcIcon}\n            label={t('home.viewUi2')}\n            size=\"small\"\n            onClick={() => setGridView('wpcalc')}\n            active={gridView === 'wpcalc'}\n          />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L284",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/view-wp-calc.svg",
+        "exact_hash": "cfd9b1988925e85df209dcc25064c3ba0cf254cb3c908e01a3d364900f39c0a5",
+        "geometry_hash": "8e7ebca368357dfdcb86568012172ea2a5558fa7c24b151075260763e1edfb8e",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.ui2",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "e2c2f9a423ccb8ea",
+        "function_label": "UI 2",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.grid-wpcalc.svg",
+          "sha256": "08e2cca5cda4cfc353617b3e851516f3b16f9c59bee9dea90ca389a2678bf8f4"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-wpcalc.svg",
+          "sha256": "2109bb52eef76d5496ebe011e2309dd9f6bc1ab7b50922fcc80af31fb4c36a1c"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.grid-wpcalc.svg",
+          "sha256": "3d60d1f0e0e82235375f4e43e13f088f05b7e6cb9209da5cdee2ae5f9bd73392"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-wpcalc.svg",
+          "sha256": "ecb3fe610b5605aa8fd9044d6a9ed40b3433d77be5e25130b03dc34132e5c94d"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.grid-simple",
+      "label": "Eenvoudige begrotingsweergave",
+      "ui_call": "setGridView simple kiest SIMPLE_COLUMN_DEFS.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "view-st",
+        "label": "Simple",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 291,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton\n            icon={viewStIcon}\n            label={t('home.viewUi3', 'UI-3')}\n            size=\"small\"\n            onClick={() => setGridView('simple')}\n            active={gridView === 'simple'}\n          />\n          <div className=\"ribbon-undo-dropdown-wrap\" ref={collapseWrapRef}>\n            <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L291",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/view-st.svg",
+        "exact_hash": "ddae8d9f0fca1035f5b9c855c59a9895cc07b9ce5f1b770d1eb7d1d4ab88b222",
+        "geometry_hash": "f06193977ad1c75cdc6790bf6225db506cff3ae42cb636da1b197bfb09a1af42",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "review.simple",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "8de859729fb99cf7",
+        "function_label": "Simple",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.grid-simple.svg",
+          "sha256": "847b5bf70dd738f8e8ae37b4e504134d61a64bc56f012033f030bdac9537fe9c"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-simple.svg",
+          "sha256": "79d0c092158a5009f2bf800c7af31dc6414f90bc0115a5c667d41781f779533b"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.grid-simple.svg",
+          "sha256": "65acbb483cc3464ed9131d0a67eacf999e6c9d1232be8f7c4d622ae5db6f05a6"
+        },
+        "24": {
+          "path": "svg/24/calc.grid-simple.svg",
+          "sha256": "81c43e1f765ef5bd705f77f1aaea0f652750a6d8b54694a87069117a4d48fb50"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.chapter",
+      "label": "Begrotingshoofdstuk",
+      "ui_call": "Hoofdstukindicator in SchedulePanel; de omringende rij selecteert de corresponderende begrotingsrij.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "SchedulePanel:svg-41",
+        "label": "SchedulePanel:svg-41",
+        "path": "src/components/panels/SchedulePanel.tsx",
+        "line": 41,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd",
+        "origin": "volledige clientbronscan",
+        "context": "            <svg width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--theme-text-secondary)\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" style={{ flexShrink: 0 }}>\n              <path d=\"M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z\"/>\n            </svg>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/panels/SchedulePanel.tsx#L41",
+        "asset": "harmonization/function-icon-assets/41cb885d5101eaf9035525d8de4af8e46624c42c1a0b69100629074af1322eeb.svg",
+        "exact_hash": "77188c8b0c38b528dcf150bc56f1e229dcd98bc41ac2fffa91b6d6e3e0f11bc0",
+        "geometry_hash": "5ce367de8b1fc978a013582921afb93e06530c54106b11a80fdb32a1debcb47b",
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.schedulepanelsvg41",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "6754758a1a470b4a",
+        "function_label": "Schedule Panel:svg 41",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.chapter.svg",
+          "sha256": "785dae5c0a2dca928c8ee4365170afcb62237948b65377420d5d9291cbc4a03d"
+        },
+        "24": {
+          "path": "svg/24/calc.chapter.svg",
+          "sha256": "c802eb4f19dd52c9834bb9443dac9639d81cc9abd32c7bf753b739aff0a9990d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.chapter.svg",
+          "sha256": "c2b66d2debdf45f1eb725d3b5f189f3f9b9d9c37aef5dc69c2c85bfe612d294a"
+        },
+        "24": {
+          "path": "svg/24/calc.chapter.svg",
+          "sha256": "17848ba39e4c7f88b725de6fb69b6b577a278cc2fa6f8b283be708fc62ab961d"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "workspace.dock-back",
+      "label": "Terug naar hoofdvenster",
+      "ui_call": "De losgemaakte begroting via BroadcastChannel als tab in het hoofdvenster openen/activeren en daarna het losse venster laten sluiten.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "App:svg-455",
+        "label": "App:svg-455",
+        "path": "src/App.tsx",
+        "line": 455,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd",
+        "origin": "volledige clientbronscan",
+        "context": "          <svg width=\"12\" height=\"12\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\">\n            <path d=\"M4 2v12M8 6l-4 4 4 4\" />\n          </svg>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx#L455",
+        "asset": "harmonization/function-icon-assets/19ba8d250a4e5b39b597fb2de3e8393b1312d81fec9def46cb5339e8b534333b.svg",
+        "exact_hash": "98dc2171015a7948cd42bee075b18126b58283f5e52593b0971b46b52c60f650",
+        "geometry_hash": "0bb41a3e5d600bae428a03166769fd0cc74110f17ac83d8f1ab6df13b4c66a27",
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.appsvg455",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "1f7657010f43067e",
+        "function_label": "App:svg 455",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/workspace.dock-back.svg",
+          "sha256": "389e0582afd7c1c4bafe59b46b8aa03c349184f3b371f81e94cd927b710a7b09"
+        },
+        "24": {
+          "path": "svg/24/workspace.dock-back.svg",
+          "sha256": "d3c68cf42619df83a257b5593e679a31262b09ccd947dba337b05bbfa8c50cfa"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/workspace.dock-back.svg",
+          "sha256": "066de0aa344db1d834a421b7f090766879eb5483eff67098feb8359847efb7ba"
+        },
+        "24": {
+          "path": "svg/24/workspace.dock-back.svg",
+          "sha256": "9df03f0e29ec59c28405278f72d95879b17dd797fc9cdebb2a66f1cd6e6be075"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calc.hsb-wizard",
+      "label": "HSB-wandrekenwizard",
+      "ui_call": "De geregistreerde HSB-wandwizard kiezen en de parameters openen; berekenen en begrotingsposten invoegen volgen afzonderlijk.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "Glyph 🏗️",
+        "label": "🏗️",
+        "path": "src/services/wizard/hsbWandCalculator.ts",
+        "line": 211,
+        "role": "",
+        "evidence": "teksticoon-kandidaat",
+        "review": null,
+        "assessment": {},
+        "state": "Lettertype-/OS-afhankelijke vorm; functie controleren",
+        "origin": "volledige clientbronscan",
+        "context": "  icon: '🏗️',\n  description: 'Hout Skelet Bouw wand — berekent stijlen, regels, beplating, isolatie en afwerking',\n  params: [\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/wizard/hsbWandCalculator.ts#L211",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.unknown",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a187ebf3640483d6",
+        "function_label": "➕",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calc.hsb-wizard.svg",
+          "sha256": "14276245727760fc4bafe10b0ef10bb67180fdd49a8f386228725a8e85c51baf"
+        },
+        "24": {
+          "path": "svg/24/calc.hsb-wizard.svg",
+          "sha256": "c007e4538b1ce6a337ac10b9b9a2d164dfb60502299f8807d5208478779e72cc"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calc.hsb-wizard.svg",
+          "sha256": "5df02962c97e8582331f49938f7e6dad843b07f34b4c25ff5afc0ed3ea8d295e"
+        },
+        "24": {
+          "path": "svg/24/calc.hsb-wizard.svg",
+          "sha256": "d7610d8ea336dd2c5d0f337ee5fe7a4a411a85f9afea2f2d248159ebd464c608"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "symbol.category-electric",
+      "label": "Elektrotechnische symbolen",
+      "ui_call": "De categorie NL Elektra in de symboolbibliotheek in- of uitklappen; geen aansluitpunt plaatsen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "nl-elektra",
+        "label": "NL Elektra",
+        "path": "open-pdf-studio/js/solid/data/nlSymbolLibrary.js",
+        "line": 185,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "built-in-category; locale-filtered",
+        "origin": "pdf-symbol-category-ui-icons.json",
+        "context": "    icon: `<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9 1 3 9h4l-1 6 6-8H8z\"/></svg>`,\n    symbols: ELEKTRA_SYMBOLS,\n  },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/data/nlSymbolLibrary.js#L185",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/symbol-categories/nl-elektra.svg",
+        "exact_hash": "e886ca05cd611df9d13fd1ec80cf3d2ea397349b891ae394da6c1db8e9fa811f",
+        "geometry_hash": "6ca383d34436a8765c853fa1b0c10ff30d16bb05ea373cf514cccb0a5bf64c9d",
+        "origins": [
+          "pdf-symbol-category-ui-icons.json"
+        ],
+        "function_id": "review.nlelektra",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "7eeef82122190ba4",
+        "function_label": "NL Elektra",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/symbol.category-electric.svg",
+          "sha256": "0ff58f9dac41155b4b57e4632870a98d482a7302e1bb1c5ee446582b1b35533a"
+        },
+        "24": {
+          "path": "svg/24/symbol.category-electric.svg",
+          "sha256": "37532758406dc07e6b5fb2005e9c1e9f7697a7b4fbe1ee5d82b61d89d881f0b9"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/symbol.category-electric.svg",
+          "sha256": "612d66f0fa7152ade0a3b18c53e5a3abaf6296d1368ee766524d2c985ee8409c"
+        },
+        "24": {
+          "path": "svg/24/symbol.category-electric.svg",
+          "sha256": "44fe30ae69bfdc49da0d5cd9bb0dfe9b9aa15cca10e6209fa00bdf58be9b1d51"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "symbol.category-custom",
+      "label": "Eigen symboolgroep",
+      "ui_call": "De opgeslagen eigen symboolgroep in de bibliotheek aanduiden en in-/uitklappen; het plusvormige bronicoon voegt hier geen groep toe.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "custom-group",
+        "label": "Eigen symboolgroep",
+        "path": "open-pdf-studio/js/solid/stores/symbolStore.js",
+        "line": 109,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "only-when-custom-group-exists",
+        "origin": "pdf-symbol-category-ui-icons.json",
+        "context": "    icon: `<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><rect x=\"2\" y=\"2\" width=\"12\" height=\"12\" rx=\"2\"/><line x1=\"8\" y1=\"5\" x2=\"8\" y2=\"11\"/><line x1=\"5\" y1=\"8\" x2=\"11\" y2=\"8\"/></svg>`,\n  }));\n  return [\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/stores/symbolStore.js#L109",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/symbol-categories/custom-group.svg",
+        "exact_hash": "7a4f0afb51232be1884396e5513d6d948b6cff0fcdf4ea179f9442d1f9fee5e0",
+        "geometry_hash": "a8780c41fc73a206b8e067040cf9deb0e41b9ab950819e5336d536c378234968",
+        "origins": [
+          "pdf-symbol-category-ui-icons.json"
+        ],
+        "function_id": "review.eigensymboolgroep",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "4c678249cc4f6427",
+        "function_label": "Eigen symboolgroep",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/symbol.category-custom.svg",
+          "sha256": "ced32f0606d0d270033e8eb1ded108f16a11cfafa1c9e4e70ba8a926ff39df52"
+        },
+        "24": {
+          "path": "svg/24/symbol.category-custom.svg",
+          "sha256": "35c99a5cee690042623b1da2b7cef6757900bd20f1c399ced4148cf9fc029928"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/symbol.category-custom.svg",
+          "sha256": "242f7e7b416b57d88c0487ec7ed3d4e81d63cea454775cc5d4ffff86197192be"
+        },
+        "24": {
+          "path": "svg/24/symbol.category-custom.svg",
+          "sha256": "3e5496240c950a0a80e29c5c34a44e991d3ad16d04f59723aab533fd56ba0faa"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "assistant.translate",
+      "label": "Documentvertaling vragen",
+      "ui_call": "De vertaalprompt via AssistantPanel.send aan de beschikbare assistentprovider aanbieden; nog geen gegarandeerd vertaald uitvoerbestand.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "Glyph 🌐",
+        "label": "🌐",
+        "path": "open-pdf-studio/js/assistant-skills.js",
+        "line": 14,
+        "role": "",
+        "evidence": "teksticoon-kandidaat",
+        "review": null,
+        "assessment": {},
+        "state": "Lettertype-/OS-afhankelijke vorm; functie controleren",
+        "origin": "volledige clientbronscan",
+        "context": "    icon: '🌐',\n    label: 'Vertaal',\n    hint: 'Vertaal de tekst van het document',\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/assistant-skills.js#L14",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.unknown",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "501ea7f81bdc4783",
+        "function_label": "➕",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/assistant.translate.svg",
+          "sha256": "4271c7097cc025751b8a5631034777f3ed761ac7e1c4b8162c34ce949369dcac"
+        },
+        "24": {
+          "path": "svg/24/assistant.translate.svg",
+          "sha256": "f9af649e9cba306e06aa814e60977a66ef4a1e27b43b59861f7e4af9c7f06ecd"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/assistant.translate.svg",
+          "sha256": "898f5bc16cc67b0d935c08e933b3a18e788c5b31c6670910b0437b3ba0010334"
+        },
+        "24": {
+          "path": "svg/24/assistant.translate.svg",
+          "sha256": "33d90e9de799f1c2ff4791728781a462dac3b0e341ee7278e4c086f0f2750849"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "assistant.summarize",
+      "label": "Documentsamenvatting vragen",
+      "ui_call": "De samenvattingsprompt via AssistantPanel.send aanbieden; het antwoord verschijnt in het gesprek.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "Glyph 📝",
+        "label": "📝",
+        "path": "open-pdf-studio/js/assistant-skills.js",
+        "line": 21,
+        "role": "",
+        "evidence": "teksticoon-kandidaat",
+        "review": null,
+        "assessment": {},
+        "state": "Lettertype-/OS-afhankelijke vorm; functie controleren",
+        "origin": "volledige clientbronscan",
+        "context": "    icon: '📝',\n    label: 'Vat samen',\n    hint: 'Vat het document of de tekening samen',\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/assistant-skills.js#L21",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.unknown",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "078297abc6f021bb",
+        "function_label": "➕",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/assistant.summarize.svg",
+          "sha256": "921b7fba28b6e1f57a768bf122a680fcce9be3494a210e5491f3309f14316538"
+        },
+        "24": {
+          "path": "svg/24/assistant.summarize.svg",
+          "sha256": "f0a98cbecbe929ffd5f0283a93c51a0da40d46af5b769a51b3d1c211c90bbf1c"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/assistant.summarize.svg",
+          "sha256": "a0f0a0469ce87c7c898133e8626f8119966104cb80c5aa5adee3184ffc7b1feb"
+        },
+        "24": {
+          "path": "svg/24/assistant.summarize.svg",
+          "sha256": "0aefbb7113747d65026d34f0e12cbd5de760b8591579202654e6ad5098464260"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "format.custom-color",
+      "label": "Aangepaste kleur kiezen",
+      "ui_call": "Meer kleuren opent de verborgen native kleurinvoer; de gekozen waarde gaat naar onColorChange of setValue. Geen tekstkleur-only-contract.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "properties-color-more",
+        "label": "Meer kleuren",
+        "path": "open-pdf-studio/js/solid/components/properties-panel/ColorPalettePicker.jsx",
+        "line": 116,
+        "role": "command",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pdf-last-jsx-svg-roles.json",
+        "context": "<button type=\"button\" class=\"color-custom-btn\" tabIndex={-1}\n            onClick={(e) => {\n              e.stopPropagation();\n              if (hiddenInput) {\n                const cv = props.color?.();\n                hiddenInput.value = (!cv || cv === 'mixed') ? '#ffffff' : cv;\n                hiddenInput.click();\n              }\n              setOpen(false);\n            }}>\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n              <circle cx=\"12\" cy=\"12\" r=\"10\"/>\n              <path d=\"M12 2a10 10 0 0 1 0 20\"/>\n            </svg>\n            {t('moreColors')}\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/properties-panel/ColorPalettePicker.jsx#L116",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/last-jsx/properties-color-more.svg",
+        "exact_hash": "4632dda4a3ed2fd394b60e025fa5b8d8369873f9d58688cf147b2ddcc67ecd58",
+        "geometry_hash": "82a2a932919d848e182fe8cd3c29f334159388db1064449ba654f5e5dc96f022",
+        "origins": [
+          "pdf-last-jsx-svg-roles.json"
+        ],
+        "function_id": "review.meerkleuren",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "3acb575b2ae7e6b0",
+        "function_label": "Meer kleuren",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/format.custom-color.svg",
+          "sha256": "6dfeb83deeed73a527e607a813870825efd99c68d115c2455d8837667268e9f2"
+        },
+        "24": {
+          "path": "svg/24/format.custom-color.svg",
+          "sha256": "c177fe65b2cbcb006e7aaf7f1128484a1b8627252f53d048ed2d02566e4ec3d3"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/format.custom-color.svg",
+          "sha256": "a2f1acbf714af633398f1ed549cc21a7504010fce70d5ffb01f82e88385f2411"
+        },
+        "24": {
+          "path": "svg/24/format.custom-color.svg",
+          "sha256": "7d90fd35bb083d6d4e3e555bf7a137c086bdb007d645e05f7e41e9940e4157c3"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "page.replace",
+      "label": "Pagina uit bestand vervangen",
+      "ui_call": "Een vervangende PDF kiezen en de doelpagina door alle pagina’s uit dat bestand vervangen via replacePages; geen achtergrondafbeelding omwisselen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "thumbnailReplaceIcon",
+        "label": "Pagina vervangen",
+        "path": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+        "line": 1068,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "multi-selection-disabled",
+        "origin": "pdf-context-literal-ui-icons.json",
+        "context": "  const thumbnailReplaceIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z\"/></svg>';\n  const thumbnailDeleteIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\"/><path d=\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1z\"/></svg>';\n  const thumbnailRotateLeftIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z\"/><path d=\"M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z\"/></svg>';\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ContextMenu.jsx#L1068",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/context-menu/thumbnail-replace-icon.svg",
+        "exact_hash": "072fc173b779571fa3a3888752245952c89f70020779e4d743365178289a110f",
+        "geometry_hash": "c4df724776e3147be0b07b7011e2c2833cc2c8a65d1f1d1d10f6441c06f871ba",
+        "origins": [
+          "pdf-context-literal-ui-icons.json"
+        ],
+        "function_id": "review.paginavervangen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "0847cc99f8b2bd1c",
+        "function_label": "Pagina vervangen",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/page.replace.svg",
+          "sha256": "b326c725b85e3ba34ea5eab64f4462ebc65ea0f27b6812bef78083e6b6f53fe4"
+        },
+        "24": {
+          "path": "svg/24/page.replace.svg",
+          "sha256": "ecc1e949a51f4178451f6f3352ae3b644eae704296501aee832191b66f9104b2"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/page.replace.svg",
+          "sha256": "aafeb252f83c30f422c55b3cc36f0a2c1228338357176b24e24bd4fcb6ea4073"
+        },
+        "24": {
+          "path": "svg/24/page.replace.svg",
+          "sha256": "9b56e69b57f3ba806fcbe4b7c28bce1170238bf7e858bbc6df52b6ca8ed6dbcc"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "page.insert-file",
+      "label": "Pagina’s uit bestand invoegen",
+      "ui_call": "Een PDF kiezen en pagina’s vóór of ná de doelpagina invoegen; de bijbehorende menukeuze bepaalt de positie.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "thumbnailInsertIcon",
+        "label": "Pagina invoegen / uit bestand invoegen",
+        "path": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+        "line": 1066,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "two-commands",
+        "origin": "pdf-context-literal-ui-icons.json",
+        "context": "  const thumbnailInsertIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M4 0h5.5L14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5H9.5V1z\"/><path d=\"M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z\"/></svg>';\n  const thumbnailExtractIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M4 0h5.5L14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5H9.5V1z\"/><path d=\"M8 12a.5.5 0 0 0 .5-.5V8.207l1.146 1.147a.5.5 0 0 0 .708-.708l-2-2a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L7.5 8.207V11.5a.5.5 0 0 0 .5.5z\"/></svg>';\n  const thumbnailReplaceIcon = '<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z\"/></svg>';\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ContextMenu.jsx#L1066",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/context-menu/thumbnail-insert-icon.svg",
+        "exact_hash": "25ac2697ef288ec882915e1b59005a5769c8995f9b95bdbdda88aee4d6aed555",
+        "geometry_hash": "393d39311aca8d56e50ae141eea6ff1605e959668c67cfebfadb0a700e4037ce",
+        "origins": [
+          "pdf-context-literal-ui-icons.json"
+        ],
+        "function_id": "review.paginainvoegenuitbestandinvoegen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "2cb1c49c7452a77d",
+        "function_label": "Pagina invoegen / uit bestand invoegen",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/page.insert-file.svg",
+          "sha256": "2fc2bcd56311a842ae0de27da7df335aa5bd7f5a46f2cf724fe995163024c7f6"
+        },
+        "24": {
+          "path": "svg/24/page.insert-file.svg",
+          "sha256": "a2e144d62756808be3ca3a1dc85c1ccbbc8510995eb57c84c103cd0fd969fd92"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/page.insert-file.svg",
+          "sha256": "f8a6124e724f6dc128461c7bb5fdaeb0f853c937cbf83b72604544c1c8adc4c2"
+        },
+        "24": {
+          "path": "svg/24/page.insert-file.svg",
+          "sha256": "6dc67687bc82e16a6cbbb01a3c0bb1e70a0067fdeca536249f16713e9d35ea36"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "image.embedded-edit",
+      "label": "Ingebedde afbeelding bewerken",
+      "ui_call": "Een raster-XObject in PDF-paginainhoud kiezen en daarna verplaatsen, schalen, vervangen of verwijderen. De toolnaam removeImage is historisch; geen directe verwijderactie of afbeeldingsannotatie.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "removeImageIcon",
+        "label": "Afbeelding bewerken",
+        "path": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+        "line": 249,
+        "role": "ui-icon",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "document-readonly-conditional",
+        "origin": "pdf-drawing-ui-icons.json",
+        "context": "<RibbonButton size=\"small\" id=\"dr-remove-image\" title={t('drawing.removeImage')} icon={removeImageIcon}\n            disabled={ro()} active={state.currentTool === 'removeImage'} onClick={() => startRemoveImageTool()} />\n        </RibbonGroup>\n\n        {/* LIJN-OPTIES — alleen zichtbaar bij het lijn-gereedschap. Bevat het\n            'Doorlopend'-vinkje dat de doorlopende (keten) tekenmodus schakelt.\n            Deelt exact dezelfde preference (state.preferences.lineContinue) als\n            het vinkje in het eigenschappen-paneel — één bron van waarheid. */}\n        <Show when={state.currentTool === 'line'}>\n          <RibbonGroup label={t('comment.line') || 'Lijn'}>\n            <label class=\"ribbon-checkbox-option\" title={t('drawing.lineContinueTip') || 'Elke klik verbindt het volgende segment met het vorige'}>\n              <input\n                type=\"checkbox\"\n      ",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx#L249",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/drawing/drawing-07.svg",
+        "exact_hash": "628740bac65db2f61451fa5b7c933c8d0d1df97c506c89271a0fbc4d33269c1a",
+        "geometry_hash": "3b65e574b7e6ec406ea8bbcea20eb161c381e552d673856913785b9e8e025d56",
+        "origins": [
+          "pdf-drawing-ui-icons.json"
+        ],
+        "function_id": "draw.line",
+        "function_status": "functie uit label; controleren",
+        "id": "92144aca8d87de21",
+        "function_label": "Lijn tekenen",
+        "category": "Tekenen en annoteren"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/image.embedded-edit.svg",
+          "sha256": "5de004c67a6db35fa84e08fe4944a1f88fb67f81d5c3d5b08ef8115cb316e169"
+        },
+        "24": {
+          "path": "svg/24/image.embedded-edit.svg",
+          "sha256": "d7e5178b7cdb002d9cd7a1d3e3bb47719fd387fe42c9861fdc4fb3546d07f650"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/image.embedded-edit.svg",
+          "sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "path": "svg/24/image.embedded-edit.svg",
+          "sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "panel.attachments",
+      "label": "Bijlagenpaneel",
+      "ui_call": "Het paneel met PDF-bijlagen openen; nog geen bestand exporteren of toevoegen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "attachmentsIcon",
+        "label": "attachmentsIcon",
+        "path": "open-pdf-studio/js/solid/components/left-panel/LeftPanel.jsx",
+        "line": 30,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: open-pdf-studio/js/solid/data/leftPanelIcons.js:16",
+        "context": "    { panelId: 'attachments', title: () => t('leftPanel.attachments'), label: () => t('leftPanel.attachments'), icon: attachmentsIcon },\n    { panelId: 'signatures', title: () => t('leftPanel.signatures'), label: () => t('leftPanel.signatures'), icon: signaturesIcon },\n    { panelId: 'layers', title: () => t('leftPanel.layers'), label: () => t('leftPanel.layers'), icon: layersIcon },\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/left-panel/LeftPanel.jsx#L30",
+        "asset": "harmonization/function-icon-assets/555d3b4674c88e5f1905244ab65cc078d18f44398eb8c74190cc01371fa35b73.svg",
+        "exact_hash": "d256e7396a4b26a52527053fbcd9ea687a3718316f8550ac0f77e39f6e77c5ee",
+        "geometry_hash": "2266cd11335d71e4625d37e7320c34c5ce5a6162959467a235465ea15e387883",
+        "origins": [
+          "clientbronscan: open-pdf-studio/js/solid/data/leftPanelIcons.js:16"
+        ],
+        "function_id": "review.attachments",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "2ed1d48602bc477b",
+        "function_label": "attachments Icon",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/panel.attachments.svg",
+          "sha256": "a857a80a9699cc9e0b88c000a164f352df466bbb18fef7440157c416fa4ff1ec"
+        },
+        "24": {
+          "path": "svg/24/panel.attachments.svg",
+          "sha256": "b5dda949615572fd6d0a3c995cd96025955edd95533300f33a8f81aca4aa28c0"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/panel.attachments.svg",
+          "sha256": "0a6d11135d199e89fc217cb2c60eaaa7dc3674d39392f175e7bc81281e4a3a1b"
+        },
+        "24": {
+          "path": "svg/24/panel.attachments.svg",
+          "sha256": "0f72f24b57f4c1e90dec140303c1e9835fd2ad5bd3eb5d247229de1913cebb89"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "file.place-add",
+      "label": "Maplocatie toevoegen",
+      "ui_call": "Een bestaande map kiezen en als opgeslagen locatieverwijzing toevoegen; geen nieuwe map op schijf maken.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "add-place",
+        "label": "Maplocatie toevoegen",
+        "path": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+        "line": 488,
+        "role": "action",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "conditional",
+        "origin": "pdf-open-panel-ui-icons.json",
+        "context": "<button class=\"places-add-btn\" onClick={handleAddFolder}>\n          <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n            <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/>\n            <line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/>\n          </svg>\n          {t('openPanel.addFolder')}\n        </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx#L488",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/open-panel/add-place.svg",
+        "exact_hash": "2ec03a8f6d009a95f66e98cf050959d003236a371287297adc37bdbbf5fa942c",
+        "geometry_hash": "28a51ba52f926d0c9a24a14bf4bd8b5e9e6c9b71a229eced998e5c0ebe19d9dd",
+        "origins": [
+          "pdf-open-panel-ui-icons.json"
+        ],
+        "function_id": "review.maplocatietoevoegen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "f74e2aa751a960fe",
+        "function_label": "Maplocatie toevoegen",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/file.place-add.svg",
+          "sha256": "753b60cf9aed371c7b583a15ff5aa9901c25e93c540a1c546892e427634ea323"
+        },
+        "24": {
+          "path": "svg/24/file.place-add.svg",
+          "sha256": "bd063e280b0cdea93fd850459cea36346b9c25c367920065d8c868a744ff6ec4"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/file.place-add.svg",
+          "sha256": "a755739c50d422702572fd8bac94a33134c70a89f766af5d02da0c2c2a944c02"
+        },
+        "24": {
+          "path": "svg/24/file.place-add.svg",
+          "sha256": "d23a2b40b1d679a50eec34cecdb0c7023ac168bc8ace804cbf29982802dede8e"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "drawing.settings",
+      "label": "Tekeninstellingen",
+      "ui_call": "Het tekeninstellingendialoog openen vanuit NL IFC Bouw; geen algemene appvoorkeuren.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "settings",
+        "label": "Instellingen openen",
+        "path": "open-pdf-studio/js/solid/components/SymbolPalette.jsx",
+        "line": 177,
+        "role": "control",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "docked-or-floating-or-category",
+        "origin": "pdf-symbol-palette-ui-icons.json",
+        "context": "const settingsSvg = `<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"8\" cy=\"8\" r=\"2\"/><path d=\"M8 1v2m0 10v2M1 8h2m10 0h2M3 3l1.5 1.5m7 7L13 13M3 13l1.5-1.5m7-7L13 3\"/></svg>`;\n\nconst closeSvg = `<svg width=\"8\" height=\"8\" viewBox=\"0 0 10 10\"><line x1=\"2\" y1=\"2\" x2=\"8\" y2=\"8\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"8\" y1=\"2\" x2=\"2\" y2=\"8\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>`;\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/SymbolPalette.jsx#L177",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/symbol-palette/settings.svg",
+        "exact_hash": "d7a021e823dd8489d34f249116084bed38c25ee23250bd3b7ad718f5ebe8e65d",
+        "geometry_hash": "a5b51a1b3425fb4ac7e4fa6c8d793a5646325d49cd655a3a77000f6ce9a48817",
+        "origins": [
+          "pdf-symbol-palette-ui-icons.json"
+        ],
+        "function_id": "ui.settings",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "9173e37b2a381b16",
+        "function_label": "Instellingen",
+        "category": "Instellingen en hulp"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/drawing.settings.svg",
+          "sha256": "28115a7b93e37171b7ac01167f32aa8d7854fa0d3cf56ffc8255acd38ac7b0d4"
+        },
+        "24": {
+          "path": "svg/24/drawing.settings.svg",
+          "sha256": "f1a5da3590d6b943a98b9a81351c5e913a35b4d39ff981cd3c30a82df871d23b"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/drawing.settings.svg",
+          "sha256": "f40d20594c406e5b88810a971da7051d4977bce69e5926d45bdf50379e43298e"
+        },
+        "24": {
+          "path": "svg/24/drawing.settings.svg",
+          "sha256": "751687f7e9cb79dfe62ba85e64cd437dcd9970e899a9bec5d0a100bfee763260"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "bcf.import",
+      "label": "BCF-issues invoeren",
+      "ui_call": "Een BCF ZIP kiezen, parsen en de herkende annotaties aan het actieve PDF-document toevoegen met undo; geen IFC-model importeren.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "import-bcf",
+        "label": "BCF importeren",
+        "path": "open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx",
+        "line": 68,
+        "role": "import",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "available",
+        "origin": "pdf-transfer-panel-ui-icons.json",
+        "context": "            <svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z\"/>\n              <path d=\"M14 2v6h6\"/>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/ImportPanel.jsx#L68",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/transfer-panels/import-bcf.svg",
+        "exact_hash": "0dc7b937d5090db7d0da9da0696a78954aa92943dddb8a01dc5cc64fe772e5d2",
+        "geometry_hash": "6560b3677970f36be4762262ae64cd8783e66ab9d576d1f04bf168cd7c831a54",
+        "origins": [
+          "pdf-transfer-panel-ui-icons.json"
+        ],
+        "function_id": "review.bcfimporteren",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "3c365ad66eca6d7c",
+        "function_label": "BCF importeren",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/bcf.import.svg",
+          "sha256": "2cc9496ebb16add8bbef83a8fc66ddcd3411a14953fd2e908e43396f34568d67"
+        },
+        "24": {
+          "path": "svg/24/bcf.import.svg",
+          "sha256": "b359db6b6753e2b20b02b990d0d4fa848acd0d261db2c3aa7e29d132d40e8f1c"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/bcf.import.svg",
+          "sha256": "73cb6494c0f17bd4cd330bc151c05e2ae997c29b20e9c4311782e30b56e0d011"
+        },
+        "24": {
+          "path": "svg/24/bcf.import.svg",
+          "sha256": "5251a73f9099c31d43ca9b2fa427dd71950dcc3f24aef39d786a519488480e06"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "planning.calculate",
+      "label": "Planning doorrekenen",
+      "ui_call": "runCPM berekent de taakdatums en resourcebelasting opnieuw via solveProject; een cyclusfout blijft als fout en verouderde planning zichtbaar.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Play",
+        "label": "Play",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 120,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Planning berekenen / AI hervatten of starten",
+          "status": "betekenis scheiden",
+          "rationale": "Eén driehoek bedient verschillende opdrachten; de commandosemantiek moet per context afzonderlijk blijven.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "  kind: 'button', id: 'calc', icon: <Play size={20} />, labelKey: 'menu:ribbon.calculate', primary: true,\n  use: () => {\n    const runCPM = useAppStore(s => s.runCPM);\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L120",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/play.svg",
+        "exact_hash": "653fbd2dc721bff624fcfc85522fadcc87c503882af382c8c2987ef92354e96a",
+        "geometry_hash": "4cbb1118e3adcd47e648582b56c1a0f9a3a5f49b93e73201552c53d85c6ae0fe",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "audio.play",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "d519b126b5a469ee",
+        "function_label": "Afspelen",
+        "category": "Spraak en audio"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/planning.calculate.svg",
+          "sha256": "bebe9d76e134bf14be95899af03916d50a13d334d74b34b3a804efcac59088df"
+        },
+        "24": {
+          "path": "svg/24/planning.calculate.svg",
+          "sha256": "08a5fa5578d575ad2124b83a52efaf6ed1c4772aa1ad5fb95b8b170ed3ff358d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/planning.calculate.svg",
+          "sha256": "6f85730dbd7b6bf2db7b141a56c732b85add3ac335fd0856019cb523ad6f379d"
+        },
+        "24": {
+          "path": "svg/24/planning.calculate.svg",
+          "sha256": "c0db2ef9181c1ab39208f3a2b920a3d8821de2a9b8ffc4ed3043cdb44f5c489c"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "report.workspace",
+      "label": "Rapportwerkruimte",
+      "ui_call": "Het Rapport-tabblad activeren met het gemonteerde ReportPanel; nog geen printopdracht of uitvoerbestand maken.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Printer",
+        "label": "Printer",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 180,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Afdrukvoorbeeld openen",
+          "status": "betekenis scheiden",
+          "rationale": "De knop opent een afdrukvoorbeeld en drukt nog niets af.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "  kind: 'button', id: 'printPreview', icon: <Printer size={20} />, labelKey: 'menu:ribbon.printPreview',\n  use: uiAction({ activeRibbonTab: 'report' }),\n};\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L180",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/printer.svg",
+        "exact_hash": "4b43fed4acfaf5acf29b48e4940ecbf3ef4c3c93870962d50711d38e19c7d286",
+        "geometry_hash": "e5c86c16b0920e95fb695f52c1169d74c64351e110c04af79144765fe5c9a00d",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "file.print",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "46fa102bb8e0aae2",
+        "function_label": "Afdrukken",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/report.workspace.svg",
+          "sha256": "5a533897085033695a7fe2ad69c84cc44c4427324ee778537b2176d88914b91c"
+        },
+        "24": {
+          "path": "svg/24/report.workspace.svg",
+          "sha256": "434f7577a1de91297d0f0cbf77ff96bdc31616167f8deaf392a4ea13421a7b2e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/report.workspace.svg",
+          "sha256": "c2a3649d127dcaff700f24a56b8e7ffa043176b9695cd18f098f57055978753a"
+        },
+        "24": {
+          "path": "svg/24/report.workspace.svg",
+          "sha256": "dd6c56703161d77767b15c5688aec70ab885eeabe1695ab9057bf74a89197e57"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "wbs.auto-number",
+      "label": "Automatische WBS-nummering",
+      "ui_call": "Automatische taaknummering omschakelen; inschakelen past de WBS-nummering onmiddellijk toe.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Hash",
+        "label": "Hash",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 441,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "WBS automatisch coderen",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "            kind: 'small', id: 'wbsAuto', icon: <Hash size={14} />, labelKey: 'menu:ribbon.wbsAuto',\n            use: () => {\n              const wbsAutoNumber = useAppStore(s => !!s.project.wbsAutoNumber);\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L441",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/hash.svg",
+        "exact_hash": "6813d5292064417f87df8f554f4192a4629317ed06659046dc140d0e90598280",
+        "geometry_hash": "968d6d61bdcbb319b05221bbe816a83dce3fbcd9ac5e4d59837d8a74e4743f55",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.hash",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "b53cd197e52819b3",
+        "function_label": "Hash",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/wbs.auto-number.svg",
+          "sha256": "f0d3b488834a31f060352f8d4bbb87775861656da481d12541df7e9823df4b7d"
+        },
+        "24": {
+          "path": "svg/24/wbs.auto-number.svg",
+          "sha256": "65cbbfb5ddcf553eca7c6ad83509366a7e8d34f50ae84523eacf62e02902305b"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/wbs.auto-number.svg",
+          "sha256": "c01b55bdaab414eb0a4bf8b88f7e6d2f73d76d9590515349acb50e3eee2e9771"
+        },
+        "24": {
+          "path": "svg/24/wbs.auto-number.svg",
+          "sha256": "fe60c31c15ae8a9dcf28891139dab36461aed9a64295204dd49cb6ead4199a1b"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "panel.warnings",
+      "label": "Waarschuwingenpaneel",
+      "ui_call": "Het rechter paneel met planningswaarschuwingen omschakelen; de icoonknop zelf is geen fout- of waarschuwingsstatus.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "AlertTriangle",
+        "label": "AlertTriangle",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 405,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Waarschuwingen, overallocatie en AI-waarschuwing",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "  kind: 'button', id: 'warningsPanel', icon: <AlertTriangle size={20} />, labelKey: 'menu:ribbon.warningsPanel',\n  // Zelfde vorm als de Eigenschappen-knop: actief ⇔ je ziet het paneel nu (rail niet ingeklapt en\n  // niet verdrongen door het volledige resourcepaneel); aanzetten klapt de rail zo nodig uit\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L405",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/alert-triangle.svg",
+        "exact_hash": "db0b4854edbf4c6b993376fa22a8a83750ad550b7e922a11be29f22c4b7ade9c",
+        "geometry_hash": "752b6e7a4b924dcdd6336b533d0e91ae1988619f117f64b1d9a26a846a0723f2",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "status.warning",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "ccae8c3214625106",
+        "function_label": "Waarschuwing",
+        "category": "Status en meldingen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/panel.warnings.svg",
+          "sha256": "3e60502f9e8b6cb8f2d27c2dd2763b2cef9f80407990582daf67610c1307745f"
+        },
+        "24": {
+          "path": "svg/24/panel.warnings.svg",
+          "sha256": "972da150f4552c8615b3ae9272b1b3b2637d5e5919562bddc104ad124dbc10ae"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/panel.warnings.svg",
+          "sha256": "104021e55651dd56c7663f599571e7f5458735e58ad41ea16c41c9057f6da2de"
+        },
+        "24": {
+          "path": "svg/24/panel.warnings.svg",
+          "sha256": "6bc35c945581431c3d529f97372cb594dfe5094f39863e6cde7872057e289da1"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "table.columns",
+      "label": "Tabelkolommen kiezen",
+      "ui_call": "Naar de Tabel-werkruimte schakelen en de gedeelde kolommenkiezer openen via useColumnsButtonBinding.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Columns3",
+        "label": "Columns3",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 320,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Tabelkolommen instellen",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "    kind: 'button', id: 'tableColumns', icon: <Columns3 size={20} />, labelKey: 'menu:ribbon.columns',\n    use: useColumnsButtonBinding,\n  }],\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonConfig.tsx#L320",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/columns-3.svg",
+        "exact_hash": "f5e6aafd7c0e2c4cef9ad609d3bf880b1cbf984a94badb4c507395a20b7f0c02",
+        "geometry_hash": "add0bae7dacad543f7e5efc3bc03ac2eca15c43dfb7b897cdf03655751d47375",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.columns3",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "94ff0ed8451c1014",
+        "function_label": "Columns3",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/table.columns.svg",
+          "sha256": "19d75b6941001505ff406533d3978b02aec1518237773c25bc68ffb3db44987f"
+        },
+        "24": {
+          "path": "svg/24/table.columns.svg",
+          "sha256": "533090ba9e56589e8e2b618f64a7158e5b1cbbfba573dabdcbd6c82a09180db8"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/table.columns.svg",
+          "sha256": "d3515ce8b90749d32a4e085ca7e26699b2caa22226e222cf56202546578b6242"
+        },
+        "24": {
+          "path": "svg/24/table.columns.svg",
+          "sha256": "b9ea676ff968128146bac1abf34db464cb6855d4445bd4e52b4f5cf8c1f99a5d"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "planning.status-date",
+      "label": "Peildatum",
+      "ui_call": "Vaste aanduiding bij het peildatumveld; DateTextInput commit de datum via setStatusDate. Het icoon is geen kalenderknop.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "CalendarClock",
+        "label": "CalendarClock",
+        "path": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+        "line": 87,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Project in tijd verschuiven en statusdatum",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "        <CalendarClock size={14} style={{ opacity: 0.6, flexShrink: 0 }} />\n        <DateTextInput\n          value={statusDate ?? ''}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L87",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/calendar-clock.svg",
+        "exact_hash": "8f6f800404539935f001c987efbf0657267a80301217f95e704a5406b04b78bb",
+        "geometry_hash": "9829f94ee4ba87e33f884beb5cc722005f2b21efd2c0464840d7c66fc1614ffe",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.calendarclock",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "83eb7897510d5055",
+        "function_label": "Calendar Clock",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/planning.status-date.svg",
+          "sha256": "b002f18c9c46cfc4d2c3c1e1622939bb39ce0888760be500d74d7077a6317d77"
+        },
+        "24": {
+          "path": "svg/24/planning.status-date.svg",
+          "sha256": "cf3b88f1a06885ec18460f7e7c965323d4391aeb7ac8a7485d83dc9eddc93f38"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/planning.status-date.svg",
+          "sha256": "a5867750a9cb6d116fc3066d412f520ddc3da7aa242ec0506ac98a8a364c53e8"
+        },
+        "24": {
+          "path": "svg/24/planning.status-date.svg",
+          "sha256": "d219ff00d5d9e00e8740b840a236979eb7c3ccc3b07879ef76a44bf3c66116c0"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "layout.manage",
+      "label": "Indelingen beheren",
+      "ui_call": "Het dialoog voor een nieuwe of bestaande bewaarde weergave-indeling openen; nieuwe-indelingsknop wist eerst layoutDialogTargetId.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Plus",
+        "label": "Plus",
+        "path": "src/components/layout/Ribbon/ribbonWidgets.tsx",
+        "line": 918,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Taak toevoegen",
+          "status": "betekenis scheiden",
+          "rationale": "Een taak toevoegen is geen nieuw document maken.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<RibbonButton\n        icon={<Plus size={20} />}\n        label={tMenu('ribbon.addLayout')}\n        onClick={() => setUI({ showLayoutsDialog: true, layoutDialogTargetId: null })}\n      />\n      {pendingDelete && (\n        <ConfirmDialog\n          message={`${tCommon('view.layout.delete')}: ${pendingDelete.name}?`}\n          danger\n          onConfirm={() => { persist(layouts.filter(l => l.id !== pendingDelete.id)); setPendingDelete(null); }}\n          onCancel={() => setPendingDelete(null)}\n        />\n      )}\n    </div>\n  );\n}\n\n/** Presentatie-groep: presentation-toggle (F11), split view, mini-map. */\nexport function PresentationGroupContent() {\n  const { t: tMenu } = useTranslation('menu');\n  const presentationMode = useAppStore(s => s.ui.presentationMode);\n  const setPresentationMode = useAppStore(s => s.setPr",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/Ribbon/ribbonWidgets.tsx#L918",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/plus.svg",
+        "exact_hash": "0cad78fc7bd7e12fbe33b74c0b1542dd24964a70b9f527b453821cd2b89da622",
+        "geometry_hash": "34283165cdac13c957fc894905b0a3319acecc57fee001f300d3974f280a2612",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.plus",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "fcd476adddffe0d2",
+        "function_label": "Plus-vorm: toevoegen of menu controleren",
+        "category": "Betekenisconflicten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/layout.manage.svg",
+          "sha256": "71eb2be8a7d7706c639323a2b4d90c4e846fba8dc048204a0e7f71354586de47"
+        },
+        "24": {
+          "path": "svg/24/layout.manage.svg",
+          "sha256": "ceb4e41d8a84f82cfbc215ed9f205817d9fd8f409a61e087c5389cee843531fc"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/layout.manage.svg",
+          "sha256": "d9002d80229f0256327ccaafcab2048e73c15cb7f5ccca2ae859311e4a8e8e80"
+        },
+        "24": {
+          "path": "svg/24/layout.manage.svg",
+          "sha256": "a8b8696f70a88cb40ad52dc08195fba142b332856490cae92a1f9819aa99c32e"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "company.library",
+      "label": "Bedrijfsbibliotheek",
+      "ui_call": "De bedrijfsbibliotheek in Backstage tonen of een bibliotheek uit de lijst selecteren; geen gebouw in een model invoegen.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Building2",
+        "label": "Building2",
+        "path": "src/components/backstage/Backstage.tsx",
+        "line": 137,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "        <NavItem icon={<Building2 size={14} />} label={tMenu('backstage.library')} active={section === 'library'} onClick={() => goTo('library')} />\n\n        <div className=\"backstage-nav-divider\" />\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/Backstage.tsx#L137",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Building2.svg",
+        "exact_hash": "39979f212401a695d8de4dfcf09a777cac4ef921d43d5a1d4ed0e0d92ea6c99f",
+        "geometry_hash": "8ccf8fd0351546545d2280037b1e42617f49fbae9e303073cf752fe0719de361",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.building2",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "c64d4907849c0cfb",
+        "function_label": "Building2",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/company.library.svg",
+          "sha256": "794e28bc03588010a7aba49ec6523961d80e12f851b48e5f8f8b697eb227b6a1"
+        },
+        "24": {
+          "path": "svg/24/company.library.svg",
+          "sha256": "4983e87c69efb1bc58bd791e7ffe48d5fa58a5c407161a64a808f3ad65237b42"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/company.library.svg",
+          "sha256": "e9f1b639decae3ef1890c842fade91597f4109a63ba2cffb08e9af9148f4b703"
+        },
+        "24": {
+          "path": "svg/24/company.library.svg",
+          "sha256": "0655d7425d58d05863c9e9692cfa660569c77692a33952e95b02325b5ec49e3e"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calendar.promote-menu",
+      "label": "Projectkalender kiezen voor bibliotheek",
+      "ui_call": "De lijst met projectkalenders openen of sluiten om er één naar de geselecteerde bibliotheek over te nemen; nog geen kalender kopiëren.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Plus",
+        "label": "Uit project",
+        "path": "src/components/backstage/LibrarySection.tsx",
+        "line": 171,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Taak toevoegen",
+          "status": "betekenis scheiden",
+          "rationale": "Een taak toevoegen is geen nieuw document maken.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n                className=\"library-promote-toggle\"\n                onClick={() => { setPromotePanel(p => (p === 'calendar' ? null : 'calendar')); setNotice(null); }}\n              >\n                <Plus size={12} /> {t('companyLibrary.promoteFromProject')}\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/backstage/LibrarySection.tsx#L171",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/plus.svg",
+        "exact_hash": "0cad78fc7bd7e12fbe33b74c0b1542dd24964a70b9f527b453821cd2b89da622",
+        "geometry_hash": "34283165cdac13c957fc894905b0a3319acecc57fee001f300d3974f280a2612",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.uitproject",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "850c3d2b45dbf223",
+        "function_label": "Uit project",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calendar.promote-menu.svg",
+          "sha256": "d39d129e4a967cc1b72fd35b7af0045379a61715f950acc3d1e22a10a2eddfe7"
+        },
+        "24": {
+          "path": "svg/24/calendar.promote-menu.svg",
+          "sha256": "aa4ccacd22c89a4eb4d1fd115d2b960b3ef92f39456339e7af5cceb6c8c51920"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calendar.promote-menu.svg",
+          "sha256": "d4872c0cda4a06176edd5a56290757976ac3fd93eabe9ab9ef37e1ab9817a3fd"
+        },
+        "24": {
+          "path": "svg/24/calendar.promote-menu.svg",
+          "sha256": "226a05bfbe3400b13cc3b942d9de97849e8ce53e4066b38c78fdf639daca3f2f"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calendar.edit",
+      "label": "Resourcekalender bewerken",
+      "ui_call": "De ResourceCalendarDialog voor de gekozen bestaande project- of poolkalender openen; de bewerkte kopie wordt pas bij Toepassen vastgelegd.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Pencil",
+        "label": "Bewerken…",
+        "path": "src/components/panels/ResourcePanel.tsx",
+        "line": 945,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n              onClick={onEditCalendar}\n              disabled={!resource.calendarId}\n              title={t('resource.editCalendar')}\n              className=\"p-0.5 rounded hover:bg-surface-hover text-text-secondary disabled:opacity-30 flex-shrink-0\"\n            >\n              <Pencil size={12} />\n            </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourcePanel.tsx#L945",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Pencil.svg",
+        "exact_hash": "26060a4fb23a34303dfa0a12c3f58a1009ac6f56981d11f8e36fbd0f34f98515",
+        "geometry_hash": "22b85d5eeeb1bf3fdd7b0343c8413e23498cf4f587a69c8ca2074e1f8b231334",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.bewerken",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a330d3eee827ba9e",
+        "function_label": "Bewerken",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calendar.edit.svg",
+          "sha256": "def2069651ed7ee2b936f123bd6bbc71133788bfff47aed3fbbee6b47594d904"
+        },
+        "24": {
+          "path": "svg/24/calendar.edit.svg",
+          "sha256": "1dade35942d8d8f5d118dee6558d4975c443209fdfe43216f47a7dae77d471db"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calendar.edit.svg",
+          "sha256": "c1a7d1255b24fb6ff197bd4764b577d87daa33b481bec5f5854b4d2080060894"
+        },
+        "24": {
+          "path": "svg/24/calendar.edit.svg",
+          "sha256": "11acd0d711b40a9c8fc2db941be523a353f65c79053ebb0f30bf933726292162"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "resource.unlink-library",
+      "label": "Resource van bibliotheek losmaken",
+      "ui_call": "De herkomststempel van de resource verwijderen; ook de kalenderkopie losmaken als geen andere gekoppelde resource die nog volgt. De resourcegegevens blijven behouden.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Unlink2",
+        "label": "Losmaken van de bibliotheek",
+        "path": "src/components/panels/ResourcePanel.tsx",
+        "line": 1042,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n                onClick={onUnlink}\n                title={t('resource.unlinkFromLibrary')}\n                className=\"p-1 rounded hover:bg-surface-hover text-text-secondary\"\n                data-ops-resource-unlink\n              >\n                <Unlink2 size={13} />\n              </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourcePanel.tsx#L1042",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Unlink2.svg",
+        "exact_hash": "57b208e4e252f6090ce4cac21fa6c66ab7e1462321cc06fd198c0d80b129b5c5",
+        "geometry_hash": "342950d21b5d6dba0350cc88e7353b7058e06542e61d1bc5b58629830df9bb38",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.losmakenvandebibliotheek",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "de01ca52647cd05e",
+        "function_label": "Losmaken van de bibliotheek",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/resource.unlink-library.svg",
+          "sha256": "57886363c1a408bcf29114c1164ab60853850b84008641e69a92f556638dd4ef"
+        },
+        "24": {
+          "path": "svg/24/resource.unlink-library.svg",
+          "sha256": "12ed25e3bd7572ba889ee0384014d1a99d3cca172fa930ba009133899076ab6a"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/resource.unlink-library.svg",
+          "sha256": "5d22b380f065a7d44f619f058f0ca006ce7eee089e0464d08d6761ecdd4bc6eb"
+        },
+        "24": {
+          "path": "svg/24/resource.unlink-library.svg",
+          "sha256": "d1091e1b315cbd597cabc43cbb4913e6c5e2c8cab4bcc6d0da0954db39c2cb34"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "ai.read-only-toggle",
+      "label": "AI alleen-lezen",
+      "ui_call": "De alleen-lezenmodus voor muterende AI-tools omschakelen via aiReadOnly; de actieve knoptoestand benoemt of deze beperking aan staat.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Lock",
+        "label": "Alleen lezen",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 103,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "AI-verbinding alleen-lezen",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<RibbonButton\n            icon={readOnly ? <Lock size={20} /> : <Unlock size={20} />}\n            label={t('aiSafety.readOnly')}\n            active={readOnly}\n            onClick={() => setAiReadOnly(!readOnly)}\n          />\n        </span>\n      </div>\n\n      {/* Backup: toggle + handmatig + map openen. */}\n      <div style={{ display: 'flex', gap: 6 }}>\n        <span title={t('aiSafety.autoBackupHint')}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L103",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/lock.svg",
+        "exact_hash": "3dbdc14f1e221ecf3adac1dbd636e4fc0a05d67362a70d3fe2e5e20d5d2f9e5a",
+        "geometry_hash": "344675a2fbf209e05981d299562c2d87f81f64a2f01e5508d9cf84cfd697cbec",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "object.lock",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "41e7e4127856cace",
+        "function_label": "Vergrendelen",
+        "category": "Objecten en lagen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/ai.read-only-toggle.svg",
+          "sha256": "6ed68fe917a845a01006f886f426ac7283d9c46426e1fa624869b3a331101d8f"
+        },
+        "24": {
+          "path": "svg/24/ai.read-only-toggle.svg",
+          "sha256": "2db968fc4c2ed49ce9798c30183e74127f58f834f56d22a02ee53f5241cfcce2"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/ai.read-only-toggle.svg",
+          "sha256": "3121874ab71834b04965dbebfc210761dd718fd36c644e806336d7d7e03a133e"
+        },
+        "24": {
+          "path": "svg/24/ai.read-only-toggle.svg",
+          "sha256": "7da8fe37b74930190886cda6e24e57217649bdadf74f749ea5b90aaa70f4a887"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "backup.auto",
+      "label": "Automatische AI-back-up",
+      "ui_call": "De voorkeur voor een herstelsnapshot vóór de eerste muterende AI-aanroep per document en serversessie omschakelen; geen periodieke bestandsautosave.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "DatabaseBackup",
+        "label": "Auto-backup: aan",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 115,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {
+          "meaning": "Automatische AI-backup",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<RibbonButton\n            icon={<DatabaseBackup size={20} />}\n            label={autoBackup ? t('aiSafety.autoBackupOn') : t('aiSafety.autoBackupOff')}\n            active={autoBackup}\n            onClick={onToggleAutoBackup}\n          />\n        </span>\n        <span title={!tauri ? t('ai.desktopOnly') : undefined}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L115",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/database-backup.svg",
+        "exact_hash": "19d96c4547ae3d18a09972c5834267422ad3f6a0d89ebca845782094fe3f878f",
+        "geometry_hash": "55880f03150e47a2f214d11458d961924c021b72606db8d83421cd9450644647",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "review.autobackupaan",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "49ef7231249a4bfd",
+        "function_label": "Auto backup: aan",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/backup.auto.svg",
+          "sha256": "ecc39c65e3a77c33c515eb55c9b200b4742f9b3824f66b6c237f158d5a062494"
+        },
+        "24": {
+          "path": "svg/24/backup.auto.svg",
+          "sha256": "0f80615b2547043d3a87106b0b437350522f4369c1c7b63e2ccc47cb5dad9bba"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/backup.auto.svg",
+          "sha256": "7230dd8d71a3db2ec1f263f79cad60742d83ea310a51624cc58c91f8c29b4edd"
+        },
+        "24": {
+          "path": "svg/24/backup.auto.svg",
+          "sha256": "b6e587b0d3cb4acde3756d752b93f0648972068a76dd0436ee20ba5927457203"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "backup.create",
+      "label": "Nu herstelkopie maken",
+      "ui_call": "Op desktop een IFC-snapshot van het actieve document naar de AI-back-upmap schrijven en de automatische back-upteller voor dit document resetten.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Save",
+        "label": "Save",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 123,
+        "role": "",
+        "evidence": "bronreview",
+        "review": {
+          "semantic_target": "Icon::Save"
+        },
+        "assessment": {
+          "meaning": "Project opslaan / AI-veiligheidsactie",
+          "status": "gedeelde kandidaat",
+          "rationale": "Vervang de bronvorm pas na controle van knopmaat en context.",
+          "source": "planner-ribbon-crosswalk.json",
+          "semantic_target": "Icon::Save"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<RibbonButton\n            icon={<Save size={20} />}\n            label={t('aiSafety.backupNow')}\n            disabled={!tauri || busy}\n            onClick={() => void onManualBackup()}\n          />\n        </span>\n        <span title={!tauri ? t('ai.desktopOnly') : undefined}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L123",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/save.svg",
+        "exact_hash": "40d697c5494dc0667f3c7bb9b1683307699102f5fc63edbbcb49e76a3b3c1ce2",
+        "geometry_hash": "b6530ad399bd73fd493f6afedaa08f8c18e56083e82079664942a52df40d60dc",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "file.save",
+        "function_status": "bronreview van functie",
+        "id": "d3bf1c6e1061e1cf",
+        "function_label": "Opslaan",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/backup.create.svg",
+          "sha256": "05027dafbff81249c411f90d94b986bdaf11d8e05ef2839867b9ad57e075a260"
+        },
+        "24": {
+          "path": "svg/24/backup.create.svg",
+          "sha256": "145d3b73cb50f1453032f880a4c4c7638d7c15067a08d7763fcd5dd23844bd1a"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/backup.create.svg",
+          "sha256": "a73b56ec1d13851c46a8519b583ce831185fddc28750eb8a54315626ac851b16"
+        },
+        "24": {
+          "path": "svg/24/backup.create.svg",
+          "sha256": "feef3829733096053fc85e673cd2e9fcef0283424f938157215c63f0d05a359b"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "backup.folder",
+      "label": "Back-upmap openen",
+      "ui_call": "De AI-back-upmap zo nodig aanmaken en in de desktopbestandsbeheerder openen; geen projectbestand inladen.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "FolderOpen",
+        "label": "FolderOpen",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 131,
+        "role": "",
+        "evidence": "bronreview",
+        "review": {
+          "semantic_target": "Icon::Open"
+        },
+        "assessment": {
+          "meaning": "Project openen / AI-backupmap",
+          "status": "gedeelde kandidaat",
+          "rationale": "Vervang de bronvorm pas na controle van knopmaat en context.",
+          "source": "planner-ribbon-crosswalk.json",
+          "semantic_target": "Icon::Open"
+        },
+        "state": "",
+        "origin": "planner-ribbon-ui-icons.json",
+        "context": "<RibbonButton\n            icon={<FolderOpen size={20} />}\n            label={t('aiSafety.openFolder')}\n            disabled={!tauri}\n            onClick={onOpenFolder}\n          />\n        </span>\n      </div>\n\n      {/* Feedback-regel (handmatige backup succes/fout). */}\n      {feedback && (\n        <div\n          className=\"!text-body\"\n          style={{\n            display: 'flex', alignItems: 'center', gap: 4, maxWidth: 200,\n            color: feedback.kind === 'ok' ? 'var(--success)' : 'var(--theme-critical-text)',\n          }}\n        >\n          {feedback.kind === 'ok' ? <Check size={13} /> : <AlertTriangle size={13} />}\n          <span>{feedback.text}</span>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/ribbon/ai/AiSafetyGroup.tsx#L131",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/folder-open.svg",
+        "exact_hash": "27453b7ce89bd06a21d46643780dba3f82cca51cde230e74a52a43d72111efcd",
+        "geometry_hash": "2bc8e33a82a14cd1d927610a6fc4f70675009d6ae812878642b00c1dc8054f5e",
+        "origins": [
+          "lucide-react@0.575.0",
+          "planner-ribbon-ui-icons.json"
+        ],
+        "function_id": "file.open",
+        "function_status": "bronreview van functie",
+        "id": "92c9fb031590a014",
+        "function_label": "Bestand openen",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/backup.folder.svg",
+          "sha256": "3bddae1647705864d13cc681f398ee9b54c0d5bf3770aed51b1459296a2e329a"
+        },
+        "24": {
+          "path": "svg/24/backup.folder.svg",
+          "sha256": "b77e26b78127d77fefaf43f89d9fb0c1d408e9335d0898176474336279468dd0"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/backup.folder.svg",
+          "sha256": "ee97937998c299a3e04fe9890e3cf45e7e57af20961688d60cc1959fe97888e2"
+        },
+        "24": {
+          "path": "svg/24/backup.folder.svg",
+          "sha256": "f9a0ea944dffe2779aa2f7dab23bbaa9933ce75e95e63f34db2048771561be18"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "update.install",
+      "label": "Appupdate installeren",
+      "ui_call": "Een beschikbare desktopupdate downloaden, een herstelkopie flushen, installeren en de app herstarten; ontbreekt voor door Snap beheerde installatie.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Download",
+        "label": "Download",
+        "path": "src/components/dialogs/UpdateDialog.tsx",
+        "line": 304,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": {
+          "semantic_target": "Icon::Export"
+        },
+        "assessment": {
+          "meaning": "Exportmenu openen",
+          "status": "gedeelde kandidaat",
+          "rationale": "Vervang de bronvorm pas na controle van knopmaat en context.",
+          "source": "planner-ribbon-crosswalk.json",
+          "semantic_target": "Icon::Export"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n              onClick={handleInstall}\n              disabled={busy}\n              className=\"btn btn--sm btn--primary shadow-[var(--shadow-glow)] flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed\"\n            >\n              <Download size={13} />\n              {t('updates.downloadInstall')}\n            </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/UpdateDialog.tsx#L304",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/download.svg",
+        "exact_hash": "0f0aa2eba222ab9775cd4c8bff9da1b6ed2d514b73d1888a43c58733324b6e82",
+        "geometry_hash": "2243b6d9f28c64f7267e28b9392f5e3cb03a8604c5648054cf0ae293b74f0a9d",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "file.export",
+        "function_status": "bronreview van functie",
+        "id": "2523ec219f1f330c",
+        "function_label": "Exporteren",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/update.install.svg",
+          "sha256": "2650669b4ca8d7034200b8c250d353710c0f305b5e13bcecb738f7e371c9c31f"
+        },
+        "24": {
+          "path": "svg/24/update.install.svg",
+          "sha256": "f8836531ec2b5422686cd4a9906c333cfdc20c4a62991ac9ee6fe65d97af7465"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/update.install.svg",
+          "sha256": "c3cdf5b598dad9de0358ad346bb8e174e6976ec887ef6777a67ec32d61117dce"
+        },
+        "24": {
+          "path": "svg/24/update.install.svg",
+          "sha256": "8687072f0ace1b1027e6c38892f56640cb73f382dc0c7443eec7021d6eff9987"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "documents.overview",
+      "label": "Geopende projecten",
+      "ui_call": "Het overzicht van geopende documentkaarten tonen via showProjectOverview; geen recent-bestandenlijst of bedrijfsbibliotheek.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Menu",
+        "label": "Alle projecten",
+        "path": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+        "line": 173,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n        className=\"ops-iconbtn ops-tabstrip-menu\"\n        title={t('documents.allProjects')}\n        onClick={openOverview}\n      >\n        <Menu size={17} />\n      </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L173",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Menu.svg",
+        "exact_hash": "61b7f72971458cc7b4a127110be415cc4cad4edb77885f8a63b0edd51a9a3d64",
+        "geometry_hash": "b456e78c55137e9620eecb9c4ecfdb5ec18f9508337749ec09d2a8229d8204e5",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.alleprojecten",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "fc6bd09ae5173585",
+        "function_label": "Alle projecten",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/documents.overview.svg",
+          "sha256": "567c1c1401e7bd5fecc283b38e30585b30eff87aa372be241ce829634ee54a6a"
+        },
+        "24": {
+          "path": "svg/24/documents.overview.svg",
+          "sha256": "731ab4cfe16a49efdcb404b5e18ebb240f4e483465f4b4d70e33c6015dc25489"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/documents.overview.svg",
+          "sha256": "36da9f71cd711495f25b9239762c342bc7ca910ef1525ff9cf7b0c11b6b6e093"
+        },
+        "24": {
+          "path": "svg/24/documents.overview.svg",
+          "sha256": "aa3ebae5ca475fb7dd3836d674a5f26a12d4e7e1d1b464bb51efcf87ed669485"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "documents.new-or-open",
+      "label": "Project starten of openen",
+      "ui_call": "Het gemonteerde keuzedialoog voor een nieuw of bestaand project tonen; nog geen project direct maken of bestand kiezen.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Plus",
+        "label": "Project starten",
+        "path": "src/components/layout/DocumentChrome/DocumentTabBar.tsx",
+        "line": 230,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Taak toevoegen",
+          "status": "betekenis scheiden",
+          "rationale": "Een taak toevoegen is geen nieuw document maken.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n        className=\"ops-iconbtn ops-tabstrip-add\"\n        title={t('documents.newOrOpenTitle')}\n        onClick={chooseNewOrOpenProject}\n      >\n        <Plus size={15} />\n      </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DocumentChrome/DocumentTabBar.tsx#L230",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/plus.svg",
+        "exact_hash": "0cad78fc7bd7e12fbe33b74c0b1542dd24964a70b9f527b453821cd2b89da622",
+        "geometry_hash": "34283165cdac13c957fc894905b0a3319acecc57fee001f300d3974f280a2612",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.projectstarten",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "25231043fc8d8e2a",
+        "function_label": "Project starten",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/documents.new-or-open.svg",
+          "sha256": "88e998285f882d9eaffe4430a04322e44d25139b90628b02ad726d6f9e8d546e"
+        },
+        "24": {
+          "path": "svg/24/documents.new-or-open.svg",
+          "sha256": "93f167fff8fa4b8793b224707beccd41dda9769c99960039a9e4e787d5d475ce"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/documents.new-or-open.svg",
+          "sha256": "a3269b52243c1e0502d400df6009df20c2b1f181b45ae11c17f55c88d411402d"
+        },
+        "24": {
+          "path": "svg/24/documents.new-or-open.svg",
+          "sha256": "d673345335d6394dd3032bed1d2ff891cdbf2791ad2959a09aae495a3ced36e1"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "capture.annotate",
+      "label": "Schermopname annoteren",
+      "ui_call": "De editor voor de bestaande schermafbeelding openen; bij sluiten worden de zichtbare annotaties naar een PNG samengevoegd en via onChange teruggegeven.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Pencil",
+        "label": "Annoteren",
+        "path": "src/components/dialogs/ScreenshotAnnotator.tsx",
+        "line": 354,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n          className=\"screenshot-annotator-open-btn\"\n          onClick={openEditor}\n          title={t('feedback.annotate')}\n        >\n          <Pencil size={16} />\n          <span>{t('feedback.annotate')}</span>\n        </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/ScreenshotAnnotator.tsx#L354",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Pencil.svg",
+        "exact_hash": "26060a4fb23a34303dfa0a12c3f58a1009ac6f56981d11f8e36fbd0f34f98515",
+        "geometry_hash": "22b85d5eeeb1bf3fdd7b0343c8413e23498cf4f587a69c8ca2074e1f8b231334",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.annoteren",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "4bf22288928451e0",
+        "function_label": "Annoteren",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/capture.annotate.svg",
+          "sha256": "3bb4542887e795e845c2f35c2ce65d27270d7a54f46e03226a2279b4c3a3f10a"
+        },
+        "24": {
+          "path": "svg/24/capture.annotate.svg",
+          "sha256": "dab5146f76822ebe745c6bfdcb47b21c5008dff65d9a00966cfb5490c6e0a438"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/capture.annotate.svg",
+          "sha256": "a06cff4740247d732a766167cc3e989891046c9aeefd250ce1c16aa0ad7ad24d"
+        },
+        "24": {
+          "path": "svg/24/capture.annotate.svg",
+          "sha256": "62145c49536aa5f587d7df03a5da4cd398b867bc6333a455553b48317e29ebdf"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.schedule-preview",
+      "label": "Tijdelijk doorgerekende bezetting",
+      "ui_call": "Het document is nog als verouderd gemarkeerd, maar de getelde bezettingscijfers zijn op een kloon tijdelijk doorgerekend. Dit is informatief, geen waarschuwing of F5-actie.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "AlertTriangle",
+        "label": "AlertTriangle",
+        "path": "src/components/panels/ResourceOccupancyView.tsx",
+        "line": 487,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Waarschuwingen, overallocatie en AI-waarschuwing",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "                                  <AlertTriangle size={12} aria-hidden />\n                                  <span className=\"!text-small\">\n                                    {doc.ephemeralComputed\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourceOccupancyView.tsx#L487",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/alert-triangle.svg",
+        "exact_hash": "db0b4854edbf4c6b993376fa22a8a83750ad550b7e922a11be29f22c4b7ade9c",
+        "geometry_hash": "752b6e7a4b924dcdd6336b533d0e91ae1988619f117f64b1d9a26a846a0723f2",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "status.warning",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "6f26090b63e67a9e",
+        "function_label": "Waarschuwing",
+        "category": "Status en meldingen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.schedule-preview.svg",
+          "sha256": "288a9b6ac26c775b6a646635a72a19a8b31947c03e2f4c3709fa1592f9693ebc"
+        },
+        "24": {
+          "path": "svg/24/status.schedule-preview.svg",
+          "sha256": "44077c64dc6649c79a65c5763e13c5922bf26a72668566600c154fb6e15b1e29"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.schedule-preview.svg",
+          "sha256": "901c3e39a8399a3647da8cbf05e432c0657edbc91ba79fc9f85628f13bfd3d3a"
+        },
+        "24": {
+          "path": "svg/24/status.schedule-preview.svg",
+          "sha256": "aa419e2ea7dba4ab695cdef98da31ecca8915111a292800c4be4638634321f76"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.schedule-last-result",
+      "label": "Laatst berekende bezetting",
+      "ui_call": "Het verouderde document telt mee met de laatst berekende taken omdat de tijdelijke solve voor dit document is overgeslagen; geen fout- of succesclaim.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "AlertTriangle",
+        "label": "AlertTriangle",
+        "path": "src/components/panels/ResourceOccupancyView.tsx",
+        "line": 487,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Waarschuwingen, overallocatie en AI-waarschuwing",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "                                  <AlertTriangle size={12} aria-hidden />\n                                  <span className=\"!text-small\">\n                                    {doc.ephemeralComputed\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/panels/ResourceOccupancyView.tsx#L487",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/alert-triangle.svg",
+        "exact_hash": "db0b4854edbf4c6b993376fa22a8a83750ad550b7e922a11be29f22c4b7ade9c",
+        "geometry_hash": "752b6e7a4b924dcdd6336b533d0e91ae1988619f117f64b1d9a26a846a0723f2",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "status.warning",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "6f26090b63e67a9e",
+        "function_label": "Waarschuwing",
+        "category": "Status en meldingen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.schedule-last-result.svg",
+          "sha256": "3796262f6e8b812167e015399c75f5e623c1ac05d0a078f882319327bc9d77e6"
+        },
+        "24": {
+          "path": "svg/24/status.schedule-last-result.svg",
+          "sha256": "efbcf9a7e414efc8f4cb96b1a4b23f1e4d2e2096062c986a44330ac9c97bab29"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.schedule-last-result.svg",
+          "sha256": "d46881c948f140f2ab2fb61f7c24317d35682a53b2479c671d10b18637790b54"
+        },
+        "24": {
+          "path": "svg/24/status.schedule-last-result.svg",
+          "sha256": "a29ffe6ecd88f89b5d3f879b952fb7d531882f9170849c82ad560b85387a7cfb"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "library.link-recognized",
+      "label": "Herkende items koppelen",
+      "ui_call": "De voorgestelde herkomstkoppeling voor één of meerdere herkende projectresources of -kalenders vastleggen via linkRecognizedItems; geen projectitem naar de pool kopiëren.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Link2",
+        "label": "Koppelen",
+        "path": "src/components/dialogs/LibraryLinkDialog.tsx",
+        "line": 95,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n                      onClick={() => linkRecognizedItems([{ kind: c.kind, projectId: c.projectId, poolId: c.suggestedPoolId! }])}\n                      className=\"btn btn--sm btn--secondary flex items-center gap-1\"\n                    >\n                      <Link2 size={12} /> {t('companyLibrary.linkThis')}\n                    </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L95",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Link2.svg",
+        "exact_hash": "c29dbcf16feb4065e72463d2e59b1bb0aa418a0aa6815447a1c86441b0b56f85",
+        "geometry_hash": "14251c7fa182371669ffd16f1c64148173bf4e8fc9c87e832e7b14a43d9574a9",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.koppelen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a8648f847ed3122e",
+        "function_label": "Koppelen",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/library.link-recognized.svg",
+          "sha256": "db3735ed3d5659010db4abc5cdf04aca2ca9cf36f54ba13d6318387e166aea45"
+        },
+        "24": {
+          "path": "svg/24/library.link-recognized.svg",
+          "sha256": "7d4030ad3aa8d1e38e88ab8d334fe0f9c446348f50f6fa60f53f5353cf78f3f8"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/library.link-recognized.svg",
+          "sha256": "5eaf1eb4c8010a6676d39bb83a076ec357edbff0108aeee681fb548bdafcfbb6"
+        },
+        "24": {
+          "path": "svg/24/library.link-recognized.svg",
+          "sha256": "b75c42428aab063274adf75d2787435b2506af274d1854f295b1dbd7d0bac9ae"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.library-item-missing",
+      "label": "Bibliotheekorigineel ontbreekt",
+      "ui_call": "De herkomst verwijst naar een poolitem dat niet meer bestaat; de projectkopie blijft aanwezig. Vaste removed-status, geen verwijderactie.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "AlertCircle",
+        "label": "AlertCircle",
+        "path": "src/components/dialogs/LibraryLinkDialog.tsx",
+        "line": 116,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "                      <AlertCircle size={11} /> {d.status === 'removed' ? t('companyLibrary.notInCompany') : t('companyLibrary.deviates')}\n                    </span>\n                  </div>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L116",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/AlertCircle.svg",
+        "exact_hash": "789e5183b31b34f1ba7b1730a7a86293f69f3e44629920243e0591a2787879c0",
+        "geometry_hash": "1e241cad8cdd9436678c7660adb91966f29778aa0b1bdbc33a30e8182c0f1a97",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "status.error",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "6d3338a5a7cb53e2",
+        "function_label": "Foutmelding",
+        "category": "Status en meldingen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.library-item-missing.svg",
+          "sha256": "26959e57faa6a2e1aae5912e4fa6dce67ab16785abcfe1d17cd5bf533fa806e0"
+        },
+        "24": {
+          "path": "svg/24/status.library-item-missing.svg",
+          "sha256": "4772b8c02c6bdf04ca4276a02f5f0c4714541c27c179e45cd2211ae06e00195d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.library-item-missing.svg",
+          "sha256": "a85c4f15cc1c9d3ed61aa1bb28689b98cc9b695f766ca3b2f4d2f3153c6f03ba"
+        },
+        "24": {
+          "path": "svg/24/status.library-item-missing.svg",
+          "sha256": "72a63a54d74e15eddf36f99aa333f0eee4cec104c93a295e931aa651fec63eeb"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.library-item-deviated",
+      "label": "Bibliotheekafwijking beoordelen",
+      "ui_call": "De projectkopie wijkt af van de synchronisatiestempel of de vergelijkingshash ontbreekt terwijl de poolinhoud veranderde; de deviated-status vraagt een keuze, vervangt niets automatisch.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "AlertCircle",
+        "label": "AlertCircle",
+        "path": "src/components/dialogs/LibraryLinkDialog.tsx",
+        "line": 116,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "                      <AlertCircle size={11} /> {d.status === 'removed' ? t('companyLibrary.notInCompany') : t('companyLibrary.deviates')}\n                    </span>\n                  </div>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/LibraryLinkDialog.tsx#L116",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/AlertCircle.svg",
+        "exact_hash": "789e5183b31b34f1ba7b1730a7a86293f69f3e44629920243e0591a2787879c0",
+        "geometry_hash": "1e241cad8cdd9436678c7660adb91966f29778aa0b1bdbc33a30e8182c0f1a97",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "status.error",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "6d3338a5a7cb53e2",
+        "function_label": "Foutmelding",
+        "category": "Status en meldingen"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.library-item-deviated.svg",
+          "sha256": "d6fa2b0b8317d6f384f395943b3a56c9a7fb80a256e440f4d300a03149402761"
+        },
+        "24": {
+          "path": "svg/24/status.library-item-deviated.svg",
+          "sha256": "c71967c2d4f9fda1e673a82367bceb54681a7491fa8b190b2038d6bcaddc7f16"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.library-item-deviated.svg",
+          "sha256": "307e46c3019e4007989c3a7694a1f25a95b0c2f2c99c00608df103c452dba9a0"
+        },
+        "24": {
+          "path": "svg/24/status.library-item-deviated.svg",
+          "sha256": "1e3abc5e3e52d40ea6a63197cdd5b64d2662c12b0adb6e5d32de238e4ef4eecc"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.hour-data",
+      "label": "Uurgegevens aanwezig",
+      "ui_call": "De melding aanduiden dat het document uurgegevens bevat terwijl uurplanning uitstaat; de aparte actie schakelt uurplanning in.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Clock",
+        "label": "Clock",
+        "path": "src/components/layout/HourDataNotice.tsx",
+        "line": 27,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "      icon={Clock}\n      text={t('hourData.notice')}\n      actionLabel={t('hourData.enable')}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/HourDataNotice.tsx#L27",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/Clock.svg",
+        "exact_hash": "600fd6058423201ab6f7d0a7d35d4837548fc90316e2839ca037a1a15e4f95c6",
+        "geometry_hash": "4580ab6e2afe38b0df8bc9fbd1ee30c6111d07f7b244234defd3716be02dc6ae",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.clock",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "19296a9a99e055e8",
+        "function_label": "Clock",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.hour-data.svg",
+          "sha256": "2499f0b5b9d1d3a2a8d820a3ba536c69729569a4f1559446013c8fc987d8a6db"
+        },
+        "24": {
+          "path": "svg/24/status.hour-data.svg",
+          "sha256": "d3d55114b641bb2e2b08ed79b3c839c27b4b420c52a50c0a2925110d3f743142"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.hour-data.svg",
+          "sha256": "a5867750a9cb6d116fc3066d412f520ddc3da7aa242ec0506ac98a8a364c53e8"
+        },
+        "24": {
+          "path": "svg/24/status.hour-data.svg",
+          "sha256": "d219ff00d5d9e00e8740b840a236979eb7c3ccc3b07879ef76a44bf3c66116c0"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "status.structure-locked",
+      "label": "Structuurwijziging beperkt",
+      "ui_call": "Melden dat structuurwijzigingen in de huidige filter-, groeps- of sorteermodus niet beschikbaar zijn; de aparte actie herstelt de boomweergave. Geen documentvergrendeling.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "ListTree",
+        "label": "ListTree",
+        "path": "src/components/layout/StructureLockedNotice.tsx",
+        "line": 64,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Boomlayout",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "      icon={ListTree}\n      text={t('view.structureLockedHint')}\n      actionLabel={t('view.filter.clear')}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/StructureLockedNotice.tsx#L64",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/list-tree.svg",
+        "exact_hash": "fea820c5004e4e80bc4c61f254b50fd2a283dc78928658c5ce81a8d45b4de52a",
+        "geometry_hash": "ba743225a639f036f1a70db4d3eafdc4d429cbd575ca0566130de7173e9698e6",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.listtree",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "bf992898cc9a4486",
+        "function_label": "List Tree",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/status.structure-locked.svg",
+          "sha256": "b953a477eeb5ab24a5eab4bd6076ed1448e0f7355f8492fc57326c98619e7bb3"
+        },
+        "24": {
+          "path": "svg/24/status.structure-locked.svg",
+          "sha256": "52ebbfd8c800371fe9eb1d0b8b1073d3713389052f07fc45412dd70bf68781f2"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/status.structure-locked.svg",
+          "sha256": "71650821faff2423cdf276307ae0fc6f1944c3722003ba42b448a0d67f680977"
+        },
+        "24": {
+          "path": "svg/24/status.structure-locked.svg",
+          "sha256": "171690bfd2da084c035abbe8c2594acde383c71b47ad94f17e2415cab340c78e"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calendar.holiday-add",
+      "label": "Niet-werkdag toevoegen",
+      "ui_call": "Een nieuwe lokale uitzonderingsregel in draft.holidays toevoegen; naam en datum zijn daarna bewerkbaar. Geen nieuwe kalender maken.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Plus",
+        "label": "Plus",
+        "path": "src/components/dialogs/CalendarForm.tsx",
+        "line": 788,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Taak toevoegen",
+          "status": "betekenis scheiden",
+          "rationale": "Een taak toevoegen is geen nieuw document maken.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button onClick={addHoliday} className=\"btn btn--sm btn--secondary flex items-center gap-1\">\n            <Plus size={12} />\n            {tMenu('ribbon.calendarDialog.addHoliday')}\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/CalendarForm.tsx#L788",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/plus.svg",
+        "exact_hash": "0cad78fc7bd7e12fbe33b74c0b1542dd24964a70b9f527b453821cd2b89da622",
+        "geometry_hash": "34283165cdac13c957fc894905b0a3319acecc57fee001f300d3974f280a2612",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.plus",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "cd7dc3ccc22b784d",
+        "function_label": "Plus-vorm: toevoegen of menu controleren",
+        "category": "Betekenisconflicten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calendar.holiday-add.svg",
+          "sha256": "b316cd6b3e249efe957b71f6658136858f1355c037a63b8526b43d0db392469e"
+        },
+        "24": {
+          "path": "svg/24/calendar.holiday-add.svg",
+          "sha256": "30fa6fa001dcbb2754de96b037e84ef8122dc45bd0e1c16b0c55f8d757b8643f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calendar.holiday-add.svg",
+          "sha256": "735825c3ac4848e92d0e7e7742bfdb5b689bb77329c3dafe39bd6be2945526d0"
+        },
+        "24": {
+          "path": "svg/24/calendar.holiday-add.svg",
+          "sha256": "38806eb796e2585d25f34aaf2daa55b519edabf52ff69a3d911aca45eb6cc575"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "calendar.copy-workdays",
+      "label": "Werktijden naar werkdagen",
+      "ui_call": "De tijdvakken van de gekozen weekdag als afzonderlijke kopieën op maandag tot en met vrijdag zetten; geen klembordactie.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Copy",
+        "label": "Copy",
+        "path": "src/components/dialogs/WorkTimeEditor.tsx",
+        "line": 118,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "AI-token naar klembord kopiëren",
+          "status": "betekenis scheiden",
+          "rationale": "Token naar klembord kopiëren is geen document dupliceren; de klembordvorm past semantisch beter.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button type=\"button\" onClick={() => copyToAllWorkdays(wd)}\n                  className=\"p-1 hover:bg-surface-hover rounded-[6px] text-text-secondary\" title={tCommon('calendar.worktime.copyToAll')}>\n                  <Copy size={12} />\n                </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/WorkTimeEditor.tsx#L118",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/copy.svg",
+        "exact_hash": "c609b09638becedabd3c4397c1e3328863c44de589b1424b1f6fe15364613e48",
+        "geometry_hash": "88917dd07fc51c21e88c8229f83b8b86d9b586e29d7e887545650abc84a8b174",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "edit.copy",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "c3999485c7ac3ba2",
+        "function_label": "Kopiëren naar klembord",
+        "category": "Bewerken"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/calendar.copy-workdays.svg",
+          "sha256": "fdf0c5e2c6ea7b73d5207d2edbd6ada474d7720b1d1a942396f41e55ced15026"
+        },
+        "24": {
+          "path": "svg/24/calendar.copy-workdays.svg",
+          "sha256": "512feffb0b94db2b6e98c2278877a8120fdb996dd5567e9a5967a422ba8d4337"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/calendar.copy-workdays.svg",
+          "sha256": "2071ab47b1be04ff59f81f23963e9889bb5b2e2582896fa9af7f9bde8042bc48"
+        },
+        "24": {
+          "path": "svg/24/calendar.copy-workdays.svg",
+          "sha256": "5335bf1b8d7d2e537511864722f03f8528c12862dcfb1b08e63590b55d6e7e5a"
+        }
+      },
+      "action": "Goedgekeurd voorstel exact toegepast."
+    },
+    {
+      "id": "integration.platform-sync",
+      "label": "Platform synchroniseren — gepland",
+      "ui_call": "Ontwerp voor de benoemde platform-synchronisatie in het BIM-lint. onSyncPlatform is niet door AppShell ingevuld; overdrachtsinhoud en protocol zijn nog niet vastgelegd.",
+      "source_example": {
+        "app": "BIM Validator",
+        "repository": "OpenAEC-BIM-validator",
+        "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "name": "syncIcon",
+        "label": "Sync",
+        "path": "viewer/src/components/chrome/ribbon/HomeTab.tsx",
+        "line": 142,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:7",
+        "context": "<RibbonButton\n              icon={syncIcon}\n              label={t(\"home.syncPlatform\")}\n              size=\"small\"\n              onClick={onSyncPlatform}\n            />\n            {bcfConnected ? (\n              <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L142",
+        "asset": "harmonization/function-icon-assets/f0052d376b3f4e9a459e0996db56321cf2d32cfe324e71eb392c43223ff0c51b.svg",
+        "exact_hash": "f0052d376b3f4e9a459e0996db56321cf2d32cfe324e71eb392c43223ff0c51b",
+        "geometry_hash": "43e46b7a4c8a7c9afc70b28496a919b5b15c8149fd76521f825b7410328a3e82",
+        "origins": [
+          "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:7"
+        ],
+        "function_id": "review.sync",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "aa5e16bc4b81b412",
+        "function_label": "Sync",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/integration.platform-sync.svg",
+          "sha256": "6fe557f3d5bbfd68f608ba25bd83e286223f83f05886e920270d1938191795f2"
+        },
+        "24": {
+          "path": "svg/24/integration.platform-sync.svg",
+          "sha256": "609622766d25c0708dc0fa7f6f08ba4f02e92785eb871c94a9a58fd7ba62de8f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/integration.platform-sync.svg",
+          "sha256": "e69ede65a91fee8fb98018c9084732e68735c09306b71f344f909dc31627591e"
+        },
+        "24": {
+          "path": "svg/24/integration.platform-sync.svg",
+          "sha256": "9a211ec6251d0a4688fa7e1a3dd2914d644ade42ea38ac8f93d933d4285e585d"
+        }
+      },
+      "action": "Zuiver vierkant rechtsboven; andere onderdelen behouden."
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "theme_contrasts": [
+      {
+        "theme": "light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.231,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.186,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.702,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.47,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.342,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 10.509,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.925,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.934,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.588,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.175,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.67,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.028,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 6.798,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "info",
+        "on": "panel",
+        "contrast": 9.285,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "error",
+        "on": "panel",
+        "contrast": 9.107,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "success",
+        "on": "panel",
+        "contrast": 9.919,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 8.92,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 9.778,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 12.595,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.651,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 12.051,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 7.09,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 10.358,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.31,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      }
+    ],
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "review_checks": {
+    "analysis_cards": 300,
+    "svg_samples_equal_to_assets": 3208,
+    "javascript_syntax": "geslaagd",
+    "shared_payload_initialization": "geslaagd",
+    "http": [
+      {
+        "url": "feedback-overview.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 172614
+      },
+      {
+        "url": "analysis-review-97.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 13317775
+      },
+      {
+        "url": "analysis-review-99.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 45321312
+      },
+      {
+        "url": "feedback-analysis-101.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 11530417
+      },
+      {
+        "url": "analysis-review-104.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 3557541
+      },
+      {
+        "url": "final-review-104.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 29625962
+      },
+      {
+        "url": "review-data.js?revision=106",
+        "status": 200,
+        "content_type": "text/javascript",
+        "bytes": 59403650
+      }
+    ],
+    "visual": "De 61 exact overgenomen varianten en het platformsync-vierkant op 16/24/32 en grote proefmaat bekeken in donker met accent en licht monochroom. Geen browserwaarneming geclaimd.",
+    "general_python_checks": "Niet herhaald: alleen B2-ontwerp en review gewijzigd.",
+    "rust_checks": "Niet uitgevoerd: geen Rust-/cratewijzigingen in deze ronde."
+  }
+}

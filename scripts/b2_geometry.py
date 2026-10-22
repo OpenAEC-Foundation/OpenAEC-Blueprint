@@ -18,6 +18,7 @@ try:
 except ImportError as error:
     raise SystemExit('Installeer eerst scripts/requirements-icon-b2.txt in harmonization/sources/b2-runtime') from error
 from build_icon_rounding_review import proposal_model, rounded_edges
+from b2_icon_placement_refinements import refine
 from b2_second_series import ACCENT_FRONT, extend
 from b2_window_series import extend as extend_windows
 from b2_text_series import extend as extend_text
@@ -193,6 +194,8 @@ class Construction:
 
 
 def construction(key,size):
+    from b2_approved_proposals import APPROVED, approved_construction
+    if key in APPROVED:return approved_construction(key,size)
     c=Construction(key,size,1.25 if size==16 else 1.75)
     if key in {'file.open','draw.note','view.search','measure.distance'}:
         original={'file.open':'open','draw.note':'note',
@@ -299,6 +302,7 @@ def construction(key,size):
         c.line([(10,6),(4,12),(10,18)],True,radius=2)
         if key=='nav.forward':c.mirror()
     elif not extend(c,key) and not extend_windows(c,key) and not extend_text(c,key) and not extend_data(c,key) and not extend_report(c,key) and not extend_ifc(c,key) and not extend_next(c,key) and not extend_later(c,key) and not extend_pages(c,key) and not extend_bulk(c,key) and not extend_session(c,key) and not extend_document_navigation(c,key) and not extend_third(c,key) and not extend_fourth(c,key) and not extend_completion(c,key):raise ValueError(key)
+    refine(c,key)
     return c
 
 

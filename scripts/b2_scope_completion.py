@@ -170,8 +170,7 @@ def extend(c,key):
         else:arrow(c,(11,10),(22,10))
     elif key=='integration.platform-sync':
         box(c,2,13,7,8)
-        c.line([(14,9),(14,5),(17,3),(21,5),(22,9)],radius=1)
-        c.line([(14,9),(22,9)],radius=0)
+        box(c,14,2,7,7)
         arrow(c,(4,8),(11,8));arrow(c,(21,17),(13,17))
     elif key in ('validation.select-specification','validation.reset'):
         box(c,3,3,15,18)

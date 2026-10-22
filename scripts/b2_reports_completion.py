@@ -195,14 +195,14 @@ def extend(c,key):
     if key not in KEYS:return False
     small=c.size==16
     if key in {'account.login','account.logout'}:
-        box(c,3,3,9,18)
-        if key=='account.login':dimension_arrow(c,(22,12),(8,12),3)
-        else:dimension_arrow(c,(8,12),(22,12),3)
+        box(c,3,3,8,18)
+        if key=='account.login':dimension_arrow(c,(22,12),(15,12),1.8)
+        else:dimension_arrow(c,(15,12),(22,12),1.8)
     elif key=='account.profile':
         person(c,12)
     elif key=='account.admin':
-        person(c,8);box(c,15,13,7,8,True)
-        c.line([(16,13),(16,10),(21,10),(21,13)],True,radius=.7)
+        person(c,7.25);box(c,16,12,7,8,True)
+        c.line([(17,12),(17,9),(22,9),(22,12)],True,radius=.7)
     elif key.startswith('report.') and key.split('.')[1].endswith('block'):
         kind=key.split('.')[1]
         if kind=='heading-block':glyph(c,'H',3,4,10,16);glyph(c,'2',15,10,7,10,True)
@@ -230,7 +230,7 @@ def extend(c,key):
     elif key=='report.page-break':
         c.line([(3,10),(3,3),(21,3),(21,10)],radius=.5)
         c.line([(3,16),(3,21),(21,21),(21,16)],radius=.5)
-        for x in (3,9,17):c.line([(x,13),(x+4,13)],True,radius=0)
+        for x in (3,10,17):c.line([(x,13),(x+4,13)],True,radius=0)
     elif key=='report.block-menu':
         for x,y in ((3,3),(14,3),(3,14)):box(c,x,y,7,7)
         c.plus(18,18,3.5,True)
@@ -260,10 +260,10 @@ def extend(c,key):
         for y in (7,14):
             c.line([(6,y),(10,y)],radius=0);box(c,13,y-1.5,5,4,True)
     elif key in {'report.chapter-add','report.appendix-add','report.revision-add'}:
-        page(c,2,3,12,18);c.plus(19,17,3,True)
-        if key=='report.chapter-add':c.line([(5,7),(11,7)],True,radius=0)
-        elif key=='report.appendix-add':c.line([(5,11),(11,11)],True,radius=0);c.line([(5,15),(9,15)],radius=0)
-        else:c.line([(5,7),(11,7),(11,11),(5,11)],True,closed=True,radius=.3)
+        page(c,2,3,10,18);c.plus(19,17,3,True)
+        if key=='report.chapter-add':c.line([(5,7),(9,7)],True,radius=0)
+        elif key=='report.appendix-add':c.line([(5,11),(9,11)],True,radius=0);c.line([(5,15),(9,15)],radius=0)
+        else:c.line([(5,7),(9,7),(9,11),(5,11)],True,closed=True,radius=.3)
     elif key in {'report.properties','report.cover','report.colophon','report.options','report.catalog','report.validate'}:
         sheet(c)
         if key=='report.properties':
@@ -273,9 +273,12 @@ def extend(c,key):
         elif key=='report.colophon':
             c.circle(12,8,2,True);c.line([(7,16),(17,16)],radius=0);c.line([(9,19),(15,19)],radius=0)
         elif key=='report.validate':
-            c.circle(11,11,4,True)
-            c.line([(14,14),(18,18)],True,radius=0)
-            c.line([(8.5,11),(10.5,13),(13.5,9)],radius=.3)
+            c.paths.clear()
+            box(c,2,2,10,20)
+            c.line([(5,7),(9,7)],radius=0)
+            c.line([(5,14),(6.5,16),(9,12)],radius=.5)
+            c.circle(19,15.5,3,True)
+            c.line([(21.2,17.7),(23,20)],True,radius=0)
         elif key=='report.options':
             for y in (8,15):
                 box(c,7,y-2,4,4,True);c.line([(14,y),(18,y)],radius=0)
@@ -285,7 +288,7 @@ def extend(c,key):
     elif key in {'report.move-project','report.unlink-project'}:
         c.line([(3,21),(3,6),(8,6),(11,9),(21,9),(21,21)],closed=True,radius=.6)
         if key=='report.move-project':dimension_arrow(c,(7,15),(18,15),2.5)
-        else:c.line([(8,13),(16,19)],True,radius=0);c.line([(8,19),(16,13)],True,radius=0)
+        else:c.line([(9,13),(15,19)],True,radius=0);c.line([(9,19),(15,13)],True,radius=0)
     elif key.startswith('view.report-'):
         mode=key.split('-')[-1]
         box(c,2,3,20,18);c.line([(2,7),(22,7)],radius=0)
@@ -303,9 +306,9 @@ def extend(c,key):
         c.line(arc_points(11,8,5,150,390,32)+[(11,20)],closed=True,radius=.5)
         c.circle(11,8,1.5);c.line([(16,18),(18,20),(22,15)],True,radius=.4)
     elif key=='geo.cadastral':
-        c.line([(3,5),(9,2),(15,5),(21,2),(21,19),(15,22),(9,19),(3,22)],closed=True,radius=.5)
-        c.line([(9,2),(9,19)],radius=0);c.line([(15,5),(15,22)],radius=0)
-        c.line([(5,12),(11,9),(18,13),(13,18),(5,12)],True,radius=.5)
+        c.line([(2,6),(7,3),(12,6),(12,19),(7,16),(2,19)],closed=True,radius=.5)
+        c.line([(7,3),(7,16)],radius=0)
+        c.line([(17,12),(23,14),(21,22),(16,20)],True,closed=True,radius=.4)
     elif key=='file.download':
         c.line([(3,16),(3,21),(21,21),(21,16)],radius=.6)
         dimension_arrow(c,(12,3),(12,16),3.5)
@@ -319,7 +322,7 @@ def extend(c,key):
         sheet(c)
         c.line([(7,17),(17,17)],True,radius=0)
     elif key=='feedback.github-issue':
-        page(c,2,5,13,17)
+        page(c,2,5,11,17)
         c.line([(6,10),(11,10)],radius=0);c.line([(6,15),(10,15)],radius=0)
-        dimension_arrow(c,(14,10),(21,3),2.5)
+        dimension_arrow(c,(17,8),(22,3),1.8)
     return True

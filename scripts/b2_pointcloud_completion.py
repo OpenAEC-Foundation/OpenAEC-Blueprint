@@ -6,7 +6,6 @@ Unused match arms and misidentified include sites remain explicit exclusions.
 import math
 from b2_second_series import box
 from b2_bim_completion import cube
-from b2_frame_completion import circular_arrow
 from b2_session_two import dimension_arrow
 from b2_energy_pile_audio import arc_points
 
@@ -171,6 +170,41 @@ def lattice(c,kind):
     for vertex in p:c.line([vertex,center],True,radius=0)
 
 
+def clip_frame(c):
+    for points in ([(2,7),(2,2),(7,2)],[(17,2),(22,2),(22,7)],[(22,17),(22,22),(17,22)],[(7,22),(2,22),(2,17)]):c.line(points,radius=.4)
+
+
+def mini_cube(c,k=.45,x=12,y=12,accent=False):
+    start=len(c.paths);cube(c);scale=c.size/24
+    for p in c.paths[start:]:
+        p['points']=[(k*px+(x-12*k)*scale,k*py+(y-12*k)*scale) for px,py in p['points']]
+        if accent:p['tone']='accent'
+
+
+def refresh_badge(c,x=18,y=18,r=4):
+    c.line([(x+r,y+r),(x+r,y-1),(x-r,y-1)],True,radius=1.4)
+    c.line([(x-r+1.8,y-2.8),(x-r,y-1),(x-r+1.8,y+.8)],True,radius=0)
+
+
+def inset_face(c,points,k=.5):
+    x=sum(p[0] for p in points)/len(points);y=sum(p[1] for p in points)/len(points);s=c.size/24
+    c.fills.append({'tone':'accent','rings':[[(s*(x+k*(px-x)),s*(y+k*(py-y))) for px,py in points]]})
+
+
+def terrain_mesh(c):
+    c.line([(2,20),(9,5),(14,13),(18,8),(22,20)],closed=True,radius=.35)
+    c.line([(14,13),(16,20)],radius=0)
+    scale=c.size/24
+    c.fills.append({'tone':'accent','rings':[[(x*scale,y*scale) for x,y in ((6.5,17.5),(9,11),(12.5,17.5))]]})
+
+
+def surface_patch(c):
+    c.line([(2,8),(14,3),(22,16),(10,21)],closed=True,radius=.35)
+    c.line([(8,5.5),(16,18.5)],radius=0)
+    c.line([(6,14.5),(18,9.5)],radius=0)
+    inset_face(c,[(8,5.5),(14,3),(18,9.5),(12,12)],.35)
+
+
 def extend(c,key):
     if key not in KEYS:return False
     small=c.size==16
@@ -192,40 +226,52 @@ def extend(c,key):
         c.line([(17,3),(17,12)],True,radius=0)
         for x,y in ((6,7),(7,17),(17,17)):c.circle(x,y,.7,False,True)
     elif key in {'section.box','section.fit-selection','section.reset-box'}:
-        cube(c)
-        if key=='section.box':
-            c.line([(4,16),(12,20),(20,16)],True,radius=.3)
+        clip_frame(c)
+        if key=='section.box':mini_cube(c,accent=True)
         elif key=='section.fit-selection':
-            for x,y in ((8,9),(15,11),(11,16)):c.circle(x,y,1,True,True)
+            box(c,8,8,8,8,True)
         else:
-            for p in c.paths:p['points']=[(.7*x,.7*y) for x,y in p['points']]
-            circular_arrow(c,17,17,5,0,270,1.5)
+            for p in c.paths:p['points']=[(.6*x,.6*y) for x,y in p['points']]
+            refresh_badge(c)
     elif key=='pointcloud.lod-refresh':
-        for x,y in ((8,8),(12,6),(16,9),(8,14),(13,14)):c.circle(x,y,.8,False,True)
-        circular_arrow(c,12,12,10,220,490,2)
+        for x in (3,8,13):
+            for y in (3,8):c.circle(x,y,.85,filled=True)
+        refresh_badge(c,17,17,5)
     elif key in {'pointcloud.section-drawing','pointcloud.to-drawing'}:
         sheet(c)
         c.line([(6,17),(10,11),(14,15),(18,9)],radius=.3)
         if key=='pointcloud.section-drawing':c.line([(5,13),(19,13)],True,radius=0)
-        else:dimension_arrow(c,(12,2),(12,11),2.2)
+        else:
+            scale=c.size/24
+            for p in c.paths:p['points']=[(.65*x,.8*y+1.8*scale) for x,y in p['points']]
+            dimension_arrow(c,(20,4),(20,20),2)
     elif key.startswith('mesh.'):
         kind=key.split('.')[1]
         if kind=='closed':
-            cube(c)
-            x=5*math.sqrt(3)
-            c.line([(12-x,7),(12,22)],True,radius=0)
-            c.line([(12,12),(12+x,17)],True,radius=0)
-        elif kind in {'terrain','surface'}:lattice(c,kind)
+            c.line([(12,3),(22,20),(2,20)],closed=True,radius=.35)
+            c.line([(12,9),(12,14),(7,17)],True,radius=.25)
+            c.line([(12,14),(17,17)],True,radius=0)
+        elif kind=='terrain':terrain_mesh(c)
+        elif kind=='surface':surface_patch(c)
         elif kind=='faces':
-            c.line([(3,7),(11,3),(11,13),(3,17)],closed=True,radius=.3)
-            c.line([(14,10),(21,6),(21,17),(14,21)],True,closed=True,radius=.3)
+            c.line([(2,7),(13,3),(20,7),(9,12)],closed=True,radius=.35)
+            c.line([(13,16),(21,12),(21,20),(13,23)],True,closed=True,radius=.35)
         elif kind=='wizard':
-            points(c)
-            c.line([(7,19),(12,8),(21,16)],True,closed=True,radius=.3)
+            box(c,2,2,12,12);c.line([(2,14),(14,2)],radius=0)
+            c.line([(15,22),(22,15)],True,radius=0)
+            c.line([(19.5,17.5),(21,19)],True,radius=0)
+            c.plus(20,7,2,True)
         else:
-            lattice(c,'terrain')
-            dimension_arrow(c,(12,4),(12,13),2)
-    elif key=='pointcloud.scans':points(c,True)
+            surface_patch(c)
+            for p in c.paths:p['points']=[(.55*x,.55*y) for x,y in p['points']]
+            c.fills.pop()
+            refresh_badge(c)
+    elif key=='pointcloud.scans':
+        box(c,4,3,12,8);c.circle(10,7,2)
+        c.line([(12,11),(12,15)],radius=0)
+        c.line([(7,22),(12,15),(17,22)],radius=.3)
+        c.line([(19,5),(22,3)],True,radius=0)
+        c.line([(19,9),(22,11)],True,radius=0)
     elif key=='pointcloud.classes':
         for x,y in ((5,5),(5,12),(5,19)):c.circle(x,y,1.5,True,True)
         for y,w in ((5,17),(12,21),(19,15)):c.line([(10,y),(w,y)],radius=0)
@@ -249,19 +295,21 @@ def extend(c,key):
         elif key=='view.saved':
             c.line([(14,3),(14,12),(17,10),(20,12),(20,3)],True,radius=.2)
         else:
-            for p in c.paths:p['points']=[(.7*x,.7*y) for x,y in p['points']]
-            circular_arrow(c,17,17,5,0,270,1.5)
+            for p in c.paths:p['points']=[(.6*x,.6*y) for x,y in p['points']]
+            refresh_badge(c)
     elif key.startswith('view.'):
         name=key.split('.')[1]
-        if name=='isometric':cube(c);c.paths[-1]['tone']='accent'
+        if name=='isometric':
+            cube(c);del c.paths[-2:]
+            c.line([(6.25,8.5),(12,12),(17.75,8.5)],True,radius=.3)
+            c.line([(12,12),(12,18.5)],True,radius=0)
         else:
-            # One exact unit cube is shared by all camera-direction symbols.
-            cube(c)
-            for p in c.paths:p['points']=[(.6*x+3*c.size/24,.6*y+3*c.size/24) for x,y in p['points']]
-            dirs={'top':((12,2),(12,8)),'bottom':((12,22),(12,16)),
-                  'front':((3,20),(8,15)),'back':((21,3),(16,8)),
-                  'right':((22,12),(16,12)),'left':((2,12),(8,12))}
-            dimension_arrow(c,*dirs[name],2)
+            centers={'top':(12,15),'bottom':(12,9),'front':(14,9),'back':(10,15),'right':(9,12),'left':(15,12)}
+            mini_cube(c,.5,*centers[name])
+            dirs={'top':((12,1.5),(12,6.5)),'bottom':((12,22.5),(12,17.5)),
+                  'front':((2,22),(7.5,16.5)),'back':((22,2),(16.5,7.5)),
+                  'right':((22.5,12),(17.5,12)),'left':((1.5,12),(6.5,12))}
+            dimension_arrow(c,*dirs[name],1.6)
     elif key.startswith('pointcloud.color-'):
         kind=key.removeprefix('pointcloud.color-')
         if kind=='elevation':
@@ -277,5 +325,8 @@ def extend(c,key):
         c.line([(3,21),(3,8),(10,8),(10,3),(17,3),(17,12),(21,12),(21,21)],closed=True,radius=.3)
         if key=='geo.bag-buildings':
             for x,y in ((6,12),(6,17),(13,7),(13,12),(17,17)):c.circle(x,y,.6,True,True)
-        else:dimension_arrow(c,(12,11),(12,21),2.5)
+        else:
+            scale=c.size/24
+            for p in c.paths:p['points']=[(.65*x,.85*y+scale) for x,y in p['points']]
+            dimension_arrow(c,(20,4),(20,21),2)
     return True

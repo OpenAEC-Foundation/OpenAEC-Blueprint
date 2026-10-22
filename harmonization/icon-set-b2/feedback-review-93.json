@@ -1,0 +1,1201 @@
+{
+  "date": "2026-10-20",
+  "revision": 93,
+  "baseline_revision": 91,
+  "base_head": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "verdict": "Technische controles geslaagd; ontwerpen ter menselijke beoordeling.",
+  "changed_designs": 41,
+  "changed_masters": 82,
+  "unchanged_designs": 904,
+  "unchanged_masters": 1808,
+  "retained_original_designs": 316,
+  "visually_checked_sizes": [
+    16,
+    24,
+    32
+  ],
+  "visually_checked_modes": [
+    "donker met accent",
+    "licht monochroom"
+  ],
+  "live_review": {
+    "present": 41,
+    "matching_canonical_svg": 41
+  },
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.9561660479552473e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "general_python_checks": {
+    "check_layout_metrics": "geslaagd",
+    "check_icon_adoptions": "geslaagd; lokale Pointcloud-integratie ontbreekt",
+    "check_portable_ui": "geslaagd; lokale Pointcloud-snapshot ontbreekt",
+    "check_crate_package": "geslaagd",
+    "check_tokens_04": "geslaagd"
+  },
+  "python_compile": "geslaagd",
+  "cargo": "Niet uitgevoerd: Rust en crate ongewijzigd.",
+  "rendering": "16 betrokken contactplaten, Pillow/Sharp via lokale CairoSVG-compatibiliteitsadapter op Windows.",
+  "spacing": [
+    {
+      "id": "section.box",
+      "master": 16,
+      "gap_px": 3.213073
+    },
+    {
+      "id": "section.box",
+      "master": 24,
+      "gap_px": 4.944448
+    },
+    {
+      "id": "section.fit-selection",
+      "master": 16,
+      "gap_px": 2.994435
+    },
+    {
+      "id": "section.fit-selection",
+      "master": 24,
+      "gap_px": 4.616593
+    },
+    {
+      "id": "section.reset-box",
+      "master": 16,
+      "gap_px": 1.013281
+    },
+    {
+      "id": "section.reset-box",
+      "master": 24,
+      "gap_px": 1.644872
+    },
+    {
+      "id": "pointcloud.lod-refresh",
+      "master": 16,
+      "gap_px": 2.976241
+    },
+    {
+      "id": "pointcloud.lod-refresh",
+      "master": 24,
+      "gap_px": 4.526821
+    },
+    {
+      "id": "pointcloud.to-drawing",
+      "master": 16,
+      "gap_px": 1.688873
+    },
+    {
+      "id": "pointcloud.to-drawing",
+      "master": 24,
+      "gap_px": 2.658262
+    },
+    {
+      "id": "mesh.wizard",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "mesh.wizard",
+      "master": 24,
+      "gap_px": 2.250001
+    },
+    {
+      "id": "mesh.closed",
+      "master": 16,
+      "gap_px": 0.609172
+    },
+    {
+      "id": "mesh.closed",
+      "master": 24,
+      "gap_px": 1.038643
+    },
+    {
+      "id": "mesh.terrain",
+      "master": 16,
+      "gap_px": 1.041663
+    },
+    {
+      "id": "mesh.terrain",
+      "master": 24,
+      "gap_px": 1.625
+    },
+    {
+      "id": "mesh.surface",
+      "master": 16,
+      "gap_px": 0.76604
+    },
+    {
+      "id": "mesh.surface",
+      "master": 24,
+      "gap_px": 1.21156
+    },
+    {
+      "id": "mesh.faces",
+      "master": 16,
+      "gap_px": 2.068824
+    },
+    {
+      "id": "mesh.faces",
+      "master": 24,
+      "gap_px": 3.228221
+    },
+    {
+      "id": "mesh.reconstruct",
+      "master": 16,
+      "gap_px": 3.708273
+    },
+    {
+      "id": "mesh.reconstruct",
+      "master": 24,
+      "gap_px": 5.687423
+    },
+    {
+      "id": "pointcloud.scans",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "pointcloud.scans",
+      "master": 24,
+      "gap_px": 1.250001
+    },
+    {
+      "id": "view.top",
+      "master": 16,
+      "gap_px": 1.133521
+    },
+    {
+      "id": "view.top",
+      "master": 24,
+      "gap_px": 1.825253
+    },
+    {
+      "id": "view.bottom",
+      "master": 16,
+      "gap_px": 1.083348
+    },
+    {
+      "id": "view.bottom",
+      "master": 24,
+      "gap_px": 1.75
+    },
+    {
+      "id": "view.front",
+      "master": 16,
+      "gap_px": 2.360256
+    },
+    {
+      "id": "view.front",
+      "master": 24,
+      "gap_px": 3.665149
+    },
+    {
+      "id": "view.back",
+      "master": 16,
+      "gap_px": 2.360149
+    },
+    {
+      "id": "view.back",
+      "master": 24,
+      "gap_px": 3.665363
+    },
+    {
+      "id": "view.right",
+      "master": 16,
+      "gap_px": 1.52992
+    },
+    {
+      "id": "view.right",
+      "master": 24,
+      "gap_px": 2.41987
+    },
+    {
+      "id": "view.left",
+      "master": 16,
+      "gap_px": 1.52992
+    },
+    {
+      "id": "view.left",
+      "master": 24,
+      "gap_px": 2.41987
+    },
+    {
+      "id": "view.isometric",
+      "master": 16,
+      "gap_px": 0.586222
+    },
+    {
+      "id": "view.isometric",
+      "master": 24,
+      "gap_px": 1.004318
+    },
+    {
+      "id": "geo.fetch-buildings",
+      "master": 16,
+      "gap_px": 1.663983
+    },
+    {
+      "id": "geo.fetch-buildings",
+      "master": 24,
+      "gap_px": 2.620898
+    },
+    {
+      "id": "building.housing",
+      "master": 16,
+      "gap_px": 1.41667
+    },
+    {
+      "id": "building.housing",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "building.utility",
+      "master": 16,
+      "gap_px": 1.343658
+    },
+    {
+      "id": "building.utility",
+      "master": 24,
+      "gap_px": 2.077929
+    },
+    {
+      "id": "building.new-housing",
+      "master": 16,
+      "gap_px": 0.61667
+    },
+    {
+      "id": "building.new-housing",
+      "master": 24,
+      "gap_px": 1.05
+    },
+    {
+      "id": "building.new-utility",
+      "master": 16,
+      "gap_px": 0.777973
+    },
+    {
+      "id": "building.new-utility",
+      "master": 24,
+      "gap_px": 1.229401
+    },
+    {
+      "id": "building.apartment",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "building.apartment",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "building.houseboat",
+      "master": 16,
+      "gap_px": 0.789214
+    },
+    {
+      "id": "building.houseboat",
+      "master": 24,
+      "gap_px": 1.24632
+    },
+    {
+      "id": "building.office",
+      "master": 16,
+      "gap_px": 1.041663
+    },
+    {
+      "id": "building.office",
+      "master": 24,
+      "gap_px": 1.625
+    },
+    {
+      "id": "energy.fired-generator",
+      "master": 16,
+      "gap_px": 0.63858
+    },
+    {
+      "id": "energy.fired-generator",
+      "master": 24,
+      "gap_px": 1.02037
+    },
+    {
+      "id": "energy.heat-pump",
+      "master": 16,
+      "gap_px": 1.55
+    },
+    {
+      "id": "energy.heat-pump",
+      "master": 24,
+      "gap_px": 2.45
+    },
+    {
+      "id": "energy.warm-air",
+      "master": 16,
+      "gap_px": 1.656019
+    },
+    {
+      "id": "energy.warm-air",
+      "master": 24,
+      "gap_px": 2.546528
+    },
+    {
+      "id": "energy.collective-hot-water",
+      "master": 16,
+      "gap_px": 1.08333
+    },
+    {
+      "id": "energy.collective-hot-water",
+      "master": 24,
+      "gap_px": 1.750018
+    },
+    {
+      "id": "ventilation.natural",
+      "master": 16,
+      "gap_px": 1.41666
+    },
+    {
+      "id": "ventilation.natural",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "ventilation.extract",
+      "master": 16,
+      "gap_px": 1.416663
+    },
+    {
+      "id": "ventilation.extract",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "ventilation.supply",
+      "master": 16,
+      "gap_px": 1.416663
+    },
+    {
+      "id": "ventilation.supply",
+      "master": 24,
+      "gap_px": 2.25
+    },
+    {
+      "id": "ventilation.balanced",
+      "master": 16,
+      "gap_px": 1.982851
+    },
+    {
+      "id": "ventilation.balanced",
+      "master": 24,
+      "gap_px": 3.098869
+    },
+    {
+      "id": "energy.heating-measure",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "energy.heating-measure",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "master": 16,
+      "gap_px": 0.68333
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "master": 24,
+      "gap_px": 1.15
+    },
+    {
+      "id": "view.update-saved",
+      "master": 16,
+      "gap_px": 2.721423
+    },
+    {
+      "id": "view.update-saved",
+      "master": 24,
+      "gap_px": 4.20716
+    }
+  ],
+  "icons": [
+    {
+      "id": "section.box",
+      "label": "Doorsnedebox",
+      "ui_call": "SetSectionEnabled schakelt de begrenzende 3D-box; dezelfde vorm duidt een opgeslagen box aan.",
+      "source_record": "6af26897d56fd216",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12371",
+      "assets": {
+        "16": {
+          "before": "97253eb9a5e70d75276b79bfc0f320de2527113caa553ed5435590f499eb6eb7",
+          "after": "4e7418a62c975550ce9089051d765432350a4771b978b556c38a60f99c66ed5d"
+        },
+        "24": {
+          "before": "6ba388562e6fc92f5e6c3e73074b3b32fedcfca7e4aeeef18febf4199be4fc32",
+          "after": "c676f4caeb05a332c7788bdda69c0a19909caac619e58c9aa39d29e2697faea9"
+        }
+      }
+    },
+    {
+      "id": "section.fit-selection",
+      "label": "Doorsnedebox om selectie",
+      "ui_call": "FitSectionToSelection past de boxgrenzen aan de geselecteerde punten aan; geen camera-fit.",
+      "source_record": "9265e41e28f7a97a",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12366",
+      "assets": {
+        "16": {
+          "before": "be97c254eb240aedbf0b6be19e28f1ee3173235fe7bcd5b0de456be80ea1c751",
+          "after": "a18f6b9b3b3528fe6b27c2edfb605902c6f7ba017b86b2595efa89d8bd5cfe4e"
+        },
+        "24": {
+          "before": "a6e14adc761c5317cfb06c4d9df01c541d3cc754a68226699e479ab8ee74a47a",
+          "after": "d113a5b9eb38833b3efb80170c1261451eb4ef7ee55caf0afc20b67f2dea1659"
+        }
+      }
+    },
+    {
+      "id": "section.reset-box",
+      "label": "Doorsnedebox herstellen",
+      "ui_call": "ResetSectionBox herstelt de boxgrenzen; laat de camerarichting ongemoeid.",
+      "source_record": "c69f9d1e645f0d5a",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12362",
+      "assets": {
+        "16": {
+          "before": "3c7a4df5299056b6c4cf20ef19f913c2388069c9cebd6795f7a4e2ea42de1e26",
+          "after": "c31a948489d41664e832f2e989d1a6f4542b46f95c6be38aeef6918cce88ed24"
+        },
+        "24": {
+          "before": "24be2b9a8b2517f22573865c3fb5f88447de3d53acc747c27fca28792211db50",
+          "after": "e27c442fd59dfcc51c92e51d85fe28a2dbfdedc06ded1b94003c103e40d82a24"
+        }
+      }
+    },
+    {
+      "id": "pointcloud.lod-refresh",
+      "label": "Detailpunten vernieuwen",
+      "ui_call": "RefreshLod wist de detailcache en vraagt LoadDetail voor de huidige weergave.",
+      "source_record": "de77dbd47144940c",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12362",
+      "assets": {
+        "16": {
+          "before": "8308c2bc8c0013415a76f5c154331ee7d38556ae6a3687bfab3cafac7d52d273",
+          "after": "12736c91b15ea6ca376997d30831c2512ee00deb2b3337b96a4e401cf33c8019"
+        },
+        "24": {
+          "before": "8992cf80908812c6b69b07687985d98237d27f5bfcbe02464deab6ecdf252ada",
+          "after": "15f14828393a73b8a2c879450014997a3b7fe616fbabb56c490704addeaa8766"
+        }
+      }
+    },
+    {
+      "id": "pointcloud.to-drawing",
+      "label": "Puntenwolk naar tekening",
+      "ui_call": "WizardAction Open opent de wizard voor projectie naar tekeningen; nog niet uitvoeren.",
+      "source_record": "de5f2f568326abf4",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12410",
+      "assets": {
+        "16": {
+          "before": "b969c13f5ffcbea4a1917f64d5b6921c001a87c5669ef04d4a7ba9c374931c13",
+          "after": "855f174a9f98c6ddea50251e125296e84da8424bdc35de69da3a2ff26ef0de1c"
+        },
+        "24": {
+          "before": "28cfe6bdea2dfdf7a2f60df598047baeaa75364ceb8822880d00adf6acc4e321",
+          "after": "3f035af47d30a1889c7cef8c5235350818a5464c1a72aa89fcaa76b0db85d5af"
+        }
+      }
+    },
+    {
+      "id": "mesh.wizard",
+      "label": "Meshwizard openen",
+      "ui_call": "MeshWizardAction Open toont de methodekiezer; start nog geen reconstructie.",
+      "source_record": "1f25076b66d392c3",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12414",
+      "assets": {
+        "16": {
+          "before": "e99a32b59361209517c54d32405513a64527b85e19504232aa30662f43f5cb7f",
+          "after": "d1c871ba271cc75e6ab9d161b671afd16b6fdef7f644db561ea66c2c1c3f9316"
+        },
+        "24": {
+          "before": "fa011cbc53e179171a59d720bd51fed8b6d8aa92019d67e08fc21876ae3f8b89",
+          "after": "22c4af7e70b01453222a102b93177b4f2f4748d8ef8bfe167924d92d2482fdd3"
+        }
+      }
+    },
+    {
+      "id": "mesh.closed",
+      "label": "Gesloten mesh kiezen",
+      "ui_call": "OpenMethod Closed kiest de gesloten-meshroute binnen de wizard.",
+      "source_record": "a0c0260755ce2fda",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12406",
+      "assets": {
+        "16": {
+          "before": "dc4506b21750e7f89d592e78727d9492bf59881d6bfe2421d88d084df26f7604",
+          "after": "f5dcdbb594c4f9913badc6d7c632d2310ce372e722e9be86df11725b61368a16"
+        },
+        "24": {
+          "before": "706042b8a8021f98abab3bee150ce6e3eb25cabca0ad67409c98f4091d3ea292",
+          "after": "d8a71bd20a6a3e4071a2ed3f3588baece1883ec9fa28ed077a82e3693672b5e7"
+        }
+      }
+    },
+    {
+      "id": "mesh.terrain",
+      "label": "Terreinmesh kiezen",
+      "ui_call": "OpenMethod Terrain kiest de terreinmeshroute binnen de wizard.",
+      "source_record": "1ae839fe79d98c49",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12416",
+      "assets": {
+        "16": {
+          "before": "600304e746ecf2292c0d47b8c477b36c39b03064b684e348a4aaa9b5874e01bc",
+          "after": "31b9939f2c73f8ef730af2d9a554674fa21a3ef33d9ad7cc9b409bd0cd63d788"
+        },
+        "24": {
+          "before": "d33c0c9ce96173c647849b98222e2b389ea0c293933bffd4d4d0e5e0b8e2c488",
+          "after": "eca253ae881190338f4b9857f0bc9f707f5922efb49ccf6dcdaf183b39b79b0e"
+        }
+      }
+    },
+    {
+      "id": "mesh.surface",
+      "label": "3D-oppervlak kiezen",
+      "ui_call": "OpenMethod Surface kiest de 3D-oppervlakroute binnen de wizard.",
+      "source_record": "85608b5276b467aa",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12417",
+      "assets": {
+        "16": {
+          "before": "07241daf999f93433ecf5336169038b6bdc53abdce34182894146bed5f7c41bc",
+          "after": "e53bc672757170f73d72fe35cba2bcb9d743a3c1f60895a5381a3d70db21758f"
+        },
+        "24": {
+          "before": "2e7b6e601ce6e3291488caaacd751f8975bc31f1ca3dac0d3681ce53bf9c778a",
+          "after": "32af592ce41b328a41a4505d0a6aaf40324c00adbb1d5d26e664deaa7fe5218e"
+        }
+      }
+    },
+    {
+      "id": "mesh.faces",
+      "label": "Vlakken detecteren kiezen",
+      "ui_call": "OpenMethod Faces kiest de vlakdetectieroute binnen de wizard.",
+      "source_record": "3889be367a67e74e",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12408",
+      "assets": {
+        "16": {
+          "before": "99f2ff3b0761e5faa5f498cd272dc38a35c6434bfa80017f1201c8857f98db47",
+          "after": "520e086a2dc8047d2e59b776331089204f0d7beb140a479b87f2754633c02633"
+        },
+        "24": {
+          "before": "b8271ca8f034041f7c900e8dd1136b3dc40673e1fe6f9893a01300d7f9618a7b",
+          "after": "caccdca0829a33a9279b3f50f86ed8e1db4da506127959c446357fabeb792950"
+        }
+      }
+    },
+    {
+      "id": "mesh.reconstruct",
+      "label": "Mesh reconstrueren",
+      "ui_call": "De klassieke handleReconstruct voert reconstructSurface uit op geladen punten.",
+      "source_record": "b724bace116df6ad",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/layout/Ribbon/Ribbon.tsx#L236",
+      "assets": {
+        "16": {
+          "before": "29be12ca8cd43085c05322365298d6f5647eb659600e5cd0f06125203e2a39da",
+          "after": "4ac00382e8780632ac29f50283da85ecb12a9702d5257078d7ca28861e6edfe9"
+        },
+        "24": {
+          "before": "647848afc93cfea6b025ce3cec7a151add90c6a55d35f800a3b3fd517de6d0ce",
+          "after": "a45eb1246bd5da4897a748143ff309282313a81b87542283e75f06b057a470e9"
+        }
+      }
+    },
+    {
+      "id": "pointcloud.scans",
+      "label": "Scans in browser",
+      "ui_call": "Groeps- en rijindicator voor geopende scanbestanden; geen indexeeropdracht.",
+      "source_record": "06b796a111700c2d",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12420",
+      "assets": {
+        "16": {
+          "before": "ada7d47f20a0190837b17ff06b25cd2ce496d185ab0c0612d4fe4f88de087e39",
+          "after": "ae637e2e2860599a8ca674cc34536ae4a1e54b7f408a2437f6e9c9a5291d918c"
+        },
+        "24": {
+          "before": "bc6b06112b75a29d7a934564114a4e9ee550652ded82d44fb384dd9a623664c9",
+          "after": "a1110b041f897957a99fb56ea7b52ac225a31ba506366f1920286f0692993eac"
+        }
+      }
+    },
+    {
+      "id": "view.top",
+      "label": "Bovenaanzicht",
+      "ui_call": "CameraPreset Top kiest yaw -pi/2, pitch pi/2.",
+      "source_record": "be15545e5612ac58",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12385",
+      "assets": {
+        "16": {
+          "before": "17c8f90820041eb0e8c570606c7d5c53425d8977e84d7ac17c156bcb233e61a5",
+          "after": "02175bd5ed5d77a4aaef429f0734f8d26ec00a2a75a4f4b242974960f46acfa1"
+        },
+        "24": {
+          "before": "6438ff228d8b5a5013c220c5979af24c52e3546f8ce5bdb3a693c0ec20d1837e",
+          "after": "4e0bd5f2926974f8d083e89ccc9ef8c4d7a37b73864990c5a4a32d498bab03c5"
+        }
+      }
+    },
+    {
+      "id": "view.bottom",
+      "label": "Onderaanzicht",
+      "ui_call": "CameraPreset Bottom kiest yaw -pi/2, pitch -pi/2.",
+      "source_record": "038a8c5d41032054",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12385",
+      "assets": {
+        "16": {
+          "before": "34bd86a8afd78abfa7c8ea69daabbddb89980826ade699eccbdf4c3c9ab635e4",
+          "after": "10142ff1ecfe8f8b0fd2fe7580380cb1702662eafeaecff994dcd67c5a2d9f34"
+        },
+        "24": {
+          "before": "4a6de7184457ba11f4b3b57faa18c6ca765dcc482e7532ac36372de877ca04ed",
+          "after": "2c5eeb275d42b6648514389dd7d034b14b90489b6812cf7d1f8a9bda6c26e7ee"
+        }
+      }
+    },
+    {
+      "id": "view.front",
+      "label": "Vooraanzicht",
+      "ui_call": "CameraPreset Front kiest yaw -pi/2, pitch 0.",
+      "source_record": "cac04e68f0760d3b",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12388",
+      "assets": {
+        "16": {
+          "before": "21c26f9d08ff9b427edbe6bac075299cf1d483f4a2ea68ade9d70ca3dd2e28e1",
+          "after": "6ea919ca0de625da4a336acd35229d006308210bae10642681625e83877ca224"
+        },
+        "24": {
+          "before": "2438e689acf8add679bee912ef15c7c8d361fb750e53df145699018a4acf5047",
+          "after": "bcb5adf2799bbe71132fc4569a2df6b1098ef29af53eca0b206de33a4271b12c"
+        }
+      }
+    },
+    {
+      "id": "view.back",
+      "label": "Achteraanzicht",
+      "ui_call": "CameraPreset Back kiest yaw pi/2, pitch 0.",
+      "source_record": "5525491b8521c17a",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12388",
+      "assets": {
+        "16": {
+          "before": "89efaf30fdfd71a9683126a28ce75149130285927acf51a7038b51750bda1b0f",
+          "after": "6648c796b327167ccf1fa8792a35c922ec12b7f25acde2a82b4650ecab8fdefb"
+        },
+        "24": {
+          "before": "870eb7274cca47df52e4866c9f0be74a165912336add7dc1bd67044ea90a308b",
+          "after": "4eb436fd0ba065f681b7470f4deb551772233dcea1c3b60b4ebae35be9bce11f"
+        }
+      }
+    },
+    {
+      "id": "view.right",
+      "label": "Rechteraanzicht",
+      "ui_call": "CameraPreset Right kiest yaw 0, pitch 0.",
+      "source_record": "537ad28ce24ef6ad",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12391",
+      "assets": {
+        "16": {
+          "before": "5fe1a6a74b612ec343f4fd5fab2a93c11ff777f60942a5c2c7f7c9a3218dba53",
+          "after": "baa5b07c87eae0cb990ad7350767e4d47771f1e0d4449ffd8b669dce64945fa2"
+        },
+        "24": {
+          "before": "78d6e0458d82d6cf7f1bb3b95d053e2ec2c217145c863af607bf5eea68139dd8",
+          "after": "aaea3563ff9dc4a1bd61c004619bb4d1827177a72e18b21a3ac815948a8f9966"
+        }
+      }
+    },
+    {
+      "id": "view.left",
+      "label": "Linkeraanzicht",
+      "ui_call": "CameraPreset Left kiest yaw pi, pitch 0.",
+      "source_record": "7ab7f2cba4b046ee",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12391",
+      "assets": {
+        "16": {
+          "before": "c87ec223979e6d9f749ad1613f38b26c2c667f2a5616b94a4cd645fb5346d3fa",
+          "after": "6acf8e540ef163d5fcde9516f48a53a1cf8ba10f7a070dac642fb7586db6d7ad"
+        },
+        "24": {
+          "before": "d1f9e824ec8703b47cc9ccf0bf76c7b7e75bd4e2de8399c7762cc716f678480d",
+          "after": "aa19305cf745c28a5ae246e3340c7feb6ba371b2f3f7aa8515cf6b7e1e57b5f5"
+        }
+      }
+    },
+    {
+      "id": "view.isometric",
+      "label": "Isometrisch beeld",
+      "ui_call": "CameraPreset Isometric kiest de diagonale modelweergave.",
+      "source_record": "1e940412b47d248d",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12394",
+      "assets": {
+        "16": {
+          "before": "63b21317f6fa47d8398411001308ef6cfa8bff3df2f0da5382ffb237b93422da",
+          "after": "cb19dc1cb889a02a44aaa56e2b05eba97e46f1f89cd1d069b90cc95f92646b68"
+        },
+        "24": {
+          "before": "0505b780b679535b987cbaf8812879142e0164009d9c692e21d47f1a2557467c",
+          "after": "20944279756af125de11ea16c344188b24834dd46e38c1d3874175b26cb79fba"
+        }
+      }
+    },
+    {
+      "id": "geo.fetch-buildings",
+      "label": "Gebouwen ophalen",
+      "ui_call": "handleDownload haalt het gekozen gebied op, leest CityJSON en voegt gebouwen toe.",
+      "source_record": "d0938cf7b0f01167",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/classic/src/components/panels/BAG3DPanel.tsx#L196",
+      "assets": {
+        "16": {
+          "before": "edf758e301fcc414ff022e28257fdad0f81110e91e984622f4736f7004e5c53f",
+          "after": "01251c57100e7eb9aa0e402d5132c048c7ff2af2b88224c3ec552cf921392f19"
+        },
+        "24": {
+          "before": "2037c57afd27bd44b1cb83254264abe71a279ee0ee0192dfc0d21e4023ba7ce2",
+          "after": "1c51de4794e7556d31aef6643b9e1c5854a5bc71b96f5dc9a20885a3db9b9ed9"
+        }
+      }
+    },
+    {
+      "id": "building.housing",
+      "label": "Woonfunctie",
+      "ui_call": "Categorie voor een woonfunctie of bestaand woongebouw; geen startpagina.",
+      "source_record": "557ba88b42e736a9",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L216",
+      "assets": {
+        "16": {
+          "before": "b5a034f89e311c04982f2ffc7b1156d80d18d934796f9e9c7997402aff883145",
+          "after": "08b340c90288798d039455f312241ae64518aa832ab2f7c3be1a5eb39f649d1d"
+        },
+        "24": {
+          "before": "5fb0557dce8c2e88d9313c478525a927d83b509c0466c1a1cee28ecb730508f1",
+          "after": "d8304937e0fd839e6868b63a82cce657922dde2a9e97a1488283801205ad6ffe"
+        }
+      }
+    },
+    {
+      "id": "building.utility",
+      "label": "Utiliteitsgebouw",
+      "ui_call": "De categorie bestaande utiliteit kiezen of een utiliteitsopname beginnen.",
+      "source_record": "46ae971402f19db5",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/NewProjectDialog.tsx#L20",
+      "assets": {
+        "16": {
+          "before": "1972e3b5d01b9f79a67a5b71bd602095e3f796a0eed479664fb126ea502ab506",
+          "after": "c6b6ef8e6382961cdcffe1b4eb1b29d9c5a44abcf77660652f1b54a5cc348cca"
+        },
+        "24": {
+          "before": "0bc1e75978241a688c17e8449bcd5a0876544f1e69fa418e56ef69972aa8f9a7",
+          "after": "4b2e2908d94269f0ccc05e80812b617d286a7b315f0c180cc396c35146faecf3"
+        }
+      }
+    },
+    {
+      "id": "building.new-housing",
+      "label": "Nieuwbouw wonen",
+      "ui_call": "De projectcategorie nieuwbouw wonen kiezen; maakt niet zelfstandig een project.",
+      "source_record": "bd5a1c1642d94579",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/NewProjectDialog.tsx#L21",
+      "assets": {
+        "16": {
+          "before": "e30f1f10eae7dcb3cf6864cb9af75aff9a105ace224155bcba2ca8ba36a3cc39",
+          "after": "b1db9b170b571f459b25d3bf1f16ead2566bc1566e1c9cde51233b1bbe260d9a"
+        },
+        "24": {
+          "before": "12bab431f4a89622d5faf3af9ec52e33f885cabc9dda04a0bad6a0cfcf65681d",
+          "after": "c26cc61bc1cccd5b2e1e8f126de2ed3d1f6666ecf5f1b8c2b95324c78b6fa744"
+        }
+      }
+    },
+    {
+      "id": "building.new-utility",
+      "label": "Nieuwbouw utiliteit",
+      "ui_call": "De projectcategorie nieuwbouw utiliteit kiezen; geen bestaand appartement.",
+      "source_record": "70ab953ccee9427c",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/WelcomeScreen/NewProjectDialog.tsx#L22",
+      "assets": {
+        "16": {
+          "before": "66f0e6038a2658842382f72ab46ca2683ecee56c632aa0b0c3c12a191f17291c",
+          "after": "a48c29fe8f9c478286d2544f36282138d770ac456eca8c93406b7bf7ca3c03f3"
+        },
+        "24": {
+          "before": "60a725d3c98dddfcd385242bb59aa48ffbaf3e3753a7ca2cea3eb017e13aa356",
+          "after": "45a6926a019b12e450c274a464f91b93cf02dad90c1a68bae1ad5f41bb900b93"
+        }
+      }
+    },
+    {
+      "id": "building.apartment",
+      "label": "Appartement",
+      "ui_call": "De woningsoort appartement kiezen; de vervolgvelden bepalen verdieping en ligging.",
+      "source_record": "ff10272b80dfc3e7",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L56",
+      "assets": {
+        "16": {
+          "before": "1df4e591115fbdb98cfb3f1c4c6f85ccc9ef9d03f1eba57983ae797a2f1922c6",
+          "after": "7e8e167d394c7b8a6f8f205770594d5c6c15735e8779eeed5947fb5da4168c6d"
+        },
+        "24": {
+          "before": "21e2b3922720cd94e42b68dcae50cb6984126d053675f7abda2bfcab751ccb0c",
+          "after": "41a67d7fc03c204245e37e5fefa4fcbc9500ac58fa3ca90598c7eef3e03a9846"
+        }
+      }
+    },
+    {
+      "id": "building.houseboat",
+      "label": "Woonboot",
+      "ui_call": "De woningsoort woonboot kiezen; de ligplaatsdatum blijft een afzonderlijke keuze.",
+      "source_record": "b5b36109b5cade16",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L56",
+      "assets": {
+        "16": {
+          "before": "1d9065d638067a2acae07a501daab31e4d5d00654c4e3a758d718ab6c02d0993",
+          "after": "267c806ad2f89b2ec37814a26c3aba01e029a4c958e1aec2a451a728a57f6b01"
+        },
+        "24": {
+          "before": "6a51872e114625bdc961065f4909d37543ec3e1c478897b58004e8b647ced99a",
+          "after": "0698929fc49944f79dfb339095a33ee4a2632e92cad9d48204cd06c4f39b9aad"
+        }
+      }
+    },
+    {
+      "id": "building.office",
+      "label": "Kantoorfunctie",
+      "ui_call": "buildingFunction office kiezen op de functiekaart.",
+      "source_record": "fe9f032f89ac7a28",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/BuildFlow/BuildFlow.tsx#L217",
+      "assets": {
+        "16": {
+          "before": "0dfc7b88918769bf5080d66f7117e5614a5e2b253495957193251fde8eb29aa8",
+          "after": "c45cadba34a88c737e5e361690c51cffa0b864b51040153a73a1b5f4d0fc51c3"
+        },
+        "24": {
+          "before": "b113e42370e9622dfd6f82ec4d023526644594f6c373b319b28847acaa86c4fe",
+          "after": "156f60df1e01a33b0de43751ec31fc806cacc673b11304ca937790eedb4c375e"
+        }
+      }
+    },
+    {
+      "id": "energy.fired-generator",
+      "label": "Warmte uit verbranding",
+      "ui_call": "Categorie bij boiler/lokaal gestookte verwarming en gasgestookte warmwateropwekkers; veld en label benoemen de subtypekeuze.",
+      "source_record": "7359d81277f71d3c",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43",
+      "assets": {
+        "16": {
+          "before": "92420d20e03becf108f39bb850998da8e7245dd36e2962a13a5702f824f65039",
+          "after": "dc7f74f2e67ff9a9aaeb788d8fbbb221fd7aa4b14ce969830bb67d32afc45772"
+        },
+        "24": {
+          "before": "b057650c5a55bfb5cfb18a757c18dcc0699f0a486e56c2194fddddbf70096e8f",
+          "after": "2d976918b038a77881684cef1fef805020cbc9fa7e09c9e115bd17a498ed7f05"
+        }
+      }
+    },
+    {
+      "id": "energy.heat-pump",
+      "label": "Warmtepomp",
+      "ui_call": "De generatorsoort heat_pump kiezen voor verwarming of warm water.",
+      "source_record": "f3400c35e00c29ba",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43",
+      "assets": {
+        "16": {
+          "before": "d5b7fe1f1e90b0382145490992ae0b52b5b0d5558f0114cfcd23b9f0dd0f3cae",
+          "after": "849eac3cb62478a7c776077a2e8c30dc405ebaf01072fc4c0d89408065fadbba"
+        },
+        "24": {
+          "before": "5dccd5d195897563b05a0fc13f4146f5a9af169bf673b452200a0a555192c5d3",
+          "after": "93b299eb94690d95f0a384731fa428491f8435e050331e176777ae7af3071b01"
+        }
+      }
+    },
+    {
+      "id": "energy.heat-network",
+      "label": "Warmtenet",
+      "ui_call": "De opwekker district_heat of gekoppelde afleverset kiezen; het bronveld benoemt de functie.",
+      "source_record": "db61e5dc7b4af3a8",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L43",
+      "assets": {
+        "16": {
+          "before": "5219c795856ee0c96d480af2ec62efb35bbb36b2e6d4e51ebb62eeaaa8038f91",
+          "after": "9589f68e250fa2f9c07ec3707f72caa1fa9503d2f2e796b8165abee229c73857"
+        },
+        "24": {
+          "before": "bb6477844513f5b49e01373159e1f55ae2d3be028107e3a695612da6eaac6ae5",
+          "after": "c15b7626e2590a702a35ff1e2ba7b0bcb16aa0f9a8feea2fd53f8a0284c83e21"
+        }
+      }
+    },
+    {
+      "id": "energy.warm-air",
+      "label": "Gasgestookte luchtverwarmer",
+      "ui_call": "De generatorsoort gas_air_heater kiezen; geen ventilatieprincipe.",
+      "source_record": "e8b763b9c58559a2",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L44",
+      "assets": {
+        "16": {
+          "before": "8a9a2a12d19bc12699ae07a75b1cd7d9bb34c5db903275dd135b6f71a92a8219",
+          "after": "3bdd2fa2708bc229db7fe31a9382cc400b2bdeea4ac441bd467d76b96f02441d"
+        },
+        "24": {
+          "before": "2edad05823f643b84bcafdcd090c6480401e2199809cc7597c0e668312b33ae5",
+          "after": "a046e1a9494c4ea540fb730cdac8b9b2cb4820d47ff0c2e963a52a5640618235"
+        }
+      }
+    },
+    {
+      "id": "energy.no-system",
+      "label": "Geen installatie aanwezig",
+      "ui_call": "none_present bij verwarming of none bij warm water kiezen; geen blokkade van de applicatie.",
+      "source_record": "e6a0175e6659fb24",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L44",
+      "assets": {
+        "16": {
+          "before": "f236031192f7886a30afaed27f120d6bff6cd56795f34a0f46d09c6702b272fc",
+          "after": "25450a21e9254a425eb1356125d88a59bf3b5337b36103383305719db157eeaf"
+        },
+        "24": {
+          "before": "852ed96c2d3ef0d25f82a18e35e00730a0d557cff52fa821f3c7c7a7d786273e",
+          "after": "09bb8cc05741f04ccc77c6cdd58392486d6c3a51601cb53568eff2a370043f14"
+        }
+      }
+    },
+    {
+      "id": "energy.collective-hot-water",
+      "label": "Collectief warm water",
+      "ui_call": "De warmwatergenerator collective_unknown kiezen; geen appartementstype.",
+      "source_record": "3410f17fec445ec4",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L48",
+      "assets": {
+        "16": {
+          "before": "c48bc65175d7505b81d10bec2bd4e72da37266fba2756eb9e9413c44af756695",
+          "after": "60b1ccf87f1b35392d73b82abb890318c62ceb26c08112e40094058071dff767"
+        },
+        "24": {
+          "before": "c3ab36684c764fc5ad561f24e41b5d8551ce23b7d0866c718074322053fdadc5",
+          "after": "21e657ed2377a729c863bfeb5edacb7870b3b0e1e8ffec824ce3ca8d42ba20ba"
+        }
+      }
+    },
+    {
+      "id": "ventilation.natural",
+      "label": "Natuurlijke ventilatie",
+      "ui_call": "ventilation.principle natural kiezen.",
+      "source_record": "24591f03ce4322e3",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L52",
+      "assets": {
+        "16": {
+          "before": "861e0551f3e1addaf4861b56d9f5bb1ff832e267e335909fc4b4589b3d4fd23b",
+          "after": "24b89a3b1f2eb9e6afa5d281752fd5047572da662e470a23f9303bec01570fc7"
+        },
+        "24": {
+          "before": "6386a3ff2b1ea243693573253f795378b3a50ffcf12f2826f78d6c2e622cc160",
+          "after": "d3ffc5f8a5768fe99df922973d1e3fd24182ebbeca6cc3b2856c7d476e6b7dec"
+        }
+      }
+    },
+    {
+      "id": "ventilation.extract",
+      "label": "Mechanische afvoer",
+      "ui_call": "ventilation.principle mechanical_extract kiezen.",
+      "source_record": "b2487bfdd199dc73",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L52",
+      "assets": {
+        "16": {
+          "before": "fd2eee00bc14b33484d0975480d3526877bee828f0f7c55d24c00e8eba2ba64b",
+          "after": "7187f827b3a28e73dfad968f86a07f5e32f49f8bf9a661a10c687fdcebea577b"
+        },
+        "24": {
+          "before": "859b81490737b94c0498192f4a97fc566fa2bc11aaaca3deae5d2a6a04a90ba7",
+          "after": "62e8cfb8146b349a276783895e27fe8e84175bdc7558746f312af11ad4a82a72"
+        }
+      }
+    },
+    {
+      "id": "ventilation.supply",
+      "label": "Mechanische toevoer",
+      "ui_call": "ventilation.principle mechanical_supply kiezen.",
+      "source_record": "b2487bfdd199dc73",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L52",
+      "assets": {
+        "16": {
+          "before": "e36025d55c0f02ece8108ff606e35a5d3276e17e1daaa16669ebed164490daec",
+          "after": "99cec5b6572186b67c33c8b1c6a55ca4b2218bec8a8023311b92c566df7128cd"
+        },
+        "24": {
+          "before": "8e02e3f3e45bd84f267903025cffbacf84b07f3b6b5a99643096a3e65ed658be",
+          "after": "6dfe5ed2666154945ffec965b7f7772414d571fff4ef0889f3b12ed92de2d623"
+        }
+      }
+    },
+    {
+      "id": "ventilation.balanced",
+      "label": "Gebalanceerde ventilatie",
+      "ui_call": "ventilation.principle balanced kiezen; toe- en afvoer.",
+      "source_record": "b2487bfdd199dc73",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyWizard.tsx#L52",
+      "assets": {
+        "16": {
+          "before": "dbecc8d6d3db194e1cd02b8917308d6065047631b22edb701e9d2bf4da528e29",
+          "after": "82d6558f2dfdb66020a5af39e06b919a0b9c904404a75a2be6980f14a8a4f4ba"
+        },
+        "24": {
+          "before": "6f0866d689e52f4c52312ed88cc756f8b0aa67105a4440fc5fd388b62fb52238",
+          "after": "fda658e7de13c69ec76c30204baa94db3d27ce4e1ed99a3eedb69f0e9f74ce82"
+        }
+      }
+    },
+    {
+      "id": "energy.heating-measure",
+      "label": "Verwarmingsmaatregel",
+      "ui_call": "In SurveyMwa een maatregel van kind heating toevoegen; geen specifiek keteltype kiezen.",
+      "source_record": "c8078703097ee3a5",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L33",
+      "assets": {
+        "16": {
+          "before": "0b01d0ee6f8f7af60dbbc539708cd998d683fab85676d56473d88c537fd0e342",
+          "after": "a34c24f82bdfcb0d52d12d7063c136f97dfa174c00f21b865aaa717d7882ebfe"
+        },
+        "24": {
+          "before": "096073ac2b4318e75cfa9ff81798e1780b2926c76f6efece1b4dbf3c14f3c538",
+          "after": "68e904ed180d9ce64d813479d168ea6f68abba1e07cb86fe11c3188a1806e03a"
+        }
+      }
+    },
+    {
+      "id": "energy.hot-water-measure",
+      "label": "Warmwatermaatregel",
+      "ui_call": "In SurveyMwa een maatregel van kind hotWater toevoegen.",
+      "source_record": "8d5f3f68dc1f00c1",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L34",
+      "assets": {
+        "16": {
+          "before": "1a713a0f6e0d8fb3825b55af355541b3b52a58edd0d3913c3b98d5f9a931d502",
+          "after": "1c67a783862134730a478c69546c2932949cf008afc58eaa1485f0642cd7860d"
+        },
+        "24": {
+          "before": "5d90d033fbc0a669546d0eb1ec9d04afd14a8f4fb200014095ecf81aa6db83a2",
+          "after": "cf89acf58173096008cd2d29fcc93fef5e9da2c47a92c99a770280f6b2167008"
+        }
+      }
+    },
+    {
+      "id": "envelope.roof-measure",
+      "label": "Dakmaatregel",
+      "ui_call": "Een verbetermaatregel voor het dak toevoegen; geen startpagina.",
+      "source_record": "078822babeb8756d",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-energy-studio/blob/e9a485db4ac695ff502a48cd2ded50dec5b5a1a6/src/components/SurveyWizard/SurveyMwa.tsx#L33",
+      "assets": {
+        "16": {
+          "before": "daf85b90e5ee1f05f8fb8e2a442b8aa1cae8711ac316d875b7a103aeecbe16e4",
+          "after": "de6b6efa80d06bc4efb733fd8c3cf657cc42fd43ee5aa664f6b840f0c36fc09f"
+        },
+        "24": {
+          "before": "74e16a24d6aa236d12daec08e425704597561743a7e97d59e25ab62618d1a787",
+          "after": "0a6be056e3280166b4806848d0db8c1e3e61ddfa4e7300ec2913b67461b41393"
+        }
+      }
+    },
+    {
+      "id": "view.update-saved",
+      "label": "Weergave overschrijven",
+      "ui_call": "ViewAction Update vervangt een bestaande bewaarde weergave door de huidige toestand.",
+      "source_record": "30589813d4a4057e",
+      "source_url": "https://github.com/OpenAEC-Foundation/open-pointcloud-studio/blob/cf209fe7a265aea7d692d710d70709c35b5b2b2c/native/desktop/src/main.rs#L12436",
+      "assets": {
+        "16": {
+          "before": "4ae4183c0bcf28081e8f1b87798c929736e56782473eb6c2d0177b8912f01002",
+          "after": "0a86c8d200372dd177825d50ecd71256f9a4408d90ee89cf22dec7ef63eed877"
+        },
+        "24": {
+          "before": "a8a45376364ce3ba937267d252afdf2b36a99eae9934d0ae572529836d925af8",
+          "after": "06c9db73850dc3c4e5b8b701335e3f920d73ff27f955dfb08457b23df12f1f41"
+        }
+      }
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "design/icon-set-b2/completion-preview-8-dark.png",
+      "sha256": "b55007abc5eb0da01f5289152580243ab4e2ee3318cf0a473249055cafb0ea46"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-8-dark-mono.png",
+      "sha256": "ed8950ce0a5bedd8e4ad13fa33f43351a796d10c8c2a4e63d2fb088514a320e8"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-8-light.png",
+      "sha256": "31481eefacff525875a89d27bdbd62510e322cefd1631c0d393d0f151d665abf"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-8-light-mono.png",
+      "sha256": "0856d91df2878908a6a21d5eb4a7f9f3fec4ebe8422e8ec7fd9a5fe9636740cf"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-9-dark.png",
+      "sha256": "8245a3d435ced57fbf73daca6e4973c2a79d1e4bd0576fdbc1dc41b69b4772a0"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-9-dark-mono.png",
+      "sha256": "e2fe080b6226f2aa9fc4e699251b3a03c34677bfd852f965b3a7a8d152351bf9"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-9-light.png",
+      "sha256": "55a78f27aebfea9aa5c1100bc0e65b26e9f15addbfcfa1f87e68102ce5960abf"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-9-light-mono.png",
+      "sha256": "e6697dedc847abba9987112c4dcaf61ce3738774655c68a102388cec0148c734"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-dark.png",
+      "sha256": "a580ab09fb88b564d23f4b575e691a362b2567e7e9b5d53304a45fb7b1d43b2e"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-dark-mono.png",
+      "sha256": "8c01a1c2673ea94b4377a226ad729dbe5853e515218aff9060d2c6012b4cf1d3"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-light.png",
+      "sha256": "e48de2a82df4ba2ff5400015e7f04b7e3f2a10c483ed233bca1d20d367a01aee"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-10-light-mono.png",
+      "sha256": "c992b3ffe4715d73edcd6e3aaf06eec2f8dd66b268912419424850c68de7a72a"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-dark.png",
+      "sha256": "054353a8c4cc27fe67df41dde88f2d7fe6660db43023567c686383f65625dc65"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-dark-mono.png",
+      "sha256": "71e211cb201b315982f44f640cba7bd0d9fb6442cbdb0aba96841a78b30faa6d"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-light.png",
+      "sha256": "2a3f6ea77c439c1347be989ad481c3d61d5d4c1e5751f14a5d03e4fc139ba61a"
+    },
+    {
+      "path": "design/icon-set-b2/completion-preview-11-light-mono.png",
+      "sha256": "59ac58c38d636f31ef21a6641b6f8841ff62219333f25f3277e43b02b6dcb652"
+    }
+  ],
+  "additional_checks": {
+    "free_colour_pairs": 76,
+    "minimum_gap_px": 0.586222,
+    "open_heat_network_nodes": 4,
+    "no_system_cross_without_slash": true
+  },
+  "manifest_sha256": "b30bfdc48b594ea341688d6be5edc03202efa482b68ffeebf0081d386aea0df9"
+}

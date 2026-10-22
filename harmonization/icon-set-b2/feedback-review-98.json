@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-22",
+  "revision": 98,
+  "baseline_revision": 97,
+  "verdict": "Brede spreadsheetvormen en heldere koppelschakels uitgewerkt; ter menselijke beoordeling.",
+  "changed_designs": 3,
+  "changed_masters": 6,
+  "unchanged_designs": 942,
+  "unchanged_masters": 1884,
+  "retained_original_designs": 316,
+  "spacing": [
+    {
+      "id": "spreadsheet.sheet-add",
+      "master": 16,
+      "gap_px": 1.08334
+    },
+    {
+      "id": "spreadsheet.sheet-add",
+      "master": 24,
+      "gap_px": 1.75
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 16,
+      "gap_px": 0.95
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 24,
+      "gap_px": 1.55
+    },
+    {
+      "id": "data.excel-link",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "data.excel-link",
+      "master": 24,
+      "gap_px": 1.25
+    }
+  ],
+  "live_review_masters": 6,
+  "native_sizes": [
+    16,
+    24,
+    32
+  ],
+  "visual_modes": [
+    "donker met accent",
+    "licht monochroom"
+  ],
+  "icons": [
+    {
+      "id": "spreadsheet.sheet-add",
+      "label": "Subblad toevoegen",
+      "ui_call": "addSubSheet maakt een nieuw rekenblad binnen de begroting en openSheet activeert dat blad.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "Glyph ➕",
+        "label": "➕",
+        "path": "src/components/ribbon/SpreadsheetTab.tsx",
+        "line": 27,
+        "role": "",
+        "evidence": "teksticoon-kandidaat",
+        "review": null,
+        "assessment": {},
+        "state": "Lettertype-/OS-afhankelijke vorm; functie controleren",
+        "origin": "volledige clientbronscan",
+        "context": "<RibbonButton icon=\"➕\" label={t('spreadsheet.newSheet')} onClick={() => openSheet(addSubSheet())} />\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/SpreadsheetTab.tsx#L27",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.unknown",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "ed0e7a106bded527",
+        "function_label": "➕",
+        "category": "Appspecifieke opdrachten"
+      },
+      "assets": {
+        "16": {
+          "before": "de7007a96bab1545b557c0ac6f23d85278211e3aabd1d8082ed4c83b69693de0",
+          "after": "68800b82ed51a7a6b0fd8d26131f9fb5bf06cef15ddbe942dd0ba00ab276b178"
+        },
+        "24": {
+          "before": "4dffa050522ecfa069f3e8aa4d9d8d85a9eb2bad30b04e21e3ea8f9070bedad5",
+          "after": "1ff05a3b16713649bd2e5df99addb8027053a81a425a3697cae9e0e3e704c23d"
+        }
+      }
+    },
+    {
+      "id": "data.excel-refresh",
+      "label": "Excel-koppelingen bijwerken",
+      "ui_call": "updateAllExcelLinks leest de gekoppelde werkboeken/cellen en werkt quantity bij; schrijft geen Excel-export.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "export",
+        "label": "Update Excel",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 402,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton icon={exportIcon} label={t('home.updateExcel')} onClick={handleUpdateExcel} />\n          </RibbonGroup>\n        )}\n\n      </div>\n\n      <Modal open={showProject} onClose={() => setShowProject(false)} title={t('home.projectData')}>\n        <ProjectInfoSettings />\n      </Modal>\n\n      <Modal open={showPriceDialog} onClose={() => setShowPriceDialog(false)} title={t('home.priceDialogTitle')} className=\"rapport-props-dialog\">\n        <div className=\"rapport-props\">\n          <label className=\"rapport-props-row\">\n            <span>\n              <strong>{t('home.percentage')}</strong>\n              <em>{t('home.percentageHelp')}</em>\n            </span>\n          </label>\n          <div className=\"price-scale-row\">\n            <input\n              type=\"number\"\n              step=\"0.1\"\n              value={pricePct}\n              autoFocus\n              onChange={(e) => setPricePct(e.target.value)}\n              onKeyDown={(e) => { if (e.key === 'Enter') handleScalePrices(); }}\n              className=\"price-scale-input\"\n            />\n            <span className=\"price-scale-pct\">%</span>\n            <button",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L402",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/export.svg",
+        "exact_hash": "f1c0673eb129ae628691aac9c6cc57337843bc71d161a2555a7f7f8286ccc390",
+        "geometry_hash": "59013f0aa1ee98d873d714446211d51b81f5741edf37602d91fbe38a9d7b07cb",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "file.export",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "f422a43648ca2b57",
+        "function_label": "Exporteren",
+        "category": "Bestanden"
+      },
+      "assets": {
+        "16": {
+          "before": "3f37c5416c7a58aa9f89ecc0b77a92bbca07b253b644952e6468364d8af2a0e5",
+          "after": "a51ec2e819006bbbbb833e37887e0b2a295c25f19e93554f1e61932b68864f30"
+        },
+        "24": {
+          "before": "fb08e2efa42c99228937ce4bb7fb8a89773ef831622421d0d9391de65f97920b",
+          "after": "2cc48ba4be5d02e37981971ae7f3fc35f068cb209e03f1a9be3e5590f4fd74f6"
+        }
+      }
+    },
+    {
+      "id": "data.excel-link",
+      "label": "Gekoppelde Excel-waarde",
+      "ui_call": "Vaste aanduiding bij een hoeveelheidcel met item.excelLink; geen nieuwe koppeling maken of exporteren.",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "GridCell:svg-366",
+        "label": "GridCell:svg-366",
+        "path": "src/components/grid/GridCell.tsx",
+        "line": 366,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd",
+        "origin": "volledige clientbronscan",
+        "context": "        <svg className=\"grid-excel-link-icon\" width=\"10\" height=\"10\" viewBox=\"0 0 16 16\" fill=\"currentColor\">\n          <path d=\"M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z\"/>\n          <path d=\"M11.286 9.458 12.657 8.086a3 3 0 0 0-4.243-4.243L6.586 5.672A3 3 0 0 0 7.414 10.5l.586-.586a1.002 1.002 0 0 0 .154-.199 2 2 0 0 1-.861-3.337L9.12 4.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287z\"/>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/GridCell.tsx#L366",
+        "asset": "harmonization/function-icon-assets/13552b7d260ac9c5dbd4da67f9c0f6c53ec17c2539f0fd2413e98f810f6c1f00.svg",
+        "exact_hash": "1e360788d1d8bb29f0f05f27c4f214f22676a7d1a46aa05505942dff66a6a2d2",
+        "geometry_hash": "7082d0d50e75fc1446c98de8211fd456682c7fd20bcf97f5f83df3ae02f6d357",
+        "origins": [
+          "volledige clientbronscan"
+        ],
+        "function_id": "review.gridcellsvg366",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "b4a5cd3e7e0d7fba",
+        "function_label": "Grid Cell:svg 366",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "assets": {
+        "16": {
+          "before": "de99deeea50f6d90f1ad23891a906e7fa9306ee078790e0dad2226a6c060a30b",
+          "after": "c082991245093604a817d89fc48e2c60ab5d9d16d7979ee8f99850196b21c591"
+        },
+        "24": {
+          "before": "3c669a1b8645cd477923f258b09d1b748147cbc7a48f8e86c7dbf4f5c849354c",
+          "after": "a7821c9dd1dbd6e568969f35205c51b6e368530e17395ba7f74c7df60d5f6ecc"
+        }
+      }
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "python_compile": "geslaagd",
+  "general_checks": "Niet herhaald: uitsluitend drie B2-ontwerpen en reviewtekst gewijzigd.",
+  "user_verdict": "2026-10-22: gebruiker vindt dit veel beter en wil het principe voortzetten."
+}

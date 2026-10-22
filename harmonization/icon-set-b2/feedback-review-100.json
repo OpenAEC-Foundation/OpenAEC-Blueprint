@@ -1,0 +1,709 @@
+{
+  "date": "2026-10-22",
+  "revision": 100,
+  "baseline_revision": 99,
+  "changed_designs": 7,
+  "changed_masters": 14,
+  "unchanged_designs": 938,
+  "unchanged_masters": 1876,
+  "retained_original_designs": 316,
+  "changed_proposals": [
+    "panel.attachments",
+    "file.place-add",
+    "wbs.auto-number",
+    "panel.warnings",
+    "planning.status-date",
+    "ai.read-only-toggle",
+    "backup.auto",
+    "backup.folder",
+    "status.schedule-preview",
+    "status.schedule-last-result",
+    "status.library-item-missing",
+    "status.library-item-deviated",
+    "status.hour-data",
+    "status.structure-locked"
+  ],
+  "proposal_masters": 28,
+  "limits": "14 voorbeelden blijven afzonderlijke, niet toegepaste voorstellen. Algemene Python- en Rust-controles niet herhaald: alleen B2-ontwerp/review gewijzigd.",
+  "icons": [
+    {
+      "id": "data.excel-refresh",
+      "source_example": {
+        "app": "Calc",
+        "repository": "open-calc-studio",
+        "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "name": "export",
+        "label": "Update Excel",
+        "path": "src/components/ribbon/HomeTab.tsx",
+        "line": 402,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "calc-inline-ui-icons.json",
+        "context": "<RibbonButton icon={exportIcon} label={t('home.updateExcel')} onClick={handleUpdateExcel} />\n          </RibbonGroup>\n        )}\n\n      </div>\n\n      <Modal open={showProject} onClose={() => setShowProject(false)} title={t('home.projectData')}>\n        <ProjectInfoSettings />\n      </Modal>\n\n      <Modal open={showPriceDialog} onClose={() => setShowPriceDialog(false)} title={t('home.priceDialogTitle')} className=\"rapport-props-dialog\">\n        <div className=\"rapport-props\">\n          <label className=\"rapport-props-row\">\n            <span>\n              <strong>{t('home.percentage')}</strong>\n              <em>{t('home.percentageHelp')}</em>\n            </span>\n          </label>\n          <div className=\"price-scale-row\">\n            <input\n              type=\"number\"\n              step=\"0.1\"\n              value={pricePct}\n              autoFocus\n              onChange={(e) => setPricePct(e.target.value)}\n              onKeyDown={(e) => { if (e.key === 'Enter') handleScalePrices(); }}\n              className=\"price-scale-input\"\n            />\n            <span className=\"price-scale-pct\">%</span>\n            <button",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/ribbon/HomeTab.tsx#L402",
+        "asset": "harmonization/inline-ui-icons/open-calc-studio/export.svg",
+        "exact_hash": "f1c0673eb129ae628691aac9c6cc57337843bc71d161a2555a7f7f8286ccc390",
+        "geometry_hash": "59013f0aa1ee98d873d714446211d51b81f5741edf37602d91fbe38a9d7b07cb",
+        "origins": [
+          "calc-inline-ui-icons.json"
+        ],
+        "function_id": "file.export",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "f422a43648ca2b57",
+        "function_label": "Exporteren",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/data.excel-refresh.svg",
+          "sha256": "a51ec2e819006bbbbb833e37887e0b2a295c25f19e93554f1e61932b68864f30"
+        },
+        "24": {
+          "path": "svg/24/data.excel-refresh.svg",
+          "sha256": "2cc48ba4be5d02e37981971ae7f3fc35f068cb209e03f1a9be3e5590f4fd74f6"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/data.excel-refresh.svg",
+          "sha256": "d967f4d52e8e5348577fd99495d48c57147dc2a0b0ad22ff516bef7e2e341a53"
+        },
+        "24": {
+          "path": "svg/24/data.excel-refresh.svg",
+          "sha256": "1e1b9ce363199821eb2e3466bfb10b602a77edfd155450cdf5088d52e738c9ed"
+        }
+      }
+    },
+    {
+      "id": "session.restore",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "session-tile",
+        "label": "Opgeslagen sessie",
+        "path": "open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx",
+        "line": 382,
+        "role": "object",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "conditional",
+        "origin": "pdf-open-panel-ui-icons.json",
+        "context": "                    <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/>\n                      <rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/>\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/OpenPanel.jsx#L382",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/open-panel/session-tile.svg",
+        "exact_hash": "e0b94d5596fd0ee7246dd0d930c00b3a039d14a9783a24c733e609feff506b94",
+        "geometry_hash": "f42f3be3b4ac490fdceb5385147396e80eb6fe91c6fa820d16ae0b231d3063d8",
+        "origins": [
+          "pdf-open-panel-ui-icons.json"
+        ],
+        "function_id": "review.opgeslagensessie",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "6d3f9c7a2614d1b7",
+        "function_label": "Opgeslagen sessie",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/session.restore.svg",
+          "sha256": "cbae80c9984c212eba55e119aa2c5d418178d1ff17c403d287ea7e71cc7e3c7e"
+        },
+        "24": {
+          "path": "svg/24/session.restore.svg",
+          "sha256": "4c09864cc5c0975852f322f801902ff145a2d718c68ae1f3d6c1e28b36596dba"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/session.restore.svg",
+          "sha256": "fb1cbf61b14a28ac21200249bc4dd17057e0df55504314202e1bfb8b20ebc450"
+        },
+        "24": {
+          "path": "svg/24/session.restore.svg",
+          "sha256": "8a33cd72b48a7c3d1a5debc591e19b8497e128f742fe2fc5bab9865d0aed98b6"
+        }
+      }
+    },
+    {
+      "id": "extension.reinstall-file",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "extension-reload",
+        "label": "Extensie herladen",
+        "path": "open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx",
+        "line": 165,
+        "role": "extension-action",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "only-when-installed",
+        "origin": "pdf-transfer-panel-ui-icons.json",
+        "context": "<button class=\"ext-reload-btn\" onClick={() => handleReload(plugin.id, plugin.name || plugin.id)} title={t('extensionsPanel.reload') || 'Reload'}>\n                    <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                      <polyline points=\"23 4 23 10 17 10\"/>\n                      <path d=\"M20.49 15a9 9 0 11-2.12-9.36L23 10\"/>\n                    </svg>\n                  </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/app-menu/ExtensionsPanel.jsx#L165",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/transfer-panels/extension-reload.svg",
+        "exact_hash": "724f2ac481386752d7c13b93f5e4ed6473258961fca000bfda3dfe39cb12a0ca",
+        "geometry_hash": "03aab94a0ff40e707990faddd832a263f558f7ce4f1ce4c7e6abfa47d19e9a25",
+        "origins": [
+          "pdf-transfer-panel-ui-icons.json"
+        ],
+        "function_id": "review.extensieherladen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "75a05038339ebace",
+        "function_label": "Extensie herladen",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/extension.reinstall-file.svg",
+          "sha256": "25fd7c318bbcc861a7df6a932ffa5413d124bb8781cfad1010ed0022cdb85845"
+        },
+        "24": {
+          "path": "svg/24/extension.reinstall-file.svg",
+          "sha256": "819a0e810e9e5e4e9429f0978de3bf2c01b1e56be75dc8ef3507c06f06af43a1"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/extension.reinstall-file.svg",
+          "sha256": "09a9a92867404d67b177cbe5edcbb2eae91ce6f0aad4f1161f1e327a8b655b4b"
+        },
+        "24": {
+          "path": "svg/24/extension.reinstall-file.svg",
+          "sha256": "93edb339d2054277ba8aceb5993daeaa2b0986b256563a2fa173c34af26bb0b0"
+        }
+      }
+    },
+    {
+      "id": "table.columns-reset",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "RotateCcw",
+        "label": "RotateCcw",
+        "path": "src/components/task-grid/ColumnChooser.tsx",
+        "line": 333,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n            type=\"button\"\n            className=\"task-grid-column-chooser-reset\"\n            disabled={resetDisabled}\n            onClick={reset}\n          >\n            <RotateCcw size={13} aria-hidden=\"true\" />\n            <span>{labels.resetDefault}</span>\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/task-grid/ColumnChooser.tsx#L333",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/RotateCcw.svg",
+        "exact_hash": "800e040587906a393bd9db4192574a1be77ca5a4e3229820c765155165b884da",
+        "geometry_hash": "a3ca7b16b5c506b3231fff56df48558c14606f662af70627629eee6038a17646",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.rotateccw",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "41f0991d4d3e0c7e",
+        "function_label": "Rotate Ccw",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/table.columns-reset.svg",
+          "sha256": "49e45975b9aec3d256c8b068b0b52d36a129bf569ed48b90b0e1245bedcaf815"
+        },
+        "24": {
+          "path": "svg/24/table.columns-reset.svg",
+          "sha256": "7f3e99a46b65ef736df749eb6955a786696d385301480d4dbb924a5b1e3e206f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/table.columns-reset.svg",
+          "sha256": "d967f4d52e8e5348577fd99495d48c57147dc2a0b0ad22ff516bef7e2e341a53"
+        },
+        "24": {
+          "path": "svg/24/table.columns-reset.svg",
+          "sha256": "1e1b9ce363199821eb2e3466bfb10b602a77edfd155450cdf5088d52e738c9ed"
+        }
+      }
+    },
+    {
+      "id": "backup.recover",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "RotateCcw",
+        "label": "Herstellen",
+        "path": "src/components/dialogs/RecoveryDialog.tsx",
+        "line": 120,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "<button\n            onClick={onRestore}\n            className=\"btn btn--sm btn--primary shadow-[var(--shadow-glow)] flex items-center gap-1.5\"\n          >\n            <RotateCcw size={13} />\n            {t('recovery.restore')}\n          </button>",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/dialogs/RecoveryDialog.tsx#L120",
+        "asset": "harmonization/library-icons/lucide-static/0.575.0/RotateCcw.svg",
+        "exact_hash": "800e040587906a393bd9db4192574a1be77ca5a4e3229820c765155165b884da",
+        "geometry_hash": "a3ca7b16b5c506b3231fff56df48558c14606f662af70627629eee6038a17646",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.herstellen",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "f08c872839f1823f",
+        "function_label": "Herstellen",
+        "category": "Overige functies — broncontrole nodig"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/backup.recover.svg",
+          "sha256": "f24f9869ef53c45352b2767932c7ad704f9af324d0f5d276f907f3a387d22be6"
+        },
+        "24": {
+          "path": "svg/24/backup.recover.svg",
+          "sha256": "1c2181042f89c417f12ebf0b709c32ca2051f9dfcd69f0f05af7ad90748c7cba"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/backup.recover.svg",
+          "sha256": "cf6e4656fd212fe463124d998c4c80a9dbcb2ca84da38a9eeb54b69588d7a078"
+        },
+        "24": {
+          "path": "svg/24/backup.recover.svg",
+          "sha256": "a6501619c2e70709d72bb8f67664a82fd97de336054c7bcd243993a31e974ff8"
+        }
+      }
+    },
+    {
+      "id": "tools.category-geotechniek",
+      "source_example": {
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "name": "category-geotechniek",
+        "label": "Geotechniek-categorie",
+        "path": "src/components/CategoryIcon.tsx",
+        "line": 39,
+        "role": "expliciete UI-bronplaats",
+        "evidence": "aanvullende gepinde bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "b2-supplemental-source-review",
+        "context": "Vast onderwerpbeeld voor toolcategorie geotechniek in kaartkop, previewfallback en webtooltab; geen gereedschap uitvoeren.",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/CategoryIcon.tsx#L39",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "b2-supplemental-source-review"
+        ],
+        "function_id": "supplement.11e4301c223be8cd",
+        "function_status": "afzonderlijk beoordeeld in B2",
+        "id": "11e4301c223be8cd",
+        "function_label": "Geotechniek-categorie",
+        "category": "Aanvullende bronplaatsen",
+        "source_file_sha256": "321354a5560e234c7dd36c5b878ebd7b993816206d707fdd31502698d3b26946",
+        "source_git_blob": "cfaf8ea577a63a5cc32d3c8412d5aa6f616e88b7"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/tools.category-geotechniek.svg",
+          "sha256": "5adf26e78cfbd661d8f4fafa8464ad6536f1dc202f0037ade0d87c60e977f1ec"
+        },
+        "24": {
+          "path": "svg/24/tools.category-geotechniek.svg",
+          "sha256": "97a4d3427309cea695af09f1135b701bc1a3a8a2161df4a45ca621a0d2896486"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/tools.category-geotechniek.svg",
+          "sha256": "fa90adda5e4b703e27994e8ad8ff2db9163c76ff492363e8c78029160086bb3d"
+        },
+        "24": {
+          "path": "svg/24/tools.category-geotechniek.svg",
+          "sha256": "49c44f83174aeb5f79eb0a3db4d9e1f97487a58cfc259eb06e92eb3653dcff9d"
+        }
+      }
+    },
+    {
+      "id": "software.update",
+      "source_example": {
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "name": "self-update",
+        "label": "Installer bijwerken",
+        "path": "src/components/SelfUpdateBanner.tsx",
+        "line": 91,
+        "role": "expliciete UI-bronplaats",
+        "evidence": "aanvullende gepinde bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "b2-supplemental-source-review",
+        "context": "onUpdate volgt handleSelfUpdate en downloadAndRunInstaller; Linux vervangt eigen AppImage en vraagt daarna herstart.",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/SelfUpdateBanner.tsx#L91",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "b2-supplemental-source-review"
+        ],
+        "function_id": "supplement.8f3d438453b1fd05",
+        "function_status": "afzonderlijk beoordeeld in B2",
+        "id": "8f3d438453b1fd05",
+        "function_label": "Installer bijwerken",
+        "category": "Aanvullende bronplaatsen",
+        "source_file_sha256": "09efe0b4ed516cd9c03a10770c86171a595aec46df0b2913ff4b6e9594c7d976",
+        "source_git_blob": "4d6678bd24348a3cf333adb4dc59d7e50cb4117f"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/software.update.svg",
+          "sha256": "25fd7c318bbcc861a7df6a932ffa5413d124bb8781cfad1010ed0022cdb85845"
+        },
+        "24": {
+          "path": "svg/24/software.update.svg",
+          "sha256": "819a0e810e9e5e4e9429f0978de3bf2c01b1e56be75dc8ef3507c06f06af43a1"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/software.update.svg",
+          "sha256": "09a9a92867404d67b177cbe5edcbb2eae91ce6f0aad4f1161f1e327a8b655b4b"
+        },
+        "24": {
+          "path": "svg/24/software.update.svg",
+          "sha256": "93edb339d2054277ba8aceb5993daeaa2b0986b256563a2fa173c34af26bb0b0"
+        }
+      }
+    }
+  ],
+  "proposal_checks": [
+    {
+      "id": "panel.attachments",
+      "master": 16,
+      "accent_area": 43.03437,
+      "overlap": 1.21315481660563e-09
+    },
+    {
+      "id": "panel.attachments",
+      "master": 24,
+      "accent_area": 90.20049,
+      "overlap": 4.983280699832951e-08
+    },
+    {
+      "id": "file.place-add",
+      "master": 16,
+      "accent_area": 10.22302,
+      "overlap": 0.0
+    },
+    {
+      "id": "file.place-add",
+      "master": 24,
+      "accent_area": 21.34368,
+      "overlap": 0.0
+    },
+    {
+      "id": "wbs.auto-number",
+      "master": 16,
+      "accent_area": 12.59885,
+      "overlap": 0.0
+    },
+    {
+      "id": "wbs.auto-number",
+      "master": 24,
+      "accent_area": 26.61071,
+      "overlap": 0.0
+    },
+    {
+      "id": "panel.warnings",
+      "master": 16,
+      "accent_area": 19.85387,
+      "overlap": 0.0
+    },
+    {
+      "id": "panel.warnings",
+      "master": 24,
+      "accent_area": 44.67119,
+      "overlap": 0.0
+    },
+    {
+      "id": "planning.status-date",
+      "master": 16,
+      "accent_area": 24.22894,
+      "overlap": 0.0
+    },
+    {
+      "id": "planning.status-date",
+      "master": 24,
+      "accent_area": 51.21678,
+      "overlap": 0.0
+    },
+    {
+      "id": "ai.read-only-toggle",
+      "master": 16,
+      "accent_area": 26.95934,
+      "overlap": 0.0
+    },
+    {
+      "id": "ai.read-only-toggle",
+      "master": 24,
+      "accent_area": 56.84407,
+      "overlap": 0.0
+    },
+    {
+      "id": "backup.auto",
+      "master": 16,
+      "accent_area": 12.59885,
+      "overlap": 0.0
+    },
+    {
+      "id": "backup.auto",
+      "master": 24,
+      "accent_area": 26.61071,
+      "overlap": 0.0
+    },
+    {
+      "id": "backup.folder",
+      "master": 16,
+      "accent_area": 15.87068,
+      "overlap": 0.0
+    },
+    {
+      "id": "backup.folder",
+      "master": 24,
+      "accent_area": 33.64151,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 16,
+      "accent_area": 18.85297,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 24,
+      "accent_area": 40.06927,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.schedule-last-result",
+      "master": 16,
+      "accent_area": 24.86042,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.schedule-last-result",
+      "master": 24,
+      "accent_area": 52.55908,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.library-item-missing",
+      "master": 16,
+      "accent_area": 28.2855,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.library-item-missing",
+      "master": 24,
+      "accent_area": 59.22802,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.library-item-deviated",
+      "master": 16,
+      "accent_area": 25.31513,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.library-item-deviated",
+      "master": 24,
+      "accent_area": 53.12692,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.hour-data",
+      "master": 16,
+      "accent_area": 24.22894,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.hour-data",
+      "master": 24,
+      "accent_area": 51.21678,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.structure-locked",
+      "master": 16,
+      "accent_area": 26.9593,
+      "overlap": 0.0
+    },
+    {
+      "id": "status.structure-locked",
+      "master": 24,
+      "accent_area": 56.84407,
+      "overlap": 0.0
+    }
+  ],
+  "python_compile": "geslaagd",
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "spacing": [
+    {
+      "id": "session.restore",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "session.restore",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "extension.reinstall-file",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "extension.reinstall-file",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "table.columns-reset",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "table.columns-reset",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "software.update",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "software.update",
+      "master": 24,
+      "gap_px": 1.25
+    },
+    {
+      "id": "backup.recover",
+      "master": 16,
+      "gap_px": 0.993063
+    },
+    {
+      "id": "backup.recover",
+      "master": 24,
+      "gap_px": 1.552087
+    },
+    {
+      "id": "tools.category-geotechniek",
+      "master": 16,
+      "gap_px": 1.796035
+    },
+    {
+      "id": "tools.category-geotechniek",
+      "master": 24,
+      "gap_px": 2.819058
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 16,
+      "gap_px": 0.75
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 24,
+      "gap_px": 1.25
+    }
+  ],
+  "preserved_primary_layers": [
+    {
+      "id": "session.restore",
+      "master": 16,
+      "difference_area": 0.0
+    },
+    {
+      "id": "session.restore",
+      "master": 24,
+      "difference_area": 0.0
+    },
+    {
+      "id": "extension.reinstall-file",
+      "master": 16,
+      "difference_area": 0.0
+    },
+    {
+      "id": "extension.reinstall-file",
+      "master": 24,
+      "difference_area": 0.0
+    },
+    {
+      "id": "table.columns-reset",
+      "master": 16,
+      "difference_area": 0.0
+    },
+    {
+      "id": "table.columns-reset",
+      "master": 24,
+      "difference_area": 0.0
+    },
+    {
+      "id": "software.update",
+      "master": 16,
+      "difference_area": 0.0
+    },
+    {
+      "id": "software.update",
+      "master": 24,
+      "difference_area": 0.0
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 16,
+      "difference_area": 0.0
+    },
+    {
+      "id": "data.excel-refresh",
+      "master": 24,
+      "difference_area": 0.0
+    }
+  ],
+  "geotechnical_alignment": {
+    "edge_vector": [
+      9.0,
+      4.0
+    ],
+    "vertical_step": 5.0
+  },
+  "proofs": [
+    "review/feedback-100-review-dark.png",
+    "review/feedback-100-review-light.png"
+  ]
+}

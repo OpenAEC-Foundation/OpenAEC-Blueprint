@@ -1,0 +1,1722 @@
+{
+  "date": "2026-10-22",
+  "revision": 104,
+  "baseline_revision": 103,
+  "verdict": "Resterende analyse en zekere correcties afgerond; 64 alternatieven afzonderlijk voor menselijke keuze.",
+  "review_page": "final-review-104.html",
+  "changed_designs": 10,
+  "changed_masters": 20,
+  "unchanged_designs": 935,
+  "retained_original_designs": 316,
+  "regenerated_proposal_designs": [
+    "quotation.type-private",
+    "assistant.summarize",
+    "page.insert-file",
+    "bcf.import",
+    "table.columns",
+    "company.library",
+    "calendar.promote-menu",
+    "resource.unlink-library",
+    "library.link-recognized",
+    "calendar.holiday-add"
+  ],
+  "proposal_masters_regenerated": 20,
+  "proposal_checks": [
+    {
+      "id": "thermal.window",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 8.042627347418506
+    },
+    {
+      "id": "thermal.window",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 16.54572881203849
+    },
+    {
+      "id": "thermal.room-split",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 9.1189734148345
+    },
+    {
+      "id": "thermal.room-split",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 18.8058784568795
+    },
+    {
+      "id": "construction.studs-toggle",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 16.0
+    },
+    {
+      "id": "construction.studs-toggle",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 36.0
+    },
+    {
+      "id": "pile.load-points",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 16.626018778781013
+    },
+    {
+      "id": "pile.load-points",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 34.93097656984996
+    },
+    {
+      "id": "pile.cpts",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 16.626018778781013
+    },
+    {
+      "id": "pile.cpts",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 34.93097656984996
+    },
+    {
+      "id": "pile.optimization",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 5.584492590204996
+    },
+    {
+      "id": "pile.optimization",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 12.565109621676013
+    },
+    {
+      "id": "pile.tip-regions",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.999999999999998
+    },
+    {
+      "id": "pile.tip-regions",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 36.0
+    },
+    {
+      "id": "pile.load-groups",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 3.574074995637999
+    },
+    {
+      "id": "pile.load-groups",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 8.041669057775998
+    },
+    {
+      "id": "quotation.type-private",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 22.16039332267802
+    },
+    {
+      "id": "quotation.type-private",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 46.36525539419847
+    },
+    {
+      "id": "quotation.type-raw",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 13.333331999999999
+    },
+    {
+      "id": "quotation.type-raw",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 30.0
+    },
+    {
+      "id": "quotation.payment-terms",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 11.871732930942008
+    },
+    {
+      "id": "quotation.payment-terms",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 25.026844638445024
+    },
+    {
+      "id": "report.view-main-contract",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.056401158509004
+    },
+    {
+      "id": "report.view-main-contract",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 31.618633589859982
+    },
+    {
+      "id": "report.view-subcontract",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.056401158508997
+    },
+    {
+      "id": "report.view-subcontract",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 31.618633589859996
+    },
+    {
+      "id": "report.view-tender",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 2.6666659999999993
+    },
+    {
+      "id": "report.view-tender",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 6.0
+    },
+    {
+      "id": "report.view-build",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.389728692700995
+    },
+    {
+      "id": "report.view-build",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 45.876886439576005
+    },
+    {
+      "id": "report.view-ibis",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 21.88919825325502
+    },
+    {
+      "id": "report.view-ibis",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 49.25069149126554
+    },
+    {
+      "id": "report.view-estimate",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 11.226168001421492
+    },
+    {
+      "id": "report.view-estimate",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 23.40291942134249
+    },
+    {
+      "id": "calc.quantities-visible",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 5.4895410986424995
+    },
+    {
+      "id": "calc.quantities-visible",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 12.351470979999995
+    },
+    {
+      "id": "calc.grid-standard",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 6.222225777778002
+    },
+    {
+      "id": "calc.grid-standard",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 14.0
+    },
+    {
+      "id": "calc.grid-wpcalc",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 10.233993531788489
+    },
+    {
+      "id": "calc.grid-wpcalc",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 21.32971317482303
+    },
+    {
+      "id": "calc.grid-simple",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 9.118789956622502
+    },
+    {
+      "id": "calc.grid-simple",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 18.806409931941488
+    },
+    {
+      "id": "calc.chapter",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.999999999999996
+    },
+    {
+      "id": "calc.chapter",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 36.0
+    },
+    {
+      "id": "workspace.dock-back",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 14.485054747180506
+    },
+    {
+      "id": "workspace.dock-back",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 30.382097412679023
+    },
+    {
+      "id": "calc.hsb-wizard",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 32.0
+    },
+    {
+      "id": "calc.hsb-wizard",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 72.0
+    },
+    {
+      "id": "symbol.category-electric",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 6.282554650428002
+    },
+    {
+      "id": "symbol.category-electric",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 14.135746055440006
+    },
+    {
+      "id": "symbol.category-custom",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.665907078516994
+    },
+    {
+      "id": "symbol.category-custom",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 54.14247702084601
+    },
+    {
+      "id": "assistant.translate",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 49.30583049441648
+    },
+    {
+      "id": "assistant.translate",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 107.64292473648402
+    },
+    {
+      "id": "assistant.summarize",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 11.618906100135497
+    },
+    {
+      "id": "assistant.summarize",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 24.05658741153399
+    },
+    {
+      "id": "format.custom-color",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 9.437792891163998
+    },
+    {
+      "id": "format.custom-color",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 21.235035535119998
+    },
+    {
+      "id": "page.replace",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.11540895514451
+    },
+    {
+      "id": "page.replace",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 52.58287514764197
+    },
+    {
+      "id": "page.insert-file",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.662900893262497
+    },
+    {
+      "id": "page.insert-file",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 32.85630338107352
+    },
+    {
+      "id": "image.embedded-edit",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 28.287500646488507
+    },
+    {
+      "id": "image.embedded-edit",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 59.67890196194747
+    },
+    {
+      "id": "panel.attachments",
+      "master": 16,
+      "overlap": 1.21315481660563e-09,
+      "accent_area": 43.03437429607051
+    },
+    {
+      "id": "panel.attachments",
+      "master": 24,
+      "overlap": 4.983280699832951e-08,
+      "accent_area": 90.2004854426149
+    },
+    {
+      "id": "file.place-add",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 10.223024213045
+    },
+    {
+      "id": "file.place-add",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 21.34368492592806
+    },
+    {
+      "id": "drawing.settings",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 18.446902542436
+    },
+    {
+      "id": "drawing.settings",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 38.48737849533701
+    },
+    {
+      "id": "bcf.import",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.662900893262497
+    },
+    {
+      "id": "bcf.import",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 32.85630338107352
+    },
+    {
+      "id": "planning.calculate",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.05640115850898
+    },
+    {
+      "id": "planning.calculate",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 52.61863358985999
+    },
+    {
+      "id": "report.workspace",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 9.119086317814501
+    },
+    {
+      "id": "report.workspace",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 18.806011277106506
+    },
+    {
+      "id": "wbs.auto-number",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.428211052379538
+    },
+    {
+      "id": "wbs.auto-number",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 42.82494770640901
+    },
+    {
+      "id": "panel.warnings",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 19.853865421921004
+    },
+    {
+      "id": "panel.warnings",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 44.67118990588
+    },
+    {
+      "id": "table.columns",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.999995999999996
+    },
+    {
+      "id": "table.columns",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 36.0
+    },
+    {
+      "id": "planning.status-date",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 24.22894005769495
+    },
+    {
+      "id": "planning.status-date",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 51.216775800876036
+    },
+    {
+      "id": "layout.manage",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 18.446902542436
+    },
+    {
+      "id": "layout.manage",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 38.48737849533701
+    },
+    {
+      "id": "company.library",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 36.44653922032599
+    },
+    {
+      "id": "company.library",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 76.53795451251605
+    },
+    {
+      "id": "calendar.promote-menu",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 15.78582687014951
+    },
+    {
+      "id": "calendar.promote-menu",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 32.80640147121898
+    },
+    {
+      "id": "calendar.edit",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 28.287500646488507
+    },
+    {
+      "id": "calendar.edit",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 59.67890196194747
+    },
+    {
+      "id": "resource.unlink-library",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.057830100481986
+    },
+    {
+      "id": "resource.unlink-library",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 41.78080907009499
+    },
+    {
+      "id": "ai.read-only-toggle",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 26.959336814014556
+    },
+    {
+      "id": "ai.read-only-toggle",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 56.84407460068849
+    },
+    {
+      "id": "backup.auto",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 20.428211052379538
+    },
+    {
+      "id": "backup.auto",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 42.82494770640901
+    },
+    {
+      "id": "backup.create",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 9.222997951449004
+    },
+    {
+      "id": "backup.create",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 19.243657305723513
+    },
+    {
+      "id": "backup.folder",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 23.556897506318492
+    },
+    {
+      "id": "backup.folder",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 49.40806874889839
+    },
+    {
+      "id": "update.install",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 11.151866253837
+    },
+    {
+      "id": "update.install",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 23.382583304980507
+    },
+    {
+      "id": "documents.overview",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 22.4521266252615
+    },
+    {
+      "id": "documents.overview",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 46.806149490513505
+    },
+    {
+      "id": "documents.new-or-open",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 22.041699166201997
+    },
+    {
+      "id": "documents.new-or-open",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 46.126663405014526
+    },
+    {
+      "id": "capture.annotate",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 28.287500646488507
+    },
+    {
+      "id": "capture.annotate",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 59.67890196194747
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.912261189591586
+    },
+    {
+      "id": "status.schedule-preview",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 54.35384666717694
+    },
+    {
+      "id": "status.schedule-last-result",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 24.86042375332
+    },
+    {
+      "id": "status.schedule-last-result",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 52.559084915035974
+    },
+    {
+      "id": "library.link-recognized",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 24.256437784011993
+    },
+    {
+      "id": "library.link-recognized",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 50.42411690502001
+    },
+    {
+      "id": "status.library-item-missing",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 28.28550389170301
+    },
+    {
+      "id": "status.library-item-missing",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 59.22802084167843
+    },
+    {
+      "id": "status.library-item-deviated",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 25.31513307906796
+    },
+    {
+      "id": "status.library-item-deviated",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 53.1269248163945
+    },
+    {
+      "id": "status.hour-data",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 24.22894005769495
+    },
+    {
+      "id": "status.hour-data",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 51.216775800876036
+    },
+    {
+      "id": "status.structure-locked",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 26.959296902504487
+    },
+    {
+      "id": "status.structure-locked",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 56.84407425470749
+    },
+    {
+      "id": "calendar.holiday-add",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 10.889513975524
+    },
+    {
+      "id": "calendar.holiday-add",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 22.743963889173514
+    },
+    {
+      "id": "calendar.copy-workdays",
+      "master": 16,
+      "overlap": 0.0,
+      "accent_area": 33.33276252154001
+    },
+    {
+      "id": "calendar.copy-workdays",
+      "master": 24,
+      "overlap": 0.0,
+      "accent_area": 69.03652649250198
+    }
+  ],
+  "remaining": {
+    "registered_feedback_points": 90,
+    "unprocessed_registered_feedback_points": [],
+    "proposals_97": 22,
+    "proposals_99": 42,
+    "proposals_total": 64,
+    "not_yet_in_consecutive_analysis": 0,
+    "current_canonical_changes_for_user_review": 46,
+    "current_proposal_changes_included_in_64": 10,
+    "approved_icons": [
+      "layout.tools"
+    ],
+    "reviewed_recent_corrections": 37,
+    "last_icons_analyzed": 16,
+    "last_icons_corrected": 9,
+    "last_icons_retained": 7,
+    "note": "37 recente correcties plus 9 nieuwe correcties van de laatste 16 staan ter eindbeoordeling; de steeksleutel is al goedgekeurd. De 10 hertekende voorbeelden zitten in de 64 en tellen niet extra. Geen open analyse; menselijke keuzes blijven open."
+  },
+  "icons": [
+    {
+      "id": "planning.dependency-draw-mode",
+      "label": "Relaties tekenen actief",
+      "ui_call": "Vaste aanduiding van de actieve afhankelijkheidstekenmodus; het aparte Stoppen beëindigt de modus. Het beeld maakt zelf geen relatie.",
+      "source_example": {
+        "app": "Planner",
+        "repository": "open-planner-studio",
+        "commit": "5a65f6b865a7f4bedca11e05bc51ad7004fb019d",
+        "name": "Link",
+        "label": "Link",
+        "path": "src/components/layout/DependencyModeNotice.tsx",
+        "line": 26,
+        "role": "component",
+        "evidence": "bibliotheek-aanroep",
+        "review": null,
+        "assessment": {
+          "meaning": "Taakrelatie tekenen",
+          "status": "eigen Planner-context",
+          "rationale": "Eigen opdracht of toestand; native vorm volgt na schermreview.",
+          "source": "planner-ribbon-crosswalk.json"
+        },
+        "state": "",
+        "origin": "lucide-react@0.575.0",
+        "context": "      icon={Link}\n      text={t('view.dependencyModeHint')}\n      actionLabel={t('view.dependencyModeStop')}\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/5a65f6b865a7f4bedca11e05bc51ad7004fb019d/src/components/layout/DependencyModeNotice.tsx#L26",
+        "asset": "harmonization/ui-icons/open-planner-ribbon/link.svg",
+        "exact_hash": "dca0e1a15e27502c0e37cac731e0f5a1e4a9112bb568ea355a30f078ad996e0e",
+        "geometry_hash": "bd92e4594490910123ca5e14d5080c1aab1c8b7668786db765a1705ad8aa4b38",
+        "origins": [
+          "lucide-react@0.575.0"
+        ],
+        "function_id": "review.link",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "a437cc141d15ac12",
+        "function_label": "Link",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/planning.dependency-draw-mode.svg",
+          "sha256": "b89d37218c8abb41f7281b608dbeaa915c839555994e6e00beea45f4a612eaa3"
+        },
+        "24": {
+          "path": "svg/24/planning.dependency-draw-mode.svg",
+          "sha256": "2cc377f95767fbd87a404ecd4de7b75e854f4a322efb81a8c6336933294f18e8"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/planning.dependency-draw-mode.svg",
+          "sha256": "18f2786085e76de8548167b813b554217e06cd66643fecbaefdb3844aa39db21"
+        },
+        "24": {
+          "path": "svg/24/planning.dependency-draw-mode.svg",
+          "sha256": "956810d1ed1a5ea1d994303c3dccd202acec11c70f045d16b143079abf2b3d5b"
+        }
+      },
+      "finding": "Gebruiker: cursor, relatiepijl en taakblokken lopen in elkaar over. De nieuwe vorm is rustiger en houdt de actieve relatiemodus herkenbaar.",
+      "action": "Twee ruime taakblokken met één vrije haakse relatiepijl in accentkleur. De cursor is verwijderd; pijl en blokken hebben zichtbare tussenruimte."
+    },
+    {
+      "id": "view.web-reload",
+      "label": "Webtool herladen",
+      "ui_call": "Het iframe van de huidige webtool opnieuw aanmaken via reloadKey; hierdoor wordt de pagina opnieuw geladen. Geen andere tab of release-inventaris vernieuwen.",
+      "source_example": {
+        "app": "Installer",
+        "repository": "openaec-installer",
+        "commit": "0961d795ce4f0e0ec14d3b25d223f8ced1879d0b",
+        "name": "web-reload",
+        "label": "Webtool herladen",
+        "path": "src/components/WebToolView.tsx",
+        "line": 36,
+        "role": "expliciete UI-bronplaats",
+        "evidence": "aanvullende gepinde bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "b2-supplemental-source-review",
+        "context": "reload verhoogt reloadKey en remount het iframe; de huidige webtool wordt opnieuw geladen.",
+        "source_url": "https://github.com/OpenAEC-Foundation/openaec-installer/blob/0961d795ce4f0e0ec14d3b25d223f8ced1879d0b/src/components/WebToolView.tsx#L36",
+        "asset": null,
+        "exact_hash": null,
+        "geometry_hash": null,
+        "origins": [
+          "b2-supplemental-source-review"
+        ],
+        "function_id": "supplement.5fb3b0580813fe04",
+        "function_status": "afzonderlijk beoordeeld in B2",
+        "id": "5fb3b0580813fe04",
+        "function_label": "Webtool herladen",
+        "category": "Aanvullende bronplaatsen",
+        "source_file_sha256": "b5106c78f7d69a8027264c020d03bcfcb175426dd2384807fe126abe9122d722",
+        "source_git_blob": "69f65f62fa2b0c77483f6636c59cdb2893d77543"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/view.web-reload.svg",
+          "sha256": "0f55b7f8cebe6b7efe3ea10d9c29e2a0eb55ec186d5a2170c6dd50b14c9b9740"
+        },
+        "24": {
+          "path": "svg/24/view.web-reload.svg",
+          "sha256": "a561d5df5f3c1000c22ff5737b55384d25e92ae594584718fd147b76b1c09067"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/view.web-reload.svg",
+          "sha256": "67f22cd281a808a7b405f63fd7deae851be1413b8fdb96d851cf4540856939b4"
+        },
+        "24": {
+          "path": "svg/24/view.web-reload.svg",
+          "sha256": "3cd49b8844facf81c6147855951996e826800cc52a40b04fd079a4e74044d5d7"
+        }
+      },
+      "finding": "De oude cirkelpijl sneed door de vensterhoek en had de eerder afgewezen puntaansluiting.",
+      "action": "Breed webvenster met een vrije cirkelpijl volgens de opnieuw uitgewerkte boog, rechte aansluiting en brede open punt."
+    },
+    {
+      "id": "draw.schedule-table",
+      "label": "Tekeningtabel plaatsen — gepland",
+      "ui_call": "Ontwerp voor het plaatsen van een tabel op het tekenblad. Drawing Table is permanent disabled omdat scheduleTable niet geregistreerd is; geen werkende uitvoering claimen.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "tableIcon",
+        "label": "Tabel",
+        "path": "open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx",
+        "line": 363,
+        "role": "ui-icon",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "always-disabled",
+        "origin": "pdf-drawing-ui-icons.json",
+        "context": "<RibbonButton size=\"small\" id=\"dr-table\" title={cs} icon={tableIcon} label={t('drawing.table')}\n              disabled={true} />\n          </RibbonButtonStack>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ribbon/DrawingTab.jsx#L363",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/drawing/drawing-20.svg",
+        "exact_hash": "e07ec027f8cb9b6820c5e13c26121bd7578df1c4e4c718c9cef797cc36db1dd9",
+        "geometry_hash": "9ef136235b379b021640e8c3a72983f356ef2f68d5416a7ff327c218cefe8a3d",
+        "origins": [
+          "pdf-drawing-ui-icons.json"
+        ],
+        "function_id": "data.table",
+        "function_status": "functie uit label; controleren",
+        "id": "f3883c39a1b2785f",
+        "function_label": "Tabel",
+        "category": "Project en gegevens"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/draw.schedule-table.svg",
+          "sha256": "14b4a657647eaa23735197d8592d0d7cf4e6e36965a52ed749ed9ca9025ab895"
+        },
+        "24": {
+          "path": "svg/24/draw.schedule-table.svg",
+          "sha256": "a3bc93cbafb3d0064943b97e5c7b4bb5dd1c1600d72bc94c9a5800415accdef2"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/draw.schedule-table.svg",
+          "sha256": "a6de86630365e5bedc2a114fe3665119b3d5ea0bda2d28c387552e481326b8bf"
+        },
+        "24": {
+          "path": "svg/24/draw.schedule-table.svg",
+          "sha256": "b52e6eb5e5140b6eeea043fc686aa47a4384c67751a53d018a0fd22faf981b19"
+        }
+      },
+      "finding": "De accentregel eindigde op de buitencontour van de tabel.",
+      "action": "Tabel op tekenvlak behouden; de accentregel stopt ruim binnen de buitenrand."
+    },
+    {
+      "id": "view.zoom-tool",
+      "label": "Zoomgereedschap — gepland",
+      "ui_call": "Ontwerp voor het interactieve in-/uitzoomgereedschap in het paginacontextmenu. De onderzochte setTool(zoom)-route heeft geen handler; de werkende losse zoomknoppen blijven afzonderlijk.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "zoomIcon",
+        "label": "In-/uitzoomgereedschap",
+        "path": "open-pdf-studio/js/solid/components/ContextMenu.jsx",
+        "line": 929,
+        "role": "",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "pdf-context-imported-ui-icons.json",
+        "context": "<MenuItem icon={zoomIcon} label={t('page.zoomInOutTool')} checkbox={true} checked={isCurrentTool('zoom')} onClick={() => setTool('zoom')} />",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/ContextMenu.jsx#L929",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/context-imported/zoom-icon.svg",
+        "exact_hash": "b12fe6a901430b5de59190839a8d339e9666169b5a7b194c00123319ae18858f",
+        "geometry_hash": "d9687e424c726b31f0165ae4f70652c969b8c49f4ec58bfe406cb02fe4ca8f34",
+        "origins": [
+          "pdf-context-imported-ui-icons.json"
+        ],
+        "function_id": "review.inuitzoomgereedschap",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "bc51cb10ad02cc5e",
+        "function_label": "In /uitzoomgereedschap",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/view.zoom-tool.svg",
+          "sha256": "ce250bd092b333e42db26caf5f114698a2ee1db84343249ec3d1f668f41ce4bb"
+        },
+        "24": {
+          "path": "svg/24/view.zoom-tool.svg",
+          "sha256": "c09a27fb04595e796a9db794d4b31382250007b4687adb0bb0e59a95bfe8f95f"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/view.zoom-tool.svg",
+          "sha256": "ad883b1152999d82f0b7f241ebe3a38f7ed40ac298db364053566cad7a3e9269"
+        },
+        "24": {
+          "path": "svg/24/view.zoom-tool.svg",
+          "sha256": "d54b3c39b3f24aaea4bee44b732d2a2beac68fd760b969cd9dc69d3004a7b84c"
+        }
+      },
+      "finding": "Het losse minteken stond dicht tegen de loeprand.",
+      "action": "Loep en plusteken behouden; het minteken vrij boven rechts geplaatst, zonder aanraking met de loep."
+    },
+    {
+      "id": "comments.import",
+      "label": "Opmerkingen importeren — gepland",
+      "ui_call": "Ontwerp voor invoer van documentopmerkingen. De bronmenuactie is disabled en heeft geen callback; bestandsformaat en invoerroute zijn nog niet vastgelegd.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "menu-import-comments",
+        "label": "Opmerkingen importeren · menu",
+        "path": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+        "line": 16,
+        "role": "command",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "default",
+        "origin": "pdf-annotations-panel-ui-icons.json",
+        "context": "const importIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M14.5 3a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5M5.854 8.146a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L4.293 9H11.5a.5.5 0 0 1 0-1H4.293l3.146-3.146a.5.5 0 0 0-.707-.708l-4 4z\"/></svg>`;\nconst exportCommentsIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M1.5 3a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5m8.646.146a.5.5 0 0 1 .707 0l4 4a.5.5 0 0 1 0 .707l-4 4a.5.5 0 0 1-.707-.707L13.293 8H4.5a.5.5 0 0 1 0-1h8.793l-3.146-3.146a.5.5 0 0 1 0-.707z\"/></svg>`;\nconst groupByIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M14 2h-3a1 1 0 0 0-1 1v1H8v-.25A.75.75 0 0 0 7.25 3h-1.5a.75.75 0 0 0-.75.75v1.5c0 .413.337.75.75.75h1.5c.413 0 .75-.337.75-.75V5h2v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1M7 5H6V4h1zm7 1h-3V3h3zm0 2h-3a1 1 0 0 0-1 1v1H8v-.25A.75.75 0 0 0 7.25 9h-1.5a.75.75 0 0 0-.75.75v1.5c0 .413.337.75.75.75h1.5c.413 0 .75-.337.75-.75V11h2v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1m-7 3H6v-1h1zm7 1h-3V9h3z\"/></svg>`;\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx#L16",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/annotations-panel/menu-import-comments.svg",
+        "exact_hash": "6b2a1fcdba26e218e9b323595671c51fc2ae795899897c57e93895e1bfb254c7",
+        "geometry_hash": "df9ffd612d92b5d9a67277c630da5b1e9022d31e7edffb12ed2aba57e21d7f6b",
+        "origins": [
+          "pdf-annotations-panel-ui-icons.json"
+        ],
+        "function_id": "review.opmerkingenimporterenmenu",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "d2741f870c014d63",
+        "function_label": "Opmerkingen importeren · menu",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/comments.import.svg",
+          "sha256": "f08c92a376d457595b152ab24c16f4d84e4b90e827fbf562686824ddec8ae3ba"
+        },
+        "24": {
+          "path": "svg/24/comments.import.svg",
+          "sha256": "13eb2237bafc7e93adb251d0a37523e50c386df350bfd3cc39e632259067926e"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/comments.import.svg",
+          "sha256": "58c17ce4838a2fdb7dc43df4a1ea775e183a9da5440589bd662281adc400d226"
+        },
+        "24": {
+          "path": "svg/24/comments.import.svg",
+          "sha256": "1692ed044489f36554d693f22ec3f870c83be265893df23eb85c3240e98906e8"
+        }
+      },
+      "finding": "De invoerpijl liep door de ballonrand.",
+      "action": "Tekstballon op normale hoogte met een vrije invoerpijl bij de open rechterhoek; het blijft een gepland ontwerp voor opmerkingeninvoer."
+    },
+    {
+      "id": "comments.export",
+      "label": "Opmerkingen exporteren — gepland",
+      "ui_call": "Ontwerp voor uitvoer van alle of de geselecteerde documentopmerkingen. Beide bronmenuacties zijn disabled zonder callback; de scope hoort in het label.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio",
+        "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+        "name": "menu-export-comments",
+        "label": "Opmerkingen exporteren · twee menuacties",
+        "path": "open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx",
+        "line": 17,
+        "role": "command",
+        "evidence": "bronreview",
+        "review": null,
+        "assessment": {},
+        "state": "default",
+        "origin": "pdf-annotations-panel-ui-icons.json",
+        "context": "const exportCommentsIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M1.5 3a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5m8.646.146a.5.5 0 0 1 .707 0l4 4a.5.5 0 0 1 0 .707l-4 4a.5.5 0 0 1-.707-.707L13.293 8H4.5a.5.5 0 0 1 0-1h8.793l-3.146-3.146a.5.5 0 0 1 0-.707z\"/></svg>`;\nconst groupByIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M14 2h-3a1 1 0 0 0-1 1v1H8v-.25A.75.75 0 0 0 7.25 3h-1.5a.75.75 0 0 0-.75.75v1.5c0 .413.337.75.75.75h1.5c.413 0 .75-.337.75-.75V5h2v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1M7 5H6V4h1zm7 1h-3V3h3zm0 2h-3a1 1 0 0 0-1 1v1H8v-.25A.75.75 0 0 0 7.25 9h-1.5a.75.75 0 0 0-.75.75v1.5c0 .413.337.75.75.75h1.5c.413 0 .75-.337.75-.75V11h2v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1m-7 3H6v-1h1zm7 1h-3V9h3z\"/></svg>`;\nconst showIcon = `<svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M2.984 8.625a.5.5 0 0 1-.612.355c-.431-.114-.355-.611-.355-.611l.018-.062s.026-.084.047-.145a6.7 6.7 0 0 1 1.117-1.982C4.096 5.089 5.605 4 8 4s3.904 1.089 4.802 2.183a6.7 6.7 0 0 1 1.117 1.982a4 4 0 0 1 .06.187l.003.013v.006a.5.5 0 0 1-.966.258l-.008-.025l-.035-.109a5.7 5.7 0 0 0-.945-1.674C11.286 5.912 10.045 5 8 5s-3.285.912-4.028 1.817a5.7 5.7 0 0 0-.945 1.674l-.035.109zM8 7a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5M6.5 9.5a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0\"/></svg>`;\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/solid/components/left-panel/panels/AnnotationsPanel.jsx#L17",
+        "asset": "harmonization/inline-ui-icons/open-pdf-studio/annotations-panel/menu-export-comments.svg",
+        "exact_hash": "61d844d30c033066be1d893b662b9ec676527efe1749bea7b619e0b0676b1f94",
+        "geometry_hash": "0c9a80f328d1925358d2cc7c3c8c86601773e43f5ff05f349961186ac3c3fff5",
+        "origins": [
+          "pdf-annotations-panel-ui-icons.json"
+        ],
+        "function_id": "review.opmerkingenexporterentweemenuacties",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "ed6cd72ad90a9ea6",
+        "function_label": "Opmerkingen exporteren · twee menuacties",
+        "category": "Pagina’s"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/comments.export.svg",
+          "sha256": "3cfda1a38e5f4ee8a6d59d8964552238ac964982b03b6be11541c56bee598b97"
+        },
+        "24": {
+          "path": "svg/24/comments.export.svg",
+          "sha256": "4bcdb6a4b3920bdc5b10dc8a4f7175d19092a95a8ae6d612e7c972e86d91bdee"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/comments.export.svg",
+          "sha256": "15e67b1f4bb0d0aadf7c1d8853ce0a62b9d758088ce5da0cdd0606ca3ce46dfe"
+        },
+        "24": {
+          "path": "svg/24/comments.export.svg",
+          "sha256": "fed55edaf68d9aa0e25d3b565d82302e6388252d7229889e95fa3b6380067554"
+        }
+      },
+      "finding": "De uitvoerpijl liep door de ballonrand.",
+      "action": "Dezelfde tekstballon met een vrije uitvoerpijl; import en export hebben tegengestelde richting."
+    },
+    {
+      "id": "validation.select-specification",
+      "label": "IDS-specificatie kiezen — gepland",
+      "ui_call": "Ontwerp voor het kiezen van de IDS-specificatie bij de modeltoetsing. Deze IDS Standaard-lintknop heeft geen callback; de bestaande IDS-werkruimte is een afzonderlijke functie.",
+      "source_example": {
+        "app": "BIM Validator",
+        "repository": "OpenAEC-BIM-validator",
+        "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "name": "idsStandardIcon",
+        "label": "IDS Standaard",
+        "path": "viewer/src/components/chrome/ribbon/HomeTab.tsx",
+        "line": 121,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:11",
+        "context": "<RibbonButton\n              icon={idsStandardIcon}\n              label={t(\"home.idsSelect\")}\n              size=\"small\"\n            />\n            <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L121",
+        "asset": "harmonization/function-icon-assets/3ebd777551ced889aa20eb31b69912879d272ea32c1d81149bbaa3a1ac9a60d9.svg",
+        "exact_hash": "3ebd777551ced889aa20eb31b69912879d272ea32c1d81149bbaa3a1ac9a60d9",
+        "geometry_hash": "837c9c77850c42ed7884ad717e7329b6a2610444184c71a06f1f0a2ff639ff34",
+        "origins": [
+          "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:11"
+        ],
+        "function_id": "review.idsstandaard",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "4d5ed0c958d22668",
+        "function_label": "IDS Standaard",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/validation.select-specification.svg",
+          "sha256": "72e817318c18bde4abf0bfd37b6eb12ad9c497bcd533b4534e11c7195a01ab9e"
+        },
+        "24": {
+          "path": "svg/24/validation.select-specification.svg",
+          "sha256": "d87702e1224ae0fb74b150123c96e9bab6e99b9c42c4fe73b96678f87aa1550d"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/validation.select-specification.svg",
+          "sha256": "d66447f265b96944049a1387274378991b01bbb1eae24d0d5184ec66a8a1e13e"
+        },
+        "24": {
+          "path": "svg/24/validation.select-specification.svg",
+          "sha256": "f1913fbede0cb50e198569126aded18b1184559c37431a2699501f92b5b25d33"
+        }
+      },
+      "finding": "Het keuze-chevron lag op de onderste documenthoek.",
+      "action": "Volwaardige checklist met een vrij keuze-chevron naast de onderste hoek. Geen werkende broncallback gesuggereerd."
+    },
+    {
+      "id": "validation.reset",
+      "label": "Validatietoestand herstellen — gepland",
+      "ui_call": "Ontwerp voor Reset bij de modelvalidatie. De bron geeft onResetValidation niet door; de precieze resetinhoud is nog niet aangesloten. Dit is geen bewezen opdracht om alleen 3D-markeringen te wissen.",
+      "source_example": {
+        "app": "BIM Validator",
+        "repository": "OpenAEC-BIM-validator",
+        "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "name": "resetIcon",
+        "label": "Reset",
+        "path": "viewer/src/components/chrome/ribbon/HomeTab.tsx",
+        "line": 126,
+        "role": "",
+        "evidence": "SVG-bronplaats",
+        "review": null,
+        "assessment": {},
+        "state": "bronplaats; rol en bereikbaarheid controleren; JSX-weergave genormaliseerd; symboolreferentie buiten import/definitie",
+        "origin": "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:13",
+        "context": "<RibbonButton\n              icon={resetIcon}\n              label={t(\"home.reset\")}\n              size=\"small\"\n              onClick={onResetValidation}\n            />\n          </RibbonButtonStack>\n        </RibbonGroup>\n\n        <RibbonGroup label={t(\"home.bcf\")}>\n          <RibbonButton",
+        "source_url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/components/chrome/ribbon/HomeTab.tsx#L126",
+        "asset": "harmonization/function-icon-assets/a90f7e679aeaec51bd87f7964d1e4cd8692508382cecf7adb0141cb92dd9a749.svg",
+        "exact_hash": "a90f7e679aeaec51bd87f7964d1e4cd8692508382cecf7adb0141cb92dd9a749",
+        "geometry_hash": "01f6f39b247ae8723ae58a3aab1dd2c7c9cf09b70a97e4735d7e73aca628d9f1",
+        "origins": [
+          "clientbronscan: viewer/src/components/chrome/ribbon/icons.ts:13"
+        ],
+        "function_id": "review.reset",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "5ea99a4a22dd643f",
+        "function_label": "Reset",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/validation.reset.svg",
+          "sha256": "67213c038750f350278405118b3bfe296fcc98d939c727bbb13a430d1a19dafd"
+        },
+        "24": {
+          "path": "svg/24/validation.reset.svg",
+          "sha256": "c712e8d7a71ab59abffbd694c486e763afb74663de79c28cc29bb76c76ca2e3c"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/validation.reset.svg",
+          "sha256": "93ea570974a32b9ab1e58035430e93cbb1ab2bca6d4ceada38866cf0a533fd02"
+        },
+        "24": {
+          "path": "svg/24/validation.reset.svg",
+          "sha256": "3854230df60fb1e5fcc72ee2487e6fc2d15eaa0777926fc983876461a4c5c3b9"
+        }
+      },
+      "finding": "De herstelpijl lag door de documentrand en gebruikte de oude pijlpunt.",
+      "action": "Volwaardige checklist met een vrije herstelpijl volgens dezelfde verbeterde cirkelpijlconstructie."
+    },
+    {
+      "id": "preferences.printing",
+      "label": "Afdrukvoorkeuren — gepland",
+      "ui_call": "Ontwerp voor de Print-categorie in de voorkeurendialoog van PDF v3; de inhoud toont Coming soon. Dit start geen afdruktaak.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio-v3",
+        "commit": "380706f5820c6090a36461663b076cec4f324fc3",
+        "name": "print",
+        "label": "print",
+        "path": "crates/app/ui/preferences.slint",
+        "line": 113,
+        "role": "",
+        "evidence": "direct-path",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "asset-index.json",
+        "context": "                        PrefCategory { text: \"Virtual Printer\"; icon: @image-url(\"icons/print.svg\"); selected: root.active-cat == 5; clicked => { root.active-cat = 5; } }\n                        Rectangle { vertical-stretch: 1; }\n                    }\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/preferences.slint#L113",
+        "asset": "harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/print.svg",
+        "exact_hash": "5b30198ea52592d0798b3f61d425d47af3cf75e12c757dbdca4d9b311ba1fe5e",
+        "geometry_hash": "e5c86c16b0920e95fb695f52c1169d74c64351e110c04af79144765fe5c9a00d",
+        "origins": [
+          "asset-index.json"
+        ],
+        "function_id": "file.print",
+        "function_status": "naamkandidaat; functie controleren",
+        "id": "3d72b875fda7bc5f",
+        "function_label": "Afdrukken",
+        "category": "Bestanden"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/preferences.printing.svg",
+          "sha256": "a496023f5691e268768a1f46f722efdf64dcbbebb2fff71c2d060d9b7c2f9018"
+        },
+        "24": {
+          "path": "svg/24/preferences.printing.svg",
+          "sha256": "ba34e685273ba4facdad2a9b4e526371e2cef1897be05fe17553c4cdd43912f5"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/preferences.printing.svg",
+          "sha256": "c41f76ab18ca62123efbd84bee3661aabfdc6271b72efb3513fecb67b7b9b5fa"
+        },
+        "24": {
+          "path": "svg/24/preferences.printing.svg",
+          "sha256": "a7742c9d71063ae608584b605ee59abb41da12aa09282154e6e248cb4a56ee39"
+        }
+      },
+      "finding": "De ronde instelknop stond dicht naast de printerrand en week af van de eerder gekozen vlakke instelstreepjes.",
+      "action": "Printer behouden; de instelstreep staat vrij naast de contour en heeft een vlakke dwarsstreep in plaats van een bolletje."
+    },
+    {
+      "id": "panel.document-navigation",
+      "label": "Documentnavigatie — gepland",
+      "ui_call": "Ontwerp voor het Navigation-paneel in PDF v3; de knop meldt uitsluitend een nog niet geïmplementeerde actie. De precieze paneelinhoud wordt niet als werkend voorgesteld.",
+      "source_example": {
+        "app": "PDF",
+        "repository": "open-pdf-studio-v3",
+        "commit": "380706f5820c6090a36461663b076cec4f324fc3",
+        "name": "navigation",
+        "label": "navigation",
+        "path": "crates/app/ui/ribbon.slint",
+        "line": 245,
+        "role": "",
+        "evidence": "direct-path",
+        "review": null,
+        "assessment": {},
+        "state": "",
+        "origin": "asset-index.json",
+        "context": "                    RibbonLargeButton { text: \"Navigation\"; icon: @image-url(\"icons/navigation.svg\"); clicked => { root.tab-action(\"Navigation\"); } }\n                    RibbonLargeButton { text: \"Properties\"; icon: @image-url(\"icons/preferences.svg\"); active: true; clicked => { root.tab-action(\"Properties\"); } }\n                    RibbonLargeButton { text: \"Annotations\"; icon: @image-url(\"icons/annotations.svg\"); clicked => { root.tab-action(\"Annotations\"); } }\n",
+        "source_url": "https://github.com/OpenAEC-Foundation/open-pdf-studio-v3/blob/380706f5820c6090a36461663b076cec4f324fc3/crates/app/ui/ribbon.slint#L245",
+        "asset": "harmonization/ui-icons/open-pdf-studio-v3/crates/app/ui/icons/navigation.svg",
+        "exact_hash": "50c22d98e41ad173cd2555c05edab0bbb3c433b28d65d84d0f879346b6f28be7",
+        "geometry_hash": "d3089e5ca26316ef79c6e5e05ecb799733e116ef1ce30d7e937b2ad22177cd03",
+        "origins": [
+          "asset-index.json"
+        ],
+        "function_id": "review.navigation",
+        "function_status": "nog functioneel te beoordelen",
+        "id": "5dd7e03fb2f5d16e",
+        "function_label": "navigation",
+        "category": "Appspecifieke opdrachten"
+      },
+      "before": {
+        "16": {
+          "path": "svg/16/panel.document-navigation.svg",
+          "sha256": "77e2c4b4148e8f7ed3160915daebb9057336dcaeda6fdbef06051d327f898ebe"
+        },
+        "24": {
+          "path": "svg/24/panel.document-navigation.svg",
+          "sha256": "00673b56006bd166b6d7742b627b4f4138fcd8552a774884e4344ce181e3b9f8"
+        }
+      },
+      "after": {
+        "16": {
+          "path": "svg/16/panel.document-navigation.svg",
+          "sha256": "33a8dc91731dd02768fc011b28d784df08975a3c07da69207de9b7d40a7a7cb1"
+        },
+        "24": {
+          "path": "svg/24/panel.document-navigation.svg",
+          "sha256": "f08f2c89f6b6c7744c9db6b777f45f15b707e4e4b55f0784566c060dc2d0625a"
+        }
+      },
+      "finding": "De binnenvorm en accentverdeler maakten het kleine navigatievak onrustig.",
+      "action": "Het linker navigatievlak binnen het paneel gemarkeerd; de inhoud loopt niet meer over de paneelverdeler."
+    }
+  ],
+  "full_validation": {
+    "status": "geslaagd",
+    "functions": 945,
+    "exported_masters": 1890,
+    "max_exported_overlap_area": 2.0545458416174274e-06,
+    "rejected_failure_controls": 3,
+    "source_clusters": 1527,
+    "source_records": 2894,
+    "theme_contrasts": [
+      {
+        "theme": "light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.231,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.186,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.702,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.47,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.342,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 10.509,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 3.925,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 6.934,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 6.588,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.175,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 6.67,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text",
+        "on": "panel",
+        "contrast": 14.028,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 6.798,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "info",
+        "on": "panel",
+        "contrast": 9.285,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "error",
+        "on": "panel",
+        "contrast": 9.107,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "success",
+        "on": "panel",
+        "contrast": 9.919,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 8.92,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 9.778,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "info",
+        "on": "panel",
+        "contrast": 12.595,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.651,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "success",
+        "on": "panel",
+        "contrast": 12.051,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "accent",
+        "on": "panel",
+        "contrast": 7.09,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "info",
+        "on": "panel",
+        "contrast": 10.358,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "error",
+        "on": "panel",
+        "contrast": 8.31,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "success",
+        "on": "panel",
+        "contrast": 7.13,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "text-secondary",
+        "on": "panel",
+        "contrast": 21.0,
+        "minimum": 3
+      },
+      {
+        "theme": "light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 6.851,
+        "minimum": 3
+      },
+      {
+        "theme": "dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.165,
+        "minimum": 3
+      },
+      {
+        "theme": "blueprint",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 11.286,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-dark",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 15.93,
+        "minimum": 3
+      },
+      {
+        "theme": "high-contrast-light",
+        "role": "warning-review",
+        "on": "panel",
+        "contrast": 8.671,
+        "minimum": 3
+      }
+    ],
+    "zip_entries": 1893,
+    "layer_comparison_masters": 124,
+    "accent_foreground_icons": 481
+  },
+  "review_checks": {
+    "analysis_cards": 300,
+    "svg_samples_equal_to_assets": 3216,
+    "javascript_syntax": "geslaagd",
+    "shared_payload_initialization": "geslaagd",
+    "http": [
+      {
+        "url": "feedback-overview.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 163399
+      },
+      {
+        "url": "analysis-review-97.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 13361503
+      },
+      {
+        "url": "analysis-review-99.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 45326816
+      },
+      {
+        "url": "feedback-analysis-101.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 11532349
+      },
+      {
+        "url": "analysis-review-104.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 3401630
+      },
+      {
+        "url": "final-review-104.html",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 29516395
+      },
+      {
+        "url": "review-data.js?revision=104",
+        "status": 200,
+        "content_type": "text/javascript",
+        "bytes": 59356513
+      }
+    ],
+    "visual": "Alle 117 gevallen bekeken op 16/24/32 en grotere proefmaat in donker/accent en licht/monochroom.",
+    "general_python_checks": "Niet herhaald: alleen B2-ontwerp en review gewijzigd.",
+    "rust_checks": "Niet uitgevoerd: geen Rust-/cratewijzigingen in deze ronde.",
+    "total_cards": 478,
+    "last_analysis_cards": 16,
+    "final_review_cards": 117,
+    "final_review_filter_smoke": "geslaagd: 37/16/16/16/16/16/117, zoeken, hashdoel en thema/monochroom"
+  }
+}

@@ -1,6 +1,6 @@
 """Original B2 designs for reviewed Workspace Composer controls and indicators."""
 import math
-from b2_second_series import box
+from b2_second_series import box, cubic, lightning
 from b2_bulk_series import page
 from b2_session_two import dimension_arrow
 from b2_energy_pile_audio import arc_points
@@ -114,7 +114,8 @@ EXCLUDED = {
 
 
 def shield(c):
-    c.line([(12,2),(21,6),(20,14),(17,19),(12,22),(7,19),(4,14),(3,6)],closed=True,radius=.7)
+    segments=[[(12,2),(10.5,2),(8,4),(3,6)],[(3,6),(3,14),(6,19),(12,22)],[(12,22),(18,19),(21,14),(21,6)],[(21,6),(16,4),(13.5,2),(12,2)]]
+    for points in segments:cubic(c,points)
 
 
 def folder(c):
@@ -153,10 +154,17 @@ def extend(c,key):
     elif key=='selection.mark':
         box(c,3,3,18,18);c.line([(7,12),(10.5,16),(18,8)],True,radius=.4)
     elif key in {'package.catalog','workflow.skills'}:
-        cube(c,True)
         if key=='package.catalog':
-            c.line([(8,4.3),(16.5,9.5),(16.5,14)],True,radius=.3)
-        else:c.circle(12,7,1.3,True,True)
+            cube(c)
+            x=5*math.sqrt(3)
+            c.line([(12-x/2,4.5),(12+x/2,9.5),(12+x/2,14)],True,radius=.3)
+        else:
+            # A complete package plus a distinct two-step workflow underneath.
+            cube(c)
+            scale=c.size/24
+            for path in c.paths:path['points']=[(.72*x+3.36*scale,.72*y+.3*scale) for x,y in path['points']]
+            c.line([(5,21),(18,21)],True,radius=0)
+            for x in (5,18):c.circle(x,21,1.4,True,True)
     elif key=='workspace.install':
         box(c,3,3,18,18)
         c.line([(3,8),(21,8)],radius=0)
@@ -197,7 +205,7 @@ def extend(c,key):
         elif suffix=='plan':
             c.line([(7,10),(17,10)],True,radius=0);c.line([(7,14),(14,14)],True,radius=0)
         elif suffix=='bypass':
-            c.line([(16,6),(10,12),(14,12),(9,18)],True,radius=.2)
+            lightning(c,12,12,7,12)
         elif suffix=='deny':
             c.line([(8,8),(16,16)],True,radius=0);c.line([(8,16),(16,8)],True,radius=0)
         elif suffix=='add':c.plus(12,12,4,True)
@@ -206,19 +214,19 @@ def extend(c,key):
         for x,y in ((6,6),(18,6),(6,18),(18,18)):c.circle(x,y,2.5)
         c.circle(12,12,3,True,True)
     elif key=='hooks.manage':
-        c.circle(5,5,2);c.circle(19,19,2,True)
-        c.line([(5,7),(5,12),(19,12),(19,17)],True,radius=2)
-        c.line([(12,3),(12,12)],radius=0)
-        c.circle(12,3,1.4,filled=True)
+        box(c,3,3,6,6);box(c,15,15,6,6)
+        c.line([(6,12),(6,18),(12,18)],True,radius=.7)
+        c.line([(10,16),(12,18),(10,20)],True,radius=.3)
     elif key in {'mcp.manage','server.gpu','server.metrics'}:
-        for y in (3,10):box(c,3,y,18,7)
-        for y in (6.5,13.5):c.circle(6.5,y,.7,True,True)
+        for y in (3,9):box(c,3,y,18,6)
+        for y in (6,12):c.circle(6.5,y,.7,True,True)
         if key=='mcp.manage':
-            c.line([(12,17),(12,21),(5,21),(19,21)],True,radius=.4)
+            c.line([(12,19),(12,22)],True,radius=0)
+            c.line([(5,22),(19,22)],True,radius=0)
         elif key=='server.gpu':
-            box(c,8,18,8,4,True)
+            box(c,8,19,8,4,True)
         else:
-            c.line([(7,21),(10,18),(13,21),(18,18)],True,radius=.3)
+            c.line([(7,23),(10,20),(13,23),(18,20)],True,radius=.3)
     elif key=='folder.sync':
         folder(c)
         dimension_arrow(c,(7,12),(18,12),1.7)
@@ -226,12 +234,12 @@ def extend(c,key):
     elif key.startswith('git.'):
         suffix=key.split('.')[1]
         if suffix in {'repository','init','branches'}:
-            c.line([(6,6),(6,20)],radius=0);c.circle(6,4,2);c.circle(6,20,2)
-            c.line([(6,13),(17,9),(17,5)],True,radius=1)
+            c.line([(6,6),(6,18)],radius=0);c.circle(6,4,2);c.circle(6,20,2)
+            c.line([(6,13),(17,9),(17,6)],True,radius=1)
             c.circle(17,4,2,True)
             if suffix=='init':c.plus(18,18,3,True)
             elif suffix=='branches':
-                c.line([(6,13),(18,18)],True,radius=0);c.circle(19,19,2,True)
+                c.line([(6,13),(17.184,18.162)],True,radius=0);c.circle(19,19,2,True)
         elif suffix=='commit':
             c.line([(2,12),(8,12)],radius=0);c.line([(16,12),(22,12)],radius=0);c.circle(12,12,4,True)
         elif suffix=='push':
@@ -240,8 +248,10 @@ def extend(c,key):
         elif suffix=='issue':
             page(c,4,2,16,20);c.line([(12,7),(12,13)],True,radius=0);c.circle(12,17,.8,True,True)
         elif suffix=='stage-all':
-            page(c,2,5,12,16);page(c,7,2,14,16)
-            c.line([(10,10),(13,13),(18,7)],True,radius=.4)
+            # Selected changes enter the staging tray; no stacked-page crossings.
+            for y in (4,8):c.line([(5,y),(12,y)],radius=0)
+            c.line([(3,17),(3,22),(21,22),(21,17)],radius=.6)
+            dimension_arrow(c,(17,4),(17,15),1.8)
     elif key in {'terminal.log','command.catalog','command.templates'}:
         terminal(c)
         if key=='command.catalog':c.line([(15,1.5),(20,1.5)],True,radius=0)
@@ -250,7 +260,10 @@ def extend(c,key):
         c.line([(3,3),(21,3),(21,17),(11,17),(5,22),(5,17),(3,17)],closed=True,radius=.6)
         if key=='prompt.catalog':
             for y,w in ((7,17),(12,13)):c.line([(7,y),(w,y)],True,radius=0)
-        else:c.line([(8,13),(9,9),(15,5),(18,8),(12,13)],True,closed=True,radius=.2)
+        else:
+            # Parallel pencil sides, a centered tip and a separate cap.
+            c.line([(8,13),(9,10),(14,5),(17,8),(12,13)],True,closed=True,radius=.2)
+            if c.size==24:c.line([(9,10),(12,13)],True,radius=0)
     elif key.startswith('memory.'):
         suffix=key.split('.')[1]
         if suffix=='manage':
@@ -264,9 +277,10 @@ def extend(c,key):
             for y in (5,12,19):
                 c.circle(4,y,1.3,True,True);c.line([(8,y),(21,y)],radius=0)
     elif key=='file.structure':
-        c.line([(5,4),(5,20),(12,20)],radius=.7)
-        c.line([(5,11),(12,11)],radius=0)
-        for x,y in ((3,2),(12,8),(12,17)):box(c,x,y,8 if x==12 else 6,5,x==12)
+        box(c,2,2,6,5)
+        c.line([(5,7),(5,20),(11,20)],radius=.7)
+        c.line([(5,11),(11,11)],radius=0)
+        for y in (8,17):box(c,14,y,7,5,True)
     elif key in {'template.workspace','template.fields','template.preview'}:
         page(c,3,2,18,20)
         if key=='template.workspace':
@@ -275,10 +289,12 @@ def extend(c,key):
         elif key=='template.fields':
             for y in (8,15):box(c,7,y,10,4,True)
         else:
-            c.line([(6,13),(9,9),(15,9),(18,13),(15,17),(9,17)],True,closed=True,radius=1.8)
+            cubic(c,[(6,13),(8.7,7.7),(15.3,7.7),(18,13)],True)
+            cubic(c,[(18,13),(15.3,18.3),(8.7,18.3),(6,13)],True)
             c.circle(12,13,1.5,True)
     elif key=='team.add':
-        c.circle(8,6,3);c.circle(17,7,2.5)
-        c.line(arc_points(8,21,6,180,360,24),radius=0)
-        c.plus(19,18,3,True)
+        for x in (5.5,16.5):
+            c.circle(x,5.5,2.4)
+            c.line(arc_points(x,16,4,180,360,24),radius=0)
+        c.plus(21,21,2,True)
     return True

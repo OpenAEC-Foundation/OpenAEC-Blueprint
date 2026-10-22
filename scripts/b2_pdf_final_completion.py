@@ -248,11 +248,11 @@ def extend(c,key):
         c.line([(22,8),(17,8),(17,18),(14,15)],True,radius=.3)
         c.line([(17,18),(20,15)],True,radius=.3)
     elif key=='diagnostics.startup-log':
-        page(c,2,3,16,18)
-        c.line([(5,8),(13,8)],radius=0)
+        page(c,2,3,10,18)
+        c.line([(5,8),(9,8)],radius=0)
         c.line([(5,13),(9,13)],radius=0)
-        c.circle(17,16,3.5,True)
-        c.line([(19.5,18.5),(22,21)],True,radius=0)
+        c.circle(19,15.5,3,True)
+        c.line([(21.2,17.7),(23,20)],True,radius=0)
     elif key=='bcf.import':
         page(c,2,3,14,18)
         for y in (8,13,18):c.circle(6,y,.8,filled=True)

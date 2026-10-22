@@ -281,7 +281,7 @@ def main():
                       'canonical_functions':targets,'design_status':status,
                       'mapping_status':'afzonderlijke bronbesluiten; geen automatische naamskoppeling',
                       'remaining_source_records':pending})
-    manifest={'family':'OpenAEC B2','revision':86,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
+    manifest={'family':'OpenAEC B2','revision':106,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
               'function_count':len(entries),'svg_count':2*len(entries),'masters':[16,24],
               'paint_order':'per icoon vastgelegd','export':'gevulde contouren; achterste kleur minus voorste kleur',
               'curve_sampling':'12 stappen per halve kwadratische hoek; buffer 20 segmenten per kwadrant; cirkels 64',
@@ -291,7 +291,7 @@ def main():
               'font_generator_sha256':digest((ROOT/'scripts/b2_font_geometry.py').read_bytes()),
               'font_sources':FONT_METADATA,'license_files':['licenses/SpaceGrotesk-OFL.txt'],
               'completion_generator_sha256':digest((ROOT/'scripts/b2_completion.py').read_bytes()),
-              'completion_modules_sha256':{name:digest((ROOT/'scripts'/name).read_bytes()) for name in ['b2_completion.py','b2_workspace_completion.py','b2_reports_completion.py','b2_bim_completion.py','b2_frame_completion.py','b2_pointcloud_completion.py','b2_energy_completion.py','b2_heatloss_completion.py','b2_pile_completion.py','b2_geotech_completion.py','b2_calc_completion.py','b2_calculations_completion.py','b2_pdf_catalog_completion.py','b2_pdf_controls_completion.py','b2_pdf_editing_completion.py','b2_pdf_final_completion.py','b2_planner_ribbon_completion.py','b2_planner_choices_completion.py','b2_planner_safety_completion.py','b2_planner_dialogs_completion.py','b2_planner_panels_completion.py','b2_planner_final_completion.py','b2_scope_completion.py','b2_scope_audit.py','b2_source_catalog.py','build_b2_supplemental_sources.py','build_b2_coverage_review.py']},
+              'completion_modules_sha256':{name:digest((ROOT/'scripts'/name).read_bytes()) for name in ['b2_approved_proposals.py','build_b2_analysis_drafts.py','b2_icon_placement_refinements.py','b2_completion.py','b2_workspace_completion.py','b2_reports_completion.py','b2_bim_completion.py','b2_frame_completion.py','b2_pointcloud_completion.py','b2_energy_completion.py','b2_heatloss_completion.py','b2_pile_completion.py','b2_geotech_completion.py','b2_calc_completion.py','b2_calculations_completion.py','b2_pdf_catalog_completion.py','b2_pdf_controls_completion.py','b2_pdf_editing_completion.py','b2_pdf_final_completion.py','b2_planner_ribbon_completion.py','b2_planner_choices_completion.py','b2_planner_safety_completion.py','b2_planner_dialogs_completion.py','b2_planner_panels_completion.py','b2_planner_final_completion.py','b2_scope_completion.py','b2_scope_audit.py','b2_source_catalog.py','build_b2_supplemental_sources.py','build_b2_coverage_review.py']},
               'session_four_generator_sha256':digest((ROOT/'scripts/b2_session_four.py').read_bytes()),
               'session_three_generator_sha256':digest((ROOT/'scripts/b2_session_three.py').read_bytes()),
               'document_navigation_generator_sha256':digest((ROOT/'scripts/b2_document_navigation.py').read_bytes()),
@@ -337,7 +337,13 @@ def main():
     data={'icons':payload,'queue':queue+new_contracts,'issues':[{**by_id[k],'finding':v} for k,v in ISSUES.items() if k in by_id],
           'themes':tokens['themes'],'warning_preview':WARNING_PREVIEW,'total_records':len(records),
           'assessed':sum(r['assessment']!='nog te beoordelen' for r in records)}
-    page=PAGE.replace('/* DATA */',json.dumps(data,ensure_ascii=False).replace('</','<\\/'))
+    # Each page loads the shared payload synchronously before the existing UI code.
+    payload_json=json.dumps(data,ensure_ascii=False)
+    (OUT/'review-data.js').write_text('document.getElementById("data").textContent = '+json.dumps(payload_json,ensure_ascii=False)+';'+chr(10),encoding='utf-8')
+    page=PAGE.replace('/* DATA */','')
+    marker='</script><script>'+chr(10)+'const d='
+    assert marker in page,'missing synchronous review-data hook'
+    page=page.replace(marker,f'</script><script src="review-data.js?revision={manifest["revision"]}"></script><script>'+chr(10)+'const d=',1)
     (OUT/'index.html').write_text(page,encoding='utf-8')
     bulk_batches=','.join(str(b) for b in AVAILABLE_SERIES)
     bulk_count=len(BULK_DEFINITIONS)
@@ -485,5 +491,7 @@ PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{bat
 
 PAGE=PAGE.replace('</select></label><label>Groep', ''.join(f'<option value="{batch}">{batch} · {COMPLETION_GROUPS[batch]} ({sum(v==batch for v in COMPLETION_SERIES.values())})</option>' for batch in COMPLETION_AVAILABLE) + f'<option value="{",".join(map(str,COMPLETION_AVAILABLE))}">Nachtelijke uitbreiding ({len(COMPLETION_DEFINITIONS)})</option></select></label><label>Groep',1)
 PAGE=PAGE.replace('<div class="stats">','<p><a href="completion-review.html">Nachtelijke uitbreiding · alle nieuwe ontwerpen</a> · <a href="coverage-review.html">Brondekking en resterend werk</a> · <a href="scope-review.html">Controle op ontbrekende ontwerpen</a></p><div class="stats">',1)
+
+PAGE=PAGE.replace('<div class="stats">','<p><a href="analysis-review-99.html">Vervolganalyse · 240 iconen met getekende voorstellen</a> · <a href="feedback-overview.html">Alle vastgelegde feedback</a> · <a href="analysis-review-97.html">Eerste 60 · 22 getekende voorstellen</a></p><div class="stats">',1)
 
 if __name__=='__main__':main()

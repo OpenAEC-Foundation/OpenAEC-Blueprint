@@ -1,6 +1,8 @@
 """Check exported B2 contours independently of construction-model geometry."""
 from build_b2_feedback_review import WARNING_PREVIEW
 from copy import deepcopy
+from b2_icon_placement_refinements import ACCENT_ROLES
+from b2_approved_proposals import APPROVED
 import json
 import re
 import hashlib
@@ -93,6 +95,17 @@ def luminance(colour):
 
 def main():
     manifest=json.loads((OUT/'manifest.json').read_text(encoding='utf-8'))
+    payload_script=(OUT/'review-data.js').read_text(encoding='utf-8').strip()
+    prefix='document.getElementById("data").textContent = '
+    assert payload_script.startswith(prefix) and payload_script.endswith(';')
+    review=json.loads(json.loads(payload_script[len(prefix):-1]))
+    review_icons={icon['id']:icon for icon in review['icons']}
+    assert set(review_icons)=={icon['id'] for icon in manifest['icons']}
+    for name in ('index.html','completion-review.html'):
+        page=(OUT/name).read_text(encoding='utf-8')
+        assert f'review-data.js?revision={manifest["revision"]}' in page
+        assert page.index('review-data.js')<page.index('const d=JSON.parse')
+
     for name,expected in manifest['completion_modules_sha256'].items():assert sha((ROOT/'scripts'/name).read_bytes())==expected
     assert sha((ROOT/'scripts/b2_completion.py').read_bytes())==manifest['completion_generator_sha256']
     assert sha((ROOT/'scripts/build_icon_set_b2.py').read_bytes())==manifest['generator_sha256']
@@ -158,6 +171,7 @@ def main():
         for size in (16,24):
             asset=icon['assets'][str(size)];content=(OUT/asset['path']).read_text(encoding='utf-8')
             assert sha(content.encode())==asset['sha256'],'hash mismatch'
+            assert review_icons[icon['id']]['svg'][str(size)]==content,'shared review/export mismatch'
             style=ET.fromstring(content).attrib.get('style')
             assert style==('color:var(--icon-accent,currentColor)' if icon['id'] in WHOLE_ACCENT else None),'unexpected whole-icon colour'
             assert icon['whole_icon_accent']==(icon['id'] in WHOLE_ACCENT)
@@ -179,7 +193,11 @@ def main():
                 y=10 if icon['id'].startswith('edit.') else 12
                 assert layers['primary'].covers(Point(x*size/24,y*size/24)),'shaft stops before pointer'
             if icon['id'] in SEMANTIC:
-                assert layers['accent'].is_empty,'status contains decorative accent'
+                # Approved alternatives explicitly use an identifying status mark in accent.
+                if icon['id'] in ACCENT_ROLES or icon['id'] in APPROVED:
+                    assert layers['accent'].area>0,'requested identifying accent missing'
+                else:
+                    assert layers['accent'].is_empty,'status contains decorative accent'
                 assert icon['semantic_color']==SEMANTIC[icon['id']]
             if icon['series']==1:
                 assert (OUT/'review/approved-core'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'approved core changed'

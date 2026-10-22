@@ -77,7 +77,7 @@ exclude('83f7f9a7079658d0 2118a839477a5f5b','Appbeeldmerk als favicon of titelba
 def sliders(c,x=17):
     for y,dx in ((6,-1),(12,2),(18,-1)):
         c.line([(x-3,y),(x+3,y)],True,radius=0)
-        c.circle(x+dx,y,1.4,True,filled=True)
+        c.line([(x+dx,y-1.3),(x+dx,y+1.3)],True,radius=0)
 
 
 def panel(c):
@@ -111,10 +111,9 @@ def extend(c,key):
         c.line([(4,7),(7.5,13),(11,7)],radius=0)
         sliders(c,19)
     elif key=='pile.lock-edit':
-        box(c,3,10,12,11)
-        c.line([(6,10),(6,5),(12,5),(12,10)],radius=3)
-        c.line([(19,5),(19,19)],True,radius=0)
-        c.circle(19,12,2.5,True)
+        box(c,2,10,10,11)
+        c.line([(4.5,10),(4.5,5),(9.5,5),(9.5,10)],radius=2.5)
+        sliders(c,19)
     elif key=='pile.optimization':
         panel(c)
         for x,y in ((5,17),(8,11),(12,7)):
@@ -137,8 +136,8 @@ def extend(c,key):
         c.circle(12,12,3)
         c.line([(3,3),(21,21)],radius=0)
     elif key=='file.type-ifc':
-        cube(c)
-        c.line([(12,2),(12+5*3**.5,7)],True,radius=0)
+        cube(c);x=5*3**.5;scale=c.size/24
+        c.fills.append({'tone':'accent','rings':[[(px*scale,py*scale) for px,py in ((12,2),(12+x,7),(12,12),(12-x,7))]]})
     elif key=='file.type-project':
         page(c,4,2,16,20)
         box(c,7,12,10,7,True)
