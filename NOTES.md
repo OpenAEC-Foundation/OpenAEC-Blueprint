@@ -55,7 +55,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Eigenaarschap en Field op tablet of telefoon: komen later.
 
 - Installer (Claude): voorstel E staat in de galerij `ui04 -- installer` en is voorlopig goedgekeurd (2026-10-22); het team kijkt er later naar. Daarna vastleggen in `05-layouts.md` als derde soort app (hub). In iced 0.13 ontsnapt een bijgesneden afbeelding (`ContentFit::Cover`) aan de scrollgrens; daarom zijn de screenshots vooraf bijgesneden.
-- Iconen B2 (Claude): staan sinds 2026-10-22 in de crate `crates/openaec-icons` als byte-kopie van de SVGZ-export (25 MB, 945 iconen in 16 en 24 px, per app een feature). De licentie van de iconen is nog open; de crate staat voorlopig op LGPL-3.0-only. Na een nieuwe export van Codex: `python scripts/generate_icon_crate.py`. Nog niet gekoppeld aan de galerij `ui04` of aan een app.
+- Iconen B2 (Claude): staan sinds 2026-10-22 in de crate `crates/openaec-icons` als byte-kopie van de SVGZ-export (25 MB, 945 iconen in 16 en 24 px, per app een feature). De licentie van de iconen is nog open; de crate staat voorlopig op LGPL-3.0-only. Na een nieuwe export van Codex: `python scripts/generate_icon_crate.py`. De galerij toont ze allemaal (`ui04 -- iconen`); nog niet gekoppeld aan een app.
 
 - Fase 4 bibliotheek 0.4 (Claude): fundament en componenten staan in `openaec_ui::design`. Schil, startscherm, instellingen, menu's en werkstroomlayout zijn klaar, de iconen staan in `openaec-icons` en het webpakket heeft CSS-componenten (`web/openaec-components.css`). Volgende stap (fase 5, later): testversies van Planner, PDF en Calc met de hele nieuwe UI.
 
@@ -160,6 +160,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+
+- 2026-10-22 **Claude**: weergave Iconen in de galerij `ui04` (`-- iconen`): alle 945 B2-iconen uit `openaec-icons`, met zoeken, filters per app en groep, 16 of 24 px, 120 per pagina, en een detailpaneel met 16/24/48 px, één kleur en het icoon in knoppen, lint en icoontegel. `openaec-icons` kreeg `Icon::apps()` en `APPS`. In het echte GPU-venster bekeken (Licht). Geen commit.
 
 - 2026-10-22 **Claude**: iconen B2 in de nieuwe crate `crates/openaec-icons` gezet: generator `scripts/generate_icon_crate.py` (met `--check`) kopieert de 1.890 SVGZ-bestanden van Codex byte voor byte (hash gecontroleerd) en maakt een getypte `Icon`-lijst met id, label, groep en per app een feature (`all` voor alles). `Icon::svg(Size)` pakt één keer uit; de test controleert alle 945 × 2 tegen de SVG-masters. Webpakket: `web/openaec-components.css` (knoppen, velden, labels, pillen, tegels, kaarten, websitestijl van installer E, meldingen, menu, dialoog, paneel, tabel, tabs, werkstroom, statusbalk, hoog contrast) en overzicht `web/componenten.html` uit `scripts/build_web_components.py`, bekeken in Licht, Donker en Hoog contrast donker. Geen commit.
 

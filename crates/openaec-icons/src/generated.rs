@@ -2845,6 +2845,9 @@ pub enum Icon {
 /// B2 revision of these icons.
 pub const REVISION: u32 = 106;
 
+/// Every app feature, in alphabetical order.
+pub const APPS: [&str; 16] = ["calc", "calculations", "composer", "energy", "field", "frame", "geotechniek", "heatloss", "installer", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"];
+
 impl Icon {
     /// Every icon that the enabled features include.
     pub fn all() -> Vec<Icon> {
@@ -10428,6 +10431,1902 @@ impl Icon {
             Icon::WorkspaceSessions => "Documentgegevens en sessies",
             #[cfg(any(feature = "pdf"))]
             Icon::WorkspaceToolbarToggle => "Werkruimte",
+        }
+    }
+
+    /// The app features that include this icon, such as `["pdf", "planner"]`.
+    pub fn apps(self) -> &'static [&'static str] {
+        match self {
+            #[cfg(any(feature = "reports"))]
+            Icon::AccountAdmin => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::AccountLogin => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::AccountLogout => &["reports"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AccountMenu => &["speech"],
+            #[cfg(any(feature = "reports"))]
+            Icon::AccountProfile => &["reports"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::ActivityClear => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::AdviceWorkspace => &["energy", "heatloss"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiBridgeStart => &["planner"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::AiBridgeStop => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiConnectionDetails => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiConnectionMenu => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiPause => &["planner"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::AiReadOnlyToggle => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiResume => &["planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateApplyRedactions => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
+            Icon::AnnotateClearAll => &["geotechniek", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateClearPage => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateFlatten => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateHighlight => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateMarked => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotatePrintable => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateRedact => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateSignature => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateStamp => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateStatusOptions => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AnnotateToolsMenu => &["pdf"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::AssignmentHoursDistribution => &["heatloss", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantDetectDoors => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantDraw => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantFloorplan => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantStructuralLayout => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantStructuralOverview => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantSummarize => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::AssistantTranslate => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "frame"))]
+            Icon::AssistantWorkspace => &["frame"],
+            #[cfg(any(feature = "pdf", feature = "reports"))]
+            Icon::AttachmentAdd => &["pdf", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AttachmentOpen => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AttachmentSave => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::AttachmentSaveAll => &["pdf"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioDictionary => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioMeeting => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioMicTest => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioMicrophone => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioModels => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioSpeech => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioTranscribe => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioTranscriptResult => &["speech"],
+            #[cfg(any(feature = "speech"))]
+            Icon::AudioTts => &["speech"],
+            #[cfg(any(feature = "planner"))]
+            Icon::BackupAuto => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::BackupCreate => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::BackupFolder => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "frame", feature = "heatloss", feature = "planner"))]
+            Icon::BackupRecover => &["calc", "frame", "heatloss", "planner"],
+            #[cfg(any(feature = "validator"))]
+            Icon::BcfExport => &["validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::BcfImport => &["pdf"],
+            #[cfg(any(feature = "validator"))]
+            Icon::BcfPush => &["validator"],
+            #[cfg(any(feature = "frame"))]
+            Icon::BcfWorkspace => &["frame"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::BimWorkspace => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::BookmarkAdd => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::BookmarkAddChild => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::BookmarkEdit => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::BookmarkNavigate => &["pdf"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddBlank => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddChapter => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddFormula => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddItem => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddMonitor => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::BudgetAddText => &["calc"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::BuildingApartment => &["energy", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingCaravan => &["energy"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::BuildingEducation => &["energy", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingHealthcare => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingHouseboat => &["energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::BuildingHousing => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingIndustrial => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingNewHousing => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingNewUtility => &["energy"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::BuildingOffice => &["energy", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingOther => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::BuildingRetail => &["energy"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::BuildingUtility => &["energy", "planner"],
+            #[cfg(any(feature = "calc"))]
+            Icon::CalcChapter => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::CalcGridSimple => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::CalcGridStandard => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::CalcGridWpcalc => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::CalcHsbWizard => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::CalcPricePercentage => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::CalcQuantitiesVisible => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "composer", feature = "energy", feature = "pdf", feature = "planner", feature = "validator"))]
+            Icon::CalculationAdvice => &["composer", "energy", "pdf", "planner", "validator"],
+            #[cfg(any(feature = "calculations", feature = "energy", feature = "reports", feature = "validator"))]
+            Icon::CalculationAudit => &["calculations", "energy", "reports", "validator"],
+            #[cfg(any(feature = "calculations"))]
+            Icon::CalculationModulePicker => &["calculations"],
+            #[cfg(any(feature = "energy"))]
+            Icon::CalculationPerformance => &["energy"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::CalculationRecalculate => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "energy"))]
+            Icon::CalculationSettings => &["energy"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "reports"))]
+            Icon::CalendarCopyWorkdays => &["calc", "composer", "energy", "geotechniek", "pdf", "planner", "reports"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "reports"))]
+            Icon::CalendarDuplicate => &["calc", "composer", "energy", "geotechniek", "pdf", "planner", "reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CalendarEdit => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::CalendarHolidayAdd => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CalendarManage => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::CalendarNew => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CalendarPromote => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CalendarPromoteMenu => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::CalendarWorkBandAdd => &["energy", "planner"],
+            #[cfg(any(feature = "field"))]
+            Icon::CameraCapture => &["field"],
+            #[cfg(any(feature = "field"))]
+            Icon::CameraOpen => &["field"],
+            #[cfg(any(feature = "field"))]
+            Icon::CameraSwitch => &["field"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CaptureAnnotate => &["planner"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
+            Icon::CaptureClearAnnotations => &["geotechniek", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CaptureOverlay => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CapturePage => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CaptureRegion => &["pdf"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryAi => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryBuilding => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryCode => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryDevops => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryIntegration => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CategoryNetwork => &["composer"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ChatClear => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ChatSend => &["frame"],
+            #[cfg(any(feature = "validator"))]
+            Icon::CloudOpen => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::CloudSave => &["validator"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CommandCatalog => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::CommandTemplates => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CommentsExport => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CommentsImport => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::CommentsSummarize => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CompanyDefault => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CompanyDefaultStatus => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::CompanyLibrary => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CompanyNew => &["planner"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ConstructionCompare => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ConstructionLayerAdd => &["energy"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pile-plan", feature = "planner", feature = "pointcloud"))]
+            Icon::ConstructionLayerDown => &["calc", "composer", "energy", "geotechniek", "heatloss", "pile-plan", "planner", "pointcloud"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ConstructionLayerUp => &["energy"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ConstructionLibrary => &["heatloss"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ConstructionStudsToggle => &["heatloss"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ConstructionTypes => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ContactEmail => &["pdf"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ContentDrag => &["reports"],
+            #[cfg(any(feature = "geotechniek", feature = "planner", feature = "pointcloud"))]
+            Icon::CredentialHide => &["geotechniek", "planner", "pointcloud"],
+            #[cfg(any(feature = "composer", feature = "energy", feature = "pdf", feature = "planner", feature = "validator"))]
+            Icon::CredentialRegenerate => &["composer", "energy", "pdf", "planner", "validator"],
+            #[cfg(any(feature = "composer", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::CredentialShow => &["composer", "geotechniek", "pdf", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "frame"))]
+            Icon::CurtainNew => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::CurtainStick => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::CurtainUnitized => &["frame"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::DataApply => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner"))]
+            Icon::DataApplyNext => &["energy", "heatloss", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::DataChart => &["heatloss", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::DataDiscard => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "calc"))]
+            Icon::DataExcelLink => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::DataExcelRefresh => &["calc", "calculations", "energy", "field", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "composer", feature = "energy"))]
+            Icon::DataPendingChanges => &["composer", "energy"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "reports"))]
+            Icon::DataTable => &["energy", "pdf", "reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::DiagnosticsBenchmark => &["planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner", feature = "reports"))]
+            Icon::DiagnosticsRunBenchmark => &["heatloss", "planner", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DiagnosticsStartupLog => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::DocumentClose => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentCompare => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentCompareSwap => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentCompress => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentEditScannedText => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentEditText => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentEmail => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentFlattenCopy => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentFromClipboardImage => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentHeaderFooter => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentMerge => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentOcr => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentOpenUrl => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentProperties => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentWatermarkAdd => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DocumentWatermarks => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::DocumentsNewOrOpen => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::DocumentsOverview => &["planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawArc => &["pdf"],
+            #[cfg(any(feature = "pdf", feature = "planner"))]
+            Icon::DrawArrow => &["pdf", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::DrawCircle => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawCloud => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawCloudPolyline => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawCoordinate => &["pdf"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::DrawDimension => &["geotechniek"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawEllipse => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawEraser => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawFilledArea => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawFreehand => &["pdf"],
+            #[cfg(any(feature = "pdf", feature = "reports"))]
+            Icon::DrawImage => &["pdf", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawLShape => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawLeader => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::DrawLine => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "energy", feature = "geotechniek", feature = "pdf"))]
+            Icon::DrawNote => &["energy", "geotechniek", "pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawPolygon => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawPolyline => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawQrCode => &["pdf"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::DrawRectangle => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "reports"))]
+            Icon::DrawScheduleTable => &["energy", "pdf", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawSpline => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawSplineArrow => &["pdf"],
+            #[cfg(any(feature = "calculations", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "validator"))]
+            Icon::DrawText => &["calculations", "geotechniek", "heatloss", "pdf", "planner", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawTextbox => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::DrawVectorClip => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::DrawingElevation => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::DrawingFile => &["pointcloud"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::DrawingFrameImport => &["geotechniek"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::DrawingPlan => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::DrawingSection => &["pointcloud"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::DrawingSettings => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::DrawingSheetNew => &["pointcloud"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
+            Icon::EditClearAll => &["geotechniek", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "reports"))]
+            Icon::EditCopy => &["calc", "composer", "energy", "geotechniek", "pdf", "planner", "reports"],
+            #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::EditCut => &["calc", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::EditDelete => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditDeselect => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditDuplicate => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "pdf", feature = "reports"))]
+            Icon::EditPaste => &["calc", "pdf", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditPasteInPlace => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditPasteVectorClip => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::EditRedo => &["calc", "calculations", "frame", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan"))]
+            Icon::EditSelect => &["frame", "geotechniek", "heatloss", "pdf", "pile-plan"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditSelectAll => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::EditSelectText => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::EditUndo => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyBiomass => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyChp => &["energy"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::EnergyCollectiveHotWater => &["energy", "planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::EnergyElectricGenerator => &["energy", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyElectricStorage => &["energy"],
+            #[cfg(any(feature = "field"))]
+            Icon::EnergyFetchLabel => &["field"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyFiredGenerator => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyHeatNetwork => &["energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::EnergyHeatPump => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyHeatingMeasure => &["energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::EnergyHotWaterMeasure => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnergyNoSystem => &["energy"],
+            #[cfg(any(feature = "composer", feature = "energy"))]
+            Icon::EnergyPvMeasure => &["composer", "energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::EnergyVentilationMeasure => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::EnergyWarmAir => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::EnvelopeFacadeMeasure => &["energy", "planner"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::EnvelopeFloorMeasure => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::EnvelopeRoofMeasure => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EnvelopeWindowMeasure => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::EvidenceFile => &["energy"],
+            #[cfg(any(feature = "energy", feature = "pdf"))]
+            Icon::EvidencePhoto => &["energy", "pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::EvidenceUnlink => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExportCad => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExportIfcReport => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExportPageImages => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExportPdfx => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExportRasterPdf => &["pdf"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ExtensionExporter => &["calc"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionFont => &["planner"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ExtensionImporter => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
+            Icon::ExtensionInstallFile => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "pointcloud", "validator"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ExtensionItem => &["calc"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ExtensionReinstallFile => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionRuntimeBrowser => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionRuntimeDesktop => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::ExtensionUninstall => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "calc", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "pointcloud"))]
+            Icon::ExtensionsManage => &["calc", "geotechniek", "pdf", "planner", "pointcloud"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::FeedbackAttachImages => &["calc", "calculations", "energy", "field", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "reports"))]
+            Icon::FeedbackGithubIssue => &["reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldButton => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldCheckbox => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldCombo => &["pdf"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldDashboard => &["field"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldFloorplans => &["field"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldHandovers => &["field"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldInspections => &["field"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldList => &["pdf"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldProject => &["field"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldRadio => &["pdf"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldSurvey => &["field"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FieldText => &["pdf"],
+            #[cfg(any(feature = "field"))]
+            Icon::FieldTicketAdd => &["field"],
+            #[cfg(any(feature = "reports"))]
+            Icon::FileDownload => &["reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::FileExamples => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::FileExport => &["calc", "calculations", "energy", "field", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::FileExportOptions => &["calc", "calculations", "energy", "field", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FileHostLibrary => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
+            Icon::FileImport => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FileListAdd => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "geotechniek", feature = "reports", feature = "validator"))]
+            Icon::FileLocal => &["calc", "geotechniek", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "reports", feature = "validator"))]
+            Icon::FileNew => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "planner", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::FileOpen => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FilePlaceAdd => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FilePlaces => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::FilePrint => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FileReveal => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::FileSave => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "reports", feature = "validator"))]
+            Icon::FileSaveAs => &["calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::FileStructure => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::FileTypeIfc => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::FileTypeOther => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::FileTypeProject => &["pile-plan"],
+            #[cfg(any(feature = "composer", feature = "energy", feature = "pdf", feature = "planner", feature = "validator"))]
+            Icon::FolderSync => &["composer", "energy", "pdf", "planner", "validator"],
+            #[cfg(any(feature = "planner", feature = "reports"))]
+            Icon::FormFieldAdd => &["planner", "reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::FormFieldGroup => &["reports"],
+            #[cfg(any(feature = "calc", feature = "pdf", feature = "reports"))]
+            Icon::FormatAlignCenter => &["calc", "pdf", "reports"],
+            #[cfg(any(feature = "calc", feature = "pdf", feature = "reports"))]
+            Icon::FormatAlignLeft => &["calc", "pdf", "reports"],
+            #[cfg(any(feature = "calc", feature = "pdf", feature = "reports"))]
+            Icon::FormatAlignRight => &["calc", "pdf", "reports"],
+            #[cfg(any(feature = "calc", feature = "pdf"))]
+            Icon::FormatBold => &["calc", "pdf"],
+            #[cfg(any(feature = "calc"))]
+            Icon::FormatClear => &["calc"],
+            #[cfg(any(feature = "planner"))]
+            Icon::FormatColor => &["planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FormatCustomColor => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::FormatDecimalsDecrease => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "calc"))]
+            Icon::FormatDecimalsIncrease => &["calc"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FormatFillColor => &["pdf"],
+            #[cfg(any(feature = "calc"))]
+            Icon::FormatFontDecrease => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::FormatFontIncrease => &["calc"],
+            #[cfg(any(feature = "calc", feature = "pdf"))]
+            Icon::FormatItalic => &["calc", "pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FormatNoColor => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FormatStrokeColor => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::FormatUnderline => &["pdf"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCalculation => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCellDoor => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCellFixed => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCellPanel => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCellSliding => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCellTurnTilt => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCertification => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCircularity => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCnc => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameColumnAdd => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameCombination => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameEditor => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameEnergy => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameLayout => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNew => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewDoor => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewDouble => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewFrench => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewLiftSlide => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewPivot => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewSliding => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewTopHung => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameNewTurnTilt => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FramePlausibility => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameProcurement => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameProduction => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameQuotation => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameRowAdd => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::FrameSchedule => &["frame"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::GeoBagBuildings => &["pointcloud"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::GeoBore => &["geotechniek"],
+            #[cfg(any(feature = "reports"))]
+            Icon::GeoCadastral => &["reports"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::GeoCoordinateTag => &["geotechniek"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::GeoFetchBuildings => &["pointcloud"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::GeoQuoteRequest => &["geotechniek"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::GeoSondering => &["geotechniek"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::GeoSoundingGrid => &["geotechniek"],
+            #[cfg(any(feature = "composer"))]
+            Icon::GitBranches => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::GitCommit => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::GitInit => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::GitIssue => &["composer"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::GitPush => &["composer", "planner"],
+            #[cfg(any(feature = "composer"))]
+            Icon::GitRepository => &["composer"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::GitStageAll => &["calculations", "composer", "energy", "heatloss", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::GridEndCouple => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::GridEndDecouple => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::GuideCompact => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::GuideTutorialStart => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::GuideTutorials => &["energy", "planner"],
+            #[cfg(any(feature = "energy", feature = "pile-plan", feature = "planner"))]
+            Icon::HelpContextHint => &["energy", "pile-plan", "planner"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::HooksManage => &["composer", "planner"],
+            #[cfg(any(feature = "frame"))]
+            Icon::IfcCompareFiles => &["frame"],
+            #[cfg(any(feature = "calc", feature = "calculations"))]
+            Icon::IfcExport => &["calc", "calculations"],
+            #[cfg(any(feature = "calculations", feature = "frame", feature = "pile-plan"))]
+            Icon::IfcImport => &["calculations", "frame", "pile-plan"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::IfcReconstructionWorkspace => &["heatloss"],
+            #[cfg(any(feature = "frame"))]
+            Icon::IfcRoundtripCompare => &["frame"],
+            #[cfg(any(feature = "calculations", feature = "energy", feature = "reports", feature = "validator"))]
+            Icon::IfcValidate => &["calculations", "energy", "reports", "validator"],
+            #[cfg(any(feature = "energy", feature = "frame", feature = "heatloss"))]
+            Icon::IfcWorkspace => &["energy", "frame", "heatloss"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ImageBrightness => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ImageContrast => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ImageCrop => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::ImageEmbeddedEdit => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ImageGrayscale => &["pdf"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ImagePlaceholder => &["validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ImageReset => &["pdf"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::InputConfirmDraft => &["calculations", "composer", "energy", "heatloss", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pile-plan", feature = "planner", feature = "pointcloud"))]
+            Icon::InputTimeDecrease => &["calc", "composer", "energy", "geotechniek", "heatloss", "pile-plan", "planner", "pointcloud"],
+            #[cfg(any(feature = "planner"))]
+            Icon::InputTimeIncrease => &["planner"],
+            #[cfg(any(feature = "field"))]
+            Icon::IntegrationManage => &["field"],
+            #[cfg(any(feature = "validator"))]
+            Icon::IntegrationPlatformSync => &["validator"],
+            #[cfg(any(feature = "frame"))]
+            Icon::IntegrationSendModel => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::IntegrationTestConnection => &["frame"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LayerAdd => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LayerAssignSelection => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LayerLower => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LayerRaise => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutCrew => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutCritical => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutEquipment => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutFilter => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutFlag => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutIdentity => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::LayoutManage => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutMilestone => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutPeriod => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutResources => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutStar => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutTaskTree => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LayoutTools => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LibraryLinkRecognized => &["planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LineReverse => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LineToMeasure => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LineToPolygon => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LineToPolyline => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LinkExportList => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LinkLocate => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LinkOpenExternal => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::LinkOpenInternal => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ListFilter => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ListGroupBy => &["pdf"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ListItemAdd => &["reports"],
+            #[cfg(any(feature = "heatloss", feature = "pdf"))]
+            Icon::ListMoveDown => &["heatloss", "pdf"],
+            #[cfg(any(feature = "heatloss", feature = "pdf"))]
+            Icon::ListMoveUp => &["heatloss", "pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ListSortFields => &["planner"],
+            #[cfg(any(feature = "reports"))]
+            Icon::LocationSelect => &["reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LogPauseView => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::LogResumeView => &["planner"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::MapExportImage => &["geotechniek"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::MaterialLibrary => &["heatloss"],
+            #[cfg(any(feature = "composer"))]
+            Icon::McpManage => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureAddHole => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureAngle => &["pdf"],
+            #[cfg(any(feature = "pdf", feature = "pointcloud"))]
+            Icon::MeasureArea => &["pdf", "pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureCalibrateLine => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureChainAdd => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureChainRemove => &["pdf"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::MeasureCount => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureDiameter => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pointcloud"))]
+            Icon::MeasureDistance => &["geotechniek", "heatloss", "pdf", "pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasurePerimeter => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureRadius => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureScalePage => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureScaleRegion => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureSetScale => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::MeasureTakeoff => &["pdf"],
+            #[cfg(any(feature = "composer"))]
+            Icon::MemoryEntries => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::MemoryIndex => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::MemoryManage => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::MemoryTypes => &["composer"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshClosed => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshFaces => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshReconstruct => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshSurface => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshTerrain => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::MeshWizard => &["pointcloud"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "validator"))]
+            Icon::NavBack => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner"))]
+            Icon::NavForward => &["energy", "heatloss", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner"))]
+            Icon::NavGoTo => &["energy", "heatloss", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::NavHome => &["energy", "heatloss"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pile-plan", feature = "planner"))]
+            Icon::NavNextStep => &["calc", "energy", "heatloss", "pile-plan", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::NavPageMenu => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::NoteHide => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::NoteOpen => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::NoteReply => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::NoteResetPosition => &["pdf"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::ObjectAdd => &["energy", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignBottom => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignCenter => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignLeft => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignMiddle => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignRight => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectAlignTop => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectArrangeOptions => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectBringForward => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectBringFront => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectCollectionCreate => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectCollectionExplode => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeBottom => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeCenter => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeHorizontal => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeLeft => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeMiddle => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeRight => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeTop => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectDistributeVertical => &["pdf"],
+            #[cfg(any(feature = "composer", feature = "energy"))]
+            Icon::ObjectEdit => &["composer", "energy"],
+            #[cfg(any(feature = "composer", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::ObjectHide => &["composer", "geotechniek", "pdf", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ObjectLayers => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::ObjectLock => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectProperties => &["pdf"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::ObjectRename => &["pile-plan"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectResetLocation => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectRotate180 => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectRotateLeft90 => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectRotateRight90 => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectSameSize => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectSendBack => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ObjectSendBackward => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "planner", feature = "pointcloud"))]
+            Icon::ObjectShow => &["geotechniek", "planner", "pointcloud"],
+            #[cfg(any(feature = "pile-plan", feature = "planner"))]
+            Icon::ObjectUnlock => &["pile-plan", "planner"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PackageCatalog => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageCopy => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageCrop => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageCut => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageDelete => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageExtract => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageFirst => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageInsert => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageInsertFile => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageLabels => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageLast => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageMoveDown => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageMoveUp => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageNext => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PagePaste => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PagePrevious => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageProperties => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageReorder => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageReplace => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageResetViewRotation => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageResize => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageRotateLeft => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageRotateRight => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageShift => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageStraighten => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageViewBook => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageViewContinuous => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageViewFacing => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PageViewSingle => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelAiActivity => &["planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelAnnotations => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelAttachments => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelBookmarks => &["pdf"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::PanelDebugTerminal => &["composer", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelDestinations => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelDocumentNavigation => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelElementVisibility => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelFormFields => &["pdf"],
+            #[cfg(any(feature = "validator"))]
+            Icon::PanelLeft => &["validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelLinks => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelMeasurements => &["pdf"],
+            #[cfg(any(feature = "calculations"))]
+            Icon::PanelModelTree => &["calculations"],
+            #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::PanelRight => &["energy", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelSchedules => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelSignatures => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelSymbolLibrary => &["pdf"],
+            #[cfg(any(feature = "pdf", feature = "planner"))]
+            Icon::PanelTags => &["pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelThumbnails => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PanelToolPalette => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::PanelWarnings => &["calc", "energy", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::PermissionAdd => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionAllow => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionBypass => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionDefault => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionDeny => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionEdits => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionManage => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PermissionPlan => &["composer"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileColumns => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileCombined => &["pile-plan"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::PileCostSettings => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::PileCptSettings => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan"))]
+            Icon::PileCpts => &["frame", "geotechniek", "heatloss", "pdf", "pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileEncodingConflicts => &["pile-plan"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::PileGroupSettings => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileLegendEdit => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileLegendUsed => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileLoadGroups => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileLoadPoints => &["pile-plan"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::PileLockEdit => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileNew => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileOptimization => &["pile-plan"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::PileTipRegions => &["pile-plan"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningBarColors => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::PlanningBaselineOverlay => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningBaselines => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningCalculate => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::PlanningClearStatusDate => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningCodeTypeAdd => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningCodeValueAdd => &["planner"],
+            #[cfg(any(feature = "planner", feature = "reports"))]
+            Icon::PlanningCustomFieldAdd => &["planner", "reports"],
+            #[cfg(any(feature = "frame"))]
+            Icon::PlanningCutList => &["frame"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDependencyAdd => &["planner"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::PlanningDependencyDrawMode => &["composer", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDriving => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningExternalRelation => &["planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::PlanningFloatBand => &["heatloss", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningGantt => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningInterruptionAdd => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::PlanningInterruptionRemove => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningMoveDate => &["planner"],
+            #[cfg(any(feature = "frame"))]
+            Icon::PlanningProduction => &["frame"],
+            #[cfg(any(feature = "frame", feature = "planner"))]
+            Icon::PlanningProfileNew => &["frame", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressLine => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressMenu => &["planner"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::PlanningRelationsMenu => &["composer", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningRelationsVisible => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningResourceAccent => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningStatusDate => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningStatusDateLine => &["planner"],
+            #[cfg(any(feature = "pdf", feature = "planner"))]
+            Icon::PlanningStructure => &["pdf", "planner"],
+            #[cfg(any(feature = "field"))]
+            Icon::PlanningSync => &["field"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningTracePredecessors => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningTraceSuccessors => &["planner"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudClasses => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudColorClass => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudColorElevation => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudColorIntensity => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudIndexBuild => &["pointcloud"],
+            #[cfg(any(feature = "geotechniek", feature = "pointcloud", feature = "validator"))]
+            Icon::PointcloudLodRefresh => &["geotechniek", "pointcloud", "validator"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudScans => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudSectionDrawing => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudThin => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::PointcloudToDrawing => &["pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PreferencesAnnotations => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PreferencesBehavior => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PreferencesPageDisplay => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::PreferencesPrinting => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::PrinterProperties => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::PrinterVirtualSettings => &["pdf"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud"))]
+            Icon::ProcessCancel => &["energy", "heatloss", "planner", "pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ProductFree => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ProductNoVendorLock => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ProductOpenSource => &["pdf"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ProfileCopyAsNew => &["frame"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ProfileEditor => &["frame"],
+            #[cfg(any(feature = "frame", feature = "planner"))]
+            Icon::ProfileManage => &["frame", "planner"],
+            #[cfg(any(feature = "frame", feature = "planner"))]
+            Icon::ProfileNew => &["frame", "planner"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ProfilePointDelete => &["frame"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ProjectArchive => &["energy"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ProjectArchiveView => &["energy"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::ProjectCompareReference => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss"))]
+            Icon::ProjectFolder => &["calc", "composer", "energy", "geotechniek", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ProjectFolderNew => &["energy"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::ProjectForgetRecent => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "pile-plan"))]
+            Icon::ProjectLibrary => &["energy", "heatloss", "pile-plan"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss"))]
+            Icon::ProjectMoveFolder => &["calc", "composer", "energy", "geotechniek", "heatloss"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ProjectOptionSet => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ProjectProperties => &["calc"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ProjectRecent => &["heatloss"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "planner"))]
+            Icon::ProjectRestore => &["energy", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports"))]
+            Icon::ProjectTrashView => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ProjectVariants => &["calc"],
+            #[cfg(any(feature = "composer", feature = "energy"))]
+            Icon::PromptBuilder => &["composer", "energy"],
+            #[cfg(any(feature = "composer"))]
+            Icon::PromptCatalog => &["composer"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::QuotationMetadata => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::QuotationPaymentTerms => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSectionExtra => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSectionFree => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSectionOptions => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSectionTechnical => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSnapshotDraft => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationSnapshotSent => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationTypePrivate => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationTypeRaw => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::QuotationTypeSimple => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::QuotationWarranties => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::RecentPinToggle => &["pdf"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportAppendixAdd => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportBlockMenu => &["reports"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ReportBranding => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportCalculationBlock => &["reports"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ReportCalculationDocument => &["energy"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportCatalog => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportChapterAdd => &["reports"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::ReportCheckBlock => &["calculations", "composer", "energy", "heatloss", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportColophon => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportCover => &["reports"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::ReportDocument => &["energy", "heatloss"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportGenerate => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportHeadingBlock => &["reports"],
+            #[cfg(any(feature = "pdf", feature = "reports"))]
+            Icon::ReportImageBlock => &["pdf", "reports"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ReportInputDossier => &["energy"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportLandscape => &["calc"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportListBlock => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportMapBlock => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportMoveProject => &["reports"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::ReportOpenViewer => &["geotechniek"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportOptions => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportPageBreak => &["reports"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportPaperSize => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportPortrait => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ReportPrintEntry => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ReportProjectDossier => &["energy"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportProperties => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportRevisionAdd => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportSpacerBlock => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportSpreadsheetBlock => &["reports"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "reports"))]
+            Icon::ReportTableBlock => &["energy", "pdf", "reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ReportTemplate => &["planner"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportTextBlock => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ReportUnlinkProject => &["reports"],
+            #[cfg(any(feature = "calculations", feature = "energy", feature = "reports", feature = "validator"))]
+            Icon::ReportValidate => &["calculations", "energy", "reports", "validator"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewActualCost => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewBuild => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewEstimate => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewIbis => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewMainContract => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewSpecification => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewSubcontract => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReportViewTender => &["calc"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ReportWorkspace => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ResourceAssign => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ResourceAvailabilityStepAdd => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ResourceClearLevel => &["planner"],
+            #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::ResourceDock => &["energy", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "planner", feature = "pointcloud"))]
+            Icon::ResourceLevel => &["planner", "pointcloud"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::ResourceNew => &["energy", "planner"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pile-plan", feature = "planner"))]
+            Icon::ResourceNext => &["calc", "energy", "heatloss", "pile-plan", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "validator"))]
+            Icon::ResourcePrevious => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "validator"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ResourceUnlinkLibrary => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ResourceWorkspace => &["planner"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReviewClearMarks => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReviewHighlightCell => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReviewHighlightRow => &["calc"],
+            #[cfg(any(feature = "calc"))]
+            Icon::ReviewTrackChanges => &["calc"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::RoomSelectFromTag => &["pdf"],
+            #[cfg(any(feature = "composer"))]
+            Icon::SearchClear => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SearchHighlightAll => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SearchNext => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SearchPrevious => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SearchWholeWord => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::SectionBox => &["pointcloud"],
+            #[cfg(any(feature = "validator"))]
+            Icon::SectionClear => &["validator"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::SectionFitSelection => &["pointcloud"],
+            #[cfg(any(feature = "validator"))]
+            Icon::SectionPlaneX => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::SectionPlaneY => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::SectionPlaneZ => &["validator"],
+            #[cfg(any(feature = "geotechniek", feature = "pointcloud", feature = "validator"))]
+            Icon::SectionResetBox => &["geotechniek", "pointcloud", "validator"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::SelectionBox => &["pointcloud"],
+            #[cfg(any(feature = "composer"))]
+            Icon::SelectionMark => &["composer"],
+            #[cfg(any(feature = "composer", feature = "reports", feature = "validator"))]
+            Icon::ServerGpu => &["composer", "reports", "validator"],
+            #[cfg(any(feature = "composer"))]
+            Icon::ServerMetrics => &["composer"],
+            #[cfg(any(feature = "composer", feature = "reports", feature = "validator"))]
+            Icon::ServerStorage => &["composer", "reports", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SessionRestore => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SignatureStatusUnknown => &["pdf"],
+            #[cfg(any(feature = "frame"))]
+            Icon::SnapGrid => &["frame"],
+            #[cfg(any(feature = "installer"))]
+            Icon::SoftwareCatalog => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::SoftwareInstall => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::SoftwareLaunch => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::SoftwareOpenWebtab => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::SoftwareUpdate => &["installer"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "geotechniek", feature = "pdf", feature = "pile-plan"))]
+            Icon::SpreadsheetSheetAdd => &["calc", "calculations", "geotechniek", "pdf", "pile-plan"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::StatsDownloads => &["heatloss", "planner"],
+            #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::StatusAssignmentProtected => &["pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusBridgeLive => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusBridgeOff => &["heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner", feature = "reports"))]
+            Icon::StatusBusy => &["heatloss", "planner", "reports"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::StatusColumnPresent => &["calculations", "composer", "energy", "heatloss", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud"))]
+            Icon::StatusError => &["energy", "heatloss", "planner", "pointcloud"],
+            #[cfg(any(feature = "pile-plan"))]
+            Icon::StatusHidden => &["pile-plan"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::StatusHourData => &["energy", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud"))]
+            Icon::StatusIncomplete => &["energy", "heatloss", "planner", "pointcloud"],
+            #[cfg(any(feature = "speech"))]
+            Icon::StatusInfo => &["speech"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::StatusInstallSizeLarger => &["composer", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::StatusInstallSizeSmaller => &["planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud"))]
+            Icon::StatusLibraryItemDeviated => &["energy", "heatloss", "planner", "pointcloud"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud"))]
+            Icon::StatusLibraryItemMissing => &["energy", "heatloss", "planner", "pointcloud"],
+            #[cfg(any(feature = "planner"))]
+            Icon::StatusLibraryLinked => &["planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner"))]
+            Icon::StatusLibrarySuggestion => &["energy", "heatloss", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::StatusPdfProtected => &["pdf"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::StatusPending => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::StatusProjectCalendar => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::StatusRecordedDates => &["planner"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusResourceOverallocated => &["calc", "energy", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusScheduleLastResult => &["calc", "energy", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusSchedulePreview => &["calc", "energy", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::StatusSignatureSection => &["pdf"],
+            #[cfg(any(feature = "installer"))]
+            Icon::StatusSoftwareInstalled => &["installer"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::StatusStaleResult => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::StatusStructureLocked => &["planner"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "heatloss", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::StatusSuccess => &["calculations", "composer", "energy", "heatloss", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "reports", feature = "validator"))]
+            Icon::StatusUnavailable => &["energy", "heatloss", "planner", "reports", "validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "reports", feature = "validator"))]
+            Icon::StatusUnknown => &["energy", "heatloss", "planner", "reports", "validator"],
+            #[cfg(any(feature = "energy"))]
+            Icon::StatusUnverified => &["energy"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::StatusUpdateAvailable => &["pdf"],
+            #[cfg(any(feature = "installer"))]
+            Icon::StatusVersionUpgrade => &["installer"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::StatusWarning => &["calc", "energy", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::StyleGallery => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::StyleTools => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategoryCustom => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategoryElectric => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategoryKitchen => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategoryNen1414 => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategoryPlumbing => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolCategorySite => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolEditType => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::SymbolLibrarySettings => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolParametricPicker => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::SymbolSystemTypes => &["pdf"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::TableColumnAddMenu => &["energy", "planner"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::TableColumnFilter => &["energy", "pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TableColumnHide => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TableColumns => &["planner"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "planner"))]
+            Icon::TableColumnsReset => &["energy", "pdf", "planner"],
+            #[cfg(any(feature = "reports"))]
+            Icon::TableMergeCells => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::TableRowAdd => &["reports"],
+            #[cfg(any(feature = "pdf", feature = "reports"))]
+            Icon::TableSplitCells => &["pdf", "reports"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pile-plan", feature = "planner"))]
+            Icon::TabsScrollEnd => &["calc", "energy", "heatloss", "pile-plan", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "validator"))]
+            Icon::TabsScrollStart => &["calc", "calculations", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "validator"],
+            #[cfg(any(feature = "energy", feature = "planner"))]
+            Icon::TaskAdd => &["energy", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TaskIndent => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TaskMilestoneMenu => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TaskOutdent => &["planner"],
+            #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::TaskSplitMode => &["calc", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "validator"))]
+            Icon::TeamAdd => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "validator"],
+            #[cfg(any(feature = "composer"))]
+            Icon::TemplateFields => &["composer"],
+            #[cfg(any(feature = "composer", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::TemplatePreview => &["composer", "geotechniek", "pdf", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "composer", feature = "energy"))]
+            Icon::TemplateWorkspace => &["composer", "energy"],
+            #[cfg(any(feature = "composer", feature = "planner"))]
+            Icon::TerminalLog => &["composer", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ThemeDark => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ThemeLight => &["pdf"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ThermalDoor => &["heatloss"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::ThermalImportSource => &["heatloss", "planner"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ThermalModeller => &["heatloss"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ThermalOpenings => &["heatloss"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::ThermalOverheating => &["heatloss", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::ThermalOverheatingQuick => &["heatloss", "planner"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::ThermalResults => &["heatloss", "planner"],
+            #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ThermalRoomSplit => &["calc", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ThermalRoomVentilation => &["heatloss"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "pile-plan"))]
+            Icon::ThermalRooms => &["energy", "heatloss", "pile-plan"],
+            #[cfg(any(feature = "heatloss", feature = "planner"))]
+            Icon::ThermalSummary => &["heatloss", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "pile-plan"))]
+            Icon::ThermalWindow => &["energy", "heatloss", "pile-plan"],
+            #[cfg(any(feature = "heatloss", feature = "pdf"))]
+            Icon::ToolAngle => &["heatloss", "pdf"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ToolDoorGap => &["heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ToolHeatPumpSizing => &["energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::ToolRainwater => &["energy", "heatloss"],
+            #[cfg(any(feature = "heatloss"))]
+            Icon::ToolRamp => &["heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ToolThermalBridge => &["energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::ToolThermalExpansion => &["energy", "heatloss"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ToolUvalue => &["energy"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "heatloss", feature = "pdf", feature = "planner"))]
+            Icon::ToolUwWindow => &["energy", "field", "heatloss", "pdf", "planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::ToolVentilationBalance => &["energy", "heatloss"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryAi => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryBim => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryCad => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryCalculatie => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryConstructief => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryDocumenten => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryEnergie => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryGeotechniek => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryGis => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryPlanning => &["installer"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ToolsCategoryVeld => &["installer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformArray => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformBreak => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformChamfer => &["pdf"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::TransformCornerJoin => &["geotechniek"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformExplode => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::TransformExtend => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformFillet => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformFlipVertical => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformJoin => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::TransformLengthAxis => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "geotechniek"))]
+            Icon::TransformMirror => &["geotechniek"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "pointcloud"))]
+            Icon::TransformMove => &["geotechniek", "pdf", "pointcloud"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::TransformOffset => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::TransformRotate => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformScale => &["pdf"],
+            #[cfg(any(feature = "pdf", feature = "reports"))]
+            Icon::TransformSplit => &["pdf", "reports"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::TransformStretch => &["pdf"],
+            #[cfg(any(feature = "geotechniek", feature = "pdf"))]
+            Icon::TransformTrim => &["geotechniek", "pdf"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pile-plan", feature = "planner", feature = "pointcloud"))]
+            Icon::TreeCollapse => &["calc", "composer", "energy", "geotechniek", "heatloss", "pile-plan", "planner", "pointcloud"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pile-plan", feature = "planner", feature = "pointcloud"))]
+            Icon::TreeCollapseLevel => &["calc", "composer", "energy", "geotechniek", "heatloss", "pile-plan", "planner", "pointcloud"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TreeCollapseScope => &["planner"],
+            #[cfg(any(feature = "calc", feature = "energy", feature = "heatloss", feature = "pile-plan", feature = "planner"))]
+            Icon::TreeExpand => &["calc", "energy", "heatloss", "pile-plan", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::TreeExpandScope => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "pdf", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::UiAbout => &["calc", "calculations", "pdf", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::UiCheckUpdates => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::UiClose => &["calc", "calculations", "composer", "energy", "field", "geotechniek", "heatloss", "pdf", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "reports"))]
+            Icon::UiDropdown => &["reports"],
+            #[cfg(any(feature = "composer"))]
+            Icon::UiFeedback => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::UiFileAssociations => &["pdf"],
+            #[cfg(any(feature = "validator"))]
+            Icon::UiFileMenu => &["validator"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "planner", feature = "reports", feature = "validator"))]
+            Icon::UiHelp => &["energy", "heatloss", "planner", "reports", "validator"],
+            #[cfg(any(feature = "field"))]
+            Icon::UiLanguage => &["field"],
+            #[cfg(any(feature = "energy"))]
+            Icon::UiMore => &["energy"],
+            #[cfg(any(feature = "composer", feature = "energy", feature = "pdf", feature = "planner", feature = "validator"))]
+            Icon::UiRefresh => &["composer", "energy", "pdf", "planner", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "composer", feature = "energy", feature = "frame", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::UiSettings => &["calc", "calculations", "composer", "energy", "frame", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "reports", "speech", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::UiShortcuts => &["pdf"],
+            #[cfg(any(feature = "energy"))]
+            Icon::UiTools => &["energy"],
+            #[cfg(any(feature = "planner"))]
+            Icon::UiTour => &["planner"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "pdf", feature = "reports", feature = "speech", feature = "validator"))]
+            Icon::UiWhatsNew => &["calc", "calculations", "pdf", "reports", "speech", "validator"],
+            #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "field", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "planner", feature = "pointcloud", feature = "validator"))]
+            Icon::UpdateInstall => &["calc", "calculations", "energy", "field", "geotechniek", "heatloss", "pdf", "pile-plan", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::UpdatePreviousDownload => &["pdf"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ValidationClearHighlights => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ValidationHighlightFailures => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ValidationReset => &["validator"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ValidationSelectSpecification => &["validator"],
+            #[cfg(any(feature = "frame"))]
+            Icon::ValidationWorkspace => &["frame"],
+            #[cfg(any(feature = "calculations", feature = "energy"))]
+            Icon::VentilationBalanced => &["calculations", "energy"],
+            #[cfg(any(feature = "calculations", feature = "energy"))]
+            Icon::VentilationExtract => &["calculations", "energy"],
+            #[cfg(any(feature = "energy", feature = "heatloss"))]
+            Icon::VentilationNatural => &["energy", "heatloss"],
+            #[cfg(any(feature = "calculations", feature = "energy"))]
+            Icon::VentilationSupply => &["calculations", "energy"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewActualSize => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewBack => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewBottom => &["pointcloud"],
+            #[cfg(any(feature = "energy"))]
+            Icon::ViewCards => &["energy"],
+            #[cfg(any(feature = "geotechniek", feature = "pointcloud", feature = "validator"))]
+            Icon::ViewFit => &["geotechniek", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewFitHeight => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewFitPage => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewFitSelection => &["pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewFitWidth => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewFront => &["pointcloud"],
+            #[cfg(any(feature = "pdf", feature = "validator"))]
+            Icon::ViewFullscreen => &["pdf", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewFullscreenExit => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ViewGanttSplit => &["planner"],
+            #[cfg(any(feature = "energy", feature = "heatloss", feature = "pile-plan"))]
+            Icon::ViewGrid => &["energy", "heatloss", "pile-plan"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewIsometric => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewLeft => &["pointcloud"],
+            #[cfg(any(feature = "energy", feature = "reports"))]
+            Icon::ViewList => &["energy", "reports"],
+            #[cfg(any(feature = "geotechniek", feature = "planner"))]
+            Icon::ViewMinimap => &["geotechniek", "planner"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ViewOrbit => &["validator"],
+            #[cfg(any(feature = "heatloss", feature = "pdf", feature = "pointcloud", feature = "validator"))]
+            Icon::ViewPan => &["heatloss", "pdf", "pointcloud", "validator"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewRememberReading => &["pdf"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ViewReportEditor => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ViewReportJson => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ViewReportPreview => &["reports"],
+            #[cfg(any(feature = "reports"))]
+            Icon::ViewReportSplit => &["reports"],
+            #[cfg(any(feature = "validator"))]
+            Icon::ViewResetCamera => &["validator"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewRight => &["pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewRotateLeft => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewRotateRight => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewSaved => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewSavedList => &["pointcloud"],
+            #[cfg(any(feature = "energy", feature = "pdf", feature = "pile-plan", feature = "planner"))]
+            Icon::ViewSearch => &["energy", "pdf", "pile-plan", "planner"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewShowKeystrokes => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewThinLines => &["pdf"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewTop => &["pointcloud"],
+            #[cfg(any(feature = "pointcloud"))]
+            Icon::ViewUpdateSaved => &["pointcloud"],
+            #[cfg(any(feature = "installer"))]
+            Icon::ViewWebReload => &["installer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewZoomDefault => &["pdf"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "frame", feature = "pdf", feature = "planner", feature = "pointcloud"))]
+            Icon::ViewZoomIn => &["energy", "field", "frame", "pdf", "planner", "pointcloud"],
+            #[cfg(any(feature = "energy", feature = "field", feature = "frame", feature = "geotechniek", feature = "pdf", feature = "planner", feature = "pointcloud"))]
+            Icon::ViewZoomOut => &["energy", "field", "frame", "geotechniek", "pdf", "planner", "pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::ViewZoomTool => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::WbsAutoNumber => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::WbsRenumber => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::WbsTemplates => &["planner"],
+            #[cfg(any(feature = "frame"))]
+            Icon::WindowClose => &["frame"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "pdf", feature = "pointcloud"))]
+            Icon::WindowMaximize => &["calculations", "composer", "energy", "field", "geotechniek", "pdf", "pointcloud"],
+            #[cfg(any(feature = "calculations", feature = "composer", feature = "energy", feature = "field", feature = "geotechniek", feature = "pdf", feature = "pointcloud", feature = "speech"))]
+            Icon::WindowMinimize => &["calculations", "composer", "energy", "field", "geotechniek", "pdf", "pointcloud", "speech"],
+            #[cfg(any(feature = "calculations", feature = "geotechniek", feature = "pdf"))]
+            Icon::WindowRestore => &["calculations", "geotechniek", "pdf"],
+            #[cfg(any(feature = "composer"))]
+            Icon::WorkflowSkills => &["composer"],
+            #[cfg(any(feature = "composer"))]
+            Icon::WorkflowUpgrade => &["composer"],
+            #[cfg(any(feature = "calc"))]
+            Icon::WorkspaceDockBack => &["calc"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceDockLeft => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceDockRight => &["pdf"],
+            #[cfg(any(feature = "composer"))]
+            Icon::WorkspaceInstall => &["composer"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceNavigationMenu => &["pdf"],
+            #[cfg(any(feature = "calc", feature = "composer", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pile-plan", feature = "planner", feature = "pointcloud"))]
+            Icon::WorkspaceRibbonCompact => &["calc", "composer", "energy", "geotechniek", "heatloss", "pile-plan", "planner", "pointcloud"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceRibbonToggle => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceSessions => &["pdf"],
+            #[cfg(any(feature = "pdf"))]
+            Icon::WorkspaceToolbarToggle => &["pdf"],
         }
     }
 

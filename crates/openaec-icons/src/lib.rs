@@ -10,7 +10,7 @@
 //! `currentColor` and the accent `var(--icon-accent, currentColor)`.
 mod generated;
 
-pub use generated::{Icon, REVISION};
+pub use generated::{Icon, APPS, REVISION};
 
 use std::collections::HashMap;
 use std::io::Read;
@@ -63,6 +63,7 @@ mod tests {
         for icon in Icon::all() {
             assert_eq!(Icon::from_id(icon.id()), Some(icon));
             assert!(!icon.label().is_empty(), "{}", icon.id());
+            assert!(!icon.apps().is_empty() && icon.apps().iter().all(|a| APPS.contains(a)), "{}", icon.id());
             for (size, folder) in [(Size::S16, "16"), (Size::S24, "24")] {
                 let svg = icon.svg(size);
                 assert!(svg.starts_with("<svg"), "{} {folder}", icon.id());

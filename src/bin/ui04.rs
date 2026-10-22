@@ -1,7 +1,7 @@
 //! UI 0.4 gallery: the components of library 0.4 in the five themes, as a full
 //! application screen and as a component sheet. Run it smoothly with
 //! `cargo run --release --features gpu --bin ui04`; add `-- installer`,
-//! `-- werkstroom` or `-- componenten` to open another view first.
+//! `-- werkstroom`, `-- componenten` or `-- iconen` to open another view first.
 //!
 //! Everything is drawn with `openaec_ui::design`; the icons are Codex's B2 set
 //! from `design/icon-set-b2`. The sample screen is a small working estimate so
@@ -15,7 +15,9 @@ use openaec_ui::design::{font, Look, StatusbarSetting, ThemeId, WorkspaceSetting
 use openaec_ui::fonts;
 use openaec_ui::iced::widget::{column, container, mouse_area, row, scrollable, text, Space};
 use openaec_ui::iced::{self, keyboard, mouse, Alignment, Background, Element, Length, Point, Size, Subscription, Task};
+use openaec_icons::Icon;
 use std::collections::HashSet;
+use std::sync::OnceLock;
 use std::time::{Duration, Instant};
 
 macro_rules! b2 {
@@ -240,6 +242,104 @@ struct ToolState {
     progress: Option<f32>,
 }
 
+/// A filter choice in the icon view: `None` is everything.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+struct Choice {
+    key: Option<&'static str>,
+    label: &'static str,
+}
+
+impl std::fmt::Display for Choice {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.label)
+    }
+}
+
+/// Display names of the app features of `openaec-icons`.
+fn app_name(feature: &str) -> &'static str {
+    match feature {
+        "calc" => "Calc",
+        "calculations" => "Calculations",
+        "composer" => "Workspace Composer",
+        "energy" => "Energy",
+        "field" => "Field",
+        "frame" => "Frame",
+        "geotechniek" => "Geotechniek",
+        "heatloss" => "Heatloss",
+        "installer" => "Installer",
+        "pdf" => "PDF",
+        "pile-plan" => "Pile Plan",
+        "planner" => "Planner",
+        "pointcloud" => "Pointcloud",
+        "reports" => "Reports",
+        "speech" => "Speech",
+        "validator" => "BIM Validator",
+        _ => "Onbekend",
+    }
+}
+
+/// The app choices, alphabetical by display name, after "Alle apps".
+fn app_choices() -> &'static [Choice] {
+    static LIST: OnceLock<Vec<Choice>> = OnceLock::new();
+    LIST.get_or_init(|| {
+        let mut list: Vec<Choice> = openaec_icons::APPS.iter().map(|&a| Choice { key: Some(a), label: app_name(a) }).collect();
+        list.sort_by_key(|c| c.label);
+        list.insert(0, Choice { key: None, label: "Alle apps" });
+        list
+    })
+}
+
+/// The group choices of the B2 set, alphabetical, after "Alle groepen".
+fn group_choices() -> &'static [Choice] {
+    static LIST: OnceLock<Vec<Choice>> = OnceLock::new();
+    LIST.get_or_init(|| {
+        let mut groups: Vec<&'static str> = Icon::all().iter().map(|i| i.group()).collect();
+        groups.sort_unstable();
+        groups.dedup();
+        std::iter::once(Choice { key: None, label: "Alle groepen" }).chain(groups.into_iter().map(|g| Choice { key: Some(g), label: g })).collect()
+    })
+}
+
+/// Icons per page, so a page lays out quickly even with all 945 icons.
+const ICONS_PER_PAGE: usize = 120;
+
+fn icon_grid_id() -> scrollable::Id {
+    scrollable::Id::new("icon-grid")
+}
+
+fn icon_grid_to_top() -> Task<Msg> {
+    scrollable::snap_to(icon_grid_id(), scrollable::RelativeOffset::START)
+}
+
+/// State of the icon view: every B2 icon from the `openaec-icons` crate.
+struct Icons {
+    search: String,
+    app: Choice,
+    group: Choice,
+    large: bool,
+    page: usize,
+    selected: Option<Icon>,
+}
+
+impl Default for Icons {
+    fn default() -> Self {
+        Self { search: String::new(), app: app_choices()[0], group: group_choices()[0], large: true, page: 0, selected: None }
+    }
+}
+
+impl Icons {
+    /// The icons that match the search text, app and group.
+    fn matches(&self) -> Vec<Icon> {
+        let needle = self.search.trim().to_lowercase();
+        Icon::all()
+            .into_iter()
+            .filter(|i| self.app.key.map_or(true, |a| i.apps().contains(&a)))
+            .filter(|i| self.group.key.map_or(true, |g| i.group() == g))
+            .filter(|i| needle.is_empty() || i.label().to_lowercase().contains(&needle) || i.id().contains(&needle) || i.group().to_lowercase().contains(&needle))
+            .collect()
+    }
+}
+
 /// State of the sample installer.
 struct Installer {
     tools: Vec<ToolState>,
@@ -451,6 +551,7 @@ enum View {
     Workflow,
     Installer,
     Components,
+    Icons,
 }
 
 #[derive(Debug, Clone)]
@@ -555,6 +656,12 @@ enum Msg {
     InstDisc(Option<char>),
     InstFeature(usize),
     InstFeatureTick,
+    IconSearch(String),
+    IconApp(Choice),
+    IconGroup(Choice),
+    IconLarge(bool),
+    IconPage(usize),
+    IconSelect(Icon),
     InstRefresh,
     InstRefreshDone,
     InstSelfUpdate,
@@ -698,6 +805,7 @@ struct Gallery {
     file_page: FilePage,
     wf: Workflow,
     inst: Installer,
+    icons: Icons,
     // Component sheet
     check: bool,
     switch: bool,
@@ -772,6 +880,7 @@ impl Default for Gallery {
             file_page: FilePage::Open,
             wf: Workflow::default(),
             inst: Installer::default(),
+            icons: Icons::default(),
             check: true,
             switch: true,
             radio: Some(1),
@@ -1287,6 +1396,27 @@ impl Gallery {
                 self.inst.filter = Filter::All;
             }
             Msg::InstFeature(n) => self.inst.feature = n,
+            Msg::IconSearch(s) => {
+                self.icons.search = s;
+                self.icons.page = 0;
+                return icon_grid_to_top();
+            }
+            Msg::IconApp(c) => {
+                self.icons.app = c;
+                self.icons.page = 0;
+                return icon_grid_to_top();
+            }
+            Msg::IconGroup(c) => {
+                self.icons.group = c;
+                self.icons.page = 0;
+                return icon_grid_to_top();
+            }
+            Msg::IconLarge(on) => self.icons.large = on,
+            Msg::IconPage(n) => {
+                self.icons.page = n;
+                return icon_grid_to_top();
+            }
+            Msg::IconSelect(i) => self.icons.selected = if self.icons.selected == Some(i) { None } else { Some(i) },
             Msg::InstFeatureTick => {
                 // The featured block changes every six seconds, but not while something installs.
                 if self.inst.tools.iter().all(|t| t.progress.is_none()) {
@@ -1391,6 +1521,7 @@ impl Gallery {
             View::Workflow => self.workflow(look),
             View::Installer => self.installer(look),
             View::Components => self.components(look),
+            View::Icons => self.icons(look),
         };
         let mut layers = vec![column![self.toolbar(look), container(body).height(Length::Fill)].height(Length::Fill).into()];
         if let Some(toast) = &self.toast {
@@ -1419,7 +1550,7 @@ impl Gallery {
     /// The gallery's own controls: theme, settings and view. Not part of the design.
     fn toolbar(&self, look: Look) -> Element<'_, Msg> {
         let c = look.color;
-        let views = [(View::Screen, "Lint-app"), (View::Workflow, "Werkstroom-app"), (View::Installer, "Installer"), (View::Components, "Componenten")];
+        let views = [(View::Screen, "Lint-app"), (View::Workflow, "Werkstroom-app"), (View::Installer, "Installer"), (View::Components, "Componenten"), (View::Icons, "Iconen")];
         let mut bar = row![
             text("UI 0.4").size(font::SIZE_PANEL_HEADING).font(fonts::HEADING).color(c.text),
             Space::with_width(12),
@@ -2482,6 +2613,131 @@ impl Gallery {
     }
 
     /// Every component in its states.
+    /// Every B2 icon, loaded from the `openaec-icons` crate as an app would load
+    /// them: search, filter by app or group, and a panel with the icon in use.
+    fn icons(&self, look: Look) -> Element<'_, Msg> {
+        use openaec_icons::Size as IconSize;
+        let c = look.color;
+        let st = &self.icons;
+        let found = st.matches();
+        let pages = found.len().div_ceil(ICONS_PER_PAGE).max(1);
+        let page = st.page.min(pages - 1);
+        let (size, px) = if st.large { (IconSize::S24, 24.0) } else { (IconSize::S16, 16.0) };
+
+        let size_button = |large: bool, label: &'static str| w::button(look, label, if st.large == large { K::Secondary } else { K::Quiet }, D::Compact, None, Some(Msg::IconLarge(large)));
+        let controls = row![
+            container(w::text_field(look, "Zoek op naam, id of groep", &st.search, Some(Msg::IconSearch), D::Compact, None)).width(280),
+            container(w::select(look, app_choices(), Some(st.app), Msg::IconApp, D::Compact)).width(190),
+            container(w::select(look, group_choices(), Some(st.group), Msg::IconGroup, D::Compact)).width(230),
+            row![size_button(false, "16 px"), size_button(true, "24 px")].spacing(4),
+        ]
+        .spacing(8)
+        .align_y(Alignment::Center);
+
+        let grid: Element<'_, Msg> = if found.is_empty() {
+            w::empty_state(look, SEARCH, "Geen iconen gevonden", "Pas de zoekterm of de filters aan.", None)
+        } else {
+            let mut tiles = row![].spacing(8);
+            for &icon in found.iter().skip(page * ICONS_PER_PAGE).take(ICONS_PER_PAGE) {
+                let chosen = st.selected == Some(icon);
+                let label = text(icon.label()).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text).width(Length::Fill).align_x(iced::alignment::Horizontal::Center);
+                let tile = column![
+                    container(w::glyph(icon.svg(size), px, c.text, c.accent_text)).center_x(Length::Fill).center_y(30),
+                    container(label).height(30).width(Length::Fill).clip(true),
+                ]
+                .spacing(4);
+                tiles = tiles.push(
+                    iced::widget::button(tile)
+                        .width(140)
+                        .height(84)
+                        .padding([8, 6])
+                        .on_press(Msg::IconSelect(icon))
+                        .style(move |_, status| t::tile_style(look, status, chosen, openaec_ui::design::radius::MEDIUM)),
+                );
+            }
+            scrollable(container(tiles.wrap()).padding(iced::Padding { right: 12.0, ..Default::default() })).id(icon_grid_id()).height(Length::Fill).into()
+        };
+        let pager = row![
+            w::button(look, "Vorige", K::Secondary, D::Compact, Some(BACK), (page > 0).then(|| Msg::IconPage(page - 1))),
+            w::secondary(look, format!("Pagina {} van {} · {} van {} iconen", page + 1, pages, found.len(), Icon::all().len())),
+            w::button(look, "Volgende", K::Secondary, D::Compact, Some(NEXT), (page + 1 < pages).then(|| Msg::IconPage(page + 1))),
+        ]
+        .spacing(8)
+        .align_y(Alignment::Center);
+        let left = column![
+            column![
+                w::heading(look, "Iconen B2", font::SIZE_PAGE_HEADING),
+                w::secondary(look, format!("Alle iconen van Codex uit de crate openaec-icons, B2-revisie {}. Klik op een icoon voor de details.", openaec_icons::REVISION)),
+            ]
+            .spacing(4),
+            controls,
+            container(grid).height(Length::Fill),
+            pager,
+        ]
+        .spacing(12)
+        .padding(20)
+        .width(Length::Fill)
+        .height(Length::Fill);
+
+        let detail: Element<'_, Msg> = match st.selected {
+            Some(icon) => {
+                let s16 = icon.svg(IconSize::S16);
+                let s24 = icon.svg(IconSize::S24);
+                // Each sample on the workspace colour, at its native size or enlarged.
+                let sample = |source: &'static str, px: f32, accent: iced::Color, caption: &'static str| -> Element<'_, Msg> {
+                    column![
+                        container(w::glyph(source, px, c.workspace_text, accent)).center(64).style(move |_| container::Style {
+                            background: Some(Background::Color(c.workspace)),
+                            border: iced::Border { color: c.border, width: 1.0, radius: openaec_ui::design::radius::MEDIUM.into() },
+                            ..Default::default()
+                        }),
+                        w::mono_label(look, caption),
+                    ]
+                    .spacing(4)
+                    .align_x(Alignment::Center)
+                    .into()
+                };
+                let accent = look.workspace_accent_text;
+                let apps = icon.apps().iter().map(|a| app_name(a)).collect::<Vec<_>>().join(", ");
+                column![
+                    w::heading(look, icon.label(), font::SIZE_DIALOG_HEADING),
+                    text(icon.id()).size(font::SIZE_LABEL).font(fonts::MONO).color(c.text_secondary),
+                    row![sample(s16, 16.0, accent, "16 px"), sample(s24, 24.0, accent, "24 px"), sample(s24, 48.0, accent, "48 px"), sample(s24, 24.0, c.workspace_text, "Eén kleur")].spacing(8),
+                    w::mono_label(look, "In gebruik"),
+                    row![w::button(look, "Opslaan", K::Primary, D::Regular, Some(s16), Some(Msg::Noop)), w::button(look, "Knop", K::Secondary, D::Regular, Some(s16), Some(Msg::Noop))].spacing(8),
+                    row![
+                        w::icon_button(look, s16, 28.0, false, Some(Msg::Noop)),
+                        w::icon_button(look, s16, 28.0, true, Some(Msg::Noop)),
+                        w::icon_button(look, s16, 28.0, false, None),
+                        t::icon_tile(look, s24, 40.0, false),
+                        w::ribbon_large(look, s24, "Lint", false, Some(Msg::Noop)),
+                    ]
+                    .spacing(8)
+                    .align_y(Alignment::Center),
+                    t::info_card(
+                        look,
+                        "Gegevens",
+                        vec![("Groep", icon.group().to_string()), ("Apps", apps), ("In Rust", format!("Icon::{icon:?}")), ("Bron", format!("openaec-icons, revisie {}", openaec_icons::REVISION))],
+                    ),
+                ]
+                .spacing(12)
+                .into()
+            }
+            None => column![
+                w::mono_label(look, "Details"),
+                w::secondary(look, "Kies een icoon. Hier zie je het op 16 en 24 px, vergroot en in één kleur, en in knoppen, het lint en een icoontegel."),
+            ]
+            .spacing(8)
+            .into(),
+        };
+        let panel = container(scrollable(container(detail).padding(16)).height(Length::Fill)).width(340).height(Length::Fill).style(move |_| w::panel_style(look));
+        container(row![left, panel].height(Length::Fill))
+            .width(Length::Fill)
+            .height(Length::Fill)
+            .style(move |_| container::Style { background: Some(Background::Color(c.frame)), ..Default::default() })
+            .into()
+    }
+
     fn components(&self, look: Look) -> Element<'_, Msg> {
         let c = look.color;
         let buttons = column![
@@ -2945,13 +3201,14 @@ fn secondary_note(look: Look, s: &'static str) -> Element<'static, Msg> {
 }
 
 /// The first argument chooses the opening view: `lint` (default), `werkstroom`,
-/// `installer` or `componenten`, so a demo can start where it is needed.
+/// `installer`, `componenten` or `iconen`, so a demo can start where it is needed.
 fn start_view() -> Gallery {
     let mut gallery = Gallery::default();
     match std::env::args().nth(1).as_deref() {
         Some("werkstroom") => gallery.view = View::Workflow,
         Some("installer") => gallery.view = View::Installer,
         Some("componenten") => gallery.view = View::Components,
+        Some("iconen") => gallery.view = View::Icons,
         _ => {}
     }
     gallery
@@ -3078,8 +3335,33 @@ mod tests {
             let _ = g.update(Msg::InstTab(None));
             g.view = View::Components;
             let _ = g.view();
+            g.view = View::Icons;
+            let _ = g.view();
             g.view = View::Screen;
         }
+    }
+
+    #[test]
+    fn icon_view_filters_pages_and_selects() {
+        let mut g = Gallery::default();
+        assert_eq!(g.icons.matches().len(), Icon::all().len());
+        let pdf = *app_choices().iter().find(|c| c.key == Some("pdf")).unwrap();
+        let _ = g.update(Msg::IconApp(pdf));
+        let pdf_count = g.icons.matches().len();
+        assert!(pdf_count > 0 && pdf_count < Icon::all().len());
+        assert!(g.icons.matches().iter().all(|i| i.apps().contains(&"pdf")));
+        let _ = g.update(Msg::IconPage(2));
+        let _ = g.update(Msg::IconSearch("opslaan".into()));
+        assert_eq!(g.icons.page, 0);
+        assert!(g.icons.matches().contains(&Icon::FileSave));
+        let _ = g.update(Msg::IconSelect(Icon::FileSave));
+        assert_eq!(g.icons.selected, Some(Icon::FileSave));
+        let _ = g.update(Msg::IconLarge(false));
+        g.view = View::Icons;
+        let _ = g.view();
+        let _ = g.update(Msg::IconSearch("geen icoon heet zo".into()));
+        assert!(g.icons.matches().is_empty());
+        let _ = g.view();
     }
 
     #[test]
@@ -3231,6 +3513,10 @@ mod tests {
             gallery.view = View::Screen;
             gallery.view = View::Components;
             save(render(&gallery, Size::new(1100.0, 1700.0)), dir.join(format!("componenten-{}.png", theme.key())));
+            gallery.view = View::Icons;
+            gallery.icons.selected = Icon::from_id("file.save");
+            save(render(&gallery, Size::new(1280.0, 800.0)), dir.join(format!("iconen-{}.png", theme.key())));
+            gallery.icons.selected = None;
         }
         gallery.theme = ThemeId::Light;
         gallery.workspace = WorkspaceSetting::Dark;

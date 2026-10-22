@@ -2013,6 +2013,7 @@ name = "openaec-style-repo"
 version = "0.1.0"
 dependencies = [
  "iced_tiny_skia",
+ "openaec-icons",
  "openaec-ui",
  "serde",
  "serde_json",
