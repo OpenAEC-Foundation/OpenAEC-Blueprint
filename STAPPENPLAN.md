@@ -42,7 +42,7 @@ Het volledige overzicht per app, met interface, status in de Style Repo en licen
 | **Tauri + Svelte** | Frame | Ombouwen naar de Rust-UI (besluit). De Rust-kant blijft |
 | **Rust + Iced** | Pointcloud | Rust-bibliotheek 0.4 |
 | **Webapp, React** | BIM Validator | Webpakket |
-| **Installer, Tauri + React** | OpenAEC Installer | Rust-UI, met een eigen wizardlayout |
+| **Installer, Tauri + React** | OpenAEC Installer | Rust-UI. Geen wizard maar een hub in de stijl van open-aec.com: kop met mono-label, filterknoppen met aantallen, ecosysteemkaarten met de screenshots van de tools, installeren en bijwerken met voortgang, en webtools in tabs. Voorbeeld: `cargo run --release --features gpu --bin ui04 -- installer` |
 | **Later** | FEM | Repository gaf een 404. Hier komen we later op terug |
 
 Twaalf apps hebben een lint. Energy, Field, Speech en Workspace Composer hebben een werkstroom.

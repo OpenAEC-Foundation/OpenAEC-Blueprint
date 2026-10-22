@@ -749,7 +749,22 @@ pub fn table<'a, M: Clone + 'a>(
 
 /// An in-page notification: status tint, a 3 px bar, icon, bold word, text and close.
 pub fn banner<'a, M: Clone + 'a>(look: Look, tone: Tone, icon: &'static str, message: &'a str, close_icon: &'static str, on_close: Option<M>) -> Element<'a, M> {
+    banner_with_action(look, tone, icon, message, None, close_icon, on_close)
+}
+
+/// An in-page notification with an action button before the close button,
+/// such as "Nu bijwerken". The bar grows to 40 px to fit a compact button.
+pub fn banner_with_action<'a, M: Clone + 'a>(
+    look: Look,
+    tone: Tone,
+    icon: &'static str,
+    message: &'a str,
+    action: Option<Element<'a, M>>,
+    close_icon: &'static str,
+    on_close: Option<M>,
+) -> Element<'a, M> {
     let c = look.color;
+    let height = if action.is_some() { 40.0 } else { 32.0 };
     let hc = look.high_contrast();
     let fg = tone.color(look);
     let tint = if hc { c.panel } else { tone.tint(look) };
@@ -757,13 +772,17 @@ pub fn banner<'a, M: Clone + 'a>(look: Look, tone: Tone, icon: &'static str, mes
         glyph(icon, 16.0, fg, fg),
         text(tone.word()).size(font::SIZE_BODY).font(fonts::STRONG).color(c.text),
         text(message).size(font::SIZE_BODY).font(fonts::BODY).color(c.text).width(Length::Fill),
-        icon_button(look, close_icon, 20.0, false, on_close),
     ]
     .spacing(8)
     .align_y(Alignment::Center);
+    let content = match action {
+        Some(action) => content.push(action),
+        None => content,
+    }
+    .push(icon_button(look, close_icon, 20.0, false, on_close));
     container(row![bar(fg, 3.0, Length::Fill), container(content).padding([0, 10]).height(Length::Fill).align_y(Vertical::Center).width(Length::Fill)])
         .width(Length::Fill)
-        .height(32)
+        .height(height)
         .style(move |_| container::Style {
             background: fill(tint),
             border: if hc { border(fg, 1.0, 0.0) } else { Border::default() },
@@ -978,6 +997,17 @@ pub struct DocumentTab<'a> {
     pub title: &'a str,
     /// Unsaved changes: a 6 px accent dot.
     pub dirty: bool,
+    /// A fixed tab, such as a catalogue, has no close button.
+    pub pinned: bool,
+}
+
+impl<'a> DocumentTab<'a> {
+    pub fn new(title: &'a str, dirty: bool) -> Self {
+        Self { title, dirty, pinned: false }
+    }
+    pub fn pinned(title: &'a str) -> Self {
+        Self { title, dirty: false, pinned: true }
+    }
 }
 
 /// Document tabs (30 px bar in `docbar`): the active tab takes the workspace colour
@@ -1007,6 +1037,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
         inner = inner.push(text(tab.title).size(font::SIZE_BODY).font(if on { fonts::STRONG } else { fonts::BODY }).color(fg));
         // The 16 px close button is its own button inside the tab.
         let hover_bg = if on { mix(c.workspace_text, 0.12, c.workspace) } else { c.pressed };
+        if !tab.pinned {
         inner = inner.push(
             iced_button(container(glyph(close_icon, 12.0, fg, fg)).center(16))
                 .width(16)
@@ -1020,6 +1051,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
                     shadow: Shadow::default(),
                 }),
         );
+        }
         let workspace = c.workspace;
         let tab = iced_button(inner).height(24).padding([0, 10]).on_press(on_select(i)).style(move |_, status| iced_button::Style {
             background: if on { fill(workspace) } else if status == iced_button::Status::Hovered && !look.high_contrast() { fill(c.hover) } else { None },
