@@ -3,6 +3,7 @@
 //! Use [`run`] and implement [`Application`]. Domain code supplies commands and
 //! content; this crate owns the shell layout, typography, icons and settings.
 pub use iced;
+pub mod design;
 pub mod fonts;
 pub mod icons;
 pub mod ribbon_icons;

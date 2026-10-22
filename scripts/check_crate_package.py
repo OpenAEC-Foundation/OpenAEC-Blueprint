@@ -26,5 +26,5 @@ ribbon_count = int(re.search(r"pub const ALL: \[Self; (\d+)\]", ribbon_source).g
 assert len(ribbon_icons) == ribbon_count
 assert icons <= files and domain_icons <= files and ribbon_icons <= files and fonts <= files
 assert {f"licenses/{name}-OFL.txt" for name in ("Inter", "SpaceGrotesk", "JetBrainsMono")} <= files
-assert {"NOTICE.md", "LICENSE", "README.md", "src/lib.rs"} <= files
+assert {"NOTICE.md", "LICENSE.md", "README.md", "src/lib.rs", "licenses/Style-Book-CC-BY-SA-4.0.txt"} <= files
 print(f"Reusable crate package: {len(files)} files, {core_count} core icons, {len(domain_icons)} domain SVGs, {ribbon_count} typed ribbon icons, 6 fonts, 3 font notices, no research assets")

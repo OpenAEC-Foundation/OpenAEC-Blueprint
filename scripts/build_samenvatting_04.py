@@ -59,7 +59,7 @@ for fname, title, review, sub in SPECS:
 OPEN = [
     ("Iconen (2.2)", "De iconen van Codex, stijl B Constructief, worden de definitieve set. De voorbeeldpagina's gebruiken al de iconen die er zijn. Alleen voor functies die nog ontbreken, staat tijdelijk een oud icoon uit het prototype.",
      '<a href="../icon-set-b2/index.html">Eerste serie</a> · <a href="../icon-set-b2/series-2.html">Tweede serie</a>'),
-    ("Licentie", "Voorstel: LGPL-3.0 voor de bibliotheek, zoals de OpenAEC Foundation voor al zijn repositories wil. De lettertypen houden hun OFL-licentie. Wacht op bevestiging.", ""),
+    ("Licentie van de iconen", "De bibliotheek valt onder LGPL-3.0-only (besloten 2026-10-22). Voor de iconen van Codex volgt de keuze nog: LGPL of een aparte iconenlicentie.", ""),
     ("Field op tablet of telefoon", "Energy en Field gaan naar de Rust-UI, net als PDF, Speech, Composer en Frame. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket.", ""),
 ]
 open_html = "".join(f'<li><b>{html.escape(t)}</b><span>{d}</span>{(" <span class=\"lk\">" + lk + "</span>") if lk else ""}</li>' for t, d, lk in OPEN)

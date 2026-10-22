@@ -79,19 +79,23 @@ Gestart op 2026-10-16. Werkplan en voortgang staan in [`design/ontwerp-0.4/READM
 
 ### Fase 3: één bron
 
-- Kies de plek van de bron: Style Book, `openaec-ui` of de Style Repo.
-- Leg tokens, iconen en tegelmaten vast in een formaat dat Rust en het web kunnen lezen.
-- Schrijf generators voor Rust en CSS.
+- De bron staat in de Style Repo: [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) (besloten 2026-10-16).
+- **Klaar (2026-10-22):** [`scripts/generate_tokens_04.py`](scripts/generate_tokens_04.py) maakt daaruit de Rust-module `openaec_ui::design` en [`web/openaec-tokens.css`](web/openaec-tokens.css). Met `--check` controleert het script of beide actueel zijn.
+- Nog te doen: de iconen van Codex en de tegelmaten in dezelfde bron opnemen.
 - **Resultaat:** één wijziging in de bron komt automatisch in alle uitvoeringen.
 
 ### Fase 4: uitvoeringen per techniek
 
 - **Rust-bibliotheek 0.4**, vanaf nul gebouwd. Architectuur, fundament, componenten, schil, layouts, documentatie en release. Het Rust-prototype dient als referentie.
+  - **Klaar (2026-10-22):** fundament, componenten, tegels en kaarten, en de navigatie van werkstroom-apps in `openaec_ui::design`. De galerij `cargo run --release --features gpu --bin ui04` toont een lint-app met startscherm, Bestand-scherm en instellingen, en een werkstroom-app met zijbalk of stappen.
+  - **Klaar (2026-10-22):** de eigen titelbalk met werkende vensterknoppen (slepen, dubbelklikken, minimaliseren, maximaliseren, sluiten met de vraag om op te slaan), versleepbare panelen en menu's (rechtermuisknop op tabel, boom en documenttabs, en het menu in de titelbalk).
+  - Nog te doen: de iconen van Codex als vaste set in de crate, en de eerste app die de bibliotheek echt gebruikt.
 - **Webpakket.** CSS en iconen die in elk webframework werken, met componenten voor React. Dit bouwt voort op het Style Book of vervangt het, afhankelijk van fase 3.
 - **Resultaat:** per techniek een uitvoering met een voorbeeld en een korte handleiding.
 
 ### Fase 5: apps harmoniseren
 
+- **Testversie van de hele nieuwe UI.** Zodra de bibliotheek 0.4 en de iconen klaar zijn, bouwen we één app als testversie met de volledige nieuwe UI: thema's, lint, panelen, tegels, startscherm, instellingen en iconen. Die beoordeelt de gebruiker als geheel voordat de andere apps volgen. Welke app dat wordt, kiest de gebruiker later; Open Calc Studio is niet vanzelfsprekend de eerste.
 - **Proefproject:** Open Calc Studio ombouwen naar de Rust-UI. Wat ontbreekt, gaat terug naar de bibliotheek.
 - **Daarna per groep**, in deze volgorde:
   1. Pointcloud, die al dezelfde techniek gebruikt;
@@ -128,9 +132,10 @@ Op 2026-10-16 door de gebruiker, die over het ontwerp beslist.
 5. **Thema's, ontwerpwerkwijze en Open FEM Studio** zijn eerder besloten: vijf thema's, ontwerpen in de Style Repo, en FEM komt later.
 6. **Energy en Field gaan naar de Rust-UI.** Energy heeft al een Rust-rekenkern. Voor Field is dat de keuze van Claude, op verzoek van de gebruiker.
 7. **PDF, Speech, Composer en Frame gaan naar de Rust-UI.** Alleen hun scherm in Solid of Svelte wordt vervangen. De Rust-kant blijft.
+8. **De bibliotheek valt onder LGPL-3.0-only** (2026-10-22), zoals de `repo-cleaner` van de Foundation voorschrijft. De makers van de bestaande code stemmen in. De lettertypen houden OFL, het microfoonicoon Apache-2.0 en de oude Style Book-vectoren van het prototype CC BY-SA 4.0; zie `crates/openaec-ui/NOTICE.md`. De Style Repo-app en het ontwerpmateriaal in `design/` houden hun huidige licentie.
 
 ## Nog open
 
-1. **Licentie.** Voorstel: LGPL-3.0 voor de bibliotheek, zoals de OpenAEC Foundation voor al zijn repositories wil (zie `repo-cleaner`). De lettertypen houden hun OFL-licentie. Wacht op bevestiging.
+1. **Licentie van de iconen van Codex.** Onder LGPL of een aparte iconenlicentie; de gebruiker controleert eerst of ze nieuw getekend zijn.
 2. **Field op tablet of telefoon.** Field gaat naar de Rust-UI, die voor desktop is. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket.
 3. **Eigenaarschap.** Wie is eigenaar van het ontwerp, van elke uitvoering en van elke app?

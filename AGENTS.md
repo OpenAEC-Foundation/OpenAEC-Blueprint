@@ -43,6 +43,7 @@ python scripts/check_icon_adoptions.py
 python scripts/check_portable_ui.py
 python scripts/check_crate_package.py
 python scripts/check_tokens_04.py
+python scripts/generate_tokens_04.py --check
 cargo test
 cargo package -p openaec-ui
 ```

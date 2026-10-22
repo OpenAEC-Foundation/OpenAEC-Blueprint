@@ -11,6 +11,12 @@ publish = false
 members = ["crates/openaec-ui"]
 resolver = "2"
 
+[features]
+# GPU rendering for interactive use: `cargo run --release --features gpu --bin ui04`.
+# iced falls back to the software renderer when no GPU is available. Tests and
+# review renders use the software renderer, so run them without this feature.
+gpu = ["openaec-ui/gpu-renderer"]
+
 [dependencies]
 openaec-ui = { path = "crates/openaec-ui" }
 serde = { version = "1", features = ["derive"] }
