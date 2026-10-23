@@ -214,6 +214,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-23 **Claude**: issue #22 af: nieuw `design::shortcuts` (`Keymap` met alleen de gewijzigde sneltoetsen, als JSON per app in `%APPDATA%\OpenAEC\<app>\sneltoetsen.json`; `Editor` en `page` voor de pagina Sneltoetsen: zoeken, opnemen door te drukken, Backspace wist, Esc stopt, navigatietoetsen en losse letters geweigerd, conflictvraag met Wisselen, terug naar standaard per opdracht of alles). Galerij: tabblad Sneltoetsen in Instellingen, bewaart in `%APPDATA%\OpenAEC\ui04\`; tests schrijven nooit een bestand. Exporteren en importeren nog niet (vraagt een bestandsdialoog).
 
 - 2026-10-23 **Claude**: issue #9 af: nieuw `design::command` (`Command` met id, label, iconen, `Shortcut`, soort actie/aan-uit/modus/dialoog, `find`, `conflicts`, en tekenfuncties voor lint, menu, iconknop en knop) en `keyboard::presses`. Galerij `ui04` heeft één lijst `commands()` waar lint, contextmenu's, titelbalk en sneltoetsen uit lezen; alleen Escape en Enter blijven aparte toetsen. Tests in `command.rs` en `ui04`. Vondst voor #14: in iced 0.14 kent een knop zijn toestand pas na een eerste event, dus testrenders zonder events tekenen alle knoppen grijs; de renderhulp moet eerst een RedrawRequested sturen.
 

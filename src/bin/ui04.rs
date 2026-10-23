@@ -10,6 +10,7 @@
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::focus;
+use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles::{self as t, RecentFile};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, TableColumn, Tone};
 use openaec_ui::design::workflow::{self as wf, Navigation, Section};
@@ -105,6 +106,18 @@ const S_BUILDING: &str = b2!("16", "building.housing");
 const S_SHELL: &str = b2!("16", "thermal.window");
 const S_SYSTEMS: &str = b2!("16", "energy.heat-pump");
 const S_RESULT: &str = b2!("16", "thermal.results");
+
+/// The groups of the shortcuts page, by command id prefix.
+const COMMAND_GROUPS: [(&str, &str); 8] = [
+    ("file", "Bestand"),
+    ("doc", "Document"),
+    ("edit", "Bewerken"),
+    ("insert", "Invoegen"),
+    ("view", "Weergave"),
+    ("calc", "Berekenen"),
+    ("report", "Rapport"),
+    ("app", "Programma"),
+];
 
 const TABS: [&str; 5] = ["Start", "Invoegen", "Berekenen", "Weergave", "Rapport"];
 const UNITS: [&str; 5] = ["st", "m", "m²", "m³", "kg"];
@@ -546,6 +559,13 @@ enum FilePage {
     New,
 }
 
+/// The tabs of the settings dialog.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum SettingsPage {
+    General,
+    Shortcuts,
+}
+
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
 enum View {
     #[default]
@@ -679,6 +699,8 @@ enum Msg {
     Noop,
     Navigate(openaec_ui::keyboard::Navigation),
     Key(openaec_ui::keyboard::KeyPress),
+    Shortcuts(sc::Message),
+    SettingsPage(SettingsPage),
 }
 
 /// State of the sample workflow app: an energy label in five sections.
@@ -810,6 +832,12 @@ struct Gallery {
     wf: Workflow,
     inst: Installer,
     icons: Icons,
+    /// The shortcuts someone set (issue #22), and the page that changes them.
+    keymap: Keymap,
+    shortcuts: sc::Editor,
+    /// Where the keymap is saved; `None` in tests, so they never write a file.
+    keymap_path: Option<std::path::PathBuf>,
+    settings_page: SettingsPage,
     // Component sheet
     check: bool,
     switch: bool,
@@ -885,6 +913,10 @@ impl Default for Gallery {
             wf: Workflow::default(),
             inst: Installer::default(),
             icons: Icons::default(),
+            keymap: Keymap::default(),
+            shortcuts: sc::Editor::default(),
+            keymap_path: None,
+            settings_page: SettingsPage::General,
             check: true,
             switch: true,
             radio: Some(1),
@@ -1156,12 +1188,31 @@ impl Gallery {
             Msg::Dialog(d) => {
                 let opening = d.is_some() && self.dialog.is_none();
                 self.dialog = d;
+                if d.is_none() {
+                    // Closing the dialog stops any recording on the shortcuts page.
+                    self.shortcuts = sc::Editor::default();
+                }
                 // The screen behind is inert, so the first step lands in the dialog.
                 if opening {
                     return openaec_ui::keyboard::navigate(openaec_ui::keyboard::Navigation::Next);
                 }
             }
             Msg::Navigate(step) => return openaec_ui::keyboard::navigate(step),
+            Msg::Key(press) if self.shortcuts.recording() => return self.update(Msg::Shortcuts(sc::Message::Key(press))),
+            Msg::Shortcuts(message) => {
+                let defaults = self.default_commands();
+                if self.shortcuts.update(message, &mut self.keymap, &defaults) {
+                    if let Some(path) = &self.keymap_path {
+                        if let Err(error) = self.keymap.save(path) {
+                            return self.toast(Tone::Error, "Sneltoetsen niet opgeslagen", &error.to_string());
+                        }
+                    }
+                }
+            }
+            Msg::SettingsPage(page) => {
+                self.settings_page = page;
+                self.shortcuts = sc::Editor::default();
+            }
             Msg::Key(press) => {
                 use keyboard::key::Named;
                 // Escape and Enter belong to dialogs and menus; every other key is a command.
@@ -1935,6 +1986,13 @@ impl Gallery {
     /// context menus, the title bar and the shortcuts all read from this list, so
     /// a label, state or key never differs between them.
     fn commands(&self) -> Vec<Command<Msg>> {
+        let mut list = self.default_commands();
+        self.keymap.apply(&mut list);
+        list
+    }
+
+    /// The commands with the app's own shortcuts, before the keymap.
+    fn default_commands(&self) -> Vec<Command<Msg>> {
         let selection = self.selected.is_some();
         let doc = self.docs.get(self.active).map(|d| d.kind);
         vec![
@@ -2587,7 +2645,13 @@ impl Gallery {
                         .push(container(w::checkbox(look, "Laatste project direct openen", self.skip_start, Some(Msg::SkipStart))).padding([4, 8]))
                         .push(container(w::secondary(look, "Sla het startscherm over. Kies Herstart bovenaan om het te zien werken.")).padding([0, 8]))
                 };
-                w::dialog(look, "Instellingen", CLOSE, close, content.into(), None, vec![w::button(look, "Sluiten", K::Primary, D::Regular, None, Some(Msg::Dialog(None)))], true)
+                let tab = |page, label| w::button(look, label, if self.settings_page == page { K::Secondary } else { K::Quiet }, D::Compact, None, Some(Msg::SettingsPage(page)));
+                let tabs = row![tab(SettingsPage::General, "Algemeen"), tab(SettingsPage::Shortcuts, "Sneltoetsen")].spacing(4);
+                let body: Element<'_, Msg> = match self.settings_page {
+                    SettingsPage::General => content.into(),
+                    SettingsPage::Shortcuts => sc::page(look, &self.shortcuts, &self.commands(), &self.keymap, &COMMAND_GROUPS, Msg::Shortcuts),
+                };
+                w::dialog(look, "Instellingen", CLOSE, close, column![tabs, body].spacing(14).into(), None, vec![w::button(look, "Sluiten", K::Primary, D::Regular, None, Some(Msg::Dialog(None)))], true)
             }
             Dialog::Export => {
                 let mut formats = column![w::secondary(look, "Kies het formaat van het bestand.")].spacing(10);
@@ -3241,6 +3305,10 @@ fn secondary_note(look: Look, s: &'static str) -> Element<'static, Msg> {
 /// `installer`, `componenten` or `iconen`, so a demo can start where it is needed.
 fn start_view() -> Gallery {
     let mut gallery = Gallery::default();
+    gallery.keymap_path = sc::keymap_path("ui04");
+    if let Some(path) = &gallery.keymap_path {
+        gallery.keymap = Keymap::load(path);
+    }
     match std::env::args().nth(1).as_deref() {
         Some("werkstroom") => gallery.view = View::Workflow,
         Some("installer") => gallery.view = View::Installer,
@@ -3496,6 +3564,37 @@ mod tests {
             let _ = g.update(Msg::RibbonTab(tab));
             let _ = g.view();
         }
+    }
+
+    #[test]
+    fn an_own_shortcut_changes_keys_menus_and_ribbon() {
+        use iced::keyboard::{Key, Modifiers};
+        use openaec_ui::keyboard::KeyPress;
+        let mut g = Gallery::default();
+        g.started = true;
+        assert!(g.keymap_path.is_none(), "tests never write a keymap file");
+        let _ = g.update(Msg::Dialog(Some(Dialog::Settings)));
+        let _ = g.update(Msg::SettingsPage(SettingsPage::Shortcuts));
+        g.view = View::Screen;
+        let _ = g.view();
+        // Raster gets Ctrl+G, through the page.
+        let _ = g.update(Msg::Shortcuts(sc::Message::Record("view.grid")));
+        let _ = g.update(Msg::Key(KeyPress { key: Key::Character("g".into()), modifiers: Modifiers::COMMAND }));
+        assert_eq!(g.command("view.grid").shortcut, Some(Shortcut::ctrl('g')));
+        assert!(cm::conflicts(&g.commands()).is_empty());
+        let _ = g.update(Msg::Dialog(None));
+        let grid = g.grid;
+        let _ = g.update(Msg::Key(KeyPress { key: Key::Character("g".into()), modifiers: Modifiers::COMMAND }));
+        assert_ne!(g.grid, grid, "Ctrl+G now switches the grid");
+        // Opslaan moves to Ctrl+Shift+S; plain Ctrl+S then does nothing.
+        let _ = g.update(Msg::Shortcuts(sc::Message::Record("file.save")));
+        let _ = g.update(Msg::Key(KeyPress { key: Key::Character("S".into()), modifiers: Modifiers::COMMAND | Modifiers::SHIFT }));
+        let save = Shortcut::ctrl_shift('s').label();
+        assert!(g.menu_items(MenuKind::Tree(TreeSel::Root)).iter().any(|i| matches!(i, MenuItem::Action { label: "Opslaan", shortcut: Some(s), .. } if std::ptr::eq(*s, save))), "the menu shows the new shortcut");
+        assert!(cm::find(&g.commands(), &Key::Character("s".into()), Modifiers::COMMAND).is_none());
+        let _ = g.update(Msg::Shortcuts(sc::Message::ResetAll));
+        assert_eq!(g.command("file.save").shortcut, Some(Shortcut::ctrl('s')));
+        let _ = g.view();
     }
 
     #[test]
