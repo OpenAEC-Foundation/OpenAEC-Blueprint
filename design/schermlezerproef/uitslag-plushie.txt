@@ -1,0 +1,41 @@
+﻿== Toegankelijkheidsboom (UI Automation, ruwe weergave)
+Window | naam='Schermlezerproef' | focusbaar
+  Text | naam='Schermlezerproef'
+  Edit | naam='Projectnaam' | focusbaar | waarde=''
+  Button | naam='Opslaan' | focusbaar | activeerbaar
+    Text | naam='Opslaan'
+  Text | naam='Opgeslagen: 0 keer'
+  CheckBox | naam='Rapport meesturen' | focusbaar | stand=Off
+  Button | naam='Automatisch bijwerken' | focusbaar | stand=Off
+  ComboBox | naam='Kies een discipline' | focusbaar
+  Text | naam='Element'
+  Text | naam='Profiel'
+  Text | naam='Unity check'
+  Text | naam='Ligger 1'
+  Text | naam='HEA 200'
+  Text | naam='0,64'
+  Text | naam='Ligger 2'
+  Text | naam='HEA 180'
+  Text | naam='0,97'
+  Text | naam='Kolom 3'
+  Text | naam='HEB 160'
+  Text | naam='1,12'
+  Button | naam='Verwijderen…' | focusbaar | activeerbaar
+    Text | naam='Verwijderen…'
+  Text | naam=''
+
+== Tab-route
+Tab  1: Window | naam='Schermlezerproef' | focusbaar
+Tab  2: Window | naam='Schermlezerproef' | focusbaar
+Tab  3: Window | naam='Schermlezerproef' | focusbaar
+Tab  4: Window | naam='Schermlezerproef' | focusbaar
+Tab  5: Window | naam='Schermlezerproef' | focusbaar
+Tab  6: Window | naam='Schermlezerproef' | focusbaar
+Tab  7: Window | naam='Schermlezerproef' | focusbaar
+Tab  8: Window | naam='Schermlezerproef' | focusbaar
+Tab  9: Window | naam='Schermlezerproef' | focusbaar
+Tab 10: Window | naam='Schermlezerproef' | focusbaar
+Tab 11: Window | naam='Schermlezerproef' | focusbaar
+Tab 12: Window | naam='Schermlezerproef' | focusbaar
+Tab 13: Window | naam='Schermlezerproef' | focusbaar
+Tab 14: Window | naam='Schermlezerproef' | focusbaar

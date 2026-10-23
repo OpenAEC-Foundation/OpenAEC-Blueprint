@@ -147,7 +147,7 @@ pub(super) fn workspace(selected: usize, theme: Theme, l: Language) -> Element<'
     let mut scale = Column::new()
         .width(46)
         .push(text("NAP (m)").size(10).color(t.text_secondary));
-    scale = scale.push(Space::new(0, 48));
+    scale = scale.push(Space::new().width(0).height(48));
     for meter in 1..=8 {
         scale = scale.push(
             container(

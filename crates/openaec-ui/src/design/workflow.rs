@@ -57,7 +57,7 @@ pub fn sidebar<'a, M: Clone + 'a>(look: Look, heading: &str, sections: &[Section
     for (i, section) in sections.iter().enumerate() {
         let on = i == active;
         let fg = if on { c.accent_text } else { c.text };
-        let lead: Element<'a, M> = if on && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::with_width(3).into() };
+        let lead: Element<'a, M> = if on && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::new().width(3).into() };
         list = list.push(
             button(
                 row![
@@ -74,7 +74,7 @@ pub fn sidebar<'a, M: Clone + 'a>(look: Look, heading: &str, sections: &[Section
             .width(Length::Fill)
             .padding(0)
             .on_press(on_select(i))
-            .style(move |_, status| button::Style {
+            .style(move |_, status| button::Style { snap: false,
                 background: if on && !hc {
                     fill(c.selected)
                 } else {
@@ -136,7 +136,7 @@ pub fn step_bar<'a, M: Clone + 'a>(look: Look, steps: &[Section<'a>], active: us
             container(bar(if on { c.accent } else { Color::TRANSPARENT }, Length::Fill, 2.0)).height(Length::Fill).align_y(Vertical::Bottom),
         ];
         line = line.push(
-            button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| button::Style {
+            button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| button::Style { snap: false,
                 background: if status == button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
                 text_color: c.text,
                 border: Border::default(),
@@ -144,7 +144,7 @@ pub fn step_bar<'a, M: Clone + 'a>(look: Look, steps: &[Section<'a>], active: us
             }),
         );
         if i + 1 < steps.len() {
-            line = line.push(container(Space::new(24, 1)).style(move |_| container::Style { background: fill(c.border_strong), ..Default::default() }));
+            line = line.push(container(Space::new().width(24).height(1)).style(move |_| container::Style { background: fill(c.border_strong), ..Default::default() }));
         }
     }
     column![
@@ -187,7 +187,7 @@ pub fn action_bar<'a, M: 'a>(look: Look, left: Vec<Element<'a, M>>, right: Vec<E
     for e in left {
         line = line.push(e);
     }
-    line = line.push(Space::with_width(Length::Fill));
+    line = line.push(Space::new().width(Length::Fill));
     for e in right {
         line = line.push(e);
     }

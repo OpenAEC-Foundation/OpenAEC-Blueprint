@@ -286,7 +286,7 @@ impl SplitReview {
         }
         let body = container(body).padding(15).width(Fill).into();
         let footer = row![
-            Space::with_width(Fill),
+            Space::new().width(Fill),
             widgets::dialog_button("Splitsen", move |_, status| widgets::primary_button_style(
                 theme, status
             ))

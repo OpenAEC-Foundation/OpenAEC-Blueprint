@@ -1,0 +1,18 @@
+[package]
+name = "schermlezerproef-cosmic"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Screen reader trial on the COSMIC iced fork (pop-os/iced) with AccessKit"
+
+# A stand-alone trial, not part of the Style Repo workspace.
+[workspace]
+
+[features]
+# Only the plushie trial turns this on; it switches the pick list call.
+plushie = []
+
+[dependencies]
+# Pinned to the commit tested on 2026-10-23. `winit` instead of the Linux-only
+# `wayland` default, so the Windows adapter of AccessKit is used.
+iced = { git = "https://github.com/pop-os/iced", rev = "229186b5180b6217d93866c912e6373ac378b231", default-features = false, features = ["a11y", "winit", "tiny-skia", "tokio"] }

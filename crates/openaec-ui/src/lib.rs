@@ -6,6 +6,7 @@ pub use iced;
 pub mod design;
 pub mod fonts;
 pub mod icons;
+pub mod keyboard;
 pub mod ribbon_icons;
 pub mod frame;
 pub mod find_bar;

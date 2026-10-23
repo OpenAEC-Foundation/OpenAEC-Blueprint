@@ -150,8 +150,8 @@ impl RibbonIcon {
 
     pub fn view<'a>(self, size: u16, color: Color) -> svg::Svg<'a> {
         svg(svg::Handle::from_memory(self.bytes()))
-            .width(size)
-            .height(size)
+            .width(u32::from(size))
+            .height(u32::from(size))
             .style(move |_, _| svg::Style { color: Some(color) })
     }
 }

@@ -93,7 +93,7 @@ fn control<'a, M: Clone + 'a>(
     };
     widgets::themed_tooltip(
         button(child)
-            .width(width)
+            .width(u32::from(width))
             .height(22)
             .padding(0)
             .on_press_maybe(enabled.then_some(message))
@@ -257,7 +257,7 @@ pub fn view<'a, M: Clone + 'a>(
         actions.close,
         22,
     );
-    let rule = container(Space::new(1, 16))
+    let rule = container(Space::new().width(1).height(16))
         .width(1)
         .height(16)
         .style(move |_| container::Style::default().background(t.border));
@@ -269,7 +269,7 @@ pub fn view<'a, M: Clone + 'a>(
                 .align_y(Alignment::Center),
         );
         rows = rows.push(
-            row![Space::new(2, 1), rule, case, whole, highlight]
+            row![Space::new().width(2).height(1), rule, case, whole, highlight]
                 .spacing(2)
                 .align_y(Alignment::Center),
         );
@@ -281,15 +281,12 @@ pub fn view<'a, M: Clone + 'a>(
         );
     }
     let sources = row![
-        checkbox(language.text("Tekst", "Text"), state.search_text)
+        checkbox(state.search_text).label(language.text("Tekst", "Text"))
             .on_toggle(move |_| actions.toggle_text.clone())
             .size(13)
             .text_size(11)
             .style(move |_, status| widgets::checkbox_style(theme, status)),
-        checkbox(
-            language.text("Annotaties", "Annotations"),
-            state.search_annotations
-        )
+        checkbox(state.search_annotations).label(language.text("Annotaties", "Annotations"))
         .on_toggle(move |_| actions.toggle_annotations.clone())
         .size(13)
         .text_size(11)

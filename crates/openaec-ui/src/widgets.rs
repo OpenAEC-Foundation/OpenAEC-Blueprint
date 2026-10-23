@@ -44,14 +44,14 @@ where
     F: Fn(&iced::Theme) -> Theme + Copy + 'a,
 {
     let rule = || {
-        container(Space::new(Fill, 1)).style(move |theme| {
+        container(Space::new().width(Fill).height(1)).style(move |theme| {
             container::Style::default().background(resolve_theme(theme).tokens().border_subtle)
         })
     };
     let page = |entry: BackstagePage<M>| {
         let active = entry.active;
         row![
-            container(Space::new(3, Fill)).style(move |theme| {
+            container(Space::new().width(3).height(Fill)).style(move |theme| {
                 container::Style::default().background(if active {
                     resolve_theme(theme).tokens().accent
                 } else {
@@ -82,7 +82,7 @@ where
             .padding([11, 18])
     };
     let top = column![
-        Space::new(Fill, 14),
+        Space::new().width(Fill).height(14),
         pages(task_pages),
         container(rule()).padding([10, 0]),
         pages(other_pages),
@@ -261,10 +261,11 @@ pub fn checkbox_style(theme: Theme, status: checkbox::Status) -> checkbox::Style
 pub fn scrollable_style(theme: Theme, status: scrollable::Status) -> scrollable::Style {
     let t = theme.tokens();
     let (horizontal, vertical) = match status {
-        scrollable::Status::Active => (false, false),
+        scrollable::Status::Active { .. } => (false, false),
         scrollable::Status::Hovered {
             is_horizontal_scrollbar_hovered,
             is_vertical_scrollbar_hovered,
+            ..
         } => (
             is_horizontal_scrollbar_hovered,
             is_vertical_scrollbar_hovered,
@@ -272,6 +273,7 @@ pub fn scrollable_style(theme: Theme, status: scrollable::Status) -> scrollable:
         scrollable::Status::Dragged {
             is_horizontal_scrollbar_dragged,
             is_vertical_scrollbar_dragged,
+            ..
         } => (
             is_horizontal_scrollbar_dragged,
             is_vertical_scrollbar_dragged,
@@ -281,7 +283,7 @@ pub fn scrollable_style(theme: Theme, status: scrollable::Status) -> scrollable:
         background: None,
         border: Border::default(),
         scroller: scrollable::Scroller {
-            color: t.accent.scale_alpha(if strong { 0.40 } else { 0.25 }),
+            background: t.accent.scale_alpha(if strong { 0.40 } else { 0.25 }).into(),
             border: Border::default().rounded(3),
         },
     };
@@ -290,6 +292,12 @@ pub fn scrollable_style(theme: Theme, status: scrollable::Status) -> scrollable:
         vertical_rail: rail(vertical),
         horizontal_rail: rail(horizontal),
         gap: None,
+        auto_scroll: scrollable::AutoScroll {
+            background: t.bg.into(),
+            border: Border::default().rounded(3),
+            shadow: iced::Shadow::default(),
+            icon: t.text,
+        },
     }
 }
 
@@ -325,7 +333,7 @@ pub fn text_input_style(theme: Theme, status: text_input::Status) -> text_input:
     let mut style = text_input::Style {
         background: t.dialog_input_bg.into(),
         border: Border {
-            color: if status == text_input::Status::Focused {
+            color: if matches!(status, text_input::Status::Focused { .. }) {
                 t.focus_color
             } else {
                 t.dialog_input_border
@@ -399,7 +407,7 @@ pub fn pick_list_style(theme: Theme, status: pick_list::Status) -> pick_list::St
             color: match status {
                 pick_list::Status::Active => t.dialog_input_border,
                 pick_list::Status::Hovered => t.dialog_content_secondary,
-                pick_list::Status::Opened => t.focus_color,
+                pick_list::Status::Opened { .. } => t.focus_color,
             },
             width: 1.0,
             radius: 0.0.into(),
@@ -409,7 +417,7 @@ pub fn pick_list_style(theme: Theme, status: pick_list::Status) -> pick_list::St
 
 pub fn pick_list_menu_style(theme: Theme) -> iced::overlay::menu::Style {
     let t = theme.tokens();
-    iced::overlay::menu::Style {
+    iced::overlay::menu::Style { shadow: iced::Shadow::default(),
         background: Background::Color(t.bg),
         border: Border {
             color: t.dialog_input_border,
@@ -531,7 +539,7 @@ pub fn dialog_button<'a, M: 'a>(
                 .size(11)
                 .font(fonts::BODY)
                 .line_height(text::LineHeight::Absolute(LINE_HEIGHT.into())),
-            iced::widget::Space::with_width(MIN_WIDTH - 2.0 * f32::from(PADDING[1])),
+            iced::widget::Space::new().width(MIN_WIDTH - 2.0 * f32::from(PADDING[1])),
         ]
         .align_x(iced::Alignment::Center),
     )
@@ -674,7 +682,7 @@ pub fn ribbon_tab<'a, M: Clone + 'a>(
         RibbonTabKind::File => tokens.file_tab_bg,
         RibbonTabKind::Regular { active: false } => iced::Color::TRANSPARENT,
     };
-    let edge = || container(Space::new(1, Fill)).width(1).style(move |_| {
+    let edge = || container(Space::new().width(1).height(Fill)).width(1).style(move |_| {
         container::Style::default().background(outline)
     });
     let face = button(content)
@@ -694,18 +702,18 @@ pub fn ribbon_tab<'a, M: Clone + 'a>(
                 ..button::Style::default()
             },
         });
-    let top = container(container(Space::new(width - 8.0, 1)).style(move |_| {
+    let top = container(container(Space::new().width(width - 8.0).height(1)).style(move |_| {
         container::Style::default().background(outline)
     }))
     .width(width)
     .height(1)
     .center_x(Fill);
-    let bottom = container(Space::new(Fill, 2)).height(2).style(move |_| {
+    let bottom = container(Space::new().width(Fill).height(2)).height(2).style(move |_| {
         container::Style::default().background(gap)
     });
     column![top, row![edge(), face, edge()].height(25), bottom]
         .width(width)
-        .height(metrics::TABS)
+        .height(u32::from(metrics::TABS))
         .into()
 }
 
@@ -713,15 +721,15 @@ pub fn ribbon_tab<'a, M: Clone + 'a>(
 pub fn ribbon_tab_strip<'a, M: 'a>(content: Element<'a, M>, theme: Theme) -> Element<'a, M> {
     let tokens = theme.tokens();
     let baseline = column![
-        Space::new(Fill, metrics::TABS - 1),
-        container(Space::new(Fill, 1)).style(move |_| {
+        Space::new().width(Fill).height(u32::from(metrics::TABS - 1)),
+        container(Space::new().width(Fill).height(1)).style(move |_| {
             container::Style::default().background(tokens.accent)
         }),
     ]
-    .height(metrics::TABS);
-    container(stack![baseline, container(content).padding([0, 8]).height(metrics::TABS)])
+    .height(u32::from(metrics::TABS));
+    container(stack![baseline, container(content).padding([0, 8]).height(u32::from(metrics::TABS))])
         .width(Fill)
-        .height(metrics::TABS)
+        .height(u32::from(metrics::TABS))
         .style(move |_| container::Style::default().background(tokens.bg_lighter))
         .into()
 }
@@ -742,7 +750,7 @@ pub fn ribbon_group<'a, M: 'a>(
         .height(69)
         .align_x(iced::Alignment::Center)
         .align_y(iced::Alignment::Center);
-    let rule = container(iced::widget::Space::new(Fill, 1))
+    let rule = container(iced::widget::Space::new().width(Fill).height(1))
         .width(Fill)
         .style(move |_| container::Style::default().background(t.border_subtle));
     let caption = container(
@@ -757,19 +765,19 @@ pub fn ribbon_group<'a, M: 'a>(
     .align_y(iced::Alignment::Center);
     let content = container(column![body, rule, caption])
         .width(Length::Fixed(width - 1.0))
-        .height(metrics::RIBBON)
+        .height(u32::from(metrics::RIBBON))
         .padding(Padding {
             top: 4.0,
             right: 8.0,
             bottom: 0.0,
             left: 8.0,
         });
-    let separator = container(iced::widget::Space::new(1, 90))
+    let separator = container(iced::widget::Space::new().width(1).height(90))
         .style(move |_| container::Style::default().background(t.ribbon_group_separator));
     row![content, separator]
         .align_y(iced::Alignment::End)
         .width(Length::Fixed(width))
-        .height(metrics::RIBBON)
+        .height(u32::from(metrics::RIBBON))
         .into()
 }
 
@@ -801,7 +809,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             column![
                 row![
                     text(title).font(fonts::BODY).size(10).color(t.text),
-                    iced::widget::horizontal_space(),
+                    iced::widget::space::horizontal(),
                     text(format!("{value:.0}{unit}")).font(fonts::STRONG).size(10).color(t.text),
                 ],
                 slider(minimum..=maximum, value, on_change)
@@ -816,7 +824,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             column![
                 row![
                     text(title).font(fonts::BODY).size(10).color(t.text),
-                    iced::widget::horizontal_space(),
+                    iced::widget::space::horizontal(),
                     text(format!("{lower:.0}–{upper:.0}{unit}")).font(fonts::STRONG).size(10).color(t.text),
                 ],
                 Element::new(DualRange { theme, minimum, maximum, lower, upper, step, on_lower, on_upper }),
@@ -936,7 +944,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
         RibbonControl::ColorSelect { options, selected, current, rows_per_column, open, on_toggle, on_close, none, custom, .. } => {
             let byte = |value: f32| (value * 255.0).round() as u8;
             let color_label = format!("#{:02x}{:02x}{:02x}", byte(current.r), byte(current.g), byte(current.b));
-            let swatch = container(Space::new(16, 16)).style(move |_| container::Style::default()
+            let swatch = container(Space::new().width(16).height(16)).style(move |_| container::Style::default()
                 .background(current)
                 .border(Border { color: theme.border_strong(), width: 1.0, radius: 1.0.into() }));
             let anchor = button(row![swatch, text(color_label).font(fonts::MEDIUM).size(11).color(t.text),
@@ -961,7 +969,7 @@ pub fn ribbon_control<'a, M: Clone + 'a>(
             }
             let mut content = iced::widget::Column::new().spacing(5).push(grid);
             if has_actions {
-                content = content.push(container(Space::new(Fill, 1))
+                content = content.push(container(Space::new().width(Fill).height(1))
                     .style(move |_| container::Style::default().background(t.border_subtle)))
                     .push(actions);
             }
@@ -1049,7 +1057,7 @@ pub fn color_grid<'a, M: Clone + 'a>(
             let index = column_index * rows_per_column.max(1) + row_index;
             let chosen = selected == Some(index);
             let fill = *color;
-            let cell = button(Space::new(14, 14))
+            let cell = button(Space::new().width(14).height(14))
                 .padding(1).width(18).height(18)
                 .on_press(message.clone())
                 .style(move |_, status| {
@@ -1110,7 +1118,7 @@ pub fn document_tab_style(theme: Theme, active: bool, status: button::Status) ->
 pub fn document_tab_bottom_gap<'a, M: 'a>(theme: Theme, tab: Element<'a, M>) -> Element<'a, M> {
     let surface = theme.tokens().docbar_bg;
     let gap = container(
-        container(Space::new(Fill, 2))
+        container(Space::new().width(Fill).height(2))
             .width(Fill)
             .height(2)
             .style(move |_| container::Style::default().background(surface)),
@@ -1166,7 +1174,7 @@ pub fn panel_header<'a, M: 'a>(title: impl Into<String>, theme: Theme) -> Elemen
             .size(11),
     )
     .padding([0, 6])
-    .height(metrics::PANEL_TOOLBAR - 1)
+    .height(u32::from(metrics::PANEL_TOOLBAR - 1))
     .width(Fill)
     .align_y(iced::Alignment::Center)
     .style(move |_| {
@@ -1174,12 +1182,12 @@ pub fn panel_header<'a, M: 'a>(title: impl Into<String>, theme: Theme) -> Elemen
             .background(t.bg_lighter)
             .color(t.accent)
     });
-    let divider = container(iced::widget::Space::new(Fill, 1))
+    let divider = container(iced::widget::Space::new().width(Fill).height(1))
         .height(1)
         .width(Fill)
         .style(move |_| container::Style::default().background(t.border));
     column![title, divider]
-        .height(metrics::PANEL_TOOLBAR)
+        .height(u32::from(metrics::PANEL_TOOLBAR))
         .width(Fill)
         .into()
 }
@@ -1220,7 +1228,7 @@ pub fn action<'a, M: Clone + 'a>(
         .align_y(iced::Alignment::Center),
     )
     .padding([5, 10])
-    .height(metrics::CONTROL)
+    .height(u32::from(metrics::CONTROL))
     .on_press_maybe(message)
     .style(move |_, status| button_style(theme, false, status))
     .into()
@@ -1289,7 +1297,7 @@ pub fn dialog_modal<'a, M: Clone + 'a>(
         .width(Fill)
         .style(move |_| container::Style::default().background(t.dialog_content_bg).color(t.dialog_content_text));
     let footer = column![
-        container(Space::new(Fill, 1)).height(1).width(Fill)
+        container(Space::new().width(Fill).height(1)).height(1).width(Fill)
             .style(move |_| container::Style::default().background(t.dialog_border)),
         container(footer).padding([8, 12]).height(43).width(Fill)
             .style(move |_| container::Style::default().background(t.dialog_sidebar_bg)),
@@ -1342,7 +1350,7 @@ pub fn settings_modal<'a, M: Clone + 'a>(
         .height(Fill)
         .padding([8, 0])
         .style(move |_| container::Style::default().background(t.dialog_sidebar_bg));
-    let rule = container(Space::new(1, Fill))
+    let rule = container(Space::new().width(1).height(Fill))
         .width(1)
         .height(Fill)
         .style(move |_| container::Style::default().background(t.dialog_sidebar_border));
@@ -1353,7 +1361,7 @@ pub fn settings_modal<'a, M: Clone + 'a>(
     ]
     .height(Fill)
     .width(Fill);
-    let footer_rule = container(Space::new(Fill, 1))
+    let footer_rule = container(Space::new().width(Fill).height(1))
         .height(1)
         .width(Fill)
         .style(move |_| container::Style::default().background(t.dialog_border));
@@ -1390,7 +1398,7 @@ pub fn settings_reset_confirmation<'a, M: Clone + 'a>(
     let body = container(text(question.into()).size(12).width(Fill))
         .padding(12).width(Fill).into();
     let footer = row![
-        Space::with_width(Fill),
+        Space::new().width(Fill),
         dialog_button(cancel_label.into(), move |_, status| secondary_button_style(theme, status))
             .on_press(cancel.clone()),
         dialog_button(reset_label.into(), move |_, status| primary_button_style(theme, status))
@@ -1433,7 +1441,7 @@ pub fn settings_theme_option<'a, M: Clone + 'a>(
 ) -> Element<'a, M> {
     let t = current_theme.tokens();
     let swatches = option.swatches().into_iter().fold(row![].spacing(2), |row, color| {
-        row.push(container(Space::new(14, 14)).style(move |_| container::Style {
+        row.push(container(Space::new().width(14).height(14)).style(move |_| container::Style {
             background: Some(color.into()),
             border: Border { color: iced::Color::from_rgba8(128, 128, 128, 0.3), width: 1.0, radius: 0.0.into() },
             ..container::Style::default()
@@ -1487,7 +1495,7 @@ pub fn settings_theme_picker<'a, M: Clone + 'a>(
     let label = options.iter().find(|(theme, _, _)| *theme == selected)
         .map(|(_, label, _)| label.clone()).unwrap_or_else(|| selected.to_string());
     let swatches = selected.swatches().into_iter().fold(row![].spacing(2), |row, color| {
-        row.push(container(Space::new(14, 14)).style(move |_| container::Style {
+        row.push(container(Space::new().width(14).height(14)).style(move |_| container::Style {
             background: Some(color.into()),
             border: Border { color: iced::Color::from_rgba8(128, 128, 128, 0.3), width: 1.0, radius: 0.0.into() },
             ..container::Style::default()
@@ -1496,7 +1504,7 @@ pub fn settings_theme_picker<'a, M: Clone + 'a>(
     let trigger = button(row![
         swatches,
         text(label).size(11).font(fonts::MEDIUM),
-        Space::with_width(Fill),
+        Space::new().width(Fill),
         text("⌄").size(11).color(t.dialog_content_text),
     ].spacing(8).align_y(Alignment::Center))
         .on_press(on_toggle.clone())
@@ -1523,7 +1531,7 @@ pub fn settings_section_heading<'a, M: 'a>(
     let t = theme.tokens();
     column![
         text(label.into()).font(fonts::STRONG).size(11).color(t.dialog_content_text),
-        container(Space::new(Fill, 1))
+        container(Space::new().width(Fill).height(1))
             .height(1)
             .width(Fill)
             .style(move |_| container::Style::default().background(t.dialog_section_border)),
@@ -1627,7 +1635,7 @@ where
         .style(move |theme| {
             container::Style::default().color(resolve_theme(theme).tokens().text)
         });
-    let rule = container(iced::widget::Space::new(Fill, 1))
+    let rule = container(iced::widget::Space::new().width(Fill).height(1))
         .width(Fill)
         .style(move |theme| {
             container::Style::default().background(resolve_theme(theme).tokens().border_subtle)

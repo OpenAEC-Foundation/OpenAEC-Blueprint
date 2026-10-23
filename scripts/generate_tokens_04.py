@@ -119,7 +119,7 @@ def build_rust(t):
     w("    pub fn iced(self) -> iced::Theme {")
     w("        let c = &self.tokens().color;")
     w("        iced::Theme::custom(self.name().to_string(), iced::theme::Palette {")
-    w("            background: c.panel, text: c.text, primary: c.accent, success: c.success, danger: c.error,")
+    w("            background: c.panel, text: c.text, primary: c.accent, success: c.success, warning: c.warning, danger: c.error,")
     w("        })")
     w("    }")
     w("}")

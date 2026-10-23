@@ -1,0 +1,30 @@
+[package]
+name = "schermlezerproef-cosmic-gerepareerd"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "COSMIC trial with a one-line repair of the AccessKit Windows adapter"
+
+# A stand-alone trial, not part of the Style Repo workspace.
+[workspace]
+
+[features]
+# Only the plushie trial turns this on; it switches the pick list call.
+plushie = []
+
+[dependencies]
+# Pinned to the commit tested on 2026-10-23. `winit` instead of the Linux-only
+# `wayland` default, so the Windows adapter of AccessKit is used.
+iced = { git = "https://github.com/pop-os/iced", rev = "229186b5180b6217d93866c912e6373ac378b231", default-features = false, features = ["a11y", "winit", "tiny-skia", "tokio"] }
+
+# The fork pins wash2/accesskit 6c20249, whose Windows adapter does not compile
+# against the fork's winit (`&Window` must be `&dyn Window`). This variant points
+# all AccessKit crates at a local copy with that one-line repair, made by
+# `herstel-accesskit.sh` in target/ (not committed).
+[patch."https://github.com/wash2/accesskit"]
+accesskit = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/common" }
+accesskit_consumer = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/consumer" }
+accesskit_windows = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/platforms/windows" }
+accesskit_winit = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/platforms/winit" }
+accesskit_macos = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/platforms/macos" }
+accesskit_unix = { path = "../../../target/schermlezerproef/accesskit-6c20249-reparatie/platforms/unix" }

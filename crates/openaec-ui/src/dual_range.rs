@@ -195,34 +195,36 @@ impl<M: Clone> Widget<M, iced::Theme, Renderer> for DualRange<M> {
         }
     }
     fn layout(
-        &self,
+        &mut self,
         _tree: &mut Tree,
         _renderer: &Renderer,
         limits: &layout::Limits,
     ) -> layout::Node {
         layout::atomic(limits, Length::Fixed(WIDTH), Length::Fixed(HEIGHT))
     }
-    fn on_event(
+    fn update(
         &mut self,
         tree: &mut Tree,
-        event: Event,
+        event: &Event,
         layout: Layout<'_>,
         cursor: mouse::Cursor,
         _renderer: &Renderer,
         _clipboard: &mut dyn Clipboard,
         shell: &mut Shell<'_, M>,
         _viewport: &Rectangle,
-    ) -> event::Status {
+    ) {
         let (status, message) = self.pointer_event(
             tree.state.downcast_mut::<Option<Thumb>>(),
-            event,
+            event.clone(),
             layout.bounds(),
             cursor,
         );
         if let Some(message) = message {
             shell.publish(message);
         }
-        status
+        if status == event::Status::Captured {
+            shell.capture_event();
+        }
     }
     fn draw(
         &self,

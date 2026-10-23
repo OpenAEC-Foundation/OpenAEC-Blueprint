@@ -49,7 +49,7 @@ impl Theme {
         let t = self.tokens();
         iced::Theme::custom(self.to_string(), iced::theme::Palette {
             background: t.bg, text: t.text, primary: t.accent,
-            success: iced::Color::from_rgb8(22, 163, 74), danger: t.danger_color,
+            success: iced::Color::from_rgb8(22, 163, 74), warning: iced::Color::from_rgb8(217, 119, 6), danger: t.danger_color,
         })
     }
 }

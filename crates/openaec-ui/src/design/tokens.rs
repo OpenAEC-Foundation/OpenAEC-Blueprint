@@ -47,7 +47,7 @@ impl ThemeId {
     pub fn iced(self) -> iced::Theme {
         let c = &self.tokens().color;
         iced::Theme::custom(self.name().to_string(), iced::theme::Palette {
-            background: c.panel, text: c.text, primary: c.accent, success: c.success, danger: c.error,
+            background: c.panel, text: c.text, primary: c.accent, success: c.success, warning: c.warning, danger: c.error,
         })
     }
 }

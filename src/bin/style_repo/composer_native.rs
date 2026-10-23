@@ -116,7 +116,7 @@ impl StyleRepo {
         let mut nav = Column::new().spacing(5)
             .push(text("OpenAEC").font(fonts::HEADING).size(18).color(t.accent))
             .push(text("Workspace Composer").size(10).color(t.text_secondary))
-            .push(Space::with_height(8))
+            .push(Space::new().height(8))
             .push(row![
                 button(text("Simple").size(11)).padding([6, 8]).width(Fill)
                     .on_press(Action::ComposerAdvanced(false))

@@ -194,8 +194,8 @@ fn export_pdf_native_find_bar_review() {
                 .map(|_| Message::Command(Action::SelectScreen(0)));
             let element = iced::widget::container(
                 iced::widget::column![
-                    iced::widget::row![iced::widget::Space::new(iced::Fill, 1), bar],
-                    iced::widget::Space::new(iced::Fill, 24),
+                    iced::widget::row![iced::widget::Space::new().width(iced::Fill).height(1), bar],
+                    iced::widget::Space::new().width(iced::Fill).height(24),
                     iced::widget::text("Voorbeeld document").size(20),
                 ]
                 .spacing(8),
@@ -350,7 +350,7 @@ fn render_element(
     let mut tree = Tree::new(&element);
     let node =
         element
-            .as_widget()
+            .as_widget_mut()
             .layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
     let iced_theme = theme.iced();
     element.as_widget().draw(
@@ -367,10 +367,10 @@ fn render_element(
     if let Some(mut overlay) =
         element
             .as_widget_mut()
-            .overlay(&mut tree, Layout::new(&node), &renderer, Vector::ZERO)
+            .overlay(&mut tree, Layout::new(&node), &renderer, &Rectangle::with_size(size), Vector::ZERO)
     {
-        let popup_node = overlay.layout(&renderer, size);
-        overlay.draw(
+        let popup_node = overlay.as_overlay_mut().layout(&renderer, size);
+        overlay.as_overlay().draw(
             &mut renderer,
             &iced_theme,
             &renderer::Style {
@@ -386,14 +386,13 @@ fn render_element(
     let mut pixels =
         tiny_skia::PixmapMut::from_bytes(&mut bytes, width, height).expect("valid pixmap");
     let mut mask = tiny_skia::Mask::new(width, height).expect("valid mask");
-    software.draw::<&str>(
+    software.draw(
         &mut pixels,
         &mut mask,
         &iced_tiny_skia::graphics::Viewport::with_physical_size(Size::new(width, height), 1.0),
         &[Rectangle::with_size(size)],
         Color::from_rgb(1.0, 0.0, 1.0),
-        &[],
-    );
+        );
     for pixel in bytes.chunks_exact_mut(4) {
         pixel.swap(0, 2);
     }
@@ -418,7 +417,7 @@ fn source_band<'a>(
 ) -> iced::Element<'a, Message<Action>> {
     iced::widget::container(iced::widget::text(label).size(12))
         .width(iced::Fill)
-        .height(height)
+        .height(u32::from(height))
         .padding([0, 12])
         .align_y(iced::Alignment::Center)
         .style(move |_| {
@@ -919,8 +918,8 @@ fn export_pdf_ribbon_semantic_review() {
                         std::fs::read(root.join(path)).expect("PDF source SVG")
                     };
                     svg(svg::Handle::from_memory(bytes))
-                        .width(size)
-                        .height(size)
+                        .width(u32::from(size))
+                        .height(u32::from(size))
                         .style(move |_, _| svg::Style {
                             color: Some(foreground),
                         })
@@ -1009,12 +1008,12 @@ fn expanded_theme_menu_keeps_the_trigger_height_in_form_layout() {
     load_fonts();
     let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
     for open in [false, true] {
-        let element = widgets::settings_theme_picker(
+        let mut element = widgets::settings_theme_picker(
             vec![(Theme::Light, "Light".to_owned(), ())],
             Theme::Light, Theme::Light, open, (),
         );
         let mut tree = Tree::new(&element);
-        let node = element.as_widget().layout(
+        let node = element.as_widget_mut().layout(
             &mut tree, &renderer,
             &layout::Limits::new(Size::ZERO, Size::new(500.0, 500.0)),
         );
@@ -1338,19 +1337,19 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
     let mut tree = Tree::new(&element);
     let size = Size::new(1280.0, 800.0);
-    let node = element.as_widget().layout(&mut tree, &renderer,
+    let node = element.as_widget_mut().layout(&mut tree, &renderer,
         &layout::Limits::new(Size::ZERO, size));
     let mut overlay = element.as_widget_mut().overlay(&mut tree, Layout::new(&node),
-        &renderer, Vector::ZERO).expect("open color palette overlay");
-    let popup_node = overlay.layout(&renderer, size);
+        &renderer, &Rectangle::with_size(size), Vector::ZERO).expect("open color palette overlay");
+    let popup_node = overlay.as_overlay_mut().layout(&renderer, size);
     let mut clipboard = iced::advanced::clipboard::Null;
     let click = iced::Event::Mouse(iced::mouse::Event::ButtonPressed(iced::mouse::Button::Left));
     let mut messages = Vec::new();
     let mut shell = iced::advanced::Shell::new(&mut messages);
-    overlay.on_event(click.clone(), Layout::new(&popup_node),
+    overlay.as_overlay_mut().update(&click.clone(), Layout::new(&popup_node),
         mouse::Cursor::Available(iced::Point::new(516.0, 192.0)),
         &renderer, &mut clipboard, &mut shell);
-    overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
+    overlay.as_overlay_mut().update(&iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
         Layout::new(&popup_node), mouse::Cursor::Available(iced::Point::new(516.0, 192.0)),
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
@@ -1358,9 +1357,9 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
     let no_fill_cursor = mouse::Cursor::Available(iced::Point::new(510.0, 260.0));
-    overlay.on_event(click.clone(), Layout::new(&popup_node), no_fill_cursor,
+    overlay.as_overlay_mut().update(&click.clone(), Layout::new(&popup_node), no_fill_cursor,
         &renderer, &mut clipboard, &mut shell);
-    overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
+    overlay.as_overlay_mut().update(&iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
         Layout::new(&popup_node), no_fill_cursor,
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
@@ -1368,16 +1367,16 @@ fn pdf_format_popup_dispatches_source_color_and_closes_outside() {
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
     let custom_cursor = mouse::Cursor::Available(iced::Point::new(595.0, 260.0));
-    overlay.on_event(click.clone(), Layout::new(&popup_node), custom_cursor,
+    overlay.as_overlay_mut().update(&click.clone(), Layout::new(&popup_node), custom_cursor,
         &renderer, &mut clipboard, &mut shell);
-    overlay.on_event(iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
+    overlay.as_overlay_mut().update(&iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left)),
         Layout::new(&popup_node), custom_cursor,
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
         Message::Command(Action::PdfFormatCustomToggle))), "messages: {messages:?}");
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
-    overlay.on_event(click, Layout::new(&popup_node),
+    overlay.as_overlay_mut().update(&click, Layout::new(&popup_node),
         mouse::Cursor::Available(iced::Point::new(100.0, 300.0)),
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
@@ -1405,26 +1404,26 @@ fn pdf_format_gallery_popup_selects_hidden_style_and_closes_outside() {
     let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
     let mut tree = Tree::new(&element);
     let size = Size::new(1280.0, 800.0);
-    let node = element.as_widget().layout(&mut tree, &renderer,
+    let node = element.as_widget_mut().layout(&mut tree, &renderer,
         &layout::Limits::new(Size::ZERO, size));
     let mut overlay = element.as_widget_mut().overlay(&mut tree, Layout::new(&node),
-        &renderer, Vector::ZERO).expect("open style gallery overlay");
-    let popup_node = overlay.layout(&renderer, size);
+        &renderer, &Rectangle::with_size(size), Vector::ZERO).expect("open style gallery overlay");
+    let popup_node = overlay.as_overlay_mut().layout(&renderer, size);
     let mut clipboard = iced::advanced::clipboard::Null;
     let click = iced::Event::Mouse(iced::mouse::Event::ButtonPressed(iced::mouse::Button::Left));
     let release = iced::Event::Mouse(iced::mouse::Event::ButtonReleased(iced::mouse::Button::Left));
     let mut messages = Vec::new();
     let mut shell = iced::advanced::Shell::new(&mut messages);
     let hidden_style = mouse::Cursor::Available(iced::Point::new(415.0, 218.0));
-    overlay.on_event(click.clone(), Layout::new(&popup_node), hidden_style,
+    overlay.as_overlay_mut().update(&click.clone(), Layout::new(&popup_node), hidden_style,
         &renderer, &mut clipboard, &mut shell);
-    overlay.on_event(release, Layout::new(&popup_node), hidden_style,
+    overlay.as_overlay_mut().update(&release, Layout::new(&popup_node), hidden_style,
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,
         Message::Command(Action::PdfFormatStyle(9)))), "messages: {messages:?}");
     messages.clear();
     let mut shell = iced::advanced::Shell::new(&mut messages);
-    overlay.on_event(click, Layout::new(&popup_node),
+    overlay.as_overlay_mut().update(&click, Layout::new(&popup_node),
         mouse::Cursor::Available(iced::Point::new(700.0, 300.0)),
         &renderer, &mut clipboard, &mut shell);
     assert!(messages.iter().any(|message| matches!(message,

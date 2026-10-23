@@ -42,13 +42,13 @@ pub fn sidebar_frame<'a, M: 'a>(
     status: Element<'a, M>,
 ) -> Element<'a, M> {
     column![
-        container(titlebar).width(Fill).height(profile.title_height),
+        container(titlebar).width(Fill).height(u32::from(profile.title_height)),
         Row::new()
-            .push(container(sidebar).width(profile.sidebar_width).height(Fill))
+            .push(container(sidebar).width(u32::from(profile.sidebar_width)).height(Fill))
             .push(container(content).width(Fill).height(Fill))
             .width(Fill)
             .height(Fill),
-        container(status).width(Fill).height(profile.status_height),
+        container(status).width(Fill).height(u32::from(profile.status_height)),
     ]
     .width(Fill)
     .height(Fill)
@@ -79,21 +79,21 @@ pub fn document_bar<'a, M: 'a>(theme: Theme, content: Element<'a, M>) -> Element
     let top = blend(Color::from_rgba8(217, 119, 6, 0.15));
     let bottom = blend(tokens.border);
     column![
-        container(Space::new(Fill, 1))
+        container(Space::new().width(Fill).height(1))
             .width(Fill)
             .style(move |_| container::Style::default().background(top)),
         container(content)
             .width(Fill)
-            .height(metrics::DOCUMENTS - 2)
+            .height(u32::from(metrics::DOCUMENTS - 2))
             .padding([0, 4])
             .align_y(Alignment::End)
             .style(move |_| container::Style::default().background(tokens.docbar_bg)),
-        container(Space::new(Fill, 1))
+        container(Space::new().width(Fill).height(1))
             .width(Fill)
             .style(move |_| container::Style::default().background(bottom)),
     ]
     .width(Fill)
-    .height(metrics::DOCUMENTS)
+    .height(u32::from(metrics::DOCUMENTS))
     .into()
 }
 
@@ -116,13 +116,13 @@ pub fn status_bar_with_height<'a, M: 'a>(
 ) -> Element<'a, M> {
     let tokens = theme.tokens();
     column![
-        container(Space::new(Fill, 1))
+        container(Space::new().width(Fill).height(1))
             .width(Fill)
             .style(move |_| container::Style::default().background(tokens.status_border)),
         container(content)
             .padding([0, horizontal_padding])
             .width(Fill)
-            .height(height.saturating_sub(1))
+            .height(u32::from(height.saturating_sub(1)))
             .style(move |_| {
                 container::Style::default()
                     .background(tokens.status_bg)
@@ -130,7 +130,7 @@ pub fn status_bar_with_height<'a, M: 'a>(
             }),
     ]
     .width(Fill)
-    .height(height)
+    .height(u32::from(height))
     .into()
 }
 
@@ -150,13 +150,13 @@ pub fn workspace_frame<'a, M: 'a>(
 ) -> Element<'a, M> {
     column![
         container(slots.titlebar)
-            .height(profile.title_height)
+            .height(u32::from(profile.title_height))
             .width(Fill),
         container(slots.ribbon).height(Shrink).width(Fill),
         container(slots.workspace_tabs).height(Shrink).width(Fill),
         container(slots.content).height(Fill).width(Fill),
         container(slots.status)
-            .height(profile.status_height)
+            .height(u32::from(profile.status_height))
             .width(Fill),
     ]
     .height(Fill)
@@ -174,13 +174,13 @@ pub fn workspace_panes<'a, M: 'a>(
 ) -> Element<'a, M> {
     let mut regions = Row::new();
     if let Some(left) = left {
-        regions = regions.push(container(left).width(profile.left_panel_width).height(Fill));
+        regions = regions.push(container(left).width(u32::from(profile.left_panel_width)).height(Fill));
     }
     regions = regions.push(container(content).width(Fill).height(Fill));
     if let Some(right) = right {
         regions = regions.push(
             container(right)
-                .width(profile.right_panel_width)
+                .width(u32::from(profile.right_panel_width))
                 .height(Fill),
         );
     }
@@ -198,17 +198,17 @@ pub struct FrameSlots<'a, M> {
 
 pub fn frame<'a, M: 'a>(slots: FrameSlots<'a, M>) -> Element<'a, M> {
     let mut bands = Column::new()
-        .push(container(slots.titlebar).height(metrics::TITLE).width(Fill))
-        .push(container(slots.tabs).height(metrics::TABS).width(Fill));
+        .push(container(slots.titlebar).height(u32::from(metrics::TITLE)).width(Fill))
+        .push(container(slots.tabs).height(u32::from(metrics::TABS)).width(Fill));
     if let Some(ribbon) = slots.ribbon {
-        bands = bands.push(container(ribbon).height(metrics::RIBBON).width(Fill));
+        bands = bands.push(container(ribbon).height(u32::from(metrics::RIBBON)).width(Fill));
     }
     if let Some(documents) = slots.documents {
-        bands = bands.push(container(documents).height(metrics::DOCUMENTS).width(Fill));
+        bands = bands.push(container(documents).height(u32::from(metrics::DOCUMENTS)).width(Fill));
     }
     bands
         .push(container(slots.content).height(Fill).width(Fill))
-        .push(container(slots.status).height(metrics::STATUS).width(Fill))
+        .push(container(slots.status).height(u32::from(metrics::STATUS)).width(Fill))
         .height(Fill)
         .width(Fill)
         .into()
@@ -222,13 +222,13 @@ pub fn workflow_frame<'a, M: 'a>(
     content: Element<'a, M>,
     status: Element<'a, M>,
 ) -> Element<'a, M> {
-    let mut bands = Column::new().push(container(titlebar).height(metrics::TITLE).width(Fill));
+    let mut bands = Column::new().push(container(titlebar).height(u32::from(metrics::TITLE)).width(Fill));
     if let Some(documents) = documents {
-        bands = bands.push(container(documents).height(metrics::DOCUMENTS).width(Fill));
+        bands = bands.push(container(documents).height(u32::from(metrics::DOCUMENTS)).width(Fill));
     }
     bands
         .push(container(content).height(Fill).width(Fill))
-        .push(container(status).height(metrics::STATUS).width(Fill))
+        .push(container(status).height(u32::from(metrics::STATUS)).width(Fill))
         .height(Fill)
         .width(Fill)
         .into()
@@ -241,13 +241,13 @@ mod tests {
     use iced::Size;
 
     fn band(height: u16) -> Element<'static, ()> {
-        container(Space::new(Fill, height)).width(Fill).into()
+        container(Space::new().width(Fill).height(u32::from(height))).width(Fill).into()
     }
 
     #[test]
     fn workspace_bands_grow_with_wrapped_navigation() {
         let profile = WorkspaceFrameProfile::OPEN_FRAME;
-        let element = workspace_frame(
+        let mut element = workspace_frame(
             WorkspaceFrameSlots {
                 titlebar: band(profile.title_height),
                 ribbon: band(132),
@@ -259,7 +259,7 @@ mod tests {
         );
         let renderer = iced_tiny_skia::Renderer::new(crate::fonts::BODY, iced::Pixels(12.0));
         let mut tree = Tree::new(&element);
-        let node = element.as_widget().layout(
+        let node = element.as_widget_mut().layout(
             &mut tree,
             &renderer,
             &layout::Limits::new(Size::ZERO, Size::new(1200.0, 800.0)),
@@ -277,10 +277,10 @@ mod tests {
     #[test]
     fn optional_workspace_panes_keep_asymmetric_source_widths() {
         let profile = WorkspaceFrameProfile::OPEN_FRAME;
-        let element = workspace_panes(profile, Some(band(1)), band(1), Some(band(1)));
+        let mut element = workspace_panes(profile, Some(band(1)), band(1), Some(band(1)));
         let renderer = iced_tiny_skia::Renderer::new(crate::fonts::BODY, iced::Pixels(12.0));
         let mut tree = Tree::new(&element);
-        let node = element.as_widget().layout(
+        let node = element.as_widget_mut().layout(
             &mut tree,
             &renderer,
             &layout::Limits::new(Size::ZERO, Size::new(1200.0, 600.0)),
@@ -295,10 +295,10 @@ mod tests {
     #[test]
     fn composer_sidebar_frame_preserves_source_geometry() {
         let profile = SidebarFrameProfile::WORKSPACE_COMPOSER;
-        let element = sidebar_frame(profile, band(1), band(1), band(1), band(1));
+        let mut element = sidebar_frame(profile, band(1), band(1), band(1), band(1));
         let renderer = iced_tiny_skia::Renderer::new(crate::fonts::BODY, iced::Pixels(12.0));
         let mut tree = Tree::new(&element);
-        let node = element.as_widget().layout(
+        let node = element.as_widget_mut().layout(
             &mut tree,
             &renderer,
             &layout::Limits::new(Size::ZERO, Size::new(1200.0, 800.0)),

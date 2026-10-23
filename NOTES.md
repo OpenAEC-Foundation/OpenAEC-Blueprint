@@ -94,7 +94,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
-- Niet vergeten: de Pointcloud-kopie van de crate (`open-pointcloud-studio/native/ui`) bijwerken met `LICENSE.md` (LGPL-3.0-only), `NOTICE.md` en de map `licenses/`; `scripts/check_portable_ui.py` meldt het verschil zodra de repository lokaal staat. Komt later (de gebruiker).
+- Niet vergeten: de Pointcloud-kopie van de crate (`open-pointcloud-studio/native/ui`) bijwerken met `LICENSE.md` (LGPL-3.0-only), `NOTICE.md` en de map `licenses/`; `scripts/check_portable_ui.py` meldt het verschil zodra de repository lokaal staat. Komt later (de gebruiker). Let op: de crate staat sinds 2026-10-23 op iced 0.14.0; Pointcloud moet dan ook naar iced 0.14.
+- Schermlezer (Claude, 2026-10-23): iced 0.14 heeft nog geen schermlezerondersteuning; zie `design/schermlezerproef/README.md`. Volgende stap: toetsenbordroute (UI-002/UI-003) en toegankelijke namen in `openaec_ui::design`. Nog door een mens te doen: de plushie-proef met Verteller of NVDA beluisteren. De reviewbeelden in `design/ontwerp-0.4/native/` zijn nog met iced 0.13 gemaakt; ze worden pas bij `cargo test --bin ui04 -- --ignored` opnieuw gemaakt.
 - Eigenaarschap en Field op tablet of telefoon: komen later.
 
 - Installer (Claude): voorstel E staat in de galerij `ui04 -- installer` en is voorlopig goedgekeurd (2026-10-22); het team kijkt er later naar. Daarna vastleggen in `05-layouts.md` als derde soort app (hub). In iced 0.13 ontsnapt een bijgesneden afbeelding (`ContentFit::Cover`) aan de scrollgrens; daarom zijn de screenshots vooraf bijgesneden.
@@ -211,6 +212,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+
+- 2026-10-23 **Claude**: `openaec-ui`, galerij `ui04`, `style_repo` en het voorbeeld naar iced 0.14.0 overgezet (Space-, checkbox-, voortgangs-, stijl- en statuswijzigingen; eigen widgets `modal`, `popover` en `dual_range` naar `update`/`capture_event`; nieuwe opstart-API; `openaec_ui::keyboard::on_key_press` vervangt de verdwenen iced-functie). Tokengenerator vult ook `warning` in het iced-palet. Schermlezerproef in `design/schermlezerproef/`: plushie-iced 0.8.4 geeft boom, namen, standen en Invoke/Toggle, maar geen focusmeldingen en geen SetValue; COSMIC-fork bouwt op Windows niet met a11y en geeft na reparatie van één regel een leeg venster. Alle controles groen (tests 49/8/21/2, `cargo package`); galerij in GPU-venster bekeken. De andere Claude-sessie (Open Planner Studio, `planner04.rs`) heeft een bericht gekregen over de nieuwe API (voorbeelden in `ui04.rs`). Geen commit.
 
 - 2026-10-23 **Codex**: volledig nachtelijk UI-onderzoek opgenomen in `design/ui-onderzoek-2026-10-22/`, inclusief alle 15 opleverbestanden, 15 onderzoeksmodules, 205 bronplaatsen, 58 bevindingen, zes voorgestelde taakproeven, scripts, gepinde bronkopieën en proef-/audituitvoer. README-leesroute, SHA-256-publicatiemanifest en bytebehoud via lokale gitattributes toegevoegd. Bundelcontrole groen: interne/README-links, 135 gecachte bronbestanden en 11 ingebedde fonthashes; oorspronkelijke opleverbestanden bytegelijk. Tijdelijke serverbestanden/cache/proefbinary niet opgenomen. Alleen documentatie/onderzoeksarchief gewijzigd; geen Cargo-/productieapp-proeven nodig of uitgevoerd. Gebruiker heeft commit en push expliciet opgedragen op 23 oktober.
 

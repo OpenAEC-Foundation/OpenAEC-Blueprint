@@ -48,10 +48,10 @@ impl<A:Application> Runtime<A> {
                     }
                 }
                 let window_task:Option<Task<Message<A::Command>>> = match &event {
-                    UiEvent::DragWindow => Some(iced::window::get_latest().and_then(iced::window::drag)),
-                    UiEvent::Minimize => Some(iced::window::get_latest().and_then(|id|iced::window::minimize(id,true))),
-                    UiEvent::Maximize => Some(iced::window::get_latest().and_then(iced::window::toggle_maximize)),
-                    UiEvent::CloseWindow if self.app.close_requested() => Some(iced::window::get_latest().and_then(iced::window::close)),
+                    UiEvent::DragWindow => Some(iced::window::latest().and_then(iced::window::drag)),
+                    UiEvent::Minimize => Some(iced::window::latest().and_then(|id|iced::window::minimize(id,true))),
+                    UiEvent::Maximize => Some(iced::window::latest().and_then(iced::window::toggle_maximize)),
+                    UiEvent::CloseWindow if self.app.close_requested() => Some(iced::window::latest().and_then(iced::window::close)),
                     _ => None,
                 };
                 let previewing_settings = self.shell.settings;
@@ -92,7 +92,7 @@ impl<A:Application> Runtime<A> {
             self.app.subscription().map(Message::Command),
             iced::window::close_requests().map(|_|Message::Ui(UiEvent::CloseWindow)),
             iced::window::resize_events().map(|(_, size)|Message::Ui(UiEvent::WindowWidth(size.width))),
-            iced::keyboard::on_key_press(|key,mods| {
+            crate::keyboard::on_key_press(|key,mods| {
                 use iced::keyboard::{Key,key::Named};
                 match key {
                     Key::Named(Named::Escape) => Some(Message::Ui(UiEvent::SettingsEscape)),
@@ -110,14 +110,17 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
         Some(path)=>match Preferences::load(path) { Ok(p)=>(p,None),Err(e)=>(Preferences::default(),Some(format!("Settings: {e}"))) },
         None=>(Preferences::default(),None),
     };
-    iced::application(|state:&Runtime<A>|state.app.title(),Runtime::update,Runtime::view)
+    // iced 0.14 boots the state through a closure; it runs once.
+    let initial=std::sync::Mutex::new(Some(Runtime{app,shell:ShellState::new(preferences),preferences_path,error}));
+    iced::application(move ||initial.lock().unwrap_or_else(|e|e.into_inner()).take().expect("the application boots once"),Runtime::update,Runtime::view)
+        .title(|state:&Runtime<A>|state.app.title())
         .subscription(Runtime::subscription)
         .theme(|state:&Runtime<A>|state.shell.preferences.theme.iced())
-        .scale_factor(|state:&Runtime<A>|state.shell.preferences.scale)
+        .scale_factor(|state:&Runtime<A>|state.shell.preferences.scale as f32)
         .default_font(fonts::BODY).font(fonts::FILES[0]).font(fonts::FILES[1]).font(fonts::FILES[2])
         .font(fonts::FILES[3]).font(fonts::FILES[4]).font(fonts::FILES[5])
         .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(model::metrics::WINDOW_MIN_WIDTH as f32,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
-        .run_with(||(Runtime{app,shell:ShellState::new(preferences),preferences_path,error},Task::none()))
+        .run()
 }
 
 #[cfg(test)]

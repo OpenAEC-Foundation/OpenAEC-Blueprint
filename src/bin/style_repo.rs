@@ -697,7 +697,7 @@ impl StyleRepo {
                         .on_input(Action::Input)
                         .style(move |_, status| widgets::text_input_style(theme, status))
                         .width(360),
-                    iced::widget::checkbox(l.text("Voorbeeld actief", "Sample active"), self.sample_toggle)
+                    iced::widget::checkbox(self.sample_toggle).label(l.text("Voorbeeld actief", "Sample active"))
                         .on_toggle(|_| Action::Toggle)
                         .size(13)
                         .text_size(11)
@@ -784,7 +784,7 @@ impl StyleRepo {
                     else { l.text("Smal documentvlak", "Narrow document") }))
                     .on_press(Action::FindNarrow)
                     .style(move |_, status| widgets::secondary_button_style(theme, status)),
-                container(row![Space::new(Fill, 1), find_demo])
+                container(row![Space::new().width(Fill).height(1), find_demo])
                     .width(find_width).height(178).padding([4, 12])
                     .style(move |_| container::Style::default().background(theme.tokens().content_bg)),
             ].spacing(12), theme),
@@ -1055,13 +1055,13 @@ impl StyleRepo {
             let t = candidate.tokens();
             let swatch = container(
                 row![
-                    container(Space::new(30, 30))
+                    container(Space::new().width(30).height(30))
                         .style(move |_| container::Style::default().background(t.bg)),
-                    container(Space::new(30, 30))
+                    container(Space::new().width(30).height(30))
                         .style(move |_| container::Style::default().background(t.bg_lighter)),
-                    container(Space::new(30, 30))
+                    container(Space::new().width(30).height(30))
                         .style(move |_| container::Style::default().background(t.accent)),
-                    container(Space::new(30, 30))
+                    container(Space::new().width(30).height(30))
                         .style(move |_| container::Style::default().background(t.status_bg)),
                 ]
                 .spacing(6),
@@ -1246,9 +1246,9 @@ impl StyleRepo {
                         button(text("Document splitsen · native schermproef").size(11))
                             .padding([6, 9]).on_press(Action::PdfSplitOpen(true))
                             .style(move |_, status| widgets::button_style(theme, false, status)),
-                        iced::widget::checkbox("3 voorbeeldbladwijzers", self.pdf_split.bookmarks)
+                        iced::widget::checkbox(self.pdf_split.bookmarks).label("3 voorbeeldbladwijzers")
                             .on_toggle(Action::PdfSplitBookmarks).text_size(11),
-                        iced::widget::checkbox("Niet opgeslagen", self.pdf_split.modified)
+                        iced::widget::checkbox(self.pdf_split.modified).label("Niet opgeslagen")
                             .on_toggle(Action::PdfSplitModified).text_size(11),
                     ].spacing(12).align_y(Alignment::Center),
                 ].spacing(6);
@@ -1256,7 +1256,7 @@ impl StyleRepo {
                     review = review.push(text(notice).size(11).color(t.text_secondary));
                 }
                 review.into()
-            } else { Space::new(0, 0).into() };
+            } else { Space::new().width(0).height(0).into() };
             column![
                 text(l.text("Ribbon-tabs · bron / concept", "Ribbon tabs · source / concept"))
                     .font(fonts::STRONG).size(11).color(t.accent),
@@ -1290,7 +1290,7 @@ impl StyleRepo {
                 text("Kies een vulkleur; de lijnkleur gebruikt hetzelfde palet.").size(11).color(t.text_secondary),
                 widgets::color_grid(theme, colors, 6, (self.pdf_format.fill < 42).then_some(self.pdf_format.fill)),
             ].spacing(8), theme)
-        } else { Space::new(0, 0).into() };
+        } else { Space::new().width(0).height(0).into() };
         let detail = column![
             text(&selected.name)
                 .font(fonts::HEADING)
@@ -1502,7 +1502,7 @@ impl StyleRepo {
                         row![
                             container(text(label).size(11).color(t.text)).width(90),
                             container(
-                                container(Space::new((185.0 * fraction).max(6.0), 22))
+                                container(Space::new().width((185.0 * fraction).max(6.0)).height(22))
                                     .width((185.0 * fraction).max(6.0))
                                     .style(move |_| container::Style::default()
                                         .background(color)
@@ -1738,10 +1738,10 @@ impl StyleRepo {
             }).size(12).color(t.text_secondary));
         }
         let options = column![
-            iced::widget::checkbox(l.text("Foto's insluiten", "Include photos"), self.field_export_photos)
+            iced::widget::checkbox(self.field_export_photos).label(l.text("Foto's insluiten", "Include photos"))
                 .on_toggle(Action::FieldExportPhotos).size(15).text_size(13).spacing(12)
                 .style(move |_, status| widgets::checkbox_style(theme, status)),
-            iced::widget::checkbox(l.text("Plattegrond met markeringen", "Floor plan with markers"), self.field_export_map)
+            iced::widget::checkbox(self.field_export_map).label(l.text("Plattegrond met markeringen", "Floor plan with markers"))
                 .on_toggle(Action::FieldExportMap).size(15).text_size(13).spacing(12)
                 .style(move |_, status| widgets::checkbox_style(theme, status)),
         ].spacing(12);
@@ -2096,8 +2096,8 @@ impl StyleRepo {
                 text(format!("{} · 62%", studio.workspace)).size(12),
                 progress_bar(0.0..=100.0, 62.0)
                     .style(move |_| widgets::progress_style(theme))
-                    .height(8)
-                    .width(300),
+                    .girth(8)
+                    .length(300),
                 text(l.text("Stap 3 van 5 · Annuleren blijft beschikbaar.", "Step 3 of 5 · Cancel remains available.")).size(12).color(t.text_secondary),
             ].spacing(12).into(),
             "unsaved-changes" => column![
@@ -2403,7 +2403,7 @@ impl Application for StyleRepo {
                 "This dialog uses the general OpenAEC modal.")).size(12),
         ].spacing(10)).padding(18).width(Fill).into();
         let footer = row![
-            Space::with_width(Fill),
+            Space::new().width(Fill),
             widgets::dialog_button(l.text("Annuleren", "Cancel"),
                 move |_, status| widgets::secondary_button_style(theme, status))
                 .on_press(Action::SampleDialog(false)),

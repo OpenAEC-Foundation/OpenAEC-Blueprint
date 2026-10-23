@@ -512,13 +512,13 @@ impl StyleRepo {
                     .style(move |_, status| widgets::primary_button_style(theme, status))].spacing(10).align_y(Alignment::End),
             field(1, "Coordinate Reference System · bronkeuzelijst"),
             row![field(2, "Boundingbox Width [m]"), field(3, "Boundingbox Height [m]")].spacing(14),
-            checkbox("Create/Update GeoOrigin Object", self.source_geo_origin)
+            checkbox(self.source_geo_origin).label("Create/Update GeoOrigin Object")
                 .on_toggle(Action::SourceGeoOrigin).style(move |_, status| widgets::checkbox_style(theme, status)),
-            checkbox("Import Aerialphoto", self.source_aerial)
+            checkbox(self.source_aerial).label("Import Aerialphoto")
                 .on_toggle(Action::SourceAerial).style(move |_, status| widgets::checkbox_style(theme, status)),
         ].spacing(14), theme);
         let notice: Element<'_, Action> = self.source_notice.map_or_else(
-            || Space::new(0, 0).into(),
+            || Space::new().width(0).height(0).into(),
             |message| text(message).size(11).color(t.accent).into(),
         );
         container(
@@ -568,7 +568,7 @@ impl StyleRepo {
         .spacing(12)
         .into();
         let footer = row![
-            Space::with_width(Fill),
+            Space::new().width(Fill),
             widgets::dialog_button("Sluiten", move |_, status| widgets::primary_button_style(
                 theme, status
             ))

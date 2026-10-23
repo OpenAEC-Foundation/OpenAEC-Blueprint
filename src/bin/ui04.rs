@@ -303,12 +303,12 @@ fn group_choices() -> &'static [Choice] {
 /// Icons per page, so a page lays out quickly even with all 945 icons.
 const ICONS_PER_PAGE: usize = 120;
 
-fn icon_grid_id() -> scrollable::Id {
-    scrollable::Id::new("icon-grid")
+fn icon_grid_id() -> iced::widget::Id {
+    iced::widget::Id::new("icon-grid")
 }
 
 fn icon_grid_to_top() -> Task<Msg> {
-    scrollable::snap_to(icon_grid_id(), scrollable::RelativeOffset::START)
+    iced::widget::operation::snap_to(icon_grid_id(), scrollable::RelativeOffset::START)
 }
 
 /// State of the icon view: every B2 icon from the `openaec-icons` crate.
@@ -1257,26 +1257,26 @@ impl Gallery {
                     self.last_title_press = None;
                     return self.update(Msg::Maximize);
                 }
-                return iced::window::get_latest().and_then(iced::window::drag);
+                return iced::window::latest().and_then(iced::window::drag);
             }
-            Msg::Minimize => return iced::window::get_latest().and_then(|id| iced::window::minimize(id, true)),
+            Msg::Minimize => return iced::window::latest().and_then(|id| iced::window::minimize(id, true)),
             Msg::Maximize => {
                 self.maximized = !self.maximized;
-                return iced::window::get_latest().and_then(iced::window::toggle_maximize);
+                return iced::window::latest().and_then(iced::window::toggle_maximize);
             }
             Msg::CloseWindow => {
                 if self.docs.iter().any(|d| d.dirty) {
                     self.dialog = Some(Dialog::Quit);
                 } else {
-                    return iced::window::get_latest().and_then(iced::window::close);
+                    return iced::window::latest().and_then(iced::window::close);
                 }
             }
-            Msg::QuitNow => return iced::window::get_latest().and_then(iced::window::close),
+            Msg::QuitNow => return iced::window::latest().and_then(iced::window::close),
             Msg::SaveAndQuit => {
                 for doc in &mut self.docs {
                     doc.dirty = false;
                 }
-                return iced::window::get_latest().and_then(iced::window::close);
+                return iced::window::latest().and_then(iced::window::close);
             }
             Msg::DragSplit(side) => {
                 let width = match side {
@@ -1485,7 +1485,7 @@ impl Gallery {
     }
 
     fn subscription(&self) -> Subscription<Msg> {
-        let keys = keyboard::on_key_press(|key, mods| {
+        let keys = openaec_ui::keyboard::on_key_press(|key, mods| {
             use keyboard::key::Named;
             use keyboard::Key;
             match (key.as_ref(), mods.command()) {
@@ -1553,7 +1553,7 @@ impl Gallery {
         let views = [(View::Screen, "Lint-app"), (View::Workflow, "Werkstroom-app"), (View::Installer, "Installer"), (View::Components, "Componenten"), (View::Icons, "Iconen")];
         let mut bar = row![
             text("UI 0.4").size(font::SIZE_PANEL_HEADING).font(fonts::HEADING).color(c.text),
-            Space::with_width(12),
+            Space::new().width(12),
             w::mono_label(look, "Thema"),
             container(w::select(look, &ThemeId::ALL, Some(self.theme), Msg::Theme, D::Compact)).width(160),
             w::mono_label(look, "Werkruimte"),
@@ -1567,7 +1567,7 @@ impl Gallery {
             bar = bar.push(w::mono_label(look, "Navigatie"));
             bar = bar.push(container(w::select(look, &Navigation::ALL, Some(self.wf.navigation), Msg::WfNavigation, D::Compact)).width(144));
         }
-        bar = bar.push(Space::with_width(Length::Fill));
+        bar = bar.push(Space::new().width(Length::Fill));
         bar = bar.push(w::with_tooltip(look, w::icon_button(look, HOME, 24.0, false, Some(Msg::Restart)), "Herstart: doe alsof de app opnieuw opent", None));
         for (v, label) in views {
             let kind = if self.view == v { K::Secondary } else { K::Quiet };
@@ -1768,7 +1768,7 @@ impl Gallery {
                 }
                 let menu_ids = ids.clone();
                 let table = w::table(look, &BUDGET_COLUMNS, rows, selected_row(&ids), Some(move |i: usize| Msg::SelectRow(ids[i])), Some(move |i: usize| Msg::Menu(Some(MenuKind::Row(menu_ids[i])))));
-                let total = row![w::mono_label(look, "Totaal"), Space::with_width(Length::Fill), text(euro(self.total())).size(font::SIZE_PANEL_HEADING).font(fonts::MONO).color(c.text)].padding([8, 8]).align_y(Alignment::Center);
+                let total = row![w::mono_label(look, "Totaal"), Space::new().width(Length::Fill), text(euro(self.total())).size(font::SIZE_PANEL_HEADING).font(fonts::MONO).color(c.text)].padding([8, 8]).align_y(Alignment::Center);
                 content = content.push(card(column![table, total].into()));
                 content = content.push(row![
                     w::button(look, "Nieuwe post", K::Secondary, D::Regular, Some(b2!("16", "budget.add-item")), Some(Msg::AddItem)),
@@ -1798,12 +1798,12 @@ impl Gallery {
                         row![
                             text(name).size(font::SIZE_BODY).color(c.text).width(120),
                             row![
-                                container(Space::new(Length::Fill, 18)).width(Length::FillPortion(share)).style(move |_| container::Style {
+                                container(Space::new().width(Length::Fill).height(18)).width(Length::FillPortion(share)).style(move |_| container::Style {
                                     background: Some(Background::Color(accent)),
                                     border: iced::Border { radius: 3.0.into(), ..Default::default() },
                                     ..Default::default()
                                 }),
-                                Space::with_width(Length::FillPortion(1000 - share.min(999))),
+                                Space::new().width(Length::FillPortion(1000 - share.min(999))),
                             ]
                             .width(Length::Fill),
                             text(euro(value)).size(font::SIZE_BODY).font(fonts::MONO).color(c.text).width(120).align_x(iced::alignment::Horizontal::Right),
@@ -1924,7 +1924,7 @@ impl Gallery {
                 w::with_tooltip(look, ch::title_button(look, REDO_SMALL, false, (!self.future.is_empty()).then_some(Msg::Redo)), "Opnieuw", Some("Ctrl+Y")),
             ]
         } else {
-            vec![Space::with_width(86).into()]
+            vec![Space::new().width(86).into()]
         };
         let extra = vec![
             w::with_tooltip(look, ch::title_button(look, MENU, self.menu.is_some_and(|(k, _)| k == MenuKind::App), Some(Msg::Menu(Some(MenuKind::App)))), "Menu", None),
@@ -2004,12 +2004,12 @@ impl Gallery {
         for (i, len) in lines.into_iter().enumerate() {
             let color = if i == 0 { look.workspace_accent_text } else { iced::Color { a: 0.45, ..c.workspace_text } };
             sheet = sheet.push(row![
-                container(Space::new(Length::Fill, 5)).width(Length::FillPortion(len)).style(move |_| container::Style {
+                container(Space::new().width(Length::Fill).height(5)).width(Length::FillPortion(len)).style(move |_| container::Style {
                     background: Some(Background::Color(color)),
                     border: iced::Border { radius: 2.0.into(), ..Default::default() },
                     ..Default::default()
                 }),
-                Space::with_width(Length::FillPortion(10 - len)),
+                Space::new().width(Length::FillPortion(10 - len)),
             ]);
         }
         sheet.into()
@@ -2042,17 +2042,17 @@ impl Gallery {
         let c = look.color;
         let left = column![
             wf::page_heading(look, "Voorbeeldstudio", Some("Begrotingen voor bouwprojecten")),
-            Space::with_height(4),
+            Space::new().height(4),
             w::mono_label(look, "Nieuw"),
             t::task_tile(look, NEW, "Lege begroting", "Begin zonder posten.", Some(Msg::OpenProject(0))),
             t::task_tile(look, ADD_CHAPTER, "Vanaf sjabloon", "Woningbouw, utiliteit of renovatie.", Some(Msg::OpenProject(0))),
             t::task_tile(look, OPEN_LARGE, "Bestand openen", "Kies een begroting op deze computer.", Some(Msg::OpenProject(1))),
-            Space::with_height(8),
+            Space::new().height(8),
             t::info_card(look, "Over", vec![("Versie", "UI 0.4 · voorbeeld".into()), ("Thema", self.theme.name().into()), ("Licentie", "nog te bepalen".into())]),
         ]
         .spacing(8)
         .width(340);
-        let right = column![w::mono_label(look, "Recente projecten"), self.project_grid(look), Space::with_height(4), w::mono_label(look, "Recente bestanden"), self.recent_list(look)]
+        let right = column![w::mono_label(look, "Recente projecten"), self.project_grid(look), Space::new().height(4), w::mono_label(look, "Recente bestanden"), self.recent_list(look)]
             .spacing(12)
             .width(Length::Fill);
         container(scrollable(container(row![left, right].spacing(40)).padding(32).max_width(1180)).height(Length::Fill))
@@ -2295,13 +2295,13 @@ impl Gallery {
                 text("één plek.").size(40).font(BOLD_HEADING).color(d.accent_text),
             ],
             text("Ontdek, installeer, werk bij en start de open source tools van de OpenAEC Foundation.").size(16).font(fonts::BODY).color(d.text_secondary),
-            Space::with_height(6),
+            Space::new().height(6),
             row![
                 site_button_owned(dark, update_all, SiteKind::Primary, Some(UPDATE), (updates > 0).then_some(Msg::InstUpdateAll), false),
                 site_button(dark, if s.refreshing { "Controleren…" } else { "Controleren op updates" }, SiteKind::Glass, Some(CHECK_UPDATES), (!s.refreshing).then_some(Msg::InstRefresh)),
             ]
             .spacing(12),
-            Space::with_height(4),
+            Space::new().height(4),
             row![
                 stat(TOOLS.len(), "TOOLS"),
                 stat(s.count(Filter::Installed), "GEÏNSTALLEERD"),
@@ -2320,7 +2320,7 @@ impl Gallery {
         for (n, _) in featured.iter().enumerate() {
             let on = n == s.feature % featured.len();
             dots = dots.push(
-                iced::widget::button(Space::new(22, 4))
+                iced::widget::button(Space::new().width(22).height(4))
                     .padding(0)
                     .on_press(Msg::InstFeature(n))
                     .style(move |_, _| iced::widget::button::Style { background: Some(Background::Color(if on { d.accent } else { alpha(iced::Color::WHITE, 0.18) })), border: iced::Border { radius: 2.0.into(), ..Default::default() }, ..Default::default() }),
@@ -2332,7 +2332,7 @@ impl Gallery {
         };
         let spot = container(
             column![
-                row![section_label(dark, if s.has_update(f) { "Nieuwe versie" } else { "Uitgelicht" }), Space::with_width(Length::Fill), dots].align_y(Alignment::Center),
+                row![section_label(dark, if s.has_update(f) { "Nieuwe versie" } else { "Uitgelicht" }), Space::new().width(Length::Fill), dots].align_y(Alignment::Center),
                 shot,
                 row![
                     tool_logo(dark, f, 40.0),
@@ -2353,7 +2353,7 @@ impl Gallery {
                 .padding(iced::Padding { top: 40.0, right: 44.0, bottom: 40.0, left: 48.0 })
                 .width(Length::Fill)
                 .style(move |_| dark_band_style(dark)),
-            container(Space::new(Length::Fill, 3)).height(3).style(move |_| container::Style { background: Some(Background::Color(d.accent)), ..Default::default() }),
+            container(Space::new().width(Length::Fill).height(3)).height(3).style(move |_| container::Style { background: Some(Background::Color(d.accent)), ..Default::default() }),
         ];
 
         // Below the band everything follows the theme.
@@ -2373,7 +2373,7 @@ impl Gallery {
                     line = line.push(container(self.tool_card(look, i)).width(Length::FillPortion(1)));
                 }
                 for _ in chunk.len()..3 {
-                    line = line.push(Space::with_width(Length::FillPortion(1)));
+                    line = line.push(Space::new().width(Length::FillPortion(1)));
                 }
                 rows = rows.push(line);
             }
@@ -2394,7 +2394,7 @@ impl Gallery {
             column![
                 row![
                     section_head(look, &format!("Desktop-apps · {}", desktop.len()), "Installeren en starten op je computer", "Windows-installers en AppImages van GitHub Releases. De installer ziet welke versie je hebt."),
-                    Space::with_width(Length::Fill),
+                    Space::new().width(Length::Fill),
                     container(w::text_field(look, "Zoek een tool", &s.search, Some(Msg::InstSearch), D::Regular, None)).width(260),
                 ]
                 .align_y(Alignment::End),
@@ -2402,7 +2402,7 @@ impl Gallery {
             ]
             .spacing(18),
         );
-        let line = || container(Space::new(Length::Fill, 1)).height(1).width(Length::Fill).style(move |_| container::Style { background: Some(Background::Color(c.border_strong)), ..Default::default() });
+        let line = || container(Space::new().width(Length::Fill).height(1)).height(1).width(Length::Fill).style(move |_| container::Style { background: Some(Background::Color(c.border_strong)), ..Default::default() });
         body = body.push(
             row![line(), row![w::glyph(WEBTAB, 14.0, c.text_secondary, c.accent_text), text("WEBTOOLS").size(11).font(fonts::MONO).color(c.text_secondary)].spacing(8).align_y(Alignment::Center), line()]
                 .spacing(14)
@@ -2467,7 +2467,7 @@ impl Gallery {
                 })
                 .into(),
         };
-        let preview = iced::widget::button(picture).padding(0).width(Length::Fill).on_press_maybe(shortcut).style(move |_, _| iced::widget::button::Style {
+        let preview = iced::widget::button(picture).padding(0).width(Length::Fill).on_press_maybe(shortcut).style(move |_, _| iced::widget::button::Style { snap: false,
             background: None,
             text_color: c.text,
             border: iced::Border::default(),
@@ -2519,7 +2519,7 @@ impl Gallery {
             head,
             text(tool.description).size(13).font(fonts::BODY).color(c.text_secondary).height(58),
             meta,
-            container(row![self.tool_action(look, i), Space::with_width(Length::Fill), icons].spacing(8).align_y(Alignment::Center)).height(40).align_y(iced::alignment::Vertical::Center),
+            container(row![self.tool_action(look, i), Space::new().width(Length::Fill), icons].spacing(8).align_y(Alignment::Center)).height(40).align_y(iced::alignment::Vertical::Center),
         ]
         .spacing(12);
         container(card).padding(18).width(Length::Fill).style(move |_| site_card_style(look, update)).into()
@@ -2539,7 +2539,7 @@ impl Gallery {
                     container(w::secondary(look, "Kleur van het vlak waarin je document staat.")).padding([0, 8]),
                     w::property_row(look, "Statusbalk", statusbar),
                     w::property_row(look, "Taal", w::select(look, &["Nederlands"], Some("Nederlands"), |_| Msg::Noop, D::Regular)),
-                    Space::with_height(6),
+                    Space::new().height(6),
                     w::mono_label(look, if self.view == View::Workflow { "Werkstroom" } else { "Opstarten" }),
                 ]
                 .spacing(6);
@@ -2902,7 +2902,7 @@ fn site_card_style(look: Look, featured: bool) -> container::Style {
     let top = c.raised;
     let bottom = openaec_ui::design::mix(c.frame, 0.3, c.raised);
     let shine = openaec_ui::design::mix(iced::Color::WHITE, 0.5, c.raised);
-    container::Style {
+    container::Style { snap: false,
         text_color: Some(c.text),
         background: Some(if hc { Background::Color(c.raised) } else { gradient(&[(0.0, shine), (0.006, top), (1.0, bottom)]) }),
         border: iced::Border { color: if featured { c.accent } else { c.border }, width: if featured { 2.0 } else { 1.0 }, radius: 12.0.into() },
@@ -2917,7 +2917,7 @@ fn glass_card_style(look: Look, featured: bool) -> container::Style {
     if look.high_contrast() {
         return container::Style { text_color: Some(c.text), background: Some(Background::Color(c.raised)), border: iced::Border { color: if featured { c.accent } else { c.border }, width: 2.0, radius: 12.0.into() }, ..Default::default() };
     }
-    container::Style {
+    container::Style { snap: false,
         text_color: Some(c.text),
         background: Some(gradient(&[(0.0, alpha(iced::Color::WHITE, 0.16)), (0.006, alpha(iced::Color::WHITE, 0.07)), (1.0, alpha(iced::Color::WHITE, 0.024))])),
         border: iced::Border { color: if featured { c.accent } else { alpha(iced::Color::WHITE, 0.09) }, width: if featured { 2.0 } else { 1.0 }, radius: 12.0.into() },
@@ -2955,7 +2955,7 @@ fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: M
         .on_press(on_press)
         .style(move |_, status| {
             let hovered = status == iced::widget::button::Status::Hovered;
-            iced::widget::button::Style {
+            iced::widget::button::Style { snap: false,
                 background: Some(Background::Color(if hovered && !look.high_contrast() { c.hover } else { alpha(c.raised, if look.tokens.dark { 0.5 } else { 1.0 }) })),
                 text_color: c.text,
                 border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
@@ -3041,20 +3041,20 @@ fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option
                 SiteKind::Primary if !disabled => {
                     let shine = openaec_ui::design::mix(iced::Color::WHITE, 0.35, c.accent_hover);
                     let (top, bottom) = if pressed { (c.accent_pressed, c.accent_pressed) } else if hovered { (c.accent_hover, c.accent) } else { (openaec_ui::design::mix(c.accent_hover, 0.6, c.accent), c.accent) };
-                    iced::widget::button::Style {
+                    iced::widget::button::Style { snap: false,
                         background: Some(if hc { Background::Color(c.accent) } else { gradient(&[(0.0, shine), (0.04, top), (1.0, bottom)]) }),
                         text_color: fg,
                         border: iced::Border { color: if hc && hovered { c.text } else { iced::Color::TRANSPARENT }, width: if hc { 2.0 } else { 0.0 }, radius },
                         shadow: if hc || pressed { iced::Shadow::default() } else { iced::Shadow { color: alpha(c.accent, if hovered { 0.6 } else { 0.45 }), offset: iced::Vector::new(0.0, 7.0), blur_radius: 20.0 } },
                     }
                 }
-                SiteKind::Glass if !hc => iced::widget::button::Style {
+                SiteKind::Glass if !hc => iced::widget::button::Style { snap: false,
                     background: Some(Background::Color(alpha(iced::Color::WHITE, if pressed { 0.03 } else if hovered { 0.11 } else { 0.06 }))),
                     text_color: fg,
                     border: iced::Border { color: if hovered { c.accent } else { alpha(iced::Color::WHITE, 0.14) }, width: 1.0, radius },
                     shadow: iced::Shadow::default(),
                 },
-                _ => iced::widget::button::Style {
+                _ => iced::widget::button::Style { snap: false,
                     background: Some(if disabled { Background::Color(c.panel) } else if pressed { Background::Color(c.pressed) } else if hovered && !hc { Background::Color(c.hover) } else { vertical(c.raised, openaec_ui::design::mix(c.frame, 0.25, c.raised)) }),
                     text_color: fg,
                     border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if hc && hovered { 2.0 } else { 1.0 }, radius },
@@ -3075,7 +3075,7 @@ fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -
         .on_press(on_press)
         .style(move |_, status| {
             let hovered = status == iced::widget::button::Status::Hovered;
-            iced::widget::button::Style {
+            iced::widget::button::Style { snap: false,
                 background: Some(Background::Color(if hovered && !look.high_contrast() { c.hover } else { alpha(c.raised, if look.tokens.dark { 0.5 } else { 1.0 }) })),
                 text_color: c.text,
                 border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
@@ -3107,7 +3107,7 @@ fn icon_tile_amber<'a>(look: Look, icon: &'static str, size: f32) -> Element<'a,
 /// with an amber dot.
 fn section_label<'a>(look: Look, label: &str) -> Element<'a, Msg> {
     let c = look.color;
-    let dot = container(Space::new(6, 6)).style(move |_| container::Style { background: Some(Background::Color(c.accent)), border: iced::Border { radius: 3.0.into(), ..Default::default() }, ..Default::default() });
+    let dot = container(Space::new().width(6).height(6)).style(move |_| container::Style { background: Some(Background::Color(c.accent)), border: iced::Border { radius: 3.0.into(), ..Default::default() }, ..Default::default() });
     container(row![dot, text(label.to_uppercase()).size(12).font(fonts::MONO).color(c.accent_text)].spacing(8).align_y(Alignment::Center))
         .padding([7, 14])
         .style(move |_| container::Style {
@@ -3168,7 +3168,7 @@ fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, activ
     .on_press(on_press)
     .style(move |_, status| {
         let hovered = status == iced::widget::button::Status::Hovered;
-        iced::widget::button::Style {
+        iced::widget::button::Style { snap: false,
             background: Some(if active && !hc {
                 gradient(&[(0.0, openaec_ui::design::mix(iced::Color::WHITE, 0.35, c.accent_hover)), (0.05, openaec_ui::design::mix(c.accent_hover, 0.6, c.accent)), (1.0, c.accent)])
             } else if active {
@@ -3215,7 +3215,8 @@ fn start_view() -> Gallery {
 }
 
 fn main() -> iced::Result {
-    iced::application("OpenAEC UI 0.4", Gallery::update, Gallery::view)
+    iced::application(|| (start_view(), after(6000, Msg::InstFeatureTick)), Gallery::update, Gallery::view)
+        .title("OpenAEC UI 0.4")
         .subscription(Gallery::subscription)
         .theme(|g: &Gallery| g.theme.iced())
         .default_font(fonts::BODY)
@@ -3233,7 +3234,7 @@ fn main() -> iced::Result {
             platform_specific: iced::window::settings::PlatformSpecific { undecorated_shadow: true, ..Default::default() },
             ..Default::default()
         })
-        .run_with(|| (start_view(), after(6000, Msg::InstFeatureTick)))
+        .run()
 }
 
 #[cfg(test)]
@@ -3257,10 +3258,10 @@ mod tests {
 
     fn render(gallery: &Gallery, size: Size) -> tiny_skia::Pixmap {
         load_fonts();
-        let element = gallery.view();
+        let mut element = gallery.view();
         let mut renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
         let mut tree = Tree::new(&element);
-        let node = element.as_widget().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
+        let node = element.as_widget_mut().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
         let theme = gallery.theme.iced();
         let style = renderer::Style { text_color: theme.palette().text };
         element.as_widget().draw(&tree, &mut renderer, &theme, &style, Layout::new(&node), mouse::Cursor::Unavailable, &Rectangle::with_size(size));
@@ -3268,13 +3269,12 @@ mod tests {
         let mut bytes = vec![0u8; (width * height * 4) as usize];
         let mut pixels = tiny_skia::PixmapMut::from_bytes(&mut bytes, width, height).expect("valid pixmap");
         let mut mask = tiny_skia::Mask::new(width, height).expect("valid mask");
-        renderer.draw::<&str>(
+        renderer.draw(
             &mut pixels,
             &mut mask,
             &iced_tiny_skia::graphics::Viewport::with_physical_size(Size::new(width, height), 1.0),
             &[Rectangle::with_size(size)],
             Color::from_rgb(1.0, 0.0, 1.0),
-            &[],
         );
         for pixel in bytes.chunks_exact_mut(4) {
             pixel.swap(0, 2);

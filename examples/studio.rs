@@ -161,8 +161,8 @@ impl Application for Studio {
             .style(move |_, status| widgets::secondary_button_style(theme, status));
             let page = container(
                 column![
-                    row![Space::new(Fill, 1), bar].width(Fill),
-                    Space::new(Fill, 24),
+                    row![Space::new().width(Fill).height(1), bar].width(Fill),
+                    Space::new().width(Fill).height(24),
                     text(l.text("Voorbeeld document", "Sample document"))
                         .size(21)
                         .font(fonts::HEADING),

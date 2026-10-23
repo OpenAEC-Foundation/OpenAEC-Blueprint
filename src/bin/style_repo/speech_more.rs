@@ -72,7 +72,7 @@ impl StyleRepo {
         let transport = container(
             row![
                 record,
-                Space::new(Fill, 1),
+                Space::new().width(Fill).height(1),
                 text("base   00:00:00")
                     .font(fonts::MONO)
                     .size(14)
@@ -190,8 +190,8 @@ impl StyleRepo {
                     .size(11)
                     .color(t.text_secondary),
                 progress_bar(0.0..=100.0, 0.0)
-                    .height(6)
-                    .width(760)
+                    .girth(6)
+                    .length(760)
                     .style(move |_| widgets::progress_style(theme)),
                 container(
                     text("··········································")

@@ -126,7 +126,7 @@ impl CommandIcon {
             Self::Canonical(icon) => icon.view(size, color),
             Self::Domain(icon) => icon.view(size, color),
             Self::Svg(bytes) => iced::widget::svg(iced::widget::svg::Handle::from_memory(bytes))
-                .width(size).height(size)
+                .width(u32::from(size)).height(u32::from(size))
                 .style(move |_, _| iced::widget::svg::Style { color: Some(color) }),
         }
     }
@@ -332,7 +332,7 @@ mod settings_tests {
         let mut shell = ShellState::default();
         let saved = (shell.preferences.explorer_ratio, shell.preferences.properties_ratio);
         let pane_widths = |shell: &ShellState, width: f32| {
-            let regions = shell.panes.layout().pane_regions(2.0, iced::Size::new(width, 480.0));
+            let regions = shell.panes.layout().pane_regions(2.0, 50.0, iced::Size::new(width, 480.0));
             shell.panes.iter().map(|(pane, region)| (*region, regions[pane].width)).collect::<Vec<_>>()
         };
         shell.set_window_width(720.0);

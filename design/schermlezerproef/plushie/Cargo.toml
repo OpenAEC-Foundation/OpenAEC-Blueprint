@@ -1,0 +1,17 @@
+[package]
+name = "schermlezerproef-plushie"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Screen reader trial on plushie-iced with AccessKit"
+
+# A stand-alone trial, not part of the Style Repo workspace.
+[workspace]
+
+[dependencies]
+# Version tested on 2026-10-23. Without the Linux backends, as on Windows.
+iced = { package = "plushie-iced", version = "=0.8.4", default-features = false, features = ["a11y", "tiny-skia", "thread-pool"] }
+
+[features]
+default = ["plushie"]
+plushie = []

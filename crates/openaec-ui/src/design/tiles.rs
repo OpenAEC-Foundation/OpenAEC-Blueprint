@@ -42,7 +42,7 @@ pub fn tile_style(look: Look, status: button::Status, chosen: bool, r: f32) -> b
         S::Hovered => (c.raised, border(c.accent, if hc { 2.0 } else { 1.0 }, r)),
         S::Active => (c.raised, border(c.border, 1.0, r)),
     };
-    button::Style { background: fill(background), text_color: c.text, border: edge, shadow: Shadow::default() }
+    button::Style { snap: false, background: fill(background), text_color: c.text, border: edge, shadow: Shadow::default() }
 }
 
 fn title<'a>(look: Look, content: impl text::IntoFragment<'a>, disabled: bool) -> text::Text<'a> {
@@ -99,7 +99,7 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
                 .width(Length::Fill)
                 .padding([0, 12])
                 .on_press_maybe(file.on_press)
-                .style(move |_, status| button::Style {
+                .style(move |_, status| button::Style { snap: false,
                     background: match status {
                         button::Status::Hovered if !look.high_contrast() => fill(c.hover),
                         button::Status::Pressed if !look.high_contrast() => fill(c.pressed),
@@ -158,7 +158,7 @@ pub fn project_card<'a, M: Clone + 'a>(
     ]
     .spacing(4);
     if let Some((tone, label)) = status {
-        info = info.push(Space::with_height(2)).push(status_label(look, tone, label));
+        info = info.push(Space::new().height(2)).push(status_label(look, tone, label));
     }
     button(column![image, bar(c.border, Length::Fill, 1.0), container(info).padding([10, 12])])
         .padding(1)
@@ -176,7 +176,7 @@ pub fn project_card<'a, M: Clone + 'a>(
 /// The chosen tile has a 2 px border in `selected-bar` and a filled radio.
 pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &'a str, explanation: &'a str, chosen: bool, on_press: M) -> Element<'a, M> {
     let c = look.color;
-    let dot = container(container(Space::new(8, 8)).style(move |_| container::Style {
+    let dot = container(container(Space::new().width(8).height(8)).style(move |_| container::Style {
         background: fill(if chosen { c.selected_bar } else { Color::TRANSPARENT }),
         border: border(Color::TRANSPARENT, 0.0, 4.0),
         ..Default::default()
@@ -185,7 +185,7 @@ pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &
     .style(move |_| container::Style { background: fill(c.raised), border: border(if chosen { c.selected_bar } else { c.border_strong }, 1.5, 8.0), ..Default::default() });
     button(
         column![
-            row![icon_tile(look, icon, 40.0, false), Space::with_width(Length::Fill), dot].align_y(Alignment::Start),
+            row![icon_tile(look, icon, 40.0, false), Space::new().width(Length::Fill), dot].align_y(Alignment::Start),
             title(look, heading, false),
             description(look, explanation, false),
         ]
@@ -201,7 +201,7 @@ pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &
 /// An info card: a mono heading and key–value rows. Not clickable, so no hover.
 pub fn info_card<'a, M: 'a>(look: Look, heading: &str, rows: Vec<(&'a str, String)>) -> Element<'a, M> {
     let c = look.color;
-    let mut content = column![mono_label(look, heading), Space::with_height(4)].spacing(6);
+    let mut content = column![mono_label(look, heading), Space::new().height(4)].spacing(6);
     for (key, value) in rows {
         content = content.push(
             row![
@@ -246,7 +246,7 @@ pub fn file_nav_row<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     let hc = look.high_contrast();
     let disabled = on_press.is_none();
     let fg = if disabled { c.text_disabled } else if active { c.accent_text } else { c.text };
-    let lead: Element<'a, M> = if active && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::with_width(3).into() };
+    let lead: Element<'a, M> = if active && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::new().width(3).into() };
     button(
         row![
             lead,
@@ -262,7 +262,7 @@ pub fn file_nav_row<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     .width(Length::Fill)
     .padding(0)
     .on_press_maybe(on_press)
-    .style(move |_, status| button::Style {
+    .style(move |_, status| button::Style { snap: false,
         background: if active && !hc {
             fill(c.selected)
         } else {

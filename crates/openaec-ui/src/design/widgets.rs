@@ -3,7 +3,7 @@
 //! Each function follows `design/ontwerp-0.4/04-componenten.md`. Icons are SVG
 //! sources in the B2 format (`currentColor` for the main colour and
 //! `var(--icon-accent, currentColor)` for the accent); [`glyph`] recolours them
-//! per state. Two parts of the spec need more than iced 0.13 offers and are
+//! per state. Two parts of the spec need more than iced 0.14 offers and are
 //! approximated: focus is drawn as a 2 px border inside the control instead of
 //! an outer ring, and High contrast draws disabled borders solid, not dashed.
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
@@ -137,7 +137,7 @@ pub fn secondary<'a>(look: Look, content: impl text::IntoFragment<'a>) -> text::
     text(content).size(font::SIZE_BODY).font(fonts::BODY).color(look.color.text_secondary)
 }
 
-/// Mono label: JetBrains Mono, 11 px, uppercase. iced 0.13 has no letter spacing.
+/// Mono label: JetBrains Mono, 11 px, uppercase. iced 0.14 has no letter spacing.
 pub fn mono_label<'a>(look: Look, content: &str) -> text::Text<'a> {
     text(content.to_uppercase()).size(font::SIZE_LABEL).font(fonts::MONO).color(look.color.text_secondary)
 }
@@ -150,16 +150,16 @@ pub fn heading<'a>(look: Look, content: impl text::IntoFragment<'a>, size: f32) 
 /// A 1 px line in `border`.
 pub fn divider<'a, M: 'a>(look: Look) -> Element<'a, M> {
     let color = look.color.border;
-    container(Space::new(Length::Fill, 1)).height(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
+    container(Space::new().width(Length::Fill).height(1)).height(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
 }
 
 fn vline<'a, M: 'a>(color: Color) -> Element<'a, M> {
-    container(Space::new(1, Length::Fill)).width(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
+    container(Space::new().width(1).height(Length::Fill)).width(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
 }
 
 pub(crate) fn bar<'a, M: 'a>(color: Color, width: impl Into<Length>, height: impl Into<Length>) -> Element<'a, M> {
     let (width, height) = (width.into(), height.into());
-    container(Space::new(width, height))
+    container(Space::new().width(width).height(height))
         .width(width)
         .height(height).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
 }
@@ -170,7 +170,7 @@ pub(crate) fn bar<'a, M: 'a>(color: Color, width: impl Into<Length>, height: imp
 /// A ring layer without blur, as in High contrast, becomes the border.
 pub fn surface(look: Look, layers: &[ShadowLayer], r: f32) -> container::Style {
     let ring = layers.iter().find(|l| !l.inset && l.blur == 0.0 && l.spread > 0.0);
-    container::Style {
+    container::Style { snap: false,
         text_color: Some(look.color.text),
         background: fill(look.color.raised),
         border: match ring {
@@ -183,7 +183,7 @@ pub fn surface(look: Look, layers: &[ShadowLayer], r: f32) -> container::Style {
 
 /// Panel surface: `panel` with the panel shadow.
 pub fn panel_style(look: Look) -> container::Style {
-    container::Style {
+    container::Style { snap: false,
         text_color: Some(look.color.text),
         background: fill(look.color.panel),
         border: border(look.color.border, 1.0, 0.0),
@@ -199,7 +199,7 @@ pub fn button_style(look: Look, kind: ButtonKind, status: iced_button::Status) -
     let hc = look.high_contrast();
     let r = radius::MEDIUM;
     if status == S::Disabled {
-        return iced_button::Style {
+        return iced_button::Style { snap: false,
             background: match kind {
                 ButtonKind::Primary => fill(c.hover),
                 ButtonKind::Secondary => fill(c.raised),
@@ -217,19 +217,19 @@ pub fn button_style(look: Look, kind: ButtonKind, status: iced_button::Status) -
     let pressed = status == S::Pressed;
     let hc_ring = if hc && (hovered || pressed) { Some(border(c.accent, 2.0, r)) } else { None };
     match kind {
-        ButtonKind::Primary => iced_button::Style {
+        ButtonKind::Primary => iced_button::Style { snap: false,
             background: fill(if pressed { c.accent_pressed } else if hovered { c.accent_hover } else { c.accent }),
             text_color: c.text_on_accent,
             border: border(Color::TRANSPARENT, 0.0, r),
             shadow: Shadow::default(),
         },
-        ButtonKind::Secondary => iced_button::Style {
+        ButtonKind::Secondary => iced_button::Style { snap: false,
             background: fill(if pressed { c.pressed } else if hovered { c.hover } else { c.raised }),
             text_color: c.text,
             border: hc_ring.unwrap_or(border(c.border_strong, 1.0, r)),
             shadow: Shadow::default(),
         },
-        ButtonKind::Quiet => iced_button::Style {
+        ButtonKind::Quiet => iced_button::Style { snap: false,
             background: if pressed { fill(c.pressed) } else if hovered { fill(c.hover) } else { None },
             text_color: c.text,
             border: hc_ring.unwrap_or(border(Color::TRANSPARENT, 0.0, r)),
@@ -238,7 +238,7 @@ pub fn button_style(look: Look, kind: ButtonKind, status: iced_button::Status) -
         ButtonKind::Danger => {
             let (h, p) = if look.tokens.dark { (0.06, 0.10) } else { (0.08, 0.16) };
             let tint = |a| if hc { None } else { fill(mix(c.error, a, c.panel)) };
-            iced_button::Style {
+            iced_button::Style { snap: false,
                 background: if pressed { tint(p) } else if hovered { tint(h) } else { None },
                 text_color: c.error,
                 border: border(c.error, if hc && (hovered || pressed) { 2.0 } else { 1.0 }, r),
@@ -318,7 +318,7 @@ pub fn icon_button<'a, M: Clone + 'a>(
             } else {
                 border(Color::TRANSPARENT, 0.0, r)
             };
-            iced_button::Style { background, text_color: fg, border: edge, shadow: Shadow::default() }
+            iced_button::Style { snap: false, background, text_color: fg, border: edge, shadow: Shadow::default() }
         })
         .into()
 }
@@ -342,7 +342,7 @@ fn input_style(look: Look, status: text_input::Status, invalid: bool) -> text_in
     let edge = match status {
         S::Disabled => border(if look.high_contrast() { c.text_disabled } else { c.border }, 1.0, r),
         _ if invalid => border(c.error, 2.0, r),
-        S::Focused => border(c.focus, 2.0, r),
+        S::Focused { .. } => border(c.focus, 2.0, r),
         S::Hovered => border(c.text, 1.0, r),
         S::Active => border(c.border_strong, 1.0, r),
     };
@@ -407,7 +407,7 @@ where
                 handle_color: c.text_secondary,
                 background: Background::Color(c.raised),
                 border: match status {
-                    S::Opened => border(c.focus, 2.0, radius::MEDIUM),
+                    S::Opened { .. } => border(c.focus, 2.0, radius::MEDIUM),
                     S::Hovered => border(c.text, 1.0, radius::MEDIUM),
                     S::Active => border(c.border_strong, 1.0, radius::MEDIUM),
                 },
@@ -415,7 +415,7 @@ where
         })
         .menu_style(move |_| {
             let s = surface(look, look.tokens.shadow.popup, radius::LARGE);
-            iced::overlay::menu::Style {
+            iced::overlay::menu::Style { shadow: iced::Shadow::default(),
                 background: Background::Color(c.raised),
                 border: s.border,
                 text_color: c.text,
@@ -431,7 +431,8 @@ where
 /// A 16 px checkbox; use it in forms that are confirmed later.
 pub fn checkbox<'a, M: 'a>(look: Look, label: &'a str, checked: bool, on_toggle: Option<impl Fn(bool) -> M + 'a>) -> Element<'a, M> {
     let c = look.color;
-    iced_checkbox(label, checked)
+    iced_checkbox(checked)
+        .label(label)
         .on_toggle_maybe(on_toggle)
         .size(16)
         .spacing(8)
@@ -505,15 +506,18 @@ pub fn switch<'a, M: 'a>(look: Look, label: &'a str, on: bool, on_toggle: Option
             let (toggled, hovered, disabled) = match status {
                 S::Active { is_toggled } => (is_toggled, false, false),
                 S::Hovered { is_toggled } => (is_toggled, true, false),
-                S::Disabled => (on, false, true),
+                S::Disabled { is_toggled } => (is_toggled, false, true),
             };
             iced_toggler::Style {
-                background: if disabled { c.border } else if toggled { if hovered { c.accent_hover } else { c.accent } } else { c.border_strong },
+                background: Background::Color(if disabled { c.border } else if toggled { if hovered { c.accent_hover } else { c.accent } } else { c.border_strong }),
                 background_border_width: 0.0,
                 background_border_color: Color::TRANSPARENT,
-                foreground: if disabled { c.text_disabled } else { Color::WHITE },
+                foreground: Background::Color(if disabled { c.text_disabled } else { Color::WHITE }),
                 foreground_border_width: 0.0,
                 foreground_border_color: Color::TRANSPARENT,
+                text_color: None,
+                border_radius: None,
+                padding_ratio: 0.1,
             }
         })
         .into()
@@ -543,7 +547,7 @@ pub fn slider<'a, M: Clone + 'a>(look: Look, range: std::ops::RangeInclusive<f32
 pub fn progress<'a, M: 'a>(look: Look, value: f32) -> Element<'a, M> {
     let c = look.color;
     iced_progress(0.0..=1.0, value)
-        .height(6)
+        .girth(6)
         .style(move |_| iced_progress::Style {
             background: Background::Color(c.border),
             bar: Background::Color(c.accent),
@@ -556,7 +560,7 @@ pub fn progress<'a, M: 'a>(look: Look, value: f32) -> Element<'a, M> {
 
 /// A panel header of 24 px with a mono label and 20 px icon buttons.
 pub fn panel_header<'a, M: 'a>(look: Look, title: &str, actions: Vec<Element<'a, M>>) -> Element<'a, M> {
-    let mut bar = row![mono_label(look, title), Space::with_width(Length::Fill)].spacing(2).align_y(Alignment::Center);
+    let mut bar = row![mono_label(look, title), Space::new().width(Length::Fill)].spacing(2).align_y(Alignment::Center);
     for action in actions {
         bar = bar.push(action);
     }
@@ -576,7 +580,7 @@ pub fn panel<'a, M: 'a>(look: Look, title: &str, width: f32, actions: Vec<Elemen
 fn selectable<'a, M: 'a>(look: Look, content: Element<'a, M>, selected: bool, height: f32) -> Element<'a, M> {
     let c = look.color;
     let hc = look.high_contrast();
-    let lead: Element<'a, M> = if selected && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::with_width(3).into() };
+    let lead: Element<'a, M> = if selected && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::new().width(3).into() };
     container(row![lead, content].height(Length::Fill).align_y(Alignment::Center))
         .height(height)
         .width(Length::Fill)
@@ -603,14 +607,14 @@ pub fn tree_row<'a, M: Clone + 'a>(
     on_menu: Option<M>,
 ) -> Element<'a, M> {
     let c = look.color;
-    let mut line = row![Space::with_width(4.0 + 16.0 * f32::from(depth))].spacing(4).align_y(Alignment::Center);
+    let mut line = row![Space::new().width(4.0 + 16.0 * f32::from(depth))].spacing(4).align_y(Alignment::Center);
     let toggle: Element<'a, M> = match (arrow, on_toggle) {
         (Some(source), Some(toggle)) => iced_button(container(glyph(source, 12.0, c.text_secondary, c.text_secondary)).center(16))
             .width(16)
             .height(16)
             .padding(0)
             .on_press(toggle)
-            .style(move |_, status| iced_button::Style {
+            .style(move |_, status| iced_button::Style { snap: false,
                 background: if status == iced_button::Status::Hovered && !look.high_contrast() { fill(c.pressed) } else { None },
                 text_color: c.text,
                 border: border(if status == iced_button::Status::Hovered && look.high_contrast() { c.accent } else { Color::TRANSPARENT }, 1.0, radius::SMALL),
@@ -618,7 +622,7 @@ pub fn tree_row<'a, M: Clone + 'a>(
             })
             .into(),
         (Some(source), None) => container(glyph(source, 12.0, c.text_secondary, c.text_secondary)).center(16).into(),
-        (None, _) => Space::with_width(16).into(),
+        (None, _) => Space::new().width(16).into(),
     };
     line = line.push(toggle);
     if let Some(source) = icon {
@@ -629,7 +633,7 @@ pub fn tree_row<'a, M: Clone + 'a>(
         .padding(0)
         .width(Length::Fill)
         .height(Length::Fill)
-        .on_press_maybe(on_press).style(move |_, status| iced_button::Style {
+        .on_press_maybe(on_press).style(move |_, status| iced_button::Style { snap: false,
         background: if status == iced_button::Status::Hovered && !selected && !look.high_contrast() { fill(c.hover) } else { None },
         text_color: c.text,
         border: if status == iced_button::Status::Hovered && look.high_contrast() { border(c.accent, 1.0, 0.0) } else { Border::default() },
@@ -726,7 +730,7 @@ pub fn table<'a, M: Clone + 'a>(
                 .width(Length::Fill)
                 .height(Length::Fill)
                 .on_press(select(i))
-                .style(move |_, status| iced_button::Style {
+                .style(move |_, status| iced_button::Style { snap: false,
                     background: if status == iced_button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
                     text_color: c.text,
                     border: if status == iced_button::Status::Hovered && look.high_contrast() { border(c.accent, 1.0, 0.0) } else { Border::default() },
@@ -824,7 +828,7 @@ pub fn dialog<'a, M: Clone + 'a>(
     if let Some(button) = quiet {
         footer = footer.push(button);
     }
-    footer = footer.push(Space::with_width(Length::Fill));
+    footer = footer.push(Space::new().width(Length::Fill));
     for action in actions {
         footer = footer.push(action);
     }
@@ -870,7 +874,7 @@ pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: 
             container(label).height(Length::Fill).align_y(Vertical::Center).padding([0, 12]),
             container(bar(if on { c.accent } else { Color::TRANSPARENT }, Length::Fill, 2.0)).height(Length::Fill).align_y(Vertical::Bottom),
         ];
-        line = line.push(iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style {
+        line = line.push(iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
             background: if status == iced_button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
             text_color: c.text,
             border: Border::default(),
@@ -885,7 +889,7 @@ fn ribbon_button_style(look: Look, active: bool, status: iced_button::Status) ->
     let c = look.color;
     let hc = look.high_contrast();
     let r = radius::MEDIUM;
-    iced_button::Style {
+    iced_button::Style { snap: false,
         background: match status {
             S::Pressed if !hc => fill(c.pressed),
             S::Hovered if !hc => fill(c.hover),
@@ -922,7 +926,7 @@ pub fn ribbon_large<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     let accent = if disabled { fg } else { c.accent_text };
     // At least 56 px wide; a longer one-word label widens the button instead of being cut.
     let content = column![
-        Space::with_width(48),
+        Space::new().width(48),
         icon_tile(look, glyph(icon, 22.0, fg, accent), active, 32.0),
         text(label).size(font::SIZE_LABEL).font(fonts::BODY).align_x(Horizontal::Center),
     ]
@@ -964,7 +968,7 @@ pub fn ribbon_group<'a, M: 'a>(look: Look, label: &str, buttons: Vec<Element<'a,
     for button in buttons {
         items = items.push(button);
     }
-    column![items, Space::with_height(Length::Fill), mono_label(look, label)]
+    column![items, Space::new().height(Length::Fill), mono_label(look, label)]
         .align_x(Alignment::Center)
         .padding([4, 6])
         .height(Length::Fill)
@@ -1028,7 +1032,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
         let fg = if on { c.workspace_text } else { c.text_secondary };
         let mut inner = row![].spacing(6).align_y(Alignment::Center);
         if tab.dirty {
-            inner = inner.push(container(Space::new(6, 6)).style(move |_| container::Style {
+            inner = inner.push(container(Space::new().width(6).height(6)).style(move |_| container::Style {
                 background: fill(if on { look.workspace_accent_text } else { c.accent }),
                 border: border(Color::TRANSPARENT, 0.0, 3.0),
                 ..Default::default()
@@ -1044,7 +1048,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
                 .height(16)
                 .padding(0)
                 .on_press(on_close(i))
-                .style(move |_, status| iced_button::Style {
+                .style(move |_, status| iced_button::Style { snap: false,
                     background: if status == iced_button::Status::Hovered && !look.high_contrast() { fill(hover_bg) } else { None },
                     text_color: fg,
                     border: border(if status == iced_button::Status::Hovered && look.high_contrast() { c.accent } else { Color::TRANSPARENT }, 1.0, radius::SMALL),
@@ -1053,7 +1057,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
         );
         }
         let workspace = c.workspace;
-        let tab = iced_button(inner).height(24).padding([0, 10]).on_press(on_select(i)).style(move |_, status| iced_button::Style {
+        let tab = iced_button(inner).height(24).padding([0, 10]).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
             background: if on { fill(workspace) } else if status == iced_button::Status::Hovered && !look.high_contrast() { fill(c.hover) } else { None },
             text_color: fg,
             border: Border {
@@ -1077,7 +1081,7 @@ pub fn status_bar<'a, M: 'a>(look: Look, left: Vec<String>, right: Vec<String>) 
     for s in left {
         line = line.push(item(s));
     }
-    line = line.push(Space::with_width(Length::Fill));
+    line = line.push(Space::new().width(Length::Fill));
     for s in right {
         line = line.push(text(s).size(font::SIZE_LABEL).font(fonts::MONO).color(c.statusbar_text));
     }
@@ -1100,7 +1104,7 @@ pub fn empty_state<'a, M: 'a>(look: Look, icon: &'static str, title: &'a str, ex
     .align_x(Alignment::Center)
     .max_width(320);
     if let Some(action) = action {
-        content = content.push(Space::with_height(4)).push(action);
+        content = content.push(Space::new().height(4)).push(action);
     }
     container(content).center(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
 }

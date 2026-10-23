@@ -106,7 +106,7 @@ impl StyleRepo {
             text("EIGENSCHAPPEN").font(fonts::STRONG).size(10).color(t.accent),
             text(if self.validator_route == 4 { "IfcWall · geselecteerd in resultaatboom" } else { "Selecteer een element in de 3D-viewer" })
                 .size(11).color(t.text_secondary),
-            if self.validator_route == 4 { line(theme, "GlobalId", "voorbeeld") } else { Space::new(0, 0).into() },
+            if self.validator_route == 4 { line(theme, "GlobalId", "voorbeeld") } else { Space::new().width(0).height(0).into() },
         ].spacing(13)).padding(12).width(Fill).height(Fill)
             .style(move |_| container::Style::default().background(t.bg_lighter)
                 .border(iced::Border::default().color(t.border).width(1)));
@@ -155,7 +155,7 @@ impl StyleRepo {
             "viewer-submitting" => content = content.push(text("Bestanden uploaden…").size(11).color(t.accent)),
             "viewer-polling" => content = content.push(column![
                 text("Validatie wordt uitgevoerd").font(fonts::STRONG).size(11),
-                progress_bar(0.0..=100.0, 63.0).height(7),
+                progress_bar(0.0..=100.0, 63.0).girth(7),
                 text("Annuleren").size(10).color(t.text_secondary),
             ].spacing(9)),
             "viewer-error" => content = content.push(column![
@@ -211,7 +211,7 @@ impl StyleRepo {
             "legacy-submitting" => cards = cards.push(surface(theme, text("Uploading files and starting validation…").size(12), 17)),
             "legacy-polling" => cards = cards.push(surface(theme, column![
                 text("Validation progress").font(fonts::STRONG).size(13),
-                progress_bar(0.0..=100.0, 63.0).height(7),
+                progress_bar(0.0..=100.0, 63.0).girth(7),
                 text("Cancel").size(11).color(t.accent),
             ].spacing(10), 17)),
             "legacy-completed" => cards = cards.push(surface(theme, column![

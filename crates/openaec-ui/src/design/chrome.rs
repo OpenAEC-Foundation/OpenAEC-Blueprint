@@ -42,7 +42,7 @@ fn window_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, on_press: M,
         .style(move |_, status| {
             use button::Status as S;
             let active = matches!(status, S::Hovered | S::Pressed);
-            button::Style {
+            button::Style { snap: false,
                 // Close turns into the error colour, as people expect from a window.
                 background: match status {
                     S::Hovered | S::Pressed if close && !hc => fill(c.error),
@@ -88,7 +88,7 @@ pub fn title_bar<'a, M: Clone + 'a>(
     }
     let maximize_icon = if window.maximized { icons.restore } else { icons.maximize };
     right = right
-        .push(Space::with_width(6))
+        .push(Space::new().width(6))
         .push(window_button(look, icons.minimize, window.minimize, false))
         .push(window_button(look, maximize_icon, window.maximize, false))
         .push(window_button(look, icons.close, window.close, true));
@@ -107,7 +107,7 @@ pub fn splitter<'a, M: Clone + 'a>(look: Look, active: bool, on_press: M) -> Ele
     let line = if active { c.accent } else { c.border };
     let width = if active { 2.0 } else { 1.0 };
     mouse_area(
-        container(container(Space::new(width, Length::Fill)).style(move |_| container::Style { background: fill(line), ..Default::default() }))
+        container(container(Space::new().width(width).height(Length::Fill)).style(move |_| container::Style { background: fill(line), ..Default::default() }))
             .width(5)
             .height(Length::Fill)
             .center_x(5)
@@ -161,7 +161,7 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
     for item in items {
         match item {
             MenuItem::Separator => {
-                list = list.push(container(container(Space::new(Length::Fill, 1)).style(move |_| container::Style { background: fill(c.border), ..Default::default() })).padding([4, 0]));
+                list = list.push(container(container(Space::new().width(Length::Fill).height(1)).style(move |_| container::Style { background: fill(c.border), ..Default::default() })).padding([4, 0]));
             }
             MenuItem::Heading(label) => {
                 list = list.push(container(text(label.to_uppercase()).size(font::SIZE_LABEL).font(fonts::MONO).color(c.text_secondary)).height(24).padding([0, 10]).align_y(Vertical::Center));
@@ -174,7 +174,7 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                 } else if let Some(source) = icon {
                     glyph(source, 14.0, fg, if disabled || danger { fg } else { c.accent_text })
                 } else {
-                    Space::with_width(14).into()
+                    Space::new().width(14).into()
                 };
                 let mut line = row![lead, text(label).size(font::SIZE_BODY).font(fonts::BODY).color(fg).width(Length::Fill)].spacing(10).align_y(Alignment::Center);
                 if let Some(keys) = shortcut {
@@ -189,7 +189,7 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                         .style(move |_, status| {
                             use button::Status as S;
                             let active = matches!(status, S::Hovered | S::Pressed);
-                            button::Style {
+                            button::Style { snap: false,
                                 background: match status {
                                     S::Hovered | S::Pressed if hc => None,
                                     S::Pressed => fill(if danger { super::mix(c.error, 0.16, c.raised) } else { c.pressed }),

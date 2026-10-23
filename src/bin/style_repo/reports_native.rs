@@ -44,7 +44,7 @@ impl StyleRepo {
         let mut nav = Column::new().spacing(4)
             .push(text(&d.sample.project).font(fonts::STRONG).size(14).color(t.text))
             .push(text(format!("{} · {}", d.sample.number, d.sample.status)).size(11).color(t.text_secondary))
-            .push(Space::with_height(10));
+            .push(Space::new().height(10));
         for (heading, ids) in [
             ("Document", &["rapport", "voorblad", "colofon", "opties"][..]),
             ("Template", &["field-group"][..]),
@@ -66,7 +66,7 @@ impl StyleRepo {
                         .style(move |_, status| widgets::button_style(theme, self.reports_route == index && number == 0, status)));
                 }
             }
-            nav = nav.push(Space::with_height(8));
+            nav = nav.push(Space::new().height(8));
         }
         container(nav).padding(12).width(Fill).into()
     }
@@ -86,7 +86,7 @@ impl StyleRepo {
             route_groups = route_groups.push(scrollable(buttons).direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new())));
         }
         let sidebar: Element<'_, Action> = if matches!(route.id.as_str(), "loading" | "sso" | "projects" | "admin") {
-            Space::new(0, 0).into()
+            Space::new().width(0).height(0).into()
         } else {
             button(text(if self.reports_sidebar_visible { "Zijbalk verbergen" } else { "Zijbalk tonen" }).size(11))
                 .padding([6, 9]).on_press(Action::ToggleReportsSidebar)
@@ -212,10 +212,10 @@ impl StyleRepo {
         let page: Element<'_, Action> = if self.reports_pdf_state == 2 {
             container(container(column![
                 text(format!("{} · {}", d.sample.number, d.sample.status)).size(9).color(iced::Color::from_rgb8(111, 117, 127)),
-                Space::with_height(52),
+                Space::new().height(52),
                 text(&d.sample.project).font(fonts::HEADING).size(18).color(iced::Color::from_rgb8(52, 56, 64)),
                 text("Constructieve berekening hoofddraagconstructie").size(11).color(iced::Color::from_rgb8(111, 117, 127)),
-                Space::with_height(160),
+                Space::new().height(160),
             ].spacing(15)).padding(20).width(360)
                 .style(move |_| container::Style::default().background(iced::Color::WHITE).border(iced::Border::default().color(iced::Color::from_rgb8(210, 213, 218)).width(1))))
                 .width(Fill).align_x(Alignment::Center).into()
@@ -224,7 +224,7 @@ impl StyleRepo {
                 .size(12).color(t.text_secondary)).padding(24).into()
         };
         self.reports_surface(theme, column![
-            row![text("Auto-preview · Pagina 1").size(11).color(t.text), Space::with_width(Fill), text("Regenereer").size(11).color(t.accent)],
+            row![text("Auto-preview · Pagina 1").size(11).color(t.text), Space::new().width(Fill), text("Regenereer").size(11).color(t.accent)],
             scrollable(states).direction(scrollable::Direction::Horizontal(scrollable::Scrollbar::new())),
             page,
         ].spacing(12), 14)

@@ -1,0 +1,12 @@
+error[E0782]: expected a type, found a trait
+  --> C:\Users\3bmpc3\.cargo\git\checkouts\accesskit-c5e0fd64a779e7b6\6c20249\platforms\winit\src\platform_impl\windows.rs:20:18
+   |
+20 |         window: &Window,
+   |                  ^^^^^^
+   |
+help: use a new generic type parameter, constrained by `Window`
+   |
+18 ~     pub fn new<T: Window>(
+--
+error: could not compile `accesskit_winit` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

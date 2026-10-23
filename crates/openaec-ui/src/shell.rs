@@ -21,7 +21,7 @@ fn horizontal<'a,M:'a>(content: impl Into<Element<'a,M>>) -> Element<'a,M> {
 pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> Element<'a,Message<M>> {
     let theme = state.preferences.theme;
     let t = theme.tokens(); let l = state.preferences.language;
-    let title = mouse_area(container(text(slots.title).font(fonts::MEDIUM).size(12).color(t.accent)).width(Fill).height(metrics::TITLE).center(Fill))
+    let title = mouse_area(container(text(slots.title).font(fonts::MEDIUM).size(12).color(t.accent)).width(Fill).height(u32::from(metrics::TITLE)).center(Fill))
         .on_press(Message::Ui(UiEvent::DragWindow));
     let mut quick = Row::new().spacing(1);
     for command in &slots.quick_commands {
@@ -39,7 +39,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         widgets::title_action(Icon::Minimize.view(16,t.text).into(),l.text("Minimaliseren","Minimize"),Some(Message::Ui(UiEvent::Minimize)),theme),
         widgets::title_action(Icon::Maximize.view(16,t.text).into(),l.text("Maximaliseren","Maximize"),Some(Message::Ui(UiEvent::Maximize)),theme),
         widgets::title_action(Icon::Close.view(16,t.text).into(),l.text("Sluiten","Close"),Some(Message::Ui(UiEvent::CloseWindow)),theme),
-    ].align_y(iced::Alignment::Center)).height(metrics::TITLE).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
+    ].align_y(iced::Alignment::Center)).height(u32::from(metrics::TITLE)).style(move |_| container::Style::default().background(t.bg_lighter).color(t.text));
     let mut tabs = Row::new().spacing(if slots.mode == ChromeMode::CanvasRibbon { 6 } else { 2 });
     if !matches!(slots.mode, ChromeMode::TopNav | ChromeMode::CanvasRibbon | ChromeMode::Plain) {
         let label = l.text("Bestand", "File");
@@ -97,7 +97,7 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
                 scrollable::Scrollbar::new().width(3).scroller_width(3).margin(0),
             ))
             .height(Fill),
-    ).height(metrics::RIBBON).padding(Padding { top: 0.0, right: 8.0, bottom: 0.0, left: 2.0 });
+    ).height(u32::from(metrics::RIBBON)).padding(Padding { top: 0.0, right: 8.0, bottom: 0.0, left: 2.0 });
     let mut documents = Row::new().spacing(1).align_y(iced::Alignment::End);
     for doc in slots.documents {
         let selected=slots.active_document.as_ref() == Some(&doc.id);
@@ -160,9 +160,9 @@ pub fn shell<'a, M: Clone + 'a>(state: &'a ShellState, slots: Slots<'a,M>) -> El
         panes.height(Fill).width(Fill).into()
     } else if let ChromeMode::ThreePaneFixed { left_width, right_width } = slots.mode {
         row![
-            container((slots.content)(Region::Explorer)).width(left_width).height(Fill),
+            container((slots.content)(Region::Explorer)).width(u32::from(left_width)).height(Fill),
             container((slots.content)(Region::Workspace)).width(Fill).height(Fill),
-            container((slots.content)(Region::Properties)).width(right_width).height(Fill),
+            container((slots.content)(Region::Properties)).width(u32::from(right_width)).height(Fill),
         ].height(Fill).width(Fill).into()
     } else if slots.mode == ChromeMode::CanvasRibbon {
         row![
@@ -250,7 +250,7 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
         SettingsPage::Appearance => column![
             heading(l.text("Thema","Theme")),
             row![
-                Space::with_width(Fill),
+                Space::new().width(Fill),
                 widgets::settings_theme_picker(
                     Theme::ALL.into_iter().map(|theme| (
                         theme, theme.to_string(), Message::Ui(UiEvent::Theme(theme)),
@@ -274,7 +274,7 @@ fn settings<'a,M:Clone+'a>(state:&'a ShellState) -> Element<'a,Message<M>> {
     let footer=row![
         widgets::dialog_button(l.text("Standaardwaarden herstellen","Reset to Defaults"),move |_,status|widgets::secondary_button_style(p.theme,status))
             .on_press(Message::Ui(UiEvent::SettingsResetPrompt(true))),
-        Space::with_width(Fill),
+        Space::new().width(Fill),
         widgets::dialog_button(l.text("Annuleren","Cancel"),move |_,status|widgets::secondary_button_style(p.theme,status))
             .on_press(Message::Ui(UiEvent::Settings(false))),
         widgets::dialog_button(l.text("Opslaan","Save"),move |_,status|widgets::primary_button_style(p.theme,status))

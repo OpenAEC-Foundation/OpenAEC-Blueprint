@@ -1,7 +1,7 @@
 //! A reusable anchored overlay for application-owned controls.
 use iced::{
     advanced::{layout, mouse, overlay, renderer::{self, Renderer as _}, widget::Tree, Clipboard, Layout, Shell, Widget},
-    event::{self, Event},
+    Event,
     Element, Length, Point, Rectangle, Size, Vector,
 };
 
@@ -40,14 +40,14 @@ impl<M: Clone> Widget<M, iced::Theme, iced::Renderer> for Popover<'_, M> {
 
     fn size(&self) -> Size<Length> { self.anchor.as_widget().size() }
 
-    fn layout(&self, tree: &mut Tree, renderer: &iced::Renderer, limits: &layout::Limits) -> layout::Node {
-        self.anchor.as_widget().layout(&mut tree.children[0], renderer, limits)
+    fn layout(&mut self, tree: &mut Tree, renderer: &iced::Renderer, limits: &layout::Limits) -> layout::Node {
+        self.anchor.as_widget_mut().layout(&mut tree.children[0], renderer, limits)
     }
 
-    fn on_event(&mut self, tree: &mut Tree, event: Event, layout: Layout<'_>, cursor: mouse::Cursor,
+    fn update(&mut self, tree: &mut Tree, event: &Event, layout: Layout<'_>, cursor: mouse::Cursor,
         renderer: &iced::Renderer, clipboard: &mut dyn Clipboard, shell: &mut Shell<'_, M>,
-        viewport: &Rectangle) -> event::Status {
-        self.anchor.as_widget_mut().on_event(&mut tree.children[0], event, layout, cursor,
+        viewport: &Rectangle) {
+        self.anchor.as_widget_mut().update(&mut tree.children[0], event, layout, cursor,
             renderer, clipboard, shell, viewport)
     }
 
@@ -61,11 +61,11 @@ impl<M: Clone> Widget<M, iced::Theme, iced::Renderer> for Popover<'_, M> {
         self.anchor.as_widget().draw(&tree.children[0], renderer, theme, style, layout, cursor, viewport);
     }
 
-    fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'_>, renderer: &iced::Renderer,
-        translation: Vector) -> Option<overlay::Element<'b, M, iced::Theme, iced::Renderer>> {
+    fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'b>, renderer: &iced::Renderer,
+        viewport: &Rectangle, translation: Vector) -> Option<overlay::Element<'b, M, iced::Theme, iced::Renderer>> {
         let mut children = tree.children.iter_mut();
         let anchor_overlay = self.anchor.as_widget_mut().overlay(
-            children.next().expect("popover anchor tree"), layout, renderer, translation);
+            children.next().expect("popover anchor tree"), layout, renderer, viewport, translation);
         let content_tree = children.next().expect("popover content tree");
         let popup = self.open.then(|| overlay::Element::new(Box::new(PopoverOverlay {
             anchor: layout.bounds(), translation, content: &mut self.content,
@@ -88,7 +88,7 @@ struct PopoverOverlay<'a, 'b, M> {
 impl<M: Clone> overlay::Overlay<M, iced::Theme, iced::Renderer> for PopoverOverlay<'_, '_, M> {
     fn layout(&mut self, renderer: &iced::Renderer, bounds: Size) -> layout::Node {
         let limits = layout::Limits::new(Size::ZERO, bounds);
-        let node = self.content.as_widget().layout(self.tree, renderer, &limits);
+        let node = self.content.as_widget_mut().layout(self.tree, renderer, &limits);
         let size = node.size();
         let anchor = self.anchor.position() + self.translation;
         let target_x = if self.align_end { anchor.x + self.anchor.width - size.width } else { anchor.x };
@@ -103,30 +103,30 @@ impl<M: Clone> overlay::Overlay<M, iced::Theme, iced::Renderer> for PopoverOverl
         layout: Layout<'_>, cursor: mouse::Cursor) {
         renderer.with_layer(layout.bounds(), |renderer| {
             self.content.as_widget().draw(self.tree, renderer, theme, style, layout, cursor,
-                &Rectangle::with_size(Size::INFINITY));
+                &Rectangle::with_size(Size::INFINITE));
         });
     }
 
-    fn on_event(&mut self, event: Event, layout: Layout<'_>, cursor: mouse::Cursor,
-        renderer: &iced::Renderer, clipboard: &mut dyn Clipboard,
-        shell: &mut Shell<'_, M>) -> event::Status {
+    fn update(&mut self, event: &Event, layout: Layout<'_>, cursor: mouse::Cursor,
+        renderer: &iced::Renderer, clipboard: &mut dyn Clipboard, shell: &mut Shell<'_, M>) {
         if matches!(event, Event::Mouse(iced::mouse::Event::ButtonPressed(iced::mouse::Button::Left))
             | Event::Touch(iced::touch::Event::FingerPressed { .. }))
             && cursor.position().is_some_and(|point| !layout.bounds().contains(point)) {
             shell.publish(self.on_close.clone());
-            return event::Status::Captured;
+            shell.capture_event();
+            return;
         }
-        self.content.as_widget_mut().on_event(self.tree, event, layout, cursor, renderer,
-            clipboard, shell, &Rectangle::with_size(Size::INFINITY))
+        self.content.as_widget_mut().update(self.tree, event, layout, cursor, renderer,
+            clipboard, shell, &Rectangle::with_size(Size::INFINITE))
     }
 
-    fn mouse_interaction(&self, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle,
+    fn mouse_interaction(&self, layout: Layout<'_>, cursor: mouse::Cursor,
         renderer: &iced::Renderer) -> mouse::Interaction {
-        self.content.as_widget().mouse_interaction(self.tree, layout, cursor, viewport, renderer)
+        self.content.as_widget().mouse_interaction(self.tree, layout, cursor, &Rectangle::with_size(Size::INFINITE), renderer)
     }
 
-    fn overlay<'b>(&'b mut self, layout: Layout<'_>, renderer: &iced::Renderer)
-        -> Option<overlay::Element<'b, M, iced::Theme, iced::Renderer>> {
-        self.content.as_widget_mut().overlay(self.tree, layout, renderer, Vector::ZERO)
+    fn overlay<'c>(&'c mut self, layout: Layout<'c>, renderer: &iced::Renderer)
+        -> Option<overlay::Element<'c, M, iced::Theme, iced::Renderer>> {
+        self.content.as_widget_mut().overlay(self.tree, layout, renderer, &Rectangle::with_size(Size::INFINITE), Vector::ZERO)
     }
 }

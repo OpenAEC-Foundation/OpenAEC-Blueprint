@@ -40,7 +40,7 @@ fn calc_cell<'a>(
             .size(10)
             .color(if prominent { t.text } else { t.text_secondary }),
     )
-    .width(width)
+    .width(u32::from(width))
     .height(29)
     .padding([7, 6])
     .into()
@@ -205,16 +205,16 @@ impl StyleRepo {
         let t = theme.tokens();
         let content = column![
             text("START").font(fonts::STRONG).size(11),
-            Space::with_height(12),
+            Space::new().height(12),
             text("Open Calc Studio").font(fonts::HEADING).size(16),
             text("Open of maak een nieuw document om te beginnen.")
                 .size(11)
                 .color(t.text_secondary),
-            Space::with_height(12),
+            Space::new().height(12),
             text("＋  Nieuwe begroting").size(12),
             text("▢  Openen").size(12),
             text("↗  Voorbeeldbegroting").size(12).color(t.accent),
-            Space::with_height(18),
+            Space::new().height(18),
             text("OpenAEC").font(fonts::STRONG).size(13),
             text("WAT IS ER NIEUW")
                 .font(fonts::STRONG)
@@ -255,7 +255,7 @@ impl StyleRepo {
             widgets::property("Eenheid", field(item, "unit"), theme),
             widgets::property("Eenheidsprijs", number(item, "unitPrice"), theme),
             widgets::property("Totaal · brondata", number(item, "total"), theme),
-            Space::with_height(10),
+            Space::new().height(10),
             text("WIJZIGINGSHISTORIE")
                 .font(fonts::STRONG)
                 .size(10)
