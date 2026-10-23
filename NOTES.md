@@ -4,6 +4,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
+- **Claude** – issue #2: pijltjestoetsen (focusgroepen) – crates/openaec-ui/src/design, src/bin/ui04.rs (niet planner04.rs) – sinds 2026-10-23.
 
 
 
@@ -102,6 +103,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 - Installer (Claude): voorstel E staat in de galerij `ui04 -- installer` en is voorlopig goedgekeurd (2026-10-22); het team kijkt er later naar. Daarna vastleggen in `05-layouts.md` als derde soort app (hub). In iced 0.13 ontsnapt een bijgesneden afbeelding (`ContentFit::Cover`) aan de scrollgrens; daarom zijn de screenshots vooraf bijgesneden. Issues #16 en #13.
 - Iconen B2 (Claude): staan sinds 2026-10-22 in de crate `crates/openaec-icons` als byte-kopie van de SVGZ-export (25 MB, 945 iconen in 16 en 24 px, per app een feature). De licentie van de iconen is nog open; de crate staat voorlopig op LGPL-3.0-only. Na een nieuwe export van Codex: `python scripts/generate_icon_crate.py`. De galerij toont ze allemaal (`ui04 -- iconen`); nog niet gekoppeld aan een app. Licentie: issue #15.
+
+- Fase 5 Planner (Claude): testversie `planner04` staat klaar voor beoordeling (zie Logboek 2026-10-23). Vervolg: relatielijnen in de Gantt (vraagt canvas of een lijnwidget in `openaec-ui`), de echte IFC-lezer voor de andere voorbeelden, daarna de testversies van PDF en Calc.
 
 - Fase 4 bibliotheek 0.4 (Claude): fundament en componenten staan in `openaec_ui::design`. Schil, startscherm, instellingen, menu's en werkstroomlayout zijn klaar, de iconen staan in `openaec-icons` en het webpakket heeft CSS-componenten (`web/openaec-components.css`). Volgende stap (fase 5, later): testversies van Planner, PDF en Calc met de hele nieuwe UI.
 
@@ -214,6 +217,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+
+- 2026-10-23 **Claude (tweede sessie)**: fase 5, testversie Open Planner Studio in UI 0.4 als nieuw bestand `src/bin/planner04.rs` (`cargo run --release --features gpu --bin planner04`). Opbouw uit de echte app (open-planner-studio, commit 001b9c67): linttabs Start/Planning/Resources/Beeld/Instellingen/Tabel/IFC/Rapport met Nederlandse labels uit de nl-locale, eigenschappenpaneel, statusbalk, Bestand-scherm. Voorbeeldproject grachtenpand Amsterdam uit `examples/01-grachtenpand-amsterdam.ifc` (44 taken, 44 relaties met SS/FF/lags, bouwkalender), vertaald. Werkende Gantt, tabel, resources, histogram, rapport, CPM met speling, nivellering, baseline, statusdatum, undo, dialogen, menu's, sneltoetsen. 8 tests groen (`cargo test --bin planner04`), 17 renders in `design/ontwerp-0.4/native/planner-*.png`; `cargo check` en clippy zonder meldingen voor dit bestand. Alleen nieuw bestand, README en NOTES aangeraakt; geen commit. Toetsenbordroute (Tab/Shift+Tab, Enter, spatie) en inert scherm achter dialoog of menu volgen `openaec_ui::keyboard::navigation` en `design::focus::inert` uit commit 3a4f8adf van de andere Claude-sessie. Bekend: relatielijnen worden niet getekend, alleen het grachtenpand is ingeladen, geen bestands-I/O.
 
 - 2026-10-23 **Claude**: issue #2 grotendeels af: nieuw `design::focus` (`focusable`, `inert`, `next`/`previous` die rondlopen) en `keyboard::navigation`/`navigate`. Alle knoppen, tegels, tabs, boom- en tabelrijen, menu-items, keuzes en werkstroomnavigatie in de bibliotheek doen mee met Tab; Enter en spatie geven dezelfde klik als de muis; focusrand alleen na toetsenbordgebruik en niet achter een open dialoog. Galerij koppelt Tab, houdt de focus in dialogen en menu's en geeft hem terug. Tests: drie in `focus_tests.rs` en één taak zonder muis in `ui04`; in het GPU-venster gecontroleerd. Pijltjestoetsen nog open. `planner04.rs` (andere sessie) bouwt nu niet door eigen fouten in dat bestand; niet aangeraakt. Geen commit.
 
