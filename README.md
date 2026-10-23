@@ -257,6 +257,8 @@ De bibliotheek is met het toetsenbord te bedienen: Tab en Shift+Tab gaan langs a
 
 Elke opdracht staat één keer beschreven als `design::command::Command`, met naam, icoon, sneltoets en soort. Lint, menu's, titelbalk, tooltips en sneltoetsen lezen uit diezelfde lijst, zodat een opdracht overal hetzelfde heet en dezelfde toets heeft (issue #9). De galerij `ui04` doet dit voor alle opdrachten van de voorbeeldapp. Iedereen kan in elke app zelf sneltoetsen instellen op de pagina Sneltoetsen van de instellingen; de keuze wordt per app bewaard en geldt meteen in lint, menu's en tooltips (issue #22, `design::shortcuts`).
 
+Getalvelden lezen in elke app op dezelfde, strikte manier (`design::number`, issue #8): de hele tekst moet het getal zijn, een punt scheidt alleen duizendtallen, te veel decimalen worden geweigerd in plaats van afgerond, en het veld zegt waarom iets geen getal is. Een half getypte invoer blijft staan maar wordt niet opgeslagen.
+
 De installer in de galerij volgt voorstel E uit [`design/ontwerp-0.4/installer-voorstellen.html`](design/ontwerp-0.4/installer-voorstellen.html), gemaakt door [`scripts/build_installer_proposals.py`](scripts/build_installer_proposals.py): alleen het bovenste vlak is donker, daaronder volgt alles het thema, met desktop-apps en webtools als twee secties met de tegels van open-aec.com. De screenshots en de catalogus komen uit de installer op commit `8b39bae`; [`scripts/crop_installer_previews.py`](scripts/crop_installer_previews.py) snijdt ze bij met afgeronde hoeken en een vervaging.
 
 ## Nachtelijke B2-uitbreiding

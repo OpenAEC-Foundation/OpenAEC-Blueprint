@@ -10,6 +10,7 @@
 pub mod chrome;
 pub mod command;
 pub mod focus;
+pub mod number;
 pub mod shortcuts;
 pub mod tiles;
 pub mod tokens;

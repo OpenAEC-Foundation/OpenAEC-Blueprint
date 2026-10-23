@@ -678,19 +678,20 @@ pub fn section_header<'a, M: 'a>(look: Look, arrow: &'static str, title: &str) -
         .into()
 }
 
-/// A property row of 28 px: label in 40% of the width, value in the rest.
+/// A property row of 28 px: label in 40% of the width, value in the rest. The
+/// row grows when the value shows an error message below its field.
 pub fn property_row<'a, M: 'a>(look: Look, label: &'a str, value: Element<'a, M>) -> Element<'a, M> {
+    // The label sits in the first 28 px; the value is centred in at least 28 px,
+    // so a field with an error message below it keeps its label beside the field.
     container(
         row![
-            container(secondary(look, label)).width(Length::FillPortion(2)),
-            container(value).width(Length::FillPortion(3)),
+            container(secondary(look, label)).width(Length::FillPortion(2)).height(28).align_y(Vertical::Center),
+            container(row![Space::new().width(1).height(28), container(value).width(Length::Fill)].align_y(Alignment::Center)).width(Length::FillPortion(3)),
         ]
         .spacing(8)
-        .align_y(Alignment::Center),
+        .align_y(Alignment::Start),
     )
-    .height(28)
     .padding([0, 8])
-    .align_y(Vertical::Center)
     .into()
 }
 

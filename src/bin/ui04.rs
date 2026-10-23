@@ -10,6 +10,7 @@
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::focus;
+use openaec_ui::design::number::{self as num, NumberFormat, NumberInput, Value};
 use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles::{self as t, RecentFile};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, TableColumn, Tone};
@@ -481,8 +482,38 @@ fn euro(value: f64) -> String {
     format!("€ {}", nl(value, 2))
 }
 
-fn parse_nl(input: &str) -> Option<f64> {
-    input.trim().replace('.', "").replace(',', ".").parse().ok()
+/// Price per unit: two decimals, not negative.
+const PRICE: NumberFormat = NumberFormat::new(2).min(0.0);
+/// Usable floor area of a dwelling, 1 to 100.000 m², whole square metres.
+const AREA: NumberFormat = NumberFormat::new(0).min(1.0).max(100_000.0).unit("m²");
+/// Rc-value of a construction, 0,1 to 15 m²K/W.
+const RC: NumberFormat = NumberFormat::new(1).min(0.1).max(15.0).unit("m²K/W");
+/// U-value of glass, 0,1 to 7 W/m²K.
+const U_VALUE: NumberFormat = NumberFormat::new(1).min(0.1).max(7.0).unit("W/m²K");
+
+/// Quantity of an item, in its own unit, one decimal, not negative.
+fn quantity_format(unit: &'static str) -> NumberFormat {
+    NumberFormat::new(1).min(0.0).unit(unit)
+}
+
+/// A number in the workflow form: the stored value and the field's draft text.
+#[derive(Debug, Clone, PartialEq)]
+struct Num {
+    value: f64,
+    input: NumberInput,
+}
+
+impl Num {
+    fn new(value: f64, f: &NumberFormat) -> Self {
+        Self { value, input: NumberInput::new(Value::Number(value), f) }
+    }
+
+    /// Keeps the text as typed; stores the value only when the whole text is a number.
+    fn edit(&mut self, text: String, f: &NumberFormat) {
+        if let Some(Value::Number(n)) = self.input.edit(text, f) {
+            self.value = n;
+        }
+    }
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -712,11 +743,11 @@ struct Workflow {
     address: String,
     kind: usize,
     year: String,
-    area: String,
-    rc_wall: String,
-    rc_roof: String,
-    rc_floor: String,
-    window_u: String,
+    area: Num,
+    rc_wall: Num,
+    rc_roof: Num,
+    rc_floor: Num,
+    window_u: Num,
     heating: &'static str,
     ventilation: &'static str,
     solar: bool,
@@ -734,11 +765,11 @@ impl Default for Workflow {
             address: "Kade 12, 3011 AA Rotterdam".into(),
             kind: 0,
             year: "1978".into(),
-            area: "124".into(),
-            rc_wall: "2,5".into(),
-            rc_roof: "3,5".into(),
-            rc_floor: "2,0".into(),
-            window_u: "1,4".into(),
+            area: Num::new(124.0, &AREA),
+            rc_wall: Num::new(2.5, &RC),
+            rc_roof: Num::new(3.5, &RC),
+            rc_floor: Num::new(2.0, &RC),
+            window_u: Num::new(1.4, &U_VALUE),
             heating: "Hybride warmtepomp",
             ventilation: "Natuurlijke toevoer, mechanische afvoer",
             solar: true,
@@ -751,8 +782,7 @@ impl Default for Workflow {
 impl Workflow {
     /// A rough primary energy use in kWh/m² per year, for the review only.
     fn energy(&self) -> f64 {
-        let rc = |s: &str| parse_nl(s).unwrap_or(1.0).max(0.3);
-        let shell = 40.0 / rc(&self.rc_wall) + 30.0 / rc(&self.rc_roof) + 20.0 / rc(&self.rc_floor) + 25.0 * parse_nl(&self.window_u).unwrap_or(2.0);
+        let shell = 40.0 / self.rc_wall.value + 30.0 / self.rc_roof.value + 20.0 / self.rc_floor.value + 25.0 * self.window_u.value;
         let heating = match self.heating {
             "Warmtepomp" => 0.45,
             "Hybride warmtepomp" => 0.7,
@@ -805,8 +835,9 @@ struct Gallery {
     root_open: bool,
     open_chapters: HashSet<&'static str>,
     selected: Option<u32>,
-    quantity_text: String,
-    price_text: String,
+    /// Draft texts of the number fields in the properties panel.
+    quantity_input: NumberInput,
+    price_input: NumberInput,
     banner: Option<(Tone, String)>,
     toast: Option<Toast>,
     toast_count: u32,
@@ -886,8 +917,8 @@ impl Default for Gallery {
             root_open: true,
             open_chapters: ["21", "22"].into_iter().collect(),
             selected: None,
-            quantity_text: String::new(),
-            price_text: String::new(),
+            quantity_input: NumberInput::default(),
+            price_input: NumberInput::default(),
             banner: None,
             toast: None,
             toast_count: 0,
@@ -941,9 +972,9 @@ impl Gallery {
 
     fn select(&mut self, id: Option<u32>) {
         self.selected = id;
-        if let Some((quantity, price, item_id)) = id.and_then(|id| self.item(id)).map(|i| (i.quantity, i.price, i.id)) {
-            self.quantity_text = nl(quantity, 1);
-            self.price_text = nl(price, 2);
+        if let Some((quantity, unit, price, item_id)) = id.and_then(|id| self.item(id)).map(|i| (i.quantity, i.unit, i.price, i.id)) {
+            self.quantity_input.show(Value::Number(quantity), &quantity_format(unit));
+            self.price_input.show(Value::Number(price), &PRICE);
             self.tree = TreeSel::Item(item_id);
         }
     }
@@ -1251,19 +1282,18 @@ impl Gallery {
             Msg::EditName(name) => self.edit(|i| i.name = name),
             Msg::EditUnit(unit) => self.edit(|i| i.unit = unit),
             Msg::EditQuantity(value) => {
-                if let Some(q) = parse_nl(&value) {
+                let unit = self.selected.and_then(|id| self.item(id)).map_or("st", |i| i.unit);
+                if let Some(Value::Number(q)) = self.quantity_input.edit(value, &quantity_format(unit)) {
                     self.edit(|i| i.quantity = q);
                 }
-                self.quantity_text = value;
             }
             Msg::EditPrice(value) => {
-                if let Some(p) = parse_nl(&value) {
+                if let Some(Value::Number(p)) = self.price_input.edit(value, &PRICE) {
                     self.edit(|i| i.price = p);
                     if self.banner.is_some() {
                         self.banner = self.missing_prices();
                     }
                 }
-                self.price_text = value;
             }
             Msg::EditInclude(b) => self.edit(|i| i.include = b),
             Msg::CloseToast => self.toast = None,
@@ -1425,11 +1455,11 @@ impl Gallery {
             Msg::WfAddress(s) => self.wf.address = s,
             Msg::WfType(k) => self.wf.kind = k,
             Msg::WfYear(s) => self.wf.year = s,
-            Msg::WfArea(s) => self.wf.area = s,
-            Msg::WfRcWall(s) => self.wf.rc_wall = s,
-            Msg::WfRcRoof(s) => self.wf.rc_roof = s,
-            Msg::WfRcFloor(s) => self.wf.rc_floor = s,
-            Msg::WfWindowU(s) => self.wf.window_u = s,
+            Msg::WfArea(s) => self.wf.area.edit(s, &AREA),
+            Msg::WfRcWall(s) => self.wf.rc_wall.edit(s, &RC),
+            Msg::WfRcRoof(s) => self.wf.rc_roof.edit(s, &RC),
+            Msg::WfRcFloor(s) => self.wf.rc_floor.edit(s, &RC),
+            Msg::WfWindowU(s) => self.wf.window_u.edit(s, &U_VALUE),
             Msg::WfHeating(h) => self.wf.heating = h,
             Msg::WfVentilation(v) => self.wf.ventilation = v,
             Msg::WfSolar(b) => self.wf.solar = b,
@@ -1771,9 +1801,9 @@ impl Gallery {
                 w::property_row(
                     look,
                     "Hoeveelheid",
-                    w::text_field(look, "0", &self.quantity_text, Some(Msg::EditQuantity), D::Compact, parse_nl(&self.quantity_text).is_none().then_some("Geen getal")),
+                    num::number_field(look, &self.quantity_input, Value::Number(item.quantity), &quantity_format(item.unit), Some(Msg::EditQuantity), D::Compact),
                 ),
-                w::property_row(look, "Prijs", w::text_field(look, "0,00", &self.price_text, Some(Msg::EditPrice), D::Compact, parse_nl(&self.price_text).is_none().then_some("Geen getal"))),
+                w::property_row(look, "Prijs", num::number_field(look, &self.price_input, Value::Number(item.price), &PRICE, Some(Msg::EditPrice), D::Compact)),
                 w::property_row(look, "Bedrag", w::number(look, euro(item.amount())).into()),
             ]
             .into(),
@@ -2161,7 +2191,6 @@ impl Gallery {
     fn workflow(&self, look: Look) -> Element<'_, Msg> {
         let c = look.color;
         let s = &self.wf;
-        let number_error = |value: &str| parse_nl(value).is_none().then_some("Geen getal");
         let content: Element<'_, Msg> = match s.section {
             0 => column![
                 wf::page_heading(look, "Project", Some("Gegevens van de woning die je beoordeelt.")),
@@ -2188,7 +2217,7 @@ impl Gallery {
                 column![
                     wf::page_heading(look, "Gebouw", Some("Kies het type gebouw en vul de oppervlakte in.")),
                     tiles,
-                    wf::form_card(look, "Afmetingen", w::property_row(look, "Gebruiksoppervlakte (m²)", w::text_field(look, "124", &s.area, Some(Msg::WfArea), D::Regular, number_error(&s.area)))),
+                    wf::form_card(look, "Afmetingen", w::property_row(look, "Gebruiksoppervlakte", num::number_field(look, &s.area.input, Value::Number(s.area.value), &AREA, Some(Msg::WfArea), D::Regular))),
                 ]
                 .spacing(16)
                 .into()
@@ -2199,10 +2228,10 @@ impl Gallery {
                     look,
                     "Isolatie",
                     column![
-                        w::property_row(look, "Rc gevel (m²K/W)", w::text_field(look, "2,5", &s.rc_wall, Some(Msg::WfRcWall), D::Regular, number_error(&s.rc_wall))),
-                        w::property_row(look, "Rc dak (m²K/W)", w::text_field(look, "3,5", &s.rc_roof, Some(Msg::WfRcRoof), D::Regular, number_error(&s.rc_roof))),
-                        w::property_row(look, "Rc vloer (m²K/W)", w::text_field(look, "2,0", &s.rc_floor, Some(Msg::WfRcFloor), D::Regular, number_error(&s.rc_floor))),
-                        w::property_row(look, "U-waarde ramen (W/m²K)", w::text_field(look, "1,4", &s.window_u, Some(Msg::WfWindowU), D::Regular, number_error(&s.window_u))),
+                        w::property_row(look, "Rc gevel", num::number_field(look, &s.rc_wall.input, Value::Number(s.rc_wall.value), &RC, Some(Msg::WfRcWall), D::Regular)),
+                        w::property_row(look, "Rc dak", num::number_field(look, &s.rc_roof.input, Value::Number(s.rc_roof.value), &RC, Some(Msg::WfRcRoof), D::Regular)),
+                        w::property_row(look, "Rc vloer", num::number_field(look, &s.rc_floor.input, Value::Number(s.rc_floor.value), &RC, Some(Msg::WfRcFloor), D::Regular)),
+                        w::property_row(look, "U-waarde ramen", num::number_field(look, &s.window_u.input, Value::Number(s.window_u.value), &U_VALUE, Some(Msg::WfWindowU), D::Regular)),
                     ]
                     .spacing(4)
                     .into()
@@ -2254,7 +2283,7 @@ impl Gallery {
                         "Uitgangspunten",
                         vec![
                             ("Gebouw", BUILDING_TYPES[s.kind].1.into()),
-                            ("Oppervlakte", format!("{} m²", s.area)),
+                            ("Oppervlakte", format!("{} m²", num::format(s.area.value, &AREA))),
                             ("Verwarming", s.heating.into()),
                             ("Ventilatie", s.ventilation.into()),
                         ],
@@ -3598,6 +3627,34 @@ mod tests {
     }
 
     #[test]
+    fn number_fields_store_only_what_was_typed_in_full() {
+        let mut g = Gallery::default();
+        let _ = g.update(Msg::SelectRow(1));
+        let before = g.item(1).unwrap().price;
+        // UI-012: "1 234,56" was read as 1; now it is 1234.56.
+        let _ = g.update(Msg::EditPrice("1 234,56".into()));
+        assert_eq!(g.item(1).unwrap().price, 1234.56);
+        // "12abc" and "1,2,3" are refused, and the draft stays for the person to fix.
+        for typed in ["12abc", "1,2,3", "1.5", "-3"] {
+            let _ = g.update(Msg::EditPrice(typed.into()));
+            assert_eq!(g.item(1).unwrap().price, 1234.56, "{typed} changes nothing");
+            assert_eq!(g.price_input.text(), typed);
+            assert!(g.price_input.error().is_some(), "{typed} shows why");
+        }
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().price, before);
+        assert_eq!(g.price_input.error(), None, "undo shows the stored price again");
+        // The workflow form: a unit after the number is fine, out of range is not.
+        let _ = g.update(Msg::WfRcWall("4,5 m²K/W".into()));
+        assert_eq!(g.wf.rc_wall.value, 4.5);
+        let _ = g.update(Msg::WfRcWall("40".into()));
+        assert_eq!(g.wf.rc_wall.value, 4.5);
+        assert_eq!(g.wf.rc_wall.input.error(), Some("Maximaal 15,0."));
+        g.view = View::Workflow;
+        let _ = g.view();
+    }
+
+    #[test]
     fn editing_marks_dirty_and_undo_restores() {
         let mut g = Gallery::default();
         let _ = g.update(Msg::SelectRow(1));
@@ -3640,7 +3697,7 @@ mod tests {
         let _ = g.update(Msg::ToggleChapter("21"));
         assert!(!g.open_chapters.contains("21"));
         assert_eq!(nl(11480.0, 2), "11.480,00");
-        assert_eq!(parse_nl("1.234,5"), Some(1234.5));
+        assert_eq!(num::parse("1.234,5", &PRICE), num::Parsed::Number(1234.5));
     }
 
     #[test]
