@@ -3,8 +3,9 @@
 //! iced 0.14 only lets text fields take focus. [`focusable`] gives any control a
 //! place in the Tab route: Enter and Space then send it the same press and release
 //! as a mouse click, so buttons, tiles, checkboxes and pick lists work without
-//! knowing about the keyboard. The focus ring only shows when the focus came from
-//! the keyboard, like `:focus-visible` on the web.
+//! knowing about the keyboard. The 2 px focus ring sits 2 px outside the control
+//! and only shows when the focus came from the keyboard, like `:focus-visible` with
+//! `outline-offset` on the web.
 //!
 //! [`inert`] takes everything behind an open dialog or menu out of the Tab route and
 //! out of the key handling. The control that had the focus keeps it, so closing the
@@ -26,6 +27,10 @@ thread_local! {
     /// an open dialog shows no ring, so only the dialog's focus is visible.
     static BEHIND_DIALOG: std::cell::Cell<bool> = const { std::cell::Cell::new(false) };
 }
+
+/// Width of the focus ring and its distance from the control.
+const RING_WIDTH: f32 = 2.0;
+const RING_GAP: f32 = 2.0;
 
 /// The focus state of one control.
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
@@ -208,11 +213,20 @@ impl<M> Widget<M, Theme, Renderer> for Focus<'_, M> {
         self.content.as_widget().draw(&tree.children[0], renderer, theme, style, layout, cursor, viewport);
         let state = tree.state.downcast_ref::<State>();
         if state.focused && state.visible && !BEHIND_DIALOG.with(|b| b.get()) {
-            // A 2 px ring inside the control: iced cannot draw outside it (see widgets.rs).
-            renderer.fill_quad(
-                renderer::Quad { bounds: layout.bounds(), border: Border { color: self.ring, width: 2.0, radius: self.radius.into() }, ..Default::default() },
-                Background::Color(Color::TRANSPARENT),
-            );
+            // A 2 px ring 2 px outside the control, as `outline-offset` on the web, so it
+            // stays visible on a selected control whose own border has the same colour.
+            // Its own layer keeps the next row from painting over it.
+            let ring = layout.bounds().expand(RING_GAP + RING_WIDTH);
+            renderer.with_layer(ring.expand(1.0), |renderer| {
+                renderer.fill_quad(
+                    renderer::Quad {
+                        bounds: ring,
+                        border: Border { color: self.ring, width: RING_WIDTH, radius: (self.radius + RING_GAP + RING_WIDTH).into() },
+                        ..Default::default()
+                    },
+                    Background::Color(Color::TRANSPARENT),
+                );
+            });
         }
     }
 
@@ -485,6 +499,74 @@ impl<M> Widget<M, Theme, Renderer> for Group<'_, M> {
         }
     }
 
+    fn mouse_interaction(&self, tree: &Tree, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle, renderer: &Renderer) -> mouse::Interaction {
+        self.content.as_widget().mouse_interaction(&tree.children[0], layout, cursor, viewport, renderer)
+    }
+    fn draw(&self, tree: &Tree, renderer: &mut Renderer, theme: &Theme, style: &renderer::Style, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle) {
+        self.content.as_widget().draw(&tree.children[0], renderer, theme, style, layout, cursor, viewport);
+    }
+    fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'b>, renderer: &Renderer, viewport: &Rectangle, translation: Vector) -> Option<overlay::Element<'b, M, Theme, Renderer>> {
+        self.content.as_widget_mut().overlay(&mut tree.children[0], layout, renderer, viewport, translation)
+    }
+}
+
+/// A tree row that opens and closes with the arrow keys while it has the focus:
+/// Right opens a closed branch, Left closes an open one, as in Windows Explorer.
+/// The app knows whether the branch is open, so it wraps its own rows.
+pub fn expander<'a, M: Clone + 'a>(content: impl Into<Element<'a, M>>, expanded: bool, on_toggle: M) -> Element<'a, M> {
+    Element::new(Expander { content: content.into(), expanded, on_toggle })
+}
+
+struct Expander<'a, M> {
+    content: Element<'a, M>,
+    expanded: bool,
+    on_toggle: M,
+}
+
+impl<M: Clone> Widget<M, Theme, Renderer> for Expander<'_, M> {
+    fn children(&self) -> Vec<Tree> {
+        vec![Tree::new(&self.content)]
+    }
+    fn diff(&self, tree: &mut Tree) {
+        tree.diff_children(std::slice::from_ref(&self.content));
+    }
+    fn size(&self) -> Size<Length> {
+        self.content.as_widget().size()
+    }
+    fn size_hint(&self) -> Size<Length> {
+        self.content.as_widget().size_hint()
+    }
+    fn layout(&mut self, tree: &mut Tree, renderer: &Renderer, limits: &layout::Limits) -> layout::Node {
+        self.content.as_widget_mut().layout(&mut tree.children[0], renderer, limits)
+    }
+    fn operate(&mut self, tree: &mut Tree, layout: Layout<'_>, renderer: &Renderer, operation: &mut dyn Operation) {
+        self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, operation);
+    }
+    fn update(
+        &mut self,
+        tree: &mut Tree,
+        event: &Event,
+        layout: Layout<'_>,
+        cursor: mouse::Cursor,
+        renderer: &Renderer,
+        clipboard: &mut dyn Clipboard,
+        shell: &mut Shell<'_, M>,
+        viewport: &Rectangle,
+    ) {
+        if let Event::Keyboard(keyboard::Event::KeyPressed { key: Key::Named(named @ (Named::ArrowLeft | Named::ArrowRight)), modifiers, .. }) = event {
+            let wanted = *named == Named::ArrowRight;
+            if modifiers.is_empty() && wanted != self.expanded {
+                let mut census = Census { total: 0, focused: None };
+                self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, &mut census);
+                if census.focused.is_some() {
+                    shell.publish(self.on_toggle.clone());
+                    shell.capture_event();
+                    return;
+                }
+            }
+        }
+        self.content.as_widget_mut().update(&mut tree.children[0], event, layout, cursor, renderer, clipboard, shell, viewport);
+    }
     fn mouse_interaction(&self, tree: &Tree, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle, renderer: &Renderer) -> mouse::Interaction {
         self.content.as_widget().mouse_interaction(&tree.children[0], layout, cursor, viewport, renderer)
     }

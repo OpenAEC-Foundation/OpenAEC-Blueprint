@@ -213,3 +213,22 @@ fn a_group_is_one_tab_stop_that_the_arrows_walk_through() {
     ui.operate(previous());
     assert_eq!(ui.key(Named::Enter), vec!["drie"], "Shift+Tab returns to the item that last had the focus");
 }
+
+/// A closed branch and an open branch in a tree list.
+fn branches() -> Element<'static, &'static str> {
+    let look = look();
+    let row = |label, message| button(look, label, ButtonKind::Quiet, Density::Regular, None, Some(message));
+    group(column![expander(row("Fundering", "kies fundering"), false, "fundering open"), expander(row("Vloeren", "kies vloeren"), true, "vloeren dicht")], Axis::Vertical)
+}
+
+#[test]
+fn right_opens_and_left_closes_the_focused_branch() {
+    let mut ui = Ui::with(branches());
+    ui.operate(next());
+    assert!(ui.key(Named::ArrowLeft).is_empty(), "Left on a closed branch does nothing");
+    assert_eq!(ui.key(Named::ArrowRight), vec!["fundering open"]);
+    let _ = ui.key(Named::ArrowDown);
+    assert!(ui.key(Named::ArrowRight).is_empty(), "Right on an open branch does nothing");
+    assert_eq!(ui.key(Named::ArrowLeft), vec!["vloeren dicht"]);
+    assert_eq!(ui.key(Named::Enter), vec!["kies vloeren"], "the arrows did not move the focus");
+}

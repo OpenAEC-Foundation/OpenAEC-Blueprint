@@ -3,9 +3,10 @@
 //! Each function follows `design/ontwerp-0.4/04-componenten.md`. Icons are SVG
 //! sources in the B2 format (`currentColor` for the main colour and
 //! `var(--icon-accent, currentColor)` for the accent); [`glyph`] recolours them
-//! per state. Two parts of the spec need more than iced 0.14 offers and are
-//! approximated: focus is drawn as a 2 px border inside the control instead of
-//! an outer ring, and High contrast draws disabled borders solid, not dashed.
+//! per state. The focus ring comes from `super::focus`: 2 px, 2 px outside the
+//! control. Text fields and select lists still show iced's own focus as a 2 px
+//! border inside, and High contrast draws disabled borders solid, not dashed,
+//! because iced 0.14 has no dashed borders.
 use super::focus::{focusable, group, Axis};
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
 use crate::fonts;

@@ -1690,7 +1690,8 @@ impl Gallery {
     }
 
     fn tree_panel(&self, look: Look) -> Element<'_, Msg> {
-        let mut tree = column![w::tree_row(
+        // Right and Left open and close a branch while its row has the focus.
+        let root = w::tree_row(
             look,
             0,
             Some(if self.root_open { COLLAPSE } else { EXPAND }),
@@ -1700,7 +1701,8 @@ impl Gallery {
             self.tree == TreeSel::Root,
             Some(Msg::Tree(TreeSel::Root)),
             Some(Msg::Menu(Some(MenuKind::Tree(TreeSel::Root)))),
-        )];
+        );
+        let mut tree = column![focus::expander(root, self.root_open, Msg::ToggleRoot)];
         if self.root_open {
             for (key, name) in CHAPTERS {
                 let children: Vec<&Item> = self.items.iter().filter(|i| i.chapter() == key).collect();
@@ -1708,7 +1710,8 @@ impl Gallery {
                     continue;
                 }
                 let open = self.open_chapters.contains(key);
-                tree = tree.push(w::tree_row(look, 1, Some(if open { COLLAPSE } else { EXPAND }), Some(Msg::ToggleChapter(key)), Some(FOLDER), name, self.tree == TreeSel::Chapter(key), Some(Msg::Tree(TreeSel::Chapter(key))), Some(Msg::Menu(Some(MenuKind::Tree(TreeSel::Chapter(key)))))));
+                let row = w::tree_row(look, 1, Some(if open { COLLAPSE } else { EXPAND }), Some(Msg::ToggleChapter(key)), Some(FOLDER), name, self.tree == TreeSel::Chapter(key), Some(Msg::Tree(TreeSel::Chapter(key))), Some(Msg::Menu(Some(MenuKind::Tree(TreeSel::Chapter(key))))));
+                tree = tree.push(focus::expander(row, open, Msg::ToggleChapter(key)));
                 if open {
                     for item in children {
                         tree = tree.push(w::tree_row(look, 2, None, None, Some(ITEM), &item.name, self.tree == TreeSel::Item(item.id), Some(Msg::Tree(TreeSel::Item(item.id))), Some(Msg::Menu(Some(MenuKind::Tree(TreeSel::Item(item.id)))))));
