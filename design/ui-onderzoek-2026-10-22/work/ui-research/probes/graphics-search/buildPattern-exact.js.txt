@@ -1,0 +1,6 @@
+function buildPattern(query, matchCase, wholeWord) {
+  const searchQuery = matchCase ? query : query.toLowerCase();
+  const wordBoundary = wholeWord ? '\\b' : '';
+  const escapedQuery = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(wordBoundary + escapedQuery + wordBoundary, matchCase ? 'g' : 'gi');
+}

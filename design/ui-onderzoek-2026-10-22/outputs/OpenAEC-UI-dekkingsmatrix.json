@@ -1,0 +1,847 @@
+{
+  "updated_at": "23-10-2026 06:58",
+  "timezone": "Europe/Amsterdam",
+  "stop_at": "2026-10-23T08:00:00+02:00",
+  "scope": "Onderzoeksdekking, geen productconformiteit of percentage gereedheid. Bureauonderzoek is geen runtime-/gebruikerstoets.",
+  "repo_snapshot": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "upstream_version_audit": {
+    "checked_at": "2026-10-23T03:03:06+02:00",
+    "heads": [
+      {
+        "repo": "OpenAEC-Style-Repo",
+        "sha": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+        "committed_at": "2026-10-22T17:57:49Z",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/commit/85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+        "title": "Complete B2 icon review rounds and add lossless library export"
+      },
+      {
+        "repo": "open-calc-studio",
+        "sha": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "committed_at": "2026-09-24T08:16:22Z",
+        "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/commit/b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "title": "feat(embed): Open Calc Studio als npm-pakket @openaec/open-calc-studio"
+      },
+      {
+        "repo": "open-pdf-studio",
+        "sha": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+        "committed_at": "2026-10-22T18:28:58Z",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/commit/e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+        "title": "Merge pull request #687: integration 2026.43.6"
+      },
+      {
+        "repo": "OpenAEC-BIM-validator",
+        "sha": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "committed_at": "2026-09-22T11:32:26Z",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/commit/8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "title": "Use shared issue assignment workflow with explicit permissions"
+      }
+    ],
+    "deliverable": "outputs/OpenAEC-UI-versieaudit.json",
+    "final_check": {
+      "checked_at": "2026-10-23T06:53:01+02:00",
+      "heads": [
+        {
+          "repo": "OpenAEC-Style-Repo",
+          "sha": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+          "committed_at": "2026-10-22T17:57:49Z",
+          "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/commit/85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+          "title": "Complete B2 icon review rounds and add lossless library export"
+        },
+        {
+          "repo": "open-calc-studio",
+          "sha": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+          "committed_at": "2026-09-24T08:16:22Z",
+          "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/commit/b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+          "title": "feat(embed): Open Calc Studio als npm-pakket @openaec/open-calc-studio"
+        },
+        {
+          "repo": "open-pdf-studio",
+          "sha": "1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+          "committed_at": "2026-10-23T04:10:58Z",
+          "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/commit/1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+          "title": "Merge pull request #696: integration 2026.43.7 (hosted web bundle)"
+        },
+        {
+          "repo": "OpenAEC-BIM-validator",
+          "sha": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+          "committed_at": "2026-09-22T11:32:26Z",
+          "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/commit/8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+          "title": "Use shared issue assignment workflow with explicit permissions"
+        }
+      ],
+      "pdf_targeted_comparison": {
+        "repo": "open-pdf-studio",
+        "base": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+        "head": "1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+        "tree_truncated": false,
+        "compared": 38,
+        "unchanged": 37,
+        "changed": [
+          "open-pdf-studio/js/main.js"
+        ],
+        "files": [
+          {
+            "path": "open-pdf-studio/js/annotations/arc-points.js",
+            "same_as_run08": true,
+            "run08_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d",
+            "final_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d"
+          },
+          {
+            "path": "open-pdf-studio/js/annotations/measurement.js",
+            "same_as_run08": true,
+            "run08_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699",
+            "final_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699"
+          },
+          {
+            "path": "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6",
+            "final_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6"
+          },
+          {
+            "path": "open-pdf-studio/js/annotations/rendering/hatch-patterns.js",
+            "same_as_run08": true,
+            "run08_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49",
+            "final_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49"
+          },
+          {
+            "path": "open-pdf-studio/js/annotations/scale-from-measurement.js",
+            "same_as_run08": true,
+            "run08_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5",
+            "final_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5"
+          },
+          {
+            "path": "open-pdf-studio/js/annotations/vlak-ringen.js",
+            "same_as_run08": true,
+            "run08_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12",
+            "final_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12"
+          },
+          {
+            "path": "open-pdf-studio/js/core/fout-bericht.js",
+            "same_as_run08": true,
+            "run08_blob": "42c5811ce0addc6757fdad410120d7c9f2e9c084",
+            "final_blob": "42c5811ce0addc6757fdad410120d7c9f2e9c084"
+          },
+          {
+            "path": "open-pdf-studio/js/core/fout-bericht.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "5a7a926f544f27808e2719e3c0745b91c7883428",
+            "final_blob": "5a7a926f544f27808e2719e3c0745b91c7883428"
+          },
+          {
+            "path": "open-pdf-studio/js/core/getal-invoer-velden.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "5a99b1aaf7950f1e6b264b538b5982674b7ac84a",
+            "final_blob": "5a99b1aaf7950f1e6b264b538b5982674b7ac84a"
+          },
+          {
+            "path": "open-pdf-studio/js/core/getal-invoer.js",
+            "same_as_run08": true,
+            "run08_blob": "11e7e5a4d0926d5a1a0f3d5b9f927bb01c930382",
+            "final_blob": "11e7e5a4d0926d5a1a0f3d5b9f927bb01c930382"
+          },
+          {
+            "path": "open-pdf-studio/js/core/getal-invoer.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "5728ddeb201e373a8807435de710d3061cbd758e",
+            "final_blob": "5728ddeb201e373a8807435de710d3061cbd758e"
+          },
+          {
+            "path": "open-pdf-studio/js/core/stores/interaction-store.ts",
+            "same_as_run08": true,
+            "run08_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615",
+            "final_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615"
+          },
+          {
+            "path": "open-pdf-studio/js/getal-velden-bron.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "cdf9b9466712c3098d1e9bd65c3238add6a9ca36",
+            "final_blob": "cdf9b9466712c3098d1e9bd65c3238add6a9ca36"
+          },
+          {
+            "path": "open-pdf-studio/js/i18n/config.js",
+            "same_as_run08": true,
+            "run08_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131",
+            "final_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131"
+          },
+          {
+            "path": "open-pdf-studio/js/i18n/useTranslation.js",
+            "same_as_run08": true,
+            "run08_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8",
+            "final_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8"
+          },
+          {
+            "path": "open-pdf-studio/js/main.js",
+            "same_as_run08": false,
+            "run08_blob": "a45d31396b28d19e1b811f06c119f444709337d1",
+            "final_blob": "8d614f4ba2b909baa7e696391f6213c4bdb786e3"
+          },
+          {
+            "path": "open-pdf-studio/js/mobile/mobiele-gereedschappen.js",
+            "same_as_run08": true,
+            "run08_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5",
+            "final_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5"
+          },
+          {
+            "path": "open-pdf-studio/js/mobile/touch-gestures.js",
+            "same_as_run08": true,
+            "run08_blob": "dd84682d0ba99df54dcb34d0263878876f059539",
+            "final_blob": "dd84682d0ba99df54dcb34d0263878876f059539"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/pdf-viewport.js",
+            "same_as_run08": true,
+            "run08_blob": "85b52dd96bb353306375795426f783d53e6ec162",
+            "final_blob": "85b52dd96bb353306375795426f783d53e6ec162"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-doel.js",
+            "same_as_run08": true,
+            "run08_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595",
+            "final_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-doel.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8",
+            "final_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-opdracht.js",
+            "same_as_run08": true,
+            "run08_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780",
+            "final_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-pagina-instelling.js",
+            "same_as_run08": true,
+            "run08_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb",
+            "final_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-plaatsing.js",
+            "same_as_run08": true,
+            "run08_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58",
+            "final_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/print-plaatsing.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30",
+            "final_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+            "same_as_run08": true,
+            "run08_blob": "1f4305216e8e857d0991e8cb59880272b956c634",
+            "final_blob": "1f4305216e8e857d0991e8cb59880272b956c634"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/saver/hatch-meta.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "274c6ef49917664ee13013683aa19ac51a7889dd",
+            "final_blob": "274c6ef49917664ee13013683aa19ac51a7889dd"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/weergave-rotatie.js",
+            "same_as_run08": true,
+            "run08_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5",
+            "final_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5"
+          },
+          {
+            "path": "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5",
+            "final_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5"
+          },
+          {
+            "path": "open-pdf-studio/js/search/find-controller.js",
+            "same_as_run08": true,
+            "run08_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff",
+            "final_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff"
+          },
+          {
+            "path": "open-pdf-studio/js/search/search-sources.js",
+            "same_as_run08": true,
+            "run08_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d",
+            "final_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d"
+          },
+          {
+            "path": "open-pdf-studio/js/search/search-sources.test.mjs",
+            "same_as_run08": true,
+            "run08_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b",
+            "final_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b"
+          },
+          {
+            "path": "open-pdf-studio/js/solid/components/FindBar.jsx",
+            "same_as_run08": true,
+            "run08_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e",
+            "final_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e"
+          },
+          {
+            "path": "open-pdf-studio/js/solid/stores/findBarStore.js",
+            "same_as_run08": true,
+            "run08_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8",
+            "final_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8"
+          },
+          {
+            "path": "open-pdf-studio/js/text/text-edit-appearance.js",
+            "same_as_run08": true,
+            "run08_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6",
+            "final_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6"
+          },
+          {
+            "path": "open-pdf-studio/js/tools/snap-engine.js",
+            "same_as_run08": true,
+            "run08_blob": "86731861aca981336da93e3bbd6ec429dade2ddb",
+            "final_blob": "86731861aca981336da93e3bbd6ec429dade2ddb"
+          },
+          {
+            "path": "open-pdf-studio/js/tools/tools/scale-measure-tool.js",
+            "same_as_run08": true,
+            "run08_blob": "9795fa5d696e02193e294352b1c113534bf6e181",
+            "final_blob": "9795fa5d696e02193e294352b1c113534bf6e181"
+          },
+          {
+            "path": "open-pdf-studio/js/ui/getal-veld.js",
+            "same_as_run08": true,
+            "run08_blob": "2a73cd45800f4207005a755376bbb8d7689a1e27",
+            "final_blob": "2a73cd45800f4207005a755376bbb8d7689a1e27"
+          }
+        ]
+      },
+      "source_id": "R85",
+      "limits": [
+        "37 gelijke bronblobs bewijzen geen complete gelijkheid van de app/hostintegratie.",
+        "Eerdere tests zijn niet als volledige nieuwe-HEAD-test herbenoemd."
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "01",
+      "title": "Toegankelijkheid, native semantiek en invoer",
+      "status": "researched",
+      "last_updated": "2026-10-23T04:58:56+02:00",
+      "validation_open": true
+    },
+    {
+      "id": "02",
+      "title": "Navigatie, werkbalken, commandodiscovery en actieve modi",
+      "status": "researched",
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "validation_open": true
+    },
+    {
+      "id": "03",
+      "title": "Tabellen, boomstructuren, selectie en bulkbewerking",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T04:01:16+02:00",
+      "remaining": "End-to-end appproeven en toetsing met gebruikers/hulptechnologie; bestaande sourcecodebevindingen zijn begrensd tot vastgelegde versies."
+    },
+    {
+      "id": "04",
+      "title": "Formulieren, eenheden, numerieke invoer en validatie",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T03:03:06+02:00",
+      "remaining": "End-to-end appproeven en toetsing met gebruikers/hulptechnologie; bestaande sourcecodebevindingen zijn begrensd tot vastgelegde versies."
+    },
+    {
+      "id": "05",
+      "title": "Opslaan, undo, herstel, import en export",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-22T21:57:17+02:00",
+      "remaining": "Opslag-/sluitproeven in echte apps, foutinjectie op doelplatformen, taakannulering, hulptechnologie en performance met grote bestanden blijven open."
+    },
+    {
+      "id": "06",
+      "title": "Prestaties, grote bestanden, voortgang en asynchrone taken",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T04:58:56+02:00",
+      "remaining": "Opslag-/sluitproeven in echte apps, foutinjectie op doelplatformen, taakannulering, hulptechnologie en performance met grote bestanden blijven open."
+    },
+    {
+      "id": "07",
+      "title": "CAD/BIM/PDF-interactie, coördinaten, snappen en visuele betekenis",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T03:03:06+02:00",
+      "remaining": "Viewer-/meetintegratie, echte touch-/penapparaten, koude offlineherstart, cache-identiteit en platformfallbacks blijven te toetsen."
+    },
+    {
+      "id": "08",
+      "title": "Tablet, bouwplaats, touch, pen en offline workflows",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-22T23:03:01+02:00",
+      "remaining": "Viewer-/meetintegratie, echte touch-/penapparaten, koude offlineherstart, cache-identiteit en platformfallbacks blijven te toetsen."
+    },
+    {
+      "id": "09",
+      "title": "Lokalisatie, taal, datum, getalnotatie en internationale glyphs",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "remaining": "Echte taalwissel/IME/RTL/fontlayout/rapportketen en zoom-/paneel-/multi-monitor-/vensteroverdracht blijven te toetsen."
+    },
+    {
+      "id": "10",
+      "title": "Grafieken, kleuren, arceringen, rapportage en afdruk",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T04:58:56+02:00",
+      "remaining": "Echte grafiek-/patroon-/papier-/PDF-roundtrip en volledige zoek/vervang-/hulptechnologie-/hulptaakvalidatie blijven open."
+    },
+    {
+      "id": "11",
+      "title": "Zoeken, hulp, onboarding, foutmeldingen en microcopy",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "remaining": "Echte grafiek-/patroon-/papier-/PDF-roundtrip en volledige zoek/vervang-/hulptechnologie-/hulptaakvalidatie blijven open."
+    },
+    {
+      "id": "12",
+      "title": "Vensters, panelen, dichtheid, zoom en multi-monitor",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "remaining": "Echte taalwissel/IME/RTL/fontlayout/rapportketen en zoom-/paneel-/multi-monitor-/vensteroverdracht blijven te toetsen."
+    },
+    {
+      "id": "13",
+      "title": "Design tokens, componentcontracten en migratie tussen renderers",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T04:58:56+02:00",
+      "remaining": "Voorstellen bespreken; renderer-/component-/app-/gebruikersbewijs en definitieve scope/keuzes zijn niet door bureauonderzoek afgehandeld."
+    },
+    {
+      "id": "14",
+      "title": "Teststrategie, gebruikersvalidatie en regressiebewaking",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "remaining": "Voorstellen bespreken; renderer-/component-/app-/gebruikersbewijs en definitieve scope/keuzes zijn niet door bureauonderzoek afgehandeld."
+    },
+    {
+      "id": "15",
+      "title": "Tegenspraak, kennishiaten, prioriteiten en besluitvorming",
+      "status": "researched",
+      "validation_open": true,
+      "last_updated": "2026-10-23T06:03:23+02:00",
+      "remaining": "Voorstellen bespreken; renderer-/component-/app-/gebruikersbewijs en definitieve scope/keuzes zijn niet door bureauonderzoek afgehandeld."
+    }
+  ],
+  "completed_runs": [
+    {
+      "date": "2026-10-22",
+      "modules": [
+        "01",
+        "02"
+      ],
+      "method": "Primaire documentatie, gepinde framework-/OpenAEC-broncontrole en openbare ervaringen. Geen native runtimetest.",
+      "findings_added": [
+        "UI-001",
+        "UI-002",
+        "UI-003",
+        "UI-004",
+        "UI-005",
+        "UI-006",
+        "UI-007"
+      ]
+    },
+    {
+      "date": "2026-10-22T21:00:34+02:00",
+      "modules": [
+        "03",
+        "04"
+      ],
+      "method": "Primaire documentatie, gepubliceerd onderzoek, openbare ervaringen, review-/bronappinspectie en geïsoleerde Rust-/TypeScript-parserproeven. Geen native/React-end-to-endtest.",
+      "findings_added": [
+        "UI-008",
+        "UI-009",
+        "UI-010",
+        "UI-011",
+        "UI-012",
+        "UI-013",
+        "UI-014",
+        "UI-015"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/upstream/calc-b470427/manifest.json"
+      ],
+      "checks": [
+        "16 native review-invoeren, 8 assertions",
+        "20 Calc-parserinvoeren, 12 assertions, 8 niet-nul round-tripvoorbeelden"
+      ],
+      "qa": "work/ui-research/report-qa-run02.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-22T21:57:17+02:00",
+      "modules": [
+        "05",
+        "06"
+      ],
+      "method": "Primaire documentatie, wachttijdonderzoek, openbare ervaringen/tegenvoorbeelden, gepinde opslag-/taakbroncode en exacte save/close-callbackproef met in-memory dependencies.",
+      "findings_added": [
+        "UI-016",
+        "UI-017",
+        "UI-018",
+        "UI-019",
+        "UI-020",
+        "UI-021",
+        "UI-022",
+        "UI-023"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/probes/save/results.json",
+        "work/ui-research/upstream/calc-b470427/manifest.json",
+        "work/ui-research/upstream/iced-0.13.1/manifest.json"
+      ],
+      "checks": [
+        "10 save/close-controlflowscenario’s, 23 assertions",
+        "Positieve tegenproeven voor single save, cancel, schrijffout, Save As annuleren en target-ID bij tabwissel"
+      ],
+      "limitations": [
+        "Geen echte bestanden geschreven of vensters gesloten.",
+        "Geen integratie-/benchmark-/crashtest."
+      ],
+      "qa": "work/ui-research/report-qa-run03.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-22T23:03:01+02:00",
+      "modules": [
+        "07",
+        "08"
+      ],
+      "method": "Primaire toegankelijkheids-/platform-/domeindocumentatie, beperkte touchstudie, openbare ervaringen met tegenspraak, gepinde PDF-/BIM-bronroutes en bestaande pure rotatieproeven.",
+      "findings_added": [
+        "UI-024",
+        "UI-025",
+        "UI-026",
+        "UI-027",
+        "UI-028",
+        "UI-029",
+        "UI-030",
+        "UI-031"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/probes/pdf/results.json",
+        "work/ui-research/probes/pdf/rotation-test.tap",
+        "work/ui-research/upstream/pdf-f754cb7/manifest.json",
+        "work/ui-research/upstream/validator-8f837dd/manifest.json"
+      ],
+      "checks": [
+        "25 bestaande pure rotatie-/coördinaat-unitproeven geslaagd, 0 mislukt."
+      ],
+      "limitations": [
+        "Geen browser-/native viewerintegratie, metrologische validatie of tabletproef.",
+        "Geen offlineherstart, IndexedDB-botsing of synchronisatieproef.",
+        "Geen nieuwe browserlayout-QA; lokale preview was in vorige ronde onbereikbaar."
+      ],
+      "qa": "work/ui-research/report-qa-run04.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-22T23:57:39+02:00",
+      "modules": [
+        "09",
+        "12"
+      ],
+      "method": "Primaire lokalisatie-/WCAG-/DPI-documentatie, historische gebruikerssurvey en openbare tegenspraak, gepinde OpenAEC-/iced-routes, bestaande EN/NL-bundlechecker en geïsoleerde exacte laadfunctieproef.",
+      "findings_added": [
+        "UI-032",
+        "UI-033",
+        "UI-034",
+        "UI-035",
+        "UI-036",
+        "UI-037",
+        "UI-038",
+        "UI-039"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/probes/locale/results.json",
+        "work/ui-research/probes/locale/loadLocale-results.json",
+        "work/ui-research/upstream/calc-b470427/manifest.json",
+        "work/ui-research/upstream/iced-0.13.1/manifest.json"
+      ],
+      "checks": [
+        "Bestaande checker: EN/NL elk1308 keys, tien namespaces, nul gemelde problemen.",
+        "Exacte loadLocale: drie scenario’s, zes assertions."
+      ],
+      "limitations": [
+        "Geen echte taal-/IME-/print-/RTL-integratie.",
+        "Geen native zoom-/multi-monitor-/remote-/vensteroverdracht of nieuwe visuele QA."
+      ],
+      "qa": "work/ui-research/report-qa-run05.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-23T00:58:43+02:00",
+      "modules": [
+        "10",
+        "11"
+      ],
+      "method": "Primaire visualisatie-/toegankelijkheids-/print-/hulprichtlijnen, onderzoeksabstract, openbare tegenspraak en gepinde bronroutes; bestaande geselecteerde geometrie/plaatsing/zoektests en exacte woordgrensfunctieproef.",
+      "findings_added": [
+        "UI-040",
+        "UI-041",
+        "UI-042",
+        "UI-043",
+        "UI-044",
+        "UI-045",
+        "UI-046",
+        "UI-047",
+        "UI-048"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/probes/graphics-search/existing-tests-results.json",
+        "work/ui-research/probes/graphics-search/word-boundary-results.json",
+        "work/ui-research/upstream/pdf-f754cb7/manifest.json"
+      ],
+      "checks": [
+        "179 bestaande recordergeometriegevallen en7 pure zoekbrontests geslaagd.",
+        "45 bestaande pure plaatsingstests geslaagd;2 integratietests niet geselecteerd.",
+        "Exacte woordgrensfunctie:6 gevallen/assertions; statisch HTML-tekstcontrast2.5629:1."
+      ],
+      "limitations": [
+        "Initiële printfilterpoging liet2 niet-beschikbare integratietests meelopen; zij faalden op ontbrekende dependencies/locale-bestanden. Originele TAP en correctie bewaard.",
+        "Geen printer/PDF-metadata-roundtrip/volledige app/grafiektaak/hulptechnologie of nieuwe visuele browserproef."
+      ],
+      "qa": "work/ui-research/report-qa-run06.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-23T01:59:48+02:00",
+      "modules": [
+        "13",
+        "14",
+        "15"
+      ],
+      "method": "Primaire token-/migratie-/evaluatie-/onderzoekdocumentatie, historische vergelijkende studie en openbare tegenspraak; gepinde crate/generator/checker/renderbron en twee bestaande read-only controles; synthese/besluitagenda.",
+      "findings_added": [
+        "UI-049",
+        "UI-050",
+        "UI-051",
+        "UI-052",
+        "UI-053",
+        "UI-054",
+        "UI-055"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-proeven.json",
+        "work/ui-research/probes/migration/results.json"
+      ],
+      "checks": [
+        "check_portable_ui.py: exit0, canonical/review gelijk, lokalePointcloudsnapshot niet beschikbaar.",
+        "check_layout_metrics.py: exit0, Rust/HTML gelijk aan recorded layoutspec; lokale bronapp niet beschikbaar."
+      ],
+      "limitations": [
+        "Geen generator, rendererexport, Cargo/package, migratie of volledige app uitgevoerd.",
+        "Geen nieuwe gebruikers-/hulptechnologiesessies of definitieve ontwerpbesluiten."
+      ],
+      "qa": "work/ui-research/report-qa-run07.json",
+      "deliverables": [
+        "outputs/OpenAEC-UI-verdiepingsonderzoek.html",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-dekkingsmatrix.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ]
+    },
+    {
+      "date": "2026-10-23T03:03:06+02:00",
+      "modules": [
+        "01",
+        "04",
+        "07",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15"
+      ],
+      "method": "Gerichte actuele upstream-HEAD-/blobcontrole, correctie verouderde generalisatie, bestaande read-only0.4-generatorcheck en18 pure PDF-tests; geen appintegratie.",
+      "findings_added": [],
+      "findings_corrected": [
+        "UI-002",
+        "UI-012",
+        "UI-049",
+        "UI-050",
+        "UI-052"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-versieaudit.json",
+        "outputs/OpenAEC-UI-proeven.json"
+      ],
+      "checks": [
+        "0.4 Rust/CSS-afleiding actueel:5thema’s31rollen.",
+        "18 bestaande pure PDF-getal-/fouttests geslaagd."
+      ],
+      "limitations": [
+        "Oudere bronbewijzen blijven aan oorspronkelijke snapshot gekoppeld.",
+        "Geen volledige nieuwste app-, portable-, native- of gebruikersproef.",
+        "Nieuwe visuele browsercontrole door URL-policy geblokkeerd; geen workaround geprobeerd. HTML-structuur/links/128 bronhashes/11 ingebedde fonthashes gecontroleerd."
+      ],
+      "qa": "work/ui-research/report-qa-run08.json"
+    },
+    {
+      "date": "2026-10-23T04:01:16+02:00",
+      "modules": [
+        "01",
+        "02",
+        "03",
+        "12",
+        "13",
+        "14"
+      ],
+      "method": "Actuele0.4-component-/reviewhost-/webpakketcontractaudit met primaire keyboard-/dialog-/splitterdocumentatie; positieve ID/sneltoets/expandtegenvoorbeelden.",
+      "findings_added": [
+        "UI-056"
+      ],
+      "findings_corrected": [
+        "UI-002",
+        "UI-004",
+        "UI-008",
+        "UI-009",
+        "UI-038",
+        "UI-050"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-componentcontracten.json"
+      ],
+      "checks": [
+        "Bron-/hostgrenzen herleidbaar vastgelegd voor zeven componentgroepen; geen nieuwe runtimetests."
+      ],
+      "limitations": [
+        "Geen toetslekkage, clipping, beschadiging of platformconformiteit geclaimd.",
+        "Geen browsercontrole wegens eerdere URL-policyblokkade."
+      ],
+      "qa": "work/ui-research/report-qa-run09.json"
+    },
+    {
+      "date": "2026-10-23T04:58:56+02:00",
+      "modules": [
+        "01",
+        "06",
+        "10",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "method": "Primaire motion-/forced-colors-/platformdocumentatie, openbare tegenspraak en actueleCSS-/tokeninspectie; zes voorgestelde taakfixtures uitgewerkt.",
+      "findings_added": [
+        "UI-057"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-voorkeurenaudit.json",
+        "outputs/OpenAEC-UI-taakproeven.json",
+        "outputs/OpenAEC-UI-taakproeven.html"
+      ],
+      "checks": [
+        "Bestaande reduced-motion-ondersteuning positief vastgesteld in CSS.",
+        "HC-selectie/schaduwinvloed bronmatig vastgelegd; geen browser/OS-proef."
+      ],
+      "limitations": [
+        "Zes taakproeven zijn een voorstel en NIET uitgevoerd.",
+        "Geen medische/fontwinnaar-/OS-conformiteitsclaim en geen browseromweg."
+      ],
+      "qa": "work/ui-research/report-qa-run10.json"
+    },
+    {
+      "date": "2026-10-23T06:03:23+02:00",
+      "modules": [
+        "02",
+        "09",
+        "11",
+        "12",
+        "14",
+        "15"
+      ],
+      "method": "Gerichte tekstlayout-/tooltip-/Unicodecontractaudit met primaire documentatie; bestaande0.4-natuurlijke tekstlayout als tegenvoorbeeld; bestaande taakfixture uitgebreid.",
+      "findings_added": [
+        "UI-058"
+      ],
+      "findings_corrected": [
+        "UI-005",
+        "UI-035"
+      ],
+      "evidence": [
+        "outputs/OpenAEC-UI-taakproeven.json",
+        "outputs/OpenAEC-UI-taakproeven.html"
+      ],
+      "checks": [
+        "Geen nieuwe uitgevoerde runtimeproeven. Bron- en artifactcontrole uitgevoerd."
+      ],
+      "limitations": [
+        "Geen clipping, tooltipfout, Unicodecorruptie of volledige platformconformiteit geclaimd.",
+        "Voorgestelde lange-/gemengde-tekstcases niet in een echte app uitgevoerd."
+      ],
+      "qa": "work/ui-research/report-qa-run11.json"
+    },
+    {
+      "date": "2026-10-23T06:57:20+02:00",
+      "modules": [
+        "13",
+        "14",
+        "15"
+      ],
+      "method": "Eindredactie ochtendadvies, laatste upstream-HEAD-/blobcontrole, artifact-/bron-/fonthash-QA en afsluiting van nachtelijk bureauonderzoek.",
+      "findings_added": [],
+      "evidence": [
+        "outputs/OpenAEC-UI-versieaudit.json",
+        "outputs/OpenAEC-UI-ochtendoverzicht.html",
+        "outputs/OpenAEC-UI-taakproeven.html"
+      ],
+      "checks": [
+        "Laatste HEADs:Style/Calc/Validator gelijk; PDF nieuwe hosted-release.",
+        "PDF38 gericht vergeleken paden:37 gelijk,main.js gewijzigd; geen nieuwe appvalidatie."
+      ],
+      "limitations": [
+        "Geen nieuwe native-/browser-/apparaat-/gebruikers-/printer-/crash-/offlineproef.",
+        "Ontwerpkeuzes en zes volledige taakproeven zijn voorstellen."
+      ],
+      "qa": "work/ui-research/report-qa-final.json"
+    }
+  ],
+  "status": "desk_research_complete",
+  "completed_at": "2026-10-23T06:57:20+02:00",
+  "automation_shutdown": "PAUSED"
+}

@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-10-23T06:57:20+02:00",
+  "automation_id": "openaec-ui-onderzoek-vannacht-verdiepen",
+  "automation_status": "PAUSED",
+  "verified_at": "2026-10-23T06:58:39+02:00",
+  "deadline": "2026-10-23T08:00:00+02:00",
+  "reason": "Vijftien onderwerpen en gerichte bron-/versie-/component-/voorkeur-/tekstcontractaudits zijn uitgewerkt. Resterend werk vraagt gekozen scope/criteria en echte app-/platform-/gebruikersproeven; extra algemene bronnen zouden nu vooral herhaling zijn. Afsluiting vóór08:00 is toegestaan in de voortzettingsinstructie.",
+  "scope": "Bureauonderzoek afgerond; gezamenlijke besluiten en echte taak-/platform-/gebruikersvalidatie blijven open.",
+  "deliverables": [
+    "OpenAEC-UI-ochtendoverzicht.html",
+    "OpenAEC-UI-verdiepingsonderzoek.html",
+    "OpenAEC-ontwerponderzoek.html",
+    "OpenAEC-UI-taakproeven.html",
+    "OpenAEC-UI-proeven.json",
+    "OpenAEC-UI-bronnen.json",
+    "OpenAEC-UI-bevindingen.json",
+    "OpenAEC-UI-dekkingsmatrix.json",
+    "OpenAEC-UI-versieaudit.json",
+    "OpenAEC-UI-componentcontracten.json",
+    "OpenAEC-UI-voorkeurenaudit.json"
+  ],
+  "validation_limits": [
+    "Structurele rapportcontrole en bron-/fonthashes; geen nieuwe visuele browsercontrole na URL-policyblokkade.",
+    "Alle oorspronkelijke geïsoleerde tests houden hun eigen gepinde commit en scope.",
+    "Zes volledige taakproeven zijn voorgesteld en niet uitgevoerd.",
+    "Nieuwe PDF-hosted-integratie is niet gevalideerd."
+  ]
+}

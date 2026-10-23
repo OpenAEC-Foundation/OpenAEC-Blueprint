@@ -1,0 +1,21 @@
+[package]
+name = "openaec-style-repo"
+version = "0.1.0"
+edition = "2021"
+description = "Native Rust showcase and source review for the shared OpenAEC UI"
+license = "CC-BY-SA-4.0"
+readme = "README.md"
+publish = false
+
+[workspace]
+members = ["crates/openaec-ui"]
+resolver = "2"
+
+[dependencies]
+openaec-ui = { path = "crates/openaec-ui" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+iced_tiny_skia = "0.13"
+tiny-skia = "0.11"

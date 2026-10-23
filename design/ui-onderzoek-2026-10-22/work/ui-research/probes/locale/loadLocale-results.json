@@ -1,0 +1,66 @@
+{
+  "source_commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "method": "Exacte loadLocale-functiebody uitgevoerd met gecontroleerde importer-/i18next-/namespaceomgeving; geen UI of netwerk.",
+  "source_hashes": {
+    "src/i18n/config.ts": "2b7598187eb15c8079e59d70dfe502598e77d10725bf6660e8ac344ba9b2734b"
+  },
+  "source_function_sha256": "d5b46881d93a4233c1a3e0c8b368b245a6a66071a16ffc7a79c25dcfb63b8689",
+  "exit_code": 0,
+  "scenarios": [
+    {
+      "scenario": "success_then_repeat",
+      "attempts": {
+        "common": 1,
+        "ribbon": 1,
+        "backstage": 1,
+        "settings": 1,
+        "feedback": 1,
+        "grid": 1,
+        "dialogs": 1,
+        "releases": 1,
+        "report": 1,
+        "units": 1
+      },
+      "bundles": 10
+    },
+    {
+      "scenario": "partial_failure_then_retry_after_repair",
+      "attempts": {
+        "common": 1,
+        "ribbon": 1,
+        "backstage": 1,
+        "settings": 1,
+        "feedback": 1,
+        "grid": 1,
+        "dialogs": 1,
+        "releases": 1,
+        "report": 1,
+        "units": 1
+      },
+      "bundles": [
+        "ribbon",
+        "backstage",
+        "settings",
+        "feedback",
+        "grid",
+        "dialogs",
+        "releases",
+        "report",
+        "units"
+      ],
+      "markedLoaded": true,
+      "warnings": 1
+    },
+    {
+      "scenario": "unknown_and_bundled_skipped",
+      "attempts": {}
+    }
+  ],
+  "assertions": 6,
+  "limits": [
+    "i18next-init, React-taalwissel, chunks, browsercache en overige appretryroutes niet uitgevoerd.",
+    "Bevestigt alleen dat deze loadLocale na één opgevangen importerfout dezelfde taal in dit proces niet opnieuw laadt."
+  ],
+  "command": "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node work/ui-research/probes/locale/loadLocale-probe.ts",
+  "harness": "work/ui-research/probes/locale/loadLocale-probe.ts"
+}

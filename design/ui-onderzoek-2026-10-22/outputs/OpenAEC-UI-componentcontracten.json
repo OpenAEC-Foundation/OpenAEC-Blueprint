@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-23T04:01:16+02:00",
+  "style_commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+  "iced_commit": "9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2",
+  "method": "Statische broninspectie en kruiscontrole met besluitbron; geen nieuwe app-/renderer-/gebruikersproef.",
+  "contracts": [
+    {
+      "component": "Knoppen en opdrachten",
+      "provided": "on_press/disabled/selected en styling; host-demo heeft echte commandobindings.",
+      "host": "Context, naam/rol, focusroute, commandoprioriteit en platformbinding.",
+      "counterexample": "Sneltoetsen ontbreken niet allemaal: ui04 bindt bewaren/undo en andere opdrachten.",
+      "sources": [
+        "R71",
+        "R78",
+        "R83"
+      ]
+    },
+    {
+      "component": "Boom",
+      "provided": "Eigen uitklapbericht en afzonderlijk selectiebericht; host bewaart domein-ID.",
+      "host": "Pijltjes, logische boomstructuur, meervoudige selectie, afstammelingenscope en viewportkoppeling.",
+      "counterexample": "Uitklappen en selecteren zijn in de huidige API al afzonderlijke handelingen.",
+      "sources": [
+        "R71",
+        "R78"
+      ]
+    },
+    {
+      "component": "Tabel",
+      "provided": "Kolommen/rijen, één geselecteerde positie en rij-/menuberichten; host remapt IDs.",
+      "host": "Rasterbewerking, sorteren/filteren, multi-/bereikselectie, formule-/plak-/virtualisatiecontract voor gekozen taak.",
+      "counterexample": "Een positionele presentatie-API is niet automatisch een ID-bug; huidige host vertaalt expliciet.",
+      "sources": [
+        "R71",
+        "R78",
+        "R81"
+      ]
+    },
+    {
+      "component": "Dialoog",
+      "provided": "Kaart/overlay; host-demo heeft Escape/Enter en muisopvang.",
+      "host": "Beginfocus, terugkeerfocus, toets-/opdrachtisolatie, fouten, schaal en scroll.",
+      "counterexample": "Escape/Enter zijn al ingevuld; een kaart bewijst de overige modale lifecycle niet.",
+      "sources": [
+        "R71",
+        "R78",
+        "R83",
+        "A06"
+      ]
+    },
+    {
+      "component": "Menu",
+      "provided": "Actie-/checked-/disabledweergave, popupplaatsing en klik-dismiss.",
+      "host": "Toetsnavigatie, focusretour, typeahead indien gekozen, submenu’s en te groot menu.",
+      "counterexample": "Plaatsinghelper bevat al randcorrectie; niet zonder runtime bewijs clipping claimen.",
+      "sources": [
+        "R80",
+        "R78"
+      ]
+    },
+    {
+      "component": "Splitter",
+      "provided": "5px sleepgebied/startbericht; host volgt cursor met180–480grenzen.",
+      "host": "Alternatief voor slepen, naam/waarde, focus, reset/collapse en schaalafhankelijke grenzen.",
+      "counterexample": "De host heeft bestaande begrenzing en paneelverbergopdrachten; geen totale afwezigheid van paneelbediening.",
+      "sources": [
+        "R80",
+        "R78",
+        "A112"
+      ]
+    },
+    {
+      "component": "Webpakket",
+      "provided": "CSS/verwachte state-attributen en visuele gallery; fonts door app geladen.",
+      "host": "Juiste HTML/platformsemantiek, feitelijke events/lifecycle, labels/fouten en appintegratie.",
+      "counterexample": "Browser-native dialog is een mogelijke implementatie voor web; dit vervangt geen native Rust-platformbewijs.",
+      "sources": [
+        "R79",
+        "R82",
+        "A113"
+      ]
+    }
+  ],
+  "source_hashes": {
+    "style-85a6aaf": {
+      "crates/openaec-ui/src/lib.rs": "16ab2f3ed38fa07dcf968465b224c7059ee4fce6074dd75ee8ad49b48795aef4",
+      "crates/openaec-ui/Cargo.toml": "35236e70ca5b47f369a59293d2b13939351919e06ea604cf14d51c48ce406a9d",
+      "Cargo.lock": "0fcd0b4ad9e0b183dbef94204fa4441edfbdd4e8a6e9ff1884f2bbdbe24ee57f",
+      "scripts/check_portable_ui.py": "9c023ec28d67be81fb4e565cc2ae519fa115ede9dc9c3902d3a4697c2ff95061",
+      "README.md": "18fa9cd0e36a8f1eb737ab80c8021641be378ee6e59b5dbe5a35c847e0e3fe08",
+      "NOTES.md": "667f050b9c8d55993dd8d45f90f1dc99def902c5e7ce6d88123d7a1f2912b53d",
+      "crates/openaec-icons/README.md": "ce178dfac512e0170fafb00b09bd8148739258cc6c6bb307effbeb121bde445c",
+      "crates/openaec-icons/Cargo.toml": "cf4d90223b7a7e8929d44b23b72eda10ea3477ce4441c8c04d04e05737026f6c",
+      "crates/openaec-ui/src/design/mod.rs": "bf4b9a0005fc316e7c878058bde45ae7109aa5ef7c06ffffdde4640fc748b8cf",
+      "crates/openaec-ui/src/design/tokens.rs": "7b461397523ab6fb8665ffe4ae37c13012c9e117d91133efa572ed4f47562d44",
+      "crates/openaec-ui/src/design/widgets.rs": "d4cfa9302731aa00261111d4ce1d3713045e1d80cfddd702c4b7b6e1d73d8521",
+      "crates/openaec-ui/src/design/chrome.rs": "d41ae730915e31ec189b8885cbd78260382b97b202b575b44da6a4f437a4e401",
+      "crates/openaec-ui/src/design/tiles.rs": "0f8bf2147d485a30919e9667ff9aacc4ea0769bbfaf1d7bac29478cb9a5fedb9",
+      "crates/openaec-ui/src/design/workflow.rs": "d78d80ec04200fb3c647622ea7249e03e67cee81b9504571f52bca1a6b8d9b09",
+      "STAPPENPLAN.md": "ac89d607460063175d9bf224a30ddf01049ad601a03fa73a1298ca9ba37fcce3",
+      "web/openaec-components.css": "ab99868d9162871c04441b3225728545b4026fd836fcec673020db4a78a5fe5d",
+      "scripts/generate_tokens_04.py": "898238e6cef581a2230f51dbafdde2fc39662463116d5260b249b132a6fb012e",
+      "web/openaec-tokens.css": "8dfe8410de4ecb3037fa5775a8e1459480130d4d9a05a9c68ca7172bc30bdaef",
+      "design/ontwerp-0.4/tokens-0.4.json": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c",
+      "scripts/check_tokens_04.py": "ba762b39cfc3cd041b375ac9edf123da4c5c781f72c2852b16564e42f0cdd3ba",
+      "design/ontwerp-0.4/04-componenten.md": "d30b8c17aede8358d5402f249b71c81b24ff7d1f6e2cb607ae93e4a0bb88d5e1",
+      "design/ontwerp-0.4/05-layouts.md": "7a33c4fbe9295fafa2e01d96406f4d5d1ab11248518c7b27efe9c7cc598ee42e",
+      "web/README.md": "a25c23f9cfd756f16d10e520281544422a81860e054e36c84f76e5ae0ef377a4",
+      "web/componenten.html": "4a3f4c685637dd361bd1401bd8eae879cc1b4c5751186326197fad9a395cfbbc",
+      "src/bin/ui04.rs": "dca418aba62ba57d03c6af83b28dd422b935b7279523577015f6dfe52540b7bc"
+    },
+    "iced-0.13.1": {
+      "Cargo.toml": "ca42066213f2363c9463dca99aa829886fd6477208109a2e89bd028de3b468ee",
+      "winit/Cargo.toml": "c2426fd3493ce8dc60c2815081f2ef7ff230437065242965b7fcf269a47ddb6a",
+      "widget/src/button.rs": "e2b9ad25c5fcd14922a24fd1b105505163f595e393690cfd3aded9a4690dbb73",
+      "widget/src/checkbox.rs": "28110ce3e0c8df4a418d971681f2ee7ff9e0c8071ac9759b68d4629a96ef72e2",
+      "core/src/widget/operation/focusable.rs": "15c779a716938bbabe98a440d3d936a1da02e21a0bef74bbca01dec512bd6138",
+      "examples/todos/src/main.rs": "0e7552dc2013dc462d5a316ab60ef962d7349053aa05918847477b9822d58480",
+      "runtime/src/task.rs": "e8e0470fdb7b224faa9a4631a836b102976bfc1605f9e2d4a0ab4fbecd7f5605",
+      "winit/src/program/state.rs": "e7fbcfc9c23e420e9d80cfafc8d18c2632f1d4e9a5da88b5ac06ddbaf737dd18",
+      "graphics/src/viewport.rs": "050f860c240891ffa717ed34dd9b0c6f73f80bf2106254f42b588f68ea61edd3",
+      "futures/src/keyboard.rs": "a7617179bdb0ebebed99f6b4e50a4602b5a2b86f53fb4c2e72c895ca0f6eabaf"
+    }
+  },
+  "limits": [
+    "Geen runtime-eventpropagatie of vensterlayout gemeten.",
+    "Gallery zelf noemt zich reviewhulp; simulatie van bewaren/export/print is geen productie-I/O.",
+    "Web-CSS en native componentbron leveren verschillende delen van één productcontract.",
+    "APG-splitterpagina heeft eigen reviewvoorbehoud; patroon geen norm."
+  ]
+}

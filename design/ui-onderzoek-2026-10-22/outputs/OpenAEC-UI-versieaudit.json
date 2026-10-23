@@ -1,0 +1,707 @@
+{
+  "checked_at": "2026-10-23T03:03:06+02:00",
+  "heads": [
+    {
+      "repo": "OpenAEC-Style-Repo",
+      "sha": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+      "committed_at": "2026-10-22T17:57:49Z",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/commit/85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+      "title": "Complete B2 icon review rounds and add lossless library export"
+    },
+    {
+      "repo": "open-calc-studio",
+      "sha": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+      "committed_at": "2026-09-24T08:16:22Z",
+      "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/commit/b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+      "title": "feat(embed): Open Calc Studio als npm-pakket @openaec/open-calc-studio"
+    },
+    {
+      "repo": "open-pdf-studio",
+      "sha": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+      "committed_at": "2026-10-22T18:28:58Z",
+      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/commit/e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+      "title": "Merge pull request #687: integration 2026.43.6"
+    },
+    {
+      "repo": "OpenAEC-BIM-validator",
+      "sha": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+      "committed_at": "2026-09-22T11:32:26Z",
+      "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/commit/8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+      "title": "Use shared issue assignment workflow with explicit permissions"
+    }
+  ],
+  "original_style_snapshot": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "original_pdf_snapshot": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "targeted_comparisons": [
+    {
+      "repo": "OpenAEC-Style-Repo",
+      "head": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+      "tree_truncated": false,
+      "tree_blobs": 18877,
+      "compared": 26,
+      "unchanged": 20,
+      "changed": [
+        "crates/openaec-ui/src/lib.rs",
+        "crates/openaec-ui/Cargo.toml",
+        "Cargo.lock",
+        "scripts/check_portable_ui.py",
+        "README.md",
+        "NOTES.md"
+      ],
+      "files": [
+        {
+          "path": "crates/openaec-ui/src/icons.rs",
+          "same_git_blob": true,
+          "old_blob": "8aafdeecaf1a955ac3875feb318e9e765790bb9d",
+          "head_blob": "8aafdeecaf1a955ac3875feb318e9e765790bb9d"
+        },
+        {
+          "path": "crates/openaec-ui/src/theme.rs",
+          "same_git_blob": true,
+          "old_blob": "0238d6ac4bc6b5a1a65e9a4410a6ded9431cfa23",
+          "head_blob": "0238d6ac4bc6b5a1a65e9a4410a6ded9431cfa23"
+        },
+        {
+          "path": "crates/openaec-ui/src/widgets.rs",
+          "same_git_blob": true,
+          "old_blob": "92e5555fb6a0bae5029dd36a66a4d4324fa43a61",
+          "head_blob": "92e5555fb6a0bae5029dd36a66a4d4324fa43a61"
+        },
+        {
+          "path": "crates/openaec-ui/src/tokens.rs",
+          "same_git_blob": true,
+          "old_blob": "69c579757fbf33df7a4fba7652726182903a4eb0",
+          "head_blob": "69c579757fbf33df7a4fba7652726182903a4eb0"
+        },
+        {
+          "path": "crates/openaec-ui/src/locale.rs",
+          "same_git_blob": true,
+          "old_blob": "dcf40517ec5c34ce9185a54d75d8ab4aa8edb97a",
+          "head_blob": "dcf40517ec5c34ce9185a54d75d8ab4aa8edb97a"
+        },
+        {
+          "path": "crates/openaec-ui/src/frame.rs",
+          "same_git_blob": true,
+          "old_blob": "61410cd7b03d21e1a73eff542632a991f9973aba",
+          "head_blob": "61410cd7b03d21e1a73eff542632a991f9973aba"
+        },
+        {
+          "path": "crates/openaec-ui/src/modal.rs",
+          "same_git_blob": true,
+          "old_blob": "ac14e7e75f0641ddaf8ed6a2d0b80da5109fbe0e",
+          "head_blob": "ac14e7e75f0641ddaf8ed6a2d0b80da5109fbe0e"
+        },
+        {
+          "path": "crates/openaec-ui/src/runtime.rs",
+          "same_git_blob": true,
+          "old_blob": "16acbe0090984791e69eff12d4f71e4e77d4b23a",
+          "head_blob": "16acbe0090984791e69eff12d4f71e4e77d4b23a"
+        },
+        {
+          "path": "crates/openaec-ui/src/find_bar.rs",
+          "same_git_blob": true,
+          "old_blob": "c8b5729639f1b44e6b1fa3a3f4703c51566b3f92",
+          "head_blob": "c8b5729639f1b44e6b1fa3a3f4703c51566b3f92"
+        },
+        {
+          "path": "crates/openaec-ui/src/dual_range.rs",
+          "same_git_blob": true,
+          "old_blob": "3e0fc8bba28f88fef78f2f672efc4e08e8433b0d",
+          "head_blob": "3e0fc8bba28f88fef78f2f672efc4e08e8433b0d"
+        },
+        {
+          "path": "crates/openaec-ui/src/shell.rs",
+          "same_git_blob": true,
+          "old_blob": "307972716e554804b5195f258424d87c71df17e2",
+          "head_blob": "307972716e554804b5195f258424d87c71df17e2"
+        },
+        {
+          "path": "crates/openaec-ui/src/fonts.rs",
+          "same_git_blob": true,
+          "old_blob": "b093bec1ea7401dba83e3fc45a936f5f019c0f82",
+          "head_blob": "b093bec1ea7401dba83e3fc45a936f5f019c0f82"
+        },
+        {
+          "path": "crates/openaec-ui/src/popover.rs",
+          "same_git_blob": true,
+          "old_blob": "54e7f8129c7e87e7900b199691df889421a61b4e",
+          "head_blob": "54e7f8129c7e87e7900b199691df889421a61b4e"
+        },
+        {
+          "path": "crates/openaec-ui/src/ribbon_icons.rs",
+          "same_git_blob": true,
+          "old_blob": "d2ad171dcfdd21a1f6141f3f685883da9989fc7c",
+          "head_blob": "d2ad171dcfdd21a1f6141f3f685883da9989fc7c"
+        },
+        {
+          "path": "crates/openaec-ui/src/lib.rs",
+          "same_git_blob": false,
+          "old_blob": "98946d7053dc03c91a10a5c869cd2d55fcf66f44",
+          "head_blob": "c7d675b38c56fffc2f142733981dab6186cda94c"
+        },
+        {
+          "path": "crates/openaec-ui/src/model.rs",
+          "same_git_blob": true,
+          "old_blob": "fc68fde90ed1e6781a0860f4e4e8d17dd91771bf",
+          "head_blob": "fc68fde90ed1e6781a0860f4e4e8d17dd91771bf"
+        },
+        {
+          "path": "crates/openaec-ui/Cargo.toml",
+          "same_git_blob": false,
+          "old_blob": "36b728cbda70f0ee6c45ac6f155164ab56ac894d",
+          "head_blob": "dbfd09dc0b972988d5fdfe5ccfdabeb0e202773a"
+        },
+        {
+          "path": "Cargo.lock",
+          "same_git_blob": false,
+          "old_blob": "b8e3ba6f38b151a985b089f533260b8683ff0c75",
+          "head_blob": "bc4b1b38f0979cd630930e7d550b6f6ac6545f68"
+        },
+        {
+          "path": "design/ontwerp-0.4/tokens-0.4.json",
+          "same_git_blob": true,
+          "old_blob": "bfc57989e61367b3011e1626741415ab0492703f",
+          "head_blob": "bfc57989e61367b3011e1626741415ab0492703f"
+        },
+        {
+          "path": "design/ontwerp-0.4/01-fundament.md",
+          "same_git_blob": true,
+          "old_blob": "26a8265fdac6cf13d59e7e8584ebec3f2814ed38",
+          "head_blob": "26a8265fdac6cf13d59e7e8584ebec3f2814ed38"
+        },
+        {
+          "path": "design/ontwerp-0.4/04-componenten.md",
+          "same_git_blob": true,
+          "old_blob": "07b3e4fef1b27c5bba146117421ca21238b5a321",
+          "head_blob": "07b3e4fef1b27c5bba146117421ca21238b5a321"
+        },
+        {
+          "path": "design/ontwerp-0.4/05-layouts.md",
+          "same_git_blob": true,
+          "old_blob": "206e7e075bb36ab672fc3e6ca55ba788ad34f9ae",
+          "head_blob": "206e7e075bb36ab672fc3e6ca55ba788ad34f9ae"
+        },
+        {
+          "path": "scripts/generate_tokens.py",
+          "same_git_blob": true,
+          "old_blob": "446beafacae67abcdceb1e6dcb66703070e48eea",
+          "head_blob": "446beafacae67abcdceb1e6dcb66703070e48eea"
+        },
+        {
+          "path": "scripts/check_portable_ui.py",
+          "same_git_blob": false,
+          "old_blob": "660475235ea4d77d7d7f120c0dda38a479b1aa3e",
+          "head_blob": "e0adc0ec5518add3ab332e6a1b1b873c5764c6e9"
+        },
+        {
+          "path": "README.md",
+          "same_git_blob": false,
+          "old_blob": "ea0c5f1114ebd2b95bff734a31de2b0c402d8447",
+          "head_blob": "c4b3b50dffe6aed63ac1ebaddb673ef86f1e31e0"
+        },
+        {
+          "path": "NOTES.md",
+          "same_git_blob": false,
+          "old_blob": "cd3f31957cd40110012c3df496d0b92b067a0db8",
+          "head_blob": "be5b7988390e2adee678c86007182c8fea0ee5d0"
+        }
+      ]
+    },
+    {
+      "repo": "open-pdf-studio",
+      "head": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+      "tree_truncated": false,
+      "tree_blobs": 14579,
+      "compared": 31,
+      "unchanged": 24,
+      "changed": [
+        "open-pdf-studio/js/pdf/pdf-viewport.js",
+        "open-pdf-studio/js/tools/snap-engine.js",
+        "open-pdf-studio/js/main.js",
+        "open-pdf-studio/js/text/text-edit-appearance.js",
+        "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+        "open-pdf-studio/js/pdf/print-opdracht.js",
+        "open-pdf-studio/js/pdf/print-pagina-instelling.js"
+      ],
+      "files": [
+        {
+          "path": "open-pdf-studio/js/pdf/pdf-viewport.js",
+          "same_git_blob": false,
+          "old_blob": "6f9cf7f280f4fefe77185aa8aa5f404730857d80",
+          "head_blob": "85b52dd96bb353306375795426f783d53e6ec162"
+        },
+        {
+          "path": "open-pdf-studio/js/mobile/touch-gestures.js",
+          "same_git_blob": true,
+          "old_blob": "dd84682d0ba99df54dcb34d0263878876f059539",
+          "head_blob": "dd84682d0ba99df54dcb34d0263878876f059539"
+        },
+        {
+          "path": "open-pdf-studio/js/tools/snap-engine.js",
+          "same_git_blob": false,
+          "old_blob": "3b12384225bc2e41eab15d0984624ccdf4dbac6a",
+          "head_blob": "86731861aca981336da93e3bbd6ec429dade2ddb"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/measurement.js",
+          "same_git_blob": true,
+          "old_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699",
+          "head_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/scale-from-measurement.js",
+          "same_git_blob": true,
+          "old_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5",
+          "head_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5"
+        },
+        {
+          "path": "open-pdf-studio/js/core/stores/interaction-store.ts",
+          "same_git_blob": true,
+          "old_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615",
+          "head_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615"
+        },
+        {
+          "path": "open-pdf-studio/js/main.js",
+          "same_git_blob": false,
+          "old_blob": "50401f590bca50f571b4e0f6e342d0edc667e8ab",
+          "head_blob": "a45d31396b28d19e1b811f06c119f444709337d1"
+        },
+        {
+          "path": "open-pdf-studio/js/mobile/mobiele-gereedschappen.js",
+          "same_git_blob": true,
+          "old_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5",
+          "head_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/weergave-rotatie.js",
+          "same_git_blob": true,
+          "old_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5",
+          "head_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5"
+        },
+        {
+          "path": "open-pdf-studio/js/tools/tools/scale-measure-tool.js",
+          "same_git_blob": true,
+          "old_blob": "9795fa5d696e02193e294352b1c113534bf6e181",
+          "head_blob": "9795fa5d696e02193e294352b1c113534bf6e181"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5",
+          "head_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5"
+        },
+        {
+          "path": "open-pdf-studio/js/text/text-edit-appearance.js",
+          "same_git_blob": false,
+          "old_blob": "bb79953dd0ab4d2a2fe52bbfd7b0dc353a8d102c",
+          "head_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6"
+        },
+        {
+          "path": "open-pdf-studio/js/i18n/config.js",
+          "same_git_blob": true,
+          "old_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131",
+          "head_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131"
+        },
+        {
+          "path": "open-pdf-studio/js/i18n/useTranslation.js",
+          "same_git_blob": true,
+          "old_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8",
+          "head_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/rendering/hatch-patterns.js",
+          "same_git_blob": true,
+          "old_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49",
+          "head_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6",
+          "head_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+          "same_git_blob": false,
+          "old_blob": "dd70de546dbd5bc4f52821b7bb7cc6a911942f98",
+          "head_blob": "1f4305216e8e857d0991e8cb59880272b956c634"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/saver/hatch-meta.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "274c6ef49917664ee13013683aa19ac51a7889dd",
+          "head_blob": "274c6ef49917664ee13013683aa19ac51a7889dd"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-opdracht.js",
+          "same_git_blob": false,
+          "old_blob": "5f6a6a942bc8709b87a2121683c3f0c2df772cd5",
+          "head_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-plaatsing.js",
+          "same_git_blob": true,
+          "old_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58",
+          "head_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-doel.js",
+          "same_git_blob": true,
+          "old_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595",
+          "head_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595"
+        },
+        {
+          "path": "open-pdf-studio/js/search/find-controller.js",
+          "same_git_blob": true,
+          "old_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff",
+          "head_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff"
+        },
+        {
+          "path": "open-pdf-studio/js/search/search-sources.js",
+          "same_git_blob": true,
+          "old_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d",
+          "head_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d"
+        },
+        {
+          "path": "open-pdf-studio/js/search/search-sources.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b",
+          "head_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b"
+        },
+        {
+          "path": "open-pdf-studio/js/solid/components/FindBar.jsx",
+          "same_git_blob": true,
+          "old_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e",
+          "head_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e"
+        },
+        {
+          "path": "open-pdf-studio/js/solid/stores/findBarStore.js",
+          "same_git_blob": true,
+          "old_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8",
+          "head_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/vlak-ringen.js",
+          "same_git_blob": true,
+          "old_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12",
+          "head_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-pagina-instelling.js",
+          "same_git_blob": false,
+          "old_blob": "48cdaf982f517d9bd34beb7f74385650cd8ccff1",
+          "head_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-plaatsing.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30",
+          "head_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-doel.test.mjs",
+          "same_git_blob": true,
+          "old_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8",
+          "head_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/arc-points.js",
+          "same_git_blob": true,
+          "old_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d",
+          "head_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d"
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    "0.4-implementatie en generator bestaan al; oude prototypepipeline is niet de hele huidige crate.",
+    "B2 is een gedeelde bibliotheek, geen uitsluitend visuele ontwerpcollectie.",
+    "PDF heeft expliciete strikte/prefix-getalhelpers; andere ambiguïteitsregel dan Calc.",
+    "Oudere PDF-viewer/snap/print/hatch-proeven niet zonder nieuwe integratie als nieuwste appvalidatie presenteren."
+  ],
+  "limits": [
+    "Gerichte vergelijkingen, geen volledige audit van alle nieuwe bestanden. GitHub compare-fileslijst was begrensd op300; daarom volledige niet-afgekaptetrees en expliciete blobvergelijking gebruikt.",
+    "Gelijke functieblob bewijst geen gelijke totale app door afhankelijkheden/configuratie.",
+    "Calc en Validator HEAD gelijk aan eerdere onderzochte commits op controlemoment.",
+    "Geen checkout, commit/push of productiecodewijziging."
+  ],
+  "final_check": {
+    "checked_at": "2026-10-23T06:53:01+02:00",
+    "heads": [
+      {
+        "repo": "OpenAEC-Style-Repo",
+        "sha": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+        "committed_at": "2026-10-22T17:57:49Z",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/commit/85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+        "title": "Complete B2 icon review rounds and add lossless library export"
+      },
+      {
+        "repo": "open-calc-studio",
+        "sha": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "committed_at": "2026-09-24T08:16:22Z",
+        "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/commit/b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+        "title": "feat(embed): Open Calc Studio als npm-pakket @openaec/open-calc-studio"
+      },
+      {
+        "repo": "open-pdf-studio",
+        "sha": "1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+        "committed_at": "2026-10-23T04:10:58Z",
+        "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/commit/1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+        "title": "Merge pull request #696: integration 2026.43.7 (hosted web bundle)"
+      },
+      {
+        "repo": "OpenAEC-BIM-validator",
+        "sha": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "committed_at": "2026-09-22T11:32:26Z",
+        "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/commit/8f837dd9a56e12d9b61ddd9dd2b341abe9794256",
+        "title": "Use shared issue assignment workflow with explicit permissions"
+      }
+    ],
+    "pdf_targeted_comparison": {
+      "repo": "open-pdf-studio",
+      "base": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+      "head": "1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+      "tree_truncated": false,
+      "compared": 38,
+      "unchanged": 37,
+      "changed": [
+        "open-pdf-studio/js/main.js"
+      ],
+      "files": [
+        {
+          "path": "open-pdf-studio/js/annotations/arc-points.js",
+          "same_as_run08": true,
+          "run08_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d",
+          "final_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/measurement.js",
+          "same_as_run08": true,
+          "run08_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699",
+          "final_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6",
+          "final_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/rendering/hatch-patterns.js",
+          "same_as_run08": true,
+          "run08_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49",
+          "final_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/scale-from-measurement.js",
+          "same_as_run08": true,
+          "run08_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5",
+          "final_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5"
+        },
+        {
+          "path": "open-pdf-studio/js/annotations/vlak-ringen.js",
+          "same_as_run08": true,
+          "run08_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12",
+          "final_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12"
+        },
+        {
+          "path": "open-pdf-studio/js/core/fout-bericht.js",
+          "same_as_run08": true,
+          "run08_blob": "42c5811ce0addc6757fdad410120d7c9f2e9c084",
+          "final_blob": "42c5811ce0addc6757fdad410120d7c9f2e9c084"
+        },
+        {
+          "path": "open-pdf-studio/js/core/fout-bericht.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "5a7a926f544f27808e2719e3c0745b91c7883428",
+          "final_blob": "5a7a926f544f27808e2719e3c0745b91c7883428"
+        },
+        {
+          "path": "open-pdf-studio/js/core/getal-invoer-velden.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "5a99b1aaf7950f1e6b264b538b5982674b7ac84a",
+          "final_blob": "5a99b1aaf7950f1e6b264b538b5982674b7ac84a"
+        },
+        {
+          "path": "open-pdf-studio/js/core/getal-invoer.js",
+          "same_as_run08": true,
+          "run08_blob": "11e7e5a4d0926d5a1a0f3d5b9f927bb01c930382",
+          "final_blob": "11e7e5a4d0926d5a1a0f3d5b9f927bb01c930382"
+        },
+        {
+          "path": "open-pdf-studio/js/core/getal-invoer.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "5728ddeb201e373a8807435de710d3061cbd758e",
+          "final_blob": "5728ddeb201e373a8807435de710d3061cbd758e"
+        },
+        {
+          "path": "open-pdf-studio/js/core/stores/interaction-store.ts",
+          "same_as_run08": true,
+          "run08_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615",
+          "final_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615"
+        },
+        {
+          "path": "open-pdf-studio/js/getal-velden-bron.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "cdf9b9466712c3098d1e9bd65c3238add6a9ca36",
+          "final_blob": "cdf9b9466712c3098d1e9bd65c3238add6a9ca36"
+        },
+        {
+          "path": "open-pdf-studio/js/i18n/config.js",
+          "same_as_run08": true,
+          "run08_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131",
+          "final_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131"
+        },
+        {
+          "path": "open-pdf-studio/js/i18n/useTranslation.js",
+          "same_as_run08": true,
+          "run08_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8",
+          "final_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8"
+        },
+        {
+          "path": "open-pdf-studio/js/main.js",
+          "same_as_run08": false,
+          "run08_blob": "a45d31396b28d19e1b811f06c119f444709337d1",
+          "final_blob": "8d614f4ba2b909baa7e696391f6213c4bdb786e3"
+        },
+        {
+          "path": "open-pdf-studio/js/mobile/mobiele-gereedschappen.js",
+          "same_as_run08": true,
+          "run08_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5",
+          "final_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5"
+        },
+        {
+          "path": "open-pdf-studio/js/mobile/touch-gestures.js",
+          "same_as_run08": true,
+          "run08_blob": "dd84682d0ba99df54dcb34d0263878876f059539",
+          "final_blob": "dd84682d0ba99df54dcb34d0263878876f059539"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/pdf-viewport.js",
+          "same_as_run08": true,
+          "run08_blob": "85b52dd96bb353306375795426f783d53e6ec162",
+          "final_blob": "85b52dd96bb353306375795426f783d53e6ec162"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-doel.js",
+          "same_as_run08": true,
+          "run08_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595",
+          "final_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-doel.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8",
+          "final_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-opdracht.js",
+          "same_as_run08": true,
+          "run08_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780",
+          "final_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-pagina-instelling.js",
+          "same_as_run08": true,
+          "run08_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb",
+          "final_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-plaatsing.js",
+          "same_as_run08": true,
+          "run08_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58",
+          "final_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/print-plaatsing.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30",
+          "final_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+          "same_as_run08": true,
+          "run08_blob": "1f4305216e8e857d0991e8cb59880272b956c634",
+          "final_blob": "1f4305216e8e857d0991e8cb59880272b956c634"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/saver/hatch-meta.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "274c6ef49917664ee13013683aa19ac51a7889dd",
+          "final_blob": "274c6ef49917664ee13013683aa19ac51a7889dd"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/weergave-rotatie.js",
+          "same_as_run08": true,
+          "run08_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5",
+          "final_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5"
+        },
+        {
+          "path": "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5",
+          "final_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5"
+        },
+        {
+          "path": "open-pdf-studio/js/search/find-controller.js",
+          "same_as_run08": true,
+          "run08_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff",
+          "final_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff"
+        },
+        {
+          "path": "open-pdf-studio/js/search/search-sources.js",
+          "same_as_run08": true,
+          "run08_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d",
+          "final_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d"
+        },
+        {
+          "path": "open-pdf-studio/js/search/search-sources.test.mjs",
+          "same_as_run08": true,
+          "run08_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b",
+          "final_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b"
+        },
+        {
+          "path": "open-pdf-studio/js/solid/components/FindBar.jsx",
+          "same_as_run08": true,
+          "run08_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e",
+          "final_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e"
+        },
+        {
+          "path": "open-pdf-studio/js/solid/stores/findBarStore.js",
+          "same_as_run08": true,
+          "run08_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8",
+          "final_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8"
+        },
+        {
+          "path": "open-pdf-studio/js/text/text-edit-appearance.js",
+          "same_as_run08": true,
+          "run08_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6",
+          "final_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6"
+        },
+        {
+          "path": "open-pdf-studio/js/tools/snap-engine.js",
+          "same_as_run08": true,
+          "run08_blob": "86731861aca981336da93e3bbd6ec429dade2ddb",
+          "final_blob": "86731861aca981336da93e3bbd6ec429dade2ddb"
+        },
+        {
+          "path": "open-pdf-studio/js/tools/tools/scale-measure-tool.js",
+          "same_as_run08": true,
+          "run08_blob": "9795fa5d696e02193e294352b1c113534bf6e181",
+          "final_blob": "9795fa5d696e02193e294352b1c113534bf6e181"
+        },
+        {
+          "path": "open-pdf-studio/js/ui/getal-veld.js",
+          "same_as_run08": true,
+          "run08_blob": "2a73cd45800f4207005a755376bbb8d7689a1e27",
+          "final_blob": "2a73cd45800f4207005a755376bbb8d7689a1e27"
+        }
+      ]
+    },
+    "source_id": "R85",
+    "limits": [
+      "37 gelijke bronblobs bewijzen geen complete gelijkheid van de app/hostintegratie.",
+      "Eerdere tests zijn niet als volledige nieuwe-HEAD-test herbenoemd."
+    ]
+  }
+}

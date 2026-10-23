@@ -1,0 +1,1509 @@
+[
+  {
+    "id": "UI-001",
+    "module": "01",
+    "title": "Native hulptechnologie vroeg bewijzen",
+    "claim": "De gekozen renderer en het gedeelde contract leveren nog geen aangetoond screenreaderpad.",
+    "priority": "P0",
+    "evidence_status": "Gepinde dependency-inspectie + primaire upstream-issues; runtime open",
+    "source_ids": [
+      "A01",
+      "A08",
+      "R06"
+    ],
+    "recommendation": "Doe een platformproef vóór brede componentuitrol; toets naam, rol, waarde en toestand.",
+    "validation": [
+      "Inspecteer toegankelijkheidsboom.",
+      "Voer kerntaak met NVDA/VoiceOver/Orca uit op ondersteunde platformen."
+    ],
+    "limits": "Geen oordeel over alle applicaties of uitsluiting van iedere mogelijke alternatieve integratie.",
+    "code_locations": [
+      "Cargo.lock: iced 0.13.1",
+      "crates/openaec-ui/Cargo.toml:14"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-002",
+    "module": "01",
+    "title": "Algemene toetsenbordroute ontbreekt in centrale afspraak",
+    "claim": "De gedeelde subscription toont geen Tab-route; standaardknop 0.13.1 bevat geen eigen toetsenbordactivatie.",
+    "priority": "P0",
+    "evidence_status": "Directe statische broncontrole; domeinroutes nog te auditen",
+    "source_ids": [
+      "R01",
+      "A02",
+      "A03",
+      "A04",
+      "A09",
+      "R71",
+      "R78",
+      "R83"
+    ],
+    "recommendation": "Definieer focus en activatie per component en regio; bewijs een volledige taak zonder muis.",
+    "validation": [
+      "Tab/Shift-Tab tussen regio’s.",
+      "Enter/Space op acties, pijltjes in groepen.",
+      "Geen toetsenbordval."
+    ],
+    "limits": "Apps kunnen hun eigen subscription aanbieden. Niet afleiden dat geen enkele functionaliteit via toetsenbord werkt. Nieuwste0.4-knop gebruikt dezelfde iced0.13.1-button; nieuwe widgets zijn geen volledige keyboard-/AT-proef. Actuele ui04-review heeft expliciete commandobindings en Escape/Enter; ontbreken van algemene focusroute is geen ontbreken van alle sneltoetsen.",
+    "code_locations": [
+      "crates/openaec-ui/src/runtime.rs:90",
+      "iced 0.13.1 widget/src/button.rs:256"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-003",
+    "module": "01",
+    "title": "Modale focus moet onderdeel van het componentcontract zijn",
+    "claim": "De modal- en popoverwrappers tonen geen algemeen beginfocus- of focusherstelcontract.",
+    "priority": "P1",
+    "evidence_status": "Directe bronobservatie; gedrag niet getest",
+    "source_ids": [
+      "R04",
+      "R05",
+      "A06"
+    ],
+    "recommendation": "Leg beginfocus, modale afbakening en focusherstel expliciet vast.",
+    "validation": [
+      "Open, annuleer, bevestig en sluit met toetsenbord.",
+      "Achterliggende acties blijven inert bij modaliteit."
+    ],
+    "limits": "Geen bewezen focuslek zonder runtimeproef; domein kan eigen gedrag toevoegen.",
+    "code_locations": [
+      "crates/openaec-ui/src/modal.rs:30",
+      "crates/openaec-ui/src/popover.rs:8"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-004",
+    "module": "02",
+    "title": "Een sneltoetstekst is geen binding",
+    "claim": "shortcut is presentatietekst in het centrale model en wordt in tooltips gezet; dispatch kan afzonderlijk door apps gebeuren.",
+    "priority": "P1",
+    "evidence_status": "Directe bronobservatie",
+    "source_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R78"
+    ],
+    "recommendation": "Koppel alle routes aan dezelfde gestructureerde commando-identiteit.",
+    "validation": [
+      "Vergelijk menu/lint/toetsresultaat per commando.",
+      "Controleer conflicten en scopes."
+    ],
+    "limits": "Niet bewezen dat de individuele app-shortcuts ontbreken. Positief tegenvoorbeeld: actuele ui04-host bindt onder meer bewaren, undo en panelen afzonderlijk.",
+    "code_locations": [
+      "crates/openaec-ui/src/model.rs:24",
+      "crates/openaec-ui/src/shell.rs:28"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-005",
+    "module": "02",
+    "title": "Tekentelling is kwetsbaar bij font- en taalwijziging",
+    "claim": "Oudere shell schat tab-/lintbreedte met tekentelling; nieuwere0.4-tabs bouwen hun titel met tekstlayout. Font-/taalwijziging blijft per route te toetsen.",
+    "priority": "P1",
+    "evidence_status": "Aangetroffen formule; geen clipping gemeten",
+    "source_ids": [
+      "R03",
+      "R71",
+      "R78"
+    ],
+    "recommendation": "Gebruik werkelijke tekstmaten of toets de schatting met nieuwe fonts, schaal en langere vertalingen.",
+    "validation": [
+      "Lange labels in NL/FR/TR.",
+      "Andere font en 150–200% schaal.",
+      "Controleer afkapping en volledige naam."
+    ],
+    "limits": "Een formule is niet op zichzelf een bewezen zichtbare fout. Positief tegenvoorbeeld in nieuwe0.4: document_tabs geeft tab.title direct aan tekstlayout, geen vaste tekentelfactor in die functie. Geen clipping of afgekapt Unicodecluster gereproduceerd.",
+    "code_locations": [
+      "crates/openaec-ui/src/shell.rs:49",
+      "crates/openaec-ui/src/shell.rs:80"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-006",
+    "module": "02",
+    "title": "Actie, toggle en tekenmodus expliciet onderscheiden",
+    "claim": "Het centrale Command-model heeft selected en enabled, maar geen expliciet semantisch commandotype of reden van onbeschikbaarheid.",
+    "priority": "P1",
+    "evidence_status": "Modelinspectie en ontwerpvoorstel",
+    "source_ids": [
+      "R02",
+      "A11"
+    ],
+    "recommendation": "Definieer action/toggle/mode/dialog/value met scope, toestand en uitleg.",
+    "validation": [
+      "Controleer actieve tool bij documentwissel.",
+      "Toets consistent resultaat in alle commandoroutes."
+    ],
+    "limits": "Apps kunnen eigen semantiek hebben; uitbreiding eerst als contract bespreken.",
+    "code_locations": [
+      "crates/openaec-ui/src/model.rs:24"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-007",
+    "module": "02",
+    "title": "Opdrachtzoeken aanvullend beoordelen",
+    "claim": "Een zoekpalet kan bestaande opdrachten ontsluiten zonder alle zichtbare navigatie te vervangen.",
+    "priority": "P2",
+    "evidence_status": "Ontwerphypothese met tegengestelde ervaringen",
+    "source_ids": [
+      "A14",
+      "A11"
+    ],
+    "recommendation": "Test zichtbare navigatie plus aanvullende opdrachtzoeker op echte taken.",
+    "validation": [
+      "Onbekende functie vinden.",
+      "Synoniemen NL/EN.",
+      "Vergelijk beginner en ervaren gebruiker."
+    ],
+    "limits": "Geen OpenAEC-gebruikersonderzoek uitgevoerd.",
+    "code_locations": [],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-008",
+    "module": "03",
+    "title": "Bescherm bestaande rasterfuncties bij migratie",
+    "claim": "Oudere native Calc-review en nieuwe0.4-tabelhelper bewijzen geen volledige bronrasterport; nieuwe ui04-host heeft wel rijacties, undo en stabiele ID-mapping.",
+    "priority": "P1",
+    "evidence_status": "Statische inspectie van review én gepinde bronapp",
+    "source_ids": [
+      "R07",
+      "R08",
+      "R12",
+      "R13",
+      "R19",
+      "R71",
+      "R78"
+    ],
+    "recommendation": "Maak een taak-/gedragsinventaris per domein en een aantoonbare pariteitsproef vóór vervanging.",
+    "validation": [
+      "Voltooi dezelfde begrotingstaak in bronapp en nieuwe renderer.",
+      "Controleer keyboard, bereik, kopiëren, bewerken, cancel en undo."
+    ],
+    "limits": "Geen bewijs dat de huidige bronapp geheel toegankelijk of foutvrij is; geen live-appvergelijking uitgevoerd. Nieuwe0.4-gallery is expliciet reviewhulp, geen volledige Calc-app. Geen bestaande functionaliteit als afwezig bestempelen alleen omdat zij buiten de helper zit.",
+    "code_locations": [
+      "src/bin/style_repo/calc_native.rs:24",
+      "Calc useGridNavigation.ts:30",
+      "Calc GridCellEditor.tsx:66"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-009",
+    "module": "03",
+    "title": "Maak selectiescope zichtbaar",
+    "claim": "De visuele 0.4-tabelafspraak legt nog niet vast of alles selecteren alle, gefilterde of paginarijen betekent.",
+    "priority": "P1",
+    "evidence_status": "Ontwerpleemte + primaire referentievarianten + historische ervaring",
+    "source_ids": [
+      "R07",
+      "A19",
+      "A20",
+      "A17",
+      "A23",
+      "R71",
+      "R78",
+      "R81"
+    ],
+    "recommendation": "Definieer scope, stabiele object-ID’s, zichtbare selectie buiten filters en transactioneel bulkgedrag.",
+    "validation": [
+      "Selecteer, sorteer en filter; controleer exact geraakte ID’s.",
+      "Toets ouder/kind, gemengde selectie, bulkpreview en undo."
+    ],
+    "limits": "Nieuw contractvoorstel; geen gemeten selectiefout in OpenAEC vastgesteld. Nieuwe tabelhelper gebruikt één geselecteerde rijpositie; ui04-host vertaalt correct tussen positie en domein-ID. Geen bewezen ID-verwisselingsbug.",
+    "code_locations": [
+      "design/ontwerp-0.4/04-componenten.md:113"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-010",
+    "module": "03",
+    "title": "Toets logische rasterstructuur naast scrollprestaties",
+    "claim": "De oorspronkelijke Calc virtualiseert rijen; bruikbaarheid met hulptechnologie is daarmee nog niet aangetoond.",
+    "priority": "P1",
+    "evidence_status": "Concrete bronroute + primaire toegankelijkheidsdocumentatie",
+    "source_ids": [
+      "R14",
+      "R19",
+      "A21",
+      "A22"
+    ],
+    "recommendation": "Test focusbehoud, koppen en logische posities; vergelijk virtualisatie met een afgebakend toegankelijk alternatief waar nodig.",
+    "validation": [
+      "Schermlezer door meer rijen dan in DOM/viewport passen.",
+      "Controleer Home/End, scroll, sorteer/filter en focusbehoud."
+    ],
+    "limits": "Geen uitspraak dat virtualisatie altijd ontoegankelijk is of geheel uit moet. Geen performancebenchmark.",
+    "code_locations": [
+      "Calc useGridVirtualizer.ts:14",
+      "Calc CostGrid.tsx:499"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-011",
+    "module": "04",
+    "title": "Eén invoercontract voor web en native",
+    "claim": "De gedeelde Number-helpers delegeren String-interpretatie; native reviewroutes gebruiken aantoonbaar verschillende grammatica.",
+    "priority": "P1",
+    "evidence_status": "Directe broninspectie + geïsoleerde Rust-proef met 16 invoeren",
+    "source_ids": [
+      "R09",
+      "R10",
+      "R11",
+      "A25"
+    ],
+    "recommendation": "Specificeer concepttekst, getypeerde waarde, locale, eenheid, validiteit en commitmoment per veldsoort.",
+    "validation": [
+      "Vergelijk 0.5/0,5, onvolledige invoer, integer en exponent.",
+      "Controleer dezelfde corpusuitkomsten in web/native."
+    ],
+    "limits": "Reviews schrijven geen PDF-bestanden. Geen volledige UI- of productieapp-proef.",
+    "code_locations": [
+      "crates/openaec-ui/src/widgets.rs:881",
+      "src/bin/style_repo.rs:2788",
+      "src/bin/style_repo/pdf_split_native.rs:76"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-012",
+    "module": "04",
+    "title": "Voorkom stille prefixparsing vóór hergebruik",
+    "claim": "De gepinde Calc-parser geeft 1 voor 1 234,56, 12 voor 12abc en 1.2 voor 1,2,3; dit is met de originele functies gereproduceerd.",
+    "priority": "P0",
+    "evidence_status": "Uitgevoerde gepinde parserfuncties; end-to-end effect open",
+    "source_ids": [
+      "R15",
+      "R16",
+      "R18",
+      "A26",
+      "A27",
+      "R73"
+    ],
+    "recommendation": "Eis volledige tekstconsumptie en geldige eindige waarde; leg ambiguïteitsregels vast en voeg gerichte regressiegevallen toe vóór migratie.",
+    "validation": [
+      "Controleer parser én commit/store/opslaan met dezelfde ongeldige en localegevoelige invoeren.",
+      "Behoud correcte bestaande round-trips en formulegevallen."
+    ],
+    "limits": "Calc-HEAD bij deze versieaudit gelijk aan geproefde commit; geen beschadigde begroting of end-to-end incident aangetoond. Nieuwere PDF heeft al een aparte strikte parser; claim niet op alle apps toepassen.",
+    "code_locations": [
+      "Calc src/utils/formatting.ts:16",
+      "Calc src/utils/numericInput.ts:9",
+      "Calc src/components/grid/useGridEditing.ts:63"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-013",
+    "module": "04",
+    "title": "Bewaar herstelbare concepttekst bij fouten",
+    "claim": "Afwijzen of normaliseren zonder zichtbare uitleg kan tekst en interpretatie uiteen laten lopen; het centrale helpercontract specificeert herstel nog niet.",
+    "priority": "P1",
+    "evidence_status": "Gedeeld contract ontbreekt; normatieve intentie + ontwerpvoorstel",
+    "source_ids": [
+      "R09",
+      "R10",
+      "R11",
+      "A24",
+      "A28"
+    ],
+    "recommendation": "Scheid onvolledig van ongeldig; houd tekst bewerkbaar, blokkeer ongeldige commit en geef veldgebonden tekstuele uitleg.",
+    "validation": [
+      "Type minteken/0,/1e- in passende velden.",
+      "Plak foutieve tekst, herstel, bevestig en annuleer met toetsenbord."
+    ],
+    "limits": "Exact feedbackmoment is domeinafhankelijk; geen universele verplichting tot onmiddellijke rode fouten.",
+    "code_locations": [
+      "crates/openaec-ui/src/widgets.rs:350",
+      "crates/openaec-ui/src/widgets.rs:881"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-014",
+    "module": "04",
+    "title": "Maak leeg, nul en gemengde waarden onderscheidbaar",
+    "claim": "Calc formatteert nul bewust als lege tekst; deze bestaande conventie kan niet zonder domeinkeuze een algemene technische veldregel worden.",
+    "priority": "P1",
+    "evidence_status": "Broncode/tests + uitgevoerde formatter/parserproef",
+    "source_ids": [
+      "R16",
+      "R17",
+      "R13"
+    ],
+    "recommendation": "Leg aparte toestanden vast voor leeg, nul, onbekend, niet van toepassing en gemengde selectie.",
+    "validation": [
+      "Open/sluit nulveld ongewijzigd; controleer geen mutatie.",
+      "Bewerk gemengde selectie en leeg vervolgens bewust."
+    ],
+    "limits": "Bestaande keuze is niet automatisch fout; commitIfChanged voorkomt ongewijzigde herschrijving. Geen gegevensverlies aangetoond.",
+    "code_locations": [
+      "Calc src/utils/formatting.ts:39",
+      "Calc GridCellEditor.tsx:102"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-015",
+    "module": "04",
+    "title": "Scheid notatie, eenheid en rekenprecisie",
+    "claim": "Een localeformatter of comma-replace is onvoldoende als volledig technisch invoer-/uitwisselingscontract.",
+    "priority": "P1",
+    "evidence_status": "SI-schrijfconventies + concrete parsertegenvoorbeelden",
+    "source_ids": [
+      "A31",
+      "A29",
+      "A30",
+      "R15",
+      "R16"
+    ],
+    "recommendation": "Maak bronlocale en eenheid expliciet bij import; bepaal precisie en toelaatbare grammatica per grootheid.",
+    "validation": [
+      "Round-trip UI/intern/export bij verschillende locales en eenheden.",
+      "Test grenswaarden, finite-check en conversie zonder stille labelwijziging."
+    ],
+    "limits": "Nog geen volledige audit van interne reken-/opslageenheden. SI-schrijfafspraken geven geen compleet domeinmodel.",
+    "code_locations": [
+      "Calc src/utils/numericInput.ts:9",
+      "Calc src/utils/formatting.ts:16"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-016",
+    "module": "05",
+    "title": "Koppel opslagstatus aan de geschreven revisie",
+    "claim": "De gepinde savecallback markeert na await onvoorwaardelijk schoon; in de geïsoleerde proef bleef actuele versie 2 bestaan terwijl alleen payload 1 was geschreven.",
+    "priority": "P0",
+    "evidence_status": "Exacte callbackbody uitgevoerd met gecontroleerde in-memory schrijfvertraging",
+    "source_ids": [
+      "R23",
+      "R29"
+    ],
+    "recommendation": "Bewaar document- en opslagrevisie; wis dirty alleen voor bevestigde revisie en controleer de schrijfvolgorde per document.",
+    "validation": [
+      "Save vertragen, tussentijds bewerken en revisie/payload/dirty vergelijken.",
+      "Overlappende saves omgekeerd voltooien; end-to-end toetsen of onderliggende lagen dit scenario voorkomen."
+    ],
+    "limits": "Geen echte schijfwrite of aangetoonde verloren productiegegevens; serializer/store/I/O zijn stubs.",
+    "code_locations": [
+      "Calc useFileOperations.ts:98",
+      "Calc documentSlice.ts:91"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-017",
+    "module": "05",
+    "title": "Laat sluiten alle gewijzigde documenten afhandelen",
+    "claim": "De gepinde sluitcallback vraagt over het eerste dirty document, slaat via de actieve-tabroute op en kan na één beslissing destroy aanroepen terwijl een tweede document dirty blijft.",
+    "priority": "P0",
+    "evidence_status": "Gepinde bron + uitgevoerde meerdocumentscenario’s + primaire destroy-semantiek",
+    "source_ids": [
+      "R22",
+      "R23",
+      "A40"
+    ],
+    "recommendation": "Maak een sluitplan met expliciete document-ID’s en bevestiging/resultaat per gewijzigd document; sluit pas als alle beslissingen verwerkt zijn.",
+    "validation": [
+      "Twee dirty documenten, beide actieve tabs, Save/Discard/Cancel.",
+      "Schrijffout en geannuleerd Save As houden alle nog relevante documenten bereikbaar."
+    ],
+    "limits": "Geen echt venster gesloten; geen integratietest met eventuele overige productlagen.",
+    "code_locations": [
+      "Calc App.tsx:337",
+      "Calc useFileOperations.ts:98"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-018",
+    "module": "05",
+    "title": "Onderscheid autosave, herstelkopie en hoofdproject",
+    "claim": "Calc autosave schrijft alleen het actieve gewijzigde desktopdocument met bestaand pad; dat dekt nieuwe naamloze of alle achtergrondtabbladen niet.",
+    "priority": "P1",
+    "evidence_status": "Statische routecontrole + openbare verwachtingstegenvoorbeelden",
+    "source_ids": [
+      "R22",
+      "A41",
+      "A42",
+      "A37"
+    ],
+    "recommendation": "Definieer aparte beloften en zichtbare tijden/locaties voor opslaan, herstel en synchronisatie; bied herstel als kopie aan.",
+    "validation": [
+      "Nieuw document zonder pad en achtergrondtab na onderbreking.",
+      "Herstelkopie vergelijken met hoofdproject zonder stil overschrijven."
+    ],
+    "limits": "Geen volledige audit van andere opslag-/herstelroutes in alle apps. Interval is bestaande keuze, geen gevalideerd optimum.",
+    "code_locations": [
+      "Calc App.tsx:317"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-019",
+    "module": "05",
+    "title": "Bevestig de opslaguitkomst die de app werkelijk kent",
+    "claim": "Browserfallback start een download en markeert schoon; native documentwrapper en voorkeuren gebruiken verschillende zichtbare schrijfroutes.",
+    "priority": "P1",
+    "evidence_status": "Concrete code + primaire download-/opslagdocumentatie",
+    "source_ids": [
+      "R20",
+      "R23",
+      "R24",
+      "A38",
+      "A39",
+      "A46"
+    ],
+    "recommendation": "Gebruik passende bevestiging per opslagmedium; toets temp/commit, fouten en behoud van de laatste goede versie op ondersteunde locaties.",
+    "validation": [
+      "Download annuleren/blokkeren; UI-tekst en herstel controleren.",
+      "Schijf vol, rechtenfout en onderbreking tijdens schrijven op echte doelplatformen."
+    ],
+    "limits": "Geen bewezen plugin-atomiciteitsfout; geen download of bestand beschadigd in deze ronde.",
+    "code_locations": [
+      "Calc useFileOperations.ts:134",
+      "Calc nativeFileService.ts:130",
+      "crates/openaec-ui/src/model.rs:200"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-020",
+    "module": "06",
+    "title": "Definieer annuleren tot aan het domeinwerk",
+    "claim": "Een balkstijl of optionele onCancel-callback bewijst geen gestopte import; iced 0.13.1 heeft wel al een abortable taskstream.",
+    "priority": "P1",
+    "evidence_status": "Statische component- en gepinde frameworkinspectie",
+    "source_ids": [
+      "R27",
+      "R28",
+      "R01",
+      "A44",
+      "A47"
+    ],
+    "recommendation": "Voer taak-ID, document/revisie, annuleringsaanvraag, bevestiging en eindresultaat in het voorgestelde taakcontract op.",
+    "validation": [
+      "Annuleer voor/tijdens/na commit en controleer echte werk-/schrijfuitkomst.",
+      "Negeer late resultaten van oude taak/revisie; behoud gedeeltelijke uitvoer zichtbaar."
+    ],
+    "limits": "Geen annuleringsintegratie getest; geen claim dat framework geen annulering kan.",
+    "code_locations": [
+      "Calc ProgressModal.tsx:14",
+      "crates/openaec-ui/src/widgets.rs:219",
+      "iced runtime/src/task.rs:173"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-021",
+    "module": "06",
+    "title": "Profileer volledige datakopieën en synchrone voorbereiding",
+    "claim": "Calc serialiseert vóór await, kopieert complete history-items en berekent logische rij-offsets; dit zijn mogelijke knelpunten naast virtueel renderen.",
+    "priority": "P1",
+    "evidence_status": "Concrete profileringsplaatsen, geen gemeten vertraging",
+    "source_ids": [
+      "R23",
+      "R25",
+      "R26",
+      "R14",
+      "A36",
+      "A45"
+    ],
+    "recommendation": "Meet invoerblokkade, tijd tot bruikbaar beeld, geheugentop en annuleringslatentie met representatieve bestanden/hardware.",
+    "validation": [
+      "Neem trace van opslaan, undo en scrollen met normale/zware bestanden.",
+      "Controleer of UI feedback kan tekenen en invoer kan verwerken tijdens voorbereiding."
+    ],
+    "limits": "Geen benchmark of bewezen performance-incident. De webdefinitie 50 ms is geen algemene native eis.",
+    "code_locations": [
+      "Calc useFileOperations.ts:105",
+      "Calc fileService.ts:40",
+      "Calc historySlice.ts:29",
+      "Calc useGridVirtualizer.ts:20"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-022",
+    "module": "06",
+    "title": "Maak voortgang inhoudelijk en toegankelijk",
+    "claim": "De 0.4-vormafspraak specificeert een balk, maar geen gedeeld bewijs voor fase/noemer, taakuitkomst en assistieve statusmelding.",
+    "priority": "P1",
+    "evidence_status": "Ontwerpvoorstel gebaseerd op primaire documentatie en begrensd gebruikersonderzoek",
+    "source_ids": [
+      "R07",
+      "R28",
+      "A33",
+      "A34",
+      "A35",
+      "A43"
+    ],
+    "recommendation": "Toon afgebakende fasen, alleen onderbouwde percentages en betekenisvolle meldmomenten zonder focusdiefstal.",
+    "validation": [
+      "Controleer onbekend totaal, fasewisseling en 100%-moment.",
+      "Schermlezer, gereduceerde beweging en een gebruiker die elders werkt."
+    ],
+    "limits": "Geen universeel beste animatie of gemeten OpenAEC-wachttijdvoorkeur vastgesteld.",
+    "code_locations": [
+      "design/ontwerp-0.4/04-componenten.md:59",
+      "crates/openaec-ui/src/widgets.rs:219"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-023",
+    "module": "05",
+    "title": "Leg undo-scope en taakgrenzen vast",
+    "claim": "De gelezen Calc-historySlice bevat items-snapshots en omschrijvingen; algemene afspraken over domeintaak, document en focus zijn daarmee niet aangetoond.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie + contractvoorstel",
+    "source_ids": [
+      "R25",
+      "R12",
+      "R13"
+    ],
+    "recommendation": "Specificeer één logische undo-stap per taak, documentcontext, tekstfocus en niet-herstelbare acties; houd crashherstel afzonderlijk.",
+    "validation": [
+      "Plakbereik, bulkactie en drag elk terugdraaien.",
+      "Wissel document/tekstfocus en controleer benoemde Undo/Redo-uitkomst."
+    ],
+    "limits": "Geen volledige audit van alle history-aanroepen; geen aangetoonde verkeerde undo in productie.",
+    "code_locations": [
+      "Calc historySlice.ts:23"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-024",
+    "module": "07",
+    "title": "Behoud expliciete coördinaten- en rotatiecontracten",
+    "claim": "De PDF-app heeft gescheiden pagina-/weergaveruimten en zoomafhankelijke snapafstand; 25 bestaande pure rotatietests slagen.",
+    "priority": "P1",
+    "evidence_status": "25 bestaande tests uitgevoerd + gepinde broninspectie",
+    "source_ids": [
+      "R30",
+      "R31",
+      "R32",
+      "R33",
+      "A56",
+      "A57"
+    ],
+    "recommendation": "Maak eenheid/oorsprong/asrichting expliciet en behoud bestaande domeinlogica bij rendererharmonisatie.",
+    "validation": [
+      "Rotatie, CropBox-offset, userUnit, DPR en zoom in echte viewer.",
+      "Annotatie-/snap-/meetpunt blijft gekoppeld aan hetzelfde domeinpunt."
+    ],
+    "limits": "Pure tests bewijzen geen pointer-/browser-/meetintegratie; geen universele PDF-unitondersteuning vastgesteld.",
+    "code_locations": [
+      "PDF weergave-rotatie.js",
+      "PDF pdf-viewport.js:1459",
+      "PDF snap-engine.js:782"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-025",
+    "module": "07",
+    "title": "Bewaar kalibratiegrondslag los van presentatie",
+    "claim": "De schaalhelper heeft een expliciet afrondingsbeleid voor de schaalstring; de tool kent een tweepuntsflow per pagina.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "R36",
+      "A58",
+      "A57"
+    ],
+    "recommendation": "Leg bronafstand/eenheid/pagina/revisie en presentatieprecisie apart vast; toon ongekalibreerde status.",
+    "validation": [
+      "Bekende tweede afstand, verschillende pagina’s en heropenen.",
+      "Controleer vervolggebruik van afgeronde schaalstring vóór een foutclaim."
+    ],
+    "limits": "Volledige schaalstring-consumenten niet getraceerd; geen foutieve hoeveelheid of meetnauwkeurigheid vastgesteld.",
+    "code_locations": [
+      "PDF scale-from-measurement.js:24",
+      "PDF scale-measure-tool.js:33"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-026",
+    "module": "07",
+    "title": "Specificeer navigatieprofielen en onderbreken",
+    "claim": "Apparaatmogelijkheden en gebruikersgewoonten verschillen; aanwezige gebaarfuncties bewijzen nog geen gemounte mobiele route.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "R30",
+      "R37",
+      "A59",
+      "A61",
+      "A53"
+    ],
+    "recommendation": "Definieer opdrachten met zichtbare mapping, tijdelijke pan/orbit en herstel/cancel per meerstapstaak.",
+    "validation": [
+      "Muis/trackpad/pen/touch dezelfde taak.",
+      "Pointercancel, toolwissel en tweevingeronderbreking op echte apparaten."
+    ],
+    "limits": "Geen universele beste mapping en geen volledige mobiele integratie onderzocht.",
+    "code_locations": [
+      "PDF touch-gestures.js",
+      "PDF main.js",
+      "PDF pdf-viewport.js:1544"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-027",
+    "module": "07",
+    "title": "Maak viewpointcontext expliciet",
+    "claim": "De werkelijke BIM-engine en capture-request zijn omvangrijker dan het illustratieve native wireframe; screenshot en camera bewaren niet iedere mogelijke BCF-context.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "R34",
+      "R35",
+      "R38",
+      "A60"
+    ],
+    "recommendation": "Definieer per workflow model/revisie, objecten, zichtbaarheid, clipping en camera; bewijs rendergereedheid.",
+    "validation": [
+      "Viewpoint na verborgen selectie en herimport.",
+      "Controleer camera-uitkomst voor gebruiker en inhoud van export."
+    ],
+    "limits": "Geen volledige BCF-conformanceaudit; screenshotfunctie hoeft geen BCF-export te zijn.",
+    "code_locations": [
+      "validator_native.rs:178",
+      "Validator captureViewpoint.ts:22",
+      "Validator ViewerEngine.ts:1041"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-028",
+    "module": "08",
+    "title": "Toets touch als afzonderlijk bedieningsprofiel",
+    "claim": "Webminimum, platformrichtlijn en fysieke duimstudie gebruiken verschillende criteria en eenheden; compact desktopcomfort bewijst geen tabletcomfort.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "A49",
+      "A50",
+      "A54",
+      "A55"
+    ],
+    "recommendation": "Vergelijk ruim touchprofiel met bestaand desktopprofiel; toets hitbox, onderlinge ruimte en foute activatie.",
+    "validation": [
+      "Doelapparaat met vinger/pen en waar relevant handschoenen.",
+      "Hybride wissel naar toetsenbord zonder onverwachte layoutsprong."
+    ],
+    "limits": "Geen apparaatproef; 0.4-maatvoering is niet gewijzigd. Studiepopulatie is klein en specifiek.",
+    "code_locations": [
+      "design/ontwerp-0.4/04-componenten.md"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-029",
+    "module": "08",
+    "title": "Bied dragvrije en onderbreekbare pointerroutes",
+    "claim": "Een toetsenbordalternatief alleen dekt web-Dragging Movements niet; pointerverlies en meerstapstools vragen hun eigen contract.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "A51",
+      "A52",
+      "A53",
+      "R30",
+      "R37"
+    ],
+    "recommendation": "Bied taakpassende tap-/numerieke alternatieven en zichtbare commit/cancel zonder hoverafhankelijkheid.",
+    "validation": [
+      "Verplaatsen/ordenen zonder drag met één pointer.",
+      "Verloren capture en palm-/vingercontact tijdens penactie."
+    ],
+    "limits": "Geen palm rejection, native toegankelijkheid of iedere CAD-uitzondering bewezen.",
+    "code_locations": [
+      "PDF pdf-viewport.js:1594",
+      "PDF touch-gestures.js"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-030",
+    "module": "08",
+    "title": "Bewijs offline beschikbaarheid na koude herstart",
+    "claim": "De BIM-validator cachet modelbytes lokaal maar initieert externe worker-/WASM-routes. Dat bewijst nog geen offline start.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "R35",
+      "R39",
+      "A63",
+      "A64",
+      "A66"
+    ],
+    "recommendation": "Definieer taakgebonden offlinepakket met code/dependencies/data en toon gecontroleerde beschikbaarheid.",
+    "validation": [
+      "Online voorbereiden, app sluiten, netwerk uit, herstart en kerntaak uitvoeren.",
+      "Onderbroken voorbereiding, opslagdruk en latere syncconflicten."
+    ],
+    "limits": "Geen vliegtuigmodus-/coldstarttest; warme browsercache kan verschil maken. Geen bestaande offlinebelofte geschonden verklaard.",
+    "code_locations": [
+      "Validator ViewerEngine.ts:21",
+      "Validator ViewerEngine.ts:231",
+      "Validator ViewerEngine.ts:254",
+      "Validator modelCache.ts:29"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-031",
+    "module": "08",
+    "title": "Koppel lokale bytes aan project- en revisie-identiteit",
+    "claim": "De cache-API en gelezen actieve routes gebruiken fileName als sleutel; foldermethoden zijn afhankelijk van beperkte browsercapabilities.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire documentatie; voorstel voor integratievalidatie",
+    "source_ids": [
+      "R39",
+      "R40",
+      "A63",
+      "A65",
+      "A62",
+      "A67"
+    ],
+    "recommendation": "Scheid menselijke bestandsnaam van stabiele identiteit; maak opslag-/platformmogelijkheden en fouten zichtbaar.",
+    "validation": [
+      "Twee gebouw.ifc-bestanden met verschillende inhoud, projecten wisselen en herstart.",
+      "Doelplatform zonder showDirectoryPicker; bewaren, heropenen en cacheverwijdering."
+    ],
+    "limits": "Geen cachebotsing of gebrek aan alle appfallbacks in runtime aangetoond; overige deduplicatieroutes niet volledig onderzocht.",
+    "code_locations": [
+      "Validator modelCache.ts:29",
+      "Validator AppShell.tsx:193",
+      "Validator CenterPanel.tsx:502",
+      "Validator LocalProjectStorage.ts:150"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-032",
+    "module": "09",
+    "title": "Maak taaldefault en migratiescope expliciet",
+    "claim": "Het 0.4-besluit/native prototype kiest Nederlands; Calc kiest bewust Engels en heeft een ruimere talenconfiguratie. Prototype gebruikt inline taalparen.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "R41",
+      "R42",
+      "R43",
+      "R44",
+      "A70"
+    ],
+    "recommendation": "Leg defaults, persoonlijke voorkeur, fallback en ondersteunde talen vast; behoud werkende bronappcontracten bewust.",
+    "validation": [
+      "Nieuwe installatie versus eerder gekozen taal.",
+      "Pseudolokalisatie en betekeniscontrole van opdrachten/termen."
+    ],
+    "limits": "Een taallijst bewijst geen vertaal-/runtimekwaliteit; geen defaults gewijzigd.",
+    "code_locations": [
+      "locale.rs:3",
+      "Calc config.ts:124",
+      "01-fundament.md:278"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-033",
+    "module": "09",
+    "title": "Scheid taal, regionale notatie en opslagbetekenis",
+    "claim": "Calc heeft al een eigen rapporttaal en stabiele eenheidscodes met vertaalde labels.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "R45",
+      "R46",
+      "A68",
+      "A78"
+    ],
+    "recommendation": "Behoud UI-/rapport-/invoercontracten afzonderlijk; verander geen domeincode bij taalwissel.",
+    "validation": [
+      "Engelse UI, Nederlands rapport, ongewijzigde data.",
+      "Bronlocale import, formattering en opnieuw invoeren apart toetsen."
+    ],
+    "limits": "Geen volledige Rust-/printketen of internationale roundtrip getest.",
+    "code_locations": [
+      "Calc reportI18n.ts:22",
+      "Calc formatUnit.ts:18"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-034",
+    "module": "09",
+    "title": "Maak herstel van gedeeltelijk geladen taalbundels mogelijk",
+    "claim": "In de exacte loadLocale-proef wordt een taal na één namespacefout als geladen gemarkeerd; een tweede aanroep probeert die namespace niet opnieuw.",
+    "priority": "P1",
+    "evidence_status": "Exacte functieproef: 3 scenario’s/6 assertions; bestaande EN/NL-checker groen",
+    "source_ids": [
+      "R43",
+      "R47",
+      "A70"
+    ],
+    "recommendation": "Definieer laadstatus per namespace, fallback en zichtbare retry; behoud lazy laden waar nuttig.",
+    "validation": [
+      "Fout in één chunk, daarna netwerk herstellen en dezelfde taal kiezen.",
+      "Bundel offline voorbereiden; taalwissel met conceptinvoer behouden."
+    ],
+    "limits": "Gecontroleerde dependencyproef, geen React/i18next-init of overige appretryroutes getest.",
+    "code_locations": [
+      "Calc config.ts:124"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-035",
+    "module": "09",
+    "title": "Valideer gemengde tekst en compositie in echte bediening",
+    "claim": "De bronapps kennen RTL/cijferpresentatie, maar dat bewijst geen complete tekst-, font- of IME-route in native en export.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "R44",
+      "R45",
+      "A69",
+      "A71",
+      "A79",
+      "A80",
+      "A120",
+      "R84"
+    ],
+    "recommendation": "Test fallback/shaping, gemengde namen/paden, graphemebewerkingen en compositie zonder globale commit.",
+    "validation": [
+      "Arabische projectnaam met Latijnse code en getal.",
+      "IME Enter/Escape, combineren/terugwissen en rapportweergave."
+    ],
+    "limits": "Geen IME-, shaping- of RTL-integratieprobleem aangetoond. Aanvullende voorgestelde lange-/gemengde-tekstfixtures zijn geen gemeten rendererdefect.",
+    "code_locations": [
+      "PDF useTranslation.js",
+      "Calc reportI18n.ts:normalizeSpaces"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-036",
+    "module": "12",
+    "title": "Toets effectieve werkruimte bij samengestelde schaal",
+    "claim": "iced vermenigvuldigt OS- en appscale; appscale2 kan in gelijk venster een UI-breedte onder de gelezen shellgrens720 geven.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "A72",
+      "R49",
+      "R50",
+      "A76"
+    ],
+    "recommendation": "Onderscheid UI-/document-/OS-/meetschaal en maak de layout bruikbaar bij de effectief overblijvende ruimte.",
+    "validation": [
+      "Appscale100/125/150/200 met gelijk venster.",
+      "Pointerpositie en dialoog na monitor-/schaalwissel."
+    ],
+    "limits": "Berekening/statische routes, geen native runtimebug of afkapping gereproduceerd.",
+    "code_locations": [
+      "iced winit/program/state.rs:53",
+      "model.rs:234",
+      "runtime.rs:116"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-037",
+    "module": "12",
+    "title": "Beperk tweedimensionale uitzondering tot de noodzakelijke inhoud",
+    "claim": "Webreflow laat uitzonderingen voor onder meer tabel-/kaartonderdelen toe; omliggende tekst en individuele cellen zijn niet algemeen vrijgesteld.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "A73",
+      "A74",
+      "A75",
+      "R48"
+    ],
+    "recommendation": "Plan vergroting, reflow, tekstoverride en een focus-/activeringsroute naar volledige afgekorte waarden.",
+    "validation": [
+      "200% tekst, 400%-reflow en text-spacingoverride waar toepasselijk.",
+      "Lange vertaling, dialoogbevestiging en celinhoud bereikbaar."
+    ],
+    "limits": "Native conformiteit niet afleiden uit webregels; geen nieuwe browserlayoutproef.",
+    "code_locations": [
+      "05-layouts.md",
+      "shell.rs:settings"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-038",
+    "module": "12",
+    "title": "Maak paneel- en vensterherstel taakgericht",
+    "claim": "Prototype bewaart paneelratio’s en heeft narrow/wide-testcode; een complete scherm-/vensterherstelflow is in de gelezen Preferences niet aangetoond.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "R49",
+      "R50",
+      "A76",
+      "A77",
+      "A81",
+      "A82",
+      "R80",
+      "R78",
+      "A112"
+    ],
+    "recommendation": "Definieer herstelwerkruimte, bereikbare dialogen en focus bij ontbrekende monitor of andere schaal.",
+    "validation": [
+      "Monitor loskoppelen en herstart.",
+      "Paneel verbergen/heropenen en dialoog naar eigenaar terug."
+    ],
+    "limits": "Bestaande Rust-paneeltest gelezen, niet uitgevoerd; appspecifieke opslag kan elders bestaan.",
+    "code_locations": [
+      "model.rs:171",
+      "model.rs:331",
+      "runtime.rs:119"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-039",
+    "module": "12",
+    "title": "Bewaak documentrevisie bij losmaken en terugplaatsen",
+    "claim": "Calc heeft een actieve windowbridge, maar een pad/vensterlabelbericht bewijst geen complete overdracht van gewijzigde documentstaat.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire richtlijnen; integratievalidatie open",
+    "source_ids": [
+      "R51",
+      "R22",
+      "R23"
+    ],
+    "recommendation": "Maak eigenaarschap, revisie, overdrachtbevestiging en sluituitkomst expliciet per documentvenster.",
+    "validation": [
+      "Dirty document losmaken/terugplaatsen, fout en cancel.",
+      "Twee vensters met dezelfde bron en verschillende revisie."
+    ],
+    "limits": "Volledige afzender-/bewaarflow niet onderzocht; geen nieuwe data-/vensterverliesclaim.",
+    "code_locations": [
+      "Calc windowBridge.ts:29",
+      "Calc App.tsx:91"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-040",
+    "module": "10",
+    "title": "Scheid merk, domeinkleur en datavisualisatie",
+    "claim": "Status-/themakleur geeft nog geen geschikte schaal voor geordende meet-/rekenwaarden. Onderzoek geeft taakafhankelijke nuance bij rainbow versus sequentieel.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "A83",
+      "A84",
+      "A85",
+      "A86",
+      "A87",
+      "A88"
+    ],
+    "recommendation": "Kies palet/labels/markering vanuit categorie, rangorde, grens of afwijking; maak onzekerheid en ontbrekende data expliciet.",
+    "validation": [
+      "Zelfde taak in kleur/monochroom en met tekst-/waardenroute.",
+      "Rangorde, grenszoeken en exacte waarde afzonderlijk vergelijken."
+    ],
+    "limits": "Geen OpenAEC-grafiektaakvalidatie of universeel beste palet vastgesteld.",
+    "code_locations": [
+      "Voorstel voor domeinvisualisaties; geen productiecomponent gewijzigd."
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-041",
+    "module": "10",
+    "title": "Behoud arcering als bewerkbare documentbetekenis",
+    "claim": "PDF heeft patroon-ID’s, lijnfamilies en metadata naast appearance; bestaande geometrieproef slaagt binnen recorder/stubscope.",
+    "priority": "179 bestaande geometriegevallen geslaagd + begrensde broninspectie",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R52",
+      "R53",
+      "R54",
+      "A87"
+    ],
+    "recommendation": "Leg patroon/schaalruimte/oorsprong/hoek/lijngewicht apart vast; houd UI-statuspatroon los van materiaalpatroon.",
+    "validation": [
+      "Opslaan/heropenen/bewerken/exporteren met verschillende patronen.",
+      "Dun vlak, bogen, clipping en echte papiermaat."
+    ],
+    "limits": "179 tests bewijzen geen echte boog-/pixel-/export-/normconformiteit; metadata-roundtriptest niet uitgevoerd.",
+    "code_locations": [
+      "PDF hatch-patterns.js",
+      "PDF hatch-meta.js"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-042",
+    "module": "10",
+    "title": "Geef rapportage een leesbaar papier-/previewprofiel",
+    "claim": "Calc HTML-printservice zet kleine secundaire tekst#A1A1AA op wit; berekende verhouding2.563:1 onder gewone webtekstgrens4.5:1.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R57",
+      "A89",
+      "A90"
+    ],
+    "recommendation": "Controleer rapporttekst/hiërarchie apart van UI-tokens en vergelijk alle uitvoerroutes.",
+    "validation": [
+      "Browserpreview, directe PDF, afdruk, lange omschrijving/paginagrens.",
+      "Controleer kleuren/fonts en exacte project-/revisie-/eenheidsinformatie."
+    ],
+    "limits": "Statische CSS-kleurcontrole; niet alle PDF’s of fysieke afdrukken doorgemeten.",
+    "code_locations": [
+      "Calc printService.ts:402",
+      "Calc printService.ts:407",
+      "Calc printService.ts:415"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-043",
+    "module": "10",
+    "title": "Bewijs afdrukschaal en uitvoer over de volledige route",
+    "claim": "PDF kent al plaatsing, marges, verschillende schaalmodi en eigen PDF-doel;45 geselecteerde pure plaatsingstests slagen.",
+    "priority": "45 bestaande pure plaatsingsproeven geslaagd; integratie open",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R55",
+      "R56",
+      "A90",
+      "A91"
+    ],
+    "recommendation": "Behoud rekenregels en toets bron/preview/PDF/papier met controleafstand en afgesneden inhoud.",
+    "validation": [
+      "Ware grootte versus passend en onbedrukbare rand.",
+      "Printerdriver versus eigenPDF, lijngewicht en grayscale."
+    ],
+    "limits": "Twee integratietests niet geselecteerd; initiële filterfout met ontbrekende deps expliciet vastgelegd. Geen printer aangestuurd.",
+    "code_locations": [
+      "PDF print-plaatsing.js:175",
+      "PDF print-doel.js"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-044",
+    "module": "11",
+    "title": "Laat zoekresultaten hun scope en volledigheid verklaren",
+    "claim": "PDF heeft generatie-/cancelchecks en aparte bronnen; annotatielaadfout wordt in de gelezen controller alleen gewaarschuwd en doorlopen.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R58",
+      "R59",
+      "R60",
+      "A34"
+    ],
+    "recommendation": "Toon bron, doorzochte dekking, gedeeltelijke fout en niet-zoekbare inhoud; negeer verouderde resultaten.",
+    "validation": [
+      "Query/document wisselen tijdens zoeken.",
+      "Eén annotatie-/extractiefout en scannendocument met nul resultaten."
+    ],
+    "limits": "Zeven pure brontests zijn geen integratieproef; aanvullende foutweergave elders niet uitgesloten.",
+    "code_locations": [
+      "PDF find-controller.js:269",
+      "PDF search-sources.js",
+      "crates/openaec-ui/src/find_bar.rs"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-045",
+    "module": "11",
+    "title": "Definieer hele-woordzoeken voor echte talen en codes",
+    "claim": "Exacte buildPattern-proef vindt één/café niet als heel woord en telt beton binnen cafébeton wel; ASCII-tegenproeven werken.",
+    "priority": "P1",
+    "evidence_status": "Exacte functie uitgevoerd: zes gevallen/assertions, inclusief positieve tegenproeven",
+    "source_ids": [
+      "R59",
+      "A92",
+      "A80"
+    ],
+    "recommendation": "Kies taal-/domeinsegmentatie en toets de volledige zoekketen met accenten, symbolen en samengestelde codes.",
+    "validation": [
+      "Zes vastgelegde voorbeelden plus gekozen taal-/codecases.",
+      "PDF-tekstextractie en annotatiezoekroute in echte app."
+    ],
+    "limits": "Exacte pure functieproef, geen PDF/UI of alle zoekroutes. Geen gewenste segmentatiespecificatie namens gebruiker ingevuld.",
+    "code_locations": [
+      "PDF find-controller.js:211"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-046",
+    "module": "11",
+    "title": "Maak vervangteller, velden en undo-scope expliciet",
+    "claim": "Calc matchlijst kiest per rij eerst omschrijving anders code anders nr; Alles vervangt de vervangbare matches en maakt een historypunt.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R61",
+      "R25"
+    ],
+    "recommendation": "Benoem of teller rijen/velden/voorkomens betreft en wat verborgen/gefilerde inhoud betekent; bescherm één logische undo.",
+    "validation": [
+      "Zelfde term in twee velden van één rij, meerdere voorkomens, ingeklapte rij.",
+      "Alles vervangen, fout halverwege en één undo."
+    ],
+    "limits": "Broninspectie, geen runtime-vervangfout vastgesteld; huidige scope niet stil veranderen.",
+    "code_locations": [
+      "Calc FindReplaceDialog.tsx:36",
+      "Calc FindReplaceDialog.tsx:90"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-047",
+    "module": "11",
+    "title": "Koppel foutmelding aan behouden staat en herstelactie",
+    "claim": "0.4 heeft al woorden/iconen en blijvende fouten; verdere taak-/herstelcontext en toegankelijke statusroute moeten per component blijken.",
+    "priority": "P1",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "R62",
+      "A24",
+      "A93",
+      "A94",
+      "A95",
+      "A96",
+      "A34"
+    ],
+    "recommendation": "Gebruik concrete fout/scope/behoudenstaat/volgendeactie; houd relevante uitkomst terugvindbaar naast tijdelijke toast.",
+    "validation": [
+      "Mislukte save/import/veldcommit met toetsenbord en hulptechnologie.",
+      "Focus, timing en herstel zonder verloren conceptinvoer."
+    ],
+    "limits": "Bestaande timerbesluit is niet gewijzigd; geen native accessibility-/meldingsintegratie getest.",
+    "code_locations": [
+      "04-componenten.md:116",
+      "runtime.rs:error"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-048",
+    "module": "11",
+    "title": "Maak hulp taakgericht en opnieuw bereikbaar",
+    "claim": "Praktijkobservaties en openbare tegenspraak ondersteunen contextgebonden uitleg én ontdekbaarheid van onbekende mogelijkheden.",
+    "priority": "P2",
+    "evidence_status": "Gepinde broninspectie + primaire bronnen; integratievalidatie open",
+    "source_ids": [
+      "A97",
+      "A98",
+      "A99"
+    ],
+    "recommendation": "Bied vaste hulpingang, herstartbare voorbeelden en overslaanbare kennismaking; gebruik gewone domeintermen.",
+    "validation": [
+      "Nieuwe/ervaren gebruiker lost dezelfde taak en fout zelfstandig op.",
+      "Hulp na overslaan en offline/versiecontext terugvinden."
+    ],
+    "limits": "Geen representatieve forumconsensus of gecontroleerde OpenAEC-onboardingtest.",
+    "code_locations": [
+      "Nieuw voorstel voor hulp-/onboardingcontract."
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-049",
+    "module": "13",
+    "title": "Maak de canonieke tokenversie en afleiding expliciet",
+    "claim": "Nieuwste Style HEAD bevat al een0.4-generator van besloten JSON naar Rust en CSS, naast de oudere prototypepipeline; de0.4 --check slaagt.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "R63",
+      "R64",
+      "R65",
+      "R70",
+      "R71",
+      "A100"
+    ],
+    "recommendation": "Documenteer en gebruik de bestaande0.4-pipeline; leg migratie/afnemers en de resterende rendererafwijkingen vast. Beoordeel uitwisselformaat alleen waar nuttig.",
+    "validation": [
+      "Afgeleide kleuren, dimensies, typografie/features en thema’s tegenover de gekozen bron.",
+      "Onbekende token, aliascyclus en benodigde platformafwijking expliciet afhandelen."
+    ],
+    "limits": "Oudere prototypepipeline blijft bestaan; cratepakketversie0.1 zegt niet dat0.4-implementatie ontbreekt. Generator alleen met --check uitgevoerd; geen appmigratie of rendererpariteit getest.",
+    "code_locations": [
+      "scripts/generate_tokens_04.py:main",
+      "crates/openaec-ui/src/design/mod.rs",
+      "crates/openaec-ui/src/design/tokens.rs",
+      "web/openaec-tokens.css"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-050",
+    "module": "13",
+    "title": "Specificeer gedeelde componenten ook op gedrag",
+    "claim": "De crate heeft echte herbruikbare weergaven; host/app blijft eigenaar van domeinwerk en staat.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "R66",
+      "R58",
+      "R01",
+      "A102",
+      "R71",
+      "R72",
+      "R79",
+      "R82",
+      "A113"
+    ],
+    "recommendation": "Leg doel, staat, naam/rol/waarde, focus/invoer, opdrachtcontext, taakuitkomst en uitzonderingen proportioneel vast.",
+    "validation": [
+      "Zelfde contract op relevante component-/rendererimplementaties.",
+      "Lege/fout/wachtende/toets-/touch-/localevarianten bij representatieve taak."
+    ],
+    "limits": "Geen algemene rendererpariteit of componentconformiteit aangetoond.",
+    "code_locations": [
+      "crates/openaec-ui/src/lib.rs",
+      "runtime.rs:Application",
+      "find_bar.rs:1"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-051",
+    "module": "13",
+    "title": "Migreer met een featurebaseline en toetsbare doorsneden",
+    "claim": "Bronapps hebben waardevolle functies en bekende begrensde risico’s; een visuele port bewaart niet automatisch de taak.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "R66",
+      "R61",
+      "R45",
+      "R30",
+      "A101",
+      "A103"
+    ],
+    "recommendation": "Leg bronfeatures/afwijkingen vast, begin met kleine complete kerntaken en verwijder oud pas met compatibele vervanging.",
+    "validation": [
+      "Calc invoer/selectie/formule/rapport/opslaan end-to-end.",
+      "Viewerkoppeling/metadata/undo en terugweg bij migratie."
+    ],
+    "limits": "Nieuw migratievoorstel binnen bestaande volgorde; geen app of oud component verwijderd.",
+    "code_locations": [
+      "Crate README.md",
+      "Calc FindReplaceDialog.tsx",
+      "Calc reportI18n.ts",
+      "PDF pdf-viewport.js"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-052",
+    "module": "13",
+    "title": "Rapporteer niet-uitgevoerde checkdekking naast exitcode",
+    "claim": "Oudere portablecheck gaf exit0 met ontbrekende afnemer. Nieuwste checker behoudt die grens en vergelijkt Rust alleen direct in src, zonder design/-submap.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "R67",
+      "R68",
+      "R76"
+    ],
+    "recommendation": "Maak per vrijgave pass/fail/not-run/not-applicable en bronversie zichtbaar; presenteer niet-beschikbare integratie niet als groen bewijs.",
+    "validation": [
+      "Controleer CI-/vrijgavesamenvatting met ontbrekende afnemer/source.",
+      "Bewijs portable-afnemer wanneer de bedoelde snapshot beschikbaar is."
+    ],
+    "limits": "Oudere checker daadwerkelijk uitgevoerd; nieuwste alleen statisch gelezen. Geen volledige afnemerbuild of aangetoonde distributiefout.",
+    "code_locations": [
+      "check_portable_ui.py:21",
+      "check_layout_metrics.py:source_root"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-053",
+    "module": "14",
+    "title": "Combineer testlagen en echte taak-/hulptechnologievalidatie",
+    "claim": "Geïsoleerde proeven, screenshots, standaardevaluatie en gebruikerssessies bewijzen verschillende dingen.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "A104",
+      "A105",
+      "A106",
+      "A108",
+      "A110",
+      "A111",
+      "R69"
+    ],
+    "recommendation": "Gebruik passende regel/component/integratie/visuele/gebruikerslagen en verifieer de native platformroute op doelplatformen.",
+    "validation": [
+      "Drie voorgestelde vroege doorsneden: bedienen/begrijpen, rekenen/bewaren, viewer/uitvoer.",
+      "Maak van gereproduceerde controlflows echte integratieregressies met positieve tegenproeven."
+    ],
+    "limits": "Geen deelnemerssessie, volledige appaudit of screenshotsuite uitgevoerd; ignored renderexports alleen gelezen.",
+    "code_locations": [
+      "render_tests.rs",
+      "outputs/OpenAEC-UI-proeven.json"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-054",
+    "module": "14",
+    "title": "Vergelijk font en dichtheid zonder verwarde oorzaken",
+    "claim": "Een tegelijk groter, contrastrijker en ruimer fontconcept laat de bijdrage van het font zelf niet zien.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "A107",
+      "A109",
+      "A77"
+    ],
+    "recommendation": "Beheers taak/inhoud/apparatuur, varieer condities en volgorde bewust, meet fouten en comfort naast voorkeur.",
+    "validation": [
+      "AEC-identifiers/eenheden/lange labels/bedragen overnemen en gebruiken.",
+      "Rapporteer x-hoogte/gewicht/ruimte, hulp en leer-/volgorde-effecten."
+    ],
+    "limits": "Onderzoeksvoorstel; geen fontwinnaar, effectmaat of steekproefberekening vastgesteld.",
+    "code_locations": [
+      "Oorspronkelijke lokale letterproef en testprotocol."
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-055",
+    "module": "15",
+    "title": "Houd besluiten, bewijs en hypotheses herleidbaar",
+    "claim": "De onderzochte knelpunten en voorkeuren hebben uiteenlopende bewijskracht;15 behandelde onderwerpen betekenen geen productgereedheid.",
+    "priority": "P1",
+    "evidence_status": "Broninspectie/expliciet uitgevoerde read-only checks en onderbouwd procesvoorstel",
+    "source_ids": [
+      "R63",
+      "A104",
+      "A105",
+      "A103"
+    ],
+    "recommendation": "Gebruik een compacte besluitagenda met eigenaar/scope/reden/bewijs/alternatieven en herbeoordelingsvoorwaarde, gekoppeld aan bevinding-ID’s.",
+    "validation": [
+      "Loop P0-opgaven en eerste scope-/font-/datacontractkeuzes gezamenlijk na.",
+      "Controleer dat een forumervaring of losse checker geen goedgekeurd productfeit wordt."
+    ],
+    "limits": "Geen besluiten namens gebruiker genomen; prioriteiten blijven voorstellen.",
+    "code_locations": [
+      "work/ui-research/findings.json",
+      "work/ui-research-state.json"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-056",
+    "module": "01",
+    "title": "Leg modale opdrachtcontext naast de dialoogkaart vast",
+    "claim": "Nieuwe0.4-dialoogkaart/overlay tekenen de context; ui04-host levert Escape/Enter en klikopvang. Volledige focus-/achtergrondopdrachtisolatie is niet aangetoond.",
+    "priority": "P1",
+    "evidence_status": "Actuele gepinde broninspectie met positieve tegenvoorbeelden; runtime open",
+    "source_ids": [
+      "R71",
+      "R78",
+      "R83",
+      "R81",
+      "A06",
+      "A113"
+    ],
+    "recommendation": "Leg beginfocus, focusherstel, toetsvoorrang en toegestane opdrachten per modale toestand vast; test dit in de native host en webhost.",
+    "validation": [
+      "Open een gewijzigde-documentdialoog: Tab/Shift-Tab, Escape, Enter en logische terugkeerfocus.",
+      "Probeer Delete/Cmd+N/Cmd+Z en paneel-/documentopdrachten vanuit dialoog, tekstveld en menu; controleer dat alleen bedoelde context verandert.",
+      "Test gestapelde overlays, foutmelding, weggehaalde opener en schaal/scroll."
+    ],
+    "limits": "Geen native app gestart en geen doorgelekte toets of dataverlies gereproduceerd. iced on_key_press ontvangt alleen Ignored events; helpers/hosts en platformgedrag moeten samen worden getest. Prioriteit blijft voorstel.",
+    "code_locations": [
+      "design/widgets.rs:dialog/overlay",
+      "src/bin/ui04.rs:subscription/update/view",
+      "iced futures/src/keyboard.rs:on_key_press"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-057",
+    "module": "10",
+    "title": "Behoud selectiemarkering bij systeemcontrast",
+    "claim": "Web0.4 tekent tabelselectie met achtergrond plus inset-schaduw; eigenHC gebruikt hier dezelfde achtergrond als panel. Forced-colors schakelt schaduw uit volgens CSS-specificatie.",
+    "priority": "P1",
+    "evidence_status": "Gepinde CSS-/tokenbron en primaire specificatie; werkelijk browsergedrag open",
+    "source_ids": [
+      "R84",
+      "R81",
+      "R70",
+      "A114",
+      "A88"
+    ],
+    "recommendation": "Maak de afgesproken selectie ook zonder schaduw herkenbaar, toets systeemkleuren en eigenHC apart en leg rendererafwijkingen vast.",
+    "validation": [
+      "Test geselecteerd/ongekozen/focus/hover/ongeldig in eigenHC én echte OS-forced-colors.",
+      "Toets tabel, tabs, keuzevlak, B2-icoon en status met eigen OS-palet.",
+      "Controleer dat aanpassing domein-/documentkleuren niet stil verandert en herstel ontbrekende alternatieve markering."
+    ],
+    "limits": "Geen verlies van selectie of onzichtbaarheid in een uitvoerbare browser gereproduceerd. Geen algemene defectclaim voor alle afnemers. UI-thema, OS-palet en documentkleur zijn verschillende contexten.",
+    "code_locations": [
+      "web/openaec-components.css:.oa-table tr[aria-selected=\"true\"]",
+      "design/ontwerp-0.4/tokens-0.4.json:HC selected/panel",
+      "design/ontwerp-0.4/04-componenten.md:High contrast"
+    ],
+    "status": "proposal"
+  },
+  {
+    "id": "UI-058",
+    "module": "11",
+    "title": "Maak tooltip en volledige tekst ook zonder hover bruikbaar",
+    "claim": "Web0.4-tooltip verschijnt op hover én focus-visible, met white-space:pre en pointer-events:none. Leesbaarheid, sluiten en bereikbaarheid bij vergroting blijven te toetsen.",
+    "priority": "P1",
+    "evidence_status": "Gepinde CSS-/widgetbron en primaire patroonvereisten; runtime open",
+    "source_ids": [
+      "R84",
+      "R71",
+      "A120",
+      "A75",
+      "A80"
+    ],
+    "recommendation": "Gebruik tooltips voor aanvullende uitleg; borg naam/volledige waarde via passende blijvende of opvraagbare route en test hover/focus/Escape/vergroting.",
+    "validation": [
+      "Beweeg pointer naar extra inhoud en toets dismiss/persistentie waar van toepassing.",
+      "Lees lange waarde zonder hover op keyboard/touch; kopieer de volledige bedoelde waarde.",
+      "Controleer vensterrand,200%schaal,tekstspacing en bijna gelijke bestandsnamen."
+    ],
+    "limits": "Geen browser-/native tooltip uitgevoerd en geen automatische WCAG-overtreding vastgesteld; uitzonderingen en eventuele hostlogica moeten per gebruik worden beoordeeld. CSSfocus-trigger is positief bestaand gedrag.",
+    "code_locations": [
+      "web/openaec-components.css:[data-oa-tip]",
+      "design/widgets.rs:with_tooltip/document_tabs"
+    ],
+    "status": "proposal"
+  }
+]

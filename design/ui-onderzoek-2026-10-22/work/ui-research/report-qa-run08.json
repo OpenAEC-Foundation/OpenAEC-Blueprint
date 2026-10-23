@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-23T03:05:08+02:00",
+  "sources": 188,
+  "findings": 55,
+  "researched_modules": 15,
+  "duplicate_ids": 0,
+  "broken_internal_or_local_links": 0,
+  "manifest_files_hash_verified": 128,
+  "review_probe_cases": 16,
+  "calc_probe_cases": 20,
+  "save_controlflow_scenarios": 10,
+  "existing_pdf_rotation_tests_passed": 25,
+  "scope": "Artifactstructuur en bronhashes gecontroleerd. Dit script test geen browserlayout, productieapp, opslag, crash, annulering of performance.",
+  "calc_i18n_source_locales_exit_code": 0,
+  "calc_locale_load_scenarios": 3,
+  "calc_locale_load_assertions": 6,
+  "pdf_graphics_search_existing_tests": {
+    "search_sources": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    "hatch_geometry": {
+      "tests": 179,
+      "pass": 179,
+      "fail": 0,
+      "skipped": 0
+    },
+    "print_placement": {
+      "tests": 45,
+      "pass": 45,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "pdf_word_boundary_cases": 6,
+  "migration_read_only_check_exit_codes": [
+    0,
+    0
+  ],
+  "current_head_tokens_04_exit_code": 0,
+  "current_head_pdf_numeric_errors_passed": 18,
+  "original_embedded_font_hashes_verified": 11
+}

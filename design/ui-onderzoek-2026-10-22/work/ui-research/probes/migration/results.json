@@ -1,0 +1,30 @@
+{
+  "source_commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "checks": [
+    {
+      "command": "python3 scripts/check_portable_ui.py",
+      "exit_code": 0,
+      "output": "Canonical and review assets agree; local Pointcloud snapshot unavailable\n",
+      "scope": "Canonical/review-assets vergeleken; portable-snapshotcontrole niet uitgevoerd omdat de lokale kopie ontbreekt."
+    },
+    {
+      "command": "python3 scripts/check_layout_metrics.py",
+      "exit_code": 0,
+      "output": "Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels\n",
+      "scope": "Rust/HTML/recorded-layoutspec; lokale Tauri-bron/Pointcloud-kopie niet aanwezig en niet geverifieerd."
+    }
+  ],
+  "source_hashes": {
+    "scripts/check_portable_ui.py": "5ddee5ac60c5e457fedd1bc4c4c447752f23bee8b6382a4df30c05b5d5476508",
+    "scripts/check_layout_metrics.py": "b461c5b843fb06a57edfce3c29be1ade1f3b26ba1b938a3166a19fdb4cdfffad",
+    "scripts/generate_tokens.py": "5659c8002149be2051b583ae53ec2598cd21d2e008372b4a5a46e0ab7cd8d27c",
+    "crates/openaec-ui/src/tokens.rs": "f84ea48a6cf161cbc129908ef010c9875e082bcbed09ee60c7a8bc22f5c02d8a",
+    "assets/themes.css": "7802bfba82ba537cb1846639ac251977e34b8365cad751dc39840a85336232fa",
+    "design/ontwerp-0.4/tokens-0.4.json": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c",
+    "design/layout-spec.json": "b788e2a83acf6621c94fea74a741ad81ae0f7ee5e94ff7d78200eb9da8b0c3cd"
+  },
+  "limitations": [
+    "Geen bestaande generator gestart; geen bronbestanden aangepast.",
+    "Geen Cargo/package/render/nativeapp- of 0.4-integratieproef."
+  ]
+}

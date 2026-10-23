@@ -1,0 +1,3 @@
+const cases = JSON.parse(process.argv[1]);
+const safe = x => Number.isNaN(x) ? 'NaN' : Number.isFinite(x) ? x : String(x);
+process.stdout.write(JSON.stringify({node:process.version, rows:cases.map(input=>({input,parseFloat:safe(parseFloat(input)),Number:safe(Number(input))})), formatting:['nl-NL','en-US'].map(locale=>({locale,value:1234.56,display:new Intl.NumberFormat(locale).format(1234.56)}))}));

@@ -1,0 +1,174 @@
+{
+  "repo": "OpenAEC-Style-Repo",
+  "head": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+  "tree_truncated": false,
+  "tree_blobs": 18877,
+  "compared": 26,
+  "unchanged": 20,
+  "changed": [
+    "crates/openaec-ui/src/lib.rs",
+    "crates/openaec-ui/Cargo.toml",
+    "Cargo.lock",
+    "scripts/check_portable_ui.py",
+    "README.md",
+    "NOTES.md"
+  ],
+  "files": [
+    {
+      "path": "crates/openaec-ui/src/icons.rs",
+      "same_git_blob": true,
+      "old_blob": "8aafdeecaf1a955ac3875feb318e9e765790bb9d",
+      "head_blob": "8aafdeecaf1a955ac3875feb318e9e765790bb9d"
+    },
+    {
+      "path": "crates/openaec-ui/src/theme.rs",
+      "same_git_blob": true,
+      "old_blob": "0238d6ac4bc6b5a1a65e9a4410a6ded9431cfa23",
+      "head_blob": "0238d6ac4bc6b5a1a65e9a4410a6ded9431cfa23"
+    },
+    {
+      "path": "crates/openaec-ui/src/widgets.rs",
+      "same_git_blob": true,
+      "old_blob": "92e5555fb6a0bae5029dd36a66a4d4324fa43a61",
+      "head_blob": "92e5555fb6a0bae5029dd36a66a4d4324fa43a61"
+    },
+    {
+      "path": "crates/openaec-ui/src/tokens.rs",
+      "same_git_blob": true,
+      "old_blob": "69c579757fbf33df7a4fba7652726182903a4eb0",
+      "head_blob": "69c579757fbf33df7a4fba7652726182903a4eb0"
+    },
+    {
+      "path": "crates/openaec-ui/src/locale.rs",
+      "same_git_blob": true,
+      "old_blob": "dcf40517ec5c34ce9185a54d75d8ab4aa8edb97a",
+      "head_blob": "dcf40517ec5c34ce9185a54d75d8ab4aa8edb97a"
+    },
+    {
+      "path": "crates/openaec-ui/src/frame.rs",
+      "same_git_blob": true,
+      "old_blob": "61410cd7b03d21e1a73eff542632a991f9973aba",
+      "head_blob": "61410cd7b03d21e1a73eff542632a991f9973aba"
+    },
+    {
+      "path": "crates/openaec-ui/src/modal.rs",
+      "same_git_blob": true,
+      "old_blob": "ac14e7e75f0641ddaf8ed6a2d0b80da5109fbe0e",
+      "head_blob": "ac14e7e75f0641ddaf8ed6a2d0b80da5109fbe0e"
+    },
+    {
+      "path": "crates/openaec-ui/src/runtime.rs",
+      "same_git_blob": true,
+      "old_blob": "16acbe0090984791e69eff12d4f71e4e77d4b23a",
+      "head_blob": "16acbe0090984791e69eff12d4f71e4e77d4b23a"
+    },
+    {
+      "path": "crates/openaec-ui/src/find_bar.rs",
+      "same_git_blob": true,
+      "old_blob": "c8b5729639f1b44e6b1fa3a3f4703c51566b3f92",
+      "head_blob": "c8b5729639f1b44e6b1fa3a3f4703c51566b3f92"
+    },
+    {
+      "path": "crates/openaec-ui/src/dual_range.rs",
+      "same_git_blob": true,
+      "old_blob": "3e0fc8bba28f88fef78f2f672efc4e08e8433b0d",
+      "head_blob": "3e0fc8bba28f88fef78f2f672efc4e08e8433b0d"
+    },
+    {
+      "path": "crates/openaec-ui/src/shell.rs",
+      "same_git_blob": true,
+      "old_blob": "307972716e554804b5195f258424d87c71df17e2",
+      "head_blob": "307972716e554804b5195f258424d87c71df17e2"
+    },
+    {
+      "path": "crates/openaec-ui/src/fonts.rs",
+      "same_git_blob": true,
+      "old_blob": "b093bec1ea7401dba83e3fc45a936f5f019c0f82",
+      "head_blob": "b093bec1ea7401dba83e3fc45a936f5f019c0f82"
+    },
+    {
+      "path": "crates/openaec-ui/src/popover.rs",
+      "same_git_blob": true,
+      "old_blob": "54e7f8129c7e87e7900b199691df889421a61b4e",
+      "head_blob": "54e7f8129c7e87e7900b199691df889421a61b4e"
+    },
+    {
+      "path": "crates/openaec-ui/src/ribbon_icons.rs",
+      "same_git_blob": true,
+      "old_blob": "d2ad171dcfdd21a1f6141f3f685883da9989fc7c",
+      "head_blob": "d2ad171dcfdd21a1f6141f3f685883da9989fc7c"
+    },
+    {
+      "path": "crates/openaec-ui/src/lib.rs",
+      "same_git_blob": false,
+      "old_blob": "98946d7053dc03c91a10a5c869cd2d55fcf66f44",
+      "head_blob": "c7d675b38c56fffc2f142733981dab6186cda94c"
+    },
+    {
+      "path": "crates/openaec-ui/src/model.rs",
+      "same_git_blob": true,
+      "old_blob": "fc68fde90ed1e6781a0860f4e4e8d17dd91771bf",
+      "head_blob": "fc68fde90ed1e6781a0860f4e4e8d17dd91771bf"
+    },
+    {
+      "path": "crates/openaec-ui/Cargo.toml",
+      "same_git_blob": false,
+      "old_blob": "36b728cbda70f0ee6c45ac6f155164ab56ac894d",
+      "head_blob": "dbfd09dc0b972988d5fdfe5ccfdabeb0e202773a"
+    },
+    {
+      "path": "Cargo.lock",
+      "same_git_blob": false,
+      "old_blob": "b8e3ba6f38b151a985b089f533260b8683ff0c75",
+      "head_blob": "bc4b1b38f0979cd630930e7d550b6f6ac6545f68"
+    },
+    {
+      "path": "design/ontwerp-0.4/tokens-0.4.json",
+      "same_git_blob": true,
+      "old_blob": "bfc57989e61367b3011e1626741415ab0492703f",
+      "head_blob": "bfc57989e61367b3011e1626741415ab0492703f"
+    },
+    {
+      "path": "design/ontwerp-0.4/01-fundament.md",
+      "same_git_blob": true,
+      "old_blob": "26a8265fdac6cf13d59e7e8584ebec3f2814ed38",
+      "head_blob": "26a8265fdac6cf13d59e7e8584ebec3f2814ed38"
+    },
+    {
+      "path": "design/ontwerp-0.4/04-componenten.md",
+      "same_git_blob": true,
+      "old_blob": "07b3e4fef1b27c5bba146117421ca21238b5a321",
+      "head_blob": "07b3e4fef1b27c5bba146117421ca21238b5a321"
+    },
+    {
+      "path": "design/ontwerp-0.4/05-layouts.md",
+      "same_git_blob": true,
+      "old_blob": "206e7e075bb36ab672fc3e6ca55ba788ad34f9ae",
+      "head_blob": "206e7e075bb36ab672fc3e6ca55ba788ad34f9ae"
+    },
+    {
+      "path": "scripts/generate_tokens.py",
+      "same_git_blob": true,
+      "old_blob": "446beafacae67abcdceb1e6dcb66703070e48eea",
+      "head_blob": "446beafacae67abcdceb1e6dcb66703070e48eea"
+    },
+    {
+      "path": "scripts/check_portable_ui.py",
+      "same_git_blob": false,
+      "old_blob": "660475235ea4d77d7d7f120c0dda38a479b1aa3e",
+      "head_blob": "e0adc0ec5518add3ab332e6a1b1b873c5764c6e9"
+    },
+    {
+      "path": "README.md",
+      "same_git_blob": false,
+      "old_blob": "ea0c5f1114ebd2b95bff734a31de2b0c402d8447",
+      "head_blob": "c4b3b50dffe6aed63ac1ebaddb673ef86f1e31e0"
+    },
+    {
+      "path": "NOTES.md",
+      "same_git_blob": false,
+      "old_blob": "cd3f31957cd40110012c3df496d0b92b067a0db8",
+      "head_blob": "be5b7988390e2adee678c86007182c8fea0ee5d0"
+    }
+  ]
+}

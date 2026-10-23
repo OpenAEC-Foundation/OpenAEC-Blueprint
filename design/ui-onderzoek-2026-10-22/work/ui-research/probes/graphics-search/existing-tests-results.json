@@ -1,0 +1,86 @@
+{
+  "search_sources": {
+    "command": [
+      "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--test",
+      "--test-reporter=tap",
+      "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/search/search-sources.test.mjs"
+    ],
+    "exit_code": 0,
+    "scope": "Pure annotatiebron-/groepeerregels; geen PDF-extractie of UI.",
+    "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+    "counts": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    "source_hashes": {
+      "open-pdf-studio/js/search/search-sources.test.mjs": "55aaaaf27bc833300868eaddfe8c1d59ea5d54ed55d30d2a8047ea1e13ca1d94",
+      "open-pdf-studio/js/search/search-sources.js": "bafc88b7a260a087b30496b57788182e95cadfaf424ab5930401321e590d0967"
+    }
+  },
+  "hatch_geometry": {
+    "command": [
+      "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--test",
+      "--test-reporter=tap",
+      "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs"
+    ],
+    "exit_code": 0,
+    "scope": "Bestaande geometrievergelijking met recorder; bestaande test stubt appstate en arcControlPoint. Geen browserbeeld, echte bogen of export.",
+    "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+    "counts": {
+      "tests": 179,
+      "pass": 179,
+      "fail": 0,
+      "skipped": 0
+    },
+    "source_hashes": {
+      "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs": "9463a5fb717c9db9784452f74a5f2c1f9b8d1d2bd880d7152ea312f6a08b1b95",
+      "open-pdf-studio/js/annotations/rendering/hatch-patterns.js": "76eb10b3043d967d90894d5ea18c02e87ae65f615d840ea8101ec8b7e29d47d3",
+      "open-pdf-studio/js/annotations/vlak-ringen.js": "33f8e5c00c8030d3ee94763562cdfac8ded91e9c772df064ff96cc8b0323771e",
+      "open-pdf-studio/js/annotations/arc-points.js": "494d473317b6756207d4135d65bcc5c8708e3b0673a6f114e88c3eece7159f18"
+    }
+  },
+  "print_placement": {
+    "command": [
+      "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--test",
+      "--test-reporter=tap",
+      "--test-skip-pattern=voegPrintPaginaToe|alle locales",
+      "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs"
+    ],
+    "exit_code": 0,
+    "scope": "Geselecteerde bestaande pure plaatsingsproeven. Twee integratie-/localetests uitgesloten, geen printer/PDF-lib/browser getest.",
+    "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+    "counts": {
+      "tests": 45,
+      "pass": 45,
+      "fail": 0,
+      "skipped": 0
+    },
+    "source_hashes": {
+      "open-pdf-studio/js/pdf/print-plaatsing.test.mjs": "6c1300cedb2ebce0d048fd150bee20eb9adeb72f4f5fd3d087e597ed39612afb",
+      "open-pdf-studio/js/pdf/print-plaatsing.js": "86ccef72c798184ef9bf7272850f9f077455263ae507c7de5ac2dbd33b5c7c93",
+      "open-pdf-studio/js/pdf/print-pagina-instelling.js": "d09ec77486bd81bb108e7c2547c9e5803aa1753003cc7c6e4418058f95ba89c9"
+    },
+    "initial_attempt": {
+      "command": [
+        "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^(?!voegPrintPaginaToe|alle locales)",
+        "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs"
+      ],
+      "exit_code": 1,
+      "counts": {
+        "tests": 47,
+        "pass": 45,
+        "fail": 2,
+        "skipped": 0
+      },
+      "explanation": "Het eerste naamfilter sloot de twee integratietests niet uit. Zij faalden wegens ontbrekend pdf-lib en niet opgehaalde locale-bundles, niet wegens een productassertion. Daarna expliciet test-skip-pattern gebruikt. Originele TAP behouden."
+    }
+  }
+}

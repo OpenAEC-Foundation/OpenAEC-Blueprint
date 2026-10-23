@@ -1,0 +1,1084 @@
+TAP version 13
+# Subtest: arcering horizontal @60%: zelfde lijnen en stippen als voorheen
+ok 1 - arcering horizontal @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 14.268436
+  type: 'test'
+  ...
+# Subtest: arcering horizontal @100%: zelfde lijnen en stippen als voorheen
+ok 2 - arcering horizontal @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.353639
+  type: 'test'
+  ...
+# Subtest: arcering horizontal @180%: zelfde lijnen en stippen als voorheen
+ok 3 - arcering horizontal @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.934076
+  type: 'test'
+  ...
+# Subtest: arcering vertical @60%: zelfde lijnen en stippen als voorheen
+ok 4 - arcering vertical @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 2.548567
+  type: 'test'
+  ...
+# Subtest: arcering vertical @100%: zelfde lijnen en stippen als voorheen
+ok 5 - arcering vertical @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.833146
+  type: 'test'
+  ...
+# Subtest: arcering vertical @180%: zelfde lijnen en stippen als voorheen
+ok 6 - arcering vertical @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.452774
+  type: 'test'
+  ...
+# Subtest: arcering grid @60%: zelfde lijnen en stippen als voorheen
+ok 7 - arcering grid @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.063997
+  type: 'test'
+  ...
+# Subtest: arcering grid @100%: zelfde lijnen en stippen als voorheen
+ok 8 - arcering grid @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.837662
+  type: 'test'
+  ...
+# Subtest: arcering grid @180%: zelfde lijnen en stippen als voorheen
+ok 9 - arcering grid @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.307429
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-left @60%: zelfde lijnen en stippen als voorheen
+ok 10 - arcering diagonal-left @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.294019
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-left @100%: zelfde lijnen en stippen als voorheen
+ok 11 - arcering diagonal-left @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.931856
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-left @180%: zelfde lijnen en stippen als voorheen
+ok 12 - arcering diagonal-left @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.528514
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-right @60%: zelfde lijnen en stippen als voorheen
+ok 13 - arcering diagonal-right @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 2.322196
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-right @100%: zelfde lijnen en stippen als voorheen
+ok 14 - arcering diagonal-right @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.714475
+  type: 'test'
+  ...
+# Subtest: arcering diagonal-right @180%: zelfde lijnen en stippen als voorheen
+ok 15 - arcering diagonal-right @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.765766
+  type: 'test'
+  ...
+# Subtest: arcering crosshatch @60%: zelfde lijnen en stippen als voorheen
+ok 16 - arcering crosshatch @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.41175
+  type: 'test'
+  ...
+# Subtest: arcering crosshatch @100%: zelfde lijnen en stippen als voorheen
+ok 17 - arcering crosshatch @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 2.068434
+  type: 'test'
+  ...
+# Subtest: arcering crosshatch @180%: zelfde lijnen en stippen als voorheen
+ok 18 - arcering crosshatch @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.527633
+  type: 'test'
+  ...
+# Subtest: arcering dots @60%: zelfde lijnen en stippen als voorheen
+ok 19 - arcering dots @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 31.705264
+  type: 'test'
+  ...
+# Subtest: arcering dots @100%: zelfde lijnen en stippen als voorheen
+ok 20 - arcering dots @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 4.012727
+  type: 'test'
+  ...
+# Subtest: arcering dots @180%: zelfde lijnen en stippen als voorheen
+ok 21 - arcering dots @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.4115
+  type: 'test'
+  ...
+# Subtest: arcering concrete @60%: zelfde lijnen en stippen als voorheen
+ok 22 - arcering concrete @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 118.280307
+  type: 'test'
+  ...
+# Subtest: arcering concrete @100%: zelfde lijnen en stippen als voorheen
+ok 23 - arcering concrete @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 24.325774
+  type: 'test'
+  ...
+# Subtest: arcering concrete @180%: zelfde lijnen en stippen als voorheen
+ok 24 - arcering concrete @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 9.032751
+  type: 'test'
+  ...
+# Subtest: arcering brick-running @60%: zelfde lijnen en stippen als voorheen
+ok 25 - arcering brick-running @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.319209
+  type: 'test'
+  ...
+# Subtest: arcering brick-running @100%: zelfde lijnen en stippen als voorheen
+ok 26 - arcering brick-running @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.694954
+  type: 'test'
+  ...
+# Subtest: arcering brick-running @180%: zelfde lijnen en stippen als voorheen
+ok 27 - arcering brick-running @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.469243
+  type: 'test'
+  ...
+# Subtest: arcering brick-stack @60%: zelfde lijnen en stippen als voorheen
+ok 28 - arcering brick-stack @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.095538
+  type: 'test'
+  ...
+# Subtest: arcering brick-stack @100%: zelfde lijnen en stippen als voorheen
+ok 29 - arcering brick-stack @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.029777
+  type: 'test'
+  ...
+# Subtest: arcering brick-stack @180%: zelfde lijnen en stippen als voorheen
+ok 30 - arcering brick-stack @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.554314
+  type: 'test'
+  ...
+# Subtest: arcering insulation @60%: zelfde lijnen en stippen als voorheen
+ok 31 - arcering insulation @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 2.121794
+  type: 'test'
+  ...
+# Subtest: arcering insulation @100%: zelfde lijnen en stippen als voorheen
+ok 32 - arcering insulation @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.281388
+  type: 'test'
+  ...
+# Subtest: arcering insulation @180%: zelfde lijnen en stippen als voorheen
+ok 33 - arcering insulation @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.828055
+  type: 'test'
+  ...
+# Subtest: arcering earth @60%: zelfde lijnen en stippen als voorheen
+ok 34 - arcering earth @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 13.158309
+  type: 'test'
+  ...
+# Subtest: arcering earth @100%: zelfde lijnen en stippen als voorheen
+ok 35 - arcering earth @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 4.182428
+  type: 'test'
+  ...
+# Subtest: arcering earth @180%: zelfde lijnen en stippen als voorheen
+ok 36 - arcering earth @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.941493
+  type: 'test'
+  ...
+# Subtest: arcering sand @60%: zelfde lijnen en stippen als voorheen
+ok 37 - arcering sand @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 55.350074
+  type: 'test'
+  ...
+# Subtest: arcering sand @100%: zelfde lijnen en stippen als voorheen
+ok 38 - arcering sand @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 16.816753
+  type: 'test'
+  ...
+# Subtest: arcering sand @180%: zelfde lijnen en stippen als voorheen
+ok 39 - arcering sand @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 6.591294
+  type: 'test'
+  ...
+# Subtest: arcering gravel @60%: zelfde lijnen en stippen als voorheen
+ok 40 - arcering gravel @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 11.456707
+  type: 'test'
+  ...
+# Subtest: arcering gravel @100%: zelfde lijnen en stippen als voorheen
+ok 41 - arcering gravel @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 5.96516
+  type: 'test'
+  ...
+# Subtest: arcering gravel @180%: zelfde lijnen en stippen als voorheen
+ok 42 - arcering gravel @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 3.900196
+  type: 'test'
+  ...
+# Subtest: arcering water @60%: zelfde lijnen en stippen als voorheen
+ok 43 - arcering water @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.324322
+  type: 'test'
+  ...
+# Subtest: arcering water @100%: zelfde lijnen en stippen als voorheen
+ok 44 - arcering water @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.282811
+  type: 'test'
+  ...
+# Subtest: arcering water @180%: zelfde lijnen en stippen als voorheen
+ok 45 - arcering water @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.220651
+  type: 'test'
+  ...
+# Subtest: arcering clay @60%: zelfde lijnen en stippen als voorheen
+ok 46 - arcering clay @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.526153
+  type: 'test'
+  ...
+# Subtest: arcering clay @100%: zelfde lijnen en stippen als voorheen
+ok 47 - arcering clay @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.360632
+  type: 'test'
+  ...
+# Subtest: arcering clay @180%: zelfde lijnen en stippen als voorheen
+ok 48 - arcering clay @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.269462
+  type: 'test'
+  ...
+# Subtest: arcering wood-grain @60%: zelfde lijnen en stippen als voorheen
+ok 49 - arcering wood-grain @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.411673
+  type: 'test'
+  ...
+# Subtest: arcering wood-grain @100%: zelfde lijnen en stippen als voorheen
+ok 50 - arcering wood-grain @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.219442
+  type: 'test'
+  ...
+# Subtest: arcering wood-grain @180%: zelfde lijnen en stippen als voorheen
+ok 51 - arcering wood-grain @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.197861
+  type: 'test'
+  ...
+# Subtest: arcering plywood @60%: zelfde lijnen en stippen als voorheen
+ok 52 - arcering plywood @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.537873
+  type: 'test'
+  ...
+# Subtest: arcering plywood @100%: zelfde lijnen en stippen als voorheen
+ok 53 - arcering plywood @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.286952
+  type: 'test'
+  ...
+# Subtest: arcering plywood @180%: zelfde lijnen en stippen als voorheen
+ok 54 - arcering plywood @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.204131
+  type: 'test'
+  ...
+# Subtest: arcering timber-section @60%: zelfde lijnen en stippen als voorheen
+ok 55 - arcering timber-section @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.559453
+  type: 'test'
+  ...
+# Subtest: arcering timber-section @100%: zelfde lijnen en stippen als voorheen
+ok 56 - arcering timber-section @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.343382
+  type: 'test'
+  ...
+# Subtest: arcering timber-section @180%: zelfde lijnen en stippen als voorheen
+ok 57 - arcering timber-section @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.262732
+  type: 'test'
+  ...
+# Subtest: arcering steel-section @60%: zelfde lijnen en stippen als voorheen
+ok 58 - arcering steel-section @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.605154
+  type: 'test'
+  ...
+# Subtest: arcering steel-section @100%: zelfde lijnen en stippen als voorheen
+ok 59 - arcering steel-section @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.363552
+  type: 'test'
+  ...
+# Subtest: arcering steel-section @180%: zelfde lijnen en stippen als voorheen
+ok 60 - arcering steel-section @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.294412
+  type: 'test'
+  ...
+# Subtest: arcering aluminum @60%: zelfde lijnen en stippen als voorheen
+ok 61 - arcering aluminum @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.064807
+  type: 'test'
+  ...
+# Subtest: arcering aluminum @100%: zelfde lijnen en stippen als voorheen
+ok 62 - arcering aluminum @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.679324
+  type: 'test'
+  ...
+# Subtest: arcering aluminum @180%: zelfde lijnen en stippen als voorheen
+ok 63 - arcering aluminum @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.390083
+  type: 'test'
+  ...
+# Subtest: arcering stone-block @60%: zelfde lijnen en stippen als voorheen
+ok 64 - arcering stone-block @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.298862
+  type: 'test'
+  ...
+# Subtest: arcering stone-block @100%: zelfde lijnen en stippen als voorheen
+ok 65 - arcering stone-block @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.180631
+  type: 'test'
+  ...
+# Subtest: arcering stone-block @180%: zelfde lijnen en stippen als voorheen
+ok 66 - arcering stone-block @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.136631
+  type: 'test'
+  ...
+# Subtest: arcering cut-stone @60%: zelfde lijnen en stippen als voorheen
+ok 67 - arcering cut-stone @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.205081
+  type: 'test'
+  ...
+# Subtest: arcering cut-stone @100%: zelfde lijnen en stippen als voorheen
+ok 68 - arcering cut-stone @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.145781
+  type: 'test'
+  ...
+# Subtest: arcering cut-stone @180%: zelfde lijnen en stippen als voorheen
+ok 69 - arcering cut-stone @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.130451
+  type: 'test'
+  ...
+# Subtest: arcering staal-dubbel @60%: zelfde lijnen en stippen als voorheen
+ok 70 - arcering staal-dubbel @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.523744
+  type: 'test'
+  ...
+# Subtest: arcering staal-dubbel @100%: zelfde lijnen en stippen als voorheen
+ok 71 - arcering staal-dubbel @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.392913
+  type: 'test'
+  ...
+# Subtest: arcering staal-dubbel @180%: zelfde lijnen en stippen als voorheen
+ok 72 - arcering staal-dubbel @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.230411
+  type: 'test'
+  ...
+# Subtest: arcering raster-liggend @60%: zelfde lijnen en stippen als voorheen
+ok 73 - arcering raster-liggend @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.277101
+  type: 'test'
+  ...
+# Subtest: arcering raster-liggend @100%: zelfde lijnen en stippen als voorheen
+ok 74 - arcering raster-liggend @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.195781
+  type: 'test'
+  ...
+# Subtest: arcering raster-liggend @180%: zelfde lijnen en stippen als voorheen
+ok 75 - arcering raster-liggend @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.150361
+  type: 'test'
+  ...
+# Subtest: arcering raster-staand @60%: zelfde lijnen en stippen als voorheen
+ok 76 - arcering raster-staand @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.276582
+  type: 'test'
+  ...
+# Subtest: arcering raster-staand @100%: zelfde lijnen en stippen als voorheen
+ok 77 - arcering raster-staand @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.201012
+  type: 'test'
+  ...
+# Subtest: arcering raster-staand @180%: zelfde lijnen en stippen als voorheen
+ok 78 - arcering raster-staand @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.151091
+  type: 'test'
+  ...
+# Subtest: arcering tegel-halfsteens @60%: zelfde lijnen en stippen als voorheen
+ok 79 - arcering tegel-halfsteens @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.222512
+  type: 'test'
+  ...
+# Subtest: arcering tegel-halfsteens @100%: zelfde lijnen en stippen als voorheen
+ok 80 - arcering tegel-halfsteens @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.164911
+  type: 'test'
+  ...
+# Subtest: arcering tegel-halfsteens @180%: zelfde lijnen en stippen als voorheen
+ok 81 - arcering tegel-halfsteens @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.129051
+  type: 'test'
+  ...
+# Subtest: arcering plank-halfsteens @60%: zelfde lijnen en stippen als voorheen
+ok 82 - arcering plank-halfsteens @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.179562
+  type: 'test'
+  ...
+# Subtest: arcering plank-halfsteens @100%: zelfde lijnen en stippen als voorheen
+ok 83 - arcering plank-halfsteens @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.139251
+  type: 'test'
+  ...
+# Subtest: arcering plank-halfsteens @180%: zelfde lijnen en stippen als voorheen
+ok 84 - arcering plank-halfsteens @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.211771
+  type: 'test'
+  ...
+# Subtest: arcering grond-blokjes @60%: zelfde lijnen en stippen als voorheen
+ok 85 - arcering grond-blokjes @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.725845
+  type: 'test'
+  ...
+# Subtest: arcering grond-blokjes @100%: zelfde lijnen en stippen als voorheen
+ok 86 - arcering grond-blokjes @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.331652
+  type: 'test'
+  ...
+# Subtest: arcering grond-blokjes @180%: zelfde lijnen en stippen als voorheen
+ok 87 - arcering grond-blokjes @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.243612
+  type: 'test'
+  ...
+# Subtest: arcering glas-strepen @60%: zelfde lijnen en stippen als voorheen
+ok 88 - arcering glas-strepen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.312292
+  type: 'test'
+  ...
+# Subtest: arcering glas-strepen @100%: zelfde lijnen en stippen als voorheen
+ok 89 - arcering glas-strepen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.212262
+  type: 'test'
+  ...
+# Subtest: arcering glas-strepen @180%: zelfde lijnen en stippen als voorheen
+ok 90 - arcering glas-strepen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.160431
+  type: 'test'
+  ...
+# Subtest: arcering vloeistof-strepen @60%: zelfde lijnen en stippen als voorheen
+ok 91 - arcering vloeistof-strepen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.306102
+  type: 'test'
+  ...
+# Subtest: arcering vloeistof-strepen @100%: zelfde lijnen en stippen als voorheen
+ok 92 - arcering vloeistof-strepen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.210342
+  type: 'test'
+  ...
+# Subtest: arcering vloeistof-strepen @180%: zelfde lijnen en stippen als voorheen
+ok 93 - arcering vloeistof-strepen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.206522
+  type: 'test'
+  ...
+# Subtest: arcering gras-pollen @60%: zelfde lijnen en stippen als voorheen
+ok 94 - arcering gras-pollen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.037317
+  type: 'test'
+  ...
+# Subtest: arcering gras-pollen @100%: zelfde lijnen en stippen als voorheen
+ok 95 - arcering gras-pollen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.673274
+  type: 'test'
+  ...
+# Subtest: arcering gras-pollen @180%: zelfde lijnen en stippen als voorheen
+ok 96 - arcering gras-pollen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.407723
+  type: 'test'
+  ...
+# Subtest: arcering honingraat @60%: zelfde lijnen en stippen als voorheen
+ok 97 - arcering honingraat @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.526714
+  type: 'test'
+  ...
+# Subtest: arcering honingraat @100%: zelfde lijnen en stippen als voorheen
+ok 98 - arcering honingraat @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.320492
+  type: 'test'
+  ...
+# Subtest: arcering honingraat @180%: zelfde lijnen en stippen als voorheen
+ok 99 - arcering honingraat @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.249191
+  type: 'test'
+  ...
+# Subtest: arcering lijnen-groep-verticaal @60%: zelfde lijnen en stippen als voorheen
+ok 100 - arcering lijnen-groep-verticaal @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.773936
+  type: 'test'
+  ...
+# Subtest: arcering lijnen-groep-verticaal @100%: zelfde lijnen en stippen als voorheen
+ok 101 - arcering lijnen-groep-verticaal @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.517933
+  type: 'test'
+  ...
+# Subtest: arcering lijnen-groep-verticaal @180%: zelfde lijnen en stippen als voorheen
+ok 102 - arcering lijnen-groep-verticaal @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.605924
+  type: 'test'
+  ...
+# Subtest: arcering lood-blokken @60%: zelfde lijnen en stippen als voorheen
+ok 103 - arcering lood-blokken @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.45814
+  type: 'test'
+  ...
+# Subtest: arcering lood-blokken @100%: zelfde lijnen en stippen als voorheen
+ok 104 - arcering lood-blokken @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.716195
+  type: 'test'
+  ...
+# Subtest: arcering lood-blokken @180%: zelfde lijnen en stippen als voorheen
+ok 105 - arcering lood-blokken @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.520303
+  type: 'test'
+  ...
+# Subtest: arcering glas-doorsnede @60%: zelfde lijnen en stippen als voorheen
+ok 106 - arcering glas-doorsnede @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.025887
+  type: 'test'
+  ...
+# Subtest: arcering glas-doorsnede @100%: zelfde lijnen en stippen als voorheen
+ok 107 - arcering glas-doorsnede @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.691685
+  type: 'test'
+  ...
+# Subtest: arcering glas-doorsnede @180%: zelfde lijnen en stippen als voorheen
+ok 108 - arcering glas-doorsnede @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.441133
+  type: 'test'
+  ...
+# Subtest: arcering diamonds @60%: zelfde lijnen en stippen als voorheen
+ok 109 - arcering diamonds @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.625775
+  type: 'test'
+  ...
+# Subtest: arcering diamonds @100%: zelfde lijnen en stippen als voorheen
+ok 110 - arcering diamonds @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.701015
+  type: 'test'
+  ...
+# Subtest: arcering diamonds @180%: zelfde lijnen en stippen als voorheen
+ok 111 - arcering diamonds @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.202841
+  type: 'test'
+  ...
+# Subtest: arcering herringbone @60%: zelfde lijnen en stippen als voorheen
+ok 112 - arcering herringbone @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.424093
+  type: 'test'
+  ...
+# Subtest: arcering herringbone @100%: zelfde lijnen en stippen als voorheen
+ok 113 - arcering herringbone @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.289771
+  type: 'test'
+  ...
+# Subtest: arcering herringbone @180%: zelfde lijnen en stippen als voorheen
+ok 114 - arcering herringbone @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.197371
+  type: 'test'
+  ...
+# Subtest: arcering basket-weave @60%: zelfde lijnen en stippen als voorheen
+ok 115 - arcering basket-weave @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.241392
+  type: 'test'
+  ...
+# Subtest: arcering basket-weave @100%: zelfde lijnen en stippen als voorheen
+ok 116 - arcering basket-weave @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.225102
+  type: 'test'
+  ...
+# Subtest: arcering basket-weave @180%: zelfde lijnen en stippen als voorheen
+ok 117 - arcering basket-weave @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.146151
+  type: 'test'
+  ...
+# Subtest: arcering zigzag @60%: zelfde lijnen en stippen als voorheen
+ok 118 - arcering zigzag @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.382682
+  type: 'test'
+  ...
+# Subtest: arcering zigzag @100%: zelfde lijnen en stippen als voorheen
+ok 119 - arcering zigzag @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.269892
+  type: 'test'
+  ...
+# Subtest: arcering zigzag @180%: zelfde lijnen en stippen als voorheen
+ok 120 - arcering zigzag @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.177522
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-baksteen @60%: zelfde lijnen en stippen als voorheen
+ok 121 - arcering nen47-metselwerk-baksteen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.754322
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-baksteen @100%: zelfde lijnen en stippen als voorheen
+ok 122 - arcering nen47-metselwerk-baksteen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 3.323373
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-baksteen @180%: zelfde lijnen en stippen als voorheen
+ok 123 - arcering nen47-metselwerk-baksteen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.929947
+  type: 'test'
+  ...
+# Subtest: arcering wand-metselwerk @60%: zelfde lijnen en stippen als voorheen
+ok 124 - arcering wand-metselwerk @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.400793
+  type: 'test'
+  ...
+# Subtest: arcering wand-metselwerk @100%: zelfde lijnen en stippen als voorheen
+ok 125 - arcering wand-metselwerk @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.256572
+  type: 'test'
+  ...
+# Subtest: arcering wand-metselwerk @180%: zelfde lijnen en stippen als voorheen
+ok 126 - arcering wand-metselwerk @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.262442
+  type: 'test'
+  ...
+# Subtest: arcering nen47-speciale-steenachtige @60%: zelfde lijnen en stippen als voorheen
+ok 127 - arcering nen47-speciale-steenachtige @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 2.101804
+  type: 'test'
+  ...
+# Subtest: arcering nen47-speciale-steenachtige @100%: zelfde lijnen en stippen als voorheen
+ok 128 - arcering nen47-speciale-steenachtige @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.052967
+  type: 'test'
+  ...
+# Subtest: arcering nen47-speciale-steenachtige @180%: zelfde lijnen en stippen als voorheen
+ok 129 - arcering nen47-speciale-steenachtige @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.519423
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-kunststeen @60%: zelfde lijnen en stippen als voorheen
+ok 130 - arcering nen47-metselwerk-kunststeen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.524603
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-kunststeen @100%: zelfde lijnen en stippen als voorheen
+ok 131 - arcering nen47-metselwerk-kunststeen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.359383
+  type: 'test'
+  ...
+# Subtest: arcering nen47-metselwerk-kunststeen @180%: zelfde lijnen en stippen als voorheen
+ok 132 - arcering nen47-metselwerk-kunststeen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.236031
+  type: 'test'
+  ...
+# Subtest: arcering nen47-lichte-scheidingswand @60%: zelfde lijnen en stippen als voorheen
+ok 133 - arcering nen47-lichte-scheidingswand @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.562364
+  type: 'test'
+  ...
+# Subtest: arcering nen47-lichte-scheidingswand @100%: zelfde lijnen en stippen als voorheen
+ok 134 - arcering nen47-lichte-scheidingswand @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.316182
+  type: 'test'
+  ...
+# Subtest: arcering nen47-lichte-scheidingswand @180%: zelfde lijnen en stippen als voorheen
+ok 135 - arcering nen47-lichte-scheidingswand @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.255582
+  type: 'test'
+  ...
+# Subtest: arcering nen47-beton-prefab @60%: zelfde lijnen en stippen als voorheen
+ok 136 - arcering nen47-beton-prefab @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.521374
+  type: 'test'
+  ...
+# Subtest: arcering nen47-beton-prefab @100%: zelfde lijnen en stippen als voorheen
+ok 137 - arcering nen47-beton-prefab @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.368342
+  type: 'test'
+  ...
+# Subtest: arcering nen47-beton-prefab @180%: zelfde lijnen en stippen als voorheen
+ok 138 - arcering nen47-beton-prefab @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.238232
+  type: 'test'
+  ...
+# Subtest: arcering nen47-ongewapend-beton @60%: zelfde lijnen en stippen als voorheen
+ok 139 - arcering nen47-ongewapend-beton @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.091807
+  type: 'test'
+  ...
+# Subtest: arcering nen47-ongewapend-beton @100%: zelfde lijnen en stippen als voorheen
+ok 140 - arcering nen47-ongewapend-beton @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.686934
+  type: 'test'
+  ...
+# Subtest: arcering nen47-ongewapend-beton @180%: zelfde lijnen en stippen als voorheen
+ok 141 - arcering nen47-ongewapend-beton @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.460473
+  type: 'test'
+  ...
+# Subtest: arcering nen47-sierbeton @60%: zelfde lijnen en stippen als voorheen
+ok 142 - arcering nen47-sierbeton @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.723941
+  type: 'test'
+  ...
+# Subtest: arcering nen47-sierbeton @100%: zelfde lijnen en stippen als voorheen
+ok 143 - arcering nen47-sierbeton @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.106867
+  type: 'test'
+  ...
+# Subtest: arcering nen47-sierbeton @180%: zelfde lijnen en stippen als voorheen
+ok 144 - arcering nen47-sierbeton @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.823935
+  type: 'test'
+  ...
+# Subtest: arcering nen47-natuursteen @60%: zelfde lijnen en stippen als voorheen
+ok 145 - arcering nen47-natuursteen @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.768252
+  type: 'test'
+  ...
+# Subtest: arcering nen47-natuursteen @100%: zelfde lijnen en stippen als voorheen
+ok 146 - arcering nen47-natuursteen @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.965727
+  type: 'test'
+  ...
+# Subtest: arcering nen47-natuursteen @180%: zelfde lijnen en stippen als voorheen
+ok 147 - arcering nen47-natuursteen @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.742775
+  type: 'test'
+  ...
+# Subtest: arcering nen47-enkele-afwerking @60%: zelfde lijnen en stippen als voorheen
+ok 148 - arcering nen47-enkele-afwerking @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.564841
+  type: 'test'
+  ...
+# Subtest: arcering nen47-enkele-afwerking @100%: zelfde lijnen en stippen als voorheen
+ok 149 - arcering nen47-enkele-afwerking @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.887806
+  type: 'test'
+  ...
+# Subtest: arcering nen47-enkele-afwerking @180%: zelfde lijnen en stippen als voorheen
+ok 150 - arcering nen47-enkele-afwerking @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.532414
+  type: 'test'
+  ...
+# Subtest: arcering nen47-samengestelde-afwerking @60%: zelfde lijnen en stippen als voorheen
+ok 151 - arcering nen47-samengestelde-afwerking @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.821823
+  type: 'test'
+  ...
+# Subtest: arcering nen47-samengestelde-afwerking @100%: zelfde lijnen en stippen als voorheen
+ok 152 - arcering nen47-samengestelde-afwerking @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 1.128187
+  type: 'test'
+  ...
+# Subtest: arcering nen47-samengestelde-afwerking @180%: zelfde lijnen en stippen als voorheen
+ok 153 - arcering nen47-samengestelde-afwerking @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.506393
+  type: 'test'
+  ...
+# Subtest: arcering nen47-naaldhout @60%: zelfde lijnen en stippen als voorheen
+ok 154 - arcering nen47-naaldhout @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.314963
+  type: 'test'
+  ...
+# Subtest: arcering nen47-naaldhout @100%: zelfde lijnen en stippen als voorheen
+ok 155 - arcering nen47-naaldhout @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.203811
+  type: 'test'
+  ...
+# Subtest: arcering nen47-naaldhout @180%: zelfde lijnen en stippen als voorheen
+ok 156 - arcering nen47-naaldhout @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.159431
+  type: 'test'
+  ...
+# Subtest: arcering nen47-loofhout @60%: zelfde lijnen en stippen als voorheen
+ok 157 - arcering nen47-loofhout @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.759955
+  type: 'test'
+  ...
+# Subtest: arcering nen47-loofhout @100%: zelfde lijnen en stippen als voorheen
+ok 158 - arcering nen47-loofhout @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.518363
+  type: 'test'
+  ...
+# Subtest: arcering nen47-loofhout @180%: zelfde lijnen en stippen als voorheen
+ok 159 - arcering nen47-loofhout @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.343872
+  type: 'test'
+  ...
+# Subtest: arcering nen47-hout-langs @60%: zelfde lijnen en stippen als voorheen
+ok 160 - arcering nen47-hout-langs @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.398183
+  type: 'test'
+  ...
+# Subtest: arcering nen47-hout-langs @100%: zelfde lijnen en stippen als voorheen
+ok 161 - arcering nen47-hout-langs @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.277162
+  type: 'test'
+  ...
+# Subtest: arcering nen47-hout-langs @180%: zelfde lijnen en stippen als voorheen
+ok 162 - arcering nen47-hout-langs @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.166752
+  type: 'test'
+  ...
+# Subtest: arcering nen47-bekledingsplaat @60%: zelfde lijnen en stippen als voorheen
+ok 163 - arcering nen47-bekledingsplaat @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.376022
+  type: 'test'
+  ...
+# Subtest: arcering nen47-bekledingsplaat @100%: zelfde lijnen en stippen als voorheen
+ok 164 - arcering nen47-bekledingsplaat @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.259842
+  type: 'test'
+  ...
+# Subtest: arcering nen47-bekledingsplaat @180%: zelfde lijnen en stippen als voorheen
+ok 165 - arcering nen47-bekledingsplaat @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.174641
+  type: 'test'
+  ...
+# Subtest: arcering nen47-isolatie @60%: zelfde lijnen en stippen als voorheen
+ok 166 - arcering nen47-isolatie @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.556813
+  type: 'test'
+  ...
+# Subtest: arcering nen47-isolatie @100%: zelfde lijnen en stippen als voorheen
+ok 167 - arcering nen47-isolatie @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.521183
+  type: 'test'
+  ...
+# Subtest: arcering nen47-isolatie @180%: zelfde lijnen en stippen als voorheen
+ok 168 - arcering nen47-isolatie @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.445823
+  type: 'test'
+  ...
+# Subtest: arcering nen47-kunststof @60%: zelfde lijnen en stippen als voorheen
+ok 169 - arcering nen47-kunststof @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.720574
+  type: 'test'
+  ...
+# Subtest: arcering nen47-kunststof @100%: zelfde lijnen en stippen als voorheen
+ok 170 - arcering nen47-kunststof @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.471903
+  type: 'test'
+  ...
+# Subtest: arcering nen47-kunststof @180%: zelfde lijnen en stippen als voorheen
+ok 171 - arcering nen47-kunststof @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.313762
+  type: 'test'
+  ...
+# Subtest: arcering nen47-afdichtingsmiddel @60%: zelfde lijnen en stippen als voorheen
+ok 172 - arcering nen47-afdichtingsmiddel @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 105.988915
+  type: 'test'
+  ...
+# Subtest: arcering nen47-afdichtingsmiddel @100%: zelfde lijnen en stippen als voorheen
+ok 173 - arcering nen47-afdichtingsmiddel @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 33.047613
+  type: 'test'
+  ...
+# Subtest: arcering nen47-afdichtingsmiddel @180%: zelfde lijnen en stippen als voorheen
+ok 174 - arcering nen47-afdichtingsmiddel @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 10.38811
+  type: 'test'
+  ...
+# Subtest: arcering nen47-maaiveld @60%: zelfde lijnen en stippen als voorheen
+ok 175 - arcering nen47-maaiveld @60%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.667485
+  type: 'test'
+  ...
+# Subtest: arcering nen47-maaiveld @100%: zelfde lijnen en stippen als voorheen
+ok 176 - arcering nen47-maaiveld @100%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.419793
+  type: 'test'
+  ...
+# Subtest: arcering nen47-maaiveld @180%: zelfde lijnen en stippen als voorheen
+ok 177 - arcering nen47-maaiveld @180%: zelfde lijnen en stippen als voorheen
+  ---
+  duration_ms: 0.321062
+  type: 'test'
+  ...
+# Subtest: arcering: buiten beeld gelegen deel wordt niet meer getekend
+ok 178 - arcering: buiten beeld gelegen deel wordt niet meer getekend
+  ---
+  duration_ms: 1.012737
+  type: 'test'
+  ...
+# Subtest: arcering: verzadigd patroon valt terug op één vlakvulling
+ok 179 - arcering: verzadigd patroon valt terug op één vlakvulling
+  ---
+  duration_ms: 0.516133
+  type: 'test'
+  ...
+1..179
+# tests 179
+# suites 0
+# pass 179
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 886.617858

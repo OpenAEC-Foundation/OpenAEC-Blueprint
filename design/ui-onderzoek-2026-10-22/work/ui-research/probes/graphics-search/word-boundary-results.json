@@ -1,0 +1,63 @@
+{
+  "command": [
+    "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/probes/graphics-search/word-boundary-probe.mjs"
+  ],
+  "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "method": "Exacte buildPattern-functie uit gepinde controller; rechtstreeks uitgevoerd in Node zonder PDF/state/browser.",
+  "source_hashes": {
+    "open-pdf-studio/js/search/find-controller.js": "80bf858d13529392ffff2e59ed1d102cc4ed066fdde4cdf976910a465c776b4d"
+  },
+  "source_function_sha256": "0fa5dc30bf42763d582a9b8f1c1f142babbf983cb79b256d61bfc29a6f2acc09",
+  "harness": "work/ui-research/probes/graphics-search/word-boundary-probe.mjs",
+  "exit_code": 0,
+  "cases": [
+    {
+      "query": "beton",
+      "text": "beton",
+      "whole": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "query": "beton",
+      "text": "betonvloer",
+      "whole": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "query": "één",
+      "text": "één",
+      "whole": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "query": "één",
+      "text": "één",
+      "whole": false,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "query": "beton",
+      "text": "cafébeton",
+      "whole": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "query": "café",
+      "text": "café",
+      "whole": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "assertions": 6,
+  "limits": [
+    "Geen PDF-extractie, zoekbalk, documentstate of andere zoekroutes getest.",
+    "Observed assertions zijn regressievoorbeelden van huidig gedrag, geen gewenste Unicode-specificatie."
+  ]
+}

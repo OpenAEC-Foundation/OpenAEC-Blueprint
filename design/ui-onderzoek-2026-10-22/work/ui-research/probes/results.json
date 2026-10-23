@@ -1,0 +1,199 @@
+{
+  "checked_at": "2026-10-22",
+  "repo_snapshot": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "method": "Exacte expressies uit twee native reviewroutes geïsoleerd gecompileerd. Daarnaast standaard ECMAScript-functies in Node uitgevoerd. Geen GUI, productieapp, daadwerkelijke invoerevents of bestandsexport getest.",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "source_hashes": {
+    "src/bin/style_repo.rs": "e62e3f7aadff03533b7777d26447b103de4436bfc0a820c11f2e846f16ea0437",
+    "src/bin/style_repo/pdf_split_native.rs": "485e1dcb73279e609ca51182eb539124935eafeacc43682d9d4fe6bf7b2c0205"
+  },
+  "expressions": {
+    "line_width_draft_acceptance": "value.is_empty() || value == \".\" ||\n                    value.parse::<f32>().is_ok_and(|number| (0.0..=50.0).contains(&number))",
+    "pdf_sample_step": "value\n                    .trim()\n                    .replace(',', \".\")\n                    .parse::<f64>()\n                    .ok()\n                    .filter(|value| value.is_finite())\n                    .map(|value| value.round().max(1.0) as usize)\n                    .unwrap_or(1)"
+  },
+  "review_expression_results": [
+    {
+      "input": "",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": ".",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "0",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "-3",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1.6",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 2
+    },
+    {
+      "input": "0,5",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "0.5",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1,234",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1.234,56",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1 234,56",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "3e1",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 30
+    },
+    {
+      "input": "NaN",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "Infinity",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "abc",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "−2",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    }
+  ],
+  "ecmascript": {
+    "node": "v18.19.1",
+    "rows": [
+      {
+        "input": "",
+        "parseFloat": "NaN",
+        "Number": 0
+      },
+      {
+        "input": ".",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "0",
+        "parseFloat": 0,
+        "Number": 0
+      },
+      {
+        "input": "-3",
+        "parseFloat": -3,
+        "Number": -3
+      },
+      {
+        "input": "1",
+        "parseFloat": 1,
+        "Number": 1
+      },
+      {
+        "input": "1.6",
+        "parseFloat": 1.6,
+        "Number": 1.6
+      },
+      {
+        "input": "0,5",
+        "parseFloat": 0,
+        "Number": "NaN"
+      },
+      {
+        "input": "0.5",
+        "parseFloat": 0.5,
+        "Number": 0.5
+      },
+      {
+        "input": "1,234",
+        "parseFloat": 1,
+        "Number": "NaN"
+      },
+      {
+        "input": "1.234,56",
+        "parseFloat": 1.234,
+        "Number": "NaN"
+      },
+      {
+        "input": "1 234,56",
+        "parseFloat": 1,
+        "Number": "NaN"
+      },
+      {
+        "input": "3e1",
+        "parseFloat": 30,
+        "Number": 30
+      },
+      {
+        "input": "NaN",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "Infinity",
+        "parseFloat": "Infinity",
+        "Number": "Infinity"
+      },
+      {
+        "input": "abc",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "−2",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      }
+    ],
+    "formatting": [
+      {
+        "locale": "nl-NL",
+        "value": 1234.56,
+        "display": "1.234,56"
+      },
+      {
+        "locale": "en-US",
+        "value": 1234.56,
+        "display": "1,234.56"
+      }
+    ]
+  },
+  "limitations": [
+    "De PDF-splitsroute schrijft expliciet geen bestanden; de uitkomst betreft alleen de voorbeeldpreview.",
+    "De lijndiktepredicate bewijst acceptatie van een complete string, niet elk teken-, plak- of IME-event in de renderer.",
+    "Het ECMAScript-voorbeeld is een taalproef; er is hiermee geen parseFloat-gebruik of fout in een specifieke OpenAEC-productieapp aangetoond."
+  ],
+  "checks": "8 gerichte assertions geslaagd; geen oordeel over alle getalinvoer."
+}

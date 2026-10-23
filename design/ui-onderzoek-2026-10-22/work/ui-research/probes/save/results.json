@@ -1,0 +1,151 @@
+{
+  "node": "v24.19.0",
+  "scenarios": [
+    {
+      "name": "single_success",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": true,
+      "prevented": true,
+      "dirty_ids": []
+    },
+    {
+      "name": "single_cancel",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [],
+      "destroyed": false,
+      "prevented": true,
+      "dirty_ids": [
+        "A"
+      ]
+    },
+    {
+      "name": "write_failure_keeps_window",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": false,
+      "prevented": true,
+      "dirty_ids": [
+        "A"
+      ]
+    },
+    {
+      "name": "save_as_cancelled",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [],
+      "destroyed": false,
+      "prevented": true,
+      "dirty_ids": [
+        "A"
+      ]
+    },
+    {
+      "name": "two_dirty_first_is_active",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": true,
+      "prevented": true,
+      "dirty_ids": [
+        "B"
+      ]
+    },
+    {
+      "name": "two_dirty_first_is_inactive",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [
+        "/virtual/B.ifcCalc"
+      ],
+      "destroyed": false,
+      "prevented": true,
+      "dirty_ids": [
+        "A"
+      ]
+    },
+    {
+      "name": "discard_first_of_two_dirty",
+      "prompt": [
+        "A"
+      ],
+      "write_paths": [],
+      "destroyed": true,
+      "prevented": true,
+      "dirty_ids": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "name": "edit_during_save",
+      "prompt": [],
+      "write_paths": [
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": false,
+      "prevented": false,
+      "dirty_ids": [],
+      "persisted_revision": 1,
+      "current_revision": 2
+    },
+    {
+      "name": "switch_tab_during_save_preserves_target_id",
+      "prompt": [],
+      "write_paths": [
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": false,
+      "prevented": false,
+      "dirty_ids": [
+        "B"
+      ]
+    },
+    {
+      "name": "overlapping_saves_complete_out_of_order",
+      "prompt": [],
+      "write_paths": [
+        "/virtual/A.ifcCalc",
+        "/virtual/A.ifcCalc"
+      ],
+      "destroyed": false,
+      "prevented": false,
+      "dirty_ids": [],
+      "completed_revisions": [
+        2,
+        1
+      ],
+      "last_completed_revision": 1,
+      "current_revision": 2
+    }
+  ],
+  "assertions": 23,
+  "checked_at": "2026-10-22",
+  "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "method": "Exacte saveFile- en onCloseRequested-callbackbodies uit gepinde Calc-bron, met in-memory store, dialoog-, serializer- en schrijfstubs. Echte controlflow; geen React/Tauri-event, schijf-I/O of productieapp.",
+  "source_hashes": {
+    "src/App.tsx": "6d86ff1a4c42e3a9d5a9fd853247b174a6eb4270c3d720b9fb9b9d57b46bd4ee",
+    "src/hooks/useFileOperations.ts": "6fdbb6fb1b53203ddbf849ec9eb872c0cba03624e1397488c613145cea538806"
+  },
+  "limitations": [
+    "De serializer en bestanden worden niet uitgevoerd; uitkomsten beschrijven de callbacklogica onder gecontroleerde scenario’s.",
+    "Er is geen echt venster gesloten of bestand gewijzigd.",
+    "Of overige productlagen een scenario uitsluiten, moet end-to-end worden getoetst.",
+    "De parallelle schrijfvolgorde is bewust geforceerd om de ontbrekende volgorde-/revisiecontrole in deze callback zichtbaar te maken."
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "path": "Cargo.toml",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/Cargo.toml",
+    "sha256": "ca42066213f2363c9463dca99aa829886fd6477208109a2e89bd028de3b468ee",
+    "bytes": 5825
+  },
+  {
+    "path": "winit/Cargo.toml",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/winit/Cargo.toml",
+    "sha256": "c2426fd3493ce8dc60c2815081f2ef7ff230437065242965b7fcf269a47ddb6a",
+    "bytes": 1220
+  },
+  {
+    "path": "widget/src/button.rs",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/widget/src/button.rs",
+    "sha256": "e2b9ad25c5fcd14922a24fd1b105505163f595e393690cfd3aded9a4690dbb73",
+    "bytes": 17548
+  },
+  {
+    "path": "widget/src/checkbox.rs",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/widget/src/checkbox.rs",
+    "sha256": "28110ce3e0c8df4a418d971681f2ee7ff9e0c8071ac9759b68d4629a96ef72e2",
+    "bytes": 19034
+  },
+  {
+    "path": "core/src/widget/operation/focusable.rs",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/core/src/widget/operation/focusable.rs",
+    "sha256": "15c779a716938bbabe98a440d3d936a1da02e21a0bef74bbca01dec512bd6138",
+    "bytes": 5862
+  },
+  {
+    "path": "examples/todos/src/main.rs",
+    "url": "https://raw.githubusercontent.com/iced-rs/iced/0.13.1/examples/todos/src/main.rs",
+    "sha256": "0e7552dc2013dc462d5a316ab60ef962d7349053aa05918847477b9822d58480",
+    "bytes": 16904
+  },
+  {
+    "path": "runtime/src/task.rs",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/runtime/src/task.rs",
+    "sha256": "e8e0470fdb7b224faa9a4631a836b102976bfc1605f9e2d4a0ab4fbecd7f5605",
+    "bytes": 10746
+  },
+  {
+    "path": "winit/src/program/state.rs",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/winit/src/program/state.rs",
+    "sha256": "e7fbcfc9c23e420e9d80cfafc8d18c2632f1d4e9a5da88b5ac06ddbaf737dd18",
+    "bytes": 7605
+  },
+  {
+    "path": "graphics/src/viewport.rs",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/graphics/src/viewport.rs",
+    "sha256": "050f860c240891ffa717ed34dd9b0c6f73f80bf2106254f42b588f68ea61edd3",
+    "bytes": 1620
+  },
+  {
+    "path": "futures/src/keyboard.rs",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/futures/src/keyboard.rs",
+    "sha256": "a7617179bdb0ebebed99f6b4e50a4602b5a2b86f53fb4c2e72c895ca0f6eabaf",
+    "bytes": 1699
+  },
+  {
+    "path": "LICENSE",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/LICENSE",
+    "sha256": "fc9086ba4eba4b77e4c603906362742bc3715ffa2c7810c6074fe7780d3a0398",
+    "bytes": 1073
+  }
+]

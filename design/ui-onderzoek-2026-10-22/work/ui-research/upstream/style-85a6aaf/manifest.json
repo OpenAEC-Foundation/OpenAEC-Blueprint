@@ -1,0 +1,152 @@
+[
+  {
+    "path": "crates/openaec-ui/src/lib.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/lib.rs",
+    "sha256": "16ab2f3ed38fa07dcf968465b224c7059ee4fce6074dd75ee8ad49b48795aef4",
+    "bytes": 603
+  },
+  {
+    "path": "crates/openaec-ui/Cargo.toml",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/Cargo.toml",
+    "sha256": "35236e70ca5b47f369a59293d2b13939351919e06ea604cf14d51c48ce406a9d",
+    "bytes": 777
+  },
+  {
+    "path": "Cargo.lock",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/Cargo.lock",
+    "sha256": "0fcd0b4ad9e0b183dbef94204fa4441edfbdd4e8a6e9ff1884f2bbdbe24ee57f",
+    "bytes": 98327
+  },
+  {
+    "path": "scripts/check_portable_ui.py",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/scripts/check_portable_ui.py",
+    "sha256": "9c023ec28d67be81fb4e565cc2ae519fa115ede9dc9c3902d3a4697c2ff95061",
+    "bytes": 3599
+  },
+  {
+    "path": "README.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/README.md",
+    "sha256": "18fa9cd0e36a8f1eb737ab80c8021641be378ee6e59b5dbe5a35c847e0e3fe08",
+    "bytes": 104160
+  },
+  {
+    "path": "NOTES.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/NOTES.md",
+    "sha256": "667f050b9c8d55993dd8d45f90f1dc99def902c5e7ce6d88123d7a1f2912b53d",
+    "bytes": 115546
+  },
+  {
+    "path": "crates/openaec-icons/README.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-icons/README.md",
+    "sha256": "ce178dfac512e0170fafb00b09bd8148739258cc6c6bb307effbeb121bde445c",
+    "bytes": 1678
+  },
+  {
+    "path": "crates/openaec-icons/Cargo.toml",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-icons/Cargo.toml",
+    "sha256": "cf4d90223b7a7e8929d44b23b72eda10ea3477ce4441c8c04d04e05737026f6c",
+    "bytes": 876
+  },
+  {
+    "path": "crates/openaec-ui/src/design/mod.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/mod.rs",
+    "sha256": "bf4b9a0005fc316e7c878058bde45ae7109aa5ef7c06ffffdde4640fc748b8cf",
+    "bytes": 3113
+  },
+  {
+    "path": "crates/openaec-ui/src/design/tokens.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/tokens.rs",
+    "sha256": "7b461397523ab6fb8665ffe4ae37c13012c9e117d91133efa572ed4f47562d44",
+    "bytes": 31404
+  },
+  {
+    "path": "crates/openaec-ui/src/design/widgets.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/widgets.rs",
+    "sha256": "d4cfa9302731aa00261111d4ce1d3713045e1d80cfddd702c4b7b6e1d73d8521",
+    "bytes": 46484
+  },
+  {
+    "path": "crates/openaec-ui/src/design/chrome.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/chrome.rs",
+    "sha256": "d41ae730915e31ec189b8885cbd78260382b97b202b575b44da6a4f437a4e401",
+    "bytes": 10972
+  },
+  {
+    "path": "crates/openaec-ui/src/design/tiles.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/tiles.rs",
+    "sha256": "0f8bf2147d485a30919e9667ff9aacc4ea0769bbfaf1d7bac29478cb9a5fedb9",
+    "bytes": 12592
+  },
+  {
+    "path": "crates/openaec-ui/src/design/workflow.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/workflow.rs",
+    "sha256": "d78d80ec04200fb3c647622ea7249e03e67cee81b9504571f52bca1a6b8d9b09",
+    "bytes": 8723
+  },
+  {
+    "path": "STAPPENPLAN.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/STAPPENPLAN.md",
+    "sha256": "ac89d607460063175d9bf224a30ddf01049ad601a03fa73a1298ca9ba37fcce3",
+    "bytes": 10706
+  },
+  {
+    "path": "web/openaec-components.css",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/openaec-components.css",
+    "sha256": "ab99868d9162871c04441b3225728545b4026fd836fcec673020db4a78a5fe5d",
+    "bytes": 28265
+  },
+  {
+    "path": "scripts/generate_tokens_04.py",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/scripts/generate_tokens_04.py",
+    "sha256": "898238e6cef581a2230f51dbafdde2fc39662463116d5260b249b132a6fb012e",
+    "bytes": 19571
+  },
+  {
+    "path": "web/openaec-tokens.css",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/openaec-tokens.css",
+    "sha256": "8dfe8410de4ecb3037fa5775a8e1459480130d4d9a05a9c68ca7172bc30bdaef",
+    "bytes": 8697
+  },
+  {
+    "path": "design/ontwerp-0.4/tokens-0.4.json",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/design/ontwerp-0.4/tokens-0.4.json",
+    "sha256": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c",
+    "bytes": 10814
+  },
+  {
+    "path": "scripts/check_tokens_04.py",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/scripts/check_tokens_04.py",
+    "sha256": "ba762b39cfc3cd041b375ac9edf123da4c5c781f72c2852b16564e42f0cdd3ba",
+    "bytes": 5598
+  },
+  {
+    "path": "design/ontwerp-0.4/04-componenten.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/design/ontwerp-0.4/04-componenten.md",
+    "sha256": "d30b8c17aede8358d5402f249b71c81b24ff7d1f6e2cb607ae93e4a0bb88d5e1",
+    "bytes": 10865
+  },
+  {
+    "path": "design/ontwerp-0.4/05-layouts.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/design/ontwerp-0.4/05-layouts.md",
+    "sha256": "7a33c4fbe9295fafa2e01d96406f4d5d1ab11248518c7b27efe9c7cc598ee42e",
+    "bytes": 4418
+  },
+  {
+    "path": "web/README.md",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/README.md",
+    "sha256": "a25c23f9cfd756f16d10e520281544422a81860e054e36c84f76e5ae0ef377a4",
+    "bytes": 3916
+  },
+  {
+    "path": "web/componenten.html",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/componenten.html",
+    "sha256": "4a3f4c685637dd361bd1401bd8eae879cc1b4c5751186326197fad9a395cfbbc",
+    "bytes": 762303
+  },
+  {
+    "path": "src/bin/ui04.rs",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/src/bin/ui04.rs",
+    "sha256": "dca418aba62ba57d03c6af83b28dd422b935b7279523577015f6dfe52540b7bc",
+    "bytes": 175528
+  }
+]

@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: tekstvelden: elk type wijst naar zijn eigen veld
+ok 1 - tekstvelden: elk type wijst naar zijn eigen veld
+  ---
+  duration_ms: 2.276885
+  type: 'test'
+  ...
+# Subtest: annotatietekst: alleen uit het juiste veld
+ok 2 - annotatietekst: alleen uit het juiste veld
+  ---
+  duration_ms: 0.375953
+  type: 'test'
+  ...
+# Subtest: zoeken in annotaties: treffers per annotatie en per pagina
+ok 3 - zoeken in annotaties: treffers per annotatie en per pagina
+  ---
+  duration_ms: 6.440583
+  type: 'test'
+  ...
+# Subtest: zoeken in annotaties: hoofdlettergevoelig volgt het patroon
+ok 4 - zoeken in annotaties: hoofdlettergevoelig volgt het patroon
+  ---
+  duration_ms: 0.991457
+  type: 'test'
+  ...
+# Subtest: filteren op bron: beide, één, of geen
+ok 5 - filteren op bron: beide, één, of geen
+  ---
+  duration_ms: 0.698905
+  type: 'test'
+  ...
+# Subtest: groeperen per pagina: aantallen, soorten en de eerste treffer
+ok 6 - groeperen per pagina: aantallen, soorten en de eerste treffer
+  ---
+  duration_ms: 1.295229
+  type: 'test'
+  ...
+# Subtest: groep van de huidige treffer
+ok 7 - groep van de huidige treffer
+  ---
+  duration_ms: 0.927676
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 164.990193

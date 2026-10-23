@@ -29,6 +29,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 
 
+
 <!-- Formaat: - **Assistent** – taak – bestanden/mappen – sinds JJJJ-MM-DD -->
 
 
@@ -210,6 +211,9 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+
+- 2026-10-23 **Codex**: volledig nachtelijk UI-onderzoek opgenomen in `design/ui-onderzoek-2026-10-22/`, inclusief alle 15 opleverbestanden, 15 onderzoeksmodules, 205 bronplaatsen, 58 bevindingen, zes voorgestelde taakproeven, scripts, gepinde bronkopieën en proef-/audituitvoer. README-leesroute, SHA-256-publicatiemanifest en bytebehoud via lokale gitattributes toegevoegd. Bundelcontrole groen: interne/README-links, 135 gecachte bronbestanden en 11 ingebedde fonthashes; oorspronkelijke opleverbestanden bytegelijk. Tijdelijke serverbestanden/cache/proefbinary niet opgenomen. Alleen documentatie/onderzoeksarchief gewijzigd; geen Cargo-/productieapp-proeven nodig of uitgevoerd. Gebruiker heeft commit en push expliciet opgedragen op 23 oktober.
+
 
 - 2026-10-22 **Codex**: op verzoek al het resterende Codex-werk voor B2 samen vastgelegd: icooncorrecties tot revisie 106, analyse-/feedback-/eindreviews, gedeelde reviewpayload en de verliesvrije export. Alle 1.890 export-roundtrips opnieuw gecontroleerd; bestaande volledige B2-validatie geslaagd. Alleen Codex-ontwerp-, script- en documentatiewijzigingen geselecteerd; Claude-crates/UI/webwerk zit al in zijn eigen commits en wordt niet gewijzigd. Geen nieuwe Rust-code of Cargo-controles in deze commitronde; niet gepusht.
 

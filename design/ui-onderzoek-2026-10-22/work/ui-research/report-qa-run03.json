@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-22T21:59:13+02:00",
+  "sources": 77,
+  "findings": 23,
+  "researched_modules": 6,
+  "duplicate_ids": 0,
+  "broken_internal_or_local_links": 0,
+  "manifest_files_hash_verified": 25,
+  "review_probe_cases": 16,
+  "calc_probe_cases": 20,
+  "save_controlflow_scenarios": 10,
+  "scope": "Artifactstructuur en bronhashes gecontroleerd. Dit script test geen browserlayout, productieapp, opslag, crash, annulering of performance.",
+  "browser_qa": "Nieuwe ronde niet visueel geverifieerd: IAB kon de localhost-preview niet bereiken. Serverpoort is in de uitvoeromgeving wel open. Geen beveiligings-/URL-policy gewijzigd. Bestanden en lokale links zijn wel structureel gecontroleerd.",
+  "production_repo_changed": false
+}

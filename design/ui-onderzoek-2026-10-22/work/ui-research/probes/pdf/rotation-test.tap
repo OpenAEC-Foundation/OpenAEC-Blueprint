@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: normaliseerRotatie: alleen kwartslagen, negatief en boven 360 omgerekend
+ok 1 - normaliseerRotatie: alleen kwartslagen, negatief en boven 360 omgerekend
+  ---
+  duration_ms: 2.085093
+  type: 'test'
+  ...
+# Subtest: weergaveMaat wisselt breedte en hoogte alleen bij een kwartslag
+ok 2 - weergaveMaat wisselt breedte en hoogte alleen bij een kwartslag
+  ---
+  duration_ms: 1.65009
+  type: 'test'
+  ...
+# Subtest: hoekpunten: rechtsom draaien zoals /Rotate
+ok 3 - hoekpunten: rechtsom draaien zoals /Rotate
+  ---
+  duration_ms: 0.775064
+  type: 'test'
+  ...
+# Subtest: heen en terug geeft hetzelfde punt, bij alle hoeken en paginaformaten
+ok 4 - heen en terug geeft hetzelfde punt, bij alle hoeken en paginaformaten
+  ---
+  duration_ms: 3.630792
+  type: 'test'
+  ...
+# Subtest: de pagina valt precies op de gedraaide maat
+ok 5 - de pagina valt precies op de gedraaide maat
+  ---
+  duration_ms: 0.808175
+  type: 'test'
+  ...
+# Subtest: matrices: paginaMatrix is de inverse van weergaveMatrix
+ok 6 - matrices: paginaMatrix is de inverse van weergaveMatrix
+  ---
+  duration_ms: 0.683784
+  type: 'test'
+  ...
+# Subtest: zelfde conventie als de paginarotatie-matrix van de tekstlaag
+ok 7 - zelfde conventie als de paginarotatie-matrix van de tekstlaag
+  ---
+  duration_ms: 0.518443
+  type: 'test'
+  ...
+# Subtest: twee kwartslagen na elkaar zijn een halve slag
+ok 8 - twee kwartslagen na elkaar zijn een halve slag
+  ---
+  duration_ms: 0.357602
+  type: 'test'
+  ...
+# Subtest: vermenigvuldig volgt de canvas-volgorde: eerst binnen, dan buiten
+ok 9 - vermenigvuldig volgt de canvas-volgorde: eerst binnen, dan buiten
+  ---
+  duration_ms: 0.434073
+  type: 'test'
+  ...
+# Subtest: verplaatsingen draaien mee zonder oorsprong
+ok 10 - verplaatsingen draaien mee zonder oorsprong
+  ---
+  duration_ms: 1.079667
+  type: 'test'
+  ...
+# Subtest: rechthoeken: heen en terug, en de maat wisselt bij een kwartslag
+ok 11 - rechthoeken: heen en terug, en de maat wisselt bij een kwartslag
+  ---
+  duration_ms: 0.799995
+  type: 'test'
+  ...
+# Subtest: rechthoek bij 90° op A4: een vak linksboven komt rechtsboven
+ok 12 - rechthoek bij 90° op A4: een vak linksboven komt rechtsboven
+  ---
+  duration_ms: 0.323362
+  type: 'test'
+  ...
+# Subtest: rechthoek met negatieve maat (tegen de richting in gesleept) wordt genormaliseerd
+ok 13 - rechthoek met negatieve maat (tegen de richting in gesleept) wordt genormaliseerd
+  ---
+  duration_ms: 0.306872
+  type: 'test'
+  ...
+# Subtest: viewportGeometrie: paginarotatie en weergaverotatie stapelen
+ok 14 - viewportGeometrie: paginarotatie en weergaverotatie stapelen
+  ---
+  duration_ms: 0.413992
+  type: 'test'
+  ...
+# Subtest: viewport: scherm → pagina → scherm, bij alle hoeken, zoom en verschuiving
+ok 15 - viewport: scherm → pagina → scherm, bij alle hoeken, zoom en verschuiving
+  ---
+  duration_ms: 1.483269
+  type: 'test'
+  ...
+# Subtest: viewport: de pagina-hoeken vallen op de weergave-rechthoek op het scherm
+ok 16 - viewport: de pagina-hoeken vallen op de weergave-rechthoek op het scherm
+  ---
+  duration_ms: 0.465393
+  type: 'test'
+  ...
+# Subtest: viewportZichtbaar zonder rotatie is het oude zichtbare gebied
+ok 17 - viewportZichtbaar zonder rotatie is het oude zichtbare gebied
+  ---
+  duration_ms: 0.247082
+  type: 'test'
+  ...
+# Subtest: viewportZichtbaar met weergave 90° geeft het zichtbare deel in paginaruimte
+ok 18 - viewportZichtbaar met weergave 90° geeft het zichtbare deel in paginaruimte
+  ---
+  duration_ms: 0.214411
+  type: 'test'
+  ...
+# Subtest: viewportZichtbaar: pagina buiten beeld geeft een lege rechthoek
+ok 19 - viewportZichtbaar: pagina buiten beeld geeft een lege rechthoek
+  ---
+  duration_ms: 0.178711
+  type: 'test'
+  ...
+# Subtest: rechtopVak: bij een kwartslag wisselen breedte en hoogte om hetzelfde midden
+ok 20 - rechtopVak: bij een kwartslag wisselen breedte en hoogte om hetzelfde midden
+  ---
+  duration_ms: 0.265942
+  type: 'test'
+  ...
+# Subtest: rechtopVak: op het scherm rechtop, met de eigen linkerbovenhoek linksboven
+ok 21 - rechtopVak: op het scherm rechtop, met de eigen linkerbovenhoek linksboven
+  ---
+  duration_ms: 0.684394
+  type: 'test'
+  ...
+# Subtest: nieuweMaatHoekVast: zonder rotatie blijven x en y staan
+ok 22 - nieuweMaatHoekVast: zonder rotatie blijven x en y staan
+  ---
+  duration_ms: 0.268801
+  type: 'test'
+  ...
+# Subtest: nieuweMaatHoekVast: de eigen linkerbovenhoek blijft op zijn plek, bij elke rotatie
+ok 23 - nieuweMaatHoekVast: de eigen linkerbovenhoek blijft op zijn plek, bij elke rotatie
+  ---
+  duration_ms: 0.292961
+  type: 'test'
+  ...
+# Subtest: klik in een gedraaide weergave: het tekstvak begint op het scherm bij het klikpunt
+ok 24 - klik in een gedraaide weergave: het tekstvak begint op het scherm bij het klikpunt
+  ---
+  duration_ms: 0.280421
+  type: 'test'
+  ...
+# Subtest: klik met het tekstvak-gereedschap: standaardvak 100 × 20 rechtop, linksboven op het klikpunt
+ok 25 - klik met het tekstvak-gereedschap: standaardvak 100 × 20 rechtop, linksboven op het klikpunt
+  ---
+  duration_ms: 0.346782
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 155.400079

@@ -1,0 +1,272 @@
+[
+  {
+    "path": "src/components/grid/CostGrid.tsx",
+    "sha256": "3b93749fd57a4cc4bee5f2abfa05e593892da511f81e78208132c534b1dd344a",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/CostGrid.tsx",
+    "bytes": 27371
+  },
+  {
+    "path": "src/components/grid/GridCellEditor.tsx",
+    "sha256": "74c79b26c53a2764c7d384a46c2baf090ad34badc04b521b674e9b8025be6512",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/GridCellEditor.tsx",
+    "bytes": 12265
+  },
+  {
+    "path": "src/components/grid/useGridEditing.ts",
+    "sha256": "53e5f02353706adcd1e8e684d0ea4e7ea6cc7b80c49a341cc0c33789be10ca54",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridEditing.ts",
+    "bytes": 4345
+  },
+  {
+    "path": "src/components/grid/useGridNavigation.ts",
+    "sha256": "6ef428bf5d242dbf113d0f246e7e21d3c38e12cad37e3ecfdf8ed68af746cbb2",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridNavigation.ts",
+    "bytes": 9191
+  },
+  {
+    "path": "src/components/grid/useGridVirtualizer.ts",
+    "sha256": "ed377fd87bff810d84de76bbbaaede8f8b51f1b57792982d2ffeb55c330b3530",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridVirtualizer.ts",
+    "bytes": 1721
+  },
+  {
+    "path": "src/state/appStore.ts",
+    "sha256": "cb37f37360e944cdc97123631a23fabf196e2bde6a0313f0f6a9c9bb5cc81362",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/state/appStore.ts",
+    "bytes": 2967
+  },
+  {
+    "path": "src/test/numericInput.test.ts",
+    "sha256": "dce87439eeefaa1e64de793cfca6f9c6c07169f228e1f4f445c2b46a5122965a",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/test/numericInput.test.ts",
+    "bytes": 3016
+  },
+  {
+    "path": "src/utils/numericInput.ts",
+    "sha256": "b264ad8aaa60e150a0841081cdd7de752f829e6093c0a59c1586af348b841607",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/utils/numericInput.ts",
+    "bytes": 4810
+  },
+  {
+    "path": "src/utils/formatting.ts",
+    "sha256": "ae559fb507f27999d67dc37b3e9e2eeb7c96a0da0ce45f9baa3c64f885b81251",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/utils/formatting.ts",
+    "bytes": 1564
+  },
+  {
+    "path": "src/App.tsx",
+    "sha256": "6d86ff1a4c42e3a9d5a9fd853247b174a6eb4270c3d720b9fb9b9d57b46bd4ee",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx",
+    "bytes": 28409
+  },
+  {
+    "path": "src/hooks/useFileOperations.ts",
+    "sha256": "6fdbb6fb1b53203ddbf849ec9eb872c0cba03624e1397488c613145cea538806",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/hooks/useFileOperations.ts",
+    "bytes": 17591
+  },
+  {
+    "path": "src/components/common/UnsavedChangesDialog.tsx",
+    "sha256": "1ed0e527bf91988de1023274ad82f7bca3d89b162c5140a93fc10bb7713c5cdb",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/common/UnsavedChangesDialog.tsx",
+    "bytes": 2213
+  },
+  {
+    "path": "src/components/common/ProgressModal.tsx",
+    "sha256": "e571867c211205327c0d986e14f6a558cd04c971f29c2c013d956e2ac6daeeda",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/common/ProgressModal.tsx",
+    "bytes": 1010
+  },
+  {
+    "path": "src/state/slices/historySlice.ts",
+    "sha256": "daaaf5494245d59394a7ad52d3ede69f2d3bdaa6ce1c735890bd35686c2ce2c8",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/state/slices/historySlice.ts",
+    "bytes": 1917
+  },
+  {
+    "path": "src/services/history/itemHistory.ts",
+    "sha256": "ca1417ad9dec3a936e02d46a13eee32837aa3684610a53c591361847184f77f8",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/history/itemHistory.ts",
+    "bytes": 3844
+  },
+  {
+    "path": "src/services/file/nativeFileService.ts",
+    "sha256": "25233b118e521332d3dc645de752280304ec128c5eed1d3f408ba5e86dc2f11b",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/file/nativeFileService.ts",
+    "bytes": 5634
+  },
+  {
+    "path": "src/services/file/fileService.ts",
+    "sha256": "69f13ba4a22f601cbadc0b2d1366b82274aa73f2043e8d758158473474768ecb",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/file/fileService.ts",
+    "bytes": 6639
+  },
+  {
+    "path": "src/state/slices/documentSlice.ts",
+    "sha256": "a5fc2203a9df565ee8bd7ef87149175663b04333bf096657c7dc4dd3eadef066",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/state/slices/documentSlice.ts",
+    "bytes": 2979
+  },
+  {
+    "path": "src/i18n/config.ts",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/config.ts",
+    "sha256": "2b7598187eb15c8079e59d70dfe502598e77d10725bf6660e8ac344ba9b2734b",
+    "bytes": 8111
+  },
+  {
+    "path": "src/i18n/formatUnit.ts",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/formatUnit.ts",
+    "sha256": "48c10a2229d21d0d617aff657cebb1e982f1852ae2676eb0cad2c9a53daa8062",
+    "bytes": 1350
+  },
+  {
+    "path": "src/i18n/reportI18n.ts",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/reportI18n.ts",
+    "sha256": "fbfa705ecf825d29a2c246ce3659238cf41c8ebb06a2f85ca8008b94bdfdde00",
+    "bytes": 9229
+  },
+  {
+    "path": "src/i18n/locales/en/common.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/common.json",
+    "sha256": "7698191d6fa841e48fe8064c82d664e9e60bfea013baf337801434ea71d641b4",
+    "bytes": 18729
+  },
+  {
+    "path": "src/i18n/locales/nl/common.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/common.json",
+    "sha256": "120aa4187c75eeafd63696c0c63f1de1427fbf517fca3c5b804655898a47d7db",
+    "bytes": 19476
+  },
+  {
+    "path": "src/i18n/locales/en/settings.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/settings.json",
+    "sha256": "158782df58fd5edd314e2d4fdbbc9c36580ba272e01dea36e99a038787e336a1",
+    "bytes": 1973
+  },
+  {
+    "path": "src/i18n/locales/nl/settings.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/settings.json",
+    "sha256": "5664f7293f47b865c6961ca10314ffa25ae2a9006af203632bcfba93c6e6eec3",
+    "bytes": 2061
+  },
+  {
+    "path": "scripts/check-i18n.py",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/scripts/check-i18n.py",
+    "sha256": "fd0c66598cead246272afbe1252036af3645e5f45b7895eac0d419bf3db6c312",
+    "bytes": 3746
+  },
+  {
+    "path": "src/services/windowBridge.ts",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/windowBridge.ts",
+    "sha256": "d801a4d785e539bdb7540b81709fb516a6bebc708871db34a996b469a25458ba",
+    "bytes": 1553
+  },
+  {
+    "path": "src/i18n/locales/en/ribbon.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/ribbon.json",
+    "sha256": "b1cb5951602d8e56bdb25eb017c06dddc55edf92cea29d51e8899c298ba56131",
+    "bytes": 9725
+  },
+  {
+    "path": "src/i18n/locales/en/backstage.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/backstage.json",
+    "sha256": "cc4b3bb5b0d91cc2680441b15959ca5bbb4a8d9fd35efd487fc56f636bb053f7",
+    "bytes": 4421
+  },
+  {
+    "path": "src/i18n/locales/en/feedback.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/feedback.json",
+    "sha256": "889dceb40e1fd8cb440aa1d5ae70e6d1e291283b1ffc013b64841196d8b92b19",
+    "bytes": 800
+  },
+  {
+    "path": "src/i18n/locales/en/grid.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/grid.json",
+    "sha256": "56dd4459c8933f8fa2c9be65408e92702aed0f4b14222791ce50d0ef030ebcdd",
+    "bytes": 8871
+  },
+  {
+    "path": "src/i18n/locales/en/dialogs.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/dialogs.json",
+    "sha256": "91d8db2ae25616aef2ed5b68de41d6f9242321c0c86edc8b4822f9ea31d6cd96",
+    "bytes": 5159
+  },
+  {
+    "path": "src/i18n/locales/en/releases.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/releases.json",
+    "sha256": "0e55ab934dd3a346a5d725126bfe105bcc9599db4b3958f860620feb8fda43df",
+    "bytes": 8046
+  },
+  {
+    "path": "src/i18n/locales/en/report.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/report.json",
+    "sha256": "e86e78fa5955081899535d20d9f2c2836fccce9964ef68c3cf744d01f13b8aa0",
+    "bytes": 4827
+  },
+  {
+    "path": "src/i18n/locales/en/units.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/en/units.json",
+    "sha256": "1afeed77886c36b0802a8c1522dc2ddc064f4a70a8cd6cc940a1901ecc793de7",
+    "bytes": 245
+  },
+  {
+    "path": "src/i18n/locales/nl/ribbon.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/ribbon.json",
+    "sha256": "37b523817cc5e6d2fa99c8b494fec6d1cee0e5abc4901bbc33dbf353611217f8",
+    "bytes": 10131
+  },
+  {
+    "path": "src/i18n/locales/nl/backstage.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/backstage.json",
+    "sha256": "cd84edd2660953d54eaf00aa27191b92d6479bd94d4678f30cfd7209c7829bb6",
+    "bytes": 4639
+  },
+  {
+    "path": "src/i18n/locales/nl/feedback.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/feedback.json",
+    "sha256": "ea1f0dbf39e7f3bc40ce95dfec18d189a35836ceee80df9215f81c140dbdf547",
+    "bytes": 846
+  },
+  {
+    "path": "src/i18n/locales/nl/grid.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/grid.json",
+    "sha256": "addf92ebf04a62f0c39398346fbea4d442fed365ca4a37140a0d7fb7ac91a4c0",
+    "bytes": 9125
+  },
+  {
+    "path": "src/i18n/locales/nl/dialogs.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/dialogs.json",
+    "sha256": "20a8b99511bb099931cfb1fdfb7b1e064e2ec5d901e98d5d0eecca384e78b877",
+    "bytes": 5388
+  },
+  {
+    "path": "src/i18n/locales/nl/releases.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/releases.json",
+    "sha256": "ff46a66cf216fa97d15319c2e8b6d9e7f389f72b8d3c699f1168b0fb53b7d1dc",
+    "bytes": 8238
+  },
+  {
+    "path": "src/i18n/locales/nl/report.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/report.json",
+    "sha256": "77d5aaa74c58d1ac6ebb0d6435928bb01a469362ef08ba0a51e91bd2dd3a721b",
+    "bytes": 5006
+  },
+  {
+    "path": "src/i18n/locales/nl/units.json",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/locales/nl/units.json",
+    "sha256": "d035af1ad41ee6914e6ade522caa67701b38bb1b0854a6f99eaab3336d7a05f4",
+    "bytes": 247
+  },
+  {
+    "path": "src/services/print/printService.ts",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/print/printService.ts",
+    "sha256": "3d8475c566005975fc15c4ec1f6c39f018c9510b4cd2d401da68b1fa20f2b5ce",
+    "bytes": 28818
+  },
+  {
+    "path": "src/components/grid/FindReplaceDialog.tsx",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/FindReplaceDialog.tsx",
+    "sha256": "de951659a47fd6427c11e3f9d55da913c606ef10e09fdf328b80a553ec6c0ce5",
+    "bytes": 6286
+  }
+]

@@ -1,0 +1,26 @@
+✔ een string uit Tauri komt ongewijzigd in de melding (2.263552ms)
+✔ een Error geeft zijn message (0.405752ms)
+✔ een object met detail of code geeft die tekst (0.389062ms)
+✔ nooit een lege melding (0.806595ms)
+✔ één scheidingsteken is altijd het decimaalteken (4.276334ms)
+✔ spaties eromheen en een voorteken (0.453773ms)
+✔ duizendtallen alleen waar het ondubbelzinnig is (0.773134ms)
+✔ een los decimaalteken aan begin of eind (0.357262ms)
+✔ ongeldige invoer geeft NaN of null (0.770875ms)
+✔ getallen gaan ongewijzigd door, exponenten worden gelezen (0.333342ms)
+✔ Arabisch-Indische cijfers en het Arabische decimaalteken (0.332781ms)
+✔ canonieke tekst zoals de value van een getalveld (0.362082ms)
+✔ leesGetalBegin vervangt parseFloat met beide decimaaltekens (1.046675ms)
+✔ leesGeheelGetal vervangt parseInt (1.195946ms)
+✔ verhoudingen als 1:100 (1.90209ms)
+✔ factoren als 1x, 0,5x en 50% (0.565663ms)
+✔ getal met eenheid (0.597163ms)
+✔ tonen met het decimaalteken van de taal (35.793874ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 187.162476

@@ -2,6 +2,8 @@
 
 Deze repository bevat een volledig in Rust getekende desktop-Style Repo en de afzonderlijk te verpakken [`openaec-ui`-crate](crates/openaec-ui/). De native interface gebruikt `iced` en volgt de regio's, maten, thema's en typografie van de OpenAEC Tauri-template: titelbalk, optionele ribbon of werkstroomnavigatie, documenttabs, werkgebied, status en instellingen. Er is geen React, JavaScript, WebView of Tauri-runtime nodig.
 
+Het [uitgebreide UI-onderzoek van 22/23 oktober 2026](design/ui-onderzoek-2026-10-22/README.md) bundelt typografie/vorm, vijftien UI-onderwerpen, bronnen, begrensde uitgevoerde proeven en zes voorgestelde volledige taakproeven. Begin bij het [ochtendadvies](design/ui-onderzoek-2026-10-22/outputs/OpenAEC-UI-ochtendoverzicht.html). Het onderzoek is overlegmateriaal; bestaande ontwerpbesluiten en productiecomponenten blijven ongewijzigd.
+
 Start de Style Repo met:
 
 ```bash

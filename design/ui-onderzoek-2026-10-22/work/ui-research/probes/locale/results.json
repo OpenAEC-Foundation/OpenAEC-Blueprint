@@ -1,0 +1,33 @@
+{
+  "source_commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "command": "python3 scripts/check-i18n.py",
+  "scope": "Ongewijzigde bestaande checker, uitsluitend de twee opgehaalde bronlocales en/nl en alle tien namespaces. Geen overige talen of volledige app getest.",
+  "exit_code": 0,
+  "output": "  en   1308 keys  OK\n  nl   1308 keys  OK\n\n2 talen; 0 met problemen\n",
+  "limitations": [
+    "Key-/placeholder-/array-/BOM-controle bewijst geen vertaalbetekenis, lay-out, fontfallback of dynamische taalwissel."
+  ],
+  "source_hashes": {
+    "scripts/check-i18n.py": "fd0c66598cead246272afbe1252036af3645e5f45b7895eac0d419bf3db6c312",
+    "src/i18n/locales/en/common.json": "7698191d6fa841e48fe8064c82d664e9e60bfea013baf337801434ea71d641b4",
+    "src/i18n/locales/en/ribbon.json": "b1cb5951602d8e56bdb25eb017c06dddc55edf92cea29d51e8899c298ba56131",
+    "src/i18n/locales/en/backstage.json": "cc4b3bb5b0d91cc2680441b15959ca5bbb4a8d9fd35efd487fc56f636bb053f7",
+    "src/i18n/locales/en/settings.json": "158782df58fd5edd314e2d4fdbbc9c36580ba272e01dea36e99a038787e336a1",
+    "src/i18n/locales/en/feedback.json": "889dceb40e1fd8cb440aa1d5ae70e6d1e291283b1ffc013b64841196d8b92b19",
+    "src/i18n/locales/en/grid.json": "56dd4459c8933f8fa2c9be65408e92702aed0f4b14222791ce50d0ef030ebcdd",
+    "src/i18n/locales/en/dialogs.json": "91d8db2ae25616aef2ed5b68de41d6f9242321c0c86edc8b4822f9ea31d6cd96",
+    "src/i18n/locales/en/releases.json": "0e55ab934dd3a346a5d725126bfe105bcc9599db4b3958f860620feb8fda43df",
+    "src/i18n/locales/en/report.json": "e86e78fa5955081899535d20d9f2c2836fccce9964ef68c3cf744d01f13b8aa0",
+    "src/i18n/locales/en/units.json": "1afeed77886c36b0802a8c1522dc2ddc064f4a70a8cd6cc940a1901ecc793de7",
+    "src/i18n/locales/nl/common.json": "120aa4187c75eeafd63696c0c63f1de1427fbf517fca3c5b804655898a47d7db",
+    "src/i18n/locales/nl/ribbon.json": "37b523817cc5e6d2fa99c8b494fec6d1cee0e5abc4901bbc33dbf353611217f8",
+    "src/i18n/locales/nl/backstage.json": "cd84edd2660953d54eaf00aa27191b92d6479bd94d4678f30cfd7209c7829bb6",
+    "src/i18n/locales/nl/settings.json": "5664f7293f47b865c6961ca10314ffa25ae2a9006af203632bcfba93c6e6eec3",
+    "src/i18n/locales/nl/feedback.json": "ea1f0dbf39e7f3bc40ce95dfec18d189a35836ceee80df9215f81c140dbdf547",
+    "src/i18n/locales/nl/grid.json": "addf92ebf04a62f0c39398346fbea4d442fed365ca4a37140a0d7fb7ac91a4c0",
+    "src/i18n/locales/nl/dialogs.json": "20a8b99511bb099931cfb1fdfb7b1e064e2ec5d901e98d5d0eecca384e78b877",
+    "src/i18n/locales/nl/releases.json": "ff46a66cf216fa97d15319c2e8b6d9e7f389f72b8d3c699f1168b0fb53b7d1dc",
+    "src/i18n/locales/nl/report.json": "77d5aaa74c58d1ac6ebb0d6435928bb01a469362ef08ba0a51e91bd2dd3a721b",
+    "src/i18n/locales/nl/units.json": "d035af1ad41ee6914e6ade522caa67701b38bb1b0854a6f99eaab3336d7a05f4"
+  }
+}

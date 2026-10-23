@@ -1,0 +1,14 @@
+{
+  "source_repository": "https://github.com/OpenAEC-Foundation/OpenAEC-style-book",
+  "source_commit": "dfdcd415b26604081b1699560621d3e9ae7ea6bf",
+  "source_root": "project-templates/Tauri+React/src/components",
+  "regions": {
+    "title": {"pixels": 32, "source": "TitleBar.css", "selector": ".titlebar"},
+    "tabs": {"pixels": 28, "source": "ribbon/Ribbon.css", "selector": ".ribbon-tabs"},
+    "ribbon": {"pixels": 94, "source": "ribbon/Ribbon.css", "selector": ".ribbon-content-wrapper"},
+    "documents": {"pixels": 30, "source": "DocumentBar.css", "selector": ".document-bar"},
+    "status": {"pixels": 22, "source": "StatusBar.css", "selector": ".status-bar"},
+    "panel_toolbar": {"pixels": 24, "source": "../App.css", "selector": ".left-panel-toolbar"}
+  },
+  "panel_default": {"pixels": 240, "source": "project-templates/Tauri+React/src/App.tsx"}
+}

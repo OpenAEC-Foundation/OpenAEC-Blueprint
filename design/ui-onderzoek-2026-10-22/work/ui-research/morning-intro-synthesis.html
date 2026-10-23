@@ -1,0 +1,40 @@
+<section><h2>Mijn advies voor OpenAEC</h2>
+<p><strong>Combineer technische precisie, warmte en leesbaarheid per taak, met één herkenbare basis.</strong> Behoud B2, warme neutrale vlakken, amber voor de afgesproken merk-/actierol en de besloten rondingen van 3/6/10 px. Website, rekenraster en tablet mogen een eigen dichtheid hebben. Hieronder staan voorstellen voor ons overleg; goedgekeurde besluiten zijn ongewijzigd.</p>
+<div class="table-wrap"><table><thead><tr><th>Keuze</th><th>Voorstel</th><th>Waarom/toets</th></tr></thead><tbody>
+<tr><td>Bodyfont</td><td>Inter als praktische referentie; vergelijk IBM Plex Sans en Source Sans 3. Atkinson Hyperlegible Next blijft kandidaat.</td><td>Inter sluit aan op de huidige identiteit. Er is geen universeel best leesbaar font aangetoond; vergelijk fouten, comfort en AEC-tekens.</td></tr>
+<tr><td>Koppen/codes</td><td>Space Grotesk voor merkkoppen; JetBrains Mono waar vaste breedte helpt.</td><td>Toets kleine mono-hoofdletters, tabulaire cijfers, onderscheidende tekens en technische glyphs/fallback.</td></tr>
+<tr><td>Leesruimte</td><td>Vergelijk de besloten 11–12 px-basis met een ruimer standaardprofiel, bijvoorbeeld 14 px body, en een expliciete compacte modus.</td><td>Dit heropeningsvoorstel vergt reflow-/paneel-/schaalbewijs; tabletbediening apart toetsen.</td></tr>
+<tr><td>Kleur/patronen</td><td>Scheid merk, focus/selectie/status, datakleur en materiaalbetekenis; eigen papierprofiel.</td><td>Meer contrast alleen lost betekenisconflicten niet op. Ook grijswaarden, systeemcontrast en uitvoer toetsen.</td></tr>
+</tbody></table></div>
+<p><a href="OpenAEC-ontwerponderzoek.html">Font-/vormonderzoek met interactieve letterproef</a> · <a href="OpenAEC-UI-verdiepingsonderzoek.html#module-15">Afwegingen en tegenargumenten</a>.</p></section>
+<section><h2>Eerst bewijzen: bedienen en betrouwbaar werken</h2>
+<p>Mijn eerste prioriteit is een volledige native toetsenbord-/hulptechnologieroute. Daarnaast tonen exacte, gepinde Calc-functieproeven gedeeltelijk gelezen getallen, bijvoorbeeld <code>1 234,56 → 1</code>, en controlepunten bij wijzigen tijdens bewaren en sluiten met meerdere gewijzigde documenten.</p>
+<p>Die opslagproeven gebruikten geheugenstubs; echte bestanden/vensters zijn daarmee niet getest en er zijn geen productie-incidenten vastgesteld. De vijf P0’s hieronder betekenen ‘vroeg een concrete bewijsproef uitvoeren’. Ze zijn geen vijf bewezen productiefouten. <a href="OpenAEC-UI-verdiepingsonderzoek.html#module-01">Bediening</a> · <a href="OpenAEC-UI-verdiepingsonderzoek.html#module-04">getalinvoer</a> · <a href="OpenAEC-UI-verdiepingsonderzoek.html#module-05">bewaren/sluiten</a>.</p></section>
+<section><h2>Wat er al is en beschermd moet worden</h2>
+<p>Style 0.4 is al geïmplementeerd als componentmodule met een generator van dezelfde JSON naar Rust/CSS en een gedeelde B2-bibliotheek. De read-only afleidingscheck slaagt voor vijf thema’s en 31 rollen. De eerdere algemene prototypebeschrijving is hiervoor gecorrigeerd. De reviewhost heeft echte commandobindings, Escape/Enter en correcte tabelpositie↔object-ID-mapping. Zij noemt zichzelf reviewhulp: een succesreactie daar bewijst geen echte bestands-I/O of voltooide appmigratie.</p>
+<p>Behoud bij migratie bronfuncties zoals Calc-rasterbediening/formules/selectie/rapporttaal en PDF-coördinaten/snap/arceringsmetadata/uitvoer. De PDF-bron heeft al strikte én bewuste prefix-getalhelpers ; 18 bestaande pure getal-/foutredentests slagen. Toch verschilt de notatieregel: <code>1.234</code> wordt bij die PDF-helper 1,234 decimaal, bij de onderzochte Calc-route 1234. Maak de interpretatie per context kenbaar en behoud de betekenis van bestaande bestanden.</p>
+<p>Afsluitcontrole: Style/Calc/BIM-validator staan op de vastgelegde onderzochte HEADs. PDF heeft daarna een hosted-web-release gekregen; 37 van 38 eerder gecachte paden zijn daarbij gelijk, main.js is gewijzigd. Die nieuwe hostintegratie is niet gevalideerd. Alle oorspronkelijke proefresultaten houden hun eigen commit. <a href="OpenAEC-UI-versieaudit.json">Versies en grenzen</a> · <a href="OpenAEC-UI-verdiepingsonderzoek.html#contractaudit-04">componenten versus hostwerk</a>.</p></section>
+<section><h2>Belangrijkste vervolgpakketten</h2>
+<ul>
+<li><strong>Invoer/selectie:</strong> locale en eenheden, leeg/nul/gemengd, bereik-/filterscope, vervangen en undo. Ook taalregels voor hele-woordenzoeken; de onderzochte PDF-regex mist accentwoorden.</li>
+<li><strong>Documenten/taken:</strong> actuele/opgeslagen revisie, herstel, sluiten, fasevoortgang, annuleren en oude resultaten negeren.</li>
+<li><strong>Leesruimte/voorkeuren:</strong> grotere tekst, lange/bijna gelijke namen, volledige waarde en kopiëren. Nieuwe 0.4-tabs gebruiken al tekstlayout. Reduced motion bestaat al in web-CSS; de schaduwmarkering van tabelselectie vraagt een afzonderlijke systeemcontrastproef.</li>
+<li><strong>Tablet/offline:</strong> kies beloofde taken/apparaten. Lokale bytes bewijzen geen koude offlineherstart met externe worker/WASM; cache-identiteit op bestandsnaam vraagt integratiebewijs.</li>
+<li><strong>Uitvoer:</strong> schaal, metadata, materiaalbetekenis en papierleesbaarheid. Kleine secundaire tekst in de onderzochte Calc-HTML-rapportvariant geeft 2,563:1 op wit; dat is een statische bronmeting, niet alle PDF-/papieruitvoer.</li>
+</ul><p><a href="OpenAEC-UI-verdiepingsonderzoek.html#findings">Alle bevindingen en hun bewijskracht</a>. Dit zijn werkpakketten om gericht te kiezen, geen opdracht alles tegelijk uit te voeren.</p></section>
+<section><h2>Voorstel voor ons gezamenlijke plan</h2>
+<ol>
+<li><strong>Kies de eerste scope:</strong> twee/drie kerntaken, doelplatformen, invoermethoden en hulptechnologie, binnen bestaande migratievolgorde en appuitsluitingen.</li>
+<li><strong>Bewijs de basis:</strong> native bedienen/begrijpen en Calc rekenen/bewaren, inclusief fouten, annuleren en herstel.</li>
+<li><strong>Vergelijk font en dichtheid:</strong> dezelfde AEC-inhoud en beheerst gevarieerde condities; meet fouten, hulp, comfort en zelfstandig taakresultaat.</li>
+<li><strong>Leg contracten vast:</strong> benut bestaande 0.4-tokens/componenten; specificeer hostgedrag en bronfeatures/afwijkingen.</li>
+<li><strong>Migreer complete taken:</strong> invoer→bewaren→heropenen→uitvoer toetsen; daarna volgende component/app, met regressiebewijs en terugweg.</li>
+</ol><p><a href="OpenAEC-UI-taakproeven.html">Zes concrete proefopzetten met fixtures en benodigd bewijs</a> · <a href="OpenAEC-UI-verdiepingsonderzoek.html#module-14">Validatiestrategie</a>. Deze zes volledige taakproeven zijn nog niet uitgevoerd.</p></section>
+<section><h2>Besluiten om samen te nemen</h2>
+<ul>
+<li>Welke taken/platformen bepalen de eerste proef en wie beoordeelt domeinbetekenis?</li>
+<li>Welke font-/leesruimtekeuzes heropenen we naast de besloten vormtaal?</li>
+<li>Wat betekenen invoer, selectie, opgeslagen revisie, herstel en annuleren precies?</li>
+<li>Welke rapport-/taalfuncties, offline-/tablettaken en papieruitvoer moet de eerste fase behouden?</li>
+<li>Welke uitkomst telt als voldoende bewijs, en welk ontbrekend bewijs blokkeert uitrol?</li>
+</ul><p>Het nachtelijke bureauonderzoek en de dossiercontrole zijn afgerond. De volgende fase is gezamenlijke besluitvorming en echte taak-/platform-/gebruikersvalidatie.</p></section>

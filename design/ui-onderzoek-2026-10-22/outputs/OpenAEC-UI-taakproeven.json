@@ -1,0 +1,248 @@
+{
+  "updated_at": "2026-10-23T06:03:23+02:00",
+  "status": "Concept voor gezamenlijke besluitvorming; geen van deze zes taakproeven is uitgevoerd.",
+  "scope": "Onderzoeksuitkomst vertaald naar reviewbare proefopzet; geen productiecode, fixtures in echte apps, deelnemerswerving of uitrol gestart.",
+  "decision_inputs": [
+    "Kies eerste doelapp/kerntaak conform bestaande migratievolgorde, platformen en ondersteunde hulptechnologie.",
+    "Bepaal invoer-/selectie-/revisie-/offlinecontract, domeintolerantie en behoud van bronfeatures.",
+    "Leg per taak vooraf toetsbaar succes, blokkade, eigenaar en nodig bewijs vast."
+  ],
+  "fixtures": [
+    {
+      "id": "TP-01",
+      "group": "Bedienen en begrijpen",
+      "title": "Kerntaak zonder muis, met modale onderbreking",
+      "given": "Synthetisch document met twee benoemde objecten, invoerveld, keuzeveld, status, toolbar en gewijzigd tabblad.",
+      "actions": [
+        "Bereik de opdracht en kies object B; wijzig een waarde met alleen toetsenbord.",
+        "Open de gewijzigde-documentdialoog; controleer naam, uitleg, beginfocus en Tab/Shift-Tab.",
+        "Probeer Enter/Escape en achtergrondopdrachten, annuleer en hervat bij een logische focusplek."
+      ],
+      "expected": [
+        "Bedoelde taak zelfstandig uit te voeren; naam/rol/waarde/toestand komen overeen met zichtbare UI.",
+        "Alleen opdrachten in de toegestane context veranderen data; annuleren bewaart de concept-/documentstaat zoals afgesproken.",
+        "Focus en selectie blijven onderscheidbaar."
+      ],
+      "evidence": [
+        "Exacte app/build/OS/hulptechnologie en een taaklog; toegankelijkheidsboom plus handmatige observatie.",
+        "Fouten, hulp, taakresultaat en herstel; een screenshot alleen is onvoldoende."
+      ],
+      "finding_ids": [
+        "UI-001",
+        "UI-002",
+        "UI-056"
+      ],
+      "source_ids": [
+        "A05",
+        "A06",
+        "R78",
+        "R83"
+      ],
+      "status": "Voorgestelde proef; niet uitgevoerd"
+    },
+    {
+      "id": "TP-02",
+      "group": "Rekenen en bewaren",
+      "title": "Getalbetekenis, formule en behouden invoertekst",
+      "given": "Kleine begrotingsfixture: hoeveelheid 12,5 × prijs 2,40 geeft 30,00; lege waarde en nul apart; bestaande ondersteunde formule =2*3 met verwacht resultaat 6.",
+      "actions": [
+        "Type/plak 0,1; 0.1; 1.234; 1 234,56; 12abc; 1,2,3 en herstel na een fout.",
+        "Toets dezelfde invoercontext in de gekozen bronapp en nieuwe host; benoem ambigue interpretatie vóór commit.",
+        "Bevestig/annuleer/undo; bewaar/heropen en vergelijk canonieke waarde, eenheid, formule en getoonde notatie."
+      ],
+      "expected": [
+        "Verwachte resultaten en precisie per veld vooraf vastgelegd; ongeldige suffixen mogen niet stil een andere betekenis krijgen.",
+        "Leeg is niet onbedoeld nul; herstelbare tekst blijft beschikbaar.",
+        "Legacybestanden behouden hun oorspronkelijke betekenis; nieuw invoerbeleid wordt niet stil op oude data toegepast."
+      ],
+      "evidence": [
+        "Voor/na-tekst, gecommitteerde waarde, formaat/locale/eenheid en heropende data.",
+        "Positieve controls voor geldige invoer en ondersteunde formule naast afwijzingsgevallen."
+      ],
+      "finding_ids": [
+        "UI-012",
+        "UI-013",
+        "UI-014",
+        "UI-033"
+      ],
+      "source_ids": [
+        "R15",
+        "R16",
+        "R73",
+        "R74",
+        "R45",
+        "R46"
+      ],
+      "status": "Voorgestelde proef; interpretatiecontract eerst kiezen"
+    },
+    {
+      "id": "TP-03",
+      "group": "Rekenen en bewaren",
+      "title": "Opslagrevisie, annuleren en meerdere documenten",
+      "given": "Twee gewijzigde documenten A/B met verschillende herkenbare inhoud; opslaginterface met gecontroleerd vertraagde/falende callbacks in een veilige testomgeving.",
+      "actions": [
+        "Start bewaren van A, wijzig A tijdens wachten en wissel naar B.",
+        "Laat twee saves in omgekeerde volgorde eindigen; leg gewenste revisieregel vooraf vast.",
+        "Sluit met A/B gewijzigd, wissel actieve tab; probeer bewaarfout, SaveAs-annulering en gewone succesvolle save."
+      ],
+      "expected": [
+        "Succes hoort bij het juiste document en de juiste revisie; een nieuwere wijziging wordt niet onterecht als opgeslagen gemarkeerd.",
+        "Geen nog-onbesliste gewijzigde documenten sluiten.",
+        "Annuleren/falen bewaart werk; gewone succesvolle route blijft bruikbaar."
+      ],
+      "evidence": [
+        "Daadwerkelijk geschreven en heropende bestanden, revisie-/documentlog en vensteruitkomst.",
+        "Alleen testdata; geheugenstubs tellen niet als deze integratieproef."
+      ],
+      "finding_ids": [
+        "UI-016",
+        "UI-017"
+      ],
+      "source_ids": [
+        "R22",
+        "R23",
+        "R24",
+        "R29"
+      ],
+      "status": "Voorgestelde integratieproef; niet uitgevoerd"
+    },
+    {
+      "id": "TP-04",
+      "group": "Selectie en taakbehoud",
+      "title": "Identiteit blijft correct bij filteren en sorteren",
+      "given": "Twaalf objecten met stabiele IDs en herhaalde zichtbare namen; vijf geselecteerd, waarvan drie na filteren buiten beeld.",
+      "actions": [
+        "Sorteer, filter, klap een ouder in/uit en vergelijk boom/raster/eigenschappen.",
+        "Controleer selectieteller en actiescope; voer één herstelbare bulkactie uit en undo.",
+        "Toets logisch rij-/kolomverband buiten het zichtbare virtuele bereik en verlaat het raster."
+      ],
+      "expected": [
+        "Bedoelde IDs en afgesproken filter-/afstammelingenscope blijven behouden of bewust zichtbaar gewijzigd.",
+        "Actieve cel, focus en objectselectie zijn afzonderlijk begrijpelijk.",
+        "Undo herstelt de bedoelde transactie; verborgen selectie wordt niet ongemerkt geraakt."
+      ],
+      "evidence": [
+        "ID-lijsten vóór/na, taakresultaat, keyboard-/hulptechnologieobservatie en bronfeaturebaseline."
+      ],
+      "finding_ids": [
+        "UI-008",
+        "UI-009",
+        "UI-010",
+        "UI-011"
+      ],
+      "source_ids": [
+        "A15",
+        "A17",
+        "A19",
+        "R78"
+      ],
+      "status": "Voorgestelde proef; productselectiecontract eerst kiezen"
+    },
+    {
+      "id": "TP-05",
+      "group": "Viewer en uitvoer",
+      "title": "Coördinaten en visuele betekenis door de uitvoerketen",
+      "given": "Eén synthetische PDF met bekende geometrie, niet-nul cropoffset, rotatie en twee benoemde arceringen. IFC alleen als afzonderlijke gekozen vervolgfixture.",
+      "actions": [
+        "Vergelijk paginarotaties 0/90/180/270, app-/OS-schaal en een bekende afstand.",
+        "Selecteer/snap/annuleer/undo; voer document uit, heropen en vergelijk geometrie, schaal, patronen en metadata.",
+        "Test de gekozen cold-offlinebelofte apart met afhankelijke worker/WASM en duidelijke gedeeltelijke/foutstatus."
+      ],
+      "expected": [
+        "Vooraf overeengekomen tolerantie en geometrie-/metadataresultaat gehaald; geen willekeurige ruimere tolerantie achteraf.",
+        "Document-/materiaalbetekenis blijft los van UI-thema; grijswaarden/papier herkenbaar.",
+        "Alleen daadwerkelijk gekozen offline-/tabletbelofte geldt als acceptatiecriterium."
+      ],
+      "evidence": [
+        "Bronfixture, build, meetwaarden, exported/heropend bestand en fysieke afdruk indien dat in scope is.",
+        "Pure rotatie/geometrie-tests zijn aanvullende aanwijzingen, niet deze volledige route."
+      ],
+      "finding_ids": [
+        "UI-024",
+        "UI-025",
+        "UI-026",
+        "UI-030",
+        "UI-041",
+        "UI-043"
+      ],
+      "source_ids": [
+        "R30",
+        "R31",
+        "R53",
+        "R77",
+        "R39",
+        "R55"
+      ],
+      "status": "Voorgestelde proef; scope/tolerantie nog te besluiten"
+    },
+    {
+      "id": "TP-06",
+      "group": "Leesbaarheid en voorkeuren",
+      "title": "AEC-tekens, ruimte en systeemvoorkeuren",
+      "given": "Zelfde inhoud/fontgewicht/taak voor elke fontconditie; identifiers I/l/1/O/0, technische tekens ⌀ Ø − ± ≤ ≥ µ ° m² m³ en lange objectnamen. Compact en ruim profiel apart vergelijken.",
+      "actions": [
+        "Lees/zoek/neem codes, getallen en eenheden over; varieer font gecontroleerd en wissel volgorde.",
+        "Herhaal bij gekozen schaal en venstermaat, met keyboardfocus/selection/invalid/disabled tegelijk.",
+        "Toets eigen HC én echte OS-contrastkleuren, reduced motion en de afgesproken themaoverride.",
+        "Vergelijk bijna gelijke namen/revisies en gelijke basenames in verschillende projecten; vraag volledige tekst op en kopieer de afgesproken waarde."
+      ],
+      "expected": [
+        "Geen ontbrekende of betekenisveranderende glyphs/fallback; fouten en zelfstandig taakresultaat als hoofdmaat, comfort/voorkeur daarnaast.",
+        "Focus/selectie/status herkenbaar zonder schaduw of uitsluitend kleur; inhoud en bediening bereikbaar.",
+        "Gereduceerde beweging behoudt voortgang en taakbediening; actuale app-/rendereruitvoering bewezen.",
+        "Een eventuele verkorting bewaart onderscheidende informatie; volledige waarde blijft zonder hover beschikbaar. Visuele afbreking/ellipsis verandert de gekopieerde identifier niet stil."
+      ],
+      "evidence": [
+        "Fontbestand/hash, features, effectieve maat/x-hoogte, monitor/schaal, foutsoort, hulp en comfort.",
+        "Vooraf gekozen criteria/deelnemers; geen universele fontwinnaar of arbitraire leessnelheidsgrens achteraf."
+      ],
+      "finding_ids": [
+        "UI-054",
+        "UI-057",
+        "UI-037",
+        "UI-005",
+        "UI-035",
+        "UI-058"
+      ],
+      "source_ids": [
+        "A107",
+        "A114",
+        "A115",
+        "R84",
+        "A71",
+        "A75",
+        "A80",
+        "A120",
+        "R71"
+      ],
+      "status": "Voorgestelde gebruiks-/platformproef; niet uitgevoerd",
+      "text_fixture_examples": [
+        "Project Zeekade – constructief model – fase02 – revisie03.ifc",
+        "Project Zeekade – constructief model – fase02 – revisie04.ifc",
+        "ProjectA/Constructie/model.ifc en ProjectB/Installatie/model.ifc",
+        "Café – Café – kolom Á – doorsnede ⌀20",
+        "مرحلة02 – gevel-A03.ifc",
+        "−0,001 kN/mm² · 12 345,67 m²",
+        "Bestand niet opgeslagen: Project Zeekade/Constructie/revisie03/model.ifc — schrijven geweigerd."
+      ]
+    }
+  ],
+  "environment_axes": [
+    "Eerst één gekozen basisplatform; vervolgens afzonderlijke bewijzen voor beloofde andere platformen.",
+    "Keyboard/hulptechnologie, pointer en alleen beloofde touch/penapparaten.",
+    "NL/EN en eventuele extra talen/IME volgens productscope.",
+    "Compact/ruim,100/150/200% schaal waar relevant, kleinere logische vensters.",
+    "Eigen thema’s, OS-systeemkleuren,reduced motion,online/koudeoffline volgens belofte."
+  ],
+  "report_fields": [
+    "Fixtureversie/appcommit/build/OS/framework/font-/datahash.",
+    "Taak/verwachting/waarneming/resultaat:pass,fail,not-run,not-applicable met reden.",
+    "Fout/hulp/herstel/taakresultaat, trace/export/boom waar passend.",
+    "Bevinding-/besluit-ID, eigenaar en herbeoordelingsvoorwaarde."
+  ],
+  "limits": [
+    "Geen testpercentages of tijdschattingen als belofte.",
+    "Uitgevoerde eerdere geïsoleerde proeven staan apart in OpenAEC-UI-proeven.json.",
+    "Voorgestelde desktop-/webscenario’s bewijzen geen native- of tabletuitvoering."
+  ]
+}

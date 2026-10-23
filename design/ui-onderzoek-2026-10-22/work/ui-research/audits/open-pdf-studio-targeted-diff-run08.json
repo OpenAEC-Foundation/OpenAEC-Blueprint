@@ -1,0 +1,205 @@
+{
+  "repo": "open-pdf-studio",
+  "head": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+  "tree_truncated": false,
+  "tree_blobs": 14579,
+  "compared": 31,
+  "unchanged": 24,
+  "changed": [
+    "open-pdf-studio/js/pdf/pdf-viewport.js",
+    "open-pdf-studio/js/tools/snap-engine.js",
+    "open-pdf-studio/js/main.js",
+    "open-pdf-studio/js/text/text-edit-appearance.js",
+    "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+    "open-pdf-studio/js/pdf/print-opdracht.js",
+    "open-pdf-studio/js/pdf/print-pagina-instelling.js"
+  ],
+  "files": [
+    {
+      "path": "open-pdf-studio/js/pdf/pdf-viewport.js",
+      "same_git_blob": false,
+      "old_blob": "6f9cf7f280f4fefe77185aa8aa5f404730857d80",
+      "head_blob": "85b52dd96bb353306375795426f783d53e6ec162"
+    },
+    {
+      "path": "open-pdf-studio/js/mobile/touch-gestures.js",
+      "same_git_blob": true,
+      "old_blob": "dd84682d0ba99df54dcb34d0263878876f059539",
+      "head_blob": "dd84682d0ba99df54dcb34d0263878876f059539"
+    },
+    {
+      "path": "open-pdf-studio/js/tools/snap-engine.js",
+      "same_git_blob": false,
+      "old_blob": "3b12384225bc2e41eab15d0984624ccdf4dbac6a",
+      "head_blob": "86731861aca981336da93e3bbd6ec429dade2ddb"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/measurement.js",
+      "same_git_blob": true,
+      "old_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699",
+      "head_blob": "b76f06cd3cf68623e69b1de30924ff9b3376a699"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/scale-from-measurement.js",
+      "same_git_blob": true,
+      "old_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5",
+      "head_blob": "dd8998126e7837d0e1da3bb9e027b0c759ff80e5"
+    },
+    {
+      "path": "open-pdf-studio/js/core/stores/interaction-store.ts",
+      "same_git_blob": true,
+      "old_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615",
+      "head_blob": "7c80473f7dc648a2b51cc0984c1681b58ec34615"
+    },
+    {
+      "path": "open-pdf-studio/js/main.js",
+      "same_git_blob": false,
+      "old_blob": "50401f590bca50f571b4e0f6e342d0edc667e8ab",
+      "head_blob": "a45d31396b28d19e1b811f06c119f444709337d1"
+    },
+    {
+      "path": "open-pdf-studio/js/mobile/mobiele-gereedschappen.js",
+      "same_git_blob": true,
+      "old_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5",
+      "head_blob": "0c2ddd4f4eae1101cea62768f485c596e5c6fca5"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/weergave-rotatie.js",
+      "same_git_blob": true,
+      "old_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5",
+      "head_blob": "507811d046ce37bb1cd5ea88cc5c21574bcef8a5"
+    },
+    {
+      "path": "open-pdf-studio/js/tools/tools/scale-measure-tool.js",
+      "same_git_blob": true,
+      "old_blob": "9795fa5d696e02193e294352b1c113534bf6e181",
+      "head_blob": "9795fa5d696e02193e294352b1c113534bf6e181"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5",
+      "head_blob": "b4680a4a87b0f5ce5c67b8680de1236d5d274fc5"
+    },
+    {
+      "path": "open-pdf-studio/js/text/text-edit-appearance.js",
+      "same_git_blob": false,
+      "old_blob": "bb79953dd0ab4d2a2fe52bbfd7b0dc353a8d102c",
+      "head_blob": "c82098c70514cdeca41847cc7b5d3c6546fd52d6"
+    },
+    {
+      "path": "open-pdf-studio/js/i18n/config.js",
+      "same_git_blob": true,
+      "old_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131",
+      "head_blob": "bee9c7c58f07dec4d7af9db41cde28d887bd8131"
+    },
+    {
+      "path": "open-pdf-studio/js/i18n/useTranslation.js",
+      "same_git_blob": true,
+      "old_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8",
+      "head_blob": "8cb54ed8a5ab6ebc9082595e35efdf56016467a8"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/rendering/hatch-patterns.js",
+      "same_git_blob": true,
+      "old_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49",
+      "head_blob": "e7b4bfebe292d7902bbac525e2058c27e143ed49"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6",
+      "head_blob": "9ee77d1f279f8d7988bd153a76bafb4dd87767c6"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/saver/hatch-meta.js",
+      "same_git_blob": false,
+      "old_blob": "dd70de546dbd5bc4f52821b7bb7cc6a911942f98",
+      "head_blob": "1f4305216e8e857d0991e8cb59880272b956c634"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/saver/hatch-meta.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "274c6ef49917664ee13013683aa19ac51a7889dd",
+      "head_blob": "274c6ef49917664ee13013683aa19ac51a7889dd"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-opdracht.js",
+      "same_git_blob": false,
+      "old_blob": "5f6a6a942bc8709b87a2121683c3f0c2df772cd5",
+      "head_blob": "7807b6cf0afd6e59d86746a5c6bd42e0d83de780"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-plaatsing.js",
+      "same_git_blob": true,
+      "old_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58",
+      "head_blob": "32cc540dd9ce1e5313cbb0d40ae966ca05011b58"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-doel.js",
+      "same_git_blob": true,
+      "old_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595",
+      "head_blob": "30ab851dbf0af1ca02b92605c02a73efbea17595"
+    },
+    {
+      "path": "open-pdf-studio/js/search/find-controller.js",
+      "same_git_blob": true,
+      "old_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff",
+      "head_blob": "7c4dc70622eb6b36bb9b8901eea95a8562cd41ff"
+    },
+    {
+      "path": "open-pdf-studio/js/search/search-sources.js",
+      "same_git_blob": true,
+      "old_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d",
+      "head_blob": "93ff7900fa4d3f77cf35b344a4de0ad0772e497d"
+    },
+    {
+      "path": "open-pdf-studio/js/search/search-sources.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b",
+      "head_blob": "90a112dfb0d24b91ef0136c025e21c3aca75017b"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/components/FindBar.jsx",
+      "same_git_blob": true,
+      "old_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e",
+      "head_blob": "ea61265677af543c40b779fe73c5ed76d585fa7e"
+    },
+    {
+      "path": "open-pdf-studio/js/solid/stores/findBarStore.js",
+      "same_git_blob": true,
+      "old_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8",
+      "head_blob": "cf5ec7481308eab593ffe91f227c74da273e51a8"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/vlak-ringen.js",
+      "same_git_blob": true,
+      "old_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12",
+      "head_blob": "9a82b80397c253f767520ecb326ad34acc2e4e12"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-pagina-instelling.js",
+      "same_git_blob": false,
+      "old_blob": "48cdaf982f517d9bd34beb7f74385650cd8ccff1",
+      "head_blob": "f96bed7753f6e9d9de842065e9ba4402e2023cbb"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-plaatsing.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30",
+      "head_blob": "7c048c8840b4d19a4ff921d2b01fc3862e6eca30"
+    },
+    {
+      "path": "open-pdf-studio/js/pdf/print-doel.test.mjs",
+      "same_git_blob": true,
+      "old_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8",
+      "head_blob": "2afdbe432fdfe475e97e5a0a46746f95b91bc0f8"
+    },
+    {
+      "path": "open-pdf-studio/js/annotations/arc-points.js",
+      "same_git_blob": true,
+      "old_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d",
+      "head_blob": "74c19cb3403d7588e24c110678586b1adbd9e12d"
+    }
+  ]
+}

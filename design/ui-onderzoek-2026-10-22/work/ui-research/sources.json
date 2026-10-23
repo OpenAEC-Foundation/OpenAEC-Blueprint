@@ -1,0 +1,2003 @@
+[
+  {
+    "id": "A01",
+    "title": "iced issue 552: Implement accessibility support",
+    "url": "https://github.com/iced-rs/iced/issues/552",
+    "type": "Primaire upstream-issue",
+    "checked_at": "2026-10-23",
+    "supports": "Gevraagde platformsemantiek; issue staat bij raadpleging open.",
+    "limits": "Issue bestaat sinds 2020. Status bewijst niet zelfstandig de complete huidige mogelijkheden; gepinde bron apart onderzocht. Issue opnieuw geraadpleegd tijdens versieaudit; open status op zichzelf bewijst geen concrete appbeperking."
+  },
+  {
+    "id": "A02",
+    "title": "iced issue 489: Keyboard focus and interactions",
+    "url": "https://github.com/iced-rs/iced/issues/489",
+    "type": "Primaire upstream-issue",
+    "checked_at": "2026-10-23",
+    "supports": "Historisch gemelde focus- en toetsenbordproblemen; nog open.",
+    "limits": "Geen recente OpenAEC-runtimeproef. Claims uit de oorspronkelijke melding niet klakkeloos als actueel overnemen. Issue opnieuw geraadpleegd tijdens versieaudit; open status op zichzelf bewijst geen concrete appbeperking."
+  },
+  {
+    "id": "A03",
+    "title": "iced 0.13.1: standaardknop",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/widget/src/button.rs#L256",
+    "type": "Gepinde upstream-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Button operate/on_event en muis-/touchafhandeling in versie 0.13.1.",
+    "limits": "De inhoud van de knop of een applicatie kan aanvullende routes leveren. Geen conclusie over alle apps."
+  },
+  {
+    "id": "A04",
+    "title": "iced 0.13.1: officieel todos-voorbeeld",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/examples/todos/src/main.rs#L142",
+    "type": "Gepinde upstream-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Expliciete TabPressed-afhandeling met focus_next/focus_previous.",
+    "limits": "Een voorbeeld is geen bewijs dat alle widgets volledig te focussen zijn."
+  },
+  {
+    "id": "A05",
+    "title": "W3C APG: Developing a Keyboard Interface",
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+    "type": "Primaire informatieve praktijkrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Samenhang tussen Tab-volgorde, focus, selectie en samengestelde bediening.",
+    "limits": "Webpatroon; native implementatiemechanismen verschillen. Geen algemene verplichting om elk APG-detail te kopiëren."
+  },
+  {
+    "id": "A06",
+    "title": "W3C APG: Modal Dialog",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "type": "Primaire informatieve praktijkrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Beginfocus, modale focusgrens en logisch focusherstel.",
+    "limits": "ARIA-attributen zijn webtechniek; equivalent native gedrag moet apart worden bewezen."
+  },
+  {
+    "id": "A07",
+    "title": "W3C APG: Toolbar",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/",
+    "type": "Primaire informatieve praktijkrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Groepsgewijze focus en bediening met pijltjestoetsen; conflicten met ingebedde invoer.",
+    "limits": "Geen normatieve eis voor elke mogelijke ribbonvorm. Beperkte samenvatting; precieze patronen in originele bron."
+  },
+  {
+    "id": "A08",
+    "title": "AccessKit: Accessibility infrastructure for UI toolkits",
+    "url": "https://accesskit.dev/",
+    "type": "Primaire projectdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Platformtoegankelijkheid voor zelfgetekende UI-toolkits vereist semantische integratie.",
+    "limits": "Een toolkit moet de integratie zelf leveren. Het toevoegen van een dependency bewijst geen bruikbare eigen widgets."
+  },
+  {
+    "id": "A09",
+    "title": "WCAG 2.2: Keyboard",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+    "type": "Primaire uitleg bij normatief criterium",
+    "checked_at": "2026-10-22",
+    "supports": "Bedienbaarheid via een toetsenbordinterface en de path-dependent uitzonderingen.",
+    "limits": "Geen juridische scopebeoordeling; uitleg zegt niet dat elke zichtbare knop afzonderlijk focusbaar moet zijn als equivalente functionaliteit bestaat."
+  },
+  {
+    "id": "A10",
+    "title": "WCAG 2.2: Character Key Shortcuts",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html",
+    "type": "Primaire uitleg bij normatief criterium",
+    "checked_at": "2026-10-22",
+    "supports": "Voorwaarden voor teken-only sneltoetsen, uitschakelen, herbinding of focuscontext.",
+    "limits": "Niet alle sneltoetsen vallen onder deze specifieke eis; technische toets per binding nodig."
+  },
+  {
+    "id": "A11",
+    "title": "Microsoft: Commanding basics",
+    "url": "https://learn.microsoft.com/en-us/windows/apps/design/basics/commanding-basics",
+    "type": "Primaire leveranciersrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Opdrachtoppervlakken, feedback en verschil tussen bevestigen en undo.",
+    "limits": "Windows-context; geen universele optimumindeling en geen vergelijkend AEC-onderzoek."
+  },
+  {
+    "id": "A12",
+    "title": "Microsoft: Windows ribbons",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/uxguide/cmd-ribbons",
+    "type": "Historische primaire leveranciersrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Stabiele basisgroepen en contextuele functies als ontwerpprecedent.",
+    "limits": "Oudere Windows-richtlijn. Geen actuele cross-platform specificatie of rechtvaardiging voor alle automatische tabwissels."
+  },
+  {
+    "id": "A13",
+    "title": "Reddit r/rust: Why do people like iced?",
+    "url": "https://www.reddit.com/r/rust/comments/1kc87v9/why_do_people_like_iced/",
+    "type": "Openbare ontwikkelaarservaringen",
+    "checked_at": "2026-10-22",
+    "supports": "Zowel waardering voor layout/architectuur als meldingen van zelf te bouwen focusgedrag.",
+    "limits": "Anekdotisch en historisch, geen representatieve vergelijking of actuele frameworkcertificering."
+  },
+  {
+    "id": "A14",
+    "title": "Hacker News: Command palettes",
+    "url": "https://news.ycombinator.com/item?id=29373536",
+    "type": "Openbare gebruikersdiscussie",
+    "checked_at": "2026-10-22",
+    "supports": "Tegengestelde ervaringen met getypte opdrachten en zichtbare menu-discovery.",
+    "limits": "Discussie uit 2021; productclaims over AutoCAD/Revit niet als actuele feiten gebruikt."
+  },
+  {
+    "id": "R01",
+    "title": "OpenAEC gedeelde runtime",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/runtime.rs#L90",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Algemene key-subscription, domeinsubscription, schaal en appcontract.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "R02",
+    "title": "OpenAEC Command-model",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/model.rs#L24",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Huidige commandovelden, shortcut-string en settings-staat.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "R03",
+    "title": "OpenAEC shell en lint",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/shell.rs#L21",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Shortcuts als hint, concrete knoproutes en breedtes op basis van tekentelling.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "R04",
+    "title": "OpenAEC modalwrapper",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/modal.rs#L30",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Overlay, plaatsing en eventafhandeling; geen algemeen focusbewaarcontract in de wrapper.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "R05",
+    "title": "OpenAEC popover",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/popover.rs#L8",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Ankerplaatsing, overlay en sluitroutes.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "R06",
+    "title": "OpenAEC crate-dependencies",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/Cargo.toml#L14",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "iced exact 0.13.1; lockfile daarnaast op relevante toegankelijkheidsnamen doorzocht.",
+    "limits": "Statische broninspectie; domeinapps kunnen uitbreidingen hebben. Geen native gedragstest uitgevoerd."
+  },
+  {
+    "id": "A15",
+    "title": "W3C APG: Grid pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/grid/",
+    "type": "Primaire informatieve toegankelijkheidspatronen",
+    "checked_at": "2026-10-22",
+    "supports": "Verschil tussen gridnavigatie en bediening binnen een cel; beheerde focus.",
+    "limits": "Webpatroon, geen native implementatiegarantie of vervanging voor gebruikerstests."
+  },
+  {
+    "id": "A16",
+    "title": "W3C APG: Table pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+    "type": "Primaire informatieve toegankelijkheidspatronen",
+    "checked_at": "2026-10-22",
+    "supports": "Statische tabel versus interactief grid; voorkeur voor passende HTML-semantiek.",
+    "limits": "Een leestabel mag losse interactieve onderdelen bevatten; niet ieder interactief tabelonderdeel vereist een volledig grid."
+  },
+  {
+    "id": "A17",
+    "title": "W3C APG: Treegrid pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/",
+    "type": "Primaire informatieve toegankelijkheidspatronen",
+    "checked_at": "2026-10-22",
+    "supports": "Hiërarchische interactieve tabel en onderscheid tussen focus en meervoudige selectie.",
+    "limits": "Voorbeeldpatroon, geen bewijs dat alle BIM-bomen als treegrid moeten worden gebouwd."
+  },
+  {
+    "id": "A18",
+    "title": "Carbon: Data table guidelines",
+    "url": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+    "type": "Primaire leveranciersrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Zichtbare batchacties; expliciete grens tussen standaard datatable en spreadsheet.",
+    "limits": "Ontwerpkeuzes voor Carbon, geen vergelijkend onderzoek of verplichte OpenAEC-maten."
+  },
+  {
+    "id": "A19",
+    "title": "AG Grid: Multi-row selection",
+    "url": "https://www.ag-grid.com/javascript-data-grid/row-selection-multi-row/",
+    "type": "Primaire actuele leveranciersdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "SelectAll kan alle, gefilterde of paginarijen omvatten; scope moet gekozen worden.",
+    "limits": "Bewijst beschikbare implementatievarianten; niet welke standaard OpenAEC-gebruikers prefereren."
+  },
+  {
+    "id": "A20",
+    "title": "AG Grid issue 1494: selectAllFiltered",
+    "url": "https://github.com/ag-grid/ag-grid/issues/1494",
+    "type": "Historische openbare ontwikkelaarservaring",
+    "checked_at": "2026-10-22",
+    "supports": "Melder verwachtte in 2017 selectie van uitsluitend gefilterde rijen.",
+    "limits": "Gesloten melding over oude versies 6/8. Niet als actueel AG Grid- of OpenAEC-defect gebruikt."
+  },
+  {
+    "id": "A21",
+    "title": "AG Grid: Accessibility",
+    "url": "https://www.ag-grid.com/javascript-data-grid/accessibility/",
+    "type": "Primaire leveranciersdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Gedocumenteerde afweging tussen virtualisatie, DOM-volgorde en schermlezers; paginering als optie.",
+    "limits": "Advies geldt voor de eigen component; vereist tests per daadwerkelijke renderer en hulptechnologie."
+  },
+  {
+    "id": "A22",
+    "title": "W3C APG: Grid and table properties",
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/grid-and-table-properties/",
+    "type": "Primaire informatieve toegankelijkheidspraktijk",
+    "checked_at": "2026-10-22",
+    "supports": "Logische rij-/kolomaantallen en posities bij ontbrekende of verborgen DOM-delen.",
+    "limits": "Correcte attributen alleen bewijzen geen bruikbare schermlezerervaring."
+  },
+  {
+    "id": "A23",
+    "title": "W3C WCAG 2.2 Understanding 3.3.4: Error prevention",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html",
+    "type": "Primaire toelichting bij WCAG-succescriterium",
+    "checked_at": "2026-10-22",
+    "supports": "Terugdraaien, controleren of bevestigen bij de in het criterium omschreven handelingen.",
+    "limits": "Understanding is informatief. Geen algemene plicht tot een dialoog bij elke celwijziging; native toepassing is ontwerpvertaling."
+  },
+  {
+    "id": "A24",
+    "title": "W3C WCAG 2.2 Understanding 3.3.1: Error identification",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+    "type": "Primaire toelichting bij WCAG-succescriterium",
+    "checked_at": "2026-10-22",
+    "supports": "Gedetecteerde invoerfout moet met item en tekst herkenbaar zijn.",
+    "limits": "Geen voorschrift dat een gebruiker bij elke onvoltooide toetsaanslag een foutmelding moet krijgen."
+  },
+  {
+    "id": "A25",
+    "title": "WHATWG HTML: Number state",
+    "url": "https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)",
+    "type": "Primaire levende webstandaard",
+    "checked_at": "2026-10-22",
+    "supports": "Numerieke hoeveelheid versus cijferidentificatie; spinboxafweging en localeconversie.",
+    "limits": "Browserstandaard; legt niet de parsing van Rust-tekstvelden vast. Concrete browser-/toetsenbordtests blijven nodig."
+  },
+  {
+    "id": "A26",
+    "title": "ECMAScript: parseFloat",
+    "url": "https://tc39.es/ecma262/multipage/global-object.html#sec-parsefloat-string",
+    "type": "Primaire taalstandaard",
+    "checked_at": "2026-10-22",
+    "supports": "ParseFloat leest een geldig prefix en meldt genegeerde suffix niet.",
+    "limits": "Taalgedrag, geen localeparser; gevolgen voor een app moeten in diens validatie-/commitroute worden nagegaan."
+  },
+  {
+    "id": "A27",
+    "title": "Thimbleby & Cairns (2010): Reducing number entry errors",
+    "url": "https://www.harold.thimbleby.net/NICE/RSInterface2010.pdf",
+    "type": "Primair gepubliceerd onderzoek",
+    "checked_at": "2026-10-22",
+    "supports": "Systematische analyse van number-entryfouten en foutafhandeling; onderscheid tussen ingevoerd en uitgevoerd getal.",
+    "limits": "Historische apparaten en expliciete modelaannames, veel medische context. Geen OpenAEC-effectmeting of universeel percentage.",
+    "doi": "10.1098/rsif.2010.0112"
+  },
+  {
+    "id": "A28",
+    "title": "GOV.UK: Recover from validation errors",
+    "url": "https://design-system.service.gov.uk/patterns/validation/",
+    "type": "Primaire ontwerp-/uitvoeringsrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Behoud invoer, maak fouten herstelbaar en valideer niet voortijdig zonder aangetoonde behoefte.",
+    "limits": "Dienstformulieren; continu rekenraster kan andere feedbackmomenten vragen. Niet klakkeloos naar native overnemen."
+  },
+  {
+    "id": "A29",
+    "title": "Reddit r/excel: Decimal numbers in CSV / Power Query",
+    "url": "https://www.reddit.com/r/excel/comments/1rzttrd/issue_with_decimal_numbers_when_importing_a_csv/",
+    "type": "Openbare gebruikerservaring en reacties",
+    "checked_at": "2026-10-22",
+    "supports": "Melder beschrijft veranderde waarden bij komma-/puntinterpretatie; reacties noemen bronlocale en tekstbehoud.",
+    "limits": "Anekdotisch, niet reproduceerbaar onderzocht; reacties zijn geen technische autoriteit of representatieve steekproef."
+  },
+  {
+    "id": "A30",
+    "title": "Microsoft Power Query: Number.FromText",
+    "url": "https://learn.microsoft.com/en-us/powerquery-m/number-fromtext",
+    "type": "Primaire productdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Expliciete culture-parameter beïnvloedt tekstinterpretatie.",
+    "limits": "Geen aanbeveling om Power Query of diens grammatica als OpenAEC-parser over te nemen."
+  },
+  {
+    "id": "A31",
+    "title": "BIPM SI Brochure, 9e editie v4.01 (juni 2026)",
+    "url": "https://www.bipm.org/documents/d/guest/si-brochure-9-pdf",
+    "type": "Primaire internationale SI-publicatie",
+    "checked_at": "2026-10-22",
+    "supports": "§5.4.3–5.4.4: waarde/eenheid, decimalen, groepering en consistente tabelnotatie.",
+    "limits": "Schrijfconventies, geen volledige UI-parser of domeinspecifiek precisiebeleid. De actuele geopende PDF is v4.01; sommige zoekindexsnippets noemen nog v3.02."
+  },
+  {
+    "id": "A32",
+    "title": "GOV.UK (2020): Changed input type for numbers, inclusief reacties",
+    "url": "https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/",
+    "type": "Historische primaire praktijkrapportage en openbare discussie",
+    "checked_at": "2026-10-22",
+    "supports": "Meldt onder meer onbedoelde scrollwijziging; bevat ook kritiek en antwoord over testversies en foutfeedback.",
+    "limits": "Veel genoemde browser-/hulptechnologieversies zijn oud. Geen actuele claim tegen ieder number-input of iedere spinbox."
+  },
+  {
+    "id": "R07",
+    "title": "Besloten OpenAEC 0.4-componenten",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/design/ontwerp-0.4/04-componenten.md#L1",
+    "type": "Gepinde OpenAEC-besluiten/broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Vastgelegde maten, uitlijning, focus, tabel- en fouttoestanden.",
+    "limits": "Reviewcode of vastgelegd ontwerp, geen bewijs van gedrag in alle productieapps; proeven beperken zich tot expliciet genoemde expressies.",
+    "local_file": "work/OpenAEC-Style-Repo/design/ontwerp-0.4/04-componenten.md"
+  },
+  {
+    "id": "R08",
+    "title": "Native Calc-review",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/src/bin/style_repo/calc_native.rs#L24",
+    "type": "Gepinde OpenAEC-besluiten/broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Voorbeeldraster met vaste kolommen, tekst 10 px en muisgestuurde enkelvoudige rijselectie.",
+    "limits": "Reviewcode of vastgelegd ontwerp, geen bewijs van gedrag in alle productieapps; proeven beperken zich tot expliciet genoemde expressies.",
+    "local_file": "work/OpenAEC-Style-Repo/src/bin/style_repo/calc_native.rs"
+  },
+  {
+    "id": "R09",
+    "title": "Gedeelde invoerhelpers",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/widgets.rs#L881",
+    "type": "Gepinde OpenAEC-besluiten/broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Number-control geeft String door; applicatie beheert betekenis en validatie.",
+    "limits": "Reviewcode of vastgelegd ontwerp, geen bewijs van gedrag in alle productieapps; proeven beperken zich tot expliciet genoemde expressies.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/widgets.rs"
+  },
+  {
+    "id": "R10",
+    "title": "Native review: lijndikte-acceptatie",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/src/bin/style_repo.rs#L2788",
+    "type": "Gepinde OpenAEC-besluiten/broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Volledige-stringpredicate voor f32 binnen 0–50, inclusief lege/punt-tussenstap.",
+    "limits": "Reviewcode of vastgelegd ontwerp, geen bewijs van gedrag in alle productieapps; proeven beperken zich tot expliciet genoemde expressies.",
+    "local_file": "work/OpenAEC-Style-Repo/src/bin/style_repo.rs"
+  },
+  {
+    "id": "R11",
+    "title": "Native review: PDF-splitsvoorbeeld",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/src/bin/style_repo/pdf_split_native.rs#L76",
+    "type": "Gepinde OpenAEC-besluiten/broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Komma vervangen, afronden, minimum één en fallback één in preview; geen bestanden schrijven.",
+    "limits": "Reviewcode of vastgelegd ontwerp, geen bewijs van gedrag in alle productieapps; proeven beperken zich tot expliciet genoemde expressies.",
+    "local_file": "work/OpenAEC-Style-Repo/src/bin/style_repo/pdf_split_native.rs"
+  },
+  {
+    "id": "R12",
+    "title": "Oorspronkelijke Calc: grid-toetsnavigatie",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridNavigation.ts#L30",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Pijltjes, Enter/F2, Tab, selectie en TSV-kopieerroutes.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/useGridNavigation.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R13",
+    "title": "Oorspronkelijke Calc: cel-editor",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/GridCellEditor.tsx#L66",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Editorformatter en commit-only-if-changed; bevestigen, annuleren en doorlopen.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/GridCellEditor.tsx",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R14",
+    "title": "Oorspronkelijke Calc: virtualizer",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridVirtualizer.ts#L14",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Cumulatieve rij-offsets, zichtbaar bereik en overscan.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/useGridVirtualizer.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R15",
+    "title": "Oorspronkelijke Calc: numericInput",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/utils/numericInput.ts#L9",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Gewone getallen en formulegrammatica; parseNlNumber als niet-formule-route.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/utils/numericInput.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R16",
+    "title": "Oorspronkelijke Calc: formatting",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/utils/formatting.ts#L16",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "NL-heuristiek, prefixparsing via parseFloat en nul als lege editortekst.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/utils/formatting.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R17",
+    "title": "Oorspronkelijke Calc: parsertests",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/test/numericInput.test.ts#L1",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Bestaande tests leggen puntheuristiek, formules, nul-leegconventie en round-tripvoorbeelden vast.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/test/numericInput.test.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R18",
+    "title": "Oorspronkelijke Calc: commitroute",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/useGridEditing.ts#L63",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "Gebruik van parseNumericInput bij getal-/valutacellen, met history en nul-/ongeldigonderscheid.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/useGridEditing.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R19",
+    "title": "Oorspronkelijke Calc: CostGrid",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/CostGrid.tsx#L499",
+    "type": "Gepinde oorspronkelijke OpenAEC-appbron",
+    "checked_at": "2026-10-22",
+    "supports": "De renderer toont een zichtbaar deel van de logische rijen en koppelt de navigatie aan een container.",
+    "limits": "Commit uit de bestaande harmonisatiemetadata, niet noodzakelijk huidige HEAD of geïnstalleerde versie. Geen volledige app of productiegegevens uitgevoerd.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/CostGrid.tsx",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "A33",
+    "title": "Microsoft: Progress controls",
+    "url": "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/progress-controls",
+    "type": "Primaire platformrichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Bepaalde/onbepaalde voortgang en uitleg over de lopende activiteit.",
+    "limits": "Windows-patroon. Ring/balk is geen universele cross-platform semantische regel."
+  },
+  {
+    "id": "A34",
+    "title": "W3C WCAG 2.2 Understanding 4.1.3: Status Messages",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+    "type": "Primaire toelichting bij WCAG-succescriterium",
+    "checked_at": "2026-10-22",
+    "supports": "Status zonder focusverplaatsing toegankelijk melden, inclusief incidentele voortgang en accessibility-API’s.",
+    "limits": "Informatieve toelichting; native app moet de eigen platformroute aantonen. Geen verplichting iedere procentstap uit te spreken."
+  },
+  {
+    "id": "A35",
+    "title": "Harrison e.a. (UIST 2007): Rethinking the Progress Bar",
+    "url": "https://www.chrisharrison.net/projects/progressbars/ProgBarHarrison.pdf",
+    "type": "Primair gepubliceerd gebruikersonderzoek",
+    "checked_at": "2026-10-22",
+    "supports": "Verschillende voortgangscurves beïnvloeden ervaren duur; 22 deelnemers, vaste duur 5,5 seconden.",
+    "limits": "Onderzoekslabpopulatie en korte vergelijkingen. Geen langdurige BIM-taak, werkelijke versnelling of rechtvaardiging voor onjuiste percentages."
+  },
+  {
+    "id": "A36",
+    "title": "Google web.dev: Optimize long tasks",
+    "url": "https://web.dev/articles/optimize-long-tasks",
+    "type": "Primaire browser-/performancedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Lange main-threadtaken blokkeren interactie; opsplitsen/yielding als oplossingsrichting.",
+    "limits": "50 ms is een webmeetdefinitie. Geen universele native prestatiegrens of gemeten OpenAEC-resultaat."
+  },
+  {
+    "id": "A37",
+    "title": "Mozilla MDN: beforeunload",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Beforeunload is niet betrouwbaar als laatste opslagmoment, vooral mobiel.",
+    "limits": "Gedrag blijft browser-/platformafhankelijk; een sluitwaarschuwing kan nog nuttig zijn, maar is geen herstelstrategie."
+  },
+  {
+    "id": "A38",
+    "title": "Qt QSaveFile",
+    "url": "https://doc.qt.io/qt-6/qsavefile.html",
+    "type": "Primaire toolkitdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Tijdelijk schrijven en commit/vervanging; direct-write-fallback verliest bescherming tegen gedeeltelijk overschrijven.",
+    "limits": "Ontwerpprecedent uit een andere toolkit. Geen voorstel voor Qt-migratie of garantie voor OpenAEC-filesystems."
+  },
+  {
+    "id": "A39",
+    "title": "Rust std::fs::rename",
+    "url": "https://doc.rust-lang.org/std/fs/fn.rename.html",
+    "type": "Primaire taal-/bibliotheekdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Vervanging en platform-/mountvoorwaarden bij rename.",
+    "limits": "Op zichzelf geen volledige crash-/stroomuitvalbestendigheidstest of netwerksharegarantie."
+  },
+  {
+    "id": "A40",
+    "title": "Tauri Window.destroy",
+    "url": "https://v2.tauri.app/reference/javascript/api/namespacewindow/#destroy",
+    "type": "Primaire toolkitdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Destroy forceert sluiten zonder opnieuw closeRequested uit te sturen.",
+    "limits": "Actuele Tauri 2-documentatie, geen daadwerkelijk gesloten venster in onze proef."
+  },
+  {
+    "id": "A41",
+    "title": "Autodesk: Is it possible to autosave projects in Revit",
+    "url": "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Does-an-Autosave-option-exist-for-Revit.html",
+    "type": "Primaire productsupport / tegenvoorbeeld",
+    "checked_at": "2026-10-22",
+    "supports": "Revit beschrijft complexiteit/performance bij autosave en onderscheid met herinneringen en back-ups.",
+    "limits": "Productspecifieke supportpagina. Zoekresultaat gaf inhoud; geopende pagina leverde geen extra tekst. Geen argument tegen ieder automatisch herstel."
+  },
+  {
+    "id": "A42",
+    "title": "LibreCAD-forum: files not being saved",
+    "url": "https://forum.librecad.org/files-not-being-saved-td5717999.html",
+    "type": "Historische openbare gebruikerservaring",
+    "checked_at": "2026-10-22",
+    "supports": "Verwarring tussen autosave/herstelbestanden, doelpad en handmatig opslaan.",
+    "limits": "Oude versies, oorzaak niet onafhankelijk gereproduceerd; niet als actuele LibreCAD-bug of gebruikersfout vastgesteld."
+  },
+  {
+    "id": "A43",
+    "title": "Reddit r/SolidWorks: Longest wait for a busy command",
+    "url": "https://www.reddit.com/r/SolidWorks/comments/1fe8kmb/",
+    "type": "Openbare gebruikersdiscussie met tegenvoorbeelden",
+    "checked_at": "2026-10-22",
+    "supports": "Zowel opgegeven taken als later voltooide lange taken; onduidelijkheid over wachten versus afsluiten.",
+    "limits": "Anekdotisch, deels humor. Geen representatieve prevalentie, productbenchmark of aanbevolen time-out."
+  },
+  {
+    "id": "A44",
+    "title": "iced 0.13.1 Task::abortable en Handle",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/runtime/src/task.rs#L173",
+    "type": "Gepinde primaire toolkitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Bestaande abortable taskstream en abort-handle in de gebruikte frameworkversie.",
+    "limits": "Geen automatische rollback van externe effecten of garantie dat los werkende workers eindigen."
+  },
+  {
+    "id": "A45",
+    "title": "Tauri: Calling Rust / Async Commands",
+    "url": "https://v2.tauri.app/develop/calling-rust/#async-commands",
+    "type": "Primaire toolkitdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Uitvoeringsverschil tussen async en gewone commands; zwaar werk moet de UI niet blokkeren.",
+    "limits": "Geen volledige audit van alle OpenAEC-commands. Async betekent geen onbeperkte CPU-capaciteit of automatische annulering."
+  },
+  {
+    "id": "A46",
+    "title": "WHATWG HTML: Downloading resources",
+    "url": "https://html.spec.whatwg.org/multipage/links.html#downloading-resources",
+    "type": "Primaire levende webstandaard",
+    "checked_at": "2026-10-22",
+    "supports": "Browser beheert de downloadprocedure met aanvullende stappen en mogelijke afbreekmomenten.",
+    "limits": "Geen geteste download in deze ronde; een anchor-click levert de app hier geen schijfwritebevestiging."
+  },
+  {
+    "id": "A47",
+    "title": "Mozilla MDN: AbortController.abort",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Abort ondersteunt onder meer fetch, responseconsumptie en streams.",
+    "limits": "Geen algemene garantie voor het stoppen of terugdraaien van native of onafhankelijke berekeningen."
+  },
+  {
+    "id": "A48",
+    "title": "Chrome: Page Lifecycle API",
+    "url": "https://developer.chrome.com/docs/web-platform/page-lifecycle-api",
+    "type": "Primaire browserplatformdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Sessie-einde is niet altijd detecteerbaar; verborgen/frozen/terminated vragen eigen omgang met staat.",
+    "limits": "Browseradvies, geen universele desktop-lifecycle. Werkelijke opslag en herstel moeten afzonderlijk worden getest."
+  },
+  {
+    "id": "R20",
+    "title": "Shell: voorkeuren opslaan en settings-snapshot",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/model.rs#L200",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Tijdelijke file + rename; preview/cancel/commit van thema, taal en schaal.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/model.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R21",
+    "title": "Runtime: close_requested en vensterinstellingen",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/runtime.rs#L32",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Domeinhaak met default true; eigen close-requestafhandeling met automatisch sluiten uit.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/runtime.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R22",
+    "title": "Calc App: autosave en sluiten",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/App.tsx#L314",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Actieve desktop-autosave met bestaand pad; sluitcallback kiest eerste gewijzigde document.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/App.tsx",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R23",
+    "title": "Calc useFileOperations: saveFile en browserfallback",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/hooks/useFileOperations.ts#L98",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Actief ID/snapshot vóór await; schoonmarkering na succes; browserdownload; bescherming van importbronformaten.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/hooks/useFileOperations.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R24",
+    "title": "Calc nativeFileService: schrijfroutes",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/file/nativeFileService.ts#L115",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Documentwrite roept writeTextFile aan; geen eigen temp/renamecontract zichtbaar in de wrapper.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/services/file/nativeFileService.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R25",
+    "title": "Calc historySlice",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/state/slices/historySlice.ts#L23",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Maximaal vijftig history-items met JSON-deepcopies, omschrijving en redo.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/state/slices/historySlice.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R26",
+    "title": "Calc fileService: serialisatie en major-versiecontrole",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/file/fileService.ts#L40",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Synchrone JSON-serialisatie; deserializer weigert nieuwe major-versie met uitleg.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/services/file/fileService.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R27",
+    "title": "Calc ProgressModal",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/common/ProgressModal.tsx#L14",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Spinner, tekst en optionele annuleercallback als component; geen onderliggende taakimplementatie in dit bestand.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/common/ProgressModal.tsx",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R28",
+    "title": "Gedeelde stijlen voor voortgang",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/widgets.rs#L219",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "De crate heeft progress-stylefuncties; stijl is geen taaklevensloopcontract.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/widgets.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R29",
+    "title": "Calc documentSlice.updateDocument",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/state/slices/documentSlice.ts#L91",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Documentupdate merge op ID; bestaande savecallback kan isModified overschrijven.",
+    "limits": "Statische broninspectie of expliciet geïsoleerde callbackproef; geen productieapp of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/state/slices/documentSlice.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "A49",
+    "title": "W3C: Target Size (Minimum), WCAG 2.5.8",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "AA: 24 × 24 CSS-pixels, met onder meer een afstandsuitzondering.",
+    "limits": "Webcriterium; geen universele native touchmaat of comfortbewijs. Kleine iconen zijn niet automatisch te kleine hitboxes."
+  },
+  {
+    "id": "A50",
+    "title": "W3C: Target Size (Enhanced), WCAG 2.5.5",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "AAA: 44 × 44 CSS-pixels met uitzonderingen.",
+    "limits": "Niet verwarren met het AA-minimum of Android dp."
+  },
+  {
+    "id": "A51",
+    "title": "W3C: Dragging Movements, WCAG 2.5.7",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "Waar van toepassing enkelvoudige pointerbediening zonder slepen; toetsenbordalternatief alleen is onvoldoende.",
+    "limits": "Essentiële en user-agentuitzonderingen moeten taakgericht worden beoordeeld. Native route apart toetsen."
+  },
+  {
+    "id": "A52",
+    "title": "W3C: Pointer Cancellation, WCAG 2.5.2",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "Beheersing van onbedoelde pointeractivatie, annuleren en commitmoment.",
+    "limits": "Niet iedere actie moet hetzelfde up-eventpatroon gebruiken; criterium bevat alternatieven/uitzonderingen."
+  },
+  {
+    "id": "A53",
+    "title": "W3C Pointer Events Level 3",
+    "url": "https://www.w3.org/TR/pointerevents3/",
+    "type": "Primaire webstandaard",
+    "checked_at": "2026-10-22",
+    "supports": "Pointertype, capture, touch-action en pointercancel als invoermechanismen.",
+    "limits": "Geen garantie voor palm rejection, apparaatdrivers of native iced-routes."
+  },
+  {
+    "id": "A54",
+    "title": "Android Compose: Accessibility API defaults",
+    "url": "https://developer.android.com/develop/ui/compose/accessibility/api-defaults#minimum-touch-target-sizes",
+    "type": "Primaire platformdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "48 dp minimumdoelen en onderscheid zichtbare component/uitgebreid aanraakgebied.",
+    "limits": "dp niet rechtstreeks gelijk aan CSS-pixels; hitboxuitbreiding kan overlappen."
+  },
+  {
+    "id": "A55",
+    "title": "Parhi, Karlson en Bederson (MobileHCI 2006): Target Size Study",
+    "url": "https://www.cs.umd.edu/~bederson/images/pubs_pdfs/p203-parhi.pdf",
+    "type": "Primair gepubliceerd gebruikersonderzoek",
+    "checked_at": "2026-10-22",
+    "supports": "Eenhandige duimdoelen: circa 9,2 mm discreet en 9,6 mm serieel als aanbevelingen binnen de onderzochte taken.",
+    "limits": "20 rechtshandigen, oude kleine HP iPAQ, staand; 17 mannen/3 vrouwen, 19–42 jaar. Geen handschoen-, pen- of moderne tabletvalidatie. DOI 10.1145/1152215.1152260."
+  },
+  {
+    "id": "A56",
+    "title": "Mozilla PDF.js: Examples",
+    "url": "https://mozilla.github.io/pdf.js/examples/",
+    "type": "Primaire bibliotheekdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Viewporttransformatie en afzonderlijke renderresolutie.",
+    "limits": "Niet de gepinde OpenAEC-dependencyversie. Appconventies niet nogmaals omkeren."
+  },
+  {
+    "id": "A57",
+    "title": "Mozilla PDF.js: PDFPageProxy API",
+    "url": "https://mozilla.github.io/pdf.js/api/draft/module-pdfjsLib-PDFPageProxy.html",
+    "type": "Primaire API-documentatie",
+    "checked_at": "2026-10-22",
+    "supports": "userUnit en zichtbare paginagrenzen als metadata.",
+    "limits": "Draftdocumentatie, geen geteste OpenAEC-UserUnit-ondersteuning."
+  },
+  {
+    "id": "A58",
+    "title": "Bluebeam Revu: Set the page scale",
+    "url": "https://support.bluebeam.com/revu/how-to/set-the-page-scale-on-drawing.html",
+    "type": "Primaire productdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Bekende afstand kalibreren, paginascope en afzonderlijke y-schaal als productprecedent.",
+    "limits": "Productspecifiek Revu 20/21; geen bewijs voor OpenAEC-meetnauwkeurigheid."
+  },
+  {
+    "id": "A59",
+    "title": "Shapr3D: Navigation Presets",
+    "url": "https://support.shapr3d.com/hc/en-us/articles/7873881091356-Navigation-Presets",
+    "type": "Primaire productdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Ondersteunt verschillende navigatiepresets voor uiteenlopende invoergewoonten.",
+    "limits": "Geen vergelijkend bewijs voor de beste OpenAEC-mapping."
+  },
+  {
+    "id": "A60",
+    "title": "buildingSMART BCF API release 3.0: Viewpoints",
+    "url": "https://github.com/buildingSMART/BCF-API/blob/release_3_0/README.md",
+    "type": "Primaire interoperabiliteitsspecificatie",
+    "checked_at": "2026-10-22",
+    "supports": "Camera, optionele componenten, clippingplanes en snapshot zijn verschillende onderdelen van viewpointcontext.",
+    "limits": "Versiespecifiek 3.0; geen conformanceaudit van OpenAEC of verplichting voor een losse screenshotfunctie."
+  },
+  {
+    "id": "A61",
+    "title": "Reddit Shapr3D: Using Shapr3D with mouse",
+    "url": "https://www.reddit.com/r/Shapr3D/comments/1vo45qa/using_shapr3d_with_mouse_big_mistake/",
+    "type": "Openbare ervaringen met tegenspraak",
+    "checked_at": "2026-10-22",
+    "supports": "Uiteenlopende muis-/penervaringen en aanbevelingen om presets te proberen.",
+    "limits": "Anekdotisch, zelfselectie; geen representatieve voorkeur, onafhankelijk geverifieerde identiteit of snelheidsmeting."
+  },
+  {
+    "id": "A62",
+    "title": "Bluebeam Community: Trouble transitioning",
+    "url": "https://community.bluebeam.com/discussion/6386/trouble-transitioning",
+    "type": "Historische openbare migratie-ervaring",
+    "checked_at": "2026-10-22",
+    "supports": "Mobiele gebruikers beschrijven gemiste vertrouwde meet-/markeerhandelingen en behoefte aan bestandstoegang.",
+    "limits": "Historische versieovergang/roadmap; niet gebruiken als huidige featurestatus. Geen populatieonderzoek."
+  },
+  {
+    "id": "A63",
+    "title": "Mozilla MDN: Storage quotas and eviction criteria",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Best-effortopslag, persistentieverzoek en verwijdering door browser/opslagdruk onderscheiden.",
+    "limits": "Verschilt per browser; gebruiker kan opslag verwijderen. Geen vaste universele retentiegarantie."
+  },
+  {
+    "id": "A64",
+    "title": "Mozilla MDN: Navigator.onLine",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Online is een OS-/browserhint, geen bewijs van bereikbaarheid van een specifieke projectdienst.",
+    "limits": "Geen OpenAEC-netwerkstoring getest."
+  },
+  {
+    "id": "A65",
+    "title": "Mozilla MDN: showDirectoryPicker",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/showDirectoryPicker",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Beperkte beschikbaarheid, secure context en gebruikersinteractie.",
+    "limits": "Capabilities op doelversies testen; geen volledige appfallbackaudit."
+  },
+  {
+    "id": "A66",
+    "title": "Shapr3D Sync: Manage project storage",
+    "url": "https://support.shapr3d.com/hc/en-us/articles/7873833167132-Shapr3D-Sync",
+    "type": "Primaire productdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Local only, Synced en Cloud only; offlinegebruik vraagt eerder gedownloade gegevens.",
+    "limits": "Productprecedent, geen advies voor verplicht cloudbeleid of onafhankelijke beveiligingsbeoordeling."
+  },
+  {
+    "id": "A67",
+    "title": "Reddit Shapr3D: Sync now forced?",
+    "url": "https://www.reddit.com/r/Shapr3D/comments/1nq4n37/sync_now_forced/",
+    "type": "Historische openbare gebruikersdiscussie",
+    "checked_at": "2026-10-22",
+    "supports": "Tegengestelde waardering voor sync en behoefte aan controle over bewaren.",
+    "limits": "Berichten uit 2025; geen bewijs voor actueel verplicht beleid, algemene voorkeur of dataverlies."
+  },
+  {
+    "id": "R30",
+    "title": "PDF viewport: scherm/pagina en pointer-pan",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/pdf-viewport.js#L1459",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Omzetting via rotatiemodule, DPR/backingstore apart, pointercapture en pointercancel bij pan.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/pdf-viewport.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R31",
+    "title": "PDF weergaverotatie: benoemde ruimten",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/weergave-rotatie.js#L1",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Pagina na documentrotatie versus extra weergaverotatie; inverse matrices en viewportgeometrie.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/weergave-rotatie.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R32",
+    "title": "PDF snap-engine",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/tools/snap-engine.js#L782",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Objectsnapradius gedeeld door schaal, kandidaatselectie en fallback.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/tools/snap-engine.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R33",
+    "title": "Bestaande PDF rotatie-unitproeven",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/weergave-rotatie.test.mjs#L1",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "25 bestaande tests uitgevoerd; import van pure tekstlaagmatrix in dezelfde snapshot.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/weergave-rotatie.test.mjs",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R34",
+    "title": "Native validator: illustratief wireframe",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/src/bin/style_repo/validator_native.rs#L178",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "SVG-illustratie, niet de daadwerkelijke IFC-renderer.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/OpenAEC-Style-Repo/src/bin/style_repo/validator_native.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R35",
+    "title": "BIM-validator: engine en externe dependencies",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/engine/ViewerEngine.ts#L21",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Externe worker/WASM; echte modelengine, import, camera, clipping en selectie. Geen offlineherstart bewezen.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/validator-8f837dd/viewer/src/engine/ViewerEngine.ts",
+    "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256"
+  },
+  {
+    "id": "R36",
+    "title": "PDF schaalhelper en kalibratietool",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/annotations/scale-from-measurement.js#L24",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Eenheden, geldige afstand en expliciete afronding van schaalstring. Aanvullend scale-measure-tool.js gecontroleerd voor twee punten/cancel/pagina.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/annotations/scale-from-measurement.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R37",
+    "title": "PDF mobiele gebaarfuncties",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/mobile/touch-gestures.js#L1",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Functies voor pinch, swipe en dubbel tikken; hoofdentry gelezen, volledige mounting niet aangetoond.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/mobile/touch-gestures.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R38",
+    "title": "BIM-validator: capture request-ID",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/lib/captureViewpoint.ts#L22",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "Verzoekcorrelatie en time-out; aanvullende engine capture op regel 1041 gebruikt camera/screenshot en vaste wachttijden.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/validator-8f837dd/viewer/src/lib/captureViewpoint.ts",
+    "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256"
+  },
+  {
+    "id": "R39",
+    "title": "BIM-validator: modelcache en actieve routes",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/engine/modelCache.ts#L29",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "IndexedDB en in-memory keys op fileName. Actieve schrijf-/herlaadaanroepen gecontroleerd in AppShell en CenterPanel.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/validator-8f837dd/viewer/src/engine/modelCache.ts",
+    "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256"
+  },
+  {
+    "id": "R40",
+    "title": "BIM-validator: lokale projectfoldermethoden",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-BIM-validator/blob/8f837dd9a56e12d9b61ddd9dd2b341abe9794256/viewer/src/services/LocalProjectStorage.ts#L150",
+    "type": "Gepinde OpenAEC-broncode",
+    "checked_at": "2026-10-22",
+    "supports": "createProject en openProjectFolder vereisen showDirectoryPicker; ontbreken geeft fout. Geen volledige appfallbackaudit.",
+    "limits": "Statische broninspectie, behalve expliciet genoemde pure unitproeven. Geen volledige runtime of actuele upstream-HEAD getest.",
+    "local_file": "work/ui-research/upstream/validator-8f837dd/viewer/src/services/LocalProjectStorage.ts",
+    "commit": "8f837dd9a56e12d9b61ddd9dd2b341abe9794256"
+  },
+  {
+    "id": "A68",
+    "title": "Unicode CLDR / UTS 35: Core",
+    "url": "https://www.unicode.org/reports/tr35/",
+    "type": "Primaire internationaliseringsspecificatie",
+    "checked_at": "2026-10-22",
+    "supports": "Locale-identificatie en afzonderlijke diensten voor taal, eenheden, formatting en sortering.",
+    "limits": "Geraadpleegde versie 49, gepubliceerd 2026-10-21. Geen bewijs van gebruikte ICU/CLDR-versie of conformiteit in OpenAEC."
+  },
+  {
+    "id": "A69",
+    "title": "W3C Internationalization: Text size in translation",
+    "url": "https://www.w3.org/International/articles/article-text-size",
+    "type": "Primaire internationale ontwerprichtlijn",
+    "checked_at": "2026-10-22",
+    "supports": "Variabele tekstlengte, samenstellingen, glyphbreedte en verticale ruimte vragen flexibele layouts.",
+    "limits": "Historische illustraties/uitbreidingscijfers zijn geen voorspelling voor iedere OpenAEC-string."
+  },
+  {
+    "id": "A70",
+    "title": "Microsoft: Pseudolocalization",
+    "url": "https://learn.microsoft.com/en-us/globalization/methodology/pseudolocalization",
+    "type": "Primaire globaliseringsdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Pseudotekst, expansie, markeringen en pseudo-locales vinden structurele lokalisatieproblemen.",
+    "limits": "Aanvulling op echte taalvalidatie; geen verplichte algemene expansiefactor of vertaalbetekeniscontrole."
+  },
+  {
+    "id": "A71",
+    "title": "W3C: Inline markup and bidirectional text",
+    "url": "https://www.w3.org/International/articles/inline-bidi-markup/index.en",
+    "type": "Primaire internationale webdocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Richting en isolatie voor gemengde tekst, namen, getallen en paden in HTML.",
+    "limits": "Geen native-/PDF-shapingtest of voorschrift domeingeometrie te spiegelen."
+  },
+  {
+    "id": "A72",
+    "title": "iced 0.13.1: DPI, appscale en viewport",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/winit/src/program/state.rs#L53",
+    "type": "Gepinde primaire toolkitbron",
+    "checked_at": "2026-10-22",
+    "supports": "OS-schaal × appscale; ScaleFactorChanged en berekening van logische viewportmaat in graphics/src/viewport.rs.",
+    "limits": "Statisch geverifieerd; niet alle widgets, monitoren of compositorroutes getest.",
+    "local_file": "work/ui-research/upstream/iced-0.13.1/winit/src/program/state.rs",
+    "commit": "9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2"
+  },
+  {
+    "id": "A73",
+    "title": "W3C: Resize Text, WCAG 1.4.4",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "Toepasselijke webtekst tot 200% vergroten zonder inhouds-/functieverlies.",
+    "limits": "Informatieve toelichting bij webcriterium; native toepassing en de gekozen ondersteuningsroute afzonderlijk aantonen."
+  },
+  {
+    "id": "A74",
+    "title": "W3C: Reflow, WCAG 1.4.10",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-22",
+    "supports": "320 CSS-pixelbreedte, 400%-equivalent en begrensde uitzondering voor tweedimensionale onderdelen.",
+    "limits": "Geen blanket-vrijstelling voor een hele CAD-/tabelapp of individuele celinhoud."
+  },
+  {
+    "id": "A75",
+    "title": "W3C: Text Spacing, WCAG 1.4.12",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-23",
+    "supports": "Gebruikersoverride voor regel-/alinea-/letter-/woordafstand zonder verlies in toepasselijke markup.",
+    "limits": "Genoemde waarden zijn geen verplicht defaultdesign; geldt niet rechtstreeks als CSS-eis aan native renderer."
+  },
+  {
+    "id": "A76",
+    "title": "Microsoft: High DPI Desktop Application Development",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows",
+    "type": "Primaire platformdocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Gemengde monitorschaal, docking, remote desktop en dynamische DPI-wissels vragen validatie.",
+    "limits": "Windows/desktopkader, deels oudere frameworkvoorbeelden. Geen voorstel om toolkit te wisselen of incidentclaim."
+  },
+  {
+    "id": "A77",
+    "title": "WebAIM Low Vision Survey #2 (2018)",
+    "url": "https://webaim.org/projects/lowvisionsurvey2/",
+    "type": "Primair uitgevoerd gebruikerssurvey",
+    "checked_at": "2026-10-22",
+    "supports": "Uiteenlopende hulpmiddelen/instellingen; niet iedereen vergroot, onder meer bij beperkt gezichtsveld.",
+    "limits": "248 zelfgeselecteerde geldige reacties; auteurs waarschuwen niet representatief. Historisch, geen huidige OpenAEC-populatie."
+  },
+  {
+    "id": "A78",
+    "title": "Reddit: Decimal separators by region",
+    "url": "https://www.reddit.com/r/todayilearned/comments/e8zc2p/til_decimal_separators_like_and_are_used/",
+    "type": "Historische openbare gebruikerservaring",
+    "checked_at": "2026-10-22",
+    "supports": "Eén Nederlandse gebruiker beschrijft bewuste voorkeur voor Engelse software naast Nederlandse omgeving.",
+    "limits": "Anekdote uit 2019. Regionale technische feiten uit deze thread niet als bewijs gebruikt."
+  },
+  {
+    "id": "A79",
+    "title": "Mozilla MDN: KeyboardEvent.isComposing",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-22",
+    "supports": "Maakt onderscheid tussen toetsen binnen en buiten compositiesessie.",
+    "limits": "Geraadpleegde pagina markeert beperkte beschikbaarheid; controleer doelbrowsers en native equivalent. Geen IME-proef uitgevoerd."
+  },
+  {
+    "id": "A80",
+    "title": "Unicode UAX 29: Text Segmentation",
+    "url": "https://www.unicode.org/reports/tr29/",
+    "type": "Primaire Unicode-specificatie",
+    "checked_at": "2026-10-23",
+    "supports": "Gebruikerswaargenomen tekens/graphemeclusters en woord-/zinsgrenzen onderscheiden van codepunten.",
+    "limits": "Unicode 18/revisie 49 geraadpleegd; geen claim dat iedere OpenAEC-dependency die versie al implementeert."
+  },
+  {
+    "id": "A81",
+    "title": "Reddit AutoCAD 2018: blurry second monitor",
+    "url": "https://www.reddit.com/r/AutoCAD/comments/jbpu58/autocad_2018_slightly_blurry_screen_on_second/",
+    "type": "Historische openbare gebruikerservaring",
+    "checked_at": "2026-10-22",
+    "supports": "Onscherpte en schaalworkarounds bij meerdere schermen; meerdere instellingen tegelijk aangepast.",
+    "limits": "Geen gecontroleerde oorzaakanalyse, actuele AutoCAD-status of universele 100%-aanbeveling."
+  },
+  {
+    "id": "A82",
+    "title": "Reddit Citrix: high DPI scaling blurring",
+    "url": "https://www.reddit.com/r/Citrix/comments/1fljfj5/citrix_high_dpi_scaling_blurring_is_driving_me/",
+    "type": "Openbare ervaring met tegenspraak",
+    "checked_at": "2026-10-22",
+    "supports": "Scherp maar te klein versus vergroot maar onscherp als concrete gebruiksspanning.",
+    "limits": "Historische individuele remote-omgeving; commentaar is geen onafhankelijk gemeten productlimiet."
+  },
+  {
+    "id": "R41",
+    "title": "0.4-taalbesluit en vertaalbestanden",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/design/ontwerp-0.4/01-fundament.md#L241",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Nederlands default/Engels tweede; besluitentabel 278 bevestigt vertaalbestanden ondanks eerdere voorsteltekst.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/design/ontwerp-0.4/01-fundament.md",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R42",
+    "title": "Prototype: Language en inline teksten",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/locale.rs#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Dutch/English-enum met inline text(nl,en); geen centrale vertaalbestanden in deze module.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/locale.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R43",
+    "title": "Calc: taaldefault, lazy bundles en loadLocale",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/config.ts#L124",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Bewust Engels default, taalkeuze en RTL; catch per importer en daarna loadedLanguages.add. Exacte functieproef uitgevoerd.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/i18n/config.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R44",
+    "title": "PDF: taalconfiguratie en vertaalwrapper",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/i18n/config.js#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Lazy locales, browser-/opslagdetectie; useTranslation.js voegt richting, cijferpresentatie en taalwissel toe.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/i18n/config.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R45",
+    "title": "Calc: rapporttaal, Intl-formaten en normalisatie",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/reportI18n.ts#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Rapporttaal los van UI; nl-NL/en-GB-keuze; nummerpatronen; normalisatie spaties/richtingsmarkeringen.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/i18n/reportI18n.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R46",
+    "title": "Calc: stabiele eenheidscodes, vertaalde presentatie",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/i18n/formatUnit.ts#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Opslagcodes blijven stabiel, alleen label vertaald, onbekend blijft ongewijzigd.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/i18n/formatUnit.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R47",
+    "title": "Calc bestaande i18n-checker",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/scripts/check-i18n.py#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Engels/Nederlands tien namespaces gecontroleerd, beide 1308 keys en nul gemelde problemen.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/scripts/check-i18n.py",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R48",
+    "title": "0.4 besloten lint-/werkstroomlayouts",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/design/ontwerp-0.4/05-layouts.md#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Banden/paneelmaten, panelen verbergen en afzonderlijke workflowindeling.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/design/ontwerp-0.4/05-layouts.md",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R49",
+    "title": "Prototype: schaal-/paneelvoorkeuren en breedtegrens",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/model.rs#L171",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Scale 0.75–2.0, paneelratio’s, minbreedte720 en set_window_width; bestaande paneeltest gelezen.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/model.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R50",
+    "title": "Gedeelde runtime: schaal, minimumvenster en resize",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/runtime.rs#L93",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "Appscale naar iced; venster1280x800, minimum720x480 en breedte-eventroute.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/runtime.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R51",
+    "title": "Calc vensterbridge en dockberichten",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/windowBridge.ts#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-22",
+    "supports": "BroadcastChannel met pad/vensterlabel. Actieve close-detached-ontvanger in App.tsx:91 gelezen; volledige overdracht niet geaudit.",
+    "limits": "Statische inspectie tenzij expliciet begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/services/windowBridge.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "A83",
+    "title": "Government Analysis Function: Colours in charts",
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/",
+    "type": "Primaire visualisatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Categorische/sequentiële kleur en door tinten gesuggereerde relaties; taak bepaalt kleurgebruik.",
+    "limits": "Geen verplicht OpenAEC-merkpalet of gecontroleerde technische gebruikerstest."
+  },
+  {
+    "id": "A84",
+    "title": "Golebiowska en Çöltekin (VIS 2021): Rainbow Dash",
+    "url": "https://content.ieeevis.org/year/2021/paper_v-tvcg-9249052.html",
+    "type": "Primair gepubliceerd onderzoeksabstract",
+    "checked_at": "2026-10-23",
+    "supports": "544 deelnemers; sequentieel beter voor veel kwantitatieve kaarttaken, rainbow competitief voor specifieke waarde-extractie en mogelijk kleurherinnering.",
+    "limits": "Onderzochte kaarttypen/taken; alleen primair abstract geraadpleegd. Geen FEM-/OpenAEC-validatie of universeel verbod."
+  },
+  {
+    "id": "A85",
+    "title": "Government Analysis Function: Communicating quality, uncertainty and change",
+    "url": "https://gss.civilservice.gov.uk/policy-store/communicating-quality-uncertainty-and-change/",
+    "type": "Primaire statistische communicatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Leg bron, beperkingen, aannames en betekenis van onzekerheid uit; maak essentiële informatie vindbaar.",
+    "limits": "Richtlijn uit2018 onder herziening; pagina waarschuwt toegankelijkheidswetgeving nog niet verwerkt. Geen technische rekennorm."
+  },
+  {
+    "id": "A86",
+    "title": "W3C WAI: Complex Images",
+    "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+    "type": "Primaire toegankelijkheidstutorial",
+    "checked_at": "2026-10-23",
+    "supports": "Korte duiding en uitgebreide essentiële informatie/relaties bij complexe grafieken.",
+    "limits": "Geen bewijs dat een willekeurige tabel of alt-tekst volledige grafiektoegankelijkheid geeft."
+  },
+  {
+    "id": "A87",
+    "title": "W3C G111: Using color and pattern",
+    "url": "https://www.w3.org/WAI/WCAG22/Techniques/general/G111",
+    "type": "Primaire informatieve WCAG-techniek",
+    "checked_at": "2026-10-23",
+    "supports": "Patroon/markering kan een kleurcodering aanvullen met redundante betekenis.",
+    "limits": "Techniek is een mogelijke route, geen verplichting elk vlak te arceren."
+  },
+  {
+    "id": "A88",
+    "title": "W3C: Non-text Contrast, WCAG1.4.11",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-23",
+    "supports": "Essentiële grafische delen en bediening/staat waar toepasselijk 3:1 tegen aangrenzende kleuren.",
+    "limits": "Uitzonderingen en betekenis bepalen scope; dunne anti-aliased lijnen kunnen praktisch zwakker ogen. Geen volledige OpenAEC-grafiekaudit."
+  },
+  {
+    "id": "A89",
+    "title": "W3C: Contrast Minimum, WCAG1.4.3",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-23",
+    "supports": "Gewone toepasselijke webtekst4.5:1; grote tekst3:1, met uitzonderingen.",
+    "limits": "Geen fysieke printer-/papiermeting of garantie dat alle exportengines dezelfde CSS gebruiken."
+  },
+  {
+    "id": "A90",
+    "title": "Mozilla MDN: Printing / CSS",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Printing",
+    "type": "Primaire browserimplementatiedocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Eigen printstylesheet, @media print en @page voor media-/papierinstellingen.",
+    "limits": "Ondersteuning/uitvoer per engine testen; geen bewijs dat preview en fysieke afdruk identiek zijn."
+  },
+  {
+    "id": "A91",
+    "title": "Reddit Revit: Filled regions print differently",
+    "url": "https://www.reddit.com/r/Revit/comments/wrol75/help_filled_regions_print_to_pdf_differently_at/",
+    "type": "Historische openbare gebruikerservaring",
+    "checked_at": "2026-10-23",
+    "supports": "Patroon-/lijngewichtsverschillen tussen views en PDF-print; reacties noemen verschillende mogelijke routes.",
+    "limits": "Anekdote uit2022, geen onafhankelijke diagnose, actuele productclaim of merkadvies."
+  },
+  {
+    "id": "A92",
+    "title": "Mozilla MDN: Word boundary assertion",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion",
+    "type": "Primaire taal-/browserdocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "JavaScript woordgrens is geen algemene natuurlijke-taalsegmentatie; aparte taalregels kunnen nodig zijn.",
+    "limits": "Geen direct productvoorschrift dat Intl.Segmenter alle technische codes correct behandelt."
+  },
+  {
+    "id": "A93",
+    "title": "W3C: Error Suggestion, WCAG3.3.3",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-23",
+    "supports": "Bekende correcties bij gedetecteerde invoerfouten waar toepasselijk aanbieden.",
+    "limits": "Niet iedere fout heeft een veilige bekende automatische correctie; native/taaktoepassing apart toetsen."
+  },
+  {
+    "id": "A94",
+    "title": "GOV.UK Design System: Error summary",
+    "url": "https://design-system.service.gov.uk/components/error-summary/",
+    "type": "Primaire ontwerp-/implementatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Formulierfouten samenvatten en verbinden met meldingen bij de velden.",
+    "limits": "Formulierinzendingspatroon; geen voorschrift bij ieder celtoetsje focus te verplaatsen."
+  },
+  {
+    "id": "A95",
+    "title": "GOV.UK Design System: Error message",
+    "url": "https://design-system.service.gov.uk/components/error-message/",
+    "type": "Primaire ontwerp-/implementatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Zeg wat misging en hoe de gebruiker het kan herstellen; koppel aan relevante invoer.",
+    "limits": "Geen volledige UX-/schermlezergarantie door alleen dezelfde tekst over te nemen."
+  },
+  {
+    "id": "A96",
+    "title": "W3C APG: Alert Pattern",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/alert/",
+    "type": "Primaire informatieve webpatroonrichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Alert onderbreekt focus niet; onderscheid met alertdialog en wees terughoudend met verdwijnen/onderbrekingen.",
+    "limits": "Webpatroon; native accessibilityroute en timingdoelen afzonderlijk bewijzen."
+  },
+  {
+    "id": "A97",
+    "title": "W3C: Consistent Help, WCAG3.2.6",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html",
+    "type": "Primaire WCAG-toelichting",
+    "checked_at": "2026-10-23",
+    "supports": "Herhaalde hulpmechanismen houden relatieve volgorde bij dezelfde paginavariant.",
+    "limits": "Verplicht niet zelfstandig een helpdesk of overal een identieke contexttooltip."
+  },
+  {
+    "id": "A98",
+    "title": "NN/G: Onboarding Tutorials vs Contextual Help",
+    "url": "https://www.nngroup.com/articles/onboarding-tutorials/",
+    "type": "Primaire UX-praktijkobservaties",
+    "checked_at": "2026-10-23",
+    "supports": "Tutorials kunnen onderbreken/vergeten worden; contextgebonden hulp op verzoek als alternatief.",
+    "limits": "Praktijkartikel uit2023, geen hier gerapporteerde OpenAEC-taakproef of gecontroleerde effectmaat."
+  },
+  {
+    "id": "A99",
+    "title": "Reddit UI_Design: Wait for onboarding animation?",
+    "url": "https://www.reddit.com/r/UI_Design/comments/1waff0p/do_users_actually_wait_for_an_onboarding/",
+    "type": "Openbare ervaringen met tegenvoorbeeld",
+    "checked_at": "2026-10-23",
+    "supports": "Afkeer van verplichte uitleg naast het nut van één onbekende mogelijkheid op een relevant moment tonen.",
+    "limits": "Zelfselectie, geen representatieve99%-claim of geverifieerde activatiecijfers overgenomen."
+  },
+  {
+    "id": "R52",
+    "title": "PDF patroon-ID’s, lijnfamilies en renderer",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/annotations/rendering/hatch-patterns.js#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Catalogus, lijnfamilies, thin-linesweergave. Cataloguscategorie nen47 is geen onafhankelijke normconformiteitsclaim.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/annotations/rendering/hatch-patterns.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R53",
+    "title": "PDF bewerkbare arceringsmetadata",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/saver/hatch-meta.js#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "OPS_HatchPattern/Color/Scale/Angle schrijven en modelvelden lezen; bestaande hatch-meta.test.mjs gelezen, niet uitgevoerd.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/saver/hatch-meta.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R54",
+    "title": "PDF bestaande arceringsgeometrieproef",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "179 bestaande tests geslaagd; recorder, state-/arcControlPointstubs en geometrievergelijking. Geen echte boog-/pixel-/exportproef.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R55",
+    "title": "PDF afdrukplaatsing en bestaande proeven",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/print-plaatsing.js#L39",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Fit/actual/shrink/custom-scale, marges, afsnijden en pagina-/papiercoördinaten.45 geselecteerde bestaande pure tests geslaagd.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R56",
+    "title": "PDF afdrukdoel en opdrachtregels",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/pdf/print-doel.js#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Eigen PDF-doel versus printer, open bron als doel voorkomen. print-opdracht.js gelezen voor argumentenvalidatie; geen print uitgevoerd.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-doel.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R57",
+    "title": "Calc HTML-printservice",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/services/print/printService.ts#L392",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Eigen rapport-CSS, koppen/pagina-/printregels; kleine secundaire tekst#A1A1AA op wit heeft berekend contrast2.5629.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/services/print/printService.ts",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R58",
+    "title": "Gedeelde native FindBar-weergave",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/src/find_bar.rs#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Host bezit zoekengine/staat; query/bronnen/groepen en compact-layout. Geen enginepariteit door alleen weergave.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/src/find_bar.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R59",
+    "title": "PDF zoekcontroller: patroon, generatie en gedeeltelijke fouten",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/search/find-controller.js#L211",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "buildPattern gebruikt\\b; progressieve zoekroute met cancel/generatie; annotatielaadfout wordt gewaarschuwd en doorgelopen.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/search/find-controller.js",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R60",
+    "title": "PDF zoekbronnen en bestaande pure tests",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/f754cb7c9d9adf654f6894cee15543413c24fcff/open-pdf-studio/js/search/search-sources.test.mjs#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Zeven bestaande tests geslaagd: velden/bronnen/pagina’s/case/groepen/huidige groep.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/search/search-sources.test.mjs",
+    "commit": "f754cb7c9d9adf654f6894cee15543413c24fcff"
+  },
+  {
+    "id": "R61",
+    "title": "Calc FindReplaceDialog: scope en history",
+    "url": "https://github.com/OpenAEC-Foundation/open-calc-studio/blob/b47042704efa388d95eb59ce77d23aeb5ee0e44c/src/components/grid/FindReplaceDialog.tsx#L36",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Per rij eerste matchveld, ingeklapte ouders openen, berekende nr niet vervangen, historypunt bij vervangen.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/ui-research/upstream/calc-b470427/src/components/grid/FindReplaceDialog.tsx",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c"
+  },
+  {
+    "id": "R62",
+    "title": "0.4-meldingenbesluit",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/design/ontwerp-0.4/04-componenten.md#L116",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Icoon+woord, in-page/toast, vijf seconden behalve fouten die blijven tot sluiten. Geen productie-timerproef.",
+    "limits": "Statische inspectie tenzij expliciete begrensde proef vermeld; geen actuele upstream-HEAD of volledige app getest.",
+    "local_file": "work/OpenAEC-Style-Repo/design/ontwerp-0.4/04-componenten.md",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "A100",
+    "title": "DTCG Design Tokens Format Module2025.10",
+    "url": "https://www.designtokens.org/tr/2025.10/format/",
+    "type": "Primaire formaatspecificatie / Community Group Report",
+    "checked_at": "2026-10-23",
+    "supports": "Getypeerde tokenuitwisseling, groepen/aliases en verwijzingsresolutie.",
+    "limits": "Final Community Group Report, geen W3C Recommendation. Niet automatisch OpenAEC-keuze of gedragstoegankelijkheid."
+  },
+  {
+    "id": "A101",
+    "title": "USWDS: Migrating to2.0",
+    "url": "https://designsystem.digital.gov/documentation/migration-v2/",
+    "type": "Primaire product-/migratiedocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Expliciete concept-/tokenwijzigingen en migratie per component.",
+    "limits": "Historische USWDS-versiemigratie als precedent; geen OpenAEC-rewrite-/toolkitvoorschrift."
+  },
+  {
+    "id": "A102",
+    "title": "Reddit Androiddev: wrap Material or rebuild primitives",
+    "url": "https://www.reddit.com/r/androiddev/comments/1tq50vu/should_an_android_design_system_wrap_material/",
+    "type": "Openbare ontwikkelervaringen met tegenspraak",
+    "checked_at": "2026-10-23",
+    "supports": "Herbruikbaar platformgedrag versus vorm-/versiecontrole en hybride aanpak.",
+    "limits": "Individuele Androidervaringen; geen consensus, onafhankelijke kosten-/betrouwbaarheidsmeting of iced-advies."
+  },
+  {
+    "id": "A103",
+    "title": "Reddit DesignSystems: migration off deprecated components",
+    "url": "https://www.reddit.com/r/DesignSystems/comments/1vtuq85/what_actually_gets_teams_to_migrate_off_a/",
+    "type": "Openbare ontwikkelervaringen",
+    "checked_at": "2026-10-23",
+    "supports": "Adoptie vraagt vervanging, impactinformatie en samenwerking; deprecatieverklaring alleen volstaat niet altijd.",
+    "limits": "Zelfgeselecteerde adviezen; geen universele deadline of gemeten OpenAEC-adoptie."
+  },
+  {
+    "id": "A104",
+    "title": "W3C WAI: Evaluating Web Accessibility Overview",
+    "url": "https://www.w3.org/WAI/test-evaluate/",
+    "type": "Primaire evaluatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Vroeg/doorlopend beoordelen; automatische tool alleen kan conformiteit niet bepalen.",
+    "limits": "Webkader, geen ingevuld native OpenAEC-auditrapport."
+  },
+  {
+    "id": "A105",
+    "title": "W3C WAI: Involving Users in Evaluating Web Accessibility",
+    "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+    "type": "Primaire onderzoek-/evaluatierichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Combineer gebruikersinbreng met standaardevaluatie; rapporteer scope, methode en deelnemerskenmerken.",
+    "limits": "Kleine studies zijn nuttig maar geen statistische representativiteit of complete conformiteit."
+  },
+  {
+    "id": "A106",
+    "title": "Mankoff, Fait en Tran (CHI2005): Is Your Web Page Accessible?",
+    "url": "https://www.cs.cmu.edu/~io/publications/chi05-web-accessibility.pdf",
+    "type": "Primair gepubliceerd vergelijkend onderzoek",
+    "checked_at": "2026-10-23",
+    "supports": "Evaluatiemethoden hadden aanvullende sterke/zwakke punten bij problemen voor blinde webgebruikers.",
+    "limits": "Historische techniek/populatie; abstract als basis voor deze beperkte claim. Geen actuele native benchmark of argument gebruikers weg te laten."
+  },
+  {
+    "id": "A107",
+    "title": "NN/G: Internal vs External Validity of UX Studies",
+    "url": "https://www.nngroup.com/articles/internal-vs-external-validity/",
+    "type": "Primaire UX-methodologische richtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Vergelijkbare condities, passende deelnemers en counterbalancen/randomiseren bij herhaalde blootstelling.",
+    "limits": "Geen berekende steekproefgrootte of OpenAEC-fontresultaat."
+  },
+  {
+    "id": "A108",
+    "title": "GOV.UK: Running research sessions with disabled people",
+    "url": "https://www.gov.uk/service-manual/user-research/running-research-sessions-with-people-with-disabilities",
+    "type": "Primaire gebruikersonderzoekrichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Toegankelijke voorbereiding, eigen hulpmiddelen en individuele behoeften meenemen.",
+    "limits": "Geen vaste deelnemersmix, geworven OpenAEC-deelnemers of uitgevoerde sessie."
+  },
+  {
+    "id": "A109",
+    "title": "GOV.UK: Measuring the success of your service",
+    "url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+    "type": "Primaire onderzoeks-/meetrichtlijn",
+    "checked_at": "2026-10-23",
+    "supports": "Combineer taak-/prestatiematen met gebruikersonderzoek.",
+    "limits": "Publieke-servicekader; geen automatische AEC-metriek of succesdrempel."
+  },
+  {
+    "id": "A110",
+    "title": "Playwright: Visual comparisons",
+    "url": "https://playwright.dev/docs/test-snapshots",
+    "type": "Primaire testtooldocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Visuele baselines en omgevingsafhankelijkheid van rendering.",
+    "limits": "Mogelijke webtestmethode; niet geïnstalleerd/uitgevoerd en geen nativeplatformbewijs."
+  },
+  {
+    "id": "A111",
+    "title": "Playwright: ARIA snapshot testing",
+    "url": "https://playwright.dev/docs/aria-snapshots",
+    "type": "Primaire testtooldocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Semantische snapshotverwachtingen; gedeeltelijke templates hoeven naam/staat niet te controleren.",
+    "limits": "Webboom, geen volledige serialisatie/standaardconformiteit of native schermlezerproef."
+  },
+  {
+    "id": "R63",
+    "title": "Vastgestelde0.4-tokenbron",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/design/ontwerp-0.4/tokens-0.4.json#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Versie/status/besluitbron en ontwerpwaarden; staat los van prototype-CSS-generatorroute.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/design/ontwerp-0.4/tokens-0.4.json",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R64",
+    "title": "Prototypecrateversie en afhankelijkheden",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/Cargo.toml#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Pakket0.1.0 en iced exact0.13.1 in oudere snapshot; zegt niet dat de nieuwere0.4-namespace ontbreekt (zieR70/R71).",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd. Verouderde momentopname; huidige0.4-generator en module afzonderlijk onderzocht inR70/R71.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/Cargo.toml",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R65",
+    "title": "Prototype-tokenpipeline uit themes.css",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/scripts/generate_tokens.py#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Leest assets/themes.css; schrijft crate tokens.rs en assets/tokens.json. Niet uitgevoerd.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/scripts/generate_tokens.py",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R66",
+    "title": "Crate-README: gedeelde shell en app-eigendom",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/crates/openaec-ui/README.md#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Herbruikbare frames/widgets en expliciete grenzen versus volledige appmigratie; app bezit commando’s/content.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/crates/openaec-ui/README.md",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R67",
+    "title": "Bestaande layoutmetricscontrole",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/scripts/check_layout_metrics.py#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Uitgevoerd: Rust/HTML tegenover recorded spec groen; lokale Tauri-/Pointcloudbronnen ontbreken.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/scripts/check_layout_metrics.py",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R68",
+    "title": "Bestaande portablecontrole",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/scripts/check_portable_ui.py#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Uitgevoerd: canonical/review-assets gelijk; ontbrekende lokale Pointcloud-snapshot geeft expliciete melding en exit0.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/scripts/check_portable_ui.py",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R69",
+    "title": "Native reviewrenders on demand",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/befcbff7790e8c593b2ec47ae18d43115a4f530c/src/bin/style_repo/render_tests.rs#L1",
+    "type": "Gepinde OpenAEC-broncode of besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Bestaande ignored-exporttests schrijven reviewbeelden; alleen gelezen, niet uitgevoerd.",
+    "limits": "Geen gewijzigde productiecode of nieuw uitgevoerde appmigratie; read-only checkeruitkomst expliciet begrensd.",
+    "local_file": "work/OpenAEC-Style-Repo/src/bin/style_repo/render_tests.rs",
+    "commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c"
+  },
+  {
+    "id": "R70",
+    "title": "0.4-generator: dezelfde JSON naar Rust en CSS",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/scripts/generate_tokens_04.py",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Bestaande 0.4-pipeline naar design/tokens.rs en web/openaec-tokens.css. --check uitgevoerd: vijf thema’s,31 kleurrollen actueel.",
+    "limits": "Tekst-/tokenafleiding en ingebouwde kleurpaarcontrole; geen renderer-, typografie-, platform- of apppariteit.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/scripts/generate_tokens_04.py",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R71",
+    "title": "Bestaande 0.4-widgets en expliciete rendererafwijkingen",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/widgets.rs",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Echte iced-knoppen, velden en andere gedeelde componenten. Bron documenteert focusrand binnen de control en solide HC-disabledrand als benadering.",
+    "limits": "Geen volledige native keyboard-/screenreaderproef of bewezen appadoptie; knop bouwt op gepinde iced0.13.1.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/crates/openaec-ui/src/design/widgets.rs",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R72",
+    "title": "B2 als gedeelde Rust-iconenbibliotheek",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-icons/README.md",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Bestaande bibliotheek met945 iconen,16/24-masters,selectie per app en SVG-bronnen.",
+    "limits": "Catalogus en API gelezen; geen Cargo-build, complete assetcontrole of herkenningsonderzoek uitgevoerd.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/crates/openaec-icons/README.md",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R73",
+    "title": "PDF: volledige getalparser naast bewuste prefixparser",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/e9f599f66ac75c5cb7656789573f942ecb8db2d7/open-pdf-studio/js/core/getal-invoer.js",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "leesGetal weigert trailingtekst; leesGetalBegin is expliciet prefix. Enkel punt/komma betekent decimaal; gekozen groepsregels en Unicodecijfers. Bestaande pure tests uitgevoerd.",
+    "limits": "Geen audit van ieder getalveld of AEC-eenheid. Ambigue getalnotatie blijft productkeuze; geen volledige UI-/saveproef.",
+    "local_file": "work/ui-research/upstream/pdf-e9f599f/open-pdf-studio/js/core/getal-invoer.js",
+    "commit": "e9f599f66ac75c5cb7656789573f942ecb8db2d7"
+  },
+  {
+    "id": "R74",
+    "title": "PDF: getalvelden met zichtbare tekst en canonieke waarde",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/e9f599f66ac75c5cb7656789573f942ecb8db2d7/open-pdf-studio/js/ui/getal-veld.js",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "DOM-adapter gebruikt gedeelde normalisatie; main.js importeert en installeert deze in init met app-taal. Bron houdt tekst tijdens bewerken en canonieke waarde uiteen.",
+    "limits": "Installatieroute statisch gelezen, geen browser/WebView/IME/toegankelijkheidsboom getest. Niet elk veld of fallback getoetst.",
+    "local_file": "work/ui-research/upstream/pdf-e9f599f/open-pdf-studio/js/ui/getal-veld.js",
+    "commit": "e9f599f66ac75c5cb7656789573f942ecb8db2d7"
+  },
+  {
+    "id": "R75",
+    "title": "PDF: foutreden behouden bij Error/string/object",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/e9f599f66ac75c5cb7656789573f942ecb8db2d7/open-pdf-studio/js/core/fout-bericht.js",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Pure helper vermijdt lege reden, leest detail/code en string. Vier bestaande pure testgevallen geslaagd.",
+    "limits": "Geen volledige foutmeldingflow, lokalisatie, herstelactie of toegankelijkheidsaankondiging getest.",
+    "local_file": "work/ui-research/upstream/pdf-e9f599f/open-pdf-studio/js/core/fout-bericht.js",
+    "commit": "e9f599f66ac75c5cb7656789573f942ecb8db2d7"
+  },
+  {
+    "id": "R76",
+    "title": "Nieuwste portable-check: bestaande beperkte bronselectie",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/scripts/check_portable_ui.py",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Ontbrekende lokale snapshot blijft expliciete exit0; Rustvergelijking gebruikt src.glob(\"*.rs\"), dus doorloopt niet de nieuwe design/-submap.",
+    "limits": "Nieuwste checker alleen gelezen, niet uitgevoerd op complete afnemer; geen aangetoonde kapotte Pointcloud-build of actuele pariteitsclaim.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/scripts/check_portable_ui.py",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R77",
+    "title": "Nieuwere hatchmetadata: ook vreemde PatternName/PatternColor",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/blob/e9f599f66ac75c5cb7656789573f942ecb8db2d7/open-pdf-studio/js/pdf/saver/hatch-meta.js",
+    "type": "Gepinde actuele OpenAEC-broncode; versieaudit 23 oktober",
+    "checked_at": "2026-10-23",
+    "supports": "Naast OPS-metadata bestaan mappings en lezen van vreemde patroonvelden; onbekend patroon valt terug op none.",
+    "limits": "Alleen broncontrole, geen PDF-roundtrip of normconformiteit; eerdere pure geometrieproeven horen bij oudere snapshot.",
+    "local_file": "work/ui-research/upstream/pdf-e9f599f/open-pdf-studio/js/pdf/saver/hatch-meta.js",
+    "commit": "e9f599f66ac75c5cb7656789573f942ecb8db2d7"
+  },
+  {
+    "id": "R78",
+    "title": "0.4-reviewhost: echte berichten, expliciet een reviewhulpmiddel",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/src/bin/ui04.rs",
+    "type": "Gepinde actuele OpenAEC-bron/besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Escape/Enter, commandosneltoetsen, undo/rijbewerking en ID-mapping bestaan. De kop noemt de gallery expliciet een reviewhulp; Save/Export/Print-berichten zijn hier geen productie-I/O-bewijs.",
+    "limits": "Geen executable uitgevoerd; subscription en update statisch gelezen. Niet extrapoleren naar oorspronkelijke Calc of alle afnemers.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/src/bin/ui04.rs",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R79",
+    "title": "Webpakket: CSS, attributen en appverantwoordelijkheid",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/README.md",
+    "type": "Gepinde actuele OpenAEC-bron/besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Bestaande token-/component-CSS en verwachte toestandattributen; apps laden zelf fonts. Klassen en attributen definiëren op zichzelf geen hele interactieroute.",
+    "limits": "Geen webapp gemigreerd of browser-/screenreaderproef; documentatiebelofte onderscheiden van semantische uitvoering.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/web/README.md",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R80",
+    "title": "0.4-chrome: menu, splitter en hostberichten",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/crates/openaec-ui/src/design/chrome.rs",
+    "type": "Gepinde actuele OpenAEC-bron/besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Splitter geeft startbericht; host volgt cursor. Menu heeft plaatsingshelper en dismiss-berichten. Geen compleet toetsenbord-/overflowcontract in deze helper.",
+    "limits": "Broninspectie, geen aangetoonde clipping, foutieve platformactie of algehele ontbrekende keyboardbediening.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/crates/openaec-ui/src/design/chrome.rs",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R81",
+    "title": "Actuele besloten0.4-componentafspraken",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/design/ontwerp-0.4/04-componenten.md",
+    "type": "Gepinde actuele OpenAEC-bron/besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Visuele geometrie/tabelafspraken; Escape sluit en Enter kiest primaire dialoogknop. Basis blijft vertrekpunt voor aanvullend gedragscontract.",
+    "limits": "Geen nieuw besluit of wijziging; bron beschrijft geen volledig raster-/focus-/modalitycontract.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/design/ontwerp-0.4/04-componenten.md",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R82",
+    "title": "Webcomponentgallery als voorbeeld, niet appconformiteit",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/componenten.html",
+    "type": "Gepinde actuele OpenAEC-bron/besluitbron",
+    "checked_at": "2026-10-23",
+    "supports": "Dialogvoorbeeld is div met role/label. Laatste script wisselt alleen thema; geen showModal-route in dit bestand. Voorbeeld is visuele catalogus.",
+    "limits": "Geen volledige productieappaudit; geen conclusie dat alle webapps dezelfde voorbeeldmarkup gebruiken.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/web/componenten.html",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "R83",
+    "title": "iced0.13.1 on_key_press: alleen genegeerde events",
+    "url": "https://github.com/iced-rs/iced/blob/9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2/futures/src/keyboard.rs",
+    "type": "Gepinde primaire frameworkbron",
+    "checked_at": "2026-10-23",
+    "supports": "Callback ontvangt KeyPressed wanneer widgetstatus Ignored is; Captured levert geen bericht via deze route.",
+    "limits": "Geen volledige eventpropagatie-/IME-/OS-proef; aanwezigheid van globale mapping betekent niet dat elke toets altijd doorlekt.",
+    "local_file": "work/ui-research/upstream/iced-0.13.1/futures/src/keyboard.rs",
+    "commit": "9bfbd7cda79aceef2d115b8bb35e8f3257dcabf2"
+  },
+  {
+    "id": "A112",
+    "title": "W3C APG Window Splitter: voorstel met eigen reviewvoorbehoud",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/",
+    "type": "Primaire informatieve patroonbeschrijving",
+    "checked_at": "2026-10-23",
+    "supports": "Pijltjes, grens-/herstelbediening en naam/waarde als aanknopingspunt voor paneelcontract.",
+    "limits": "Pagina meldt expliciet onvoltooide taskforcereview/voorbeeld; geen afgeronde norm, nativeplatformcertificering of verplicht toetsenrecept."
+  },
+  {
+    "id": "A113",
+    "title": "WHATWG HTML: dialog en modale lifecycle",
+    "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+    "type": "Primaire HTML Living Standard",
+    "checked_at": "2026-10-23",
+    "supports": "show/showModal, beginfocus en modaliteit hebben browseralgoritmen; een CSS-klasse of role-attribuut voert die algoritmen niet zelfstandig uit.",
+    "limits": "Webstandaard, geen iced-implementatie of automatisch bewijs voor appcommando’s en ondersteunde WebViews."
+  },
+  {
+    "id": "R84",
+    "title": "Web0.4: gereduceerde beweging, HC-selectie en schaduw",
+    "url": "https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/blob/85a6aafc7d003ec8f61c9543b352a1f1b0f47346/web/openaec-components.css",
+    "type": "Gepinde actuele OpenAEC-CSS",
+    "checked_at": "2026-10-23",
+    "supports": "Bestaande prefers-reduced-motion-regel zet transitions uit en stopt hoverlift. Tabelselectie gebruikt background en inset box-shadow. Eigen HC-thema’s zijn attribuutselectoren.",
+    "limits": "Geen browser-/OS-/computed-styleproef. Afwezigheid van een mediaquery in deze twee CSS-bestanden bewijst geen ontbrekende route in elke afnemer.",
+    "local_file": "work/ui-research/upstream/style-85a6aaf/web/openaec-components.css",
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346"
+  },
+  {
+    "id": "A114",
+    "title": "W3C CSS Color Adjustment1: forced palettes",
+    "url": "https://www.w3.org/TR/css-color-adjust-1/#forced-colors-mode",
+    "type": "Primaire CSS Candidate Recommendation Snapshot16december2025",
+    "checked_at": "2026-10-23",
+    "supports": "Forced colors kan auteurskleuren vervangen; box-/text-shadow worden none en niet-URL-achtergrondbeelden vallen weg.",
+    "limits": "CR Snapshot, geen definitieve Recommendation of bewijs dat een specifieke OpenAEC-build fout rendert. Native Rust valt niet automatisch onder browser-CSS."
+  },
+  {
+    "id": "A115",
+    "title": "WCAG2.3.3 Animation from Interactions, niveauAAA",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+    "type": "Primaire informatieve WCAG-uitleg",
+    "checked_at": "2026-10-23",
+    "supports": "Niet-essentiële beweging uit interactie uitschakelbaar; toepasselijkheid/essential-uitzondering expliciet.",
+    "limits": "NiveauAAA, niet presenteren als algemene AA-verplichting of verbod op iedere kleur-/opacityverandering."
+  },
+  {
+    "id": "A116",
+    "title": "WCAG2.2.2 Pause, Stop, Hide, niveauA",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+    "type": "Primaire informatieve WCAG-uitleg",
+    "checked_at": "2026-10-23",
+    "supports": "Voor automatisch bewegende/auto-updating informatie gelden verschillende voorwaarden; auto-updating kent niet dezelfde vijfsecondenregel.",
+    "limits": "Toepasselijkheid en essentiële voortgang afzonderlijk beoordelen; geen simpele regel dat iedere animatie na vijf seconden moet stoppen."
+  },
+  {
+    "id": "A117",
+    "title": "Microsoft: contrastthema’s zijn aanpasbaar",
+    "url": "https://support.microsoft.com/en-us/accessibility/windows/magnifier/appendix-d-set-up-your-device-for-screen-comfort",
+    "type": "Primaire platformdocumentatie",
+    "checked_at": "2026-10-23",
+    "supports": "Gebruiker kan contrastpalet en losse tekst/link/achtergrondkleuren aanpassen; voorkeur is meer dan alleen licht/donker.",
+    "limits": "Platforminstellingenbeschrijving, geen advies over diagnose of gemeten OpenAEC-werking."
+  },
+  {
+    "id": "A118",
+    "title": "r/Blind: contrastthema’s, esthetiek en verschillende behoeften",
+    "url": "https://www.reddit.com/r/Blind/comments/15lldxy/windows_contrast_themes_is_it_possible_to_keep/",
+    "type": "Openbare historische gebruikerservaring met tegenspraak",
+    "checked_at": "2026-10-23",
+    "supports": "Deelnemers wegen leesbaarheid, achtergrondbeeld en alternatieve instellingen verschillend; een antwoord wordt ook genuanceerd.",
+    "limits": "Kleine zelfgeselecteerde discussie, niet representatief, geen bewezen actuele browser-/Windowsfout of medische aanbeveling."
+  },
+  {
+    "id": "A119",
+    "title": "r/Windows11: contrastthema als brede kleurvoorkeur",
+    "url": "https://www.reddit.com/r/Windows11/comments/1r9xloe/dark_mode_doesnt_apply_into_apps_but_high/",
+    "type": "Openbare gebruikerservaring met tegenargumenten",
+    "checked_at": "2026-10-23",
+    "supports": "Sommigen waarderen bredere toepassing van eigen contrastkleuren; anderen ervaren beperkingen en ongewenste neveneffecten.",
+    "limits": "Ervaringen en onbevestigde technische uitspraken; geen consensus of technische bron voor platformgedrag."
+  },
+  {
+    "id": "A120",
+    "title": "WCAG1.4.13 Content on Hover or Focus, niveauAA",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+    "type": "Primaire informatieve WCAG-uitleg",
+    "checked_at": "2026-10-23",
+    "supports": "Auteursgestuurde aanvullende hover-/focusinhoud: onder toepasselijke voorwaarden dismissible, hoverable en persistent; eigen uitzonderingen expliciet.",
+    "limits": "Webcriterium met uitzonderingen, waaronder ongewijzigde browsertooltip. Geen uitvoerbare OpenAEC-browser-/nativeproef en geen algemene eis iedere tooltip een dialoog te maken."
+  },
+  {
+    "id": "R85",
+    "title": "Afsluitcontrole PDF2026.43.7: hosted web bundle en bronversiegrens",
+    "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/commit/1c57e8ee2f00665d7e90321b0030deec3c4ce4f5",
+    "type": "Primaire repositorymetadata en gerichte Git-blobvergelijking",
+    "checked_at": "2026-10-23",
+    "supports": "Nieuwere HEAD bevat hosted-web-integratie. Volledige niet-afgekapte tree vergeleken op38 eerder gecachte paden:37 gelijk aan ronde8,main.js gewijzigd.",
+    "local_file": "work/ui-research/audits/pdf-final-targeted-diff.json",
+    "limits": "Geen volledige review van91 gewijzigde bestanden, nieuwe hoststorage-/iframe-integratie of nieuwste appbuild. Oude proeven behouden hun eigen commit.",
+    "commit": "1c57e8ee2f00665d7e90321b0030deec3c4ce4f5"
+  }
+]

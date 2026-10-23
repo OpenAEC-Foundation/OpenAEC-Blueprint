@@ -1,0 +1,5 @@
+# Keep pinned source evidence, font binaries and reports byte-identical.
+** -text
+# Historical source/notices may contain CRLF or trailing spaces: preserve evidence.
+work/** -whitespace
+outputs/** -whitespace

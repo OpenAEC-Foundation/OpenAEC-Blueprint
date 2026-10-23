@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-23T04:58:56+02:00",
+  "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+  "method": "Statische tekst-/tokeninspectie, geen browser-CSS-engine of platformproef.",
+  "source_hashes": {
+    "work/ui-research/upstream/style-85a6aaf/web/openaec-components.css": "ab99868d9162871c04441b3225728545b4026fd836fcec673020db4a78a5fe5d",
+    "work/ui-research/upstream/style-85a6aaf/design/ontwerp-0.4/tokens-0.4.json": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c"
+  },
+  "present_reduced_motion_query": true,
+  "query_occurrences": {
+    "forced-colors": 0,
+    "forced-color-adjust": 0,
+    "prefers-contrast": 0,
+    "prefers-color-scheme": 0,
+    "prefers-reduced-motion": 1
+  },
+  "selected_row_properties": [
+    "background: var(--oa-selected)",
+    "box-shadow: inset 3px 0 var(--oa-selected-bar)"
+  ],
+  "high_contrast_tokens": {
+    "high-contrast-dark": {
+      "panel": "#000000",
+      "selected": "#000000",
+      "selected-bar": "#F59E0B"
+    },
+    "high-contrast-light": {
+      "panel": "#FFFFFF",
+      "selected": "#FFFFFF",
+      "selected-bar": "#92400E"
+    }
+  },
+  "limits": [
+    "Geen computed styles, emulatie, OS-instelling of screenshot.",
+    "Geen bewijs dat iedere afnemer automatische systeemvoorkeuren mist.",
+    "Aanwezige reduce-motion-regel is positief bestaand gedrag, geen volledige motionaudit."
+  ]
+}

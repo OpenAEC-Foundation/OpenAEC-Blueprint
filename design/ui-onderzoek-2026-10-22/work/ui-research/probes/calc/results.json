@@ -1,0 +1,166 @@
+{
+  "node": "v24.19.0",
+  "rows": [
+    {
+      "input": "6,66",
+      "nl": 6.66,
+      "numeric": 6.66
+    },
+    {
+      "input": "6.66",
+      "nl": 6.66,
+      "numeric": 6.66
+    },
+    {
+      "input": "1.234",
+      "nl": 1234,
+      "numeric": 1234
+    },
+    {
+      "input": "1.234,56",
+      "nl": 1234.56,
+      "numeric": 1234.56
+    },
+    {
+      "input": "1 234,56",
+      "nl": 1,
+      "numeric": 1
+    },
+    {
+      "input": "1 234,56",
+      "nl": 1,
+      "numeric": 1
+    },
+    {
+      "input": "12abc",
+      "nl": 12,
+      "numeric": 12
+    },
+    {
+      "input": "1,2,3",
+      "nl": 1.2,
+      "numeric": 1.2
+    },
+    {
+      "input": "abc12",
+      "nl": null,
+      "numeric": null
+    },
+    {
+      "input": "0",
+      "nl": 0,
+      "numeric": 0
+    },
+    {
+      "input": "",
+      "nl": null,
+      "numeric": null
+    },
+    {
+      "input": "Infinity",
+      "nl": "Infinity",
+      "numeric": "Infinity"
+    },
+    {
+      "input": "NaN",
+      "nl": null,
+      "numeric": null
+    },
+    {
+      "input": "=1.234",
+      "nl": null,
+      "numeric": 1.234
+    },
+    {
+      "input": "=1,2,3",
+      "nl": null,
+      "numeric": null
+    },
+    {
+      "input": "=2/0",
+      "nl": null,
+      "numeric": null
+    },
+    {
+      "input": "=12,2*2,22",
+      "nl": null,
+      "numeric": 27.084
+    },
+    {
+      "input": "-15,5",
+      "nl": -15.5,
+      "numeric": -15.5
+    },
+    {
+      "input": "0.001",
+      "nl": 1,
+      "numeric": 1
+    },
+    {
+      "input": "=0.001",
+      "nl": null,
+      "numeric": 0.001
+    }
+  ],
+  "roundtrip": [
+    {
+      "value": 6.66,
+      "editor": "6,66",
+      "parsed": 6.66
+    },
+    {
+      "value": 60.5,
+      "editor": "60,5",
+      "parsed": 60.5
+    },
+    {
+      "value": 1988.25,
+      "editor": "1988,25",
+      "parsed": 1988.25
+    },
+    {
+      "value": 17.7,
+      "editor": "17,7",
+      "parsed": 17.7
+    },
+    {
+      "value": 103.4,
+      "editor": "103,4",
+      "parsed": 103.4
+    },
+    {
+      "value": 0.001,
+      "editor": "0,001",
+      "parsed": 0.001
+    },
+    {
+      "value": 12345.67,
+      "editor": "12345,67",
+      "parsed": 12345.67
+    },
+    {
+      "value": 42,
+      "editor": "42",
+      "parsed": 42
+    },
+    {
+      "value": 0,
+      "editor": "",
+      "parsed": null
+    }
+  ],
+  "repo": "OpenAEC-Foundation/open-calc-studio",
+  "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+  "method": "Gepinde parserbestanden uitgevoerd met Node type stripping. Alleen de relatieve import kreeg .ts als extensie. Geen React-component, UI-event, storemutatie of productie-installatie uitgevoerd.",
+  "source_hashes": {
+    "formatting.ts": "ae559fb507f27999d67dc37b3e9e2eeb7c96a0da0ce45f9baa3c64f885b81251",
+    "numericInput.ts": "b264ad8aaa60e150a0841081cdd7de752f829e6093c0a59c1586af348b841607"
+  },
+  "checks": "12 gerichte assertions geslaagd; acht niet-nul round-tripvoorbeelden behouden hun waarde.",
+  "limits": [
+    "Uitkomsten zijn parserresultaten, geen aangetoonde gevolgen voor opgeslagen begrotingen.",
+    "Bestaande tests zijn gelezen, niet als volledige Vitest-suite uitgevoerd.",
+    "Gedrag op huidige upstream-HEAD of een geïnstalleerde versie is niet vastgesteld.",
+    "Nul leeg formatteren is expliciet bestaande keuze in broncode/tests; beoordeling van de zichtbare betekenis blijft een ontwerpvoorstel."
+  ]
+}

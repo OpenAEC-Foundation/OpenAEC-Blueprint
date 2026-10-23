@@ -1,0 +1,317 @@
+TAP version 13
+# Subtest: zoom: begrensd op 10..400, hele procenten, onzin wordt 100
+ok 1 - zoom: begrensd op 10..400, hele procenten, onzin wordt 100
+  ---
+  duration_ms: 7.753932
+  type: 'test'
+  ...
+# Subtest: oriëntatie van het vel: gevraagd wint, auto volgt de pagina
+ok 2 - oriëntatie van het vel: gevraagd wint, auto volgt de pagina
+  ---
+  duration_ms: 0.694305
+  type: 'test'
+  ...
+# Subtest: schaalfactor per type; onbekend type is passend
+ok 3 - schaalfactor per type; onbekend type is passend
+  ---
+  duration_ms: 2.503606
+  type: 'test'
+  ...
+# Subtest: A1-papier, liggende A1-pagina, aangepaste schaal 10 %: een tiende, gecentreerd op een liggend vel
+ok 4 - A1-papier, liggende A1-pagina, aangepaste schaal 10 %: een tiende, gecentreerd op een liggend vel
+  ---
+  duration_ms: 1.862412
+  type: 'test'
+  ...
+# Subtest: A1-papier, zelfde pagina, passend: vult het vel
+ok 5 - A1-papier, zelfde pagina, passend: vult het vel
+  ---
+  duration_ms: 0.504274
+  type: 'test'
+  ...
+# Subtest: A4 op A3, werkelijke grootte: 1:1 en gecentreerd
+ok 6 - A4 op A3, werkelijke grootte: 1:1 en gecentreerd
+  ---
+  duration_ms: 0.471663
+  type: 'test'
+  ...
+# Subtest: A4 op A3, passend: vergroot tot het vel (vergroten mag)
+ok 7 - A4 op A3, passend: vergroot tot het vel (vergroten mag)
+  ---
+  duration_ms: 0.653464
+  type: 'test'
+  ...
+# Subtest: A4 op A3, verkleinen: past al, dus ware grootte
+ok 8 - A4 op A3, verkleinen: past al, dus ware grootte
+  ---
+  duration_ms: 0.634834
+  type: 'test'
+  ...
+# Subtest: A4 op A3, aangepaste schaal 50 % en 10 %
+ok 9 - A4 op A3, aangepaste schaal 50 % en 10 %
+  ---
+  duration_ms: 1.331519
+  type: 'test'
+  ...
+# Subtest: zoom telt alleen bij aangepaste schaal
+ok 10 - zoom telt alleen bij aangepaste schaal
+  ---
+  duration_ms: 1.049108
+  type: 'test'
+  ...
+# Subtest: niet centreren: linksboven op het vel
+ok 11 - niet centreren: linksboven op het vel
+  ---
+  duration_ms: 0.816275
+  type: 'test'
+  ...
+# Subtest: auto: een liggende pagina krijgt een liggend vel; staand gevraagd blijft staand
+ok 12 - auto: een liggende pagina krijgt een liggend vel; staand gevraagd blijft staand
+  ---
+  duration_ms: 0.663885
+  type: 'test'
+  ...
+# Subtest: haaks: alleen liggend op staand of staand op liggend; vierkant nooit
+ok 13 - haaks: alleen liggend op staand of staand op liggend; vierkant nooit
+  ---
+  duration_ms: 0.783956
+  type: 'test'
+  ...
+# Subtest: haaks: staande pagina op een handmatig liggend vel vult het vel
+ok 14 - haaks: staande pagina op een handmatig liggend vel vult het vel
+  ---
+  duration_ms: 0.612554
+  type: 'test'
+  ...
+# Subtest: haaks: auto draait nooit (het vel volgt de pagina), vierkant ook niet
+ok 15 - haaks: auto draait nooit (het vel volgt de pagina), vierkant ook niet
+  ---
+  duration_ms: 0.535444
+  type: 'test'
+  ...
+# Subtest: haaks: de marges van het liggende vel gelden, de pagina past gedraaid in het gebied
+ok 16 - haaks: de marges van het liggende vel gelden, de pagina past gedraaid in het gebied
+  ---
+  duration_ms: 0.863176
+  type: 'test'
+  ...
+# Subtest: ongedraaidDeel: van het beeld op het vel terug naar de pixels van de pagina
+ok 17 - ongedraaidDeel: van het beeld op het vel terug naar de pixels van de pagina
+  ---
+  duration_ms: 0.742685
+  type: 'test'
+  ...
+# Subtest: haaks en afgesneden: alleen het deel op het vel, in het gedraaide beeld
+ok 18 - haaks en afgesneden: alleen het deel op het vel, in het gedraaide beeld
+  ---
+  duration_ms: 0.231321
+  type: 'test'
+  ...
+# Subtest: het papier mag in elke volgorde binnenkomen
+ok 19 - het papier mag in elke volgorde binnenkomen
+  ---
+  duration_ms: 0.220162
+  type: 'test'
+  ...
+# Subtest: passend met een andere verhouding: de korte kant beslist, de lange blijft vrij
+ok 20 - passend met een andere verhouding: de korte kant beslist, de lange blijft vrij
+  ---
+  duration_ms: 0.170501
+  type: 'test'
+  ...
+# Subtest: marges: onbekend, onzin of onmogelijk telt als geen rand
+ok 21 - marges: onbekend, onzin of onmogelijk telt als geen rand
+  ---
+  duration_ms: 0.274442
+  type: 'test'
+  ...
+# Subtest: passend blijft binnen het bedrukbare gebied en staat gecentreerd op het vel
+ok 22 - passend blijft binnen het bedrukbare gebied en staat gecentreerd op het vel
+  ---
+  duration_ms: 0.301332
+  type: 'test'
+  ...
+# Subtest: passend met een scheve rand blijft aan beide kanten binnen het gebied
+ok 23 - passend met een scheve rand blijft aan beide kanten binnen het gebied
+  ---
+  duration_ms: 0.235912
+  type: 'test'
+  ...
+# Subtest: zonder centreren staan passend en verkleinen op de hoek van het bedrukbare gebied
+ok 24 - zonder centreren staan passend en verkleinen op de hoek van het bedrukbare gebied
+  ---
+  duration_ms: 0.255792
+  type: 'test'
+  ...
+# Subtest: verkleinen verkleint tot het bedrukbare gebied, niet tot het vel
+ok 25 - verkleinen verkleint tot het bedrukbare gebied, niet tot het vel
+  ---
+  duration_ms: 0.173411
+  type: 'test'
+  ...
+# Subtest: ware grootte en aangepaste schaal blijven 1:1 op het vel en melden de rand
+ok 26 - ware grootte en aangepaste schaal blijven 1:1 op het vel en melden de rand
+  ---
+  duration_ms: 0.230261
+  type: 'test'
+  ...
+# Subtest: zonder marges verandert er niets aan de oude uitkomsten
+ok 27 - zonder marges verandert er niets aan de oude uitkomsten
+  ---
+  duration_ms: 0.234242
+  type: 'test'
+  ...
+# Subtest: de marges volgen de oriëntatie van het vel
+ok 28 - de marges volgen de oriëntatie van het vel
+  ---
+  duration_ms: 0.335483
+  type: 'test'
+  ...
+# Subtest: onbekend papier: geen gebied, geen melding
+ok 29 - onbekend papier: geen gebied, geen melding
+  ---
+  duration_ms: 0.233532
+  type: 'test'
+  ...
+# Subtest: A3-pagina op A4-papier op ware grootte: gecentreerd afgesneden en gemeld
+ok 30 - A3-pagina op A4-papier op ware grootte: gecentreerd afgesneden en gemeld
+  ---
+  duration_ms: 0.257612
+  type: 'test'
+  ...
+# Subtest: niet gecentreerd en te groot: de linkerbovenhoek blijft, rechts en onder vallen weg
+ok 31 - niet gecentreerd en te groot: de linkerbovenhoek blijft, rechts en onder vallen weg
+  ---
+  duration_ms: 0.433733
+  type: 'test'
+  ...
+# Subtest: aangepaste schaal boven passend: afgesneden
+ok 32 - aangepaste schaal boven passend: afgesneden
+  ---
+  duration_ms: 0.335312
+  type: 'test'
+  ...
+# Subtest: passend en verkleinen snijden nooit af
+ok 33 - passend en verkleinen snijden nooit af
+  ---
+  duration_ms: 0.369872
+  type: 'test'
+  ...
+# Subtest: afronding van papiermaten is geen afsnijden (Letter 216 x 279 in de lijst)
+ok 34 - afronding van papiermaten is geen afsnijden (Letter 216 x 279 in de lijst)
+  ---
+  duration_ms: 0.222122
+  type: 'test'
+  ...
+# Subtest: onbekend papier + Custom Scale: de pagina wordt haar eigen (bekende) vel, op schaal en gecentreerd
+ok 35 - onbekend papier + Custom Scale: de pagina wordt haar eigen (bekende) vel, op schaal en gecentreerd
+  ---
+  duration_ms: 0.651855
+  type: 'test'
+  ...
+# Subtest: onbekend papier: "actual"/"fit"/"shrink" blijven ware grootte (oud gedrag)
+ok 36 - onbekend papier: "actual"/"fit"/"shrink" blijven ware grootte (oud gedrag)
+  ---
+  duration_ms: 0.375973
+  type: 'test'
+  ...
+# Subtest: papier "pagina": het vel heeft de maat van de pagina en is bekend
+ok 37 - papier "pagina": het vel heeft de maat van de pagina en is bekend
+  ---
+  duration_ms: 0.355293
+  type: 'test'
+  ...
+# Subtest: papier "pagina": een handmatige stand haaks op de pagina draait haar op het vel
+ok 38 - papier "pagina": een handmatige stand haaks op de pagina draait haar op het vel
+  ---
+  duration_ms: 0.342573
+  type: 'test'
+  ...
+# Subtest: onbruikbare paginamaat: geen plaatsing
+ok 39 - onbruikbare paginamaat: geen plaatsing
+  ---
+  duration_ms: 0.391693
+  type: 'test'
+  ...
+# Subtest: renderDeel: hele pagina op 300 dpi, randen exact op de pagina
+ok 40 - renderDeel: hele pagina op 300 dpi, randen exact op de pagina
+  ---
+  duration_ms: 0.400023
+  type: 'test'
+  ...
+# Subtest: renderDeel: bij afsnijden alleen de zichtbare pixels, op hun plek op het vel
+ok 41 - renderDeel: bij afsnijden alleen de zichtbare pixels, op hun plek op het vel
+  ---
+  duration_ms: 0.333043
+  type: 'test'
+  ...
+# Subtest: renderDeel: minstens één pixel, nooit buiten de pagina
+ok 42 - renderDeel: minstens één pixel, nooit buiten de pagina
+  ---
+  duration_ms: 0.273642
+  type: 'test'
+  ...
+# Subtest: pdfPagina: bekend papier = pagina op papiergrootte, beeld op de plek (oorsprong linksonder)
+ok 43 - pdfPagina: bekend papier = pagina op papiergrootte, beeld op de plek (oorsprong linksonder)
+  ---
+  duration_ms: 0.326053
+  type: 'test'
+  ...
+# Subtest: pdfPagina: onbekend papier = de pagina op haar eigen maat, beeld vult haar (oude gedrag)
+ok 44 - pdfPagina: onbekend papier = de pagina op haar eigen maat, beeld vult haar (oude gedrag)
+  ---
+  duration_ms: 0.240841
+  type: 'test'
+  ...
+# Subtest: printPxPerPt: 300 dpi op papier, bij vergroten 300 dpi van de pagina
+ok 45 - printPxPerPt: 300 dpi op papier, bij vergroten 300 dpi van de pagina
+  ---
+  duration_ms: 0.342242
+  type: 'test'
+  ...
+# Subtest: voegPrintPaginaToe: pagina op papiergrootte, beeld op de plek (pdf-lib)
+not ok 46 - voegPrintPaginaToe: pagina op papiergrootte, beeld op de plek (pdf-lib)
+  ---
+  duration_ms: 2.056243
+  type: 'test'
+  location: '/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs:556:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find package 'pdf-lib' imported from /home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
+    packageResolve (node:internal/modules/esm/resolve:768:81)
+    moduleResolve (node:internal/modules/esm/resolve:859:18)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+  ...
+# Subtest: alle locales melden afsnijden en de onbedrukbare rand, vertaald en zonder plaatshouders
+not ok 47 - alle locales melden afsnijden en de onbedrukbare rand, vertaald en zonder plaatshouders
+  ---
+  duration_ms: 2.90163
+  type: 'test'
+  location: '/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs:589:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, open '/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/i18n/locales/en/dialogs.json'"
+  code: 'ENOENT'
+  stack: |-
+    readFileSync (node:fs:484:20)
+    lees (file:///home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs:594:37)
+    TestContext.<anonymous> (file:///home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs:595:14)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 45
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 241.302797

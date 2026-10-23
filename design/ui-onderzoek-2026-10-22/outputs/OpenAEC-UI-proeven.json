@@ -1,0 +1,880 @@
+{
+  "checked_at": "2026-10-22",
+  "repo_snapshot": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "method": "Exacte expressies uit twee native reviewroutes geïsoleerd gecompileerd. Daarnaast standaard ECMAScript-functies in Node uitgevoerd. Geen GUI, productieapp, daadwerkelijke invoerevents of bestandsexport getest.",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "source_hashes": {
+    "src/bin/style_repo.rs": "e62e3f7aadff03533b7777d26447b103de4436bfc0a820c11f2e846f16ea0437",
+    "src/bin/style_repo/pdf_split_native.rs": "485e1dcb73279e609ca51182eb539124935eafeacc43682d9d4fe6bf7b2c0205"
+  },
+  "expressions": {
+    "line_width_draft_acceptance": "value.is_empty() || value == \".\" ||\n                    value.parse::<f32>().is_ok_and(|number| (0.0..=50.0).contains(&number))",
+    "pdf_sample_step": "value\n                    .trim()\n                    .replace(',', \".\")\n                    .parse::<f64>()\n                    .ok()\n                    .filter(|value| value.is_finite())\n                    .map(|value| value.round().max(1.0) as usize)\n                    .unwrap_or(1)"
+  },
+  "review_expression_results": [
+    {
+      "input": "",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": ".",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "0",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "-3",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1.6",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 2
+    },
+    {
+      "input": "0,5",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "0.5",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1,234",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1.234,56",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "1 234,56",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "3e1",
+      "line_width_draft_accepted": true,
+      "pdf_sample_page_step": 30
+    },
+    {
+      "input": "NaN",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "Infinity",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "abc",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    },
+    {
+      "input": "−2",
+      "line_width_draft_accepted": false,
+      "pdf_sample_page_step": 1
+    }
+  ],
+  "ecmascript": {
+    "node": "v18.19.1",
+    "rows": [
+      {
+        "input": "",
+        "parseFloat": "NaN",
+        "Number": 0
+      },
+      {
+        "input": ".",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "0",
+        "parseFloat": 0,
+        "Number": 0
+      },
+      {
+        "input": "-3",
+        "parseFloat": -3,
+        "Number": -3
+      },
+      {
+        "input": "1",
+        "parseFloat": 1,
+        "Number": 1
+      },
+      {
+        "input": "1.6",
+        "parseFloat": 1.6,
+        "Number": 1.6
+      },
+      {
+        "input": "0,5",
+        "parseFloat": 0,
+        "Number": "NaN"
+      },
+      {
+        "input": "0.5",
+        "parseFloat": 0.5,
+        "Number": 0.5
+      },
+      {
+        "input": "1,234",
+        "parseFloat": 1,
+        "Number": "NaN"
+      },
+      {
+        "input": "1.234,56",
+        "parseFloat": 1.234,
+        "Number": "NaN"
+      },
+      {
+        "input": "1 234,56",
+        "parseFloat": 1,
+        "Number": "NaN"
+      },
+      {
+        "input": "3e1",
+        "parseFloat": 30,
+        "Number": 30
+      },
+      {
+        "input": "NaN",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "Infinity",
+        "parseFloat": "Infinity",
+        "Number": "Infinity"
+      },
+      {
+        "input": "abc",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      },
+      {
+        "input": "−2",
+        "parseFloat": "NaN",
+        "Number": "NaN"
+      }
+    ],
+    "formatting": [
+      {
+        "locale": "nl-NL",
+        "value": 1234.56,
+        "display": "1.234,56"
+      },
+      {
+        "locale": "en-US",
+        "value": 1234.56,
+        "display": "1,234.56"
+      }
+    ]
+  },
+  "limitations": [
+    "De PDF-splitsroute schrijft expliciet geen bestanden; de uitkomst betreft alleen de voorbeeldpreview.",
+    "De lijndiktepredicate bewijst acceptatie van een complete string, niet elk teken-, plak- of IME-event in de renderer.",
+    "Het ECMAScript-voorbeeld is een taalproef; er is hiermee geen parseFloat-gebruik of fout in een specifieke OpenAEC-productieapp aangetoond."
+  ],
+  "checks": "8 gerichte assertions geslaagd; geen oordeel over alle getalinvoer.",
+  "calc_parser": {
+    "node": "v24.19.0",
+    "rows": [
+      {
+        "input": "6,66",
+        "nl": 6.66,
+        "numeric": 6.66
+      },
+      {
+        "input": "6.66",
+        "nl": 6.66,
+        "numeric": 6.66
+      },
+      {
+        "input": "1.234",
+        "nl": 1234,
+        "numeric": 1234
+      },
+      {
+        "input": "1.234,56",
+        "nl": 1234.56,
+        "numeric": 1234.56
+      },
+      {
+        "input": "1 234,56",
+        "nl": 1,
+        "numeric": 1
+      },
+      {
+        "input": "1 234,56",
+        "nl": 1,
+        "numeric": 1
+      },
+      {
+        "input": "12abc",
+        "nl": 12,
+        "numeric": 12
+      },
+      {
+        "input": "1,2,3",
+        "nl": 1.2,
+        "numeric": 1.2
+      },
+      {
+        "input": "abc12",
+        "nl": null,
+        "numeric": null
+      },
+      {
+        "input": "0",
+        "nl": 0,
+        "numeric": 0
+      },
+      {
+        "input": "",
+        "nl": null,
+        "numeric": null
+      },
+      {
+        "input": "Infinity",
+        "nl": "Infinity",
+        "numeric": "Infinity"
+      },
+      {
+        "input": "NaN",
+        "nl": null,
+        "numeric": null
+      },
+      {
+        "input": "=1.234",
+        "nl": null,
+        "numeric": 1.234
+      },
+      {
+        "input": "=1,2,3",
+        "nl": null,
+        "numeric": null
+      },
+      {
+        "input": "=2/0",
+        "nl": null,
+        "numeric": null
+      },
+      {
+        "input": "=12,2*2,22",
+        "nl": null,
+        "numeric": 27.084
+      },
+      {
+        "input": "-15,5",
+        "nl": -15.5,
+        "numeric": -15.5
+      },
+      {
+        "input": "0.001",
+        "nl": 1,
+        "numeric": 1
+      },
+      {
+        "input": "=0.001",
+        "nl": null,
+        "numeric": 0.001
+      }
+    ],
+    "roundtrip": [
+      {
+        "value": 6.66,
+        "editor": "6,66",
+        "parsed": 6.66
+      },
+      {
+        "value": 60.5,
+        "editor": "60,5",
+        "parsed": 60.5
+      },
+      {
+        "value": 1988.25,
+        "editor": "1988,25",
+        "parsed": 1988.25
+      },
+      {
+        "value": 17.7,
+        "editor": "17,7",
+        "parsed": 17.7
+      },
+      {
+        "value": 103.4,
+        "editor": "103,4",
+        "parsed": 103.4
+      },
+      {
+        "value": 0.001,
+        "editor": "0,001",
+        "parsed": 0.001
+      },
+      {
+        "value": 12345.67,
+        "editor": "12345,67",
+        "parsed": 12345.67
+      },
+      {
+        "value": 42,
+        "editor": "42",
+        "parsed": 42
+      },
+      {
+        "value": 0,
+        "editor": "",
+        "parsed": null
+      }
+    ],
+    "repo": "OpenAEC-Foundation/open-calc-studio",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "method": "Gepinde parserbestanden uitgevoerd met Node type stripping. Alleen de relatieve import kreeg .ts als extensie. Geen React-component, UI-event, storemutatie of productie-installatie uitgevoerd.",
+    "source_hashes": {
+      "formatting.ts": "ae559fb507f27999d67dc37b3e9e2eeb7c96a0da0ce45f9baa3c64f885b81251",
+      "numericInput.ts": "b264ad8aaa60e150a0841081cdd7de752f829e6093c0a59c1586af348b841607"
+    },
+    "checks": "12 gerichte assertions geslaagd; acht niet-nul round-tripvoorbeelden behouden hun waarde.",
+    "limits": [
+      "Uitkomsten zijn parserresultaten, geen aangetoonde gevolgen voor opgeslagen begrotingen.",
+      "Bestaande tests zijn gelezen, niet als volledige Vitest-suite uitgevoerd.",
+      "Gedrag op huidige upstream-HEAD of een geïnstalleerde versie is niet vastgesteld.",
+      "Nul leeg formatteren is expliciet bestaande keuze in broncode/tests; beoordeling van de zichtbare betekenis blijft een ontwerpvoorstel."
+    ]
+  },
+  "save_controlflow": {
+    "node": "v24.19.0",
+    "scenarios": [
+      {
+        "name": "single_success",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": true,
+        "prevented": true,
+        "dirty_ids": []
+      },
+      {
+        "name": "single_cancel",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [],
+        "destroyed": false,
+        "prevented": true,
+        "dirty_ids": [
+          "A"
+        ]
+      },
+      {
+        "name": "write_failure_keeps_window",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": false,
+        "prevented": true,
+        "dirty_ids": [
+          "A"
+        ]
+      },
+      {
+        "name": "save_as_cancelled",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [],
+        "destroyed": false,
+        "prevented": true,
+        "dirty_ids": [
+          "A"
+        ]
+      },
+      {
+        "name": "two_dirty_first_is_active",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": true,
+        "prevented": true,
+        "dirty_ids": [
+          "B"
+        ]
+      },
+      {
+        "name": "two_dirty_first_is_inactive",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [
+          "/virtual/B.ifcCalc"
+        ],
+        "destroyed": false,
+        "prevented": true,
+        "dirty_ids": [
+          "A"
+        ]
+      },
+      {
+        "name": "discard_first_of_two_dirty",
+        "prompt": [
+          "A"
+        ],
+        "write_paths": [],
+        "destroyed": true,
+        "prevented": true,
+        "dirty_ids": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "name": "edit_during_save",
+        "prompt": [],
+        "write_paths": [
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": false,
+        "prevented": false,
+        "dirty_ids": [],
+        "persisted_revision": 1,
+        "current_revision": 2
+      },
+      {
+        "name": "switch_tab_during_save_preserves_target_id",
+        "prompt": [],
+        "write_paths": [
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": false,
+        "prevented": false,
+        "dirty_ids": [
+          "B"
+        ]
+      },
+      {
+        "name": "overlapping_saves_complete_out_of_order",
+        "prompt": [],
+        "write_paths": [
+          "/virtual/A.ifcCalc",
+          "/virtual/A.ifcCalc"
+        ],
+        "destroyed": false,
+        "prevented": false,
+        "dirty_ids": [],
+        "completed_revisions": [
+          2,
+          1
+        ],
+        "last_completed_revision": 1,
+        "current_revision": 2
+      }
+    ],
+    "assertions": 23,
+    "checked_at": "2026-10-22",
+    "commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "method": "Exacte saveFile- en onCloseRequested-callbackbodies uit gepinde Calc-bron, met in-memory store, dialoog-, serializer- en schrijfstubs. Echte controlflow; geen React/Tauri-event, schijf-I/O of productieapp.",
+    "source_hashes": {
+      "src/App.tsx": "6d86ff1a4c42e3a9d5a9fd853247b174a6eb4270c3d720b9fb9b9d57b46bd4ee",
+      "src/hooks/useFileOperations.ts": "6fdbb6fb1b53203ddbf849ec9eb872c0cba03624e1397488c613145cea538806"
+    },
+    "limitations": [
+      "De serializer en bestanden worden niet uitgevoerd; uitkomsten beschrijven de callbacklogica onder gecontroleerde scenario’s.",
+      "Er is geen echt venster gesloten of bestand gewijzigd.",
+      "Of overige productlagen een scenario uitsluiten, moet end-to-end worden getoetst.",
+      "De parallelle schrijfvolgorde is bewust geforceerd om de ontbrekende volgorde-/revisiecontrole in deze callback zichtbaar te maken."
+    ]
+  },
+  "pdf_rotation": {
+    "command": [
+      "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--test",
+      "--test-reporter=tap",
+      "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/weergave-rotatie.test.mjs"
+    ],
+    "exit_code": 0,
+    "passed_tests": 25,
+    "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+    "scope": "Bestaande pure coördinaat-/rotatie-unitproeven. Geen browser-, pointer-, pen-, DPR-, snap- of meetkalibratie-integratie.",
+    "source_hashes": {
+      "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs": "0135a6cfb041d7c07eb0b350b5c6d0f86632ba28b419dbd6b53b99a8ad167b6f",
+      "open-pdf-studio/js/pdf/weergave-rotatie.js": "f2b4b8baca8e5322c0b349ed45ab43147394a3316e34fef8e643442dca242c7a",
+      "open-pdf-studio/js/text/text-edit-appearance.js": "b11d82a535169dea52318adf0e6cf1247ac7e33fb81f010c53c053e563808353"
+    }
+  },
+  "calc_i18n_source_locales": {
+    "source_commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "command": "python3 scripts/check-i18n.py",
+    "scope": "Ongewijzigde bestaande checker, uitsluitend de twee opgehaalde bronlocales en/nl en alle tien namespaces. Geen overige talen of volledige app getest.",
+    "exit_code": 0,
+    "output": "  en   1308 keys  OK\n  nl   1308 keys  OK\n\n2 talen; 0 met problemen\n",
+    "limitations": [
+      "Key-/placeholder-/array-/BOM-controle bewijst geen vertaalbetekenis, lay-out, fontfallback of dynamische taalwissel."
+    ],
+    "source_hashes": {
+      "scripts/check-i18n.py": "fd0c66598cead246272afbe1252036af3645e5f45b7895eac0d419bf3db6c312",
+      "src/i18n/locales/en/common.json": "7698191d6fa841e48fe8064c82d664e9e60bfea013baf337801434ea71d641b4",
+      "src/i18n/locales/en/ribbon.json": "b1cb5951602d8e56bdb25eb017c06dddc55edf92cea29d51e8899c298ba56131",
+      "src/i18n/locales/en/backstage.json": "cc4b3bb5b0d91cc2680441b15959ca5bbb4a8d9fd35efd487fc56f636bb053f7",
+      "src/i18n/locales/en/settings.json": "158782df58fd5edd314e2d4fdbbc9c36580ba272e01dea36e99a038787e336a1",
+      "src/i18n/locales/en/feedback.json": "889dceb40e1fd8cb440aa1d5ae70e6d1e291283b1ffc013b64841196d8b92b19",
+      "src/i18n/locales/en/grid.json": "56dd4459c8933f8fa2c9be65408e92702aed0f4b14222791ce50d0ef030ebcdd",
+      "src/i18n/locales/en/dialogs.json": "91d8db2ae25616aef2ed5b68de41d6f9242321c0c86edc8b4822f9ea31d6cd96",
+      "src/i18n/locales/en/releases.json": "0e55ab934dd3a346a5d725126bfe105bcc9599db4b3958f860620feb8fda43df",
+      "src/i18n/locales/en/report.json": "e86e78fa5955081899535d20d9f2c2836fccce9964ef68c3cf744d01f13b8aa0",
+      "src/i18n/locales/en/units.json": "1afeed77886c36b0802a8c1522dc2ddc064f4a70a8cd6cc940a1901ecc793de7",
+      "src/i18n/locales/nl/common.json": "120aa4187c75eeafd63696c0c63f1de1427fbf517fca3c5b804655898a47d7db",
+      "src/i18n/locales/nl/ribbon.json": "37b523817cc5e6d2fa99c8b494fec6d1cee0e5abc4901bbc33dbf353611217f8",
+      "src/i18n/locales/nl/backstage.json": "cd84edd2660953d54eaf00aa27191b92d6479bd94d4678f30cfd7209c7829bb6",
+      "src/i18n/locales/nl/settings.json": "5664f7293f47b865c6961ca10314ffa25ae2a9006af203632bcfba93c6e6eec3",
+      "src/i18n/locales/nl/feedback.json": "ea1f0dbf39e7f3bc40ce95dfec18d189a35836ceee80df9215f81c140dbdf547",
+      "src/i18n/locales/nl/grid.json": "addf92ebf04a62f0c39398346fbea4d442fed365ca4a37140a0d7fb7ac91a4c0",
+      "src/i18n/locales/nl/dialogs.json": "20a8b99511bb099931cfb1fdfb7b1e064e2ec5d901e98d5d0eecca384e78b877",
+      "src/i18n/locales/nl/releases.json": "ff46a66cf216fa97d15319c2e8b6d9e7f389f72b8d3c699f1168b0fb53b7d1dc",
+      "src/i18n/locales/nl/report.json": "77d5aaa74c58d1ac6ebb0d6435928bb01a469362ef08ba0a51e91bd2dd3a721b",
+      "src/i18n/locales/nl/units.json": "d035af1ad41ee6914e6ade522caa67701b38bb1b0854a6f99eaab3336d7a05f4"
+    }
+  },
+  "calc_locale_load_controlflow": {
+    "source_commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "method": "Exacte loadLocale-functiebody uitgevoerd met gecontroleerde importer-/i18next-/namespaceomgeving; geen UI of netwerk.",
+    "source_hashes": {
+      "src/i18n/config.ts": "2b7598187eb15c8079e59d70dfe502598e77d10725bf6660e8ac344ba9b2734b"
+    },
+    "source_function_sha256": "d5b46881d93a4233c1a3e0c8b368b245a6a66071a16ffc7a79c25dcfb63b8689",
+    "exit_code": 0,
+    "scenarios": [
+      {
+        "scenario": "success_then_repeat",
+        "attempts": {
+          "common": 1,
+          "ribbon": 1,
+          "backstage": 1,
+          "settings": 1,
+          "feedback": 1,
+          "grid": 1,
+          "dialogs": 1,
+          "releases": 1,
+          "report": 1,
+          "units": 1
+        },
+        "bundles": 10
+      },
+      {
+        "scenario": "partial_failure_then_retry_after_repair",
+        "attempts": {
+          "common": 1,
+          "ribbon": 1,
+          "backstage": 1,
+          "settings": 1,
+          "feedback": 1,
+          "grid": 1,
+          "dialogs": 1,
+          "releases": 1,
+          "report": 1,
+          "units": 1
+        },
+        "bundles": [
+          "ribbon",
+          "backstage",
+          "settings",
+          "feedback",
+          "grid",
+          "dialogs",
+          "releases",
+          "report",
+          "units"
+        ],
+        "markedLoaded": true,
+        "warnings": 1
+      },
+      {
+        "scenario": "unknown_and_bundled_skipped",
+        "attempts": {}
+      }
+    ],
+    "assertions": 6,
+    "limits": [
+      "i18next-init, React-taalwissel, chunks, browsercache en overige appretryroutes niet uitgevoerd.",
+      "Bevestigt alleen dat deze loadLocale na één opgevangen importerfout dezelfde taal in dit proces niet opnieuw laadt."
+    ],
+    "command": "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node work/ui-research/probes/locale/loadLocale-probe.ts",
+    "harness": "work/ui-research/probes/locale/loadLocale-probe.ts"
+  },
+  "pdf_graphics_search_existing_tests": {
+    "search_sources": {
+      "command": [
+        "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/search/search-sources.test.mjs"
+      ],
+      "exit_code": 0,
+      "scope": "Pure annotatiebron-/groepeerregels; geen PDF-extractie of UI.",
+      "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 0
+      },
+      "source_hashes": {
+        "open-pdf-studio/js/search/search-sources.test.mjs": "55aaaaf27bc833300868eaddfe8c1d59ea5d54ed55d30d2a8047ea1e13ca1d94",
+        "open-pdf-studio/js/search/search-sources.js": "bafc88b7a260a087b30496b57788182e95cadfaf424ab5930401321e590d0967"
+      }
+    },
+    "hatch_geometry": {
+      "command": [
+        "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs"
+      ],
+      "exit_code": 0,
+      "scope": "Bestaande geometrievergelijking met recorder; bestaande test stubt appstate en arcControlPoint. Geen browserbeeld, echte bogen of export.",
+      "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+      "counts": {
+        "tests": 179,
+        "pass": 179,
+        "fail": 0,
+        "skipped": 0
+      },
+      "source_hashes": {
+        "open-pdf-studio/js/annotations/rendering/hatch-geometrie.test.mjs": "9463a5fb717c9db9784452f74a5f2c1f9b8d1d2bd880d7152ea312f6a08b1b95",
+        "open-pdf-studio/js/annotations/rendering/hatch-patterns.js": "76eb10b3043d967d90894d5ea18c02e87ae65f615d840ea8101ec8b7e29d47d3",
+        "open-pdf-studio/js/annotations/vlak-ringen.js": "33f8e5c00c8030d3ee94763562cdfac8ded91e9c772df064ff96cc8b0323771e",
+        "open-pdf-studio/js/annotations/arc-points.js": "494d473317b6756207d4135d65bcc5c8708e3b0673a6f114e88c3eece7159f18"
+      }
+    },
+    "print_placement": {
+      "command": [
+        "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-skip-pattern=voegPrintPaginaToe|alle locales",
+        "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs"
+      ],
+      "exit_code": 0,
+      "scope": "Geselecteerde bestaande pure plaatsingsproeven. Twee integratie-/localetests uitgesloten, geen printer/PDF-lib/browser getest.",
+      "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+      "counts": {
+        "tests": 45,
+        "pass": 45,
+        "fail": 0,
+        "skipped": 0
+      },
+      "source_hashes": {
+        "open-pdf-studio/js/pdf/print-plaatsing.test.mjs": "6c1300cedb2ebce0d048fd150bee20eb9adeb72f4f5fd3d087e597ed39612afb",
+        "open-pdf-studio/js/pdf/print-plaatsing.js": "86ccef72c798184ef9bf7272850f9f077455263ae507c7de5ac2dbd33b5c7c93",
+        "open-pdf-studio/js/pdf/print-pagina-instelling.js": "d09ec77486bd81bb108e7c2547c9e5803aa1753003cc7c6e4418058f95ba89c9"
+      },
+      "initial_attempt": {
+        "command": [
+          "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--test",
+          "--test-reporter=tap",
+          "--test-name-pattern=^(?!voegPrintPaginaToe|alle locales)",
+          "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/print-plaatsing.test.mjs"
+        ],
+        "exit_code": 1,
+        "counts": {
+          "tests": 47,
+          "pass": 45,
+          "fail": 2,
+          "skipped": 0
+        },
+        "explanation": "Het eerste naamfilter sloot de twee integratietests niet uit. Zij faalden wegens ontbrekend pdf-lib en niet opgehaalde locale-bundles, niet wegens een productassertion. Daarna expliciet test-skip-pattern gebruikt. Originele TAP behouden."
+      }
+    }
+  },
+  "pdf_word_boundary": {
+    "command": [
+      "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/probes/graphics-search/word-boundary-probe.mjs"
+    ],
+    "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+    "method": "Exacte buildPattern-functie uit gepinde controller; rechtstreeks uitgevoerd in Node zonder PDF/state/browser.",
+    "source_hashes": {
+      "open-pdf-studio/js/search/find-controller.js": "80bf858d13529392ffff2e59ed1d102cc4ed066fdde4cdf976910a465c776b4d"
+    },
+    "source_function_sha256": "0fa5dc30bf42763d582a9b8f1c1f142babbf983cb79b256d61bfc29a6f2acc09",
+    "harness": "work/ui-research/probes/graphics-search/word-boundary-probe.mjs",
+    "exit_code": 0,
+    "cases": [
+      {
+        "query": "beton",
+        "text": "beton",
+        "whole": true,
+        "expected": 1,
+        "actual": 1
+      },
+      {
+        "query": "beton",
+        "text": "betonvloer",
+        "whole": true,
+        "expected": 0,
+        "actual": 0
+      },
+      {
+        "query": "één",
+        "text": "één",
+        "whole": true,
+        "expected": 0,
+        "actual": 0
+      },
+      {
+        "query": "één",
+        "text": "één",
+        "whole": false,
+        "expected": 1,
+        "actual": 1
+      },
+      {
+        "query": "beton",
+        "text": "cafébeton",
+        "whole": true,
+        "expected": 1,
+        "actual": 1
+      },
+      {
+        "query": "café",
+        "text": "café",
+        "whole": true,
+        "expected": 0,
+        "actual": 0
+      }
+    ],
+    "assertions": 6,
+    "limits": [
+      "Geen PDF-extractie, zoekbalk, documentstate of andere zoekroutes getest.",
+      "Observed assertions zijn regressievoorbeelden van huidig gedrag, geen gewenste Unicode-specificatie."
+    ]
+  },
+  "calc_print_colour_static": {
+    "method": "WCAG relatieve-luminantieberekening op expliciete CSS-kleuren in gepinde HTML-printbron. Geen browserrender/afdruk.",
+    "foreground": "#A1A1AA",
+    "background": "#FFFFFF",
+    "contrast_ratio": 2.562908108464821,
+    "source_commit": "b47042704efa388d95eb59ce77d23aeb5ee0e44c",
+    "source_hashes": {
+      "src/services/print/printService.ts": "3d8475c566005975fc15c4ec1f6c39f018c9510b4cd2d401da68b1fa20f2b5ce"
+    },
+    "scope": "Kleine secundaire tekst/kodes in deze HTML-service. Geen conclusie over alle PDF-/Typst-/printeruitvoer."
+  },
+  "migration_check_scope": {
+    "source_commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+    "checks": [
+      {
+        "command": "python3 scripts/check_portable_ui.py",
+        "exit_code": 0,
+        "output": "Canonical and review assets agree; local Pointcloud snapshot unavailable\n",
+        "scope": "Canonical/review-assets vergeleken; portable-snapshotcontrole niet uitgevoerd omdat de lokale kopie ontbreekt."
+      },
+      {
+        "command": "python3 scripts/check_layout_metrics.py",
+        "exit_code": 0,
+        "output": "Rust and HTML agree with the recorded Tauri source: 32 / 28 / 94 / 30 / 22 px bands, 24 px panel toolbars, 240 px panels\n",
+        "scope": "Rust/HTML/recorded-layoutspec; lokale Tauri-bron/Pointcloud-kopie niet aanwezig en niet geverifieerd."
+      }
+    ],
+    "source_hashes": {
+      "scripts/check_portable_ui.py": "5ddee5ac60c5e457fedd1bc4c4c447752f23bee8b6382a4df30c05b5d5476508",
+      "scripts/check_layout_metrics.py": "b461c5b843fb06a57edfce3c29be1ade1f3b26ba1b938a3166a19fdb4cdfffad",
+      "scripts/generate_tokens.py": "5659c8002149be2051b583ae53ec2598cd21d2e008372b4a5a46e0ab7cd8d27c",
+      "crates/openaec-ui/src/tokens.rs": "f84ea48a6cf161cbc129908ef010c9875e082bcbed09ee60c7a8bc22f5c02d8a",
+      "assets/themes.css": "7802bfba82ba537cb1846639ac251977e34b8365cad751dc39840a85336232fa",
+      "design/ontwerp-0.4/tokens-0.4.json": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c",
+      "design/layout-spec.json": "b788e2a83acf6621c94fea74a741ad81ae0f7ee5e94ff7d78200eb9da8b0c3cd"
+    },
+    "limitations": [
+      "Geen bestaande generator gestart; geen bronbestanden aangepast.",
+      "Geen Cargo/package/render/nativeapp- of 0.4-integratieproef."
+    ]
+  },
+  "current_head_tokens_04": {
+    "commit": "85a6aafc7d003ec8f61c9543b352a1f1b0f47346",
+    "command": "python3 scripts/generate_tokens_04.py --check",
+    "exit_code": 0,
+    "themes": 5,
+    "colour_roles": 31,
+    "output": "work/ui-research/probes/current-head/tokens-04-check.txt",
+    "source_hashes": {
+      "crates/openaec-ui/src/lib.rs": "16ab2f3ed38fa07dcf968465b224c7059ee4fce6074dd75ee8ad49b48795aef4",
+      "crates/openaec-ui/Cargo.toml": "35236e70ca5b47f369a59293d2b13939351919e06ea604cf14d51c48ce406a9d",
+      "Cargo.lock": "0fcd0b4ad9e0b183dbef94204fa4441edfbdd4e8a6e9ff1884f2bbdbe24ee57f",
+      "scripts/check_portable_ui.py": "9c023ec28d67be81fb4e565cc2ae519fa115ede9dc9c3902d3a4697c2ff95061",
+      "README.md": "18fa9cd0e36a8f1eb737ab80c8021641be378ee6e59b5dbe5a35c847e0e3fe08",
+      "NOTES.md": "667f050b9c8d55993dd8d45f90f1dc99def902c5e7ce6d88123d7a1f2912b53d",
+      "crates/openaec-icons/README.md": "ce178dfac512e0170fafb00b09bd8148739258cc6c6bb307effbeb121bde445c",
+      "crates/openaec-icons/Cargo.toml": "cf4d90223b7a7e8929d44b23b72eda10ea3477ce4441c8c04d04e05737026f6c",
+      "crates/openaec-ui/src/design/mod.rs": "bf4b9a0005fc316e7c878058bde45ae7109aa5ef7c06ffffdde4640fc748b8cf",
+      "crates/openaec-ui/src/design/tokens.rs": "7b461397523ab6fb8665ffe4ae37c13012c9e117d91133efa572ed4f47562d44",
+      "crates/openaec-ui/src/design/widgets.rs": "d4cfa9302731aa00261111d4ce1d3713045e1d80cfddd702c4b7b6e1d73d8521",
+      "crates/openaec-ui/src/design/chrome.rs": "d41ae730915e31ec189b8885cbd78260382b97b202b575b44da6a4f437a4e401",
+      "crates/openaec-ui/src/design/tiles.rs": "0f8bf2147d485a30919e9667ff9aacc4ea0769bbfaf1d7bac29478cb9a5fedb9",
+      "crates/openaec-ui/src/design/workflow.rs": "d78d80ec04200fb3c647622ea7249e03e67cee81b9504571f52bca1a6b8d9b09",
+      "STAPPENPLAN.md": "ac89d607460063175d9bf224a30ddf01049ad601a03fa73a1298ca9ba37fcce3",
+      "web/openaec-components.css": "ab99868d9162871c04441b3225728545b4026fd836fcec673020db4a78a5fe5d",
+      "scripts/generate_tokens_04.py": "898238e6cef581a2230f51dbafdde2fc39662463116d5260b249b132a6fb012e",
+      "web/openaec-tokens.css": "8dfe8410de4ecb3037fa5775a8e1459480130d4d9a05a9c68ca7172bc30bdaef",
+      "design/ontwerp-0.4/tokens-0.4.json": "685552731376353186277105a5ee29ba76475e2f91b8caa9366abf06e87cb14c",
+      "scripts/check_tokens_04.py": "ba762b39cfc3cd041b375ac9edf123da4c5c781f72c2852b16564e42f0cdd3ba"
+    },
+    "scope": "Bestaande read-only afleidingscontrole; geen app, beeldvergelijking, Cargo-build of font-/platformvalidatie."
+  },
+  "current_head_pdf_numeric_errors": {
+    "commit": "e9f599f66ac75c5cb7656789573f942ecb8db2d7",
+    "command": "Node24 --test core/getal-invoer.test.mjs core/fout-bericht.test.mjs",
+    "exit_code": 0,
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "output": "work/ui-research/probes/current-head/pdf-numeric-error-tests.txt",
+    "source_hashes": {
+      "open-pdf-studio/js/pdf/pdf-viewport.js": "2454317ec02513805114410c1a893d076b8c403c4c46eaad32a208c6027b3523",
+      "open-pdf-studio/js/tools/snap-engine.js": "2605f93dabb95c2fd77c094c4a9a7f7e9af79d6e179cd64403297597cfd6da82",
+      "open-pdf-studio/js/main.js": "db39c354358ee7bafdf482aaa55f75db09783cff58fc0365b91c9df4d084e8fe",
+      "open-pdf-studio/js/text/text-edit-appearance.js": "26a0c1fb8924a2519d0c49808d8657942f1665250b7697c065d05368bd5a8983",
+      "open-pdf-studio/js/pdf/saver/hatch-meta.js": "7c2b9948cfc5c07c7ea8e5545b51b0c1c02a40479d59a1faaca162c80849e84f",
+      "open-pdf-studio/js/pdf/print-opdracht.js": "daaf8dad681d26410d7224c135b37a79e2d70ba2c578d2f2c73adb5c6d2f0d1f",
+      "open-pdf-studio/js/pdf/print-pagina-instelling.js": "cb81bc18b1eca2a725e87ec7bf1e59d0a5466894d729ace0ebd01c05c6864974",
+      "open-pdf-studio/js/core/getal-invoer.js": "52768a6984828e51e6ded69650c42178fa4bdbdd19fe29c9d73c2f201dcd22a1",
+      "open-pdf-studio/js/core/getal-invoer.test.mjs": "1ea719b66ef0afd11ce30d6d18de708f5b68173445cb4405aecf140198df7d4a",
+      "open-pdf-studio/js/core/fout-bericht.js": "c79a0ea2bba4f879e482646c3089cfafc2d2ab5801b3f8f8cbabd5e5e5b59274",
+      "open-pdf-studio/js/core/fout-bericht.test.mjs": "bebe0eada452c0feebf0d58d099409298fb218a78d33b73f2309c303c5cfd090",
+      "open-pdf-studio/js/ui/getal-veld.js": "f468f98d2d3baeb15527317d7a43a353f361db706472ee4e4808e2bda9417668",
+      "open-pdf-studio/js/core/getal-invoer-velden.test.mjs": "0213bfa28f02fe037bff60661f825a35339d118334bf0aeed0980e96e8acf0da",
+      "open-pdf-studio/js/getal-velden-bron.test.mjs": "c107ef4a1d10d3f66f12a5b483c4bbfbc4df393ec270af88cc6bd1b5d02b1ee6"
+    },
+    "scope": "Bestaande14 pure getaltests en4 pure foutredentests. DOM-adapter/installatie alleen gelezen; geen volledige WebView/IME/eindgebruikersproef."
+  }
+}

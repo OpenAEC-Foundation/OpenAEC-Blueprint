@@ -1,0 +1,432 @@
+{
+  "date": "2026-10-22",
+  "repo_commit": "befcbff7790e8c593b2ec47ae18d43115a4f530c",
+  "repo_status": "",
+  "token_check": {
+    "themes": 5,
+    "pairs": 190,
+    "problems": []
+  },
+  "contrast_pairs": [
+    {
+      "name": "white_on_amber",
+      "fg": "#FFFFFF",
+      "bg": "#D97706",
+      "ratio": 3.1858
+    },
+    {
+      "name": "white_on_gradient_top",
+      "fg": "#FFFFFF",
+      "bg": "#E08A12",
+      "ratio": 2.6876
+    },
+    {
+      "name": "dark_on_amber",
+      "fg": "#1C1917",
+      "bg": "#D97706",
+      "ratio": 5.4894
+    },
+    {
+      "name": "amber_on_white",
+      "fg": "#D97706",
+      "bg": "#FFFFFF",
+      "ratio": 3.1858
+    },
+    {
+      "name": "accent_text_on_white",
+      "fg": "#92400E",
+      "bg": "#FFFFFF",
+      "ratio": 7.09
+    },
+    {
+      "name": "body_on_white",
+      "fg": "#2A2A32",
+      "bg": "#FFFFFF",
+      "ratio": 14.2306
+    },
+    {
+      "name": "body_on_dark",
+      "fg": "#EDEBE8",
+      "bg": "#2A2A32",
+      "ratio": 11.9601
+    }
+  ],
+  "fonts": [
+    {
+      "file": "Inter-Medium.ttf",
+      "version": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "features": [
+        "aalt",
+        "calt",
+        "case",
+        "ccmp",
+        "cpsp",
+        "cv01",
+        "cv02",
+        "cv03",
+        "cv04",
+        "cv05",
+        "cv06",
+        "cv07",
+        "cv08",
+        "cv09",
+        "cv10",
+        "cv11",
+        "cv12",
+        "cv13",
+        "cv14",
+        "dlig",
+        "dnom",
+        "frac",
+        "kern",
+        "locl",
+        "mark",
+        "mkmk",
+        "numr",
+        "ordn",
+        "pnum",
+        "salt",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "ss06",
+        "ss07",
+        "ss08",
+        "subs",
+        "sups",
+        "tnum",
+        "zero"
+      ],
+      "missing_probe": "⌀",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "97ad806f526e41546d46365bb3a393145f75b7b1568913db74549ad8b8dba872"
+    },
+    {
+      "file": "Inter-Regular.ttf",
+      "version": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "features": [
+        "aalt",
+        "calt",
+        "case",
+        "ccmp",
+        "cpsp",
+        "cv01",
+        "cv02",
+        "cv03",
+        "cv04",
+        "cv05",
+        "cv06",
+        "cv07",
+        "cv08",
+        "cv09",
+        "cv10",
+        "cv11",
+        "cv12",
+        "cv13",
+        "cv14",
+        "dlig",
+        "dnom",
+        "frac",
+        "kern",
+        "locl",
+        "mark",
+        "mkmk",
+        "numr",
+        "ordn",
+        "pnum",
+        "salt",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "ss06",
+        "ss07",
+        "ss08",
+        "subs",
+        "sups",
+        "tnum",
+        "zero"
+      ],
+      "missing_probe": "⌀",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82"
+    },
+    {
+      "file": "Inter-SemiBold.ttf",
+      "version": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "features": [
+        "aalt",
+        "calt",
+        "case",
+        "ccmp",
+        "cpsp",
+        "cv01",
+        "cv02",
+        "cv03",
+        "cv04",
+        "cv05",
+        "cv06",
+        "cv07",
+        "cv08",
+        "cv09",
+        "cv10",
+        "cv11",
+        "cv12",
+        "cv13",
+        "cv14",
+        "dlig",
+        "dnom",
+        "frac",
+        "kern",
+        "locl",
+        "mark",
+        "mkmk",
+        "numr",
+        "ordn",
+        "pnum",
+        "salt",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "ss06",
+        "ss07",
+        "ss08",
+        "subs",
+        "sups",
+        "tnum",
+        "zero"
+      ],
+      "missing_probe": "⌀",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3"
+    },
+    {
+      "file": "JetBrainsMono-Regular.ttf",
+      "version": [
+        "Version 2.304; ttfautohint (v1.8.4.7-5d5b)"
+      ],
+      "features": [
+        "aalt",
+        "calt",
+        "case",
+        "ccmp",
+        "cv01",
+        "cv02",
+        "cv03",
+        "cv04",
+        "cv05",
+        "cv06",
+        "cv07",
+        "cv08",
+        "cv09",
+        "cv10",
+        "cv11",
+        "cv12",
+        "cv14",
+        "cv15",
+        "cv16",
+        "cv17",
+        "cv18",
+        "cv19",
+        "cv20",
+        "cv99",
+        "frac",
+        "locl",
+        "mark",
+        "mkmk",
+        "ordn",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss19",
+        "ss20",
+        "subs",
+        "sups",
+        "zero"
+      ],
+      "missing_probe": "Ĳĳ⌀",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "a0bf60ef0f83c5ed4d7a75d45838548b1f6873372dfac88f71804491898d138f"
+    },
+    {
+      "file": "SpaceGrotesk-Bold.ttf",
+      "version": [
+        "Version 2.000; ttfautohint (v1.8.3)"
+      ],
+      "features": [
+        "aalt",
+        "case",
+        "ccmp",
+        "dnom",
+        "frac",
+        "kern",
+        "liga",
+        "lnum",
+        "locl",
+        "mark",
+        "mkmk",
+        "numr",
+        "onum",
+        "ordn",
+        "pnum",
+        "salt",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "subs",
+        "sups",
+        "tnum",
+        "zero"
+      ],
+      "missing_probe": "⌀αβσλ",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "7209bbb75fc0f5c546a5f5773b0db74ffc6abf04c2148c1105cace5765a96bdb"
+    },
+    {
+      "file": "SpaceGrotesk-Medium.ttf",
+      "version": [
+        "Version 2.000; ttfautohint (v1.8.3)"
+      ],
+      "features": [
+        "aalt",
+        "case",
+        "ccmp",
+        "dnom",
+        "frac",
+        "kern",
+        "liga",
+        "lnum",
+        "locl",
+        "mark",
+        "mkmk",
+        "numr",
+        "onum",
+        "ordn",
+        "pnum",
+        "salt",
+        "sinf",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "subs",
+        "sups",
+        "tnum",
+        "zero"
+      ],
+      "missing_probe": "⌀αβσλ",
+      "probe": "ĲĳéëçİıĞğŞş±−×Øø⌀²³≤≥αβσλ°€",
+      "sha256": "3183b7eb0b4241476360e2cd8e527868616cc16d3ce332c4376505989b772b44"
+    }
+  ],
+  "website_snapshots": [
+    {
+      "file": "open-aec-home.html",
+      "sha256": "7cf067e921a76210449cd66dd391a35b410c60717e13ff8eef63d80c9ffb25b0"
+    },
+    {
+      "file": "open-aec-style.css",
+      "sha256": "17a8d0ee430e21631e917743c47afa6ce1489f002481ea211077b70c3090f55c"
+    }
+  ],
+  "limits": "Static source inspection and existing token checker only. No native app execution, user test, complete glyph coverage audit or conformance certification.",
+  "report_fonts": [
+    {
+      "family": "IBM Plex Sans",
+      "weight": "400",
+      "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXGKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1swZSAXcomDVmadSD6llzAA.ttf",
+      "sha256": "6dbe082463cf749cfa057d45c3048c90f4df031496498e5b5bdfd0b6babb9d16"
+    },
+    {
+      "family": "IBM Plex Sans",
+      "weight": "600",
+      "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXGKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1swZSAXcomDVmadSDNF5zAA.ttf",
+      "sha256": "5311c66fd6d04ae45671236f7eae667b671c06c1dc7e88d52c206e5fadd0fb21"
+    },
+    {
+      "family": "Source Sans 3",
+      "weight": "400",
+      "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky461EN.ttf",
+      "sha256": "20ab9752bd19a373dba627393b6c142e6cf8fc2f219119a8e0cb1442ef679ec5"
+    },
+    {
+      "family": "Source Sans 3",
+      "weight": "600",
+      "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7FEN.ttf",
+      "sha256": "950e66c48e5e60c9407421d0fa601047176f17e0d22a598bbd084dde45a98be2"
+    },
+    {
+      "family": "Atkinson Hyperlegible Next",
+      "weight": "400",
+      "url": "https://fonts.gstatic.com/s/atkinsonhyperlegiblenext/v7/NaP4cYPdHfdVxJw0IfIP0lvYFqijb-UxCtm5_wdGscKFt4tOOfV4ZmW37LQhtA.ttf",
+      "sha256": "833b4e79c549e3f407fecf03b5c9e6dbfb94a80c86f35fe4f12d32b5936eccba"
+    },
+    {
+      "family": "Atkinson Hyperlegible Next",
+      "weight": "600",
+      "url": "https://fonts.gstatic.com/s/atkinsonhyperlegiblenext/v7/NaP4cYPdHfdVxJw0IfIP0lvYFqijb-UxCtm5_wdGscKFt4tOOfV4ZmW3MrMhtA.ttf",
+      "sha256": "b8ee2866e707e26b26aca96741b756cfda3e44b1ede220d8c986bd0bc6eaac6d"
+    },
+    {
+      "family": "Inter",
+      "weight": "400",
+      "url": "OpenAEC repository snapshot: Inter-Regular.ttf",
+      "sha256": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82"
+    },
+    {
+      "family": "Inter",
+      "weight": "500",
+      "url": "OpenAEC repository snapshot: Inter-Medium.ttf",
+      "sha256": "97ad806f526e41546d46365bb3a393145f75b7b1568913db74549ad8b8dba872"
+    },
+    {
+      "family": "Inter",
+      "weight": "600",
+      "url": "OpenAEC repository snapshot: Inter-SemiBold.ttf",
+      "sha256": "78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": "500",
+      "url": "OpenAEC repository snapshot: SpaceGrotesk-Medium.ttf",
+      "sha256": "3183b7eb0b4241476360e2cd8e527868616cc16d3ce332c4376505989b772b44"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": "700",
+      "url": "OpenAEC repository snapshot: SpaceGrotesk-Bold.ttf",
+      "sha256": "7209bbb75fc0f5c546a5f5773b0db74ffc6abf04c2148c1105cace5765a96bdb"
+    }
+  ],
+  "report_font_notice": "Unmodified font binaries embedded in the HTML. Complete OFL notices included in its final section.",
+  "google_inter_probe": {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "version": "Version 4.001;git-66647c0bb",
+    "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+    "absent_features": [
+      "ss02",
+      "ss04",
+      "cv05",
+      "cv08"
+    ],
+    "scope": "Specific TTF returned to this research request. Delivery may differ with request context."
+  }
+}

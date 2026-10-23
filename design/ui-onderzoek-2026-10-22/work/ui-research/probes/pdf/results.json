@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/aia08/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--test",
+    "--test-reporter=tap",
+    "/home/aia08/Documents/Codex/2026-10-22/https-github-com-openaec-foundation-openaec/work/ui-research/upstream/pdf-f754cb7/open-pdf-studio/js/pdf/weergave-rotatie.test.mjs"
+  ],
+  "exit_code": 0,
+  "passed_tests": 25,
+  "source_commit": "f754cb7c9d9adf654f6894cee15543413c24fcff",
+  "scope": "Bestaande pure coördinaat-/rotatie-unitproeven. Geen browser-, pointer-, pen-, DPR-, snap- of meetkalibratie-integratie.",
+  "source_hashes": {
+    "open-pdf-studio/js/pdf/weergave-rotatie.test.mjs": "0135a6cfb041d7c07eb0b350b5c6d0f86632ba28b419dbd6b53b99a8ad167b6f",
+    "open-pdf-studio/js/pdf/weergave-rotatie.js": "f2b4b8baca8e5322c0b349ed45ab43147394a3316e34fef8e643442dca242c7a",
+    "open-pdf-studio/js/text/text-edit-appearance.js": "b11d82a535169dea52318adf0e6cf1247ac7e33fb81f010c53c053e563808353"
+  }
+}
