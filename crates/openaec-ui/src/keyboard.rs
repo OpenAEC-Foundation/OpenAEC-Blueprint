@@ -43,3 +43,16 @@ pub fn navigate<T: Send + 'static>(step: Navigation) -> iced::Task<T> {
         Navigation::Previous => iced::advanced::widget::operate(crate::design::focus::previous()),
     }
 }
+
+/// A key press that no widget captured.
+#[derive(Debug, Clone, PartialEq)]
+pub struct KeyPress {
+    pub key: Key,
+    pub modifiers: Modifiers,
+}
+
+/// Every key press that no widget captured. Look it up in the app's commands
+/// with `design::command::find`, so shortcuts and menus share one list.
+pub fn presses() -> Subscription<KeyPress> {
+    on_key_press(|key, modifiers| Some(KeyPress { key, modifiers }))
+}

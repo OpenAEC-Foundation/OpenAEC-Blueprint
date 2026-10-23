@@ -255,6 +255,8 @@ De B2-iconen van Codex staan als vaste set in de crate [`openaec-icons`](crates/
 
 De bibliotheek is met het toetsenbord te bedienen: Tab en Shift+Tab gaan langs alle knoppen, tegels, tabs, rijen en menu-items, Enter en spatie drukken ze in, en een open dialoog houdt de focus vast tot hij sluit. Zie `design::focus` en `keyboard::navigation` in [`crates/openaec-ui`](crates/openaec-ui/README.md). In menu's, tabellen, tabs, het lint en de zijbalk gaan de pijltjestoetsen langs de items; zo'n groep is één Tab-stop (issue #2).
 
+Elke opdracht staat één keer beschreven als `design::command::Command`, met naam, icoon, sneltoets en soort. Lint, menu's, titelbalk, tooltips en sneltoetsen lezen uit diezelfde lijst, zodat een opdracht overal hetzelfde heet en dezelfde toets heeft (issue #9). De galerij `ui04` doet dit voor alle opdrachten van de voorbeeldapp.
+
 De installer in de galerij volgt voorstel E uit [`design/ontwerp-0.4/installer-voorstellen.html`](design/ontwerp-0.4/installer-voorstellen.html), gemaakt door [`scripts/build_installer_proposals.py`](scripts/build_installer_proposals.py): alleen het bovenste vlak is donker, daaronder volgt alles het thema, met desktop-apps en webtools als twee secties met de tegels van open-aec.com. De screenshots en de catalogus komen uit de installer op commit `8b39bae`; [`scripts/crop_installer_previews.py`](scripts/crop_installer_previews.py) snijdt ze bij met afgeronde hoeken en een vervaging.
 
 ## Nachtelijke B2-uitbreiding

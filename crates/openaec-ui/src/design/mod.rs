@@ -8,6 +8,7 @@
 //! user's Werkruimte and Statusbalk settings. This module is independent of the
 //! prototype theme in [`crate::theme`].
 pub mod chrome;
+pub mod command;
 pub mod focus;
 pub mod tiles;
 pub mod tokens;

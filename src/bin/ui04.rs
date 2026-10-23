@@ -8,6 +8,7 @@
 //! the design can be judged by using it: tabs, ribbon, tree, editing, undo,
 //! dialogs, notifications and shortcuts all respond. It is a review aid, not an app.
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
+use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::focus;
 use openaec_ui::design::tiles::{self as t, RecentFile};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, TableColumn, Tone};
@@ -677,6 +678,7 @@ enum Msg {
     Unit(&'static str),
     Noop,
     Navigate(openaec_ui::keyboard::Navigation),
+    Key(openaec_ui::keyboard::KeyPress),
 }
 
 /// State of the sample workflow app: an energy label in five sections.
@@ -1160,6 +1162,18 @@ impl Gallery {
                 }
             }
             Msg::Navigate(step) => return openaec_ui::keyboard::navigate(step),
+            Msg::Key(press) => {
+                use keyboard::key::Named;
+                // Escape and Enter belong to dialogs and menus; every other key is a command.
+                let message = match &press.key {
+                    keyboard::Key::Named(Named::Escape) => Some(Msg::Escape),
+                    keyboard::Key::Named(Named::Enter) if press.modifiers.is_empty() => Some(Msg::Enter),
+                    key => cm::find(&self.commands(), key, press.modifiers),
+                };
+                if let Some(message) = message {
+                    return self.update(message);
+                }
+            }
             Msg::Format(f) => self.format = f,
             Msg::Landscape(b) => self.landscape = b,
             Msg::ConfirmExport => {
@@ -1499,32 +1513,8 @@ impl Gallery {
     }
 
     fn subscription(&self) -> Subscription<Msg> {
-        let keys = openaec_ui::keyboard::on_key_press(|key, mods| {
-            use keyboard::key::Named;
-            use keyboard::Key;
-            match (key.as_ref(), mods.command()) {
-                (Key::Named(Named::Escape), _) => Some(Msg::Escape),
-                (Key::Named(Named::Enter), false) => Some(Msg::Enter),
-                (Key::Named(Named::Delete), false) => Some(Msg::Delete),
-                (Key::Character("s"), true) => Some(Msg::Save),
-                (Key::Character("n"), true) => Some(Msg::New),
-                (Key::Character("z"), true) => Some(Msg::Undo),
-                (Key::Character("y"), true) => Some(Msg::Redo),
-                (Key::Character("x"), true) => Some(Msg::Cut),
-                (Key::Character("c"), true) => Some(Msg::Copy),
-                (Key::Character("v"), true) => Some(Msg::Paste),
-                (Key::Character("p"), true) => Some(Msg::Dialog(Some(Dialog::Print))),
-                (Key::Character("e"), true) => Some(Msg::Dialog(Some(Dialog::Export))),
-                (Key::Character(","), true) => Some(Msg::Dialog(Some(Dialog::Settings))),
-                (Key::Character("1"), true) => Some(Msg::ToggleLeft),
-                (Key::Character("2"), true) => Some(Msg::ToggleRight),
-                (Key::Character("+") | Key::Character("="), true) => Some(Msg::ZoomIn),
-                (Key::Character("-"), true) => Some(Msg::ZoomOut),
-                (Key::Character("0"), true) => Some(Msg::ZoomFit),
-                (Key::Character("w"), true) => Some(Msg::CloseActive),
-                _ => None,
-            }
-        });
+        // Shortcuts come from the same command list as the ribbon and the menus.
+        let keys = openaec_ui::keyboard::presses().map(Msg::Key);
         Subscription::batch([keys, openaec_ui::keyboard::navigation().map(Msg::Navigate), iced::window::resize_events().map(|(_, size)| Msg::WindowResized(size))])
     }
 
@@ -1645,45 +1635,32 @@ impl Gallery {
     }
 
     fn ribbon(&self, look: Look) -> Element<'_, Msg> {
-        let has_selection = self.selected.is_some();
-        let sel = |m: Msg| has_selection.then_some(m);
+        // Every button comes from the command list, so it shows the same label,
+        // state and shortcut as the menus and the keyboard.
+        let large = |id| cm::ribbon_large(look, &self.command(id));
+        let small = |id| cm::ribbon_small(look, &self.command(id));
         let groups = match self.ribbon_tab {
             0 => vec![
-                w::ribbon_group(look, "Project", vec![w::ribbon_large(look, NEW, "Nieuw", false, Some(Msg::New)), w::ribbon_large(look, OPEN, "Openen", false, Some(Msg::Backstage(true))), w::ribbon_large(look, SAVE, "Opslaan", false, Some(Msg::Save))]),
-                w::ribbon_group(look, "Klembord", vec![
-                    w::ribbon_large(look, PASTE, "Plakken", false, self.clipboard.as_ref().map(|_| Msg::Paste)),
-                    column![w::ribbon_small(look, CUT, "Knippen", false, sel(Msg::Cut)), w::ribbon_small(look, COPY, "Kopiëren", false, sel(Msg::Copy)), w::ribbon_small(look, DELETE, "Verwijderen", false, sel(Msg::Delete))].spacing(2).into(),
-                ]),
-                w::ribbon_group(look, "Geschiedenis", vec![
-                    w::ribbon_large(look, UNDO, "Ongedaan", false, (!self.history.is_empty()).then_some(Msg::Undo)),
-                    w::ribbon_large(look, REDO, "Opnieuw", false, (!self.future.is_empty()).then_some(Msg::Redo)),
-                ]),
+                w::ribbon_group(look, "Project", vec![large("file.new"), large("file.open"), large("file.save")]),
+                w::ribbon_group(look, "Klembord", vec![large("edit.paste"), column![small("edit.cut"), small("edit.copy"), small("edit.delete")].spacing(2).into()]),
+                w::ribbon_group(look, "Geschiedenis", vec![large("edit.undo"), large("edit.redo")]),
             ],
             1 => vec![
-                w::ribbon_group(look, "Posten", vec![w::ribbon_large(look, ADD_ITEM, "Nieuwe post", false, Some(Msg::AddItem)), w::ribbon_large(look, ADD_CHAPTER, "Hoofdstuk", false, Some(Msg::AddChapter))]),
-                w::ribbon_group(look, "Weergaven", vec![
-                    w::ribbon_large(look, TABLE, "Tabel", self.docs.get(self.active).is_some_and(|d| d.kind == DocKind::Budget), Some(Msg::OpenDoc(DocKind::Budget))),
-                    w::ribbon_large(look, CHART, "Grafiek", self.docs.get(self.active).is_some_and(|d| d.kind == DocKind::Chart), Some(Msg::OpenDoc(DocKind::Chart))),
-                ]),
+                w::ribbon_group(look, "Posten", vec![large("insert.item"), large("insert.chapter")]),
+                w::ribbon_group(look, "Weergaven", vec![large("view.table"), large("view.chart")]),
             ],
             2 => vec![
-                w::ribbon_group(look, "Berekening", vec![w::ribbon_large(look, RECALC, "Herberekenen", false, Some(Msg::Recalculate))]),
-                w::ribbon_group(look, "Controle", vec![w::ribbon_large(look, AUDIT, "Controleren", self.banner.is_some(), Some(Msg::Audit))]),
+                w::ribbon_group(look, "Berekening", vec![large("calc.recalculate")]),
+                w::ribbon_group(look, "Controle", vec![large("calc.audit")]),
             ],
             3 => vec![
-                w::ribbon_group(look, "Zoomen", vec![
-                    column![w::ribbon_small(look, ZOOM_IN, "Inzoomen", false, Some(Msg::ZoomIn)), w::ribbon_small(look, ZOOM_OUT, "Uitzoomen", false, Some(Msg::ZoomOut)), w::ribbon_small(look, FIT, "100%", self.zoom == 100, Some(Msg::ZoomFit))].spacing(2).into(),
-                ]),
-                w::ribbon_group(look, "Tonen", vec![
-                    w::ribbon_large(look, GRID, "Raster", self.grid, Some(Msg::ToggleGrid)),
-                    w::ribbon_large(look, LEFT_LARGE, "Structuur", self.show_left, Some(Msg::ToggleLeft)),
-                    w::ribbon_large(look, RIGHT_LARGE, "Eigenschappen", self.show_right, Some(Msg::ToggleRight)),
-                ]),
-                w::ribbon_group(look, "Venster", vec![w::ribbon_large(look, SETTINGS_LARGE, "Instellingen", false, Some(Msg::Dialog(Some(Dialog::Settings))))]),
+                w::ribbon_group(look, "Zoomen", vec![column![small("view.zoom-in"), small("view.zoom-out"), small("view.zoom-fit")].spacing(2).into()]),
+                w::ribbon_group(look, "Tonen", vec![large("view.grid"), large("view.left"), large("view.right")]),
+                w::ribbon_group(look, "Venster", vec![large("app.settings")]),
             ],
             _ => vec![
-                w::ribbon_group(look, "Rapport", vec![w::ribbon_large(look, REPORT, "Rapport maken", self.report_ready, Some(Msg::GenerateReport))]),
-                w::ribbon_group(look, "Uitvoer", vec![w::ribbon_large(look, EXPORT, "Exporteren", false, Some(Msg::Dialog(Some(Dialog::Export)))), w::ribbon_large(look, PRINT, "Afdrukken", false, Some(Msg::Dialog(Some(Dialog::Print))))]),
+                w::ribbon_group(look, "Rapport", vec![large("report.generate")]),
+                w::ribbon_group(look, "Uitvoer", vec![large("file.export"), large("file.print")]),
             ],
         };
         w::ribbon(look, groups)
@@ -1938,9 +1915,9 @@ impl Gallery {
     fn title_bar(&self, look: Look, name: String, quick: bool) -> Element<'_, Msg> {
         let quick_buttons = if quick {
             vec![
-                w::with_tooltip(look, ch::title_button(look, SAVE_SMALL, false, Some(Msg::Save)), "Opslaan", Some("Ctrl+S")),
-                w::with_tooltip(look, ch::title_button(look, UNDO_SMALL, false, (!self.history.is_empty()).then_some(Msg::Undo)), "Ongedaan maken", Some("Ctrl+Z")),
-                w::with_tooltip(look, ch::title_button(look, REDO_SMALL, false, (!self.future.is_empty()).then_some(Msg::Redo)), "Opnieuw", Some("Ctrl+Y")),
+                cm::icon_button(look, &self.command("file.save"), 28.0),
+                cm::icon_button(look, &self.command("edit.undo"), 28.0),
+                cm::icon_button(look, &self.command("edit.redo"), 28.0),
             ]
         } else {
             vec![Space::new().width(86).into()]
@@ -1954,19 +1931,59 @@ impl Gallery {
     }
 
     /// Lines of the open menu.
+    /// Every command of the sample app, in one place (issue #9). The ribbon, the
+    /// context menus, the title bar and the shortcuts all read from this list, so
+    /// a label, state or key never differs between them.
+    fn commands(&self) -> Vec<Command<Msg>> {
+        let selection = self.selected.is_some();
+        let doc = self.docs.get(self.active).map(|d| d.kind);
+        vec![
+            Command::new("file.new", "Nieuw", Msg::New).icon(NEW_SMALL, NEW).shortcut(Shortcut::ctrl('n')),
+            Command::new("file.open", "Openen", Msg::Backstage(true)).icon(OPEN_SMALL, OPEN).shortcut(Shortcut::ctrl('o')),
+            Command::new("file.save", "Opslaan", Msg::Save).icon(SAVE_SMALL, SAVE).shortcut(Shortcut::ctrl('s')),
+            Command::new("file.export", "Exporteren…", Msg::Dialog(Some(Dialog::Export))).icon(EXPORT_SMALL, EXPORT).shortcut(Shortcut::ctrl('e')).dialog(),
+            Command::new("file.print", "Afdrukken…", Msg::Dialog(Some(Dialog::Print))).icon(PRINT_SMALL, PRINT).shortcut(Shortcut::ctrl('p')).dialog(),
+            Command::new("doc.close", "Sluiten", Msg::CloseActive).icon_small(CLOSE).shortcut(Shortcut::ctrl('w')),
+            Command::new("edit.undo", "Ongedaan", Msg::Undo).icon(UNDO_SMALL, UNDO).shortcut(Shortcut::ctrl('z')).enabled(!self.history.is_empty()),
+            Command::new("edit.redo", "Opnieuw", Msg::Redo).icon(REDO_SMALL, REDO).shortcut(Shortcut::ctrl('y')).enabled(!self.future.is_empty()),
+            Command::new("edit.cut", "Knippen", Msg::Cut).icon_small(CUT).shortcut(Shortcut::ctrl('x')).enabled(selection),
+            Command::new("edit.copy", "Kopiëren", Msg::Copy).icon_small(COPY).shortcut(Shortcut::ctrl('c')).enabled(selection),
+            Command::new("edit.paste", "Plakken", Msg::Paste).icon(b2!("16", "edit.paste"), PASTE).shortcut(Shortcut::ctrl('v')).enabled(self.clipboard.is_some()),
+            Command::new("edit.delete", "Verwijderen", Msg::Delete).icon_small(DELETE).shortcut(Shortcut::named(keyboard::key::Named::Delete)).danger().enabled(selection),
+            Command::new("insert.item", "Nieuwe post", Msg::AddItem).icon(b2!("16", "budget.add-item"), ADD_ITEM),
+            Command::new("insert.chapter", "Nieuw hoofdstuk", Msg::AddChapter).icon(b2!("16", "budget.add-chapter"), ADD_CHAPTER),
+            Command::new("view.table", "Tabel", Msg::OpenDoc(DocKind::Budget)).icon(TABLE_SMALL, TABLE).mode(doc == Some(DocKind::Budget)),
+            Command::new("view.chart", "Grafiek", Msg::OpenDoc(DocKind::Chart)).icon(b2!("16", "data.chart"), CHART).mode(doc == Some(DocKind::Chart)),
+            Command::new("calc.recalculate", "Herberekenen", Msg::Recalculate).icon(b2!("16", "calculation.recalculate"), RECALC),
+            Command::new("calc.audit", "Controleren", Msg::Audit).icon(b2!("16", "calculation.audit"), AUDIT).toggle(self.banner.is_some()),
+            Command::new("view.zoom-in", "Inzoomen", Msg::ZoomIn).icon_small(ZOOM_IN).shortcut(Shortcut::ctrl('+')),
+            Command::new("view.zoom-out", "Uitzoomen", Msg::ZoomOut).icon_small(ZOOM_OUT).shortcut(Shortcut::ctrl('-')),
+            Command::new("view.zoom-fit", "100%", Msg::ZoomFit).icon_small(FIT).shortcut(Shortcut::ctrl('0')).mode(self.zoom == 100),
+            Command::new("view.grid", "Raster", Msg::ToggleGrid).icon(b2!("16", "view.grid"), GRID).toggle(self.grid),
+            Command::new("view.left", "Structuur", Msg::ToggleLeft).icon(PANEL_LEFT, LEFT_LARGE).shortcut(Shortcut::ctrl('1')).toggle(self.show_left),
+            Command::new("view.right", "Eigenschappen", Msg::ToggleRight).icon(PANEL_RIGHT, RIGHT_LARGE).shortcut(Shortcut::ctrl('2')).toggle(self.show_right),
+            Command::new("app.settings", "Instellingen…", Msg::Dialog(Some(Dialog::Settings))).icon(SETTINGS, SETTINGS_LARGE).shortcut(Shortcut::ctrl(',')).dialog(),
+            Command::new("report.generate", "Rapport maken", Msg::GenerateReport).icon(b2!("16", "report.generate"), REPORT),
+        ]
+    }
+
+    /// One command from [`Self::commands`].
+    fn command(&self, id: &str) -> Command<Msg> {
+        self.commands().into_iter().find(|c| c.id == id).unwrap_or_else(|| panic!("unknown command {id}"))
+    }
+
     fn menu_items(&self, kind: MenuKind) -> Vec<MenuItem<'static, Msg>> {
-        let paste = self.clipboard.as_ref().map(|_| Msg::Paste);
         let item_menu = |id: u32| {
             vec![
                 MenuItem::action(Some(ITEM), "Openen in tab", None, Some(Msg::OpenItem(id))),
                 MenuItem::Separator,
-                MenuItem::action(Some(CUT), "Knippen", Some("Ctrl+X"), Some(Msg::Cut)),
-                MenuItem::action(Some(COPY), "Kopiëren", Some("Ctrl+C"), Some(Msg::Copy)),
-                MenuItem::action(Some(b2!("16", "edit.paste")), "Plakken", Some("Ctrl+V"), paste.clone()),
+                cm::menu_item(&self.command("edit.cut")),
+                cm::menu_item(&self.command("edit.copy")),
+                cm::menu_item(&self.command("edit.paste")),
                 MenuItem::Separator,
-                MenuItem::action(Some(b2!("16", "budget.add-item")), "Nieuwe post hieronder", None, Some(Msg::AddItem)),
+                cm::menu_item(&self.command("insert.item")),
                 MenuItem::Separator,
-                MenuItem::danger(Some(DELETE), "Verwijderen", Some("Del"), Some(Msg::Delete)),
+                cm::menu_item(&self.command("edit.delete")),
             ]
         };
         match kind {
@@ -1978,7 +1995,7 @@ impl Gallery {
                     MenuItem::action(Some(if open { COLLAPSE } else { EXPAND }), if open { "Inklappen" } else { "Uitklappen" }, None, Some(Msg::ToggleChapter(key))),
                     MenuItem::action(Some(TABLE_SMALL), "Begroting openen", None, Some(Msg::OpenDoc(DocKind::Budget))),
                     MenuItem::Separator,
-                    MenuItem::action(Some(b2!("16", "budget.add-chapter")), "Nieuw hoofdstuk", None, Some(Msg::AddChapter)),
+                    cm::menu_item(&self.command("insert.chapter")),
                 ]
             }
             MenuKind::Tree(TreeSel::Root) => vec![
@@ -1987,14 +2004,15 @@ impl Gallery {
                 MenuItem::action(Some(TABLE_SMALL), "Begroting openen", None, Some(Msg::OpenDoc(DocKind::Budget))),
                 MenuItem::action(Some(b2!("16", "data.chart")), "Grafiek openen", None, Some(Msg::OpenDoc(DocKind::Chart))),
                 MenuItem::Separator,
-                MenuItem::action(Some(SAVE_SMALL), "Opslaan", Some("Ctrl+S"), Some(Msg::Save)),
+                cm::menu_item(&self.command("file.save")),
             ],
             MenuKind::Tab(i) => vec![
-                MenuItem::action(Some(CLOSE), "Sluiten", Some("Ctrl+W"), Some(Msg::CloseDoc(i))),
+                // The tab menu closes this tab: the same command with its own message.
+                cm::menu_item(&Command { message: Msg::CloseDoc(i), ..self.command("doc.close") }),
                 MenuItem::action(None, "Andere tabs sluiten", None, (self.docs.len() > 1).then_some(Msg::CloseOthers(i))),
                 MenuItem::action(None, "Alle tabs sluiten", None, Some(Msg::CloseAll)),
                 MenuItem::Separator,
-                MenuItem::action(Some(SAVE_SMALL), "Opslaan", Some("Ctrl+S"), Some(Msg::Save)),
+                cm::menu_item(&self.command("file.save")),
             ],
             MenuKind::App => vec![
                 MenuItem::Heading("Weergave"),
@@ -3451,6 +3469,33 @@ mod tests {
         let _ = g.update(Msg::IconSearch("geen icoon heet zo".into()));
         assert!(g.icons.matches().is_empty());
         let _ = g.view();
+    }
+
+    #[test]
+    fn one_command_list_drives_keys_ribbon_and_menus() {
+        use iced::keyboard::{Key, Modifiers};
+        use openaec_ui::keyboard::KeyPress;
+        let mut g = Gallery::default();
+        g.started = true;
+        assert!(cm::conflicts(&g.commands()).is_empty(), "no key does two things: {:?}", cm::conflicts(&g.commands()));
+        let left = g.show_left;
+        let _ = g.update(Msg::Key(KeyPress { key: Key::Character("1".into()), modifiers: Modifiers::COMMAND }));
+        assert_ne!(g.show_left, left, "Ctrl+1 is the Structuur command");
+        assert!(!g.command("view.left").kind.is_on() || g.show_left, "the command shows the panel state");
+        g.selected = None;
+        g.clipboard = None;
+        assert!(!g.command("edit.cut").enabled, "Knippen is greyed out without a selection");
+        let _ = g.update(Msg::Key(KeyPress { key: Key::Character("x".into()), modifiers: Modifiers::COMMAND }));
+        assert!(g.clipboard.is_none(), "and then Ctrl+X does nothing either");
+        // The tab menu shows the same label and shortcut as the command.
+        let items = g.menu_items(MenuKind::Tab(0));
+        let close = Shortcut::ctrl('w').label();
+        assert!(items.iter().any(|i| matches!(i, MenuItem::Action { label: "Sluiten", shortcut: Some(s), .. } if std::ptr::eq(*s, close))));
+        g.view = View::Screen;
+        for tab in 0..5 {
+            let _ = g.update(Msg::RibbonTab(tab));
+            let _ = g.view();
+        }
     }
 
     #[test]
