@@ -1,6 +1,7 @@
 //! UI 0.4 workflow apps (`design/ontwerp-0.4/05-layouts.md`): Energy, Speech,
 //! Workspace Composer and Field have no ribbon. They navigate with a sidebar
 //! (default) or with steps at the top; users choose in Navigatie.
+use super::focus::focusable;
 use super::widgets::{bar, border, fill, glyph, mono_label};
 use super::{font, mix, radius, shell, Look};
 use crate::fonts;
@@ -58,7 +59,8 @@ pub fn sidebar<'a, M: Clone + 'a>(look: Look, heading: &str, sections: &[Section
         let on = i == active;
         let fg = if on { c.accent_text } else { c.text };
         let lead: Element<'a, M> = if on && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::new().width(3).into() };
-        list = list.push(
+        list = list.push(focusable(
+            look,
             button(
                 row![
                     lead,
@@ -88,7 +90,9 @@ pub fn sidebar<'a, M: Clone + 'a>(look: Look, heading: &str, sections: &[Section
                 border: if hc && (on || status == button::Status::Hovered) { border(c.selected_bar, 2.0, 0.0) } else { Border::default() },
                 shadow: Shadow::default(),
             }),
-        );
+            true,
+            0.0,
+        ));
     }
     container(list)
         .width(SIDEBAR_WIDTH)
@@ -135,14 +139,17 @@ pub fn step_bar<'a, M: Clone + 'a>(look: Look, steps: &[Section<'a>], active: us
             container(row![step_circle(look, i + 1, finished, on, check), label].spacing(8).align_y(Alignment::Center)).height(Length::Fill).align_y(Vertical::Center).padding([0, 10]),
             container(bar(if on { c.accent } else { Color::TRANSPARENT }, Length::Fill, 2.0)).height(Length::Fill).align_y(Vertical::Bottom),
         ];
-        line = line.push(
+        line = line.push(focusable(
+            look,
             button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| button::Style { snap: false,
                 background: if status == button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
                 text_color: c.text,
                 border: Border::default(),
                 shadow: Shadow::default(),
             }),
-        );
+            true,
+            0.0,
+        ));
         if i + 1 < steps.len() {
             line = line.push(container(Space::new().width(24).height(1)).style(move |_| container::Style { background: fill(c.border_strong), ..Default::default() }));
         }

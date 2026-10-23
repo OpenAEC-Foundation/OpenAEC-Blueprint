@@ -4,6 +4,7 @@
 //! The application owns the window: it turns the messages from these parts into
 //! `iced::window` tasks (drag, minimise, maximise, close) and keeps the panel
 //! widths and the open menu in its state.
+use super::focus::focusable;
 use super::widgets::{border, fill, glyph, icon_button, surface};
 use super::{font, radius, shell as size, Look};
 use crate::fonts;
@@ -180,7 +181,8 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                 if let Some(keys) = shortcut {
                     line = line.push(text(keys).size(font::SIZE_LABEL).font(fonts::MONO).color(if disabled { c.text_disabled } else { c.text_secondary }));
                 }
-                list = list.push(
+                list = list.push(focusable(
+                    look,
                     button(container(line).height(Length::Fill).align_y(Vertical::Center))
                         .height(28)
                         .width(Length::Fill)
@@ -202,7 +204,9 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                                 shadow: Shadow::default(),
                             }
                         }),
-                );
+                    !disabled,
+                    radius::SMALL,
+                ));
             }
         }
     }

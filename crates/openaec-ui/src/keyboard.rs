@@ -17,3 +17,29 @@ where
         _ => None,
     })
 }
+
+/// A step in the Tab route.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Navigation {
+    Next,
+    Previous,
+}
+
+/// Tab and Shift+Tab that no widget captured. Map it to a message and answer
+/// with [`navigate`]; see `design::focus` for the controls in the route.
+pub fn navigation() -> Subscription<Navigation> {
+    on_key_press(|key, modifiers| match key {
+        Key::Named(iced::keyboard::key::Named::Tab) if !modifiers.command() && !modifiers.alt() => {
+            Some(if modifiers.shift() { Navigation::Previous } else { Navigation::Next })
+        }
+        _ => None,
+    })
+}
+
+/// Moves the focus one step along the Tab route, wrapping at the ends.
+pub fn navigate<T: Send + 'static>(step: Navigation) -> iced::Task<T> {
+    match step {
+        Navigation::Next => iced::advanced::widget::operate(crate::design::focus::next()),
+        Navigation::Previous => iced::advanced::widget::operate(crate::design::focus::previous()),
+    }
+}

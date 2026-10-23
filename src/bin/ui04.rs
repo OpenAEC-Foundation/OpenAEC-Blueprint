@@ -8,6 +8,7 @@
 //! the design can be judged by using it: tabs, ribbon, tree, editing, undo,
 //! dialogs, notifications and shortcuts all respond. It is a review aid, not an app.
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
+use openaec_ui::design::focus;
 use openaec_ui::design::tiles::{self as t, RecentFile};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, TableColumn, Tone};
 use openaec_ui::design::workflow::{self as wf, Navigation, Section};
@@ -675,6 +676,7 @@ enum Msg {
     Name(String),
     Unit(&'static str),
     Noop,
+    Navigate(openaec_ui::keyboard::Navigation),
 }
 
 /// State of the sample workflow app: an energy label in five sections.
@@ -1149,7 +1151,15 @@ impl Gallery {
                 self.open_doc(DocKind::Report);
                 return self.toast(Tone::Success, "Rapport gemaakt", "Het rapport staat in de tab Rapport.");
             }
-            Msg::Dialog(d) => self.dialog = d,
+            Msg::Dialog(d) => {
+                let opening = d.is_some() && self.dialog.is_none();
+                self.dialog = d;
+                // The screen behind is inert, so the first step lands in the dialog.
+                if opening {
+                    return openaec_ui::keyboard::navigate(openaec_ui::keyboard::Navigation::Next);
+                }
+            }
+            Msg::Navigate(step) => return openaec_ui::keyboard::navigate(step),
             Msg::Format(f) => self.format = f,
             Msg::Landscape(b) => self.landscape = b,
             Msg::ConfirmExport => {
@@ -1287,6 +1297,7 @@ impl Gallery {
             }
             Msg::EndDrag => self.drag = None,
             Msg::Menu(kind) => {
+                let opening = kind.is_some() && self.menu.is_none();
                 self.menu = kind.map(|k| (k, self.cursor));
                 match kind {
                     Some(MenuKind::Row(id)) => self.select(Some(id)),
@@ -1297,6 +1308,9 @@ impl Gallery {
                         }
                     }
                     _ => {}
+                }
+                if opening {
+                    return openaec_ui::keyboard::navigate(openaec_ui::keyboard::Navigation::Next);
                 }
             }
             Msg::OpenItem(id) => {
@@ -1511,7 +1525,7 @@ impl Gallery {
                 _ => None,
             }
         });
-        Subscription::batch([keys, iced::window::resize_events().map(|(_, size)| Msg::WindowResized(size))])
+        Subscription::batch([keys, openaec_ui::keyboard::navigation().map(Msg::Navigate), iced::window::resize_events().map(|(_, size)| Msg::WindowResized(size))])
     }
 
     fn view(&self) -> Element<'_, Msg> {
@@ -1523,7 +1537,9 @@ impl Gallery {
             View::Components => self.components(look),
             View::Icons => self.icons(look),
         };
-        let mut layers = vec![column![self.toolbar(look), container(body).height(Length::Fill)].height(Length::Fill).into()];
+        // An open menu or dialog takes the screen behind out of the Tab route and the keys.
+        let screen = column![self.toolbar(look), container(body).height(Length::Fill)].height(Length::Fill);
+        let mut layers = vec![focus::inert(screen, self.menu.is_some() || self.dialog.is_some())];
         if let Some(toast) = &self.toast {
             let card = w::toast(look, toast.tone, tone_icon(toast.tone), &toast.title, &toast.message, CLOSE, Some(Msg::CloseToast));
             layers.push(container(card).width(Length::Fill).height(Length::Fill).align_right(Length::Fill).align_bottom(Length::Fill).padding([36, 16]).into());
@@ -2647,12 +2663,12 @@ impl Gallery {
                 ]
                 .spacing(4);
                 tiles = tiles.push(
-                    iced::widget::button(tile)
+                    focus::focusable(look, iced::widget::button(tile)
                         .width(140)
                         .height(84)
                         .padding([8, 6])
                         .on_press(Msg::IconSelect(icon))
-                        .style(move |_, status| t::tile_style(look, status, chosen, openaec_ui::design::radius::MEDIUM)),
+                        .style(move |_, status| t::tile_style(look, status, chosen, openaec_ui::design::radius::MEDIUM)), true, 6.0),
                 );
             }
             scrollable(container(tiles.wrap()).padding(iced::Padding { right: 12.0, ..Default::default() })).id(icon_grid_id()).height(Length::Fill).into()
@@ -2948,7 +2964,7 @@ fn dark_band_style(dark: Look) -> container::Style {
 /// A round button with a tooltip text that is built at run time.
 fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: Msg) -> Element<'a, Msg> {
     let c = look.color;
-    let button = iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
+    let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
         .width(34)
         .height(34)
         .padding(0)
@@ -2961,7 +2977,7 @@ fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: M
                 border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
                 shadow: iced::Shadow::default(),
             }
-        });
+        }), true, 17.0);
     let tip = container(text(tip).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text)).padding([4, 8]).style(move |_| w::surface(look, look.tokens.shadow.popup, 3.0));
     iced::widget::tooltip(button, tip, iced::widget::tooltip::Position::Bottom).gap(4).into()
 }
@@ -3029,7 +3045,7 @@ fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option
         content = content.push(w::glyph(source, 16.0, fg, if kind == SiteKind::Primary || disabled { fg } else { c.accent_text }));
     }
     content = content.push(text(label).size(if small { 13 } else { 14 }).font(fonts::STRONG).color(fg));
-    iced::widget::button(content)
+    focus::focusable(look, iced::widget::button(content)
         .padding(if small { [7, 14] } else { [10, 20] })
         .on_press_maybe(on_press)
         .style(move |_, status| {
@@ -3061,14 +3077,14 @@ fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option
                     shadow: if hc || disabled { iced::Shadow::default() } else { iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 } },
                 },
             }
-        })
+        }), !disabled, 8.0)
         .into()
 }
 
 /// A round icon button with a tooltip, as the source and browser buttons of the real installer.
 fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -> Element<'a, Msg> {
     let c = look.color;
-    let button = iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
+    let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
         .width(34)
         .height(34)
         .padding(0)
@@ -3081,7 +3097,7 @@ fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -
                 border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
                 shadow: iced::Shadow::default(),
             }
-        });
+        }), true, 17.0);
     w::with_tooltip(look, button.into(), tip, None)
 }
 
@@ -3154,7 +3170,7 @@ fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, activ
                 .style(move |_| container::Style { background: Some(Background::Color(alpha(fg, 0.06))), border: iced::Border { color: edge, width: 1.0, radius: 4.0.into() }, ..Default::default() }),
         );
     }
-    iced::widget::button(
+    focus::focusable(look, iced::widget::button(
         content.push(row![
             text(name).size(14).font(fonts::STRONG).color(fg),
             container(text(count.to_string()).size(11).font(fonts::MONO).color(fg))
@@ -3188,7 +3204,7 @@ fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, activ
                 iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 }
             },
         }
-    })
+    }), true, 9999.0)
     .into()
 }
 
@@ -3244,6 +3260,76 @@ mod tests {
     use iced::advanced::renderer;
     use iced::advanced::widget::Tree;
     use iced::{mouse, Color, Rectangle, Size};
+
+    /// Issue #2: a whole task without the mouse. From the start screen, Tab to the
+    /// tile "Lege begroting" and press Enter: the project opens.
+    #[test]
+    fn a_project_opens_with_the_keyboard_alone() {
+        use iced::advanced::widget::operation::{Focusable, Operation, Outcome};
+        use iced::advanced::{clipboard, Shell};
+        use iced::keyboard;
+
+        struct Find {
+            route: Vec<Rectangle>,
+            target: Option<Rectangle>,
+        }
+        impl Operation<()> for Find {
+            fn traverse(&mut self, operate: &mut dyn FnMut(&mut dyn Operation<()>)) {
+                operate(self);
+            }
+            fn focusable(&mut self, _id: Option<&iced::widget::Id>, bounds: Rectangle, _state: &mut dyn Focusable) {
+                self.route.push(bounds);
+            }
+            fn text(&mut self, _id: Option<&iced::widget::Id>, bounds: Rectangle, text: &str) {
+                if text == "Lege begroting" {
+                    self.target = Some(bounds);
+                }
+            }
+        }
+
+        let mut g = Gallery::default();
+        assert!(!g.started, "the gallery opens on the start screen");
+        let size = Size::new(1280.0, 800.0);
+        let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
+        let messages = {
+            let mut element = g.view();
+            let mut tree = Tree::new(&element);
+            let node = element.as_widget_mut().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
+            let mut find = Find { route: Vec::new(), target: None };
+            element.as_widget_mut().operate(&mut tree, Layout::new(&node), &renderer, &mut find);
+            let target = find.target.expect("the start screen shows Lege begroting");
+            let steps = find.route.iter().position(|b| b.contains(target.center())).expect("the tile is in the Tab route") + 1;
+            for _ in 0..steps {
+                let mut step: Box<dyn Operation<()>> = Box::new(openaec_ui::design::focus::next());
+                loop {
+                    element.as_widget_mut().operate(&mut tree, Layout::new(&node), &renderer, step.as_mut());
+                    match step.finish() {
+                        Outcome::Chain(next) => step = next,
+                        _ => break,
+                    }
+                }
+            }
+            let enter = keyboard::Key::Named(keyboard::key::Named::Enter);
+            let event = iced::Event::Keyboard(keyboard::Event::KeyPressed {
+                key: enter.clone(),
+                modified_key: enter,
+                physical_key: keyboard::key::Physical::Unidentified(keyboard::key::NativeCode::Unidentified),
+                location: keyboard::Location::Standard,
+                modifiers: keyboard::Modifiers::empty(),
+                text: None,
+                repeat: false,
+            });
+            let mut messages = Vec::new();
+            let mut shell = Shell::new(&mut messages);
+            element.as_widget_mut().update(&mut tree, &event, Layout::new(&node), mouse::Cursor::Unavailable, &renderer, &mut clipboard::Null, &mut shell, &Rectangle::with_size(size));
+            messages
+        };
+        assert!(messages.iter().any(|m| matches!(m, Msg::OpenProject(0))), "Enter on the tile opens the project: {messages:?}");
+        for message in messages {
+            let _ = g.update(message);
+        }
+        assert!(g.started, "the project is open");
+    }
     use std::sync::Once;
 
     fn load_fonts() {

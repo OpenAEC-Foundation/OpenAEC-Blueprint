@@ -2,6 +2,7 @@
 //! task tiles, the recent-files list, project cards, choice tiles, info cards,
 //! figure tiles and the navigation of the Bestand screen.
 use super::widgets::{bar, border, fill, glyph, mono_label, Tone};
+use super::focus::focusable;
 use super::{font, mix, radius, Look, Shadows};
 use crate::fonts;
 use iced::alignment::Vertical;
@@ -57,7 +58,8 @@ fn description<'a>(look: Look, content: impl text::IntoFragment<'a>, disabled: b
 /// Use it in a column of at most 620 px with 8 px between the tiles.
 pub fn task_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &'a str, explanation: &'a str, on_press: Option<M>) -> Element<'a, M> {
     let disabled = on_press.is_none();
-    button(
+    let enabled = on_press.is_some();
+    let control = button(
         row![icon_tile(look, icon, 40.0, disabled), column![title(look, heading, disabled), description(look, explanation, disabled)].spacing(2)]
             .spacing(12)
             .align_y(Alignment::Center),
@@ -65,8 +67,8 @@ pub fn task_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &'a
     .padding([12, 16])
     .width(Length::Fill)
     .on_press_maybe(on_press)
-    .style(move |_, status| tile_style(look, status, false, radius::LARGE))
-    .into()
+    .style(move |_, status| tile_style(look, status, false, radius::LARGE));
+    focusable(look, control, enabled, radius::LARGE)
 }
 
 /// One row in the recent-files list.
@@ -93,7 +95,9 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
         ]
         .spacing(10)
         .align_y(Alignment::Center);
-        list = list.push(
+        let enabled = file.on_press.is_some();
+        list = list.push(focusable(
+            look,
             button(container(line).height(Length::Fill).align_y(Vertical::Center))
                 .height(40)
                 .width(Length::Fill)
@@ -109,7 +113,9 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
                     border: if look.high_contrast() && status == button::Status::Hovered { border(c.accent, 2.0, 0.0) } else { Border::default() },
                     shadow: Shadow::default(),
                 }),
-        );
+            enabled,
+            0.0,
+        ));
         if i + 1 < count {
             list = list.push(bar(c.border, Length::Fill, 1.0));
         }
@@ -160,7 +166,8 @@ pub fn project_card<'a, M: Clone + 'a>(
     if let Some((tone, label)) = status {
         info = info.push(Space::new().height(2)).push(status_label(look, tone, label));
     }
-    button(column![image, bar(c.border, Length::Fill, 1.0), container(info).padding([10, 12])])
+    let enabled = on_press.is_some();
+    let control = button(column![image, bar(c.border, Length::Fill, 1.0), container(info).padding([10, 12])])
         .padding(1)
         .width(Length::Fill)
         .on_press_maybe(on_press)
@@ -168,8 +175,8 @@ pub fn project_card<'a, M: Clone + 'a>(
             let mut s = tile_style(look, status, false, radius::LARGE);
             s.shadow = Shadows::drop_shadow(look.tokens.shadow.panel).unwrap_or_default();
             s
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::LARGE)
 }
 
 /// A choice tile: icon tile, title and description, with a radio at the top right.
@@ -183,7 +190,8 @@ pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &
     }))
     .center(16)
     .style(move |_| container::Style { background: fill(c.raised), border: border(if chosen { c.selected_bar } else { c.border_strong }, 1.5, 8.0), ..Default::default() });
-    button(
+    let enabled = true;
+    let control = button(
         column![
             row![icon_tile(look, icon, 40.0, false), Space::new().width(Length::Fill), dot].align_y(Alignment::Start),
             title(look, heading, false),
@@ -194,8 +202,8 @@ pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &
     .padding([12, 14])
     .width(Length::Fill)
     .on_press(on_press)
-    .style(move |_, status| tile_style(look, status, chosen, radius::LARGE))
-    .into()
+    .style(move |_, status| tile_style(look, status, chosen, radius::LARGE));
+    focusable(look, control, enabled, radius::LARGE)
 }
 
 /// An info card: a mono heading and key–value rows. Not clickable, so no hover.
@@ -247,7 +255,8 @@ pub fn file_nav_row<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     let disabled = on_press.is_none();
     let fg = if disabled { c.text_disabled } else if active { c.accent_text } else { c.text };
     let lead: Element<'a, M> = if active && !hc { bar(c.selected_bar, 3.0, Length::Fill) } else { Space::new().width(3).into() };
-    button(
+    let enabled = on_press.is_some();
+    let control = button(
         row![
             lead,
             row![glyph(icon, 16.0, fg, if disabled { fg } else { c.accent_text }), text(label).size(font::SIZE_BODY).font(if active { fonts::STRONG } else { fonts::MEDIUM }).color(fg)]
@@ -275,6 +284,6 @@ pub fn file_nav_row<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
         text_color: fg,
         border: if hc && (active || status == button::Status::Hovered) { border(c.selected_bar, 2.0, 0.0) } else { Border::default() },
         shadow: Shadow::default(),
-    })
-    .into()
+    });
+    focusable(look, control, enabled, 0.0)
 }

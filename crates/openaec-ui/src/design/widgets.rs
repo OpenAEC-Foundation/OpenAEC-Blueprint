@@ -6,6 +6,7 @@
 //! per state. Two parts of the spec need more than iced 0.14 offers and are
 //! approximated: focus is drawn as a 2 px border inside the control instead of
 //! an outer ring, and High contrast draws disabled borders solid, not dashed.
+use super::focus::focusable;
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
 use crate::fonts;
 use iced::alignment::{Horizontal, Vertical};
@@ -273,17 +274,31 @@ pub fn button<'a, M: Clone + 'a>(
         content = content.push(glyph(source, 16.0, fg, if on_press.is_none() { fg } else { accent }));
     }
     content = content.push(text(label).size(font::SIZE_BODY).font(fonts::STRONG));
-    iced_button(container(content).height(Length::Fill).align_y(Vertical::Center))
+    let enabled = on_press.is_some();
+    let control = iced_button(container(content).height(Length::Fill).align_y(Vertical::Center))
         .height(density.height())
         .padding(Padding::from([0.0, density.pad_x()]))
         .on_press_maybe(on_press)
-        .style(move |_, status| button_style(look, kind, status))
-        .into()
+        .style(move |_, status| button_style(look, kind, status));
+    focusable(look, control, enabled, radius::MEDIUM)
 }
 
 /// A square icon button: 28 px, or 20 px in a panel header. The icon is 16 px.
 /// `selected` is the on state of a toggle.
 pub fn icon_button<'a, M: Clone + 'a>(
+    look: Look,
+    icon: &'static str,
+    size: f32,
+    selected: bool,
+    on_press: Option<M>,
+) -> Element<'a, M> {
+    let enabled = on_press.is_some();
+    focusable(look, plain_icon_button(look, icon, size, selected, on_press), enabled, radius::SMALL)
+}
+
+/// The icon button outside the Tab route, for the close button of a dialog:
+/// Escape closes the dialog, so the first Tab step goes to its content.
+fn plain_icon_button<'a, M: Clone + 'a>(
     look: Look,
     icon: &'static str,
     size: f32,
@@ -394,7 +409,8 @@ where
 {
     let c = look.color;
     let pad_y = (density.height() - 16.0) / 2.0;
-    pick_list(options, selected, on_select)
+    let enabled = true;
+    let control = pick_list(options, selected, on_select)
         .width(Length::Fill)
         .text_size(font::SIZE_BODY)
         .font(fonts::BODY)
@@ -422,8 +438,8 @@ where
                 selected_text_color: c.text,
                 selected_background: Background::Color(if look.high_contrast() { c.hover } else { c.selected }),
             }
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::MEDIUM)
 }
 
 // ---------- Choices ----------
@@ -431,7 +447,8 @@ where
 /// A 16 px checkbox; use it in forms that are confirmed later.
 pub fn checkbox<'a, M: 'a>(look: Look, label: &'a str, checked: bool, on_toggle: Option<impl Fn(bool) -> M + 'a>) -> Element<'a, M> {
     let c = look.color;
-    iced_checkbox(checked)
+    let enabled = on_toggle.is_some();
+    let control = iced_checkbox(checked)
         .label(label)
         .on_toggle_maybe(on_toggle)
         .size(16)
@@ -458,8 +475,8 @@ pub fn checkbox<'a, M: 'a>(look: Look, label: &'a str, checked: bool, on_toggle:
                 },
                 text_color: Some(if disabled { c.text_disabled } else { c.text }),
             }
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::SMALL)
 }
 
 /// A 16 px radio button with its dot in `selected-bar`.
@@ -469,7 +486,8 @@ where
     M: Clone + 'a,
 {
     let c = look.color;
-    iced_radio(label, value, selected, on_click)
+    let enabled = true;
+    let control = iced_radio(label, value, selected, on_click)
         .size(16)
         .spacing(8)
         .text_size(font::SIZE_BODY)
@@ -487,14 +505,15 @@ where
                 border_color: if on { c.selected_bar } else if hovered { c.text } else { c.border_strong },
                 text_color: Some(c.text),
             }
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::SMALL)
 }
 
 /// A switch that acts at once, such as showing a grid. Height 18 px.
 pub fn switch<'a, M: 'a>(look: Look, label: &'a str, on: bool, on_toggle: Option<impl Fn(bool) -> M + 'a>) -> Element<'a, M> {
     let c = look.color;
-    iced_toggler(on)
+    let enabled = on_toggle.is_some();
+    let control = iced_toggler(on)
         .label(label)
         .on_toggle_maybe(on_toggle)
         .size(18)
@@ -519,8 +538,8 @@ pub fn switch<'a, M: 'a>(look: Look, label: &'a str, on: bool, on_toggle: Option
                 border_radius: None,
                 padding_ratio: 0.1,
             }
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::SMALL)
 }
 
 /// A slider: 4 px track, accent fill and a 14 px knob with an accent edge,
@@ -629,6 +648,7 @@ pub fn tree_row<'a, M: Clone + 'a>(
         line = line.push(glyph(source, 14.0, c.text, c.accent_text));
     }
     line = line.push(text(label).size(font::SIZE_BODY).font(if selected { fonts::STRONG } else { fonts::BODY }).color(c.text));
+    let enabled = on_press.is_some();
     let content = iced_button(container(line).height(Length::Fill).align_y(Vertical::Center))
         .padding(0)
         .width(Length::Fill)
@@ -639,9 +659,10 @@ pub fn tree_row<'a, M: Clone + 'a>(
         border: if status == iced_button::Status::Hovered && look.high_contrast() { border(c.accent, 1.0, 0.0) } else { Border::default() },
         shadow: Shadow::default(),
     });
+    let content = focusable(look, content, enabled, 0.0);
     let content: Element<'a, M> = match on_menu {
         Some(menu) => mouse_area(content).on_right_press(menu).into(),
-        None => content.into(),
+        None => content,
     };
     selectable(look, content, selected, 24.0)
 }
@@ -725,7 +746,7 @@ pub fn table<'a, M: Clone + 'a>(
                 .collect(),
         );
         let line: Element<'a, M> = match &on_select {
-            Some(select) => iced_button(container(line).height(Length::Fill).align_y(Vertical::Center))
+            Some(select) => focusable(look, iced_button(container(line).height(Length::Fill).align_y(Vertical::Center))
                 .padding(0)
                 .width(Length::Fill)
                 .height(Length::Fill)
@@ -735,8 +756,7 @@ pub fn table<'a, M: Clone + 'a>(
                     text_color: c.text,
                     border: if status == iced_button::Status::Hovered && look.high_contrast() { border(c.accent, 1.0, 0.0) } else { Border::default() },
                     shadow: Shadow::default(),
-                })
-                .into(),
+                }), true, 0.0),
             None => line,
         };
         let line: Element<'a, M> = match &on_menu {
@@ -834,7 +854,7 @@ pub fn dialog<'a, M: Clone + 'a>(
     }
     container(
         column![
-            row![heading(look, title, font::SIZE_DIALOG_HEADING).width(Length::Fill), icon_button(look, close_icon, 28.0, false, on_close)].align_y(Alignment::Center),
+            row![heading(look, title, font::SIZE_DIALOG_HEADING).width(Length::Fill), plain_icon_button(look, close_icon, 28.0, false, on_close)].align_y(Alignment::Center),
             content,
             footer,
         ]
@@ -857,11 +877,13 @@ pub fn overlay<'a, M: 'a>(look: Look, dialog: Element<'a, M>) -> Element<'a, M> 
 /// Ribbon tabs (28 px): the Bestand button and text tabs with an accent bar under the active one.
 pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: Option<M>, tabs: &[&'a str], active: usize, on_select: impl Fn(usize) -> M) -> Element<'a, M> {
     let c = look.color;
+    let file_enabled = on_file.is_some();
     let file = iced_button(container(text(file_label).size(font::SIZE_BODY).font(fonts::STRONG)).height(Length::Fill).align_y(Vertical::Center))
         .height(22)
         .padding([0, 12])
         .on_press_maybe(on_file)
         .style(move |_, status| button_style(look, ButtonKind::Primary, status));
+    let file = focusable(look, file, file_enabled, radius::MEDIUM);
     let mut line = row![container(file).height(Length::Fill).align_y(Vertical::Center).padding([0, 8])].height(Length::Fill);
     for (i, &name) in tabs.iter().enumerate() {
         let on = i == active;
@@ -874,12 +896,12 @@ pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: 
             container(label).height(Length::Fill).align_y(Vertical::Center).padding([0, 12]),
             container(bar(if on { c.accent } else { Color::TRANSPARENT }, Length::Fill, 2.0)).height(Length::Fill).align_y(Vertical::Bottom),
         ];
-        line = line.push(iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
+        line = line.push(focusable(look, iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
             background: if status == iced_button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
             text_color: c.text,
             border: Border::default(),
             shadow: Shadow::default(),
-        }));
+        }), true, 0.0));
     }
     container(line).height(shell::RIBBON_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
 }
@@ -932,12 +954,13 @@ pub fn ribbon_large<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     ]
     .spacing(4)
     .align_x(Alignment::Center);
-    iced_button(content)
+    let enabled = on_press.is_some();
+    let control = iced_button(content)
         .height(66)
         .padding([0, 4])
         .on_press_maybe(on_press)
-        .style(move |_, status| ribbon_button_style(look, active, status))
-        .into()
+        .style(move |_, status| ribbon_button_style(look, active, status));
+    focusable(look, control, enabled, radius::MEDIUM)
 }
 
 /// A small ribbon button: 22 px high, 16 px icon, label of 11 px.
@@ -946,7 +969,8 @@ pub fn ribbon_small<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
     let disabled = on_press.is_none();
     let fg = if disabled { c.text_disabled } else if active { c.accent_text } else { c.text };
     let accent = if disabled { fg } else { c.accent_text };
-    iced_button(row![glyph(icon, 16.0, fg, accent), text(label).size(font::SIZE_LABEL).font(fonts::BODY)].spacing(6).align_y(Alignment::Center))
+    let enabled = on_press.is_some();
+    let control = iced_button(row![glyph(icon, 16.0, fg, accent), text(label).size(font::SIZE_LABEL).font(fonts::BODY)].spacing(6).align_y(Alignment::Center))
         .height(22)
         .padding([0, 4])
         .on_press_maybe(on_press)
@@ -958,8 +982,8 @@ pub fn ribbon_small<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
                 s.border = border(if look.high_contrast() { c.accent } else { mix(c.accent, 0.35, c.panel) }, 1.0, radius::SMALL);
             }
             s
-        })
-        .into()
+        });
+    focusable(look, control, enabled, radius::SMALL)
 }
 
 /// A ribbon group: its buttons on top and a centred mono label at the bottom.
@@ -1043,7 +1067,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
         let hover_bg = if on { mix(c.workspace_text, 0.12, c.workspace) } else { c.pressed };
         if !tab.pinned {
         inner = inner.push(
-            iced_button(container(glyph(close_icon, 12.0, fg, fg)).center(16))
+            focusable(look, iced_button(container(glyph(close_icon, 12.0, fg, fg)).center(16))
                 .width(16)
                 .height(16)
                 .padding(0)
@@ -1053,7 +1077,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
                     text_color: fg,
                     border: border(if status == iced_button::Status::Hovered && look.high_contrast() { c.accent } else { Color::TRANSPARENT }, 1.0, radius::SMALL),
                     shadow: Shadow::default(),
-                }),
+                }), true, radius::SMALL),
         );
         }
         let workspace = c.workspace;
@@ -1067,7 +1091,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
             },
             shadow: Shadow::default(),
         });
-        line = line.push(mouse_area(tab).on_right_press(on_menu(i)));
+        line = line.push(mouse_area(focusable(look, tab, true, radius::MEDIUM)).on_right_press(on_menu(i)));
     }
     container(line).height(shell::DOCUMENT_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.docbar), ..Default::default() }).into()
 }
