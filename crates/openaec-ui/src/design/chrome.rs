@@ -4,7 +4,7 @@
 //! The application owns the window: it turns the messages from these parts into
 //! `iced::window` tasks (drag, minimise, maximise, close) and keeps the panel
 //! widths and the open menu in its state.
-use super::focus::focusable;
+use super::focus::{focusable, group, Axis};
 use super::widgets::{border, fill, glyph, icon_button, surface};
 use super::{font, radius, shell as size, Look};
 use crate::fonts;
@@ -210,7 +210,7 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
             }
         }
     }
-    container(list).width(MENU_WIDTH).padding(4).style(move |_| surface(look, look.tokens.shadow.popup, radius::LARGE)).into()
+    container(group(list, Axis::Vertical)).width(MENU_WIDTH).padding(4).style(move |_| surface(look, look.tokens.shadow.popup, radius::LARGE)).into()
 }
 
 /// Rough height of a menu, to keep it inside the window.

@@ -52,7 +52,11 @@ struct Ui {
 
 impl Ui {
     fn new(dialog: bool) -> Self {
-        let mut element = screen(dialog);
+        Self::with(screen(dialog))
+    }
+
+    fn with(element: Element<'static, &'static str>) -> Self {
+        let mut element = element;
         let mut tree = Tree::new(&element);
         let renderer = renderer();
         let node = element.as_widget_mut().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, SIZE));
@@ -170,4 +174,42 @@ fn a_click_moves_the_focus_without_the_ring() {
     assert!(state.focused && !state.visible, "a click shows no focus ring");
     ui.operate(next());
     assert_eq!(ui.focused(), Some(1));
+}
+
+/// A button, a list of three as one group, and another button.
+fn list() -> Element<'static, &'static str> {
+    let look = look();
+    let item = |label, message| button(look, label, ButtonKind::Quiet, Density::Regular, None, Some(message));
+    column![
+        item("Voor", "voor"),
+        group(column![item("Een", "een"), item("Twee", "twee"), item("Drie", "drie")], Axis::Vertical),
+        item("Na", "na"),
+    ]
+    .into()
+}
+
+#[test]
+fn a_group_is_one_tab_stop_that_the_arrows_walk_through() {
+    let mut ui = Ui::with(list());
+    assert_eq!(ui.route().len(), 3, "the list of three counts as one stop");
+    ui.operate(next());
+    ui.operate(next());
+    assert_eq!(ui.key(Named::Enter), vec!["een"], "Tab enters the list at its first item");
+    let _ = ui.key(Named::ArrowDown);
+    assert_eq!(ui.key(Named::Enter), vec!["twee"]);
+    let _ = ui.key(Named::End);
+    assert_eq!(ui.key(Named::Enter), vec!["drie"]);
+    let _ = ui.key(Named::ArrowDown);
+    assert_eq!(ui.key(Named::Enter), vec!["drie"], "the arrows stop at the end");
+    let _ = ui.key(Named::Home);
+    assert_eq!(ui.key(Named::Enter), vec!["een"]);
+    let _ = ui.key(Named::ArrowUp);
+    assert_eq!(ui.key(Named::Enter), vec!["een"], "and at the start");
+    let _ = ui.key(Named::ArrowDown);
+    let _ = ui.key(Named::ArrowDown);
+    assert!(ui.key(Named::ArrowLeft).is_empty() && ui.key(Named::Enter) == vec!["drie"], "Left does nothing in a vertical list");
+    ui.operate(next());
+    assert_eq!(ui.key(Named::Enter), vec!["na"], "the next Tab leaves the list");
+    ui.operate(previous());
+    assert_eq!(ui.key(Named::Enter), vec!["drie"], "Shift+Tab returns to the item that last had the focus");
 }

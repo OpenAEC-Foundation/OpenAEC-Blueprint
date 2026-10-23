@@ -215,6 +215,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Logboek
 
+- 2026-10-23 **Claude**: issue #2 pijltjestoetsen: `design::focus::group` met `Axis` (pijltjes, Home, End; één Tab-stop per groep die terugkeert naar het laatst gebruikte item). Gebruikt in menu, tabel, lint-tabs, documenttabs, lint, zijbalk, stappenbalk en recente bestanden; galerij groepeert de boom. Test in `focus_tests.rs` en in het GPU-venster (zijbalk werkstroom). Nog open: focusrand in Hoog contrast visueel nakijken, boom in-/uitklappen met links/rechts. Mijn claim verdween uit NOTES.md toen de planner-sessie even van branch wisselde; code bleef intact.
+
 - 2026-10-23 **Claude**: issue #2 grotendeels af: nieuw `design::focus` (`focusable`, `inert`, `next`/`previous` die rondlopen) en `keyboard::navigation`/`navigate`. Alle knoppen, tegels, tabs, boom- en tabelrijen, menu-items, keuzes en werkstroomnavigatie in de bibliotheek doen mee met Tab; Enter en spatie geven dezelfde klik als de muis; focusrand alleen na toetsenbordgebruik en niet achter een open dialoog. Galerij koppelt Tab, houdt de focus in dialogen en menu's en geeft hem terug. Tests: drie in `focus_tests.rs` en één taak zonder muis in `ui04`; in het GPU-venster gecontroleerd. Pijltjestoetsen nog open. `planner04.rs` (andere sessie) bouwt nu niet door eigen fouten in dat bestand; niet aangeraakt. Geen commit.
 
 - 2026-10-23 **Claude**: op verzoek van de gebruiker de open punten als twintig issues op GitHub gezet (#2–#21: toetsenbord, schermlezer, onderzoeksbevindingen, webpakket, installer, licentie, Pointcloud, fase 5, team-besluiten). Verwijzingen in NOTES en STAPPENPLAN. Geen commit.

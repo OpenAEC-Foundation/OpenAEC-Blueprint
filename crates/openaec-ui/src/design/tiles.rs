@@ -2,7 +2,7 @@
 //! task tiles, the recent-files list, project cards, choice tiles, info cards,
 //! figure tiles and the navigation of the Bestand screen.
 use super::widgets::{bar, border, fill, glyph, mono_label, Tone};
-use super::focus::focusable;
+use super::focus::{focusable, group, Axis};
 use super::{font, mix, radius, Look, Shadows};
 use crate::fonts;
 use iced::alignment::Vertical;
@@ -120,7 +120,7 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
             list = list.push(bar(c.border, Length::Fill, 1.0));
         }
     }
-    container(list)
+    container(group(list, Axis::Vertical))
         .width(Length::Fill)
         .clip(true)
         .style(move |_| container::Style { background: fill(c.raised), border: border(c.border, 1.0, radius::LARGE), ..Default::default() })

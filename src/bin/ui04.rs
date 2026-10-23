@@ -1724,7 +1724,7 @@ impl Gallery {
                 w::with_tooltip(look, w::icon_button(look, SEARCH, 20.0, false, Some(Msg::Noop)), "Zoeken", Some("Ctrl+F")),
                 w::with_tooltip(look, w::icon_button(look, PANEL_LEFT, 20.0, true, Some(Msg::ToggleLeft)), "Paneel verbergen", Some("Ctrl+1")),
             ],
-            scrollable(tree).height(Length::Fill).into(),
+            scrollable(focus::group(tree, focus::Axis::Vertical)).height(Length::Fill).into(),
         )
     }
 

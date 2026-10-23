@@ -291,6 +291,211 @@ impl<M> Widget<M, Theme, Renderer> for Inert<'_, M> {
     }
 }
 
+/// The arrow keys of a [`group`].
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Axis {
+    /// Up and Down, as in a list, menu, table or sidebar.
+    Vertical,
+    /// Left and Right, as in tabs, a step bar or the ribbon.
+    Horizontal,
+}
+
+/// A group of controls that the arrow keys walk through, such as the rows of a
+/// table or the items of a menu. Home and End go to the first and last control.
+/// The group is one stop in the Tab route ("roving focus"): Tab lands on the
+/// control that last had the focus in the group, and the next Tab leaves the group.
+pub fn group<'a, M: 'a>(content: impl Into<Element<'a, M>>, axis: Axis) -> Element<'a, M> {
+    Element::new(Group { content: content.into(), axis })
+}
+
+struct Group<'a, M> {
+    content: Element<'a, M>,
+    axis: Axis,
+}
+
+/// The control of the group that takes part in the Tab route.
+#[derive(Debug, Clone, Copy, Default)]
+struct GroupState {
+    last: usize,
+}
+
+/// Finds the focused control of a group and how many there are.
+struct Census {
+    total: usize,
+    focused: Option<usize>,
+}
+
+impl Operation for Census {
+    fn traverse(&mut self, operate: &mut dyn FnMut(&mut dyn Operation)) {
+        operate(self);
+    }
+    fn focusable(&mut self, _id: Option<&iced::widget::Id>, _bounds: Rectangle, state: &mut dyn Focusable) {
+        if state.is_focused() {
+            self.focused = Some(self.total);
+        }
+        self.total += 1;
+    }
+}
+
+/// Focuses one control of the group, as from the keyboard, and unfocuses the rest.
+struct FocusIndex {
+    target: usize,
+    current: usize,
+}
+
+impl Operation for FocusIndex {
+    fn traverse(&mut self, operate: &mut dyn FnMut(&mut dyn Operation)) {
+        operate(self);
+    }
+    fn focusable(&mut self, _id: Option<&iced::widget::Id>, _bounds: Rectangle, state: &mut dyn Focusable) {
+        if self.current == self.target {
+            state.focus();
+        } else {
+            state.unfocus();
+        }
+        self.current += 1;
+    }
+}
+
+/// Passes an outside operation through to one control of the group only, so the
+/// Tab route sees the group as a single stop.
+struct Roving<'o> {
+    inner: &'o mut dyn Operation,
+    shown: usize,
+    current: usize,
+}
+
+impl Operation for Roving<'_> {
+    fn traverse(&mut self, operate: &mut dyn FnMut(&mut dyn Operation)) {
+        operate(self);
+    }
+    fn container(&mut self, id: Option<&iced::widget::Id>, bounds: Rectangle) {
+        self.inner.container(id, bounds);
+    }
+    fn scrollable(
+        &mut self,
+        id: Option<&iced::widget::Id>,
+        bounds: Rectangle,
+        content_bounds: Rectangle,
+        translation: Vector,
+        state: &mut dyn iced::advanced::widget::operation::Scrollable,
+    ) {
+        self.inner.scrollable(id, bounds, content_bounds, translation, state);
+    }
+    fn focusable(&mut self, id: Option<&iced::widget::Id>, bounds: Rectangle, state: &mut dyn Focusable) {
+        if self.current == self.shown {
+            self.inner.focusable(id, bounds, state);
+        }
+        self.current += 1;
+    }
+    fn text_input(&mut self, id: Option<&iced::widget::Id>, bounds: Rectangle, state: &mut dyn iced::advanced::widget::operation::TextInput) {
+        self.inner.text_input(id, bounds, state);
+    }
+    fn text(&mut self, id: Option<&iced::widget::Id>, bounds: Rectangle, text: &str) {
+        self.inner.text(id, bounds, text);
+    }
+    fn custom(&mut self, id: Option<&iced::widget::Id>, bounds: Rectangle, state: &mut dyn std::any::Any) {
+        self.inner.custom(id, bounds, state);
+    }
+}
+
+impl<M> Group<'_, M> {
+    fn census(&mut self, tree: &mut Tree, layout: Layout<'_>, renderer: &Renderer) -> Census {
+        let mut census = Census { total: 0, focused: None };
+        self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, &mut census);
+        census
+    }
+}
+
+impl<M> Widget<M, Theme, Renderer> for Group<'_, M> {
+    fn tag(&self) -> tree::Tag {
+        tree::Tag::of::<GroupState>()
+    }
+    fn state(&self) -> tree::State {
+        tree::State::new(GroupState::default())
+    }
+    fn children(&self) -> Vec<Tree> {
+        vec![Tree::new(&self.content)]
+    }
+    fn diff(&self, tree: &mut Tree) {
+        tree.diff_children(std::slice::from_ref(&self.content));
+    }
+    fn size(&self) -> Size<Length> {
+        self.content.as_widget().size()
+    }
+    fn size_hint(&self) -> Size<Length> {
+        self.content.as_widget().size_hint()
+    }
+    fn layout(&mut self, tree: &mut Tree, renderer: &Renderer, limits: &layout::Limits) -> layout::Node {
+        self.content.as_widget_mut().layout(&mut tree.children[0], renderer, limits)
+    }
+
+    fn operate(&mut self, tree: &mut Tree, layout: Layout<'_>, renderer: &Renderer, operation: &mut dyn Operation) {
+        let census = self.census(tree, layout, renderer);
+        if census.total == 0 {
+            return self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, operation);
+        }
+        let last = tree.state.downcast_ref::<GroupState>().last;
+        let shown = census.focused.unwrap_or(last.min(census.total - 1));
+        let mut roving = Roving { inner: operation, shown, current: 0 };
+        self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, &mut roving);
+    }
+
+    fn update(
+        &mut self,
+        tree: &mut Tree,
+        event: &Event,
+        layout: Layout<'_>,
+        cursor: mouse::Cursor,
+        renderer: &Renderer,
+        clipboard: &mut dyn Clipboard,
+        shell: &mut Shell<'_, M>,
+        viewport: &Rectangle,
+    ) {
+        if let Event::Keyboard(keyboard::Event::KeyPressed { key: Key::Named(named), modifiers, .. }) = event {
+            let (back, forward) = match self.axis {
+                Axis::Vertical => (Named::ArrowUp, Named::ArrowDown),
+                Axis::Horizontal => (Named::ArrowLeft, Named::ArrowRight),
+            };
+            if !modifiers.command() && !modifiers.alt() && !modifiers.shift() && [back, forward, Named::Home, Named::End].contains(named) {
+                let census = self.census(tree, layout, renderer);
+                if let Some(focused) = census.focused {
+                    let last = census.total - 1;
+                    let target = match *named {
+                        Named::Home => 0,
+                        Named::End => last,
+                        n if n == back => focused.saturating_sub(1),
+                        _ => (focused + 1).min(last),
+                    };
+                    let mut focus = FocusIndex { target, current: 0 };
+                    self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, &mut focus);
+                    tree.state.downcast_mut::<GroupState>().last = target;
+                    shell.capture_event();
+                    shell.request_redraw();
+                    return;
+                }
+            }
+        }
+        self.content.as_widget_mut().update(&mut tree.children[0], event, layout, cursor, renderer, clipboard, shell, viewport);
+        // A click inside the group makes that control the group's Tab stop.
+        if matches!(event, Event::Mouse(mouse::Event::ButtonPressed(_)) | Event::Touch(iced::touch::Event::FingerPressed { .. })) {
+            if let Some(focused) = self.census(tree, layout, renderer).focused {
+                tree.state.downcast_mut::<GroupState>().last = focused;
+            }
+        }
+    }
+
+    fn mouse_interaction(&self, tree: &Tree, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle, renderer: &Renderer) -> mouse::Interaction {
+        self.content.as_widget().mouse_interaction(&tree.children[0], layout, cursor, viewport, renderer)
+    }
+    fn draw(&self, tree: &Tree, renderer: &mut Renderer, theme: &Theme, style: &renderer::Style, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle) {
+        self.content.as_widget().draw(&tree.children[0], renderer, theme, style, layout, cursor, viewport);
+    }
+    fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'b>, renderer: &Renderer, viewport: &Rectangle, translation: Vector) -> Option<overlay::Element<'b, M, Theme, Renderer>> {
+        self.content.as_widget_mut().overlay(&mut tree.children[0], layout, renderer, viewport, translation)
+    }
+}
+
 #[cfg(test)]
 #[path = "focus_tests.rs"]
 mod tests;

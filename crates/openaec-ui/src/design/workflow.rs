@@ -1,7 +1,7 @@
 //! UI 0.4 workflow apps (`design/ontwerp-0.4/05-layouts.md`): Energy, Speech,
 //! Workspace Composer and Field have no ribbon. They navigate with a sidebar
 //! (default) or with steps at the top; users choose in Navigatie.
-use super::focus::focusable;
+use super::focus::{focusable, group, Axis};
 use super::widgets::{bar, border, fill, glyph, mono_label};
 use super::{font, mix, radius, shell, Look};
 use crate::fonts;
@@ -94,7 +94,7 @@ pub fn sidebar<'a, M: Clone + 'a>(look: Look, heading: &str, sections: &[Section
             0.0,
         ));
     }
-    container(list)
+    container(group(list, Axis::Vertical))
         .width(SIDEBAR_WIDTH)
         .height(Length::Fill)
         .padding([4, 0])
@@ -155,7 +155,7 @@ pub fn step_bar<'a, M: Clone + 'a>(look: Look, steps: &[Section<'a>], active: us
         }
     }
     column![
-        container(line).height(STEP_BAR - 1.0).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }),
+        container(group(line, Axis::Horizontal)).height(STEP_BAR - 1.0).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }),
         bar(c.border, Length::Fill, 1.0),
     ]
     .into()

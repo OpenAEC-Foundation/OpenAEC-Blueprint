@@ -6,7 +6,7 @@
 //! per state. Two parts of the spec need more than iced 0.14 offers and are
 //! approximated: focus is drawn as a 2 px border inside the control instead of
 //! an outer ring, and High contrast draws disabled borders solid, not dashed.
-use super::focus::focusable;
+use super::focus::{focusable, group, Axis};
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
 use crate::fonts;
 use iced::alignment::{Horizontal, Vertical};
@@ -766,7 +766,7 @@ pub fn table<'a, M: Clone + 'a>(
         sheet = sheet.push(selectable(look, line, on, 28.0));
         sheet = sheet.push(divider(look));
     }
-    sheet.width(Length::Fill).into()
+    group(sheet.width(Length::Fill), Axis::Vertical)
 }
 
 // ---------- Notifications and dialogs ----------
@@ -903,7 +903,7 @@ pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: 
             shadow: Shadow::default(),
         }), true, 0.0));
     }
-    container(line).height(shell::RIBBON_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
+    container(group(line, Axis::Horizontal)).height(shell::RIBBON_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
 }
 
 fn ribbon_button_style(look: Look, active: bool, status: iced_button::Status) -> iced_button::Style {
@@ -1010,7 +1010,7 @@ pub fn ribbon<'a, M: 'a>(look: Look, groups: Vec<Element<'a, M>>) -> Element<'a,
             band = band.push(container(vline(c.border)).padding([10, 0]).height(Length::Fill));
         }
     }
-    container(band)
+    container(group(band, Axis::Horizontal))
         .height(shell::RIBBON)
         .width(Length::Fill)
         .style(move |_| container::Style { background: fill(c.panel), border: border(c.border, 0.0, 0.0), ..Default::default() })
@@ -1093,7 +1093,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
         });
         line = line.push(mouse_area(focusable(look, tab, true, radius::MEDIUM)).on_right_press(on_menu(i)));
     }
-    container(line).height(shell::DOCUMENT_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.docbar), ..Default::default() }).into()
+    container(group(line, Axis::Horizontal)).height(shell::DOCUMENT_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.docbar), ..Default::default() }).into()
 }
 
 /// The status bar (22 px). It follows the theme with a line above it, unless the
