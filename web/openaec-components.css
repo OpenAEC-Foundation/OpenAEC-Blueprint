@@ -46,7 +46,7 @@
 
 /* ---------- Text ---------- */
 
-.oa-heading { margin: 0; font-family: var(--oa-font-heading); font-weight: var(--oa-weight-semibold); letter-spacing: var(--oa-letter-spacing-heading); color: var(--oa-text); }
+.oa-heading { margin: 0; font-family: var(--oa-font-heading); font-weight: var(--oa-weight-medium); /* Space Grotesk Medium, as openaec_ui::fonts::HEADING */ letter-spacing: var(--oa-letter-spacing-heading); color: var(--oa-text); }
 .oa-heading--page { font-size: var(--oa-size-page-heading); }
 .oa-heading--dialog { font-size: var(--oa-size-dialog-heading); }
 .oa-heading--panel { font-size: var(--oa-size-panel-heading); }
@@ -239,7 +239,7 @@ select.oa-field { padding-right: 24px; appearance: none; background-image: linea
 .oa-info-card dl { display: grid; grid-template-columns: 2fr 3fr; gap: 6px 8px; margin: 10px 0 0; }
 .oa-info-card dt { color: var(--oa-text-secondary); }
 .oa-info-card dd { margin: 0; font-weight: var(--oa-weight-medium); }
-.oa-figure { font: var(--oa-weight-semibold) var(--oa-size-page-heading) / 1.2 var(--oa-font-heading); letter-spacing: var(--oa-letter-spacing-heading); }
+.oa-figure { font: var(--oa-weight-medium) var(--oa-size-page-heading) / 1.2 var(--oa-font-heading); letter-spacing: var(--oa-letter-spacing-heading); }
 .oa-figure--accent { color: var(--oa-accent-text); }
 
 .oa-recent { border: 1px solid var(--oa-border); border-radius: var(--oa-radius-large); background: var(--oa-raised); overflow: hidden; }

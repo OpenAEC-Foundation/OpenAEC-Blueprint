@@ -1,0 +1,78 @@
+{
+  "about": "Fontpakket van OpenAEC UI 0.4 (issue #24). Gemaakt door scripts/build_font_package.py; niet met de hand aanpassen.",
+  "licence": "SIL Open Font License 1.1 voor alle fonts",
+  "fonts": [
+    {
+      "file": "Inter-Regular.ttf",
+      "family": "Inter",
+      "weight": 400,
+      "style": "normal",
+      "name": "Inter Regular",
+      "version": "Version 4.001;git-9221beed3",
+      "bytes": 411640,
+      "sha256": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+      "licence": "licenses/Inter-OFL.txt"
+    },
+    {
+      "file": "Inter-Medium.ttf",
+      "family": "Inter",
+      "weight": 500,
+      "style": "normal",
+      "name": "Inter Medium Regular",
+      "version": "Version 4.001;git-9221beed3",
+      "bytes": 417300,
+      "sha256": "97ad806f526e41546d46365bb3a393145f75b7b1568913db74549ad8b8dba872",
+      "licence": "licenses/Inter-OFL.txt"
+    },
+    {
+      "file": "Inter-SemiBold.ttf",
+      "family": "Inter",
+      "weight": 600,
+      "style": "normal",
+      "name": "Inter SemiBold Regular",
+      "version": "Version 4.001;git-9221beed3",
+      "bytes": 419744,
+      "sha256": "78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3",
+      "licence": "licenses/Inter-OFL.txt"
+    },
+    {
+      "file": "SpaceGrotesk-Medium.ttf",
+      "family": "Space Grotesk",
+      "weight": 500,
+      "style": "normal",
+      "name": "Space Grotesk Medium Regular",
+      "version": "Version 2.000; ttfautohint (v1.8.3)",
+      "bytes": 116664,
+      "sha256": "3183b7eb0b4241476360e2cd8e527868616cc16d3ce332c4376505989b772b44",
+      "licence": "licenses/SpaceGrotesk-OFL.txt"
+    },
+    {
+      "file": "SpaceGrotesk-Bold.ttf",
+      "family": "Space Grotesk",
+      "weight": 700,
+      "style": "normal",
+      "name": "Space Grotesk Bold",
+      "version": "Version 2.000; ttfautohint (v1.8.3)",
+      "bytes": 116056,
+      "sha256": "7209bbb75fc0f5c546a5f5773b0db74ffc6abf04c2148c1105cace5765a96bdb",
+      "licence": "licenses/SpaceGrotesk-OFL.txt"
+    },
+    {
+      "file": "JetBrainsMono-Regular.ttf",
+      "family": "JetBrains Mono",
+      "weight": 400,
+      "style": "normal",
+      "name": "JetBrains Mono Regular",
+      "version": "Version 2.304; ttfautohint (v1.8.4.7-5d5b)",
+      "bytes": 273900,
+      "sha256": "a0bf60ef0f83c5ed4d7a75d45838548b1f6873372dfac88f71804491898d138f",
+      "licence": "licenses/JetBrainsMono-OFL.txt"
+    }
+  ],
+  "missing_weights": [
+    "Inter 700",
+    "Space Grotesk 400",
+    "Space Grotesk 600",
+    "JetBrains Mono 500"
+  ]
+}
