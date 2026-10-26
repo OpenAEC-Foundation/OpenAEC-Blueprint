@@ -23,7 +23,7 @@ De proef toont:
 
 ## Renders
 
-Gemaakt met `cargo test --bin ui04 export_specimen_renders -- --ignored`, op 13 px en 100 %. De knoppen zijn grijs: iced kent de toestand van een knop pas na het eerste event, en een testrender heeft geen events.
+Gemaakt met `cargo test --bin ui04 export_specimen_renders -- --ignored`, op 13 px en 100 %.
 
 | Bestand | Inhoud |
 |---|---|

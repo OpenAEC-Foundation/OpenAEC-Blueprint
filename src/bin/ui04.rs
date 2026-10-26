@@ -323,6 +323,8 @@ fn group_choices() -> &'static [Choice] {
 }
 
 /// Icons per page, so a page lays out quickly even with all 945 icons.
+/// The longest word that fits on one line of a 140 px icon tile.
+const ICON_LABEL_WORD: usize = 21;
 const ICONS_PER_PAGE: usize = 120;
 
 fn icon_grid_id() -> iced::widget::Id {
@@ -2897,14 +2899,19 @@ impl Gallery {
             let mut tiles = row![].spacing(8);
             for &icon in found.iter().skip(page * ICONS_PER_PAGE).take(ICONS_PER_PAGE) {
                 let chosen = st.selected == Some(icon);
-                let label = text(icon.label()).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text).width(Length::Fill).align_x(iced::alignment::Horizontal::Center);
+                // One word longer than the tile is shortened, with the full name as tooltip;
+                // clipping cut it off on both sides ("nnotatiegereedschappe").
+                let name = icon.label();
+                let long = name.split_whitespace().any(|word| word.chars().count() > ICON_LABEL_WORD);
+                let shown = if long { w::shorten(name, ICON_LABEL_WORD).into_owned() } else { name.to_string() };
+                let label = text(shown).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text).width(Length::Fill).align_x(iced::alignment::Horizontal::Center);
                 let tile = column![
                     container(w::glyph(icon.svg(size), px, c.text, c.accent_text)).center_x(Length::Fill).center_y(30),
                     container(label).height(30).width(Length::Fill).clip(true),
                 ]
                 .spacing(4);
-                let node = Node::new(Role::Button, icon.label()).selected(chosen);
-                tiles = tiles.push(a11y::node(
+                let node = Node::new(Role::Button, name).selected(chosen);
+                let tile: Element<'_, Msg> = a11y::node(
                     focus::focusable(look, iced::widget::button(tile)
                         .width(140)
                         .height(84)
@@ -2912,7 +2919,8 @@ impl Gallery {
                         .on_press(Msg::IconSelect(icon))
                         .style(move |_, status| t::tile_style(look, status, chosen, openaec_ui::design::radius::MEDIUM)), true, 6.0),
                     node,
-                ));
+                );
+                tiles = tiles.push(if long { w::with_tooltip(look, tile, name, None) } else { tile });
             }
             scrollable(container(tiles.wrap()).padding(iced::Padding { right: 12.0, ..Default::default() })).id(icon_grid_id()).height(Length::Fill).into()
         };
@@ -3700,6 +3708,12 @@ mod tests {
         let mut renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
         let mut tree = Tree::new(&element);
         let node = element.as_widget_mut().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
+        // In iced 0.14 a button learns its state from its first event; without one
+        // every button draws as disabled. A redraw request is what the window sends first.
+        let redraw = iced::Event::Window(iced::window::Event::RedrawRequested(std::time::Instant::now()));
+        let mut messages = Vec::new();
+        let mut shell = iced::advanced::Shell::new(&mut messages);
+        element.as_widget_mut().update(&mut tree, &redraw, Layout::new(&node), mouse::Cursor::Unavailable, &renderer, &mut iced::advanced::clipboard::Null, &mut shell, &Rectangle::with_size(size));
         let theme = gallery.theme.iced();
         let style = renderer::Style { text_color: theme.palette().text };
         element.as_widget().draw(&tree, &mut renderer, &theme, &style, Layout::new(&node), mouse::Cursor::Unavailable, &Rectangle::with_size(size));
