@@ -7,6 +7,7 @@
 //! control. Text fields and select lists still show iced's own focus as a 2 px
 //! border inside, and High contrast draws disabled borders solid, not dashed,
 //! because iced 0.14 has no dashed borders.
+use super::a11y::{self, Node, Role};
 use super::focus::{self, focusable, group, Axis};
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
 use crate::fonts;
@@ -281,20 +282,28 @@ pub fn button<'a, M: Clone + 'a>(
         .padding(Padding::from([0.0, density.pad_x()]))
         .on_press_maybe(on_press)
         .style(move |_, status| button_style(look, kind, status));
-    focusable(look, control, enabled, radius::MEDIUM)
+    a11y::node(focusable(look, control, enabled, radius::MEDIUM), Node::new(Role::Button, label).disabled(!enabled))
 }
 
 /// A square icon button: 28 px, or 20 px in a panel header. The icon is 16 px.
-/// `selected` is the on state of a toggle.
+/// `selected` is the on state of a toggle. `name` is what a screen reader says,
+/// as the button has no text (issue #3); show it as a tooltip with `with_tooltip`.
 pub fn icon_button<'a, M: Clone + 'a>(
     look: Look,
     icon: &'static str,
     size: f32,
     selected: bool,
+    name: &str,
     on_press: Option<M>,
 ) -> Element<'a, M> {
+    let node = Node::new(Role::Button, name).selected(selected).disabled(on_press.is_none());
+    icon_button_with(look, icon, size, selected, node, on_press)
+}
+
+/// An icon button with its accessible node given in full, such as a toggle.
+pub fn icon_button_with<'a, M: Clone + 'a>(look: Look, icon: &'static str, size: f32, selected: bool, node: Node, on_press: Option<M>) -> Element<'a, M> {
     let enabled = on_press.is_some();
-    focusable(look, plain_icon_button(look, icon, size, selected, on_press), enabled, radius::SMALL)
+    a11y::node(focusable(look, plain_icon_button(look, icon, size, selected, on_press), enabled, radius::SMALL), node)
 }
 
 /// The icon button outside the Tab route, for the close button of a dialog:
@@ -423,16 +432,21 @@ pub fn text_field_in<'a, M: Clone + 'a>(
 ) -> Element<'a, M> {
     let pad_y = (density.height() - 16.0) / 2.0;
     let invalid = error.is_some();
+    let mut node = Node::new(Role::TextField, placeholder).value(value).invalid(invalid).disabled(on_input.is_none());
+    if let Some(message) = error {
+        node = node.description(message);
+    }
     let field = text_input(placeholder, value)
         .on_input_maybe(on_input)
         .size(font::SIZE_BODY)
         .font(face)
         .padding(Padding::from([pad_y, 8.0]))
         .style(move |_, status| input_style(look, status, invalid));
-    match error {
+    let field: Element<'a, M> = match error {
         Some(message) => column![field, text(message).size(font::SIZE_LABEL).font(fonts::BODY).color(look.color.error)].spacing(4).into(),
         None => field.into(),
-    }
+    };
+    a11y::node(field, node)
 }
 
 /// A select list with the arrow on the right and a menu with a 10 px corner.
@@ -450,6 +464,10 @@ where
     let c = look.color;
     let pad_y = (density.height() - 16.0) / 2.0;
     let enabled = true;
+    let mut node = Node::new(Role::ComboBox, "");
+    if let Some(value) = &selected {
+        node = node.value(value.to_string());
+    }
     let control = pick_list(options, selected, on_select)
         .width(Length::Fill)
         .text_size(font::SIZE_BODY)
@@ -479,7 +497,7 @@ where
                 selected_background: Background::Color(if look.high_contrast() { c.hover } else { c.selected }),
             }
         });
-    focusable(look, control, enabled, radius::MEDIUM)
+    a11y::node(focusable(look, control, enabled, radius::MEDIUM), node)
 }
 
 // ---------- Choices ----------
@@ -516,7 +534,7 @@ pub fn checkbox<'a, M: 'a>(look: Look, label: &'a str, checked: bool, on_toggle:
                 text_color: Some(if disabled { c.text_disabled } else { c.text }),
             }
         });
-    focusable(look, control, enabled, radius::SMALL)
+    a11y::node(focusable(look, control, enabled, radius::SMALL), Node::new(Role::CheckBox, label).checked(checked).disabled(!enabled))
 }
 
 /// A 16 px radio button with its dot in `selected-bar`.
@@ -527,6 +545,7 @@ where
 {
     let c = look.color;
     let enabled = true;
+    let node = Node::new(Role::RadioButton, label).checked(selected == Some(value));
     let control = iced_radio(label, value, selected, on_click)
         .size(16)
         .spacing(8)
@@ -546,7 +565,7 @@ where
                 text_color: Some(c.text),
             }
         });
-    focusable(look, control, enabled, radius::SMALL)
+    a11y::node(focusable(look, control, enabled, radius::SMALL), node)
 }
 
 /// A switch that acts at once, such as showing a grid. Height 18 px.
@@ -579,7 +598,7 @@ pub fn switch<'a, M: 'a>(look: Look, label: &'a str, on: bool, on_toggle: Option
                 padding_ratio: 0.1,
             }
         });
-    focusable(look, control, enabled, radius::SMALL)
+    a11y::node(focusable(look, control, enabled, radius::SMALL), Node::new(Role::Switch, label).checked(on).disabled(!enabled))
 }
 
 /// A slider: 4 px track, accent fill and a 14 px knob with an accent edge,
@@ -599,20 +618,21 @@ pub fn slider<'a, M: Clone + 'a>(look: Look, range: std::ops::RangeInclusive<f32
             border_color: c.accent,
         },
     });
-    row![control, text(value_label).size(font::SIZE_BODY).font(fonts::MONO).color(c.text)].spacing(8).align_y(Alignment::Center).into()
+    let node = Node::new(Role::Slider, "").value(value_label.clone());
+    a11y::node(row![control, text(value_label).size(font::SIZE_BODY).font(fonts::MONO).color(c.text)].spacing(8).align_y(Alignment::Center), node)
 }
 
 /// A 6 px progress bar in `accent`.
 pub fn progress<'a, M: 'a>(look: Look, value: f32) -> Element<'a, M> {
     let c = look.color;
-    iced_progress(0.0..=1.0, value)
+    let bar = iced_progress(0.0..=1.0, value)
         .girth(6)
         .style(move |_| iced_progress::Style {
             background: Background::Color(c.border),
             bar: Background::Color(c.accent),
             border: border(Color::TRANSPARENT, 0.0, 3.0),
-        })
-        .into()
+        });
+    a11y::node(bar, Node::new(Role::ProgressBar, "").value(format!("{} %", (value * 100.0).round())))
 }
 
 // ---------- Panels, tree, properties, table ----------
@@ -629,11 +649,8 @@ pub fn panel_header<'a, M: 'a>(look: Look, title: &str, actions: Vec<Element<'a,
 /// A side panel: header, line and content on `panel`.
 /// The width is 240 px by default (`shell::PANEL_WIDTH`); users may drag it.
 pub fn panel<'a, M: 'a>(look: Look, title: &str, width: f32, actions: Vec<Element<'a, M>>, content: Element<'a, M>) -> Element<'a, M> {
-    container(column![panel_header(look, title, actions), divider(look), content])
-        .width(width)
-        .height(Length::Fill)
-        .style(move |_| panel_style(look))
-        .into()
+    let panel = container(column![panel_header(look, title, actions), divider(look), content]).width(width).height(Length::Fill).style(move |_| panel_style(look));
+    a11y::named(panel, Role::Group, title)
 }
 
 fn selectable<'a, M: 'a>(look: Look, content: Element<'a, M>, selected: bool, height: f32) -> Element<'a, M> {
@@ -699,7 +716,7 @@ pub fn tree_row<'a, M: Clone + 'a>(
         border: if status == iced_button::Status::Hovered && look.high_contrast() { border(c.accent, 1.0, 0.0) } else { Border::default() },
         shadow: Shadow::default(),
     });
-    let content = focusable(look, content, enabled, 0.0);
+    let content = a11y::node(focusable(look, content, enabled, 0.0), Node::new(Role::TreeItem, label).selected(selected));
     let content: Element<'a, M> = match on_menu {
         Some(menu) => mouse_area(content).on_right_press(menu).into(),
         None => content,
@@ -722,6 +739,7 @@ pub fn section_header<'a, M: 'a>(look: Look, arrow: &'static str, title: &str) -
 pub fn property_row<'a, M: 'a>(look: Look, label: &'a str, value: Element<'a, M>) -> Element<'a, M> {
     // The label sits in the first 28 px; the value is centred in at least 28 px,
     // so a field with an error message below it keeps its label beside the field.
+    let value = a11y::named(value, Role::Label, label);
     container(
         row![
             container(secondary(look, label)).width(Length::FillPortion(2)).height(28).align_y(Vertical::Center),
@@ -779,6 +797,7 @@ pub fn table<'a, M: Clone + 'a>(
     let mut sheet = column![container(header).height(28).align_y(Vertical::Center), bar(c.border_strong, Length::Fill, 1.0)];
     for (i, cells) in rows.into_iter().enumerate() {
         let on = selected == Some(i);
+        let name = cells.iter().filter(|c| !c.is_empty()).cloned().collect::<Vec<_>>().join(", ");
         // Text that does not fit a fixed column is shortened; the full texts show
         // as the row's tooltip, on hover and keyboard focus (issue #7).
         let mut full = Vec::new();
@@ -822,6 +841,7 @@ pub fn table<'a, M: Clone + 'a>(
         };
         let line = if full.is_empty() { line } else { full_text_tip(look, line, full.join("
 ")) };
+        let line = a11y::node(line, Node::new(Role::Row, name).selected(on));
         sheet = sheet.push(selectable(look, line, on, 28.0));
         sheet = sheet.push(divider(look));
     }
@@ -868,33 +888,35 @@ pub fn banner_with_action<'a, M: Clone + 'a>(
         Some(action) => content.push(action),
         None => content,
     }
-    .push(icon_button(look, close_icon, 20.0, false, on_close));
-    container(row![bar(fg, 3.0, Length::Fill), container(content).padding([0, 10]).height(Length::Fill).align_y(Vertical::Center).width(Length::Fill)])
+    .push(icon_button(look, close_icon, 20.0, false, "Melding sluiten", on_close));
+    let role = if matches!(tone, Tone::Error | Tone::Warning) { Role::Alert } else { Role::Status };
+    let node = Node::new(role, format!("{} {message}", tone.word()));
+    let banner = container(row![bar(fg, 3.0, Length::Fill), container(content).padding([0, 10]).height(Length::Fill).align_y(Vertical::Center).width(Length::Fill)])
         .width(Length::Fill)
         .height(height)
         .style(move |_| container::Style {
             background: fill(tint),
             border: if hc { border(fg, 1.0, 0.0) } else { Border::default() },
             ..Default::default()
-        })
-        .into()
+        });
+    a11y::node(banner, node)
 }
 
 /// A notification at the bottom right: raised, popup shadow, 10 px corner.
 pub fn toast<'a, M: Clone + 'a>(look: Look, tone: Tone, icon: &'static str, title: &'a str, message: &'a str, close_icon: &'static str, on_close: Option<M>) -> Element<'a, M> {
     let fg = tone.color(look);
-    container(
+    let card = container(
         row![
             glyph(icon, 16.0, fg, fg),
             column![text(title).size(font::SIZE_BODY).font(fonts::STRONG).color(look.color.text), secondary(look, message)].spacing(2).width(Length::Fill),
-            icon_button(look, close_icon, 20.0, false, on_close),
+            icon_button(look, close_icon, 20.0, false, "Melding sluiten", on_close),
         ]
         .spacing(10),
     )
     .width(320)
     .padding(12)
-    .style(move |_| surface(look, look.tokens.shadow.popup, radius::LARGE))
-    .into()
+    .style(move |_| surface(look, look.tokens.shadow.popup, radius::LARGE));
+    a11y::node(card, Node::new(Role::Status, title).description(message))
 }
 
 /// A dialog card: 420 px (or 560 px), title in Space Grotesk 16 px with a close
@@ -917,7 +939,7 @@ pub fn dialog<'a, M: Clone + 'a>(
     for action in actions {
         footer = footer.push(action);
     }
-    container(
+    let card = container(
         column![
             row![heading(look, title, font::SIZE_DIALOG_HEADING).width(Length::Fill), plain_icon_button(look, close_icon, 28.0, false, on_close)].align_y(Alignment::Center),
             content,
@@ -927,8 +949,8 @@ pub fn dialog<'a, M: Clone + 'a>(
     )
     .width(if wide { 560 } else { 420 })
     .padding(20)
-    .style(move |_| surface(look, look.tokens.shadow.dialog, radius::LARGE))
-    .into()
+    .style(move |_| surface(look, look.tokens.shadow.dialog, radius::LARGE));
+    a11y::named(card, Role::Dialog, title)
 }
 
 /// The theme overlay behind a dialog, with the dialog centred.
@@ -948,7 +970,7 @@ pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: 
         .padding([0, 12])
         .on_press_maybe(on_file)
         .style(move |_, status| button_style(look, ButtonKind::Primary, status));
-    let file = focusable(look, file, file_enabled, radius::MEDIUM);
+    let file = a11y::node(focusable(look, file, file_enabled, radius::MEDIUM), Node::new(Role::Button, file_label).disabled(!file_enabled));
     let mut line = row![container(file).height(Length::Fill).align_y(Vertical::Center).padding([0, 8])].height(Length::Fill);
     for (i, &name) in tabs.iter().enumerate() {
         let on = i == active;
@@ -961,12 +983,13 @@ pub fn ribbon_tabs<'a, M: Clone + 'a>(look: Look, file_label: &'a str, on_file: 
             container(label).height(Length::Fill).align_y(Vertical::Center).padding([0, 12]),
             container(bar(if on { c.accent } else { Color::TRANSPARENT }, Length::Fill, 2.0)).height(Length::Fill).align_y(Vertical::Bottom),
         ];
-        line = line.push(focusable(look, iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
+        let tab = focusable(look, iced_button(tab).padding(0).height(Length::Fill).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
             background: if status == iced_button::Status::Hovered && !on && !look.high_contrast() { fill(c.hover) } else { None },
             text_color: c.text,
             border: Border::default(),
             shadow: Shadow::default(),
-        }), true, 0.0));
+        }), true, 0.0);
+        line = line.push(a11y::node(tab, Node::new(Role::Tab, name).selected(on)));
     }
     container(group(line, Axis::Horizontal)).height(shell::RIBBON_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
 }
@@ -1025,7 +1048,13 @@ pub fn ribbon_large<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
         .padding([0, 4])
         .on_press_maybe(on_press)
         .style(move |_, status| ribbon_button_style(look, active, status));
-    focusable(look, control, enabled, radius::MEDIUM)
+    a11y::node(focusable(look, control, enabled, radius::MEDIUM), ribbon_node(label, active, enabled))
+}
+
+/// A ribbon button reads as a toggle while it is on, such as Raster.
+fn ribbon_node(label: &str, active: bool, enabled: bool) -> Node {
+    let node = if active { Node::new(Role::ToggleButton, label).checked(true) } else { Node::new(Role::Button, label) };
+    node.disabled(!enabled)
 }
 
 /// A small ribbon button: 22 px high, 16 px icon, label of 11 px.
@@ -1048,7 +1077,7 @@ pub fn ribbon_small<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
             }
             s
         });
-    focusable(look, control, enabled, radius::SMALL)
+    a11y::node(focusable(look, control, enabled, radius::SMALL), ribbon_node(label, active, enabled))
 }
 
 /// A ribbon group: its buttons on top and a centred mono label at the bottom.
@@ -1128,13 +1157,14 @@ pub fn document_tabs<'a, M: Clone + 'a>(
             }));
         }
         let full_title = tab.title;
+        let tab_dirty = tab.dirty;
         let title = shorten(full_title, TAB_TITLE_MAX);
         let shortened = title.len() != full_title.len();
         inner = inner.push(text(title).size(font::SIZE_BODY).font(if on { fonts::STRONG } else { fonts::BODY }).color(fg));
         // The 16 px close button is its own button inside the tab.
         let hover_bg = if on { mix(c.workspace_text, 0.12, c.workspace) } else { c.pressed };
         if !tab.pinned {
-        inner = inner.push(
+        inner = inner.push(a11y::named(
             focusable(look, iced_button(container(glyph(close_icon, 12.0, fg, fg)).center(16))
                 .width(16)
                 .height(16)
@@ -1146,7 +1176,9 @@ pub fn document_tabs<'a, M: Clone + 'a>(
                     border: border(if status == iced_button::Status::Hovered && look.high_contrast() { c.accent } else { Color::TRANSPARENT }, 1.0, radius::SMALL),
                     shadow: Shadow::default(),
                 }), true, radius::SMALL),
-        );
+            Role::Button,
+            format!("{full_title} sluiten"),
+        ));
         }
         let workspace = c.workspace;
         let tab = iced_button(inner).height(24).padding([0, 10]).on_press(on_select(i)).style(move |_, status| iced_button::Style { snap: false,
@@ -1159,7 +1191,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
             },
             shadow: Shadow::default(),
         });
-        let tab = focusable(look, tab, true, radius::MEDIUM);
+        let tab = a11y::node(focusable(look, tab, true, radius::MEDIUM), Node::new(Role::Tab, full_title).selected(on).description(if tab_dirty { "Niet opgeslagen wijzigingen" } else { "" }));
         // A shortened title shows in full on hover and keyboard focus.
         let tab = if shortened { with_tooltip(look, tab, full_title, None) } else { tab };
         line = line.push(mouse_area(tab).on_right_press(on_menu(i)));
@@ -1172,6 +1204,7 @@ pub fn document_tabs<'a, M: Clone + 'a>(
 pub fn status_bar<'a, M: 'a>(look: Look, left: Vec<String>, right: Vec<String>) -> Element<'a, M> {
     let c = look.color;
     let item = move |s: String| -> Element<'a, M> { text(s).size(font::SIZE_LABEL).font(fonts::BODY).color(c.statusbar_text).into() };
+    let name = left.join(", ");
     let mut line = row![].spacing(16).align_y(Alignment::Center).padding([0, 10]);
     for s in left {
         line = line.push(item(s));
@@ -1180,11 +1213,11 @@ pub fn status_bar<'a, M: 'a>(look: Look, left: Vec<String>, right: Vec<String>) 
     for s in right {
         line = line.push(text(s).size(font::SIZE_LABEL).font(fonts::MONO).color(c.statusbar_text));
     }
-    column![
+    let bar = column![
         divider(look),
         container(line).height(shell::STATUSBAR - 1.0).width(Length::Fill).align_y(Vertical::Center).style(move |_| container::Style { background: fill(c.statusbar), ..Default::default() }),
-    ]
-    .into()
+    ];
+    a11y::named(bar, Role::Status, name)
 }
 
 /// An empty state where the document would be: it follows the theme.

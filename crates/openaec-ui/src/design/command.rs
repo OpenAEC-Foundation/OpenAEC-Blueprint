@@ -282,6 +282,21 @@ pub fn menu_item<M: Clone>(command: &Command<M>) -> MenuItem<'static, M> {
     }
 }
 
+/// What a screen reader gets for a command: a toggle or mode reads as a pressed
+/// button, and the shortcut is the description (issue #3).
+pub fn node<M>(command: &Command<M>) -> crate::design::a11y::Node {
+    use crate::design::a11y::{Node, Role};
+    let node = match command.kind {
+        CommandKind::Toggle(on) | CommandKind::Mode(on) => Node::new(Role::ToggleButton, command.description()).checked(on),
+        _ => Node::new(Role::Button, command.description()),
+    };
+    let node = node.disabled(!command.enabled);
+    match command.shortcut_label() {
+        Some(keys) => node.description(keys),
+        None => node,
+    }
+}
+
 /// The ribbon shows a dialog command without its ellipsis, as Office does.
 fn ribbon_label<M>(command: &Command<M>) -> &'static str {
     command.label.trim_end_matches('…')
@@ -304,7 +319,7 @@ pub fn ribbon_small<'a, M: Clone + 'a>(look: Look, command: &Command<M>) -> Elem
 /// A square icon button of `size` px with a tooltip; a toggle shows as selected
 /// when on.
 pub fn icon_button<'a, M: Clone + 'a>(look: Look, command: &Command<M>, size: f32) -> Element<'a, M> {
-    let button = w::icon_button(look, command.icon.unwrap_or_default(), size, command.kind.is_on(), command.on_press());
+    let button = w::icon_button_with(look, command.icon.unwrap_or_default(), size, command.kind.is_on(), node(command), command.on_press());
     w::with_tooltip(look, button, command.description(), command.shortcut_label())
 }
 

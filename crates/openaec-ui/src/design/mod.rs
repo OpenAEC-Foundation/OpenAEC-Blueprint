@@ -7,6 +7,7 @@
 //! all with those tokens only. Every component takes a [`Look`]: the theme plus the
 //! user's Werkruimte and Statusbalk settings. This module is independent of the
 //! prototype theme in [`crate::theme`].
+pub mod a11y;
 pub mod chrome;
 pub mod command;
 pub mod document;

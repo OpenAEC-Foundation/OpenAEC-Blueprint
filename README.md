@@ -277,6 +277,11 @@ Ongedaan maken volgt in elke app dezelfde regels (`design::history`, issue #34):
 - **Niet terug te draaien.** Exporteren en afdrukken worden niet vastgelegd; hun dialoog zegt dat het niet ongedaan kan worden gemaakt.
 - **Herstel na een crash.** Dat staat los van ongedaan maken; daarvoor is er de herstelkopie van `design::document`.
 
+Elk onderdeel van de bibliotheek heeft een toegankelijke naam en rol (`design::a11y`, issue #3):
+- **Wat er per onderdeel is.** Rol, naam, waarde en toestand, uit het eigen label. Knoppen zonder tekst (iconknoppen, titelbalkknoppen) krijgen een verplichte naam. Een eigenschappenrij geeft haar veld de naam van het label.
+- **Waarom nu al.** iced 0.14 geeft dit nog niet aan een schermlezer door, zie de [schermlezerproef](design/schermlezerproef/README.md). Zodra iced of een fork het wel doet, hoeven apps niets aan te passen.
+- **Controle.** `a11y::Collect` vindt elk onderdeel in de Tab-route zonder naam. De galerij test met elke weergave dat er geen enkel is.
+
 Tooltips en selectie werken ook zonder muis en zonder schaduw (issues #6 en #7):
 - **Tooltip bij toetsenbordfocus.** In Rust toont `design::focus::tip` de tooltip ook bij toetsenbordfocus, en `widgets::with_tooltip` gebruikt dat voor elke iconknop. Escape verbergt de tooltip.
 - **Afgekorte tekst.** Lange tabnamen en tabelcellen worden met "…" afgekort (`widgets::shorten`). De volledige tekst staat dan in de tooltip.

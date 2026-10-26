@@ -149,7 +149,7 @@ impl State {
         }
         let controls = row![
             w::mono_label(look, "Tekstfont"),
-            container(w::select(look, &Candidate::ALL, Some(self.font), Message::Font, D::Compact)).width(230),
+            openaec_ui::design::a11y::named(container(w::select(look, &Candidate::ALL, Some(self.font), Message::Font, D::Compact)).width(230), openaec_ui::design::a11y::Role::Label, "Tekstfont"),
             sizes,
             w::checkbox(look, "Gelijke x-hoogte", self.equal_x_height, Some(Message::EqualXHeight)),
             scales,

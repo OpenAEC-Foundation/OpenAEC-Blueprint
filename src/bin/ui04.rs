@@ -10,6 +10,7 @@
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::document::{self as dm, Choice as CloseChoice, ClosePlan, DocumentState, Request, SaveKind, SaveTicket, Status, Step};
+use openaec_ui::design::a11y::{self, Node, Role};
 use openaec_ui::design::focus;
 use openaec_ui::design::history::{self as hist, History};
 use openaec_ui::design::number::{self as num, NumberFormat, NumberInput, Value};
@@ -1774,20 +1775,20 @@ impl Gallery {
             text("UI 0.4").size(font::SIZE_PANEL_HEADING).font(fonts::HEADING).color(c.text),
             Space::new().width(12),
             w::mono_label(look, "Thema"),
-            container(w::select(look, &ThemeId::ALL, Some(self.theme), Msg::Theme, D::Compact)).width(160),
+            a11y::named(container(w::select(look, &ThemeId::ALL, Some(self.theme), Msg::Theme, D::Compact)).width(160), Role::Label, "Thema"),
             w::mono_label(look, "Werkruimte"),
-            container(w::select(look, &WorkspaceSetting::ALL, Some(self.workspace), Msg::Workspace, D::Compact)).width(122),
+            a11y::named(container(w::select(look, &WorkspaceSetting::ALL, Some(self.workspace), Msg::Workspace, D::Compact)).width(122), Role::Label, "Werkruimte"),
             w::mono_label(look, "Statusbalk"),
-            container(w::select(look, &StatusbarSetting::ALL, Some(self.statusbar), Msg::Statusbar, D::Compact)).width(122),
+            a11y::named(container(w::select(look, &StatusbarSetting::ALL, Some(self.statusbar), Msg::Statusbar, D::Compact)).width(122), Role::Label, "Statusbalk"),
         ]
         .spacing(8)
         .align_y(Alignment::Center);
         if self.view == View::Workflow {
             bar = bar.push(w::mono_label(look, "Navigatie"));
-            bar = bar.push(container(w::select(look, &Navigation::ALL, Some(self.wf.navigation), Msg::WfNavigation, D::Compact)).width(144));
+            bar = bar.push(a11y::named(container(w::select(look, &Navigation::ALL, Some(self.wf.navigation), Msg::WfNavigation, D::Compact)).width(144), Role::Label, "Navigatie"));
         }
         bar = bar.push(Space::new().width(Length::Fill));
-        bar = bar.push(w::with_tooltip(look, w::icon_button(look, HOME, 24.0, false, Some(Msg::Restart)), "Herstart: doe alsof de app opnieuw opent", None));
+        bar = bar.push(w::with_tooltip(look, w::icon_button(look, HOME, 24.0, false, "Herstart", Some(Msg::Restart)), "Herstart: doe alsof de app opnieuw opent", None));
         for (v, label) in views {
             let kind = if self.view == v { K::Secondary } else { K::Quiet };
             bar = bar.push(w::button(look, label, kind, D::Compact, None, Some(Msg::View(v))));
@@ -1914,8 +1915,8 @@ impl Gallery {
             "Structuur",
             self.left_width,
             vec![
-                w::with_tooltip(look, w::icon_button(look, SEARCH, 20.0, false, Some(Msg::Noop)), "Zoeken", Some("Ctrl+F")),
-                w::with_tooltip(look, w::icon_button(look, PANEL_LEFT, 20.0, true, Some(Msg::ToggleLeft)), "Paneel verbergen", Some("Ctrl+1")),
+                w::with_tooltip(look, w::icon_button(look, SEARCH, 20.0, false, "Zoeken", Some(Msg::Noop)), "Zoeken", Some("Ctrl+F")),
+                w::with_tooltip(look, w::icon_button(look, PANEL_LEFT, 20.0, true, "Paneel verbergen", Some(Msg::ToggleLeft)), "Paneel verbergen", Some("Ctrl+1")),
             ],
             scrollable(focus::group(tree, focus::Axis::Vertical)).height(Length::Fill).into(),
         )
@@ -1941,7 +1942,7 @@ impl Gallery {
             .into(),
             None => container(w::secondary(look, "Kies een post in de boom of de tabel om de eigenschappen te zien.")).padding(12).into(),
         };
-        w::panel(look, "Eigenschappen", self.right_width, vec![w::with_tooltip(look, w::icon_button(look, PANEL_RIGHT, 20.0, true, Some(Msg::ToggleRight)), "Paneel verbergen", Some("Ctrl+2"))], content)
+        w::panel(look, "Eigenschappen", self.right_width, vec![w::with_tooltip(look, w::icon_button(look, PANEL_RIGHT, 20.0, true, "Paneel verbergen", Some(Msg::ToggleRight)), "Paneel verbergen", Some("Ctrl+2"))], content)
     }
 
     fn document_tabs(&self, look: Look) -> Element<'_, Msg> {
@@ -2136,8 +2137,8 @@ impl Gallery {
             vec![Space::new().width(86).into()]
         };
         let extra = vec![
-            w::with_tooltip(look, ch::title_button(look, MENU, self.menu.is_some_and(|(k, _)| k == MenuKind::App), Some(Msg::Menu(Some(MenuKind::App)))), "Menu", None),
-            w::with_tooltip(look, ch::title_button(look, SETTINGS, self.dialog == Some(Dialog::Settings), Some(Msg::Dialog(Some(Dialog::Settings)))), "Instellingen", Some("Ctrl+,")),
+            w::with_tooltip(look, ch::title_button(look, MENU, self.menu.is_some_and(|(k, _)| k == MenuKind::App), "Menu", Some(Msg::Menu(Some(MenuKind::App)))), "Menu", None),
+            w::with_tooltip(look, ch::title_button(look, SETTINGS, self.dialog == Some(Dialog::Settings), "Instellingen", Some(Msg::Dialog(Some(Dialog::Settings)))), "Instellingen", Some("Ctrl+,")),
         ];
         let window = WindowActions { drag: Msg::TitlePress, minimize: Msg::Minimize, maximize: Msg::Maximize, close: Msg::CloseWindow, maximized: self.maximized };
         ch::title_bar(look, name, quick_buttons, extra, window, WINDOW_ICONS)
@@ -2883,8 +2884,8 @@ impl Gallery {
         let size_button = |large: bool, label: &'static str| w::button(look, label, if st.large == large { K::Secondary } else { K::Quiet }, D::Compact, None, Some(Msg::IconLarge(large)));
         let controls = row![
             container(w::text_field(look, "Zoek op naam, id of groep", &st.search, Some(Msg::IconSearch), D::Compact, None)).width(280),
-            container(w::select(look, app_choices(), Some(st.app), Msg::IconApp, D::Compact)).width(190),
-            container(w::select(look, group_choices(), Some(st.group), Msg::IconGroup, D::Compact)).width(230),
+            a11y::named(container(w::select(look, app_choices(), Some(st.app), Msg::IconApp, D::Compact)).width(190), Role::Label, "App"),
+            a11y::named(container(w::select(look, group_choices(), Some(st.group), Msg::IconGroup, D::Compact)).width(230), Role::Label, "Groep"),
             row![size_button(false, "16 px"), size_button(true, "24 px")].spacing(4),
         ]
         .spacing(8)
@@ -2902,14 +2903,16 @@ impl Gallery {
                     container(label).height(30).width(Length::Fill).clip(true),
                 ]
                 .spacing(4);
-                tiles = tiles.push(
+                let node = Node::new(Role::Button, icon.label()).selected(chosen);
+                tiles = tiles.push(a11y::node(
                     focus::focusable(look, iced::widget::button(tile)
                         .width(140)
                         .height(84)
                         .padding([8, 6])
                         .on_press(Msg::IconSelect(icon))
                         .style(move |_, status| t::tile_style(look, status, chosen, openaec_ui::design::radius::MEDIUM)), true, 6.0),
-                );
+                    node,
+                ));
             }
             scrollable(container(tiles.wrap()).padding(iced::Padding { right: 12.0, ..Default::default() })).id(icon_grid_id()).height(Length::Fill).into()
         };
@@ -2962,9 +2965,9 @@ impl Gallery {
                     w::mono_label(look, "In gebruik"),
                     row![w::button(look, "Opslaan", K::Primary, D::Regular, Some(s16), Some(Msg::Noop)), w::button(look, "Knop", K::Secondary, D::Regular, Some(s16), Some(Msg::Noop))].spacing(8),
                     row![
-                        w::icon_button(look, s16, 28.0, false, Some(Msg::Noop)),
-                        w::icon_button(look, s16, 28.0, true, Some(Msg::Noop)),
-                        w::icon_button(look, s16, 28.0, false, None),
+                        w::icon_button(look, s16, 28.0, false, icon.id(), Some(Msg::Noop)),
+                        w::icon_button(look, s16, 28.0, true, icon.id(), Some(Msg::Noop)),
+                        w::icon_button(look, s16, 28.0, false, icon.id(), None),
                         t::icon_tile(look, s24, 40.0, false),
                         w::ribbon_large(look, s24, "Lint", false, Some(Msg::Noop)),
                     ]
@@ -3022,10 +3025,10 @@ impl Gallery {
         ]
         .spacing(8);
         let icon_buttons = row![
-            w::with_tooltip(look, w::icon_button(look, PANEL_LEFT, 28.0, false, Some(Msg::Noop)), "Linkerpaneel", Some("Ctrl+1")),
-            w::with_tooltip(look, w::icon_button(look, PANEL_RIGHT, 28.0, true, Some(Msg::Noop)), "Rechterpaneel", Some("Ctrl+2")),
-            w::icon_button(look, HELP, 28.0, false, None),
-            w::icon_button(look, SEARCH, 20.0, false, Some(Msg::Noop)),
+            w::with_tooltip(look, w::icon_button(look, PANEL_LEFT, 28.0, false, "Linkerpaneel", Some(Msg::Noop)), "Linkerpaneel", Some("Ctrl+1")),
+            w::with_tooltip(look, w::icon_button(look, PANEL_RIGHT, 28.0, true, "Rechterpaneel", Some(Msg::Noop)), "Rechterpaneel", Some("Ctrl+2")),
+            w::icon_button(look, HELP, 28.0, false, "Help", None),
+            w::icon_button(look, SEARCH, 20.0, false, "Zoeken", Some(Msg::Noop)),
             secondary_note(look, "normaal, aan, uitgeschakeld, 20 px"),
         ]
         .spacing(8)
@@ -3037,7 +3040,7 @@ impl Gallery {
                 container(w::text_field(look, "Uitgeschakeld", "", None::<fn(String) -> Msg>, D::Regular, None)).width(220),
             ]
             .spacing(12),
-            row![container(w::select(look, &UNITS, self.unit, Msg::Unit, D::Regular)).width(220), container(w::select(look, &UNITS, self.unit, Msg::Unit, D::Compact)).width(220)].spacing(12),
+            row![a11y::named(container(w::select(look, &UNITS, self.unit, Msg::Unit, D::Regular)).width(220), Role::Label, "Eenheid"), a11y::named(container(w::select(look, &UNITS, self.unit, Msg::Unit, D::Compact)).width(220), Role::Label, "Eenheid, compact")].spacing(12),
         ]
         .spacing(12);
         let choices = row![
@@ -3223,6 +3226,7 @@ fn dark_band_style(dark: Look) -> container::Style {
 /// A round button with a tooltip text that is built at run time.
 fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: Msg) -> Element<'a, Msg> {
     let c = look.color;
+    let node = Node::new(Role::Button, tip.clone());
     let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
         .width(34)
         .height(34)
@@ -3238,7 +3242,7 @@ fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: M
             }
         }), true, 17.0);
     let tip = container(text(tip).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text)).padding([4, 8]).style(move |_| w::surface(look, look.tokens.shadow.popup, 3.0));
-    iced::widget::tooltip(button, tip, iced::widget::tooltip::Position::Bottom).gap(4).into()
+    iced::widget::tooltip(a11y::node(button, node), tip, iced::widget::tooltip::Position::Bottom).gap(4).into()
 }
 
 /// The tool's own logo in an amber tile, or its category icon, as in the real installer.
@@ -3303,8 +3307,9 @@ fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option
     if let Some(source) = icon {
         content = content.push(w::glyph(source, 16.0, fg, if kind == SiteKind::Primary || disabled { fg } else { c.accent_text }));
     }
+    let node = Node::new(Role::Button, label.clone()).disabled(disabled);
     content = content.push(text(label).size(if small { 13 } else { 14 }).font(fonts::STRONG).color(fg));
-    focus::focusable(look, iced::widget::button(content)
+    let button = focus::focusable(look, iced::widget::button(content)
         .padding(if small { [7, 14] } else { [10, 20] })
         .on_press_maybe(on_press)
         .style(move |_, status| {
@@ -3336,13 +3341,14 @@ fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option
                     shadow: if hc || disabled { iced::Shadow::default() } else { iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 } },
                 },
             }
-        }), !disabled, 8.0)
-        .into()
+        }), !disabled, 8.0);
+    a11y::node(button, node)
 }
 
 /// A round icon button with a tooltip, as the source and browser buttons of the real installer.
 fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -> Element<'a, Msg> {
     let c = look.color;
+    let node = Node::new(Role::Button, tip);
     let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
         .width(34)
         .height(34)
@@ -3357,7 +3363,7 @@ fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -
                 shadow: iced::Shadow::default(),
             }
         }), true, 17.0);
-    w::with_tooltip(look, button.into(), tip, None)
+    w::with_tooltip(look, a11y::node(button, node), tip, None)
 }
 
 /// The website's icon tile: an amber gradient at 145°, from 18% to 5%.
@@ -3429,7 +3435,7 @@ fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, activ
                 .style(move |_| container::Style { background: Some(Background::Color(alpha(fg, 0.06))), border: iced::Border { color: edge, width: 1.0, radius: 4.0.into() }, ..Default::default() }),
         );
     }
-    focus::focusable(look, iced::widget::button(
+    let button = focus::focusable(look, iced::widget::button(
         content.push(row![
             text(name).size(14).font(fonts::STRONG).color(fg),
             container(text(count.to_string()).size(11).font(fonts::MONO).color(fg))
@@ -3463,8 +3469,9 @@ fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, activ
                 iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 }
             },
         }
-    }), true, 9999.0)
-    .into()
+    }), true, 9999.0);
+    // A filter pill reads as a toggle with its count.
+    a11y::node(button, Node::new(Role::ToggleButton, format!("{name}, {count}")).checked(active))
 }
 
 fn section<'a>(look: Look, title: &str, content: Element<'a, Msg>) -> Element<'a, Msg> {
@@ -3608,6 +3615,83 @@ mod tests {
             drop(system);
             letterproef::load();
         });
+    }
+
+    /// What a screen reader would get from a view: its accessible nodes and the
+    /// controls without a name (issue #3).
+    fn accessibility(gallery: &Gallery, size: Size) -> openaec_ui::design::a11y::Collect {
+        load_fonts();
+        let mut element = gallery.view();
+        let renderer = iced_tiny_skia::Renderer::new(fonts::BODY, iced::Pixels(12.0));
+        let mut tree = Tree::new(&element);
+        let node = element.as_widget_mut().layout(&mut tree, &renderer, &layout::Limits::new(Size::ZERO, size));
+        let mut collect = openaec_ui::design::a11y::Collect::default();
+        element.as_widget_mut().operate(&mut tree, Layout::new(&node), &renderer, &mut collect);
+        collect
+    }
+
+    /// Every view of the gallery, as a person can reach them.
+    fn every_view() -> Vec<(&'static str, Gallery)> {
+        let mut views = Vec::new();
+        let mut start = Gallery::default();
+        start.started = false;
+        views.push(("start", start));
+        let screen = || {
+            let mut g = Gallery::default();
+            g.started = true;
+            let _ = g.update(Msg::SelectRow(2));
+            g
+        };
+        views.push(("lint-app", screen()));
+        let mut backstage = screen();
+        let _ = backstage.update(Msg::Backstage(true));
+        views.push(("bestand", backstage));
+        let mut dialog = screen();
+        let _ = dialog.update(Msg::Dialog(Some(Dialog::Export)));
+        views.push(("dialoog", dialog));
+        let mut settings = screen();
+        let _ = settings.update(Msg::Dialog(Some(Dialog::Settings)));
+        views.push(("instellingen", settings));
+        let mut menu = screen();
+        let _ = menu.update(Msg::Menu(Some(MenuKind::App)));
+        views.push(("menu", menu));
+        let mut new_page = screen();
+        let _ = new_page.update(Msg::Backstage(true));
+        let _ = new_page.update(Msg::FilePage(FilePage::New));
+        views.push(("bestand-nieuw", new_page));
+        for (name, view) in [("werkstroom", View::Workflow), ("installer", View::Installer), ("componenten", View::Components), ("iconen", View::Icons), ("letterproef", View::Specimen)] {
+            let mut g = Gallery::default();
+            g.view = view;
+            views.push((name, g));
+        }
+        views
+    }
+
+    #[test]
+    fn every_control_has_a_name() {
+        // Issue #3: a screen reader gets a name for every control in the Tab route.
+        for (name, g) in every_view() {
+            let found = accessibility(&g, Size::new(1280.0, 800.0));
+            assert!(found.unnamed.is_empty(), "{name}: controls without a name at {:?}", found.unnamed);
+        }
+    }
+
+    #[test]
+    fn a_screen_reader_gets_roles_and_states() {
+        let mut g = Gallery::default();
+        g.started = true;
+        let _ = g.update(Msg::SelectRow(2));
+        let found = accessibility(&g, Size::new(1280.0, 800.0));
+        let has = |role: Role, name: &str, check: &dyn Fn(&Node) -> bool| found.nodes.iter().any(|f| f.node.role == role && f.node.name.contains(name) && check(&f.node));
+        assert!(has(Role::TreeItem, "Poeren", &|n| n.state.selected), "{:?}", found.summary());
+        assert!(has(Role::Row, "Poeren", &|n| n.state.selected));
+        assert!(has(Role::Tab, "Begroting", &|n| n.state.selected));
+        assert!(has(Role::Tab, "Start", &|n| n.state.selected));
+        assert!(has(Role::Button, "Opslaan", &|n| n.description.as_deref() == Some("Ctrl+S")));
+        assert!(has(Role::Label, "Prijs", &|_| true), "the property row names its field");
+        assert!(has(Role::Button, "Minimaliseren", &|_| true));
+        assert!(has(Role::Status, "posten", &|_| true));
+        assert!(has(Role::Alert, "Let op", &|_| true), "the banner about missing prices");
     }
 
     fn render(gallery: &Gallery, size: Size) -> tiny_skia::Pixmap {

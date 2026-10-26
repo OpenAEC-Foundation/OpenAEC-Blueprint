@@ -4,6 +4,7 @@
 //! The application owns the window: it turns the messages from these parts into
 //! `iced::window` tasks (drag, minimise, maximise, close) and keeps the panel
 //! widths and the open menu in its state.
+use super::a11y::{self, Node, Role};
 use super::focus::{focusable, group, Axis};
 use super::widgets::{border, fill, glyph, icon_button, surface};
 use super::{font, radius, shell as size, Look};
@@ -32,10 +33,11 @@ pub struct WindowIcons {
     pub close: &'static str,
 }
 
-fn window_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, on_press: M, close: bool) -> Element<'a, M> {
+fn window_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, name: &str, on_press: M, close: bool) -> Element<'a, M> {
     let c = look.color;
     let hc = look.high_contrast();
-    button(container(glyph(icon, 16.0, c.text, c.text)).center(Length::Fill))
+    let node = Node::new(Role::Button, name);
+    let control = button(container(glyph(icon, 16.0, c.text, c.text)).center(Length::Fill))
         .width(40)
         .height(size::TITLEBAR)
         .padding(0)
@@ -55,8 +57,8 @@ fn window_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, on_press: M,
                 border: if hc && active { border(c.accent, 2.0, 0.0) } else { Border::default() },
                 shadow: Shadow::default(),
             }
-        })
-        .into()
+        });
+    a11y::node(control, node)
 }
 
 /// The title bar (32 px) in `frame`: quick actions on the left, the name in the
@@ -90,9 +92,9 @@ pub fn title_bar<'a, M: Clone + 'a>(
     let maximize_icon = if window.maximized { icons.restore } else { icons.maximize };
     right = right
         .push(Space::new().width(6))
-        .push(window_button(look, icons.minimize, window.minimize, false))
-        .push(window_button(look, maximize_icon, window.maximize, false))
-        .push(window_button(look, icons.close, window.close, true));
+        .push(window_button(look, icons.minimize, "Minimaliseren", window.minimize, false))
+        .push(window_button(look, maximize_icon, if window.maximized { "Vorig formaat" } else { "Maximaliseren" }, window.maximize, false))
+        .push(window_button(look, icons.close, "Sluiten", window.close, true));
     container(row![left, middle, right].height(Length::Fill).align_y(Alignment::Center))
         .height(size::TITLEBAR)
         .width(Length::Fill)
@@ -181,7 +183,14 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                 if let Some(keys) = shortcut {
                     line = line.push(text(keys).size(font::SIZE_LABEL).font(fonts::MONO).color(if disabled { c.text_disabled } else { c.text_secondary }));
                 }
-                list = list.push(focusable(
+                let mut node = Node::new(Role::MenuItem, label).disabled(disabled);
+                if checked {
+                    node = node.checked(true);
+                }
+                if let Some(keys) = shortcut {
+                    node = node.description(keys);
+                }
+                list = list.push(a11y::node(focusable(
                     look,
                     button(container(line).height(Length::Fill).align_y(Vertical::Center))
                         .height(28)
@@ -206,7 +215,7 @@ pub fn menu<'a, M: Clone + 'a>(look: Look, items: Vec<MenuItem<'a, M>>, check_ic
                         }),
                     !disabled,
                     radius::SMALL,
-                ));
+                ), node));
             }
         }
     }
@@ -237,6 +246,7 @@ pub fn menu_layer<'a, M: Clone + 'a>(menu: Element<'a, M>, at: Point, menu_size:
 }
 
 /// A small icon button for the title bar (28 px), such as save, undo or settings.
-pub fn title_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, selected: bool, on_press: Option<M>) -> Element<'a, M> {
-    icon_button(look, icon, 28.0, selected, on_press)
+/// `name` is what a screen reader says (issue #3).
+pub fn title_button<'a, M: Clone + 'a>(look: Look, icon: &'static str, selected: bool, name: &str, on_press: Option<M>) -> Element<'a, M> {
+    icon_button(look, icon, 28.0, selected, name, on_press)
 }

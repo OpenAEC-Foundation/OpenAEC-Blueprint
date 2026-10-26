@@ -97,7 +97,8 @@ Gestart op 2026-10-16. Werkplan en voortgang staan in [`design/ontwerp-0.4/READM
   - **Klaar (2026-10-23):** strikte getalinvoer, `design::number` (issue [#8](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/8)), gebruikt in de galerij.
   - **Klaar (2026-10-26):** opslaan- en sluitcontract, `design::document` (issue [#10](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/10)), gebruikt in de galerij.
   - **Klaar (2026-10-26):** ongedaan maken per taak en per document, `design::history` (issue [#34](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/34)), gebruikt in de galerij.
-  - Nog te doen: toegankelijke namen (#3) en de eerste app die de bibliotheek echt gebruikt (fase 5).
+  - **Klaar (2026-10-26):** toegankelijke naam en rol voor elk onderdeel, `design::a11y` (issue [#3](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/3)); iced geeft ze nog niet door aan een schermlezer.
+  - Nog te doen: de eerste app die de bibliotheek echt gebruikt (fase 5).
 - **Webpakket.** CSS en iconen die in elk webframework werken, met componenten voor React. Dit bouwt voort op het Style Book of vervangt het, afhankelijk van fase 3.
   - **Klaar (2026-10-22):** [`web/openaec-components.css`](web/openaec-components.css) met de componenten van 0.4 en de websitestijl van de installer, voor webtools zoals BIM Validator. Overzicht in vijf thema's: [`web/componenten.html`](web/componenten.html).
   - Nog te doen: de iconen als los webbestand en de React-componenten.

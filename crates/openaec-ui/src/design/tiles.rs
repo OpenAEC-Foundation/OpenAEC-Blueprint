@@ -2,6 +2,7 @@
 //! task tiles, the recent-files list, project cards, choice tiles, info cards,
 //! figure tiles and the navigation of the Bestand screen.
 use super::widgets::{bar, border, fill, glyph, mono_label, Tone};
+use super::a11y::{self, Node, Role};
 use super::focus::{focusable, group, Axis};
 use super::{font, mix, radius, Look, Shadows};
 use crate::fonts;
@@ -68,7 +69,7 @@ pub fn task_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &'a
     .width(Length::Fill)
     .on_press_maybe(on_press)
     .style(move |_, status| tile_style(look, status, false, radius::LARGE));
-    focusable(look, control, enabled, radius::LARGE)
+    a11y::node(focusable(look, control, enabled, radius::LARGE), Node::new(Role::Button, heading).description(explanation).disabled(disabled))
 }
 
 /// One row in the recent-files list.
@@ -96,7 +97,8 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
         .spacing(10)
         .align_y(Alignment::Center);
         let enabled = file.on_press.is_some();
-        list = list.push(focusable(
+        let node = Node::new(Role::Link, file.name).description(format!("{}, {}", file.path, file.date)).disabled(!enabled);
+        list = list.push(a11y::node(focusable(
             look,
             button(container(line).height(Length::Fill).align_y(Vertical::Center))
                 .height(40)
@@ -115,7 +117,7 @@ pub fn recent_files<'a, M: Clone + 'a>(look: Look, files: Vec<RecentFile<'a, M>>
                 }),
             enabled,
             0.0,
-        ));
+        ), node));
         if i + 1 < count {
             list = list.push(bar(c.border, Length::Fill, 1.0));
         }
@@ -163,6 +165,7 @@ pub fn project_card<'a, M: Clone + 'a>(
         text(meta).size(font::SIZE_LABEL).font(fonts::MONO).color(c.text_secondary),
     ]
     .spacing(4);
+    let status_text = status.map(|(_, label)| label);
     if let Some((tone, label)) = status {
         info = info.push(Space::new().height(2)).push(status_label(look, tone, label));
     }
@@ -176,7 +179,11 @@ pub fn project_card<'a, M: Clone + 'a>(
             s.shadow = Shadows::drop_shadow(look.tokens.shadow.panel).unwrap_or_default();
             s
         });
-    focusable(look, control, enabled, radius::LARGE)
+    let detail = match status_text {
+        Some(label) => format!("{meta}, {label}"),
+        None => meta.to_string(),
+    };
+    a11y::node(focusable(look, control, enabled, radius::LARGE), Node::new(Role::Button, name).description(detail).disabled(!enabled))
 }
 
 /// A choice tile: icon tile, title and description, with a radio at the top right.
@@ -203,7 +210,7 @@ pub fn choice_tile<'a, M: Clone + 'a>(look: Look, icon: &'static str, heading: &
     .width(Length::Fill)
     .on_press(on_press)
     .style(move |_, status| tile_style(look, status, chosen, radius::LARGE));
-    focusable(look, control, enabled, radius::LARGE)
+    a11y::node(focusable(look, control, enabled, radius::LARGE), Node::new(Role::RadioButton, heading).description(explanation).checked(chosen))
 }
 
 /// An info card: a mono heading and key–value rows. Not clickable, so no hover.
@@ -285,5 +292,5 @@ pub fn file_nav_row<'a, M: Clone + 'a>(look: Look, icon: &'static str, label: &'
         border: if hc && (active || status == button::Status::Hovered) { border(c.selected_bar, 2.0, 0.0) } else { Border::default() },
         shadow: Shadow::default(),
     });
-    focusable(look, control, enabled, 0.0)
+    a11y::node(focusable(look, control, enabled, 0.0), Node::new(Role::Link, label).current(active).disabled(disabled))
 }
