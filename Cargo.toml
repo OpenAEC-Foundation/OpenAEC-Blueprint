@@ -1,14 +1,14 @@
 [package]
-name = "openaec-style-repo"
+name = "openaec-blueprint"
 version = "2026.44.0"
 edition = "2021"
-description = "Native Rust showcase and source review for the shared OpenAEC UI"
+description = "OpenAEC Blueprint: the standard application and shared UI of every OpenAEC tool"
 license = "CC-BY-SA-4.0"
 readme = "README.md"
 publish = false
 
 [workspace]
-members = ["crates/openaec-ui", "crates/openaec-icons"]
+members = ["crates/openaec-ui", "crates/openaec-icons", "crates/openaec-blueprint-sdk"]
 resolver = "2"
 
 [features]

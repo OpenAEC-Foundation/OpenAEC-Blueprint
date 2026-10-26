@@ -25,7 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCHEME = re.compile(r"^(?P<year>\d{4})\.(?P<week>[1-9]\d?)\.(?P<n>0|[1-9]\d*)$")
 # Cargo manifests whose [package] version follows the root.
-MANIFESTS = ["Cargo.toml", "crates/openaec-ui/Cargo.toml", "crates/openaec-icons/Cargo.toml"]
+MANIFESTS = ["Cargo.toml", "crates/openaec-ui/Cargo.toml", "crates/openaec-icons/Cargo.toml", "crates/openaec-blueprint-sdk/Cargo.toml"]
 PACKAGE_VERSION = re.compile(r'(\[package\][^\[]*?\nversion = ")([^"]+)(")', re.S)
 
 

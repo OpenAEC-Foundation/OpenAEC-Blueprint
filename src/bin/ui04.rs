@@ -3564,6 +3564,7 @@ fn main() -> iced::Result {
             min_size: Some(Size::new(960.0, 600.0)),
             // The library draws the title bar; Windows keeps the shadow and the resize border.
             decorations: false,
+            #[cfg(target_os = "windows")]
             platform_specific: iced::window::settings::PlatformSpecific { undecorated_shadow: true, ..Default::default() },
             ..Default::default()
         })

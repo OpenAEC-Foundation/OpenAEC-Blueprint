@@ -1,0 +1,501 @@
+# Release of OpenAEC Blueprint: the standard application and the C library for
+# Windows, macOS and Linux, tested first and signed on every platform.
+#
+# A tag vYYYY.W.N starts it; all crate versions must be YYYY.W.N. The signing
+# keys are the secrets of the OpenAEC organisation, under the same names as in
+# Open Pointcloud Studio. A platform whose keys are missing is not signed; the
+# release notes say so per file, and such a release is published as a
+# pre-release.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to build, such as v2026.44.0"
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.event.inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  TAG: ${{ github.event.inputs.tag || github.ref_name }}
+
+jobs:
+  check:
+    name: Tests and version
+    runs-on: ubuntu-24.04
+    outputs:
+      number: ${{ steps.version.outputs.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: The tag and every crate carry the same version YYYY.W.N
+        id: version
+        run: |
+          number="${TAG#v}"
+          [[ "$number" =~ ^20[0-9]{2}\.([1-9]|[1-4][0-9]|5[0-3])\.(0|[1-9][0-9]*)$ ]] \
+            || { echo "::error::$TAG is not vYYYY.W.N (week without a leading zero)"; exit 1; }
+          for manifest in Cargo.toml crates/openaec-ui/Cargo.toml crates/openaec-icons/Cargo.toml crates/openaec-blueprint-sdk/Cargo.toml; do
+            version=$(sed -n 's/^version = "\(.*\)"$/\1/p' "$manifest" | head -1)
+            [[ "$version" == "$number" ]] || { echo "::error::$manifest has $version, the tag says $number"; exit 1; }
+          done
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+      - name: System libraries
+        run: sudo apt-get update && sudo apt-get install -y pkg-config libxkbcommon-dev libwayland-dev libfontconfig1-dev
+      - name: Repository checks
+        run: |
+          python3 scripts/check_layout_metrics.py
+          python3 scripts/check_icon_adoptions.py
+          python3 scripts/check_portable_ui.py
+          python3 scripts/check_crate_package.py
+          python3 scripts/check_tokens_04.py
+          python3 scripts/generate_tokens_04.py --check
+          python3 scripts/generate_icon_crate.py --check
+          python3 scripts/build_web_components.py --check
+          python3 scripts/build_font_package.py --check
+          python3 scripts/build_web_icons.py --check
+      - name: Rust tests
+        run: |
+          cargo test --workspace --locked
+          cargo test -p openaec-icons --features all --locked
+
+  linux:
+    name: Linux
+    needs: check
+    runs-on: ubuntu-22.04
+    env:
+      NUMBER: ${{ needs.check.outputs.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: System libraries and packaging tools
+        run: sudo apt-get update && sudo apt-get install -y pkg-config libxkbcommon-dev libwayland-dev libfontconfig1-dev rpm file
+      - name: Build the application and the library
+        run: |
+          cargo build --release --locked --features gpu --bin ui04
+          cargo build --release --locked -p openaec-blueprint-sdk
+      - name: Package the application
+        run: |
+          set -euo pipefail
+          out="$PWD/dist"; mkdir -p "$out"
+          bin=target/release/ui04
+          stage=$(mktemp -d)
+          # .tar.gz
+          mkdir -p "$stage/openaec-blueprint_${NUMBER}_linux-x64"
+          cp "$bin" "$stage/openaec-blueprint_${NUMBER}_linux-x64/openaec-blueprint"
+          cp LICENSE README.md "$stage/openaec-blueprint_${NUMBER}_linux-x64/"
+          tar -C "$stage" -czf "$out/openaec-blueprint_${NUMBER}_linux-x64.tar.gz" "openaec-blueprint_${NUMBER}_linux-x64"
+          # .deb
+          deb="$stage/deb"
+          install -Dm755 "$bin" "$deb/usr/bin/openaec-blueprint"
+          install -Dm644 packaging/linux/org.openaec.Blueprint.desktop "$deb/usr/share/applications/org.openaec.Blueprint.desktop"
+          install -Dm644 packaging/icon-256.png "$deb/usr/share/icons/hicolor/256x256/apps/org.openaec.Blueprint.png"
+          install -Dm644 LICENSE "$deb/usr/share/doc/openaec-blueprint/copyright"
+          mkdir -p "$deb/DEBIAN"
+          cat > "$deb/DEBIAN/control" <<EOF
+          Package: openaec-blueprint
+          Version: ${NUMBER}
+          Section: devel
+          Priority: optional
+          Architecture: amd64
+          Maintainer: OpenAEC Foundation <info@open-aec.com>
+          Homepage: https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint
+          Description: Standard application of OpenAEC tools
+           The shared look, components and icons that every OpenAEC tool is built from.
+          EOF
+          sed -i 's/^          //' "$deb/DEBIAN/control"
+          dpkg-deb --root-owner-group --build "$deb" "$out/openaec-blueprint_${NUMBER}_amd64.deb"
+          # .rpm
+          rpmtop=$(mktemp -d)
+          mkdir -p "$rpmtop"/{SOURCES,SPECS,RPMS,BUILD,BUILDROOT}
+          cp "$bin" "$rpmtop/SOURCES/openaec-blueprint"
+          cp packaging/linux/org.openaec.Blueprint.desktop packaging/icon-256.png LICENSE "$rpmtop/SOURCES/"
+          rpmbuild -bb --define "_topdir $rpmtop" --define "number $NUMBER" packaging/linux/openaec-blueprint.spec
+          cp "$rpmtop"/RPMS/x86_64/*.rpm "$out/openaec-blueprint_${NUMBER}_x86_64.rpm"
+          # AppImage
+          app="$stage/AppDir"
+          install -Dm755 "$bin" "$app/usr/bin/openaec-blueprint"
+          cp packaging/linux/org.openaec.Blueprint.desktop "$app/"
+          cp packaging/icon-256.png "$app/org.openaec.Blueprint.png"
+          ln -s usr/bin/openaec-blueprint "$app/AppRun"
+          curl -fsSL -o "$stage/appimagetool" https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x "$stage/appimagetool"
+          ARCH=x86_64 APPIMAGE_EXTRACT_AND_RUN=1 "$stage/appimagetool" --no-appstream "$app" "$out/openaec-blueprint_${NUMBER}_amd64.AppImage"
+          ls -la "$out"
+      - name: Package the library and test it from C
+        run: |
+          set -euo pipefail
+          name="openaec-blueprint-sdk_${NUMBER}_linux-x64"
+          sdk="$(mktemp -d)/$name"
+          mkdir -p "$sdk/lib" "$sdk/include" "$sdk/examples"
+          cp target/release/libopenaec_blueprint.so target/release/libopenaec_blueprint.a "$sdk/lib/"
+          cp crates/openaec-blueprint-sdk/include/openaec_blueprint.h "$sdk/include/"
+          cp crates/openaec-blueprint-sdk/examples/list_icons.c "$sdk/examples/"
+          cp packaging/sdk-README.md "$sdk/README.md"
+          cp crates/openaec-icons/LICENSE.md "$sdk/LICENSE.md"
+          cc -std=c11 -Wall -Wextra -Werror -I"$sdk/include" "$sdk/examples/list_icons.c" -L"$sdk/lib" -lopenaec_blueprint -Wl,-rpath,"$sdk/lib" -o "$RUNNER_TEMP/list_icons"
+          "$RUNNER_TEMP/list_icons"
+          tar -C "$(dirname "$sdk")" -czf "dist/$name.tar.gz" "$name"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: dist/*
+          if-no-files-found: error
+
+  windows:
+    name: Windows
+    needs: check
+    runs-on: windows-2022
+    outputs:
+      signed: ${{ steps.report.outputs.signed }}
+    env:
+      NUMBER: ${{ needs.check.outputs.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Build the application and the library
+        shell: bash
+        env:
+          RUSTFLAGS: -C target-feature=+crt-static
+        run: |
+          cargo build --release --locked --features gpu --bin ui04
+          cargo build --release --locked -p openaec-blueprint-sdk
+          mkdir -p sign
+          cp target/release/ui04.exe sign/openaec-blueprint.exe
+          cp target/release/openaec_blueprint.dll sign/
+      - name: Sign the application and the DLL
+        continue-on-error: true
+        uses: azure/trusted-signing-action@v0.5.0
+        with:
+          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          endpoint: ${{ secrets.AZURE_ENDPOINT }}
+          trusted-signing-account-name: ${{ secrets.AZURE_TRUSTED_SIGNING_ACCOUNT_NAME }}
+          certificate-profile-name: ${{ secrets.AZURE_CERTIFICATE_PROFILE_NAME }}
+          files-folder: ${{ github.workspace }}\sign
+          files-folder-filter: exe,dll
+          files-folder-depth: 1
+          file-digest: SHA256
+          timestamp-rfc3161: http://timestamp.acs.microsoft.com
+          timestamp-digest: SHA256
+      - name: Build the installer
+        shell: pwsh
+        run: |
+          if (-not (Get-Command makensis -ErrorAction SilentlyContinue)) { choco install nsis -y --no-progress }
+          $nsis = (Get-Command makensis -ErrorAction SilentlyContinue).Source
+          if (-not $nsis) { $nsis = "${env:ProgramFiles(x86)}\NSIS\makensis.exe" }
+          New-Item -ItemType Directory -Force installer | Out-Null
+          Copy-Item packaging\windows\installer.nsi, packaging\windows\icon.ico installer\
+          Push-Location installer
+          & $nsis "/DNUMBER=$env:NUMBER" "/DSOURCE=$env:GITHUB_WORKSPACE\sign" installer.nsi
+          if ($LASTEXITCODE -ne 0) { throw "makensis failed" }
+          Pop-Location
+      - name: Sign the installer
+        continue-on-error: true
+        uses: azure/trusted-signing-action@v0.5.0
+        with:
+          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          endpoint: ${{ secrets.AZURE_ENDPOINT }}
+          trusted-signing-account-name: ${{ secrets.AZURE_TRUSTED_SIGNING_ACCOUNT_NAME }}
+          certificate-profile-name: ${{ secrets.AZURE_CERTIFICATE_PROFILE_NAME }}
+          files-folder: ${{ github.workspace }}\installer
+          files-folder-filter: exe
+          files-folder-depth: 1
+          file-digest: SHA256
+          timestamp-rfc3161: http://timestamp.acs.microsoft.com
+          timestamp-digest: SHA256
+      # The signing steps may fail without failing the job; this step says
+      # what the files really carry, and the release notes go by it.
+      - name: Report the signatures
+        id: report
+        shell: pwsh
+        run: |
+          $files = @("sign\openaec-blueprint.exe", "sign\openaec_blueprint.dll", "installer\openaec-blueprint_$($env:NUMBER)_x64-setup.exe")
+          $all = $true
+          "### Windows: Authenticode" >> $env:GITHUB_STEP_SUMMARY
+          foreach ($f in $files) {
+            $s = Get-AuthenticodeSignature $f
+            if ($s.Status -ne 'Valid') { $all = $false }
+            "- $(Split-Path $f -Leaf): $($s.Status) $($s.SignerCertificate.Subject)" | Tee-Object -Append -FilePath $env:GITHUB_STEP_SUMMARY
+          }
+          "signed=$($all.ToString().ToLower())" >> $env:GITHUB_OUTPUT
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Package the library and test it from C
+        shell: pwsh
+        run: |
+          $name = "openaec-blueprint-sdk_$($env:NUMBER)_windows-x64"
+          $sdk = "$env:RUNNER_TEMP\$name"
+          New-Item -ItemType Directory -Force "$sdk\lib", "$sdk\include", "$sdk\examples" | Out-Null
+          Copy-Item sign\openaec_blueprint.dll, target\release\openaec_blueprint.dll.lib, target\release\openaec_blueprint.lib "$sdk\lib\"
+          Copy-Item crates\openaec-blueprint-sdk\include\openaec_blueprint.h "$sdk\include\"
+          Copy-Item crates\openaec-blueprint-sdk\examples\list_icons.c "$sdk\examples\"
+          Copy-Item packaging\sdk-README.md "$sdk\README.md"
+          Copy-Item crates\openaec-icons\LICENSE.md "$sdk\LICENSE.md"
+          $build = "$env:RUNNER_TEMP\example"
+          New-Item -ItemType Directory -Force $build | Out-Null
+          Push-Location $build
+          cl /nologo /W4 /WX /I "$sdk\include" "$sdk\examples\list_icons.c" "$sdk\lib\openaec_blueprint.dll.lib"
+          if ($LASTEXITCODE -ne 0) { throw "the example did not compile" }
+          Copy-Item "$sdk\lib\openaec_blueprint.dll" .
+          .\list_icons.exe
+          if ($LASTEXITCODE -ne 0) { throw "the example ended with code $LASTEXITCODE" }
+          Pop-Location
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Compress-Archive -Path $sdk -DestinationPath "dist\$name.zip"
+          Copy-Item "installer\openaec-blueprint_$($env:NUMBER)_x64-setup.exe" dist\
+          $app = "$env:RUNNER_TEMP\openaec-blueprint_$($env:NUMBER)_windows-x64"
+          New-Item -ItemType Directory -Force $app | Out-Null
+          Copy-Item sign\openaec-blueprint.exe, LICENSE, README.md $app
+          Compress-Archive -Path $app -DestinationPath "dist\openaec-blueprint_$($env:NUMBER)_windows-x64.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: dist/*
+          if-no-files-found: error
+
+  macos:
+    name: macOS
+    needs: check
+    runs-on: macos-15
+    outputs:
+      signed: ${{ steps.sign.outputs.signed }}
+    env:
+      NUMBER: ${{ needs.check.outputs.number }}
+      MACOSX_DEPLOYMENT_TARGET: "11.0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - uses: Swatinem/rust-cache@v2
+      - name: Build both processor types and join them
+        run: |
+          set -euo pipefail
+          for t in aarch64-apple-darwin x86_64-apple-darwin; do
+            cargo build --release --locked --features gpu --bin ui04 --target "$t"
+            cargo build --release --locked -p openaec-blueprint-sdk --target "$t"
+          done
+          mkdir -p build
+          lipo -create -output build/openaec-blueprint target/aarch64-apple-darwin/release/ui04 target/x86_64-apple-darwin/release/ui04
+          lipo -create -output build/libopenaec_blueprint.dylib target/aarch64-apple-darwin/release/libopenaec_blueprint.dylib target/x86_64-apple-darwin/release/libopenaec_blueprint.dylib
+          lipo -create -output build/libopenaec_blueprint.a target/aarch64-apple-darwin/release/libopenaec_blueprint.a target/x86_64-apple-darwin/release/libopenaec_blueprint.a
+          install_name_tool -id @rpath/libopenaec_blueprint.dylib build/libopenaec_blueprint.dylib
+          lipo -archs build/openaec-blueprint
+      - name: Make the application bundle
+        run: |
+          set -euo pipefail
+          app="build/OpenAEC Blueprint.app"
+          mkdir -p "$app/Contents/MacOS" "$app/Contents/Resources"
+          cp build/openaec-blueprint "$app/Contents/MacOS/"
+          sed "s/@NUMBER@/$NUMBER/g" packaging/macos/Info.plist.in > "$app/Contents/Info.plist"
+          iconset=build/AppIcon.iconset; mkdir -p "$iconset"
+          for s in 16 32 128 256 512; do
+            cp "packaging/icon-$s.png" "$iconset/icon_${s}x${s}.png"
+            d=$((s*2)); [[ -f "packaging/icon-$d.png" ]] && cp "packaging/icon-$d.png" "$iconset/icon_${s}x${s}@2x.png"
+          done
+          iconutil -c icns "$iconset" -o "$app/Contents/Resources/AppIcon.icns"
+      - name: Prepare Developer ID signing and notarization
+        env:
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_API_KEY_CONTENT: ${{ secrets.APPLE_API_KEY_CONTENT }}
+          APPLE_API_KEY: ${{ secrets.APPLE_API_KEY }}
+          APPLE_API_ISSUER: ${{ secrets.APPLE_API_ISSUER }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${APPLE_CERTIFICATE:-}" || -z "${APPLE_SIGNING_IDENTITY:-}" || -z "${APPLE_API_KEY_CONTENT:-}" ]]; then
+            echo "Developer ID secrets are not available; signing ad hoc."
+            exit 0
+          fi
+          cert="$RUNNER_TEMP/id.p12"; key="$RUNNER_TEMP/notary.p8"; kc="$RUNNER_TEMP/sign.keychain-db"
+          printf '%s' "$APPLE_CERTIFICATE" | base64 -D > "$cert"
+          if [[ "$APPLE_API_KEY_CONTENT" == *"-----BEGIN"* ]]; then printf '%s\n' "$APPLE_API_KEY_CONTENT" > "$key"; else printf '%s' "$APPLE_API_KEY_CONTENT" | base64 -D > "$key"; fi
+          chmod 600 "$cert" "$key"
+          pw=$(uuidgen)
+          security create-keychain -p "$pw" "$kc"
+          security set-keychain-settings -lut 21600 "$kc"
+          security unlock-keychain -p "$pw" "$kc"
+          security import "$cert" -k "$kc" -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$pw" "$kc"
+          security list-keychains -d user -s "$kc"
+          security find-identity -v -p codesigning "$kc" | grep -Fq "$APPLE_SIGNING_IDENTITY"
+          rm -f "$cert"
+          {
+            echo "SIGN_ID=$APPLE_SIGNING_IDENTITY"; echo "SIGN_KC=$kc"
+            echo "NOTARY_KEY=$key"; echo "NOTARY_KEY_ID=$APPLE_API_KEY"; echo "NOTARY_ISSUER=$APPLE_API_ISSUER"
+          } >> "$GITHUB_ENV"
+      - name: Sign, notarize and package
+        id: sign
+        run: |
+          set -euo pipefail
+          app="build/OpenAEC Blueprint.app"
+          dmg="build/openaec-blueprint_${NUMBER}_macos-universal.dmg"
+          notarize() {
+            for attempt in 1 2 3; do
+              if xcrun notarytool submit "$1" --key "$NOTARY_KEY" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER" --wait --output-format json > "$RUNNER_TEMP/notary.json"; then
+                cat "$RUNNER_TEMP/notary.json"
+                python3 -c 'import json,sys; s=json.load(open(sys.argv[1]))["status"]; print(s); sys.exit(0 if s=="Accepted" else 1)' "$RUNNER_TEMP/notary.json"
+                return
+              fi
+              echo "notarytool failed (attempt $attempt), trying again"; sleep 20
+            done
+            return 1
+          }
+          if [[ -n "${SIGN_ID:-}" ]]; then
+            codesign --force --options runtime --timestamp --sign "$SIGN_ID" --keychain "$SIGN_KC" build/libopenaec_blueprint.dylib
+            codesign --force --options runtime --timestamp --sign "$SIGN_ID" --keychain "$SIGN_KC" "$app"
+            (cd build && ditto -c -k --keepParent libopenaec_blueprint.dylib "$RUNNER_TEMP/lib.zip")
+            notarize "$RUNNER_TEMP/lib.zip"
+            stage=$(mktemp -d); cp -R "$app" "$stage/"; ln -s /Applications "$stage/Applications"
+            hdiutil create -volname "OpenAEC Blueprint" -srcfolder "$stage" -ov -format UDZO "$dmg"
+            codesign --force --timestamp --sign "$SIGN_ID" --keychain "$SIGN_KC" "$dmg"
+            notarize "$dmg"
+            xcrun stapler staple "$dmg"
+            echo "signed=true" >> "$GITHUB_OUTPUT"
+            echo "### macOS: Developer ID signed and notarized" >> "$GITHUB_STEP_SUMMARY"
+          else
+            codesign --force --sign - build/libopenaec_blueprint.dylib
+            codesign --force --deep --sign - "$app"
+            stage=$(mktemp -d); cp -R "$app" "$stage/"; ln -s /Applications "$stage/Applications"
+            hdiutil create -volname "OpenAEC Blueprint" -srcfolder "$stage" -ov -format UDZO "$dmg"
+            echo "signed=false" >> "$GITHUB_OUTPUT"
+            echo "### macOS: signed ad hoc (no Developer ID secrets)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          codesign --verify --strict --verbose=2 "$app"
+          codesign --verify --strict --verbose=2 build/libopenaec_blueprint.dylib
+      - name: Package the library and test it from C
+        run: |
+          set -euo pipefail
+          name="openaec-blueprint-sdk_${NUMBER}_macos-universal"
+          sdk="$(mktemp -d)/$name"
+          mkdir -p "$sdk/lib" "$sdk/include" "$sdk/examples"
+          cp build/libopenaec_blueprint.dylib build/libopenaec_blueprint.a "$sdk/lib/"
+          cp crates/openaec-blueprint-sdk/include/openaec_blueprint.h "$sdk/include/"
+          cp crates/openaec-blueprint-sdk/examples/list_icons.c "$sdk/examples/"
+          cp packaging/sdk-README.md "$sdk/README.md"
+          cp crates/openaec-icons/LICENSE.md "$sdk/LICENSE.md"
+          cc -std=c11 -Wall -Wextra -Werror -I"$sdk/include" "$sdk/examples/list_icons.c" -L"$sdk/lib" -lopenaec_blueprint -Wl,-rpath,"$sdk/lib" -o "$RUNNER_TEMP/list_icons"
+          "$RUNNER_TEMP/list_icons"
+          mkdir -p dist
+          tar -C "$(dirname "$sdk")" -czf "dist/$name.tar.gz" "$name"
+          cp "build/openaec-blueprint_${NUMBER}_macos-universal.dmg" dist/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos
+          path: dist/*
+          if-no-files-found: error
+
+  publish:
+    name: Publish
+    needs: [check, linux, windows, macos]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      NUMBER: ${{ needs.check.outputs.number }}
+      WINDOWS_SIGNED: ${{ needs.windows.outputs.signed }}
+      MACOS_SIGNED: ${{ needs.macos.outputs.signed }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: assets
+          merge-multiple: true
+      - name: Checksums
+        run: |
+          cd assets
+          sha256sum -- * > SHA256SUMS
+          cat SHA256SUMS
+      - name: Sign the checksums and the AppImage with OpenPGP
+        id: gpg
+        env:
+          OPENAEC_GPG_PRIVATE_KEY: ${{ secrets.OPENAEC_GPG_PRIVATE_KEY }}
+          OPENAEC_GPG_PASSPHRASE: ${{ secrets.OPENAEC_GPG_PASSPHRASE }}
+          OPENAEC_GPG_FINGERPRINT: ${{ vars.OPENAEC_GPG_FINGERPRINT }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${OPENAEC_GPG_PRIVATE_KEY:-}" || -z "${OPENAEC_GPG_PASSPHRASE:-}" || -z "${OPENAEC_GPG_FINGERPRINT:-}" ]]; then
+            echo "signed=false" >> "$GITHUB_OUTPUT"; echo "OpenPGP key not available; not signed."; exit 0
+          fi
+          home=$(mktemp -d); export GNUPGHOME="$home"
+          printf '%s\n' "$OPENAEC_GPG_PRIVATE_KEY" | gpg --batch --import
+          fpr=$(tr -d ' ' <<< "$OPENAEC_GPG_FINGERPRINT")
+          gpg --batch --list-secret-keys --with-colons | grep -q "$fpr" || { echo "::error::the imported key is not $fpr"; exit 1; }
+          for f in assets/SHA256SUMS assets/*.AppImage; do
+            gpg --batch --yes --pinentry-mode loopback --passphrase "$OPENAEC_GPG_PASSPHRASE" --local-user "$fpr" --armor --detach-sign --output "$f.asc" "$f"
+            gpg --batch --verify "$f.asc" "$f"
+          done
+          echo "signed=true" >> "$GITHUB_OUTPUT"
+      - name: Build attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: |
+            assets/*.deb
+            assets/*.rpm
+            assets/*.AppImage
+            assets/*.tar.gz
+            assets/*.zip
+            assets/*.exe
+            assets/*.dmg
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GPG_SIGNED: ${{ steps.gpg.outputs.signed }}
+        run: |
+          set -euo pipefail
+          yes() { [[ "$1" == true ]] && echo "ja" || echo "**nee**"; }
+          cat > notes.md <<EOF
+          De eerste release van **OpenAEC Blueprint**: de standaardapplicatie en de C-bibliotheek met de ontwerptokens en de 945 B2-iconen. Versie \`${NUMBER}\` volgt het schema jaar.week (\`JJJJ.W.N\`).
+
+          | Systeem | Applicatie | Bibliotheek |
+          | --- | --- | --- |
+          | Windows 10/11 x64 | \`openaec-blueprint_${NUMBER}_x64-setup.exe\` (installeert zonder beheerdersrechten) of \`_windows-x64.zip\` | \`openaec-blueprint-sdk_${NUMBER}_windows-x64.zip\` |
+          | macOS 11+ (Apple silicon en Intel) | \`openaec-blueprint_${NUMBER}_macos-universal.dmg\` | \`openaec-blueprint-sdk_${NUMBER}_macos-universal.tar.gz\` |
+          | Ubuntu, Linux Mint | \`openaec-blueprint_${NUMBER}_amd64.deb\` | \`openaec-blueprint-sdk_${NUMBER}_linux-x64.tar.gz\` |
+          | Fedora | \`openaec-blueprint_${NUMBER}_x86_64.rpm\` | idem |
+          | Elke Linux | \`openaec-blueprint_${NUMBER}_amd64.AppImage\` of \`_linux-x64.tar.gz\` | idem |
+
+          ## Ondertekening
+
+          | Wat | Ondertekend |
+          | --- | --- |
+          | Windows: applicatie, installer en DLL (Authenticode) | $(yes "$WINDOWS_SIGNED") |
+          | macOS: app, schijfkopie en bibliotheek (Developer ID, genotariseerd) | $(yes "$MACOS_SIGNED") |
+          | Linux: \`SHA256SUMS\` en AppImage (OpenPGP, \`.asc\`) | $(yes "$GPG_SIGNED") |
+          | Alle pakketten: build-attestatie via GitHub | ja |
+
+          Controleren: \`sha256sum -c SHA256SUMS\`, en \`gh attestation verify BESTAND --repo OpenAEC-Foundation/OpenAEC-Blueprint\`.
+
+          Alle tests en controles van de repository zijn geslaagd voordat deze release werd gebouwd. De licentie van de B2-iconen is nog niet vastgelegd (#15).
+          EOF
+          sed -i 's/^          //' notes.md
+          pre=()
+          if [[ "$WINDOWS_SIGNED" != true || "$MACOS_SIGNED" != true || "$GPG_SIGNED" != true ]]; then
+            pre=(--prerelease)
+            echo "::warning::not every platform is signed; publishing as a pre-release"
+          fi
+          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --title "OpenAEC Blueprint ${NUMBER}" --notes-file notes.md "${pre[@]}" assets/*
