@@ -7,7 +7,7 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 - Native Rust Style Repo (`cargo run --bin style_repo`) en de afzonderlijk verpakte crate [`crates/openaec-ui`](crates/openaec-ui/).
 - `scripts/` bevat Python-scripts die reviews, indexen en atlassen in `design/` en `harmonization/` genereren.
 - `harmonization/sources/` en `target/` staan in `.gitignore` en horen nooit in een commit.
-- De [README](README.md) is de inhoudelijke bron van waarheid. Houd die bij als je iets toevoegt of verandert dat erin beschreven staat.
+- De [README](README.md) is de korte ingang; de details van alle reviews en tussenstappen staan in [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md). Samen zijn ze de inhoudelijke bron van waarheid. Houd ze bij als je iets toevoegt of verandert dat erin beschreven staat; nieuwe reviews en tussenstappen gaan in `UI-HARMONISATIE.md`.
 
 ## Samenwerken in dezelfde map
 
