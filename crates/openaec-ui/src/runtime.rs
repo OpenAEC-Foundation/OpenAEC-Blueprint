@@ -113,13 +113,13 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
     fonts::install_fallback();
     // iced 0.14 boots the state through a closure; it runs once.
     let initial=std::sync::Mutex::new(Some(Runtime{app,shell:ShellState::new(preferences),preferences_path,error}));
-    iced::application(move ||initial.lock().unwrap_or_else(|e|e.into_inner()).take().expect("the application boots once"),Runtime::update,Runtime::view)
+    let builder = iced::application(move ||initial.lock().unwrap_or_else(|e|e.into_inner()).take().expect("the application boots once"),Runtime::update,Runtime::view)
         .title(|state:&Runtime<A>|state.app.title())
         .subscription(Runtime::subscription)
         .theme(|state:&Runtime<A>|state.shell.preferences.theme.iced())
         .scale_factor(|state:&Runtime<A>|state.shell.preferences.scale as f32)
-        .default_font(fonts::BODY).font(fonts::FILES[0]).font(fonts::FILES[1]).font(fonts::FILES[2])
-        .font(fonts::FILES[3]).font(fonts::FILES[4]).font(fonts::FILES[5])
+        .default_font(fonts::BODY);
+    fonts::FILES.iter().fold(builder, |builder, file| builder.font(*file))
         .window(iced::window::Settings { size:iced::Size::new(model::metrics::WINDOW_DEFAULT_WIDTH as f32,800.0), min_size:Some(iced::Size::new(model::metrics::WINDOW_MIN_WIDTH as f32,480.0)), decorations:false, exit_on_close_request:false,..Default::default() })
         .run()
 }

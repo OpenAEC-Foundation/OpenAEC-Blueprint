@@ -465,6 +465,7 @@ pub mod font {
     pub const BODY: &str = "Inter";
     pub const HEADING: &str = "Space Grotesk";
     pub const MONO: &str = "JetBrains Mono";
+    pub const NUMBERS: &str = "Inter AEC";
     pub const SIZE_LABEL: f32 = 11.0;
     pub const SIZE_BODY: f32 = 12.0;
     pub const SIZE_PANEL_HEADING: f32 = 13.0;

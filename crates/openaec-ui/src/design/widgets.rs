@@ -408,12 +408,25 @@ pub fn text_field<'a, M: Clone + 'a>(
     density: Density,
     error: Option<&'a str>,
 ) -> Element<'a, M> {
+    text_field_in(look, placeholder, value, on_input, density, error, fonts::BODY)
+}
+
+/// A text field in another font, such as `fonts::NUMBERS` for number fields.
+pub fn text_field_in<'a, M: Clone + 'a>(
+    look: Look,
+    placeholder: &'a str,
+    value: &'a str,
+    on_input: Option<impl Fn(String) -> M + 'a>,
+    density: Density,
+    error: Option<&'a str>,
+    face: iced::Font,
+) -> Element<'a, M> {
     let pad_y = (density.height() - 16.0) / 2.0;
     let invalid = error.is_some();
     let field = text_input(placeholder, value)
         .on_input_maybe(on_input)
         .size(font::SIZE_BODY)
-        .font(fonts::BODY)
+        .font(face)
         .padding(Padding::from([pad_y, 8.0]))
         .style(move |_, status| input_style(look, status, invalid));
     match error {
@@ -723,7 +736,7 @@ pub fn property_row<'a, M: 'a>(look: Look, label: &'a str, value: Element<'a, M>
 
 /// A number or code in mono, right-aligned, as in tables and the property grid.
 pub fn number<'a>(look: Look, value: impl text::IntoFragment<'a>) -> text::Text<'a> {
-    text(value).size(font::SIZE_BODY).font(fonts::MONO).color(look.color.text).width(Length::Fill).align_x(Horizontal::Right)
+    text(value).size(font::SIZE_BODY).font(fonts::NUMBERS).color(look.color.text).width(Length::Fill).align_x(Horizontal::Right)
 }
 
 /// One table column.
@@ -731,7 +744,7 @@ pub fn number<'a>(look: Look, value: impl text::IntoFragment<'a>) -> text::Text<
 pub struct TableColumn<'a> {
     pub title: &'a str,
     pub width: Length,
-    /// Numbers and amounts: mono and right-aligned.
+    /// Numbers and amounts: Inter AEC (tabular figures) and right-aligned.
     pub numeric: bool,
 }
 

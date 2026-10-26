@@ -6,6 +6,11 @@ pub const MEDIUM: Font = Font { weight: Weight::Medium, ..BODY };
 pub const STRONG: Font = Font { weight: Weight::Semibold, ..BODY };
 pub const HEADING: Font = Font { weight: Weight::Medium, ..Font::with_name("Space Grotesk") };
 pub const MONO: Font = Font::with_name("JetBrains Mono");
+/// Numbers in tables, number fields and reports: Inter with digits of one width
+/// and a distinct I and l frozen in (issue #28), as iced applies no OpenType
+/// features. Made by `scripts/build_inter_aec.py`.
+pub const NUMBERS: Font = Font::with_name("Inter AEC");
+pub const NUMBERS_STRONG: Font = Font { weight: Weight::Semibold, ..NUMBERS };
 /// Characters every OpenAEC font must show (issue #25), grouped for the gallery.
 /// `scripts/check_font_glyphs.py` reads this list; keep one group per line.
 /// The last group holds look-alikes that must stay distinguishable.
@@ -17,13 +22,16 @@ pub const AEC_TEST_SET: [(&str, &str); 6] = [
     ("Turks", "İ ı Ğ Ş"),
     ("Verwisselbaar", "I l 1 O 0 rn m 5 S 2 Z"),
 ];
-pub const FILES: [&[u8]; 6] = [
+pub const FILES: [&[u8]; 9] = [
     include_bytes!("../assets/fonts/Inter-Regular.ttf"),
     include_bytes!("../assets/fonts/Inter-Medium.ttf"),
     include_bytes!("../assets/fonts/Inter-SemiBold.ttf"),
     include_bytes!("../assets/fonts/SpaceGrotesk-Medium.ttf"),
     include_bytes!("../assets/fonts/SpaceGrotesk-Bold.ttf"),
     include_bytes!("../assets/fonts/JetBrainsMono-Regular.ttf"),
+    include_bytes!("../assets/fonts/InterAEC-Regular.ttf"),
+    include_bytes!("../assets/fonts/InterAEC-Medium.ttf"),
+    include_bytes!("../assets/fonts/InterAEC-SemiBold.ttf"),
 ];
 /// Fallback fonts for characters the fonts above lack (issue #25): Greek and Ĳ
 /// from Noto Sans, the diameter sign ⌀ from Noto Sans Symbols.

@@ -55,7 +55,8 @@
 .oa-heading--panel { font-size: var(--oa-size-panel-heading); }
 .oa-secondary { color: var(--oa-text-secondary); }
 .oa-mono-label { font-family: var(--oa-font-mono); font-size: var(--oa-size-label); letter-spacing: var(--oa-letter-spacing-mono-label); text-transform: uppercase; color: var(--oa-text-secondary); }
-.oa-number { font-family: var(--oa-font-mono); text-align: right; font-variant-numeric: tabular-nums; }
+/* Numbers in Inter AEC: tabular figures and a distinct I and l without OpenType features (issue #28). */
+.oa-number { font-family: var(--oa-font-numbers); text-align: right; font-variant-numeric: tabular-nums; }
 .oa-divider { height: 1px; border: 0; margin: 0; background: var(--oa-border); }
 
 /* ---------- Buttons (besluit 1: 28 px, 24 px compact) ---------- */
@@ -324,7 +325,7 @@ select.oa-field { padding-right: 24px; appearance: none; background-image: linea
 .oa-table td { height: 28px; padding: 0 8px; border-bottom: 1px solid var(--oa-border); }
 .oa-table tbody tr:hover { background: var(--oa-hover); }
 .oa-table tr[aria-selected="true"] { background: var(--oa-selected); box-shadow: inset 3px 0 var(--oa-selected-bar); }
-.oa-table .oa-number { font-family: var(--oa-font-mono); }
+.oa-table .oa-number { font-family: var(--oa-font-numbers); }
 
 /* Tabs with an amber underline (ribbon tabs, settings pages). */
 .oa-tabs { display: flex; gap: 0; height: var(--oa-shell-ribbon-tabs); border-bottom: 1px solid var(--oa-border); }

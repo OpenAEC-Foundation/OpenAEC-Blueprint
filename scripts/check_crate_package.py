@@ -20,11 +20,11 @@ ribbon_icons = {f"assets/ribbon-icons/{p.name}" for p in (root / "crates/openaec
 fonts = {f"assets/fonts/{p.name}" for p in (root / "crates/openaec-ui/assets/fonts").glob("*.ttf")}
 icon_source = (root / "crates/openaec-ui/src/icons.rs").read_text()
 core_count, domain_count = map(int, re.findall(r"pub const ALL: \[Self; (\d+)\]", icon_source))
-assert len(icons) == core_count and len(domain_icons) == 2 * domain_count and len(fonts) == 8
+assert len(icons) == core_count and len(domain_icons) == 2 * domain_count and len(fonts) == 11
 ribbon_source = (root / "crates/openaec-ui/src/ribbon_icons.rs").read_text()
 ribbon_count = int(re.search(r"pub const ALL: \[Self; (\d+)\]", ribbon_source).group(1))
 assert len(ribbon_icons) == ribbon_count
 assert icons <= files and domain_icons <= files and ribbon_icons <= files and fonts <= files
 assert {f"licenses/{name}-OFL.txt" for name in ("Inter", "SpaceGrotesk", "JetBrainsMono", "NotoSans", "NotoSansSymbols")} <= files
 assert {"NOTICE.md", "LICENSE.md", "README.md", "src/lib.rs", "licenses/Style-Book-CC-BY-SA-4.0.txt"} <= files
-print(f"Reusable crate package: {len(files)} files, {core_count} core icons, {len(domain_icons)} domain SVGs, {ribbon_count} typed ribbon icons, 6 fonts, 2 fallback fonts, 5 font notices, no research assets")
+print(f"Reusable crate package: {len(files)} files, {core_count} core icons, {len(domain_icons)} domain SVGs, {ribbon_count} typed ribbon icons, 9 fonts, 2 fallback fonts, 5 font notices, no research assets")

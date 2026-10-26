@@ -1967,7 +1967,7 @@ impl Gallery {
                 }
                 let menu_ids = ids.clone();
                 let table = w::table(look, &BUDGET_COLUMNS, rows, selected_row(&ids), Some(move |i: usize| Msg::SelectRow(ids[i])), Some(move |i: usize| Msg::Menu(Some(MenuKind::Row(menu_ids[i])))));
-                let total = row![w::mono_label(look, "Totaal"), Space::new().width(Length::Fill), text(euro(self.total())).size(font::SIZE_PANEL_HEADING).font(fonts::MONO).color(c.text)].padding([8, 8]).align_y(Alignment::Center);
+                let total = row![w::mono_label(look, "Totaal"), Space::new().width(Length::Fill), text(euro(self.total())).size(font::SIZE_PANEL_HEADING).font(fonts::NUMBERS).color(c.text)].padding([8, 8]).align_y(Alignment::Center);
                 content = content.push(card(column![table, total].into()));
                 content = content.push(row![
                     w::button(look, "Nieuwe post", K::Secondary, D::Regular, Some(b2!("16", "budget.add-item")), Some(Msg::AddItem)),
@@ -2005,7 +2005,7 @@ impl Gallery {
                                 Space::new().width(Length::FillPortion(1000 - share.min(999))),
                             ]
                             .width(Length::Fill),
-                            text(euro(value)).size(font::SIZE_BODY).font(fonts::MONO).color(c.text).width(120).align_x(iced::alignment::Horizontal::Right),
+                            text(euro(value)).size(font::SIZE_BODY).font(fonts::NUMBERS).color(c.text).width(120).align_x(iced::alignment::Horizontal::Right),
                         ]
                         .spacing(12)
                         .align_y(Alignment::Center),
@@ -3065,6 +3065,7 @@ impl Gallery {
                 ("Space Grotesk 500", fonts::HEADING),
                 ("Space Grotesk 700", iced::Font { weight: iced::font::Weight::Bold, ..fonts::HEADING }),
                 ("JetBrains Mono 400", fonts::MONO),
+                ("Inter AEC 400", fonts::NUMBERS),
             ]
             .into_iter()
             .map(|(name, font)| row![container(secondary_note(look, name)).width(150), text(test_set.clone()).font(font).size(15).color(c.text)].spacing(12).align_y(Alignment::Center).into()),
@@ -3484,17 +3485,14 @@ fn start_view() -> Gallery {
 
 fn main() -> iced::Result {
     fonts::install_fallback();
-    iced::application(|| (start_view(), after(6000, Msg::InstFeatureTick)), Gallery::update, Gallery::view)
+    let app = iced::application(|| (start_view(), after(6000, Msg::InstFeatureTick)), Gallery::update, Gallery::view)
         .title("OpenAEC UI 0.4")
         .subscription(Gallery::subscription)
         .theme(|g: &Gallery| g.theme.iced())
-        .default_font(fonts::BODY)
-        .font(fonts::FILES[0])
-        .font(fonts::FILES[1])
-        .font(fonts::FILES[2])
-        .font(fonts::FILES[3])
-        .font(fonts::FILES[4])
-        .font(fonts::FILES[5])
+        .default_font(fonts::BODY);
+    fonts::FILES
+        .iter()
+        .fold(app, |app, file| app.font(*file))
         .window(iced::window::Settings {
             size: Size::new(1280.0, 800.0),
             min_size: Some(Size::new(960.0, 600.0)),

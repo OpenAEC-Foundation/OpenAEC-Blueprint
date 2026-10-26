@@ -55,6 +55,7 @@ cargo package -p openaec-ui
 ```
 
 - Op deze Windows-machine heet de interpreter `python`, niet `python3`.
+- `scripts/build_font_package.py` (zonder `--check`) en `scripts/build_inter_aec.py` hebben fontTools en brotli nodig: `python -m pip install --target harmonization/sources/font-runtime -r scripts/requirements-fonts.txt`. De `--check` werkt zonder.
 - Rust staat in `%USERPROFILE%\.cargo\bin` met de MSVC-toolchain en Visual Studio Build Tools 2022. Een terminal die al openstond vóór 2026-10-16 kent dat pad pas na opnieuw openen.
 - `scripts/render_collision_drafts.py` en `scripts/render_domain_icon_review.py` gebruiken PyGObject met librsvg. Die draaien op Linux, niet op deze Windows-machine.
 - Draai generatiescripts alleen voor het deel waaraan je werkt. Regenereer niet de hele `design/`-map zonder opdracht.

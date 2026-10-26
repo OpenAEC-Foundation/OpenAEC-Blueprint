@@ -20,8 +20,9 @@ pub enum Role {
     Heading,
     /// The report title on the cover or first page.
     Title,
-    /// Columns of numbers and amounts. Inter's digits differ in width (1 is
-    /// narrower than 0), so columns would not line up; JetBrains Mono's do not.
+    /// Columns of numbers and amounts, in Inter AEC: Inter's own digits differ
+    /// in width (1 is narrower than 0) and PDF writers apply no tabular figures,
+    /// so Inter AEC has them frozen in (issue #28).
     Numbers,
     /// File names, codes and other literal text.
     Code,
@@ -66,6 +67,7 @@ pub static INTER_REGULAR: ReportFont = report_font!("Inter", 400, "Inter-Regular
 pub static INTER_SEMIBOLD: ReportFont = report_font!("Inter", 600, "Inter-SemiBold", "Inter-SemiBold.ttf", "Inter-OFL.txt");
 pub static SPACE_GROTESK_MEDIUM: ReportFont = report_font!("Space Grotesk", 500, "SpaceGrotesk-Medium", "SpaceGrotesk-Medium.ttf", "SpaceGrotesk-OFL.txt");
 pub static SPACE_GROTESK_BOLD: ReportFont = report_font!("Space Grotesk", 700, "SpaceGrotesk-Bold", "SpaceGrotesk-Bold.ttf", "SpaceGrotesk-OFL.txt");
+pub static INTER_AEC: ReportFont = report_font!("Inter AEC", 400, "InterAEC-Regular", "InterAEC-Regular.ttf", "Inter-OFL.txt");
 pub static JETBRAINS_MONO: ReportFont = report_font!("JetBrains Mono", 400, "JetBrainsMono-Regular", "JetBrainsMono-Regular.ttf", "JetBrainsMono-OFL.txt");
 pub static NOTO_SANS: ReportFont = report_font!("Noto Sans", 400, "NotoSans-Regular", "NotoSans-Regular.ttf", "NotoSans-OFL.txt");
 pub static NOTO_SANS_SYMBOLS: ReportFont = report_font!("Noto Sans Symbols", 400, "NotoSansSymbols-Regular", "NotoSansSymbols-Regular.ttf", "NotoSansSymbols-OFL.txt");
@@ -75,7 +77,7 @@ pub static NOTO_SANS_SYMBOLS: ReportFont = report_font!("Noto Sans Symbols", 400
 pub static FALLBACK: [&ReportFont; 2] = [&NOTO_SANS, &NOTO_SANS_SYMBOLS];
 
 /// Every file a report may embed: the role fonts and the fallback.
-pub static ALL: [&ReportFont; 7] = [&INTER_REGULAR, &INTER_SEMIBOLD, &SPACE_GROTESK_MEDIUM, &SPACE_GROTESK_BOLD, &JETBRAINS_MONO, &NOTO_SANS, &NOTO_SANS_SYMBOLS];
+pub static ALL: [&ReportFont; 8] = [&INTER_REGULAR, &INTER_SEMIBOLD, &SPACE_GROTESK_MEDIUM, &SPACE_GROTESK_BOLD, &INTER_AEC, &JETBRAINS_MONO, &NOTO_SANS, &NOTO_SANS_SYMBOLS];
 
 /// The font for a role.
 pub fn font(role: Role) -> &'static ReportFont {
@@ -84,7 +86,8 @@ pub fn font(role: Role) -> &'static ReportFont {
         Role::Strong => &INTER_SEMIBOLD,
         Role::Heading => &SPACE_GROTESK_MEDIUM,
         Role::Title => &SPACE_GROTESK_BOLD,
-        Role::Numbers | Role::Code => &JETBRAINS_MONO,
+        Role::Numbers => &INTER_AEC,
+        Role::Code => &JETBRAINS_MONO,
     }
 }
 
@@ -144,8 +147,27 @@ mod tests {
     fn numbers_use_digits_of_one_width() {
         let data = skrifa::FontRef::new(font(Role::Numbers).bytes).expect("font");
         let metrics = data.glyph_metrics(skrifa::instance::Size::unscaled(), skrifa::instance::LocationRef::default());
-        let widths: Vec<_> = "0123456789,.".chars().map(|c| metrics.advance_width(data.charmap().map(c).expect("digit"))).collect();
-        assert!(widths.windows(2).all(|w| w[0] == w[1]), "{widths:?}");
+        let width = |chars: &str| chars.chars().map(|c| metrics.advance_width(data.charmap().map(c).expect("glyph"))).collect::<Vec<_>>();
+        // Every digit is as wide as the others, and so are the separators, so
+        // "1.234,56" and "9.876,54" line up in a column.
+        let (digits, separators) = (width("0123456789"), width(",."));
+        assert!(digits.windows(2).all(|w| w[0] == w[1]), "{digits:?}");
+        assert!(separators.windows(2).all(|w| w[0] == w[1]), "{separators:?}");
+        // Inter's own digits differ: that is why reports use Inter AEC.
+        let inter = skrifa::FontRef::new(INTER_REGULAR.bytes).expect("font");
+        let inter_metrics = inter.glyph_metrics(skrifa::instance::Size::unscaled(), skrifa::instance::LocationRef::default());
+        let one = inter_metrics.advance_width(inter.charmap().map('1').expect("one"));
+        let zero = inter_metrics.advance_width(inter.charmap().map('0').expect("zero"));
+        assert_ne!(one, zero);
+    }
+
+    #[test]
+    fn inter_aec_tells_i_l_and_one_apart() {
+        // The capital I and small l are their own glyphs in Inter AEC, not Inter's.
+        let glyph = |font: &ReportFont, c| skrifa::FontRef::new(font.bytes).expect("font").charmap().map(c).expect("glyph");
+        for c in ['I', 'l'] {
+            assert_ne!(glyph(&INTER_AEC, c), glyph(&INTER_REGULAR, c), "{c}");
+        }
     }
 
     #[test]
@@ -154,7 +176,7 @@ mod tests {
         assert_eq!(pieces("Paal ⌀ 400 mm", Role::Body), [("Inter-Regular", "Paal "), ("NotoSansSymbols-Regular", "⌀ "), ("Inter-Regular", "400 mm")]);
         assert_eq!(pieces("Spanning σ en λ", Role::Heading), [("SpaceGrotesk-Medium", "Spanning "), ("NotoSans-Regular", "σ "), ("SpaceGrotesk-Medium", "en "), ("NotoSans-Regular", "λ")]);
         assert_eq!(pieces("Ĳsselmeer", Role::Code), [("NotoSans-Regular", "Ĳ"), ("JetBrainsMono-Regular", "sselmeer")]);
-        assert_eq!(pieces("1.234,56", Role::Numbers), [("JetBrainsMono-Regular", "1.234,56")]);
+        assert_eq!(pieces("1.234,56", Role::Numbers), [("InterAEC-Regular", "1.234,56")]);
         assert!(runs("", Role::Body).is_empty());
     }
 }

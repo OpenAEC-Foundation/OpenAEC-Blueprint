@@ -259,7 +259,7 @@ pub fn number_field<'a, M: Clone + 'a>(
         Value::Empty if f.allow_empty => "Leeg",
         _ => "",
     };
-    let field = w::text_field(look, placeholder, input.text(), on_input, density, input.error());
+    let field = w::text_field_in(look, placeholder, input.text(), on_input, density, input.error(), fonts::NUMBERS);
     match f.unit {
         Some(unit) => row![
             iced::widget::container(field).width(Length::Fill),

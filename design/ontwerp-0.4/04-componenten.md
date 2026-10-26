@@ -11,7 +11,7 @@ Alle kleuren, hoeken en lettergroottes komen uit [`tokens-0.4.json`](tokens-0.4.
 | Hoogte van bediening | 28 px standaard, 24 px compact in panelen en het eigenschappenraster |
 | Hoeken | 3 px voor lintknoppen, icoonknoppen, checkboxen en tooltips. 6 px voor knoppen en velden. 10 px voor menu's en dialogen. Rond voor schakelaars, sliders en labels |
 | Tekst | 12 px. Labels en sneltoetsen 11 px. Paneelkoppen, groepslabels en tabelkoppen in mono-hoofdletters, 11 px |
-| Getallen en codes | JetBrains Mono, rechts uitgelijnd in tabellen en het eigenschappenraster |
+| Getallen en codes | Getallen in Inter AEC (Inter met cijfers van gelijke breedte en een duidelijke I en l, issue #28), rechts uitgelijnd in tabellen en het eigenschappenraster. Codes en bestandsnamen in JetBrains Mono |
 | Hover en ingedrukt | Blijven in dezelfde kleur: iets lichter bij hover, iets donkerder bij ingedrukt. Neutrale onderdelen gebruiken `hover` en `pressed`. In High contrast een rand in `accent` |
 | Aan of geselecteerd | `selected` met een streep of rand in `selected-bar`. In High contrast een omlijning |
 | Focus | Focusring van 2 px in `focus`. Bij losse knoppen, velden en tegels staat hij buiten het onderdeel, met 2 px ruimte. Waar onderdelen dicht op elkaar staan, staat hij binnen het onderdeel: in het lint, menu's, de boomstructuur, tabellen en documenttabs |
@@ -103,7 +103,7 @@ In de template waren de labels 9 en 10 px. Door het besluit over de kleinste let
   - De gekozen regel krijgt de tint en een streep links.
 - **Eigenschappenraster:**
   - Regels van 28 px. Labels nemen 40% van de breedte in, in `text-secondary`.
-  - Compacte velden van 24 px. Getallen in mono, rechts uitgelijnd.
+  - Compacte velden van 24 px. Getallen in Inter AEC, rechts uitgelijnd.
   - Sectiekoppen van 24 px in mono, met een pijltje om in en uit te klappen.
 
 ### Tabel
