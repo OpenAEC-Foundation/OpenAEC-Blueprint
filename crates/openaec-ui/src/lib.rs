@@ -5,6 +5,7 @@
 pub use iced;
 pub mod design;
 pub mod fonts;
+pub mod report_fonts;
 pub mod icons;
 pub mod keyboard;
 pub mod ribbon_icons;

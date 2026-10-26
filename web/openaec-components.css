@@ -35,6 +35,9 @@
   -webkit-font-smoothing: antialiased;
 }
 .oa-app *, .oa-app *::before, .oa-app *::after { box-sizing: border-box; }
+/* Form controls do not inherit the font in browsers; inputs and icon buttons were set in Arial (issue #26).
+   :where keeps this below every .oa- class, so their own sizes and weights still apply. */
+:where(.oa-app) :is(button, input, select, textarea) { font: inherit; }
 
 /* B2 icons inline: currentColor for the main colour, --icon-accent for the accent. */
 .oa-icon { width: 16px; height: 16px; flex: none; color: inherit; --icon-accent: var(--oa-accent-text); }
