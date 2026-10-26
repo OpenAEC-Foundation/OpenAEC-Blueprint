@@ -1,0 +1,37 @@
+{
+  "about": "Kandidaat-tekstfonts voor de letterproef (issue #29). Onveranderd overgenomen uit google/fonts; alleen voor de galerij, niet in de crate. Een gereserveerde fontnaam (RFN) mag niet op een gewijzigde versie: daarom worden de variabele bestanden onveranderd gebruikt.",
+  "licence": "SIL Open Font License 1.1",
+  "google_fonts_commit": "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0",
+  "fonts": [
+    {
+      "file": "IBMPlexSans[wdth,wght].ttf",
+      "family": "IBM Plex Sans",
+      "version": "Version 3.201",
+      "bytes": 537244,
+      "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
+      "source": "https://github.com/google/fonts/blob/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/ibmplexsans/IBMPlexSans[wdth,wght].ttf",
+      "licence": "IBMPlexSans-OFL.txt",
+      "reserved_font_name": "Plex"
+    },
+    {
+      "file": "SourceSans3[wght].ttf",
+      "family": "Source Sans 3",
+      "version": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0",
+      "bytes": 646340,
+      "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "source": "https://github.com/google/fonts/blob/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/sourcesans3/SourceSans3[wght].ttf",
+      "licence": "SourceSans3-OFL.txt",
+      "reserved_font_name": "Source"
+    },
+    {
+      "file": "AtkinsonHyperlegibleNext[wght].ttf",
+      "family": "Atkinson Hyperlegible Next",
+      "version": "Version 2.001",
+      "bytes": 114552,
+      "sha256": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745",
+      "source": "https://github.com/google/fonts/blob/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/atkinsonhyperlegiblenext/AtkinsonHyperlegibleNext[wght].ttf",
+      "licence": "AtkinsonHyperlegibleNext-OFL.txt",
+      "reserved_font_name": null
+    }
+  ]
+}

@@ -26,6 +26,9 @@ use std::collections::HashSet;
 use std::sync::OnceLock;
 use std::time::{Duration, Instant};
 
+#[path = "ui04/letterproef.rs"]
+mod letterproef;
+
 macro_rules! b2 {
     ($size:literal, $name:literal) => {
         include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/design/icon-set-b2/svg/", $size, "/", $name, ".svg"))
@@ -617,6 +620,8 @@ enum View {
     Installer,
     Components,
     Icons,
+    /// The text font specimen (issue #29).
+    Specimen,
 }
 
 #[derive(Debug, Clone)]
@@ -722,6 +727,7 @@ enum Msg {
     InstFeature(usize),
     InstFeatureTick,
     IconSearch(String),
+    Proef(letterproef::Message),
     IconApp(Choice),
     IconGroup(Choice),
     IconLarge(bool),
@@ -877,6 +883,7 @@ struct Gallery {
     wf: Workflow,
     inst: Installer,
     icons: Icons,
+    proef: letterproef::State,
     /// The shortcuts someone set (issue #22), and the page that changes them.
     keymap: Keymap,
     shortcuts: sc::Editor,
@@ -958,6 +965,7 @@ impl Default for Gallery {
             wf: Workflow::default(),
             inst: Installer::default(),
             icons: Icons::default(),
+            proef: letterproef::State::default(),
             keymap: Keymap::default(),
             shortcuts: sc::Editor::default(),
             keymap_path: None,
@@ -1629,6 +1637,7 @@ impl Gallery {
                 return icon_grid_to_top();
             }
             Msg::IconLarge(on) => self.icons.large = on,
+            Msg::Proef(message) => self.proef.update(message),
             Msg::IconPage(n) => {
                 self.icons.page = n;
                 return icon_grid_to_top();
@@ -1729,6 +1738,7 @@ impl Gallery {
             View::Installer => self.installer(look),
             View::Components => self.components(look),
             View::Icons => self.icons(look),
+            View::Specimen => self.proef.view(look).map(Msg::Proef),
         };
         // An open menu or dialog takes the screen behind out of the Tab route and the keys.
         let screen = column![self.toolbar(look), container(body).height(Length::Fill)].height(Length::Fill);
@@ -1759,7 +1769,7 @@ impl Gallery {
     /// The gallery's own controls: theme, settings and view. Not part of the design.
     fn toolbar(&self, look: Look) -> Element<'_, Msg> {
         let c = look.color;
-        let views = [(View::Screen, "Lint-app"), (View::Workflow, "Werkstroom-app"), (View::Installer, "Installer"), (View::Components, "Componenten"), (View::Icons, "Iconen")];
+        let views = [(View::Screen, "Lint-app"), (View::Workflow, "Werkstroom-app"), (View::Installer, "Installer"), (View::Components, "Componenten"), (View::Icons, "Iconen"), (View::Specimen, "Letterproef")];
         let mut bar = row![
             text("UI 0.4").size(font::SIZE_PANEL_HEADING).font(fonts::HEADING).color(c.text),
             Space::new().width(12),
@@ -3478,6 +3488,7 @@ fn start_view() -> Gallery {
         Some("installer") => gallery.view = View::Installer,
         Some("componenten") => gallery.view = View::Components,
         Some("iconen") => gallery.view = View::Icons,
+        Some("letterproef") => gallery.view = View::Specimen,
         _ => {}
     }
     gallery
@@ -3485,10 +3496,13 @@ fn start_view() -> Gallery {
 
 fn main() -> iced::Result {
     fonts::install_fallback();
+    letterproef::load();
     let app = iced::application(|| (start_view(), after(6000, Msg::InstFeatureTick)), Gallery::update, Gallery::view)
         .title("OpenAEC UI 0.4")
         .subscription(Gallery::subscription)
         .theme(|g: &Gallery| g.theme.iced())
+        // The specimen compares at 125% and 150% too; the rest of the gallery stays at 100%.
+        .scale_factor(|g: &Gallery| if g.view == View::Specimen { g.proef.scale } else { 1.0 })
         .default_font(fonts::BODY);
     fonts::FILES
         .iter()
@@ -3591,6 +3605,8 @@ mod tests {
             for bytes in fonts::FILES {
                 system.load_font(std::borrow::Cow::Borrowed(bytes));
             }
+            drop(system);
+            letterproef::load();
         });
     }
 
@@ -4013,6 +4029,27 @@ mod tests {
         let p = pixmap.pixel(300, 50).expect("pixel");
         let [r, g, b, _] = frame.into_rgba8();
         assert_eq!((p.red(), p.green(), p.blue()), (r, g, b));
+    }
+
+    #[test]
+    #[ignore = "regenerate the specimen renders in design/letterproef on demand"]
+    fn export_specimen_renders() {
+        // Issue #29: every candidate at 13 px in Licht, and the comparison in the other themes.
+        let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("design/letterproef");
+        let mut g = Gallery::default();
+        g.view = View::Specimen;
+        for (i, candidate) in letterproef::Candidate::ALL.into_iter().enumerate() {
+            g.proef.font = candidate;
+            save(render(&g, Size::new(1280.0, 1320.0)), dir.join(format!("{}-{}.png", i + 1, candidate.family().to_lowercase().replace(' ', "-"))));
+        }
+        g.proef.font = letterproef::Candidate::Inter;
+        g.proef.equal_x_height = true;
+        save(render(&g, Size::new(1280.0, 1320.0)), dir.join("x-hoogte-gelijk.png"));
+        g.proef.equal_x_height = false;
+        for theme in [ThemeId::Dark, ThemeId::HighContrastDark, ThemeId::HighContrastLight] {
+            g.theme = theme;
+            save(render(&g, Size::new(1280.0, 1320.0)), dir.join(format!("thema-{}.png", theme.key())));
+        }
     }
 
     /// Save a render; a file that is open elsewhere is skipped with a warning.

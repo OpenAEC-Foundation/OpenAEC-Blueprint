@@ -70,6 +70,26 @@ pub fn install_fallback() {
     });
 }
 
+/// Loads a variable font unchanged and makes it available at each of
+/// `weights`. cosmic-text only picks a face whose weight matches exactly, and a
+/// variable font registers only its default weight, so each weight gets its own
+/// entry for the same file; cosmic-text then draws that weight from the `wght`
+/// axis. The file stays unmodified, which matters for fonts with a Reserved Font
+/// Name. Call it once at start, after [`install_fallback`], before the first frame.
+pub fn load_variable(bytes: &'static [u8], weights: &[u16]) {
+    use cosmic_text::fontdb;
+    use iced::advanced::graphics::text::font_system;
+    use std::sync::Arc;
+    let mut system = font_system().write().expect("font system");
+    let db = system.raw().db_mut();
+    for id in db.load_font_source(fontdb::Source::Binary(Arc::new(bytes))) {
+        let Some(face) = db.face(id).cloned() else { continue };
+        for &weight in weights.iter().filter(|w| **w != face.weight.0) {
+            db.push_face_info(fontdb::FaceInfo { weight: fontdb::Weight(weight), ..face.clone() });
+        }
+    }
+}
+
 /// The bundled fallback families first, then the platform's own list.
 struct Fallback {
     common: Vec<&'static str>,
