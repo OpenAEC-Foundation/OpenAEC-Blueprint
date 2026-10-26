@@ -48,7 +48,7 @@ STANDARD = [
     "format.bold", "format.italic", "format.underline", "ifc.export", "ifc.import", "ifc.validate", "link.open-external",
     "measure.distance", "mesh.closed", "panel.left", "panel.model-tree", "panel.right", "project.folder",
     "project.properties", "report.cover", "report.generate", "report.template", "section.box", "software.catalog",
-    "status.info", "status.success", "ui.help", "ui.settings", "view.fit", "view.orbit", "view.report-preview",
+    "status.info", "status.success", "ui.help", "ui.settings", "view.fit", "view.orbit", "view.report-preview", "view.reset-camera",
     "window.close", "window.maximize", "window.minimize", "window.restore",
 ]
 

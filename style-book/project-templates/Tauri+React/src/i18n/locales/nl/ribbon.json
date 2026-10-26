@@ -60,7 +60,17 @@
     "section": "Doorsnede",
     "measure": "Meten",
     "display": "Weergave",
-    "wireframe": "Draadmodel"
+    "wireframe": "Draadmodel",
+    "viewCube": {
+      "top": "Boven",
+      "bottom": "Onder",
+      "front": "Voor",
+      "back": "Achter",
+      "left": "Links",
+      "right": "Rechts",
+      "home": "Standaardaanzicht",
+      "hint": "Klik op een vlak, rand of hoek om het aanzicht te kiezen"
+    }
   },
   "report": {
     "document": "Document",

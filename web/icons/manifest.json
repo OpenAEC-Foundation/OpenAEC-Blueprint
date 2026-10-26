@@ -2064,10 +2064,10 @@
     },
     "standard": {
       "file": "standard.svg",
-      "icons": 52,
-      "bytes": 233877,
-      "gzip_bytes": 71247,
-      "sha256": "08305fae21403ae565cb1d38db74f2b4c4f16fb1bab0207779b10a26eef040c4",
+      "icons": 53,
+      "bytes": 239136,
+      "gzip_bytes": 73057,
+      "sha256": "a94c799310825959a7e82e84b25e2eb6ed75bf07fbfdc82afbd77e7b05fab062",
       "ids": [
         "data.chart",
         "data.table",
@@ -2117,6 +2117,7 @@
         "view.fit",
         "view.orbit",
         "view.report-preview",
+        "view.reset-camera",
         "window.close",
         "window.maximize",
         "window.minimize",

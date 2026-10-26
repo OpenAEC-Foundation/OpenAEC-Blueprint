@@ -60,7 +60,17 @@
     "section": "Section",
     "measure": "Measure",
     "display": "Display",
-    "wireframe": "Wireframe"
+    "wireframe": "Wireframe",
+    "viewCube": {
+      "top": "Top",
+      "bottom": "Bottom",
+      "front": "Front",
+      "back": "Back",
+      "left": "Left",
+      "right": "Right",
+      "home": "Home view",
+      "hint": "Click a face, edge or corner to choose the view"
+    }
   },
   "report": {
     "document": "Document",

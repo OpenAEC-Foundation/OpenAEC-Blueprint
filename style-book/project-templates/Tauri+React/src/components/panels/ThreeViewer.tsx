@@ -1,11 +1,29 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { ViewCube, type ViewCubeLabels } from "./ViewCube";
 import "./ThreeViewer.css";
+
+const HOME_ICON = `<svg class="oa-icon" width="16" height="16" aria-hidden="true"><use href="${import.meta.env.BASE_URL}icons/standard.svg#i16-view.reset-camera"/></svg>`;
 
 export default function ThreeViewer() {
   const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+  const viewCubeRef = useRef<ViewCube | null>(null);
+  const { t, i18n } = useTranslation("ribbon");
+  const labels = (): ViewCubeLabels => ({
+    top: t("viewer.viewCube.top"),
+    bottom: t("viewer.viewCube.bottom"),
+    front: t("viewer.viewCube.front"),
+    back: t("viewer.viewCube.back"),
+    left: t("viewer.viewCube.left"),
+    right: t("viewer.viewCube.right"),
+    home: t("viewer.viewCube.home"),
+    hint: t("viewer.viewCube.hint"),
+  });
+  const labelsRef = useRef(labels);
+  labelsRef.current = labels;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -41,6 +59,11 @@ export default function ThreeViewer() {
     controls.dampingFactor = 0.08;
     controls.update();
 
+    // View cube in the top-right corner
+    const viewCube = new ViewCube(camera, controls, labelsRef.current(), HOME_ICON);
+    container.appendChild(viewCube.element);
+    viewCubeRef.current = viewCube;
+
     // Lights
     const ambient = new THREE.AmbientLight(0xffffff, 0.6);
     scene.add(ambient);
@@ -62,7 +85,10 @@ export default function ThreeViewer() {
       scene.add(grid);
     };
     applyTheme();
-    const themeObserver = new MutationObserver(applyTheme);
+    const themeObserver = new MutationObserver(() => {
+      applyTheme();
+      viewCube.applyTheme();
+    });
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-oa-theme"] });
 
     // Axes
@@ -145,6 +171,7 @@ export default function ThreeViewer() {
     let animId: number;
     const animate = () => {
       animId = requestAnimationFrame(animate);
+      viewCube.update();
       controls.update();
       renderer.render(scene, camera);
     };
@@ -168,6 +195,8 @@ export default function ThreeViewer() {
       observer.disconnect();
       themeObserver.disconnect();
       controls.dispose();
+      viewCube.dispose();
+      viewCubeRef.current = null;
       renderer.dispose();
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
@@ -175,6 +204,12 @@ export default function ThreeViewer() {
       rendererRef.current = null;
     };
   }, []);
+
+  // Follow a change of language.
+  useEffect(() => {
+    viewCubeRef.current?.setLabels(labels());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]);
 
   return <div className="three-viewer-container" ref={containerRef} />;
 }
