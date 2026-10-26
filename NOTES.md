@@ -30,6 +30,9 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 
 
+
+
+
 <!-- Formaat: - **Assistent** – taak – bestanden/mappen – sinds JJJJ-MM-DD -->
 
 
@@ -56,6 +59,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 
 ## Open punten
+
+- **Hernoemd naar OpenAEC-Blueprint, 2026-10-26**: de GitHub-repo heet nu `OpenAEC-Foundation/OpenAEC-Blueprint`; oude links worden doorgestuurd. Op deze pc wijst `origin` al naar het nieuwe adres; op andere pc's eenmalig `git remote set-url origin https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint.git` of de repository opnieuw toevoegen in GitHub Desktop. De lokale map heet nog `OpenAEC-Style-Repo`. Nog toe te voegen volgens de nieuwe opzet: standaardapplicatie Rust en Tauri, README-sjabloon, versieschema, afspraken MCP en IFCX, en het overkoepelende ecosysteemplan met planning. `conventions` blijft een eigen repo omdat andere repo's de workflow daaruit aanroepen. Teksten "Style Repo" in README en documentatie en de binary `style_repo` zijn nog niet omgedoopt.
 
 - **B2-verliesvrije bibliotheekexport gereed, 2026-10-22**: na expliciet akkoord staan alle 1.890 SVGZ-bestanden in `design/icon-set-b2/library-lossless/{16,24}/`, met manifest en Nederlandse inleesinstructies. 16 px: 27.647.473 → 10.442.732 bytes (−62,23%); 24 px: 28.023.564 → 10.186.273 bytes (−63,65%). Alle gzip-roundtrips bytegelijk en alle oorspronkelijke masters intact; tweede export identiek zonder 1.891 gelijke asset-/manifestbestanden te herschrijven. Generator: `scripts/build_b2_lossless_library.py`; onafhankelijke checker: `scripts/check_b2_lossless_library.py`; bewijs: `harmonization/icon-set-b2/lossless-library-validation.json`. Export klaar, crate-/widgetinbouw blijft vervolgwerk voor de bibliotheek. Daarvoor: SVGZ-bytes bij eerste gebruik uitpakken, daarna bestaande kleurvervanging en handlecache; alleen gebruikte iconen/groepen opnemen waar mogelijk. Huidige `glyph` verwacht een SVG-string. Compressie verlaagt opslag, niet het aantal tekenpunten; geen afronding/puntenreductie als exact behoud verplicht is. Geen Rust-bestanden gewijzigd in deze exportronde.
 
@@ -94,7 +99,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
-- Open werk staat sinds 2026-10-23 als issues op GitHub: [#2 tot en met #21](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues?q=is%3Aissue+is%3Aopen). Werk een punt daar af en sluit het issue met een verwijzing naar de commit.
+- Open werk staat sinds 2026-10-23 als issues op GitHub: [#2 tot en met #21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues?q=is%3Aissue+is%3Aopen). Werk een punt daar af en sluit het issue met een verwijzing naar de commit.
 
 - Niet vergeten: de Pointcloud-kopie van de crate (`open-pointcloud-studio/native/ui`) bijwerken met `LICENSE.md` (LGPL-3.0-only), `NOTICE.md` en de map `licenses/`; `scripts/check_portable_ui.py` meldt het verschil zodra de repository lokaal staat. Komt later (de gebruiker). Let op: de crate staat sinds 2026-10-23 op iced 0.14.0; Pointcloud moet dan ook naar iced 0.14. Issue #17.
 - Schermlezer (Claude, 2026-10-23): iced 0.14 heeft nog geen schermlezerondersteuning; zie `design/schermlezerproef/README.md`. Volgende stap: toetsenbordroute (UI-002/UI-003) en toegankelijke namen in `openaec_ui::design`. Nog door een mens te doen: de plushie-proef met Verteller of NVDA beluisteren. De reviewbeelden in `design/ontwerp-0.4/native/` zijn nog met iced 0.13 gemaakt; ze worden pas bij `cargo test --bin ui04 -- --ignored` opnieuw gemaakt. Issues #2 tot en met #5.
@@ -221,6 +226,12 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-26 **Claude**: eerste release voorbereid (#37), op verzoek van de gebruiker zelf gecommit en gepusht. Alle crates en de generator op `2026.44.0`; rootpakket heet nu `openaec-blueprint`. Nieuwe crate `crates/openaec-blueprint-sdk` (lib `openaec_blueprint`, cdylib + staticlib): `oa_version`, `oa_tokens_json`, `oa_icon_count`, `oa_icon_id`, `oa_icon_label`, `oa_icon_svg`; header en C-voorbeeld, lokaal vanuit C getest (945 iconen). `.github/workflows/release.yml`: controles + tests, builds Windows (setup.exe via NSIS, zip, DLL), macOS (universele dmg en dylib), Linux (deb, rpm, AppImage, tar.gz, so), ondertekening met de organisatiegeheimen zoals Pointcloud (Azure Trusted Signing, Developer ID + notarisatie, OpenPGP), SHA256SUMS en build-attestatie; zonder sleutel een pre-release. App-icoon `packaging/icon.svg` is een eerste versie. Meegenomen: de Linux-buildfix van de andere sessie (x11/wayland in `crates/openaec-ui/Cargo.toml`, `undecorated_shadow` alleen op Windows). Lokaal groen: alle controles uit AGENTS.md behalve `check_portable_ui.py` (lokale Pointcloud-kopie loopt achter, #17), `cargo test --workspace`, `cargo test -p openaec-icons --features all`. Ook `cargo package -p openaec-ui` geslaagd.
+
+- 2026-10-26 **Claude**: README herschreven als korte ingang (standaardapplicatie met screenshot, wat hier staat, versieschema, releases, samenwerken). De oude README staat ongewijzigd als `UI-HARMONISATIE.md`; AGENTS.md zegt nu dat nieuwe reviews daar komen. Nieuw `templates/README-tool.md` (Engelstalig README-sjabloon voor tools). Issues #36 (online standaardapplicatie met 3D-weergave, voor Jan) en #37 (standaardapplicaties met ondertekende release: eerst Tauri, dan Rust) aangemaakt. Alleen documentatie; geen controles gedraaid.
+
+- 2026-10-26 **Claude**: repo op verzoek van de gebruiker hernoemd naar `OpenAEC-Blueprint`, lokale `origin` bijgewerkt, GitHub-links in README, STAPPENPLAN en NOTES aangepast en README-kop met korte inleiding. Historische bestanden in `design/` ongewijzigd. Geen code gewijzigd en geen controles gedraaid (alleen documentatie).
+
 - 2026-10-26 **Claude**: issue #33, bibliotheekdeel af: nieuw `design::update` (statusbestand van de installer `%LOCALAPPDATA%\OpenAEC\installer\updates.json`, `check_installed`, `compare` voor jaar.week en semver, `notice` voor de titelbalk, `open_installer` met `--update <app-id>` of de https-releasepagina). Galerij: melding "Versie 2026.44.1 staat klaar" + Bijwerken in de titelbalk; Bijwerken loopt via het sluitplan en start daarna (gesimuleerd) de installer. Reviewbeelden opnieuw gemaakt. Nog open: de installer moet het statusbestand schrijven en `--update <id>` begrijpen (repo openaec-installer); ids volgen `src/data/catalog.ts`.
 
 - 2026-10-26 **Claude**: issue #11 af: `scripts/build_web_icons.py` maakt `web/icons/<app>.svg` (16 sprites, symbolen `i16-<id>`/`i24-<id>`, kleuren via currentColor en `--icon-accent`) en `web/icons/manifest.json`, uit de B2-export met hashcontrole; `--check` bouwt opnieuw en vergelijkt. Padgegevens compact (punten binnen 0,01 px weg, twee decimalen): 8 % van de grootte, PDF-sprite 1,9 MB (544 kB gzip). In Chrome nagemeten tegen een exacte referentie: even nauwkeurig als de export (3,43 tegen 3,40 gemiddelde afwijking). `web/componenten.html` gebruikt dezelfde compacte symbolen: 745 → 84 kB. Meting ook op #35 gezet.
@@ -257,7 +268,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 - 2026-10-23 **Claude**: issue #2 pijltjestoetsen: `design::focus::group` met `Axis` (pijltjes, Home, End; één Tab-stop per groep die terugkeert naar het laatst gebruikte item). Gebruikt in menu, tabel, lint-tabs, documenttabs, lint, zijbalk, stappenbalk en recente bestanden; galerij groepeert de boom. Test in `focus_tests.rs` en in het GPU-venster (zijbalk werkstroom). Nog open: focusrand in Hoog contrast visueel nakijken, boom in-/uitklappen met links/rechts. Mijn claim verdween uit NOTES.md toen de planner-sessie even van branch wisselde; code bleef intact.
 
-- 2026-10-23 **Claude (tweede sessie)**: PR #23 geopend (`planner04-ui04` → `main`, https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/pull/23) met de testversie Open Planner Studio in UI 0.4, op verzoek van de gebruiker voor een collega die meekijkt; branch gepusht met `gh` na expliciete opdracht. De PR bevat ook de twee nog niet gepushte commits op `main` (iced 0.14 en de focusroute) tot `main` gepusht is. Vervolgwerk aan planner04 komt op die branch; README/NOTES-regels over planner04 staan op de branch, niet op `main`.
+- 2026-10-23 **Claude (tweede sessie)**: PR #23 geopend (`planner04-ui04` → `main`, https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/pull/23) met de testversie Open Planner Studio in UI 0.4, op verzoek van de gebruiker voor een collega die meekijkt; branch gepusht met `gh` na expliciete opdracht. De PR bevat ook de twee nog niet gepushte commits op `main` (iced 0.14 en de focusroute) tot `main` gepusht is. Vervolgwerk aan planner04 komt op die branch; README/NOTES-regels over planner04 staan op de branch, niet op `main`.
 
 - 2026-10-23 **Claude**: issue #2 grotendeels af: nieuw `design::focus` (`focusable`, `inert`, `next`/`previous` die rondlopen) en `keyboard::navigation`/`navigate`. Alle knoppen, tegels, tabs, boom- en tabelrijen, menu-items, keuzes en werkstroomnavigatie in de bibliotheek doen mee met Tab; Enter en spatie geven dezelfde klik als de muis; focusrand alleen na toetsenbordgebruik en niet achter een open dialoog. Galerij koppelt Tab, houdt de focus in dialogen en menu's en geeft hem terug. Tests: drie in `focus_tests.rs` en één taak zonder muis in `ui04`; in het GPU-venster gecontroleerd. Pijltjestoetsen nog open. `planner04.rs` (andere sessie) bouwt nu niet door eigen fouten in dat bestand; niet aangeraakt. Geen commit.
 
