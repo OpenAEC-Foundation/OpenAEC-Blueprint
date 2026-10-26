@@ -21,7 +21,7 @@ OpenAEC develops multiple tools for the AEC industry. End users should perceive 
 
 ### Built-in Features
 
-- **Theming** — Dark and light themes with CSS custom properties, user preference persisted across sessions
+- **Design 0.4** — The five themes (Light, Dark, Blueprint, High contrast dark, High contrast light), fonts (Inter, Space Grotesk, JetBrains Mono) and B2 icons of the OpenAEC design system, from the web package in the OpenAEC-Blueprint repository; the choice is persisted across sessions
 - **Internationalization (i18n)** — Full i18n setup with `react-i18next`, auto-detection of system language, and manual override. Ships with English and Dutch; easily extensible
 - **Persistent Settings** — Key-value store via `@tauri-apps/plugin-store` for user preferences (theme, language, etc.)
 - **Feedback Dialog** — Built-in user feedback mechanism
@@ -77,7 +77,8 @@ Produces platform-specific installers (NSIS for Windows, DMG for macOS, DEB/AppI
 ├── src/                          # Frontend source (React + TypeScript)
 │   ├── App.tsx                   # Main application layout and panel logic
 │   ├── App.css                   # Application-level styles
-│   ├── themes.css                # Theme definitions (CSS custom properties)
+│   ├── themes.css                # --theme-* names on top of the 0.4 tokens
+│   ├── openaec/                  # 0.4 tokens and fonts (copied from web/, do not edit)
 │   ├── store.ts                  # Tauri store helpers for persistent settings
 │   ├── components/
 │   │   ├── TitleBar.tsx          # Custom window title bar
@@ -148,3 +149,12 @@ CC BY-SA 4.0 — see the repository root for full license text.
 
 Part of the [OpenAEC Foundation](https://github.com/OpenAEC-Foundation) open-source ecosystem.
 *Build free. Build together.*
+
+## Design 0.4
+
+The template follows design 0.4 of the [OpenAEC Blueprint](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint), the same design as the Rust library `openaec-ui`.
+
+- **Tokens and fonts** come from `src/openaec/` and the icons from `public/icons/standard.svg`. Do not edit these files: in the Blueprint repository, `python scripts/sync_tauri_template.py` copies them from the web package `web/`, and `--check` checks that they are current.
+- **Colours** — components use the `--theme-*` names; `themes.css` maps every one to a 0.4 token (`--oa-*`). The theme is set with `<html data-oa-theme="…">`.
+- **Icons** — use `b2("file.save")` from `components/ribbon/icons.ts` for ribbon buttons, or `<B2Icon id="file.save" />`. To add an icon, put its B2 id in `STANDARD` in `scripts/build_web_icons.py` and run that script and `sync_tauri_template.py`.
+- **Text** — body text 12 px, labels 11 px, panel headings 13 px (`--oa-size-*`). Text in the accent colour uses `--theme-accent-tint`; dark text on amber (`--theme-accent-text`).

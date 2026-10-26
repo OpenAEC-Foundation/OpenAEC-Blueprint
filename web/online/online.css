@@ -1,9 +1,0 @@
-/* Online-only corrections to the template in style-book/ (issue #36). */
-
-/* .main-view centres its content, so a full-width view got no height and the
-   3D canvas stayed 0 px high. Full-width views fill the main view instead. */
-.main-view > .three-viewer-container,
-.main-view > .ifc-viewer-panel,
-.main-view > .report-preview {
-  align-self: stretch;
-}

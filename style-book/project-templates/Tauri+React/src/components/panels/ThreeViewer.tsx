@@ -13,7 +13,8 @@ export default function ThreeViewer() {
 
     // Scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x1a1a2e);
+    // Background and grid follow the theme (--oa-workspace, --oa-border).
+    const token = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#808080";
 
     // Camera
     const camera = new THREE.PerspectiveCamera(
@@ -50,8 +51,19 @@ export default function ThreeViewer() {
     scene.add(directional);
 
     // Grid
-    const grid = new THREE.GridHelper(20, 20, 0x444466, 0x333355);
-    scene.add(grid);
+    let grid: THREE.GridHelper | null = null;
+    const applyTheme = () => {
+      scene.background = new THREE.Color(token("--oa-workspace"));
+      if (grid) {
+        scene.remove(grid);
+        grid.dispose();
+      }
+      grid = new THREE.GridHelper(20, 20, token("--oa-border-strong"), token("--oa-border"));
+      scene.add(grid);
+    };
+    applyTheme();
+    const themeObserver = new MutationObserver(applyTheme);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-oa-theme"] });
 
     // Axes
     const axes = new THREE.AxesHelper(3);
@@ -154,6 +166,7 @@ export default function ThreeViewer() {
     return () => {
       cancelAnimationFrame(animId);
       observer.disconnect();
+      themeObserver.disconnect();
       controls.dispose();
       renderer.dispose();
       if (container.contains(renderer.domElement)) {

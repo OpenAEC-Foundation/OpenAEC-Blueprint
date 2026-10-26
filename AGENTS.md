@@ -47,6 +47,7 @@ python scripts/generate_tokens_04.py --check
 python scripts/generate_icon_crate.py --check
 python scripts/build_web_components.py --check
 python scripts/build_web_icons.py --check
+python scripts/sync_tauri_template.py --check
 python scripts/build_font_package.py --check
 python scripts/check_font_glyphs.py
 python scripts/check_report_pdf.py --self-test

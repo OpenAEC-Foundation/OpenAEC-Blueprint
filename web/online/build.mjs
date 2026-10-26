@@ -52,8 +52,7 @@ function online() {
       return out === code ? null : { code: out, map: null };
     },
     transformIndexHtml(html) {
-      const css = readFileSync(join(here, "online.css"), "utf8");
-      return html.replace(/<title>[^<]*<\/title>/, `<title>${NAME}</title>`).replace("</head>", `<style>${css}</style>\n</head>`);
+      return html.replace(/<title>[^<]*<\/title>/, `<title>${NAME}</title>`);
     },
     buildEnd() {
       const missed = RULES.filter((_, i) => !hits.has(i));

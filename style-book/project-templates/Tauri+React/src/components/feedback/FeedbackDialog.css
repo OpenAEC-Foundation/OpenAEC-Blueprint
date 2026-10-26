@@ -20,7 +20,7 @@
 
 .feedback-field-label {
   display: block;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-text);
   margin-bottom: 3px;
 }
@@ -33,7 +33,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 5px 6px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-family: inherit;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 0;
@@ -55,7 +55,7 @@
 .feedback-category {
   flex: 1;
   padding: 5px 8px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-family: inherit;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 2px;
@@ -80,7 +80,7 @@
 .feedback-textarea {
   width: 100%;
   padding: 6px 8px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-family: inherit;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 0;
@@ -98,7 +98,7 @@
 }
 
 .feedback-char-count {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-secondary);
   text-align: right;
   margin-top: 2px;
@@ -120,7 +120,7 @@
   align-items: center;
   gap: 4px;
   padding: 4px 8px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-family: inherit;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 2px;
@@ -140,7 +140,7 @@
 }
 
 .feedback-image-limit {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-secondary);
 }
 
@@ -172,9 +172,9 @@
   width: 16px;
   height: 16px;
   border: none;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--oa-overlay);
   color: white;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   line-height: 1;
   cursor: default;
   display: flex;
@@ -190,7 +190,7 @@
 
 /* Sentiment */
 .feedback-sentiment-label {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-text);
   margin-bottom: 6px;
 }
@@ -205,7 +205,7 @@
   align-items: center;
   gap: 4px;
   padding: 4px 10px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-family: inherit;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 2px;
@@ -225,17 +225,17 @@
 }
 
 .feedback-sentiment-emoji {
-  font-size: 14px;
+  font-size: var(--oa-size-panel-heading);
   line-height: 1;
 }
 
 .feedback-sentiment-text {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
 }
 
 /* Error */
 .feedback-error {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-danger-color);
   padding: 4px 0;
 }
@@ -257,14 +257,14 @@
 }
 
 .feedback-success h3 {
-  font-size: 14px;
+  font-size: var(--oa-size-panel-heading);
   font-weight: 600;
   margin: 0;
   color: var(--theme-dialog-content-text);
 }
 
 .feedback-success p {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-secondary);
   margin: 0;
 }
@@ -274,7 +274,7 @@
   padding: 5px 20px;
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 2px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 400;
   font-family: inherit;
   cursor: default;
@@ -315,7 +315,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-dialog-content-text);
   cursor: pointer;
 }
@@ -328,7 +328,7 @@
 }
 
 .feedback-hint {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-dialog-content-secondary);
   margin: 4px 0 0 22px;
   font-style: italic;

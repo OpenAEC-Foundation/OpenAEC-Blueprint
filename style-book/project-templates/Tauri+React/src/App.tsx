@@ -5,7 +5,7 @@ import Ribbon from "./components/ribbon/Ribbon";
 import DocumentBar from "./components/DocumentBar";
 import StatusBar from "./components/StatusBar";
 import Backstage from "./components/backstage/Backstage";
-import SettingsDialog, { applyTheme } from "./components/settings/SettingsDialog";
+import SettingsDialog, { applyTheme, themeId } from "./components/settings/SettingsDialog";
 import FeedbackDialog from "./components/feedback/FeedbackDialog";
 import WelcomeScreen from "./components/welcome/WelcomeScreen";
 import { StartSidebar } from "./components/welcome/StartSidebar";
@@ -118,7 +118,7 @@ function App() {
 
   useEffect(() => {
     getSetting("theme", "light").then((saved) => {
-      setTheme(saved);
+      setTheme(themeId(saved));
       applyTheme(saved);
     });
     // Welcome modal is no longer auto-shown — the persistent StartSidebar

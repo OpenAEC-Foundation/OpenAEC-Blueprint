@@ -2,7 +2,7 @@
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  background: #1a1a2e;
+  background: var(--oa-workspace);
 }
 
 .three-viewer-container canvas {

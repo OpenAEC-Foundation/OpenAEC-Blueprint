@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import B2Icon from "./B2Icon";
 import "./TitleBar.css";
 
 interface TitleBarProps {
@@ -101,11 +102,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("save")}
           tabIndex={-1}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
-            <polyline points="17 21 17 13 7 13 7 21" />
-            <polyline points="7 3 7 8 15 8" />
-          </svg>
+          <B2Icon id="file.save" />
         </button>
         <button
           className="titlebar-quick-btn"
@@ -113,10 +110,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("undo")}
           tabIndex={-1}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="1 4 1 10 7 10" />
-            <path d="M3.51 15a9 9 0 102.13-9.36L1 10" />
-          </svg>
+          <B2Icon id="edit.undo" />
         </button>
         <button
           className="titlebar-quick-btn"
@@ -124,10 +118,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("redo")}
           tabIndex={-1}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="23 4 23 10 17 10" />
-            <path d="M20.49 15a9 9 0 11-2.13-9.36L23 10" />
-          </svg>
+          <B2Icon id="edit.redo" />
         </button>
         <button
           className="titlebar-quick-btn"
@@ -135,11 +126,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("print")}
           tabIndex={-1}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="6 9 6 2 18 2 18 9" />
-            <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
-            <rect x="6" y="14" width="12" height="8" />
-          </svg>
+          <B2Icon id="file.print" />
         </button>
           <button
             className="titlebar-quick-btn"
@@ -148,10 +135,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
             tabIndex={-1}
             onClick={onSettingsClick}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-            </svg>
+            <B2Icon id="ui.settings" />
           </button>
         </div>
       </div>
@@ -175,9 +159,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("minimize")}
           tabIndex={-1}
         >
-          <svg width="10" height="1" viewBox="0 0 10 1">
-            <rect width="10" height="1" fill="currentColor" />
-          </svg>
+          <B2Icon id="window.minimize" />
         </button>
 
         <button
@@ -187,14 +169,9 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           tabIndex={-1}
         >
           {isMaximized ? (
-            <svg width="10" height="10" viewBox="0 0 10 10">
-              <rect x="0.5" y="2.5" width="7" height="7" fill="none" stroke="currentColor" strokeWidth="1.2" />
-              <polyline points="2.5 2.5 2.5 0.5 9.5 0.5 9.5 7.5 7.5 7.5" fill="none" stroke="currentColor" strokeWidth="1.2" />
-            </svg>
+            <B2Icon id="window.restore" />
           ) : (
-            <svg width="10" height="10" viewBox="0 0 10 10">
-              <rect x="0.5" y="0.5" width="9" height="9" fill="none" stroke="currentColor" strokeWidth="1.2" />
-            </svg>
+            <B2Icon id="window.maximize" />
           )}
         </button>
 
@@ -204,10 +181,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
           aria-label={t("close")}
           tabIndex={-1}
         >
-          <svg width="10" height="10" viewBox="0 0 10 10">
-            <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" strokeWidth="1.2" />
-            <line x1="10" y1="0" x2="0" y2="10" stroke="currentColor" strokeWidth="1.2" />
-          </svg>
+          <B2Icon id="window.close" />
         </button>
       </div>
     </div>

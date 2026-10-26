@@ -312,9 +312,17 @@ De vernieuwde installer is de hub-app (issues #13 en #16; besluit van 26 oktober
 De standaardapplicatie is online te bekijken (issue #36; [`web/online/`](web/online/README.md)):
 - **Bron.** De Tauri-sjabloon in `style-book/project-templates/Tauri+React`, ongewijzigd. `web/online/build.mjs` bouwt hem als webapp; de Tauri-functies gaan naar browservervangers in `tauri-browser.ts`.
 - **Naam en versie.** Online heet hij OpenAEC Blueprint, met de versie van de laatste release uit de hoofd-`Cargo.toml`.
-- **3D-weergave.** Raster, assen, draaien en zoomen uit de sjabloon. De weergave kreeg in de sjabloon geen hoogte; `online.css` lost dat online op, de sjabloon zelf moet nog worden aangepast.
+- **3D-weergave.** Raster, assen, draaien en zoomen uit de sjabloon; achtergrond en raster volgen het thema.
 - **Getest** in het browserpaneel: schil, 3D-weergave met draaien en zoomen, vijf thema's, en het thema blijft na herladen bewaard.
 - **Publicatie.** `.github/workflows/pages.yml` publiceert na elke geslaagde release op GitHub Pages; `release.yml` is niet aangepast.
+
+De Tauri-sjabloon volgt ontwerp 0.4 (op verzoek van de gebruiker, 26 oktober 2026):
+- **Webpakket in de sjabloon.** `scripts/sync_tauri_template.py` kopieert de tokens, de fonts (alleen WOFF2) en de B2-sprite `standard.svg` uit `web/` naar `style-book/project-templates/Tauri+React`; `--check` staat in de controles. De sjabloon wordt als geheel gekopieerd voor een nieuwe tool, daarom een eigen kopie en geen pad naar deze repository.
+- **Thema's.** De vijf thema's van 0.4 in plaats van Licht, Forge, OpenAEC, Blueprint en Contrast. `themes.css` legt elke `--theme-*`-naam op een `--oa-*`-token; oude opgeslagen keuzes worden omgezet (Forge en OpenAEC naar Donker, Contrast naar High contrast donker).
+- **Tekst.** Inter, 12 px voor tekst, 11 px voor labels, 13 px voor paneelkoppen. Tekst in accentkleur gebruikt `--oa-accent-text`, tekst op amber is donker. Linttitels breken niet meer midden in een woord; een lang woord maakt de knop breder, zoals in Rust.
+- **Iconen.** De 42 linticonen en de knoppen in de titelbalk zijn B2 (`standard.svg`, 52 iconen in 16 en 24 px).
+- **Getest** in het browserpaneel: alle vijf thema's, 3D-weergave, instellingen. Een contrastcontrole over alle zichtbare tekst vindt in geen enkel thema tekst onder 4,5 : 1 (na de aanpassing van de plaatshoudertekst in de panelen).
+- **Nog niet gedaan.** De syntaxkleuren in de IFC-weergave en de Tauri-desktopbuild zelf (`npm run tauri dev`) zijn niet nagekeken. De Style Book-map `style-book/design/` heeft een eigen tokenbron; die is niet gelijkgetrokken.
 
 ## Nachtelijke B2-uitbreiding
 

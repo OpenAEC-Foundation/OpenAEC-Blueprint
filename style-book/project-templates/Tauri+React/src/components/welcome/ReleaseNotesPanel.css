@@ -4,13 +4,13 @@
   padding: 0;
   overflow-y: auto;
   flex-shrink: 0;
-  font-family: "Inter", inherit;
+  font-family: var(--oa-font-body);
 }
 
 .welcome-brand h3 {
   margin: 0 0 4px;
-  font-family: "Space Grotesk", "Inter", inherit;
-  font-size: 16px;
+  font-family: var(--oa-font-heading);
+  font-size: var(--oa-size-dialog-heading);
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--theme-text);
@@ -18,8 +18,8 @@
 
 .welcome-link {
   display: inline-block;
-  font-size: 12px;
-  color: #d97706;
+  font-size: var(--oa-size-body);
+  color: var(--theme-accent-tint);
   text-decoration: none;
   font-weight: 500;
 }
@@ -32,8 +32,8 @@
 }
 .welcome-releases h3 {
   margin: 0 0 12px;
-  font-family: "Space Grotesk", "Inter", inherit;
-  font-size: 12px;
+  font-family: var(--oa-font-heading);
+  font-size: var(--oa-size-body);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -56,12 +56,12 @@
   margin-bottom: 4px;
 }
 .welcome-release-tag {
-  font-family: "JetBrains Mono", "Inter", monospace;
-  font-size: 11px;
+  font-family: var(--oa-font-mono);
+  font-size: var(--oa-size-label);
   font-weight: 600;
-  color: #d97706;
+  color: var(--theme-accent-tint);
   text-decoration: none;
-  background: rgba(217, 119, 6, 0.08);
+  background: var(--theme-accent-soft);
   padding: 1px 6px;
   border-radius: 3px;
 }
@@ -70,21 +70,21 @@
 }
 
 .welcome-release-date {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary, var(--theme-placeholder-text));
 }
 
 .welcome-release-title {
   margin: 4px 0 8px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-weight: 600;
   color: var(--theme-text);
-  font-family: "Space Grotesk", "Inter", inherit;
+  font-family: var(--oa-font-heading);
   letter-spacing: -0.005em;
 }
 
 .welcome-release-body {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   line-height: 1.5;
   color: var(--theme-text-secondary, var(--theme-placeholder-text));
   white-space: pre-wrap;
@@ -92,6 +92,6 @@
 
 .welcome-error,
 .welcome-loading {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-text-secondary, var(--theme-placeholder-text));
 }

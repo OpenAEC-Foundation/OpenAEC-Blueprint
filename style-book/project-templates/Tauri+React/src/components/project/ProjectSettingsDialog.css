@@ -31,7 +31,7 @@
 }
 
 .proj-header h2 {
-  font-size: 14px;
+  font-size: var(--oa-size-panel-heading);
   font-weight: 600;
   color: var(--theme-dialog-header-text);
   margin: 0;
@@ -41,14 +41,14 @@
   background: transparent;
   border: none;
   color: var(--theme-text-secondary);
-  font-size: 18px;
+  font-size: var(--oa-size-dialog-heading);
   cursor: default;
   padding: 0 4px;
   line-height: 1;
 }
 
 .proj-close:hover {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .proj-body {
@@ -62,11 +62,11 @@
 }
 
 .proj-section-title {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   margin-bottom: 10px;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--theme-dialog-section-border);
@@ -77,11 +77,11 @@
   align-items: center;
   gap: 8px;
   cursor: default;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .proj-toggle input {
@@ -112,7 +112,7 @@
 }
 
 .proj-field label {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 500;
   color: var(--theme-dialog-content-secondary);
 }
@@ -124,7 +124,7 @@
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 4px;
   color: var(--theme-dialog-input-text);
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-family: inherit;
   outline: none;
   transition: border-color 0.15s;
@@ -157,7 +157,7 @@
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 4px;
   color: var(--theme-dialog-input-text);
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-family: inherit;
   outline: none;
 }
@@ -172,7 +172,7 @@
   border: none;
   border-radius: 4px;
   color: var(--theme-btn-primary-text);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   font-family: inherit;
   cursor: default;
@@ -215,12 +215,12 @@
 }
 
 .proj-erp-result strong {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-text);
 }
 
 .proj-erp-result span {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
 }
 
@@ -235,7 +235,7 @@
 .proj-btn {
   padding: 6px 20px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-weight: 600;
   font-family: inherit;
   cursor: default;

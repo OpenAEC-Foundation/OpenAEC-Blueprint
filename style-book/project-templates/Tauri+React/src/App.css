@@ -1,6 +1,6 @@
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
+  font-family: var(--oa-font-body);
+  font-size: var(--oa-size-body);
   line-height: 1.5;
   font-weight: 400;
   color: var(--theme-text);
@@ -80,13 +80,13 @@ body,
 }
 
 .left-panel-collapsed-tab:hover {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .left-panel-collapsed-tab span {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
@@ -103,15 +103,15 @@ body,
   flex-shrink: 0;
   border-bottom: 1px solid var(--theme-border);
   background: var(--theme-bg-lighter);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .left-panel-title {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .left-panel-close-btn {
@@ -122,7 +122,7 @@ body,
   height: 20px;
   border: none;
   background: transparent;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   cursor: default;
   border-radius: 3px;
   padding: 0;
@@ -131,7 +131,7 @@ body,
 
 .left-panel-close-btn:hover {
   background: var(--theme-ribbon-btn-hover);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   opacity: 1;
 }
 
@@ -179,7 +179,7 @@ body,
   color: var(--theme-accent-tint);
   cursor: default;
   font-family: inherit;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-align: left;
   transition: background 0.1s;
@@ -187,7 +187,7 @@ body,
 
 .panel-section-header:hover {
   background: var(--theme-hover);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .panel-section-chevron {
@@ -206,8 +206,8 @@ body,
 }
 
 .panel-placeholder {
-  font-size: 11px;
-  color: var(--theme-text-faint);
+  font-size: var(--oa-size-label);
+  color: var(--theme-text-secondary);
 }
 
 /* Right panel */
@@ -239,12 +239,12 @@ body,
 }
 
 .right-panel-collapsed-tab:hover {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .right-panel-collapsed-tab span {
   writing-mode: vertical-lr;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
@@ -261,15 +261,15 @@ body,
   flex-shrink: 0;
   border-bottom: 1px solid var(--theme-border);
   background: var(--theme-bg-lighter);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .right-panel-title {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .right-panel-close-btn {
@@ -280,7 +280,7 @@ body,
   height: 20px;
   border: none;
   background: transparent;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   cursor: default;
   border-radius: 3px;
   padding: 0;
@@ -289,7 +289,7 @@ body,
 
 .right-panel-close-btn:hover {
   background: var(--theme-ribbon-btn-hover);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   opacity: 1;
 }
 
@@ -344,13 +344,13 @@ body,
 }
 
 .placeholder h2 {
-  font-size: 18px;
+  font-size: var(--oa-size-dialog-heading);
   font-weight: 500;
   color: var(--theme-placeholder-heading);
 }
 
 .placeholder p {
-  font-size: 13px;
+  font-size: var(--oa-size-panel-heading);
   color: var(--theme-placeholder-text);
 }
 
@@ -360,9 +360,9 @@ body,
   align-items: center;
   justify-content: space-between;
   padding: 4px 12px;
-  background: var(--theme-accent, #D97706);
-  color: #fff;
-  font-size: 12px;
+  background: var(--theme-accent);
+  color: var(--theme-accent-text);
+  font-size: var(--oa-size-body);
   gap: 8px;
 }
 
@@ -377,18 +377,26 @@ body,
   display: flex;
   align-items: center;
   gap: 5px;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: color-mix(in srgb, var(--theme-accent-text) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--theme-accent-text) 35%, transparent);
   border-radius: 4px;
-  color: #fff;
+  color: var(--theme-accent-text);
   padding: 3px 10px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   transition: background 0.15s;
   flex-shrink: 0;
 }
 
 .detached-dock-btn:hover {
-  background: rgba(255,255,255,0.35);
+  background: color-mix(in srgb, var(--theme-accent-text) 20%, transparent);
+}
+
+/* Full-width views (3D, IFC, report) fill the main view; it centres its
+   content, which left the 3D canvas without height. */
+.main-view > .three-viewer-container,
+.main-view > .ifc-viewer-panel,
+.main-view > .report-preview {
+  align-self: stretch;
 }

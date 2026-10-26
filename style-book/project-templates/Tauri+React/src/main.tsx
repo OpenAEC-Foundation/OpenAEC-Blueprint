@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// Design 0.4: fonts and tokens from the OpenAEC web package (scripts/sync_tauri_template.py).
+import "./openaec/openaec-fonts.css";
+import "./openaec/openaec-tokens.css";
 import "./i18n/config";
 import App from "./App";
 

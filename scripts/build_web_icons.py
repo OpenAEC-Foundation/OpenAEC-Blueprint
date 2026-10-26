@@ -38,6 +38,19 @@ OUT = ROOT / "web/icons"
 # Largest distance (in pixels of the icon's own size) a left-out point may lie
 # from the simplified line.
 TOLERANCE = 0.01
+# The icons of the standard application (src/bin/blueprint.rs and the Tauri
+# template in style-book/project-templates/Tauri+React), as one extra sprite
+# "standard" next to the app sprites.
+STANDARD = [
+    "data.chart", "data.table", "draw.arrow", "draw.circle", "draw.freehand", "draw.image", "draw.line", "draw.rectangle",
+    "edit.copy", "edit.cut", "edit.paste", "edit.redo", "edit.undo", "extension.install-file", "extensions.manage",
+    "file.new", "file.open", "file.print", "file.save", "format.align-center", "format.align-left", "format.align-right",
+    "format.bold", "format.italic", "format.underline", "ifc.export", "ifc.import", "ifc.validate", "link.open-external",
+    "measure.distance", "mesh.closed", "panel.left", "panel.model-tree", "panel.right", "project.folder",
+    "project.properties", "report.cover", "report.generate", "report.template", "section.box", "software.catalog",
+    "status.info", "status.success", "ui.help", "ui.settings", "view.fit", "view.orbit", "view.report-preview",
+    "window.close", "window.maximize", "window.minimize", "window.restore",
+]
 
 
 def subpaths(d):
@@ -129,8 +142,10 @@ def build():
     revision = export.get("source_revision")
     per_app = {}
     for icon_id, label, apps, assets in icons():
-        for app in apps:
+        for app in apps + (["standard"] if icon_id in STANDARD else []):
             per_app.setdefault(app, []).append((icon_id, label, assets))
+    missing = sorted(set(STANDARD) - {icon_id for icon_id, _, _ in per_app.get("standard", [])})
+    assert not missing, f"STANDARD names icons that are not in the export: {missing}"
     writes, summary = {}, {}
     for app, entries in sorted(per_app.items()):
         symbols = [symbol(icon_id, size, assets[size]["path"], assets[size]["original_sha256"]) for icon_id, _, assets in entries for size in sorted(assets)]

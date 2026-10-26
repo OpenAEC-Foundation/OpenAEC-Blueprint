@@ -53,14 +53,14 @@
 }
 
 .welcome-title {
-  font-size: 22px;
+  font-size: var(--oa-size-page-heading);
   font-weight: 600;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   margin: 0;
 }
 
 .welcome-subtitle {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-dialog-content-secondary);
   margin: 2px 0 0;
 }
@@ -79,11 +79,11 @@
 }
 
 .welcome-body h2 {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   margin: 0 0 12px;
 }
 
@@ -111,7 +111,7 @@
 
 .welcome-action-btn.primary {
   border-color: var(--theme-accent);
-  background: rgba(217, 119, 6, 0.12);
+  background: var(--theme-accent-soft);
 }
 
 .welcome-action-btn svg {
@@ -127,22 +127,22 @@
 }
 
 .welcome-action-btn strong {
-  font-size: 13px;
+  font-size: var(--oa-size-panel-heading);
   font-weight: 600;
   color: var(--theme-text);
 }
 
 .welcome-action-btn span {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
 }
 
 .welcome-action-btn:hover strong {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .welcome-empty {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-text-faint);
   font-style: italic;
 }
@@ -185,7 +185,7 @@
 }
 
 .welcome-recent-name {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -193,7 +193,7 @@
 }
 
 .welcome-recent-path {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-faint);
   white-space: nowrap;
   overflow: hidden;
@@ -201,7 +201,7 @@
 }
 
 .welcome-recent-date {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-faint);
   flex-shrink: 0;
 }
@@ -218,7 +218,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
   cursor: default;
 }
@@ -233,7 +233,7 @@
   border: 1px solid var(--theme-border-subtle);
   border-radius: 4px;
   color: var(--theme-text);
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-family: inherit;
   cursor: default;
   transition: all 0.15s ease;
@@ -242,5 +242,5 @@
 .welcome-skip-btn:hover {
   background: var(--theme-btn-secondary-hover-bg);
   border-color: var(--theme-accent);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }

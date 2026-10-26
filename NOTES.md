@@ -4,7 +4,6 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
-- **Claude** – #36 online standaardapplicatie: wacht op commit en het aanzetten van GitHub Pages – web/online/, .github/workflows/pages.yml – sinds 2026-10-26.
 
 
 
@@ -103,7 +102,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
-- Tauri-sjabloon in `style-book/project-templates/Tauri+React` (Claude, 2026-10-26, #36): de 3D-weergave krijgt geen hoogte (`.main-view` centreert), en naam en versie staan vast als "Open Template" 0.1.0 in `common.json`, `settings.json`, `backstage.json`, `Backstage.tsx` en `SettingsDialog.tsx`. Online opgevangen in `web/online/`; hoort in de sjabloon zelf te worden opgelost door wie het Style Book beheert.
+- Tauri-sjabloon (Claude, 2026-10-26): volgt nu ontwerp 0.4. Nog niet nagekeken: de Tauri-desktopbuild zelf (`npm run tauri dev`) en de syntaxkleuren in de IFC-weergave. `style-book/design/` met `generators/` is een tweede tokenbron (npm-pakketten en crates in `style-book/`); die volgt 0.4 nog niet en moet worden gelijkgetrokken of opgeheven.
 
 - Open werk staat sinds 2026-10-23 als issues op GitHub: [#2 tot en met #21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues?q=is%3Aissue+is%3Aopen). Werk een punt daar af en sluit het issue met een verwijzing naar de commit.
 
@@ -239,6 +238,10 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-26 **Claude**: Tauri-sjabloon naar ontwerp 0.4, op verzoek van de gebruiker (Erika hoeft niets te doen). Nieuw `scripts/sync_tauri_template.py` (`--check` in AGENTS.md) kopieert tokens, WOFF2-fonts en de nieuwe B2-sprite `web/icons/standard.svg` (52 iconen, lijst `STANDARD` in `build_web_icons.py`) naar de sjabloon. `themes.css` legt alle `--theme-*`-namen op `--oa-*`-tokens; vijf thema's van 0.4 met omzetting van oude keuzes; Inter 12/11/13 px via `--oa-size-*`; tekst in accentkleur via `--oa-accent-text`, donkere tekst op amber; linticonen en titelbalkknoppen B2; linttitels breken niet meer in een woord; 3D-achtergrond en raster volgen het thema; 3D-hoogte in de sjabloon zelf opgelost, `web/online/online.css` weg. Getest in het browserpaneel: vijf thema's, 3D, instellingen; contrastcontrole over alle zichtbare tekst zonder fouten. `tsc --noEmit` groen.
+
+- 2026-10-26 **Claude**: #36 online: GitHub Pages aangezet (bron GitHub Actions), Pages-workflow met de hand gestart en geslaagd; https://openaec-foundation.github.io/OpenAEC-Blueprint/ toont de standaardapplicatie met 3D-weergave en versie 2026.44.1. Automatisch publiceren na een release is nog niet met een echte release getest.
+
 - 2026-10-26 **Claude**: #36, online standaardapplicatie: `web/online/build.mjs` bouwt de Tauri-sjabloon uit `style-book/` ongewijzigd als webapp (Tauri-functies naar browservervangers in `tauri-browser.ts`, naam OpenAEC Blueprint en versie uit de hoofd-`Cargo.toml`, `online.css` geeft de 3D-weergave hoogte). Getest in het browserpaneel: schil, 3D draaien en zoomen, vijf thema's, thema blijft na herladen. Nieuwe workflow `.github/workflows/pages.yml` publiceert na elke geslaagde release; `release.yml` niet aangeraakt. npm-pakketten van de sjabloon met toestemming gedownload (122, 180 MB, in `node_modules`, genegeerd door git).
 
 - 2026-10-26 **Claude**: #37, OpenPGP-sleutel voor Linux-releases gemaakt: OpenAEC Foundation Releases (ed25519, hoofdsleutel alleen certificeren, ondertekeningssubsleutel, geldig tot 2028-10-25), vingerafdruk `13F6D414ADEE4ED4CD09AC60601D86C93C504D29`. Organisatiegeheimen `OPENAEC_GPG_PRIVATE_KEY` (alleen subsleutel) en `OPENAEC_GPG_PASSPHRASE` en variabele `OPENAEC_GPG_FINGERPRINT`, met toegang voor OpenAEC-Blueprint en open-pointcloud-studio. Publieke sleutel op #37. Reservekopie buiten de repository bij de gebruiker; tijdelijke bestanden verwijderd.

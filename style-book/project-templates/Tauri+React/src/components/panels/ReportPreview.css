@@ -29,7 +29,7 @@
 }
 
 .report-sidebar-title {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -62,7 +62,7 @@
 }
 
 .report-sidebar-hint {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
   margin: 0 0 12px;
   line-height: 1.4;
@@ -80,7 +80,7 @@
   align-items: center;
   gap: 8px;
   padding: 5px 6px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   color: var(--theme-text);
   cursor: pointer;
   border-radius: 3px;
@@ -104,7 +104,7 @@
 }
 
 .report-reset-btn {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   background: transparent;
   border: 1px solid var(--theme-border);
   color: var(--theme-text-secondary);
@@ -118,7 +118,7 @@
 
 .report-reset-btn:hover {
   border-color: var(--theme-accent);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   background: var(--theme-hover);
 }
 
@@ -135,7 +135,7 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
 }
 
@@ -170,7 +170,7 @@
 .report-sidebar-collapsed span {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -196,7 +196,7 @@
 }
 
 .report-page-info {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
   flex: 1;
   overflow: hidden;
@@ -218,7 +218,7 @@
   border: none;
   border-radius: 4px;
   color: var(--theme-btn-primary-text);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -261,7 +261,7 @@
   padding: 16px 24px;
   background: rgba(220, 38, 38, 0.08);
   color: var(--theme-danger-color);
-  font-size: 12px;
+  font-size: var(--oa-size-body);
 }
 
 .report-empty-state {
@@ -282,14 +282,14 @@
 }
 
 .report-empty-title {
-  font-size: 14px;
+  font-size: var(--oa-size-panel-heading);
   font-weight: 600;
   color: var(--theme-text);
   margin: 0;
 }
 
 .report-empty-subtitle {
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   margin: 0;
   opacity: 0.8;
 }

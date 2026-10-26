@@ -27,13 +27,13 @@
 
 .start-sidebar-collapsed-tab:hover {
   color: var(--theme-text);
-  background: rgba(217, 119, 6, 0.08);
+  background: var(--theme-accent-soft);
 }
 
 .start-sidebar-collapsed-tab span {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
@@ -51,9 +51,9 @@
 }
 
 .start-sidebar-title {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
-  font-family: "Space Grotesk", "Inter", inherit;
+  font-family: var(--oa-font-heading);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--theme-text);
@@ -74,7 +74,7 @@
 }
 
 .start-sidebar-close-btn:hover {
-  background: rgba(217, 119, 6, 0.08);
+  background: var(--theme-accent-soft);
   color: var(--theme-text);
 }
 
@@ -102,16 +102,16 @@
 
 .start-brand-text h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--oa-size-panel-heading);
   font-weight: 700;
-  font-family: "Space Grotesk", "Inter", inherit;
+  font-family: var(--oa-font-heading);
   letter-spacing: -0.01em;
   color: var(--theme-text);
 }
 
 .start-brand-text p {
   margin: 2px 0 0;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-placeholder-text);
   line-height: 1.4;
 }
@@ -132,8 +132,8 @@
   border-radius: 6px;
   background: var(--theme-bg);
   color: var(--theme-text);
-  font-size: 12px;
-  font-family: "Inter", inherit;
+  font-size: var(--oa-size-body);
+  font-family: var(--oa-font-body);
   font-weight: 500;
   cursor: pointer;
   text-align: left;
@@ -141,7 +141,7 @@
 }
 
 .start-action-btn:hover {
-  background: rgba(217, 119, 6, 0.08);
+  background: var(--theme-accent-soft);
   border-color: var(--theme-accent);
 }
 
@@ -159,7 +159,7 @@
 }
 
 .start-recent-title {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   color: var(--theme-placeholder-text);
   margin: 0 0 6px;
@@ -184,14 +184,14 @@
   cursor: pointer;
   text-align: left;
   font-family: inherit;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text);
   transition: background 0.12s ease;
   width: 100%;
 }
 
 .start-recent-item:hover {
-  background: rgba(217, 119, 6, 0.08);
+  background: var(--theme-accent-soft);
 }
 
 .start-recent-item svg {

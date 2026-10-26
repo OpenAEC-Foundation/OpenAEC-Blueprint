@@ -34,14 +34,14 @@
 }
 
 .ifc-viewer-label {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 700;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   letter-spacing: 0.3px;
 }
 
 .ifc-viewer-stats {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-faint);
   margin-left: auto;
 }
@@ -56,7 +56,7 @@
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 2px 6px;
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   font-family: inherit;
   font-weight: 600;
   color: var(--theme-text-secondary);
@@ -67,7 +67,7 @@
 .ifc-viewer-actions button:hover {
   background: var(--theme-hover);
   border-color: var(--theme-accent);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .ifc-viewer-code {
@@ -79,8 +79,8 @@
 .ifc-viewer-table {
   border-collapse: collapse;
   width: 100%;
-  font-family: "JetBrains Mono", "Consolas", "Monaco", monospace;
-  font-size: 11px;
+  font-family: var(--oa-font-mono);
+  font-size: var(--oa-size-label);
   line-height: 1.55;
 }
 
@@ -104,8 +104,8 @@
 .ifc-viewer-json {
   margin: 0;
   padding: 8px 10px;
-  font-family: "JetBrains Mono", "Consolas", "Monaco", monospace;
-  font-size: 11px;
+  font-family: var(--oa-font-mono);
+  font-size: var(--oa-size-label);
   line-height: 1.55;
   white-space: pre;
   color: var(--theme-text);
@@ -142,7 +142,7 @@
   background: transparent;
   border: none;
   font-family: inherit;
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text);
   cursor: default;
   text-align: left;
@@ -173,20 +173,20 @@
 
 .ifc-tree-type {
   font-weight: 600;
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   flex-shrink: 0;
 }
 
 .ifc-tree-name {
   color: var(--theme-text-secondary);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .ifc-tree-count {
   margin-left: auto;
-  font-size: 9px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   color: var(--theme-text-faint);
   background: var(--theme-accent-soft);

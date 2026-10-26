@@ -4,9 +4,9 @@
 }
 
 .ext-manager-title {
-  font-size: 18px;
+  font-size: var(--oa-size-dialog-heading);
   font-weight: 600;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   margin: 0 0 16px;
 }
 
@@ -19,7 +19,7 @@
 
 .ext-tab {
   padding: 6px 16px;
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-weight: 500;
   font-family: inherit;
   background: transparent;
@@ -31,11 +31,11 @@
 }
 
 .ext-tab:hover {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .ext-tab.active {
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   border-bottom-color: var(--theme-accent);
 }
 
@@ -52,7 +52,7 @@
   border: 1px solid var(--theme-dialog-input-border);
   border-radius: 4px;
   color: var(--theme-dialog-input-text);
-  font-size: 12px;
+  font-size: var(--oa-size-body);
   font-family: inherit;
   outline: none;
 }
@@ -67,7 +67,7 @@
   border: 1px solid var(--theme-border-subtle);
   border-radius: 4px;
   color: var(--theme-text);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   font-family: inherit;
   cursor: default;
@@ -77,7 +77,7 @@
 .ext-upload-btn:hover {
   background: var(--theme-btn-secondary-hover-bg);
   border-color: var(--theme-accent);
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
 }
 
 .ext-list {
@@ -112,7 +112,7 @@
 }
 
 .ext-category-badge {
-  font-size: 9px;
+  font-size: var(--oa-size-label);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -122,7 +122,7 @@
 }
 
 .ext-version {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-faint);
   margin-left: auto;
 }
@@ -132,19 +132,19 @@
 }
 
 .ext-name {
-  font-size: 13px;
+  font-size: var(--oa-size-panel-heading);
   color: var(--theme-text);
 }
 
 .ext-desc {
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-secondary);
   margin: 2px 0 4px;
   line-height: 1.4;
 }
 
 .ext-author {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   color: var(--theme-text-faint);
 }
 
@@ -197,9 +197,9 @@
 }
 
 .ext-installed-badge {
-  font-size: 10px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
-  color: var(--theme-accent);
+  color: var(--theme-accent-tint);
   padding: 2px 8px;
   border: 1px solid var(--theme-accent);
   border-radius: 3px;
@@ -211,7 +211,7 @@
   border: none;
   border-radius: 4px;
   color: var(--theme-btn-primary-text);
-  font-size: 11px;
+  font-size: var(--oa-size-label);
   font-weight: 600;
   font-family: inherit;
   cursor: default;

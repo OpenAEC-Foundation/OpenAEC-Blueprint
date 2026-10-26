@@ -16,7 +16,7 @@ De bron is de sjabloon in [`style-book/project-templates/Tauri+React`](../../sty
 
   Rapporten maken en opslaan kan online niet, want daarvoor is de Rust-kant nodig.
 - **Naam en versie.** De sjabloon noemt zich "Open Template" met versie 0.1.0. Online staat er "OpenAEC Blueprint" met de versie uit de hoofd-`Cargo.toml`, gelijk aan de laatste release (`JJJJ.W.N`, #1). Verandert de sjabloon zo dat een vervanging niet meer past, dan stopt de build met een melding.
-- **3D-weergave.** In de sjabloon kreeg de 3D-weergave geen hoogte, omdat `.main-view` zijn inhoud centreert. [`online.css`](online.css) laat weergaven over de volle breedte de ruimte vullen. Hoort eigenlijk in de sjabloon zelf.
+- **Ontwerp 0.4.** De sjabloon zelf gebruikt de tokens, fonts en B2-iconen van het webpakket (`scripts/sync_tauri_template.py`), dus online geldt hetzelfde.
 
 ## Bouwen
 
