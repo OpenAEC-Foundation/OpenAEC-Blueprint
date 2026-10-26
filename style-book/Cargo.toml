@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["project-templates"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/OpenAEC-Foundation/OpenAEC-style-book"
+authors = ["OpenAEC Foundation"]

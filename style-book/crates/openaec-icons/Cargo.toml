@@ -1,0 +1,12 @@
+[package]
+name = "openaec-icons"
+description = "OpenAEC-iconen als SVG voor Rust-applicaties"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dev-dependencies]
+openaec-tokens = { path = "../openaec-tokens" }
+resvg = "0.45"

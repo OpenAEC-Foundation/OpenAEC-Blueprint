@@ -1,0 +1,26 @@
+app = "voorbeeld-app"
+format = 1
+include = ["openaec:viewer3d"]
+
+[quick_access]
+items = ["file.save", "edit.undo", "view.fit-all"]
+
+[[tab]]
+id = "home"
+label = "app.tab.home"
+
+  [[tab.group]]
+  id = "clipboard"
+  label = "app.group.clipboard"
+  items = [
+    { type = "large", command = "edit.paste", icon = "edit/paste", label = "openaec.action.paste" },
+    { type = "small", command = "edit.cut", icon = "edit/cut", label = "openaec.action.cut" },
+    { type = "small", command = "edit.copy", icon = "edit/copy", label = "openaec.action.copy" },
+    { type = "split", command = "insert.table", icon = "insert/table", label = "app.cmd.table", items = [
+        { command = "insert.table.grid", label = "app.cmd.table.grid" } ] },
+  ]
+
+  [[tab.group]]
+  id = "custom"
+  label = "app.group.custom"
+  items = [ { type = "custom", slot = "layer-combo" } ]
