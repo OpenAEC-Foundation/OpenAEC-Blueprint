@@ -9,6 +9,7 @@
 //! dialogs, notifications and shortcuts all respond. It is a review aid, not an app.
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
+use openaec_ui::design::document::{self as dm, Choice as CloseChoice, ClosePlan, DocumentState, Request, SaveKind, SaveTicket, Status, Step};
 use openaec_ui::design::focus;
 use openaec_ui::design::number::{self as num, NumberFormat, NumberInput, Value};
 use openaec_ui::design::shortcuts::{self as sc, Keymap};
@@ -550,7 +551,7 @@ enum DocKind {
 struct Doc {
     kind: DocKind,
     title: String,
-    dirty: bool,
+    state: DocumentState,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -565,9 +566,19 @@ enum Dialog {
     Settings,
     Export,
     Print,
-    CloseDirty(usize),
-    Quit,
+    /// The question of the running close plan (`Gallery::closing`).
+    Close,
 }
+
+/// What a close plan closes when every choice is carried out.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum CloseTarget {
+    Documents,
+    Window,
+}
+
+/// How long a simulated write takes, so "Opslaan…" is visible.
+const SAVE_MILLIS: u64 = 400;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum MenuKind {
@@ -648,8 +659,10 @@ enum Msg {
     Landscape(bool),
     ConfirmExport,
     ConfirmPrint,
-    DiscardAndClose(usize),
-    SaveAndClose(usize),
+    CloseChoose(CloseChoice),
+    CloseChooseAll(CloseChoice),
+    /// A write finished (simulated in the gallery).
+    Written(DocKind, SaveTicket, Result<(), String>),
     EditName(String),
     EditUnit(&'static str),
     EditQuantity(String),
@@ -667,8 +680,6 @@ enum Msg {
     Minimize,
     Maximize,
     CloseWindow,
-    QuitNow,
-    SaveAndQuit,
     DragSplit(Side),
     EndDrag,
     Menu(Option<MenuKind>),
@@ -842,6 +853,7 @@ struct Gallery {
     toast: Option<Toast>,
     toast_count: u32,
     dialog: Option<Dialog>,
+    closing: Option<(ClosePlan<DocKind>, CloseTarget)>,
     format: &'static str,
     landscape: bool,
     zoom: u16,
@@ -902,9 +914,9 @@ impl Default for Gallery {
             backstage: false,
             project: 0,
             docs: vec![
-                Doc { kind: DocKind::Budget, title: "Begroting".into(), dirty: false },
-                Doc { kind: DocKind::Quantities, title: "Hoeveelheden".into(), dirty: false },
-                Doc { kind: DocKind::Report, title: "Rapport".into(), dirty: false },
+                Doc { kind: DocKind::Budget, title: "Begroting".into(), state: DocumentState::opened() },
+                Doc { kind: DocKind::Quantities, title: "Hoeveelheden".into(), state: DocumentState::opened() },
+                Doc { kind: DocKind::Report, title: "Rapport".into(), state: DocumentState::opened() },
             ],
             active: 0,
             blank_count: 0,
@@ -923,6 +935,7 @@ impl Default for Gallery {
             toast: None,
             toast_count: 0,
             dialog: None,
+            closing: None,
             format: "PDF",
             landscape: false,
             zoom: 100,
@@ -999,11 +1012,108 @@ impl Gallery {
             self.history.remove(0);
         }
         self.future.clear();
+        self.touch();
+    }
+
+    /// One new revision for every document that shows the posts.
+    fn touch(&mut self) {
         for doc in &mut self.docs {
             if matches!(doc.kind, DocKind::Budget | DocKind::Quantities | DocKind::Item(_)) {
-                doc.dirty = true;
+                doc.state.edit();
             }
         }
+    }
+
+    /// Start writing one document. The gallery has no file dialog, so a new
+    /// document gets its name at once; a real app asks for it (Opslaan als).
+    fn write(&mut self, kind: DocKind) -> Task<Msg> {
+        let Some(doc) = self.docs.iter_mut().find(|d| d.kind == kind) else { return Task::none() };
+        let mut request = doc.state.request(SaveKind::Save);
+        if request == Request::NeedsPath {
+            doc.state.set_path();
+            request = doc.state.request(SaveKind::Save);
+        }
+        match request {
+            Request::Start(ticket) => after(SAVE_MILLIS, Msg::Written(kind, ticket, Ok(()))),
+            // A running write of this revision reports back by itself.
+            Request::Queued | Request::NotNeeded | Request::NeedsPath => Task::none(),
+        }
+    }
+
+    fn save_all(&mut self) -> Task<Msg> {
+        let changed: Vec<DocKind> = self.docs.iter().filter(|d| d.state.is_dirty()).map(|d| d.kind).collect();
+        let tasks: Vec<Task<Msg>> = changed.into_iter().map(|kind| self.write(kind)).collect();
+        Task::batch(tasks)
+    }
+
+    /// Close documents or the window through one close plan (issue #10).
+    fn start_close(&mut self, kinds: Vec<DocKind>, target: CloseTarget) -> Task<Msg> {
+        self.menu = None;
+        let documents: Vec<(DocKind, bool)> = kinds.into_iter().filter_map(|k| self.docs.iter().find(|d| d.kind == k).map(|d| (k, d.state.is_dirty()))).collect();
+        self.closing = Some((ClosePlan::new(documents), target));
+        self.advance_close()
+    }
+
+    fn advance_close(&mut self) -> Task<Msg> {
+        let Some((plan, target)) = &self.closing else { return Task::none() };
+        match plan.step() {
+            Step::Ask { .. } => {
+                let opening = self.dialog.is_none();
+                self.dialog = Some(Dialog::Close);
+                if opening {
+                    return openaec_ui::keyboard::navigate(openaec_ui::keyboard::Navigation::Next);
+                }
+            }
+            Step::Wait => self.dialog = None,
+            Step::Close(kinds) => {
+                let target = *target;
+                self.closing = None;
+                self.dialog = None;
+                if target == CloseTarget::Window {
+                    return iced::window::latest().and_then(iced::window::close);
+                }
+                for kind in kinds {
+                    if let Some(i) = self.docs.iter().position(|d| d.kind == kind) {
+                        self.close_doc(i);
+                    }
+                }
+            }
+        }
+        Task::none()
+    }
+
+    /// The person's answer to the close question, for this document or all left.
+    fn close_choose(&mut self, choice: CloseChoice, all: bool) -> Task<Msg> {
+        let Some((plan, _)) = self.closing.as_mut() else { return Task::none() };
+        let to_save = if all { plan.choose_all(choice) } else { plan.choose(choice) };
+        let mut tasks: Vec<Task<Msg>> = to_save.into_iter().map(|kind| self.write(kind)).collect();
+        tasks.push(self.advance_close());
+        Task::batch(tasks)
+    }
+
+    /// A save the close plan waited for is done. A failed one stops the plan:
+    /// nothing closes.
+    fn close_saved(&mut self, kind: DocKind, ok: bool) -> Task<Msg> {
+        let Some((plan, _)) = self.closing.as_mut() else { return Task::none() };
+        if plan.saved(kind, ok) {
+            return self.advance_close();
+        }
+        self.closing = None;
+        self.dialog = None;
+        let name = self.docs.iter().find(|d| d.kind == kind).map_or("Een document".to_string(), |d| d.title.clone());
+        self.toast(Tone::Error, "Niet gesloten", format!("{name} is niet opgeslagen, dus er is niets gesloten."))
+    }
+
+    /// The save status for the status bar: a running or failed write first.
+    fn save_status(&self) -> String {
+        let states: Vec<Status> = self.docs.iter().map(|d| d.state.status()).collect();
+        if let Some(status) = states.iter().find(|s| **s == Status::Saving).or_else(|| states.iter().find(|s| matches!(s, Status::Failed(_)))) {
+            return status.label();
+        }
+        if states.contains(&Status::Unsaved) {
+            return Status::Unsaved.label();
+        }
+        "Gereed".into()
     }
 
     fn toast(&mut self, tone: Tone, title: &str, message: impl Into<String>) -> Task<Msg> {
@@ -1036,7 +1146,8 @@ impl Gallery {
             DocKind::Item(id) => self.item(id).map_or("Post".into(), |i| format!("{} {}", i.code, i.name)),
             DocKind::Blank(n) => format!("Naamloos {n}"),
         };
-        self.docs.push(Doc { kind, title, dirty: false });
+        let state = if matches!(kind, DocKind::Blank(_)) { DocumentState::new_file() } else { DocumentState::opened() };
+        self.docs.push(Doc { kind, title, state });
         self.active = self.docs.len() - 1;
     }
 
@@ -1093,10 +1204,8 @@ impl Gallery {
             }
             Msg::SelectDoc(i) => self.active = i,
             Msg::CloseDoc(i) => {
-                if self.docs.get(i).is_some_and(|d| d.dirty) {
-                    self.dialog = Some(Dialog::CloseDirty(i));
-                } else {
-                    self.close_doc(i);
+                if let Some(kind) = self.docs.get(i).map(|d| d.kind) {
+                    return self.start_close(vec![kind], CloseTarget::Documents);
                 }
             }
             Msg::OpenDoc(kind) => self.open_doc(kind),
@@ -1121,20 +1230,35 @@ impl Gallery {
                 self.blank_count += 1;
                 self.open_doc(DocKind::Blank(self.blank_count));
             }
-            Msg::Save => {
-                for doc in &mut self.docs {
-                    doc.dirty = false;
+            Msg::Save => return self.save_all(),
+            Msg::Written(kind, ticket, result) => {
+                let failed = result.as_ref().err().cloned();
+                let Some(doc) = self.docs.iter_mut().find(|d| d.kind == kind) else { return Task::none() };
+                let next = doc.state.finish(ticket, result);
+                let (title, done, clean) = (doc.title.clone(), !doc.state.is_saving(), !doc.state.is_dirty());
+                let mut tasks = Vec::new();
+                if let Some(next) = next {
+                    tasks.push(after(SAVE_MILLIS, Msg::Written(kind, next, Ok(()))));
                 }
-                return self.toast(Tone::Success, "Opgeslagen", format!("{} is opgeslagen.", PROJECTS[self.project].0));
+                if done && self.closing.as_ref().is_some_and(|(plan, _)| plan.is_waiting_for(kind)) {
+                    tasks.push(self.close_saved(kind, failed.is_none() && clean));
+                } else if let Some(reason) = failed {
+                    tasks.push(self.toast(Tone::Error, "Opslaan mislukt", format!("{title}: {reason}")));
+                } else if done {
+                    tasks.push(self.toast(Tone::Success, "Opgeslagen", format!("{title} is opgeslagen.")));
+                }
+                return Task::batch(tasks);
             }
             Msg::Undo => {
                 if let Some(previous) = self.history.pop() {
+                    self.touch();
                     self.future.push(std::mem::replace(&mut self.items, previous));
                     self.select(self.selected.filter(|id| self.items.iter().any(|i| i.id == *id)));
                 }
             }
             Msg::Redo => {
                 if let Some(next) = self.future.pop() {
+                    self.touch();
                     self.history.push(std::mem::replace(&mut self.items, next));
                     self.select(self.selected.filter(|id| self.items.iter().any(|i| i.id == *id)));
                 }
@@ -1220,8 +1344,10 @@ impl Gallery {
                 let opening = d.is_some() && self.dialog.is_none();
                 self.dialog = d;
                 if d.is_none() {
-                    // Closing the dialog stops any recording on the shortcuts page.
+                    // Closing the dialog stops any recording on the shortcuts page,
+                    // and cancels a close plan: nothing closes.
                     self.shortcuts = sc::Editor::default();
+                    self.closing = None;
                 }
                 // The screen behind is inert, so the first step lands in the dialog.
                 if opening {
@@ -1267,18 +1393,8 @@ impl Gallery {
                 let orientation = if self.landscape { "liggend" } else { "staand" };
                 return self.toast(Tone::Success, "Naar de printer", format!("De begroting wordt {orientation} afgedrukt."));
             }
-            Msg::DiscardAndClose(i) => {
-                self.dialog = None;
-                self.close_doc(i);
-            }
-            Msg::SaveAndClose(i) => {
-                self.dialog = None;
-                for doc in &mut self.docs {
-                    doc.dirty = false;
-                }
-                self.close_doc(i);
-                return self.toast(Tone::Success, "Opgeslagen", "De wijzigingen zijn opgeslagen.");
-            }
+            Msg::CloseChoose(choice) => return self.close_choose(choice, false),
+            Msg::CloseChooseAll(choice) => return self.close_choose(choice, true),
             Msg::EditName(name) => self.edit(|i| i.name = name),
             Msg::EditUnit(unit) => self.edit(|i| i.unit = unit),
             Msg::EditQuantity(value) => {
@@ -1307,6 +1423,7 @@ impl Gallery {
                     self.menu = None;
                 } else if self.dialog.is_some() {
                     self.dialog = None;
+                    self.closing = None;
                 } else if self.backstage {
                     self.backstage = false;
                 } else {
@@ -1317,8 +1434,7 @@ impl Gallery {
                 let next = match self.dialog {
                     Some(Dialog::Export) => Some(Msg::ConfirmExport),
                     Some(Dialog::Print) => Some(Msg::ConfirmPrint),
-                    Some(Dialog::CloseDirty(i)) => Some(Msg::SaveAndClose(i)),
-                    Some(Dialog::Quit) => Some(Msg::SaveAndQuit),
+                    Some(Dialog::Close) => Some(Msg::CloseChoose(CloseChoice::Save)),
                     Some(Dialog::Settings) => Some(Msg::Dialog(None)),
                     None => None,
                 };
@@ -1370,18 +1486,8 @@ impl Gallery {
                 return iced::window::latest().and_then(iced::window::toggle_maximize);
             }
             Msg::CloseWindow => {
-                if self.docs.iter().any(|d| d.dirty) {
-                    self.dialog = Some(Dialog::Quit);
-                } else {
-                    return iced::window::latest().and_then(iced::window::close);
-                }
-            }
-            Msg::QuitNow => return iced::window::latest().and_then(iced::window::close),
-            Msg::SaveAndQuit => {
-                for doc in &mut self.docs {
-                    doc.dirty = false;
-                }
-                return iced::window::latest().and_then(iced::window::close);
+                let all = self.docs.iter().map(|d| d.kind).collect();
+                return self.start_close(all, CloseTarget::Window);
             }
             Msg::DragSplit(side) => {
                 let width = match side {
@@ -1414,23 +1520,13 @@ impl Gallery {
                 self.open_doc(DocKind::Item(id));
             }
             Msg::CloseOthers(keep) => {
-                self.menu = None;
                 let kept = self.docs.get(keep).map(|d| d.kind);
-                let before = self.docs.len();
-                self.docs.retain(|d| Some(d.kind) == kept || d.dirty);
-                self.active = self.docs.iter().position(|d| Some(d.kind) == kept).unwrap_or(0);
-                if self.docs.len() > 1 {
-                    return self.toast(Tone::Info, "Niet alles gesloten", format!("{} tab(s) met wijzigingen blijven open.", self.docs.len() - 1));
-                }
-                let _ = before;
+                let others = self.docs.iter().map(|d| d.kind).filter(|k| Some(*k) != kept).collect();
+                return self.start_close(others, CloseTarget::Documents);
             }
             Msg::CloseAll => {
-                self.menu = None;
-                self.docs.retain(|d| d.dirty);
-                self.active = 0;
-                if !self.docs.is_empty() {
-                    return self.toast(Tone::Info, "Niet alles gesloten", "Tabs met wijzigingen blijven open. Sla eerst op.");
-                }
+                let all = self.docs.iter().map(|d| d.kind).collect();
+                return self.start_close(all, CloseTarget::Documents);
             }
             Msg::CloseActive => {
                 if !self.docs.is_empty() {
@@ -1673,7 +1769,7 @@ impl Gallery {
 
     /// A complete application screen in the 0.4 design.
     fn screen(&self, look: Look) -> Element<'_, Msg> {
-        let dirty = self.docs.iter().any(|d| d.dirty);
+        let dirty = self.docs.iter().any(|d| d.state.is_dirty());
         let title = self.title_bar(look, format!("{}{} · Voorbeeldstudio · OpenAEC", PROJECTS[self.project].0, if dirty { " •" } else { "" }), true);
         if !self.started {
             return column![self.title_bar(look, "Voorbeeldstudio · OpenAEC".into(), false), self.start_screen(look), self.plain_status(look, "Kies een project om te beginnen")].into();
@@ -1705,7 +1801,7 @@ impl Gallery {
             w::status_bar(
                 look,
                 vec![
-                    if dirty { "Niet opgeslagen wijzigingen".into() } else { "Gereed".into() },
+                    self.save_status(),
                     format!("{open} posten"),
                     format!("Raster {}", if self.grid { "aan" } else { "uit" }),
                 ],
@@ -1813,7 +1909,7 @@ impl Gallery {
     }
 
     fn document_tabs(&self, look: Look) -> Element<'_, Msg> {
-        let tabs: Vec<DocumentTab<'_>> = self.docs.iter().map(|d| DocumentTab::new(&d.title, d.dirty)).collect();
+        let tabs: Vec<DocumentTab<'_>> = self.docs.iter().map(|d| DocumentTab::new(&d.title, d.state.is_dirty())).collect();
         w::document_tabs(look, &tabs, self.active, CLOSE, Msg::SelectDoc, Msg::CloseDoc, |i| Msg::Menu(Some(MenuKind::Tab(i))))
     }
 
@@ -2716,28 +2812,13 @@ impl Gallery {
                     false,
                 )
             }
-            Dialog::Quit => w::dialog(
-                look,
-                "Wijzigingen opslaan?",
-                CLOSE,
-                close,
-                w::secondary(look, "Er zijn wijzigingen die nog niet zijn opgeslagen. Wil je ze opslaan voordat je afsluit?").into(),
-                Some(w::button(look, "Niet opslaan", K::Quiet, D::Regular, None, Some(Msg::QuitNow))),
-                vec![w::button(look, "Annuleren", K::Secondary, D::Regular, None, Some(Msg::Dialog(None))), w::button(look, "Opslaan en afsluiten", K::Primary, D::Regular, None, Some(Msg::SaveAndQuit))],
-                false,
-            ),
-            Dialog::CloseDirty(i) => {
-                let name = self.docs.get(i).map_or("dit document", |d| d.title.as_str());
-                w::dialog(
-                    look,
-                    "Wijzigingen opslaan?",
-                    CLOSE,
-                    close,
-                    w::secondary(look, format!("Er zijn wijzigingen in {name} die nog niet zijn opgeslagen.")).into(),
-                    Some(w::button(look, "Niet opslaan", K::Quiet, D::Regular, None, Some(Msg::DiscardAndClose(i)))),
-                    vec![w::button(look, "Annuleren", K::Secondary, D::Regular, None, Some(Msg::Dialog(None))), w::button(look, "Opslaan", K::Primary, D::Regular, None, Some(Msg::SaveAndClose(i)))],
-                    false,
-                )
+            Dialog::Close => {
+                let (id, number, of) = match self.closing.as_ref().map(|(plan, _)| plan.step()) {
+                    Some(Step::Ask { id, number, of }) => (Some(id), number, of),
+                    _ => (None, 1, 1),
+                };
+                let name = id.and_then(|k| self.docs.iter().find(|d| d.kind == k)).map_or("dit document", |d| d.title.as_str());
+                dm::close_dialog(look, name, number, of, CLOSE, Msg::Dialog(None), Msg::CloseChoose(CloseChoice::Discard), Msg::CloseChoose(CloseChoice::Save), Msg::CloseChooseAll(CloseChoice::Save))
             }
         }
     }
@@ -2964,7 +3045,7 @@ impl Gallery {
             section(look, "Tabel", container(w::table(look, &BUDGET_COLUMNS, rows, Some(1), None::<fn(usize) -> Msg>, None::<fn(usize) -> Msg>)).style(move |_| w::panel_style(look)).into()),
             section(look, "Meldingen", notes.into()),
             section(look, "Tekenset", glyphs.into()),
-            section(look, "Dialoog", self.dialog_card(look, Dialog::CloseDirty(0))),
+            section(look, "Dialoog", dm::close_dialog(look, "Begroting", 1, 2, CLOSE, Msg::Noop, Msg::Noop, Msg::Noop, Msg::Noop)),
             section(
                 look,
                 "Lege staat",
@@ -3519,7 +3600,7 @@ mod tests {
                 let _ = g.update(Msg::OpenDoc(kind));
                 let _ = g.view();
             }
-            for d in [Dialog::Settings, Dialog::Export, Dialog::Print, Dialog::CloseDirty(0)] {
+            for d in [Dialog::Settings, Dialog::Export, Dialog::Print, Dialog::Close] {
                 let _ = g.update(Msg::Dialog(Some(d)));
                 let _ = g.view();
             }
@@ -3680,25 +3761,90 @@ mod tests {
         let _ = g.update(Msg::SelectRow(1));
         let _ = g.update(Msg::EditPrice("250,00".into()));
         assert_eq!(g.item(1).unwrap().price, 250.0);
-        assert!(g.docs[0].dirty);
+        assert!(g.docs[0].state.is_dirty());
         let _ = g.update(Msg::Undo);
         assert_eq!(g.item(1).unwrap().price, 240.0);
         let _ = g.update(Msg::Redo);
         assert_eq!(g.item(1).unwrap().price, 250.0);
         let _ = g.update(Msg::Save);
-        assert!(!g.docs.iter().any(|d| d.dirty));
+        assert_eq!(g.save_status(), "Opslaan…");
+        finish_writes(&mut g);
+        assert!(!g.docs.iter().any(|d| d.state.is_dirty()));
+        assert_eq!(g.save_status(), "Gereed");
+    }
+
+    /// Delivers every running write as the timer would, until none is left.
+    fn finish_writes(g: &mut Gallery) {
+        while let Some((kind, ticket)) = g.docs.iter().find_map(|d| d.state.writing().map(|t| (d.kind, t))) {
+            let _ = g.update(Msg::Written(kind, ticket, Ok(())));
+        }
+    }
+
+    fn edit_posts(g: &mut Gallery, name: &str) {
+        let _ = g.update(Msg::SelectRow(2));
+        let _ = g.update(Msg::EditName(name.into()));
     }
 
     #[test]
     fn closing_a_dirty_tab_asks_first() {
         let mut g = Gallery::default();
-        let _ = g.update(Msg::SelectRow(2));
-        let _ = g.update(Msg::EditName("Poeren groot".into()));
+        edit_posts(&mut g, "Poeren groot");
         let _ = g.update(Msg::CloseDoc(0));
-        assert_eq!(g.dialog, Some(Dialog::CloseDirty(0)));
-        let _ = g.update(Msg::DiscardAndClose(0));
+        assert_eq!(g.dialog, Some(Dialog::Close));
+        let _ = g.view();
+        let _ = g.update(Msg::CloseChoose(CloseChoice::Discard));
         assert_eq!(g.docs.len(), 2);
+        assert!(g.dialog.is_none() && g.closing.is_none());
+    }
+
+    #[test]
+    fn an_edit_while_saving_keeps_the_document_unsaved() {
+        // UI-016: only the revision that was written counts as saved.
+        let mut g = Gallery::default();
+        edit_posts(&mut g, "Poeren groot");
+        let _ = g.update(Msg::Save);
+        let ticket = g.docs[0].state.writing().expect("a write runs");
+        edit_posts(&mut g, "Poeren groter");
+        let _ = g.update(Msg::Written(DocKind::Budget, ticket, Ok(())));
+        assert!(g.docs[0].state.is_dirty());
+        assert_eq!(g.docs[0].state.status(), Status::Unsaved);
+        finish_writes(&mut g);
+        assert_eq!(g.save_status(), "Niet opgeslagen wijzigingen");
+    }
+
+    #[test]
+    fn closing_the_window_asks_about_every_changed_document() {
+        // UI-017: editing a post changes Begroting and Hoeveelheden; both are asked about.
+        let mut g = Gallery::default();
+        edit_posts(&mut g, "Poeren groot");
+        let _ = g.update(Msg::CloseWindow);
+        let step = |g: &Gallery| g.closing.as_ref().map(|(plan, _)| plan.step());
+        assert_eq!(step(&g), Some(Step::Ask { id: DocKind::Budget, number: 1, of: 2 }));
+        let _ = g.update(Msg::CloseChoose(CloseChoice::Save));
+        assert_eq!(step(&g), Some(Step::Ask { id: DocKind::Quantities, number: 2, of: 2 }));
+        let _ = g.update(Msg::CloseChoose(CloseChoice::Discard));
+        assert_eq!(step(&g), Some(Step::Wait), "the window waits for the save");
         assert!(g.dialog.is_none());
+        finish_writes(&mut g);
+        assert!(g.closing.is_none(), "every choice carried out: the window closes");
+        assert!(!g.docs[0].state.is_dirty());
+    }
+
+    #[test]
+    fn a_failed_save_while_closing_closes_nothing() {
+        let mut g = Gallery::default();
+        edit_posts(&mut g, "Poeren groot");
+        let _ = g.update(Msg::CloseAll);
+        let _ = g.update(Msg::CloseChooseAll(CloseChoice::Save));
+        let ticket = g.docs[0].state.writing().expect("a write runs");
+        let _ = g.update(Msg::Written(DocKind::Budget, ticket, Err("De schijf is vol.".into())));
+        assert!(g.closing.is_none());
+        assert_eq!(g.docs.len(), 3, "nothing closed");
+        assert!(g.docs[0].state.is_dirty());
+        // Cancelling the question also closes nothing.
+        let _ = g.update(Msg::CloseDoc(1));
+        let _ = g.update(Msg::Escape);
+        assert!(g.closing.is_none() && g.docs.len() == 3);
     }
 
     #[test]

@@ -9,6 +9,7 @@
 //! prototype theme in [`crate::theme`].
 pub mod chrome;
 pub mod command;
+pub mod document;
 pub mod focus;
 pub mod number;
 pub mod shortcuts;

@@ -261,6 +261,13 @@ Elke opdracht staat één keer beschreven als `design::command::Command`, met na
 
 Getalvelden lezen in elke app op dezelfde, strikte manier (`design::number`, issue #8): de hele tekst moet het getal zijn, een punt scheidt alleen duizendtallen, te veel decimalen worden geweigerd in plaats van afgerond, en het veld zegt waarom iets geen getal is. Een half getypte invoer blijft staan maar wordt niet opgeslagen.
 
+Opslaan en sluiten volgen in elke app hetzelfde contract (`design::document`, issue #10):
+- **Revisie per document.** Elk document houdt zijn revisie bij en de revisie die in het bestand staat. "Opgeslagen" verschijnt alleen als de getoonde revisie echt is weggeschreven. Na een wijziging tijdens het opslaan blijft het document dus niet opgeslagen; in Calc werd het toen onterecht als opgeslagen gemarkeerd.
+- **Eén opslag tegelijk.** Per document loopt er maar één opslag tegelijk, zodat de opslagen in volgorde op schijf komen.
+- **Sluitplan.** Sluiten, ook van het venster, gaat via een `ClosePlan`. Het vraagt per gewijzigd document Opslaan, Niet opslaan of Annuleren, met "document 1 van 2" en Alles opslaan. Er sluit pas iets als elke keuze is uitgevoerd. Een mislukte of geannuleerde opslag sluit niets.
+- **Drie soorten opslaan.** Opslaan, automatisch opslaan en herstelkopie zijn drie aparte beloften. Automatisch opslaan schrijft alleen een document met een bestandsnaam; een nieuw document krijgt een herstelkopie. Die komt in `%LOCALAPPDATA%\OpenAEC\<app>\herstel`, overschrijft het hoofdbestand nooit en telt niet als opgeslagen.
+- **Galerij.** De galerij gebruikt dit contract voor tabs, Alles sluiten, Andere sluiten en het venster, met een gesimuleerde schrijftijd zodat "Opslaan…" zichtbaar is.
+
 De installer in de galerij volgt voorstel E uit [`design/ontwerp-0.4/installer-voorstellen.html`](design/ontwerp-0.4/installer-voorstellen.html), gemaakt door [`scripts/build_installer_proposals.py`](scripts/build_installer_proposals.py): alleen het bovenste vlak is donker, daaronder volgt alles het thema, met desktop-apps en webtools als twee secties met de tegels van open-aec.com. De screenshots en de catalogus komen uit de installer op commit `8b39bae`; [`scripts/crop_installer_previews.py`](scripts/crop_installer_previews.py) snijdt ze bij met afgeronde hoeken en een vervaging.
 
 ## Nachtelijke B2-uitbreiding
