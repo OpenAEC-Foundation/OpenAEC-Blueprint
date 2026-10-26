@@ -61,6 +61,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
+- **OpenPGP-sleutel van de organisatie, 2026-10-26**: Nino maakt de sleutel voor Linux-releases met het **voorlopige** adres `nino@open-aec.com`; de gebruiker wil dit later aanpassen. Aanpassen kan zonder nieuwe sleutel (nieuwe UID toevoegen met de reservekopie van de hoofdsleutel, oude intrekken); vingerafdruk en GitHub-geheimen blijven gelijk.
+
 - **Release v2026.44.0 is een niet-ondertekende pre-release, 2026-10-26**: alle tests slaagden en alle pakketten zijn gebouwd, maar in deze repository waren alle ondertekeningsgeheimen leeg (Azure, Apple, OpenPGP). Een organisatiebeheerder moet OpenAEC-Blueprint toegang geven tot de organisatiegeheimen; de lijst staat in een reactie op #37. Daarna een ondertekende release `v2026.44.1` of later taggen.
 
 - **Hernoemd naar OpenAEC-Blueprint, 2026-10-26**: de GitHub-repo heet nu `OpenAEC-Foundation/OpenAEC-Blueprint`; oude links worden doorgestuurd. Op deze pc wijst `origin` al naar het nieuwe adres; op andere pc's eenmalig `git remote set-url origin https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint.git` of de repository opnieuw toevoegen in GitHub Desktop. De lokale map heet nog `OpenAEC-Style-Repo`. Nog toe te voegen volgens de nieuwe opzet: standaardapplicatie Rust en Tauri, README-sjabloon, versieschema, afspraken MCP en IFCX, en het overkoepelende ecosysteemplan met planning. `conventions` blijft een eigen repo omdat andere repo's de workflow daaruit aanroepen. Teksten "Style Repo" in README en documentatie en de binary `style_repo` zijn nog niet omgedoopt.

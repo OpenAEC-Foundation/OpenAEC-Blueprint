@@ -354,6 +354,18 @@ jobs:
           set -euo pipefail
           app="build/OpenAEC Blueprint.app"
           dmg="build/openaec-blueprint_${NUMBER}_macos-universal.dmg"
+          # hdiutil guesses the size of the image from the folder and on the
+          # GitHub runners that guess is sometimes too small ("No space left on
+          # device"); give it the size of the folder plus room, and retry.
+          make_dmg() {
+            local mb=$(( $(du -sm "$1" | cut -f1) * 2 + 64 ))
+            for attempt in 1 2 3; do
+              rm -f "$2"
+              if hdiutil create -volname "OpenAEC Blueprint" -srcfolder "$1" -size "${mb}m" -fs HFS+ -ov -format UDZO "$2"; then return; fi
+              echo "hdiutil failed (attempt $attempt), trying again"; sleep 10
+            done
+            return 1
+          }
           notarize() {
             for attempt in 1 2 3; do
               if xcrun notarytool submit "$1" --key "$NOTARY_KEY" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER" --wait --output-format json > "$RUNNER_TEMP/notary.json"; then
@@ -371,7 +383,7 @@ jobs:
             (cd build && ditto -c -k --keepParent libopenaec_blueprint.dylib "$RUNNER_TEMP/lib.zip")
             notarize "$RUNNER_TEMP/lib.zip"
             stage=$(mktemp -d); cp -R "$app" "$stage/"; ln -s /Applications "$stage/Applications"
-            hdiutil create -volname "OpenAEC Blueprint" -srcfolder "$stage" -ov -format UDZO "$dmg"
+            make_dmg "$stage" "$dmg"
             codesign --force --timestamp --sign "$SIGN_ID" --keychain "$SIGN_KC" "$dmg"
             notarize "$dmg"
             xcrun stapler staple "$dmg"
@@ -381,7 +393,7 @@ jobs:
             codesign --force --sign - build/libopenaec_blueprint.dylib
             codesign --force --deep --sign - "$app"
             stage=$(mktemp -d); cp -R "$app" "$stage/"; ln -s /Applications "$stage/Applications"
-            hdiutil create -volname "OpenAEC Blueprint" -srcfolder "$stage" -ov -format UDZO "$dmg"
+            make_dmg "$stage" "$dmg"
             echo "signed=false" >> "$GITHUB_OUTPUT"
             echo "### macOS: signed ad hoc (no Developer ID secrets)" >> "$GITHUB_STEP_SUMMARY"
           fi
