@@ -1,0 +1,54 @@
+# Publishes the online standard application on GitHub Pages (issue #36):
+# https://openaec-foundation.github.io/OpenAEC-Blueprint/
+#
+# It runs after every successful release, from the released commit, so the
+# version in the title bar is the release version. Run it by hand to publish
+# the branch or tag you choose. release.yml is not changed by this workflow.
+name: Pages
+
+on:
+  workflow_run:
+    workflows: ["Release"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: style-book/project-templates/Tauri+React/package-lock.json
+      - name: Install the template's packages
+        working-directory: style-book/project-templates/Tauri+React
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Build the online standard application
+        run: node web/online/build.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: target/online
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

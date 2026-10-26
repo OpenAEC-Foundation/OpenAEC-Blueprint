@@ -4,7 +4,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
-- **Claude** – dagplan Blueprint: #36 (online standaardapplicatie met 3D-weergave, na de merge van PR #32) – src/bin/, crates/openaec-ui/src/design/, web/ – sinds 2026-10-26.
+- **Claude** – #36 online standaardapplicatie: wacht op commit en het aanzetten van GitHub Pages – web/online/, .github/workflows/pages.yml – sinds 2026-10-26.
 
 
 
@@ -102,6 +102,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
   Volledige requirement-audit: harmonization/icon-set-b2/completion-audit.json (ook outputs/bewijs/afrondingscontrole.json). Alle bronhashes, generatorhashes, 945 bronbindingen, 1.890 bestanden, 632 behouden masters, 108 contactplaten, 1.904 pakketitems en HEAD bd8b453ccd1bccce206913741b078ba6efb6ae3a opnieuw geverifieerd. Werkclaim verwijderd. EOL-only layers/shapes/layer-comparison uitsluitend bij genormaliseerde gelijkheid teruggezet. Voor nieuwe feedback opnieuw claimen en de relevante ontwerpen wijzigen; geen commit/push zonder gebruikersopdracht.
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
+
+- Tauri-sjabloon in `style-book/project-templates/Tauri+React` (Claude, 2026-10-26, #36): de 3D-weergave krijgt geen hoogte (`.main-view` centreert), en naam en versie staan vast als "Open Template" 0.1.0 in `common.json`, `settings.json`, `backstage.json`, `Backstage.tsx` en `SettingsDialog.tsx`. Online opgevangen in `web/online/`; hoort in de sjabloon zelf te worden opgelost door wie het Style Book beheert.
 
 - Open werk staat sinds 2026-10-23 als issues op GitHub: [#2 tot en met #21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues?q=is%3Aissue+is%3Aopen). Werk een punt daar af en sluit het issue met een verwijzing naar de commit.
 
@@ -237,6 +239,12 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-26 **Claude**: #36, online standaardapplicatie: `web/online/build.mjs` bouwt de Tauri-sjabloon uit `style-book/` ongewijzigd als webapp (Tauri-functies naar browservervangers in `tauri-browser.ts`, naam OpenAEC Blueprint en versie uit de hoofd-`Cargo.toml`, `online.css` geeft de 3D-weergave hoogte). Getest in het browserpaneel: schil, 3D draaien en zoomen, vijf thema's, thema blijft na herladen. Nieuwe workflow `.github/workflows/pages.yml` publiceert na elke geslaagde release; `release.yml` niet aangeraakt. npm-pakketten van de sjabloon met toestemming gedownload (122, 180 MB, in `node_modules`, genegeerd door git).
+
+- 2026-10-26 **Claude**: #37, OpenPGP-sleutel voor Linux-releases gemaakt: OpenAEC Foundation Releases (ed25519, hoofdsleutel alleen certificeren, ondertekeningssubsleutel, geldig tot 2028-10-25), vingerafdruk `13F6D414ADEE4ED4CD09AC60601D86C93C504D29`. Organisatiegeheimen `OPENAEC_GPG_PRIVATE_KEY` (alleen subsleutel) en `OPENAEC_GPG_PASSPHRASE` en variabele `OPENAEC_GPG_FINGERPRINT`, met toegang voor OpenAEC-Blueprint en open-pointcloud-studio. Publieke sleutel op #37. Reservekopie buiten de repository bij de gebruiker; tijdelijke bestanden verwijderd.
+
+- 2026-10-26 **Claude**: #37, ondertekeningsgeheimen: OpenAEC-Blueprint heeft op verzoek van de gebruiker repository-toegang gekregen tot de 6 `AZURE_*`- en 6 `APPLE_*`-organisatiegeheimen (alleen deze repository toegevoegd, waarden niet bekeken). `OPENAEC_GPG_PRIVATE_KEY`, `OPENAEC_GPG_PASSPHRASE` en de variabele `OPENAEC_GPG_FINGERPRINT` bestaan nergens in de organisatie; Linux blijft ongetekend. Het `gh`-token heeft daarvoor de scope `admin:org` gekregen.
+
 - 2026-10-26 **Claude**: release `v2026.44.1` gepubliceerd als volledige release, volledig ondertekend: Windows Authenticode (Impertio Studio B.V.), macOS Developer ID + notarisatie, Linux OpenPGP (sleutel van Nino) plus build-attestaties. Onderweg: Cargo.lock vergeten bij het ophogen (tag opnieuw gezet) en hdiutil-ruimtefout op macOS opgelost met een vaste grootte en herhaling. `v2026.44.0` blijft als niet-ondertekende pre-release staan.
 
 - 2026-10-26 **Claude**: issues #16 en #13 af. #16: de hub-app staat als derde soort app in `design/ontwerp-0.4/05-layouts.md` (banden, updates via de installer, besluiten 4 en 5). #13: nieuw `openaec_ui::design::site` met de websitestijl van open-aec.com (tegels, glas, donkere bovenband, knoppen in drie soorten, ronde iconknop met tooltip bij focus, icoontegel, sectiekop, chip, filterpil), met toegankelijke namen; de galerij-installer gebruikt die nu in plaats van eigen hulpjes. Installer-renders pixelgelijk aan de gecommitte versies. Alle controles uit AGENTS.md groen, `cargo test --workspace` groen, `cargo package -p openaec-ui` geslaagd.

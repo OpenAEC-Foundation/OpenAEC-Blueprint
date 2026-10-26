@@ -2,6 +2,8 @@
 
 De blauwdruk voor elke OpenAEC-tool. Wie een tool bouwt of bijwerkt, begint hier: de standaardapplicatie, de gedeelde vormgeving en iconen, het versieschema, een voorbeeld-README, de afspraken voor onder meer MCP en IFCX, en het plan voor het hele ecosysteem.
 
+**Online bekijken:** de lege standaardapplicatie met 3D-weergave staat op <https://openaec-foundation.github.io/OpenAEC-Blueprint/> ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)).
+
 ![De standaardapplicatie in Rust, thema Licht](design/ontwerp-0.4/native/scherm-light.png)
 
 *De standaardapplicatie in Rust: lint met Bestand-menu, structuurboom, documenttabs, tabel, eigenschappen en statusbalk. De inhoud is voorbeelddata.*
@@ -12,7 +14,8 @@ Elke OpenAEC-tool heeft dezelfde schil: titelbalk, lint of werkstroom, documentt
 
 | Uitvoering | Staat nu | Starten |
 | --- | --- | --- |
-| **Tauri** (Tauri 2 + React + TypeScript) | In het [Style Book](https://github.com/OpenAEC-Foundation/OpenAEC-style-book/tree/main/project-templates/Tauri%2BReact); PR #32 haalt het hierheen | zie de README van de template |
+| **Tauri** (Tauri 2 + React + TypeScript) | In [`style-book/project-templates/Tauri+React`](style-book/project-templates/Tauri+React/) | zie de README van de template |
+| **Online** (webbuild van de Tauri-applicatie) | [`web/online/`](web/online/), gepubliceerd op GitHub Pages | [openaec-foundation.github.io/OpenAEC-Blueprint](https://openaec-foundation.github.io/OpenAEC-Blueprint/), lokaal `node web/online/build.mjs --serve` |
 | **Rust** (iced, bibliotheek 0.4) | In deze repository: de lege standaardapplicatie `blueprint`, en de galerij `ui04` met voorbeeldschermen | `cargo run --bin blueprint` en `cargo run --release --features gpu --bin ui04` |
 
 **De standaardapplicatie in Rust** ([`src/bin/blueprint.rs`](src/bin/blueprint.rs), #37 stap 4) is een lege app waarop elke Rust-tool wordt gebouwd. Een tool neemt dit bestand over en zet zijn eigen werk in de werkruimte en zijn opdrachten in `commands()`.
@@ -22,7 +25,7 @@ Elke OpenAEC-tool heeft dezelfde schil: titelbalk, lint of werkstroom, documentt
 
 De galerij `ui04` toont een lint-app (startscherm, Bestand-scherm, instellingen) en een werkstroom-app (zijbalk of stappen). Andere weergaven: `ui04 -- installer`, `ui04 -- iconen` en `ui04 -- letterproef`.
 
-**Volgorde ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)):** eerst de Tauri-applicatie helemaal goed, daarna dezelfde lege applicatie in Rust. Elk krijgt een ondertekende release. Een online versie om in de browser te bekijken, met een 3D-weergave, staat in [#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36).
+**Volgorde ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)):** eerst de Tauri-applicatie helemaal goed, daarna dezelfde lege applicatie in Rust. Elk krijgt een ondertekende release. De online versie ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)) wordt na elke release opnieuw gepubliceerd, zie [`web/online/`](web/online/README.md).
 
 ## Wat hier staat
 
