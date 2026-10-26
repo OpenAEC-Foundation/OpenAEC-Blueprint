@@ -1,0 +1,36 @@
+shared = "viewer3d"
+format = 1
+
+[[tab]]
+id = "viewer3d"
+label = "openaec.ribbon.tab.viewer3d"
+
+  [[tab.group]]
+  id = "file"
+  label = "openaec.ribbon.group.file"
+  items = [
+    { type = "large", command = "view.load-model", icon = "view/load-model", label = "openaec.command.view.load-model" },
+  ]
+
+  [[tab.group]]
+  id = "navigation"
+  label = "openaec.ribbon.group.navigation"
+  items = [
+    { type = "toggle", command = "view.orbit", icon = "view/orbit", label = "openaec.command.view.orbit" },
+    { type = "large", command = "view.fit-all", icon = "view/fit-all", label = "openaec.command.view.fit-all" },
+  ]
+
+  [[tab.group]]
+  id = "analysis"
+  label = "openaec.ribbon.group.analysis"
+  items = [
+    { type = "toggle", command = "view.section", icon = "view/section", label = "openaec.command.view.section" },
+    { type = "toggle", command = "view.measure", icon = "view/measure", label = "openaec.command.view.measure" },
+  ]
+
+  [[tab.group]]
+  id = "display"
+  label = "openaec.ribbon.group.display"
+  items = [
+    { type = "toggle", command = "view.wireframe", icon = "view/wireframe", label = "openaec.command.view.wireframe" },
+  ]

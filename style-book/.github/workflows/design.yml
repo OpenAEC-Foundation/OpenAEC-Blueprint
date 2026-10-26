@@ -1,0 +1,40 @@
+name: design
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - name: Typecontrole packages
+        run: |
+          npx -w @openaec/icons tsc -p .
+          npx -w @openaec/i18n tsc -p .
+      - name: Node-tests
+        run: npm test
+      - name: Gegenereerde bestanden actueel
+        run: npm run check
+      - name: Rust-tests
+        run: cargo test --workspace
+      - name: Gedeelde ribbon-tabs
+        run: cargo run -q -p openaec-ribbon -- check-shared design/ribbons
+      - name: Frappe-app
+        run: python -m unittest discover -s frappe/openaec_theme/tests -v
+      - name: Versies gelijk
+        run: node -e "import('./generators/version/set-version.mjs').then(m=>{const v=new Set(m.readVersions(process.cwd()).values());if(v.size!==1){console.error([...v]);process.exit(1)}})"

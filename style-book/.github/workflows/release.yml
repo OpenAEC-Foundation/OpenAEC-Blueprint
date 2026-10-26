@@ -1,0 +1,67 @@
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - name: Tag en versies komen overeen
+        run: |
+          node -e "import('./generators/version/set-version.mjs').then(m=>{const want=process.env.GITHUB_REF_NAME.replace(/^v/,'');const v=[...m.readVersions(process.cwd())];const bad=v.filter(([,x])=>x!==want);if(bad.length){console.error('versie wijkt af van tag',bad);process.exit(1)}})"
+      - run: npm test
+      - run: npm run check
+      - run: cargo test --workspace
+      - run: python -m unittest discover -s frappe/openaec_theme/tests
+      - name: Logo-sets inpakken
+        run: |
+          npm run generate
+          mkdir -p logos
+          cd logos && zip -r "../openaec-logos-${GITHUB_REF_NAME}.zip" . && cd ..
+      - name: npm-packages publiceren
+        run: node generators/release/publish-npm.mjs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Frappe-thema naar eigen repo
+        env:
+          THEME_REPO_TOKEN: ${{ secrets.THEME_REPO_TOKEN }}
+        run: |
+          git config user.name "openaec-release"
+          git config user.email "release@users.noreply.github.com"
+          git subtree split --prefix frappe/openaec_theme -b theme-release
+          THEME_URL="https://x-access-token:${THEME_REPO_TOKEN}@github.com/OpenAEC-Foundation/openaec_theme.git"
+          git push "$THEME_URL" theme-release:main
+          if [ -n "$(git ls-remote --tags "$THEME_URL" "refs/tags/${GITHUB_REF_NAME}")" ]; then
+            echo "tag ${GITHUB_REF_NAME} bestaat al in het thema-repo; overgeslagen"
+          else
+            git push "$THEME_URL" "theme-release:refs/tags/${GITHUB_REF_NAME}"
+          fi
+      - name: GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            echo "release $GITHUB_REF_NAME bestaat al; zip wordt bijgewerkt"
+            gh release upload "$GITHUB_REF_NAME" "openaec-logos-${GITHUB_REF_NAME}.zip" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" "openaec-logos-${GITHUB_REF_NAME}.zip" --generate-notes
+          fi
