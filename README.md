@@ -145,7 +145,7 @@ Dit is de broninventaris voor de nieuwe iconenset, met expliciete voorlopige fun
 
 Gericht vernieuwen en controleren: `python scripts/collect_app_icon_sources.py`, daarna `python scripts/build_function_icon_catalog.py` en `python scripts/check_function_icon_catalog.py`. De genegeerde broncache staat in `harmonization/sources/function-icon-audit/`; de [validatie-uitkomst](harmonization/function-icon-validation.json) controleert bronhashes, verwijzingen, groepsdekking, previews en de gelijkheid van HTML/JSON/CSV.
 
-De map is een zelfstandige Git-repository op branch `main`, gekoppeld aan de private [OpenAEC-Style-Repo](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo) als `origin`. De bestaande geschiedenis staat op GitHub. Voeg `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie` via **File → Add Local Repository** toe aan GitHub Desktop; nieuwe commits kunnen daarna met **Push origin** worden verstuurd.
+De map is een zelfstandige Git-repository op branch `main`, gekoppeld aan de private [OpenAEC-Blueprint](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint) als `origin`. De bestaande geschiedenis staat op GitHub. Voeg `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie` via **File → Add Local Repository** toe aan GitHub Desktop; nieuwe commits kunnen daarna met **Push origin** worden verstuurd.
 
 De app laat componenten, vijf thema's, de gedeelde layout, 19 toolinterfaces, twee aanvullende broninterfaces, 577 onderzochte UI-iconbestanden en 109 getekende FEM/BIM-iconconcepten zien. De broniconen en domeinconcepten zijn bedoeld voor beoordeling; de 35 iconen in [`crates/openaec-ui/assets/icons/`](crates/openaec-ui/assets/icons/) vormen de huidige semantische kern van de crate. De gelijkgehouden kopie in `assets/icons/` bedient de HTML-review. Thema, taal, schaal en paneelinstellingen worden opgeslagen in de gebruikersconfiguratie.
 
@@ -313,7 +313,7 @@ Reports krijgt 46 ontwerpen en BIM Validator 14. Tabelblok invoegen, rapportvali
 ## Via GitHub Desktop pushen
 
 1. Kies **File → Add local repository** en selecteer `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.
-2. Meld je in GitHub Desktop aan met een account dat toegang heeft tot de private [OpenAEC-Style-Repo](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo).
+2. Meld je in GitHub Desktop aan met een account dat toegang heeft tot de private [OpenAEC-Blueprint](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint).
 3. Commit je wijzigingen en gebruik **Push origin**. De lokale `main` volgt al `origin/main`.
 
 De remote staat voorlopig op privé. Pointcloud gebruikt een gelijkgehouden lokale crate-kopie zodat een publieke checkout zonder toegang tot deze private repository kan bouwen. `python3 scripts/check_portable_ui.py` controleert de inhoudelijke gelijkheid. De bestaande repository `OpenAEC-style-book` is niet gewijzigd.

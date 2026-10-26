@@ -1,6 +1,6 @@
 # Letterproef tekstfont (issue #29)
 
-Een letterproef in de echte Rust-weergave. Het team kan hiermee vóór het besluit in [#19](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/19) zien hoe de kandidaat-tekstfonts in iced uitpakken. Een browser rendert anders, daarom staat de proef in de galerij.
+Een letterproef in de echte Rust-weergave. Het team kan hiermee vóór het besluit in [#19](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/19) zien hoe de kandidaat-tekstfonts in iced uitpakken. Een browser rendert anders, daarom staat de proef in de galerij.
 
 ## Openen
 

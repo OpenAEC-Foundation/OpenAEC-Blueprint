@@ -91,13 +91,13 @@ Gestart op 2026-10-16. Werkplan en voortgang staan in [`design/ontwerp-0.4/READM
   - **Klaar (2026-10-22):** de eigen titelbalk met werkende vensterknoppen (slepen, dubbelklikken, minimaliseren, maximaliseren, sluiten met de vraag om op te slaan), versleepbare panelen en menu's (rechtermuisknop op tabel, boom en documenttabs, en het menu in de titelbalk).
   - **Klaar (2026-10-22):** de iconen van Codex als vaste set in de crate [`crates/openaec-icons`](crates/openaec-icons/): 945 iconen in 16 en 24 px, per app een feature, zodat een app alleen haar eigen iconen meeneemt. De galerij toont ze allemaal: `cargo run --release --features gpu --bin ui04 -- iconen`. Gemaakt door [`scripts/generate_icon_crate.py`](scripts/generate_icon_crate.py) uit de verliesvrije export.
   - **Klaar (2026-10-23):** overgestapt van iced 0.13.1 naar iced 0.14.0 (`openaec-ui`, galerij en Style Repo). Schermlezerproef op Windows: iced 0.14 en de COSMIC-fork geven nog niets door, plushie-iced het meeste maar zonder focusmeldingen. Advies: op 0.14 blijven, nu de toetsenbordroute en toegankelijke namen in de bibliotheek bouwen, en de proef herhalen bij elke iced-release. Zie [`design/schermlezerproef/`](design/schermlezerproef/README.md).
-  - **Klaar (2026-10-23):** toetsenbordroute in `openaec_ui::design` (issue [#2](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/2)): Tab en Shift+Tab langs alle bedienbare onderdelen, Enter en spatie om te activeren, focusrand alleen bij toetsenbordgebruik, een dialoog die de focus vasthoudt en teruggeeft, en pijltjestoetsen in menu's, tabellen, tabs, lint en zijbalk.
-  - **Klaar (2026-10-23):** één opdrachtmodel, `design::command` (issue [#9](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/9)): lint, menu's, titelbalk en sneltoetsen lezen uit één lijst. Dit is de basis voor zelf ingestelde sneltoetsen (#22).
-  - **Klaar (2026-10-23):** sneltoetsen zelf instellen (issue [#22](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/22)): pagina Sneltoetsen in de instellingen, per app bewaard.
-  - **Klaar (2026-10-23):** strikte getalinvoer, `design::number` (issue [#8](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/8)), gebruikt in de galerij.
-  - **Klaar (2026-10-26):** opslaan- en sluitcontract, `design::document` (issue [#10](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/10)), gebruikt in de galerij.
-  - **Klaar (2026-10-26):** ongedaan maken per taak en per document, `design::history` (issue [#34](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/34)), gebruikt in de galerij.
-  - **Klaar (2026-10-26):** toegankelijke naam en rol voor elk onderdeel, `design::a11y` (issue [#3](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/3)); iced geeft ze nog niet door aan een schermlezer.
+  - **Klaar (2026-10-23):** toetsenbordroute in `openaec_ui::design` (issue [#2](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/2)): Tab en Shift+Tab langs alle bedienbare onderdelen, Enter en spatie om te activeren, focusrand alleen bij toetsenbordgebruik, een dialoog die de focus vasthoudt en teruggeeft, en pijltjestoetsen in menu's, tabellen, tabs, lint en zijbalk.
+  - **Klaar (2026-10-23):** één opdrachtmodel, `design::command` (issue [#9](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/9)): lint, menu's, titelbalk en sneltoetsen lezen uit één lijst. Dit is de basis voor zelf ingestelde sneltoetsen (#22).
+  - **Klaar (2026-10-23):** sneltoetsen zelf instellen (issue [#22](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/22)): pagina Sneltoetsen in de instellingen, per app bewaard.
+  - **Klaar (2026-10-23):** strikte getalinvoer, `design::number` (issue [#8](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/8)), gebruikt in de galerij.
+  - **Klaar (2026-10-26):** opslaan- en sluitcontract, `design::document` (issue [#10](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/10)), gebruikt in de galerij.
+  - **Klaar (2026-10-26):** ongedaan maken per taak en per document, `design::history` (issue [#34](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/34)), gebruikt in de galerij.
+  - **Klaar (2026-10-26):** toegankelijke naam en rol voor elk onderdeel, `design::a11y` (issue [#3](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/3)); iced geeft ze nog niet door aan een schermlezer.
   - Nog te doen: de eerste app die de bibliotheek echt gebruikt (fase 5).
 - **Webpakket.** CSS en iconen die in elk webframework werken, met componenten voor React. Dit bouwt voort op het Style Book of vervangt het, afhankelijk van fase 3.
   - **Klaar (2026-10-22):** [`web/openaec-components.css`](web/openaec-components.css) met de componenten van 0.4 en de websitestijl van de installer, voor webtools zoals BIM Validator. Overzicht in vijf thema's: [`web/componenten.html`](web/componenten.html).
@@ -147,8 +147,8 @@ Op 2026-10-16 door de gebruiker, die over het ontwerp beslist.
 
 ## Nog open
 
-1. **Licentie van de iconen van Codex.** Onder LGPL of een aparte iconenlicentie; de gebruiker controleert eerst of ze nieuw getekend zijn. Issue [#15](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/15).
-2. **Field op tablet of telefoon.** Field gaat naar de Rust-UI, die voor desktop is. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket. Issue [#20](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/20).
-3. **Eigenaarschap.** Wie is eigenaar van het ontwerp, van elke uitvoering en van elke app? Issue [#21](https://github.com/OpenAEC-Foundation/OpenAEC-Style-Repo/issues/21).
+1. **Licentie van de iconen van Codex.** Onder LGPL of een aparte iconenlicentie; de gebruiker controleert eerst of ze nieuw getekend zijn. Issue [#15](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/15).
+2. **Field op tablet of telefoon.** Field gaat naar de Rust-UI, die voor desktop is. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket. Issue [#20](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/20).
+3. **Eigenaarschap.** Wie is eigenaar van het ontwerp, van elke uitvoering en van elke app? Issue [#21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/21).
 
 Alle open werk staat als issue op GitHub, ook de vervolgstappen van fase 4 en 5.
