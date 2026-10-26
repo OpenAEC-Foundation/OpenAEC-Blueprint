@@ -15,6 +15,7 @@ pub mod focus;
 pub mod history;
 pub mod number;
 pub mod shortcuts;
+pub mod site;
 pub mod tiles;
 pub mod tokens;
 pub mod update;

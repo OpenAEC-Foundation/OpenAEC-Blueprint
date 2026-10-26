@@ -10,6 +10,7 @@
 use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcons};
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::document::{self as dm, Choice as CloseChoice, ClosePlan, DocumentState, Request, SaveKind, SaveTicket, Status, Step};
+use openaec_ui::design::site;
 use openaec_ui::design::a11y::{self, Node, Role};
 use openaec_ui::design::focus;
 use openaec_ui::design::history::{self as hist, History};
@@ -2550,18 +2551,18 @@ impl Gallery {
         let c = look.color;
         let tool = &TOOLS[i];
         let bar = row![
-            site_button(look, "Alle tools", SiteKind::Light, Some(BACK), Some(Msg::InstTab(None))),
+            site::button(look, "Alle tools", site::Kind::Light, Some(BACK), Some(Msg::InstTab(None))),
             tool_logo(look, i, 32.0),
             column![text(tool.name).size(14).font(fonts::STRONG).color(c.text), text(format!("https://{}", tool.web_url.unwrap_or(""))).size(11).font(fonts::MONO).color(c.text_secondary)].spacing(1).width(Length::Fill),
-            round_icon(look, WEB_RELOAD, "Opnieuw laden", Msg::Noop),
-            round_icon(look, EXTERNAL, "Openen in browser", Msg::InstLaunch(i)),
+            site::round_icon(look, WEB_RELOAD, "Opnieuw laden", Msg::Noop),
+            site::round_icon(look, EXTERNAL, "Openen in browser", Msg::InstLaunch(i)),
         ]
         .spacing(12)
         .align_y(Alignment::Center)
         .padding([0, 16]);
         let view: Element<'_, Msg> = match preview_handle(i) {
             Some(handle) => container(iced::widget::image(handle).content_fit(iced::ContentFit::Contain).width(Length::Fill).height(Length::Fill)).padding(32).center(Length::Fill).into(),
-            None => container(icon_tile_amber(look, tool.icon, 64.0)).center(Length::Fill).into(),
+            None => container(site::icon_tile(look, tool.icon, 64.0)).center(Length::Fill).into(),
         };
         column![
             container(bar).height(52).width(Length::Fill).align_y(iced::alignment::Vertical::Center).style(move |_| container::Style { background: Some(Background::Color(c.panel)), ..Default::default() }),
@@ -2594,16 +2595,16 @@ impl Gallery {
         };
         let update_all = if updates == 0 { "Alles is bijgewerkt".to_string() } else { format!("Alles bijwerken ({updates})") };
         let left = column![
-            section_label(dark, "OpenAEC Installer"),
+            site::section_label(dark, "OpenAEC Installer"),
             column![
-                text("Alle bouwsoftware,").size(40).font(BOLD_HEADING).color(d.text),
-                text("één plek.").size(40).font(BOLD_HEADING).color(d.accent_text),
+                text("Alle bouwsoftware,").size(40).font(site::HEADING_BOLD).color(d.text),
+                text("één plek.").size(40).font(site::HEADING_BOLD).color(d.accent_text),
             ],
             text("Ontdek, installeer, werk bij en start de open source tools van de OpenAEC Foundation.").size(16).font(fonts::BODY).color(d.text_secondary),
             Space::new().height(6),
             row![
-                site_button_owned(dark, update_all, SiteKind::Primary, Some(UPDATE), (updates > 0).then_some(Msg::InstUpdateAll), false),
-                site_button(dark, if s.refreshing { "Controleren…" } else { "Controleren op updates" }, SiteKind::Glass, Some(CHECK_UPDATES), (!s.refreshing).then_some(Msg::InstRefresh)),
+                site::button(dark, update_all, site::Kind::Primary, Some(UPDATE), (updates > 0).then_some(Msg::InstUpdateAll)),
+                site::button(dark, if s.refreshing { "Controleren…" } else { "Controleren op updates" }, site::Kind::Glass, Some(CHECK_UPDATES), (!s.refreshing).then_some(Msg::InstRefresh)),
             ]
             .spacing(12),
             Space::new().height(4),
@@ -2628,20 +2629,20 @@ impl Gallery {
                 iced::widget::button(Space::new().width(22).height(4))
                     .padding(0)
                     .on_press(Msg::InstFeature(n))
-                    .style(move |_, _| iced::widget::button::Style { background: Some(Background::Color(if on { d.accent } else { alpha(iced::Color::WHITE, 0.18) })), border: iced::Border { radius: 2.0.into(), ..Default::default() }, ..Default::default() }),
+                    .style(move |_, _| iced::widget::button::Style { background: Some(Background::Color(if on { d.accent } else { site::alpha(iced::Color::WHITE, 0.18) })), border: iced::Border { radius: 2.0.into(), ..Default::default() }, ..Default::default() }),
             );
         }
         let shot: Element<'_, Msg> = match preview_handle(f) {
             Some(handle) => iced::widget::image(handle).content_fit(iced::ContentFit::Contain).width(Length::Fill).into(),
-            None => container(icon_tile_amber(dark, TOOLS[f].icon, 64.0)).center_x(Length::Fill).height(200).align_y(iced::alignment::Vertical::Center).into(),
+            None => container(site::icon_tile(dark, TOOLS[f].icon, 64.0)).center_x(Length::Fill).height(200).align_y(iced::alignment::Vertical::Center).into(),
         };
         let spot = container(
             column![
-                row![section_label(dark, if s.has_update(f) { "Nieuwe versie" } else { "Uitgelicht" }), Space::new().width(Length::Fill), dots].align_y(Alignment::Center),
+                row![site::section_label(dark, if s.has_update(f) { "Nieuwe versie" } else { "Uitgelicht" }), Space::new().width(Length::Fill), dots].align_y(Alignment::Center),
                 shot,
                 row![
                     tool_logo(dark, f, 40.0),
-                    column![text(TOOLS[f].name).size(18).font(BOLD_HEADING).color(d.text), version_line(dark, s, f)].spacing(2).width(Length::Fill),
+                    column![text(TOOLS[f].name).size(18).font(site::HEADING_BOLD).color(d.text), version_line(dark, s, f)].spacing(2).width(Length::Fill),
                     self.tool_action(dark, f),
                 ]
                 .spacing(12)
@@ -2651,24 +2652,24 @@ impl Gallery {
         )
         .padding(16)
         .width(540)
-        .style(move |_| glass_style(dark));
+        .style(move |_| site::glass_style(dark));
 
         let band = column![
             container(row![left, spot].spacing(40).align_y(Alignment::Center))
                 .padding(iced::Padding { top: 40.0, right: 44.0, bottom: 40.0, left: 48.0 })
                 .width(Length::Fill)
-                .style(move |_| dark_band_style(dark)),
+                .style(move |_| site::dark_band_style(dark)),
             container(Space::new().width(Length::Fill).height(3)).height(3).style(move |_| container::Style { background: Some(Background::Color(d.accent)), ..Default::default() }),
         ];
 
         // Below the band everything follows the theme.
         let mut pills = row![].spacing(8).align_y(Alignment::Center);
         for (filter, name) in [(Filter::All, "Alle"), (Filter::Installed, "Geïnstalleerd"), (Filter::Updates, "Updates")] {
-            pills = pills.push(pill(look, None, name, s.count(filter), s.filter == filter && (filter != Filter::All || s.disc.is_none()), Msg::InstFilter(filter)));
+            pills = pills.push(site::pill(look, None, name, s.count(filter), s.filter == filter && (filter != Filter::All || s.disc.is_none()), Msg::InstFilter(filter)));
         }
         for (letter, name) in DISCIPLINES {
             let n = TOOLS.iter().filter(|t| t.disc.contains(letter)).count();
-            pills = pills.push(pill(look, Some(letter), name, n, s.disc == Some(letter), Msg::InstDisc(Some(letter))));
+            pills = pills.push(site::pill(look, Some(letter), name, n, s.disc == Some(letter), Msg::InstDisc(Some(letter))));
         }
         let grid = |ids: &[usize]| -> Element<'_, Msg> {
             let mut rows = column![].spacing(22);
@@ -2698,7 +2699,7 @@ impl Gallery {
         body = body.push(
             column![
                 row![
-                    section_head(look, &format!("Desktop-apps · {}", desktop.len()), "Installeren en starten op je computer", "Windows-installers en AppImages van GitHub Releases. De installer ziet welke versie je hebt."),
+                    site::section_head(look, &format!("Desktop-apps · {}", desktop.len()), "Installeren en starten op je computer", "Windows-installers en AppImages van GitHub Releases. De installer ziet welke versie je hebt."),
                     Space::new().width(Length::Fill),
                     container(w::text_field(look, "Zoek een tool", &s.search, Some(Msg::InstSearch), D::Regular, None)).width(260),
                 ]
@@ -2715,7 +2716,7 @@ impl Gallery {
         );
         body = body.push(
             column![
-                section_head(look, &format!("Webtools · {}", web.len()), "Direct in je browser", "Geen installatie nodig. Ze openen in de installer of in je eigen browser."),
+                site::section_head(look, &format!("Webtools · {}", web.len()), "Direct in je browser", "Geen installatie nodig. Ze openen in de installer of in je eigen browser."),
                 if web.is_empty() { empty("Geen webtools voor dit filter.") } else { grid(&web) },
             ]
             .spacing(18),
@@ -2737,13 +2738,13 @@ impl Gallery {
             return column![w::progress(look, p), text(format!("Downloaden… {:.0}%", p * 100.0)).size(11).font(fonts::BODY).color(c.text_secondary)].spacing(5).width(160).into();
         }
         if tool.web {
-            site_button_owned(look, "Openen".into(), SiteKind::Primary, Some(WEBTAB), Some(Msg::InstOpenWeb(i)), true)
+            site::small_button(look, "Openen", site::Kind::Primary, Some(WEBTAB), Some(Msg::InstOpenWeb(i)))
         } else if state.installed.is_none() {
-            site_button_owned(look, "Installeren".into(), SiteKind::Primary, Some(INSTALL), Some(Msg::InstInstall(i)), true)
+            site::small_button(look, "Installeren", site::Kind::Primary, Some(INSTALL), Some(Msg::InstInstall(i)))
         } else if self.inst.has_update(i) {
-            site_button_owned(look, "Bijwerken".into(), SiteKind::Primary, Some(UPDATE), Some(Msg::InstInstall(i)), true)
+            site::small_button(look, "Bijwerken", site::Kind::Primary, Some(UPDATE), Some(Msg::InstInstall(i)))
         } else {
-            site_button_owned(look, "Starten".into(), SiteKind::Primary, Some(LAUNCH), Some(Msg::InstLaunch(i)), true)
+            site::small_button(look, "Starten", site::Kind::Primary, Some(LAUNCH), Some(Msg::InstLaunch(i)))
         }
     }
 
@@ -2761,12 +2762,12 @@ impl Gallery {
         let picture: Element<'_, Msg> = match preview_handle(i) {
             // The PNG has rounded corners and fades out at the bottom; Contain keeps it inside the scroll area.
             Some(handle) => iced::widget::image(handle).content_fit(iced::ContentFit::Contain).width(Length::Fill).into(),
-            None => container(icon_tile_amber(look, tool.icon, 64.0))
+            None => container(site::icon_tile(look, tool.icon, 64.0))
                 .center_x(Length::Fill)
                 .height(150)
                 .align_y(iced::alignment::Vertical::Center)
                 .style(move |_| container::Style {
-                    background: Some(if look.high_contrast() { Background::Color(c.panel) } else { gradient(&[(0.0, alpha(c.accent, 0.12)), (1.0, alpha(c.accent, 0.03))]) }),
+                    background: Some(if look.high_contrast() { Background::Color(c.panel) } else { site::gradient(&[(0.0, site::alpha(c.accent, 0.12)), (1.0, site::alpha(c.accent, 0.03))]) }),
                     border: iced::Border { radius: 8.0.into(), ..Default::default() },
                     ..Default::default()
                 })
@@ -2782,21 +2783,21 @@ impl Gallery {
 
         let mut chips = row![].spacing(5).align_y(Alignment::Center);
         for letter in tool.disc.chars() {
-            chips = chips.push(chip(look, &letter.to_string(), None));
+            chips = chips.push(site::chip(look, &letter.to_string(), None));
         }
         if state.progress.is_some() {
-            chips = chips.push(chip(look, "Bezig", Some(Tone::Info)));
+            chips = chips.push(site::chip(look, "Bezig", Some(Tone::Info)));
         } else if update {
-            chips = chips.push(chip(look, "Update", Some(Tone::Warning)));
+            chips = chips.push(site::chip(look, "Update", Some(Tone::Warning)));
         } else if tool.web {
-            chips = chips.push(chip(look, "Web", Some(Tone::Info)));
+            chips = chips.push(site::chip(look, "Web", Some(Tone::Info)));
         } else if state.installed.is_some() {
-            chips = chips.push(chip(look, "Geïnstalleerd", Some(Tone::Success)));
+            chips = chips.push(site::chip(look, "Geïnstalleerd", Some(Tone::Success)));
         }
         if !tool.site.is_empty() {
-            chips = chips.push(chip(look, tool.site, (tool.site == "Beta").then_some(Tone::Warning)));
+            chips = chips.push(site::chip(look, tool.site, (tool.site == "Beta").then_some(Tone::Warning)));
         }
-        let head = row![tool_logo(look, i, 44.0), column![text(tool.name).size(16).font(BOLD_HEADING).color(c.text), chips.wrap()].spacing(6).width(Length::Fill)]
+        let head = row![tool_logo(look, i, 44.0), column![text(tool.name).size(16).font(site::HEADING_BOLD).color(c.text), chips.wrap()].spacing(6).width(Length::Fill)]
             .spacing(12)
             .align_y(Alignment::Center);
 
@@ -2807,16 +2808,16 @@ impl Gallery {
 
         let mut icons = row![].spacing(6).align_y(Alignment::Center);
         if update && state.progress.is_none() {
-            icons = icons.push(round_icon(look, LAUNCH, "Huidige versie starten", Msg::InstLaunch(i)));
+            icons = icons.push(site::round_icon(look, LAUNCH, "Huidige versie starten", Msg::InstLaunch(i)));
         }
         if let Some(repo) = tool.repo {
-            icons = icons.push(round_icon_owned(look, GITHUB, format!("Broncode op GitHub · {repo}"), Msg::InstGitHub(i)));
+            icons = icons.push(site::round_icon(look, GITHUB, format!("Broncode op GitHub · {repo}"), Msg::InstGitHub(i)));
         }
         if !tool.web && tool.web_url.is_some() {
-            icons = icons.push(round_icon(look, WEBTAB, "Webversie hier openen", Msg::InstOpenWeb(i)));
+            icons = icons.push(site::round_icon(look, WEBTAB, "Webversie hier openen", Msg::InstOpenWeb(i)));
         }
         if tool.web_url.is_some() {
-            icons = icons.push(round_icon(look, EXTERNAL, "Openen in browser", Msg::InstLaunch(i)));
+            icons = icons.push(site::round_icon(look, EXTERNAL, "Openen in browser", Msg::InstLaunch(i)));
         }
 
         let card = column![
@@ -2827,7 +2828,7 @@ impl Gallery {
             container(row![self.tool_action(look, i), Space::new().width(Length::Fill), icons].spacing(8).align_y(Alignment::Center)).height(40).align_y(iced::alignment::Vertical::Center),
         ]
         .spacing(12);
-        container(card).padding(18).width(Length::Fill).style(move |_| site_card_style(look, update)).into()
+        container(card).padding(18).width(Length::Fill).style(move |_| site::card_style(look, update)).into()
     }
 
     fn dialog_card(&self, look: Look, dialog: Dialog) -> Element<'_, Msg> {
@@ -3192,104 +3193,6 @@ fn card<'a>(look: Look, content: Element<'a, Msg>) -> Element<'a, Msg> {
     container(content).style(move |_| w::panel_style(look)).into()
 }
 
-/// Space Grotesk bold, as the headings and tile names on open-aec.com.
-const BOLD_HEADING: iced::Font = iced::Font { weight: iced::font::Weight::Bold, ..fonts::HEADING };
-
-/// A linear gradient with stops, top to bottom.
-fn gradient(stops: &[(f32, iced::Color)]) -> Background {
-    let mut g = iced::gradient::Linear::new(iced::Degrees(180.0));
-    for &(offset, color) in stops {
-        g = g.add_stop(offset, color);
-    }
-    Background::Gradient(iced::Gradient::Linear(g))
-}
-
-fn vertical(top: iced::Color, bottom: iced::Color) -> Background {
-    gradient(&[(0.0, top), (1.0, bottom)])
-}
-
-fn alpha(color: iced::Color, a: f32) -> iced::Color {
-    iced::Color { a, ..color }
-}
-
-/// Shadow colour of the website's deep soft shadows.
-fn soft_shadow(look: Look, a: f32) -> iced::Color {
-    if look.tokens.dark { iced::Color::from_rgba(0.0, 0.0, 0.0, (a * 2.2).min(0.8)) } else { iced::Color::from_rgba8(42, 42, 50, a) }
-}
-
-/// The light tile of open-aec.com: a white-to-warm gradient with a light line on
-/// top, 12 px corners, a fine border (2 px amber when featured) and a deep soft shadow.
-fn site_card_style(look: Look, featured: bool) -> container::Style {
-    let c = look.color;
-    let hc = look.high_contrast();
-    let top = c.raised;
-    let bottom = openaec_ui::design::mix(c.frame, 0.3, c.raised);
-    let shine = openaec_ui::design::mix(iced::Color::WHITE, 0.5, c.raised);
-    container::Style { snap: false,
-        text_color: Some(c.text),
-        background: Some(if hc { Background::Color(c.raised) } else { gradient(&[(0.0, shine), (0.006, top), (1.0, bottom)]) }),
-        border: iced::Border { color: if featured { c.accent } else { c.border }, width: if featured { 2.0 } else { 1.0 }, radius: 12.0.into() },
-        shadow: if hc { iced::Shadow::default() } else { iced::Shadow { color: soft_shadow(look, 0.2), offset: iced::Vector::new(0.0, 14.0), blur_radius: 30.0 } },
-    }
-}
-
-/// The glass tile in the website's dark panels: white 7% to 2.4% with a light
-/// line on top, a white 8% border and a deep shadow.
-fn glass_card_style(look: Look, featured: bool) -> container::Style {
-    let c = look.color;
-    if look.high_contrast() {
-        return container::Style { text_color: Some(c.text), background: Some(Background::Color(c.raised)), border: iced::Border { color: if featured { c.accent } else { c.border }, width: 2.0, radius: 12.0.into() }, ..Default::default() };
-    }
-    container::Style { snap: false,
-        text_color: Some(c.text),
-        background: Some(gradient(&[(0.0, alpha(iced::Color::WHITE, 0.16)), (0.006, alpha(iced::Color::WHITE, 0.07)), (1.0, alpha(iced::Color::WHITE, 0.024))])),
-        border: iced::Border { color: if featured { c.accent } else { alpha(iced::Color::WHITE, 0.09) }, width: if featured { 2.0 } else { 1.0 }, radius: 12.0.into() },
-        shadow: iced::Shadow { color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.5), offset: iced::Vector::new(0.0, 16.0), blur_radius: 34.0 },
-    }
-}
-
-/// A smaller glass surface, such as the figures and the update strip in the hero.
-fn glass_style(look: Look) -> container::Style {
-    let mut s = glass_card_style(look, false);
-    s.shadow = iced::Shadow { color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.3), offset: iced::Vector::new(0.0, 8.0), blur_radius: 20.0 };
-    s
-}
-
-/// The website's dark top band: #33333C to #2A2A32 at 70%, with a soft light at the top.
-fn dark_band_style(dark: Look) -> container::Style {
-    let c = dark.color;
-    if dark.high_contrast() {
-        return container::Style { text_color: Some(c.text), background: Some(Background::Color(c.panel)), ..Default::default() };
-    }
-    container::Style {
-        text_color: Some(c.text),
-        background: Some(gradient(&[(0.0, openaec_ui::design::mix(iced::Color::WHITE, 0.06, c.panel)), (0.7, c.frame), (1.0, c.frame)])),
-        ..Default::default()
-    }
-}
-
-/// A round button with a tooltip text that is built at run time.
-fn round_icon_owned<'a>(look: Look, icon: &'static str, tip: String, on_press: Msg) -> Element<'a, Msg> {
-    let c = look.color;
-    let node = Node::new(Role::Button, tip.clone());
-    let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
-        .width(34)
-        .height(34)
-        .padding(0)
-        .on_press(on_press)
-        .style(move |_, status| {
-            let hovered = status == iced::widget::button::Status::Hovered;
-            iced::widget::button::Style { snap: false,
-                background: Some(Background::Color(if hovered && !look.high_contrast() { c.hover } else { alpha(c.raised, if look.tokens.dark { 0.5 } else { 1.0 }) })),
-                text_color: c.text,
-                border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
-                shadow: iced::Shadow::default(),
-            }
-        }), true, 17.0);
-    let tip = container(text(tip).size(font::SIZE_LABEL).font(fonts::BODY).color(c.text)).padding([4, 8]).style(move |_| w::surface(look, look.tokens.shadow.popup, 3.0));
-    iced::widget::tooltip(a11y::node(button, node), tip, iced::widget::tooltip::Position::Bottom).gap(4).into()
-}
-
 /// The tool's own logo in an amber tile, or its category icon, as in the real installer.
 fn tool_logo<'a>(look: Look, i: usize, size: f32) -> Element<'a, Msg> {
     let c = look.color;
@@ -3297,12 +3200,12 @@ fn tool_logo<'a>(look: Look, i: usize, size: f32) -> Element<'a, Msg> {
         Some(handle) => container(iced::widget::image(handle).width(size * 0.72).height(size * 0.72))
             .center(size)
             .style(move |_| container::Style {
-                background: Some(if look.high_contrast() { Background::Color(c.panel) } else { Background::Gradient(iced::Gradient::Linear(iced::gradient::Linear::new(iced::Degrees(145.0)).add_stop(0.0, alpha(c.accent, 0.14)).add_stop(1.0, alpha(c.accent, 0.03)))) }),
-                border: iced::Border { color: alpha(c.accent, 0.25), width: 1.0, radius: (size * 0.25).round().into() },
+                background: Some(if look.high_contrast() { Background::Color(c.panel) } else { Background::Gradient(iced::Gradient::Linear(iced::gradient::Linear::new(iced::Degrees(145.0)).add_stop(0.0, site::alpha(c.accent, 0.14)).add_stop(1.0, site::alpha(c.accent, 0.03)))) }),
+                border: iced::Border { color: site::alpha(c.accent, 0.25), width: 1.0, radius: (size * 0.25).round().into() },
                 ..Default::default()
             })
             .into(),
-        None => icon_tile_amber(look, TOOLS[i].icon, size),
+        None => site::icon_tile(look, TOOLS[i].icon, size),
     }
 }
 
@@ -3325,199 +3228,6 @@ fn version_line<'a>(look: Look, inst: &Installer, i: usize) -> Element<'a, Msg> 
     line.into()
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-enum SiteKind {
-    /// Amber gradient with a light line and an amber glow.
-    Primary,
-    /// The light button: raised, fine border, small shadow.
-    Light,
-    /// The glass button on dark panels: white 6%, a white 14% border.
-    Glass,
-}
-
-/// A button as on open-aec.com: 8 px corners, 14 px semibold, an icon on the left.
-/// The primary text stays dark, as decided for contrast; the website's white text
-/// on amber does not reach 4.5 : 1.
-fn site_button<'a>(look: Look, label: &'a str, kind: SiteKind, icon: Option<&'static str>, on_press: Option<Msg>) -> Element<'a, Msg> {
-    site_button_owned(look, label.to_string(), kind, icon, on_press, false)
-}
-
-/// `small` is the tile size: 7 × 14 px padding and 13 px text.
-fn site_button_owned<'a>(look: Look, label: String, kind: SiteKind, icon: Option<&'static str>, on_press: Option<Msg>, small: bool) -> Element<'a, Msg> {
-    let c = look.color;
-    let hc = look.high_contrast();
-    let disabled = on_press.is_none();
-    let fg = if disabled { c.text_disabled } else if kind == SiteKind::Primary { c.text_on_accent } else { c.text };
-    let mut content = row![].spacing(8).align_y(Alignment::Center);
-    if let Some(source) = icon {
-        content = content.push(w::glyph(source, 16.0, fg, if kind == SiteKind::Primary || disabled { fg } else { c.accent_text }));
-    }
-    let node = Node::new(Role::Button, label.clone()).disabled(disabled);
-    content = content.push(text(label).size(if small { 13 } else { 14 }).font(fonts::STRONG).color(fg));
-    let button = focus::focusable(look, iced::widget::button(content)
-        .padding(if small { [7, 14] } else { [10, 20] })
-        .on_press_maybe(on_press)
-        .style(move |_, status| {
-            use iced::widget::button::Status as S;
-            let hovered = status == S::Hovered;
-            let pressed = status == S::Pressed;
-            let radius: iced::border::Radius = 8.0.into();
-            match kind {
-                SiteKind::Primary if !disabled => {
-                    let shine = openaec_ui::design::mix(iced::Color::WHITE, 0.35, c.accent_hover);
-                    let (top, bottom) = if pressed { (c.accent_pressed, c.accent_pressed) } else if hovered { (c.accent_hover, c.accent) } else { (openaec_ui::design::mix(c.accent_hover, 0.6, c.accent), c.accent) };
-                    iced::widget::button::Style { snap: false,
-                        background: Some(if hc { Background::Color(c.accent) } else { gradient(&[(0.0, shine), (0.04, top), (1.0, bottom)]) }),
-                        text_color: fg,
-                        border: iced::Border { color: if hc && hovered { c.text } else { iced::Color::TRANSPARENT }, width: if hc { 2.0 } else { 0.0 }, radius },
-                        shadow: if hc || pressed { iced::Shadow::default() } else { iced::Shadow { color: alpha(c.accent, if hovered { 0.6 } else { 0.45 }), offset: iced::Vector::new(0.0, 7.0), blur_radius: 20.0 } },
-                    }
-                }
-                SiteKind::Glass if !hc => iced::widget::button::Style { snap: false,
-                    background: Some(Background::Color(alpha(iced::Color::WHITE, if pressed { 0.03 } else if hovered { 0.11 } else { 0.06 }))),
-                    text_color: fg,
-                    border: iced::Border { color: if hovered { c.accent } else { alpha(iced::Color::WHITE, 0.14) }, width: 1.0, radius },
-                    shadow: iced::Shadow::default(),
-                },
-                _ => iced::widget::button::Style { snap: false,
-                    background: Some(if disabled { Background::Color(c.panel) } else if pressed { Background::Color(c.pressed) } else if hovered && !hc { Background::Color(c.hover) } else { vertical(c.raised, openaec_ui::design::mix(c.frame, 0.25, c.raised)) }),
-                    text_color: fg,
-                    border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if hc && hovered { 2.0 } else { 1.0 }, radius },
-                    shadow: if hc || disabled { iced::Shadow::default() } else { iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 } },
-                },
-            }
-        }), !disabled, 8.0);
-    a11y::node(button, node)
-}
-
-/// A round icon button with a tooltip, as the source and browser buttons of the real installer.
-fn round_icon<'a>(look: Look, icon: &'static str, tip: &'a str, on_press: Msg) -> Element<'a, Msg> {
-    let c = look.color;
-    let node = Node::new(Role::Button, tip);
-    let button = focus::focusable(look, iced::widget::button(container(w::glyph(icon, 16.0, c.text, c.accent_text)).center(Length::Fill))
-        .width(34)
-        .height(34)
-        .padding(0)
-        .on_press(on_press)
-        .style(move |_, status| {
-            let hovered = status == iced::widget::button::Status::Hovered;
-            iced::widget::button::Style { snap: false,
-                background: Some(Background::Color(if hovered && !look.high_contrast() { c.hover } else { alpha(c.raised, if look.tokens.dark { 0.5 } else { 1.0 }) })),
-                text_color: c.text,
-                border: iced::Border { color: if hovered { c.accent } else { c.border }, width: if look.high_contrast() && hovered { 2.0 } else { 1.0 }, radius: 17.0.into() },
-                shadow: iced::Shadow::default(),
-            }
-        }), true, 17.0);
-    w::with_tooltip(look, a11y::node(button, node), tip, None)
-}
-
-/// The website's icon tile: an amber gradient at 145°, from 18% to 5%.
-fn icon_tile_amber<'a>(look: Look, icon: &'static str, size: f32) -> Element<'a, Msg> {
-    let c = look.color;
-    let hc = look.high_contrast();
-    container(w::glyph(icon, (size * 0.55).round(), c.accent_text, c.accent_text))
-        .center(size)
-        .style(move |_| container::Style {
-            background: Some(if hc {
-                Background::Color(c.panel)
-            } else {
-                Background::Gradient(iced::Gradient::Linear(iced::gradient::Linear::new(iced::Degrees(145.0)).add_stop(0.0, alpha(c.accent, 0.22)).add_stop(1.0, alpha(c.accent, 0.06))))
-            }),
-            border: iced::Border { color: if hc { c.accent } else { alpha(c.accent, 0.25) }, width: 1.0, radius: (size * 0.25).round().into() },
-            ..Default::default()
-        })
-        .into()
-}
-
-/// The section label of open-aec.com: mono uppercase on a 15% amber tint, round,
-/// with an amber dot.
-fn section_label<'a>(look: Look, label: &str) -> Element<'a, Msg> {
-    let c = look.color;
-    let dot = container(Space::new().width(6).height(6)).style(move |_| container::Style { background: Some(Background::Color(c.accent)), border: iced::Border { radius: 3.0.into(), ..Default::default() }, ..Default::default() });
-    container(row![dot, text(label.to_uppercase()).size(12).font(fonts::MONO).color(c.accent_text)].spacing(8).align_y(Alignment::Center))
-        .padding([7, 14])
-        .style(move |_| container::Style {
-            background: Some(Background::Color(if look.high_contrast() { c.panel } else { alpha(c.accent, 0.15) })),
-            border: iced::Border { color: if look.high_contrast() { c.accent } else { iced::Color::TRANSPARENT }, width: 1.0, radius: 9999.0.into() },
-            ..Default::default()
-        })
-        .into()
-}
-
-/// A section head: label, a 26 px Space Grotesk heading and an explanation.
-fn section_head<'a>(look: Look, label: &str, heading: &'a str, explanation: &'a str) -> Element<'a, Msg> {
-    let c = look.color;
-    column![section_label(look, label), text(heading).size(26).font(BOLD_HEADING).color(c.text), text(explanation).size(15).font(fonts::BODY).color(c.text_secondary)].spacing(10).into()
-}
-
-/// A small mono chip as the discipline letters on the website tiles: 4 px corners,
-/// a fine border. With a tone it becomes a status chip in the status colours.
-fn chip<'a>(look: Look, label: &str, tone: Option<Tone>) -> Element<'a, Msg> {
-    let c = look.color;
-    let (fg, bg, edge) = match tone {
-        Some(t) => (t.color(look), if look.high_contrast() { c.panel } else { t.tint(look) }, t.color(look)),
-        None => (c.text_secondary, if look.tokens.dark { alpha(iced::Color::WHITE, 0.06) } else { c.hover }, c.border),
-    };
-    container(text(label.to_uppercase()).size(11).font(fonts::MONO).color(fg))
-        .padding([1, 7])
-        .style(move |_| container::Style { background: Some(Background::Color(bg)), border: iced::Border { color: edge, width: 1.0, radius: 4.0.into() }, ..Default::default() })
-        .into()
-}
-
-/// A filter pill with a count, as on open-aec.com: round, 14 px semibold, a small
-/// shadow; the active one in the amber gradient with a glow.
-fn pill<'a>(look: Look, letter: Option<char>, name: &'a str, count: usize, active: bool, on_press: Msg) -> Element<'a, Msg> {
-    let c = look.color;
-    let hc = look.high_contrast();
-    let fg = if active { c.text_on_accent } else { c.text };
-    let badge_bg = if active { alpha(c.text_on_accent, 0.12) } else { c.hover };
-    let mut content = row![].spacing(8).align_y(Alignment::Center);
-    if let Some(l) = letter {
-        let edge = if active { alpha(c.text_on_accent, 0.2) } else { c.border };
-        content = content.push(
-            container(text(l.to_string()).size(10).font(fonts::MONO).color(fg))
-                .padding([0, 5])
-                .style(move |_| container::Style { background: Some(Background::Color(alpha(fg, 0.06))), border: iced::Border { color: edge, width: 1.0, radius: 4.0.into() }, ..Default::default() }),
-        );
-    }
-    let button = focus::focusable(look, iced::widget::button(
-        content.push(row![
-            text(name).size(14).font(fonts::STRONG).color(fg),
-            container(text(count.to_string()).size(11).font(fonts::MONO).color(fg))
-                .padding([1, 7])
-                .style(move |_| container::Style { background: Some(Background::Color(badge_bg)), border: iced::Border { radius: 9999.0.into(), ..Default::default() }, ..Default::default() }),
-        ]
-        .spacing(8)
-        .align_y(Alignment::Center)),
-    )
-    .padding([9, 16])
-    .on_press(on_press)
-    .style(move |_, status| {
-        let hovered = status == iced::widget::button::Status::Hovered;
-        iced::widget::button::Style { snap: false,
-            background: Some(if active && !hc {
-                gradient(&[(0.0, openaec_ui::design::mix(iced::Color::WHITE, 0.35, c.accent_hover)), (0.05, openaec_ui::design::mix(c.accent_hover, 0.6, c.accent)), (1.0, c.accent)])
-            } else if active {
-                Background::Color(c.accent)
-            } else if hovered && !hc {
-                Background::Color(c.hover)
-            } else {
-                vertical(c.raised, openaec_ui::design::mix(c.frame, 0.25, c.raised))
-            }),
-            text_color: fg,
-            border: iced::Border { color: if active || hovered { c.accent } else { c.border }, width: if hc && hovered { 2.0 } else { 1.0 }, radius: 9999.0.into() },
-            shadow: if hc {
-                iced::Shadow::default()
-            } else if active {
-                iced::Shadow { color: alpha(c.accent, 0.5), offset: iced::Vector::new(0.0, 7.0), blur_radius: 20.0 }
-            } else {
-                iced::Shadow { color: soft_shadow(look, 0.08), offset: iced::Vector::new(0.0, 2.0), blur_radius: 4.0 }
-            },
-        }
-    }), true, 9999.0);
-    // A filter pill reads as a toggle with its count.
-    a11y::node(button, Node::new(Role::ToggleButton, format!("{name}, {count}")).checked(active))
-}
 
 fn section<'a>(look: Look, title: &str, content: Element<'a, Msg>) -> Element<'a, Msg> {
     column![w::mono_label(look, title), content].spacing(10).into()

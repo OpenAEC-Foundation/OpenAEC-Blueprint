@@ -4,6 +4,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
+- **Claude** – dagplan Blueprint: #36 (online standaardapplicatie met 3D-weergave, na de merge van PR #32) – src/bin/, crates/openaec-ui/src/design/, web/ – sinds 2026-10-26.
 
 
 
@@ -233,6 +234,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-26 **Claude**: issues #16 en #13 af. #16: de hub-app staat als derde soort app in `design/ontwerp-0.4/05-layouts.md` (banden, updates via de installer, besluiten 4 en 5). #13: nieuw `openaec_ui::design::site` met de websitestijl van open-aec.com (tegels, glas, donkere bovenband, knoppen in drie soorten, ronde iconknop met tooltip bij focus, icoontegel, sectiekop, chip, filterpil), met toegankelijke namen; de galerij-installer gebruikt die nu in plaats van eigen hulpjes. Installer-renders pixelgelijk aan de gecommitte versies. Alle controles uit AGENTS.md groen, `cargo test --workspace` groen, `cargo package -p openaec-ui` geslaagd.
+
 - 2026-10-26 **Claude**: issue #1 af en #37 stap 4 af. `scripts/version.py` (`--check`, `--set`, `--next` voor de releaseworkflow): alle versievelden op `2026.44.0`, `generate_icon_crate.py` neemt het nummer over. Nieuw `cargo run --bin blueprint`: de lege Rust-standaardapplicatie met de complete schil en het gedrag van bibliotheek 0.4 (sluitplan ook bij Alt+F4, ongedaan maken per document, bijwerkmelding, eigen sneltoetsen, toegankelijke namen), drie tests en renders in `design/blueprint/`. Releaseworkflow en ondertekening blijven bij Erika (#37).
 
 - 2026-10-26 **Claude**: eerste release voorbereid (#37), op verzoek van de gebruiker zelf gecommit en gepusht. Alle crates en de generator op `2026.44.0`; rootpakket heet nu `openaec-blueprint`. Nieuwe crate `crates/openaec-blueprint-sdk` (lib `openaec_blueprint`, cdylib + staticlib): `oa_version`, `oa_tokens_json`, `oa_icon_count`, `oa_icon_id`, `oa_icon_label`, `oa_icon_svg`; header en C-voorbeeld, lokaal vanuit C getest (945 iconen). `.github/workflows/release.yml`: controles + tests, builds Windows (setup.exe via NSIS, zip, DLL), macOS (universele dmg en dylib), Linux (deb, rpm, AppImage, tar.gz, so), ondertekening met de organisatiegeheimen zoals Pointcloud (Azure Trusted Signing, Developer ID + notarisatie, OpenPGP), SHA256SUMS en build-attestatie; zonder sleutel een pre-release. App-icoon `packaging/icon.svg` is een eerste versie. Meegenomen: de Linux-buildfix van de andere sessie (x11/wayland in `crates/openaec-ui/Cargo.toml`, `undecorated_shadow` alleen op Windows). Lokaal groen: alle controles uit AGENTS.md behalve `check_portable_ui.py` (lokale Pointcloud-kopie loopt achter, #17), `cargo test --workspace`, `cargo test -p openaec-icons --features all`. Ook `cargo package -p openaec-ui` geslaagd.

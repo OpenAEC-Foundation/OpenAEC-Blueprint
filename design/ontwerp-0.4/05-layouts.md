@@ -4,12 +4,13 @@ Status: **besloten**, 2026-10-16. Bekijk de [reviewpagina](layouts-review.html) 
 
 De layouts gebruiken alleen wat al besloten is: de tokens uit [`tokens-0.4.json`](tokens-0.4.json), de tegels uit [`03-tegels.md`](03-tegels.md) en de componenten uit [`04-componenten.md`](04-componenten.md). Er komen geen nieuwe kleuren of maten bij.
 
-## Twee soorten apps
+## Drie soorten apps
 
 | Soort | Apps | Kenmerk |
 | --- | --- | --- |
 | Lint-app | Calc, Calculations, Planner, Geotechniek, Heatloss, Pile Plan, Reports, PDF, Frame, Pointcloud, BIM Validator, FEM | Lint, documenttabs, verkenner, werkruimte en eigenschappen |
 | Werkstroom-app | Energy, Speech, Workspace Composer, Field | Geen lint. Navigatie door secties of stappen |
+| Hub-app | OpenAEC Installer | Geen lint en geen documenten. Eén catalogus van alle tools: installeren, bijwerken en starten, ook de webtools |
 
 ## Lint-app
 
@@ -62,6 +63,26 @@ Beide vormen kunnen in elke werkstroom-app. Gebruikers kiezen in de instellingen
 - **Zijbalk**, standaard, van 220 px met secties. Past het best bij apps waarin je de onderdelen in elke volgorde kunt bewerken, zoals Energy, Speech en Composer. Regels van 36 px, de actieve sectie krijgt de tint en een streep.
 - **Stappen bovenaan** in een balk van 44 px. Past het best bij apps met een vaste volgorde, zoals Field. Genummerde stappen in mono. Een afgeronde stap krijgt een getinte cirkel, de actieve stap een amberkleurige cirkel en een streep eronder.
 
+## Hub-app
+
+De OpenAEC Installer volgt voorstel E uit [`installer-voorstellen.html`](installer-voorstellen.html#E) (besluit 4). Bekijk hem in de galerij met `cargo run --release --features gpu --bin ui04 -- installer`. Van boven naar beneden:
+
+| Band | Hoogte | Inhoud |
+| --- | --- | --- |
+| Titelbalk | 32 px | Zoals bij de lint-app, zonder snelle acties |
+| Bovenvlak | ongeveer 320 px | De donkere band van de website, in elk thema behalve Hoog contrast. Links een label, een kop van twee regels met een accentdeel, een korte uitleg, de knoppen Alles bijwerken (primair, met het aantal) en Controleren op updates, en kerngetallen in mono: tools, geïnstalleerd, updates en webtools. Rechts de uitgelichte tool met schermafbeelding; die wisselt elke zes seconden, met stippen om zelf te kiezen |
+| Filters | 36 px | Filterpillen Alle, Geïnstalleerd en Updates met een teller, de letters van de disciplines, en rechts een zoekveld |
+| Desktop-apps | rest | Een sectiekop met het aantal, daaronder de websitekaarten in rijen. Een kaart toont icoon, naam, omschrijving, versie en status, met Installeren, Bijwerken of Starten |
+| Webtools | rest | Een lijn met WEBTOOLS, dan dezelfde kaarten. Een webtool opent in een tab van de installer, met een balk terug naar de catalogus, of in de eigen browser |
+| Statusbalk | 22 px | Links het aantal geïnstalleerde desktop-apps en het aantal updates, rechts de versie van de installer en het tijdstip van de laatste controle |
+
+Alleen het bovenvlak is donker; alles daaronder volgt het thema. De knoppen, pillen, chips, kaarten en de donkere band zijn de websitestijl van open-aec.com; ze gaan naar `openaec_ui::design` (issue #13).
+
+De installer is ook de centrale plek voor updates (besluit 5, issue #33).
+- **Status:** hij schrijft na elke controle per app de nieuwste versie naar `updates.json`.
+- **Melding in de app:** apps tonen die versie in hun titelbalk.
+- **Bijwerken:** Bijwerken in een app opent de installer met `--update <id>`; de installer werkt die app bij en start hem opnieuw.
+
 ## High contrast
 
 - Selectie in de boom, de navigatie en de tabel krijgt een omlijning van 2 px in plaats van een tint.
@@ -76,3 +97,5 @@ Genomen door de gebruiker op 2026-10-16.
 | 1 | Het startscherm verschijnt bij het openen van de app. Met de instelling "Laatste project direct openen" sla je het over. Start de app vanuit een bestand, dan opent dat bestand direct |
 | 2 | Werkstroom-apps kunnen een zijbalk of stappen bovenaan tonen. Gebruikers kiezen in de instellingen bij Navigatie. Standaard is de zijbalk |
 | 3 | De statusbalk volgt het thema, in Licht dus licht met een lijn erboven. Met de instelling Statusbalk kan hij altijd donker. De waarden staan onder `statusbar-setting` in het tokenbestand |
+| 4 | Op 2026-10-26: de installer is de derde soort app, de hub. Voorstel E wordt de echte OpenAEC Installer, zonder verdere teambeoordeling (issue #16) |
+| 5 | Op 2026-10-26: de installer is de centrale plek voor updates. Apps melden alleen dat er een update is; bijwerken gaat via de installer (issue #33) |
