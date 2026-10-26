@@ -5,7 +5,7 @@ The OpenAEC crate code is licensed under the GNU Lesser General Public License v
 | Material | License | Text |
 | --- | --- | --- |
 | Crate code, including library 0.4 in `src/design/` | LGPL-3.0-only | [`LICENSE.md`](LICENSE.md) |
-| The six fonts in `assets/fonts/` | SIL Open Font License 1.1 | `licenses/*-OFL.txt` |
+| The eight fonts in `assets/fonts/` | SIL Open Font License 1.1 | `licenses/*-OFL.txt` |
 | `assets/icons/microphone.svg` | Apache License 2.0 | [`licenses/Open-Speech-Studio-Apache-2.0.txt`](licenses/Open-Speech-Studio-Apache-2.0.txt) |
 | Style Book vectors: `assets/ribbon-icons/`, `src/ribbon_icons.rs` and `assets/icons/settings.svg` | CC BY-SA 4.0 | [`licenses/Style-Book-CC-BY-SA-4.0.txt`](licenses/Style-Book-CC-BY-SA-4.0.txt) |
 
@@ -13,15 +13,17 @@ The Style Book vectors belong to the earlier prototype. Library 0.4 (`src/design
 
 ## Bundled font notices
 
-The six font binaries in `assets/fonts/` came from the pinned OpenAEC Style Book Tauri template. The typefaces have separate SIL Open Font License 1.1 notices:
+Six font binaries in `assets/fonts/` came from the pinned OpenAEC Style Book Tauri template; the two Noto fallback fonts came from [notofonts/notofonts.github.io](https://github.com/notofonts/notofonts.github.io) (hinted TTF, retrieved 26 October 2026). The typefaces have separate SIL Open Font License 1.1 notices:
 
 | Typeface | Bundled files | License text | Upstream |
 | --- | --- | --- | --- |
 | Inter | `Inter-Regular.ttf`, `Inter-Medium.ttf`, `Inter-SemiBold.ttf` | [`licenses/Inter-OFL.txt`](licenses/Inter-OFL.txt) | [rsms/inter](https://github.com/rsms/inter) |
 | Space Grotesk | `SpaceGrotesk-Medium.ttf`, `SpaceGrotesk-Bold.ttf` | [`licenses/SpaceGrotesk-OFL.txt`](licenses/SpaceGrotesk-OFL.txt) | [floriankarsten/space-grotesk](https://github.com/floriankarsten/space-grotesk) |
 | JetBrains Mono | `JetBrainsMono-Regular.ttf` | [`licenses/JetBrainsMono-OFL.txt`](licenses/JetBrainsMono-OFL.txt) | [JetBrains/JetBrainsMono](https://github.com/JetBrains/JetBrainsMono) |
+| Noto Sans | `NotoSans-Regular.ttf` (fallback) | [`licenses/NotoSans-OFL.txt`](licenses/NotoSans-OFL.txt) | [notofonts/latin-greek-cyrillic](https://github.com/notofonts/latin-greek-cyrillic) |
+| Noto Sans Symbols | `NotoSansSymbols-Regular.ttf` (fallback) | [`licenses/NotoSansSymbols-OFL.txt`](licenses/NotoSansSymbols-OFL.txt) | [notofonts/symbols](https://github.com/notofonts/symbols) |
 
-The upstream license texts were retrieved on 15 October 2026 and are included with the crate. The fonts keep these licenses; `LICENSE.md` does not apply to them.
+The upstream license texts were retrieved on 15 October 2026 and are included with the crate. The Noto notices hold the copyright line from each font's name table followed by the unchanged OFL 1.1 text. The fonts keep these licenses; `LICENSE.md` does not apply to them.
 
 The `microphone.svg` control icon adapts the inline microphone geometry in Open Speech Studio's `src/components/Sidebar.tsx` at commit `4e8aa61`. That source is distributed under Apache License 2.0; the [license text](licenses/Open-Speech-Studio-Apache-2.0.txt) accompanies this package. The icon uses the shared 1.75 px stroke and rounded joins of the OpenAEC control set.
 

@@ -10,6 +10,7 @@ use std::sync::Once;
 fn load_fonts() {
     static LOADED: Once = Once::new();
     LOADED.call_once(|| {
+        fonts::install_fallback();
         let mut system = iced_tiny_skia::graphics::text::font_system()
             .write()
             .expect("font system");

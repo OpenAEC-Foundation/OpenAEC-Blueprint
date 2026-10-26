@@ -2938,6 +2938,23 @@ impl Gallery {
             w::toast(look, Tone::Success, SUCCESS, "Opgeslagen", "Kade 12 is opgeslagen.", CLOSE, Some(Msg::Noop)),
         ]
         .spacing(8);
+        // Issue #25: every font shows the whole AEC test set; what a font lacks
+        // comes from the bundled Noto fallback, not from the computer.
+        let test_set = fonts::AEC_TEST_SET.iter().map(|(_, chars)| *chars).collect::<Vec<_>>().join("  ");
+        let glyphs = column(
+            [
+                ("Inter 400", fonts::BODY),
+                ("Inter 500", fonts::MEDIUM),
+                ("Inter 600", fonts::STRONG),
+                ("Space Grotesk 500", fonts::HEADING),
+                ("Space Grotesk 700", iced::Font { weight: iced::font::Weight::Bold, ..fonts::HEADING }),
+                ("JetBrains Mono 400", fonts::MONO),
+            ]
+            .into_iter()
+            .map(|(name, font)| row![container(secondary_note(look, name)).width(150), text(test_set.clone()).font(font).size(15).color(c.text)].spacing(12).align_y(Alignment::Center).into()),
+        )
+        .push(secondary_note(look, "Wat een font mist (⌀, Grieks in Space Grotesk, Ĳ in JetBrains Mono) komt uit Noto Sans en Noto Sans Symbols."))
+        .spacing(8);
         let rows: Vec<Vec<String>> = self.items.iter().take(4).map(|i| vec![i.code.clone(), i.name.clone(), format!("{} {}", nl(i.quantity, 1), i.unit), euro(i.price), euro(i.amount())]).collect();
         let sheet = column![
             section(look, "Knoppen", buttons.into()),
@@ -2946,6 +2963,7 @@ impl Gallery {
             section(look, "Keuzes", choices.into()),
             section(look, "Tabel", container(w::table(look, &BUDGET_COLUMNS, rows, Some(1), None::<fn(usize) -> Msg>, None::<fn(usize) -> Msg>)).style(move |_| w::panel_style(look)).into()),
             section(look, "Meldingen", notes.into()),
+            section(look, "Tekenset", glyphs.into()),
             section(look, "Dialoog", self.dialog_card(look, Dialog::CloseDirty(0))),
             section(
                 look,
@@ -3349,6 +3367,7 @@ fn start_view() -> Gallery {
 }
 
 fn main() -> iced::Result {
+    fonts::install_fallback();
     iced::application(|| (start_view(), after(6000, Msg::InstFeatureTick)), Gallery::update, Gallery::view)
         .title("OpenAEC UI 0.4")
         .subscription(Gallery::subscription)
@@ -3453,6 +3472,7 @@ mod tests {
     fn load_fonts() {
         static LOADED: Once = Once::new();
         LOADED.call_once(|| {
+            fonts::install_fallback();
             let mut system = iced_tiny_skia::graphics::text::font_system().write().expect("font system");
             for bytes in fonts::FILES {
                 system.load_font(std::borrow::Cow::Borrowed(bytes));

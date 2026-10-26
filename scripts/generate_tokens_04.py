@@ -381,8 +381,10 @@ def build_css(t):
     w(" * Themes: " + ", ".join(themes) + ". Workspace: theme, light, dark. Statusbar: theme, dark. */")
     w(":root {")
     for k, v in t["font"]["family"].items():
+        # The bundled Noto fallback (web/openaec-fonts.css, issue #25) comes before
+        # any system font, as openaec_ui::fonts::install_fallback does in Rust.
         fallback = "monospace" if k == "mono" else "system-ui, sans-serif"
-        w(f'  --oa-font-{k}: "{v}", {fallback};')
+        w(f'  --oa-font-{k}: "{v}", "Noto Sans", "Noto Sans Symbols", {fallback};')
     for k, v in t["font"]["size"].items():
         w(f"  --oa-size-{k}: {v}px;")
     for k, v in t["font"]["weight"].items():

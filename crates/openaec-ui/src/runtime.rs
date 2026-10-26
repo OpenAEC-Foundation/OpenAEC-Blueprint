@@ -110,6 +110,7 @@ pub fn run<A:Application>(app:A, preferences_path:Option<PathBuf>) -> iced::Resu
         Some(path)=>match Preferences::load(path) { Ok(p)=>(p,None),Err(e)=>(Preferences::default(),Some(format!("Settings: {e}"))) },
         None=>(Preferences::default(),None),
     };
+    fonts::install_fallback();
     // iced 0.14 boots the state through a closure; it runs once.
     let initial=std::sync::Mutex::new(Some(Runtime{app,shell:ShellState::new(preferences),preferences_path,error}));
     iced::application(move ||initial.lock().unwrap_or_else(|e|e.into_inner()).take().expect("the application boots once"),Runtime::update,Runtime::view)

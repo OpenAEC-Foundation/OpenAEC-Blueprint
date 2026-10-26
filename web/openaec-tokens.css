@@ -3,9 +3,9 @@
  * Do not edit by hand. Use: <html data-oa-theme="dark" data-oa-workspace="theme" data-oa-statusbar="theme">
  * Themes: light, dark, blueprint, high-contrast-dark, high-contrast-light. Workspace: theme, light, dark. Statusbar: theme, dark. */
 :root {
-  --oa-font-body: "Inter", system-ui, sans-serif;
-  --oa-font-heading: "Space Grotesk", system-ui, sans-serif;
-  --oa-font-mono: "JetBrains Mono", monospace;
+  --oa-font-body: "Inter", "Noto Sans", "Noto Sans Symbols", system-ui, sans-serif;
+  --oa-font-heading: "Space Grotesk", "Noto Sans", "Noto Sans Symbols", system-ui, sans-serif;
+  --oa-font-mono: "JetBrains Mono", "Noto Sans", "Noto Sans Symbols", monospace;
   --oa-size-label: 11px;
   --oa-size-body: 12px;
   --oa-size-panel-heading: 13px;

@@ -47,6 +47,7 @@ python scripts/generate_tokens_04.py --check
 python scripts/generate_icon_crate.py --check
 python scripts/build_web_components.py --check
 python scripts/build_font_package.py --check
+python scripts/check_font_glyphs.py
 cargo test
 cargo test -p openaec-icons --features all
 cargo package -p openaec-ui

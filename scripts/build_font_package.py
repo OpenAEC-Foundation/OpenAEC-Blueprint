@@ -32,6 +32,14 @@ PACKAGE = {
     "JetBrainsMono-Regular.ttf": ("JetBrains Mono", 400, "JetBrainsMono-OFL.txt"),
 }
 
+# Fallback fonts for characters the fonts above lack (issue #25): Greek and
+# Ĳ from Noto Sans, the diameter sign ⌀ from Noto Sans Symbols. Rust and CSS
+# put them after every family, so no computer falls back to its own fonts.
+FALLBACK = {
+    "NotoSans-Regular.ttf": ("Noto Sans", 400, "NotoSans-OFL.txt"),
+    "NotoSansSymbols-Regular.ttf": ("Noto Sans Symbols", 400, "NotoSansSymbols-OFL.txt"),
+}
+
 # Weights the tokens use (400, 500, 600, 700) that no file has yet: the browser
 # then picks the nearest file. Listed so the gap stays visible.
 MISSING = ["Inter 700", "Space Grotesk 400", "Space Grotesk 600", "JetBrains Mono 500"]
@@ -59,36 +67,41 @@ def name_table(data):
 def main():
     check = "--check" in sys.argv[1:]
     on_disk = sorted(p.name for p in FONTS.glob("*.ttf"))
-    if on_disk != sorted(PACKAGE):
+    if on_disk != sorted({**PACKAGE, **FALLBACK}):
         print(f"Fontbestanden en PACKAGE verschillen: op schijf {on_disk}")
         return 1
 
-    fonts = []
     writes = {}
-    for file, (family, weight, licence) in PACKAGE.items():
-        data = (FONTS / file).read_bytes()
-        names = name_table(data)
-        if not (LICENCES / licence).exists():
-            print(f"Licentie ontbreekt: {licence}")
-            return 1
-        fonts.append({
-            "file": file,
-            "family": family,
-            "weight": weight,
-            "style": "normal",
-            "name": f"{names.get(1, '?')} {names.get(2, '')}".strip(),
-            "version": names.get(5, "?"),
-            "bytes": len(data),
-            "sha256": hashlib.sha256(data).hexdigest(),
-            "licence": f"licenses/{licence}",
-        })
-        writes[WEB / "fonts" / file] = data
-        writes[WEB / "fonts" / licence] = (LICENCES / licence).read_bytes()
+
+    def entries(files):
+        out = []
+        for file, (family, weight, licence) in files.items():
+            data = (FONTS / file).read_bytes()
+            names = name_table(data)
+            assert (LICENCES / licence).exists(), f"Licentie ontbreekt: {licence}"
+            out.append({
+                "file": file,
+                "family": family,
+                "weight": weight,
+                "style": "normal",
+                "name": f"{names.get(1, '?')} {names.get(2, '')}".strip(),
+                "version": names.get(5, "?"),
+                "bytes": len(data),
+                "sha256": hashlib.sha256(data).hexdigest(),
+                "licence": f"licenses/{licence}",
+            })
+            writes[WEB / "fonts" / file] = data
+            writes[WEB / "fonts" / licence] = (LICENCES / licence).read_bytes()
+        return out
+
+    fonts = entries(PACKAGE)
+    fallback = entries(FALLBACK)
 
     manifest = {
-        "about": "Fontpakket van OpenAEC UI 0.4 (issue #24). Gemaakt door scripts/build_font_package.py; niet met de hand aanpassen.",
+        "about": "Fontpakket van OpenAEC UI 0.4 (issues #24 en #25). Gemaakt door scripts/build_font_package.py; niet met de hand aanpassen.",
         "licence": "SIL Open Font License 1.1 voor alle fonts",
         "fonts": fonts,
+        "fallback": fallback,
         "missing_weights": MISSING,
     }
     manifest_bytes = (json.dumps(manifest, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
@@ -102,7 +115,7 @@ def main():
         " * Do not edit by hand. The same files as the Rust library; no Google Fonts, works offline.",
         " * Licences: web/fonts/*-OFL.txt (SIL Open Font License 1.1). */",
     ]
-    for font in fonts:
+    for font in fonts + fallback:
         css.append(
             f"@font-face {{ font-family: \"{font['family']}\"; font-style: normal; font-weight: {font['weight']}; "
             f"font-display: swap; src: url(\"fonts/{font['file']}\") format(\"truetype\"); }}"
@@ -116,15 +129,15 @@ def main():
             first = (stale + extra)[0].relative_to(ROOT).as_posix()
             print(f"Fontpakket verouderd, draai scripts/build_font_package.py: {len(stale) + len(extra)} bestanden, bijvoorbeeld {first}")
             return 1
-        print(f"Fontpakket actueel: {len(fonts)} fonts, {sum(f['bytes'] for f in fonts) // 1024} kB, gelijk in crate en web")
+        print(f"Fontpakket actueel: {len(fonts)} fonts en {len(fallback)} terugvalfonts, {sum(f['bytes'] for f in fonts + fallback) // 1024} kB, gelijk in crate en web")
         return 0
     for path in stale:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(writes[path])
     for path in extra:
         path.unlink()
-    print(f"Fontpakket: {len(fonts)} fonts, {len(stale)} bestanden bijgewerkt, {len(extra)} verwijderd")
-    for f in fonts:
+    print(f"Fontpakket: {len(fonts)} fonts en {len(fallback)} terugvalfonts, {len(stale)} bestanden bijgewerkt, {len(extra)} verwijderd")
+    for f in fonts + fallback:
         print(f"  {f['file']}: {f['name']}, {f['version']}")
     return 0
 

@@ -1,5 +1,5 @@
 {
-  "about": "Fontpakket van OpenAEC UI 0.4 (issue #24). Gemaakt door scripts/build_font_package.py; niet met de hand aanpassen.",
+  "about": "Fontpakket van OpenAEC UI 0.4 (issues #24 en #25). Gemaakt door scripts/build_font_package.py; niet met de hand aanpassen.",
   "licence": "SIL Open Font License 1.1 voor alle fonts",
   "fonts": [
     {
@@ -67,6 +67,30 @@
       "bytes": 273900,
       "sha256": "a0bf60ef0f83c5ed4d7a75d45838548b1f6873372dfac88f71804491898d138f",
       "licence": "licenses/JetBrainsMono-OFL.txt"
+    }
+  ],
+  "fallback": [
+    {
+      "file": "NotoSans-Regular.ttf",
+      "family": "Noto Sans",
+      "weight": 400,
+      "style": "normal",
+      "name": "Noto Sans Regular",
+      "version": "Version 2.015; ttfautohint (v1.8.4.7-5d5b)",
+      "bytes": 621572,
+      "sha256": "478c558ea716033cd60c03438f628dfa75694dcf6b5f6d505a2f05fd2b4f3823",
+      "licence": "licenses/NotoSans-OFL.txt"
+    },
+    {
+      "file": "NotoSansSymbols-Regular.ttf",
+      "family": "Noto Sans Symbols",
+      "weight": 400,
+      "style": "normal",
+      "name": "Noto Sans Symbols Regular",
+      "version": "Version 2.003; ttfautohint (v1.8.4.7-5d5b)",
+      "bytes": 226980,
+      "sha256": "d0e98e9a2c046594c5021437273943be7e79e0fd980fde125279e22302212595",
+      "licence": "licenses/NotoSansSymbols-OFL.txt"
     }
   ],
   "missing_weights": [
