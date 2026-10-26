@@ -282,6 +282,13 @@ Elk onderdeel van de bibliotheek heeft een toegankelijke naam en rol (`design::a
 - **Waarom nu al.** iced 0.14 geeft dit nog niet aan een schermlezer door, zie de [schermlezerproef](design/schermlezerproef/README.md). Zodra iced of een fork het wel doet, hoeven apps niets aan te passen.
 - **Controle.** `a11y::Collect` vindt elk onderdeel in de Tab-route zonder naam. De galerij test met elke weergave dat er geen enkel is.
 
+Updates lopen in elke app via de OpenAEC Installer (`design::update`, issue #33; besluit van 26 oktober 2026):
+- **Status van de installer.** De installer controleert GitHub en schrijft per app de nieuwste versie naar `%LOCALAPPDATA%\OpenAEC\installer\updates.json`.
+- **Melding in de app.** Een app leest dat bestand bij het starten. Is er een nieuwere versie, dan toont hij rechts in de titelbalk "Versie … staat klaar" met de knop **Bijwerken**.
+- **Bijwerken.** Die knop sluit de app eerst via het sluitplan, zodat niet-opgeslagen werk wordt nagevraagd. Daarna opent hij de installer met `--update <app>`. Zonder installer opent de releasepagina op GitHub.
+- **Niets zelf.** Apps downloaden of installeren niets zelf.
+- **Galerij.** De galerij toont de melding met een voorbeeldversie en start de installer niet echt.
+
 Webapps krijgen de B2-iconen als één sprite per app in `web/icons/` (issue #11), gemaakt door `scripts/build_web_icons.py` uit de B2-export. De padgegevens worden daarbij compact gemaakt: punten die niet meer dan 0,01 px afwijken vallen weg en coördinaten houden twee decimalen, waardoor 8 % van de grootte overblijft. `web/componenten.html` gebruikt dezelfde compacte iconen en ging van 745 naar 84 kB.
 
 Tooltips en selectie werken ook zonder muis en zonder schaduw (issues #6 en #7):

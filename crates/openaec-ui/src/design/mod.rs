@@ -17,6 +17,7 @@ pub mod number;
 pub mod shortcuts;
 pub mod tiles;
 pub mod tokens;
+pub mod update;
 pub mod widgets;
 pub mod workflow;
 

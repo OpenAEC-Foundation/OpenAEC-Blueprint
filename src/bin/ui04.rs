@@ -13,6 +13,7 @@ use openaec_ui::design::document::{self as dm, Choice as CloseChoice, ClosePlan,
 use openaec_ui::design::a11y::{self, Node, Role};
 use openaec_ui::design::focus;
 use openaec_ui::design::history::{self as hist, History};
+use openaec_ui::design::update::{self as upd, Available};
 use openaec_ui::design::number::{self as num, NumberFormat, NumberInput, Value};
 use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles::{self as t, RecentFile};
@@ -582,6 +583,8 @@ enum Dialog {
 enum CloseTarget {
     Documents,
     Window,
+    /// Close for an update: then the installer takes over (issue #33).
+    Update,
 }
 
 /// How long a simulated write takes, so "Opslaan…" is visible.
@@ -689,6 +692,8 @@ enum Msg {
     Minimize,
     Maximize,
     CloseWindow,
+    /// "Bijwerken": close through the close plan, then the installer.
+    Update,
     DragSplit(Side),
     EndDrag,
     Menu(Option<MenuKind>),
@@ -865,6 +870,8 @@ struct Gallery {
     toast_count: u32,
     dialog: Option<Dialog>,
     closing: Option<(ClosePlan<DocKind>, CloseTarget)>,
+    /// The update the installer reported (issue #33); a sample in the gallery.
+    update: Option<Available>,
     format: &'static str,
     landscape: bool,
     zoom: u16,
@@ -947,6 +954,13 @@ impl Default for Gallery {
             toast_count: 0,
             dialog: None,
             closing: None,
+            update: Some(Available {
+                app: "open-calc-studio".into(),
+                current: "2026.43.2".into(),
+                latest: "2026.44.1".into(),
+                page_url: Some("https://github.com/OpenAEC-Foundation/open-calc-studio/releases".into()),
+                installer: Some(std::path::PathBuf::from(r"C:\Users\voorbeeld\AppData\Local\OpenAEC Installer\openaec-installer.exe")),
+            }),
             format: "PDF",
             landscape: false,
             zoom: 100,
@@ -1089,6 +1103,9 @@ impl Gallery {
                 if target == CloseTarget::Window {
                     return iced::window::latest().and_then(iced::window::close);
                 }
+                if target == CloseTarget::Update {
+                    return self.hand_over_update();
+                }
                 for kind in kinds {
                     if let Some(i) = self.docs.iter().position(|d| d.kind == kind) {
                         self.close_doc(i);
@@ -1097,6 +1114,18 @@ impl Gallery {
             }
         }
         Task::none()
+    }
+
+    /// Every choice of the close plan is carried out: a real app now calls
+    /// `update::open_installer` and closes its window. The gallery starts no
+    /// programs, so it says what would happen and stays open.
+    fn hand_over_update(&mut self) -> Task<Msg> {
+        let Some(available) = self.update.take() else { return Task::none() };
+        let command = match &available.installer {
+            Some(path) => format!("{} {} {}", path.display(), upd::INSTALLER_ARGUMENT, available.app),
+            None => available.page_url.clone().unwrap_or_default(),
+        };
+        self.toast(Tone::Info, "Naar de installer", format!("Een app opent nu {command} en sluit zich."))
     }
 
     /// The person's answer to the close question, for this document or all left.
@@ -1511,6 +1540,10 @@ impl Gallery {
             Msg::CloseWindow => {
                 let all = self.docs.iter().map(|d| d.kind).collect();
                 return self.start_close(all, CloseTarget::Window);
+            }
+            Msg::Update => {
+                let all = self.docs.iter().map(|d| d.kind).collect();
+                return self.start_close(all, CloseTarget::Update);
             }
             Msg::DragSplit(side) => {
                 let width = match side {
@@ -2138,10 +2171,14 @@ impl Gallery {
         } else {
             vec![Space::new().width(86).into()]
         };
-        let extra = vec![
+        let mut extra = Vec::new();
+        if let Some(available) = &self.update {
+            extra.push(container(upd::notice(look, available, Msg::Update)).padding([0, 8]).into());
+        }
+        extra.extend([
             w::with_tooltip(look, ch::title_button(look, MENU, self.menu.is_some_and(|(k, _)| k == MenuKind::App), "Menu", Some(Msg::Menu(Some(MenuKind::App)))), "Menu", None),
             w::with_tooltip(look, ch::title_button(look, SETTINGS, self.dialog == Some(Dialog::Settings), "Instellingen", Some(Msg::Dialog(Some(Dialog::Settings)))), "Instellingen", Some("Ctrl+,")),
-        ];
+        ]);
         let window = WindowActions { drag: Msg::TitlePress, minimize: Msg::Minimize, maximize: Msg::Maximize, close: Msg::CloseWindow, maximized: self.maximized };
         ch::title_bar(look, name, quick_buttons, extra, window, WINDOW_ICONS)
     }
@@ -3962,6 +3999,25 @@ mod tests {
         let _ = g.update(Msg::OpenDoc(DocKind::Quantities));
         let _ = g.update(Msg::Undo);
         assert_eq!(g.item(1).unwrap().price, 240.0, "Hoeveelheden is a view of the same budget");
+    }
+
+    #[test]
+    fn updating_asks_about_changes_and_then_hands_over_to_the_installer() {
+        // Issue #33: Bijwerken closes through the close plan, then the installer takes over.
+        let mut g = Gallery::default();
+        g.started = true;
+        let found = accessibility(&g, Size::new(1280.0, 800.0));
+        assert!(found.nodes.iter().any(|f| f.node.role == Role::Status && f.node.name == "Versie 2026.44.1 staat klaar"));
+        edit_posts(&mut g, "Poeren groot");
+        let _ = g.update(Msg::Update);
+        assert_eq!(g.dialog, Some(Dialog::Close), "unsaved work is asked about first");
+        let _ = g.update(Msg::Dialog(None));
+        assert!(g.update.is_some(), "cancelling keeps the notice and opens nothing");
+        let _ = g.update(Msg::Update);
+        let _ = g.update(Msg::CloseChooseAll(CloseChoice::Save));
+        finish_writes(&mut g);
+        assert!(g.update.is_none(), "after saving, the installer takes over");
+        assert!(g.toast.as_ref().is_some_and(|t| t.message.contains("--update open-calc-studio")));
     }
 
     /// Delivers every running write as the timer would, until none is left.
