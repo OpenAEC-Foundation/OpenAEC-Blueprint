@@ -120,6 +120,13 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Besluiten
 
+- 2026-10-26 (later): Besluiten van de gebruiker en het dagplan.
+  - **Font, #19:** Inter op 12–13 px blijft, getallen in Inter AEC.
+  - **Installer, #16:** voorstel E wordt vastgelegd als hub, zonder verdere teambeoordeling.
+  - **Eigenaarschap, #21:** Nino is eigenaar van het ontwerp, de Rust-bibliotheek, de iconen en het webpakket; elke app houdt zijn eigen ontwikkelaar.
+  - **Field, #20:** daar komt de gebruiker later op terug.
+  - **Dagplan:** de Blueprint-repo zo ver mogelijk krijgen heeft prioriteit 1. Deze sessie doet #1, de Rust-standaardapplicatie (#37 stap 4), #16 met #13, en #36 na de merge van PR #32. Erika houdt de releaseworkflow van #37.
+
 - 2026-10-26: Besluiten van de gebruiker over open issues.
   - **Bijwerken, #33:** de OpenAEC Installer wordt de centrale plek voor updates; releases zijn ook op GitHub te zien. Een app meldt vooral dat er een update klaarstaat, en de knop opent de installer, die bijwerkt en de app opnieuw start. Er is geen eigen updatemechanisme per app. Van het privéproject JM-Orgue afblijven.
   - **React, #12:** alles komt in de Style Repo.
@@ -221,6 +228,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-26 **Claude**: issue #1 af en #37 stap 4 af. `scripts/version.py` (`--check`, `--set`, `--next` voor de releaseworkflow): alle versievelden op `2026.44.0`, `generate_icon_crate.py` neemt het nummer over. Nieuw `cargo run --bin blueprint`: de lege Rust-standaardapplicatie met de complete schil en het gedrag van bibliotheek 0.4 (sluitplan ook bij Alt+F4, ongedaan maken per document, bijwerkmelding, eigen sneltoetsen, toegankelijke namen), drie tests en renders in `design/blueprint/`. Releaseworkflow en ondertekening blijven bij Erika (#37).
+
 - 2026-10-26 **Claude**: issue #33, bibliotheekdeel af: nieuw `design::update` (statusbestand van de installer `%LOCALAPPDATA%\OpenAEC\installer\updates.json`, `check_installed`, `compare` voor jaar.week en semver, `notice` voor de titelbalk, `open_installer` met `--update <app-id>` of de https-releasepagina). Galerij: melding "Versie 2026.44.1 staat klaar" + Bijwerken in de titelbalk; Bijwerken loopt via het sluitplan en start daarna (gesimuleerd) de installer. Reviewbeelden opnieuw gemaakt. Nog open: de installer moet het statusbestand schrijven en `--update <id>` begrijpen (repo openaec-installer); ids volgen `src/data/catalog.ts`.
 
 - 2026-10-26 **Claude**: issue #11 af: `scripts/build_web_icons.py` maakt `web/icons/<app>.svg` (16 sprites, symbolen `i16-<id>`/`i24-<id>`, kleuren via currentColor en `--icon-accent`) en `web/icons/manifest.json`, uit de B2-export met hashcontrole; `--check` bouwt opnieuw en vergelijkt. Padgegevens compact (punten binnen 0,01 px weg, twee decimalen): 8 % van de grootte, PDF-sprite 1,9 MB (544 kB gzip). In Chrome nagemeten tegen een exacte referentie: even nauwkeurig als de export (3,43 tegen 3,40 gemiddelde afwijking). `web/componenten.html` gebruikt dezelfde compacte symbolen: 745 → 84 kB. Meting ook op #35 gezet.

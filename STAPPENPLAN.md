@@ -144,11 +144,13 @@ Op 2026-10-16 door de gebruiker, die over het ontwerp beslist.
 6. **Energy en Field gaan naar de Rust-UI.** Energy heeft al een Rust-rekenkern. Voor Field is dat de keuze van Claude, op verzoek van de gebruiker.
 7. **PDF, Speech, Composer en Frame gaan naar de Rust-UI.** Alleen hun scherm in Solid of Svelte wordt vervangen. De Rust-kant blijft.
 8. **De bibliotheek valt onder LGPL-3.0-only** (2026-10-22), zoals de `repo-cleaner` van de Foundation voorschrijft. De makers van de bestaande code stemmen in. De lettertypen houden OFL, het microfoonicoon Apache-2.0 en de oude Style Book-vectoren van het prototype CC BY-SA 4.0; zie `crates/openaec-ui/NOTICE.md`. De Style Repo-app en het ontwerpmateriaal in `design/` houden hun huidige licentie.
+9. **Tekstfont en grootte blijven** (2026-10-26, issue [#19](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/19)). Inter op 12–13 px, zoals ontwerp 0.4; getallen in Inter AEC. De [letterproef](design/letterproef/README.md) was het materiaal.
+10. **Voorstel E wordt de echte OpenAEC Installer** (2026-10-26, issues [#16](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/16) en [#13](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/13)), en de centrale plek voor updates (issue [#33](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/33)).
+11. **Eigenaarschap** (2026-10-26, issue [#21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/21)). Nino is eigenaar van het ontwerp, de Rust-bibliotheek, de iconen en het webpakket. Elke app houdt zijn eigen ontwikkelaar als eigenaar.
 
 ## Nog open
 
 1. **Licentie van de iconen van Codex.** Onder LGPL of een aparte iconenlicentie; de gebruiker controleert eerst of ze nieuw getekend zijn. Issue [#15](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/15).
 2. **Field op tablet of telefoon.** Field gaat naar de Rust-UI, die voor desktop is. Blijkt Field op locatie op een tablet of telefoon nodig, dan kijken we opnieuw naar het webpakket. Issue [#20](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/20).
-3. **Eigenaarschap.** Wie is eigenaar van het ontwerp, van elke uitvoering en van elke app? Issue [#21](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/21).
 
 Alle open werk staat als issue op GitHub, ook de vervolgstappen van fase 4 en 5.

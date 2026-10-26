@@ -282,6 +282,25 @@ Elk onderdeel van de bibliotheek heeft een toegankelijke naam en rol (`design::a
 - **Waarom nu al.** iced 0.14 geeft dit nog niet aan een schermlezer door, zie de [schermlezerproef](design/schermlezerproef/README.md). Zodra iced of een fork het wel doet, hoeven apps niets aan te passen.
 - **Controle.** `a11y::Collect` vindt elk onderdeel in de Tab-route zonder naam. De galerij test met elke weergave dat er geen enkel is.
 
+## Standaardapplicatie in Rust
+
+`cargo run --bin blueprint` start **OpenAEC Blueprint**, de lege standaardapplicatie waarop elke OpenAEC-tool in Rust wordt gebouwd (issue #37, stap 4). Een app neemt [`src/bin/blueprint.rs`](src/bin/blueprint.rs) over en zet zijn eigen werk in de werkruimte en zijn opdrachten in `commands()`.
+
+- **Schil.** Titelbalk met snelle acties en vensterknoppen, lint met Bestand, documenttabs, verkenner, eigenschappen, statusbalk, en instellingen met thema's en eigen sneltoetsen.
+- **Gedrag uit bibliotheek 0.4.**
+  - Toetsenbordfocus en één opdrachtenlijst.
+  - Opslaan en sluiten via het sluitplan, ook bij Alt+F4.
+  - Ongedaan maken per document.
+  - De bijwerkmelding van de installer.
+  - Toegankelijke namen voor elk onderdeel.
+- **Afbeeldingen.** [`design/blueprint/`](design/blueprint/) heeft renders in Licht, Donker, Blueprint en Hoog contrast, plus Bestand en Instellingen. Maak ze opnieuw met `cargo test --bin blueprint -- --ignored`.
+- **Tests.** De tests controleren dat geen twee opdrachten dezelfde sneltoets hebben, dat elk onderdeel een naam heeft, en het ongedaan maken en sluiten.
+
+Alles in deze repository draagt één versienummer volgens `JJJJ.W.N` (issue #1): jaar, ISO-week zonder voorloopnul en een volgnummer dat elke week bij 0 begint, zoals `2026.44.0`. Releases krijgen de tag `vJJJJ.W.N`.
+- **Bron.** Het nummer staat in de hoofd-`Cargo.toml`. `python scripts/version.py --check` controleert dat elk versieveld gelijk en geldig is.
+- **Zetten.** `--set 2026.44.0` zet een nummer. `--next` zet het volgende nummer voor vandaag; dat is bedoeld voor de releaseworkflow.
+- **Iconencrate.** `scripts/generate_icon_crate.py` neemt het nummer over voor `openaec-icons`.
+
 Updates lopen in elke app via de OpenAEC Installer (`design::update`, issue #33; besluit van 26 oktober 2026):
 - **Status van de installer.** De installer controleert GitHub en schrijft per app de nieuwste versie naar `%LOCALAPPDATA%\OpenAEC\installer\updates.json`.
 - **Melding in de app.** Een app leest dat bestand bij het starten. Is er een nieuwere versie, dan toont hij rechts in de titelbalk "Versie … staat klaar" met de knop **Bijwerken**.

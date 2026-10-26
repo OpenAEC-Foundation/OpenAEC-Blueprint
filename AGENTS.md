@@ -50,6 +50,7 @@ python scripts/build_web_icons.py --check
 python scripts/build_font_package.py --check
 python scripts/check_font_glyphs.py
 python scripts/check_report_pdf.py --self-test
+python scripts/version.py --check
 cargo test
 cargo test -p openaec-icons --features all
 cargo package -p openaec-ui
