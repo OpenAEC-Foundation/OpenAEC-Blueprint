@@ -11,6 +11,7 @@ pub mod chrome;
 pub mod command;
 pub mod document;
 pub mod focus;
+pub mod history;
 pub mod number;
 pub mod shortcuts;
 pub mod tiles;

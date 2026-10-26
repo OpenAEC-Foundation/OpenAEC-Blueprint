@@ -164,11 +164,14 @@ pub struct Command<M> {
     pub message: M,
     /// A disabled command shows greyed out and its shortcut does nothing.
     pub enabled: bool,
+    /// A longer text for menus and tooltips when it says more than the label,
+    /// such as "Ongedaan maken: Prijs wijzigen" (issue #34).
+    pub detail: Option<&'static str>,
 }
 
 impl<M> Command<M> {
     pub fn new(id: &'static str, label: &'static str, message: M) -> Self {
-        Self { id, label, icon: None, icon_large: None, shortcut: None, kind: CommandKind::Action, danger: false, message, enabled: true }
+        Self { id, label, icon: None, icon_large: None, shortcut: None, kind: CommandKind::Action, danger: false, message, enabled: true, detail: None }
     }
     /// The 16 px and 24 px icon.
     pub fn icon(mut self, small: &'static str, large: &'static str) -> Self {
@@ -205,11 +208,34 @@ impl<M> Command<M> {
         self.enabled = enabled;
         self
     }
+    /// The text menus and tooltips show instead of the label. Kept for the life of
+    /// the app, like shortcut labels, so use it for a limited set of texts.
+    pub fn detail(mut self, text: &str) -> Self {
+        self.detail = Some(intern(text));
+        self
+    }
+
+    /// What menus and tooltips say: the detail, or else the label.
+    pub fn description(&self) -> &'static str {
+        self.detail.unwrap_or(self.label)
+    }
 
     /// The shortcut text, such as "Ctrl+S".
     pub fn shortcut_label(&self) -> Option<&'static str> {
         self.shortcut.map(|s| s.label())
     }
+}
+
+/// Keeps a text for the life of the app, once per distinct text.
+fn intern(text: &str) -> &'static str {
+    static TEXTS: OnceLock<Mutex<std::collections::HashSet<&'static str>>> = OnceLock::new();
+    let mut texts = TEXTS.get_or_init(Default::default).lock().unwrap_or_else(|e| e.into_inner());
+    if let Some(&known) = texts.get(text) {
+        return known;
+    }
+    let kept: &'static str = Box::leak(text.to_owned().into_boxed_str());
+    texts.insert(kept);
+    kept
 }
 
 impl<M: Clone> Command<M> {
@@ -248,7 +274,7 @@ pub fn conflicts<M>(commands: &[Command<M>]) -> Vec<(&'static str, &'static str)
 pub fn menu_item<M: Clone>(command: &Command<M>) -> MenuItem<'static, M> {
     MenuItem::Action {
         icon: command.icon,
-        label: command.label,
+        label: command.description(),
         shortcut: command.shortcut_label(),
         checked: command.kind.is_on(),
         danger: command.danger,
@@ -266,20 +292,20 @@ fn ribbon_label<M>(command: &Command<M>) -> &'static str {
 pub fn ribbon_large<'a, M: Clone + 'a>(look: Look, command: &Command<M>) -> Element<'a, M> {
     let icon = command.icon_large.or(command.icon).unwrap_or_default();
     let button = w::ribbon_large(look, icon, ribbon_label(command), command.kind.is_on(), command.on_press());
-    w::with_tooltip(look, button, command.label, command.shortcut_label())
+    w::with_tooltip(look, button, command.description(), command.shortcut_label())
 }
 
 /// A small ribbon button (16 px icon beside the label) with a tooltip.
 pub fn ribbon_small<'a, M: Clone + 'a>(look: Look, command: &Command<M>) -> Element<'a, M> {
     let button = w::ribbon_small(look, command.icon.unwrap_or_default(), ribbon_label(command), command.kind.is_on(), command.on_press());
-    w::with_tooltip(look, button, command.label, command.shortcut_label())
+    w::with_tooltip(look, button, command.description(), command.shortcut_label())
 }
 
 /// A square icon button of `size` px with a tooltip; a toggle shows as selected
 /// when on.
 pub fn icon_button<'a, M: Clone + 'a>(look: Look, command: &Command<M>, size: f32) -> Element<'a, M> {
     let button = w::icon_button(look, command.icon.unwrap_or_default(), size, command.kind.is_on(), command.on_press());
-    w::with_tooltip(look, button, command.label, command.shortcut_label())
+    w::with_tooltip(look, button, command.description(), command.shortcut_label())
 }
 
 /// A text button with the command's 16 px icon and a tooltip with the shortcut.
@@ -287,7 +313,7 @@ pub fn button<'a, M: Clone + 'a>(look: Look, command: &Command<M>, kind: ButtonK
     let kind = if command.danger && kind == ButtonKind::Secondary { ButtonKind::Danger } else { kind };
     let button = w::button(look, command.label, kind, density, command.icon, command.on_press());
     match command.shortcut_label() {
-        Some(keys) => w::with_tooltip(look, button, command.label, Some(keys)),
+        Some(keys) => w::with_tooltip(look, button, command.description(), Some(keys)),
         None => button,
     }
 }

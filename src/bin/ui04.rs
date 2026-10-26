@@ -11,6 +11,7 @@ use openaec_ui::design::chrome::{self as ch, MenuItem, WindowActions, WindowIcon
 use openaec_ui::design::command::{self as cm, Command, Shortcut};
 use openaec_ui::design::document::{self as dm, Choice as CloseChoice, ClosePlan, DocumentState, Request, SaveKind, SaveTicket, Status, Step};
 use openaec_ui::design::focus;
+use openaec_ui::design::history::{self as hist, History};
 use openaec_ui::design::number::{self as num, NumberFormat, NumberInput, Value};
 use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles::{self as t, RecentFile};
@@ -839,8 +840,9 @@ struct Gallery {
     blank_count: u32,
     items: Vec<Item>,
     next_id: u32,
-    history: Vec<Vec<Item>>,
-    future: Vec<Vec<Item>>,
+    /// Undo history of the budget document; its views (Begroting, Hoeveelheden
+    /// and the post tabs) share it (issue #34).
+    history: History<Vec<Item>>,
     clipboard: Option<Item>,
     tree: TreeSel,
     root_open: bool,
@@ -922,8 +924,7 @@ impl Default for Gallery {
             blank_count: 0,
             next_id: items.len() as u32 + 1,
             items,
-            history: Vec::new(),
-            future: Vec::new(),
+            history: History::new(),
             clipboard: None,
             tree: TreeSel::Item(3),
             root_open: true,
@@ -984,6 +985,10 @@ impl Gallery {
     }
 
     fn select(&mut self, id: Option<u32>) {
+        // Another post ends a run of typing: the next edit is a new step.
+        if id != self.selected {
+            self.history.seal();
+        }
         self.selected = id;
         if let Some((quantity, unit, price, item_id)) = id.and_then(|id| self.item(id)).map(|i| (i.quantity, i.unit, i.price, i.id)) {
             self.quantity_input.show(Value::Number(quantity), &quantity_format(unit));
@@ -1005,14 +1010,15 @@ impl Gallery {
         }
     }
 
-    /// Record the current posts before a change, for undo.
-    fn remember(&mut self) {
-        self.history.push(self.items.clone());
-        if self.history.len() > 200 {
-            self.history.remove(0);
-        }
-        self.future.clear();
+    /// Record the current posts before a change, as one named undo step.
+    fn remember(&mut self, label: &str) {
+        self.history.record(label, self.items.clone());
         self.touch();
+    }
+
+    /// Whether the active document shows the posts, so Ongedaan maken works on it.
+    fn edits_posts(&self) -> bool {
+        self.docs.get(self.active).is_some_and(|d| matches!(d.kind, DocKind::Budget | DocKind::Quantities | DocKind::Item(_)))
     }
 
     /// One new revision for every document that shows the posts.
@@ -1250,16 +1256,22 @@ impl Gallery {
                 return Task::batch(tasks);
             }
             Msg::Undo => {
-                if let Some(previous) = self.history.pop() {
+                if !self.edits_posts() {
+                    return Task::none();
+                }
+                if let Some(previous) = self.history.undo(self.items.clone()) {
                     self.touch();
-                    self.future.push(std::mem::replace(&mut self.items, previous));
+                    self.items = previous;
                     self.select(self.selected.filter(|id| self.items.iter().any(|i| i.id == *id)));
                 }
             }
             Msg::Redo => {
-                if let Some(next) = self.future.pop() {
+                if !self.edits_posts() {
+                    return Task::none();
+                }
+                if let Some(next) = self.history.redo(self.items.clone()) {
                     self.touch();
-                    self.history.push(std::mem::replace(&mut self.items, next));
+                    self.items = next;
                     self.select(self.selected.filter(|id| self.items.iter().any(|i| i.id == *id)));
                 }
             }
@@ -1269,7 +1281,7 @@ impl Gallery {
                 };
                 self.clipboard = Some(item.clone());
                 if matches!(message, Msg::Cut) {
-                    self.remember();
+                    self.remember("Post knippen");
                     self.items.retain(|i| i.id != item.id);
                     self.selected = None;
                     return self.toast(Tone::Info, "Geknipt", format!("{} staat op het klembord.", item.name));
@@ -1278,7 +1290,7 @@ impl Gallery {
             }
             Msg::Paste => {
                 if let Some(mut item) = self.clipboard.clone() {
-                    self.remember();
+                    self.remember("Post plakken");
                     item.code = self.next_code(item.chapter().to_string().as_str());
                     self.insert_item(item);
                     self.banner = self.missing_prices();
@@ -1287,7 +1299,7 @@ impl Gallery {
             Msg::Delete => {
                 if let Some(id) = self.selected {
                     let name = self.item(id).map(|i| i.name.clone()).unwrap_or_default();
-                    self.remember();
+                    self.remember("Post verwijderen");
                     self.items.retain(|i| i.id != id);
                     self.selected = None;
                     if let Some(i) = self.docs.iter().position(|d| d.kind == DocKind::Item(id)) {
@@ -1299,7 +1311,7 @@ impl Gallery {
             }
             Msg::AddItem => {
                 let chapter = self.selected.and_then(|id| self.item(id)).map_or("21".to_string(), |i| i.chapter().to_string());
-                self.remember();
+                self.remember("Post toevoegen");
                 let code = self.next_code(&chapter);
                 self.insert_item(Item { id: 0, code, name: "Nieuwe post".into(), quantity: 1.0, unit: "st", price: 0.0, include: true });
                 self.open_doc(DocKind::Budget);
@@ -1308,7 +1320,7 @@ impl Gallery {
             Msg::AddChapter => {
                 let used: HashSet<String> = self.items.iter().map(|i| i.chapter().to_string()).collect();
                 if let Some((key, name)) = CHAPTERS.iter().find(|(k, _)| !used.contains(*k)) {
-                    self.remember();
+                    self.remember("Hoofdstuk toevoegen");
                     let code = format!("{key}.10");
                     self.insert_item(Item { id: 0, code, name: "Nieuwe post".into(), quantity: 1.0, unit: "st", price: 0.0, include: true });
                     self.open_doc(DocKind::Budget);
@@ -1395,23 +1407,23 @@ impl Gallery {
             }
             Msg::CloseChoose(choice) => return self.close_choose(choice, false),
             Msg::CloseChooseAll(choice) => return self.close_choose(choice, true),
-            Msg::EditName(name) => self.edit(|i| i.name = name),
-            Msg::EditUnit(unit) => self.edit(|i| i.unit = unit),
+            Msg::EditName(name) => self.edit_typed("Naam wijzigen", "name", |i| i.name = name),
+            Msg::EditUnit(unit) => self.edit("Eenheid wijzigen", |i| i.unit = unit),
             Msg::EditQuantity(value) => {
                 let unit = self.selected.and_then(|id| self.item(id)).map_or("st", |i| i.unit);
                 if let Some(Value::Number(q)) = self.quantity_input.edit(value, &quantity_format(unit)) {
-                    self.edit(|i| i.quantity = q);
+                    self.edit_typed("Hoeveelheid wijzigen", "quantity", |i| i.quantity = q);
                 }
             }
             Msg::EditPrice(value) => {
                 if let Some(Value::Number(p)) = self.price_input.edit(value, &PRICE) {
-                    self.edit(|i| i.price = p);
+                    self.edit_typed("Prijs wijzigen", "price", |i| i.price = p);
                     if self.banner.is_some() {
                         self.banner = self.missing_prices();
                     }
                 }
             }
-            Msg::EditInclude(b) => self.edit(|i| i.include = b),
+            Msg::EditInclude(b) => self.edit("Meenemen wijzigen", |i| i.include = b),
             Msg::CloseToast => self.toast = None,
             Msg::ToastExpired(id) => {
                 if self.toast.as_ref().is_some_and(|t| t.id == id) {
@@ -1677,9 +1689,23 @@ impl Gallery {
         Task::none()
     }
 
-    fn edit(&mut self, change: impl FnOnce(&mut Item)) {
+    /// One change to the selected post, as its own undo step.
+    fn edit(&mut self, label: &str, change: impl FnOnce(&mut Item)) {
         let Some(id) = self.selected else { return };
-        self.remember();
+        self.remember(label);
+        self.apply(id, change);
+    }
+
+    /// A change while typing in a field: the run of typing in one field of one
+    /// post is one undo step, so Ctrl+Z first takes back the whole field edit.
+    fn edit_typed(&mut self, label: &str, field: &str, change: impl FnOnce(&mut Item)) {
+        let Some(id) = self.selected else { return };
+        self.history.record_merged(label, format!("{field}:{id}"), self.items.clone());
+        self.touch();
+        self.apply(id, change);
+    }
+
+    fn apply(&mut self, id: u32, change: impl FnOnce(&mut Item)) {
         if let Some(item) = self.items.iter_mut().find(|i| i.id == id) {
             change(item);
         }
@@ -2128,8 +2154,17 @@ impl Gallery {
             Command::new("file.export", "Exporteren…", Msg::Dialog(Some(Dialog::Export))).icon(EXPORT_SMALL, EXPORT).shortcut(Shortcut::ctrl('e')).dialog(),
             Command::new("file.print", "Afdrukken…", Msg::Dialog(Some(Dialog::Print))).icon(PRINT_SMALL, PRINT).shortcut(Shortcut::ctrl('p')).dialog(),
             Command::new("doc.close", "Sluiten", Msg::CloseActive).icon_small(CLOSE).shortcut(Shortcut::ctrl('w')),
-            Command::new("edit.undo", "Ongedaan", Msg::Undo).icon(UNDO_SMALL, UNDO).shortcut(Shortcut::ctrl('z')).enabled(!self.history.is_empty()),
-            Command::new("edit.redo", "Opnieuw", Msg::Redo).icon(REDO_SMALL, REDO).shortcut(Shortcut::ctrl('y')).enabled(!self.future.is_empty()),
+            // Undo works on the active document and names the step it takes back.
+            Command::new("edit.undo", "Ongedaan", Msg::Undo)
+                .icon(UNDO_SMALL, UNDO)
+                .shortcut(Shortcut::ctrl('z'))
+                .enabled(self.edits_posts() && self.history.can_undo())
+                .detail(&hist::undo_text(self.history.undo_label().filter(|_| self.edits_posts()))),
+            Command::new("edit.redo", "Opnieuw", Msg::Redo)
+                .icon(REDO_SMALL, REDO)
+                .shortcut(Shortcut::ctrl('y'))
+                .enabled(self.edits_posts() && self.history.can_redo())
+                .detail(&hist::redo_text(self.history.redo_label().filter(|_| self.edits_posts()))),
             Command::new("edit.cut", "Knippen", Msg::Cut).icon_small(CUT).shortcut(Shortcut::ctrl('x')).enabled(selection),
             Command::new("edit.copy", "Kopiëren", Msg::Copy).icon_small(COPY).shortcut(Shortcut::ctrl('c')).enabled(selection),
             Command::new("edit.paste", "Plakken", Msg::Paste).icon(b2!("16", "edit.paste"), PASTE).shortcut(Shortcut::ctrl('v')).enabled(self.clipboard.is_some()),
@@ -2779,7 +2814,7 @@ impl Gallery {
                 w::dialog(look, "Instellingen", CLOSE, close, column![tabs, body].spacing(14).into(), None, vec![w::button(look, "Sluiten", K::Primary, D::Regular, None, Some(Msg::Dialog(None)))], true)
             }
             Dialog::Export => {
-                let mut formats = column![w::secondary(look, "Kies het formaat van het bestand.")].spacing(10);
+                let mut formats = column![w::secondary(look, format!("Kies het formaat van het bestand. {}", hist::IRREVERSIBLE))].spacing(10);
                 for f in FORMATS {
                     formats = formats.push(w::radio(look, f, f, Some(self.format), Msg::Format));
                 }
@@ -2796,7 +2831,7 @@ impl Gallery {
             }
             Dialog::Print => {
                 let content = column![
-                    w::secondary(look, "De begroting wordt op de standaardprinter afgedrukt."),
+                    w::secondary(look, format!("De begroting wordt op de standaardprinter afgedrukt. {}", hist::IRREVERSIBLE)),
                     w::radio(look, "Staand", false, Some(self.landscape), Msg::Landscape),
                     w::radio(look, "Liggend", true, Some(self.landscape), Msg::Landscape),
                 ]
@@ -3771,6 +3806,50 @@ mod tests {
         finish_writes(&mut g);
         assert!(!g.docs.iter().any(|d| d.state.is_dirty()));
         assert_eq!(g.save_status(), "Gereed");
+    }
+
+    fn command_text(g: &Gallery, id: &str) -> &'static str {
+        g.commands().into_iter().find(|c| c.id == id).expect("command").description()
+    }
+
+    #[test]
+    fn undo_takes_back_one_named_task_at_a_time() {
+        // Issue #34: typing in one field is one step, and the menu names it.
+        let mut g = Gallery::default();
+        let _ = g.update(Msg::SelectRow(1));
+        for typed in ["2", "25", "250", "250,00"] {
+            let _ = g.update(Msg::EditPrice(typed.into()));
+        }
+        assert_eq!(command_text(&g, "edit.undo"), "Ongedaan maken: Prijs wijzigen");
+        let _ = g.update(Msg::EditName("Balken".into()));
+        assert_eq!(command_text(&g, "edit.undo"), "Ongedaan maken: Naam wijzigen");
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().name, "Funderingsbalken");
+        assert_eq!(g.item(1).unwrap().price, 250.0, "the name came back, the price stays");
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().price, 240.0, "the whole price edit comes back in one step");
+        assert!(!g.history.can_undo());
+        assert_eq!(command_text(&g, "edit.redo"), "Opnieuw: Prijs wijzigen");
+        // Another post starts a new step.
+        let _ = g.update(Msg::Redo);
+        let _ = g.update(Msg::SelectRow(2));
+        let _ = g.update(Msg::EditPrice("300,00".into()));
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().price, 250.0);
+    }
+
+    #[test]
+    fn undo_works_on_the_active_document() {
+        let mut g = Gallery::default();
+        let _ = g.update(Msg::SelectRow(1));
+        let _ = g.update(Msg::EditPrice("250,00".into()));
+        let _ = g.update(Msg::OpenDoc(DocKind::Report));
+        assert_eq!(command_text(&g, "edit.undo"), "Ongedaan maken", "the report has no steps");
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().price, 250.0, "Ctrl+Z in the report leaves the budget alone");
+        let _ = g.update(Msg::OpenDoc(DocKind::Quantities));
+        let _ = g.update(Msg::Undo);
+        assert_eq!(g.item(1).unwrap().price, 240.0, "Hoeveelheden is a view of the same budget");
     }
 
     /// Delivers every running write as the timer would, until none is left.

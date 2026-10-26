@@ -268,6 +268,13 @@ Opslaan en sluiten volgen in elke app hetzelfde contract (`design::document`, is
 - **Drie soorten opslaan.** Opslaan, automatisch opslaan en herstelkopie zijn drie aparte beloften. Automatisch opslaan schrijft alleen een document met een bestandsnaam; een nieuw document krijgt een herstelkopie. Die komt in `%LOCALAPPDATA%\OpenAEC\<app>\herstel`, overschrijft het hoofdbestand nooit en telt niet als opgeslagen.
 - **Galerij.** De galerij gebruikt dit contract voor tabs, Alles sluiten, Andere sluiten en het venster, met een gesimuleerde schrijftijd zodat "Opslaan…" zichtbaar is.
 
+Ongedaan maken volgt in elke app dezelfde regels (`design::history`, issue #34):
+- **Eén stap per taak.** Plakken, een bulkactie, slepen en typen in één veld zijn elk één stap. Ctrl+Z in een veld neemt dus eerst de hele veldbewerking terug.
+- **Per document.** Elk document heeft een eigen geschiedenis. Weergaven van dezelfde gegevens delen die; in de galerij delen Begroting, Hoeveelheden en de posttabs de geschiedenis, terwijl Rapport niets terugdraait.
+- **Benoemde stappen.** Menu en tooltip zeggen wat er gebeurt, zoals "Ongedaan maken: Prijs wijzigen".
+- **Niet terug te draaien.** Exporteren en afdrukken worden niet vastgelegd; hun dialoog zegt dat het niet ongedaan kan worden gemaakt.
+- **Herstel na een crash.** Dat staat los van ongedaan maken; daarvoor is er de herstelkopie van `design::document`.
+
 Tooltips en selectie werken ook zonder muis en zonder schaduw (issues #6 en #7):
 - **Tooltip bij toetsenbordfocus.** In Rust toont `design::focus::tip` de tooltip ook bij toetsenbordfocus, en `widgets::with_tooltip` gebruikt dat voor elke iconknop. Escape verbergt de tooltip.
 - **Afgekorte tekst.** Lange tabnamen en tabelcellen worden met "…" afgekort (`widgets::shorten`). De volledige tekst staat dan in de tooltip.
