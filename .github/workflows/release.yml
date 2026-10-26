@@ -55,6 +55,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pkg-config libxkbcommon-dev libwayland-dev libfontconfig1-dev
       - name: Repository checks
         run: |
+          python3 scripts/version.py --check
           python3 scripts/check_layout_metrics.py
           python3 scripts/check_icon_adoptions.py
           python3 scripts/check_portable_ui.py
@@ -86,13 +87,13 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pkg-config libxkbcommon-dev libwayland-dev libfontconfig1-dev rpm file
       - name: Build the application and the library
         run: |
-          cargo build --release --locked --features gpu --bin ui04
+          cargo build --release --locked --features gpu --bin blueprint
           cargo build --release --locked -p openaec-blueprint-sdk
       - name: Package the application
         run: |
           set -euo pipefail
           out="$PWD/dist"; mkdir -p "$out"
-          bin=target/release/ui04
+          bin=target/release/blueprint
           stage=$(mktemp -d)
           # .tar.gz
           mkdir -p "$stage/openaec-blueprint_${NUMBER}_linux-x64"
@@ -175,10 +176,10 @@ jobs:
         env:
           RUSTFLAGS: -C target-feature=+crt-static
         run: |
-          cargo build --release --locked --features gpu --bin ui04
+          cargo build --release --locked --features gpu --bin blueprint
           cargo build --release --locked -p openaec-blueprint-sdk
           mkdir -p sign
-          cp target/release/ui04.exe sign/openaec-blueprint.exe
+          cp target/release/blueprint.exe sign/openaec-blueprint.exe
           cp target/release/openaec_blueprint.dll sign/
       - name: Sign the application and the DLL
         continue-on-error: true
@@ -294,11 +295,11 @@ jobs:
         run: |
           set -euo pipefail
           for t in aarch64-apple-darwin x86_64-apple-darwin; do
-            cargo build --release --locked --features gpu --bin ui04 --target "$t"
+            cargo build --release --locked --features gpu --bin blueprint --target "$t"
             cargo build --release --locked -p openaec-blueprint-sdk --target "$t"
           done
           mkdir -p build
-          lipo -create -output build/openaec-blueprint target/aarch64-apple-darwin/release/ui04 target/x86_64-apple-darwin/release/ui04
+          lipo -create -output build/openaec-blueprint target/aarch64-apple-darwin/release/blueprint target/x86_64-apple-darwin/release/blueprint
           lipo -create -output build/libopenaec_blueprint.dylib target/aarch64-apple-darwin/release/libopenaec_blueprint.dylib target/x86_64-apple-darwin/release/libopenaec_blueprint.dylib
           lipo -create -output build/libopenaec_blueprint.a target/aarch64-apple-darwin/release/libopenaec_blueprint.a target/x86_64-apple-darwin/release/libopenaec_blueprint.a
           install_name_tool -id @rpath/libopenaec_blueprint.dylib build/libopenaec_blueprint.dylib
@@ -469,7 +470,7 @@ jobs:
           set -euo pipefail
           yes() { [[ "$1" == true ]] && echo "ja" || echo "**nee**"; }
           cat > notes.md <<EOF
-          De eerste release van **OpenAEC Blueprint**: de standaardapplicatie en de C-bibliotheek met de ontwerptokens en de 945 B2-iconen. Versie \`${NUMBER}\` volgt het schema jaar.week (\`JJJJ.W.N\`).
+          **OpenAEC Blueprint** ${NUMBER}: de lege standaardapplicatie in Rust en de C-bibliotheek met de ontwerptokens en de 945 B2-iconen. Versie \`${NUMBER}\` volgt het schema jaar.week (\`JJJJ.W.N\`).
 
           | Systeem | Applicatie | Bibliotheek |
           | --- | --- | --- |
@@ -494,8 +495,11 @@ jobs:
           EOF
           sed -i 's/^          //' notes.md
           pre=()
-          if [[ "$WINDOWS_SIGNED" != true || "$MACOS_SIGNED" != true || "$GPG_SIGNED" != true ]]; then
+          # The organisation has no OpenPGP key yet (#37); until it has, the
+          # Linux packages rely on the build attestation, and only Windows and
+          # macOS decide whether this is a pre-release.
+          if [[ "$WINDOWS_SIGNED" != true || "$MACOS_SIGNED" != true ]]; then
             pre=(--prerelease)
-            echo "::warning::not every platform is signed; publishing as a pre-release"
+            echo "::warning::Windows or macOS is not signed; publishing as a pre-release"
           fi
           gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --title "OpenAEC Blueprint ${NUMBER}" --notes-file notes.md "${pre[@]}" assets/*
