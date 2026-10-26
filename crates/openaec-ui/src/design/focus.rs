@@ -26,6 +26,9 @@ thread_local! {
     /// Set while an inert screen draws: the control that keeps the focus behind
     /// an open dialog shows no ring, so only the dialog's focus is visible.
     static BEHIND_DIALOG: std::cell::Cell<bool> = const { std::cell::Cell::new(false) };
+    /// Whether the focus last moved by keyboard: a [`tip`] only shows then, not
+    /// after a click.
+    static KEYBOARD: std::cell::Cell<bool> = const { std::cell::Cell::new(false) };
 }
 
 /// Width of the focus ring and its distance from the control.
@@ -48,6 +51,7 @@ impl Focusable for State {
         // Only focus operations (Tab, Shift+Tab, `focus(id)`) call this.
         self.focused = true;
         self.visible = true;
+        KEYBOARD.with(|k| k.set(true));
     }
     fn unfocus(&mut self) {
         self.focused = false;
@@ -193,6 +197,7 @@ impl<M> Widget<M, Theme, Renderer> for Focus<'_, M> {
             }
             Event::Mouse(mouse::Event::ButtonPressed(_)) | Event::Touch(iced::touch::Event::FingerPressed { .. }) => {
                 // A click moves the focus here without showing the ring, and away elsewhere.
+                KEYBOARD.with(|k| k.set(false));
                 let own = tree.state.downcast_mut::<State>();
                 let inside = cursor.is_over(bounds);
                 if own.focused != inside || own.visible {
@@ -575,6 +580,125 @@ impl<M: Clone> Widget<M, Theme, Renderer> for Expander<'_, M> {
     }
     fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'b>, renderer: &Renderer, viewport: &Rectangle, translation: Vector) -> Option<overlay::Element<'b, M, Theme, Renderer>> {
         self.content.as_widget_mut().overlay(&mut tree.children[0], layout, renderer, viewport, translation)
+    }
+}
+
+/// Shows `tip` under `content` while a control inside it has the keyboard focus
+/// (issue #7), so a name or full text that the mouse gets as a tooltip is also
+/// there without a mouse. Escape hides it until the focus moves on.
+/// [`super::widgets::with_tooltip`] uses this together with the hover tooltip.
+pub fn tip<'a, M: 'a>(content: impl Into<Element<'a, M>>, tip: impl Into<Element<'a, M>>) -> Element<'a, M> {
+    Element::new(Tip { content: content.into(), tip: tip.into() })
+}
+
+struct Tip<'a, M> {
+    content: Element<'a, M>,
+    tip: Element<'a, M>,
+}
+
+#[derive(Debug, Clone, Copy, Default)]
+struct TipState {
+    /// Escape hid the tip; it comes back when the focus has left and returns.
+    dismissed: bool,
+}
+
+/// Gap between the control and its tip, as `with_tooltip` uses.
+const TIP_GAP: f32 = 4.0;
+
+impl<M> Tip<'_, M> {
+    fn has_keyboard_focus(&mut self, tree: &mut Tree, layout: Layout<'_>, renderer: &Renderer) -> bool {
+        if !KEYBOARD.with(|k| k.get()) {
+            return false;
+        }
+        let mut census = Census { total: 0, focused: None };
+        self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, &mut census);
+        census.focused.is_some()
+    }
+}
+
+impl<M> Widget<M, Theme, Renderer> for Tip<'_, M> {
+    fn tag(&self) -> tree::Tag {
+        tree::Tag::of::<TipState>()
+    }
+    fn state(&self) -> tree::State {
+        tree::State::new(TipState::default())
+    }
+    fn children(&self) -> Vec<Tree> {
+        vec![Tree::new(&self.content), Tree::new(&self.tip)]
+    }
+    fn diff(&self, tree: &mut Tree) {
+        tree.diff_children(&[&self.content, &self.tip]);
+    }
+    fn size(&self) -> Size<Length> {
+        self.content.as_widget().size()
+    }
+    fn size_hint(&self) -> Size<Length> {
+        self.content.as_widget().size_hint()
+    }
+    fn layout(&mut self, tree: &mut Tree, renderer: &Renderer, limits: &layout::Limits) -> layout::Node {
+        self.content.as_widget_mut().layout(&mut tree.children[0], renderer, limits)
+    }
+    fn operate(&mut self, tree: &mut Tree, layout: Layout<'_>, renderer: &Renderer, operation: &mut dyn Operation) {
+        self.content.as_widget_mut().operate(&mut tree.children[0], layout, renderer, operation);
+    }
+    fn update(
+        &mut self,
+        tree: &mut Tree,
+        event: &Event,
+        layout: Layout<'_>,
+        cursor: mouse::Cursor,
+        renderer: &Renderer,
+        clipboard: &mut dyn Clipboard,
+        shell: &mut Shell<'_, M>,
+        viewport: &Rectangle,
+    ) {
+        let focused = self.has_keyboard_focus(tree, layout, renderer);
+        let state = tree.state.downcast_mut::<TipState>();
+        if !focused {
+            state.dismissed = false;
+        } else if !state.dismissed && matches!(event, Event::Keyboard(keyboard::Event::KeyPressed { key: Key::Named(Named::Escape), .. })) {
+            // Escape first closes the tip; the next one reaches the app.
+            state.dismissed = true;
+            shell.capture_event();
+            shell.request_redraw();
+            return;
+        }
+        self.content.as_widget_mut().update(&mut tree.children[0], event, layout, cursor, renderer, clipboard, shell, viewport);
+    }
+    fn mouse_interaction(&self, tree: &Tree, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle, renderer: &Renderer) -> mouse::Interaction {
+        self.content.as_widget().mouse_interaction(&tree.children[0], layout, cursor, viewport, renderer)
+    }
+    fn draw(&self, tree: &Tree, renderer: &mut Renderer, theme: &Theme, style: &renderer::Style, layout: Layout<'_>, cursor: mouse::Cursor, viewport: &Rectangle) {
+        self.content.as_widget().draw(&tree.children[0], renderer, theme, style, layout, cursor, viewport);
+    }
+    fn overlay<'b>(&'b mut self, tree: &'b mut Tree, layout: Layout<'b>, renderer: &Renderer, viewport: &Rectangle, translation: Vector) -> Option<overlay::Element<'b, M, Theme, Renderer>> {
+        let showing = self.has_keyboard_focus(tree, layout, renderer) && !tree.state.downcast_ref::<TipState>().dismissed;
+        let [content_tree, tip_tree] = tree.children.as_mut_slice() else { return None };
+        if !showing {
+            return self.content.as_widget_mut().overlay(content_tree, layout, renderer, viewport, translation);
+        }
+        Some(overlay::Element::new(Box::new(TipOverlay { tip: &mut self.tip, tree: tip_tree, anchor: layout.bounds() + translation })))
+    }
+}
+
+struct TipOverlay<'a, 'b, M> {
+    tip: &'b mut Element<'a, M>,
+    tree: &'b mut Tree,
+    anchor: Rectangle,
+}
+
+impl<M> overlay::Overlay<M, Theme, Renderer> for TipOverlay<'_, '_, M> {
+    fn layout(&mut self, renderer: &Renderer, bounds: Size) -> layout::Node {
+        let node = self.tip.as_widget_mut().layout(self.tree, renderer, &layout::Limits::new(Size::ZERO, bounds));
+        let size = node.size();
+        // Centred under the control, as the hover tooltip, and kept inside the window.
+        let x = (self.anchor.center_x() - size.width / 2.0).clamp(0.0, (bounds.width - size.width).max(0.0));
+        let below = self.anchor.y + self.anchor.height + TIP_GAP;
+        let y = if below + size.height > bounds.height { (self.anchor.y - TIP_GAP - size.height).max(0.0) } else { below };
+        node.move_to(iced::Point::new(x, y))
+    }
+    fn draw(&self, renderer: &mut Renderer, theme: &Theme, style: &renderer::Style, layout: Layout<'_>, cursor: mouse::Cursor) {
+        self.tip.as_widget().draw(self.tree, renderer, theme, style, layout, cursor, &layout.bounds());
     }
 }
 

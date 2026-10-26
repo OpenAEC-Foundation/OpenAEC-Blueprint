@@ -232,3 +232,38 @@ fn right_opens_and_left_closes_the_focused_branch() {
     assert_eq!(ui.key(Named::ArrowLeft), vec!["vloeren dicht"]);
     assert_eq!(ui.key(Named::Enter), vec!["kies vloeren"], "the arrows did not move the focus");
 }
+
+/// A button with a keyboard tip, and a second button.
+fn tipped() -> Element<'static, &'static str> {
+    let look = look();
+    column![
+        tip(button(look, "Opslaan", ButtonKind::Primary, Density::Regular, None, Some("opslaan")), iced::widget::text("Opslaan  Ctrl+S")),
+        button(look, "Verder", ButtonKind::Secondary, Density::Regular, None, Some("verder")),
+    ]
+    .into()
+}
+
+impl Ui {
+    fn tip_shows(&mut self) -> bool {
+        let viewport = Rectangle::with_size(SIZE);
+        self.element.as_widget_mut().overlay(&mut self.tree, Layout::new(&self.node), &self.renderer, &viewport, Vector::ZERO).is_some()
+    }
+}
+
+#[test]
+fn a_tip_shows_on_keyboard_focus_and_escape_hides_it() {
+    // Issue #7: what the mouse gets as a tooltip, the keyboard gets too.
+    let mut ui = Ui::with(tipped());
+    assert!(!ui.tip_shows());
+    ui.operate(next());
+    assert!(ui.tip_shows(), "Tab to the button shows its tip");
+    assert!(ui.key(Named::Escape).is_empty());
+    assert!(!ui.tip_shows(), "Escape hides it");
+    ui.operate(next());
+    let _ = ui.key(Named::Shift);
+    ui.operate(previous());
+    assert!(ui.tip_shows(), "coming back shows it again");
+    let first = Layout::new(&ui.node).children().next().unwrap().bounds();
+    let _ = ui.send(Event::Mouse(mouse::Event::ButtonPressed(mouse::Button::Left)), mouse::Cursor::Available(first.center()));
+    assert!(!ui.tip_shows(), "a click gives focus without the tip; hovering shows the normal tooltip");
+}

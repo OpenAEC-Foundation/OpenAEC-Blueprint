@@ -268,6 +268,13 @@ Opslaan en sluiten volgen in elke app hetzelfde contract (`design::document`, is
 - **Drie soorten opslaan.** Opslaan, automatisch opslaan en herstelkopie zijn drie aparte beloften. Automatisch opslaan schrijft alleen een document met een bestandsnaam; een nieuw document krijgt een herstelkopie. Die komt in `%LOCALAPPDATA%\OpenAEC\<app>\herstel`, overschrijft het hoofdbestand nooit en telt niet als opgeslagen.
 - **Galerij.** De galerij gebruikt dit contract voor tabs, Alles sluiten, Andere sluiten en het venster, met een gesimuleerde schrijftijd zodat "Opslaan…" zichtbaar is.
 
+Tooltips en selectie werken ook zonder muis en zonder schaduw (issues #6 en #7):
+- **Tooltip bij toetsenbordfocus.** In Rust toont `design::focus::tip` de tooltip ook bij toetsenbordfocus, en `widgets::with_tooltip` gebruikt dat voor elke iconknop. Escape verbergt de tooltip.
+- **Afgekorte tekst.** Lange tabnamen en tabelcellen worden met "…" afgekort (`widgets::shorten`). De volledige tekst staat dan in de tooltip.
+- **Webpakket.** Op het web doet `openaec-components.js` hetzelfde met Escape. `oa-truncate` kort tekst af. Elke iconknop heeft een eigen `aria-label`.
+- **Contrastthema's van Windows.** In Windows-contrastthema's (`forced-colors`) krijgen geselecteerde rijen, de huidige pagina en stap, en ingedrukte knoppen de systeemkleur `Highlight`, omdat schaduwen daar verdwijnen.
+- **Hoog contrast in Rust.** In Hoog contrast tekent Rust de selectie al als rand van 2 px; de renders van beide hoogcontrastthema's zijn nagekeken.
+
 De installer in de galerij volgt voorstel E uit [`design/ontwerp-0.4/installer-voorstellen.html`](design/ontwerp-0.4/installer-voorstellen.html), gemaakt door [`scripts/build_installer_proposals.py`](scripts/build_installer_proposals.py): alleen het bovenste vlak is donker, daaronder volgt alles het thema, met desktop-apps en webtools als twee secties met de tegels van open-aec.com. De screenshots en de catalogus komen uit de installer op commit `8b39bae`; [`scripts/crop_installer_previews.py`](scripts/crop_installer_previews.py) snijdt ze bij met afgeronde hoeken en een vervaging.
 
 ## Nachtelijke B2-uitbreiding

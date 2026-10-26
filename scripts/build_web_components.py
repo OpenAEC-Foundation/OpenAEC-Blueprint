@@ -74,10 +74,10 @@ def build():
       <button class="oa-button oa-button--compact">Compact 24 px</button>
     </div>
     <div class="demo-row">
-      <button class="oa-icon-button" data-oa-tip="Ongedaan maken" data-oa-keys="Ctrl+Z">{i("edit.undo")}</button>
-      <button class="oa-icon-button" data-oa-tip="Opnieuw" data-oa-keys="Ctrl+Y">{i("edit.redo")}</button>
-      <button class="oa-icon-button" aria-pressed="true" data-oa-tip="Raster">{i("view.grid")}</button>
-      <button class="oa-icon-button" disabled>{i("view.search")}</button>
+      <button class="oa-icon-button" aria-label="Ongedaan maken" aria-keyshortcuts="Control+Z" data-oa-tip="Ongedaan maken" data-oa-keys="Ctrl+Z">{i("edit.undo")}</button>
+      <button class="oa-icon-button" aria-label="Opnieuw" aria-keyshortcuts="Control+Y" data-oa-tip="Opnieuw" data-oa-keys="Ctrl+Y">{i("edit.redo")}</button>
+      <button class="oa-icon-button" aria-pressed="true" aria-label="Raster" data-oa-tip="Raster">{i("view.grid")}</button>
+      <button class="oa-icon-button" aria-label="Zoeken" disabled>{i("view.search")}</button>
       <span class="demo-gap"></span>
       <a class="oa-site-button oa-site-button--primary" href="#">{i("software.install")} Installeren</a>
       <a class="oa-site-button" href="#">{i("link.open-external")} Naar de website</a>
@@ -183,7 +183,7 @@ def build():
 
     panels = f'''
     <div class="oa-tabs" role="tablist"><button role="tab" aria-selected="true">Start</button><button role="tab">Invoegen</button><button role="tab">Berekenen</button><button role="tab">Beeld</button></div>
-    <div class="oa-document-tabs"><span class="oa-document-tab" aria-selected="true">Kantoor Velp <span class="oa-dirty"></span><button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></span><span class="oa-document-tab">Brug Arnhem<button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></span></div>
+    <div class="oa-document-tabs"><span class="oa-document-tab" aria-selected="true">Kantoor Velp <span class="oa-dirty"></span><button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></span><span class="oa-document-tab">Brug Arnhem<button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></span><span class="oa-document-tab" tabindex="0" data-oa-tip="Fundering en paalkoppen blok A, variant 2"><span class="oa-truncate">Fundering en paalkoppen blok A, variant 2</span><button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></span></div>
     <div class="demo-grid" style="grid-template-columns:240px 1fr;gap:0;border:1px solid var(--oa-border)">
       <div class="oa-panel" style="border:0;border-right:1px solid var(--oa-border);box-shadow:none">
         <div class="oa-panel-header"><span class="oa-mono-label">Eigenschappen</span><button class="oa-icon-button oa-icon-button--small" aria-label="Meer">{i("ui.more")}</button></div>
@@ -197,6 +197,7 @@ def build():
           <tr><td>Ligger 1</td><td>HEA 200</td><td class="oa-number">0,64</td><td><span class="oa-status oa-status--success">Voldoet</span></td></tr>
           <tr aria-selected="true"><td>Ligger 2</td><td>HEA 180</td><td class="oa-number">0,97</td><td><span class="oa-status oa-status--warning">Krap</span></td></tr>
           <tr><td>Kolom 3</td><td>HEB 160</td><td class="oa-number">1,12</td><td><span class="oa-status oa-status--error">Voldoet niet</span></td></tr>
+          <tr tabindex="0"><td data-oa-tip="Randligger as A tot en met D, verdieping 2"><span class="oa-truncate" style="max-width:120px">Randligger as A tot en met D, verdieping 2</span></td><td>IPE 300</td><td class="oa-number">0,81</td><td><span class="oa-status oa-status--success">Voldoet</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -240,6 +241,7 @@ def build():
 <link rel="stylesheet" href="openaec-fonts.css">
 <link rel="stylesheet" href="openaec-tokens.css">
 <link rel="stylesheet" href="openaec-components.css">
+<script src="openaec-components.js" defer></script>
 <style>
   /* Layout of this overview only; not part of the package. */
   .demo-top {{ position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 12px; padding: 12px 24px; background: var(--oa-panel); border-bottom: 1px solid var(--oa-border); }}
@@ -280,6 +282,11 @@ def build():
 
 def main():
     text = build()
+    # An icon button needs a name of its own; a tooltip alone is no name (issue #7).
+    unnamed = [b for b in re.findall(r'<button class="oa-icon-button[^"]*"[^>]*>', text) if "aria-label" not in b]
+    if unnamed:
+        print(f"Iconknop zonder aria-label: {unnamed[0]}")
+        return 1
     if "--check" in sys.argv[1:]:
         if not OUT.exists() or OUT.read_text(encoding="utf-8") != text:
             print("web/componenten.html is verouderd, draai scripts/build_web_components.py")

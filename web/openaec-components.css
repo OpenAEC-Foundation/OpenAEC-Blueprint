@@ -98,15 +98,23 @@
 .oa-icon-button:disabled { background: transparent; color: var(--oa-text-disabled); cursor: default; }
 .oa-icon-button:disabled .oa-icon { --icon-accent: currentColor; }
 
-/* Tooltip on any element: data-oa-tip="Opslaan" data-oa-keys="Ctrl+S". */
+/* Tooltip on any element: data-oa-tip="Opslaan" data-oa-keys="Ctrl+S". It shows on hover and
+   on keyboard focus; a focused row also shows the tips of its cells. Escape hides it with
+   openaec-components.js (issue #7). */
 [data-oa-tip] { position: relative; }
-[data-oa-tip]:hover::after, [data-oa-tip]:focus-visible::after {
+[data-oa-tip]:hover::after, [data-oa-tip]:focus-visible::after, :focus-visible > [data-oa-tip]::after {
   content: attr(data-oa-tip) "  " attr(data-oa-keys);
   position: absolute; left: 50%; top: calc(100% + 4px); transform: translateX(-50%); z-index: 20;
   padding: 4px 8px; border-radius: var(--oa-radius-small); white-space: pre; pointer-events: none;
   background: var(--oa-raised); color: var(--oa-text); box-shadow: var(--oa-shadow-popup);
   font: var(--oa-weight-regular) var(--oa-size-label) / 1.3 var(--oa-font-body);
 }
+[data-oa-tip][data-oa-tip-hidden]::after, [data-oa-tip-hidden] > [data-oa-tip]::after { content: none; }
+
+/* Text that may not fit: cut off with "…". Put the full text in data-oa-tip on a parent (the
+   truncated element clips its own tooltip): a tab, or a table cell whose row is focusable, so it
+   can be read with mouse and keyboard (issue #7). */
+.oa-truncate { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 
 /* ---------- Website buttons (open-aec.com, installer E) ---------- */
 
@@ -366,6 +374,24 @@ select.oa-field { padding-right: 24px; appearance: none; background-image: linea
 [data-oa-theme^="high-contrast"] :is(.oa-banner, .oa-status, .oa-chip) { background: var(--oa-panel); }
 [data-oa-theme^="high-contrast"] .oa-dark-band { background: var(--oa-panel); color: var(--oa-text); }
 [data-oa-theme^="high-contrast"] .oa-dark-band :is(.oa-heading, .oa-secondary, .oa-mono-label) { color: var(--oa-text); }
+
+/* ---------- Windows contrast themes (forced-colors): shadows and own colours are gone ---------- */
+
+/* A selection carried by a box-shadow or a tint alone would vanish (issue #6), so it
+   takes the system's Highlight colours; underlines and bars become borders. */
+@media (forced-colors: active) {
+  /* Pseudo-elements cannot go inside :is(), so the step marker has its own rule. */
+  :is(.oa-table tr[aria-selected="true"] > td, .oa-sidebar a[aria-current="page"], .oa-icon-button[aria-pressed="true"], .oa-pill[aria-pressed="true"]),
+  .oa-steps [aria-current="step"]::before {
+    forced-color-adjust: none; background: Highlight; color: HighlightText; border-color: HighlightText;
+  }
+  .oa-tabs [aria-selected="true"]::after { forced-color-adjust: none; background: Highlight; }
+  /* Borders are forced to the text colour here, so the top bar is its own strip. */
+  .oa-document-tab[aria-selected="true"] { position: relative; }
+  .oa-document-tab[aria-selected="true"]::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; forced-color-adjust: none; background: Highlight; }
+  :is(.oa-tile[aria-checked="true"], [aria-checked="true"] > .oa-radio-dot) { border-color: Highlight; }
+  .oa-icon { --icon-accent: currentColor; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .oa-app * { transition: none !important; }

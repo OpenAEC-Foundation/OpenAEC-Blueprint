@@ -4,6 +4,7 @@ Uitvoering van ontwerp 0.4 voor webapps, zoals BIM Validator.
 
 - [`openaec-tokens.css`](openaec-tokens.css): kleuren van de vijf thema's, letters, ruimtes, hoeken, schilmaten, schaduwen en de instellingen Werkruimte en Statusbalk als CSS-variabelen met het voorvoegsel `--oa-`.
 - [`openaec-components.css`](openaec-components.css): de componenten, met dezelfde maten en toestanden als de Rust-bibliotheek, en de websitestijl van de installer.
+- [`openaec-components.js`](openaec-components.js): optioneel, klein script voor wat CSS niet kan: Escape verbergt een tooltip. Zonder het script werkt alles, behalve dat.
 - [`openaec-fonts.css`](openaec-fonts.css) en [`fonts/`](fonts/): de lettertypen van de Rust-bibliotheek, zie [Lettertypen](#lettertypen).
 - [`componenten.html`](componenten.html): overzicht van alle componenten in de vijf thema's. Kies het thema rechtsboven, of open bijvoorbeeld `componenten.html#dark`.
 
@@ -47,6 +48,11 @@ Map en CSS worden gemaakt door [`scripts/build_font_package.py`](../scripts/buil
 ```
 
 Alle klassen beginnen met `oa-`, varianten met `--`. Toestanden gebruiken de aria-attributen die HTML al heeft: `aria-pressed` voor een aan/uit-knop of actieve filterpil, `aria-selected` voor tabs en tabelrijen, `aria-current` voor de zijbalk en de stappenbalk, `aria-checked` voor keuzetegels en `aria-invalid` voor een fout veld.
+
+- **Tooltips.** Een tooltip (`data-oa-tip`) verschijnt bij aanwijzen en bij toetsenbordfocus. Een rij met focus toont ook de tooltips van haar cellen. Met `openaec-components.js` verbergt Escape de tooltip tot de focus of de muis verdergaat; pas de volgende Escape bereikt de pagina (issue #7).
+- **Iconknoppen.** Een tooltip is geen naam. Geef elke iconknop een `aria-label`, en een sneltoets ook als `aria-keyshortcuts`. `scripts/build_web_components.py` weigert een iconknop zonder `aria-label`.
+- **Afgekorte tekst.** `oa-truncate` kort een tekst af met "…". Zet de volledige tekst in `data-oa-tip` op een ouder die focus kan krijgen, zoals de tab of de cel van een rij met `tabindex`. Op het afgekorte element zelf wordt de tooltip mee afgesneden.
+- **Contrastthema's van Windows.** Daarin (`forced-colors`) verdwijnen schaduwen en eigen kleuren. Een geselecteerde tabelrij, de huidige zijbalkpagina, ingedrukte knoppen en filterpillen, en de huidige stap krijgen dan de systeemkleur `Highlight`. Tab- en documenttabstrepen worden een eigen streep in die kleur (issue #6). Getest met `chrome --force-high-contrast`.
 
 | Groep | Klassen |
 |---|---|

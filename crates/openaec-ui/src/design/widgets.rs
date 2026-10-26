@@ -7,7 +7,7 @@
 //! control. Text fields and select lists still show iced's own focus as a 2 px
 //! border inside, and High contrast draws disabled borders solid, not dashed,
 //! because iced 0.14 has no dashed borders.
-use super::focus::{focusable, group, Axis};
+use super::focus::{self, focusable, group, Axis};
 use super::{font, hex, mix, radius, shell, Look, ShadowLayer, Shadows};
 use crate::fonts;
 use iced::alignment::{Horizontal, Vertical};
@@ -341,13 +341,39 @@ fn plain_icon_button<'a, M: Clone + 'a>(
 
 /// Wraps `content` in a tooltip with the theme colours: name and shortcut in mono.
 pub fn with_tooltip<'a, M: 'a>(look: Look, content: Element<'a, M>, name: &'a str, shortcut: Option<&'a str>) -> Element<'a, M> {
-    let mut tip = row![text(name).size(font::SIZE_LABEL).font(fonts::BODY).color(look.color.text)].spacing(8);
-    if let Some(keys) = shortcut {
-        tip = tip.push(text(keys).size(font::SIZE_LABEL).font(fonts::MONO).color(look.color.text_secondary));
-    }
-    let tip = container(tip).padding([4, 8]).style(move |_| surface(look, look.tokens.shadow.popup, radius::SMALL));
-    tooltip(content, tip, tooltip::Position::Bottom).gap(4).into()
+    let tip = || {
+        let mut tip = row![text(name).size(font::SIZE_LABEL).font(fonts::BODY).color(look.color.text)].spacing(8);
+        if let Some(keys) = shortcut {
+            tip = tip.push(text(keys).size(font::SIZE_LABEL).font(fonts::MONO).color(look.color.text_secondary));
+        }
+        container(tip).padding([4, 8]).style(move |_| surface(look, look.tokens.shadow.popup, radius::SMALL))
+    };
+    // The same tip on hover and on keyboard focus (issue #7); Escape hides it.
+    tooltip(focus::tip(content, tip()), tip(), tooltip::Position::Bottom).gap(4).into()
 }
+
+/// Shortens `text` to at most `max` characters with a trailing "…". iced 0.14
+/// cannot cut text off with an ellipsis itself; show the full text in a tooltip
+/// next to it, as `document_tabs` and `table` do (issue #7).
+pub fn shorten(text: &str, max: usize) -> std::borrow::Cow<'_, str> {
+    if text.chars().count() <= max {
+        return text.into();
+    }
+    let mut kept: String = text.chars().take(max.saturating_sub(1)).collect();
+    // Cut at a space rather than in a word, unless that loses more than half.
+    let next_is_space = text.chars().nth(kept.chars().count()).is_some_and(char::is_whitespace);
+    if let Some(space) = kept.rfind(' ').filter(|_| !next_is_space) {
+        if kept[..space].chars().count() >= max / 2 {
+            kept.truncate(space);
+        }
+    }
+    format!("{}…", kept.trim_end()).into()
+}
+
+/// The longest document tab title before it is shortened.
+pub const TAB_TITLE_MAX: usize = 28;
+/// Average width of a body character, to fit text into a fixed table column.
+const BODY_CHAR_WIDTH: f32 = 7.0;
 
 // ---------- Fields ----------
 
@@ -740,11 +766,27 @@ pub fn table<'a, M: Clone + 'a>(
     let mut sheet = column![container(header).height(28).align_y(Vertical::Center), bar(c.border_strong, Length::Fill, 1.0)];
     for (i, cells) in rows.into_iter().enumerate() {
         let on = selected == Some(i);
+        // Text that does not fit a fixed column is shortened; the full texts show
+        // as the row's tooltip, on hover and keyboard focus (issue #7).
+        let mut full = Vec::new();
         let line = cell_row(
             cells
                 .into_iter()
                 .zip(columns)
-                .map(|(value, col)| if col.numeric { number(look, value).into() } else { body(look, value).into() })
+                .map(|(value, col)| {
+                    if col.numeric {
+                        return number(look, value).into();
+                    }
+                    let fits = match col.width {
+                        Length::Fixed(width) => ((width / BODY_CHAR_WIDTH) as usize).max(4),
+                        _ => usize::MAX,
+                    };
+                    let shown = shorten(&value, fits).into_owned();
+                    if shown != value {
+                        full.push(value);
+                    }
+                    body(look, shown).into()
+                })
                 .collect(),
         );
         let line: Element<'a, M> = match &on_select {
@@ -765,10 +807,18 @@ pub fn table<'a, M: Clone + 'a>(
             Some(menu) => mouse_area(line).on_right_press(menu(i)).into(),
             None => line,
         };
+        let line = if full.is_empty() { line } else { full_text_tip(look, line, full.join("
+")) };
         sheet = sheet.push(selectable(look, line, on, 28.0));
         sheet = sheet.push(divider(look));
     }
     group(sheet.width(Length::Fill), Axis::Vertical)
+}
+
+/// A tooltip with text the row owns, for cells that were shortened.
+fn full_text_tip<'a, M: 'a>(look: Look, content: Element<'a, M>, full: String) -> Element<'a, M> {
+    let tip = |full: String| container(text(full).size(font::SIZE_LABEL).font(fonts::BODY).color(look.color.text)).padding([4, 8]).max_width(420).style(move |_| surface(look, look.tokens.shadow.popup, radius::SMALL));
+    tooltip(focus::tip(content, tip(full.clone())), tip(full), tooltip::Position::Bottom).gap(4).into()
 }
 
 // ---------- Notifications and dialogs ----------
@@ -1064,7 +1114,10 @@ pub fn document_tabs<'a, M: Clone + 'a>(
                 ..Default::default()
             }));
         }
-        inner = inner.push(text(tab.title).size(font::SIZE_BODY).font(if on { fonts::STRONG } else { fonts::BODY }).color(fg));
+        let full_title = tab.title;
+        let title = shorten(full_title, TAB_TITLE_MAX);
+        let shortened = title.len() != full_title.len();
+        inner = inner.push(text(title).size(font::SIZE_BODY).font(if on { fonts::STRONG } else { fonts::BODY }).color(fg));
         // The 16 px close button is its own button inside the tab.
         let hover_bg = if on { mix(c.workspace_text, 0.12, c.workspace) } else { c.pressed };
         if !tab.pinned {
@@ -1093,7 +1146,10 @@ pub fn document_tabs<'a, M: Clone + 'a>(
             },
             shadow: Shadow::default(),
         });
-        line = line.push(mouse_area(focusable(look, tab, true, radius::MEDIUM)).on_right_press(on_menu(i)));
+        let tab = focusable(look, tab, true, radius::MEDIUM);
+        // A shortened title shows in full on hover and keyboard focus.
+        let tab = if shortened { with_tooltip(look, tab, full_title, None) } else { tab };
+        line = line.push(mouse_area(tab).on_right_press(on_menu(i)));
     }
     container(group(line, Axis::Horizontal)).height(shell::DOCUMENT_TABS).width(Length::Fill).style(move |_| container::Style { background: fill(c.docbar), ..Default::default() }).into()
 }
@@ -1133,4 +1189,16 @@ pub fn empty_state<'a, M: 'a>(look: Look, icon: &'static str, title: &'a str, ex
         content = content.push(Space::new().height(4)).push(action);
     }
     container(content).center(Length::Fill).style(move |_| container::Style { background: fill(c.panel), ..Default::default() }).into()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::shorten;
+
+    #[test]
+    fn shorten_keeps_short_text_and_ends_long_text_with_an_ellipsis() {
+        assert_eq!(shorten("Begroting", 28), "Begroting");
+        assert_eq!(shorten("Fundering en paalkoppen blok A", 12), "Fundering…");
+        assert_eq!(shorten("Ĳsselmeerdijk", 6).chars().count(), 6);
+    }
 }
