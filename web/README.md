@@ -5,6 +5,7 @@ Uitvoering van ontwerp 0.4 voor webapps, zoals BIM Validator.
 - [`openaec-tokens.css`](openaec-tokens.css): kleuren van de vijf thema's, letters, ruimtes, hoeken, schilmaten, schaduwen en de instellingen Werkruimte en Statusbalk als CSS-variabelen met het voorvoegsel `--oa-`.
 - [`openaec-components.css`](openaec-components.css): de componenten, met dezelfde maten en toestanden als de Rust-bibliotheek, en de websitestijl van de installer.
 - [`openaec-components.js`](openaec-components.js): optioneel, klein script voor wat CSS niet kan: Escape verbergt een tooltip. Zonder het script werkt alles, behalve dat.
+- [`icons/`](icons/): de B2-iconen, één sprite per app, zie [Iconen](#iconen).
 - [`openaec-fonts.css`](openaec-fonts.css) en [`fonts/`](fonts/): de lettertypen van de Rust-bibliotheek, zie [Lettertypen](#lettertypen).
 - [`componenten.html`](componenten.html): overzicht van alle componenten in de vijf thema's. Kies het thema rechtsboven, of open bijvoorbeeld `componenten.html#dark`.
 
@@ -36,6 +37,17 @@ Het bestand wordt gemaakt door [`scripts/generate_tokens_04.py`](../scripts/gene
 [`openaec-fonts.css`](openaec-fonts.css) laadt Inter, Space Grotesk, JetBrains Mono en Inter AEC uit [`fonts/`](fonts/), als WOFF2 met de TTF als terugval: dezelfde bestanden als de Rust-bibliotheek, zonder Google Fonts, zodat de app ook offline dezelfde letters toont. Kopieer de map `fonts/` mee naast het CSS-bestand; de OFL-licenties staan erin. Beschikbare gewichten: Inter 400, 500 en 600, Space Grotesk 500 en 700, JetBrains Mono 400, Inter AEC 400, 500 en 600. Inter AEC is Inter met cijfers van gelijke breedte en een duidelijke I en l, voor getallen (`--oa-font-numbers`, `oa-number`; issue #28). De TTF-bestanden blijven erin voor PDF-bibliotheken zoals jsPDF. Daarnaast staan Noto Sans en Noto Sans Symbols erin als terugval: de stapels in `openaec-tokens.css` noemen ze direct na het eigen font, zodat ⌀, Grieks in koppen en Ĳ in monospace op elke computer gelijk zijn. De browser haalt ze alleen op als een teken ze nodig heeft. Knoppen en invoervelden erven het lettertype via `openaec-components.css`; zonder die regel kiest de browser er Arial voor. Koppen gebruiken Space Grotesk Medium (500), net als `openaec_ui::fonts::HEADING`.
 
 Map en CSS worden gemaakt door [`scripts/build_font_package.py`](../scripts/build_font_package.py) uit `crates/openaec-ui/assets/fonts`, samen met [`manifest.json`](../crates/openaec-ui/assets/fonts/manifest.json) met per bestand familie, gewicht, versie, SHA-256, WOFF2 en licentie (issue #24). Pas ze niet met de hand aan.
+
+## Iconen
+
+```html
+<svg class="oa-icon"><use href="icons/pdf.svg#i16-file.save"/></svg>
+<svg class="oa-icon oa-icon--24"><use href="icons/pdf.svg#i24-file.save"/></svg>
+```
+
+[`icons/`](icons/) heeft per app één sprite met alle B2-iconen van die app, in 16 en 24 px, met de ids `i16-<id>` en `i24-<id>`. Dat is dezelfde indeling als de features van de crate `openaec-icons`. [`icons/manifest.json`](icons/manifest.json) noemt per app de iconen, de grootte en de SHA-256. De kleuren volgen de CSS: de hoofdkleur is `currentColor`, het accent `--icon-accent` (standaard `currentColor`), net als bij `oa-icon` in `openaec-components.css`. Geef een icoon met betekenis een naam via de knop eromheen (`aria-label`); het icoon zelf is `aria-hidden`.
+
+De sprites worden gemaakt door [`scripts/build_web_icons.py`](../scripts/build_web_icons.py) uit de B2-export (revisie 106). De export tekent bochten als heel veel korte lijnstukken met zes decimalen, ongeveer 30 kB per icoon. Voor het web worden punten weggelaten die binnen 0,01 px van de lijn liggen, en coördinaten houden twee decimalen. Geen punt verschuift meer dan 0,02 px en er blijft 8 % van de grootte over. Dat is in Chrome nagemeten tegen een exacte referentie (het icoon op 256 px getekend en teruggemiddeld naar 16 px). De compacte iconen zijn even nauwkeurig als de export: een gemiddelde afwijking van 3,43 tegenover 3,40 op 255, over 150 iconen. De grootste sprite, PDF met 404 iconen, is 1,9 MB, of 544 kB met gzip. `--check` maakt alles opnieuw en vergelijkt het met de bestanden. Een `<use>` naar een ander bestand werkt alleen via een webserver, niet vanaf `file://`.
 
 ## Componenten
 

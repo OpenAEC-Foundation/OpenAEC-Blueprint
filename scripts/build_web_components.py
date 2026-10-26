@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build web/componenten.html: every component of web/openaec-components.css in
-all five themes, with the B2 icons of Codex inline. Run with --check to verify."""
+all five themes, with the B2 icons of Codex inline, in the same compact form as
+the sprites of scripts/build_web_icons.py. Run with --check to verify."""
 
 import html
 import re
@@ -8,11 +9,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SVG = ROOT / "design/icon-set-b2/svg"
 OUT = ROOT / "web/componenten.html"
 PREVIEWS = "../harmonization/references/openaec-installer/public/previews"
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_installer_proposals import GITHUB  # noqa: E402
+from build_web_icons import icons as b2_icons, symbol  # noqa: E402
+
+ASSETS = {icon_id: assets for icon_id, _, _, assets in b2_icons()}
 
 GITHUB_MARK = re.sub(r'<symbol id="gh" (viewBox="[^"]+")>(.*)</symbol>', r'<svg class="oa-icon" \1 aria-hidden="true">\2</svg>', GITHUB)
 
@@ -24,11 +27,8 @@ def i(icon_id, size=16, extra=""):
     """An inline icon that refers to one symbol per icon in the page's sprite."""
     key = f"i{size}-{icon_id}"
     if key not in USED:
-        svg = (SVG / str(size) / f"{icon_id}.svg").read_text(encoding="utf-8").strip()
-        head, inner = re.match(r"<svg([^>]*)>(.*)</svg>$", svg, re.S).groups()
-        box = re.search(r'viewBox="([^"]+)"', head).group(1)
-        rest = re.sub(r'\s(xmlns|width|height|viewBox)="[^"]*"', "", head)
-        USED[key] = f'<symbol id="{key}" viewBox="{box}"><g{rest}>{inner}</g></symbol>'
+        asset = ASSETS[icon_id][str(size)]
+        USED[key] = symbol(icon_id, str(size), asset["path"], asset["original_sha256"])
     cls = "oa-icon" + (" oa-icon--24" if size == 24 else "") + (f" {extra}" if extra else "")
     return f'<svg class="{cls}" aria-hidden="true"><use href="#{key}"/></svg>'
 
