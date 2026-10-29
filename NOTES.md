@@ -4,7 +4,6 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
-- **Claude** – AGENTS.md (pushen, PR en Linux-varianten) en CI-workflow voor de iconenchecks – `AGENTS.md`, `.github/workflows/icons.yml`, `NOTES.md` – sinds 2026-10-29
 
 
 
@@ -60,6 +59,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 
 ## Open punten
+
+- **`check_icon_set_b2.py` faalt op Linux en in de CI, 2026-10-29**: (1) het B2-manifest legt SHA-256-hashes vast van ongeveer 20 scripts in CRLF, zoals de Windows-checkout ze heeft; op Linux staan ze met LF, en in `.gitattributes` staan ze niet op `-text`; (2) `theme_tokens_sha256` hoort bij `tokens-0.4.json` uit ba6b0956 en is ouder dan de wijzigingen van 26 en 29 oktober (dat faalt ook op Windows). Met tolerantie voor regeleindes en zonder de tokens-hash slaagt de rest. De CI-job *B2 icon set (fails on main, stale hashes)* blijft rood tot de check of het manifest is aangepast.
 
 - **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
 
@@ -243,6 +244,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: `.github/workflows/icons.yml`: iconenchecks bij elke PR en push naar main (adopties, geometrie, crate- en web-iconen, `cargo test -p openaec-icons --features all`); de B2-check staat apart en is rood, zie *Open punten*. AGENTS.md: Windows-regels gemarkeerd als machine van de maker, met Linux-varianten (`python3`, rustup, apt-pakketten voor PyGObject/librsvg). Git-regels ongewijzigd.
 - 2026-10-29 **Claude**: Tauri-sjabloon: vaste Nederlandse teksten in het startpaneel via i18n (Wat is er nieuw, laden, foutmelding, geen releases, Start-tab; datum in de taal van de app). Het paneel haalde releases bij de oude repo `OpenAEC-style-book` (geen releases) en haalt ze nu bij OpenAEC-Blueprint; Markdown in releasenotes wordt platte tekst. Browserbeelden en README-beelden opnieuw gemaakt (ook de Rust-renders uit `68e13720` meegenomen). GitHub-beschrijving en website van de repo bijgewerkt. `tsc --noEmit`, `sync_tauri_template.py --check` en `build_readme_images.py --check` groen.
 - 2026-10-29 **Claude**: #36 gesloten. #27 tekstgrootte: `text-size-setting` in de tokens (Compact 11/11/12/15/20 rij 24, Standaard = 0.4, Groot 12/14/15/18/26 rij 32); generator schrijft `TextSize`/`TextSizes` en `data-oa-text`; `Look::with_text_size` en `look.text` in de hele bibliotheek (55 vaste maten vervangen, rijhoogtes mee); nieuw `design::display` bewaart thema, werkruimte, statusbalk en tekstgrootte in `weergave.json`; `blueprint` en de galerij hebben de instelling; webcomponenten volgen `--oa-row`; Tauri-sjabloon: Uiterlijk → Tekstgrootte. Alle controles, `cargo test --workspace` en `cargo package` groen; Tauri-sjabloon in het browserpaneel getest.
 

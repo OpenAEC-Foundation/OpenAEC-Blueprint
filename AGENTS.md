@@ -20,8 +20,7 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 
 ## Git
 
-- Elke wijziging gaat via een eigen branch en een pull request naar `main`, zodat de checks draaien. Push nooit rechtstreeks naar `main`.
-- Een assistent mag op zijn eigen branch committen en pushen, een pull request openen en dat zelf mergen als de checks groen zijn.
+- Commit alleen als de gebruiker erom vraagt. Push nooit zelf; de gebruiker pusht via GitHub Desktop.
 - Geen `git reset --hard`, force-push, rebase van gedeelde geschiedenis of het weggooien van andermans wijzigingen.
 - Commitberichten in het Engels, kort en in de gebiedende wijs, zoals de bestaande geschiedenis (`Add native PDF split-dialog screen review`).
 - Vermeld in de commit welke assistent het werk deed als de gebruiker daar om vraagt of als de tool dat standaard doet.
