@@ -356,6 +356,17 @@ De warning-review gebruikt nu de afgesproken gele rol uit tokens 0.4. Nieuwe ont
 
 Reports krijgt 46 ontwerpen en BIM Validator 14. Tabelblok invoegen, rapportvalidatie en BCF-export zijn nu expliciet van hun eerder verkeerd toegewezen functies onderscheiden. De dynamische Reports-blokdispatcher bewaart elf typekoppelingen per bronplaats. De H2-vorm komt uit de gebundelde Space Grotesk Medium, met fontbron en licentie in het manifest. Snijvlakken X/Y/Z komen uit hetzelfde orthografische 3D-eenheidsmodel; de cloudcontour is uit cirkelvlakken geconstrueerd. Placeholderknoppen zonder aangesloten callback en statische marketing-/mockuppagina’s tellen niet als werkende bedieningen. De dekking blijft open voor niet-afgehandelde conflicten, ook als die eerder al als conflict waren beoordeeld.
 
+## Iconenrichtlijn en de tab Planning
+
+Op 29 oktober 2026 stelde de eigenaar zes principes voor iconen vast, na de controle van de tab Planning in Open Planner Studio (issues #40, #46–#57). De richtlijn staat in [`docs/iconen.md`](docs/iconen.md), de werkwijze in de skill [`.claude/skills/iconen-ontwerpen/`](.claude/skills/iconen-ontwerpen/SKILL.md).
+
+- **Bron.** Open Planner Studio op main, commit a58d53482: `ribbonConfig.tsx`, `ribbonWidgets.tsx` en `Ribbon.tsx`. Per knop staat de aanroep in [`design/iconen/planning/knoppen.json`](design/iconen/planning/knoppen.json), met het Lucide-icoon van main als vergelijking in `design/iconen/referentie/ops-main/` (ISC).
+- **Onderzoek.** De zes principes zijn naast Apple, GNOME, IBM Carbon, Microsoft Fluent, Lucide, Nielsen Norman Group en WCAG gelegd. Geen bron spreekt een principe tegen. Wat de bronnen toevoegen, staat in de richtlijn apart als voorstel.
+- **Herzien.** 27 bestaande ids hebben een nieuwe tekening in `scripts/b2_richtlijn.py`; hun naam blijft. Drie nieuwe betekenissen kregen een nieuw id: `solver.run` (een rekenkern laat doorrekenen; `planning.calculate` blijft de rekenmachine, #57), `workspace.ribbon-collapse` en `workspace.ribbon-expand` (#40). Manifest revisie 107, 948 iconen. De andere 918 iconen zijn bytegelijk.
+- **Checks.** `scripts/check_icon_guideline.py` rastert de 16 px-master en toetst afstand, gaten, vlekjes, scherpte, aantal delen, dichtheid en gelijkenis binnen een groep. De oude tekeningen in `design/iconen/voorbeelden/fout/` dienen als negatieve controle. De check draait in de workflow `Icons`. De scripthashes in de B2-check zijn nu ongevoelig voor regeleindes (CRLF en LF).
+- **Overzichtsblad.** [`design/iconen/planning/overzicht-1.png`](design/iconen/planning/overzicht-1.png) tot en met `-3`: per knop het nieuwe icoon naast main, op 16 en 24 px, licht en donker.
+- **Oordeel.** Concept. De tekeningen halen alle checks; de ontwerpcontrole en de beoordeling in Open Planner Studio zelf volgen. De iconen zijn nog niet in een programma op main gebruikt.
+
 ## Via GitHub Desktop pushen
 
 1. Kies **File → Add local repository** en selecteer `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.

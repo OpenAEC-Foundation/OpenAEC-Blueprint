@@ -62,7 +62,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
-- **`check_icon_set_b2.py` faalt op Linux en in de CI, 2026-10-29**: (1) het B2-manifest legt SHA-256-hashes vast van ongeveer 20 scripts in CRLF, zoals de Windows-checkout ze heeft; op Linux staan ze met LF, en in `.gitattributes` staan ze niet op `-text`; (2) `theme_tokens_sha256` hoort bij `tokens-0.4.json` uit ba6b0956 en is ouder dan de wijzigingen van 26 en 29 oktober (dat faalt ook op Windows). Met tolerantie voor regeleindes en zonder de tokens-hash slaagt de rest. De CI-job *B2 icon set (fails on main, stale hashes)* blijft rood tot de check of het manifest is aangepast.
+- **Twee keer B2-revisie 107, 2026-10-29**: de branch `iconen/planning` (PR #59, iconenrichtlijn en tab Planning) en de branch `b2-revisie-107` (#35, 16 px op het pixelraster met lijnen van 1 px) heten allebei revisie 107. Wie als tweede naar main gaat, bouwt opnieuw als revisie 108. `b2-revisie-107` verandert de lijndikte op 16 px; volgens de iconenrichtlijn ([`docs/iconen.md`](docs/iconen.md)) beslist de eigenaar daar eerst over. PR #59 lost ook de rode B2-check op: scripthashes zijn ongevoelig voor regeleindes en de tokens-hash is bijgewerkt.
 
 - **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
 
