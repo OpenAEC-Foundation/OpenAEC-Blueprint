@@ -4,6 +4,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
+- **Claude (branch `iconen/planning`)** – iconen opnieuw ontwerpen volgens een vaste richtlijn, eerst de tab Planning van Open Planner Studio – `docs/iconen.md`, `.claude/skills/iconen-ontwerpen/`, `scripts/b2_richtlijn.py`, `scripts/b2_geometry.py`, `scripts/build_icon_set_b2.py`, `scripts/check_icon_set_b2.py`, nieuwe iconenchecks in `scripts/` en `.github/workflows/icons.yml`; gegenereerd: `design/icon-set-b2/`, `crates/openaec-icons/`, `web/icons/` – sinds 2026-10-29
+
 
 
 
