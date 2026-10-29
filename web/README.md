@@ -7,6 +7,7 @@ Uitvoering van ontwerp 0.4 voor webapps, zoals BIM Validator.
 - [`openaec-components.js`](openaec-components.js): optioneel, klein script voor wat CSS niet kan: Escape verbergt een tooltip. Zonder het script werkt alles, behalve dat.
 - [`icons/`](icons/): de B2-iconen, één sprite per app, zie [Iconen](#iconen).
 - [`openaec-fonts.css`](openaec-fonts.css) en [`fonts/`](fonts/): de lettertypen van de Rust-bibliotheek, zie [Lettertypen](#lettertypen).
+- [`react/`](react/README.md): React-componenten op deze CSS (issue #12): knoppen, velden, tegels, meldingen, dialoog, tabel en schil, met toetsenbord en aria.
 - [`online/`](online/README.md): de Tauri-standaardapplicatie als webapp met 3D-weergave, gepubliceerd op GitHub Pages (#36).
 - [`componenten.html`](componenten.html): overzicht van alle componenten in de vijf thema's. Kies het thema rechtsboven, of open bijvoorbeeld `componenten.html#dark`.
 
@@ -22,6 +23,7 @@ Het bestand wordt gemaakt door [`scripts/generate_tokens_04.py`](../scripts/gene
 - `data-oa-theme`: `light`, `dark`, `blueprint`, `high-contrast-dark` of `high-contrast-light`. Zonder attribuut geldt Licht.
 - `data-oa-workspace`: `theme` (standaard), `light` of `dark`.
 - `data-oa-statusbar`: `theme` (standaard) of `dark`.
+- Kleurrollen voor apps (issues #41–#44): `--oa-field` voor de vulling van tekstvelden, keuzelijsten en zoekvelden; `--oa-border-subtle` voor rasterlijnen en scheidingen binnen een paneel, zoals tabelrijen en daglijnen in een Gantt-diagram; `--oa-text-muted` voor gedempte tekst die nog leesbaar moet zijn (minstens 4,5 : 1, in High contrast 7 : 1). `--oa-border` is de rand tussen vlakken.
 - `data-oa-text`: Tekstgrootte (issue #27), `compact`, `standard` (standaard) of `large`. Het zet de `--oa-size-*` en de rijhoogte `--oa-row` (24, 28 of 32 px) voor menu's, eigenschappen, tabellen, knoppen en velden. Iconen blijven 16 en 24 px.
 - High contrast negeert de instellingen voor werkruimte en statusbalk.
 

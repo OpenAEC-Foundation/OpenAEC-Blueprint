@@ -156,6 +156,12 @@ pub fn divider<'a, M: 'a>(look: Look) -> Element<'a, M> {
     container(Space::new().width(Length::Fill).height(1)).height(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
 }
 
+/// The line between table rows: the soft line, so rows stay calm (issue #41).
+pub fn row_divider<'a, M: 'a>(look: Look) -> Element<'a, M> {
+    let color = look.color.border_subtle;
+    container(Space::new().width(Length::Fill).height(1)).height(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
+}
+
 fn vline<'a, M: 'a>(color: Color) -> Element<'a, M> {
     container(Space::new().width(1).height(Length::Fill)).width(1).style(move |_| container::Style { background: fill(color), ..Default::default() }).into()
 }
@@ -398,12 +404,12 @@ fn input_style(look: Look, status: text_input::Status, invalid: bool) -> text_in
         S::Active => border(c.border_strong, 1.0, r),
     };
     text_input::Style {
-        background: Background::Color(if status == S::Disabled { c.panel } else { c.raised }),
+        background: Background::Color(if status == S::Disabled { c.panel } else { c.field }),
         border: edge,
         icon: c.text_secondary,
         placeholder: if status == S::Disabled { c.text_disabled } else { c.text_secondary },
         value: if status == S::Disabled { c.text_disabled } else { c.text },
-        selection: mix(c.accent, 0.35, c.raised),
+        selection: mix(c.accent, 0.35, c.field),
     }
 }
 
@@ -479,7 +485,7 @@ where
                 text_color: c.text,
                 placeholder_color: c.text_secondary,
                 handle_color: c.text_secondary,
-                background: Background::Color(c.raised),
+                background: Background::Color(c.field),
                 border: match status {
                     S::Opened { .. } => border(c.focus, 2.0, radius::MEDIUM),
                     S::Hovered => border(c.text, 1.0, radius::MEDIUM),
@@ -842,8 +848,8 @@ pub fn table<'a, M: Clone + 'a>(
         let line = if full.is_empty() { line } else { full_text_tip(look, line, full.join("
 ")) };
         let line = a11y::node(line, Node::new(Role::Row, name).selected(on));
-        sheet = sheet.push(selectable(look, line, on, 28.0));
-        sheet = sheet.push(divider(look));
+        sheet = sheet.push(selectable(look, line, on, look.text.row));
+        sheet = sheet.push(row_divider(look));
     }
     group(sheet.width(Length::Fill), Axis::Vertical)
 }
