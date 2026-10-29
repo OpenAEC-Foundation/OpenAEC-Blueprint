@@ -341,5 +341,44 @@
         "statusbar-text": "#D4D1CC"
       }
     }
+  },
+  "text-size-setting": {
+    "description": "Gebruikersinstelling Tekstgrootte (issue #27). Standaard volgt font.size, het besluit van #19 (Inter 12-13 px). Compact gaat niet onder 11 px, zoals het ontwerponderzoek (hoofdstuk 8) aanraadt; Groot ligt dicht bij de 14 px uit dat onderzoek. 'row' is de hoogte van rijen met tekst: menu-items, eigenschappen en tabelkoppen. Iconen houden 16 en 24 px, zodat ze scherp blijven.",
+    "default": "standard",
+    "options": {
+      "compact": {
+        "name": "Compact",
+        "size": {
+          "label": 11,
+          "body": 11,
+          "panel-heading": 12,
+          "dialog-heading": 15,
+          "page-heading": 20
+        },
+        "row": 24
+      },
+      "standard": {
+        "name": "Standaard",
+        "size": {
+          "label": 11,
+          "body": 12,
+          "panel-heading": 13,
+          "dialog-heading": 16,
+          "page-heading": 22
+        },
+        "row": 28
+      },
+      "large": {
+        "name": "Groot",
+        "size": {
+          "label": 12,
+          "body": 14,
+          "panel-heading": 15,
+          "dialog-heading": 18,
+          "page-heading": 26
+        },
+        "row": 32
+      }
+    }
   }
 }

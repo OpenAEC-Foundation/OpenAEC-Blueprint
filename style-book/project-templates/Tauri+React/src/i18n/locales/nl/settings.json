@@ -27,7 +27,13 @@
     "highContrastDark": "High contrast donker",
     "highContrastLight": "High contrast licht",
     "font": "Lettertype",
-    "uiFontSize": "UI-lettergrootte"
+    "uiFontSize": "UI-lettergrootte",
+    "textSize": "Tekstgrootte",
+    "textSizes": {
+      "compact": "Compact",
+      "standard": "Standaard",
+      "large": "Groot"
+    }
   },
   "editor": {
     "general": "Algemeen",

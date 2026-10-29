@@ -16,12 +16,13 @@ Het bestand wordt gemaakt door [`scripts/generate_tokens_04.py`](../scripts/gene
 
 ```html
 <link rel="stylesheet" href="openaec-tokens.css">
-<html data-oa-theme="dark" data-oa-workspace="theme" data-oa-statusbar="theme">
+<html data-oa-theme="dark" data-oa-workspace="theme" data-oa-statusbar="theme" data-oa-text="standard">
 ```
 
 - `data-oa-theme`: `light`, `dark`, `blueprint`, `high-contrast-dark` of `high-contrast-light`. Zonder attribuut geldt Licht.
 - `data-oa-workspace`: `theme` (standaard), `light` of `dark`.
 - `data-oa-statusbar`: `theme` (standaard) of `dark`.
+- `data-oa-text`: Tekstgrootte (issue #27), `compact`, `standard` (standaard) of `large`. Het zet de `--oa-size-*` en de rijhoogte `--oa-row` (24, 28 of 32 px) voor menu's, eigenschappen, tabellen, knoppen en velden. Iconen blijven 16 en 24 px.
 - High contrast negeert de instellingen voor werkruimte en statusbalk.
 
 ```css

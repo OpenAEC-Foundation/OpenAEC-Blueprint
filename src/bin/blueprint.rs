@@ -19,7 +19,8 @@ use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles as t;
 use openaec_ui::design::update::{self as upd, Available};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, Tone};
-use openaec_ui::design::{Look, StatusbarSetting, ThemeId, WorkspaceSetting};
+use openaec_ui::design::display::{self as dsp, Display};
+use openaec_ui::design::{Look, StatusbarSetting, TextSize, ThemeId, WorkspaceSetting};
 use openaec_ui::fonts;
 use openaec_ui::iced::widget::{column, container, mouse_area, row};
 use openaec_ui::iced::{self, Element, Length, Size, Subscription, Task};
@@ -89,6 +90,7 @@ enum Msg {
     Theme(ThemeId),
     Workspace(WorkspaceSetting),
     Statusbar(StatusbarSetting),
+    TextSize(TextSize),
     RibbonTab(usize),
     Backstage(bool),
     New,
@@ -127,6 +129,9 @@ struct App {
     theme: ThemeId,
     workspace: WorkspaceSetting,
     statusbar: StatusbarSetting,
+    text_size: TextSize,
+    /// Where the display settings are stored; `None` in tests, so they never write.
+    display_path: Option<std::path::PathBuf>,
     docs: Vec<Doc>,
     active: usize,
     next_number: u32,
@@ -153,6 +158,8 @@ impl Default for App {
             theme: ThemeId::Light,
             workspace: WorkspaceSetting::Theme,
             statusbar: StatusbarSetting::Theme,
+            text_size: TextSize::Standard,
+            display_path: None,
             docs: Vec::new(),
             active: 0,
             next_number: 1,
@@ -178,7 +185,18 @@ impl Default for App {
 
 impl App {
     fn look(&self) -> Look {
-        Look::new(self.theme, self.workspace, self.statusbar)
+        self.display().look()
+    }
+
+    fn display(&self) -> Display {
+        Display { theme: self.theme, workspace: self.workspace, statusbar: self.statusbar, text_size: self.text_size }
+    }
+
+    /// Keeps the display settings for the next start (issue #27).
+    fn save_display(&self) {
+        if let Some(path) = &self.display_path {
+            let _ = self.display().save(path);
+        }
     }
 
     fn doc(&self) -> Option<&Doc> {
@@ -307,9 +325,22 @@ impl App {
 
     fn update(&mut self, message: Msg) -> Task<Msg> {
         match message {
-            Msg::Theme(theme) => self.theme = theme,
-            Msg::Workspace(setting) => self.workspace = setting,
-            Msg::Statusbar(setting) => self.statusbar = setting,
+            Msg::Theme(theme) => {
+                self.theme = theme;
+                self.save_display();
+            }
+            Msg::Workspace(setting) => {
+                self.workspace = setting;
+                self.save_display();
+            }
+            Msg::Statusbar(setting) => {
+                self.statusbar = setting;
+                self.save_display();
+            }
+            Msg::TextSize(size) => {
+                self.text_size = size;
+                self.save_display();
+            }
             Msg::RibbonTab(i) => self.ribbon_tab = i,
             Msg::Backstage(open) => self.backstage = open,
             Msg::New => {
@@ -583,6 +614,7 @@ impl App {
                         w::property_row(look, "Thema", w::select(look, &ThemeId::ALL, Some(self.theme), Msg::Theme, D::Regular)),
                         w::property_row(look, "Werkruimte", w::select(look, &WorkspaceSetting::ALL, Some(self.workspace), Msg::Workspace, D::Regular)),
                         w::property_row(look, "Statusbalk", w::select(look, &StatusbarSetting::ALL, Some(self.statusbar), Msg::Statusbar, D::Regular)),
+                        w::property_row(look, "Tekstgrootte", w::select(look, &TextSize::ALL, Some(self.text_size), Msg::TextSize, D::Regular)),
                     ]
                     .spacing(6)
                     .into(),
@@ -606,6 +638,11 @@ fn main() -> iced::Result {
     fonts::install_fallback();
     let mut app = App::default();
     app.keymap_path = sc::keymap_path("blueprint");
+    app.display_path = dsp::settings_path("blueprint");
+    if let Some(path) = &app.display_path {
+        let saved = Display::load(path);
+        (app.theme, app.workspace, app.statusbar, app.text_size) = (saved.theme, saved.workspace, saved.statusbar, saved.text_size);
+    }
     if let Some(path) = &app.keymap_path {
         app.keymap = Keymap::load(path);
     }
@@ -706,6 +743,10 @@ mod tests {
         let _ = app.update(Msg::Backstage(false));
         let _ = app.update(Msg::Dialog(Some(Dialog::Settings)));
         render(&app, Size::new(1280.0, 800.0)).save_png(dir.join("blueprint-instellingen.png")).expect("png");
+        for size in [TextSize::Compact, TextSize::Large] {
+            app.text_size = size;
+            render(&app, Size::new(1280.0, 800.0)).save_png(dir.join(format!("blueprint-instellingen-{}.png", size.name().to_lowercase()))).expect("png");
+        }
     }
 
     #[test]

@@ -264,6 +264,8 @@ def build():
   <h1 class="oa-heading oa-heading--panel">OpenAEC webcomponenten 0.4</h1>
   <label class="oa-secondary" for="theme">Thema</label>
   <select class="oa-field" id="theme">{options}</select>
+  <label class="oa-secondary" for="text">Tekstgrootte</label>
+  <select class="oa-field" id="text"><option value="compact">Compact</option><option value="standard" selected>Standaard</option><option value="large">Groot</option></select>
 </header>
 <main>{body}
 </main>
@@ -274,6 +276,9 @@ def build():
   const apply = () => {{ document.documentElement.dataset.oaTheme = pick.value; history.replaceState(null, "", "#" + pick.value); }};
   pick.addEventListener("change", apply);
   apply();
+  // Tekstgrootte (issue #27): Standaard needs no attribute.
+  const text = document.getElementById("text");
+  text.addEventListener("change", () => {{ if (text.value === "standard") delete document.documentElement.dataset.oaText; else document.documentElement.dataset.oaText = text.value; }});
 </script>
 </body>
 </html>

@@ -427,6 +427,48 @@ impl std::fmt::Display for StatusbarSetting {
     }
 }
 
+/// User setting Tekstgrootte (issue #27): text sizes and row height together.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum TextSize {
+    Compact,
+    #[default]
+    Standard,
+    Large,
+}
+
+/// Text sizes in pixels and the height of rows with text, for one Tekstgrootte.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct TextSizes {
+    pub label: f32,
+    pub body: f32,
+    pub panel_heading: f32,
+    pub dialog_heading: f32,
+    pub page_heading: f32,
+    /// Menu items, property rows and table headers.
+    pub row: f32,
+}
+
+impl TextSize {
+    pub const ALL: [Self; 3] = [Self::Compact, Self::Standard, Self::Large];
+    pub fn name(self) -> &'static str {
+        match self { Self::Compact => "Compact", Self::Standard => "Standaard", Self::Large => "Groot" }
+    }
+    pub const fn sizes(self) -> TextSizes {
+        match self {
+            Self::Compact => TextSizes { label: 11.0, body: 11.0, panel_heading: 12.0, dialog_heading: 15.0, page_heading: 20.0, row: 24.0 },
+            Self::Standard => TextSizes { label: 11.0, body: 12.0, panel_heading: 13.0, dialog_heading: 16.0, page_heading: 22.0, row: 28.0 },
+            Self::Large => TextSizes { label: 12.0, body: 14.0, panel_heading: 15.0, dialog_heading: 18.0, page_heading: 26.0, row: 32.0 },
+        }
+    }
+}
+
+impl std::fmt::Display for TextSize {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.name())
+    }
+}
+
 impl ThemeTokens {
     /// The palette after the Werkruimte and Statusbalk settings.
     ///

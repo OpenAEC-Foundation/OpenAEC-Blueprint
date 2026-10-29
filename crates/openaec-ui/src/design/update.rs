@@ -15,7 +15,7 @@
 //!   opens in the browser, so people can still see it on GitHub.
 use super::a11y::{self, Node, Role};
 use super::widgets::{self, ButtonKind, Density};
-use super::{font, Look};
+use super::Look;
 use crate::fonts;
 use iced::widget::{row, text};
 use iced::{Alignment, Element};
@@ -154,7 +154,7 @@ fn open_in_browser(url: &str) -> Result<(), String> {
 pub fn notice<'a, M: Clone + 'a>(look: Look, available: &Available, on_update: M) -> Element<'a, M> {
     let label = format!("Versie {} staat klaar", available.latest);
     let content = row![
-        text(label.clone()).size(font::SIZE_LABEL).font(fonts::BODY).color(look.color.text_secondary),
+        text(label.clone()).size(look.text.label).font(fonts::BODY).color(look.color.text_secondary),
         widgets::button(look, "Bijwerken", ButtonKind::Primary, Density::Compact, None, Some(on_update)),
     ]
     .spacing(8)

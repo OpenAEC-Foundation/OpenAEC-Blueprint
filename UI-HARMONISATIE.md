@@ -291,6 +291,14 @@ Updates lopen in elke app via de OpenAEC Installer (`design::update`, issue #33;
 - **Niets zelf.** Apps downloaden of installeren niets zelf.
 - **Galerij.** De galerij toont de melding met een voorbeeldversie en start de installer niet echt.
 
+Tekstgrootte is een instelling in elke app (issue #27; 29 oktober 2026):
+- **Drie standen.** Compact, Standaard en Groot in `tokens-0.4.json` (`text-size-setting`). Standaard is de 0.4-maat uit #19 (label 11, tekst 12, paneelkop 13, dialoogkop 16, paginakop 22 px; rij 28 px). Compact gaat niet onder 11 px, zoals het ontwerponderzoek aanraadt (11/11/12/15/20; rij 24). Groot ligt dicht bij de 14 px uit dat onderzoek (12/14/15/18/26; rij 32).
+- **Wat meeschaalt.** Alle tekst van de bibliotheek, en de rijen met tekst: menu-items, eigenschappen, tabelkoppen en tabs. Knoppen en velden groeien vanzelf mee. Iconen blijven 16 en 24 px; een zoom van de hele interface zou ze onscherp maken (#35).
+- **Rust.** `Look::with_text_size` en `look.text`; de 55 vaste `font::SIZE_*` in de bibliotheek gebruiken nu `look.text`. Op Standaard zijn de renders van `blueprint` pixelgelijk (alleen het versienummer in de statusbalk verschilt).
+- **Web.** `data-oa-text="compact"` of `"large"` op `<html>` zet de `--oa-size-*` en `--oa-row`; knoppen, velden, menu's, eigenschappen en tabellen in `openaec-components.css` volgen `--oa-row`. `web/componenten.html` heeft een keuze voor de tekstgrootte.
+- **Bewaard per app.** Rust: `design::display` schrijft `weergave.json` naast `sneltoetsen.json`; `blueprint` laadt het bij het starten. Tauri-sjabloon: Instellingen → Uiterlijk → Tekstgrootte, bewaard als `textSize`.
+- **Getest.** Renders `design/blueprint/blueprint-instellingen-compact.png` en `-groot.png`; in het browserpaneel blijft Groot na herladen bewaard (tekst 14 px, labels 12 px). Alle controles en `cargo test --workspace` groen.
+
 Webapps krijgen de B2-iconen als één sprite per app in `web/icons/` (issue #11), gemaakt door `scripts/build_web_icons.py` uit de B2-export. De padgegevens worden daarbij compact gemaakt: punten die niet meer dan 0,01 px afwijken vallen weg en coördinaten houden twee decimalen, waardoor 8 % van de grootte overblijft. `web/componenten.html` gebruikt dezelfde compacte iconen en ging van 745 naar 84 kB.
 
 Tooltips en selectie werken ook zonder muis en zonder schaduw (issues #6 en #7):

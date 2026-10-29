@@ -20,7 +20,7 @@ use openaec_ui::design::shortcuts::{self as sc, Keymap};
 use openaec_ui::design::tiles::{self as t, RecentFile};
 use openaec_ui::design::widgets::{self as w, ButtonKind as K, Density as D, DocumentTab, TableColumn, Tone};
 use openaec_ui::design::workflow::{self as wf, Navigation, Section};
-use openaec_ui::design::{font, Look, StatusbarSetting, ThemeId, WorkspaceSetting};
+use openaec_ui::design::{font, Look, StatusbarSetting, TextSize, ThemeId, WorkspaceSetting};
 use openaec_ui::fonts;
 use openaec_ui::iced::widget::{column, container, mouse_area, row, scrollable, text, Space};
 use openaec_ui::iced::{self, keyboard, mouse, Alignment, Background, Element, Length, Point, Size, Subscription, Task};
@@ -636,6 +636,7 @@ enum Msg {
     Theme(ThemeId),
     Workspace(WorkspaceSetting),
     Statusbar(StatusbarSetting),
+    TextSize(TextSize),
     View(View),
     RibbonTab(usize),
     Backstage(bool),
@@ -846,6 +847,7 @@ struct Gallery {
     theme: ThemeId,
     workspace: WorkspaceSetting,
     statusbar: StatusbarSetting,
+    text_size: TextSize,
     view: View,
     ribbon_tab: usize,
     backstage: bool,
@@ -929,6 +931,7 @@ impl Default for Gallery {
             theme: ThemeId::Light,
             workspace: WorkspaceSetting::Theme,
             statusbar: StatusbarSetting::Theme,
+            text_size: TextSize::Standard,
             view: View::Screen,
             ribbon_tab: 0,
             backstage: false,
@@ -1003,7 +1006,7 @@ impl Default for Gallery {
 
 impl Gallery {
     fn look(&self) -> Look {
-        Look::new(self.theme, self.workspace, self.statusbar)
+        Look::new(self.theme, self.workspace, self.statusbar).with_text_size(self.text_size)
     }
 
     fn item(&self, id: u32) -> Option<&Item> {
@@ -1240,6 +1243,7 @@ impl Gallery {
             Msg::Theme(t) => self.theme = t,
             Msg::Workspace(s) => self.workspace = s,
             Msg::Statusbar(s) => self.statusbar = s,
+            Msg::TextSize(s) => self.text_size = s,
             Msg::View(v) => self.view = v,
             Msg::RibbonTab(i) => self.ribbon_tab = i,
             Msg::Backstage(open) => self.backstage = open,
@@ -2844,6 +2848,7 @@ impl Gallery {
                     w::property_row(look, "Werkruimte", workspace),
                     container(w::secondary(look, "Kleur van het vlak waarin je document staat.")).padding([0, 8]),
                     w::property_row(look, "Statusbalk", statusbar),
+                    w::property_row(look, "Tekstgrootte", w::select(look, &TextSize::ALL, Some(self.text_size), Msg::TextSize, D::Regular)),
                     w::property_row(look, "Taal", w::select(look, &["Nederlands"], Some("Nederlands"), |_| Msg::Noop, D::Regular)),
                     Space::new().height(6),
                     w::mono_label(look, if self.view == View::Workflow { "Werkstroom" } else { "Opstarten" }),

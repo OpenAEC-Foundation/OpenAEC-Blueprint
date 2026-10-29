@@ -29,7 +29,13 @@
     "highContrastDark": "High contrast dark",
     "highContrastLight": "High contrast light",
     "font": "Font",
-    "uiFontSize": "UI Font Size"
+    "uiFontSize": "UI Font Size",
+    "textSize": "Text size",
+    "textSizes": {
+      "compact": "Compact",
+      "standard": "Standard",
+      "large": "Large"
+    }
   },
   "editor": {
     "general": "General",

@@ -35,6 +35,15 @@ export function applyTheme(theme?: string) {
   document.documentElement.setAttribute("data-oa-theme", themeId(theme));
 }
 
+/** Tekstgrootte (issue #27): text sizes and row heights from the 0.4 tokens. */
+export const TEXT_SIZES = ["compact", "standard", "large"] as const;
+
+export function applyTextSize(size?: string) {
+  const value = TEXT_SIZES.find((s) => s === size) ?? "standard";
+  if (value === "standard") document.documentElement.removeAttribute("data-oa-text");
+  else document.documentElement.setAttribute("data-oa-text", value);
+}
+
 interface SettingsDialogProps {
   open: boolean;
   onClose: () => void;
@@ -55,11 +64,13 @@ export default function SettingsDialog({
   // Draft state — only committed on Save
   const [draftTheme, setDraftTheme] = useState(theme);
   const [draftLang, setDraftLang] = useState("auto");
+  const [draftText, setDraftText] = useState("standard");
   const [confirmResetOpen, setConfirmResetOpen] = useState(false);
 
   // Snapshot of original values when dialog opens, for reverting on Cancel
   const originalTheme = useRef(theme);
   const originalLang = useRef("");
+  const originalText = useRef("standard");
 
   // Reset draft to current values when dialog opens
   useEffect(() => {
@@ -70,6 +81,10 @@ export default function SettingsDialog({
         originalLang.current = lang;
         setDraftLang(lang);
       });
+      getSetting("textSize", "standard").then((size) => {
+        originalText.current = size;
+        setDraftText(size);
+      });
     }
   }, [open, theme]);
 
@@ -78,6 +93,12 @@ export default function SettingsDialog({
   const handleThemePreview = (value: string) => {
     setDraftTheme(value);
     applyTheme(value);
+  };
+
+  // Live text size preview, like the theme.
+  const handleTextPreview = (value: string) => {
+    setDraftText(value);
+    applyTextSize(value);
   };
 
   // Live language preview — switch i18n immediately on selection.
@@ -92,6 +113,8 @@ export default function SettingsDialog({
     applyTheme(originalTheme.current);
     setDraftLang(originalLang.current);
     changeLanguage(originalLang.current);
+    setDraftText(originalText.current);
+    applyTextSize(originalText.current);
     onClose();
   };
 
@@ -103,6 +126,9 @@ export default function SettingsDialog({
 
     setSetting("language", draftLang);
     changeLanguage(draftLang);
+
+    setSetting("textSize", draftText);
+    applyTextSize(draftText);
 
     onClose();
   };
@@ -117,6 +143,8 @@ export default function SettingsDialog({
     applyTheme("light");
     setDraftLang("auto");
     changeLanguage("auto");
+    setDraftText("standard");
+    applyTextSize("standard");
     setConfirmResetOpen(false);
   };
 
@@ -157,7 +185,7 @@ export default function SettingsDialog({
             <GeneralTabContent lang={draftLang} onLangChange={handleLangPreview} />
           )}
           {activeTab === "appearance" && (
-            <AppearanceTabContent theme={draftTheme} onThemeSelect={handleThemePreview} />
+            <AppearanceTabContent theme={draftTheme} onThemeSelect={handleThemePreview} textSize={draftText} onTextSizeSelect={handleTextPreview} />
           )}
           {activeTab === "about" && <AboutTabContent />}
         </div>
@@ -221,15 +249,28 @@ function GeneralTabContent({
 function AppearanceTabContent({
   theme,
   onThemeSelect,
+  textSize,
+  onTextSizeSelect,
 }: {
   theme: string;
   onThemeSelect: (value: string) => void;
+  textSize: string;
+  onTextSizeSelect: (value: string) => void;
 }) {
   const { t } = useTranslation("settings");
   return (
     <div className="settings-section">
       <h3>{t("appearance.theme")}</h3>
       <ThemeDropdown theme={theme} onThemeSelect={onThemeSelect} />
+      <div className="settings-row">
+        <span className="settings-label">{t("appearance.textSize")}</span>
+        <ThemedSelect
+          value={textSize}
+          options={TEXT_SIZES.map((s) => ({ value: s, label: t(`appearance.textSizes.${s}`) }))}
+          onChange={onTextSizeSelect}
+          style={{ width: 180 }}
+        />
+      </div>
     </div>
   );
 }
