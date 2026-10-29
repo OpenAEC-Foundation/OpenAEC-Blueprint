@@ -200,11 +200,13 @@ De stappen staan in de skill [`.claude/skills/iconen-ontwerpen/SKILL.md`](../.cl
 
 De grenzen zijn op 29 oktober 2026 gekozen met de oude en nieuwe tekeningen naast elkaar:
 
-- Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee verschillende functies 0,44. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
-- Dichtste plek: in de nieuwe tekeningen hoogstens 0,61. Het oude resourcedock haalt 0,70.
+- Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee knoppen die geen familie zijn 0,45. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
+- Dichtste plek: in de nieuwe tekeningen hoogstens 0,60. Het oude resourcedock haalt 0,70.
 - Familie: het kleinste vormverschil is 4,7 px², tussen Zoom + en Zoom −.
 
-**Negatieve controle.** De oude tekeningen in [`design/iconen/voorbeelden/fout/`](../design/iconen/voorbeelden/fout/) moeten op de bedoelde regel vallen: de zes schakelaars met het assenkader, Voorgangers en Opvolgers als twee blokjes, de paneelkaders, het lint als inklapknop en de cijfers bij Hernummer WBS. Vangt de check daar niets meer, dan faalt hij. Zo blijft zichtbaar dat de grenzen niet te los worden.
+**Negatieve controle.** De oude tekeningen in [`design/iconen/voorbeelden/fout/`](../design/iconen/voorbeelden/fout/) moeten op de bedoelde regel vallen: de zes schakelaars met het assenkader, Voorgangers en Opvolgers als twee blokjes, de paneelkaders, het lint als inklapknop en de cijfers bij Hernummer WBS. De controle gebruikt dezelfde groepsregels als de echte groep, ook de families. Vangt de check daar niets meer, dan faalt hij. Zo blijft zichtbaar dat de grenzen niet te los worden, en dat een familie geen gat in de groepscontrole maakt.
+
+Een familie slaat de grenzen voor gelijkenis en gedeelde vorm over. Geef daarom alleen een familie op als de iconen zonder die uitzondering niet kunnen: Voorgangers en Opvolgers halen de gewone grenzen en zijn geen familie.
 
 De CI draait de check in de workflow `Icons`, job *B2 icon set and icon guideline*, na `check_icon_set_b2.py`.
 

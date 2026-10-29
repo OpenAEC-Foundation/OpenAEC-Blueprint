@@ -220,7 +220,9 @@ def main():
     for control in groups.get('negatieve_controles', []):
         wrong = {i: measure(WRONG / f'{i}.svg') for i in control['ids']}
         if control['regel'] == 'gelijkenis':
-            caught = group_errors({'ids': control['ids']}, wrong)
+            # Dezelfde groepsregels als de echte groep, ook de families; anders bewijst de controle niets over die groep.
+            group = next((g for g in groups['groepen'] if set(control['ids']) <= set(g['ids'])), {})
+            caught = group_errors({'ids': control['ids'], 'families': group.get('families', [])}, wrong)
         elif control['regel'] == 'detail':
             caught = [e for i in control['ids'] for e in detail_errors(wrong[i])]
         else:

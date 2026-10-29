@@ -548,4 +548,3 @@ def revised_construction(c):
     """Vul een lege Construction met de tekening uit dit bestand."""
     DRAWINGS[c.key](Pen(c))
     return c
-

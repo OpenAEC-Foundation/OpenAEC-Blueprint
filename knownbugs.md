@@ -1,0 +1,7 @@
+# Bekende punten
+
+Punten uit reviews die geen nieuwe fixronde vragen (VERVOLG): zeldzaam, alleen tekst, een ontbrekende test of opruimen. Elk punt heeft een vast nummer; een opgelost punt blijft staan met de PR die het oploste.
+
+1. **CRLF in `function-list.csv`** (review PR #59, 29 oktober 2026). `scripts/build_icon_set_b2.py` schrijft `harmonization/icon-set-b2/function-list.csv` met de standaard-CSV-schrijver van Python, die regels met CRLF afsluit. `git diff --check` meldt daardoor elke nieuwe regel als witruimte aan het eind. Dat was op main al zo. Oplossing: `lineterminator='\n'` bij het schrijven, of het bestand op `-text` in `.gitattributes`.
+2. **`design/icon-set-b2/review-data.js` is 59 MB** (gezien bij PR #59, 29 oktober 2026). GitHub raadt maximaal 50 MB per bestand aan en waarschuwt bij elke push. Dat was op main al zo. Oplossing: de reviewdata opsplitsen, of buiten de repository bewaren.
+3. **Gedeelde zoomiconen niet in elk programma bekeken** (review PR #59, 29 oktober 2026). `view.zoom-in`, `view.zoom-out` en `view.zoom-default` zijn hertekend en zitten ook in Frame, PDF, Pointcloud, Energy, Field en Geotechniek. Ze zijn alleen in Open Planner Studio en op het overzichtsblad bekeken. Nagaan in die programma's als ze naar de nieuwe revisie gaan.
