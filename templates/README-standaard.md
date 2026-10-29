@@ -1,6 +1,8 @@
 # README-standaard voor OpenAEC-repositories
 
-**Status: concept.** Opgesteld naar de README van [Open Planner Studio](https://github.com/OpenAEC-Foundation/open-planner-studio) en voor het eerst toegepast op de README van deze repository ([`README.md`](../README.md), [`README.nl.md`](../README.nl.md)). Het sjabloon om mee te beginnen is [`README-tool.md`](README-tool.md).
+**Status: vastgesteld op 2026-10-29.** Dit is de standaard voor de README van elke OpenAEC-repository. Een nieuwe repository begint ermee; een bestaande wordt bijgewerkt volgens [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
+
+Opgesteld naar de README van [Open Planner Studio](https://github.com/OpenAEC-Foundation/open-planner-studio). **Het voorbeeld is de README van deze repository** ([`README.md`](../README.md), [`README.nl.md`](../README.nl.md)). Het sjabloon om mee te beginnen is [`README-tool.md`](README-tool.md).
 
 ## Waarom
 
@@ -60,6 +62,6 @@ Een repository die deze standaard volgt, heeft een controle die faalt als een RE
 
 ## Nog uit te werken
 
-- Deze standaard en het sjabloon in elke OpenAEC-repository toepassen; per repository een issue.
+- Deze standaard en het sjabloon in elke OpenAEC-repository toepassen ([#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38)).
 - Een gedeelde controle in [`conventions`](https://github.com/OpenAEC-Foundation/conventions), zodat elke repository hem kan aanroepen in plaats van een eigen script te hebben.
 - Of de standaard daarna naar `conventions` verhuist, omdat andere repositories daar al naar verwijzen.
