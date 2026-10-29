@@ -21,7 +21,7 @@ Werk per tab van één programma. Begin met één tab en laat die beoordelen voo
 
 Maak een map `design/iconen/<tab>/` met een `knoppen.json`. Per knop: tab, groep, knop (het label in het lint), het B2-id en het icoon dat het programma nu heeft (`main`). Lees de knoppen uit de broncode van het programma op main, niet uit een schermafbeelding. Voorbeeld: [`design/iconen/planning/knoppen.json`](../../../design/iconen/planning/knoppen.json).
 
-Zet de groepen uit het lint in [`design/iconen/groepen.json`](../../../design/iconen/groepen.json). Knoppen die hetzelfde ding met een andere actie zijn (Zoom + en Zoom −), zet je samen onder `families`.
+Zet de groepen uit het lint in [`design/iconen/groepen.json`](../../../design/iconen/groepen.json). Knoppen die hetzelfde ding met een andere actie zijn (Zoom + en Zoom −), zet je samen onder `families`, maar alleen als ze de gewone grenzen voor gelijkenis niet halen. Een familie slaat die grenzen over; de check toetst dan alleen het vormverschil na uitlijnen.
 
 ### 2. Per knop: betekenis
 

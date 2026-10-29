@@ -11,7 +11,8 @@ Met --alle meet de check daarnaast de hele B2-set en drukt hij af hoeveel iconen
 Dat deel is informatie, geen fout: de rest van de set wordt per tab herzien.
 
 Negatieve controle: de oude B2-tekeningen in design/iconen/voorbeelden/fout/16/ moeten op de bedoelde regel
-falen. Zo blijft zichtbaar dat de check echt iets vangt.
+falen, met de regels van hun echte groep. Daarnaast moet per familie een verschoven kopie van het eerste icoon
+falen: binnen een familie telt alleen vormverschil na uitlijnen, geen verschil in plaats.
 
 Runtime: shapely (scripts/requirements-icon-b2.txt, in harmonization/sources/b2-runtime).
 """
@@ -30,6 +31,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 try:
     import numpy as np
     import shapely
+    from shapely import affinity
     from shapely.geometry import Polygon
 except ImportError as error:
     raise SystemExit('Installeer eerst scripts/requirements-icon-b2.txt in harmonization/sources/b2-runtime') from error
@@ -53,7 +55,11 @@ MAX_INK = 0.36         # deel van het vlak van 16 x 16 dat inkt is
 MIN_CRISP = 0.70       # scherpte: som(dekking²)/som(dekking); 1 is helemaal scherp
 MAX_SIMILAR = 0.55     # gelijkenis (vervaagde overlap) tussen twee iconen in een groep
 MAX_SHARED = 0.72      # deel van de inkt van het kleinere icoon dat precies op het andere valt
-MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom −): niet alleen kleur
+MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom −), na uitlijnen: niet alleen kleur of plaats
+ALIGN_RANGE = 2.0      # px: zoveel mag een familielid verschoven liggen zonder dat het als andere vorm telt
+ALIGN_STEPS = (0.25, 0.05)  # px: eerst grof uitlijnen, dan fijn rond de beste plek
+ALIGN_TOLERANCE = 0.05 # px: rest na het fijne uitlijnen telt niet als vormverschil
+COPY_SHIFTS = ((0.1, 0.1), (0.6, -0.4), (1.5, 1.0))  # negatieve kopieproef per familie
 
 
 def layer(path_data: str):
@@ -108,7 +114,10 @@ def construction_elements(icon_id: str, manifest_icons: dict) -> int | None:
 
 
 def measure(path: Path, elements: int | None = None):
-    ink, primary, accent = load(path)
+    return measure_ink(*load(path), elements)
+
+
+def measure_ink(ink, primary, accent, elements: int | None = None):
     parts = polygons(ink)
     gaps = [a.distance(b) for a, b in itertools.combinations(parts, 2)]
     holes = [Polygon(r) for p in parts for r in p.interiors]
@@ -155,13 +164,31 @@ def detail_errors(m) -> list[str]:
     return errors
 
 
+def shape_difference(a, b) -> float:
+    """Vormverschil in px² na de beste uitlijning. Een verschuiving tot ALIGN_RANGE telt niet: een verschoven kopie
+    is dezelfde vorm. Wat na uitlijnen binnen ALIGN_TOLERANCE van de andere vorm ligt, telt ook niet."""
+    a_wide, b_wide = a.buffer(ALIGN_TOLERANCE), b.buffer(ALIGN_TOLERANCE)
+
+    def diff(dx, dy):
+        return (a.difference(affinity.translate(b_wide, dx, dy)).area
+                + affinity.translate(b, dx, dy).difference(a_wide).area)
+
+    best, (cx, cy), reach = float('inf'), (0.0, 0.0), ALIGN_RANGE
+    for step in ALIGN_STEPS:
+        n = int(round(reach / step))
+        best, cx, cy = min((diff(cx + i * step, cy + j * step), cx + i * step, cy + j * step)
+                           for i in range(-n, n + 1) for j in range(-n, n + 1))
+        reach = step
+    return best
+
+
 def pair(a, b):
     """Gelijkenis van twee iconen op 16 px: vervaagde overlap, gedeelde inkt en vormverschil."""
     ba, bb = blur(a['_grid']), blur(b['_grid'])
     similar = float(np.minimum(ba, bb).sum() / np.maximum(ba, bb).sum())
     shared_area = a['_ink'].intersection(b['_ink']).area
     shared = shared_area / min(a['_ink'].area, b['_ink'].area)
-    diff = a['_ink'].symmetric_difference(b['_ink']).area
+    diff = shape_difference(a['_ink'], b['_ink'])
     return round(similar, 3), round(shared, 3), round(diff, 2)
 
 
@@ -172,7 +199,7 @@ def group_errors(group, metrics) -> list[str]:
         similar, shared, diff = pair(metrics[x], metrics[y])
         if any({x, y} <= f for f in families):
             if diff < MIN_FAMILY_DIFF:
-                errors.append(f'{x} en {y}: familie, maar het vormverschil is {diff} px² (minimaal {MIN_FAMILY_DIFF}); '
+                errors.append(f'{x} en {y}: familie, maar het vormverschil na uitlijnen is {diff} px² (minimaal {MIN_FAMILY_DIFF}); '
                               'het verschil mag niet alleen kleur of een detail zijn')
             continue
         if similar > MAX_SIMILAR:
@@ -230,6 +257,19 @@ def main():
         if not caught:
             failures.append(f"negatieve controle '{control['naam']}' vangt niets meer; de check is te los geworden")
         controls += 1
+
+    # Negatieve kopieproef: een verschoven kopie van een familielid is dezelfde vorm en moet in de echte familie falen.
+    for group in groups['groepen']:
+        for family in group.get('families', []):
+            original = metrics[family[0]]
+            for dx, dy in COPY_SHIFTS:
+                copy = measure_ink(affinity.translate(original['_ink'], dx, dy), Polygon(), Polygon())
+                caught = group_errors({'ids': [family[0], 'kopie'], 'families': [[family[0], 'kopie']]},
+                                      {family[0]: original, 'kopie': copy})
+                if not caught:
+                    failures.append(f"familie {family}: een kopie van {family[0]}, {dx}/{dy} px verschoven, komt door de "
+                                    'familiecontrole; die meet plaats in plaats van vorm')
+                controls += 1
 
     summary = {'status': 'geslaagd' if not failures else 'gefaald',
                'richtlijn_iconen': len(guideline), 'groepen': len(groups['groepen']),
