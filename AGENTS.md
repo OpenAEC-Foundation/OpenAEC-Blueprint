@@ -20,11 +20,12 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 
 ## Git
 
-- Commit alleen als de gebruiker erom vraagt. Push nooit zelf; de gebruiker pusht via GitHub Desktop.
+- Elke wijziging gaat via een eigen branch en een pull request naar `main`, zodat de checks draaien. Push nooit rechtstreeks naar `main`.
+- Een assistent mag op zijn eigen branch committen en pushen, een pull request openen en dat zelf mergen als de checks groen zijn.
 - Geen `git reset --hard`, force-push, rebase van gedeelde geschiedenis of het weggooien van andermans wijzigingen.
 - Commitberichten in het Engels, kort en in de gebiedende wijs, zoals de bestaande geschiedenis (`Add native PDF split-dialog screen review`).
 - Vermeld in de commit welke assistent het werk deed als de gebruiker daar om vraagt of als de tool dat standaard doet.
-- `core.autocrlf` staat op deze Windows-machine aan. Maak geen commits die alleen regeleindes veranderen.
+- Op de machine van de maker (Windows) staat `core.autocrlf` aan. Maak geen commits die alleen regeleindes veranderen.
 
 ## Taal en stijl
 
@@ -58,9 +59,9 @@ cargo test -p openaec-icons --features all
 cargo package -p openaec-ui
 ```
 
-- Op deze Windows-machine heet de interpreter `python`, niet `python3`.
+- Op de machine van de maker (Windows) heet de interpreter `python`, niet `python3`. Op Linux heet hij `python3`.
 - `scripts/build_font_package.py` (zonder `--check`) en `scripts/build_inter_aec.py` hebben fontTools en brotli nodig: `python -m pip install --target harmonization/sources/font-runtime -r scripts/requirements-fonts.txt`. De `--check` werkt zonder.
-- Rust staat in `%USERPROFILE%\.cargo\bin` met de MSVC-toolchain en Visual Studio Build Tools 2022. Een terminal die al openstond vóór 2026-10-16 kent dat pad pas na opnieuw openen.
-- `scripts/render_collision_drafts.py` en `scripts/render_domain_icon_review.py` gebruiken PyGObject met librsvg. Die draaien op Linux, niet op deze Windows-machine.
+- Op de machine van de maker staat Rust in `%USERPROFILE%\.cargo\bin` met de MSVC-toolchain en Visual Studio Build Tools 2022. Een terminal die al openstond vóór 2026-10-16 kent dat pad pas na opnieuw openen. Op Linux staat Rust via rustup in `~/.cargo/bin`.
+- `scripts/render_collision_drafts.py` en `scripts/render_domain_icon_review.py` gebruiken PyGObject met librsvg. Die draaien op Linux, niet op de Windows-machine van de maker. Op Debian of Ubuntu: `sudo apt install python3-gi python3-gi-cairo gir1.2-rsvg-2.0 python3-pil`.
 - Draai generatiescripts alleen voor het deel waaraan je werkt. Regenereer niet de hele `design/`-map zonder opdracht.
 - Meld eerlijk welke controles je wel en niet hebt gedraaid, met de uitkomst.

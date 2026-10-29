@@ -4,6 +4,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
+- **Claude** – AGENTS.md (pushen, PR en Linux-varianten) en CI-workflow voor de iconenchecks – `AGENTS.md`, `.github/workflows/icons.yml`, `NOTES.md` – sinds 2026-10-29
 
 
 
