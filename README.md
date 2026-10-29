@@ -71,6 +71,11 @@ The Rust screens are in Dutch, the language of the example data. The browser scr
 
 A Rust tool copies `blueprint.rs`, puts its own work in the workspace and its commands in `commands()`. The gallery `ui04` shows more example screens: a ribbon app, a workflow app, the installer, all icons and a type specimen (`cargo run --release --features gpu --bin ui04`).
 
+| | |
+|---|---|
+| ![File screen of the Rust app](docs/images/readme/rust-file.png) **File screen with recent files** | ![Settings of the Rust app](docs/images/readme/rust-settings.png) **Settings: theme, workspace, status bar and shortcuts** |
+| ![Start screen of a ribbon app](docs/images/readme/start-screen.png) **Start screen of a ribbon app, from the gallery** | ![Workflow app with steps at the top](docs/images/readme/workflow-steps.png) **Workflow app with steps at the top, from the gallery** |
+
 The Tauri app comes first, then the same empty app in Rust. Both get a signed release ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)). The online version ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)) is published again after every release.
 
 ## What is in this repository

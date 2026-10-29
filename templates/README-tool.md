@@ -64,9 +64,17 @@ Every release is on the [releases page](https://github.com/OpenAEC-Foundation/<r
 | ![<alt>](docs/images/readme/<three>.png) **<Caption>** | ![<alt>](docs/images/readme/<four>.png) **<Caption>** |
 | ![<alt>](docs/images/readme/<five>.png) **<Caption>** | ![<alt>](docs/images/readme/<six>.png) **<Caption>** |
 
+<!-- Add rows as long as each image shows something new. -->
+
 ## &lt;Main feature&gt;
 
 - **&lt;Capability&gt;.** &lt;What it does, with a link to the documentation.&gt;
+
+<!-- Screenshots that explain this feature, not repeated from the gallery. Delete if none. -->
+
+| | |
+|---|---|
+| ![<alt>](docs/images/readme/<feature-one>.png) **<Caption>** | ![<alt>](docs/images/readme/<feature-two>.png) **<Caption>** |
 
 ## Interoperability
 

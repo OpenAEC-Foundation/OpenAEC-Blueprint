@@ -38,6 +38,10 @@ IMAGES = {
     "icons.png": "design/ontwerp-0.4/native/iconen-dark.png",
     "workflow-app.png": "design/ontwerp-0.4/native/werkstroom-zijbalk-light.png",
     "installer.png": "design/ontwerp-0.4/native/installer-light.png",
+    "rust-file.png": "design/blueprint/blueprint-bestand.png",
+    "rust-settings.png": "design/blueprint/blueprint-instellingen.png",
+    "start-screen.png": "design/ontwerp-0.4/native/start-light.png",
+    "workflow-steps.png": "design/ontwerp-0.4/native/werkstroom-stappen-light.png",
 }
 
 

@@ -71,6 +71,11 @@ De Rust-schermen zijn in het Nederlands, de taal van de voorbeelddata. De browse
 
 Een Rust-tool neemt `blueprint.rs` over, zet zijn eigen werk in de werkruimte en zijn opdrachten in `commands()`. De galerij `ui04` toont meer voorbeeldschermen: een lint-app, een werkstroom-app, de installer, alle iconen en een letterproef (`cargo run --release --features gpu --bin ui04`).
 
+| | |
+|---|---|
+| ![Bestand-scherm van de Rust-app](docs/images/readme/rust-file.png) **Bestand-scherm met recente bestanden** | ![Instellingen van de Rust-app](docs/images/readme/rust-settings.png) **Instellingen: thema, werkruimte, statusbalk en sneltoetsen** |
+| ![Startscherm van een lint-app](docs/images/readme/start-screen.png) **Startscherm van een lint-app, uit de galerij** | ![Werkstroom-app met stappen bovenaan](docs/images/readme/workflow-steps.png) **Werkstroom-app met stappen bovenaan, uit de galerij** |
+
 Eerst komt de Tauri-app, daarna dezelfde lege app in Rust. Elk krijgt een ondertekende release ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)). De online versie ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)) wordt na elke release opnieuw gepubliceerd.
 
 ## Wat hier staat

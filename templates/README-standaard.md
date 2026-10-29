@@ -14,6 +14,7 @@ Wie een OpenAEC-repository opent, ziet eerst de README. Elke README begint daaro
 | `README.nl.md` in het Nederlands | Zelfde opbouw, zelfde beelden, zelfde volgorde. Wie de ene wijzigt, wijzigt de andere mee. |
 | Taalkeuze op de eerste regel | `**English** · [Nederlands](README.nl.md)` en omgekeerd `[English](README.md) · **Nederlands**`. |
 | Beelden in `docs/images/readme/` | PNG, hoogstens 150 kB per beeld, breedte 1280 tot 1600 px. Een animatie (`demo.gif`) mag, liever onder 2 MB. |
+| Meerdere schermafbeeldingen | Zoveel als relevant is, niet één. Elk beeld laat iets zien dat de andere niet laten zien: een ander scherm, een andere werkwijze, een ander thema of een andere vorm van de app. Twee beelden die bijna hetzelfde tonen, worden er één. |
 | Beelden met een script | Elk beeld komt uit een script dat je opnieuw kunt draaien, niet uit een losse schermafdruk. Het script staat in de repository en wordt in de README of in `scripts/README.md` genoemd. Voorbeelden: `scripts/generate-readme-screenshots.mjs` in Planner, `scripts/build_readme_images.py` en `web/online/screenshots.mjs` hier. |
 
 ## Opbouw, in deze volgorde
@@ -30,8 +31,8 @@ Verplicht is **vet**. De rest neem je op als het voor die repository iets zegt; 
 3. **Try it**: de snelste weg om het te zien, met wat de gebruiker daar meteen kan doen.
 4. **Download**: tabel per platform met de bestandssoorten, hoe updaten gaat, en hoe de bestanden zijn ondertekend.
 5. **Why use it?**: vier tot acht punten, elk met een vetgedrukte kern en één zin uitleg.
-6. **Screenshots**: tabel van twee kolommen, zes tot acht beelden, elk met een vetgedrukt bijschrift. Staan beelden in een andere taal dan de README, zeg dat in één zin.
-7. Inhoudelijke secties per hoofdfunctie (bij Planner: planning, uitwisseling, rapporten, MCP). Elke sectie verwijst naar de uitgebreide documentatie.
+6. **Screenshots**: tabel van twee kolommen met minstens vier beelden, en meer als dat relevant is; elk beeld met een vetgedrukt bijschrift. Een oneven laatste cel blijft leeg. Staan beelden in een andere taal dan de README, zeg dat in één zin.
+7. Inhoudelijke secties per hoofdfunctie (bij Planner: planning, uitwisseling, rapporten, MCP). Elke sectie verwijst naar de uitgebreide documentatie. Laat een sectie iets zien wat tekst slecht uitlegt, zet er dan eigen schermafbeeldingen bij, ook meerdere naast elkaar in een tabel van twee kolommen. Een beeld uit de galerij herhaal je daar niet.
 8. **Interoperability** of **open formats**: welke formaten in en uit gaan, met wat er verloren gaat. Bij tools met IFC of IFCX verplicht.
 9. **MCP**: als de tool een MCP-server heeft, wat die kan, wat de gebruiker in de hand houdt en waar hij draait.
 10. **Testing and reliability**: wat er getest wordt, met getallen die uit de repository te tellen zijn, en waar die getallen vandaan komen. Geen beloftes die de tests niet dragen.
