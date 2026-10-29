@@ -1,15 +1,15 @@
 {
   "about": "B2-iconen voor webapps, één sprite per app (issue #11). Gemaakt door scripts/build_web_icons.py; niet met de hand aanpassen.",
-  "revision": 106,
+  "revision": 107,
   "tolerance_px": 0.01,
   "use": "<svg class=\"oa-icon\"><use href=\"icons/<app>.svg#i16-<id>\"/></svg>",
   "apps": {
     "calc": {
       "file": "calc.svg",
-      "icons": 140,
-      "bytes": 655682,
-      "gzip_bytes": 180002,
-      "sha256": "4249e757eaac2bed9d4214f8dc4cedddaa4dfadea79d77c3bdc7084afe400b78",
+      "icons": 142,
+      "bytes": 655977,
+      "gzip_bytes": 179880,
+      "sha256": "3ca200f79b2bc2f618f7c11baa3a80ba37b781f689cd661a1d1cbaa42e6a1748",
       "ids": [
         "activity.clear",
         "assistant.detect-doors",
@@ -150,15 +150,17 @@
         "ui.whats-new",
         "update.install",
         "workspace.dock-back",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "calculations": {
       "file": "calculations.svg",
       "icons": 82,
-      "bytes": 392832,
-      "gzip_bytes": 119345,
-      "sha256": "fa6b850af33f8ae5fa4de01da5d326f1cfa574595b0e146791f22ba4fbe37303",
+      "bytes": 390019,
+      "gzip_bytes": 118319,
+      "sha256": "09a1972f2f5256f774fa8c27d462bcf6f23159514c1e1696caf320219cad8d68",
       "ids": [
         "activity.clear",
         "assistant.detect-doors",
@@ -246,10 +248,10 @@
     },
     "composer": {
       "file": "composer.svg",
-      "icons": 96,
-      "bytes": 480842,
-      "gzip_bytes": 139585,
-      "sha256": "d28e07ce7c50c1f43750d52687c944dba6e33f7368722c7b6d63896ea9f51551",
+      "icons": 98,
+      "bytes": 497360,
+      "gzip_bytes": 145032,
+      "sha256": "3ba18729f0e5aa9b1e476c7f8b88e43fef7629279d55d0fafd98941b957d8bff",
       "ids": [
         "activity.clear",
         "backup.folder",
@@ -346,15 +348,17 @@
         "workflow.skills",
         "workflow.upgrade",
         "workspace.install",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "energy": {
       "file": "energy.svg",
-      "icons": 197,
-      "bytes": 928063,
-      "gzip_bytes": 272052,
-      "sha256": "19d609580116d4618f6cb42a56fe0eef9b2c12e0d8766d4932aff3bf88b22fe7",
+      "icons": 199,
+      "bytes": 928509,
+      "gzip_bytes": 271616,
+      "sha256": "3ec51e937765e0a189412404bb5fd13d4153c0b4a796752cc08cfed32d5e84e1",
       "ids": [
         "activity.clear",
         "advice.workspace",
@@ -552,15 +556,17 @@
         "view.zoom-out",
         "window.maximize",
         "window.minimize",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "field": {
       "file": "field.svg",
       "icons": 35,
-      "bytes": 185619,
-      "gzip_bytes": 57650,
-      "sha256": "92b42b7d2b420284fb689c831890db256210fa1a545a47e2c60ca6c0603056f2",
+      "bytes": 184178,
+      "gzip_bytes": 56835,
+      "sha256": "8d6a172dcef03a321b38132bc153e316418f9272e49d6b17a96f645c561de90d",
       "ids": [
         "activity.clear",
         "bim.workspace",
@@ -602,9 +608,9 @@
     "frame": {
       "file": "frame.svg",
       "icons": 87,
-      "bytes": 399663,
-      "gzip_bytes": 110875,
-      "sha256": "09eb0a7d2f7308ed7c5fa2c90e549c88b2a6ba18833cba1580f805d7e9f9803e",
+      "bytes": 401035,
+      "gzip_bytes": 111110,
+      "sha256": "d79bd71dee8571852b82df6fcf17d136780d2cdaa2fe5aaf283f2cb3acf60831",
       "ids": [
         "assistant.workspace",
         "backup.create",
@@ -697,10 +703,10 @@
     },
     "geotechniek": {
       "file": "geotechniek.svg",
-      "icons": 113,
-      "bytes": 531361,
-      "gzip_bytes": 162536,
-      "sha256": "4af4aa249cc0a8d2192d019333afe3cc4f8804ef12719c441131a971ad51cbe4",
+      "icons": 115,
+      "bytes": 531988,
+      "gzip_bytes": 162386,
+      "sha256": "3ee3c61df1ea83949b615797d428ac1d93f2b3723bb196dc58f297e0bff41055",
       "ids": [
         "activity.clear",
         "annotate.clear-all",
@@ -814,15 +820,17 @@
         "window.maximize",
         "window.minimize",
         "window.restore",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "heatloss": {
       "file": "heatloss.svg",
-      "icons": 148,
-      "bytes": 697731,
-      "gzip_bytes": 211349,
-      "sha256": "ec0d1bee3a25b6f5166cd040284e360c88c5dbea235dfb58984b3d331dc0e880",
+      "icons": 150,
+      "bytes": 696040,
+      "gzip_bytes": 210317,
+      "sha256": "80250968c32d1971e2d9847c434e69c1b2bc48b3dadf4dab78e1607e6f3f332d",
       "ids": [
         "activity.clear",
         "advice.workspace",
@@ -971,7 +979,9 @@
         "ventilation.natural",
         "view.grid",
         "view.pan",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "installer": {
@@ -979,7 +989,7 @@
       "icons": 19,
       "bytes": 86799,
       "gzip_bytes": 26329,
-      "sha256": "be8c9f91b2883cf352c77d60da11b56a4aa94640af53d8d21ef5e0e2cbef7b5a",
+      "sha256": "06940a8f087a0b1b8c24b42f584b7789298d607a15a183be56b533c95396cf47",
       "ids": [
         "software.catalog",
         "software.install",
@@ -1005,9 +1015,9 @@
     "pdf": {
       "file": "pdf.svg",
       "icons": 404,
-      "bytes": 1931708,
-      "gzip_bytes": 557719,
-      "sha256": "4150ec08d0a975f4a42b353b06a9e07cb5c74c5200aaa6b7aa63d8698a2599bd",
+      "bytes": 1930975,
+      "gzip_bytes": 556832,
+      "sha256": "eacac55aaba766db5767c001d24cb0a4b2f6ba4a3200ec1dd0068ca245356615",
       "ids": [
         "activity.clear",
         "ai.bridge-stop",
@@ -1417,10 +1427,10 @@
     },
     "pile-plan": {
       "file": "pile-plan.svg",
-      "icons": 87,
-      "bytes": 414769,
-      "gzip_bytes": 125954,
-      "sha256": "23a0be5c7e715ae35f9686f9cb2b9a347a5675cfc99083316040ca38687372b4",
+      "icons": 89,
+      "bytes": 417545,
+      "gzip_bytes": 126603,
+      "sha256": "5167267271aa9f739b3ca9b5b14a1008abf983ed7f7f318472c92c10b64d8f75",
       "ids": [
         "ai.read-only-toggle",
         "assistant.detect-doors",
@@ -1508,15 +1518,17 @@
         "update.install",
         "view.grid",
         "view.search",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "planner": {
       "file": "planner.svg",
-      "icons": 262,
-      "bytes": 1249267,
-      "gzip_bytes": 365008,
-      "sha256": "53104de099518e5a0905435045344f441435ae3c554bfce87015424783d5ffce",
+      "icons": 265,
+      "bytes": 1254855,
+      "gzip_bytes": 370530,
+      "sha256": "d465dd0c90a1844c0dedc001a7a04ef14b1f9d8a408678af775da5efe18c7ac1",
       "ids": [
         "activity.clear",
         "ai.bridge-start",
@@ -1710,6 +1722,7 @@
         "resource.previous",
         "resource.unlink-library",
         "resource.workspace",
+        "solver.run",
         "stats.downloads",
         "status.assignment-protected",
         "status.bridge-live",
@@ -1779,15 +1792,17 @@
         "wbs.auto-number",
         "wbs.renumber",
         "wbs.templates",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "pointcloud": {
       "file": "pointcloud.svg",
-      "icons": 112,
-      "bytes": 524939,
-      "gzip_bytes": 155950,
-      "sha256": "6cd793f6d4bf7c2265192ba102a733a16d1db3b6814f244a9eae6d897cd2e313",
+      "icons": 114,
+      "bytes": 526274,
+      "gzip_bytes": 155773,
+      "sha256": "986c45481612cc4993782da500125b418ad2b96b53670c43af4a4973e43ffe5d",
       "ids": [
         "activity.clear",
         "backup.create",
@@ -1900,15 +1915,17 @@
         "view.zoom-out",
         "window.maximize",
         "window.minimize",
-        "workspace.ribbon-compact"
+        "workspace.ribbon-collapse",
+        "workspace.ribbon-compact",
+        "workspace.ribbon-expand"
       ]
     },
     "reports": {
       "file": "reports.svg",
       "icons": 110,
-      "bytes": 530047,
-      "gzip_bytes": 157731,
-      "sha256": "fde3ce4993232c5335ab21868ef1938b42709f045077d0a4f57a748b6225a208",
+      "bytes": 527234,
+      "gzip_bytes": 156707,
+      "sha256": "4df0fd45c51e174414041834499249f3b2d1e1a95552f12c1bd478611ecc2f19",
       "ids": [
         "account.admin",
         "account.login",
@@ -2025,9 +2042,9 @@
     "speech": {
       "file": "speech.svg",
       "icons": 31,
-      "bytes": 164582,
-      "gzip_bytes": 52277,
-      "sha256": "867d96f75640687471a0431539741d672b8b7b443829180f496def45a03e8533",
+      "bytes": 161769,
+      "gzip_bytes": 51064,
+      "sha256": "dac8fd15be56a8b367d6a3803878970856eeda70332cc674079d9c703d319931",
       "ids": [
         "account.menu",
         "activity.clear",
@@ -2067,7 +2084,7 @@
       "icons": 58,
       "bytes": 256896,
       "gzip_bytes": 77480,
-      "sha256": "9d32b8b54daa9e9d58a888763cde5f530de7db0bce4cc7d88c843a046b8637ce",
+      "sha256": "e0f4673d376a654b98bdeafe09a9888eeb956d34c9022a55ec37bb109af21c56",
       "ids": [
         "data.chart",
         "data.table",
@@ -2132,9 +2149,9 @@
     "validator": {
       "file": "validator.svg",
       "icons": 88,
-      "bytes": 446503,
-      "gzip_bytes": 138071,
-      "sha256": "fa73d315c8945cf76ef64ae5b2cc4a3e471f3b87f7029fbbe0c4b5ea7a4f37b1",
+      "bytes": 443690,
+      "gzip_bytes": 137070,
+      "sha256": "7096076ae1ad4583aa8e8b13a0d867d048f23d414d159f0c2c20b2994c6c34b9",
       "ids": [
         "activity.clear",
         "backup.create",

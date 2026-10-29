@@ -1,25 +1,25 @@
 {
   "status": "geslaagd",
-  "source_revision": 106,
-  "icons": 945,
-  "assets_checked": 1890,
+  "source_revision": 107,
+  "icons": 948,
+  "assets_checked": 1896,
   "all_roundtrips_byte_identical": true,
-  "source_manifest_sha256": "35428fb190e79924503d79d5e66f0aabd88a1393743a4f45accbcd9b1317c310",
-  "library_manifest_sha256": "42ed54f84df9a73b59da179fbdb7340e98abbab2950f3ee90462bc8107a9ee44",
+  "source_manifest_sha256": "976b72fcfba7d27f9bca8a12ec0ec867f9aabcc379f9ba2a9050f49c830dfb6b",
+  "library_manifest_sha256": "bbf88a4c79054e269e25cfa227037afd81b7dee2f44a01fb8856ecf26c3d6789",
   "generator_sha256": "c2d8dc697a373753e25211b9dac300669d7f890e45a25729b878823dda692be2",
   "checker_sha256": "b3fdfcf73207c32c72a77ecc84c4fabcfdd9bfa8c0a78cbb267bbc93ee18fae1",
   "totals": {
     "16": {
-      "files": 945,
-      "original_bytes": 27647473,
-      "compressed_bytes": 10442732,
-      "reduction_percent": 62.23
+      "files": 948,
+      "original_bytes": 27594699,
+      "compressed_bytes": 10428307,
+      "reduction_percent": 62.21
     },
     "24": {
-      "files": 945,
-      "original_bytes": 28023564,
-      "compressed_bytes": 10186273,
-      "reduction_percent": 63.65
+      "files": 948,
+      "original_bytes": 28037406,
+      "compressed_bytes": 10208558,
+      "reduction_percent": 63.59
     }
   }
 }

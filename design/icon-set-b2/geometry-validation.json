@@ -435,49 +435,49 @@
     "id": "view.zoom-in",
     "master": 16,
     "bounds": [
-      1.041667,
-      1.041667,
-      14.625,
-      14.625
+      1.875,
+      1.875,
+      14.875,
+      14.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 10.889989906439014
+    "accent_area": 10.889975930546994
   },
   {
     "id": "view.zoom-in",
     "master": 24,
     "bounds": [
-      1.625,
-      1.625,
+      2.625,
+      2.625,
       21.875,
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 22.743471737239958
+    "accent_area": 22.744029117093962
   },
   {
     "id": "view.zoom-out",
     "master": 16,
     "bounds": [
-      1.041667,
-      1.041667,
-      14.625,
-      14.625
+      1.875,
+      1.875,
+      14.875,
+      14.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 6.226244953219497
+    "accent_area": 6.226237965273501
   },
   {
     "id": "view.zoom-out",
     "master": 24,
     "bounds": [
-      1.625,
-      1.625,
+      2.625,
+      2.625,
       21.875,
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 12.902985868619997
+    "accent_area": 12.903264558547006
   },
   {
     "id": "view.fit",
@@ -16851,25 +16851,25 @@
     "id": "view.zoom-default",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      15.29167
+      1.875,
+      1.875,
+      14.875,
+      14.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 6.273760417935501
+    "accent_area": 4.9082456344239915
   },
   {
     "id": "view.zoom-default",
     "master": 24,
     "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      22.875
+      2.625,
+      2.625,
+      21.875,
+      21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 14.115966442355006
+    "accent_area": 9.620160204800003
   },
   {
     "id": "view.fit-height",
@@ -18531,49 +18531,49 @@
     "id": "task.split-mode",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375021,
-      14.625,
-      14.625
+      0.875,
+      4.875,
+      15.125,
+      11.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 9.118958456528496
+    "accent_area": 21.090428823318497
   },
   {
     "id": "task.split-mode",
     "master": 24,
     "bounds": [
-      2.125,
-      2.125029,
-      21.875,
-      21.875
+      1.125,
+      7.125,
+      22.875,
+      16.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 18.806119382378988
+    "accent_area": 47.6816212792665
   },
   {
     "id": "calendar.manage",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      14.625,
-      14.625
+      0.875,
+      0.875006,
+      15.125,
+      15.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 2.792246631625998
+    "accent_area": 0.0
   },
   {
     "id": "calendar.manage",
     "master": 24,
     "bounds": [
       2.125,
-      2.125018,
+      1.125029,
       21.875,
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 9.423832199687999
+    "accent_area": 0.0
   },
   {
     "id": "report.workspace",
@@ -18603,145 +18603,145 @@
     "id": "planning.move-date",
     "master": 16,
     "bounds": [
-      1.375,
-      1.04167,
-      15.29167,
-      14.625
+      0.875,
+      0.875,
+      15.375,
+      15.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 18.16331396362095
+    "accent_area": 34.62021146735553
   },
   {
     "id": "planning.move-date",
     "master": 24,
     "bounds": [
       2.125,
-      1.625412,
-      22.875,
-      21.875
+      1.125029,
+      23.125,
+      23.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 38.10605526810062
+    "accent_area": 68.94641887184655
   },
   {
     "id": "planning.structure",
     "master": 16,
     "bounds": [
-      2.70833,
-      2.04167,
-      14.625,
-      14.625
+      0.625,
+      1.625,
+      12.773948,
+      15.124999
     ],
     "overlap_area": 0.0,
-    "accent_area": 46.22642844065198
+    "accent_area": 2.8350026629749996
   },
   {
     "id": "planning.structure",
     "master": 24,
     "bounds": [
+      1.125,
+      2.625,
+      19.258841,
+      22.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 5.308758238606
+  },
+  {
+    "id": "wbs.auto-number",
+    "master": 16,
+    "bounds": [
+      1.375,
+      0.875,
+      14.625,
+      15.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "wbs.auto-number",
+    "master": 24,
+    "bounds": [
+      2.125018,
+      1.125,
+      21.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "wbs.renumber",
+    "master": 16,
+    "bounds": [
+      0.875013,
+      0.875,
+      15.52494,
+      15.5246
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 20.448629872247956
+  },
+  {
+    "id": "wbs.renumber",
+    "master": 24,
+    "bounds": [
+      1.125,
+      1.125,
+      22.87491,
+      22.87442
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 41.396589721207555
+  },
+  {
+    "id": "task.indent",
+    "master": 16,
+    "bounds": [
+      1.125,
+      1.875,
+      15.125,
+      13.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.025665517256002
+  },
+  {
+    "id": "task.indent",
+    "master": 24,
+    "bounds": [
+      2.125,
       4.125,
-      3.125015,
-      21.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 97.07590902503206
-  },
-  {
-    "id": "wbs.auto-number",
-    "master": 16,
-    "bounds": [
-      2.0,
-      1.333333,
-      14.625,
-      15.95833
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 20.428211052379492
-  },
-  {
-    "id": "wbs.auto-number",
-    "master": 24,
-    "bounds": [
-      3.0,
-      2.0,
-      21.875,
-      23.874992
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 42.824947706408956
-  },
-  {
-    "id": "wbs.renumber",
-    "master": 16,
-    "bounds": [
-      2.0,
-      2.0,
-      13.95833,
-      14.0
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 15.663018337497482
-  },
-  {
-    "id": "wbs.renumber",
-    "master": 24,
-    "bounds": [
-      3.0,
-      3.0,
-      20.875,
-      21.0
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 32.85579051531651
-  },
-  {
-    "id": "task.indent",
-    "master": 16,
-    "bounds": [
-      1.375,
-      2.04167,
-      14.625,
-      13.29167
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 12.329965008859508
-  },
-  {
-    "id": "task.indent",
-    "master": 24,
-    "bounds": [
-      2.125,
-      3.125,
       21.875,
       19.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 25.855782694808507
+    "accent_area": 24.25461679149997
   },
   {
     "id": "task.outdent",
     "master": 16,
     "bounds": [
-      1.375,
-      2.04167,
-      14.625,
-      13.29167
+      1.328942,
+      1.875,
+      15.125,
+      13.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 12.329793465788999
+    "accent_area": 12.025500672280492
   },
   {
     "id": "task.outdent",
     "master": 24,
     "bounds": [
-      2.125,
-      3.125,
+      2.337889,
+      4.125,
       21.875,
       19.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 25.85575348740846
+    "accent_area": 24.25384060905304
   },
   {
     "id": "tree.collapse-scope",
@@ -18867,25 +18867,25 @@
     "id": "panel.warnings",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.29167
+      0.591287,
+      1.73197,
+      14.408713,
+      14.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 19.853865421921004
+    "accent_area": 6.308259187997502
   },
   {
     "id": "panel.warnings",
     "master": 24,
     "bounds": [
-      2.125,
-      1.125,
-      21.875,
-      22.875
+      1.789238,
+      2.99324,
+      22.210762,
+      21.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 44.67118990588
+    "accent_area": 14.432428862232989
   },
   {
     "id": "table.columns",
@@ -19011,229 +19011,229 @@
     "id": "planning.trace-predecessors",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
+      1.875,
+      2.375,
       14.625,
-      14.625
+      12.625
     ],
     "overlap_area": 0.0,
-    "accent_area": 12.329845322746992
+    "accent_area": 23.241759657151984
   },
   {
     "id": "planning.trace-predecessors",
     "master": 24,
     "bounds": [
       2.125,
-      2.125,
+      4.125,
       21.875,
-      21.875
+      19.87487
     ],
     "overlap_area": 0.0,
-    "accent_area": 25.856196611536475
+    "accent_area": 48.85292667822697
   },
   {
     "id": "planning.trace-successors",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      14.625,
-      14.625
+      1.375004,
+      2.375027,
+      14.125,
+      12.625
     ],
     "overlap_area": 0.0,
-    "accent_area": 12.329619329004004
+    "accent_area": 23.242079236107973
   },
   {
     "id": "planning.trace-successors",
     "master": 24,
     "bounds": [
-      2.125,
-      2.125,
+      2.125029,
+      4.125,
       21.875,
-      21.875
+      19.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 25.855576851839476
+    "accent_area": 48.85284472658008
   },
   {
     "id": "planning.baseline-overlay",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      14.625
+      0.875,
+      1.875,
+      15.124982,
+      12.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 14.952361981577003
+    "accent_area": 13.726274717647993
   },
   {
     "id": "planning.baseline-overlay",
     "master": 24,
     "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 31.056420956267466
-  },
-  {
-    "id": "planning.progress-line",
-    "master": 16,
-    "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 23.281716167806948
-  },
-  {
-    "id": "planning.progress-line",
-    "master": 24,
-    "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 48.79445790765243
-  },
-  {
-    "id": "planning.status-date-line",
-    "master": 16,
-    "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 21.058149638575465
-  },
-  {
-    "id": "planning.status-date-line",
-    "master": 24,
-    "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 44.07354083603351
-  },
-  {
-    "id": "planning.resource-accent",
-    "master": 16,
-    "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 17.452234959490994
-  },
-  {
-    "id": "planning.resource-accent",
-    "master": 24,
-    "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 36.306149423433986
-  },
-  {
-    "id": "planning.float-band",
-    "master": 16,
-    "bounds": [
-      1.375,
-      1.375,
-      15.29167,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 15.722007927001496
-  },
-  {
-    "id": "planning.float-band",
-    "master": 24,
-    "bounds": [
-      2.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 32.91450799640048
-  },
-  {
-    "id": "planning.relations-visible",
-    "master": 16,
-    "bounds": [
-      1.375,
-      1.375,
-      14.625,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 18.678282708152505
-  },
-  {
-    "id": "planning.relations-visible",
-    "master": 24,
-    "bounds": [
-      2.125,
-      2.125,
-      21.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 39.4310303484235
-  },
-  {
-    "id": "planning.baselines",
-    "master": 16,
-    "bounds": [
-      1.375,
-      0.708333,
-      15.958333,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 30.658729328157484
-  },
-  {
-    "id": "planning.baselines",
-    "master": 24,
-    "bounds": [
-      2.125,
       1.125,
-      23.875,
+      3.125,
+      22.875,
+      17.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 30.403119091222504
+  },
+  {
+    "id": "planning.progress-line",
+    "master": 16,
+    "bounds": [
+      3.093023,
+      0.875,
+      12.40646,
+      15.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.progress-line",
+    "master": 24,
+    "bounds": [
+      4.42732,
+      1.125,
+      18.57111,
+      22.874991
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.status-date-line",
+    "master": 16,
+    "bounds": [
+      4.0,
+      1.25,
+      11.0,
+      15.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 15.75
+  },
+  {
+    "id": "planning.status-date-line",
+    "master": 24,
+    "bounds": [
+      7.0,
+      1.5,
+      17.0,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 32.5
+  },
+  {
+    "id": "planning.resource-accent",
+    "master": 16,
+    "bounds": [
+      1.375,
+      1.125,
+      14.625,
+      15.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.776758559727504
+  },
+  {
+    "id": "planning.resource-accent",
+    "master": 24,
+    "bounds": [
+      2.125,
+      1.625,
+      21.875,
+      23.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 51.85955793147805
+  },
+  {
+    "id": "planning.float-band",
+    "master": 16,
+    "bounds": [
+      0.875,
+      3.875,
+      15.125,
+      11.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.float-band",
+    "master": 24,
+    "bounds": [
+      1.12512,
+      7.125,
+      22.875,
+      16.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.relations-visible",
+    "master": 16,
+    "bounds": [
+      0.875011,
+      2.875,
+      13.447678,
+      15.124982
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 11.589110272379491
+  },
+  {
+    "id": "planning.relations-visible",
+    "master": 24,
+    "bounds": [
+      1.125029,
+      4.125,
+      20.626751,
+      22.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 24.199381452500507
+  },
+  {
+    "id": "planning.baselines",
+    "master": 16,
+    "bounds": [
+      0.875,
+      1.375,
+      15.125,
+      14.625
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 31.505461440629468
+  },
+  {
+    "id": "planning.baselines",
+    "master": 24,
+    "bounds": [
+      1.125,
+      2.125,
+      22.875,
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 64.03953687189497
+    "accent_area": 70.56413589559803
   },
   {
     "id": "planning.status-date",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.95833
+      0.875,
+      0.875,
+      15.375,
+      15.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 24.228940057694988
+    "accent_area": 0.0
   },
   {
     "id": "planning.status-date",
@@ -19241,59 +19241,59 @@
     "bounds": [
       2.125,
       1.125029,
-      21.875,
-      23.875
+      23.125,
+      23.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 51.21677580087603
+    "accent_area": 0.0
   },
   {
     "id": "planning.clear-status-date",
     "master": 16,
     "bounds": [
-      1.375,
-      0.375,
-      14.625,
-      15.29167
+      4.875,
+      4.875,
+      11.125,
+      11.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 10.31790233252649
+    "accent_area": 0.0
   },
   {
     "id": "planning.clear-status-date",
     "master": 24,
     "bounds": [
-      2.125,
-      0.625008,
-      21.875,
+      7.125,
+      7.125,
+      16.875,
+      16.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.progress-menu",
+    "master": 16,
+    "bounds": [
+      2.875,
+      0.875011,
+      13.625,
+      15.124994
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "planning.progress-menu",
+    "master": 24,
+    "bounds": [
+      4.125,
+      1.125029,
+      20.375,
       22.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 21.542692694644483
-  },
-  {
-    "id": "planning.progress-menu",
-    "master": 16,
-    "bounds": [
-      0.70833,
-      1.375,
-      15.29167,
-      14.625
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 19.921020773486497
-  },
-  {
-    "id": "planning.progress-menu",
-    "master": 24,
-    "bounds": [
-      1.125,
-      2.125,
-      22.875,
-      21.875
-    ],
-    "overlap_area": 0.0,
-    "accent_area": 41.33012487208351
+    "accent_area": 0.0
   },
   {
     "id": "task.milestone-menu",
@@ -19323,37 +19323,37 @@
     "id": "planning.relations-menu",
     "master": 16,
     "bounds": [
-      0.70833,
-      1.375086,
-      14.625,
-      13.95833
+      0.625,
+      0.625,
+      15.375,
+      15.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 8.159517968864
+    "accent_area": 0.0
   },
   {
     "id": "planning.relations-menu",
     "master": 24,
     "bounds": [
-      1.125,
-      2.125,
-      21.875,
-      20.875
+      0.875114,
+      0.875117,
+      23.12478,
+      23.12478
     ],
     "overlap_area": 0.0,
-    "accent_area": 16.974588945976503
+    "accent_area": 0.0
   },
   {
     "id": "wbs.templates",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      14.625,
-      14.625
+      0.875,
+      0.875,
+      15.125,
+      15.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 24.475435001896507
+    "accent_area": 0.0
   },
   {
     "id": "wbs.templates",
@@ -19365,7 +19365,7 @@
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 51.43096798451193
+    "accent_area": 0.0
   },
   {
     "id": "resource.assign",
@@ -19395,25 +19395,25 @@
     "id": "planning.bar-colors",
     "master": 16,
     "bounds": [
-      1.375,
-      1.375,
-      15.625,
-      14.625
+      1.13185,
+      1.13185,
+      14.86815,
+      14.86815
     ],
     "overlap_area": 0.0,
-    "accent_area": 17.452553237334993
+    "accent_area": 10.389775156716002
   },
   {
     "id": "planning.bar-colors",
     "master": 24,
     "bounds": [
-      2.125,
-      2.125,
-      23.375,
-      21.875
+      1.635414,
+      1.635414,
+      22.364586,
+      22.364586
     ],
     "overlap_area": 0.0,
-    "accent_area": 36.3064260113035
+    "accent_area": 21.203619083159985
   },
   {
     "id": "list.sort-fields",
@@ -22678,5 +22678,77 @@
     ],
     "overlap_area": 0.0,
     "accent_area": 80.037954512516
+  },
+  {
+    "id": "solver.run",
+    "master": 16,
+    "bounds": [
+      3.875,
+      2.423898,
+      13.44237,
+      13.576102
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "solver.run",
+    "master": 24,
+    "bounds": [
+      5.125,
+      3.364995,
+      20.42603,
+      20.635005
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "workspace.ribbon-collapse",
+    "master": 16,
+    "bounds": [
+      3.875,
+      5.837672,
+      12.125,
+      10.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "workspace.ribbon-collapse",
+    "master": 24,
+    "bounds": [
+      6.125,
+      8.908599,
+      17.875,
+      15.375
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "workspace.ribbon-expand",
+    "master": 16,
+    "bounds": [
+      3.875,
+      5.625,
+      12.125,
+      10.162328
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
+  },
+  {
+    "id": "workspace.ribbon-expand",
+    "master": 24,
+    "bounds": [
+      6.125018,
+      8.625,
+      17.875,
+      15.091401
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 0.0
   }
 ]

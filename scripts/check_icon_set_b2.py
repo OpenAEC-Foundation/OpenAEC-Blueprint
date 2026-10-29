@@ -11,6 +11,7 @@ import zipfile
 from b2_source_catalog import load_catalog, source_hashes, supplemental_catalog
 from b2_completion import PLANNED_KEYS, PLANNED, EXCLUDED as SCOPE_EXCLUDED
 from b2_scope_audit import audit_hash, validate_scope_audit
+from b2_richtlijn import REVISED as RICHTLIJN_REVISED
 from b2_geometry import ROOT, Polygon, Point, unary_union, foreground, ROUNDED_JOINTS, CURRENT_CHANGES, WHOLE_ACCENT
 from b2_second_series import KEYS as SECOND_KEYS, SEMANTIC
 from b2_window_series import KEYS as WINDOW_KEYS
@@ -48,6 +49,11 @@ OUT=ROOT/'design/icon-set-b2'
 
 
 def sha(data):return hashlib.sha256(data).hexdigest()
+
+
+def text_sha(path):
+    """Zoals text_digest in build_icon_set_b2.py: CRLF en LF geven dezelfde hash."""
+    return sha(path.read_bytes().replace(b'\r\n',b'\n'))
 
 
 def parse_layer(path):
@@ -106,31 +112,33 @@ def main():
         assert f'review-data.js?revision={manifest["revision"]}' in page
         assert page.index('review-data.js')<page.index('const d=JSON.parse')
 
-    for name,expected in manifest['completion_modules_sha256'].items():assert sha((ROOT/'scripts'/name).read_bytes())==expected
-    assert sha((ROOT/'scripts/b2_completion.py').read_bytes())==manifest['completion_generator_sha256']
-    assert sha((ROOT/'scripts/build_icon_set_b2.py').read_bytes())==manifest['generator_sha256']
-    assert sha((ROOT/'scripts/b2_geometry.py').read_bytes())==manifest['geometry_generator_sha256']
-    assert sha((ROOT/'scripts/b2_second_series.py').read_bytes())==manifest['extension_generator_sha256']
-    assert sha((ROOT/'scripts/build_b2_feedback_review.py').read_bytes())==manifest['feedback_generator_sha256']
+    for name,expected in manifest['completion_modules_sha256'].items():assert text_sha(ROOT/'scripts'/name)==expected
+    assert text_sha(ROOT/'scripts/b2_completion.py')==manifest['completion_generator_sha256']
+    assert text_sha(ROOT/'scripts/build_icon_set_b2.py')==manifest['generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_geometry.py')==manifest['geometry_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_second_series.py')==manifest['extension_generator_sha256']
+    assert text_sha(ROOT/'scripts/build_b2_feedback_review.py')==manifest['feedback_generator_sha256']
     assert manifest['warning_preview']['colors']==WARNING_PREVIEW
-    assert sha((ROOT/'scripts/b2_window_series.py').read_bytes())==manifest['window_generator_sha256']
-    assert sha((ROOT/'scripts/b2_text_series.py').read_bytes())==manifest['text_generator_sha256']
-    assert sha((ROOT/'scripts/b2_font_geometry.py').read_bytes())==manifest['font_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_richtlijn.py')==manifest['guideline_generator_sha256']
+    assert set(RICHTLIJN_REVISED)<={i['id'] for i in manifest['icons']}
+    assert text_sha(ROOT/'scripts/b2_window_series.py')==manifest['window_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_text_series.py')==manifest['text_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_font_geometry.py')==manifest['font_generator_sha256']
     for font in manifest['font_sources'].values():assert sha((ROOT/font['source']).read_bytes())==font['sha256']
-    assert sha((ROOT/'scripts/b2_data_series.py').read_bytes())==manifest['data_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_three.py').read_bytes())==manifest['session_three_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_four.py').read_bytes())==manifest['session_four_generator_sha256']
-    assert sha((ROOT/'scripts/b2_document_navigation.py').read_bytes())==manifest['document_navigation_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_two.py').read_bytes())==manifest['session_two_generator_sha256']
-    assert sha((ROOT/'scripts/b2_bulk_series.py').read_bytes())==manifest['bulk_generator_sha256']
-    assert sha((ROOT/'scripts/b2_page_views.py').read_bytes())==manifest['page_views_generator_sha256']
-    assert sha((ROOT/'scripts/b2_energy_pile_audio.py').read_bytes())==manifest['later_groups_generator_sha256']
-    assert sha((ROOT/'scripts/b2_tree_planning_geo.py').read_bytes())==manifest['next_groups_generator_sha256']
-    assert sha((ROOT/'scripts/b2_ifc_series.py').read_bytes())==manifest['ifc_generator_sha256']
-    assert sha((ROOT/'scripts/b2_report_series.py').read_bytes())==manifest['report_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_data_series.py')==manifest['data_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_session_three.py')==manifest['session_three_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_session_four.py')==manifest['session_four_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_document_navigation.py')==manifest['document_navigation_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_session_two.py')==manifest['session_two_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_bulk_series.py')==manifest['bulk_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_page_views.py')==manifest['page_views_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_energy_pile_audio.py')==manifest['later_groups_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_tree_planning_geo.py')==manifest['next_groups_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_ifc_series.py')==manifest['ifc_generator_sha256']
+    assert text_sha(ROOT/'scripts/b2_report_series.py')==manifest['report_generator_sha256']
     source=ROOT/'harmonization/function-icon-catalog.json'
     assert sha(source.read_bytes())==manifest['source_catalog_sha256']
-    assert sha((ROOT/'design/ontwerp-0.4/tokens-0.4.json').read_bytes())==manifest['theme_tokens_sha256']
+    assert text_sha(ROOT/'design/ontwerp-0.4/tokens-0.4.json')==manifest['theme_tokens_sha256']
     audit=json.loads((ROOT/'harmonization/icon-set-b2/function-plan.json').read_text(encoding='utf-8'))
     catalog=load_catalog()
     assert manifest['source_catalogs_sha256']==source_hashes()
@@ -168,6 +176,9 @@ def main():
         assert icon['foreground']==foreground(icon['id'])
         example=icon['source_example']
         if example:assert example==by_id[example['id']] and example['function_id']==SOURCE_FUNCTIONS.get(icon['id'],icon['id'])
+        # Een icoon dat volgens docs/iconen.md opnieuw getekend is, mag van zijn eerder goedgekeurde master afwijken.
+        retained=icon['id'] not in RICHTLIJN_REVISED
+        assert icon.get('guideline')==(None if retained else 'docs/iconen.md')
         for size in (16,24):
             asset=icon['assets'][str(size)];content=(OUT/asset['path']).read_text(encoding='utf-8')
             assert sha(content.encode())==asset['sha256'],'hash mismatch'
@@ -199,28 +210,28 @@ def main():
                 else:
                     assert layers['accent'].is_empty,'status contains decorative accent'
                 assert icon['semantic_color']==SEMANTIC[icon['id']]
-            if icon['series']==1:
+            if retained and icon['series']==1:
                 assert (OUT/'review/approved-core'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'approved core changed'
-            if icon['series']<11 and icon['id']!='planning.driving':
+            if retained and icon['series']<11 and icon['id']!='planning.driving':
                 assert (OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted series changed'
             if icon['id']=='planning.driving':
                 before=(OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_text(encoding='utf-8')
                 assert content.replace(' style="color:var(--icon-accent,currentColor)"','')==before,'driving shape changed'
-            if icon['series']<14 and icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:
+            if retained and icon['series']<14 and icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:
                 assert (OUT/'review/before-round-11-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested icon changed'
-            if icon['series']<14 and icon['id'] not in {'object.rename','pile.legend-edit'}:
+            if retained and icon['series']<14 and icon['id'] not in {'object.rename','pile.legend-edit'}:
                 assert (OUT/'review/before-pencil-fix'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested pencil-round change'
-            if icon['series']<14:
+            if retained and icon['series']<14:
                 assert (OUT/'review/retained-series-1-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous family changed'
-            if icon['series']<=14:
+            if retained and icon['series']<=14:
                 assert (OUT/'review/retained-series-1-14'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 125 designs changed'
-            if icon['series']<=20:
+            if retained and icon['series']<=20:
                 assert (OUT/'review/retained-series-1-20'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted 170 changed'
-            if icon['series']<=28:
+            if retained and icon['series']<=28:
                 assert (OUT/'review/retained-series-1-28'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 231 designs changed'
-            if icon['series']<=30:
+            if retained and icon['series']<=30:
                 assert (OUT/'review/retained-series-1-30'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 239 designs changed'
-            if icon['series']<=45:
+            if retained and icon['series']<=45:
                 assert (OUT/'review/retained-series-1-45'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'nightly work changed existing master'
             if icon['id']=='file.open' and size==24:sample=content
     # Failure controls make sure layering, overshoot and overlap are actually rejected.
@@ -257,6 +268,7 @@ def main():
     comparison_count=0
     assert {c['id'] for c in comparisons}=={i['id'] for i in manifest['icons'] if i['series']==1}
     for record in comparisons:
+        if record['id'] in RICHTLIJN_REVISED:continue
         for size in (16,24):
             silhouettes=[]
             for front in ('primary','accent'):
