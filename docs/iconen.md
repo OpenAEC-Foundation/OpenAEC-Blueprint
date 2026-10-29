@@ -202,13 +202,13 @@ De grenzen zijn op 29 oktober 2026 gekozen met de oude en nieuwe tekeningen naas
 
 - Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee knoppen die geen familie zijn 0,45. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
 - Dichtste plek: in de nieuwe tekeningen hoogstens 0,60. Het oude resourcedock haalt 0,70.
-- Familie: het kleinste vormverschil is 4,5 px², tussen Zoom + en Zoom −. Een verschoven kopie, of een kopie op 95 tot 105 %, meet hoogstens 0,3 px².
+- Familie: het kleinste vormverschil is 4,5 px², tussen Zoom + en Zoom −. Een kopie die verschoven is, op 96 tot 103 % getekend, of aan één uiteinde 0,5 px langer, ook alles tegelijk, meet hoogstens 2,9 px².
 
 **Negatieve controle.** De oude tekeningen in [`design/iconen/voorbeelden/fout/`](../design/iconen/voorbeelden/fout/) moeten op de bedoelde regel vallen: de zes schakelaars met het assenkader, Voorgangers en Opvolgers als twee blokjes, de paneelkaders, het lint als inklapknop en de cijfers bij Hernummer WBS. De controle gebruikt dezelfde groepsregels als de echte groep, ook de families. Vangt de check daar niets meer, dan faalt hij. Zo blijft zichtbaar dat de grenzen niet te los worden, en dat een familie geen gat in de groepscontrole maakt.
 
 Een familie slaat de grenzen voor gelijkenis en gedeelde vorm over. Geef daarom alleen een familie op als de iconen zonder die uitzondering niet kunnen. Voorgangers en Opvolgers, WBS auto en Hernummer WBS, en Lint inklappen en uitklappen halen de gewone grenzen en zijn geen familie.
 
-Binnen een familie telt alleen vorm. De check legt het tweede icoon eerst precies op het omhullende kader van het eerste, schuift het daarna nog tot 0,25 px bij, en meet pas dan het verschil. Een verschoven of iets groter of kleiner getekende kopie is dus geen nieuwe vorm. Spiegelen telt wel als verschil: bij Inspringen en Uitspringen is dat juist de bedoeling. **Kopieproef:** per familie maakt de check vijf kopieën van het eerste icoon (verschoven tot 2,5 px, en op 98 % en 103 %) en toetst die met de regels van die familie. Komt een kopie erdoor, dan faalt de check.
+Binnen een familie telt alleen vorm. De check legt het tweede icoon op een paar manieren op het eerste: op hetzelfde omhullende kader, of in een maat van 96 tot 104 % met een hoek of het midden van de kaders op elkaar. Bij de beste manieren schuift hij nog tot 0,25 px bij, en hij meet het kleinste verschil dat overblijft. Een kopie die verschoven is, iets groter of kleiner getekend, of aan één uiteinde iets langer, is dus geen nieuwe vorm. Spiegelen telt wel als verschil: bij Inspringen en Uitspringen is dat juist de bedoeling. **Kopieproef:** per familie maakt de check acht kopieën van het eerste icoon (verschoven tot 2,5 px, op 97, 98 en 103 %, en met het uiteinde rechtsonder 0,5 px langer) en toetst die met de regels van die familie. Komt een kopie erdoor, dan faalt de check.
 
 De CI draait de check in de workflow `Icons`, job *B2 icon set and icon guideline*, na `check_icon_set_b2.py`.
 

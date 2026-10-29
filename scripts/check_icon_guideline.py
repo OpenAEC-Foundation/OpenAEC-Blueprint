@@ -32,7 +32,7 @@ try:
     import numpy as np
     import shapely
     from shapely import affinity
-    from shapely.geometry import Polygon
+    from shapely.geometry import Polygon, box
 except ImportError as error:
     raise SystemExit('Installeer eerst scripts/requirements-icon-b2.txt in harmonization/sources/b2-runtime') from error
 
@@ -59,8 +59,11 @@ MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom �
 ALIGN_FINE = 0.25      # px: na het leggen op hetzelfde kader nog zoveel fijn bijschuiven
 ALIGN_STEP = 0.05      # px: stap van het fijne bijschuiven
 ALIGN_TOLERANCE = 0.05 # px: rest na uitlijnen telt niet als vormverschil
-# Negatieve kopieproef per familie: (verschuiving x, y in px, schaal rond het midden). Elke kopie is dezelfde vorm.
-COPY_PROOFS = ((0.1, 0.1, 1.0), (0.6, -0.4, 1.0), (2.5, 0.0, 1.0), (0.0, 0.0, 0.98), (0.3, -0.2, 1.03))
+ALIGN_SCALES = (0.96, 0.98, 1.0, 1.02, 1.04)  # kleine maatverschillen die niet als vorm tellen
+# Negatieve kopieproef per familie: (verschuiving x, y in px, schaal rond het midden, uiteinde rechtsonder 0,5 px
+# langer). Elke kopie is dezelfde vorm.
+COPY_PROOFS = ((0.1, 0.1, 1.0, False), (0.6, -0.4, 1.0, False), (2.5, 0.0, 1.0, False), (0.0, 0.0, 0.98, False),
+               (0.3, -0.2, 1.03, False), (0.0, 0.0, 1.0, True), (1.2, 0.4, 1.0, True), (0.6, -0.4, 0.97, True))
 
 
 def layer(path_data: str):
@@ -166,18 +169,33 @@ def detail_errors(m) -> list[str]:
 
 
 def shape_difference(a, b) -> float:
-    """Vormverschil in px² na uitlijnen. Eerst gaat b precies op het omhullende kader van a: een verschoven of iets
-    geschaalde kopie is dan dezelfde vorm. Daarna schuift b nog tot ALIGN_FINE bij. Wat binnen ALIGN_TOLERANCE van de
-    andere vorm ligt, telt niet. Spiegelen telt wel: bij Inspringen en Uitspringen is dat juist het verschil."""
+    """Vormverschil in px² na uitlijnen: het kleinste over een paar manieren om b op a te leggen.
+    - b precies op het omhullende kader van a (een iets groter of kleiner getekende kopie);
+    - b in een kleine maat (ALIGN_SCALES) met een hoek of het midden van zijn kader op dat van a. Zo valt een kopie
+      weg die verschoven, iets geschaald of aan één uiteinde iets langer is, of een combinatie daarvan.
+    Eerst worden alle manieren zonder bijschuiven gemeten; de drie beste schuiven daarna tot ALIGN_FINE bij.
+    Wat binnen ALIGN_TOLERANCE van de andere vorm ligt, telt niet. Spiegelen telt wel: bij Inspringen en
+    Uitspringen is dat juist het verschil."""
     ax0, ay0, ax1, ay1 = a.bounds
     bx0, by0, bx1, by1 = b.bounds
     sx, sy = (ax1 - ax0) / (bx1 - bx0), (ay1 - ay0) / (by1 - by0)
-    b = affinity.affine_transform(b, [sx, 0, 0, sy, ax0 - bx0 * sx, ay0 - by0 * sy])
-    a_wide, b_wide = a.buffer(ALIGN_TOLERANCE), b.buffer(ALIGN_TOLERANCE)
+    candidates = [affinity.affine_transform(b, [sx, 0, 0, sy, ax0 - bx0 * sx, ay0 - by0 * sy])]
+    anchors = ((ax0, ay0, bx0, by0), (ax1, ay1, bx1, by1), (ax0, ay1, bx0, by1), (ax1, ay0, bx1, by0),
+               ((ax0 + ax1) / 2, (ay0 + ay1) / 2, (bx0 + bx1) / 2, (by0 + by1) / 2))
+    for k in ALIGN_SCALES:
+        for pax, pay, pbx, pby in anchors:
+            candidates.append(affinity.affine_transform(b, [k, 0, 0, k, pax - k * pbx, pay - k * pby]))
+    a_wide = a.buffer(ALIGN_TOLERANCE)
+
+    def residual(c, c_wide, dx=0.0, dy=0.0):
+        return (a.difference(affinity.translate(c_wide, dx, dy)).area
+                + affinity.translate(c, dx, dy).difference(a_wide).area)
+
+    scored = sorted((residual(c, w), i, c, w) for i, (c, w) in
+                    enumerate((c, c.buffer(ALIGN_TOLERANCE)) for c in candidates))
     n = int(round(ALIGN_FINE / ALIGN_STEP))
-    return min(a.difference(affinity.translate(b_wide, i * ALIGN_STEP, j * ALIGN_STEP)).area
-               + affinity.translate(b, i * ALIGN_STEP, j * ALIGN_STEP).difference(a_wide).area
-               for i in range(-n, n + 1) for j in range(-n, n + 1))
+    return min(residual(c, w, i * ALIGN_STEP, j * ALIGN_STEP)
+               for _, _, c, w in scored[:3] for i in range(-n, n + 1) for j in range(-n, n + 1))
 
 
 def pair(a, b):
@@ -261,13 +279,19 @@ def main():
     for group in groups['groepen']:
         for family in group.get('families', []):
             original = metrics[family[0]]
-            for dx, dy, scale in COPY_PROOFS:
-                ink = affinity.translate(affinity.scale(original['_ink'], scale, scale, origin=(8, 8)), dx, dy)
+            for dx, dy, scale, longer in COPY_PROOFS:
+                ink = original['_ink']
+                if longer:
+                    # Het uiteinde rechtsonder 0,5 px verder doortrekken, zoals een iets langer handvat.
+                    x0, y0, x1, y1 = ink.bounds
+                    ink = ink.union(affinity.translate(ink, 0.5, 0.5).intersection(box(x1 - 2, y1 - 2, x1 + 1, y1 + 1)))
+                ink = affinity.translate(affinity.scale(ink, scale, scale, origin=(8, 8)), dx, dy)
                 copy = measure_ink(ink, Polygon(), Polygon())
                 caught = group_errors({'ids': [family[0], 'kopie'], 'families': [[family[0], 'kopie']]},
                                       {family[0]: original, 'kopie': copy})
                 if not caught:
-                    failures.append(f"familie {family}: een kopie van {family[0]} ({dx}/{dy} px verschoven, {scale:g} x) "
+                    extra = ', uiteinde langer' if longer else ''
+                    failures.append(f"familie {family}: een kopie van {family[0]} ({dx}/{dy} px verschoven, {scale:g} x{extra}) "
                                     'komt door de familiecontrole; die meet plaats of maat in plaats van vorm')
                 controls += 1
 
