@@ -11,6 +11,14 @@ Stappenplan om een bestaande app-pagina op open-aec.com om te bouwen naar de [pr
 - Zie welke pagina's nog niet omgebouwd zijn: `node scripts/check-product-pages.js`.
 - Lees de huidige pagina, `shared/translations/<slug>.json` en de README en release notes van de app (`gh release view -R OpenAEC-Foundation/<repo>`). Schrijf alleen wat de app vandaag kan.
 - Werk de SuperCloud-pagina's (`supercloud/`) niet om; die hebben een eigen opzet.
+- Ververs de release notes van de app, zodat *Nieuw in vX* en de tijdlijn bij de nieuwste versie beginnen:
+
+  ```bash
+  GITHUB_TOKEN=$(gh auth token) node scripts/generate-release-notes.js
+  git checkout -- $(git diff --name-only data/release-notes | grep -v "/<repo>.json")   # alleen jouw app houden
+  ```
+
+- Heeft de app een gegenereerde functielijst (zoals `data/open-pdf-studio-functies.json` via `scripts/genereer-opds-functies.mjs <pad-naar-app-repo>`), genereer die dan opnieuw uit de broncode van de nieuwste release. Neem getallen op de pagina (aantal functies, MCP-gereedschappen, talen) daaruit over.
 
 ## 1. Onderwerpen kiezen en voorleggen
 
@@ -83,8 +91,8 @@ De scripts `build-i18n-pages.js`, `build-release-notes-static.js` en `build-sche
 ```bash
 node scripts/build-i18n-pages.js && node scripts/build-release-notes-static.js && node scripts/build-schema.js
 rm -rf en/_voorbeeld fr/_voorbeeld tr/_voorbeeld es/_voorbeeld
-# behoud: <slug>/index.html, {en,fr,tr,es}/<slug>/index.html, shared/*, scripts/* die je zelf wijzigde
-git diff --name-only | grep -v -e '^<slug>/' -e '^\(en\|fr\|tr\|es\)/<slug>/' -e '^shared/' -e '^scripts/' | xargs -r git checkout --
+# behoud: <slug>/index.html, {en,fr,tr,es}/<slug>/index.html, shared/*, scripts/* en data/* die je zelf wijzigde
+git diff --name-only | grep -v -e '^<slug>/' -e '^\(en\|fr\|tr\|es\)/<slug>/' -e '^shared/' -e '^scripts/' -e '^data/' | xargs -r git checkout --
 ```
 
 Zet ook `sitemap.xml` terug als daarin alleen regeleindes veranderden.
