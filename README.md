@@ -138,7 +138,7 @@ The Rust library is built on [iced](https://iced.rs/) and draws every screen its
 ## Contributing
 
 - **Report a problem or an idea** as an [issue](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues). Describe what you did, what you expected and what happened.
-- **Building a tool?** Start from the standard application and the [README template](templates/README-tool.md). The requirements for a README are in [`templates/README-standaard.md`](templates/README-standaard.md). Its page on open-aec.com starts from [`templates/productpagina.html`](templates/productpagina.html), with the requirements in [`templates/productpagina-standaard.md`](templates/productpagina-standaard.md).
+- **Building a tool?** Start from the standard application and the [README template](templates/README-tool.md). The requirements for a README are in [`templates/README-standaard.md`](templates/README-standaard.md). Its page on open-aec.com starts from [`templates/productpagina.html`](templates/productpagina.html), with the requirements in [`templates/productpagina-standaard.md`](templates/productpagina-standaard.md). To convert an existing page, follow [`templates/productpagina-ombouwen.md`](templates/productpagina-ombouwen.md); the screenshots come from [`templates/productpagina-schermen/`](templates/productpagina-schermen/).
 - **Working in this repository**, alone or with an AI assistant: read [`AGENTS.md`](AGENTS.md) and start every task with [`NOTES.md`](NOTES.md).
 
 ## Quick start (developers)

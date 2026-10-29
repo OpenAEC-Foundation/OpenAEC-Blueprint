@@ -1,8 +1,8 @@
 # Productpagina-standaard voor open-aec.com
 
-**Status: vastgesteld op 2026-10-29.** Dit is de standaard voor de pagina van elke OpenAEC-app op [open-aec.com](https://open-aec.com). Een nieuwe app krijgt meteen zo'n pagina; de bestaande pagina's worden één voor één omgebouwd.
+**Status: vastgesteld op 2026-10-29; slider in de kop toegevoegd op dezelfde dag.** Dit is de standaard voor de pagina van elke OpenAEC-app op [open-aec.com](https://open-aec.com). Een nieuwe app krijgt meteen zo'n pagina; de bestaande pagina's worden één voor één omgebouwd.
 
-Opgesteld naar de pagina van [Open Planner Studio](https://open-aec.com/open-planner-studio/) (bron: [`open-planner-studio/index.html`](https://github.com/OpenAEC-Foundation/website/blob/main/open-planner-studio/index.html) in de website-repository), die volgde uit [open-planner-studio#342](https://github.com/OpenAEC-Foundation/open-planner-studio/discussions/342). **Die pagina is het voorbeeld.** Het sjabloon om mee te beginnen is [`productpagina.html`](productpagina.html).
+Opgesteld naar de pagina van [Open Planner Studio](https://open-aec.com/open-planner-studio/) (bron: [`open-planner-studio/index.html`](https://github.com/OpenAEC-Foundation/website/blob/main/open-planner-studio/index.html) in de website-repository), die volgde uit [open-planner-studio#342](https://github.com/OpenAEC-Foundation/open-planner-studio/discussions/342). **Die pagina is het voorbeeld**, net als [Open PDF Studio](https://open-aec.com/open-pdf-studio/). Het sjabloon om mee te beginnen is [`productpagina.html`](productpagina.html); hoe je een pagina ombouwt staat in het [stappenplan](productpagina-ombouwen.md), met een [script voor de schermafbeeldingen](productpagina-schermen/).
 
 Geldt alleen voor open-aec.com. De app-pagina's van de SuperCloud (`open-aec.com/supercloud/apps/…`) volgen hun eigen opzet.
 
@@ -18,7 +18,7 @@ De pagina's staan in de [website-repository](https://github.com/OpenAEC-Foundati
 |---------|-----|
 | `shared/style.css` | huisstijl van de hele site (kop, panelen, kaarten, knoppen) |
 | `shared/productpagina.css` | de vaste onderdelen van deze standaard, voorvoegsel `pp-` |
-| `shared/productpagina.js` | tabs bij Functies, plakkende navigatie, release notes inklappen, download per besturingssysteem |
+| `shared/productpagina.js` | slider in de kop, tabs bij Functies, plakkende navigatie, release notes inklappen, download per besturingssysteem |
 | `shared/release-notes.js` | de release notes, live uit `data/release-notes/<repo>.json` |
 | `shared/translations/<slug>*.json` | de teksten in het Engels, Frans, Turks en Spaans (Nederlands staat in de HTML) |
 
@@ -35,18 +35,19 @@ Verplicht is **vet**. Een extra blok neem je op als het voor die app iets zegt; 
    - **lead**: één of twee zinnen over wat het is en hoe je het gebruikt;
    - **drie knoppen**, in deze volgorde: *Open in de browser* (glow; anders *Download* als glow) · *Download* (naar `#download`) · *Broncode*;
    - **feitenchips** (`ul.chip-row.pp-proof`): drie tot vijf feiten, zoals bestandsformaten, talen, platforms, licentie;
-   - **grote schermafbeelding** (`.shot-float.shot-overlap`) van het belangrijkste scherm.
+   - **slider met schermafbeeldingen** (`div.media-slider.shot-overlap[data-pp-slider]`): eerst het openingsbeeld van het belangrijkste scherm, dan de beelden van de hoogtepunten in dezelfde volgorde, minstens drie. Pijlen en bolletjes, vegen op telefoon en tablet, pijltoetsen; hij draait niet vanzelf. Alleen het eerste beeld laadt meteen.
    - *Optioneel:* een smalle melding onder de kop (`p.pp-notice`), bijvoorbeeld "testers gezocht".
 2. **Plakkende navigatie** (`nav.pp-subnav`): Functies · Download · Nieuw · Vragen · Releases. Alleen de blokken die er zijn.
 3. **Functies** (`section#features.pp-anchor`)
    - kop met `pill-label`, `h2` en één zin uitleg;
    - **tabs** (`.pp-tabs`): *Hoogtepunten* eerst, dan drie tot vijf onderwerpen, *Alle functies* laatst. De tellers vult het script;
    - **Hoogtepunten**: vier tot zes rijen (`article.pp-hl-row`), elk met een schermafbeelding (16:10), een genummerde kicker (`01 Onderwerp`), een titel die het voordeel noemt, twee of drie zinnen, en *Meer lezen* naar de handleiding of wiki. Beeld en tekst wisselen links en rechts;
-   - **Alle functies**: tegels (`li.pp-tile`) met `data-cats="<onderwerp> …"`; een tegel kan bij meer onderwerpen horen.
+   - **Alle functies**: tegels (`li.pp-tile`) met `data-cats="<onderwerp> …"`; een tegel kan bij meer onderwerpen horen, en een tegel met `data-cats=""` staat alleen onder *Alle functies*;
+   - *optioneel:* een volledige, gegenereerde functielijst ingeklapt onder de tegels (`details.pp-faq-item.pp-allfx`), zoals bij Open PDF Studio.
 4. **Download** (`section#download.pp-anchor`, alleen als er een desktop- of mobiele app is)
    - `data-pp-repo="OpenAEC-Foundation/<repo>"` op de sectie; het script haalt de nieuwste release op;
    - één hoofdknop (`data-pp-primary`) die het besturingssysteem van de bezoeker kiest;
-   - *Andere platforms* (`details.pp-dl-other`) met alle bestanden per platform: sleutels `windows`, `macos`, `linux-deb`, `linux-rpm`, `linux-appimage`, `linux-snap`, `android`;
+   - *Andere platforms* (`details.pp-dl-other`) met alle bestanden per platform: sleutels `windows`, `windows-user` (installer zonder beheerrechten), `macos`, `linux-deb`, `linux-rpm`, `linux-appimage`, `linux-snap`, `android`. Met een Android-app vier kolommen (`pp-files pp-files-4`); op een Android-telefoon kiest de hoofdknop dan de `.apk`;
    - de browserversie als alternatief (`p.pp-dl-note`);
    - zonder JavaScript wijzen alle links al naar de bestanden van de release in de HTML.
 5. **Nieuw in vX** (`section#whats-new.pp-anchor`, donker paneel): `pill-label` *Nieuw in vX*, titel, korte samenvatting, knoppen *Volledige changelog* en *Probeer het in de browser*, en vier tot zes kaarten (`split-card`) met de belangrijkste wijzigingen. Bijwerken bij elke release met nieuwe functies.
@@ -70,8 +71,8 @@ Verplicht is **vet**. Een extra blok neem je op als het voor die app iets zegt; 
 | Eis | Toelichting |
 |-----|-------------|
 | Echte schermafbeeldingen | Uit de app zelf, met realistische voorbeelddata (een echt project, geen "Test 1"). Geen persoonsgegevens, browsertabbladen of adressen in beeld. |
-| Eén beeld per hoogtepunt | 16:10, minstens 1600 px breed, JPEG of PNG, in `shared/assets/screenshots/<slug>-feat-<onderwerp>.*`. Elk beeld laat iets anders zien. |
-| Beelden met een script | Liefst gemaakt met een script dat je opnieuw kunt draaien (in de app-repository), zodat ze bij een nieuwe versie mee kunnen. |
+| Eén beeld per hoogtepunt | 16:10, 1200×750, PNG, in `shared/assets/screenshots/<slug>-feat-<onderwerp>.png`; het openingsbeeld 1920×1200 als `<slug>-hero.png`. Elk beeld laat iets anders zien. |
+| Beelden met een script | Gemaakt met [`productpagina-schermen/schermen.mjs`](productpagina-schermen/) en een stappenbestand per app, zodat ze bij een nieuwe versie opnieuw kunnen. Gebruik fictieve voorbeelddata. |
 | Verkooptaal | Schrijf wat de gebruiker ermee wint, niet hoe het intern heet. Vaktermen alleen in Technologie. |
 | Kloppende teksten | Alleen wat de app vandaag kan. Komt iets later, zet het niet in de functies maar hooguit in de FAQ als "nog niet". |
 | Vijf talen | Nederlands in de HTML, Engels, Frans, Turks en Spaans in `shared/translations/<slug>*.json`. Elke zichtbare tekst heeft een `data-i18n`-sleutel. |
@@ -79,6 +80,6 @@ Verplicht is **vet**. Een extra blok neem je op als het voor die app iets zegt; 
 
 ## Controleren
 
-- De website-repository krijgt een controle die per productpagina meldt welke blokken ontbreken.
+- `node scripts/check-product-pages.js` in de website-repository meldt per app-pagina welke blokken er zijn. Een pagina die `shared/productpagina.css` laadt, moet alle verplichte blokken hebben in de vaste volgorde, met een slider van minstens drie beelden; anders faalt de controle.
 - Bekijk de pagina op desktop en op een telefoon: geen horizontale scroll, de download kiest het juiste platform.
-- Maak daarna de taalversies opnieuw (`scripts/build-i18n-pages.js`, dan `build-release-notes-static.js` en `build-schema.js`).
+- Maak daarna de taalversies opnieuw (`scripts/build-i18n-pages.js`, dan `build-release-notes-static.js` en `build-schema.js`). Die herschrijven de hele site: zet alles terug wat niet bij je pagina hoort (zie het [stappenplan](productpagina-ombouwen.md), stap 6).

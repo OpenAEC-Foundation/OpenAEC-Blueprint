@@ -49,8 +49,20 @@ Haal dit commentaar weg.
         <li class="chip"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-shield"/></svg><span data-i18n="header.proofFree">Gratis · {{licentie}}</span></li>
       </ul>
     </div>
-    <div class="shot-float shot-overlap">
-      <img src="/shared/assets/screenshots/{{slug}}-hero.png" width="1920" height="1048" alt="{{Wat er te zien is.}}">
+    <!-- Slider: eerst het openingsbeeld, dan dezelfde beelden als de hoogtepunten, in dezelfde volgorde
+         en met dezelfde alt-sleutels. Het gedrag (pijlen, bolletjes, vegen, pijltoetsen) zit in productpagina.js. -->
+    <div class="media-slider shot-overlap" data-pp-slider>
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="slider-slide"><img src="/shared/assets/screenshots/{{slug}}-hero.png" width="1920" height="1200" alt="{{Wat er te zien is.}}" data-i18n="header.heroAlt" data-i18n-attr="alt" fetchpriority="high"></div>
+          <div class="slider-slide"><img loading="lazy" decoding="async" src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp-1}}.png" width="1200" height="750" alt="{{Wat er te zien is.}}" data-i18n="hl.{{onderwerp-1}}.alt" data-i18n-attr="alt"></div>
+          <div class="slider-slide"><img loading="lazy" decoding="async" src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp-2}}.png" width="1200" height="750" alt="{{Wat er te zien is.}}" data-i18n="hl.{{onderwerp-2}}.alt" data-i18n-attr="alt"></div>
+          <!-- … een slide per hoogtepunt (vier tot zes) -->
+        </div>
+        <button type="button" class="slider-btn slider-prev" aria-label="Vorige afbeelding">&lsaquo;</button>
+        <button type="button" class="slider-btn slider-next" aria-label="Volgende afbeelding">&rsaquo;</button>
+      </div>
+      <div class="slider-dots"></div>
     </div>
   </header>
 
@@ -84,7 +96,7 @@ Haal dit commentaar weg.
       <div class="pp-hl" data-panel="highlights">
         <!-- 4 tot 6 rijen; beeld en tekst wisselen vanzelf links en rechts -->
         <article class="pp-hl-row">
-          <figure class="pp-shot"><img src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp}}.png" loading="lazy" decoding="async" alt="{{Wat er te zien is.}}"></figure>
+          <figure class="pp-shot"><img src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp}}.png" width="1200" height="750" loading="lazy" decoding="async" alt="{{Wat er te zien is.}}"></figure>
           <div class="pp-hl-text">
             <p class="pp-kicker"><span class="pp-num">01</span> <span data-i18n="hl.{{id}}.kicker">{{Onderwerp}}</span></p>
             <h3 data-i18n="hl.{{id}}.title">{{Het voordeel, als titel}}</h3>
@@ -113,6 +125,7 @@ Haal dit commentaar weg.
       <p class="pp-dl-mobile" data-pp-mobile hidden data-i18n="download.mobileNote">{{Naam}} is gemaakt voor een groot scherm. Open hem op je computer, of probeer hem hier in de browser.</p>
       <details class="pp-dl-other" data-pp-other>
         <summary><span data-i18n="download.other">Andere platforms</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chevron-down"/></svg></summary>
+        <!-- Met een Android-app: class="pp-files pp-files-4" en de vierde kolom hieronder aanzetten. -->
         <div class="pp-files">
           <div class="pp-files-col"><h3>Windows</h3><ul>
             <li><a href="{{url}}" data-pp-dl="windows" data-pp-item="windows"><span class="pp-file">.exe</span><span class="pp-file-size" data-pp-size="windows"></span></a></li>
