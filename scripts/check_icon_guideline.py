@@ -12,7 +12,8 @@ Dat deel is informatie, geen fout: de rest van de set wordt per tab herzien.
 
 Negatieve controle: de oude B2-tekeningen in design/iconen/voorbeelden/fout/16/ moeten op de bedoelde regel
 falen, met de regels van hun echte groep. Daarnaast moet per familie een verschoven kopie van het eerste icoon
-falen: binnen een familie telt alleen vormverschil na uitlijnen, geen verschil in plaats of maat.
+falen: binnen een familie telt alleen vormverschil na uitlijnen, geen verschil in plaats of maat, ook niet
+van één los deel.
 
 Runtime: shapely (scripts/requirements-icon-b2.txt, in harmonization/sources/b2-runtime).
 """
@@ -60,10 +61,12 @@ ALIGN_FINE = 0.25      # px: na het leggen op hetzelfde kader nog zoveel fijn bi
 ALIGN_STEP = 0.05      # px: stap van het fijne bijschuiven
 ALIGN_TOLERANCE = 0.05 # px: rest na uitlijnen telt niet als vormverschil
 ALIGN_SCALES = (0.96, 0.98, 1.0, 1.02, 1.04)  # kleine maatverschillen die niet als vorm tellen
+PART_SHIFT = 1.0       # px: zoveel mag een los deel (een plusje, een pijl) apart verschoven liggen
 # Negatieve kopieproef per familie: (verschuiving x, y in px, schaal rond het midden, uiteinde rechtsonder 0,5 px
 # langer). Elke kopie is dezelfde vorm.
 COPY_PROOFS = ((0.1, 0.1, 1.0, False), (0.6, -0.4, 1.0, False), (2.5, 0.0, 1.0, False), (0.0, 0.0, 0.98, False),
                (0.3, -0.2, 1.03, False), (0.0, 0.0, 1.0, True), (1.2, 0.4, 1.0, True), (0.6, -0.4, 0.97, True))
+COPY_PART_SHIFTS = ((0.5, 0.0), (0.0, -0.75), (0.75, 0.25))  # kopie waarin alleen het kleinste losse deel verschoven is
 
 
 def layer(path_data: str):
@@ -168,11 +171,46 @@ def detail_errors(m) -> list[str]:
     return errors
 
 
+def residual(a, a_wide, c, dx=0.0, dy=0.0) -> float:
+    """Wat van a buiten c valt en van c buiten a, met ALIGN_TOLERANCE speling; c eerst dx, dy verschoven."""
+    return (a.difference(affinity.translate(c.buffer(ALIGN_TOLERANCE), dx, dy)).area
+            + affinity.translate(c, dx, dy).difference(a_wide).area)
+
+
+def fine(a, c) -> tuple[float, float, float]:
+    """Kleinste residu als c nog tot ALIGN_FINE bijschuift; met de verschuiving die het oplevert."""
+    a_wide = a.buffer(ALIGN_TOLERANCE)
+    n = int(round(ALIGN_FINE / ALIGN_STEP))
+    return min((residual(a, a_wide, c, i * ALIGN_STEP, j * ALIGN_STEP), i * ALIGN_STEP, j * ALIGN_STEP)
+               for i in range(-n, n + 1) for j in range(-n, n + 1))
+
+
+def parts_difference(a, c) -> float | None:
+    """Vormverschil per los deel: elk deel van c schuift apart (tot PART_SHIFT) naar het deel van a waar het het meest
+    mee overlapt.
+    Zo telt alleen het verplaatsen van een los teken (een plusje in de lens) niet als vorm. None als de delen niet
+    één op één bij elkaar horen."""
+    parts_a, parts_c = polygons(a), polygons(c)
+    if len(parts_a) != len(parts_c) or len(parts_a) < 2:
+        return None
+    match = [max(parts_a, key=lambda p: p.intersection(q.buffer(PART_SHIFT)).area) for q in parts_c]
+    if len({id(p) for p in match}) != len(match):
+        return None
+    total = 0.0
+    for p, q in zip(match, parts_c):
+        dx, dy = p.centroid.x - q.centroid.x, p.centroid.y - q.centroid.y
+        if (dx * dx + dy * dy) ** 0.5 > PART_SHIFT:
+            dx = dy = 0.0
+        total += fine(p, affinity.translate(q, dx, dy))[0]
+    return total
+
+
 def shape_difference(a, b) -> float:
-    """Vormverschil in px² na uitlijnen: het kleinste over een paar manieren om b op a te leggen.
+    """Vormverschil in px² na uitlijnen, het kleinste over een paar manieren om b op a te leggen:
     - b precies op het omhullende kader van a (een iets groter of kleiner getekende kopie);
     - b in een kleine maat (ALIGN_SCALES) met een hoek of het midden van zijn kader op dat van a. Zo valt een kopie
-      weg die verschoven, iets geschaald of aan één uiteinde iets langer is, of een combinatie daarvan.
+      weg die verschoven, iets geschaald of aan één uiteinde iets langer is, of een combinatie daarvan;
+    - daarna ook per los deel (parts_difference): een plusje dat alleen een halve pixel verschoven is, telt niet.
     Eerst worden alle manieren zonder bijschuiven gemeten; de drie beste schuiven daarna tot ALIGN_FINE bij.
     Wat binnen ALIGN_TOLERANCE van de andere vorm ligt, telt niet. Spiegelen telt wel: bij Inspringen en
     Uitspringen is dat juist het verschil."""
@@ -186,16 +224,16 @@ def shape_difference(a, b) -> float:
         for pax, pay, pbx, pby in anchors:
             candidates.append(affinity.affine_transform(b, [k, 0, 0, k, pax - k * pbx, pay - k * pby]))
     a_wide = a.buffer(ALIGN_TOLERANCE)
-
-    def residual(c, c_wide, dx=0.0, dy=0.0):
-        return (a.difference(affinity.translate(c_wide, dx, dy)).area
-                + affinity.translate(c, dx, dy).difference(a_wide).area)
-
-    scored = sorted((residual(c, w), i, c, w) for i, (c, w) in
-                    enumerate((c, c.buffer(ALIGN_TOLERANCE)) for c in candidates))
-    n = int(round(ALIGN_FINE / ALIGN_STEP))
-    return min(residual(c, w, i * ALIGN_STEP, j * ALIGN_STEP)
-               for _, _, c, w in scored[:3] for i in range(-n, n + 1) for j in range(-n, n + 1))
+    scored = sorted(((residual(a, a_wide, c), i, c) for i, c in enumerate(candidates)), key=lambda t: t[:2])
+    if scored[0][0] == 0:
+        return 0.0
+    best, best_c = float('inf'), None
+    for _, _, c in scored[:3]:
+        value, dx, dy = fine(a, c)
+        if value < best:
+            best, best_c = value, affinity.translate(c, dx, dy)
+    per_part = parts_difference(a, best_c)
+    return best if per_part is None else min(best, per_part)
 
 
 def pair(a, b):
@@ -294,6 +332,19 @@ def main():
                     failures.append(f"familie {family}: een kopie van {family[0]} ({dx}/{dy} px verschoven, {scale:g} x{extra}) "
                                     'komt door de familiecontrole; die meet plaats of maat in plaats van vorm')
                 controls += 1
+            # Alleen het kleinste losse deel (het actieteken) verschoven: dezelfde vorm.
+            parts = polygons(original['_ink'])
+            if len(parts) > 1:
+                small = min(parts, key=lambda q: q.area)
+                for dx, dy in COPY_PART_SHIFTS:
+                    ink = shapely.union_all([q for q in parts if q is not small] + [affinity.translate(small, dx, dy)])
+                    copy = measure_ink(ink, Polygon(), Polygon())
+                    caught = group_errors({'ids': [family[0], 'kopie'], 'families': [[family[0], 'kopie']]},
+                                          {family[0]: original, 'kopie': copy})
+                    if not caught:
+                        failures.append(f"familie {family}: een kopie van {family[0]} met alleen het kleinste losse deel "
+                                        f"{dx}/{dy} px verschoven komt door de familiecontrole")
+                    controls += 1
 
     summary = {'status': 'geslaagd' if not failures else 'gefaald',
                'richtlijn_iconen': len(guideline), 'groepen': len(groups['groepen']),
