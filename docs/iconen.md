@@ -210,6 +210,8 @@ Een familie slaat de grenzen voor gelijkenis en gedeelde vorm over. Geef daarom 
 
 Binnen een familie telt alleen vorm. De check legt het tweede icoon op een paar manieren op het eerste: op hetzelfde omhullende kader, of in een maat van 96 tot 104 % met een hoek of het midden van de kaders op elkaar. Bij de beste manieren schuift hij nog tot 0,25 px bij, en hij meet het kleinste verschil dat overblijft. Bestaat een icoon uit losse delen, zoals een lens en een plusje, dan meet de check ook per deel: elk deel mag apart tot 1 px verschuiven. Een kopie die verschoven is, iets groter of kleiner getekend, aan één uiteinde iets langer, of met het plusje iets anders in de lens, is dus geen nieuwe vorm. Spiegelen telt wel als verschil: bij Inspringen en Uitspringen is dat juist de bedoeling. **Kopieproef:** per familie maakt de check acht kopieën van het eerste icoon (verschoven tot 2,5 px, op 97, 98 en 103 %, en met het uiteinde rechtsonder 0,5 px langer) en toetst die met de regels van die familie. Daarna maakt hij drie kopieën waarin alleen het kleinste losse deel verschoven is (0,5 px opzij, 0,75 px omhoog, en 0,75 en 0,25 px schuin). Komt een kopie erdoor, dan faalt de check.
 
+De check is een vangnet, geen bewijs. Een kopie die iemand bewust verschuift, schaalt of spiegelt, kan er nog door (zie [`knownbugs.md`](../knownbugs.md), punt 4). Het oordeel over een icoon komt van de ontwerpcontrole op ware grootte, en daarna van Ethan.
+
 De CI draait de check in de workflow `Icons`, job *B2 icon set and icon guideline*, na `check_icon_set_b2.py`.
 
 ## Bronnen
