@@ -246,6 +246,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: `templates/productpagina-standaard.md` en `templates/productpagina.html`: standaard voor de app-pagina op open-aec.com (9 blokken, naar Open Planner Studio, alleen open-aec.com, niet de SuperCloud). De gedeelde onderdelen staan in de website-repo (`shared/productpagina.css`/`.js`, commit 5d75f030); het sjabloon is daar getest. README.md en README.nl.md verwijzen ernaar.
 - 2026-10-29 **Claude**: `.github/workflows/icons.yml`: iconenchecks bij elke PR en push naar main (adopties, geometrie, crate- en web-iconen, `cargo test -p openaec-icons --features all`); de B2-check staat apart en is rood, zie *Open punten*. AGENTS.md: Windows-regels gemarkeerd als machine van de maker, met Linux-varianten (`python3`, rustup, apt-pakketten voor PyGObject/librsvg). Git-regels ongewijzigd.
 - 2026-10-29 **Claude**: #12 React-componenten in `web/react/` (`@openaec/ui-react`, 30 componenten op de CSS van het webpakket, met toetsenbord en aria). `node scripts/check_react_components.mjs` (typecontrole en 90 HTML-controles, leent TypeScript/React/esbuild van de Tauri-sjabloon; `--demo` voor een demopagina) staat in AGENTS.md. Demo in het browserpaneel getest. Standaardsprite +5 iconen.
 
