@@ -63,7 +63,13 @@ def raster(svg: str, px: int, bg: str, ink: str, accent: str) -> Image.Image:
 def source(kind: str, key: str, size: int) -> str:
     """kind: nieuw (B2-master), main (Lucide-referentie), fout (oude B2-tekening), allaccent (nieuw, alles oranje)."""
     if kind == 'main':
-        return (MAIN / f'{key}.svg').read_text(encoding='utf-8')
+        # 'x@12': het icoon staat in main op 12 px in plaats van 16; teken het in het vak even klein als in het lint.
+        name, _, px = key.partition('@')
+        svg = (MAIN / f'{name}.svg').read_text(encoding='utf-8')
+        if px and int(px) != 16:
+            a = (24 * 16 / int(px) - 24) / 2
+            svg = svg.replace('viewBox="0 0 24 24"', f'viewBox="{-a:g} {-a:g} {24 + 2 * a:g} {24 + 2 * a:g}"', 1)
+        return svg
     if kind == 'fout':
         return (WRONG / str(size) / f'{key}.svg').read_text(encoding='utf-8')
     svg = (SVG / str(size) / f'{key}.svg').read_text(encoding='utf-8')
@@ -148,15 +154,18 @@ def overview(folder: Path):
         icon = icons[k['id']]
         others = sorted(usage.get(k['id'], set()) - {'Planner'})
         status = 'nieuw id' if icon['series'] == 167 else 'herzien' if icon.get('guideline') else 'ongewijzigd (B2)'
+        main = f"{k['main']}@{k['main_px']}" if 'main_px' in k else k['main']
         sub = [f"{k['tab']} › {k['groep']}", f"{k['id']} · {status}"]
+        if 'main_px' in k:
+            sub.append(f"main: {k['main_px']} px, zoals in het lint")
         if others:
             sub.append('ook in: ' + ', '.join(others[:4]))
             if others[4:]:
                 sub.append('         ' + ', '.join(others[4:]))
         rows.append({'label': k['knop'], 'sub': sub,
-                     'cells': [('nieuw', k['id']), ('main', k['main'])]})
+                     'cells': [('nieuw', k['id']), ('main', main)]})
         cells = []
-        for kind, key in (('nieuw', k['id']), ('main', k['main'])):
+        for kind, key in (('nieuw', k['id']), ('main', main)):
             parts = []
             for name, bg, ink, acc in THEMES:
                 svgs = ''.join(inline(source(kind, key, px), px) for px in (16, 24))

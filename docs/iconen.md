@@ -143,6 +143,7 @@ Elke maat heeft een eigen tekening, in de pixels van die maat. Zo blijven lijnen
 - Een nieuwe betekenis krijgt een nieuw id. Het oude id blijft bestaan. Voorbeeld: `solver.run` (een rekenkern laat doorrekenen) naast `planning.calculate` (de rekenmachine).
 - Een id noemt de betekenis, niet het woord en niet het programma. Zo vindt een ander programma met dezelfde betekenis hetzelfde icoon.
 - Wil je een gedeeld icoon aanpassen? Dat mag alleen als het nieuwe icoon beter is voor elk programma met die functie. Kijk in de functielijst naar `meaning`, en naar de bronplaatsen in `harmonization/icon-set-b2/function-plan.json`: daar staat welk programma de functie echt gebruikt. `candidate_apps` in het manifest is ruimer; dat volgt de naamcluster, niet de betekenis. Heeft de functie elders een andere betekenis, maak dan een nieuw id.
+- Voorbeeld: *Voortgangsblad exporteren* in Open Planner Studio schrijft een werkblad weg waarin de uitvoering voortgang invult. Dat is meer dan een gewone export. Het gedeelde `file.export` (een bakje met pijl, in tien programma's) blijft staan; de knop krijgt `planning.progress-sheet-export`, een blad met pijl zoals in main.
 
 ### Grens
 
@@ -158,6 +159,15 @@ Deze punten staan in de bronnen, maar niet in de zes principes. Ze zijn nog niet
 - **A4. Ruimte tussen delen.** Lucide: *"Distinct elements must have at least 2 pixels of visual spacing between them."* (op 24 px bij een lijn van 2 px). De check eist 1 px op 16 px en 1,5 px op 24 px.
 - **A5. Zichtbare labels.** Nielsen Norman Group: *"Icon labels should be visible at all times, without any interaction from the user."* en *"Don't rely on hover to reveal text labels"*. Een tooltip alleen is dus te weinig voor een icoon dat niet algemeen bekend is. Dit gaat over de opbouw van het lint, niet over het icoon; het hoort in een issue.
 - **A6. Test met mensen.** Nielsen Norman Group: *"Test the icons for recognizability: ask people what they expect the icons to stand for."* De ontwerpcontrole hieronder is een eerste stap, geen vervanging.
+
+De ontwerpcontrole van de tab Planning (29 oktober 2026) vond vier punten die de richtlijn nog niet regelt:
+
+- **A7. Het verschil is zwaar genoeg.** Het oranje accent (#D97706) heeft op wit een contrast van 3,2 : 1, de lijnkleur 14,2 : 1 (donker: 3,9 en 10,5). Staat het enige verschil binnen een familie in oranje (de plus bij Zoom +), dan moet dat deel op 16 px minstens zo zwaar zijn als de omtrek. De tint van het accent zelf valt buiten deze richtlijn.
+- **A8. Oranje bij een schakelaar.** Een schakelaar die iets op het werkvlak toont, tekent dat ding. Bestaat het icoon uit dat ding plus iets eromheen, dan is het ding oranje: de baseline onder de taakbalk. Is het icoon alleen het ding (de voortgangslijn), dan is er geen oranje.
+- **A9. Maat in het vak.** Een tekening vult het vak ongeveer zoals de knoppen ernaast. Een vierkante vorm is op 16 px ongeveer 12 × 12 px; een smalle of platte vorm mag kleiner, maar niet onder 8 px in de lange richting. Een knop die in het programma kleiner staat dan 16 px (zoals het wisknopje van 12 px), vergelijk je op die maat.
+- **A10. Een gedeeld icoon in een herziene tab.** Komt een gedeeld icoon in een herziene tab dat nog niet in de lijnstijl staat, dan geldt de regel van de ontwerpcontrole: is het niet beter dan main, dan krijgt de knop de vorm van main in de lijnstijl, met een eigen id als het gedeelde icoon voor andere programma's moet blijven.
+
+Open vraag uit dezelfde controle: geldt principe 4 alleen per groep, of per tab? *Project verplaatsen* (groep Planning) en *Statusdatum* (groep Baselines & voortgang) staan op dezelfde tab en verschillen alleen in kleur.
 
 ## Werkwijze
 

@@ -16857,7 +16857,7 @@
       14.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 4.9082456344239915
+    "accent_area": 8.5
   },
   {
     "id": "view.zoom-default",
@@ -16869,7 +16869,7 @@
       21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 9.620160204800003
+    "accent_area": 15.280000000000001
   },
   {
     "id": "view.fit-height",
@@ -18531,25 +18531,25 @@
     "id": "task.split-mode",
     "master": 16,
     "bounds": [
-      0.875,
-      4.875,
-      15.125,
-      11.125
+      1.125,
+      1.125,
+      14.125,
+      14.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 21.090428823318497
+    "accent_area": 0.0
   },
   {
     "id": "task.split-mode",
     "master": 24,
     "bounds": [
-      1.125,
-      7.125,
-      22.875,
-      16.875
+      1.875,
+      1.875,
+      21.375,
+      22.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 47.6816212792665
+    "accent_area": 0.0
   },
   {
     "id": "calendar.manage",
@@ -18633,7 +18633,7 @@
       13.775
     ],
     "overlap_area": 0.0,
-    "accent_area": 2.5444348049090015
+    "accent_area": 0.0
   },
   {
     "id": "planning.structure",
@@ -18645,7 +18645,7 @@
       20.625
     ],
     "overlap_area": 0.0,
-    "accent_area": 5.724977921673996
+    "accent_area": 0.0
   },
   {
     "id": "wbs.auto-number",
@@ -18675,25 +18675,25 @@
     "id": "wbs.renumber",
     "master": 16,
     "bounds": [
-      0.87502,
       0.875,
-      15.34082,
-      15.37427
+      0.87502,
+      15.62332,
+      15.62332
     ],
     "overlap_area": 0.0,
-    "accent_area": 19.49604280619748
+    "accent_area": 20.883130474423
   },
   {
     "id": "wbs.renumber",
     "master": 24,
     "bounds": [
+      1.125029,
       1.125,
-      1.125,
-      22.82183,
-      22.87387
+      23.12272,
+      23.122705
     ],
     "overlap_area": 0.0,
-    "accent_area": 41.39588635573407
+    "accent_area": 41.47019814101853
   },
   {
     "id": "task.indent",
@@ -18873,7 +18873,7 @@
       14.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 5.4239649180375
+    "accent_area": 0.0
   },
   {
     "id": "panel.warnings",
@@ -18885,7 +18885,7 @@
       21.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 11.891285077001509
+    "accent_area": 0.0
   },
   {
     "id": "table.columns",
@@ -19017,7 +19017,7 @@
       12.625
     ],
     "overlap_area": 0.0,
-    "accent_area": 23.241759657151984
+    "accent_area": 13.314749619726493
   },
   {
     "id": "planning.trace-predecessors",
@@ -19029,7 +19029,7 @@
       19.87487
     ],
     "overlap_area": 0.0,
-    "accent_area": 48.85292667822697
+    "accent_area": 26.616043303117078
   },
   {
     "id": "planning.trace-successors",
@@ -19041,7 +19041,7 @@
       12.625
     ],
     "overlap_area": 0.0,
-    "accent_area": 23.242079236107973
+    "accent_area": 13.3148656738375
   },
   {
     "id": "planning.trace-successors",
@@ -19053,7 +19053,7 @@
       19.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 48.85284472658008
+    "accent_area": 26.616182819862033
   },
   {
     "id": "planning.baseline-overlay",
@@ -19083,9 +19083,9 @@
     "id": "planning.progress-line",
     "master": 16,
     "bounds": [
-      3.093023,
+      2.09902,
       0.875,
-      12.40646,
+      12.90595,
       15.125
     ],
     "overlap_area": 0.0,
@@ -19108,24 +19108,24 @@
     "master": 16,
     "bounds": [
       4.0,
-      1.25,
+      1.0,
       11.0,
       15.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 15.75
+    "accent_area": 12.25
   },
   {
     "id": "planning.status-date-line",
     "master": 24,
     "bounds": [
-      7.0,
-      1.5,
-      17.0,
+      6.0,
+      2.0,
+      18.0,
       22.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 32.5
+    "accent_area": 33.0
   },
   {
     "id": "planning.resource-accent",
@@ -19204,12 +19204,12 @@
     "master": 16,
     "bounds": [
       1.125,
-      1.125,
+      0.875232,
       14.875,
-      14.875
+      15.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 30.88690422687752
+    "accent_area": 0.0
   },
   {
     "id": "planning.baselines",
@@ -19221,7 +19221,7 @@
       22.375
     ],
     "overlap_area": 0.0,
-    "accent_area": 69.40758328451298
+    "accent_area": 0.0
   },
   {
     "id": "planning.status-date",
@@ -19323,10 +19323,10 @@
     "id": "planning.relations-menu",
     "master": 16,
     "bounds": [
-      0.625,
-      0.625,
-      15.375,
-      15.375
+      1.02512,
+      1.02512,
+      14.97488,
+      14.97488
     ],
     "overlap_area": 0.0,
     "accent_area": 0.0
@@ -19335,10 +19335,10 @@
     "id": "planning.relations-menu",
     "master": 24,
     "bounds": [
-      0.875114,
-      0.875117,
-      23.12478,
-      23.12478
+      1.7026,
+      1.7026,
+      22.2974,
+      22.2974
     ],
     "overlap_area": 0.0,
     "accent_area": 0.0
@@ -22750,5 +22750,53 @@
     ],
     "overlap_area": 0.0,
     "accent_area": 0.0
+  },
+  {
+    "id": "planning.progress-sheet-export",
+    "master": 16,
+    "bounds": [
+      1.875,
+      0.875,
+      13.125,
+      15.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.324813161008503
+  },
+  {
+    "id": "planning.progress-sheet-export",
+    "master": 24,
+    "bounds": [
+      3.125,
+      1.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.594010376371997
+  },
+  {
+    "id": "planning.progress-sheet-import",
+    "master": 16,
+    "bounds": [
+      1.875,
+      0.875,
+      13.125,
+      15.125
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 12.32481642235449
+  },
+  {
+    "id": "planning.progress-sheet-import",
+    "master": 24,
+    "bounds": [
+      3.125,
+      1.125,
+      20.875,
+      22.875
+    ],
+    "overlap_area": 0.0,
+    "accent_area": 27.594283418813998
   }
 ]

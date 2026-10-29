@@ -7,9 +7,9 @@
     "calc": {
       "file": "calc.svg",
       "icons": 142,
-      "bytes": 655959,
-      "gzip_bytes": 179849,
-      "sha256": "0881f79fee9f7b5cb09e7742a0b3a33f917fb94c331ef98cbe3370f77765d868",
+      "bytes": 658181,
+      "gzip_bytes": 180605,
+      "sha256": "7683ff3b92a0cb5c4a61ace5edce6d3647905ee64120740fc5074d94a3ddf035",
       "ids": [
         "activity.clear",
         "assistant.detect-doors",
@@ -249,9 +249,9 @@
     "composer": {
       "file": "composer.svg",
       "icons": 98,
-      "bytes": 497360,
-      "gzip_bytes": 145032,
-      "sha256": "3ba18729f0e5aa9b1e476c7f8b88e43fef7629279d55d0fafd98941b957d8bff",
+      "bytes": 479806,
+      "gzip_bytes": 139010,
+      "sha256": "baf811717531495a05266018faf5598e941fdd2ed6290a5f989abe8b3d0f3211",
       "ids": [
         "activity.clear",
         "backup.folder",
@@ -356,9 +356,9 @@
     "energy": {
       "file": "energy.svg",
       "icons": 199,
-      "bytes": 928491,
-      "gzip_bytes": 271631,
-      "sha256": "47b01c4a6eab5bd860783a1dd6f1192242ea7d1906317987c5b41cedbe940cca",
+      "bytes": 928462,
+      "gzip_bytes": 271617,
+      "sha256": "d2a902da8adea90395467aa6cfc77d78d404a13ed9bab4f63ccd58699936efb1",
       "ids": [
         "activity.clear",
         "advice.workspace",
@@ -828,9 +828,9 @@
     "heatloss": {
       "file": "heatloss.svg",
       "icons": 150,
-      "bytes": 696022,
-      "gzip_bytes": 210313,
-      "sha256": "5797041b1c1a5d4b16b221bf2c4cdb363c35dead6dda392e87405cb21e0c8c85",
+      "bytes": 698244,
+      "gzip_bytes": 211109,
+      "sha256": "c4cd0d10149d1476e0cb3c2b91bc93736fed830531e24b06acb5481bb1643ac3",
       "ids": [
         "activity.clear",
         "advice.workspace",
@@ -1015,9 +1015,9 @@
     "pdf": {
       "file": "pdf.svg",
       "icons": 404,
-      "bytes": 1930766,
-      "gzip_bytes": 556775,
-      "sha256": "62e4d70b3749cd5cf7d6872229b23894a93813d7764b7cd7378d21bda49c35fa",
+      "bytes": 1932410,
+      "gzip_bytes": 557398,
+      "sha256": "98864c5ddccfab0107ea8959d544413164f6e2c26c06843a3f5ac4eaa20c9579",
       "ids": [
         "activity.clear",
         "ai.bridge-stop",
@@ -1525,10 +1525,10 @@
     },
     "planner": {
       "file": "planner.svg",
-      "icons": 265,
-      "bytes": 1253551,
-      "gzip_bytes": 369981,
-      "sha256": "36dd5f50e67fa116e27345887268f0f83078cb0ae105fca8cb5ba60007f1bcce",
+      "icons": 267,
+      "bytes": 1245997,
+      "gzip_bytes": 366323,
+      "sha256": "4e341d0e4a0e13aa8c7c7dcb5e1ede623bb3df3c0502d56ddf79c5365a4a6ca3",
       "ids": [
         "activity.clear",
         "ai.bridge-start",
@@ -1687,6 +1687,8 @@
         "planning.profile-new",
         "planning.progress-line",
         "planning.progress-menu",
+        "planning.progress-sheet-export",
+        "planning.progress-sheet-import",
         "planning.relations-menu",
         "planning.relations-visible",
         "planning.resource-accent",

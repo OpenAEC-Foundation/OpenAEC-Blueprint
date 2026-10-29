@@ -4,11 +4,11 @@
 
 # OpenAEC Blueprint
 
-**The blueprint for every OpenAEC tool. One standard application in Tauri, Rust and the browser, with shared design tokens, fonts, 948 icons, a version scheme and signed releases.**
+**The blueprint for every OpenAEC tool. One standard application in Tauri, Rust and the browser, with shared design tokens, fonts, 950 icons, a version scheme and signed releases.**
 
 [![Release](https://img.shields.io/github/v/release/OpenAEC-Foundation/OpenAEC-Blueprint?label=release&color=D97706)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases/latest)
 [![Release workflow](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml/badge.svg)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml)
-[![Icons](https://img.shields.io/badge/icons-948-informational)](crates/openaec-icons/)
+[![Icons](https://img.shields.io/badge/icons-950-informational)](crates/openaec-icons/)
 [![Themes](https://img.shields.io/badge/themes-5-informational)](design/ontwerp-0.4/tokens-0.4.json)
 [![License](https://img.shields.io/badge/license-LGPL--3.0%20%C2%B7%20CC%20BY--SA%204.0-blue)](#license)
 
@@ -46,7 +46,7 @@ Every file is signed: Windows with Authenticode, macOS with a Developer ID and n
 - **Start with a working shell.** Title bar, ribbon or workflow, document tabs, side panels, status bar and settings are already there. A tool adds its own work in the middle.
 - **Behaviour you do not have to rebuild.** Save and close through one close plan (also on Alt+F4), undo per document, the update notice, your own keyboard shortcuts and an accessible name for every control.
 - **Five themes.** Light, Dark, Blueprint, High contrast dark and High contrast light, in every form of the application.
-- **948 icons** at 16 and 24 px, one style for every tool. A tool picks only the icons it uses.
+- **950 icons** at 16 and 24 px, one style for every tool. A tool picks only the icons it uses.
 - **Any language.** A C library (`.dll`, `.dylib`, `.so`) gives tokens and icons to tools that are not written in Rust.
 - **Releases that are checked and signed.** One tag starts the checks, the builds for three systems, the signatures and the release.
 
@@ -83,7 +83,7 @@ The Tauri app comes first, then the same empty app in Rust. Both get a signed re
 | Part | Where |
 |------|-------|
 | UI library for Rust | [`crates/openaec-ui`](crates/openaec-ui/) |
-| All 948 icons (16 and 24 px), per app to choose | [`crates/openaec-icons`](crates/openaec-icons/) |
+| All 950 icons (16 and 24 px), per app to choose | [`crates/openaec-icons`](crates/openaec-icons/) |
 | How to design an icon, and the icon checks | [`docs/iconen.md`](docs/iconen.md) |
 | C library with tokens and icons for any language | [`crates/openaec-blueprint-sdk`](crates/openaec-blueprint-sdk/) |
 | Colours, sizes and fonts (one source) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |

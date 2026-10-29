@@ -30,12 +30,20 @@ NEW_DEFINITIONS = [
      'Het lint inklappen tot de tabbladen; de knop staat aan de rand van het lint. Tegenhanger van workspace.ribbon-expand.'),
     ('workspace.ribbon-expand', 'Lint uitklappen', 'Werkruimte',
      'Het ingeklapte lint weer volledig tonen; de knop staat aan de rand van het lint. Tegenhanger van workspace.ribbon-collapse.'),
+    ('planning.progress-sheet-export', 'Voortgangsblad exporteren', 'Referenties, peildatum en relaties',
+     'Een voortgangsblad (werkblad) wegschrijven waarin de uitvoering de voortgang per taak invult. Geen algemene export '
+     'van het project; daarvoor blijft file.export. Tegenhanger van planning.progress-sheet-import.'),
+    ('planning.progress-sheet-import', 'Voortgang bijwerken uit een blad', 'Referenties, peildatum en relaties',
+     'De voortgang overnemen uit een ingevuld voortgangsblad: bestaande taken worden bijgewerkt. Geen algemene import; '
+     'daarvoor blijft file.import. Tegenhanger van planning.progress-sheet-export.'),
 ]
 # Programma's waar de nieuwe betekenis voorkomt. Bij een bestaand id komt dit uit de broncatalogus.
 NEW_APPS = {
     'solver.run': ['FEM', 'Planner'],
     'workspace.ribbon-collapse': ['Calc', 'Energy', 'Geotechniek', 'Heatloss', 'Pile Plan', 'Planner', 'Pointcloud', 'Workspace Composer'],
     'workspace.ribbon-expand': ['Calc', 'Energy', 'Geotechniek', 'Heatloss', 'Pile Plan', 'Planner', 'Pointcloud', 'Workspace Composer'],
+    'planning.progress-sheet-export': ['Planner'],
+    'planning.progress-sheet-import': ['Planner'],
 }
 # Een bestaand id met een nieuwe betekenistekst. De naam blijft; de tekst zegt nu waar het icoon voor is.
 MEANING_UPDATES = {
@@ -110,10 +118,13 @@ def zoom_out(p):
     p.line([(m - a, m), (m + a, m)], True, r=0)
 
 
-@design('view.zoom-default', 'Hetzelfde vergrootglas als Zoom + en Zoom −, met een oranje punt: de standaardmaat (#52).')
+@design('view.zoom-default', 'Hetzelfde vergrootglas als Zoom + en Zoom −, met een oranje punt: de standaardmaat (#52). '
+                             'De punt is een vol blokje op het pixelraster, zodat hij niet op een kleine plus lijkt.')
 def zoom_default(p):
     m, _ = magnifier(p)
-    p.circle(m, m, 1.25 if p.s == 16 else 1.75, True, True)
+    h, c = (1.5, 0.5) if p.s == 16 else (2.0, 0.6)
+    p.fill([(m - h + c, m - h), (m + h - c, m - h), (m + h, m - h + c), (m + h, m + h - c),
+            (m + h - c, m + h), (m - h + c, m + h), (m - h, m + h - c), (m - h, m - h + c)], True)
 
 
 # ---------------------------------------------------------------- groep Planning
@@ -154,72 +165,83 @@ def status_date(p):
     calendar_clock(p, False)
 
 
-@design('panel.warnings', 'Waarschuwingsdriehoek zoals in Open Planner Studio, zonder paneelkader (#56 a); het uitroepteken in oranje.')
+@design('panel.warnings', 'Waarschuwingsdriehoek zoals in Open Planner Studio, zonder paneelkader (#56 a). Eén ding, dus geen oranje.')
 def warnings(p):
     if p.s == 16:
         p.line([(7.5, 1.75), (14.25, 13.5), (0.75, 13.5)], closed=True, r=1.4)
-        p.line([(7.5, 6.5), (7.5, 8.25)], True, r=0)
-        p.circle(7.5, 10.75, 0.8, True, True)
+        p.line([(7.5, 6.5), (7.5, 8.25)], r=0)
+        p.circle(7.5, 10.75, 0.8, filled=True)
     else:
         p.line([(12, 3), (22, 20.5), (2, 20.5)], closed=True, r=2)
-        p.line([(12, 9.75), (12, 13)], True, r=0)
-        p.circle(12, 16.5, 1.1, True, True)
+        p.line([(12, 9.75), (12, 13)], r=0)
+        p.circle(12, 16.5, 1.1, filled=True)
 
 
 # ---------------------------------------------------------------- groep Relaties
 
-def stadium(p, x0, y0, x1, y1, w, accent=False):
-    """Schakel van een ketting: een staaf met ronde einden tussen twee punten, breedte w (hartlijn)."""
-    ang = math.atan2(y1 - y0, x1 - x0)
-    nx, ny = -math.sin(ang), math.cos(ang)
-    h = w / 2
-    pts = []
-    for (cx, cy), base in (((x1, y1), ang - math.pi / 2), ((x0, y0), ang + math.pi / 2)):
-        for i in range(13):
-            t = base + math.pi * i / 12
-            pts.append((cx + h * math.cos(t), cy + h * math.sin(t)))
-    p.line(pts, accent, True, 0)
+def link_half(p, c, d, length, r, open_deg, short):
+    """Eén helft van een schakel langs de diagonaal: een staaf met ronde kop buiten en een open binnenkant.
+
+    c is het midden van het icoon, d de afstand van c tot de binnenkop, length de afstand tussen de kopmiddens.
+    De binnenkop loopt maar `open_deg` graden door; de andere zijde is met `short` ingekort, zodat de
+    helften niet in elkaar lopen."""
+    ux, uy = math.sqrt(0.5), -math.sqrt(0.5)          # naar rechtsboven
+    nx, ny = math.sqrt(0.5), math.sqrt(0.5)           # dwars, naar rechtsonder
+    ix, iy = c[0] + ux * d, c[1] + uy * d             # midden van de binnenkop
+    ox, oy = ix + ux * length, iy + uy * length       # midden van de buitenkop
+    base = math.degrees(math.atan2(ny, nx))            # 45 graden: de zijde rechtsonder
+    pts = [(ix + r * math.cos(math.radians(base + open_deg - i * open_deg / 10)),
+            iy + r * math.sin(math.radians(base + open_deg - i * open_deg / 10))) for i in range(11)]
+    pts += [(ox + r * math.cos(math.radians(base - i * 18)), oy + r * math.sin(math.radians(base - i * 18))) for i in range(11)]
+    ex, ey = ox - nx * r, oy - ny * r
+    pts.append((ex - ux * length * (1 - short), ey - uy * length * (1 - short)))
+    return pts
 
 
-@design('planning.relations-menu', 'Ketting zoals Relatie in Open Planner Studio en Taken koppelen in MS Project.')
+@design('planning.relations-menu', 'Schakel zoals Relatie in Open Planner Studio: twee open helften langs de diagonaal. '
+                                   'De ontwerpcontrole vond de gesloten ketting niet beter dan main (29 oktober 2026).')
 def relations_menu(p):
-    if p.s == 16:
-        stadium(p, 3.5, 12.5, 8.5, 7.5, 4.5)
-        stadium(p, 7.5, 8.5, 12.5, 3.5, 4.5)
-    else:
-        stadium(p, 5, 19, 12.5, 11.5, 6.5)
-        stadium(p, 11.5, 12.5, 19, 5, 6.5)
+    c, args = ((8, 8), (1.75, 2.9, 3.1, 95, 0.5)) if p.s == 16 else ((12, 12), (2.6, 4.3, 4.6, 95, 0.5))
+    half = link_half(p, c, *args)
+    p.line(half, r=0)
+    p.line([(2 * c[0] - x, 2 * c[1] - y) for x, y in half], r=0)
 
 
-@design('task.split-mode', 'Een taakbalk met een schuine knip, zoals Taak splitsen in MS Project; het afgesplitste deel in oranje.')
+@design('task.split-mode', 'Schaar zoals Taak splitsen in Open Planner Studio. De gesplitste taakbalk was op 16 px te klein '
+                           '(ontwerpcontrole 29 oktober 2026). De schaar staat in Open Planner Studio alleen bij deze knop.')
 def split_mode(p):
     if p.s == 16:
-        p.line([(1.5, 5.5), (8.5, 5.5), (6.5, 10.5), (1.5, 10.5)], closed=True, r=1.0)
-        p.line([(11.5, 5.5), (14.5, 5.5), (14.5, 10.5), (9.5, 10.5)], True, True, r=1.0)
+        r, (a, b), tip = 2.25, (4, 12), 13.5
     else:
-        p.line([(2, 8), (13, 8), (10, 16), (2, 16)], closed=True, r=1.5)
-        p.line([(17, 8), (22, 8), (22, 16), (14, 16)], True, True, r=1.5)
+        r, (a, b), tip = 3.25, (6, 18), 20.5
+    k = r * math.sqrt(0.5)
+    p.circle(a, a, r)
+    p.circle(a, b, r)
+    p.line([(a + k, a + k), (tip, tip)], r=0)
+    p.line([(a + k, b - k), (tip, a + b - tip)], r=0)
 
 
 def trace(p, successors):
     if p.s == 16:
         p.line([(2.5, 3), (2.5, 12)], r=0)
-        p.line([(14, 7.5), (5.5, 7.5)], True, r=0)
+        p.line([(14, 7.5), (6, 7.5)], r=0)
         p.line([(9, 4), (5.5, 7.5), (9, 11)], True, r=0.6)
     else:
         p.line([(3, 5), (3, 19)], r=0)
-        p.line([(21, 12), (7.5, 12)], True, r=0)
+        p.line([(21, 12), (8, 12)], r=0)
         p.line([(12.5, 7), (7.5, 12), (12.5, 17)], True, r=0.8)
     if successors:
         p.c.mirror()
 
 
-@design('planning.trace-predecessors', 'Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de pijl in oranje (#48).')
+@design('planning.trace-predecessors', 'Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de pijlpunt in oranje (#48).',
+        'De oranje pijlpunt ligt vóór de steel.')
 def trace_pred(p):
     trace(p, False)
 
 
-@design('planning.trace-successors', 'Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio (#48).')
+@design('planning.trace-successors', 'Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio (#48).',
+        'De oranje pijlpunt ligt vóór de steel.')
 def trace_succ(p):
     trace(p, True)
 
@@ -257,11 +279,11 @@ def tag(p, tip, length, width, angle, accent=False, hole=None):
     p.line(pts, accent, True, 1.0 if p.s == 16 else 1.4)
     if hole:
         d, r = hole
-        p.circle(x + ux * d, y + uy * d, r, True, True)
+        p.circle(x + ux * d, y + uy * d, r, filled=True)
     return pts
 
 
-@design('planning.structure', 'Twee etiketten, zoals Codes & velden in Open Planner Studio (#53); het gat in het voorste etiket in oranje.')
+@design('planning.structure', 'Twee etiketten, zoals Codes & velden in Open Planner Studio (#53). Eén ding, dus geen oranje.')
 def structure(p):
     if p.s == 16:
         tag(p, (3.25, 1.75), 10.5, 6.5, 45, hole=(3.8, 0.9))
@@ -290,28 +312,27 @@ def wbs_auto(p):
 
 
 def refresh(p, cx, cy, r, accent=True, start=-60, end=230):
-    """Draaipijl: open cirkel met één pijlpunt aan het eind."""
-    pts = p.arc(cx, cy, r, start, end, accent)
-    ex, ey = pts[-1]
+    """Draaipijl: open boog met één gevulde pijlpunt aan het eind, die in de open ruimte wijst."""
+    p.arc(cx, cy, r, start, end, accent)
     a = math.radians(end)
+    ex, ey = cx + r * math.cos(a), cy + r * math.sin(a)
     tx, ty = -math.sin(a), math.cos(a)   # raaklijn in looprichting
     nx, ny = math.cos(a), math.sin(a)    # naar buiten
-    k = 1.7 if p.s == 16 else 2.4
-    p.line([(ex + nx * k - tx * k * 0.2, ey + ny * k - ty * k * 0.2), (ex, ey), (ex - nx * k - tx * k * 0.2, ey - ny * k - ty * k * 0.2)][::-1],
-           accent, r=0.3)
+    w, length = (1.7, 2.4) if p.s == 16 else (2.6, 3.6)
+    p.fill([(ex + nx * w, ey + ny * w), (ex + tx * length, ey + ty * length), (ex - nx * w, ey - ny * w)], accent)
 
 
 @design('wbs.renumber', 'Hekje met een oranje draaipijl: de nummering opnieuw doen. Geen kleine cijfers 1 en 2, die op 16 px onleesbaar zijn.')
 def wbs_renumber(p):
     if p.s == 16:
-        p.line([(1.5, 4.5), (10, 4.5)], r=0)
-        p.line([(1.5, 9.5), (8.75, 9.5)], r=0)
-        p.line([(4.25, 1.5), (3.25, 12.5)], r=0)
-        p.line([(8.75, 1.5), (7.85, 11.5)], r=0)
-        refresh(p, 12.5, 12.5, 2.25, start=10, end=300)
+        p.line([(1.5, 3.5), (11.5, 3.5)], r=0)
+        p.line([(1.5, 8.5), (8.5, 8.5)], r=0)
+        p.line([(4.5, 1.5), (3.5, 12.5)], r=0)
+        p.line([(9, 1.5), (8.5, 8.5)], r=0)
+        refresh(p, 12.25, 12.25, 2.75, start=-20, end=250)
     else:
-        hash_sign(p, 2, 2, 15, 15)
-        refresh(p, 18.5, 18.5, 3.5, start=10, end=300)
+        hash_sign(p, 2, 2, 14, 14)
+        refresh(p, 18.5, 18.5, 3.75, start=-20, end=250)
 
 
 @design('wbs.templates', 'Indelingsvlak met drie vakken, zoals Sjablonen in Open Planner Studio.')
@@ -354,22 +375,23 @@ def task_outdent(p):
 
 # ---------------------------------------------------------------- groep Baselines & voortgang (tab Planning)
 
-@design('planning.baselines', 'Twee versies met pijlen ertussen, zoals Baselines beheren in Open Planner Studio; de pijlen in oranje.')
+@design('planning.baselines', 'Twee versies met pijlen ertussen, zoals Baselines beheren in Open Planner Studio. '
+                               'De knop opent een venster; geen deel toont een actie, dus geen oranje.')
 def baselines(p):
     if p.s == 16:
         p.circle(3.5, 3.5, 1.75)
         p.circle(12.5, 12.5, 1.75)
-        p.line([(7.75, 3.5), (10.5, 3.5), (12.5, 5.5), (12.5, 8)], True, r=1.5)
-        p.line([(9.25, 2), (7.75, 3.5), (9.25, 5)], True, r=0.4)
-        p.line([(8.25, 12.5), (5.5, 12.5), (3.5, 10.5), (3.5, 8)], True, r=1.5)
-        p.line([(6.75, 11), (8.25, 12.5), (6.75, 14)], True, r=0.4)
+        p.line([(7.5, 3.5), (10.5, 3.5), (12.5, 5.5), (12.5, 8.5)], r=1.5)
+        p.line([(9.5, 1.5), (7.5, 3.5), (9.5, 5.5)], r=0.4)
+        p.line([(8.5, 12.5), (5.5, 12.5), (3.5, 10.5), (3.5, 7.5)], r=1.5)
+        p.line([(6.5, 10.5), (8.5, 12.5), (6.5, 14.5)], r=0.4)
     else:
         p.circle(5, 5, 2.5)
         p.circle(19, 19, 2.5)
-        p.line([(11.5, 5), (16, 5), (19, 8), (19, 12)], True, r=2.2)
-        p.line([(14, 2.5), (11.5, 5), (14, 7.5)], True, r=0.6)
-        p.line([(12.5, 19), (8, 19), (5, 16), (5, 12)], True, r=2.2)
-        p.line([(10, 16.5), (12.5, 19), (10, 21.5)], True, r=0.6)
+        p.line([(11.5, 5), (16, 5), (19, 8), (19, 12)], r=2.2)
+        p.line([(14, 2.5), (11.5, 5), (14, 7.5)], r=0.6)
+        p.line([(12.5, 19), (8, 19), (5, 16), (5, 12)], r=2.2)
+        p.line([(10, 16.5), (12.5, 19), (10, 21.5)], r=0.6)
 
 
 @design('planning.clear-status-date', 'Klein kruisje zoals het wisknopje bij de statusdatum in Open Planner Studio; zelfde maat als daar.')
@@ -390,6 +412,35 @@ def progress_menu(p):
     else:
         p.line([(5, 2), (5, 22)], r=0)
         p.line([(5, 3.5), (9, 2.5), (13.5, 4.5), (19.5, 3.5), (19.5, 14), (13.5, 15), (9, 13), (5, 14)], closed=False, r=1.6)
+
+
+def sheet_arrow(p, down):
+    """Blad met omgevouwen hoek en een oranje pijl, zoals Voortgang in Open Planner Studio (FileDown, FileUp)."""
+    if p.s == 16:
+        p.line([(2.5, 1.5), (8.5, 1.5), (12.5, 5.5), (12.5, 14.5), (2.5, 14.5)], closed=True, r=1.2)
+        p.line([(8.5, 1.5), (8.5, 5.5), (12.5, 5.5)], r=0.6)
+        p.line([(7.5, 8), (7.5, 12)], True, r=0)
+        p.line([(5.5, 10), (7.5, 12), (9.5, 10)] if down else [(5.5, 10), (7.5, 8), (9.5, 10)], True, r=0.4)
+    else:
+        p.line([(4, 2), (14, 2), (20, 8), (20, 22), (4, 22)], closed=True, r=1.6)
+        p.line([(14, 2), (14, 8), (20, 8)], r=0.8)
+        p.line([(12, 11), (12, 18)], True, r=0)
+        p.line([(9, 15), (12, 18), (15, 15)] if down else [(9, 14), (12, 11), (15, 14)], True, r=0.6)
+
+
+@design('planning.progress-sheet-export', 'Blad met pijl omlaag, zoals Voortgangsblad exporteren in Open Planner Studio (FileDown). '
+                                          'Eigen id: file.export is gedeeld en blijft het bakje met pijl; de ontwerpcontrole '
+                                          'vond dat op deze knop slechter dan main (29 oktober 2026).',
+        'De oranje pijlpunt ligt vóór de steel.')
+def progress_sheet_export(p):
+    sheet_arrow(p, True)
+
+
+@design('planning.progress-sheet-import', 'Blad met pijl omhoog, zoals Voortgang bijwerken uit een blad in Open Planner Studio (FileUp). '
+                                          'Eigen id om dezelfde reden als planning.progress-sheet-export.',
+        'De oranje pijlpunt ligt vóór de steel.')
+def progress_sheet_import(p):
+    sheet_arrow(p, False)
 
 
 # ---------------------------------------------------------------- inklapknop van het lint (#40)
@@ -427,20 +478,20 @@ def baseline_overlay(p):
 @design('planning.progress-line', 'Getande verticale lijn: de voortgangslijn zoals P6 en MS Project hem op de Gantt tekenen; geen assenkader.')
 def progress_line(p):
     if p.s == 16:
-        p.line([(7.5, 1.5), (7.5, 3.5), (12, 6), (7.5, 8.5), (3.5, 11), (7.5, 13), (7.5, 14.5)], r=0.5)
+        p.line([(7.5, 1.5), (7.5, 3), (12.5, 5.75), (7.5, 8.5), (2.5, 11.25), (7.5, 13.5), (7.5, 14.5)], r=0.5)
     else:
         p.line([(11, 2), (11, 5), (18, 9), (11, 13), (5, 16.5), (11, 20), (11, 22)], r=0.7)
 
 
-@design('planning.status-date-line', 'Verticale lijn met een oranje merkteken bovenaan: de statusdatumlijn op de Gantt; geen assenkader.',
-        'Het oranje merkteken ligt vóór de lijn, zodat de punt heel blijft.')
+@design('planning.status-date-line', 'Verticale lijn met een plat oranje merkteken erboven: de statusdatumlijn op de Gantt; geen assenkader. '
+                                     'Merkteken los van de lijn, zodat het niet op een trechter lijkt.')
 def status_date_line(p):
     if p.s == 16:
-        p.line([(7.5, 4), (7.5, 14.5)], r=0)
-        p.fill([(4, 1.25), (11, 1.25), (7.5, 5.75)], True)
+        p.line([(7.5, 6.5), (7.5, 14.5)], r=0)
+        p.fill([(4, 1), (11, 1), (7.5, 4.5)], True)
     else:
-        p.line([(12, 6), (12, 22)], r=0)
-        p.fill([(7, 1.5), (17, 1.5), (12, 8)], True)
+        p.line([(12, 10), (12, 22)], r=0)
+        p.fill([(6, 2), (18, 2), (12, 7.5)], True)
 
 
 def palette(p):

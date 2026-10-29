@@ -1763,6 +1763,12 @@ pub enum Icon {
     /// Referenties en voortgang (`planning.progress-menu`); planner.
     #[cfg(any(feature = "planner"))]
     PlanningProgressMenu,
+    /// Voortgangsblad exporteren (`planning.progress-sheet-export`); planner.
+    #[cfg(any(feature = "planner"))]
+    PlanningProgressSheetExport,
+    /// Voortgang bijwerken uit een blad (`planning.progress-sheet-import`); planner.
+    #[cfg(any(feature = "planner"))]
+    PlanningProgressSheetImport,
     /// Taakrelaties kiezen (`planning.relations-menu`); composer, planner.
     #[cfg(any(feature = "composer", feature = "planner"))]
     PlanningRelationsMenu,
@@ -4034,6 +4040,10 @@ impl Icon {
         list.push(Icon::PlanningProgressLine);
         #[cfg(any(feature = "planner"))]
         list.push(Icon::PlanningProgressMenu);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PlanningProgressSheetExport);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PlanningProgressSheetImport);
         #[cfg(any(feature = "composer", feature = "planner"))]
         list.push(Icon::PlanningRelationsMenu);
         #[cfg(any(feature = "planner"))]
@@ -5936,6 +5946,10 @@ impl Icon {
             Icon::PlanningProgressLine => "planning.progress-line",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningProgressMenu => "planning.progress-menu",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetExport => "planning.progress-sheet-export",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetImport => "planning.progress-sheet-import",
             #[cfg(any(feature = "composer", feature = "planner"))]
             Icon::PlanningRelationsMenu => "planning.relations-menu",
             #[cfg(any(feature = "planner"))]
@@ -7838,6 +7852,10 @@ impl Icon {
             Icon::PlanningProgressLine => "Voortgangslijn tonen",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningProgressMenu => "Referenties en voortgang",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetExport => "Voortgangsblad exporteren",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetImport => "Voortgang bijwerken uit een blad",
             #[cfg(any(feature = "composer", feature = "planner"))]
             Icon::PlanningRelationsMenu => "Taakrelaties kiezen",
             #[cfg(any(feature = "planner"))]
@@ -9740,6 +9758,10 @@ impl Icon {
             Icon::PlanningProgressLine => "Planningslagen en volgrelaties",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningProgressMenu => "Referenties, peildatum en relaties",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetExport => "Referenties, peildatum en relaties",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetImport => "Referenties, peildatum en relaties",
             #[cfg(any(feature = "composer", feature = "planner"))]
             Icon::PlanningRelationsMenu => "Referenties, peildatum en relaties",
             #[cfg(any(feature = "planner"))]
@@ -11642,6 +11664,10 @@ impl Icon {
             Icon::PlanningProgressLine => &["planner"],
             #[cfg(any(feature = "planner"))]
             Icon::PlanningProgressMenu => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetExport => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningProgressSheetImport => &["planner"],
             #[cfg(any(feature = "composer", feature = "planner"))]
             Icon::PlanningRelationsMenu => &["composer", "planner"],
             #[cfg(any(feature = "planner"))]
@@ -13544,6 +13570,10 @@ impl Icon {
             "planning.progress-line" => Some(Icon::PlanningProgressLine),
             #[cfg(any(feature = "planner"))]
             "planning.progress-menu" => Some(Icon::PlanningProgressMenu),
+            #[cfg(any(feature = "planner"))]
+            "planning.progress-sheet-export" => Some(Icon::PlanningProgressSheetExport),
+            #[cfg(any(feature = "planner"))]
+            "planning.progress-sheet-import" => Some(Icon::PlanningProgressSheetImport),
             #[cfg(any(feature = "composer", feature = "planner"))]
             "planning.relations-menu" => Some(Icon::PlanningRelationsMenu),
             #[cfg(any(feature = "planner"))]
@@ -16619,6 +16649,14 @@ impl Icon {
             (Icon::PlanningProgressMenu, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.progress-menu.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::PlanningProgressMenu, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/planning.progress-menu.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningProgressSheetExport, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.progress-sheet-export.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningProgressSheetExport, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/planning.progress-sheet-export.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningProgressSheetImport, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.progress-sheet-import.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningProgressSheetImport, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/planning.progress-sheet-import.svgz")),
             #[cfg(any(feature = "composer", feature = "planner"))]
             (Icon::PlanningRelationsMenu, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.relations-menu.svgz")),
             #[cfg(any(feature = "composer", feature = "planner"))]

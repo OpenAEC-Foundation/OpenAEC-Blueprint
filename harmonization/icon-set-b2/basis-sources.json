@@ -210,5 +210,37 @@
         "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/a58d53482f6eef57e6c279fbf053e6fdc39dcae8/src/components/layout/Ribbon/Ribbon.tsx#L362"
       }
     ]
+  },
+  "planning.progress-sheet-export": {
+    "description": "De kleine knop Voortgangsblad exporteren (FileDown) roept exportAs('progress-xlsx') aan: een werkblad om voortgang in te vullen.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "a58d53482f6eef57e6c279fbf053e6fdc39dcae8",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 385,
+        "description": "De kleine knop Voortgangsblad exporteren (FileDown) roept exportAs('progress-xlsx') aan: een werkblad om voortgang in te vullen.",
+        "sha256": "f04acfc37a5a26e524226efcc858547ab2396b3ff862772a10bd9af40f9691bb",
+        "git_blob": "bfaf5fb7fc408af7acc2b559f8bf0817f686f649",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/a58d53482f6eef57e6c279fbf053e6fdc39dcae8/src/components/layout/Ribbon/ribbonConfig.tsx#L385"
+      }
+    ]
+  },
+  "planning.progress-sheet-import": {
+    "description": "De kleine knop Voortgang bijwerken uit een blad (FileUp) opent showProgressImportDialog: voortgang uit een ingevuld blad overnemen.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "a58d53482f6eef57e6c279fbf053e6fdc39dcae8",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 369,
+        "description": "De kleine knop Voortgang bijwerken uit een blad (FileUp) opent showProgressImportDialog: voortgang uit een ingevuld blad overnemen.",
+        "sha256": "f04acfc37a5a26e524226efcc858547ab2396b3ff862772a10bd9af40f9691bb",
+        "git_blob": "bfaf5fb7fc408af7acc2b559f8bf0817f686f649",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/a58d53482f6eef57e6c279fbf053e6fdc39dcae8/src/components/layout/Ribbon/ribbonConfig.tsx#L369"
+      }
+    ]
   }
 }
