@@ -1,7 +1,7 @@
 {
   "family": "OpenAEC B2",
   "source_revision": 107,
-  "source_manifest_sha256": "976b72fcfba7d27f9bca8a12ec0ec867f9aabcc379f9ba2a9050f49c830dfb6b",
+  "source_manifest_sha256": "d5d3915352616ff990efbe7d0ea67a4eadc5939f4c29220eaeb789ee4b371cc3",
   "format": "gzip-compressed original SVG (SVGZ)",
   "compression": {
     "level": 9,
@@ -14,14 +14,14 @@
   "totals": {
     "16": {
       "files": 948,
-      "original_bytes": 27594699,
-      "compressed_bytes": 10428307,
+      "original_bytes": 27598957,
+      "compressed_bytes": 10429723,
       "reduction_percent": 62.21
     },
     "24": {
       "files": 948,
-      "original_bytes": 28037406,
-      "compressed_bytes": 10208558,
+      "original_bytes": 28038905,
+      "compressed_bytes": 10209962,
       "reduction_percent": 63.59
     }
   },
@@ -17082,18 +17082,18 @@
       "assets": {
         "16": {
           "path": "16/planning.move-date.svgz",
-          "compressed_sha256": "f9e3cf20db1263bbe5a0e61ef97709cb4a9244be133b07a2ed0f018cc32ea4c3",
-          "original_sha256": "47447ac65de854420d68314420b407cf321ac3813151d82ec7253100b47ed097",
-          "compressed_bytes": 18779,
-          "original_bytes": 49227,
+          "compressed_sha256": "a1622ce4254375bca6b8ec084dfdbf86465c3234d630a5ab956baa808550382b",
+          "original_sha256": "f41c65502f304c409726230c09cc65992fb27f48d394e40af84cae886ddf5847",
+          "compressed_bytes": 20636,
+          "original_bytes": 54078,
           "source_path": "svg/16/planning.move-date.svg"
         },
         "24": {
           "path": "24/planning.move-date.svgz",
-          "compressed_sha256": "db6c92fde8ca7b6bac2bb56a87acfcf28ae28beb10e1a6033690ee92e845de79",
-          "original_sha256": "7ea35c604e60fa228dcee0ec7fa5578f4d635a17b983c43350cbc9f15e24d123",
-          "compressed_bytes": 20450,
-          "original_bytes": 53115,
+          "compressed_sha256": "e182f0bd798c6ac242e06f0dd09c2215c9f3917d03d79b4166dca9d2cc72cae9",
+          "original_sha256": "b3486793ba9819e2b4daa18c2c9078b36e342ba0779584c8b25be5e61fb93f75",
+          "compressed_bytes": 21828,
+          "original_bytes": 56815,
           "source_path": "svg/24/planning.move-date.svg"
         }
       }
@@ -17104,18 +17104,18 @@
       "assets": {
         "16": {
           "path": "16/planning.structure.svgz",
-          "compressed_sha256": "0d6754767b1dbe243eb8b381584c90e666754d73d59f70918b6d2d445ec6c6fe",
-          "original_sha256": "d64b37decca016a4ec155fd3c56be0c3d13206bbd754a30ad43d2f3a04edad28",
-          "compressed_bytes": 8715,
-          "original_bytes": 22033,
+          "compressed_sha256": "49303aa6835e647cc17e4bbd1d54ea9628cab9438a8f7041435828cfc104b2fc",
+          "original_sha256": "cb45410d34582f5892dd7576a5bad0bff16758b7f495caea499adb595a5b00e4",
+          "compressed_bytes": 9796,
+          "original_bytes": 24092,
           "source_path": "svg/16/planning.structure.svg"
         },
         "24": {
           "path": "24/planning.structure.svgz",
-          "compressed_sha256": "0a8265ddf60d86b2f478ef72ddbcd4490f72a61b001c8ea6407bde28234b86be",
-          "original_sha256": "4750ef3daba822d61d88a84a7accb461689287efc5a5127d2dab25cd213fb19f",
-          "compressed_bytes": 8886,
-          "original_bytes": 22691,
+          "compressed_sha256": "e14400bcb60e9fb2a25cbb49d2dc61baf2f46e4aecff40fe82abc57c358c8c3d",
+          "original_sha256": "661683fa168ad9454c0d8304fdfc5d72603d32bdb1309f5268a509894aa1ef8e",
+          "compressed_bytes": 8697,
+          "original_bytes": 21107,
           "source_path": "svg/24/planning.structure.svg"
         }
       }
@@ -17148,18 +17148,18 @@
       "assets": {
         "16": {
           "path": "16/wbs.renumber.svgz",
-          "compressed_sha256": "c565388c239aae1880729295528d91b9bca7f6b3d9a728fc8878eb635b324b88",
-          "original_sha256": "4fbd3c01b83ab2f9280cf110a2b2c9bf87ec0d948a165a1166a31c08ddf57d53",
-          "compressed_bytes": 27605,
-          "original_bytes": 68123,
+          "compressed_sha256": "0e8d3f0bcb2c136372cbed1b650fa46812228ee05d410cea5329a24f38320a41",
+          "original_sha256": "7f099588d194604372fdb3445ff8952da113825b48f38a8a4795fbe125598623",
+          "compressed_bytes": 25566,
+          "original_bytes": 62837,
           "source_path": "svg/16/wbs.renumber.svg"
         },
         "24": {
           "path": "24/wbs.renumber.svgz",
-          "compressed_sha256": "ac05a126b2287f8e5c620bca5050699214b485928df14d3c032cbcb1e5c804c3",
-          "original_sha256": "cdbc8f53d620b5f8c1da65c421121d9e150f64bfb1aabdf88973f7a186c4db21",
-          "compressed_bytes": 31891,
-          "original_bytes": 79633,
+          "compressed_sha256": "a1e73cd304205cf45b358ebe7a6ba4915da0d6c0715d20d97f29ab94a4afaa11",
+          "original_sha256": "977a9eb1f81b4f8edf28fdd33aba46bc0da0b3f15c87b756ed152339c1f36879",
+          "compressed_bytes": 30004,
+          "original_bytes": 75433,
           "source_path": "svg/24/wbs.renumber.svg"
         }
       }
@@ -17324,18 +17324,18 @@
       "assets": {
         "16": {
           "path": "16/panel.warnings.svgz",
-          "compressed_sha256": "20d8661b13523ace17e37657c9a2364086f00ff09cd0729fa78d5fb7b69a6101",
-          "original_sha256": "20a1a6ef7baf9cbc171ea9a59c72e8883abe7d62fbc01d81ea24b41f20d8602e",
-          "compressed_bytes": 6779,
-          "original_bytes": 17182,
+          "compressed_sha256": "6c6ff97b1538e34557296fffe10766f8c58f545eb335d4a599d1ae0eaacdde0e",
+          "original_sha256": "19348e89028b3f1746762a16fe20bd1597e2cbc344efcd2f14779b04fd2f2e44",
+          "compressed_bytes": 5830,
+          "original_bytes": 14716,
           "source_path": "svg/16/panel.warnings.svg"
         },
         "24": {
           "path": "24/panel.warnings.svgz",
-          "compressed_sha256": "3f15582b1eb7f504dbc2d4ee9db4adb3c53f565fb7f58554662f4dd9d603f2ac",
-          "original_sha256": "9fe8982f7da32cf85e73123affab50df9518169c7e11cff58657eb8308b45631",
-          "compressed_bytes": 6452,
-          "original_bytes": 17400,
+          "compressed_sha256": "061e3d9b2e74e8564db4f517824e40c7e608ac9a1e38ab7a7d11749734423ba2",
+          "original_sha256": "8df56a22e5571d648cefc46812ad4511c35e08ffcb6c6909877bbde3ea57b26d",
+          "compressed_bytes": 4609,
+          "original_bytes": 12528,
           "source_path": "svg/24/panel.warnings.svg"
         }
       }
@@ -17566,18 +17566,18 @@
       "assets": {
         "16": {
           "path": "16/planning.resource-accent.svgz",
-          "compressed_sha256": "60355d3e2e320072fff41c016dd65246cb44e44d325e72d6c612e1f581e15ae4",
-          "original_sha256": "3063c38ba2b74f77911a2f10bcb936b0ec2af843592f45202d2a6cd297dc00d0",
-          "compressed_bytes": 12116,
-          "original_bytes": 30491,
+          "compressed_sha256": "cb37689f2eb2c175bd081e3059d633cc7652c999121978d5d2d716abb7fe9579",
+          "original_sha256": "af2b5980c26289747857771899c375891acc694781cf6f64f922d9b7692fea4b",
+          "compressed_bytes": 12113,
+          "original_bytes": 30436,
           "source_path": "svg/16/planning.resource-accent.svg"
         },
         "24": {
           "path": "24/planning.resource-accent.svgz",
-          "compressed_sha256": "8b6690ea49ee183d18c6bfc2a10385bfc137d21054344b645bf78bd851be2b3f",
-          "original_sha256": "a8ce3940332bfb5d0c5d720bd9be0d7bdd0171ca001d3ca4405625b4583a46a3",
-          "compressed_bytes": 10947,
-          "original_bytes": 28575,
+          "compressed_sha256": "b0602165cb07b91fec9de3613e8e9dbad12f4bb32f4197483b378c93f8cd95b1",
+          "original_sha256": "a8f6f794546bfd45ac9725cc9940074988a7acb1b3ab7b3fca17744993446933",
+          "compressed_bytes": 11332,
+          "original_bytes": 28520,
           "source_path": "svg/24/planning.resource-accent.svg"
         }
       }
@@ -17632,18 +17632,18 @@
       "assets": {
         "16": {
           "path": "16/planning.baselines.svgz",
-          "compressed_sha256": "eb6ce708ad4a0c38abf322bd0d613cb7a0a52888ad970aa949f8be32b1f0e208",
-          "original_sha256": "3f834430d279100f961cbc996258ddaaa24dc11d296fc1156f2197fa1cc523da",
-          "compressed_bytes": 20889,
-          "original_bytes": 53922,
+          "compressed_sha256": "1e8cc3ae2fce3b14cec29211e874491321abfb9b3ad08e3ae923a0b0a1cebc9e",
+          "original_sha256": "8f46638777c04ecbdaba827bd630c35e04c5560b8b81145becea361cd920e59b",
+          "compressed_bytes": 20491,
+          "original_bytes": 54272,
           "source_path": "svg/16/planning.baselines.svg"
         },
         "24": {
           "path": "24/planning.baselines.svgz",
-          "compressed_sha256": "1eb59eca3ede58ab87aa6bf7023839e6b505c7a4179b6784fd014f40ba95efe4",
-          "original_sha256": "f1e27d8e92a2cad94d11d9e5b8153c2a5b2fa973c9d9596bb6546f3c164a20fe",
-          "compressed_bytes": 18964,
-          "original_bytes": 51442,
+          "compressed_sha256": "7b22006a3e2109180d1c3d0b2fada02c01b853dcc124e7e877a7b4f20a307bec",
+          "original_sha256": "a5bf1c361ed919f112056614273aeb92b03eee7e33735399f4566df849a9f408",
+          "compressed_bytes": 21163,
+          "original_bytes": 56251,
           "source_path": "svg/24/planning.baselines.svg"
         }
       }
@@ -17654,18 +17654,18 @@
       "assets": {
         "16": {
           "path": "16/planning.status-date.svgz",
-          "compressed_sha256": "cc108a41119c59c29b89133a34af4534cc119c26da4d491c8f262ec9419b55d3",
-          "original_sha256": "8f4937ef1b902a177cdaf83b2c98c2c3b648ac1178030d8cd9cb0441632be365",
-          "compressed_bytes": 18673,
-          "original_bytes": 49227,
+          "compressed_sha256": "221fd98251fdd1a0d4cfa8bf2dd0e77bda34922b051766d3feccb2418ac76772",
+          "original_sha256": "2b3dda647c81707ee3a46bb39e191dad45bde820a9bd27e8977cdad742f29975",
+          "compressed_bytes": 20559,
+          "original_bytes": 54078,
           "source_path": "svg/16/planning.status-date.svg"
         },
         "24": {
           "path": "24/planning.status-date.svgz",
-          "compressed_sha256": "ae8640d88aef3a3bff0de3dc8724c5b483337210506bb0656fbc078b29225a1e",
-          "original_sha256": "faedb4346b5d27111001aa75c40d7cd4197d250d7066345302075715001ab49e",
-          "compressed_bytes": 20338,
-          "original_bytes": 53115,
+          "compressed_sha256": "2e8f5e6f3c92608f8984d505bd77ea2875e0fd2e46cc94afcefa909bf3dfb9f1",
+          "original_sha256": "1472fc46e25bfe4320822ecaa99908bcfbfc246db791f54684eb76c3f5fc0dd9",
+          "compressed_bytes": 21733,
+          "original_bytes": 56815,
           "source_path": "svg/24/planning.status-date.svg"
         }
       }
@@ -17808,18 +17808,18 @@
       "assets": {
         "16": {
           "path": "16/planning.bar-colors.svgz",
-          "compressed_sha256": "9763eb915a474db0a1714da7fc42af5e8f7d5e80535e846772c05ed0b8ec9c15",
-          "original_sha256": "9d60da23fbfc735bdf47357c3c39536b9d8094f2857b952b6f0d9fe3ce7822c9",
-          "compressed_bytes": 34560,
-          "original_bytes": 88903,
+          "compressed_sha256": "d8d63bc9d860698d09067d30c35a69a8885a60418c00113ec2a294bf039fa182",
+          "original_sha256": "02823ddee27ab1c7c17268b89aefa0a580fe77811b270cfb8d2dfb262e7e61af",
+          "compressed_bytes": 34541,
+          "original_bytes": 88857,
           "source_path": "svg/16/planning.bar-colors.svg"
         },
         "24": {
           "path": "24/planning.bar-colors.svgz",
-          "compressed_sha256": "bfc9b9fc3473c958456978f52b0cd3eeba86841480fb208ce4b02bfd610b74ba",
-          "original_sha256": "3b2fa8eb185a88f592015f00364532addcac95ea46349d537f62c609e038a350",
-          "compressed_bytes": 35000,
-          "original_bytes": 90858,
+          "compressed_sha256": "aea44cc639899d10851b7cdbae9600ed37768207bd2d43f2d0dbc4db65772292",
+          "original_sha256": "47272c8f58aa7c0b81fb56d09f5f36016585ada5daf081ac41f0bb91af75e6a7",
+          "compressed_bytes": 34966,
+          "original_bytes": 90859,
           "source_path": "svg/24/planning.bar-colors.svg"
         }
       }

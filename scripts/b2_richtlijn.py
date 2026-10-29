@@ -133,14 +133,14 @@ def calendar_clock(p, accent):
         p.line([(10.5, 1.5), (10.5, 4.5)], r=0)
         p.line([(1.5, 7.5), (5.5, 7.5)], r=0)
         p.circle(11, 11, 3.75, accent)
-        p.line([(11, 9.25), (11, 11), (12.25, 11.75)], accent, r=0.3)
+        p.line([(11, 9.6), (11, 11), (12.2, 11.7)], accent, r=0.3)
     else:
         p.line([(20, 8.5), (20, 4), (3, 4), (3, 21), (9, 21)])
         p.line([(8, 2), (8, 6)], r=0)
         p.line([(15, 2), (15, 6)], r=0)
         p.line([(3, 10), (9, 10)], r=0)
         p.circle(17, 17, 5.25, accent)
-        p.line([(17, 14.25), (17, 17), (19, 18.25)], accent, r=0.4)
+        p.line([(17, 15.1), (17, 17), (18.6, 18)], accent, r=0.4)
 
 
 @design('planning.move-date', 'Kalender met klok zoals in Open Planner Studio; het klokje in oranje (#55).')
@@ -158,12 +158,12 @@ def status_date(p):
 def warnings(p):
     if p.s == 16:
         p.line([(7.5, 1.75), (14.25, 13.5), (0.75, 13.5)], closed=True, r=1.4)
-        p.line([(7.5, 6), (7.5, 8.25)], True, r=0)
-        p.circle(7.5, 10.6, 0.85, True, True)
+        p.line([(7.5, 6.5), (7.5, 8.25)], True, r=0)
+        p.circle(7.5, 10.75, 0.8, True, True)
     else:
         p.line([(12, 3), (22, 20.5), (2, 20.5)], closed=True, r=2)
-        p.line([(12, 9), (12, 13.5)], True, r=0)
-        p.circle(12, 17, 1.15, True, True)
+        p.line([(12, 9.75), (12, 13)], True, r=0)
+        p.circle(12, 16.5, 1.1, True, True)
 
 
 # ---------------------------------------------------------------- groep Relaties
@@ -264,11 +264,11 @@ def tag(p, tip, length, width, angle, accent=False, hole=None):
 @design('planning.structure', 'Twee etiketten, zoals Codes & velden in Open Planner Studio (#53); het gat in het voorste etiket in oranje.')
 def structure(p):
     if p.s == 16:
-        tag(p, (2.25, 2.25), 11, 7, 45, hole=(3.6, 0.95))
-        p.line([(1.25, 7.75), (1.25, 9), (6.75, 14.5)], r=0.8)
+        tag(p, (3.25, 1.75), 10.5, 6.5, 45, hole=(3.8, 0.9))
+        p.line([(1.55, 8.6), (6.1, 13.15)], r=0)
     else:
-        tag(p, (3.5, 3.5), 16.5, 10.5, 45, hole=(5.4, 1.3))
-        p.line([(2, 11.5), (2, 13.5), (10, 21.5)], r=1.2)
+        tag(p, (4.875, 2.625), 15.75, 9.75, 45, hole=(5.7, 1.35))
+        p.line([(2.3, 12.9), (9.15, 19.75)], r=0)
 
 
 def hash_sign(p, x0, y0, x1, y1):
@@ -289,11 +289,11 @@ def wbs_auto(p):
         hash_sign(p, 3, 2, 21, 22)
 
 
-def refresh(p, cx, cy, r, accent=True):
-    """Draaipijl: open cirkel met één pijlpunt."""
-    pts = p.arc(cx, cy, r, -60, 230, accent)
+def refresh(p, cx, cy, r, accent=True, start=-60, end=230):
+    """Draaipijl: open cirkel met één pijlpunt aan het eind."""
+    pts = p.arc(cx, cy, r, start, end, accent)
     ex, ey = pts[-1]
-    a = math.radians(230)
+    a = math.radians(end)
     tx, ty = -math.sin(a), math.cos(a)   # raaklijn in looprichting
     nx, ny = math.cos(a), math.sin(a)    # naar buiten
     k = 1.7 if p.s == 16 else 2.4
@@ -304,11 +304,14 @@ def refresh(p, cx, cy, r, accent=True):
 @design('wbs.renumber', 'Hekje met een oranje draaipijl: de nummering opnieuw doen. Geen kleine cijfers 1 en 2, die op 16 px onleesbaar zijn.')
 def wbs_renumber(p):
     if p.s == 16:
-        hash_sign(p, 1.5, 1.5, 10, 10.5)
-        refresh(p, 12.5, 12.5, 2.4)
+        p.line([(1.5, 4.5), (10, 4.5)], r=0)
+        p.line([(1.5, 9.5), (8.75, 9.5)], r=0)
+        p.line([(4.25, 1.5), (3.25, 12.5)], r=0)
+        p.line([(8.75, 1.5), (7.85, 11.5)], r=0)
+        refresh(p, 12.5, 12.5, 2.25, start=10, end=300)
     else:
         hash_sign(p, 2, 2, 15, 15)
-        refresh(p, 18.5, 18.5, 3.5)
+        refresh(p, 18.5, 18.5, 3.5, start=10, end=300)
 
 
 @design('wbs.templates', 'Indelingsvlak met drie vakken, zoals Sjablonen in Open Planner Studio.')
@@ -354,19 +357,19 @@ def task_outdent(p):
 @design('planning.baselines', 'Twee versies met pijlen ertussen, zoals Baselines beheren in Open Planner Studio; de pijlen in oranje.')
 def baselines(p):
     if p.s == 16:
-        p.circle(3.5, 4, 2)
-        p.circle(12.5, 12, 2)
-        p.line([(7.5, 4), (10.5, 4), (12.5, 6), (12.5, 8.5)], True, r=1.5)
-        p.line([(9, 2.5), (7.5, 4), (9, 5.5)], True, r=0.4)
-        p.line([(8.5, 12), (5.5, 12), (3.5, 10), (3.5, 7.5)], True, r=1.5)
-        p.line([(7, 10.5), (8.5, 12), (7, 13.5)], True, r=0.4)
+        p.circle(3.5, 3.5, 1.75)
+        p.circle(12.5, 12.5, 1.75)
+        p.line([(7.75, 3.5), (10.5, 3.5), (12.5, 5.5), (12.5, 8)], True, r=1.5)
+        p.line([(9.25, 2), (7.75, 3.5), (9.25, 5)], True, r=0.4)
+        p.line([(8.25, 12.5), (5.5, 12.5), (3.5, 10.5), (3.5, 8)], True, r=1.5)
+        p.line([(6.75, 11), (8.25, 12.5), (6.75, 14)], True, r=0.4)
     else:
-        p.circle(5, 6, 3)
-        p.circle(19, 18, 3)
-        p.line([(11.5, 6), (16.5, 6), (19, 8.5), (19, 13)], True, r=2.2)
-        p.line([(14, 3.5), (11.5, 6), (14, 8.5)], True, r=0.6)
-        p.line([(12.5, 18), (7.5, 18), (5, 15.5), (5, 11)], True, r=2.2)
-        p.line([(10, 15.5), (12.5, 18), (10, 20.5)], True, r=0.6)
+        p.circle(5, 5, 2.5)
+        p.circle(19, 19, 2.5)
+        p.line([(11.5, 5), (16, 5), (19, 8), (19, 12)], True, r=2.2)
+        p.line([(14, 2.5), (11.5, 5), (14, 7.5)], True, r=0.6)
+        p.line([(12.5, 19), (8, 19), (5, 16), (5, 12)], True, r=2.2)
+        p.line([(10, 16.5), (12.5, 19), (10, 21.5)], True, r=0.6)
 
 
 @design('planning.clear-status-date', 'Klein kruisje zoals het wisknopje bij de statusdatum in Open Planner Studio; zelfde maat als daar.')
@@ -447,8 +450,8 @@ def palette(p):
     pts += [(cx + r * 0.58 * math.cos(math.radians(45)), cy + r * 0.58 * math.sin(math.radians(45)))]
     p.line(pts, closed=True, r=1.0 if p.s == 16 else 1.5)
     if p.s == 16:
-        return [(4.75, 7.5, 1.05), (7.25, 4.5, 1.05), (10.75, 5.5, 1.05)]
-    return [(7, 11, 1.5), (11, 6.5, 1.5), (16.25, 8, 1.5)]
+        return [(4.75, 7.5, 1.05), (7.25, 4.75, 1.05), (10.25, 5.75, 1.05)]
+    return [(7, 11, 1.5), (11, 6.5, 1.5), (15.75, 8.5, 1.5)]
 
 
 @design('planning.bar-colors', 'Palet zoals Balkkleuren in Open Planner Studio; de verfklodders in oranje.')
@@ -460,10 +463,10 @@ def bar_colors(p):
 @design('planning.resource-accent', 'Persoon met een oranje lichaam: de resource krijgt een eigen kleur. Eigen vorm naast het palet ernaast.')
 def resource_accent(p):
     if p.s == 16:
-        p.circle(8, 4.75, 3)
+        p.circle(8, 4.25, 2.6)
         p.arc(8, 15.25, 6, 180, 360, True)
     else:
-        p.circle(12, 7, 4.5)
+        p.circle(12, 6.25, 3.75)
         p.arc(12, 22.5, 9, 180, 360, True)
 
 

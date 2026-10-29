@@ -1,11 +1,10 @@
 # Icon checks for every pull request and every push to main.
 #
-# The B2 icon set check is a job of its own: it fails on main today. Its
-# manifest pins SHA-256 hashes of scripts as the maker's Windows checkout has
-# them (CRLF), while Linux checks them out with LF. The hash of
-# design/ontwerp-0.4/tokens-0.4.json is also older than the changes of that file
-# on 2026-10-26 and 2026-10-29. The job stays red until the manifest or the
-# check is fixed.
+# The B2 job builds nothing; it checks the committed B2 masters, manifest and
+# hashes, and then the icon guideline in docs/iconen.md
+# (scripts/check_icon_guideline.py): legibility at 16 px, not too many loose
+# parts, and enough difference between icons that sit side by side in a group.
+# Script hashes in the B2 manifest ignore CRLF versus LF since revision 107.
 name: Icons
 
 on:
@@ -48,7 +47,7 @@ jobs:
         run: cargo test -p openaec-icons --features all --locked
 
   b2:
-    name: B2 icon set (fails on main, stale hashes)
+    name: B2 icon set and icon guideline
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -61,3 +60,5 @@ jobs:
         run: python -m pip install --target harmonization/sources/b2-runtime -r scripts/requirements-icon-b2.txt
       - name: B2 icon set
         run: python scripts/check_icon_set_b2.py
+      - name: Icon guideline (docs/iconen.md)
+        run: python scripts/check_icon_guideline.py --alle
