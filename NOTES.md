@@ -60,6 +60,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
+- **`check_icon_set_b2.py` faalt op Linux en in de CI, 2026-10-29**: (1) het B2-manifest legt SHA-256-hashes vast van ongeveer 20 scripts in CRLF, zoals de Windows-checkout ze heeft; op Linux staan ze met LF, en in `.gitattributes` staan ze niet op `-text`; (2) `theme_tokens_sha256` hoort bij `tokens-0.4.json` uit ba6b0956 en is ouder dan de wijzigingen van 26 en 29 oktober (dat faalt ook op Windows). Met tolerantie voor regeleindes en zonder de tokens-hash slaagt de rest. De CI-job *B2 icon set (fails on main, stale hashes)* blijft rood tot de check of het manifest is aangepast.
+
 - **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
 
 - **OpenPGP-sleutel van de organisatie, 2026-10-26**: Nino maakt de sleutel voor Linux-releases met het **voorlopige** adres `nino@open-aec.com`; de gebruiker wil dit later aanpassen. Aanpassen kan zonder nieuwe sleutel (nieuwe UID toevoegen met de reservekopie van de hoofdsleutel, oude intrekken); vingerafdruk en GitHub-geheimen blijven gelijk.
@@ -244,6 +246,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: `.github/workflows/icons.yml`: iconenchecks bij elke PR en push naar main (adopties, geometrie, crate- en web-iconen, `cargo test -p openaec-icons --features all`); de B2-check staat apart en is rood, zie *Open punten*. AGENTS.md: Windows-regels gemarkeerd als machine van de maker, met Linux-varianten (`python3`, rustup, apt-pakketten voor PyGObject/librsvg). Git-regels ongewijzigd.
 - 2026-10-29 **Claude**: #12 React-componenten in `web/react/` (`@openaec/ui-react`, 30 componenten op de CSS van het webpakket, met toetsenbord en aria). `node scripts/check_react_components.mjs` (typecontrole en 90 HTML-controles, leent TypeScript/React/esbuild van de Tauri-sjabloon; `--demo` voor een demopagina) staat in AGENTS.md. Demo in het browserpaneel getest. Standaardsprite +5 iconen.
 
 - 2026-10-29 **Claude**: issues #41–#44 (tokens): `border` in Licht `#D6D2CC`, nieuwe rollen `border-subtle`, `text-muted` en `field` in alle vijf thema's; contrastcontrole uitgebreid (225 paren groen); Rust-velden, keuzelijsten en tabelrijen, `.oa-field`, `.oa-table td` en de Tauri-sjabloon gebruiken ze. Renders `native/` en `blueprint/` opnieuw. Alle controles en `cargo test --workspace` groen.
