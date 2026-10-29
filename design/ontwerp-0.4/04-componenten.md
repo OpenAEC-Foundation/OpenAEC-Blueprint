@@ -42,7 +42,7 @@ Alle kleuren, hoeken en lettergroottes komen uit [`tokens-0.4.json`](tokens-0.4.
 ### Invoerveld, keuzelijst en zoekveld
 
 - Hoogte 28 px, of 24 px in het eigenschappenraster.
-- Vlak `raised`, rand 1 px `border-strong`, hoek 6 px. Hulptekst in `text-secondary`.
+- Vlak `field`, rand 1 px `border-strong`, hoek 6 px. Hulptekst in `text-secondary`.
 - Hover geeft een rand in `text`.
 - Een fout geeft een rand van 2 px in `error`, met de melding in 11 px onder het veld.
 - De keuzelijst heeft een pijltje rechts. Het zoekveld heeft een vergrootglas links.
@@ -109,7 +109,7 @@ In de template waren de labels 9 en 10 px. Door het besluit over de kleinste let
 ### Tabel
 
 - Een kop van 28 px in mono-hoofdletters, met een lijn in `border-strong` eronder.
-- Regels van 28 px met een lijn in `border`. Geen zebrastrepen.
+- Regels van 28 px met een lijn in `border-subtle`. Geen zebrastrepen.
 - Codes en getallen in mono. Getallen en bedragen staan rechts uitgelijnd.
 - De gekozen regel krijgt de tint en een streep links.
 
@@ -181,6 +181,9 @@ Genomen door de gebruiker op 2026-10-16.
 | 5 | Lint en documenttabs volgen variant B: licht en vlak, naar de website. Tabs als tekst met een amberkleurige streep, Bestand als afgeronde knop, een actieve lintknop als icoontegel en documenttabs zonder kaders |
 | 6 | Meldingen in Donker en Blueprint hebben een zachte maar volle tint: de volle statuskleur voor 28% over het paneel (Z2). De tinten staan als `error-tint`, `success-tint`, `warning-tint` en `info-tint` in het tokenbestand |
 | 7 | De werkruimte volgt standaard het thema. In de instellingen staat een keuzelijst Werkruimte met Volgt thema, Altijd licht en Altijd donker. De waarden staan onder `workspace-setting` in het tokenbestand |
+| 8 | Rand en zachte lijn zijn twee rollen (issues #41 en #44, 29 oktober 2026). `border` is de rand tussen vlakken; in Licht wordt die `#D6D2CC`, het warme grijs uit Open Planner Studio (1,51 : 1 op wit). `border-subtle` is de lijn binnen een paneel, zoals tabelrijen en rasterlijnen: Licht `#EAEAEA`, Donker `#3D3D46`, Blueprint `#172942`; High contrast houdt de volle rand |
+| 9 | Gedempte tekst heeft een eigen rol `text-muted` tussen secundaire en uitgeschakelde tekst (issue #42): Licht `#6A6A70`, Donker `#A7A7A8`, Blueprint `#8A94A9`, High contrast `#A3A3A3` en `#575757`. Hij haalt 4,5 : 1 op frame, paneel, verhoogd vlak en veld, in High contrast 7 : 1 |
+| 10 | Invoervelden hebben een eigen vulling `field` (issue #43): Licht wit met de rand `border-strong`; in Donker (`#2C2C34`) en Blueprint (`#0B1626`) ligt het veld iets dieper dan het paneel in plaats van lichter |
 
 **Gevolgen van besluit 4 voor de tokens**
 

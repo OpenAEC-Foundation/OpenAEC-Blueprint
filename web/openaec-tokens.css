@@ -52,6 +52,7 @@
   --oa-frame: #F1EEEA;
   --oa-panel: #FFFFFF;
   --oa-raised: #FFFFFF;
+  --oa-field: #FFFFFF;
   --oa-workspace: #FFFFFF;
   --oa-workspace-text: #2A2A32;
   --oa-docbar: #F1EEEA;
@@ -59,9 +60,11 @@
   --oa-statusbar-text: #5F5F65;
   --oa-text: #2A2A32;
   --oa-text-secondary: #5F5F65;
+  --oa-text-muted: #6A6A70;
   --oa-text-disabled: #AAAAAD;
-  --oa-border: #EAEAEA;
+  --oa-border: #D6D2CC;
   --oa-border-strong: #7F7F84;
+  --oa-border-subtle: #EAEAEA;
   --oa-hover: #F2F2F3;
   --oa-pressed: #E5E5E6;
   --oa-accent: #D97706;
@@ -91,6 +94,7 @@
   --oa-frame: #2A2A32;
   --oa-panel: #33333C;
   --oa-raised: #3B3B45;
+  --oa-field: #2C2C34;
   --oa-workspace: #26262D;
   --oa-workspace-text: #EDEBE8;
   --oa-docbar: #2A2A32;
@@ -98,9 +102,11 @@
   --oa-statusbar-text: #BDBAB5;
   --oa-text: #EDEBE8;
   --oa-text-secondary: #BEBDBD;
+  --oa-text-muted: #A7A7A8;
   --oa-text-disabled: #7D7D81;
   --oa-border: #474750;
   --oa-border-strong: #878689;
+  --oa-border-subtle: #3D3D46;
   --oa-hover: #3E3E46;
   --oa-pressed: #494951;
   --oa-accent: #D97706;
@@ -130,6 +136,7 @@
   --oa-frame: #0A1320;
   --oa-panel: #0F1B2D;
   --oa-raised: #1A2C45;
+  --oa-field: #0B1626;
   --oa-workspace: #0A1320;
   --oa-workspace-text: #E0E7FF;
   --oa-docbar: #0A1320;
@@ -137,9 +144,11 @@
   --oa-statusbar-text: #9CA3AF;
   --oa-text: #E0E7FF;
   --oa-text-secondary: #B2BAD1;
+  --oa-text-muted: #8A94A9;
   --oa-text-disabled: #636D81;
   --oa-border: #1F3756;
   --oa-border-strong: #7189B0;
+  --oa-border-subtle: #172942;
   --oa-hover: #1C273A;
   --oa-pressed: #283346;
   --oa-accent: #60A5FA;
@@ -169,6 +178,7 @@
   --oa-frame: #000000;
   --oa-panel: #000000;
   --oa-raised: #000000;
+  --oa-field: #000000;
   --oa-workspace: #000000;
   --oa-workspace-text: #FFFFFF;
   --oa-docbar: #000000;
@@ -176,9 +186,11 @@
   --oa-statusbar-text: #FFFFFF;
   --oa-text: #FFFFFF;
   --oa-text-secondary: #FFFFFF;
+  --oa-text-muted: #A3A3A3;
   --oa-text-disabled: #A3A3A3;
   --oa-border: #FFFFFF;
   --oa-border-strong: #FFFFFF;
+  --oa-border-subtle: #FFFFFF;
   --oa-hover: #000000;
   --oa-pressed: #000000;
   --oa-accent: #F59E0B;
@@ -208,6 +220,7 @@
   --oa-frame: #FFFFFF;
   --oa-panel: #FFFFFF;
   --oa-raised: #FFFFFF;
+  --oa-field: #FFFFFF;
   --oa-workspace: #FFFFFF;
   --oa-workspace-text: #000000;
   --oa-docbar: #FFFFFF;
@@ -215,9 +228,11 @@
   --oa-statusbar-text: #000000;
   --oa-text: #000000;
   --oa-text-secondary: #000000;
+  --oa-text-muted: #575757;
   --oa-text-disabled: #737373;
   --oa-border: #000000;
   --oa-border-strong: #000000;
+  --oa-border-subtle: #000000;
   --oa-hover: #FFFFFF;
   --oa-pressed: #FFFFFF;
   --oa-accent: #92400E;

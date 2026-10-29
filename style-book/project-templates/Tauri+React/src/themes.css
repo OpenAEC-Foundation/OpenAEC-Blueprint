@@ -22,10 +22,10 @@
   --theme-docbar-bg: var(--oa-docbar);
   --theme-surface: var(--oa-panel);
   --theme-border: var(--oa-border);
-  --theme-border-subtle: var(--oa-border);
+  --theme-border-subtle: var(--oa-border-subtle);
   --theme-text: var(--oa-text);
   --theme-text-secondary: var(--oa-text-secondary);
-  --theme-text-muted: var(--oa-text-secondary);
+  --theme-text-muted: var(--oa-text-muted);
   --theme-text-faint: var(--oa-text-disabled);
   --theme-accent: var(--oa-accent);
   --theme-accent-hover: var(--oa-accent-hover);
@@ -96,7 +96,7 @@
   --theme-dialog-content-bg: var(--oa-raised);
   --theme-dialog-content-text: var(--oa-text);
   --theme-dialog-content-secondary: var(--oa-text-secondary);
-  --theme-dialog-input-bg: var(--oa-panel);
+  --theme-dialog-input-bg: var(--oa-field);
   --theme-dialog-input-border: var(--oa-border-strong);
   --theme-dialog-input-text: var(--oa-text);
   --theme-dialog-btn-bg: var(--oa-accent);

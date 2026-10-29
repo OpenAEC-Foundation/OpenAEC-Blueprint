@@ -104,6 +104,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 <!-- Onafgemaakt werk, vragen aan de gebruiker of bekende problemen. Verwijder een punt zodra het klaar is. -->
 
+- #35 iconen op 16 px (Claude, 2026-10-29): B2-revisie 107 staat op de branch `b2-revisie-107` (fea46a39), niet op `main`. 16 px op het pixelraster met lijnen van 1 px; scherpte gemiddeld 31,7 % naar 75,5 %, 871 scherper, 56 iets minder; review in `design/icon-set-b2/raster-review-107.html`. Nog niet gedaan op die branch: verliesvrije export, crate, websprites, sjabloon. Iemand anders neemt de iconen over; de gebruiker beslist of dit erin gaat.
+
 - Tauri-sjabloon (Claude, 2026-10-26): volgt nu ontwerp 0.4. Nog niet nagekeken: de Tauri-desktopbuild zelf (`npm run tauri dev`) en de syntaxkleuren in de IFC-weergave. `style-book/design/` met `generators/` is een tweede tokenbron (npm-pakketten en crates in `style-book/`); die volgt 0.4 nog niet en moet worden gelijkgetrokken of opgeheven.
 
 - Bijwerken via de installer (Claude, 2026-10-26): voorstel in `design/bijwerken-via-installer/README.md`. Stap 1 staat in `openaec-installer` op de branch `latest-json-updates`, commit `9bf0d36`; alleen Planner heeft een sleutel. Stap 2 (stil bijwerken in dezelfde soort, wachten op sluiten, herstarten) staat op dezelfde branch als commit `5eb213f`, beide gepusht op 2026-10-26; Planner-update getest, wachten en herstarten met een open app nog niet. Stappen 3 tot en met 6 nog te doen; ook als issues uitzetten (hoort bij #33). Aanvullingen op `design::update` (pid meegeven, `--check` bij een oud `updates.json`) pas na overleg met de sessie die die module maakt.
@@ -242,6 +244,10 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: issues #41–#44 (tokens): `border` in Licht `#D6D2CC`, nieuwe rollen `border-subtle`, `text-muted` en `field` in alle vijf thema's; contrastcontrole uitgebreid (225 paren groen); Rust-velden, keuzelijsten en tabelrijen, `.oa-field`, `.oa-table td` en de Tauri-sjabloon gebruiken ze. Renders `native/` en `blueprint/` opnieuw. Alle controles en `cargo test --workspace` groen.
+
+- 2026-10-29 **Claude**: #35 B2-revisie 107 gebouwd en op akkoord van de gebruiker op een eigen branch gezet (`b2-revisie-107`, gepusht), omdat iemand anders de iconen overneemt. `main` blijft op revisie 106.
+
 - 2026-10-29 **Claude**: Tauri-sjabloon: vaste Nederlandse teksten in het startpaneel via i18n (Wat is er nieuw, laden, foutmelding, geen releases, Start-tab; datum in de taal van de app). Het paneel haalde releases bij de oude repo `OpenAEC-style-book` (geen releases) en haalt ze nu bij OpenAEC-Blueprint; Markdown in releasenotes wordt platte tekst. Browserbeelden en README-beelden opnieuw gemaakt (ook de Rust-renders uit `68e13720` meegenomen). GitHub-beschrijving en website van de repo bijgewerkt. `tsc --noEmit`, `sync_tauri_template.py --check` en `build_readme_images.py --check` groen.
 - 2026-10-29 **Claude**: #36 gesloten. #27 tekstgrootte: `text-size-setting` in de tokens (Compact 11/11/12/15/20 rij 24, Standaard = 0.4, Groot 12/14/15/18/26 rij 32); generator schrijft `TextSize`/`TextSizes` en `data-oa-text`; `Look::with_text_size` en `look.text` in de hele bibliotheek (55 vaste maten vervangen, rijhoogtes mee); nieuw `design::display` bewaart thema, werkruimte, statusbalk en tekstgrootte in `weergave.json`; `blueprint` en de galerij hebben de instelling; webcomponenten volgen `--oa-row`; Tauri-sjabloon: Uiterlijk → Tekstgrootte. Alle controles, `cargo test --workspace` en `cargo package` groen; Tauri-sjabloon in het browserpaneel getest.
 

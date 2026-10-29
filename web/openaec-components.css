@@ -156,7 +156,7 @@
 .oa-field {
   height: var(--oa-row); padding: 0 8px; min-width: 0;
   border: 1px solid var(--oa-border-strong); border-radius: var(--oa-radius-medium);
-  background: var(--oa-raised); color: var(--oa-text);
+  background: var(--oa-field); color: var(--oa-text);
   font: var(--oa-weight-regular) var(--oa-size-body) / 1 var(--oa-font-body);
 }
 .oa-field--compact { height: calc(var(--oa-row) - 4px); }
@@ -322,7 +322,7 @@ select.oa-field { padding-right: 24px; appearance: none; background-image: linea
 /* Table: header 28 px with a strong line, rows 28 px with a line, no zebra stripes. */
 .oa-table { width: 100%; border-collapse: collapse; font-size: var(--oa-size-body); }
 .oa-table th { height: var(--oa-row); padding: 0 8px; text-align: left; border-bottom: 1px solid var(--oa-border-strong); font: var(--oa-size-label) var(--oa-font-mono); letter-spacing: var(--oa-letter-spacing-mono-label); text-transform: uppercase; color: var(--oa-text-secondary); font-weight: var(--oa-weight-regular); }
-.oa-table td { height: var(--oa-row); padding: 0 8px; border-bottom: 1px solid var(--oa-border); }
+.oa-table td { height: var(--oa-row); padding: 0 8px; border-bottom: 1px solid var(--oa-border-subtle); }
 .oa-table tbody tr:hover { background: var(--oa-hover); }
 .oa-table tr[aria-selected="true"] { background: var(--oa-selected); box-shadow: inset 3px 0 var(--oa-selected-bar); }
 .oa-table .oa-number { font-family: var(--oa-font-numbers); }

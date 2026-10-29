@@ -18,8 +18,9 @@ UI = "ui"       # component boundaries and focus: 3:1
 
 # (label, foreground, [backgrounds], kind)
 PAIRS = [
-    ("Tekst", "text", ["frame", "panel", "raised", "selected"], TEXT),
-    ("Secundaire tekst", "text-secondary", ["frame", "panel", "raised"], TEXT),
+    ("Tekst", "text", ["frame", "panel", "raised", "selected", "field"], TEXT),
+    ("Secundaire tekst", "text-secondary", ["frame", "panel", "raised", "field"], TEXT),
+    ("Gedempte tekst", "text-muted", ["frame", "panel", "raised", "field"], TEXT),
     ("Accenttekst", "accent-text", ["panel", "raised", "selected"], TEXT),
     ("Tekst op primaire knop", "text-on-accent", ["accent"], TEXT),
     ("Tekst op knop bij hover", "text-on-accent", ["accent-hover"], TEXT),
@@ -31,7 +32,7 @@ PAIRS = [
     ("Gelukt", "success", ["panel", "raised", "@tint"], TEXT),
     ("Waarschuwing", "warning", ["panel", "raised", "@tint"], TEXT),
     ("Info", "info", ["panel", "raised", "@tint"], TEXT),
-    ("Rand van invoerveld", "border-strong", ["panel", "frame", "raised"], UI),
+    ("Rand van invoerveld", "border-strong", ["panel", "frame", "raised", "field"], UI),
     ("Focusring", "focus", ["panel", "frame", "raised"], UI),
     ("Selectiestreep", "selected-bar", ["selected", "panel"], UI),
 ]
