@@ -1,0 +1,63 @@
+# Icon checks for every pull request and every push to main.
+#
+# The B2 icon set check is a job of its own: it fails on main today. Its
+# manifest pins SHA-256 hashes of scripts as the maker's Windows checkout has
+# them (CRLF), while Linux checks them out with LF. The hash of
+# design/ontwerp-0.4/tokens-0.4.json is also older than the changes of that file
+# on 2026-10-26 and 2026-10-29. The job stays red until the manifest or the
+# check is fixed.
+name: Icons
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: icons-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  checks:
+    name: Icon checks
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Adoptions, geometry, crate and web icons
+        run: |
+          python3 scripts/check_icon_adoptions.py
+          python3 scripts/check_icon_geometry.py
+          python3 scripts/generate_icon_crate.py --check
+          python3 scripts/build_web_icons.py --check
+
+  crate:
+    name: Icon crate tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: openaec-icons with every app
+        run: cargo test -p openaec-icons --features all --locked
+
+  b2:
+    name: B2 icon set (fails on main, stale hashes)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements-icon-b2.txt
+      - name: Shapely and fontTools
+        run: python -m pip install --target harmonization/sources/b2-runtime -r scripts/requirements-icon-b2.txt
+      - name: B2 icon set
+        run: python scripts/check_icon_set_b2.py
