@@ -89,7 +89,7 @@ The Tauri app comes first, then the same empty app in Rust. Both get a signed re
 | Colours, sizes and fonts (one source) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |
 | Web package: CSS, fonts and icons per app | [`web/`](web/) |
 | Design 0.4: foundation, components, tiles, layouts | [`design/ontwerp-0.4/`](design/ontwerp-0.4/README.md) |
-| README template and the README standard | [`templates/`](templates/) |
+| README template and the README standard; template and standard for the app page on open-aec.com | [`templates/`](templates/) |
 | Plan for harmonizing all apps | [`STAPPENPLAN.md`](STAPPENPLAN.md) |
 | Overview of the apps | [`APP-OVERZICHT.md`](APP-OVERZICHT.md) |
 | All reviews and studies so far | [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md) |
@@ -139,7 +139,7 @@ The Rust library is built on [iced](https://iced.rs/) and draws every screen its
 ## Contributing
 
 - **Report a problem or an idea** as an [issue](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues). Describe what you did, what you expected and what happened.
-- **Building a tool?** Start from the standard application and the [README template](templates/README-tool.md). The requirements for a README are in [`templates/README-standaard.md`](templates/README-standaard.md).
+- **Building a tool?** Start from the standard application and the [README template](templates/README-tool.md). The requirements for a README are in [`templates/README-standaard.md`](templates/README-standaard.md). Its page on open-aec.com starts from [`templates/productpagina.html`](templates/productpagina.html), with the requirements in [`templates/productpagina-standaard.md`](templates/productpagina-standaard.md). To convert an existing page, follow [`templates/productpagina-ombouwen.md`](templates/productpagina-ombouwen.md); the screenshots come from [`templates/productpagina-schermen/`](templates/productpagina-schermen/).
 - **Working in this repository**, alone or with an AI assistant: read [`AGENTS.md`](AGENTS.md) and start every task with [`NOTES.md`](NOTES.md).
 
 ## Quick start (developers)

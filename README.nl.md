@@ -89,7 +89,7 @@ Eerst komt de Tauri-app, daarna dezelfde lege app in Rust. Elk krijgt een ondert
 | Kleuren, maten en lettertypen (één bron) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |
 | Webpakket: CSS, fonts en iconen per app | [`web/`](web/) |
 | Ontwerp 0.4: fundament, componenten, tegels, layouts | [`design/ontwerp-0.4/`](design/ontwerp-0.4/README.md) |
-| README-sjabloon en de README-standaard | [`templates/`](templates/) |
+| README-sjabloon en de README-standaard; sjabloon en standaard voor de app-pagina op open-aec.com | [`templates/`](templates/) |
 | Plan voor de harmonisatie van alle apps | [`STAPPENPLAN.md`](STAPPENPLAN.md) |
 | Overzicht van de apps | [`APP-OVERZICHT.md`](APP-OVERZICHT.md) |
 | Alle reviews en onderzoeken tot nu toe | [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md) |
@@ -139,7 +139,7 @@ De Rust-bibliotheek is gebouwd op [iced](https://iced.rs/) en tekent elk scherm 
 ## Bijdragen
 
 - **Meld een probleem of idee** als [issue](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues). Beschrijf wat je deed, wat je verwachtte en wat er gebeurde.
-- **Bouw je een tool?** Begin met de standaardapplicatie en het [README-sjabloon](templates/README-tool.md). De eisen voor een README staan in [`templates/README-standaard.md`](templates/README-standaard.md).
+- **Bouw je een tool?** Begin met de standaardapplicatie en het [README-sjabloon](templates/README-tool.md). De eisen voor een README staan in [`templates/README-standaard.md`](templates/README-standaard.md). De pagina op open-aec.com begint met [`templates/productpagina.html`](templates/productpagina.html), met de eisen in [`templates/productpagina-standaard.md`](templates/productpagina-standaard.md). Een bestaande pagina ombouwen gaat met [`templates/productpagina-ombouwen.md`](templates/productpagina-ombouwen.md); de schermafbeeldingen komen uit [`templates/productpagina-schermen/`](templates/productpagina-schermen/).
 - **Werk je in deze repository**, alleen of met een AI-assistent: lees [`AGENTS.md`](AGENTS.md) en begin elke taak met [`NOTES.md`](NOTES.md).
 
 ## Snel beginnen (ontwikkelaars)

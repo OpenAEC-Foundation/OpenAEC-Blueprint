@@ -367,7 +367,7 @@ select.oa-field { padding-right: 24px; appearance: none; background-image: linea
 /* ---------- High contrast: no gradients, glows or lifts; borders get 2 px ---------- */
 
 [data-oa-theme^="high-contrast"] :is(.oa-site-button, .oa-site-card, .oa-pill, .oa-glass-card) { background: var(--oa-raised); box-shadow: none; transform: none; }
-[data-oa-theme^="high-contrast"] :is(.oa-site-button--primary, .oa-pill[aria-pressed="true"]) { background: var(--oa-accent); }
+[data-oa-theme^="high-contrast"] :is(.oa-site-button--primary:not(:disabled), .oa-pill[aria-pressed="true"]) { background: var(--oa-accent); }
 [data-oa-theme^="high-contrast"] :is(.oa-button, .oa-icon-button, .oa-tile, .oa-site-button, .oa-pill, .oa-round-icon):hover { border-color: var(--oa-accent); box-shadow: inset 0 0 0 1px var(--oa-accent); }
 [data-oa-theme^="high-contrast"] .oa-button--primary:hover { border-color: var(--oa-text); }
 [data-oa-theme^="high-contrast"] .oa-tile:active { box-shadow: inset 0 0 0 3px var(--oa-accent); background: var(--oa-raised); }
