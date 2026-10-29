@@ -1,0 +1,225 @@
+<!--
+Productpagina-sjabloon voor een OpenAEC-app op open-aec.com, naar de pagina van Open Planner Studio.
+De eisen staan in productpagina-standaard.md naast dit bestand.
+
+1. Kopieer dit bestand in de website-repository naar {{slug}}/index.html.
+2. Vervang alles tussen {{dubbele accolades}}: {{slug}} (paginanaam, bv. open-pdf-studio), {{repo}} (GitHub-repo,
+   bv. open-pdf-studio), {{Naam}}, {{web-url}} (browserversie) en de teksten. Houd de volgorde aan.
+   Laat een optioneel blok weg in plaats van het leeg te laten; haal dan ook de link uit de navigatie.
+3. Zet de Engelse, Franse, Turkse en Spaanse teksten in shared/translations/{{slug}}*.json
+   (zelfde data-i18n-sleutels).
+4. De kop van <head> (canonical, Open Graph, JSON-LD) en de gedeelde nav en footer neem je over van
+   een bestaande productpagina; scripts/build-nav-static.js en build-schema.js vullen ze aan.
+5. Draai daarna build-i18n-pages.js, build-release-notes-static.js en build-schema.js, en de controles.
+Haal dit commentaar weg.
+-->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{Naam}} — OpenAEC Foundation</title>
+  <meta name="description" content="{{Eén zin: wat het is en voor wie.}}">
+  <meta name="i18n-page" content="{{slug}}">
+  <link rel="canonical" href="https://open-aec.com/{{slug}}/">
+  <link rel="stylesheet" href="/shared/style.css?v={{versie}}">
+  <link rel="stylesheet" href="/shared/productpagina.css?v={{versie}}">
+</head>
+<body class="page-panels">
+  <div id="shared-nav"></div>
+  <script src="/shared/nav.js?v={{versie}}"></script>
+  <main id="main">
+
+  <!-- 1. Kop -->
+  <header class="product-head surface-spot" id="top">
+    <div class="product-head-inner">
+      <p class="pill-label" data-i18n="header.label">{{Categorie, bv. Bouwplanning}}</p>
+      <h1 data-i18n="header.title">Open <span class="accent">{{Woord}}</span> Studio</h1>
+      <p class="pp-tagline" data-i18n="header.tagline">{{Wat de bezoeker ermee wint, in één zin.}}</p>
+      <p class="lead" data-i18n="header.desc">{{Wat het is en hoe je het gebruikt, in één of twee zinnen.}}</p>
+      <div class="btn-group">
+        <a href="{{web-url}}" target="_blank" rel="noopener" class="btn btn-glow btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-play"/></svg><span data-i18n="header.demoBtn">Open in de browser</span></a>
+        <a href="#download" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-download"/></svg><span data-i18n="header.downloadBtn">Download</span></a>
+        <a href="https://github.com/OpenAEC-Foundation/{{repo}}" target="_blank" rel="noopener" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-external"/></svg><span data-i18n="header.sourceBtn">Broncode</span></a>
+      </div>
+      <ul class="chip-row pp-proof">
+        <li class="chip"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-check"/></svg><span data-i18n="header.proof1">{{Feit 1, bv. bestandsformaten}}</span></li>
+        <li class="chip"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-globe"/></svg><span data-i18n="header.proof2">{{Feit 2, bv. aantal talen}}</span></li>
+        <li class="chip"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chip"/></svg><span>Windows · macOS · Linux · Web</span></li>
+        <li class="chip"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-shield"/></svg><span data-i18n="header.proofFree">Gratis · {{licentie}}</span></li>
+      </ul>
+    </div>
+    <!-- Slider: eerst het openingsbeeld, dan dezelfde beelden als de hoogtepunten, in dezelfde volgorde
+         en met dezelfde alt-sleutels. Het gedrag (pijlen, bolletjes, vegen, pijltoetsen) zit in productpagina.js. -->
+    <div class="media-slider shot-overlap" data-pp-slider>
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="slider-slide"><img src="/shared/assets/screenshots/{{slug}}-hero.png" width="1920" height="1200" alt="{{Wat er te zien is.}}" data-i18n="header.heroAlt" data-i18n-attr="alt" fetchpriority="high"></div>
+          <div class="slider-slide"><img loading="lazy" decoding="async" src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp-1}}.png" width="1200" height="750" alt="{{Wat er te zien is.}}" data-i18n="hl.{{onderwerp-1}}.alt" data-i18n-attr="alt"></div>
+          <div class="slider-slide"><img loading="lazy" decoding="async" src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp-2}}.png" width="1200" height="750" alt="{{Wat er te zien is.}}" data-i18n="hl.{{onderwerp-2}}.alt" data-i18n-attr="alt"></div>
+          <!-- … een slide per hoogtepunt (vier tot zes) -->
+        </div>
+        <button type="button" class="slider-btn slider-prev" aria-label="Vorige afbeelding">&lsaquo;</button>
+        <button type="button" class="slider-btn slider-next" aria-label="Volgende afbeelding">&rsaquo;</button>
+      </div>
+      <div class="slider-dots"></div>
+    </div>
+  </header>
+
+  <!-- Optioneel: smalle melding onder de kop
+  <div class="after-overlap pp-notice-wrap">
+    <p class="pp-notice"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-users"/></svg><span data-i18n="notice.text">{{Melding}}</span> <a href="{{url}}" data-i18n="notice.link">{{Linktekst}}</a></p>
+  </div>
+  -->
+
+  <!-- 2. Plakkende navigatie: alleen de blokken die er zijn -->
+  <nav class="pp-subnav" aria-label="Op deze pagina" data-i18n="subnav.label" data-i18n-attr="aria-label">
+    <div class="pp-subnav-inner">
+      <a href="#features" data-i18n="subnav.features">Functies</a>
+      <a href="#download" data-i18n="subnav.download">Download</a>
+      <a href="#whats-new" data-i18n="subnav.whatsnew">Nieuw</a>
+      <a href="#faq" data-i18n="subnav.faq">Vragen</a>
+      <a href="#releases" data-i18n="subnav.releases">Releases</a>
+    </div>
+  </nav>
+
+  <!-- 3. Functies: tabs, hoogtepunten (beeld + tekst), tegels per onderwerp -->
+  <section class="section pp-anchor" id="features"><div class="container">
+    <div class="section-head"><p class="pill-label" data-i18n="features.label">Functies</p><h2 data-i18n="features.heading">{{Alles wat een … nodig heeft}}</h2><p data-i18n="features.sub">Begin bij de hoogtepunten of kies een onderwerp.</p></div>
+    <div class="pp-tabs" role="tablist" aria-label="Functies per onderwerp" data-i18n="features.tabsLabel" data-i18n-attr="aria-label" hidden>
+      <button type="button" class="pp-tab" role="tab" id="pp-tab-highlights" data-tab="highlights" aria-controls="pp-feature-panel" aria-selected="true" tabindex="0"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-star"/></svg><span data-i18n="tabs.highlights">Hoogtepunten</span> <span class="pp-tab-count" data-count></span></button>
+      <button type="button" class="pp-tab" role="tab" id="pp-tab-{{onderwerp1}}" data-tab="{{onderwerp1}}" aria-controls="pp-feature-panel" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-{{icoon}}"/></svg><span data-i18n="tabs.{{onderwerp1}}">{{Onderwerp 1}}</span> <span class="pp-tab-count" data-count></span></button>
+      <!-- 3 tot 5 onderwerpen -->
+      <button type="button" class="pp-tab" role="tab" id="pp-tab-all" data-tab="all" aria-controls="pp-feature-panel" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-grid"/></svg><span data-i18n="tabs.all">Alle functies</span> <span class="pp-tab-count" data-count></span></button>
+    </div>
+    <div id="pp-feature-panel" role="tabpanel" aria-labelledby="pp-tab-highlights">
+      <div class="pp-hl" data-panel="highlights">
+        <!-- 4 tot 6 rijen; beeld en tekst wisselen vanzelf links en rechts -->
+        <article class="pp-hl-row">
+          <figure class="pp-shot"><img src="/shared/assets/screenshots/{{slug}}-feat-{{onderwerp}}.png" width="1200" height="750" loading="lazy" decoding="async" alt="{{Wat er te zien is.}}"></figure>
+          <div class="pp-hl-text">
+            <p class="pp-kicker"><span class="pp-num">01</span> <span data-i18n="hl.{{id}}.kicker">{{Onderwerp}}</span></p>
+            <h3 data-i18n="hl.{{id}}.title">{{Het voordeel, als titel}}</h3>
+            <p data-i18n="hl.{{id}}.desc">{{Twee of drie zinnen.}}</p>
+            <a class="pp-more" href="{{handleiding of wiki}}" target="_blank" rel="noopener"><span data-i18n="features.learnMore">Meer lezen</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-arrow-right"/></svg></a>
+          </div>
+        </article>
+      </div>
+      <ul class="pp-tiles">
+        <!-- één tegel per functie; data-cats = de onderwerpen waar hij bij hoort (spaties ertussen) -->
+        <li class="pp-tile" data-cats="{{onderwerp1}}"><div class="pp-tile-body"><div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-{{icoon}}"/></svg></div><div><h3 data-i18n="tiles.{{id}}.title">{{Functie}}</h3><p data-i18n="tiles.{{id}}.desc">{{Eén of twee zinnen.}}</p></div></div></li>
+      </ul>
+    </div>
+  </div></section>
+
+  <!-- 4. Download (alleen met een desktop- of mobiele app). Zonder JavaScript werken alle links al. -->
+  <section class="section surface-dark panel pp-anchor" id="download" data-pp-repo="OpenAEC-Foundation/{{repo}}">
+    <div class="pp-dl">
+      <h2 data-i18n="download.title" data-pp-ver>Download v{{versie-app}}</h2>
+      <p class="pp-dl-lead" data-i18n="download.lead">Gratis en zonder account. De desktop-app meldt zelf wanneer er een nieuwe versie is.</p>
+      <div class="pp-dl-main" data-pp-main>
+        <a href="{{url windows-installer}}" class="btn btn-glow btn-lg" data-pp-dl="windows" data-pp-primary><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-download"/></svg><span data-i18n="download.primary">Download</span></a>
+        <a href="{{web-url}}" target="_blank" rel="noopener" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-play"/></svg><span data-i18n="download.browser">Open in de browser</span></a>
+      </div>
+      <p class="pp-dl-meta"><span data-os="windows" data-i18n="download.metaWindows">.exe-installer</span><span data-os="macos" data-i18n="download.metaMac" hidden>universele .dmg</span><span data-os="linux-appimage" data-i18n="download.metaLinux" hidden>AppImage</span><span data-os="android" data-i18n="download.metaAndroid" hidden>.apk voor Android</span> · <span data-pp-primary-size></span></p>
+      <p class="pp-dl-mobile" data-pp-mobile hidden data-i18n="download.mobileNote">{{Naam}} is gemaakt voor een groot scherm. Open hem op je computer, of probeer hem hier in de browser.</p>
+      <details class="pp-dl-other" data-pp-other>
+        <summary><span data-i18n="download.other">Andere platforms</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chevron-down"/></svg></summary>
+        <!-- Met een Android-app: class="pp-files pp-files-4" en de vierde kolom hieronder aanzetten. -->
+        <div class="pp-files">
+          <div class="pp-files-col"><h3>Windows</h3><ul>
+            <li><a href="{{url}}" data-pp-dl="windows" data-pp-item="windows"><span class="pp-file">.exe</span><span class="pp-file-size" data-pp-size="windows"></span></a></li>
+          </ul></div>
+          <div class="pp-files-col"><h3>macOS</h3><ul>
+            <li><a href="{{url}}" data-pp-dl="macos" data-pp-item="macos"><span class="pp-file">.dmg</span><span class="pp-file-size" data-pp-size="macos"></span></a></li>
+          </ul></div>
+          <div class="pp-files-col"><h3>Linux</h3><ul>
+            <li><a href="{{url}}" data-pp-dl="linux-deb" data-pp-item="linux-deb"><span class="pp-file">.deb</span><span class="pp-file-size" data-pp-size="linux-deb"></span></a></li>
+            <li><a href="{{url}}" data-pp-dl="linux-appimage" data-pp-item="linux-appimage"><span class="pp-file">AppImage</span><span class="pp-file-size" data-pp-size="linux-appimage"></span></a></li>
+          </ul></div>
+          <!-- Optioneel: <div class="pp-files-col"><h3>Android</h3><ul><li><a href="{{url}}" data-pp-dl="android" data-pp-item="android">…</a></li></ul></div> -->
+        </div>
+      </details>
+      <p class="pp-dl-note" data-i18n="download.browserNote">Liever niets installeren? De app draait ook <a href="{{web-url}}" target="_blank" rel="noopener">volledig in de browser</a>.</p>
+    </div>
+  </section>
+
+  <!-- 5. Nieuw in vX: bijwerken bij elke release met nieuwe functies -->
+  <section class="section surface-dark panel pp-anchor" id="whats-new">
+    <div class="panel-split">
+      <div class="panel-split-text">
+        <p class="pill-label" data-i18n="whatsnew.label">Nieuw in v{{versie-app}}</p>
+        <h2 data-i18n="whatsnew.title">{{Titel van deze release}}</h2>
+        <p data-i18n="whatsnew.desc">{{Korte samenvatting.}}</p>
+        <div class="btn-group">
+          <a href="{{url changelog}}" target="_blank" rel="noopener" class="btn btn-glow btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-document"/></svg><span data-i18n="whatsnew.ctaChangelog">Volledige changelog</span></a>
+          <a href="{{web-url}}" target="_blank" rel="noopener" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-play"/></svg><span data-i18n="whatsnew.ctaDemo">Probeer het in de browser</span></a>
+        </div>
+      </div>
+      <ul class="split-cards split-cards-2">
+        <!-- 4 tot 6 kaarten -->
+        <li class="split-card"><div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-{{icoon}}"/></svg></div><div><h4 data-i18n="whatsnew.items.{{id}}.title">{{Wijziging}}</h4><p data-i18n="whatsnew.items.{{id}}.desc">{{Wat het oplevert.}}</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Veelgestelde vragen: eerst de vaste vragen (zie de standaard), dan 2 tot 4 eigen vragen -->
+  <section class="section pp-anchor" id="faq"><div class="container">
+    <h2 data-i18n="faq.heading">Veelgestelde vragen</h2>
+    <div class="pp-faq-list">
+      <details class="pp-faq-item">
+        <summary><span data-i18n="faq.files.q">Welke bestanden kan ik openen?</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chevron-down"/></svg></summary>
+        <div class="pp-faq-a"><p data-i18n="faq.files.a">{{Antwoord.}}</p></div>
+      </details>
+      <details class="pp-faq-item">
+        <summary><span data-i18n="faq.install.q">Moet ik iets installeren?</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chevron-down"/></svg></summary>
+        <div class="pp-faq-a"><p data-i18n="faq.install.a">{{Antwoord.}}</p></div>
+      </details>
+      <details class="pp-faq-item">
+        <summary><span data-i18n="faq.price.q">Wat kost {{Naam}}?</span><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-chevron-down"/></svg></summary>
+        <div class="pp-faq-a"><p data-i18n="faq.price.a">{{Antwoord.}}</p></div>
+      </details>
+      <!-- verder: opslagformaat · systemen · bouwpraktijk · AI-assistent · eigen vragen -->
+    </div>
+  </div></section>
+
+  <!-- 7. Technologie: zes kaarten -->
+  <section class="section" id="technology"><div class="container">
+    <div class="section-head"><h2 data-i18n="tech.heading">Technologie</h2><p data-i18n="tech.sub">Voor wie wil weten hoe het gebouwd is.</p></div>
+    <div class="features features-compact">
+      <div class="feature"><div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-{{icoon}}"/></svg></div><div><h4 data-i18n="tech.{{id}}.title">{{Techniek}}</h4><p data-i18n="tech.{{id}}.desc">{{Wat het doet.}}</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- Extra's (optioneel), hier: handleiding, tabel bestandsformaten, MCP/API, video -->
+
+  <!-- 8. Release notes: de laatste drie open, de rest achter de knop -->
+  <section id="releases" class="pp-releases">
+    <div data-release-notes="{{repo}}" data-release-notes-timeline></div>
+    <p class="pp-rel-more">
+      <button type="button" class="btn btn-secondary" data-rel-toggle aria-expanded="false" hidden><span data-rel-show data-i18n="releases.showAll">Toon alle releases</span><span data-rel-hide hidden data-i18n="releases.showLess">Toon alleen de laatste drie</span></button>
+      <a href="https://github.com/OpenAEC-Foundation/{{repo}}/releases" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-external"/></svg><span data-i18n="releases.github">Alle releases op GitHub</span></a>
+      <a href="{{url changelog}}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-document"/></svg><span data-i18n="releases.changelog">Changelog</span></a>
+    </p>
+  </section>
+
+  <!-- 9. Slotvlak -->
+  <section class="section surface-spot panel">
+    <div class="panel-center">
+      <h2 data-i18n="header.title">Open <span class="accent">{{Woord}}</span> Studio</h2>
+      <div class="btn-group">
+        <a href="{{web-url}}" target="_blank" rel="noopener" class="btn btn-glow btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-play"/></svg><span data-i18n="header.demoBtn">Open in de browser</span></a>
+        <a href="#download" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-download"/></svg><span data-i18n="header.downloadBtn">Download</span></a>
+        <a href="https://github.com/OpenAEC-Foundation/{{repo}}" target="_blank" rel="noopener" class="btn btn-glass btn-lg"><svg class="ico" aria-hidden="true"><use href="/shared/icons.svg?v={{versie}}#i-external"/></svg><span data-i18n="header.sourceBtn">Broncode</span></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="/shared/release-notes.js?v={{versie}}"></script>
+  <script src="/shared/productpagina.js?v={{versie}}"></script>
+  </main>
+  <div id="shared-footer"></div>
+  <script src="/shared/feedback.js?v={{versie}}" defer></script>
+  <script src="/shared/i18n.js?v={{versie}}"></script>
+</body>
+</html>
