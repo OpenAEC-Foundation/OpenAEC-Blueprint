@@ -62,6 +62,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
+- **Iconenrichtlijn en tab Planning wachten op Ethan, 2026-10-29**: PR #59 (branch `iconen/planning`) blijft open tot Ethan de tab Planning in Open Planner Studio heeft gezien; de PR verandert ook gedeelde iconen (zoom). Open Planner Studio staat op zijn eigen branch `iconen/planning` (niet op main). Na akkoord: #59 mergen en OPS op de laatste Blueprint-commit zetten. Vervolgpunten in `knownbugs.md`.
+
 - **Twee keer B2-revisie 107, 2026-10-29**: de branch `iconen/planning` (PR #59, iconenrichtlijn en tab Planning) en de branch `b2-revisie-107` (#35, 16 px op het pixelraster met lijnen van 1 px) heten allebei revisie 107. Wie als tweede naar main gaat, bouwt opnieuw als revisie 108. `b2-revisie-107` verandert de lijndikte op 16 px; volgens de iconenrichtlijn ([`docs/iconen.md`](docs/iconen.md)) beslist de eigenaar daar eerst over. PR #59 lost ook de rode B2-check op: scripthashes zijn ongevoelig voor regeleindes en de tokens-hash is bijgewerkt.
 
 - **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
@@ -248,6 +250,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: iconenrichtlijn (`docs/iconen.md`), skill `iconen-ontwerpen`, check `check_icon_guideline.py` in de CI, en de iconen van de tab Planning van Open Planner Studio opnieuw getekend (27 herzien, 5 nieuwe ids, revisie 107, 950 iconen). Ontwerpcontrole (Claude Opus 5.5) verwerkt; reviews door Sol (Codex `gpt-6.1-sol`), de stand staat in PR #59. PR #59 open, wacht op Ethan.
 - 2026-10-29 **Claude**: OpenAEC Installer v0.2.5 uitgebracht (openaec-installer, op verzoek van de gebruiker). Stap 3 van bijwerken via de installer gebouwd (`--update`, `--check`, één installer tegelijk via een named mutex, `updates.json` in het formaat van `design::update`), fonts uit het fontpakket (#30). PR #17 (stap 1 tot en met 3) en PR #11 (ondertekening Windows en macOS) gemerged; release ondertekend en gecontroleerd. Getest met een open Planner: tweede start geeft `--update` door, installer wacht tot sluiten, stil 2026.10.0 naar 2026.43.0, herstart door de installer. #30 en #31 bijgewerkt.
 
 - 2026-10-29 **Claude**: `.github/workflows/icons.yml`: iconenchecks bij elke PR en push naar main (adopties, geometrie, crate- en web-iconen, `cargo test -p openaec-icons --features all`); de B2-check staat apart en is rood, zie *Open punten*. AGENTS.md: Windows-regels gemarkeerd als machine van de maker, met Linux-varianten (`python3`, rustup, apt-pakketten voor PyGObject/librsvg). Git-regels ongewijzigd.

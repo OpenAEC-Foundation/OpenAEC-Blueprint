@@ -12,7 +12,7 @@ Dat deel is informatie, geen fout: de rest van de set wordt per tab herzien.
 
 Negatieve controle: de oude B2-tekeningen in design/iconen/voorbeelden/fout/16/ moeten op de bedoelde regel
 falen, met de regels van hun echte groep. Daarnaast moet per familie een verschoven kopie van het eerste icoon
-falen: binnen een familie telt alleen vormverschil na uitlijnen, geen verschil in plaats.
+falen: binnen een familie telt alleen vormverschil na uitlijnen, geen verschil in plaats of maat.
 
 Runtime: shapely (scripts/requirements-icon-b2.txt, in harmonization/sources/b2-runtime).
 """
@@ -55,11 +55,12 @@ MAX_INK = 0.36         # deel van het vlak van 16 x 16 dat inkt is
 MIN_CRISP = 0.70       # scherpte: som(dekking²)/som(dekking); 1 is helemaal scherp
 MAX_SIMILAR = 0.55     # gelijkenis (vervaagde overlap) tussen twee iconen in een groep
 MAX_SHARED = 0.72      # deel van de inkt van het kleinere icoon dat precies op het andere valt
-MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom −), na uitlijnen: niet alleen kleur of plaats
-ALIGN_RANGE = 2.0      # px: zoveel mag een familielid verschoven liggen zonder dat het als andere vorm telt
-ALIGN_STEPS = (0.25, 0.05)  # px: eerst grof uitlijnen, dan fijn rond de beste plek
-ALIGN_TOLERANCE = 0.05 # px: rest na het fijne uitlijnen telt niet als vormverschil
-COPY_SHIFTS = ((0.1, 0.1), (0.6, -0.4), (1.5, 1.0))  # negatieve kopieproef per familie
+MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom −), na uitlijnen: niet kleur, plaats of maat
+ALIGN_FINE = 0.25      # px: na het leggen op hetzelfde kader nog zoveel fijn bijschuiven
+ALIGN_STEP = 0.05      # px: stap van het fijne bijschuiven
+ALIGN_TOLERANCE = 0.05 # px: rest na uitlijnen telt niet als vormverschil
+# Negatieve kopieproef per familie: (verschuiving x, y in px, schaal rond het midden). Elke kopie is dezelfde vorm.
+COPY_PROOFS = ((0.1, 0.1, 1.0), (0.6, -0.4, 1.0), (2.5, 0.0, 1.0), (0.0, 0.0, 0.98), (0.3, -0.2, 1.03))
 
 
 def layer(path_data: str):
@@ -165,43 +166,40 @@ def detail_errors(m) -> list[str]:
 
 
 def shape_difference(a, b) -> float:
-    """Vormverschil in px² na de beste uitlijning. Een verschuiving tot ALIGN_RANGE telt niet: een verschoven kopie
-    is dezelfde vorm. Wat na uitlijnen binnen ALIGN_TOLERANCE van de andere vorm ligt, telt ook niet."""
+    """Vormverschil in px² na uitlijnen. Eerst gaat b precies op het omhullende kader van a: een verschoven of iets
+    geschaalde kopie is dan dezelfde vorm. Daarna schuift b nog tot ALIGN_FINE bij. Wat binnen ALIGN_TOLERANCE van de
+    andere vorm ligt, telt niet. Spiegelen telt wel: bij Inspringen en Uitspringen is dat juist het verschil."""
+    ax0, ay0, ax1, ay1 = a.bounds
+    bx0, by0, bx1, by1 = b.bounds
+    sx, sy = (ax1 - ax0) / (bx1 - bx0), (ay1 - ay0) / (by1 - by0)
+    b = affinity.affine_transform(b, [sx, 0, 0, sy, ax0 - bx0 * sx, ay0 - by0 * sy])
     a_wide, b_wide = a.buffer(ALIGN_TOLERANCE), b.buffer(ALIGN_TOLERANCE)
-
-    def diff(dx, dy):
-        return (a.difference(affinity.translate(b_wide, dx, dy)).area
-                + affinity.translate(b, dx, dy).difference(a_wide).area)
-
-    best, (cx, cy), reach = float('inf'), (0.0, 0.0), ALIGN_RANGE
-    for step in ALIGN_STEPS:
-        n = int(round(reach / step))
-        best, cx, cy = min((diff(cx + i * step, cy + j * step), cx + i * step, cy + j * step)
-                           for i in range(-n, n + 1) for j in range(-n, n + 1))
-        reach = step
-    return best
+    n = int(round(ALIGN_FINE / ALIGN_STEP))
+    return min(a.difference(affinity.translate(b_wide, i * ALIGN_STEP, j * ALIGN_STEP)).area
+               + affinity.translate(b, i * ALIGN_STEP, j * ALIGN_STEP).difference(a_wide).area
+               for i in range(-n, n + 1) for j in range(-n, n + 1))
 
 
 def pair(a, b):
-    """Gelijkenis van twee iconen op 16 px: vervaagde overlap, gedeelde inkt en vormverschil."""
+    """Gelijkenis van twee iconen op 16 px: vervaagde overlap en gedeelde inkt."""
     ba, bb = blur(a['_grid']), blur(b['_grid'])
     similar = float(np.minimum(ba, bb).sum() / np.maximum(ba, bb).sum())
     shared_area = a['_ink'].intersection(b['_ink']).area
     shared = shared_area / min(a['_ink'].area, b['_ink'].area)
-    diff = shape_difference(a['_ink'], b['_ink'])
-    return round(similar, 3), round(shared, 3), round(diff, 2)
+    return round(similar, 3), round(shared, 3)
 
 
 def group_errors(group, metrics) -> list[str]:
     errors = []
     families = [set(f) for f in group.get('families', [])]
     for x, y in itertools.combinations(group['ids'], 2):
-        similar, shared, diff = pair(metrics[x], metrics[y])
         if any({x, y} <= f for f in families):
+            diff = round(shape_difference(metrics[x]['_ink'], metrics[y]['_ink']), 2)
             if diff < MIN_FAMILY_DIFF:
                 errors.append(f'{x} en {y}: familie, maar het vormverschil na uitlijnen is {diff} px² (minimaal {MIN_FAMILY_DIFF}); '
                               'het verschil mag niet alleen kleur of een detail zijn')
             continue
+        similar, shared = pair(metrics[x], metrics[y])
         if similar > MAX_SIMILAR:
             errors.append(f'{x} en {y} lijken te veel op elkaar: gelijkenis {similar} (maximaal {MAX_SIMILAR})')
         if shared > MAX_SHARED:
@@ -258,17 +256,19 @@ def main():
             failures.append(f"negatieve controle '{control['naam']}' vangt niets meer; de check is te los geworden")
         controls += 1
 
-    # Negatieve kopieproef: een verschoven kopie van een familielid is dezelfde vorm en moet in de echte familie falen.
+    # Negatieve kopieproef: een verschoven of iets geschaalde kopie van een familielid is dezelfde vorm en moet in de
+    # echte familie falen.
     for group in groups['groepen']:
         for family in group.get('families', []):
             original = metrics[family[0]]
-            for dx, dy in COPY_SHIFTS:
-                copy = measure_ink(affinity.translate(original['_ink'], dx, dy), Polygon(), Polygon())
+            for dx, dy, scale in COPY_PROOFS:
+                ink = affinity.translate(affinity.scale(original['_ink'], scale, scale, origin=(8, 8)), dx, dy)
+                copy = measure_ink(ink, Polygon(), Polygon())
                 caught = group_errors({'ids': [family[0], 'kopie'], 'families': [[family[0], 'kopie']]},
                                       {family[0]: original, 'kopie': copy})
                 if not caught:
-                    failures.append(f"familie {family}: een kopie van {family[0]}, {dx}/{dy} px verschoven, komt door de "
-                                    'familiecontrole; die meet plaats in plaats van vorm')
+                    failures.append(f"familie {family}: een kopie van {family[0]} ({dx}/{dy} px verschoven, {scale:g} x) "
+                                    'komt door de familiecontrole; die meet plaats of maat in plaats van vorm')
                 controls += 1
 
     summary = {'status': 'geslaagd' if not failures else 'gefaald',
