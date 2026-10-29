@@ -1,85 +1,154 @@
+**English** · [Nederlands](README.nl.md)
+
+<div align="center">
+
 # OpenAEC Blueprint
 
-De blauwdruk voor elke OpenAEC-tool. Wie een tool bouwt of bijwerkt, begint hier: de standaardapplicatie, de gedeelde vormgeving en iconen, het versieschema, een voorbeeld-README, de afspraken voor onder meer MCP en IFCX, en het plan voor het hele ecosysteem.
+**The blueprint for every OpenAEC tool. One standard application in Tauri, Rust and the browser, with shared design tokens, fonts, 945 icons, a version scheme and signed releases.**
 
-**Online bekijken:** de lege standaardapplicatie met 3D-weergave staat op <https://openaec-foundation.github.io/OpenAEC-Blueprint/> ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)).
+[![Release](https://img.shields.io/github/v/release/OpenAEC-Foundation/OpenAEC-Blueprint?label=release&color=D97706)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases/latest)
+[![Release workflow](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml/badge.svg)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml)
+[![Icons](https://img.shields.io/badge/icons-945-informational)](crates/openaec-icons/)
+[![Themes](https://img.shields.io/badge/themes-5-informational)](design/ontwerp-0.4/tokens-0.4.json)
+[![License](https://img.shields.io/badge/license-LGPL--3.0%20%C2%B7%20CC%20BY--SA%204.0-blue)](#license)
 
-![De standaardapplicatie in Rust, thema Licht](design/ontwerp-0.4/native/scherm-light.png)
+### [Try in your browser](https://openaec-foundation.github.io/OpenAEC-Blueprint/) &nbsp;·&nbsp; [Download](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases/latest) &nbsp;·&nbsp; [README template](templates/README-tool.md)
 
-*De standaardapplicatie in Rust: lint met Bestand-menu, structuurboom, documenttabs, tabel, eigenschappen en statusbalk. De inhoud is voorbeelddata.*
+![The standard application in the browser: the 3D view with the view cube, theme Dark](docs/images/readme/hero-3d.png)
 
-## De standaardapplicatie
+</div>
 
-Elke OpenAEC-tool heeft dezelfde schil: titelbalk, lint of werkstroom, documenttabs, zijpanelen, statusbalk, instellingen en vijf thema's. Die schil is er in twee uitvoeringen.
+OpenAEC Blueprint is where every OpenAEC tool starts. It holds the empty standard application that each tool builds on, the shared look (colours, sizes, fonts and icons), the version scheme and the release workflow that signs everything. A tool that follows the blueprint looks and behaves like the other OpenAEC tools from its first build.
 
-| Uitvoering | Staat nu | Starten |
-| --- | --- | --- |
-| **Tauri** (Tauri 2 + React + TypeScript) | In [`style-book/project-templates/Tauri+React`](style-book/project-templates/Tauri+React/) | zie de README van de template |
-| **Online** (webbuild van de Tauri-applicatie) | [`web/online/`](web/online/), gepubliceerd op GitHub Pages | [openaec-foundation.github.io/OpenAEC-Blueprint](https://openaec-foundation.github.io/OpenAEC-Blueprint/), lokaal `node web/online/build.mjs --serve` |
-| **Rust** (iced, bibliotheek 0.4) | In deze repository: de lege standaardapplicatie `blueprint`, en de galerij `ui04` met voorbeeldschermen | `cargo run --bin blueprint` en `cargo run --release --features gpu --bin ui04` |
+The standard application comes in three forms: a Tauri app with React, a native Rust app, and the Tauri app as a web page that needs no installation.
 
-**De standaardapplicatie in Rust** ([`src/bin/blueprint.rs`](src/bin/blueprint.rs), #37 stap 4) is een lege app waarop elke Rust-tool wordt gebouwd. Een tool neemt dit bestand over en zet zijn eigen werk in de werkruimte en zijn opdrachten in `commands()`.
-- **Schil.** Titelbalk met snelle acties, lint met Bestand, documenttabs, verkenner, eigenschappen, statusbalk, en instellingen met thema's en eigen sneltoetsen.
-- **Gedrag uit bibliotheek 0.4.** Opslaan en sluiten via het sluitplan, ook bij Alt+F4. Ongedaan maken per document. De bijwerkmelding van de installer. Toegankelijke namen voor elk onderdeel.
-- **Afbeeldingen.** [`design/blueprint/`](design/blueprint/) heeft renders in vier thema's; maak ze opnieuw met `cargo test --bin blueprint -- --ignored`.
+## Try it
 
-De galerij `ui04` toont een lint-app (startscherm, Bestand-scherm, instellingen) en een werkstroom-app (zijbalk of stappen). Andere weergaven: `ui04 -- installer`, `ui04 -- iconen` en `ui04 -- letterproef`.
+**[Open the browser version](https://openaec-foundation.github.io/OpenAEC-Blueprint/)**. It is the Tauri standard application, built as a web app: ribbon, document tabs, side panels, settings with five themes, and a 3D view with a view cube. Your theme stays after a reload.
 
-**Volgorde ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)):** eerst de Tauri-applicatie helemaal goed, daarna dezelfde lege applicatie in Rust. Elk krijgt een ondertekende release. De online versie ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)) wordt na elke release opnieuw gepubliceerd, zie [`web/online/`](web/online/README.md).
+The Rust version runs on your own computer: download it below, or build it with `cargo run --bin blueprint`.
 
-## Wat hier staat
+## Download
 
-| Onderdeel | Waar |
-| --- | --- |
-| UI-bibliotheek voor Rust | [`crates/openaec-ui`](crates/openaec-ui/) |
-| Alle 945 iconen (16 en 24 px), per app te kiezen | [`crates/openaec-icons`](crates/openaec-icons/) |
-| C-bibliotheek met tokens en iconen voor elke taal (.dll, .dylib, .so) | [`crates/openaec-blueprint-sdk`](crates/openaec-blueprint-sdk/) |
-| Kleuren, maten en lettertypen (één bron) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |
-| Webpakket: CSS, fonts en iconen per app | [`web/`](web/) |
-| Ontwerp 0.4: fundament, componenten, tegels, layouts | [`design/ontwerp-0.4/`](design/ontwerp-0.4/README.md) |
-| Voorbeeld-README voor een tool | [`templates/README-tool.md`](templates/README-tool.md) |
-| Plan voor de harmonisatie van alle apps | [`STAPPENPLAN.md`](STAPPENPLAN.md) |
-| Overzicht van de apps | [`APP-OVERZICHT.md`](APP-OVERZICHT.md) |
-| Alle reviews en onderzoeken tot nu toe | [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md) |
+Every release is on the [releases page](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases/latest).
 
-Nog toe te voegen: de afspraken voor MCP-servers en IFCX, en het overkoepelende ecosysteemplan met planning. Codeafspraken en de gedeelde issue-workflow blijven in [`conventions`](https://github.com/OpenAEC-Foundation/conventions), omdat andere repositories daar rechtstreeks naar verwijzen.
+| Platform | Standard application | Library for other languages |
+|----------|----------------------|-----------------------------|
+| **Windows** | `.exe` installer (x64), `.zip` | `.dll` in `openaec-blueprint-sdk_…_windows-x64.zip` |
+| **macOS** | `.dmg` (universal: Apple silicon and Intel) | `.dylib` in `openaec-blueprint-sdk_…_macos-universal.tar.gz` |
+| **Linux** | `.deb`, `.rpm`, `.AppImage`, `.tar.gz` | `.so` in `openaec-blueprint-sdk_…_linux-x64.tar.gz` |
 
-## Versienummers
+Every file is signed: Windows with Authenticode, macOS with a Developer ID and notarized by Apple, Linux with the OpenAEC OpenPGP key and a build attestation. `SHA256SUMS` checks all files at once.
 
-Alle OpenAEC-tools gebruiken **jaar.week**: `JJJJ.W.N`. Dat is het jaar, het ISO-weeknummer zonder voorloopnul en een volgnummer binnen de week dat bij 0 begint.
+## Why use it?
 
-| Voorbeeld | Betekenis |
-| --- | --- |
-| `2026.44.0` | eerste release in week 44 van 2026 |
-| `2026.44.1` | tweede release in dezelfde week |
-| `2026.45.0` | eerste release van de week erna |
-| `v2026.44.0` | de bijbehorende Git-tag en GitHub-release |
+- **One look for all tools.** Colours, sizes and fonts come from one file, [`tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json). Rust, CSS and the C library are generated from it.
+- **Start with a working shell.** Title bar, ribbon or workflow, document tabs, side panels, status bar and settings are already there. A tool adds its own work in the middle.
+- **Behaviour you do not have to rebuild.** Save and close through one close plan (also on Alt+F4), undo per document, the update notice, your own keyboard shortcuts and an accessible name for every control.
+- **Five themes.** Light, Dark, Blueprint, High contrast dark and High contrast light, in every form of the application.
+- **945 icons** at 16 and 24 px, one style for every tool. A tool picks only the icons it uses.
+- **Any language.** A C library (`.dll`, `.dylib`, `.so`) gives tokens and icons to tools that are not written in Rust.
+- **Releases that are checked and signed.** One tag starts the checks, the builds for three systems, the signatures and the release.
 
-Punten, geen streepje: `2026-44` is in npm, Cargo en Tauri geen geldige versie. Zie [#1](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/1). Alle crates in deze repository staan op hetzelfde nummer; de releaseworkflow weigert een tag die daar niet mee overeenkomt. `python scripts/version.py --check` controleert dat lokaal, `--set 2026.44.1` zet een nummer in alle crates, en `--next` kiest het volgende nummer voor vandaag.
+## Screenshots
 
-## Releases en ondertekening
+| | |
+|---|---|
+| ![Rust standard application](docs/images/readme/rust-app.png) **The Rust standard application** | ![Four themes](docs/images/readme/themes.png) **Light, Dark, Blueprint and High contrast dark** |
+| ![Tauri standard application](docs/images/readme/tauri-app.png) **The Tauri standard application** | ![Settings in the Blueprint theme](docs/images/readme/settings.png) **Settings, theme Blueprint** |
+| ![Workflow app](docs/images/readme/workflow-app.png) **A workflow app with steps in a side bar** | ![Icons](docs/images/readme/icons.png) **The icon browser with all 945 icons** |
+| ![Installer](docs/images/readme/installer.png) **The OpenAEC Installer in the same style** | |
 
-Een OpenAEC-release bevat de applicatie voor Windows, macOS en Linux, een bibliotheek (.dll, .dylib, .so), `SHA256SUMS` en releasenotes. Alles wordt pas gepubliceerd als de tests slagen, en alles wordt ondertekend: Windows met Authenticode, macOS met een Developer ID en notarisatie door Apple, Linux met de OpenAEC OpenPGP-sleutel en een build-attestatie. Een tag `vJJJJ.W.N` start [`.github/workflows/release.yml`](.github/workflows/release.yml): eerst alle controles en tests, dan de builds en handtekeningen per platform, dan de release. Ontbreekt een sleutel, dan staat dat per bestand in de releasenotes en wordt het een pre-release. De verpakking staat in [`packaging/`](packaging/). Open Pointcloud Studio was het voorbeeld; zie ook [#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37).
+The Rust screens are in Dutch, the language of the example data. The browser screens are in English.
 
-## Bouwen en controleren
+## The standard application
+
+| Form | Where | Start |
+|------|-------|-------|
+| **Tauri** (Tauri 2, React, TypeScript) | [`style-book/project-templates/Tauri+React`](style-book/project-templates/Tauri+React/) | see the README of the template |
+| **Online** (web build of the Tauri app) | [`web/online/`](web/online/README.md), published on GitHub Pages | [openaec-foundation.github.io/OpenAEC-Blueprint](https://openaec-foundation.github.io/OpenAEC-Blueprint/), or locally `node web/online/build.mjs --serve` |
+| **Rust** (iced, library 0.4) | [`src/bin/blueprint.rs`](src/bin/blueprint.rs) | `cargo run --bin blueprint` |
+
+A Rust tool copies `blueprint.rs`, puts its own work in the workspace and its commands in `commands()`. The gallery `ui04` shows more example screens: a ribbon app, a workflow app, the installer, all icons and a type specimen (`cargo run --release --features gpu --bin ui04`).
+
+The Tauri app comes first, then the same empty app in Rust. Both get a signed release ([#37](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/37)). The online version ([#36](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/36)) is published again after every release.
+
+## What is in this repository
+
+| Part | Where |
+|------|-------|
+| UI library for Rust | [`crates/openaec-ui`](crates/openaec-ui/) |
+| All 945 icons (16 and 24 px), per app to choose | [`crates/openaec-icons`](crates/openaec-icons/) |
+| C library with tokens and icons for any language | [`crates/openaec-blueprint-sdk`](crates/openaec-blueprint-sdk/) |
+| Colours, sizes and fonts (one source) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |
+| Web package: CSS, fonts and icons per app | [`web/`](web/) |
+| Design 0.4: foundation, components, tiles, layouts | [`design/ontwerp-0.4/`](design/ontwerp-0.4/README.md) |
+| README template and the README standard | [`templates/`](templates/) |
+| Plan for harmonizing all apps | [`STAPPENPLAN.md`](STAPPENPLAN.md) |
+| Overview of the apps | [`APP-OVERZICHT.md`](APP-OVERZICHT.md) |
+| All reviews and studies so far | [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md) |
+
+The documents behind these links are in Dutch. Code conventions and the shared issue workflow stay in [`conventions`](https://github.com/OpenAEC-Foundation/conventions), because other repositories call them from there.
+
+## Versions
+
+All OpenAEC tools use **year.week**: `YYYY.W.N`. That is the year, the ISO week without a leading zero, and a number within the week that starts at 0.
+
+| Example | Meaning |
+|---------|---------|
+| `2026.44.0` | first release in week 44 of 2026 |
+| `2026.44.1` | second release in the same week |
+| `2026.45.0` | first release of the next week |
+| `v2026.44.0` | the matching Git tag and GitHub release |
+
+Dots, not a dash: `2026-44` is not a valid version in npm, Cargo or Tauri. See [#1](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/1). All crates in this repository carry the same number, and the release workflow refuses a tag that does not match. `python scripts/version.py --check` checks this locally, `--set 2026.44.1` sets a number in every crate, and `--next` picks the next number for today.
+
+## Releases and signing
+
+A tag `vYYYY.W.N` starts [`release.yml`](.github/workflows/release.yml): first all repository checks and tests, then the builds and signatures per platform, then the release with release notes. If a key is missing, the release notes say so per file and the release becomes a pre-release. Packaging is in [`packaging/`](packaging/). Open Pointcloud Studio was the example.
+
+## Testing and reliability
+
+- **Eleven repository checks** run before every release: version, layout metrics, icon adoptions, portable UI, crate package, tokens, generated tokens, icon crate, web components, font package and web icons. They are the first step of [`release.yml`](.github/workflows/release.yml).
+- **Rust tests** for the whole workspace, and once more for the icon crate with all icons switched on.
+- **Generated files are checked, not trusted.** Tokens, icons, web components, fonts, the Tauri template and these README images each have a script with `--check` that fails when the committed file differs from what the source would give.
+- **Screens are rendered by the tests.** `cargo test --bin blueprint -- --ignored` writes the screens of the Rust app in four themes to [`design/blueprint/`](design/blueprint/). `node web/online/screenshots.mjs` takes the screens of the browser version.
+
+The full list of checks is in [`AGENTS.md`](AGENTS.md#controles).
+
+## Current limitations
+
+- **The checks run on release, not on every pull request.** There is no separate CI workflow yet.
+- **The licence of the B2 icons is still open** ([#15](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/15)). Check it before you ship the icons in another product.
+- **Agreements for MCP servers and IFCX are not written yet**, and neither is the ecosystem plan with a schedule.
+- **The online version cannot make or save reports.** That needs the Rust side of the desktop app.
+- **Some names still say Style Repo.** The repository was called OpenAEC-Style-Repo until 26 October 2026; the binary `style_repo` and some texts have not been renamed. GitHub forwards old links.
+
+Found something? [Open an issue](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues).
+
+## Under the hood
+
+The Rust library is built on [iced](https://iced.rs/) and draws every screen itself, with the same tokens as the web package. The Tauri template uses Tauri 2, React and TypeScript, with Three.js for the 3D view. The online version builds that template unchanged with Vite and replaces only what works differently in a browser: settings in `localStorage`, links in a new tab. The C library is a `cdylib` and `staticlib` from [`openaec-blueprint-sdk`](crates/openaec-blueprint-sdk/), with a header and a C example.
+
+## Contributing
+
+- **Report a problem or an idea** as an [issue](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues). Describe what you did, what you expected and what happened.
+- **Building a tool?** Start from the standard application and the [README template](templates/README-tool.md). The requirements for a README are in [`templates/README-standaard.md`](templates/README-standaard.md).
+- **Working in this repository**, alone or with an AI assistant: read [`AGENTS.md`](AGENTS.md) and start every task with [`NOTES.md`](NOTES.md).
+
+## Quick start (developers)
 
 ```bash
+git clone https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint.git
+cd OpenAEC-Blueprint
 cargo run --bin blueprint
-cargo run --bin style_repo
-cargo run --release --features gpu --bin ui04
 cargo test
 ```
 
-De volledige lijst met controles staat in [`AGENTS.md`](AGENTS.md#controles). Draai na een wijziging de controles die bij dat deel horen.
+Rust with the MSVC toolchain on Windows. The scripts in `scripts/` need Python 3. The Tauri template and the online version need Node 22 or later.
 
-## Samenwerken
+OpenAEC Blueprint is part of the [OpenAEC Foundation](https://github.com/OpenAEC-Foundation) family of apps.
 
-- Afspraken voor mensen en AI-assistenten: [`AGENTS.md`](AGENTS.md). Begin elke taak met [`NOTES.md`](NOTES.md).
-- Open werk staat als [issue op GitHub](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues).
-- Pushen gaat via GitHub Desktop: **File → Add Local Repository**, kies deze map, en daarna **Push origin**.
+## License
 
-Tot 26 oktober 2026 heette deze repository **OpenAEC-Style-Repo**. GitHub stuurt oude links door.
-
-## Licentie
-
-De UI-bibliotheek valt onder LGPL-3.0-only, met eigen licenties voor de lettertypen en enkele vectoren; zie [`crates/openaec-ui/NOTICE.md`](crates/openaec-ui/NOTICE.md). De rest van deze repository valt onder [`LICENSE`](LICENSE). De licentie van de B2-iconen is nog open ([#15](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/15)).
+The UI library falls under LGPL-3.0-only, with its own licences for the fonts and some vectors; see [`crates/openaec-ui/NOTICE.md`](crates/openaec-ui/NOTICE.md). The rest of this repository falls under CC BY-SA 4.0, see [`LICENSE`](LICENSE). The licence of the B2 icons is still open ([#15](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/15)).

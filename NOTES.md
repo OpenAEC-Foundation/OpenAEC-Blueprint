@@ -60,6 +60,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
+- **README-standaard, 2026-10-29**: `templates/README-standaard.md` is een concept, toegepast op deze README. Nog af te spreken: goedkeuring van de eisen, uitrol naar elke OpenAEC-repository, en een gedeelde controle in `conventions`. In de Tauri-sjabloon staat "Wat is er nieuw / Geen releases gevonden" vast in het Nederlands, ook als de taal Engels is (zichtbaar in de browserbeelden).
+
 - **OpenPGP-sleutel van de organisatie, 2026-10-26**: Nino maakt de sleutel voor Linux-releases met het **voorlopige** adres `nino@open-aec.com`; de gebruiker wil dit later aanpassen. Aanpassen kan zonder nieuwe sleutel (nieuwe UID toevoegen met de reservekopie van de hoofdsleutel, oude intrekken); vingerafdruk en GitHub-geheimen blijven gelijk.
 
 
@@ -240,6 +242,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: nieuwe README naar het voorbeeld van Open Planner Studio: `README.md` Engels en `README.nl.md` Nederlands met taalkeuze, gecentreerde kop met badges, hoofdbeeld (3D-weergave), Try it, Download, Why use it, schermafbeeldingen (8 beelden in `docs/images/readme/`), testen, huidige beperkingen, ontwikkelaars en licentie. Beelden: nieuw `web/online/screenshots.mjs` (Chrome zonder venster via het DevTools-protocol, naar `design/online/`) en `scripts/build_readme_images.py` (kiest renders uit `design/`, verkleint tot hoogstens 150 kB; `--check` toegevoegd aan AGENTS.md). Concept-standaard `templates/README-standaard.md` en `templates/README-tool.md` naar dezelfde opbouw. AGENTS.md: README Engels met Nederlandse versie. Gedraaid: `build_readme_images.py --check` groen; geen Rust-controles (geen code gewijzigd).
 - 2026-10-26 **Claude**: ViewCube in de 3D-weergave van de Tauri-sjabloon (`ViewCube.ts`): draait mee, klik op vlak/rand/hoek (26 aanzichten) draait de camera, huisknop met B2 `view.reset-camera` (toegevoegd aan `STANDARD`), labels NL/EN, kleuren uit de tokens. Getest in het browserpaneel in Donker en Licht; `tsc --noEmit` groen.
 
 - 2026-10-26 **Claude**: Tauri-sjabloon naar ontwerp 0.4, op verzoek van de gebruiker (Erika hoeft niets te doen). Nieuw `scripts/sync_tauri_template.py` (`--check` in AGENTS.md) kopieert tokens, WOFF2-fonts en de nieuwe B2-sprite `web/icons/standard.svg` (52 iconen, lijst `STANDARD` in `build_web_icons.py`) naar de sjabloon. `themes.css` legt alle `--theme-*`-namen op `--oa-*`-tokens; vijf thema's van 0.4 met omzetting van oude keuzes; Inter 12/11/13 px via `--oa-size-*`; tekst in accentkleur via `--oa-accent-text`, donkere tekst op amber; linticonen en titelbalkknoppen B2; linttitels breken niet meer in een woord; 3D-achtergrond en raster volgen het thema; 3D-hoogte in de sjabloon zelf opgelost, `web/online/online.css` weg. Getest in het browserpaneel: vijf thema's, 3D, instellingen; contrastcontrole over alle zichtbare tekst zonder fouten. `tsc --noEmit` groen.

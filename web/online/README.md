@@ -29,6 +29,10 @@ node web/online/build.mjs
 
 De uitvoer staat in `target/online/`. Met `node web/online/build.mjs --serve` bouw je hem en bekijk je hem op <http://localhost:4173/OpenAEC-Blueprint/>.
 
+## Schermafbeeldingen
+
+Terwijl `--serve` draait, maakt `node web/online/screenshots.mjs` de schermen voor de README: de app in Chrome zonder venster (1600×900, Engels) in de thema's Licht, Donker met de 3D-weergave, en Blueprint met de instellingen. Ze komen in [`design/online/`](../../design/online/); `python scripts/build_readme_images.py` maakt er de README-beelden van. Met `--url <adres>` gebruik je een andere versie, zoals de gepubliceerde site. Chrome wordt op de gebruikelijke plekken gezocht; met de omgevingsvariabele `CHROME` kies je een andere.
+
 ## Publiceren
 
 [`.github/workflows/pages.yml`](../../.github/workflows/pages.yml) bouwt en publiceert de site na elke geslaagde release (workflow Release), vanaf de commit van die release. Met de hand starten kan ook, via Actions → Pages → Run workflow. De releaseworkflow zelf blijft ongewijzigd.

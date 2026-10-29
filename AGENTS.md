@@ -7,7 +7,7 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 - Native Rust Style Repo (`cargo run --bin style_repo`) en de afzonderlijk verpakte crate [`crates/openaec-ui`](crates/openaec-ui/).
 - `scripts/` bevat Python-scripts die reviews, indexen en atlassen in `design/` en `harmonization/` genereren.
 - `harmonization/sources/` en `target/` staan in `.gitignore` en horen nooit in een commit.
-- De [README](README.md) is de korte ingang; de details van alle reviews en tussenstappen staan in [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md). Samen zijn ze de inhoudelijke bron van waarheid. Houd ze bij als je iets toevoegt of verandert dat erin beschreven staat; nieuwe reviews en tussenstappen gaan in `UI-HARMONISATIE.md`.
+- De README is de korte ingang, in het Engels ([`README.md`](README.md)) en het Nederlands ([`README.nl.md`](README.nl.md)) met dezelfde opbouw en beelden; wijzig ze samen. Ze volgen [`templates/README-standaard.md`](templates/README-standaard.md); de beelden in `docs/images/readme/` maak je met `scripts/build_readme_images.py` (bron: renders in `design/`, en `node web/online/screenshots.mjs` voor de browserversie). De details van alle reviews en tussenstappen staan in [`UI-HARMONISATIE.md`](UI-HARMONISATIE.md). Samen zijn ze de inhoudelijke bron van waarheid. Houd ze bij als je iets toevoegt of verandert dat erin beschreven staat; nieuwe reviews en tussenstappen gaan in `UI-HARMONISATIE.md`.
 
 ## Samenwerken in dezelfde map
 
@@ -28,7 +28,7 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 
 ## Taal en stijl
 
-- Documentatie, reviews en `NOTES.md` in het Nederlands. Code, identifiers en commitberichten in het Engels.
+- Documentatie, reviews en `NOTES.md` in het Nederlands. Code, identifiers en commitberichten in het Engels. Uitzondering: `README.md` is Engels, met `README.nl.md` als Nederlandse versie.
 - Volg de bestaande opbouw van een review: bron, concrete UI-aanroep, hash of commit, en een expliciet oordeel.
 - Noem iets pas "gedeeld" of "geharmoniseerd" als het echt in de Rust-crate zit. Concepten en reviewmateriaal blijven zo benoemd.
 - Controleer licenties van bronassets voordat je ze in `crates/openaec-ui` opneemt.
@@ -52,6 +52,7 @@ python scripts/build_font_package.py --check
 python scripts/check_font_glyphs.py
 python scripts/check_report_pdf.py --self-test
 python scripts/version.py --check
+python scripts/build_readme_images.py --check
 cargo test
 cargo test -p openaec-icons --features all
 cargo package -p openaec-ui
