@@ -60,7 +60,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
-- **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38). In de Tauri-sjabloon staat "Wat is er nieuw / Geen releases gevonden" vast in het Nederlands, ook als de taal Engels is (zichtbaar in de browserbeelden).
+- **README-standaard, 2026-10-29**: vastgesteld; uitrol naar elke repository in [#38](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/issues/38).
 
 - **OpenPGP-sleutel van de organisatie, 2026-10-26**: Nino maakt de sleutel voor Linux-releases met het **voorlopige** adres `nino@open-aec.com`; de gebruiker wil dit later aanpassen. Aanpassen kan zonder nieuwe sleutel (nieuwe UID toevoegen met de reservekopie van de hoofdsleutel, oude intrekken); vingerafdruk en GitHub-geheimen blijven gelijk.
 
@@ -242,6 +242,7 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: Tauri-sjabloon: vaste Nederlandse teksten in het startpaneel via i18n (Wat is er nieuw, laden, foutmelding, geen releases, Start-tab; datum in de taal van de app). Het paneel haalde releases bij de oude repo `OpenAEC-style-book` (geen releases) en haalt ze nu bij OpenAEC-Blueprint; Markdown in releasenotes wordt platte tekst. Browserbeelden en README-beelden opnieuw gemaakt (ook de Rust-renders uit `68e13720` meegenomen). GitHub-beschrijving en website van de repo bijgewerkt. `tsc --noEmit`, `sync_tauri_template.py --check` en `build_readme_images.py --check` groen.
 - 2026-10-29 **Claude**: #36 gesloten. #27 tekstgrootte: `text-size-setting` in de tokens (Compact 11/11/12/15/20 rij 24, Standaard = 0.4, Groot 12/14/15/18/26 rij 32); generator schrijft `TextSize`/`TextSizes` en `data-oa-text`; `Look::with_text_size` en `look.text` in de hele bibliotheek (55 vaste maten vervangen, rijhoogtes mee); nieuw `design::display` bewaart thema, werkruimte, statusbalk en tekstgrootte in `weergave.json`; `blueprint` en de galerij hebben de instelling; webcomponenten volgen `--oa-row`; Tauri-sjabloon: Uiterlijk → Tekstgrootte. Alle controles, `cargo test --workspace` en `cargo package` groen; Tauri-sjabloon in het browserpaneel getest.
 
 - 2026-10-29 **Claude**: README-standaard op verzoek van de gebruiker vastgesteld als eis voor elke OpenAEC-repository; de Blueprint-README is het voorbeeld. Uitrol naar de 17 apps uit APP-OVERZICHT.md en een gedeelde controle in `conventions` als issue #38. Gecommit en naar main gepusht.

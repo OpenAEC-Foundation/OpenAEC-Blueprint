@@ -131,13 +131,14 @@ export function StartSidebar({
 
 /** Vertical collapsed tab — shown when the sidebar is closed. */
 export function StartSidebarCollapsedTab({ onOpen }: { onOpen: () => void }) {
+  const { t } = useTranslation();
   return (
     <button
       className="start-sidebar-collapsed-tab"
       onClick={onOpen}
-      title="Start openen"
+      title={t("welcome.openStart")}
     >
-      <span>Start</span>
+      <span>{t("welcome.start")}</span>
     </button>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./ReleaseNotesPanel.css";
 
 interface Release {
@@ -9,7 +10,7 @@ interface Release {
   html_url: string;
 }
 
-const REPO = "OpenAEC-Foundation/OpenAEC-style-book";
+const REPO = "OpenAEC-Foundation/OpenAEC-Blueprint";
 const CACHE_KEY = "openaec-releases-cache-v1";
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
@@ -20,11 +21,12 @@ const FALLBACK_RELEASES: Release[] = [
     name: "Initial OpenAEC desktop template",
     body: "Ribbon UI, multi-tenant report generation, IFC viewer, 3D viewer, recent files, MCP server, multi-window with drag-out tabs.",
     published_at: "2026-05-12T00:00:00Z",
-    html_url: "https://github.com/OpenAEC-Foundation/OpenAEC-style-book/releases",
+    html_url: "https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases",
   },
 ];
 
 export function ReleaseNotesPanel() {
+  const { t, i18n } = useTranslation();
   const [releases, setReleases] = useState<Release[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -81,12 +83,12 @@ export function ReleaseNotesPanel() {
       </div>
 
       <div className="welcome-releases">
-        <h3>Wat is er nieuw</h3>
+        <h3>{t("welcome.whatsNew")}</h3>
         {error && !releases && (
-          <p className="welcome-error">Kan release notes niet laden ({error})</p>
+          <p className="welcome-error">{t("welcome.releasesError", { error })}</p>
         )}
-        {!releases && !error && <p className="welcome-loading">Laden…</p>}
-        {releases?.length === 0 && <p>Geen releases gevonden</p>}
+        {!releases && !error && <p className="welcome-loading">{t("welcome.loading")}</p>}
+        {releases?.length === 0 && <p>{t("welcome.noReleases")}</p>}
         {releases?.map((r) => (
           <article key={r.tag_name} className="welcome-release">
             <header>
@@ -99,7 +101,7 @@ export function ReleaseNotesPanel() {
                 {r.tag_name}
               </a>
               <time className="welcome-release-date">
-                {new Date(r.published_at).toLocaleDateString("nl-NL", {
+                {new Date(r.published_at).toLocaleDateString(i18n.language, {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
@@ -117,6 +119,13 @@ export function ReleaseNotesPanel() {
 
 function truncate(s: string, n: number): string {
   if (!s) return "";
-  const cleaned = s.replace(/^#+\s+/gm, "").replace(/\n{3,}/g, "\n\n").trim();
+  // Release notes are Markdown; show them as plain text, without tables.
+  const cleaned = s
+    .replace(/^\s*\|.*$/gm, "")
+    .replace(/^#+\s+/gm, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/(\*\*|__|`)/g, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
   return cleaned.length > n ? cleaned.slice(0, n).trim() + "…" : cleaned;
 }
