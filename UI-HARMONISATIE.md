@@ -291,6 +291,12 @@ Updates lopen in elke app via de OpenAEC Installer (`design::update`, issue #33;
 - **Niets zelf.** Apps downloaden of installeren niets zelf.
 - **Galerij.** De galerij toont de melding met een voorbeeldversie en start de installer niet echt.
 
+React-apps hebben de componenten van 0.4 (issue #12; [`web/react/`](web/react/README.md), 29 oktober 2026):
+- **Op de CSS.** 30 componenten maken de HTML en `oa-`-klassen van `openaec-components.css`; de stijl staat dus op één plek. Pakket `@openaec/ui-react`, TypeScript-bron zonder eigen build, React 18 of nieuwer.
+- **Gedrag en toegankelijkheid.** Echte elementen, een verplichte naam voor iconknoppen, `aria-invalid` en `aria-describedby` bij fouten, pijltjestoetsen in tabs, keuzetegels, menu's en tabellen, en de dialoog op `<dialog>` met `showModal()`.
+- **Getest.** `node scripts/check_react_components.mjs`: strikte typecontrole en 90 controles op de HTML van alle componenten. In de demo in het browserpaneel: tabelselectie met pijltjes, dialoog modaal met focus erin, Escape sluit en geeft de focus terug, lint-tabs en keuzetegels met pijltjes.
+- **Iconen.** De standaardsprite `web/icons/standard.svg` heeft er `status.error`, `status.warning`, `ui.close`, `ui.more` en `view.search` bij voor meldingen, documenttabs en de lege toestand.
+
 Vier kleurvragen uit Open Planner Studio zijn tokens geworden (issues #41 tot en met #44; 29 oktober 2026):
 - **Rand in Licht (#44).** `border` wordt `#D6D2CC` in plaats van `#EAEAEA`, het warme grijs dat Planner al gebruikte: 1,51 : 1 op wit en 1,30 : 1 op het frame. Randen tussen witte vlakken en het frame zijn weer zichtbaar.
 - **Zachte lijn (#41).** Nieuwe rol `border-subtle` voor rijlijnen en rasters binnen een paneel: Licht `#EAEAEA`, Donker `#3D3D46`, Blueprint `#172942`, High contrast de volle rand. De tabel in Rust (`widgets::row_divider`) en `.oa-table td` gebruiken hem.

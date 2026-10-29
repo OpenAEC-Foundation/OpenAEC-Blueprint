@@ -7,6 +7,7 @@ Uitvoering van ontwerp 0.4 voor webapps, zoals BIM Validator.
 - [`openaec-components.js`](openaec-components.js): optioneel, klein script voor wat CSS niet kan: Escape verbergt een tooltip. Zonder het script werkt alles, behalve dat.
 - [`icons/`](icons/): de B2-iconen, één sprite per app, zie [Iconen](#iconen).
 - [`openaec-fonts.css`](openaec-fonts.css) en [`fonts/`](fonts/): de lettertypen van de Rust-bibliotheek, zie [Lettertypen](#lettertypen).
+- [`react/`](react/README.md): React-componenten op deze CSS (issue #12): knoppen, velden, tegels, meldingen, dialoog, tabel en schil, met toetsenbord en aria.
 - [`online/`](online/README.md): de Tauri-standaardapplicatie als webapp met 3D-weergave, gepubliceerd op GitHub Pages (#36).
 - [`componenten.html`](componenten.html): overzicht van alle componenten in de vijf thema's. Kies het thema rechtsboven, of open bijvoorbeeld `componenten.html#dark`.
 

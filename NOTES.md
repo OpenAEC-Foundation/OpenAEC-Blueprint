@@ -244,6 +244,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-29 **Claude**: #12 React-componenten in `web/react/` (`@openaec/ui-react`, 30 componenten op de CSS van het webpakket, met toetsenbord en aria). `node scripts/check_react_components.mjs` (typecontrole en 90 HTML-controles, leent TypeScript/React/esbuild van de Tauri-sjabloon; `--demo` voor een demopagina) staat in AGENTS.md. Demo in het browserpaneel getest. Standaardsprite +5 iconen.
+
 - 2026-10-29 **Claude**: issues #41–#44 (tokens): `border` in Licht `#D6D2CC`, nieuwe rollen `border-subtle`, `text-muted` en `field` in alle vijf thema's; contrastcontrole uitgebreid (225 paren groen); Rust-velden, keuzelijsten en tabelrijen, `.oa-field`, `.oa-table td` en de Tauri-sjabloon gebruiken ze. Renders `native/` en `blueprint/` opnieuw. Alle controles en `cargo test --workspace` groen.
 
 - 2026-10-29 **Claude**: #35 B2-revisie 107 gebouwd en op akkoord van de gebruiker op een eigen branch gezet (`b2-revisie-107`, gepusht), omdat iemand anders de iconen overneemt. `main` blijft op revisie 106.
