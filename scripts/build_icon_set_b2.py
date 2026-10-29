@@ -281,7 +281,7 @@ def main():
                       'canonical_functions':targets,'design_status':status,
                       'mapping_status':'afzonderlijke bronbesluiten; geen automatische naamskoppeling',
                       'remaining_source_records':pending})
-    manifest={'family':'OpenAEC B2','revision':106,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
+    manifest={'family':'OpenAEC B2','revision':107,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
               'function_count':len(entries),'svg_count':2*len(entries),'masters':[16,24],
               'paint_order':'per icoon vastgelegd','export':'gevulde contouren; achterste kleur minus voorste kleur',
               'curve_sampling':'12 stappen per halve kwadratische hoek; buffer 20 segmenten per kwadrant; cirkels 64',
@@ -311,7 +311,7 @@ def main():
               'limits':['Bronplaatsen afzonderlijk beoordeeld op de gepinde versies; kandidaat-apps zijn geen runtime-adopties.',
                         'FEM-bron ontbreekt; runtime-extensies blijven buiten volledige dekking.',
                         'Bronillustraties en symbolen worden niet automatisch onderdeel van de UI-iconenset.',
-                        '16px gebruikt eigen lijndikte en waar nodig minder details; verdere optische verfijning blijft mogelijk.'],
+                        '16px staat sinds revisie 107 op het pixelraster: lijnen van 1 px met de middellijn op halve pixels, per icoon de scherpste variant die de vorm behoudt (issue #35); verdere optische verfijning blijft mogelijk.'],
               'icons':entries}
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     (OUT/'geometry-validation.json').write_text(json.dumps(geometry,indent=2),encoding='utf-8')

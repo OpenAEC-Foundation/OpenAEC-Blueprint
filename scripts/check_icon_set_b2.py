@@ -170,6 +170,9 @@ def main():
         if example:assert example==by_id[example['id']] and example['function_id']==SOURCE_FUNCTIONS.get(icon['id'],icon['id'])
         for size in (16,24):
             asset=icon['assets'][str(size)];content=(OUT/asset['path']).read_text(encoding='utf-8')
+            # Revision 107 (issue #35) only fitted the 16 px masters to the pixel grid; the
+            # reviewed designs are kept as revision 106 in review/raster-before/16.
+            reviewed=(OUT/'review/raster-before/16'/(icon['id']+'.svg')).read_text(encoding='utf-8') if size==16 else content
             assert sha(content.encode())==asset['sha256'],'hash mismatch'
             assert review_icons[icon['id']]['svg'][str(size)]==content,'shared review/export mismatch'
             style=ET.fromstring(content).attrib.get('style')
@@ -200,28 +203,28 @@ def main():
                     assert layers['accent'].is_empty,'status contains decorative accent'
                 assert icon['semantic_color']==SEMANTIC[icon['id']]
             if icon['series']==1:
-                assert (OUT/'review/approved-core'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'approved core changed'
+                assert (OUT/'review/approved-core'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'approved core changed'
             if icon['series']<11 and icon['id']!='planning.driving':
-                assert (OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted series changed'
+                assert (OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'accepted series changed'
             if icon['id']=='planning.driving':
                 before=(OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_text(encoding='utf-8')
-                assert content.replace(' style="color:var(--icon-accent,currentColor)"','')==before,'driving shape changed'
+                assert reviewed.replace(' style="color:var(--icon-accent,currentColor)"','')==before,'driving shape changed'
             if icon['series']<14 and icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:
-                assert (OUT/'review/before-round-11-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested icon changed'
+                assert (OUT/'review/before-round-11-13'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'unrequested icon changed'
             if icon['series']<14 and icon['id'] not in {'object.rename','pile.legend-edit'}:
-                assert (OUT/'review/before-pencil-fix'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'unrequested pencil-round change'
+                assert (OUT/'review/before-pencil-fix'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'unrequested pencil-round change'
             if icon['series']<14:
-                assert (OUT/'review/retained-series-1-13'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous family changed'
+                assert (OUT/'review/retained-series-1-13'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'previous family changed'
             if icon['series']<=14:
-                assert (OUT/'review/retained-series-1-14'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 125 designs changed'
+                assert (OUT/'review/retained-series-1-14'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'previous 125 designs changed'
             if icon['series']<=20:
-                assert (OUT/'review/retained-series-1-20'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted 170 changed'
+                assert (OUT/'review/retained-series-1-20'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'accepted 170 changed'
             if icon['series']<=28:
-                assert (OUT/'review/retained-series-1-28'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 231 designs changed'
+                assert (OUT/'review/retained-series-1-28'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'previous 231 designs changed'
             if icon['series']<=30:
-                assert (OUT/'review/retained-series-1-30'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'previous 239 designs changed'
+                assert (OUT/'review/retained-series-1-30'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'previous 239 designs changed'
             if icon['series']<=45:
-                assert (OUT/'review/retained-series-1-45'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'nightly work changed existing master'
+                assert (OUT/'review/retained-series-1-45'/str(size)/(icon['id']+'.svg')).read_bytes()==reviewed.encode(),'nightly work changed existing master'
             if icon['id']=='file.open' and size==24:sample=content
     # Failure controls make sure layering, overshoot and overlap are actually rejected.
     controls=0
@@ -270,12 +273,15 @@ def main():
             selected=record['variants'][record['foreground']][str(size)]
             assert current==(OUT/selected['path']).read_bytes(),'review/export mismatch'
             before=OUT/'review/stem-before'/str(size)/(record['id']+'.svg')
+            # Revision 107 fitted 16 px to the pixel grid; compare the reviewed revision 106 master.
+            reviewed=(OUT/'review/raster-before/16'/(record['id']+'.svg')).read_bytes() if size==16 else current
             if record['id'] not in CURRENT_CHANGES:
-                assert before.read_bytes()==current,'unrequested change'
+                assert before.read_bytes()==reviewed,'unrequested change'
             elif record['id'] in ROUNDED_JOINTS:
                 old=ET.fromstring(before.read_text(encoding='utf-8'))
                 old_shape=unary_union([parse_layer(n.attrib['d']) for n in old if n.tag.endswith('}path')])
-                assert old_shape.symmetric_difference(silhouettes[0]).area<.0001,'approved arrow shape changed'
+                shown=unary_union([parse_layer(n.attrib['d']) for n in ET.fromstring(reviewed.decode('utf-8')) if n.tag.endswith('}path')]) if size==16 else silhouettes[0]
+                assert old_shape.symmetric_difference(shown).area<.0001,'approved arrow shape changed'
     result={'status':'geslaagd','functions':len(manifest['icons']),'exported_masters':count,
             'max_exported_overlap_area':maximum,'rejected_failure_controls':controls,
             'source_clusters':len(audit['clusters']),'source_records':len(audit['record_assessments']),

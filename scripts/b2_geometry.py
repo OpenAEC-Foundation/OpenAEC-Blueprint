@@ -5,6 +5,7 @@ No upstream icon artwork is copied. Existing B2 geometry is the design source.
 """
 from pathlib import Path
 import sys
+import copy
 import math
 import re
 from dataclasses import dataclass, field
@@ -194,6 +195,103 @@ class Construction:
 
 
 def construction(key,size):
+    """The construction of one master; 16 px is fitted to the pixel grid (revision 107, issue #35)."""
+    c=_construction(key,size)
+    return grid_fit(c) if size==16 else c
+
+
+# Revision 107 (issue #35): the 16 px master was the 24 px design times 2/3 with
+# 1.25 px lines, so 75 % of the coordinates fell on thirds of a pixel and every
+# line covered two half-grey pixel rows. At 16 px the lines are now 1 px wide with
+# their centrelines on half pixels, so both edges fall on whole pixels.
+GRID_WIDTH=1.0
+
+
+def _half(v):return math.floor(v)+.5
+
+
+def _fresh(c):
+    for attr in ('_geometry','_raw_geometry'):
+        if hasattr(c,attr):delattr(c,attr)
+    return c
+
+
+def _snap(c,mode):
+    """mode 'free': 1 px lines where they were; 'all': every point on half pixels;
+    'axes': like TrueType stems, only the x of points on vertical segments and the y
+    of points on horizontal segments, so diagonals keep their angle."""
+    c=copy.deepcopy(c);c.width=GRID_WIDTH
+    kept=[]
+    for p in c.paths:
+        pts=p['points'];n=len(pts);out=[]
+        for i,(x,y) in enumerate(pts):
+            if mode=='all':q=(_half(x),_half(y))
+            elif mode=='axes':
+                nb=[]
+                if i>0 or p['closed']:nb.append(pts[i-1])
+                if i<n-1 or p['closed']:nb.append(pts[(i+1)%n])
+                vertical=any(abs(qx-x)<.05 and abs(qy-y)>.05 for qx,qy in nb)
+                horizontal=any(abs(qy-y)<.05 and abs(qx-x)>.05 for qx,qy in nb)
+                q=(_half(x) if vertical else x,_half(y) if horizontal else y)
+            else:q=(x,y)
+            if not out or math.dist(out[-1],q)>1e-6:out.append(q)
+        if p['closed'] and len(out)>1 and math.dist(out[0],out[-1])<=1e-6:out.pop()
+        if len(out)>=2:
+            p['points']=out;kept.append(p)
+    c.paths=kept
+    if mode!='free':
+        for k in c.circles:
+            k['x'],k['y']=_half(k['x']),_half(k['y'])
+            k['r']=max(1.0,round(k['r'])) if not k['filled'] else max(.5,round(k['r']*2)/2)
+    return _fresh(c)
+
+
+def _ink(c):
+    g=c.geometry()
+    return unary_union([g['primary'],g['accent']])
+
+
+def _shape(c):
+    """Parts and holes per colour, ignoring slivers under 0.05 px²: snapping may not
+    merge, split or close anything that the design keeps apart or open."""
+    counts=[]
+    for tone,geometry in sorted(c.geometry().items()):
+        parts=[p for p in getattr(geometry,'geoms',[geometry]) if not p.is_empty and p.area>.05]
+        holes=sum(1 for p in parts for r in p.interiors if Polygon(r).area>.05)
+        counts.append((tone,len(parts),holes))
+    return tuple(counts)
+
+
+_CELLS=None
+
+
+def sharpness(geometry,size=16):
+    """Share of drawn pixels that are at least 75 % covered, measured exactly."""
+    import shapely
+    global _CELLS
+    if _CELLS is None:
+        _CELLS=shapely.box(*[a.ravel() for a in __import__('numpy').meshgrid(range(size),range(size))],
+                           *[a.ravel()+1 for a in __import__('numpy').meshgrid(range(size),range(size))])
+    cover=shapely.area(shapely.intersection(geometry,_CELLS))
+    ink=(cover>.1).sum()
+    return float((cover>=.75).sum()/ink) if ink else 0.0
+
+
+def grid_fit(c):
+    """The sharpest of the three 1 px variants that keeps the shape of the icon."""
+    free=_snap(c,'free')
+    reference=_shape(free)
+    best=(sharpness(_ink(free)),'free',free)
+    for mode in ('all','axes'):
+        candidate=_snap(c,mode)
+        if _shape(candidate)!=reference:continue
+        score=sharpness(_ink(candidate))
+        if score>best[0]+1e-9:best=(score,mode,candidate)
+    result=best[2];result.grid=best[1]
+    return result
+
+
+def _construction(key,size):
     from b2_approved_proposals import APPROVED, approved_construction
     if key in APPROVED:return approved_construction(key,size)
     c=Construction(key,size,1.25 if size==16 else 1.75)

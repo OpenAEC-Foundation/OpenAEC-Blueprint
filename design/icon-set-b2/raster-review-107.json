@@ -1,0 +1,6625 @@
+{
+ "revision": 107,
+ "icons": 945,
+ "sharpness_before_percent": 31.7,
+ "sharpness_after_percent": 75.5,
+ "sharper": 871,
+ "less_sharp": 56,
+ "rows": [
+  {
+   "id": "image.contrast",
+   "label": "Contrast",
+   "group": "Beeldbewerking",
+   "before": 0.7755,
+   "after": 0.3878
+  },
+  {
+   "id": "image.grayscale",
+   "label": "Grijswaarden",
+   "group": "Beeldbewerking",
+   "before": 0.5106,
+   "after": 0.1702
+  },
+  {
+   "id": "field.radio",
+   "label": "Keuzerondje",
+   "group": "Formulierveldtypen",
+   "before": 0.6316,
+   "after": 0.3684
+  },
+  {
+   "id": "ui.language",
+   "label": "Taal kiezen",
+   "group": "Taal en account",
+   "before": 0.4688,
+   "after": 0.2414
+  },
+  {
+   "id": "link.locate",
+   "label": "Koppeling op pagina tonen",
+   "group": "Documentkoppelingen",
+   "before": 0.4603,
+   "after": 0.322
+  },
+  {
+   "id": "attachment.save-all",
+   "label": "Alle bijlagen opslaan",
+   "group": "Bijlagen",
+   "before": 0.4341,
+   "after": 0.3077
+  },
+  {
+   "id": "edit.cut",
+   "label": "Knippen",
+   "group": "Bewerken",
+   "before": 0.3922,
+   "after": 0.2667
+  },
+  {
+   "id": "measure.radius",
+   "label": "Straalmaat plaatsen",
+   "group": "Technisch tekenen",
+   "before": 0.5,
+   "after": 0.375
+  },
+  {
+   "id": "product.open-source",
+   "label": "Open broncode",
+   "group": "Productkenmerken en documentstatus",
+   "before": 0.4324,
+   "after": 0.3103
+  },
+  {
+   "id": "permission.manage",
+   "label": "Machtigingen",
+   "group": "Toegang en machtigingen",
+   "before": 0.3929,
+   "after": 0.28
+  },
+  {
+   "id": "git.repository",
+   "label": "Git-repositorystatus",
+   "group": "Git en opdrachten",
+   "before": 0.3947,
+   "after": 0.2857
+  },
+  {
+   "id": "git.init",
+   "label": "Git-repository initialiseren",
+   "group": "Git en opdrachten",
+   "before": 0.3542,
+   "after": 0.2667
+  },
+  {
+   "id": "project.recent",
+   "label": "Recente projecten",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.2613,
+   "after": 0.1748
+  },
+  {
+   "id": "calculation.recalculate",
+   "label": "Project herberekenen",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.3407,
+   "after": 0.2544
+  },
+  {
+   "id": "link.open-external",
+   "label": "Externe koppeling openen",
+   "group": "Documentkoppelingen",
+   "before": 0.4627,
+   "after": 0.3818
+  },
+  {
+   "id": "object.distribute-right",
+   "label": "Rechterranden verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.3983,
+   "after": 0.3186
+  },
+  {
+   "id": "object.distribute-bottom",
+   "label": "Onderranden verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.3983,
+   "after": 0.3186
+  },
+  {
+   "id": "git.branches",
+   "label": "Git-branches",
+   "group": "Git en opdrachten",
+   "before": 0.4135,
+   "after": 0.3438
+  },
+  {
+   "id": "draw.line",
+   "label": "Lijn tekenen",
+   "group": "Tekenen",
+   "before": 0.3889,
+   "after": 0.3333
+  },
+  {
+   "id": "diagnostics.run-benchmark",
+   "label": "Prestatiemeting starten",
+   "group": "Prestatiemeting en begeleiding",
+   "before": 0.4206,
+   "after": 0.3654
+  },
+  {
+   "id": "measure.diameter",
+   "label": "Diametermaat plaatsen",
+   "group": "Technisch tekenen",
+   "before": 0.4524,
+   "after": 0.4
+  },
+  {
+   "id": "attachment.add",
+   "label": "Bijlage toevoegen",
+   "group": "Bijlagen",
+   "before": 0.4444,
+   "after": 0.3929
+  },
+  {
+   "id": "mesh.surface",
+   "label": "3D-oppervlak kiezen",
+   "group": "Meshmethoden",
+   "before": 0.4299,
+   "after": 0.382
+  },
+  {
+   "id": "file.save",
+   "label": "Opslaan",
+   "group": "Bestanden",
+   "before": 0.2313,
+   "after": 0.184
+  },
+  {
+   "id": "document.from-clipboard-image",
+   "label": "Document uit klembordafbeelding",
+   "group": "Bestandslijsten en klemborddocumenten",
+   "before": 0.4966,
+   "after": 0.45
+  },
+  {
+   "id": "workflow.upgrade",
+   "label": "Versie-upgradewerkstroom",
+   "group": "Pakketten en werkstromen",
+   "before": 0.2403,
+   "after": 0.1938
+  },
+  {
+   "id": "quotation.snapshot-draft",
+   "label": "Conceptversie vastleggen",
+   "group": "Offertedocument en versies",
+   "before": 0.3672,
+   "after": 0.3248
+  },
+  {
+   "id": "format.clear",
+   "label": "Tekstopmaak wissen",
+   "group": "Tekst en stijlen",
+   "before": 0.4219,
+   "after": 0.381
+  },
+  {
+   "id": "tools.category-cad",
+   "label": "CAD-categorie",
+   "group": "Toolcategorieën: techniek",
+   "before": 0.4474,
+   "after": 0.4098
+  },
+  {
+   "id": "guide.tutorial-start",
+   "label": "Tutorial starten",
+   "group": "Activiteiten en begeleiding",
+   "before": 0.3922,
+   "after": 0.3556
+  },
+  {
+   "id": "panel.thumbnails",
+   "label": "Paginaminiaturen",
+   "group": "PDF-zijpanelen",
+   "before": 0.2222,
+   "after": 0.1857
+  },
+  {
+   "id": "object.layers",
+   "label": "Lagen",
+   "group": "Objecten en lagen",
+   "before": 0.375,
+   "after": 0.3429
+  },
+  {
+   "id": "attachment.open",
+   "label": "Bijlage openen",
+   "group": "Bijlagen",
+   "before": 0.402,
+   "after": 0.3721
+  },
+  {
+   "id": "thermal.summary",
+   "label": "Importsamenvatting",
+   "group": "Energie en warmte",
+   "before": 0.4107,
+   "after": 0.381
+  },
+  {
+   "id": "server.storage",
+   "label": "Serveropslag",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.2029,
+   "after": 0.1739
+  },
+  {
+   "id": "planning.trace-predecessors",
+   "label": "Voorgangers volgen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2527,
+   "after": 0.2289
+  },
+  {
+   "id": "planning.trace-successors",
+   "label": "Opvolgers volgen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2527,
+   "after": 0.2289
+  },
+  {
+   "id": "view.zoom-default",
+   "label": "Standaardzoom",
+   "group": "Basiszoom en paginahoogte",
+   "before": 0.3882,
+   "after": 0.3659
+  },
+  {
+   "id": "tools.category-veld",
+   "label": "Veldwerk-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.4841,
+   "after": 0.4622
+  },
+  {
+   "id": "assistant.draw",
+   "label": "Tekenopdracht voorbereiden",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.4405,
+   "after": 0.4189
+  },
+  {
+   "id": "evidence.unlink",
+   "label": "Bewijskoppeling losmaken",
+   "group": "Formulieren en bewerken",
+   "before": 0.3909,
+   "after": 0.3696
+  },
+  {
+   "id": "quotation.snapshot-sent",
+   "label": "Versie als verstuurd vastleggen",
+   "group": "Offertedocument en versies",
+   "before": 0.3565,
+   "after": 0.3365
+  },
+  {
+   "id": "page.straighten",
+   "label": "Pagina rechtzetten",
+   "group": "Paginabewerkingen",
+   "before": 0.3981,
+   "after": 0.3797
+  },
+  {
+   "id": "product.free",
+   "label": "Gratis product",
+   "group": "Productkenmerken en documentstatus",
+   "before": 0.3214,
+   "after": 0.3043
+  },
+  {
+   "id": "signature.status-unknown",
+   "label": "Handtekeningstatus onbekend",
+   "group": "Koppelingen en handtekeningen",
+   "before": 0.3366,
+   "after": 0.321
+  },
+  {
+   "id": "planning.progress-line",
+   "label": "Voortgangslijn tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2202,
+   "after": 0.2059
+  },
+  {
+   "id": "building.caravan",
+   "label": "Woonwagen",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.287,
+   "after": 0.2727
+  },
+  {
+   "id": "project.properties",
+   "label": "Projectgegevens",
+   "group": "Project en wijzigingsreview",
+   "before": 0.3333,
+   "after": 0.32
+  },
+  {
+   "id": "library.link-recognized",
+   "label": "Herkende items koppelen",
+   "group": "Bibliotheekkoppeling en conceptinvoer",
+   "before": 0.2558,
+   "after": 0.2458
+  },
+  {
+   "id": "measure.distance",
+   "label": "Afstand meten",
+   "group": "Annoteren en meten",
+   "before": 0.3913,
+   "after": 0.3818
+  },
+  {
+   "id": "page.paste",
+   "label": "Pagina’s plakken",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.4653,
+   "after": 0.4571
+  },
+  {
+   "id": "advice.workspace",
+   "label": "Maatwerkadvies",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.3435,
+   "after": 0.3361
+  },
+  {
+   "id": "audio.speech",
+   "label": "Spraakwerkruimte",
+   "group": "Spraak en audio",
+   "before": 0.186,
+   "after": 0.1795
+  },
+  {
+   "id": "audio.microphone",
+   "label": "Microfooningang",
+   "group": "Spraakapparaten en bronnen",
+   "before": 0.186,
+   "after": 0.1795
+  },
+  {
+   "id": "field.inspections",
+   "label": "Inspecties",
+   "group": "Veldwerk en inspectie",
+   "before": 0.4766,
+   "after": 0.4706
+  },
+  {
+   "id": "status.success",
+   "label": "Geslaagd",
+   "group": "Status en meldingen",
+   "before": 0.3571,
+   "after": 0.3514
+  },
+  {
+   "id": "symbol.category-electric",
+   "label": "Elektrotechnische symbolen",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.375,
+   "after": 0.3714
+  },
+  {
+   "id": "construction.layer-up",
+   "label": "Constructielaag omhoog",
+   "group": "Constructieopbouw en bewijs",
+   "before": 0.4106,
+   "after": 0.4082
+  },
+  {
+   "id": "construction.layer-down",
+   "label": "Constructielaag omlaag",
+   "group": "Constructieopbouw en bewijs",
+   "before": 0.4106,
+   "after": 0.4082
+  },
+  {
+   "id": "status.library-linked",
+   "label": "Uit bibliotheek afkomstig",
+   "group": "Resourcecapaciteit en herkomst",
+   "before": 0.1811,
+   "after": 0.1789
+  },
+  {
+   "id": "document.watermarks",
+   "label": "Watermerken beheren",
+   "group": "Documentafwerking",
+   "before": 0.2899,
+   "after": 0.2879
+  },
+  {
+   "id": "style.gallery",
+   "label": "Stijlgalerij openen",
+   "group": "Tekst en stijlen",
+   "before": 0.3121,
+   "after": 0.3116
+  },
+  {
+   "id": "report.properties",
+   "label": "Rapportinstellingen",
+   "group": "Rapportorganisatie",
+   "before": 0.3041,
+   "after": 0.3037
+  },
+  {
+   "id": "format.bold",
+   "label": "Vet",
+   "group": "Tekstopmaak",
+   "before": 0.5455,
+   "after": 0.5455
+  },
+  {
+   "id": "format.italic",
+   "label": "Cursief",
+   "group": "Tekstopmaak",
+   "before": 0.4286,
+   "after": 0.4286
+  },
+  {
+   "id": "theme.dark",
+   "label": "Donkere modus",
+   "group": "Thema en kleur",
+   "before": 0.6,
+   "after": 0.6
+  },
+  {
+   "id": "report.heading-block",
+   "label": "Subkop invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2805,
+   "after": 0.2805
+  },
+  {
+   "id": "content.drag",
+   "label": "Inhoud verslepen",
+   "group": "Tabellen en formulieren",
+   "before": 0.2222,
+   "after": 0.2222
+  },
+  {
+   "id": "pointcloud.index-build",
+   "label": "Puntenindex bouwen",
+   "group": "Punten en verwerking",
+   "before": 0.1875,
+   "after": 0.1875
+  },
+  {
+   "id": "envelope.facade-measure",
+   "label": "Gevelmaatregel",
+   "group": "Schilmaatregelen",
+   "before": 0.1667,
+   "after": 0.1667
+  },
+  {
+   "id": "mesh.reconstruct",
+   "label": "Mesh reconstrueren",
+   "group": "Meshmethoden",
+   "before": 0.4658,
+   "after": 0.4667
+  },
+  {
+   "id": "document.properties",
+   "label": "Documenteigenschappen",
+   "group": "Documentgegevens en sessies",
+   "before": 0.2812,
+   "after": 0.2833
+  },
+  {
+   "id": "page.properties",
+   "label": "Pagina-eigenschappen",
+   "group": "Documentgegevens en sessies",
+   "before": 0.2523,
+   "after": 0.2547
+  },
+  {
+   "id": "annotate.highlight",
+   "label": "Tekst markeren",
+   "group": "Annoteren en meten",
+   "before": 0.4557,
+   "after": 0.4603
+  },
+  {
+   "id": "construction.layer-add",
+   "label": "Constructielaag toevoegen",
+   "group": "Constructieopbouw en bewijs",
+   "before": 0.3824,
+   "after": 0.3881
+  },
+  {
+   "id": "mesh.terrain",
+   "label": "Terreinmesh kiezen",
+   "group": "Meshmethoden",
+   "before": 0.4455,
+   "after": 0.4524
+  },
+  {
+   "id": "planning.external-relation",
+   "label": "Externe taakrelatie",
+   "group": "Relaties, herstel en tabelweergave",
+   "before": 0.3333,
+   "after": 0.3407
+  },
+  {
+   "id": "draw.circle",
+   "label": "Cirkel tekenen",
+   "group": "Tekenen",
+   "before": 0.3286,
+   "after": 0.3433
+  },
+  {
+   "id": "envelope.floor-measure",
+   "label": "Vloermaatregel",
+   "group": "Schilmaatregelen",
+   "before": 0.36,
+   "after": 0.375
+  },
+  {
+   "id": "edit.undo",
+   "label": "Ongedaan maken",
+   "group": "Bewerken",
+   "before": 0.4237,
+   "after": 0.44
+  },
+  {
+   "id": "edit.redo",
+   "label": "Opnieuw uitvoeren",
+   "group": "Bewerken",
+   "before": 0.4237,
+   "after": 0.44
+  },
+  {
+   "id": "mesh.faces",
+   "label": "Vlakken detecteren kiezen",
+   "group": "Meshmethoden",
+   "before": 0.3936,
+   "after": 0.4103
+  },
+  {
+   "id": "section.clear",
+   "label": "Snijvlakken wissen",
+   "group": "Snijvlakken",
+   "before": 0.4206,
+   "after": 0.4409
+  },
+  {
+   "id": "printer.virtual-settings",
+   "label": "Virtuele printer instellen",
+   "group": "PDF-instellingen",
+   "before": 0.4342,
+   "after": 0.4583
+  },
+  {
+   "id": "diagnostics.benchmark",
+   "label": "Prestatiemeting",
+   "group": "Prestatiemeting en begeleiding",
+   "before": 0.3714,
+   "after": 0.4
+  },
+  {
+   "id": "symbol.edit-type",
+   "label": "Symbooltype bewerken",
+   "group": "Tekst en stijlen",
+   "before": 0.42,
+   "after": 0.45
+  },
+  {
+   "id": "git.commit",
+   "label": "Commitformulier",
+   "group": "Git en opdrachten",
+   "before": 0.3333,
+   "after": 0.3636
+  },
+  {
+   "id": "tools.category-geotechniek",
+   "label": "Geotechniek-categorie",
+   "group": "Toolcategorieën: techniek",
+   "before": 0.5,
+   "after": 0.5326
+  },
+  {
+   "id": "edit.select",
+   "label": "Selecteren",
+   "group": "Selecteren",
+   "before": 0.4444,
+   "after": 0.4776
+  },
+  {
+   "id": "status.error",
+   "label": "Fout",
+   "group": "Status en meldingen",
+   "before": 0.3448,
+   "after": 0.381
+  },
+  {
+   "id": "assistant.translate",
+   "label": "Documentvertaling vragen",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.3475,
+   "after": 0.3868
+  },
+  {
+   "id": "ui.dropdown",
+   "label": "Keuzemenu openen",
+   "group": "Tabellen en formulieren",
+   "before": 0.3125,
+   "after": 0.3571
+  },
+  {
+   "id": "status.unknown",
+   "label": "Soort niet bekend",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.3719,
+   "after": 0.4186
+  },
+  {
+   "id": "status.hidden",
+   "label": "Verborgen",
+   "group": "Paalplanzweergave",
+   "before": 0.3684,
+   "after": 0.4158
+  },
+  {
+   "id": "chat.send",
+   "label": "Bericht versturen",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.413,
+   "after": 0.4605
+  },
+  {
+   "id": "tree.expand",
+   "label": "Uitklappen",
+   "group": "Lijsten en bomen",
+   "before": 0.2857,
+   "after": 0.3333
+  },
+  {
+   "id": "tree.collapse",
+   "label": "Inklappen",
+   "group": "Lijsten en bomen",
+   "before": 0.2857,
+   "after": 0.3333
+  },
+  {
+   "id": "page.previous",
+   "label": "Vorige pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.2857,
+   "after": 0.3333
+  },
+  {
+   "id": "page.next",
+   "label": "Volgende pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.2857,
+   "after": 0.3333
+  },
+  {
+   "id": "energy.no-system",
+   "label": "Geen installatie aanwezig",
+   "group": "Warmteopwekkers",
+   "before": 0.3333,
+   "after": 0.3846
+  },
+  {
+   "id": "layout.star",
+   "label": "Sterindeling herkennen",
+   "group": "Indelingsiconen voor kenmerken",
+   "before": 0.4255,
+   "after": 0.48
+  },
+  {
+   "id": "attachment.save",
+   "label": "Bijlage opslaan",
+   "group": "Bijlagen",
+   "before": 0.3821,
+   "after": 0.4388
+  },
+  {
+   "id": "link.export-list",
+   "label": "Koppelingenlijst exporteren",
+   "group": "Documentkoppelingen",
+   "before": 0.4205,
+   "after": 0.4776
+  },
+  {
+   "id": "cloud.save",
+   "label": "Cloudbestand opslaan",
+   "group": "BCF en cloudbestanden",
+   "before": 0.1707,
+   "after": 0.2338
+  },
+  {
+   "id": "cloud.open",
+   "label": "Cloudbestand kiezen",
+   "group": "BCF en cloudbestanden",
+   "before": 0.1707,
+   "after": 0.2338
+  },
+  {
+   "id": "layer.raise",
+   "label": "Laag omhoog",
+   "group": "Markeringslagen",
+   "before": 0.4459,
+   "after": 0.5094
+  },
+  {
+   "id": "draw.arrow",
+   "label": "Pijl tekenen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.4348,
+   "after": 0.5
+  },
+  {
+   "id": "document.open-url",
+   "label": "Openen via URL",
+   "group": "Documentgegevens en sessies",
+   "before": 0.4783,
+   "after": 0.5446
+  },
+  {
+   "id": "ifc.validate",
+   "label": "IFC valideren",
+   "group": "IFC en BIM",
+   "before": 0.4457,
+   "after": 0.5139
+  },
+  {
+   "id": "category.network",
+   "label": "Netwerktoegang",
+   "group": "Toegang en machtigingen",
+   "before": 0.4884,
+   "after": 0.5574
+  },
+  {
+   "id": "layer.lower",
+   "label": "Laag omlaag",
+   "group": "Markeringslagen",
+   "before": 0.44,
+   "after": 0.5094
+  },
+  {
+   "id": "format.font-decrease",
+   "label": "Tekst kleiner",
+   "group": "Tekst en stijlen",
+   "before": 0.383,
+   "after": 0.4524
+  },
+  {
+   "id": "company.default-status",
+   "label": "Standaardbibliotheek",
+   "group": "Bibliotheekstandaard en kalenders",
+   "before": 0.4054,
+   "after": 0.4754
+  },
+  {
+   "id": "window.close",
+   "label": "Venster sluiten",
+   "group": "Vensters en panelen",
+   "before": 0.3077,
+   "after": 0.3778
+  },
+  {
+   "id": "ui.close",
+   "label": "Paneel of dialoog sluiten",
+   "group": "Algemene bediening",
+   "before": 0.3077,
+   "after": 0.3778
+  },
+  {
+   "id": "frame.certification",
+   "label": "Certificeringswerkruimte",
+   "group": "Productie en toetsing",
+   "before": 0.3465,
+   "after": 0.4177
+  },
+  {
+   "id": "section.plane-x",
+   "label": "Snijvlak X",
+   "group": "Snijvlakken",
+   "before": 0.4122,
+   "after": 0.4848
+  },
+  {
+   "id": "section.plane-y",
+   "label": "Snijvlak Y",
+   "group": "Snijvlakken",
+   "before": 0.4122,
+   "after": 0.4848
+  },
+  {
+   "id": "planning.driving",
+   "label": "Bepalende relatie",
+   "group": "Planning",
+   "before": 0.4688,
+   "after": 0.5417
+  },
+  {
+   "id": "section.plane-z",
+   "label": "Snijvlak Z",
+   "group": "Snijvlakken",
+   "before": 0.4308,
+   "after": 0.5053
+  },
+  {
+   "id": "category.integration",
+   "label": "Techniekintegratie",
+   "group": "Pakketten en werkstromen",
+   "before": 0.4634,
+   "after": 0.5439
+  },
+  {
+   "id": "ifc.workspace",
+   "label": "IFC-werkruimte",
+   "group": "IFC en warmteverliesresultaten",
+   "before": 0.5588,
+   "after": 0.6422
+  },
+  {
+   "id": "ifc.import",
+   "label": "IFC importeren",
+   "group": "IFC en BIM",
+   "before": 0.4717,
+   "after": 0.5556
+  },
+  {
+   "id": "package.catalog",
+   "label": "Pakkettencatalogus",
+   "group": "Pakketten en werkstromen",
+   "before": 0.4375,
+   "after": 0.5222
+  },
+  {
+   "id": "status.pending",
+   "label": "Wacht op gegevens",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.3263,
+   "after": 0.4118
+  },
+  {
+   "id": "mesh.closed",
+   "label": "Gesloten mesh kiezen",
+   "group": "Meshmethoden",
+   "before": 0.4118,
+   "after": 0.5
+  },
+  {
+   "id": "tools.category-ai",
+   "label": "AI en spraak-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.4857,
+   "after": 0.5741
+  },
+  {
+   "id": "layer.add",
+   "label": "Markeringslaag toevoegen",
+   "group": "Markeringslagen",
+   "before": 0.4306,
+   "after": 0.52
+  },
+  {
+   "id": "bim.workspace",
+   "label": "BIM-werkruimte",
+   "group": "Veldwerk en inspectie",
+   "before": 0.4211,
+   "after": 0.5128
+  },
+  {
+   "id": "format.font-increase",
+   "label": "Tekst groter",
+   "group": "Tekst en stijlen",
+   "before": 0.3962,
+   "after": 0.4889
+  },
+  {
+   "id": "input.time-increase",
+   "label": "Tijd met kwartier verhogen",
+   "group": "Tijdinvoer en toewijzingsinformatie",
+   "before": 0.3551,
+   "after": 0.4483
+  },
+  {
+   "id": "view.isometric",
+   "label": "Isometrisch beeld",
+   "group": "Camerarichtingen",
+   "before": 0.3929,
+   "after": 0.4868
+  },
+  {
+   "id": "ifc.export",
+   "label": "IFC exporteren",
+   "group": "IFC en BIM",
+   "before": 0.4615,
+   "after": 0.5556
+  },
+  {
+   "id": "input.time-decrease",
+   "label": "Tijd met kwartier verlagen",
+   "group": "Tijdinvoer en toewijzingsinformatie",
+   "before": 0.3585,
+   "after": 0.4545
+  },
+  {
+   "id": "guide.tutorials",
+   "label": "Tutorials",
+   "group": "Activiteiten en begeleiding",
+   "before": 0.396,
+   "after": 0.4928
+  },
+  {
+   "id": "draw.polygon",
+   "label": "Veelhoek tekenen",
+   "group": "Tekenen",
+   "before": 0.3429,
+   "after": 0.44
+  },
+  {
+   "id": "calc.price-percentage",
+   "label": "Prijzen procentueel wijzigen",
+   "group": "Begrotingsweergave",
+   "before": 0.3953,
+   "after": 0.5
+  },
+  {
+   "id": "measure.area",
+   "label": "Oppervlakte meten",
+   "group": "Annoteren en meten",
+   "before": 0.5333,
+   "after": 0.6444
+  },
+  {
+   "id": "ui.about",
+   "label": "Over deze app",
+   "group": "Extensies en hulpfuncties",
+   "before": 0.3505,
+   "after": 0.4627
+  },
+  {
+   "id": "validation.highlight-failures",
+   "label": "Afgekeurde elementen markeren",
+   "group": "Validatieweergave",
+   "before": 0.4667,
+   "after": 0.5806
+  },
+  {
+   "id": "status.info",
+   "label": "Informatie",
+   "group": "Status en meldingen",
+   "before": 0.3404,
+   "after": 0.4545
+  },
+  {
+   "id": "evidence.file",
+   "label": "Bewijsbestand",
+   "group": "Constructieopbouw en bewijs",
+   "before": 0.3565,
+   "after": 0.4725
+  },
+  {
+   "id": "pile.group-settings",
+   "label": "Belastinggroepen instellen",
+   "group": "Paalplaninspectie en instellingen",
+   "before": 0.3519,
+   "after": 0.4769
+  },
+  {
+   "id": "tools.category-gis",
+   "label": "GIS-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.4684,
+   "after": 0.5941
+  },
+  {
+   "id": "profile.point-delete",
+   "label": "Profielpunten verwijderen",
+   "group": "Vliesgevels en profielen",
+   "before": 0.4545,
+   "after": 0.5833
+  },
+  {
+   "id": "nav.home",
+   "label": "Startpagina",
+   "group": "Navigeren",
+   "before": 0.4468,
+   "after": 0.5758
+  },
+  {
+   "id": "task.milestone-menu",
+   "label": "Mijlpaal toevoegen",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.3704,
+   "after": 0.5
+  },
+  {
+   "id": "transform.break",
+   "label": "Geometrie onderbreken",
+   "group": "Vectorbewerkingen",
+   "before": 0.25,
+   "after": 0.3846
+  },
+  {
+   "id": "building.education",
+   "label": "Onderwijsfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.4,
+   "after": 0.5375
+  },
+  {
+   "id": "validation.clear-highlights",
+   "label": "Validatiemarkeringen wissen",
+   "group": "Validatieweergave",
+   "before": 0.4457,
+   "after": 0.5833
+  },
+  {
+   "id": "tools.category-bim",
+   "label": "BIM-categorie",
+   "group": "Toolcategorieën: techniek",
+   "before": 0.5333,
+   "after": 0.6714
+  },
+  {
+   "id": "ui.tools",
+   "label": "Gereedschapmenu",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.4177,
+   "after": 0.5574
+  },
+  {
+   "id": "format.decimals-increase",
+   "label": "Meer decimalen",
+   "group": "Webtools en decimalen",
+   "before": 0.4058,
+   "after": 0.5455
+  },
+  {
+   "id": "ui.help",
+   "label": "Hulp",
+   "group": "Instellingen en hulp",
+   "before": 0.3529,
+   "after": 0.493
+  },
+  {
+   "id": "format.decimals-decrease",
+   "label": "Minder decimalen",
+   "group": "Subbladen en Excel",
+   "before": 0.4058,
+   "after": 0.549
+  },
+  {
+   "id": "document.edit-text",
+   "label": "Bestaande tekst bewerken",
+   "group": "Documentafwerking",
+   "before": 0.4103,
+   "after": 0.5556
+  },
+  {
+   "id": "pile.legend-used",
+   "label": "Gebruikte typen activeren",
+   "group": "Paalplan",
+   "before": 0.3956,
+   "after": 0.541
+  },
+  {
+   "id": "draw.eraser",
+   "label": "Vrije hand uitgummen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.3191,
+   "after": 0.4648
+  },
+  {
+   "id": "ifc.reconstruction-workspace",
+   "label": "IFC-reconstructiewerkruimte",
+   "group": "IFC en warmteverliesresultaten",
+   "before": 0.5846,
+   "after": 0.732
+  },
+  {
+   "id": "file.type-ifc",
+   "label": "IFC-bestandstype",
+   "group": "Bestandstypeaanduidingen",
+   "before": 0.5846,
+   "after": 0.732
+  },
+  {
+   "id": "integration.test-connection",
+   "label": "Verbinding testen",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.3735,
+   "after": 0.5254
+  },
+  {
+   "id": "view.front",
+   "label": "Vooraanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.5,
+   "after": 0.6538
+  },
+  {
+   "id": "view.back",
+   "label": "Achteraanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.5,
+   "after": 0.6538
+  },
+  {
+   "id": "integration.send-model",
+   "label": "Model naar Blender sturen",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.427,
+   "after": 0.5902
+  },
+  {
+   "id": "workflow.skills",
+   "label": "Skillpakket-werkstroom",
+   "group": "Pakketten en werkstromen",
+   "before": 0.375,
+   "after": 0.5405
+  },
+  {
+   "id": "data.apply-next",
+   "label": "Toepassen en volgende",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.3673,
+   "after": 0.5333
+  },
+  {
+   "id": "page.cut",
+   "label": "Pagina’s knippen",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.5,
+   "after": 0.6667
+  },
+  {
+   "id": "energy.biomass",
+   "label": "Biomassaopwekker",
+   "group": "Warmteopwekkers",
+   "before": 0.4167,
+   "after": 0.5857
+  },
+  {
+   "id": "category.ai",
+   "label": "AI-gereedschappen",
+   "group": "Toegang en machtigingen",
+   "before": 0.4667,
+   "after": 0.6364
+  },
+  {
+   "id": "wbs.auto-number",
+   "label": "Automatische WBS-nummering",
+   "group": "Taakstructuur en WBS",
+   "before": 0.2209,
+   "after": 0.3906
+  },
+  {
+   "id": "status.resource-overallocated",
+   "label": "Resourceoverbelasting",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.3276,
+   "after": 0.5055
+  },
+  {
+   "id": "view.zoom-out",
+   "label": "Uitzoomen",
+   "group": "Navigeren",
+   "before": 0.253,
+   "after": 0.4333
+  },
+  {
+   "id": "geo.cadastral",
+   "label": "Kadastergegevens ophalen",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.3874,
+   "after": 0.5696
+  },
+  {
+   "id": "layout.tools",
+   "label": "Gereedschapsindeling herkennen",
+   "group": "Indelingsiconen voor resources",
+   "before": 0.381,
+   "after": 0.5738
+  },
+  {
+   "id": "layer.assign-selection",
+   "label": "Selectie naar laag",
+   "group": "Markeringslagen",
+   "before": 0.3902,
+   "after": 0.5833
+  },
+  {
+   "id": "view.zoom-in",
+   "label": "Inzoomen",
+   "group": "Navigeren",
+   "before": 0.2747,
+   "after": 0.4688
+  },
+  {
+   "id": "layout.critical",
+   "label": "Kritiekpadindeling herkennen",
+   "group": "Indelingsiconen voor taken",
+   "before": 0.5,
+   "after": 0.6949
+  },
+  {
+   "id": "status.warning",
+   "label": "Waarschuwing",
+   "group": "Status en meldingen",
+   "before": 0.2955,
+   "after": 0.4915
+  },
+  {
+   "id": "format.no-color",
+   "label": "Geen kleur",
+   "group": "Thema en kleur",
+   "before": 0.4815,
+   "after": 0.68
+  },
+  {
+   "id": "draw.filled-area",
+   "label": "Gevuld vlak tekenen",
+   "group": "PDF-inhoud bewerken",
+   "before": 0.2908,
+   "after": 0.4894
+  },
+  {
+   "id": "ventilation.balanced",
+   "label": "Gebalanceerde ventilatie",
+   "group": "Lucht, water en zon",
+   "before": 0.4217,
+   "after": 0.6271
+  },
+  {
+   "id": "wbs.renumber",
+   "label": "WBS opnieuw nummeren",
+   "group": "Taakstructuur en WBS",
+   "before": 0.25,
+   "after": 0.4643
+  },
+  {
+   "id": "field.ticket-add",
+   "label": "Ticket op plattegrond",
+   "group": "Veldwerk en inspectie",
+   "before": 0.3636,
+   "after": 0.5833
+  },
+  {
+   "id": "ui.check-updates",
+   "label": "Updates controleren",
+   "group": "Extensies en hulpfuncties",
+   "before": 0.4634,
+   "after": 0.6833
+  },
+  {
+   "id": "project.forget-recent",
+   "label": "Uit recente bestanden",
+   "group": "Projectbibliotheek",
+   "before": 0.3111,
+   "after": 0.5333
+  },
+  {
+   "id": "account.menu",
+   "label": "Accountmenu openen",
+   "group": "Taal en account",
+   "before": 0.3947,
+   "after": 0.6182
+  },
+  {
+   "id": "list.filter",
+   "label": "Annotatielijst filteren",
+   "group": "Annotatielijsten",
+   "before": 0.4659,
+   "after": 0.6897
+  },
+  {
+   "id": "pointcloud.scans",
+   "label": "Scans in browser",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.3738,
+   "after": 0.6061
+  },
+  {
+   "id": "ventilation.supply",
+   "label": "Mechanische toevoer",
+   "group": "Lucht, water en zon",
+   "before": 0.3714,
+   "after": 0.6042
+  },
+  {
+   "id": "field.survey",
+   "label": "Opname ter plaatse",
+   "group": "Veldwerk en inspectie",
+   "before": 0.3878,
+   "after": 0.6212
+  },
+  {
+   "id": "frame.procurement",
+   "label": "Inkoopwerkruimte",
+   "group": "Productie en toetsing",
+   "before": 0.4255,
+   "after": 0.661
+  },
+  {
+   "id": "map.export-image",
+   "label": "Kaart als afbeelding",
+   "group": "Kaart en geotechnische rapportuitvoer",
+   "before": 0.4219,
+   "after": 0.6579
+  },
+  {
+   "id": "format.color",
+   "label": "Tekstkleur",
+   "group": "Tekstopmaak",
+   "before": 0.2632,
+   "after": 0.5
+  },
+  {
+   "id": "view.zoom-tool",
+   "label": "Zoomgereedschap — gepland",
+   "group": "Geplande documentgereedschappen",
+   "before": 0.2632,
+   "after": 0.5
+  },
+  {
+   "id": "ifc.roundtrip-compare",
+   "label": "IFC-rondgang vergelijken",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.434,
+   "after": 0.6712
+  },
+  {
+   "id": "draw.spline",
+   "label": "Spline tekenen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.4762,
+   "after": 0.7143
+  },
+  {
+   "id": "geo.quote-request",
+   "label": "Offerteaanvraag voorbereiden",
+   "group": "Kaart en geotechnische rapportuitvoer",
+   "before": 0.4722,
+   "after": 0.7126
+  },
+  {
+   "id": "draw.arc",
+   "label": "Boog tekenen",
+   "group": "Tekenen",
+   "before": 0.3889,
+   "after": 0.6296
+  },
+  {
+   "id": "energy.pv-measure",
+   "label": "PV-maatregel",
+   "group": "Lucht, water en zon",
+   "before": 0.2991,
+   "after": 0.5412
+  },
+  {
+   "id": "object.hide",
+   "label": "Verbergen",
+   "group": "Objecten en lagen",
+   "before": 0.4717,
+   "after": 0.7143
+  },
+  {
+   "id": "panel.element-visibility",
+   "label": "Elementzichtbaarheid",
+   "group": "Weergave en panelen",
+   "before": 0.4717,
+   "after": 0.7143
+  },
+  {
+   "id": "object.rename",
+   "label": "Object hernoemen",
+   "group": "Naam en eigenschappen",
+   "before": 0.3628,
+   "after": 0.6056
+  },
+  {
+   "id": "tools.category-energie",
+   "label": "Energie-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.36,
+   "after": 0.6029
+  },
+  {
+   "id": "image.reset",
+   "label": "Beeldcorrecties herstellen",
+   "group": "Beeldbewerking",
+   "before": 0.4565,
+   "after": 0.7015
+  },
+  {
+   "id": "location.select",
+   "label": "Locatie kiezen",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.3452,
+   "after": 0.5926
+  },
+  {
+   "id": "view.fullscreen-exit",
+   "label": "Volledig scherm verlaten",
+   "group": "Vensters en panelen",
+   "before": 0.4516,
+   "after": 0.7
+  },
+  {
+   "id": "ventilation.extract",
+   "label": "Mechanische afvoer",
+   "group": "Lucht, water en zon",
+   "before": 0.3529,
+   "after": 0.6042
+  },
+  {
+   "id": "contact.email",
+   "label": "Contact per e-mail",
+   "group": "Contact en update-informatie",
+   "before": 0.4667,
+   "after": 0.7222
+  },
+  {
+   "id": "backup.auto",
+   "label": "Automatische AI-back-up",
+   "group": "Herstelkopieën",
+   "before": 0.4744,
+   "after": 0.732
+  },
+  {
+   "id": "view.top",
+   "label": "Bovenaanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.3548,
+   "after": 0.617
+  },
+  {
+   "id": "view.left",
+   "label": "Linkeraanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.3548,
+   "after": 0.617
+  },
+  {
+   "id": "view.reset-camera",
+   "label": "Modelweergave herstellen",
+   "group": "Validatieweergave",
+   "before": 0.4179,
+   "after": 0.6809
+  },
+  {
+   "id": "view.thin-lines",
+   "label": "Dunne lijnen tonen",
+   "group": "Lezen en inspecteren",
+   "before": 0.0,
+   "after": 0.2653
+  },
+  {
+   "id": "draw.leader",
+   "label": "Leidlijn plaatsen",
+   "group": "Tekenen",
+   "before": 0.3676,
+   "after": 0.6364
+  },
+  {
+   "id": "view.search",
+   "label": "Zoeken",
+   "group": "Navigeren",
+   "before": 0.3377,
+   "after": 0.6066
+  },
+  {
+   "id": "view.bottom",
+   "label": "Onderaanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.3548,
+   "after": 0.625
+  },
+  {
+   "id": "view.right",
+   "label": "Rechteraanzicht",
+   "group": "Camerarichtingen",
+   "before": 0.3548,
+   "after": 0.625
+  },
+  {
+   "id": "status.unavailable",
+   "label": "Rekenkern niet beschikbaar",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.4516,
+   "after": 0.7222
+  },
+  {
+   "id": "energy.fetch-label",
+   "label": "Energielabel ophalen",
+   "group": "Camera en gegevenskoppeling",
+   "before": 0.3125,
+   "after": 0.5846
+  },
+  {
+   "id": "status.bridge-live",
+   "label": "Bridge actief",
+   "group": "Bridge en lintdichtheid",
+   "before": 0.4706,
+   "after": 0.7442
+  },
+  {
+   "id": "format.underline",
+   "label": "Onderstrepen",
+   "group": "Tekstopmaak",
+   "before": 0.303,
+   "after": 0.5769
+  },
+  {
+   "id": "page.reset-view-rotation",
+   "label": "Weergavedraaiing herstellen",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.413,
+   "after": 0.6912
+  },
+  {
+   "id": "page.first",
+   "label": "Eerste pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.36,
+   "after": 0.6429
+  },
+  {
+   "id": "page.last",
+   "label": "Laatste pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.36,
+   "after": 0.6429
+  },
+  {
+   "id": "panel.attachments",
+   "label": "Bijlagenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.2914,
+   "after": 0.5784
+  },
+  {
+   "id": "document.flatten-copy",
+   "label": "Gevlakte kopie maken",
+   "group": "Documentuitvoer",
+   "before": 0.2385,
+   "after": 0.5294
+  },
+  {
+   "id": "resource.assign",
+   "label": "Resource toewijzen",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.39,
+   "after": 0.6812
+  },
+  {
+   "id": "building.office",
+   "label": "Kantoorfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.391,
+   "after": 0.6835
+  },
+  {
+   "id": "object.show",
+   "label": "Zichtbaar maken",
+   "group": "Objecten en lagen",
+   "before": 0.4211,
+   "after": 0.7143
+  },
+  {
+   "id": "layout.milestone",
+   "label": "Mijlpaalindeling herkennen",
+   "group": "Indelingsiconen voor taken",
+   "before": 0.25,
+   "after": 0.5455
+  },
+  {
+   "id": "search.whole-word",
+   "label": "Alleen hele woorden",
+   "group": "Zoekresultaten",
+   "before": 0.1404,
+   "after": 0.439
+  },
+  {
+   "id": "measure.count",
+   "label": "Objecten tellen",
+   "group": "Technisch tekenen",
+   "before": 0.3261,
+   "after": 0.625
+  },
+  {
+   "id": "project.variants",
+   "label": "Begrotingsvarianten",
+   "group": "Project en wijzigingsreview",
+   "before": 0.4333,
+   "after": 0.7347
+  },
+  {
+   "id": "thermal.overheating-quick",
+   "label": "Snelle TOjuli-werkruimte",
+   "group": "IFC en warmteverliesresultaten",
+   "before": 0.2588,
+   "after": 0.5625
+  },
+  {
+   "id": "view.pan",
+   "label": "Beeld verschuiven",
+   "group": "Navigeren",
+   "before": 0.4059,
+   "after": 0.7121
+  },
+  {
+   "id": "frame.new-top-hung",
+   "label": "Nieuw klapraam",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4464,
+   "after": 0.7538
+  },
+  {
+   "id": "annotate.clear-page",
+   "label": "Pagina-annotaties wissen",
+   "group": "Annoteren en meten",
+   "before": 0.3333,
+   "after": 0.641
+  },
+  {
+   "id": "search.previous",
+   "label": "Vorige zoektreffer",
+   "group": "Zoekresultaten",
+   "before": 0.2987,
+   "after": 0.6071
+  },
+  {
+   "id": "mesh.wizard",
+   "label": "Meshwizard openen",
+   "group": "Meshmethoden",
+   "before": 0.4298,
+   "after": 0.7385
+  },
+  {
+   "id": "search.clear",
+   "label": "Zoektekst wissen",
+   "group": "Algemene bediening",
+   "before": 0.3269,
+   "after": 0.6364
+  },
+  {
+   "id": "status.update-available",
+   "label": "Update beschikbaar",
+   "group": "Contact en update-informatie",
+   "before": 0.3838,
+   "after": 0.6944
+  },
+  {
+   "id": "search.next",
+   "label": "Volgende zoektreffer",
+   "group": "Zoekresultaten",
+   "before": 0.2987,
+   "after": 0.6111
+  },
+  {
+   "id": "planning.sync",
+   "label": "Taken synchroniseren",
+   "group": "Planning",
+   "before": 0.4898,
+   "after": 0.8036
+  },
+  {
+   "id": "pointcloud.color-class",
+   "label": "Kleur naar puntklasse",
+   "group": "Puntkleuren en gebouwen",
+   "before": 0.3019,
+   "after": 0.6184
+  },
+  {
+   "id": "format.custom-color",
+   "label": "Aangepaste kleur kiezen",
+   "group": "Aangepaste kleurkeuze",
+   "before": 0.3402,
+   "after": 0.6567
+  },
+  {
+   "id": "symbol.category-custom",
+   "label": "Eigen symboolgroep",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.4,
+   "after": 0.7195
+  },
+  {
+   "id": "view.orbit",
+   "label": "3D-beeld draaien",
+   "group": "Navigeren",
+   "before": 0.4186,
+   "after": 0.7385
+  },
+  {
+   "id": "resource.previous",
+   "label": "Vorige histogramresource",
+   "group": "Resourcebelasting en vereffening",
+   "before": 0.375,
+   "after": 0.6957
+  },
+  {
+   "id": "resource.next",
+   "label": "Volgende histogramresource",
+   "group": "Resourcebelasting en vereffening",
+   "before": 0.375,
+   "after": 0.6957
+  },
+  {
+   "id": "transform.move",
+   "label": "Object verplaatsen",
+   "group": "Transformeren",
+   "before": 0.3043,
+   "after": 0.6308
+  },
+  {
+   "id": "table.columns",
+   "label": "Tabelkolommen kiezen",
+   "group": "Resources en werkruimtes",
+   "before": 0.48,
+   "after": 0.807
+  },
+  {
+   "id": "image.embedded-edit",
+   "label": "Ingebedde afbeelding bewerken",
+   "group": "PDF-inhoud bewerken",
+   "before": 0.296,
+   "after": 0.6234
+  },
+  {
+   "id": "capture.annotate",
+   "label": "Schermopname annoteren",
+   "group": "Schermannotaties en logweergave",
+   "before": 0.296,
+   "after": 0.6234
+  },
+  {
+   "id": "building.new-utility",
+   "label": "Nieuwbouw utiliteit",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.4516,
+   "after": 0.7797
+  },
+  {
+   "id": "field.checkbox",
+   "label": "Selectievak",
+   "group": "Formulierveldtypen",
+   "before": 0.451,
+   "after": 0.7797
+  },
+  {
+   "id": "status.bridge-off",
+   "label": "Bridge uit",
+   "group": "Bridge en lintdichtheid",
+   "before": 0.4706,
+   "after": 0.8
+  },
+  {
+   "id": "calendar.edit",
+   "label": "Resourcekalender bewerken",
+   "group": "Resourcecapaciteit en herkomst",
+   "before": 0.3676,
+   "after": 0.6977
+  },
+  {
+   "id": "resource.unlink-library",
+   "label": "Resource van bibliotheek losmaken",
+   "group": "Resourcecapaciteit en herkomst",
+   "before": 0.3421,
+   "after": 0.6727
+  },
+  {
+   "id": "panel.symbol-library",
+   "label": "Symboolbibliotheek",
+   "group": "Weergave en panelen",
+   "before": 0.3448,
+   "after": 0.6769
+  },
+  {
+   "id": "measure.scale-region",
+   "label": "Schaalgebied tekenen",
+   "group": "Selecties en verzamelingen",
+   "before": 0.4167,
+   "after": 0.75
+  },
+  {
+   "id": "pile.cpts",
+   "label": "Sonderingen inspecteren",
+   "group": "Paalplaninspectie en instellingen",
+   "before": 0.3895,
+   "after": 0.7231
+  },
+  {
+   "id": "section.box",
+   "label": "Doorsnedebox",
+   "group": "Doorsneden en meshes",
+   "before": 0.4386,
+   "after": 0.7727
+  },
+  {
+   "id": "tool.rainwater",
+   "label": "HWA-rekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.3494,
+   "after": 0.6842
+  },
+  {
+   "id": "layout.equipment",
+   "label": "Materieelindeling herkennen",
+   "group": "Indelingsiconen voor resources",
+   "before": 0.3826,
+   "after": 0.7188
+  },
+  {
+   "id": "file.save-as",
+   "label": "Opslaan als",
+   "group": "Bestanden",
+   "before": 0.2778,
+   "after": 0.617
+  },
+  {
+   "id": "recent.pin-toggle",
+   "label": "Recent bestand vastzetten",
+   "group": "Bestandsbronnen en sessies",
+   "before": 0.325,
+   "after": 0.6667
+  },
+  {
+   "id": "status.assignment-protected",
+   "label": "Grootheid beschermd door werkregel",
+   "group": "Tijdinvoer en toewijzingsinformatie",
+   "before": 0.36,
+   "after": 0.7031
+  },
+  {
+   "id": "line.reverse",
+   "label": "Lijnrichting omkeren",
+   "group": "Meetbewerkingen",
+   "before": 0.439,
+   "after": 0.7826
+  },
+  {
+   "id": "team.add",
+   "label": "Team samenstellen",
+   "group": "Prompts en projectcontext",
+   "before": 0.3656,
+   "after": 0.7101
+  },
+  {
+   "id": "project.option-set",
+   "label": "Optieset maken",
+   "group": "Project en wijzigingsreview",
+   "before": 0.4231,
+   "after": 0.7679
+  },
+  {
+   "id": "draw.rectangle",
+   "label": "Rechthoek tekenen",
+   "group": "Tekenen",
+   "before": 0.5,
+   "after": 0.8462
+  },
+  {
+   "id": "measure.scale-page",
+   "label": "Schaalgebied over pagina",
+   "group": "Selecties en verzamelingen",
+   "before": 0.4559,
+   "after": 0.8026
+  },
+  {
+   "id": "construction.library",
+   "label": "Constructiebibliotheek",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.2553,
+   "after": 0.6022
+  },
+  {
+   "id": "input.confirm-draft",
+   "label": "Conceptinvoer bevestigen",
+   "group": "Bibliotheekkoppeling en conceptinvoer",
+   "before": 0.4552,
+   "after": 0.8026
+  },
+  {
+   "id": "view.update-saved",
+   "label": "Weergave overschrijven",
+   "group": "Opgeslagen weergaven",
+   "before": 0.473,
+   "after": 0.8205
+  },
+  {
+   "id": "line.to-polygon",
+   "label": "Lijn naar veelhoek",
+   "group": "Meetbewerkingen",
+   "before": 0.3409,
+   "after": 0.6885
+  },
+  {
+   "id": "status.software-installed",
+   "label": "Appversie geïnstalleerd",
+   "group": "Installaties en versies",
+   "before": 0.4671,
+   "after": 0.8148
+  },
+  {
+   "id": "feedback.attach-images",
+   "label": "Feedbackafbeeldingen kiezen",
+   "group": "BCF en cloudbestanden",
+   "before": 0.3594,
+   "after": 0.7073
+  },
+  {
+   "id": "edit.duplicate",
+   "label": "Dupliceren",
+   "group": "Bewerken",
+   "before": 0.2893,
+   "after": 0.6389
+  },
+  {
+   "id": "image.brightness",
+   "label": "Helderheid",
+   "group": "Beeldbewerking",
+   "before": 0.25,
+   "after": 0.6
+  },
+  {
+   "id": "planning.code-value-add",
+   "label": "Codewaarde toevoegen",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.5067,
+   "after": 0.8571
+  },
+  {
+   "id": "ifc.compare-files",
+   "label": "Twee IFC-bestanden vergelijken",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.3529,
+   "after": 0.7037
+  },
+  {
+   "id": "symbol.category-kitchen",
+   "label": "Keukensymbolen",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.4675,
+   "after": 0.8228
+  },
+  {
+   "id": "document.edit-scanned-text",
+   "label": "Scantekst bewerken",
+   "group": "Documentafwerking",
+   "before": 0.3009,
+   "after": 0.6567
+  },
+  {
+   "id": "frame.new-french",
+   "label": "Nieuw stolpkozijn",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4636,
+   "after": 0.8197
+  },
+  {
+   "id": "calendar.promote",
+   "label": "Kalender in bibliotheek opnemen",
+   "group": "Bibliotheekstandaard en kalenders",
+   "before": 0.4914,
+   "after": 0.8507
+  },
+  {
+   "id": "capture.clear-annotations",
+   "label": "Schermannotaties wissen",
+   "group": "Schermannotaties en logweergave",
+   "before": 0.3333,
+   "after": 0.6933
+  },
+  {
+   "id": "status.column-present",
+   "label": "Kolom al zichtbaar",
+   "group": "Bezettingsinformatie en tabelkolommen",
+   "before": 0.4767,
+   "after": 0.837
+  },
+  {
+   "id": "draw.coordinate",
+   "label": "Puntcoördinaat plaatsen",
+   "group": "Technisch tekenen",
+   "before": 0.3537,
+   "after": 0.7174
+  },
+  {
+   "id": "symbol.category-site",
+   "label": "Bouwplaatssymbolen",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.4433,
+   "after": 0.807
+  },
+  {
+   "id": "draw.image",
+   "label": "Afbeelding plaatsen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.3388,
+   "after": 0.7027
+  },
+  {
+   "id": "frame.new-turn-tilt",
+   "label": "Nieuw draaikiepkozijn",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4455,
+   "after": 0.8103
+  },
+  {
+   "id": "frame.new-double",
+   "label": "Nieuw dubbel draaikiepkozijn",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4758,
+   "after": 0.8406
+  },
+  {
+   "id": "audio.meeting",
+   "label": "Vergaderwerkruimte",
+   "group": "Spraak en audio",
+   "before": 0.3673,
+   "after": 0.7353
+  },
+  {
+   "id": "geo.sounding-grid",
+   "label": "Sonderingsraster plaatsen",
+   "group": "Geotechniek",
+   "before": 0.45,
+   "after": 0.8182
+  },
+  {
+   "id": "measure.perimeter",
+   "label": "Omtrek meten",
+   "group": "Annoteren en meten",
+   "before": 0.45,
+   "after": 0.8182
+  },
+  {
+   "id": "building.houseboat",
+   "label": "Woonboot",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.2941,
+   "after": 0.6623
+  },
+  {
+   "id": "pile.load-points",
+   "label": "Belastinglocaties inspecteren",
+   "group": "Paalplaninspectie en instellingen",
+   "before": 0.4304,
+   "after": 0.8
+  },
+  {
+   "id": "draw.cloud",
+   "label": "Revisiewolk tekenen",
+   "group": "Technisch tekenen",
+   "before": 0.3889,
+   "after": 0.7593
+  },
+  {
+   "id": "calculation.advice",
+   "label": "Maatwerkadvies berekenen",
+   "group": "Formulieren en bewerken",
+   "before": 0.4453,
+   "after": 0.8158
+  },
+  {
+   "id": "planning.interruption-remove",
+   "label": "Taakonderbreking opheffen",
+   "group": "Onderbrekingen en fontpakketten",
+   "before": 0.375,
+   "after": 0.7455
+  },
+  {
+   "id": "permission.deny",
+   "label": "Geblokkeerde regels",
+   "group": "Toegang en machtigingen",
+   "before": 0.4107,
+   "after": 0.7821
+  },
+  {
+   "id": "edit.paste",
+   "label": "Plakken",
+   "group": "Bewerken",
+   "before": 0.3636,
+   "after": 0.7356
+  },
+  {
+   "id": "export.page-images",
+   "label": "Pagina-afbeeldingen exporteren",
+   "group": "Documentuitvoer",
+   "before": 0.3628,
+   "after": 0.7353
+  },
+  {
+   "id": "energy.chp",
+   "label": "Warmte-krachtkoppeling",
+   "group": "Warmteopwekkers",
+   "before": 0.2917,
+   "after": 0.6667
+  },
+  {
+   "id": "building.new-housing",
+   "label": "Nieuwbouw wonen",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.4043,
+   "after": 0.78
+  },
+  {
+   "id": "symbol.parametric-picker",
+   "label": "Parametrisch symbool kiezen",
+   "group": "Lezen en inspecteren",
+   "before": 0.3504,
+   "after": 0.7273
+  },
+  {
+   "id": "account.profile",
+   "label": "Mijn account",
+   "group": "Account en beheer",
+   "before": 0.3571,
+   "after": 0.7368
+  },
+  {
+   "id": "audio.mic-test",
+   "label": "Microfoon testen",
+   "group": "Spraak en audio",
+   "before": 0.2639,
+   "after": 0.6444
+  },
+  {
+   "id": "draw.spline-arrow",
+   "label": "Gebogen pijl tekenen",
+   "group": "Technisch tekenen",
+   "before": 0.3778,
+   "after": 0.7586
+  },
+  {
+   "id": "page.resize",
+   "label": "Paginaformaat wijzigen",
+   "group": "Paginabewerkingen",
+   "before": 0.4331,
+   "after": 0.8143
+  },
+  {
+   "id": "file.structure",
+   "label": "Mappenstructuur",
+   "group": "Prompts en projectcontext",
+   "before": 0.4274,
+   "after": 0.8095
+  },
+  {
+   "id": "layout.task-tree",
+   "label": "Boomindeling herkennen",
+   "group": "Indelingsiconen voor taken",
+   "before": 0.4464,
+   "after": 0.8308
+  },
+  {
+   "id": "page.rotate-left",
+   "label": "Pagina linksom draaien",
+   "group": "Paginabewerkingen",
+   "before": 0.375,
+   "after": 0.76
+  },
+  {
+   "id": "view.fit",
+   "label": "Alles passend",
+   "group": "Navigeren",
+   "before": 0.1667,
+   "after": 0.5522
+  },
+  {
+   "id": "grid.end-couple",
+   "label": "Stramienuiteinde koppelen",
+   "group": "Stramienuiteinden koppelen",
+   "before": 0.3563,
+   "after": 0.7419
+  },
+  {
+   "id": "planning.code-type-add",
+   "label": "Codetype toevoegen",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.3171,
+   "after": 0.7037
+  },
+  {
+   "id": "draw.cloud-polyline",
+   "label": "Wolkpolylijn tekenen",
+   "group": "Wolkpolylijn",
+   "before": 0.4048,
+   "after": 0.7931
+  },
+  {
+   "id": "nav.back",
+   "label": "Terug",
+   "group": "Navigeren",
+   "before": 0.2174,
+   "after": 0.6071
+  },
+  {
+   "id": "nav.forward",
+   "label": "Vooruit",
+   "group": "Navigeren",
+   "before": 0.2174,
+   "after": 0.6071
+  },
+  {
+   "id": "link.open-internal",
+   "label": "Interne documentkoppeling",
+   "group": "Koppelingen en handtekeningen",
+   "before": 0.4583,
+   "after": 0.8481
+  },
+  {
+   "id": "document.email",
+   "label": "PDF per e-mail voorbereiden",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.3519,
+   "after": 0.7424
+  },
+  {
+   "id": "frame.circularity",
+   "label": "Circulariteit",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.3876,
+   "after": 0.7792
+  },
+  {
+   "id": "permission.bypass",
+   "label": "Toestemmingsvragen overslaan",
+   "group": "Toegang en machtigingen",
+   "before": 0.4167,
+   "after": 0.8088
+  },
+  {
+   "id": "planning.status-date",
+   "label": "Peildatum",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.3497,
+   "after": 0.7429
+  },
+  {
+   "id": "status.hour-data",
+   "label": "Uurgegevens aanwezig",
+   "group": "Planningsmodi en informatie",
+   "before": 0.3497,
+   "after": 0.7429
+  },
+  {
+   "id": "file.type-other",
+   "label": "Bestandsaanduiding",
+   "group": "Bestandstypeaanduidingen",
+   "before": 0.5,
+   "after": 0.8947
+  },
+  {
+   "id": "draw.vector-clip",
+   "label": "Vectorknipsel maken",
+   "group": "Technisch tekenen",
+   "before": 0.4189,
+   "after": 0.814
+  },
+  {
+   "id": "grid.end-decouple",
+   "label": "Stramienuiteinde loszetten",
+   "group": "Stramienuiteinden koppelen",
+   "before": 0.3333,
+   "after": 0.7288
+  },
+  {
+   "id": "annotate.stamp",
+   "label": "Stempel plaatsen",
+   "group": "Annoteren en meten",
+   "before": 0.4038,
+   "after": 0.8
+  },
+  {
+   "id": "planning.relations-menu",
+   "label": "Taakrelaties kiezen",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.3404,
+   "after": 0.7368
+  },
+  {
+   "id": "integration.platform-sync",
+   "label": "Platform synchroniseren — gepland",
+   "group": "Geplande BIM-bediening",
+   "before": 0.3363,
+   "after": 0.7333
+  },
+  {
+   "id": "frame.new-pivot",
+   "label": "Nieuw pivotraam",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4673,
+   "after": 0.8644
+  },
+  {
+   "id": "report.validate",
+   "label": "Rapport controleren",
+   "group": "Rapportorganisatie",
+   "before": 0.3615,
+   "after": 0.76
+  },
+  {
+   "id": "status.signature-section",
+   "label": "Digitale handtekeninginformatie",
+   "group": "Productkenmerken en documentstatus",
+   "before": 0.4148,
+   "after": 0.8148
+  },
+  {
+   "id": "data.excel-refresh",
+   "label": "Excel-koppelingen bijwerken",
+   "group": "Subbladen en Excel",
+   "before": 0.3548,
+   "after": 0.7551
+  },
+  {
+   "id": "table.columns-reset",
+   "label": "Standaardkolommen herstellen",
+   "group": "Bezettingsinformatie en tabelkolommen",
+   "before": 0.3548,
+   "after": 0.7551
+  },
+  {
+   "id": "page.rotate-right",
+   "label": "Pagina rechtsom draaien",
+   "group": "Paginabewerkingen",
+   "before": 0.375,
+   "after": 0.7755
+  },
+  {
+   "id": "layout.resources",
+   "label": "Resource-indeling herkennen",
+   "group": "Indelingsiconen voor resources",
+   "before": 0.3143,
+   "after": 0.716
+  },
+  {
+   "id": "transform.split",
+   "label": "Geometrie splitsen",
+   "group": "Vectorbewerkingen",
+   "before": 0.16,
+   "after": 0.5625
+  },
+  {
+   "id": "file.type-project",
+   "label": "Projectbestandstype",
+   "group": "Bestandstypeaanduidingen",
+   "before": 0.482,
+   "after": 0.8846
+  },
+  {
+   "id": "pile.encoding-conflicts",
+   "label": "Coderingsconflicten bekijken",
+   "group": "Paalplan",
+   "before": 0.2632,
+   "after": 0.6667
+  },
+  {
+   "id": "planning.dependency-add",
+   "label": "Taakrelatie toevoegen",
+   "group": "Planning",
+   "before": 0.3293,
+   "after": 0.7333
+  },
+  {
+   "id": "page.replace",
+   "label": "Pagina uit bestand vervangen",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.4521,
+   "after": 0.8571
+  },
+  {
+   "id": "transform.length-axis",
+   "label": "Lijnlengte aanpassen",
+   "group": "PDF-inhoud bewerken",
+   "before": 0.2791,
+   "after": 0.6863
+  },
+  {
+   "id": "report.view-build",
+   "label": "Bouw 1-rapport",
+   "group": "Begrotingsrapportages",
+   "before": 0.4545,
+   "after": 0.8621
+  },
+  {
+   "id": "file.examples",
+   "label": "Voorbeeldprojecten",
+   "group": "Bestandmenu en projectbibliotheek",
+   "before": 0.3841,
+   "after": 0.7922
+  },
+  {
+   "id": "camera.switch",
+   "label": "Camera wisselen",
+   "group": "Camera en gegevenskoppeling",
+   "before": 0.3824,
+   "after": 0.7907
+  },
+  {
+   "id": "preferences.behavior",
+   "label": "Gedragsvoorkeuren",
+   "group": "PDF-instellingen",
+   "before": 0.3333,
+   "after": 0.7419
+  },
+  {
+   "id": "energy.warm-air",
+   "label": "Gasgestookte luchtverwarmer",
+   "group": "Warmteopwekkers",
+   "before": 0.3643,
+   "after": 0.7738
+  },
+  {
+   "id": "object.edit",
+   "label": "Gegevens bewerken",
+   "group": "Formulieren en bewerken",
+   "before": 0.2621,
+   "after": 0.6719
+  },
+  {
+   "id": "pointcloud.color-intensity",
+   "label": "Kleur naar intensiteit",
+   "group": "Puntkleuren en gebouwen",
+   "before": 0.2258,
+   "after": 0.6364
+  },
+  {
+   "id": "draw.dimension",
+   "label": "Maatlijn plaatsen",
+   "group": "Tekenen",
+   "before": 0.375,
+   "after": 0.7857
+  },
+  {
+   "id": "calendar.holiday-add",
+   "label": "Niet-werkdag toevoegen",
+   "group": "Werkrooster bewerken",
+   "before": 0.3254,
+   "after": 0.7361
+  },
+  {
+   "id": "thermal.overheating",
+   "label": "Volledige TOjuli-werkruimte",
+   "group": "IFC en warmteverliesresultaten",
+   "before": 0.3085,
+   "after": 0.7193
+  },
+  {
+   "id": "session.restore",
+   "label": "Opgeslagen sessie herstellen",
+   "group": "Bestandsbronnen en sessies",
+   "before": 0.2756,
+   "after": 0.6883
+  },
+  {
+   "id": "resource.clear-level",
+   "label": "Vereffening wissen",
+   "group": "Resourcebelasting en vereffening",
+   "before": 0.3333,
+   "after": 0.746
+  },
+  {
+   "id": "backup.create",
+   "label": "Nu herstelkopie maken",
+   "group": "Herstelkopieën",
+   "before": 0.482,
+   "after": 0.8947
+  },
+  {
+   "id": "pile.legend-edit",
+   "label": "Legenda bewerken",
+   "group": "Paalplan",
+   "before": 0.2444,
+   "after": 0.6585
+  },
+  {
+   "id": "extension.reinstall-file",
+   "label": "Extensie uit bestand vervangen",
+   "group": "Extensiepakketten onderhouden",
+   "before": 0.3083,
+   "after": 0.7229
+  },
+  {
+   "id": "software.update",
+   "label": "App met releasepakket bijwerken",
+   "group": "Installaties en versies",
+   "before": 0.3083,
+   "after": 0.7229
+  },
+  {
+   "id": "page.labels",
+   "label": "Paginalabels instellen",
+   "group": "Documentgegevens en sessies",
+   "before": 0.3853,
+   "after": 0.8
+  },
+  {
+   "id": "permission.allow",
+   "label": "Toegestane regels",
+   "group": "Toegang en machtigingen",
+   "before": 0.4059,
+   "after": 0.8209
+  },
+  {
+   "id": "status.library-item-missing",
+   "label": "Bibliotheekorigineel ontbreekt",
+   "group": "Bibliotheekkoppeling en conceptinvoer",
+   "before": 0.3008,
+   "after": 0.716
+  },
+  {
+   "id": "window.maximize",
+   "label": "Venster maximaliseren",
+   "group": "Vensters en panelen",
+   "before": 0.4737,
+   "after": 0.8889
+  },
+  {
+   "id": "pointcloud.classes",
+   "label": "Puntklassen in browser",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.2414,
+   "after": 0.6571
+  },
+  {
+   "id": "symbol.category-plumbing",
+   "label": "Sanitaire symbolen",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.3824,
+   "after": 0.8
+  },
+  {
+   "id": "view.web-reload",
+   "label": "Webtool herladen",
+   "group": "Webtools en decimalen",
+   "before": 0.2977,
+   "after": 0.716
+  },
+  {
+   "id": "nav.next-step",
+   "label": "Volgende stap",
+   "group": "Importbron en stappen",
+   "before": 0.3478,
+   "after": 0.7692
+  },
+  {
+   "id": "object.same-size",
+   "label": "Dezelfde grootte",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.375,
+   "after": 0.7966
+  },
+  {
+   "id": "frame.new",
+   "label": "Nieuw leeg kozijn",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4884,
+   "after": 0.9111
+  },
+  {
+   "id": "quotation.metadata",
+   "label": "Offertegegevens",
+   "group": "Offertedocument en versies",
+   "before": 0.4571,
+   "after": 0.88
+  },
+  {
+   "id": "draw.polyline",
+   "label": "Polylijn tekenen",
+   "group": "Tekenen",
+   "before": 0.4516,
+   "after": 0.875
+  },
+  {
+   "id": "terminal.log",
+   "label": "Opdrachtenlogboek",
+   "group": "Git en opdrachten",
+   "before": 0.4068,
+   "after": 0.8308
+  },
+  {
+   "id": "report.input-dossier",
+   "label": "Invoerdossier",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.461,
+   "after": 0.8851
+  },
+  {
+   "id": "list.sort-fields",
+   "label": "Sorteervelden kiezen",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.4419,
+   "after": 0.8667
+  },
+  {
+   "id": "field.handovers",
+   "label": "Opleveringen",
+   "group": "Veldwerk en inspectie",
+   "before": 0.2018,
+   "after": 0.6286
+  },
+  {
+   "id": "bcf.export",
+   "label": "BCF exporteren",
+   "group": "BCF en cloudbestanden",
+   "before": 0.4272,
+   "after": 0.8545
+  },
+  {
+   "id": "page.reorder",
+   "label": "Paginavolgorde wijzigen",
+   "group": "Documentafwerking",
+   "before": 0.4058,
+   "after": 0.8333
+  },
+  {
+   "id": "object.collection-create",
+   "label": "Verzameling maken",
+   "group": "Selecties en verzamelingen",
+   "before": 0.426,
+   "after": 0.8537
+  },
+  {
+   "id": "frame.combination",
+   "label": "Kozijncombinaties",
+   "group": "Productie en toetsing",
+   "before": 0.4375,
+   "after": 0.8667
+  },
+  {
+   "id": "panel.warnings",
+   "label": "Waarschuwingenpaneel",
+   "group": "Resources en werkruimtes",
+   "before": 0.3067,
+   "after": 0.7363
+  },
+  {
+   "id": "pointcloud.to-drawing",
+   "label": "Puntenwolk naar tekening",
+   "group": "Doorsneden en meshes",
+   "before": 0.3721,
+   "after": 0.8026
+  },
+  {
+   "id": "planning.dependency-draw-mode",
+   "label": "Relaties tekenen actief",
+   "group": "Planningsmodi en informatie",
+   "before": 0.3295,
+   "after": 0.76
+  },
+  {
+   "id": "edit.copy",
+   "label": "Kopiëren",
+   "group": "Bewerken",
+   "before": 0.2353,
+   "after": 0.6667
+  },
+  {
+   "id": "resource.new",
+   "label": "Resource toevoegen",
+   "group": "Resources en werkruimtes",
+   "before": 0.2951,
+   "after": 0.7273
+  },
+  {
+   "id": "annotate.apply-redactions",
+   "label": "Redacties toepassen",
+   "group": "Annoteren en meten",
+   "before": 0.3545,
+   "after": 0.7869
+  },
+  {
+   "id": "report.calculation-document",
+   "label": "Berekeningsdocument",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.475,
+   "after": 0.9077
+  },
+  {
+   "id": "annotate.clear-all",
+   "label": "Alle annotaties wissen",
+   "group": "Selecties en verzamelingen",
+   "before": 0.291,
+   "after": 0.7241
+  },
+  {
+   "id": "capture.page",
+   "label": "Pagina vastleggen",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.283,
+   "after": 0.7164
+  },
+  {
+   "id": "bcf.push",
+   "label": "BCF-issues verzenden",
+   "group": "BCF en cloudbestanden",
+   "before": 0.4324,
+   "after": 0.8667
+  },
+  {
+   "id": "file.print",
+   "label": "Afdrukken",
+   "group": "Bestanden",
+   "before": 0.3571,
+   "after": 0.7917
+  },
+  {
+   "id": "thermal.modeller",
+   "label": "Thermische modelbewerker",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.2981,
+   "after": 0.7344
+  },
+  {
+   "id": "profile.manage",
+   "label": "Vormbeheer openen",
+   "group": "Vliesgevels en profielen",
+   "before": 0.4176,
+   "after": 0.8545
+  },
+  {
+   "id": "table.column-filter",
+   "label": "Kolomwaarden filteren",
+   "group": "Paalplanbewerking",
+   "before": 0.3676,
+   "after": 0.8056
+  },
+  {
+   "id": "ai.bridge-stop",
+   "label": "Bridge stoppen",
+   "group": "Bridge en lintdichtheid",
+   "before": 0.4048,
+   "after": 0.8431
+  },
+  {
+   "id": "extension.runtime-browser",
+   "label": "Extensiecontext browser",
+   "group": "Uitvoeromgeving van extensies",
+   "before": 0.3678,
+   "after": 0.8077
+  },
+  {
+   "id": "edit.clear-all",
+   "label": "Alles wissen",
+   "group": "Bewerken",
+   "before": 0.2787,
+   "after": 0.7222
+  },
+  {
+   "id": "resource.workspace",
+   "label": "Resourcewerkruimte",
+   "group": "Resources en werkruimtes",
+   "before": 0.4024,
+   "after": 0.8471
+  },
+  {
+   "id": "bookmark.edit",
+   "label": "Bladwijzer bewerken",
+   "group": "Bladwijzers",
+   "before": 0.1826,
+   "after": 0.6282
+  },
+  {
+   "id": "assistant.floorplan",
+   "label": "Plattegrondopdracht voorbereiden",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.4331,
+   "after": 0.8788
+  },
+  {
+   "id": "theme.light",
+   "label": "Lichte modus",
+   "group": "Thema en kleur",
+   "before": 0.125,
+   "after": 0.5714
+  },
+  {
+   "id": "pile.columns",
+   "label": "Paalkolommen kiezen",
+   "group": "Paalplan",
+   "before": 0.3868,
+   "after": 0.8361
+  },
+  {
+   "id": "layout.crew",
+   "label": "Ploegindeling herkennen",
+   "group": "Indelingsiconen voor resources",
+   "before": 0.2885,
+   "after": 0.7385
+  },
+  {
+   "id": "export.cad",
+   "label": "Naar CAD exporteren",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.2655,
+   "after": 0.7164
+  },
+  {
+   "id": "category.devops",
+   "label": "DevOps",
+   "group": "Pakketten en werkstromen",
+   "before": 0.3529,
+   "after": 0.8043
+  },
+  {
+   "id": "camera.capture",
+   "label": "Foto vastleggen",
+   "group": "Camera en gegevenskoppeling",
+   "before": 0.3393,
+   "after": 0.791
+  },
+  {
+   "id": "feedback.github-issue",
+   "label": "GitHub-issue voorbereiden",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.4,
+   "after": 0.8519
+  },
+  {
+   "id": "annotate.marked",
+   "label": "Annotatie gemarkeerd",
+   "group": "Annotatiekeuzes",
+   "before": 0.3721,
+   "after": 0.8261
+  },
+  {
+   "id": "frame.new-sliding",
+   "label": "Nieuwe schuifpui",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4602,
+   "after": 0.9153
+  },
+  {
+   "id": "ai.bridge-start",
+   "label": "Bridge starten",
+   "group": "Bridge en lintdichtheid",
+   "before": 0.4,
+   "after": 0.8571
+  },
+  {
+   "id": "backup.folder",
+   "label": "Back-upmap openen",
+   "group": "Herstelkopieën",
+   "before": 0.3429,
+   "after": 0.8
+  },
+  {
+   "id": "report.list-block",
+   "label": "Opsommingsblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2571,
+   "after": 0.7143
+  },
+  {
+   "id": "file.list-add",
+   "label": "Bestanden aan lijst toevoegen",
+   "group": "Bestandslijsten en klemborddocumenten",
+   "before": 0.475,
+   "after": 0.9322
+  },
+  {
+   "id": "view.fullscreen",
+   "label": "Volledig scherm",
+   "group": "Vensters en panelen",
+   "before": 0.2424,
+   "after": 0.7
+  },
+  {
+   "id": "report.map-block",
+   "label": "Kaartblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2174,
+   "after": 0.675
+  },
+  {
+   "id": "export.ifc-report",
+   "label": "IFC-report exporteren",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.2232,
+   "after": 0.6812
+  },
+  {
+   "id": "status.stale-result",
+   "label": "Resultaat hoort bij eerdere invoer",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.3448,
+   "after": 0.803
+  },
+  {
+   "id": "memory.entries",
+   "label": "Geheugenitems",
+   "group": "Prompts en projectcontext",
+   "before": 0.275,
+   "after": 0.7333
+  },
+  {
+   "id": "format.fill-color",
+   "label": "Vulkleur kiezen",
+   "group": "Tekst en stijlen",
+   "before": 0.4211,
+   "after": 0.88
+  },
+  {
+   "id": "object.collection-explode",
+   "label": "Verzameling opheffen",
+   "group": "Selecties en verzamelingen",
+   "before": 0.381,
+   "after": 0.84
+  },
+  {
+   "id": "review.highlight-row",
+   "label": "Hele regel markeren",
+   "group": "Project en wijzigingsreview",
+   "before": 0.2619,
+   "after": 0.7217
+  },
+  {
+   "id": "frame.new-door",
+   "label": "Nieuwe voordeur",
+   "group": "Nieuwe kozijnen",
+   "before": 0.475,
+   "after": 0.9355
+  },
+  {
+   "id": "budget.add-monitor",
+   "label": "Bewakingspost toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.3868,
+   "after": 0.8475
+  },
+  {
+   "id": "report.view-specification",
+   "label": "Werkbeschrijving",
+   "group": "Begrotingsrapportages",
+   "before": 0.4746,
+   "after": 0.9355
+  },
+  {
+   "id": "permission.edits",
+   "label": "Bestandswijzigingen toestaan",
+   "group": "Toegang en machtigingen",
+   "before": 0.3694,
+   "after": 0.831
+  },
+  {
+   "id": "permission.default",
+   "label": "Toestemming per gereedschap",
+   "group": "Toegang en machtigingen",
+   "before": 0.4151,
+   "after": 0.8767
+  },
+  {
+   "id": "file.open",
+   "label": "Openen",
+   "group": "Bestanden",
+   "before": 0.2762,
+   "after": 0.7385
+  },
+  {
+   "id": "object.rotate-left-90",
+   "label": "Object 90° linksom",
+   "group": "Objectstand",
+   "before": 0.3514,
+   "after": 0.814
+  },
+  {
+   "id": "energy.fired-generator",
+   "label": "Warmte uit verbranding",
+   "group": "Warmteopwekkers",
+   "before": 0.3136,
+   "after": 0.7763
+  },
+  {
+   "id": "file.reveal",
+   "label": "Bestand in map tonen",
+   "group": "Documentgegevens en sessies",
+   "before": 0.3486,
+   "after": 0.8116
+  },
+  {
+   "id": "object.arrange-options",
+   "label": "Schikopties openen",
+   "group": "Annotatiekeuzes",
+   "before": 0.403,
+   "after": 0.8667
+  },
+  {
+   "id": "camera.open",
+   "label": "Camera openen",
+   "group": "Camera en gegevenskoppeling",
+   "before": 0.3443,
+   "after": 0.8082
+  },
+  {
+   "id": "command.catalog",
+   "label": "Eigen opdrachten",
+   "group": "Prompts en projectcontext",
+   "before": 0.375,
+   "after": 0.8406
+  },
+  {
+   "id": "object.rotate-right-90",
+   "label": "Object 90° rechtsom",
+   "group": "Objectstand",
+   "before": 0.3514,
+   "after": 0.8182
+  },
+  {
+   "id": "task.indent",
+   "label": "Taak inspringen",
+   "group": "Taakstructuur en WBS",
+   "before": 0.3902,
+   "after": 0.8571
+  },
+  {
+   "id": "task.outdent",
+   "label": "Taak uitspringen",
+   "group": "Taakstructuur en WBS",
+   "before": 0.3902,
+   "after": 0.8571
+  },
+  {
+   "id": "status.schedule-last-result",
+   "label": "Laatst berekende bezetting",
+   "group": "Bezettingsinformatie en tabelkolommen",
+   "before": 0.1985,
+   "after": 0.6667
+  },
+  {
+   "id": "view.remember-reading",
+   "label": "Leespositie onthouden",
+   "group": "Lezen en inspecteren",
+   "before": 0.2388,
+   "after": 0.7073
+  },
+  {
+   "id": "tool.ramp",
+   "label": "Hellingbaanrekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.3017,
+   "after": 0.7703
+  },
+  {
+   "id": "credential.hide",
+   "label": "Token verbergen",
+   "group": "Verbindingsgegevens en tokens",
+   "before": 0.3623,
+   "after": 0.8315
+  },
+  {
+   "id": "draw.ellipse",
+   "label": "Ellips tekenen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.2895,
+   "after": 0.76
+  },
+  {
+   "id": "transform.flip-vertical",
+   "label": "Verticaal spiegelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.1961,
+   "after": 0.6667
+  },
+  {
+   "id": "view.show-keystrokes",
+   "label": "Toetsaanslagen tonen",
+   "group": "Lezen en inspecteren",
+   "before": 0.4127,
+   "after": 0.8833
+  },
+  {
+   "id": "energy.hot-water-measure",
+   "label": "Warmwatermaatregel",
+   "group": "Lucht, water en zon",
+   "before": 0.3407,
+   "after": 0.8113
+  },
+  {
+   "id": "status.install-size-smaller",
+   "label": "Installatiepakket kleiner",
+   "group": "Pakketgrootte in releasevergelijking",
+   "before": 0.377,
+   "after": 0.8485
+  },
+  {
+   "id": "status.install-size-larger",
+   "label": "Installatiepakket groter",
+   "group": "Pakketgrootte in releasevergelijking",
+   "before": 0.377,
+   "after": 0.8485
+  },
+  {
+   "id": "budget.add-formula",
+   "label": "Rekenregel toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.4587,
+   "after": 0.931
+  },
+  {
+   "id": "budget.add-text",
+   "label": "Tekstregel toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.4571,
+   "after": 0.9298
+  },
+  {
+   "id": "audio.tts",
+   "label": "Tekst naar spraak",
+   "group": "Spraak en audio",
+   "before": 0.2,
+   "after": 0.6739
+  },
+  {
+   "id": "measure.calibrate-line",
+   "label": "Kalibreren vanuit lijn",
+   "group": "Meetbewerkingen",
+   "before": 0.4286,
+   "after": 0.9032
+  },
+  {
+   "id": "prompt.builder",
+   "label": "Prompt samenstellen",
+   "group": "Prompts en projectcontext",
+   "before": 0.264,
+   "after": 0.7397
+  },
+  {
+   "id": "account.admin",
+   "label": "Beheeromgeving",
+   "group": "Account en beheer",
+   "before": 0.3333,
+   "after": 0.8095
+  },
+  {
+   "id": "frame.calculation",
+   "label": "Kozijncalculatie",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.4118,
+   "after": 0.8889
+  },
+  {
+   "id": "drawing.settings",
+   "label": "Tekeninstellingen",
+   "group": "Symbool- en tekeninstellingen",
+   "before": 0.2946,
+   "after": 0.7727
+  },
+  {
+   "id": "tabs.scroll-start",
+   "label": "Tabstrook naar begin",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.3182,
+   "after": 0.7966
+  },
+  {
+   "id": "tabs.scroll-end",
+   "label": "Tabstrook naar eind",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.3182,
+   "after": 0.7966
+  },
+  {
+   "id": "document.close",
+   "label": "Document sluiten",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.2647,
+   "after": 0.7436
+  },
+  {
+   "id": "measure.set-scale",
+   "label": "Meetschaal instellen",
+   "group": "Meetbewerkingen",
+   "before": 0.3571,
+   "after": 0.8361
+  },
+  {
+   "id": "building.utility",
+   "label": "Utiliteitsgebouw",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.2909,
+   "after": 0.7733
+  },
+  {
+   "id": "energy.ventilation-measure",
+   "label": "Ventilatiemaatregel",
+   "group": "Lucht, water en zon",
+   "before": 0.1923,
+   "after": 0.6765
+  },
+  {
+   "id": "object.rotate-180",
+   "label": "Object 180° draaien",
+   "group": "Objectstand",
+   "before": 0.3258,
+   "after": 0.8113
+  },
+  {
+   "id": "object.lock",
+   "label": "Vergrendelen",
+   "group": "Objecten en lagen",
+   "before": 0.3404,
+   "after": 0.8269
+  },
+  {
+   "id": "pile.cpt-settings",
+   "label": "Sonderingsinstellingen",
+   "group": "Paalplaninspectie en instellingen",
+   "before": 0.2791,
+   "after": 0.766
+  },
+  {
+   "id": "image.crop",
+   "label": "Afbeelding bijsnijden",
+   "group": "Beeldbewerking",
+   "before": 0.4861,
+   "after": 0.9737
+  },
+  {
+   "id": "draw.freehand",
+   "label": "Vrije hand tekenen",
+   "group": "Extra tekengereedschappen",
+   "before": 0.3788,
+   "after": 0.8667
+  },
+  {
+   "id": "tools.category-calculatie",
+   "label": "Calculatie-categorie",
+   "group": "Toolcategorieën: techniek",
+   "before": 0.4082,
+   "after": 0.8961
+  },
+  {
+   "id": "budget.add-chapter",
+   "label": "Hoofdstuk toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.3365,
+   "after": 0.8246
+  },
+  {
+   "id": "section.fit-selection",
+   "label": "Doorsnedebox om selectie",
+   "group": "Doorsneden en meshes",
+   "before": 0.4286,
+   "after": 0.9167
+  },
+  {
+   "id": "report.document",
+   "label": "Rapportdocument",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.4315,
+   "after": 0.92
+  },
+  {
+   "id": "transform.chamfer",
+   "label": "Hoek afkanten",
+   "group": "Extra tekengereedschappen",
+   "before": 0.3375,
+   "after": 0.8261
+  },
+  {
+   "id": "symbol.category-nen1414",
+   "label": "NEN 1414-symboolcategorie",
+   "group": "Symboolbibliotheekcategorieën",
+   "before": 0.1571,
+   "after": 0.6458
+  },
+  {
+   "id": "frame.new-lift-slide",
+   "label": "Nieuwe hefschuifpui",
+   "group": "Nieuwe kozijnen",
+   "before": 0.4375,
+   "after": 0.9273
+  },
+  {
+   "id": "drawing.frame-import",
+   "label": "SVG-tekeningkader kiezen",
+   "group": "Tekeningkaders en hoekverbindingen",
+   "before": 0.3846,
+   "after": 0.875
+  },
+  {
+   "id": "object.send-back",
+   "label": "Helemaal naar achteren",
+   "group": "Rangschikken en verdelen",
+   "before": 0.2743,
+   "after": 0.7647
+  },
+  {
+   "id": "page.move-up",
+   "label": "Pagina één plaats eerder",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.3509,
+   "after": 0.8413
+  },
+  {
+   "id": "page.move-down",
+   "label": "Pagina één plaats later",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.3509,
+   "after": 0.8413
+  },
+  {
+   "id": "object.send-backward",
+   "label": "Eén stap naar achteren",
+   "group": "Rangschikken en verdelen",
+   "before": 0.2571,
+   "after": 0.75
+  },
+  {
+   "id": "export.raster-pdf",
+   "label": "Raster-PDF exporteren",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.2569,
+   "after": 0.75
+  },
+  {
+   "id": "transform.rotate",
+   "label": "Object roteren",
+   "group": "Transformeren",
+   "before": 0.4177,
+   "after": 0.9111
+  },
+  {
+   "id": "thermal.rooms",
+   "label": "Vertrekken",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.3759,
+   "after": 0.8696
+  },
+  {
+   "id": "status.structure-locked",
+   "label": "Structuurwijziging beperkt",
+   "group": "Planningsmodi en informatie",
+   "before": 0.3681,
+   "after": 0.8625
+  },
+  {
+   "id": "project.trash-view",
+   "label": "Prullenbak bekijken",
+   "group": "Projectbibliotheek",
+   "before": 0.2553,
+   "after": 0.75
+  },
+  {
+   "id": "printer.properties",
+   "label": "Printereigenschappen",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.3857,
+   "after": 0.8816
+  },
+  {
+   "id": "backup.recover",
+   "label": "Projecten herstellen",
+   "group": "Relaties, herstel en tabelweergave",
+   "before": 0.3214,
+   "after": 0.8182
+  },
+  {
+   "id": "report.image-block",
+   "label": "Afbeeldingsblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.1812,
+   "after": 0.6782
+  },
+  {
+   "id": "construction.compare",
+   "label": "Constructieopbouwen vergelijken",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.4699,
+   "after": 0.9674
+  },
+  {
+   "id": "object.bring-front",
+   "label": "Helemaal naar voren",
+   "group": "Rangschikken en verdelen",
+   "before": 0.2743,
+   "after": 0.7727
+  },
+  {
+   "id": "object.unlock",
+   "label": "Ontgrendelen",
+   "group": "Objecten en lagen",
+   "before": 0.3441,
+   "after": 0.8431
+  },
+  {
+   "id": "report.catalog",
+   "label": "Alle rapporten",
+   "group": "Rapportorganisatie",
+   "before": 0.4601,
+   "after": 0.9592
+  },
+  {
+   "id": "report.check-block",
+   "label": "Toetsblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.264,
+   "after": 0.7639
+  },
+  {
+   "id": "extensions.manage",
+   "label": "Extensies beheren",
+   "group": "Extensies en hulpfuncties",
+   "before": 0.2778,
+   "after": 0.7778
+  },
+  {
+   "id": "memory.types",
+   "label": "Geheugentypen",
+   "group": "Prompts en projectcontext",
+   "before": 0.2778,
+   "after": 0.7778
+  },
+  {
+   "id": "project.library",
+   "label": "Projectbibliotheek",
+   "group": "Projectbibliotheek",
+   "before": 0.2778,
+   "after": 0.7778
+  },
+  {
+   "id": "symbol.system-types",
+   "label": "Systeemtypen beheren",
+   "group": "Symbool- en tekeninstellingen",
+   "before": 0.2778,
+   "after": 0.7778
+  },
+  {
+   "id": "software.catalog",
+   "label": "Appcatalogus tonen",
+   "group": "Apps kiezen en openen",
+   "before": 0.2778,
+   "after": 0.7778
+  },
+  {
+   "id": "object.bring-forward",
+   "label": "Eén stap naar voren",
+   "group": "Rangschikken en verdelen",
+   "before": 0.2571,
+   "after": 0.7581
+  },
+  {
+   "id": "panel.model-tree",
+   "label": "Modelstructuur — gepland",
+   "group": "Geplande documentpanelen en afdrukvoorkeuren",
+   "before": 0.3739,
+   "after": 0.875
+  },
+  {
+   "id": "tools.category-constructief",
+   "label": "Constructief-categorie",
+   "group": "Toolcategorieën: techniek",
+   "before": 0.4493,
+   "after": 0.9506
+  },
+  {
+   "id": "ai.resume",
+   "label": "AI-mutaties hervatten",
+   "group": "AI-mutaties bedienen",
+   "before": 0.3121,
+   "after": 0.8161
+  },
+  {
+   "id": "chat.clear",
+   "label": "Gesprek wissen",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.2213,
+   "after": 0.726
+  },
+  {
+   "id": "frame.editor",
+   "label": "Kozijneditor",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.3818,
+   "after": 0.8868
+  },
+  {
+   "id": "evidence.photo",
+   "label": "Fotobewijs",
+   "group": "Constructieopbouw en bewijs",
+   "before": 0.1727,
+   "after": 0.6782
+  },
+  {
+   "id": "panel.signatures",
+   "label": "Handtekeningenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.3067,
+   "after": 0.8132
+  },
+  {
+   "id": "energy.electric-storage",
+   "label": "Elektrische voorraadboiler",
+   "group": "Warmteopwekkers",
+   "before": 0.2617,
+   "after": 0.7692
+  },
+  {
+   "id": "transform.mirror",
+   "label": "Spiegelen",
+   "group": "Transformeren",
+   "before": 0.1765,
+   "after": 0.6842
+  },
+  {
+   "id": "report.print-entry",
+   "label": "Naar afdrukvoorbereiding",
+   "group": "Bestandmenu en projectbibliotheek",
+   "before": 0.3188,
+   "after": 0.8267
+  },
+  {
+   "id": "measure.angle",
+   "label": "Hoek meten",
+   "group": "Annoteren en meten",
+   "before": 0.4918,
+   "after": 1.0
+  },
+  {
+   "id": "quotation.type-simple",
+   "label": "Eenvoudige offerte",
+   "group": "Offertetypen en secties",
+   "before": 0.4237,
+   "after": 0.9322
+  },
+  {
+   "id": "file.place-add",
+   "label": "Maplocatie toevoegen",
+   "group": "Bestandsbronnen en sessies",
+   "before": 0.3448,
+   "after": 0.8542
+  },
+  {
+   "id": "calc.chapter",
+   "label": "Begrotingshoofdstuk",
+   "group": "Begrotingsweergave",
+   "before": 0.2632,
+   "after": 0.7727
+  },
+  {
+   "id": "panel.document-navigation",
+   "label": "Documentnavigatie — gepland",
+   "group": "Geplande documentpanelen en afdrukvoorkeuren",
+   "before": 0.3137,
+   "after": 0.8235
+  },
+  {
+   "id": "view.rotate-left",
+   "label": "Weergave linksom draaien",
+   "group": "Weergave en panelen",
+   "before": 0.3254,
+   "after": 0.8356
+  },
+  {
+   "id": "status.busy",
+   "label": "Bezig",
+   "group": "Status en meldingen",
+   "before": 0.375,
+   "after": 0.8857
+  },
+  {
+   "id": "git.issue",
+   "label": "Issueformulier",
+   "group": "Git en opdrachten",
+   "before": 0.4151,
+   "after": 0.9259
+  },
+  {
+   "id": "credential.regenerate",
+   "label": "Nieuw verbindingstoken",
+   "group": "Verbindingsgegevens en tokens",
+   "before": 0.3304,
+   "after": 0.8413
+  },
+  {
+   "id": "note.reset-position",
+   "label": "Notitiepositie herstellen",
+   "group": "Notities en afdrukgedrag",
+   "before": 0.3516,
+   "after": 0.8627
+  },
+  {
+   "id": "draw.note",
+   "label": "Opmerking",
+   "group": "Annoteren en meten",
+   "before": 0.1667,
+   "after": 0.678
+  },
+  {
+   "id": "ui.settings",
+   "label": "Instellingen",
+   "group": "Instellingen en hulp",
+   "before": 0.2222,
+   "after": 0.7368
+  },
+  {
+   "id": "command.templates",
+   "label": "Opdrachtsjablonen",
+   "group": "Prompts en projectcontext",
+   "before": 0.338,
+   "after": 0.8533
+  },
+  {
+   "id": "file.places",
+   "label": "Opgeslagen maplocaties",
+   "group": "Bestandsbronnen en sessies",
+   "before": 0.3443,
+   "after": 0.8611
+  },
+  {
+   "id": "status.library-suggestion",
+   "label": "Voorgesteld bibliotheekitem",
+   "group": "Bibliotheekkoppeling en conceptinvoer",
+   "before": 0.2963,
+   "after": 0.8136
+  },
+  {
+   "id": "status.version-upgrade",
+   "label": "Beschikbare opvolgversie",
+   "group": "Installaties en versies",
+   "before": 0.2963,
+   "after": 0.8136
+  },
+  {
+   "id": "view.report-preview",
+   "label": "Rapportvoorbeeld",
+   "group": "Rapportweergaven",
+   "before": 0.3875,
+   "after": 0.9048
+  },
+  {
+   "id": "table.split-cells",
+   "label": "Celsamenvoeging opheffen",
+   "group": "Tabellen en formulieren",
+   "before": 0.3896,
+   "after": 0.907
+  },
+  {
+   "id": "table.merge-cells",
+   "label": "Cellen samenvoegen",
+   "group": "Tabellen en formulieren",
+   "before": 0.3836,
+   "after": 0.9012
+  },
+  {
+   "id": "comments.import",
+   "label": "Opmerkingen importeren — gepland",
+   "group": "Geplande opmerkingenuitwisseling",
+   "before": 0.2556,
+   "after": 0.7736
+  },
+  {
+   "id": "geo.sondering",
+   "label": "Sondering plaatsen",
+   "group": "Geotechniek",
+   "before": 0.2812,
+   "after": 0.8
+  },
+  {
+   "id": "annotate.printable",
+   "label": "Annotatie afdrukbaar",
+   "group": "Notities en afdrukgedrag",
+   "before": 0.3448,
+   "after": 0.8636
+  },
+  {
+   "id": "assistant.structural-layout",
+   "label": "Constructieopdracht voorbereiden",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.419,
+   "after": 0.9385
+  },
+  {
+   "id": "thermal.room-split",
+   "label": "Vertrek splitsen",
+   "group": "Model- en constructiebewerking",
+   "before": 0.4074,
+   "after": 0.9286
+  },
+  {
+   "id": "tree.collapse-level",
+   "label": "Tot niveau inklappen",
+   "group": "Begrotingsweergave",
+   "before": 0.3676,
+   "after": 0.8889
+  },
+  {
+   "id": "calculation.audit",
+   "label": "Rekenkerncontrole",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.2927,
+   "after": 0.8143
+  },
+  {
+   "id": "calculation.module-picker",
+   "label": "Rekenmodule kiezen",
+   "group": "Rekenmodules kiezen",
+   "before": 0.2879,
+   "after": 0.8095
+  },
+  {
+   "id": "view.rotate-right",
+   "label": "Weergave rechtsom draaien",
+   "group": "Weergave en panelen",
+   "before": 0.3254,
+   "after": 0.8472
+  },
+  {
+   "id": "transform.array",
+   "label": "Objectreeks maken",
+   "group": "Vectorbewerkingen",
+   "before": 0.2778,
+   "after": 0.8
+  },
+  {
+   "id": "quotation.payment-terms",
+   "label": "Betalingstermijnen",
+   "group": "Offertedocument en versies",
+   "before": 0.3129,
+   "after": 0.8354
+  },
+  {
+   "id": "calendar.copy-workdays",
+   "label": "Werktijden naar werkdagen",
+   "group": "Werkrooster bewerken",
+   "before": 0.4136,
+   "after": 0.9362
+  },
+  {
+   "id": "tool.heat-pump-sizing",
+   "label": "Warmtepompdimensionering",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.3067,
+   "after": 0.8293
+  },
+  {
+   "id": "category.code",
+   "label": "Webontwikkeling",
+   "group": "Pakketten en werkstromen",
+   "before": 0.2821,
+   "after": 0.8049
+  },
+  {
+   "id": "field.project",
+   "label": "Veldwerkproject",
+   "group": "Veldwerk en inspectie",
+   "before": 0.2615,
+   "after": 0.7848
+  },
+  {
+   "id": "comments.export",
+   "label": "Opmerkingen exporteren — gepland",
+   "group": "Geplande opmerkingenuitwisseling",
+   "before": 0.25,
+   "after": 0.7736
+  },
+  {
+   "id": "material.library",
+   "label": "Materiaalbibliotheek",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.3846,
+   "after": 0.9091
+  },
+  {
+   "id": "energy.heat-network",
+   "label": "Warmtenet",
+   "group": "Warmteopwekkers",
+   "before": 0.2391,
+   "after": 0.7647
+  },
+  {
+   "id": "credential.show",
+   "label": "Token tonen",
+   "group": "Verbindingsgegevens en tokens",
+   "before": 0.3521,
+   "after": 0.878
+  },
+  {
+   "id": "software.open-webtab",
+   "label": "Webtool in tab openen",
+   "group": "Apps kiezen en openen",
+   "before": 0.3333,
+   "after": 0.8592
+  },
+  {
+   "id": "edit.select-all",
+   "label": "Alles selecteren",
+   "group": "Selecteren",
+   "before": 0.1341,
+   "after": 0.6604
+  },
+  {
+   "id": "bookmark.add-child",
+   "label": "Onderliggende bladwijzer",
+   "group": "Bladwijzers",
+   "before": 0.3148,
+   "after": 0.8413
+  },
+  {
+   "id": "calc.hsb-wizard",
+   "label": "HSB-wandrekenwizard",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.4242,
+   "after": 0.9512
+  },
+  {
+   "id": "ui.shortcuts",
+   "label": "Sneltoetsen",
+   "group": "Extensies en hulpfuncties",
+   "before": 0.4032,
+   "after": 0.931
+  },
+  {
+   "id": "panel.ai-activity",
+   "label": "AI-activiteitenpaneel",
+   "group": "Activiteiten en begeleiding",
+   "before": 0.3165,
+   "after": 0.8452
+  },
+  {
+   "id": "diagnostics.startup-log",
+   "label": "Opstartdiagnostiek tonen",
+   "group": "Versies, diagnostiek en uitwisseling",
+   "before": 0.2797,
+   "after": 0.8088
+  },
+  {
+   "id": "view.grid",
+   "label": "Raster tonen",
+   "group": "Objecten en lagen",
+   "before": 0.4074,
+   "after": 0.9365
+  },
+  {
+   "id": "planning.clear-status-date",
+   "label": "Peildatum wissen",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.3167,
+   "after": 0.8462
+  },
+  {
+   "id": "transform.extend",
+   "label": "Verlengen tot grens",
+   "group": "Transformeren",
+   "before": 0.3448,
+   "after": 0.875
+  },
+  {
+   "id": "export.pdfx",
+   "label": "PDF/X exporteren",
+   "group": "Documentuitvoer",
+   "before": 0.2389,
+   "after": 0.7692
+  },
+  {
+   "id": "tool.angle",
+   "label": "Hoekenrekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.3774,
+   "after": 0.9077
+  },
+  {
+   "id": "geo.fetch-buildings",
+   "label": "Gebouwen ophalen",
+   "group": "Puntkleuren en gebouwen",
+   "before": 0.4314,
+   "after": 0.9623
+  },
+  {
+   "id": "permission.plan",
+   "label": "Alleen analyseren",
+   "group": "Toegang en machtigingen",
+   "before": 0.4528,
+   "after": 0.9844
+  },
+  {
+   "id": "format.stroke-color",
+   "label": "Lijnkleur kiezen",
+   "group": "Tekst en stijlen",
+   "before": 0.3878,
+   "after": 0.92
+  },
+  {
+   "id": "software.launch",
+   "label": "Geïnstalleerde app starten",
+   "group": "Apps kiezen en openen",
+   "before": 0.3033,
+   "after": 0.8358
+  },
+  {
+   "id": "ai.connection-menu",
+   "label": "Verbindingsinstellingen",
+   "group": "Verbindingsgegevens en tokens",
+   "before": 0.3895,
+   "after": 0.9222
+  },
+  {
+   "id": "workspace.dock-back",
+   "label": "Terug naar hoofdvenster",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.3223,
+   "after": 0.8551
+  },
+  {
+   "id": "memory.index",
+   "label": "Geheugenindex",
+   "group": "Prompts en projectcontext",
+   "before": 0.4058,
+   "after": 0.9394
+  },
+  {
+   "id": "audio.transcript-result",
+   "label": "Transcriptieresultaat",
+   "group": "Spraakapparaten en bronnen",
+   "before": 0.4046,
+   "after": 0.9385
+  },
+  {
+   "id": "geo.bore",
+   "label": "Boring plaatsen",
+   "group": "Geotechniek",
+   "before": 0.2879,
+   "after": 0.8235
+  },
+  {
+   "id": "quotation.type-raw",
+   "label": "RAW-offerte",
+   "group": "Offertetypen en secties",
+   "before": 0.403,
+   "after": 0.9394
+  },
+  {
+   "id": "report.branding",
+   "label": "Rapportlogo’s instellen",
+   "group": "Rapportpapier en huisstijl",
+   "before": 0.2865,
+   "after": 0.8229
+  },
+  {
+   "id": "annotate.tools-menu",
+   "label": "Annotatiegereedschappen",
+   "group": "Koppelingen en handtekeningen",
+   "before": 0.2533,
+   "after": 0.7901
+  },
+  {
+   "id": "data.apply",
+   "label": "Invoer toepassen",
+   "group": "Formulieren en bewerken",
+   "before": 0.25,
+   "after": 0.7869
+  },
+  {
+   "id": "building.apartment",
+   "label": "Appartement",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.4196,
+   "after": 0.9571
+  },
+  {
+   "id": "tool.ventilation-balance",
+   "label": "Ventilatiebalans",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.3382,
+   "after": 0.8767
+  },
+  {
+   "id": "profile.copy-as-new",
+   "label": "Profiel als nieuw concept",
+   "group": "Vliesgevels en profielen",
+   "before": 0.3964,
+   "after": 0.9355
+  },
+  {
+   "id": "project.folder",
+   "label": "Projectmap",
+   "group": "Projecten en gegevens",
+   "before": 0.3261,
+   "after": 0.8654
+  },
+  {
+   "id": "log.resume-view",
+   "label": "Logweergave hervatten",
+   "group": "Schermannotaties en logweergave",
+   "before": 0.306,
+   "after": 0.8472
+  },
+  {
+   "id": "planning.production",
+   "label": "Productieplanning",
+   "group": "Planning",
+   "before": 0.2662,
+   "after": 0.8077
+  },
+  {
+   "id": "transform.corner-join",
+   "label": "Lijnen tot hoek verbinden",
+   "group": "Tekeningkaders en hoekverbindingen",
+   "before": 0.4583,
+   "after": 1.0
+  },
+  {
+   "id": "report.calculation-block",
+   "label": "Rekenblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2868,
+   "after": 0.8286
+  },
+  {
+   "id": "report.view-ibis",
+   "label": "IBIS-rapportweergave",
+   "group": "Begrotingsrapportages",
+   "before": 0.4,
+   "after": 0.942
+  },
+  {
+   "id": "section.reset-box",
+   "label": "Doorsnedebox herstellen",
+   "group": "Doorsneden en meshes",
+   "before": 0.3662,
+   "after": 0.9091
+  },
+  {
+   "id": "review.clear-marks",
+   "label": "Wijzigingsmarkeringen wissen",
+   "group": "Project en wijzigingsreview",
+   "before": 0.2171,
+   "after": 0.76
+  },
+  {
+   "id": "project.compare-reference",
+   "label": "Referentieproject vergelijken",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.2837,
+   "after": 0.8267
+  },
+  {
+   "id": "report.spacer-block",
+   "label": "Witruimte invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2308,
+   "after": 0.7742
+  },
+  {
+   "id": "documents.overview",
+   "label": "Geopende projecten",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.3636,
+   "after": 0.907
+  },
+  {
+   "id": "status.unverified",
+   "label": "Niet geverifieerd",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.4095,
+   "after": 0.9531
+  },
+  {
+   "id": "comments.summarize",
+   "label": "Opmerkingen samenvatten — gepland",
+   "group": "Geplande opmerkingenuitwisseling",
+   "before": 0.3274,
+   "after": 0.871
+  },
+  {
+   "id": "geo.coordinate-tag",
+   "label": "RD-coördinaat plaatsen",
+   "group": "Geotechniek",
+   "before": 0.2198,
+   "after": 0.7636
+  },
+  {
+   "id": "report.block-menu",
+   "label": "Inhoudsblok kiezen",
+   "group": "Rapportinhoud",
+   "before": 0.2656,
+   "after": 0.8095
+  },
+  {
+   "id": "report.workspace",
+   "label": "Rapportwerkruimte",
+   "group": "Taken en planningsberekening",
+   "before": 0.3737,
+   "after": 0.9184
+  },
+  {
+   "id": "window.minimize",
+   "label": "Venster minimaliseren",
+   "group": "Vensters en panelen",
+   "before": 0.4545,
+   "after": 1.0
+  },
+  {
+   "id": "selection.box",
+   "label": "Rechthoekselectie",
+   "group": "Punten en verwerking",
+   "before": 0.4545,
+   "after": 1.0
+  },
+  {
+   "id": "view.fit-selection",
+   "label": "Selectie passend",
+   "group": "Navigeren",
+   "before": 0.24,
+   "after": 0.7857
+  },
+  {
+   "id": "budget.add-item",
+   "label": "Begrotingspost toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.381,
+   "after": 0.9273
+  },
+  {
+   "id": "view.cards",
+   "label": "Kaartweergave",
+   "group": "Projectbibliotheek",
+   "before": 0.3261,
+   "after": 0.875
+  },
+  {
+   "id": "edit.deselect",
+   "label": "Selectie opheffen",
+   "group": "Selecties en verzamelingen",
+   "before": 0.1579,
+   "after": 0.7073
+  },
+  {
+   "id": "report.view-actual-cost",
+   "label": "Nacalculatierapport",
+   "group": "Begrotingsrapportages",
+   "before": 0.3926,
+   "after": 0.9429
+  },
+  {
+   "id": "thermal.room-ventilation",
+   "label": "Ventilatiegegevens van vertrek",
+   "group": "Model- en constructiebewerking",
+   "before": 0.3063,
+   "after": 0.8571
+  },
+  {
+   "id": "panel.destinations",
+   "label": "Bestemmingenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.3509,
+   "after": 0.9022
+  },
+  {
+   "id": "object.align-middle",
+   "label": "Verticaal centreren",
+   "group": "Rangschikken en verdelen",
+   "before": 0.375,
+   "after": 0.9273
+  },
+  {
+   "id": "snap.grid",
+   "label": "Aan raster snappen",
+   "group": "Vliesgevels en profielen",
+   "before": 0.3871,
+   "after": 0.9403
+  },
+  {
+   "id": "frame.quotation",
+   "label": "Kozijnoffertes",
+   "group": "Productie en toetsing",
+   "before": 0.3889,
+   "after": 0.9429
+  },
+  {
+   "id": "data.pending-changes",
+   "label": "Gewijzigde invoervelden",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.314,
+   "after": 0.8689
+  },
+  {
+   "id": "view.minimap",
+   "label": "Planningsoverzicht tonen",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.3457,
+   "after": 0.9012
+  },
+  {
+   "id": "resource.dock",
+   "label": "Resourcepaneel naast planning",
+   "group": "Resources en werkruimtes",
+   "before": 0.3395,
+   "after": 0.8953
+  },
+  {
+   "id": "activity.clear",
+   "label": "Activiteitenlog wissen",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.2969,
+   "after": 0.8529
+  },
+  {
+   "id": "calendar.promote-menu",
+   "label": "Projectkalender kiezen voor bibliotheek",
+   "group": "Bibliotheekstandaard en kalenders",
+   "before": 0.3136,
+   "after": 0.871
+  },
+  {
+   "id": "planning.relations-visible",
+   "label": "Relatielijnen tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2386,
+   "after": 0.7963
+  },
+  {
+   "id": "ventilation.natural",
+   "label": "Natuurlijke ventilatie",
+   "group": "Lucht, water en zon",
+   "before": 0.3396,
+   "after": 0.898
+  },
+  {
+   "id": "energy.electric-generator",
+   "label": "Elektrische opwekker",
+   "group": "Warmteopwekkers",
+   "before": 0.2301,
+   "after": 0.7887
+  },
+  {
+   "id": "list.group-by",
+   "label": "Lijst groeperen",
+   "group": "Annotatielijsten",
+   "before": 0.3158,
+   "after": 0.875
+  },
+  {
+   "id": "template.preview",
+   "label": "Sjabloonvoorbeeld",
+   "group": "Prompts en projectcontext",
+   "before": 0.2895,
+   "after": 0.8488
+  },
+  {
+   "id": "documents.new-or-open",
+   "label": "Project starten of openen",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.3088,
+   "after": 0.8684
+  },
+  {
+   "id": "calc.quantities-visible",
+   "label": "Hoeveelheden tonen",
+   "group": "Begrotingsweergave",
+   "before": 0.3232,
+   "after": 0.8837
+  },
+  {
+   "id": "page.view-book",
+   "label": "Boekweergave",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.3103,
+   "after": 0.871
+  },
+  {
+   "id": "report.open-viewer",
+   "label": "Rapport in systeemviewer",
+   "group": "Kaart en geotechnische rapportuitvoer",
+   "before": 0.2752,
+   "after": 0.8361
+  },
+  {
+   "id": "pointcloud.lod-refresh",
+   "label": "Detailpunten vernieuwen",
+   "group": "Doorsneden en meshes",
+   "before": 0.2955,
+   "after": 0.8571
+  },
+  {
+   "id": "tree.collapse-scope",
+   "label": "Taakstructuur inklappen",
+   "group": "Taakstructuur en WBS",
+   "before": 0.1364,
+   "after": 0.6981
+  },
+  {
+   "id": "tree.expand-scope",
+   "label": "Taakstructuur uitklappen",
+   "group": "Taakstructuur en WBS",
+   "before": 0.1364,
+   "after": 0.6981
+  },
+  {
+   "id": "company.library",
+   "label": "Bedrijfsbibliotheek",
+   "group": "Bestandmenu en projectbibliotheek",
+   "before": 0.3132,
+   "after": 0.875
+  },
+  {
+   "id": "hooks.manage",
+   "label": "Gebeurteniskoppelingen",
+   "group": "Koppelingen en servers",
+   "before": 0.1875,
+   "after": 0.75
+  },
+  {
+   "id": "audio.models",
+   "label": "Spraakmodellen beheren",
+   "group": "Spraakapparaten en bronnen",
+   "before": 0.3768,
+   "after": 0.9403
+  },
+  {
+   "id": "extension.font",
+   "label": "PDF-fontpakket",
+   "group": "Onderbrekingen en fontpakketten",
+   "before": 0.1471,
+   "after": 0.7108
+  },
+  {
+   "id": "object.reset-location",
+   "label": "Objectpositie herstellen",
+   "group": "Lezen en inspecteren",
+   "before": 0.2596,
+   "after": 0.8235
+  },
+  {
+   "id": "file.new",
+   "label": "Nieuw document",
+   "group": "Bestanden",
+   "before": 0.2973,
+   "after": 0.8621
+  },
+  {
+   "id": "ai.connection-details",
+   "label": "Verbindingsgegevens",
+   "group": "Verbindingsgegevens en tokens",
+   "before": 0.3895,
+   "after": 0.9545
+  },
+  {
+   "id": "preferences.annotations",
+   "label": "Annotatievoorkeuren",
+   "group": "PDF-instellingen",
+   "before": 0.2971,
+   "after": 0.863
+  },
+  {
+   "id": "object.align-left",
+   "label": "Links uitlijnen",
+   "group": "Objecten en lagen",
+   "before": 0.4333,
+   "after": 1.0
+  },
+  {
+   "id": "object.align-right",
+   "label": "Rechts uitlijnen",
+   "group": "Objecten en lagen",
+   "before": 0.4333,
+   "after": 1.0
+  },
+  {
+   "id": "update.previous-download",
+   "label": "Vorige versie downloaden",
+   "group": "Versies, diagnostiek en uitwisseling",
+   "before": 0.2621,
+   "after": 0.8305
+  },
+  {
+   "id": "document.merge",
+   "label": "PDF’s samenvoegen",
+   "group": "Paginabewerkingen",
+   "before": 0.3,
+   "after": 0.8689
+  },
+  {
+   "id": "tool.door-gap",
+   "label": "Deurspleetrekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.4307,
+   "after": 1.0
+  },
+  {
+   "id": "assistant.structural-overview",
+   "label": "Constructieoverzicht voorbereiden",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.3289,
+   "after": 0.8987
+  },
+  {
+   "id": "annotate.flatten",
+   "label": "Annotatie vlak maken",
+   "group": "Annotatielijsten",
+   "before": 0.3168,
+   "after": 0.8868
+  },
+  {
+   "id": "form.field-add",
+   "label": "Gegevensveld toevoegen",
+   "group": "Tabellen en formulieren",
+   "before": 0.3438,
+   "after": 0.9149
+  },
+  {
+   "id": "pile.new",
+   "label": "Nieuw paalplan",
+   "group": "Paalplan",
+   "before": 0.3111,
+   "after": 0.8824
+  },
+  {
+   "id": "document.watermark-add",
+   "label": "Watermerk toevoegen",
+   "group": "Documentafwerking",
+   "before": 0.3,
+   "after": 0.8714
+  },
+  {
+   "id": "status.incomplete",
+   "label": "Nog aan te vullen",
+   "group": "Reken- en gegevenstoestanden",
+   "before": 0.3231,
+   "after": 0.8947
+  },
+  {
+   "id": "update.install",
+   "label": "Appupdate installeren",
+   "group": "Updates, tabbladen en activiteit",
+   "before": 0.3051,
+   "after": 0.8769
+  },
+  {
+   "id": "software.install",
+   "label": "App installeren",
+   "group": "Installaties en versies",
+   "before": 0.3051,
+   "after": 0.8769
+  },
+  {
+   "id": "object.align-top",
+   "label": "Boven uitlijnen",
+   "group": "Rangschikken en verdelen",
+   "before": 0.3465,
+   "after": 0.9184
+  },
+  {
+   "id": "object.align-bottom",
+   "label": "Onder uitlijnen",
+   "group": "Rangschikken en verdelen",
+   "before": 0.3465,
+   "after": 0.9184
+  },
+  {
+   "id": "page.copy",
+   "label": "Pagina’s kopiëren",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.3191,
+   "after": 0.8919
+  },
+  {
+   "id": "report.paper-size",
+   "label": "Rapportpapierformaat",
+   "group": "Rapportpapier en huisstijl",
+   "before": 0.3594,
+   "after": 0.9333
+  },
+  {
+   "id": "form.field-group",
+   "label": "Veldgroep",
+   "group": "Tabellen en formulieren",
+   "before": 0.283,
+   "after": 0.8571
+  },
+  {
+   "id": "object.distribute-left",
+   "label": "Linkerranden verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.425,
+   "after": 1.0
+  },
+  {
+   "id": "object.distribute-top",
+   "label": "Bovenranden verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.425,
+   "after": 1.0
+  },
+  {
+   "id": "line.to-polyline",
+   "label": "Lijn naar polylijn",
+   "group": "Meetbewerkingen",
+   "before": 0.3288,
+   "after": 0.9048
+  },
+  {
+   "id": "panel.links",
+   "label": "Koppelingenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.3814,
+   "after": 0.9574
+  },
+  {
+   "id": "guide.compact",
+   "label": "Begeleiding compact tonen",
+   "group": "Prestatiemeting en begeleiding",
+   "before": 0.2848,
+   "after": 0.8625
+  },
+  {
+   "id": "ui.tour",
+   "label": "Rondleiding starten",
+   "group": "Bestandmenu en projectbibliotheek",
+   "before": 0.3025,
+   "after": 0.881
+  },
+  {
+   "id": "tool.uw-window",
+   "label": "Uw-rekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.3289,
+   "after": 0.908
+  },
+  {
+   "id": "data.excel-link",
+   "label": "Gekoppelde Excel-waarde",
+   "group": "Subbladen en Excel",
+   "before": 0.3587,
+   "after": 0.9388
+  },
+  {
+   "id": "table.column-hide",
+   "label": "Kolom uit weergave halen",
+   "group": "Relaties, herstel en tabelweergave",
+   "before": 0.3636,
+   "after": 0.9437
+  },
+  {
+   "id": "construction.types",
+   "label": "Projectconstructietypen",
+   "group": "Vertrekken en constructieoverzichten",
+   "before": 0.4188,
+   "after": 1.0
+  },
+  {
+   "id": "view.report-json",
+   "label": "Rapport als JSON",
+   "group": "Rapportweergaven",
+   "before": 0.3049,
+   "after": 0.8864
+  },
+  {
+   "id": "report.template",
+   "label": "Rapportsjabloon",
+   "group": "Rapporten",
+   "before": 0.3151,
+   "after": 0.8974
+  },
+  {
+   "id": "profile.new",
+   "label": "Nieuw profielconcept",
+   "group": "Vliesgevels en profielen",
+   "before": 0.4177,
+   "after": 1.0
+  },
+  {
+   "id": "pile.load-groups",
+   "label": "Belastinggroepen tonen of verbergen",
+   "group": "Paalplanzweergave",
+   "before": 0.303,
+   "after": 0.8857
+  },
+  {
+   "id": "calc.grid-standard",
+   "label": "Standaard begrotingsweergave",
+   "group": "Begrotingsweergave",
+   "before": 0.2651,
+   "after": 0.8478
+  },
+  {
+   "id": "pile.tip-regions",
+   "label": "Paalpuntniveaugebieden tonen of verbergen",
+   "group": "Paalplanzweergave",
+   "before": 0.3025,
+   "after": 0.8857
+  },
+  {
+   "id": "panel.annotations",
+   "label": "Annotatielijst",
+   "group": "Weergave en panelen",
+   "before": 0.4167,
+   "after": 1.0
+  },
+  {
+   "id": "report.colophon",
+   "label": "Rapportcolofon",
+   "group": "Rapportorganisatie",
+   "before": 0.2917,
+   "after": 0.875
+  },
+  {
+   "id": "curtain.unitized",
+   "label": "Nieuwe elementengevel",
+   "group": "Vliesgevels en profielen",
+   "before": 0.2778,
+   "after": 0.8621
+  },
+  {
+   "id": "annotate.redact",
+   "label": "Redactie markeren",
+   "group": "Annoteren en meten",
+   "before": 0.3448,
+   "after": 0.931
+  },
+  {
+   "id": "frame.energy",
+   "label": "Kozijnenergie",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.2132,
+   "after": 0.8
+  },
+  {
+   "id": "calendar.work-band-add",
+   "label": "Werktijdvak toevoegen",
+   "group": "Werkrooster bewerken",
+   "before": 0.4128,
+   "after": 1.0
+  },
+  {
+   "id": "preferences.printing",
+   "label": "Afdrukvoorkeuren — gepland",
+   "group": "Geplande documentpanelen en afdrukvoorkeuren",
+   "before": 0.2794,
+   "after": 0.8667
+  },
+  {
+   "id": "integration.manage",
+   "label": "Gegevenskoppelingen",
+   "group": "Camera en gegevenskoppeling",
+   "before": 0.2692,
+   "after": 0.8571
+  },
+  {
+   "id": "planning.bar-colors",
+   "label": "Planningskleuren kiezen",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.2364,
+   "after": 0.8246
+  },
+  {
+   "id": "file.host-library",
+   "label": "Documenten van de site",
+   "group": "Bestandsbronnen en sessies",
+   "before": 0.3298,
+   "after": 0.9184
+  },
+  {
+   "id": "status.project-calendar",
+   "label": "Projectkalender",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.2714,
+   "after": 0.8608
+  },
+  {
+   "id": "thermal.openings",
+   "label": "Openingen controleren",
+   "group": "Energie en warmte",
+   "before": 0.3529,
+   "after": 0.9429
+  },
+  {
+   "id": "drawing.file",
+   "label": "Geimporteerd tekenblad",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.1901,
+   "after": 0.7805
+  },
+  {
+   "id": "pile.cost-settings",
+   "label": "Paalkosten instellen",
+   "group": "Paalplaninspectie en instellingen",
+   "before": 0.3431,
+   "after": 0.9365
+  },
+  {
+   "id": "audio.transcribe",
+   "label": "Transcriptiewerkruimte",
+   "group": "Spraak en audio",
+   "before": 0.2536,
+   "after": 0.8472
+  },
+  {
+   "id": "layout.filter",
+   "label": "Filterindeling herkennen",
+   "group": "Indelingsiconen voor taken",
+   "before": 0.1986,
+   "after": 0.7927
+  },
+  {
+   "id": "panel.debug-terminal",
+   "label": "Debugterminal tonen",
+   "group": "Activiteiten en begeleiding",
+   "before": 0.2667,
+   "after": 0.8608
+  },
+  {
+   "id": "transform.offset",
+   "label": "Evenwijdige kopie",
+   "group": "Transformeren",
+   "before": 0.3478,
+   "after": 0.9429
+  },
+  {
+   "id": "status.pdf-protected",
+   "label": "Beveiligde PDF alleen-lezen",
+   "group": "Productkenmerken en documentstatus",
+   "before": 0.325,
+   "after": 0.9206
+  },
+  {
+   "id": "product.no-vendor-lock",
+   "label": "Geen leveranciersbinding",
+   "group": "Productkenmerken en documentstatus",
+   "before": 0.271,
+   "after": 0.8679
+  },
+  {
+   "id": "status.library-item-deviated",
+   "label": "Bibliotheekafwijking beoordelen",
+   "group": "Bibliotheekkoppeling en conceptinvoer",
+   "before": 0.2677,
+   "after": 0.8657
+  },
+  {
+   "id": "workspace.ribbon-compact",
+   "label": "Compact lint omschakelen",
+   "group": "Bridge en lintdichtheid",
+   "before": 0.2795,
+   "after": 0.878
+  },
+  {
+   "id": "bookmark.add",
+   "label": "Bladwijzer toevoegen",
+   "group": "Bladwijzers",
+   "before": 0.3011,
+   "after": 0.9
+  },
+  {
+   "id": "git.stage-all",
+   "label": "Alle wijzigingen klaarzetten",
+   "group": "Git en opdrachten",
+   "before": 0.3556,
+   "after": 0.9545
+  },
+  {
+   "id": "spreadsheet.sheet-add",
+   "label": "Subblad toevoegen",
+   "group": "Subbladen en Excel",
+   "before": 0.3478,
+   "after": 0.9467
+  },
+  {
+   "id": "table.column-add-menu",
+   "label": "Zichtbare kolom toevoegen",
+   "group": "Bezettingsinformatie en tabelkolommen",
+   "before": 0.3478,
+   "after": 0.9467
+  },
+  {
+   "id": "building.housing",
+   "label": "Woonfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.1731,
+   "after": 0.7727
+  },
+  {
+   "id": "envelope.roof-measure",
+   "label": "Dakmaatregel",
+   "group": "Schilmaatregelen",
+   "before": 0.1731,
+   "after": 0.7727
+  },
+  {
+   "id": "quotation.type-private",
+   "label": "Particuliere offerte",
+   "group": "Offertetypen en secties",
+   "before": 0.1983,
+   "after": 0.8
+  },
+  {
+   "id": "quotation.section-extra",
+   "label": "Meerwerksectie toevoegen",
+   "group": "Offertetypen en secties",
+   "before": 0.275,
+   "after": 0.8769
+  },
+  {
+   "id": "data.table",
+   "label": "Tabelweergave",
+   "group": "Projecten en gegevens",
+   "before": 0.3433,
+   "after": 0.9452
+  },
+  {
+   "id": "transform.scale",
+   "label": "Objecten schalen",
+   "group": "Vectorbewerkingen",
+   "before": 0.1864,
+   "after": 0.7887
+  },
+  {
+   "id": "thermal.window",
+   "label": "Raamopening plaatsen",
+   "group": "Model- en constructiebewerking",
+   "before": 0.2705,
+   "after": 0.873
+  },
+  {
+   "id": "document.compare",
+   "label": "PDF’s vergelijken",
+   "group": "Lezen en inspecteren",
+   "before": 0.3043,
+   "after": 0.907
+  },
+  {
+   "id": "calculation.settings",
+   "label": "Rekenvoorkeuren",
+   "group": "Formulieren en bewerken",
+   "before": 0.3306,
+   "after": 0.9333
+  },
+  {
+   "id": "page.extract",
+   "label": "Pagina’s extraheren",
+   "group": "Paginabewerkingen",
+   "before": 0.25,
+   "after": 0.8545
+  },
+  {
+   "id": "budget.add-blank",
+   "label": "Witregel toevoegen",
+   "group": "Begrotingsregels",
+   "before": 0.3211,
+   "after": 0.9273
+  },
+  {
+   "id": "object.properties",
+   "label": "Objecteigenschappen openen",
+   "group": "Weergave en panelen",
+   "before": 0.1818,
+   "after": 0.7887
+  },
+  {
+   "id": "ui.refresh",
+   "label": "Vernieuwen",
+   "group": "Instellingen en hulp",
+   "before": 0.3929,
+   "after": 1.0
+  },
+  {
+   "id": "report.cover",
+   "label": "Rapportvoorblad",
+   "group": "Rapportorganisatie",
+   "before": 0.2911,
+   "after": 0.9
+  },
+  {
+   "id": "object.distribute-center",
+   "label": "Middens horizontaal verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.3902,
+   "after": 1.0
+  },
+  {
+   "id": "object.distribute-middle",
+   "label": "Middens verticaal verdelen",
+   "group": "Verdelen en objectgrootte",
+   "before": 0.3902,
+   "after": 1.0
+  },
+  {
+   "id": "review.highlight-cell",
+   "label": "Alleen cel markeren",
+   "group": "Project en wijzigingsreview",
+   "before": 0.225,
+   "after": 0.8351
+  },
+  {
+   "id": "construction.studs-toggle",
+   "label": "Stijlen in constructielaag",
+   "group": "Model- en constructiebewerking",
+   "before": 0.32,
+   "after": 0.931
+  },
+  {
+   "id": "process.cancel",
+   "label": "Verwerking annuleren",
+   "group": "Punten en verwerking",
+   "before": 0.125,
+   "after": 0.7368
+  },
+  {
+   "id": "transform.explode",
+   "label": "Geometrie ontleden",
+   "group": "Vectorbewerkingen",
+   "before": 0.1379,
+   "after": 0.75
+  },
+  {
+   "id": "edit.delete",
+   "label": "Verwijderen",
+   "group": "Bewerken",
+   "before": 0.2453,
+   "after": 0.8596
+  },
+  {
+   "id": "nav.page-menu",
+   "label": "Paginanavigatiemenu",
+   "group": "Annotatiekeuzes",
+   "before": 0.2,
+   "after": 0.8148
+  },
+  {
+   "id": "document.header-footer",
+   "label": "Kop- en voettekst",
+   "group": "Documentafwerking",
+   "before": 0.3235,
+   "after": 0.9385
+  },
+  {
+   "id": "ui.whats-new",
+   "label": "Wat is er nieuw",
+   "group": "Lezen en inspecteren",
+   "before": 0.3107,
+   "after": 0.9259
+  },
+  {
+   "id": "planning.baselines",
+   "label": "Referentieplanningen beheren",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.2721,
+   "after": 0.8873
+  },
+  {
+   "id": "frame.column-add",
+   "label": "Kozijnkolom toevoegen",
+   "group": "Kozijnvakken",
+   "before": 0.3061,
+   "after": 0.9216
+  },
+  {
+   "id": "frame.row-add",
+   "label": "Kozijnrij toevoegen",
+   "group": "Kozijnvakken",
+   "before": 0.3061,
+   "after": 0.9216
+  },
+  {
+   "id": "selection.mark",
+   "label": "Geselecteerde optie",
+   "group": "Algemene bediening",
+   "before": 0.1404,
+   "after": 0.7571
+  },
+  {
+   "id": "report.options",
+   "label": "Rapportopties",
+   "group": "Rapportorganisatie",
+   "before": 0.281,
+   "after": 0.9
+  },
+  {
+   "id": "extension.runtime-desktop",
+   "label": "Extensiecontext desktop",
+   "group": "Uitvoeromgeving van extensies",
+   "before": 0.3175,
+   "after": 0.9365
+  },
+  {
+   "id": "pointcloud.section-drawing",
+   "label": "2D-doorsnede",
+   "group": "Doorsneden en meshes",
+   "before": 0.2297,
+   "after": 0.8488
+  },
+  {
+   "id": "layout.period",
+   "label": "Periode-indeling herkennen",
+   "group": "Indelingsiconen voor kenmerken",
+   "before": 0.3288,
+   "after": 0.9481
+  },
+  {
+   "id": "panel.tool-palette",
+   "label": "Gereedschapspalet — gepland",
+   "group": "Geplande documentpanelen en afdrukvoorkeuren",
+   "before": 0.2767,
+   "after": 0.8966
+  },
+  {
+   "id": "calc.grid-wpcalc",
+   "label": "WpCalc-begrotingsweergave",
+   "group": "Begrotingsweergave",
+   "before": 0.3313,
+   "after": 0.9518
+  },
+  {
+   "id": "extension.uninstall",
+   "label": "Extensie verwijderen",
+   "group": "Extensiepakketten onderhouden",
+   "before": 0.3091,
+   "after": 0.9298
+  },
+  {
+   "id": "view.fit-page",
+   "label": "Pagina passend",
+   "group": "Navigeren",
+   "before": 0.1852,
+   "after": 0.8065
+  },
+  {
+   "id": "building.retail",
+   "label": "Winkelfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.2581,
+   "after": 0.8806
+  },
+  {
+   "id": "template.fields",
+   "label": "Sjabloongegevens",
+   "group": "Prompts en projectcontext",
+   "before": 0.2857,
+   "after": 0.9091
+  },
+  {
+   "id": "permission.add",
+   "label": "Eigen toegangsregel",
+   "group": "Toegang en machtigingen",
+   "before": 0.3585,
+   "after": 0.9836
+  },
+  {
+   "id": "view.fit-width",
+   "label": "Breedte passend",
+   "group": "Navigeren",
+   "before": 0.1667,
+   "after": 0.7925
+  },
+  {
+   "id": "account.login",
+   "label": "Aanmelden met SSO",
+   "group": "Account en beheer",
+   "before": 0.2143,
+   "after": 0.8409
+  },
+  {
+   "id": "account.logout",
+   "label": "Afmelden",
+   "group": "Account en beheer",
+   "before": 0.2143,
+   "after": 0.8409
+  },
+  {
+   "id": "thermal.import-source",
+   "label": "Thermisch importbronbestand",
+   "group": "Importbron en stappen",
+   "before": 0.3056,
+   "after": 0.9324
+  },
+  {
+   "id": "audio.dictionary",
+   "label": "Woordenboek bewerken",
+   "group": "Spraakapparaten en bronnen",
+   "before": 0.313,
+   "after": 0.9403
+  },
+  {
+   "id": "pile.lock-edit",
+   "label": "Locatievergrendelingen bewerken",
+   "group": "Paalplanbewerking",
+   "before": 0.265,
+   "after": 0.8929
+  },
+  {
+   "id": "capture.overlay",
+   "label": "Opname als overlay plaatsen",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.1776,
+   "after": 0.8065
+  },
+  {
+   "id": "calendar.new",
+   "label": "Kalenderconcept toevoegen",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.3051,
+   "after": 0.9344
+  },
+  {
+   "id": "category.building",
+   "label": "Bouw en BIM",
+   "group": "Pakketten en werkstromen",
+   "before": 0.2963,
+   "after": 0.9259
+  },
+  {
+   "id": "task.add",
+   "label": "Taak toevoegen",
+   "group": "Taken en planningsberekening",
+   "before": 0.369,
+   "after": 1.0
+  },
+  {
+   "id": "log.pause-view",
+   "label": "Logweergave pauzeren",
+   "group": "Schermannotaties en logweergave",
+   "before": 0.3077,
+   "after": 0.9394
+  },
+  {
+   "id": "edit.paste-vector-clip",
+   "label": "Vectorknipsel plakken",
+   "group": "Selecties en verzamelingen",
+   "before": 0.2131,
+   "after": 0.8451
+  },
+  {
+   "id": "ai.read-only-toggle",
+   "label": "AI alleen-lezen",
+   "group": "AI-mutaties bedienen",
+   "before": 0.2708,
+   "after": 0.9028
+  },
+  {
+   "id": "note.open",
+   "label": "Pop-upnotitie openen",
+   "group": "Notities en afdrukgedrag",
+   "before": 0.2375,
+   "after": 0.8696
+  },
+  {
+   "id": "memory.manage",
+   "label": "Projectgeheugen",
+   "group": "Prompts en projectcontext",
+   "before": 0.3088,
+   "after": 0.942
+  },
+  {
+   "id": "quotation.section-options",
+   "label": "Optiesectie toevoegen",
+   "group": "Offertetypen en secties",
+   "before": 0.3,
+   "after": 0.9344
+  },
+  {
+   "id": "report.view-main-contract",
+   "label": "Hoofdaannemingsrapport",
+   "group": "Begrotingsrapportages",
+   "before": 0.2632,
+   "after": 0.8987
+  },
+  {
+   "id": "report.view-subcontract",
+   "label": "Onderaannemingsrapport",
+   "group": "Begrotingsrapportages",
+   "before": 0.2632,
+   "after": 0.8987
+  },
+  {
+   "id": "view.report-editor",
+   "label": "Rapporteditor",
+   "group": "Rapportweergaven",
+   "before": 0.3158,
+   "after": 0.9529
+  },
+  {
+   "id": "planning.progress-menu",
+   "label": "Referenties en voortgang",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.2625,
+   "after": 0.9
+  },
+  {
+   "id": "status.recorded-dates",
+   "label": "Vastgelegde datums tonen",
+   "group": "Planningsmodi en informatie",
+   "before": 0.2162,
+   "after": 0.8537
+  },
+  {
+   "id": "frame.cell-fixed",
+   "label": "Vak met vast glas",
+   "group": "Kozijnvakken",
+   "before": 0.1053,
+   "after": 0.7429
+  },
+  {
+   "id": "capture.region",
+   "label": "Gebied vastleggen",
+   "group": "Vastleggen en uitvoer",
+   "before": 0.2609,
+   "after": 0.9
+  },
+  {
+   "id": "transform.stretch",
+   "label": "Geometrie uitrekken",
+   "group": "Vectorbewerkingen",
+   "before": 0.2542,
+   "after": 0.8939
+  },
+  {
+   "id": "report.generate",
+   "label": "Rapport genereren",
+   "group": "Rapporten",
+   "before": 0.2969,
+   "after": 0.9375
+  },
+  {
+   "id": "frame.cell-turn-tilt",
+   "label": "Vak draaikiep",
+   "group": "Kozijnvakken",
+   "before": 0.1271,
+   "after": 0.7681
+  },
+  {
+   "id": "company.default",
+   "label": "Standaardbibliotheek instellen",
+   "group": "Bibliotheekstandaard en kalenders",
+   "before": 0.1704,
+   "after": 0.8133
+  },
+  {
+   "id": "drawing.elevation",
+   "label": "Aanzichtblad",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.2222,
+   "after": 0.8652
+  },
+  {
+   "id": "document.compare-swap",
+   "label": "Vergelijkingsdocumenten wisselen",
+   "group": "Documentgegevens en sessies",
+   "before": 0.194,
+   "after": 0.8378
+  },
+  {
+   "id": "page.delete",
+   "label": "Pagina verwijderen",
+   "group": "Paginabewerkingen",
+   "before": 0.125,
+   "after": 0.7692
+  },
+  {
+   "id": "report.unlink-project",
+   "label": "Rapport uit project",
+   "group": "Rapportorganisatie",
+   "before": 0.1364,
+   "after": 0.7812
+  },
+  {
+   "id": "planning.profile-new",
+   "label": "Nieuw planningsprofiel",
+   "group": "Profielconcept en toelichting",
+   "before": 0.2937,
+   "after": 0.9385
+  },
+  {
+   "id": "list.item-add",
+   "label": "Opsommingsitem toevoegen",
+   "group": "Tabellen en formulieren",
+   "before": 0.3548,
+   "after": 1.0
+  },
+  {
+   "id": "quotation.warranties",
+   "label": "Offertegaranties",
+   "group": "Offertedocument en versies",
+   "before": 0.292,
+   "after": 0.9375
+  },
+  {
+   "id": "object.distribute-horizontal",
+   "label": "Horizontaal verdelen",
+   "group": "Rangschikken en verdelen",
+   "before": 0.3542,
+   "after": 1.0
+  },
+  {
+   "id": "object.distribute-vertical",
+   "label": "Verticaal verdelen",
+   "group": "Rangschikken en verdelen",
+   "before": 0.3542,
+   "after": 1.0
+  },
+  {
+   "id": "panel.measurements",
+   "label": "Meetannotatiespaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.3068,
+   "after": 0.9535
+  },
+  {
+   "id": "report.spreadsheet-block",
+   "label": "Spreadsheetblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.3077,
+   "after": 0.9545
+  },
+  {
+   "id": "report.view-tender",
+   "label": "Inschrijfstaatweergave",
+   "group": "Begrotingsrapportages",
+   "before": 0.2403,
+   "after": 0.8875
+  },
+  {
+   "id": "envelope.window-measure",
+   "label": "Raammaatregel",
+   "group": "Schilmaatregelen",
+   "before": 0.2179,
+   "after": 0.8652
+  },
+  {
+   "id": "data.discard",
+   "label": "Invoer verwerpen",
+   "group": "Formulieren en bewerken",
+   "before": 0.2542,
+   "after": 0.9016
+  },
+  {
+   "id": "status.schedule-preview",
+   "label": "Tijdelijk doorgerekende bezetting",
+   "group": "Bezettingsinformatie en tabelkolommen",
+   "before": 0.2154,
+   "after": 0.8636
+  },
+  {
+   "id": "tools.category-documenten",
+   "label": "Documenten-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.2232,
+   "after": 0.873
+  },
+  {
+   "id": "format.align-left",
+   "label": "Tekst links uitlijnen",
+   "group": "Tekstopmaak",
+   "before": 0.35,
+   "after": 1.0
+  },
+  {
+   "id": "format.align-center",
+   "label": "Tekst centreren",
+   "group": "Tekstopmaak",
+   "before": 0.35,
+   "after": 1.0
+  },
+  {
+   "id": "format.align-right",
+   "label": "Tekst rechts uitlijnen",
+   "group": "Tekstopmaak",
+   "before": 0.35,
+   "after": 1.0
+  },
+  {
+   "id": "page.insert-file",
+   "label": "Pagina’s uit bestand invoegen",
+   "group": "Pagina’s op het klembord en in de volgorde",
+   "before": 0.1944,
+   "after": 0.8448
+  },
+  {
+   "id": "report.revision-add",
+   "label": "Rapportrevisie toevoegen",
+   "group": "Rapportorganisatie",
+   "before": 0.2818,
+   "after": 0.9322
+  },
+  {
+   "id": "energy.heating-measure",
+   "label": "Verwarmingsmaatregel",
+   "group": "Lucht, water en zon",
+   "before": 0.2727,
+   "after": 0.9231
+  },
+  {
+   "id": "thermal.door",
+   "label": "Deur plaatsen",
+   "group": "Energie en warmte",
+   "before": 0.3493,
+   "after": 1.0
+  },
+  {
+   "id": "planning.cut-list",
+   "label": "Zaagplan",
+   "group": "Planning",
+   "before": 0.3488,
+   "after": 1.0
+  },
+  {
+   "id": "preferences.page-display",
+   "label": "Paginaweergavevoorkeuren",
+   "group": "PDF-instellingen",
+   "before": 0.2879,
+   "after": 0.9394
+  },
+  {
+   "id": "layout.manage",
+   "label": "Indelingen beheren",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.2879,
+   "after": 0.9394
+  },
+  {
+   "id": "note.reply",
+   "label": "Reactie toevoegen",
+   "group": "Notities en afdrukgedrag",
+   "before": 0.2593,
+   "after": 0.913
+  },
+  {
+   "id": "transform.fillet",
+   "label": "Hoek afronden",
+   "group": "Extra tekengereedschappen",
+   "before": 0.3457,
+   "after": 1.0
+  },
+  {
+   "id": "planning.structure",
+   "label": "Codes en velden beheren",
+   "group": "Taakstructuur en WBS",
+   "before": 0.2095,
+   "after": 0.8644
+  },
+  {
+   "id": "file.local",
+   "label": "Lokaal bestand",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.2759,
+   "after": 0.931
+  },
+  {
+   "id": "server.metrics",
+   "label": "Serverstatistieken",
+   "group": "Koppelingen en servers",
+   "before": 0.1311,
+   "after": 0.7887
+  },
+  {
+   "id": "folder.sync",
+   "label": "Mappen synchroniseren",
+   "group": "Koppelingen en servers",
+   "before": 0.2121,
+   "after": 0.8701
+  },
+  {
+   "id": "transform.join",
+   "label": "Geometrie samenvoegen",
+   "group": "Vectorbewerkingen",
+   "before": 0.1818,
+   "after": 0.84
+  },
+  {
+   "id": "quotation.section-technical",
+   "label": "Technische offertesectie",
+   "group": "Offertetypen en secties",
+   "before": 0.2685,
+   "after": 0.9273
+  },
+  {
+   "id": "report.chapter-add",
+   "label": "Rapporthoofdstuk toevoegen",
+   "group": "Rapportorganisatie",
+   "before": 0.2626,
+   "after": 0.9216
+  },
+  {
+   "id": "file.import",
+   "label": "Importeren",
+   "group": "Bestanden",
+   "before": 0.1316,
+   "after": 0.7907
+  },
+  {
+   "id": "validation.reset",
+   "label": "Validatietoestand herstellen — gepland",
+   "group": "Geplande BIM-bediening",
+   "before": 0.2045,
+   "after": 0.8636
+  },
+  {
+   "id": "quotation.section-free",
+   "label": "Vrije offertesectie",
+   "group": "Offertetypen en secties",
+   "before": 0.2556,
+   "after": 0.9149
+  },
+  {
+   "id": "page.view-continuous",
+   "label": "Doorlopende pagina’s",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.1923,
+   "after": 0.8519
+  },
+  {
+   "id": "ui.feedback",
+   "label": "Feedbackformulier openen",
+   "group": "Algemene bediening",
+   "before": 0.2385,
+   "after": 0.8983
+  },
+  {
+   "id": "planning.calculate",
+   "label": "Planning doorrekenen",
+   "group": "Taken en planningsberekening",
+   "before": 0.2338,
+   "after": 0.8947
+  },
+  {
+   "id": "symbol.library-settings",
+   "label": "Symboolbibliotheek instellen",
+   "group": "Symbool- en tekeninstellingen",
+   "before": 0.2742,
+   "after": 0.9355
+  },
+  {
+   "id": "extension.install-file",
+   "label": "Extensie uit bestand installeren",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.2449,
+   "after": 0.907
+  },
+  {
+   "id": "company.new",
+   "label": "Resourcebibliotheek toevoegen",
+   "group": "Bibliotheekstandaard en kalenders",
+   "before": 0.2642,
+   "after": 0.9273
+  },
+  {
+   "id": "layout.flag",
+   "label": "Gemarkeerde indeling herkennen",
+   "group": "Indelingsiconen voor kenmerken",
+   "before": 0.2113,
+   "after": 0.875
+  },
+  {
+   "id": "wbs.templates",
+   "label": "WBS-sjablonen kiezen",
+   "group": "Referenties, peildatum en relaties",
+   "before": 0.2365,
+   "after": 0.9012
+  },
+  {
+   "id": "validation.select-specification",
+   "label": "IDS-specificatie kiezen — gepland",
+   "group": "Geplande BIM-bediening",
+   "before": 0.1429,
+   "after": 0.8077
+  },
+  {
+   "id": "draw.l-shape",
+   "label": "L-vorm tekenen",
+   "group": "Technisch tekenen",
+   "before": 0.2935,
+   "after": 0.9583
+  },
+  {
+   "id": "template.workspace",
+   "label": "Werkruimtesjabloon",
+   "group": "Prompts en projectcontext",
+   "before": 0.2838,
+   "after": 0.9487
+  },
+  {
+   "id": "window.restore",
+   "label": "Venster herstellen",
+   "group": "Vensters en panelen",
+   "before": 0.2294,
+   "after": 0.8947
+  },
+  {
+   "id": "planning.interruption-add",
+   "label": "Taakonderbreking toevoegen",
+   "group": "Planning",
+   "before": 0.1667,
+   "after": 0.8333
+  },
+  {
+   "id": "style.tools",
+   "label": "Stijlgereedschappen",
+   "group": "Tekst en stijlen",
+   "before": 0.2549,
+   "after": 0.9216
+  },
+  {
+   "id": "workspace.navigation-menu",
+   "label": "Navigatiemenu openen",
+   "group": "Werkruimte",
+   "before": 0.3333,
+   "after": 1.0
+  },
+  {
+   "id": "draw.textbox",
+   "label": "Tekstvak toevoegen",
+   "group": "Tekenen",
+   "before": 0.2632,
+   "after": 0.931
+  },
+  {
+   "id": "validation.workspace",
+   "label": "IDS-werkruimte",
+   "group": "Productie en toetsing",
+   "before": 0.1469,
+   "after": 0.8148
+  },
+  {
+   "id": "calculation.performance",
+   "label": "Energieprestatie-uitkomst",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.264,
+   "after": 0.9355
+  },
+  {
+   "id": "edit.select-text",
+   "label": "Documenttekst selecteren — gepland",
+   "group": "Geplande documentpanelen en afdrukvoorkeuren",
+   "before": 0.2444,
+   "after": 0.9167
+  },
+  {
+   "id": "file.export",
+   "label": "Exporteren",
+   "group": "Bestanden",
+   "before": 0.1316,
+   "after": 0.8049
+  },
+  {
+   "id": "page.crop",
+   "label": "Paginamarges bijsnijden",
+   "group": "Paginabewerkingen",
+   "before": 0.2687,
+   "after": 0.9429
+  },
+  {
+   "id": "bookmark.navigate",
+   "label": "Naar bladwijzer",
+   "group": "Bladwijzers",
+   "before": 0.125,
+   "after": 0.8
+  },
+  {
+   "id": "panel.form-fields",
+   "label": "Formulierveldenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.2703,
+   "after": 0.9474
+  },
+  {
+   "id": "assistant.detect-doors",
+   "label": "Deurherkenning vragen",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.2879,
+   "after": 0.9655
+  },
+  {
+   "id": "tool.thermal-expansion",
+   "label": "Uitzettingsrekenhulp",
+   "group": "Bouwfysische rekenhulpen",
+   "before": 0.2424,
+   "after": 0.9206
+  },
+  {
+   "id": "tool.uvalue",
+   "label": "Rc/U-rekenhulp",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.2692,
+   "after": 0.9474
+  },
+  {
+   "id": "view.saved",
+   "label": "Opgeslagen weergave herstellen",
+   "group": "Opgeslagen weergaven",
+   "before": 0.181,
+   "after": 0.8594
+  },
+  {
+   "id": "drawing.section",
+   "label": "Doorsnedeblad",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.2727,
+   "after": 0.9518
+  },
+  {
+   "id": "measure.takeoff",
+   "label": "Hoeveelhedenpaneel",
+   "group": "Lezen en inspecteren",
+   "before": 0.3208,
+   "after": 1.0
+  },
+  {
+   "id": "ui.file-menu",
+   "label": "Bestandmenu openen",
+   "group": "BCF en cloudbestanden",
+   "before": 0.2449,
+   "after": 0.9245
+  },
+  {
+   "id": "calc.grid-simple",
+   "label": "Eenvoudige begrotingsweergave",
+   "group": "Begrotingsweergave",
+   "before": 0.2704,
+   "after": 0.95
+  },
+  {
+   "id": "report.landscape",
+   "label": "Rapport liggend",
+   "group": "Rapportpapier en huisstijl",
+   "before": 0.25,
+   "after": 0.931
+  },
+  {
+   "id": "draw.qr-code",
+   "label": "QR-code plaatsen — gepland",
+   "group": "Geplande documentgereedschappen",
+   "before": 0.1207,
+   "after": 0.8033
+  },
+  {
+   "id": "line.to-measure",
+   "label": "Lijn naar afstandsmeting",
+   "group": "Meetbewerkingen",
+   "before": 0.2133,
+   "after": 0.8974
+  },
+  {
+   "id": "report.text-block",
+   "label": "Tekstblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2587,
+   "after": 0.9437
+  },
+  {
+   "id": "report.table-block",
+   "label": "Tabelblok invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.2639,
+   "after": 0.9494
+  },
+  {
+   "id": "workspace.toolbar-toggle",
+   "label": "Onderste werkbalk inklappen",
+   "group": "Werkruimte",
+   "before": 0.1587,
+   "after": 0.8451
+  },
+  {
+   "id": "prompt.catalog",
+   "label": "Promptsjablonen",
+   "group": "Prompts en projectcontext",
+   "before": 0.2167,
+   "after": 0.9032
+  },
+  {
+   "id": "report.appendix-add",
+   "label": "Rapportbijlage toevoegen",
+   "group": "Rapportorganisatie",
+   "before": 0.2385,
+   "after": 0.9273
+  },
+  {
+   "id": "view.report-split",
+   "label": "Editor en voorbeeld",
+   "group": "Rapportweergaven",
+   "before": 0.2688,
+   "after": 0.9579
+  },
+  {
+   "id": "workspace.sessions",
+   "label": "Opgeslagen sessies",
+   "group": "Documentgegevens en sessies",
+   "before": 0.1829,
+   "after": 0.8723
+  },
+  {
+   "id": "bcf.import",
+   "label": "BCF-issues invoeren",
+   "group": "Versies, diagnostiek en uitwisseling",
+   "before": 0.1579,
+   "after": 0.8475
+  },
+  {
+   "id": "planning.resource-accent",
+   "label": "Resourcekleuren tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2059,
+   "after": 0.8958
+  },
+  {
+   "id": "extension.item",
+   "label": "Uitbreidingspakket",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.2329,
+   "after": 0.9231
+  },
+  {
+   "id": "file.export-options",
+   "label": "Uitvoerkeuzes openen",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.1967,
+   "after": 0.8906
+  },
+  {
+   "id": "server.gpu",
+   "label": "GPU-server",
+   "group": "Koppelingen en servers",
+   "before": 0.1875,
+   "after": 0.8841
+  },
+  {
+   "id": "frame.cnc",
+   "label": "CNC-werkruimte",
+   "group": "Productie en toetsing",
+   "before": 0.1949,
+   "after": 0.8923
+  },
+  {
+   "id": "pointcloud.color-elevation",
+   "label": "Kleur naar hoogte",
+   "group": "Puntkleuren en gebouwen",
+   "before": 0.1081,
+   "after": 0.8056
+  },
+  {
+   "id": "panel.left",
+   "label": "Linkerpaneel tonen of verbergen",
+   "group": "Vensters en panelen",
+   "before": 0.2308,
+   "after": 0.9286
+  },
+  {
+   "id": "panel.right",
+   "label": "Rechterpaneel tonen of verbergen",
+   "group": "Vensters en panelen",
+   "before": 0.2308,
+   "after": 0.9286
+  },
+  {
+   "id": "page.view-facing",
+   "label": "Dubbele pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.2308,
+   "after": 0.9286
+  },
+  {
+   "id": "energy.collective-hot-water",
+   "label": "Collectief warm water",
+   "group": "Warmteopwekkers",
+   "before": 0.2624,
+   "after": 0.9605
+  },
+  {
+   "id": "calendar.manage",
+   "label": "Werkkalenders beheren",
+   "group": "Taken en planningsberekening",
+   "before": 0.2381,
+   "after": 0.9365
+  },
+  {
+   "id": "pile.optimization",
+   "label": "ILP-optimalisatiepaneel",
+   "group": "Paalplanbewerking",
+   "before": 0.1948,
+   "after": 0.8947
+  },
+  {
+   "id": "report.portrait",
+   "label": "Rapport staand",
+   "group": "Rapportpapier en huisstijl",
+   "before": 0.2222,
+   "after": 0.9231
+  },
+  {
+   "id": "annotate.signature",
+   "label": "Handtekening plaatsen",
+   "group": "Annoteren en meten",
+   "before": 0.2317,
+   "after": 0.9348
+  },
+  {
+   "id": "ai.pause",
+   "label": "AI-mutaties pauzeren",
+   "group": "AI-mutaties bedienen",
+   "before": 0.2368,
+   "after": 0.9459
+  },
+  {
+   "id": "draw.schedule-table",
+   "label": "Tekeningtabel plaatsen — gepland",
+   "group": "Geplande documentgereedschappen",
+   "before": 0.2407,
+   "after": 0.9524
+  },
+  {
+   "id": "frame.cell-panel",
+   "label": "Vak paneel",
+   "group": "Kozijnvakken",
+   "before": 0.1892,
+   "after": 0.9024
+  },
+  {
+   "id": "note.hide",
+   "label": "Pop-upnotitie verbergen",
+   "group": "Notities en afdrukgedrag",
+   "before": 0.1867,
+   "after": 0.9
+  },
+  {
+   "id": "view.gantt-split",
+   "label": "Twee tijdschalen tonen",
+   "group": "Resourcekeuzes en Gantt-weergave",
+   "before": 0.2338,
+   "after": 0.9474
+  },
+  {
+   "id": "object.align-center",
+   "label": "Horizontaal centreren",
+   "group": "Objecten en lagen",
+   "before": 0.2857,
+   "after": 1.0
+  },
+  {
+   "id": "field.combo",
+   "label": "Uitklapbaar keuzeveld",
+   "group": "Formulierveldtypen",
+   "before": 0.1604,
+   "after": 0.875
+  },
+  {
+   "id": "list.move-up",
+   "label": "Lijstitem omhoog",
+   "group": "Bestandslijsten en klemborddocumenten",
+   "before": 0.1026,
+   "after": 0.8182
+  },
+  {
+   "id": "list.move-down",
+   "label": "Lijstitem omlaag",
+   "group": "Bestandslijsten en klemborddocumenten",
+   "before": 0.1026,
+   "after": 0.8182
+  },
+  {
+   "id": "extension.exporter",
+   "label": "Exportuitbreiding",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.1679,
+   "after": 0.8846
+  },
+  {
+   "id": "panel.tags",
+   "label": "Structuurtagpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.1846,
+   "after": 0.9014
+  },
+  {
+   "id": "view.fit-height",
+   "label": "Paginahoogte passend",
+   "group": "Basiszoom en paginahoogte",
+   "before": 0.1034,
+   "after": 0.8209
+  },
+  {
+   "id": "frame.layout",
+   "label": "Indelingswerkruimte",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.2273,
+   "after": 0.9452
+  },
+  {
+   "id": "file.download",
+   "label": "Gegenereerd bestand downloaden",
+   "group": "Locatie en documentuitvoer",
+   "before": 0.1351,
+   "after": 0.8537
+  },
+  {
+   "id": "extension.importer",
+   "label": "Importuitbreiding",
+   "group": "Uitbreidingen, docking en rekenwizard",
+   "before": 0.1655,
+   "after": 0.8846
+  },
+  {
+   "id": "object.add",
+   "label": "Onderdeel toevoegen",
+   "group": "Formulieren en bewerken",
+   "before": 0.1957,
+   "after": 0.9149
+  },
+  {
+   "id": "frame.production",
+   "label": "Productiestaten",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.1402,
+   "after": 0.8596
+  },
+  {
+   "id": "building.industrial",
+   "label": "Industriefunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.1402,
+   "after": 0.8596
+  },
+  {
+   "id": "bcf.workspace",
+   "label": "BCF-werkruimte",
+   "group": "Productie en toetsing",
+   "before": 0.1855,
+   "after": 0.9077
+  },
+  {
+   "id": "frame.schedule",
+   "label": "Kozijnstaat",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.2308,
+   "after": 0.9535
+  },
+  {
+   "id": "git.push",
+   "label": "Git-wijzigingen pushen",
+   "group": "Git en opdrachten",
+   "before": 0.1176,
+   "after": 0.8421
+  },
+  {
+   "id": "panel.bookmarks",
+   "label": "Bladwijzerpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.1504,
+   "after": 0.875
+  },
+  {
+   "id": "view.actual-size",
+   "label": "Werkelijke grootte",
+   "group": "Weergave en panelen",
+   "before": 0.2273,
+   "after": 0.9524
+  },
+  {
+   "id": "workspace.install",
+   "label": "Werkruimte installeren",
+   "group": "Pakketten en werkstromen",
+   "before": 0.1642,
+   "after": 0.8904
+  },
+  {
+   "id": "project.move-folder",
+   "label": "Project in map plaatsen",
+   "group": "Projectbibliotheek",
+   "before": 0.1416,
+   "after": 0.875
+  },
+  {
+   "id": "project.archive",
+   "label": "Project archiveren",
+   "group": "Projectbibliotheek",
+   "before": 0.1857,
+   "after": 0.92
+  },
+  {
+   "id": "building.healthcare",
+   "label": "Zorgfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.2,
+   "after": 0.9355
+  },
+  {
+   "id": "ui.file-associations",
+   "label": "Bestandskoppelingen",
+   "group": "Extensies en hulpfuncties",
+   "before": 0.1111,
+   "after": 0.8478
+  },
+  {
+   "id": "assistant.summarize",
+   "label": "Documentsamenvatting vragen",
+   "group": "Assistentopdrachten voor PDF",
+   "before": 0.2105,
+   "after": 0.9474
+  },
+  {
+   "id": "report.project-dossier",
+   "label": "Projectdossier",
+   "group": "Documenttypen en uitvoer",
+   "before": 0.2031,
+   "after": 0.9403
+  },
+  {
+   "id": "help.context-hint",
+   "label": "Korte toelichting",
+   "group": "Profielconcept en toelichting",
+   "before": 0.17,
+   "after": 0.9074
+  },
+  {
+   "id": "ui.more",
+   "label": "Meer acties",
+   "group": "Projectbibliotheek",
+   "before": 0.2609,
+   "after": 1.0
+  },
+  {
+   "id": "stats.downloads",
+   "label": "Downloadstatistieken",
+   "group": "Tijdinvoer en toewijzingsinformatie",
+   "before": 0.1495,
+   "after": 0.8889
+  },
+  {
+   "id": "energy.heat-pump",
+   "label": "Warmtepomp",
+   "group": "Warmteopwekkers",
+   "before": 0.1594,
+   "after": 0.9014
+  },
+  {
+   "id": "view.list",
+   "label": "Lijstweergave",
+   "group": "Projectbibliotheek",
+   "before": 0.2571,
+   "after": 1.0
+  },
+  {
+   "id": "tool.thermal-bridge",
+   "label": "Koudebrugrekenhulp",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.1379,
+   "after": 0.8814
+  },
+  {
+   "id": "drawing.plan",
+   "label": "Plattegrondblad",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.2099,
+   "after": 0.954
+  },
+  {
+   "id": "document.compress",
+   "label": "PDF comprimeren",
+   "group": "Documentafwerking",
+   "before": 0.1311,
+   "after": 0.8769
+  },
+  {
+   "id": "project.restore",
+   "label": "Project terugzetten",
+   "group": "Projectbibliotheek",
+   "before": 0.1857,
+   "after": 0.9315
+  },
+  {
+   "id": "frame.cell-door",
+   "label": "Vak deur",
+   "group": "Kozijnvakken",
+   "before": 0.1955,
+   "after": 0.9437
+  },
+  {
+   "id": "room.select-from-tag",
+   "label": "Ruimte vanuit tag selecteren",
+   "group": "Meetbewerkingen",
+   "before": 0.1429,
+   "after": 0.8939
+  },
+  {
+   "id": "workspace.ribbon-toggle",
+   "label": "Lint in- en uitklappen",
+   "group": "Werkruimte",
+   "before": 0.0938,
+   "after": 0.8451
+  },
+  {
+   "id": "building.other",
+   "label": "Overige gebruiksfunctie",
+   "group": "Gebruiksfuncties en gebouwtypen",
+   "before": 0.1667,
+   "after": 0.9184
+  },
+  {
+   "id": "layout.identity",
+   "label": "Algemene indeling",
+   "group": "Indelingsiconen voor taken",
+   "before": 0.1519,
+   "after": 0.9059
+  },
+  {
+   "id": "planning.baseline-overlay",
+   "label": "Referentieplanning tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2455,
+   "after": 1.0
+  },
+  {
+   "id": "report.move-project",
+   "label": "Rapport naar project",
+   "group": "Rapportorganisatie",
+   "before": 0.1161,
+   "after": 0.871
+  },
+  {
+   "id": "profile.editor",
+   "label": "Profielwerkruimte",
+   "group": "Kozijnwerkruimtes",
+   "before": 0.2449,
+   "after": 1.0
+  },
+  {
+   "id": "report.view-estimate",
+   "label": "Directiebegrotingsrapport",
+   "group": "Begrotingsrapportages",
+   "before": 0.1871,
+   "after": 0.9437
+  },
+  {
+   "id": "tools.category-planning",
+   "label": "Planning-categorie",
+   "group": "Toolcategorieën: werkvelden",
+   "before": 0.1875,
+   "after": 0.9452
+  },
+  {
+   "id": "draw.text",
+   "label": "Tekst toevoegen",
+   "group": "Tekenen",
+   "before": 0.2381,
+   "after": 1.0
+  },
+  {
+   "id": "pointcloud.thin",
+   "label": "Punten uitdunnen",
+   "group": "Punten en verwerking",
+   "before": 0.1071,
+   "after": 0.8696
+  },
+  {
+   "id": "thermal.results",
+   "label": "Warmteverliesresultaten",
+   "group": "IFC en warmteverliesresultaten",
+   "before": 0.1837,
+   "after": 0.9467
+  },
+  {
+   "id": "search.highlight-all",
+   "label": "Alle zoektreffers markeren",
+   "group": "Zoekresultaten",
+   "before": 0.2368,
+   "after": 1.0
+  },
+  {
+   "id": "planning.status-date-line",
+   "label": "Peildatumlijn tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.2315,
+   "after": 1.0
+  },
+  {
+   "id": "panel.schedules",
+   "label": "Hoeveelhedenstatenpaneel",
+   "group": "PDF-zijpanelen",
+   "before": 0.1895,
+   "after": 0.9592
+  },
+  {
+   "id": "nav.go-to",
+   "label": "Ga naar benoemde bestemming",
+   "group": "Rekenhulpen en navigatie",
+   "before": 0.093,
+   "after": 0.8667
+  },
+  {
+   "id": "table.row-add",
+   "label": "Tabelrij toevoegen",
+   "group": "Tabellen en formulieren",
+   "before": 0.1639,
+   "after": 0.9394
+  },
+  {
+   "id": "planning.custom-field-add",
+   "label": "Vrij veld toevoegen",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.1667,
+   "after": 0.9459
+  },
+  {
+   "id": "field.button",
+   "label": "Formulierknop",
+   "group": "Formulierveldtypen",
+   "before": 0.0833,
+   "after": 0.8627
+  },
+  {
+   "id": "pile.combined",
+   "label": "Gecombineerd paneel",
+   "group": "Paalplan",
+   "before": 0.1667,
+   "after": 0.9467
+  },
+  {
+   "id": "planning.move-date",
+   "label": "Projectdatums verschuiven",
+   "group": "Taken en planningsberekening",
+   "before": 0.1197,
+   "after": 0.9016
+  },
+  {
+   "id": "curtain.stick",
+   "label": "Nieuwe stijl-regelgevel",
+   "group": "Vliesgevels en profielen",
+   "before": 0.1667,
+   "after": 0.9494
+  },
+  {
+   "id": "project.archive-view",
+   "label": "Archief bekijken",
+   "group": "Projectbibliotheek",
+   "before": 0.1846,
+   "after": 0.9697
+  },
+  {
+   "id": "calendar.duplicate",
+   "label": "Kalenderconcept dupliceren",
+   "group": "Kalenderconcepten en planningsvelden",
+   "before": 0.1597,
+   "after": 0.9452
+  },
+  {
+   "id": "planning.float-band",
+   "label": "Spelingsband tonen",
+   "group": "Planningslagen en volgrelaties",
+   "before": 0.211,
+   "after": 1.0
+  },
+  {
+   "id": "drawing.sheet-new",
+   "label": "Nieuw tekenblad voorbereiden",
+   "group": "Model- en tekeningenbrowser",
+   "before": 0.1515,
+   "after": 0.9412
+  },
+  {
+   "id": "review.track-changes",
+   "label": "Wijzigingen bijhouden",
+   "group": "Project en wijzigingsreview",
+   "before": 0.1405,
+   "after": 0.931
+  },
+  {
+   "id": "field.dashboard",
+   "label": "Projectdashboard",
+   "group": "Veldwerk en inspectie",
+   "before": 0.1511,
+   "after": 0.9452
+  },
+  {
+   "id": "workspace.dock-right",
+   "label": "Palet rechts vastzetten",
+   "group": "Werkruimte",
+   "before": 0.0938,
+   "after": 0.8889
+  },
+  {
+   "id": "mcp.manage",
+   "label": "MCP-servers",
+   "group": "Koppelingen en servers",
+   "before": 0.1429,
+   "after": 0.9385
+  },
+  {
+   "id": "field.floorplans",
+   "label": "Plattegronden",
+   "group": "Veldwerk en inspectie",
+   "before": 0.1429,
+   "after": 0.9394
+  },
+  {
+   "id": "assistant.workspace",
+   "label": "AI-assistent openen",
+   "group": "Assistent en modeluitwisseling",
+   "before": 0.1316,
+   "after": 0.9286
+  },
+  {
+   "id": "project.folder-new",
+   "label": "Bibliotheekmap maken",
+   "group": "Projectbibliotheek",
+   "before": 0.1308,
+   "after": 0.9298
+  },
+  {
+   "id": "field.list",
+   "label": "Lijstveld",
+   "group": "Formulierveldtypen",
+   "before": 0.1429,
+   "after": 0.9444
+  },
+  {
+   "id": "workspace.dock-left",
+   "label": "Palet links vastzetten",
+   "group": "Werkruimte",
+   "before": 0.0938,
+   "after": 0.8986
+  },
+  {
+   "id": "measure.add-hole",
+   "label": "Sparing in meetvlak",
+   "group": "Meetbewerkingen",
+   "before": 0.0667,
+   "after": 0.875
+  },
+  {
+   "id": "page.insert",
+   "label": "Pagina invoegen",
+   "group": "Paginabewerkingen",
+   "before": 0.0952,
+   "after": 0.907
+  },
+  {
+   "id": "page.shift",
+   "label": "Pagina-inhoud verschuiven",
+   "group": "Paginabewerkingen",
+   "before": 0.0714,
+   "after": 0.8852
+  },
+  {
+   "id": "edit.paste-in-place",
+   "label": "Op dezelfde plaats plakken",
+   "group": "Vectorbewerkingen",
+   "before": 0.1852,
+   "after": 1.0
+  },
+  {
+   "id": "field.text",
+   "label": "Tekstveld",
+   "group": "Formulierveldtypen",
+   "before": 0.1111,
+   "after": 0.9259
+  },
+  {
+   "id": "frame.cell-sliding",
+   "label": "Vak schuifraam",
+   "group": "Kozijnvakken",
+   "before": 0.0909,
+   "after": 0.9091
+  },
+  {
+   "id": "task.split-mode",
+   "label": "Taakonderbreking tekenen",
+   "group": "Taken en planningsberekening",
+   "before": 0.1739,
+   "after": 1.0
+  },
+  {
+   "id": "planning.gantt",
+   "label": "Gantt-planning",
+   "group": "Planning",
+   "before": 0.1057,
+   "after": 0.9355
+  },
+  {
+   "id": "annotate.status-options",
+   "label": "Reviewstatus kiezen",
+   "group": "Annotatiekeuzes",
+   "before": 0.1061,
+   "after": 0.9365
+  },
+  {
+   "id": "geo.bag-buildings",
+   "label": "3D-BAG-gebouwen",
+   "group": "Puntkleuren en gebouwen",
+   "before": 0.1635,
+   "after": 1.0
+  },
+  {
+   "id": "assignment.hours-distribution",
+   "label": "Urenverdeling bewerken",
+   "group": "Tijdinvoer en toewijzingsinformatie",
+   "before": 0.1604,
+   "after": 1.0
+  },
+  {
+   "id": "document.ocr",
+   "label": "Tekst herkennen met OCR",
+   "group": "Documentafwerking",
+   "before": 0.1579,
+   "after": 1.0
+  },
+  {
+   "id": "measure.chain-remove",
+   "label": "Maatketting inkorten",
+   "group": "Meetbewerkingen",
+   "before": 0.1579,
+   "after": 1.0
+  },
+  {
+   "id": "measure.chain-add",
+   "label": "Maatketting uitbreiden",
+   "group": "Meetbewerkingen",
+   "before": 0.1429,
+   "after": 1.0
+  },
+  {
+   "id": "curtain.new",
+   "label": "Nieuwe lege vliesgevel",
+   "group": "Vliesgevels en profielen",
+   "before": 0.0714,
+   "after": 0.9298
+  },
+  {
+   "id": "data.chart",
+   "label": "Grafiekweergave",
+   "group": "Projecten en gegevens",
+   "before": 0.1183,
+   "after": 0.9773
+  },
+  {
+   "id": "resource.level",
+   "label": "Resources vereffenen",
+   "group": "Resourcebelasting en vereffening",
+   "before": 0.1398,
+   "after": 1.0
+  },
+  {
+   "id": "page.view-single",
+   "label": "Enkele pagina",
+   "group": "Paginanavigatie en weergaven",
+   "before": 0.0435,
+   "after": 0.9167
+  },
+  {
+   "id": "report.page-break",
+   "label": "Pagina-einde invoegen",
+   "group": "Rapportinhoud",
+   "before": 0.1228,
+   "after": 1.0
+  },
+  {
+   "id": "frame.plausibility",
+   "label": "Plausibiliteit",
+   "group": "Productie en toetsing",
+   "before": 0.037,
+   "after": 0.9259
+  },
+  {
+   "id": "image.placeholder",
+   "label": "Geen voorbeeldafbeelding",
+   "group": "Validatieweergave",
+   "before": 0.037,
+   "after": 0.9286
+  },
+  {
+   "id": "view.saved-list",
+   "label": "Opgeslagen weergaven",
+   "group": "Opgeslagen weergaven",
+   "before": 0.0357,
+   "after": 0.9286
+  },
+  {
+   "id": "resource.availability-step-add",
+   "label": "Capaciteitsstap toevoegen",
+   "group": "Resourcecapaciteit en herkomst",
+   "before": 0.0935,
+   "after": 1.0
+  },
+  {
+   "id": "transform.trim",
+   "label": "Inkorten tot grens",
+   "group": "Transformeren",
+   "before": 0.0455,
+   "after": 1.0
+  }
+ ]
+}
