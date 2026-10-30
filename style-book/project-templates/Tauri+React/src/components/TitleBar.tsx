@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import B2Icon from "./B2Icon";
+import UpdateNotice from "./UpdateNotice";
 import "./TitleBar.css";
 
 interface TitleBarProps {
@@ -146,6 +147,7 @@ function TitleBar({ onSettingsClick, onFeedbackClick }: TitleBarProps) {
       </span>
 
       <div className="titlebar-controls">
+        <UpdateNotice />
         <button
           className="send-feedback-btn"
           onClick={onFeedbackClick}

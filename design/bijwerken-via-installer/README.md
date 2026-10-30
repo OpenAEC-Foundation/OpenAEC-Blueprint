@@ -137,8 +137,16 @@ Voorstel: in de installer-repo, als `release-kit/` met het script voor `latest.j
      - het contract in `crates/openaec-ui/src/design/update_core.rs`, met `find_installer` en `refresh_if_stale`: is `updates.json` ouder dan een dag, dan start de app `installer --check`;
      - de Tauri-plugin `openaec-update` in openaec-installer (`crates/openaec-update`, met een kopie van dat contract via `scripts/sync-openaec.mjs`), met de opdrachten `installer_present`, `check` en `update_now`;
      - `UpdateNotice` in `@openaec/ui-react`.
-   - **Eerste app: Planner**, daarna PDF, Calc, 2D en Cloud Desktop. Cloud Desktop staat nog niet in de catalogus van de installer.
+   - **Stand op 2026-10-30:**
+     - Planner: open-planner-studio#754, getest met een debugbuild.
+     - PDF: open-pdf-studio#889.
+     - Cloud Desktop (OpenAEC Desktop App): eerst in de catalogus, openaec-installer#28.
+     - Calc en 2D: pas na overleg met hun eigenaars.
 6. **Zelf bijwerken van de installer** omzetten naar de JM-Orgue-route.
+   *Gebouwd op 2026-10-30, openaec-installer#27.*
+   - Een installatie per gebruiker start de nieuwe setup met `/S /UPDATE /R`, sluit zichzelf, en de setup start hem opnieuw. Een systeembrede of MSI-installatie gebruikt de gewone setup.
+   - Getest met een testbuild als 0.2.8: één klik werkte bij naar de officiële, ondertekende 0.2.9.
+   - De releaseworkflow ververst daarna meteen `releases.json`.
 
 ## Open vragen voor het team
 

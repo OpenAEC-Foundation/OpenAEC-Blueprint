@@ -179,3 +179,32 @@
 .send-feedback-btn:hover {
   color: var(--theme-accent-hover);
 }
+
+/* Update notice (OpenAEC-Blueprint#33): "Versie … staat klaar" and a compact
+   Bijwerken button, as design::update::notice in openaec-ui. */
+.titlebar-update {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+  font-size: var(--oa-size-label);
+  color: var(--theme-text-secondary);
+  white-space: nowrap;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-update-btn {
+  height: 22px;
+  padding: 0 10px;
+  border: none;
+  border-radius: var(--oa-radius-medium);
+  background: var(--theme-accent);
+  color: var(--theme-accent-text);
+  font: inherit;
+  font-weight: var(--oa-weight-semibold);
+  cursor: pointer;
+}
+
+.titlebar-update-btn:hover {
+  background: var(--theme-accent-hover);
+}
