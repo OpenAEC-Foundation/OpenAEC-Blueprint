@@ -1,0 +1,14 @@
+{
+  "titel": "OpenAEC Installer · catalogus",
+  "uitleg": "Per knop het nieuwe icoon uit de Blueprint naast de bekende vorm. De installer heeft op main (openaec-installer 4cbd428, ontwerp E) voor al deze knoppen een B2-venster met een klein oranje teken eronder; vóór ontwerp E (8b39bae) had hij eigen lijntekeningen in de vorm van Lucide download, external-link, het tabicoon en de afspeelknop. De kolom main noemt die Lucide-vorm. Knoppen uit src/components/ToolCard.tsx (PrimaryAction en de ronde iconknoppen), src/components/Hero.tsx en src/components/WebToolView.tsx. Appupdate installeren (update.install) staat er niet in: dat is dezelfde handeling in andere programma's en krijgt hetzelfde icoon als Bijwerken.",
+  "knoppen": [
+    {"tab": "Catalogus", "groep": "Knoppen op een kaart", "knop": "Installeren", "id": "software.install", "main": "download"},
+    {"tab": "Catalogus", "groep": "Knoppen op een kaart", "knop": "Bijwerken", "id": "software.update", "main": "download"},
+    {"tab": "Catalogus", "groep": "Knoppen op een kaart", "knop": "Starten", "id": "software.launch", "main": "circle-play"},
+    {"tab": "Catalogus", "groep": "Knoppen op een kaart", "knop": "In tabblad openen", "id": "software.open-webtab", "main": "app-window"},
+    {"tab": "Catalogus", "groep": "Knoppen op een kaart", "knop": "Openen in browser / website", "id": "link.open-external", "main": "external-link"},
+    {"tab": "Catalogus", "groep": "Updates (kop)", "knop": "Alles bijwerken", "id": "software.update", "main": "download"},
+    {"tab": "Catalogus", "groep": "Updates (kop)", "knop": "Controleren op updates", "id": "ui.check-updates", "main": "refresh-cw"},
+    {"tab": "Webtool", "groep": "Werkbalk", "knop": "Herladen", "id": "view.web-reload", "main": "rotate-cw"}
+  ]
+}

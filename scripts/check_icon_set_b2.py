@@ -194,7 +194,8 @@ def main():
                 x,y=crossing[icon['id']]
                 assert layers['accent'].covers(Point(x*size/24,y*size/24)),'accent interrupted at crossing'
             if icon['id']=='draw.freehand':assert layers['accent'].is_empty,'freehand must use one colour'
-            if icon['id'] in {'image.reset','ui.check-updates'}:
+            # Vastgelegde pijlpunt van de vorige tekening; een icoon dat volgens docs/iconen.md hertekend is, valt erbuiten.
+            if icon['id'] in {'image.reset','ui.check-updates'} and retained:
                 ring=layers['accent' if icon['id']=='image.reset' else 'primary']
                 for x,y in ((13.5,2.75),(13.5,5.25),(15,4),(12.75,4)):
                     assert ring.covers(Point(x*size/24,y*size/24)),'incomplete symmetric ring arrowhead'

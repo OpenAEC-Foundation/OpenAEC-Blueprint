@@ -370,6 +370,29 @@ Op 29 oktober 2026 stelde de eigenaar zes principes voor iconen vast, na de cont
 - **In Open Planner Studio.** De iconen staan in Open Planner Studio op de branch `iconen/planning`, niet op main. Een dev-server toont de tab Planning naast main, in licht en donker.
 - **Oordeel.** Concept. De tekeningen halen alle checks. Het oordeel komt van de eigenaar, in Open Planner Studio zelf; tot dan blijft PR #59 open. De iconen zijn nog niet in een programma op main gebruikt.
 
+### Installeren, bijwerken, openen en starten
+
+Tweede ronde, op 30 oktober 2026, op verzoek van de gebruiker. In de OpenAEC Installer waren Installeren, Bijwerken, Starten, In tabblad openen en Webtool herladen allemaal een venster met een klein oranje teken eronder. Op 16 px leken ze op elkaar en liet het teken niet zien wat de knop doet. Openen in de browser was een ketting en las als koppeling.
+
+- **Bron.** De installer op main (openaec-installer 4cbd428, ontwerp E): `src/components/ToolCard.tsx` (`PrimaryAction` en de ronde iconknoppen), `src/components/Hero.tsx` en `src/components/WebToolView.tsx`. De bekende vorm komt uit de installer vóór ontwerp E (8b39bae), die eigen lijntekeningen had in de vorm van Lucide download, external-link, het tabicoon en de afspeelknop. De knoppen staan in [`design/iconen/installer/knoppen.json`](design/iconen/installer/knoppen.json), de Lucide-vormen als vergelijking in `design/iconen/referentie/ops-main/` (ISC).
+- **Herzien.** Acht bestaande ids hebben een nieuwe tekening; hun naam blijft.
+  - `software.install`: pijl omlaag in een bakje.
+  - `software.update` en `update.install`: dezelfde tekening als Installeren, op besluit van de gebruiker (30 oktober 2026): bijwerken is de nieuwe versie downloaden en installeren. Op een kaart staat altijd één van de twee; het label zegt welke.
+  - `ui.check-updates`: twee ververspijlen.
+  - `view.web-reload`: één cirkelpijl, zoals herladen in een browser.
+  - `software.open-webtab`: wereldbol, op besluit van de gebruiker (30 oktober 2026). Een webtool openen zegt vooral 'web'; het venster met een tab las niet als openen.
+  - `link.open-external`: vierkant met een oranje pijl naar buiten.
+  - `software.launch`: de afspeelpijl, dezelfde tekening als `solver.run`. Beide laten iets lopen, en ze komen niet in hetzelfde programma voor. Een cirkel eromheen leek te veel op de wereldbol op dezelfde kaart (gelijkenis 0,62), en een volle driehoek is op 16 px te vol.
+
+  Waar maar één ding staat, is geen oranje gebruikt. `update.install` komt voor in elf programma's. `ui.check-updates` en `link.open-external` komen uit Open PDF Studio en worden ook in de installer gebruikt. De andere vijf komen uit de installer. Verwante iconen met een andere betekenis zijn niet veranderd: `file.download`, `workspace.install`, `extension.install-file`, `ui.refresh` en `status.update-available`.
+- **Checks.** Twee nieuwe groepen in `design/iconen/groepen.json`: de knoppen op een kaart (Installeren of Bijwerken, Starten, Tab openen en Extern openen) en de kop met Alles bijwerken en Controleren op updates. `check_icon_guideline.py` geeft 40 iconen, 12 groepen en 0 fouten. `check_icon_set_b2.py` legde de pijlpunt van de vorige `ui.check-updates` vast; die controle geldt nu alleen voor iconen die niet volgens de richtlijn hertekend zijn, net als de andere vergelijkingen met eerder goedgekeurde masters.
+- **Overzichtsblad.** [`design/iconen/installer/overzicht-1.png`](design/iconen/installer/overzicht-1.png): oud naast nieuw, op 16 en 24 px en vier keer vergroot, in licht en donker. Gemaakt met dezelfde rastering als de check, met Pillow, omdat `build_icon_overview.py` rsvg nodig heeft en die niet op Windows draait.
+- **Ontwerpcontrole.** Een aparte agent (Claude Opus 5.5) kreeg alleen de richtlijn en het overzichtsblad.
+  - Eerste ronde: zes beter, Controleren op updates gelijk, en Starten beter van vorm maar met oranje dat botst met de regel. Verwerkt: één kleur en meer ruimte voor Controleren op updates, één cirkelpijl voor herladen, geen oranje bij Starten, en een grotere draaipijl bij Bijwerken.
+  - Tweede ronde: zeven beter, In tabblad openen gelijk. Een tab die boven het venster uitsteekt, las als een map. Daarom heeft In tabblad openen nu de vorm van de installer vóór ontwerp E, in de lijnstijl.
+  - Daarna besloot de gebruiker dat Bijwerken dezelfde tekening krijgt als Installeren; de draaipijl boven het bakje is weg. Voor Openen koos hij uit drie schetsen de wereldbol. Daardoor werd Starten de afspeelpijl.
+- **Oordeel.** Concept, op de branch `iconen/installer` bovenop PR #59. De tekeningen halen alle checks. Het oordeel komt van de eigenaar, in de installer zelf.
+
 ## Via GitHub Desktop pushen
 
 1. Kies **File → Add local repository** en selecteer `/home/aia04/Documenten/GitHub/OpenAEC-app-kopie`.

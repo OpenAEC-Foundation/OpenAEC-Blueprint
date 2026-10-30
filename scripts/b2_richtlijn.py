@@ -544,6 +544,114 @@ def relations_visible(p):
         p.line([(15.5, 12.5), (20, 17), (15.5, 21.5)], True, r=0.7)
 
 
+# ---------------------------------------------------------------- installeren, bijwerken, openen en starten
+# Tweede ronde (30 oktober 2026): de knoppen van de OpenAEC Installer en dezelfde betekenissen elders in de
+# Blueprint. Ze waren allemaal een venster met een klein oranje teken eronder; op 16 px leken ze op elkaar
+# en liet het teken niet zien of er iets gedownload, ververst of geopend wordt (principes 3, 4 en 5).
+# De vormen zijn die van de installer vóór ontwerp E (openaec-installer 8b39bae) en de bekende vormen
+# voor downloaden, verversen en extern openen.
+
+def tray(p):
+    """Open bakje onderaan: het doel van een download."""
+    if p.s == 16:
+        p.line([(1.5, 10.5), (1.5, 13.5), (13.5, 13.5), (13.5, 10.5)], r=1.2)
+    else:
+        p.line([(3, 15), (3, 20), (21, 20), (21, 15)], r=1.6)
+
+
+@design('software.install', 'Pijl omlaag in een bakje: de bekende vorm voor downloaden, zoals de knoppen van de installer '
+                            'vóór ontwerp E. Het venster met een klein pijltje eronder leek op 16 px op Starten en Tab openen.')
+def software_install(p):
+    tray(p)
+    if p.s == 16:
+        p.line([(7.5, 1.5), (7.5, 10)], True, r=0)
+        p.line([(4.5, 7), (7.5, 10), (10.5, 7)], True, r=0.4)
+    else:
+        p.line([(12, 3), (12, 15)], True, r=0)
+        p.line([(7.5, 10.5), (12, 15), (16.5, 10.5)], True, r=0.6)
+
+
+def turn_arrow(p, cx, cy, r, start, end, accent=True, head=None):
+    """Draaipijl met een grote pijlpunt: de punt moet ook op 16 px te zien zijn, anders leest hij als open cirkel."""
+    p.arc(cx, cy, r, start, end, accent)
+    a = math.radians(end)
+    ex, ey = cx + r * math.cos(a), cy + r * math.sin(a)
+    tx, ty = -math.sin(a), math.cos(a)
+    nx, ny = math.cos(a), math.sin(a)
+    w, length = head or ((2.2, 3.0) if p.s == 16 else (3.2, 4.4))
+    p.fill([(ex + nx * w, ey + ny * w), (ex + tx * length, ey + ty * length), (ex - nx * w, ey - ny * w)], accent)
+
+
+@design('software.update', 'Dezelfde pijl omlaag in een bakje als Installeren: bijwerken is de nieuwe versie downloaden en '
+                           'installeren (besluit van de gebruiker, 30 oktober 2026). Op een kaart staat altijd maar één van de '
+                           'twee; het label zegt welke. Eigen vorm naast Controleren op updates.')
+def software_update(p):
+    software_install(p)
+
+
+@design('update.install', 'Zelfde betekenis als software.update (een appupdate installeren), dus hetzelfde icoon (principe 2).')
+def update_install(p):
+    software_install(p)
+
+
+@design('ui.check-updates', 'Twee ververspijlen in één kleur: opnieuw ophalen of er updates zijn. Op 16 px bijna 12 x 12 groot, '
+                            'met ruimte tussen de pijlen. De draaipijl met een pijltje erin was op 16 px een vlek (principe 3); '
+                            'één ding, dus geen oranje. Eigen vorm naast Bijwerken (bakje met pijl) en Webtool herladen (één pijl).')
+def check_updates(p):
+    if p.s == 16:
+        for start, end in ((195, 325), (15, 145)):
+            turn_arrow(p, 7.5, 7.5, 5.75, start, end, False, (1.9, 2.6))
+    else:
+        for start, end in ((195, 325), (15, 145)):
+            turn_arrow(p, 12, 12, 7.75, start, end, False, (2.8, 3.8))
+
+
+@design('view.web-reload', 'Eén cirkelpijl met de punt bovenaan, zoals de herlaadknop in een browser. Geen venster eromheen en '
+                           'geen oranje: één ding. Anders dan Controleren op updates, dat twee pijlen heeft.')
+def web_reload(p):
+    if p.s == 16:
+        turn_arrow(p, 7.5, 8, 5.5, -45, 250, False)
+    else:
+        turn_arrow(p, 12, 12.5, 8, -45, 250, False)
+
+
+def globe(p):
+    """Wereldbol: cirkel, één meridiaan en de evenaar."""
+    cx, r, rx = (7.5, 6.4, 2.75) if p.s == 16 else (12, 9.25, 4.25)
+    p.circle(cx, cx, r)
+    p.line([(cx + rx * math.sin(math.radians(a)), cx - r * math.cos(math.radians(a))) for a in range(0, 361, 10)],
+           closed=True, r=0)
+    p.line([(cx - r, cx), (cx + r, cx)], r=0)
+
+
+@design('software.open-webtab', 'Wereldbol: een webtool openen, de bekendste vorm voor web (besluit van de gebruiker, '
+                                '30 oktober 2026). Eén ding, dus geen oranje. Eigen vorm naast Extern openen (vierkant met pijl) '
+                                'en Installeren (bakje). Het venster met een tab las niet als openen.')
+def open_webtab(p):
+    globe(p)
+
+
+@design('link.open-external', 'Vierkant met een oranje pijl schuin naar buiten: de bekende vorm voor openen in de browser '
+                              '(external-link), zoals in de installer vóór ontwerp E. De ketting las als koppeling, niet als openen.')
+def open_external(p):
+    if p.s == 16:
+        p.line([(6.5, 4.5), (1.5, 4.5), (1.5, 14.5), (11.5, 14.5), (11.5, 9.5)], r=1.2)
+        p.line([(6.5, 9.5), (13, 3)], True, r=0)
+        p.line([(10, 2.5), (13.5, 2.5), (13.5, 6)], True, r=0.4)
+    else:
+        p.line([(10, 6), (3, 6), (3, 21), (18, 21), (18, 14)], r=1.6)
+        p.line([(10, 14), (21, 3)], True, r=0)
+        p.line([(15, 3), (21, 3), (21, 9)], True, r=0.6)
+
+
+@design('software.launch', 'Afspeelpijl: een geïnstalleerde app starten, zoals de afspeelknop op de kaart van de installer vóór '
+                           'ontwerp E. Dezelfde tekening als solver.run: beide laten iets lopen, en ze komen niet in hetzelfde '
+                           'programma voor. Een cirkel eromheen leek op de wereldbol van Openen op dezelfde kaart, en een volle '
+                           'driehoek is op 16 px te vol. Eén ding, dus geen oranje.')
+def software_launch(p):
+    solver_run(p)
+
+
 def revised_construction(c):
     """Vul een lege Construction met de tekening uit dit bestand."""
     DRAWINGS[c.key](Pen(c))
