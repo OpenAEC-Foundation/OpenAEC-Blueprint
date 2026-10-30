@@ -100,9 +100,8 @@ SHAPE_REVISIONS={
 }
 
 # Iconen die volgens docs/iconen.md opnieuw getekend zijn; zie scripts/b2_richtlijn.py.
-from b2_richtlijn import ACCENT_FRONT as RICHTLIJN_ACCENT_FRONT, REVISED as RICHTLIJN_REVISED
+from b2_richtlijn import REVISED as RICHTLIJN_REVISED
 for _key in RICHTLIJN_REVISED:ACCENT_FOREGROUND.pop(_key,None)
-ACCENT_FOREGROUND.update(RICHTLIJN_ACCENT_FRONT)
 SHAPE_REVISIONS.update(RICHTLIJN_REVISED)
 
 ROUNDED_JOINTS={'edit.undo','edit.redo','nav.back','nav.forward'}

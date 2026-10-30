@@ -5,7 +5,8 @@ De check meet de 16 px-master zoals hij op het scherm komt: de gevulde contouren
 design/icon-set-b2/svg/16/ worden per pixel gerasterd (dekking 0..1). Alle maten zijn in pixels van die master.
 
 Wat streng getoetst wordt (exit 1 bij een fout):
-- elk icoon dat volgens de richtlijn getekend is (REVISED en de nieuwe ids in scripts/b2_richtlijn.py);
+- elk icoon dat volgens de richtlijn getekend is (REVISED en de nieuwe ids in scripts/b2_richtlijn.py), ook op
+  de regel dat één doorlopende lijn één kleur heeft: hoofdkleur en accent raken elkaar niet, op 16 en op 24 px;
 - elke groep in design/iconen/groepen.json.
 Met --alle meet de check daarnaast de hele B2-set en drukt hij af hoeveel iconen de regels nu al halen.
 Dat deel is informatie, geen fout: de rest van de set wordt per tab herzien.
@@ -56,6 +57,7 @@ MAX_INK = 0.36         # deel van het vlak van 16 x 16 dat inkt is
 MIN_CRISP = 0.70       # scherpte: som(dekking²)/som(dekking); 1 is helemaal scherp
 MAX_SIMILAR = 0.55     # gelijkenis (vervaagde overlap) tussen twee iconen in een groep
 MAX_SHARED = 0.72      # deel van de inkt van het kleinere icoon dat precies op het andere valt
+TOUCH = 0.06           # px: dichterbij raken twee vormen elkaar; load() sluit zulke naden
 MIN_FAMILY_DIFF = 4.0  # px² vormverschil binnen een familie (Zoom + en Zoom −), na uitlijnen: niet kleur, plaats of maat
 ALIGN_FINE = 0.25      # px: na het leggen op hetzelfde kader nog zoveel fijn bijschuiven
 ALIGN_STEP = 0.05      # px: stap van het fijne bijschuiven
@@ -124,6 +126,11 @@ def measure(path: Path, elements: int | None = None):
     return measure_ink(*load(path), elements)
 
 
+def two_colors(primary, accent) -> bool:
+    """Eén doorlopende lijn heeft één kleur: raken hoofdkleur en accent elkaar, dan heeft één lijn er twee."""
+    return not primary.is_empty and not accent.is_empty and primary.distance(accent) < TOUCH
+
+
 def measure_ink(ink, primary, accent, elements: int | None = None):
     parts = polygons(ink)
     gaps = [a.distance(b) for a, b in itertools.combinations(parts, 2)]
@@ -140,6 +147,7 @@ def measure_ink(ink, primary, accent, elements: int | None = None):
         'ink': round(float(total / 256), 3),
         'crisp': round(float((grid ** 2).sum() / total), 3) if total else 0,
         'accent_area': round(accent.area, 3),
+        'two_colors': two_colors(primary, accent),
         '_ink': ink,
         '_grid': grid,
     }
@@ -156,6 +164,10 @@ def legibility_errors(m) -> list[str]:
     if m['crisp'] < MIN_CRISP:
         errors.append(f"scherpte {m['crisp']} (minimaal {MIN_CRISP}); lijnen liggen naast het pixelraster")
     return errors
+
+
+def colour_errors(m) -> list[str]:
+    return ['hoofdkleur en accent raken elkaar: één doorlopende lijn heeft dan twee kleuren'] if m['two_colors'] else []
 
 
 def detail_errors(m) -> list[str]:
@@ -284,9 +296,12 @@ def main():
     for icon_id in sorted(guideline | grouped):
         metrics[icon_id] = measure(SVG16 / f'{icon_id}.svg', construction_elements(icon_id, icons))
     for icon_id in sorted(guideline):
-        for error in legibility_errors(metrics[icon_id]) + detail_errors(metrics[icon_id]):
+        for error in legibility_errors(metrics[icon_id]) + detail_errors(metrics[icon_id]) + colour_errors(metrics[icon_id]):
             failures.append(f'{icon_id}: {error}')
-        parts24 = polygons(load(SVG24 / f'{icon_id}.svg')[0])
+        ink24, primary24, accent24 = load(SVG24 / f'{icon_id}.svg')
+        if two_colors(primary24, accent24):
+            failures.append(f'{icon_id}: in de 24 px-master raken hoofdkleur en accent elkaar: één doorlopende lijn heeft dan twee kleuren')
+        parts24 = polygons(ink24)
         gap24 = min((a.distance(b) for a, b in itertools.combinations(parts24, 2)), default=None)
         if gap24 is not None and gap24 < MIN_GAP_24:
             failures.append(f'{icon_id}: in de 24 px-master liggen losse delen {round(gap24, 3)} px uit elkaar (minimaal {MIN_GAP_24})')
@@ -304,6 +319,8 @@ def main():
             # Dezelfde groepsregels als de echte groep, ook de families; anders bewijst de controle niets over die groep.
             group = next((g for g in groups['groepen'] if set(control['ids']) <= set(g['ids'])), {})
             caught = group_errors({'ids': control['ids'], 'families': group.get('families', [])}, wrong)
+        elif control['regel'] == 'kleur':
+            caught = [e for i in control['ids'] for e in colour_errors(wrong[i])]
         elif control['regel'] == 'detail':
             caught = [e for i in control['ids'] for e in detail_errors(wrong[i])]
         else:
@@ -351,12 +368,13 @@ def main():
                'negatieve_controles': controls, 'fouten': len(failures)}
     if args.alle:
         rest = sorted(set(icons) - guideline)
-        passing = 0
+        passing = two_coloured = 0
         for icon_id in rest:
             m = measure(SVG16 / f'{icon_id}.svg', construction_elements(icon_id, icons))
             metrics[icon_id] = m
-            passing += not (legibility_errors(m) + detail_errors(m))
-        summary['rest_van_de_set'] = {'iconen': len(rest), 'halen_de_regels_nu': passing}
+            passing += not (legibility_errors(m) + detail_errors(m) + colour_errors(m))
+            two_coloured += m['two_colors']
+        summary['rest_van_de_set'] = {'iconen': len(rest), 'halen_de_regels_nu': passing, 'lijn_in_twee_kleuren': two_coloured}
     if args.json:
         args.json.write_text(json.dumps({k: {n: v for n, v in m.items() if not n.startswith('_')}
                                          for k, m in metrics.items()}, ensure_ascii=False, indent=1), encoding='utf-8')

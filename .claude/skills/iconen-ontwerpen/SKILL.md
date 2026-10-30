@@ -48,7 +48,7 @@ Teken in `scripts/b2_richtlijn.py`, met de decorator `@design(id, reden)` en de 
 - Elke maat heeft een eigen tekening: `if p.s == 16:` en `else:` voor 24.
 - 16 px: lijndikte 1,25; rechte lijnen op x,5. 24 px: lijndikte 1,75; rechte lijnen op hele pixels.
 - `p.line(...)`, `p.rect(...)`, `p.circle(...)`, `p.arc(...)`, `p.fill(...)`; met `accent=True` alleen op het deel dat de actie of het verschil toont.
-- Ligt een oranje deel vóór een lijn van de hoofdkleur, geef dan `accent_front='<reden>'` mee aan `@design`. Zonder die tekst wint de hoofdkleur waar de twee elkaar raken.
+- Eén doorlopende lijn heeft één kleur: steel en punt van een pijl zijn allebei oranje of allebei donker. Oranje en de hoofdkleur raken elkaar nooit; laat er ruimte tussen.
 - De reden noemt de bekende vorm en, als die er is, het issue.
 
 Bouw daarna de keten. Zet eerst de runtime klaar als die er nog niet is:

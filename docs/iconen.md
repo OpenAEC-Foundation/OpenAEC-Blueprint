@@ -137,6 +137,15 @@ Elke maat heeft een eigen tekening, in de pixels van die maat. Zo blijven lijnen
 
 ![Accent: alleen het klokje oranje, niet het hele icoon](images/iconen/regel-accent.png)
 
+**Eén doorlopende lijn heeft altijd één kleur.** Regel van Ethan, uit zijn controle van de tab Planning op 30 oktober 2026: een pijl waarvan alleen de punt oranje is, ziet er vreemd uit.
+
+- Een pijl is één ding. Steel en punt hebben dezelfde kleur.
+- Hoort de lijn bij een icoon met nog een ander deel, dan is de hele lijn oranje of de hele lijn donker. Bij *Voorgangers* is de hele pijl oranje en het streepje donker.
+- Is het icoon alleen die lijn, zoals *Relatielijnen*, dan is het één ding en heeft het geen oranje.
+- Oranje en de hoofdkleur raken elkaar nooit. Er blijft ruimte tussen, net als tussen alle losse delen (zie [Lijnstijl](#lijnstijl)).
+
+![Eén lijn, één kleur: de hele pijl oranje, niet alleen de punt](images/iconen/regel-lijn-kleur.png)
+
 ### Namen
 
 - Een bestaand id (zoals `view.zoom-in`) blijft werken. Een icoon mag van vorm veranderen; de naam blijft.
@@ -197,14 +206,18 @@ De stappen staan in de skill [`.claude/skills/iconen-ontwerpen/SKILL.md`](../.cl
 | Eigen vorm in een groep | gelijkenis na lichte vervaging | maximaal 0,55 |
 | | gedeelde vorm (zelfde basis met klein verschil) | maximaal 72 % van het kleinste icoon |
 | | familie: vormverschil na uitlijnen, niet alleen kleur, plaats of maat | minimaal 4 px² |
+| Eén kleur per lijn | hoofdkleur en accent raken elkaar niet, op 16 en op 24 px | geen contact |
 
 De grenzen zijn op 29 oktober 2026 gekozen met de oude en nieuwe tekeningen naast elkaar:
 
 - Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee knoppen die geen familie zijn 0,45. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
 - Dichtste plek: in de nieuwe tekeningen hoogstens 0,60. Het oude resourcedock haalt 0,70.
 - Familie: het kleinste vormverschil is 4,5 px², tussen Zoom + en Zoom −. Een kopie die verschoven is, op 96 tot 103 % getekend, of aan één uiteinde 0,5 px langer, ook alles tegelijk, meet hoogstens 2,9 px². Een kopie waarin alleen het kleinste losse deel tot 1 px verschoven is, meet 0 px².
+- Eén kleur per lijn: in de 40 iconen die volgens deze richtlijn getekend zijn, liggen hoofdkleur en accent nu minstens 1,0 px uit elkaar. Bij een half oranje pijl is de afstand 0. In de rest van de set raken ze elkaar bij 189 van de 910 iconen; dat is nog geen fout en de check noemt dat aantal met `--alle`. Die iconen komen aan de beurt als ze per tab herzien worden.
 
-**Negatieve controle.** De oude tekeningen in [`design/iconen/voorbeelden/fout/`](../design/iconen/voorbeelden/fout/) moeten op de bedoelde regel vallen: de zes schakelaars met het assenkader, Voorgangers en Opvolgers als twee blokjes, de paneelkaders, het lint als inklapknop en de cijfers bij Hernummer WBS. De controle gebruikt dezelfde groepsregels als de echte groep, ook de families. Vangt de check daar niets meer, dan faalt hij. Zo blijft zichtbaar dat de grenzen niet te los worden, en dat een familie geen gat in de groepscontrole maakt.
+De check op één kleur ziet alleen of twee kleuren elkaar raken. Hij ziet niet of twee losse delen op het oog één lijn vormen. Zo is de lijn van *Statusdatumlijn* donker en het merkteken erboven oranje; daar zit 1,4 px ruimte tussen, en het zijn twee dingen. Dat onderscheid blijft aan het oog.
+
+**Negatieve controle.** De oude tekeningen in [`design/iconen/voorbeelden/fout/`](../design/iconen/voorbeelden/fout/) moeten op de bedoelde regel vallen: de zes schakelaars met het assenkader, Voorgangers en Opvolgers als twee blokjes, de paneelkaders, het lint als inklapknop, de cijfers bij Hernummer WBS en de pijlen met alleen de punt in oranje. De controle gebruikt dezelfde groepsregels als de echte groep, ook de families. Vangt de check daar niets meer, dan faalt hij. Zo blijft zichtbaar dat de grenzen niet te los worden, en dat een familie geen gat in de groepscontrole maakt.
 
 Een familie slaat de grenzen voor gelijkenis en gedeelde vorm over. Geef daarom alleen een familie op als de iconen zonder die uitzondering niet kunnen. Voorgangers en Opvolgers, WBS auto en Hernummer WBS, en Lint inklappen en uitklappen halen de gewone grenzen en zijn geen familie.
 

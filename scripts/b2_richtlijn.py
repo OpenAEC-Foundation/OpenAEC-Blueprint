@@ -15,10 +15,9 @@ Een nieuwe betekenis krijgt een nieuw id (NEW_DEFINITIONS); de oude naam blijft 
 """
 import math
 
-# Een herzien icoon: waarom, en welke kleur bij een aansluiting vóór ligt.
+# Een herzien icoon: waarom.
 REVISED = {}
 DRAWINGS = {}
-ACCENT_FRONT = {}
 
 # Nieuwe betekenissen: (id, label, groep, betekenis). De groep volgt de bestaande B2-groepen.
 NEW_DEFINITIONS = [
@@ -83,12 +82,10 @@ class Pen:
         self.c.fills.append({'rings': [[(float(x), float(y)) for x, y in points]], 'tone': 'accent' if accent else 'primary'})
 
 
-def design(key, reason, accent_front=None):
+def design(key, reason):
     def register(fn):
         DRAWINGS[key] = fn
         REVISED[key] = reason
-        if accent_front:
-            ACCENT_FRONT[key] = accent_front
         return fn
     return register
 
@@ -224,24 +221,24 @@ def split_mode(p):
 def trace(p, successors):
     if p.s == 16:
         p.line([(2.5, 3), (2.5, 12)], r=0)
-        p.line([(14, 7.5), (6, 7.5)], r=0)
+        p.line([(14, 7.5), (6, 7.5)], True, r=0)
         p.line([(9, 4), (5.5, 7.5), (9, 11)], True, r=0.6)
     else:
         p.line([(3, 5), (3, 19)], r=0)
-        p.line([(21, 12), (8, 12)], r=0)
+        p.line([(21, 12), (8, 12)], True, r=0)
         p.line([(12.5, 7), (7.5, 12), (12.5, 17)], True, r=0.8)
     if successors:
         p.c.mirror()
 
 
-@design('planning.trace-predecessors', 'Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de pijlpunt in oranje (#48).',
-        'De oranje pijlpunt ligt vóór de steel.')
+@design('planning.trace-predecessors', 'Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de hele pijl in oranje, '
+                                       'want één doorlopende lijn heeft één kleur (Ethan, 30 oktober 2026) (#48).')
 def trace_pred(p):
     trace(p, False)
 
 
-@design('planning.trace-successors', 'Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio (#48).',
-        'De oranje pijlpunt ligt vóór de steel.')
+@design('planning.trace-successors', 'Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio; de hele pijl in '
+                                     'oranje, zoals bij Voorgangers (#48).')
 def trace_succ(p):
     trace(p, True)
 
@@ -430,15 +427,13 @@ def sheet_arrow(p, down):
 
 @design('planning.progress-sheet-export', 'Blad met pijl omlaag, zoals Voortgangsblad exporteren in Open Planner Studio (FileDown). '
                                           'Eigen id: file.export is gedeeld en blijft het bakje met pijl; de ontwerpcontrole '
-                                          'vond dat op deze knop slechter dan main (29 oktober 2026).',
-        'De oranje pijlpunt ligt vóór de steel.')
+                                          'vond dat op deze knop slechter dan main (29 oktober 2026).')
 def progress_sheet_export(p):
     sheet_arrow(p, True)
 
 
 @design('planning.progress-sheet-import', 'Blad met pijl omhoog, zoals Voortgang bijwerken uit een blad in Open Planner Studio (FileUp). '
-                                          'Eigen id om dezelfde reden als planning.progress-sheet-export.',
-        'De oranje pijlpunt ligt vóór de steel.')
+                                          'Eigen id om dezelfde reden als planning.progress-sheet-export.')
 def progress_sheet_import(p):
     sheet_arrow(p, False)
 
@@ -533,15 +528,15 @@ def float_band(p):
         p.line([(18, 8), (22, 12), (18, 16)], r=0.7)
 
 
-@design('planning.relations-visible', 'Afhankelijkheidspijl einde-begin zoals op de Gantt: haaks naar beneden en naar rechts, met de punt in oranje.',
-        'De oranje pijlpunt ligt vóór de lijn.')
+@design('planning.relations-visible', 'Afhankelijkheidspijl einde-begin zoals op de Gantt: haaks naar beneden en naar rechts. '
+                                      'Eén doorlopende lijn heeft één kleur, en het icoon is alleen dat ding, dus geen oranje.')
 def relations_visible(p):
     if p.s == 16:
         p.line([(1.5, 3.5), (5.5, 3.5), (5.5, 11.5), (12.5, 11.5)], r=1.4)
-        p.line([(10, 8.5), (13, 11.5), (10, 14.5)], True, r=0.5)
+        p.line([(10, 8.5), (13, 11.5), (10, 14.5)], r=0.5)
     else:
         p.line([(2, 5), (8, 5), (8, 17), (19, 17)], r=2)
-        p.line([(15.5, 12.5), (20, 17), (15.5, 21.5)], True, r=0.7)
+        p.line([(15.5, 12.5), (20, 17), (15.5, 21.5)], r=0.7)
 
 
 # ---------------------------------------------------------------- installeren, bijwerken, openen en starten

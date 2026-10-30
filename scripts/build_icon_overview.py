@@ -235,6 +235,12 @@ FIGURES = {
         ('Project verplaatsen', ['goed: alleen het klokje oranje', 'fout: alles oranje'],
          [('nieuw', 'planning.move-date'), ('allaccent', 'planning.move-date')]),
     ]),
+    'regel-lijn-kleur': (['goed', 'fout'], [
+        ('Voorgangers', ['goed: de hele pijl oranje', 'fout: alleen de punt oranje'],
+         [('nieuw', 'planning.trace-predecessors'), ('fout', 'planning.trace-predecessors.half-oranje')]),
+        ('Relatielijnen', ['goed: de pijl in één kleur', 'fout: alleen de punt oranje'],
+         [('nieuw', 'planning.relations-visible'), ('fout', 'planning.relations-visible.half-oranje')]),
+    ]),
 }
 
 
