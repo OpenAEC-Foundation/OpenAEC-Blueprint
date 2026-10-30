@@ -292,7 +292,7 @@ Updates lopen in elke app via de OpenAEC Installer (`design::update`, issue #33;
 - **Galerij.** De galerij toont de melding met een voorbeeldversie en start de installer niet echt.
 
 React-apps hebben de componenten van 0.4 (issue #12; [`web/react/`](web/react/README.md), 29 oktober 2026):
-- **Op de CSS.** 30 componenten maken de HTML en `oa-`-klassen van `openaec-components.css`; de stijl staat dus op één plek. Pakket `@openaec/ui-react`, TypeScript-bron zonder eigen build, React 18 of nieuwer.
+- **Op de CSS.** 31 componenten maken de HTML en `oa-`-klassen van `openaec-components.css`; de stijl staat dus op één plek. Pakket `@openaec/ui-react`, TypeScript-bron zonder eigen build, React 18 of nieuwer.
 - **Gedrag en toegankelijkheid.** Echte elementen, een verplichte naam voor iconknoppen, `aria-invalid` en `aria-describedby` bij fouten, pijltjestoetsen in tabs, keuzetegels, menu's en tabellen, en de dialoog op `<dialog>` met `showModal()`.
 - **Getest.** `node scripts/check_react_components.mjs`: strikte typecontrole en 90 controles op de HTML van alle componenten. In de demo in het browserpaneel: tabelselectie met pijltjes, dialoog modaal met focus erin, Escape sluit en geeft de focus terug, lint-tabs en keuzetegels met pijltjes.
 - **Iconen.** De standaardsprite `web/icons/standard.svg` heeft er `status.error`, `status.warning`, `ui.close`, `ui.more` en `view.search` bij voor meldingen, documenttabs en de lege toestand.

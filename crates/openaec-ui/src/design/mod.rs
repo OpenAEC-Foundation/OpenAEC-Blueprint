@@ -20,6 +20,7 @@ pub mod site;
 pub mod tiles;
 pub mod tokens;
 pub mod update;
+mod update_core;
 pub mod widgets;
 pub mod workflow;
 

@@ -65,7 +65,7 @@ Beide vormen kunnen in elke werkstroom-app. Gebruikers kiezen in de instellingen
 
 ## Hub-app
 
-De OpenAEC Installer volgt voorstel E uit [`installer-voorstellen.html`](installer-voorstellen.html#E) (besluit 4). Bekijk hem in de galerij met `cargo run --release --features gpu --bin ui04 -- installer`. Van boven naar beneden:
+De OpenAEC Installer volgt voorstel E uit [`installer-voorstellen.html`](installer-voorstellen.html#E) (besluit 4). Bekijk hem in de galerij met `cargo run --release --features gpu --bin ui04 -- installer`. De echte installer gebruikt ontwerp E sinds versie 0.2.7 (openaec-installer#22). Hij is gebouwd met React en het webpakket, en neemt tokens, websitestijl, fonts en B2-iconen over met `scripts/sync-openaec.mjs`. Van boven naar beneden:
 
 | Band | Hoogte | Inhoud |
 | --- | --- | --- |
@@ -76,12 +76,13 @@ De OpenAEC Installer volgt voorstel E uit [`installer-voorstellen.html`](install
 | Webtools | rest | Een lijn met WEBTOOLS, dan dezelfde kaarten. Een webtool opent in een tab van de installer, met een balk terug naar de catalogus, of in de eigen browser |
 | Statusbalk | 22 px | Links het aantal geïnstalleerde desktop-apps en het aantal updates, rechts de versie van de installer en het tijdstip van de laatste controle |
 
-Alleen het bovenvlak is donker; alles daaronder volgt het thema. De knoppen, pillen, chips, kaarten en de donkere band zijn de websitestijl van open-aec.com; ze gaan naar `openaec_ui::design` (issue #13).
+Alleen het bovenvlak is donker; alles daaronder volgt het thema. De knoppen, pillen, chips, kaarten en de donkere band zijn de websitestijl van open-aec.com. Ze staan in `openaec_ui::design::site` en, voor het web, in `openaec-components.css` (issue #13).
 
 De installer is ook de centrale plek voor updates (besluit 5, issue #33).
 - **Status:** hij schrijft na elke controle per app de nieuwste versie naar `updates.json`.
 - **Melding in de app:** apps tonen die versie in hun titelbalk.
-- **Bijwerken:** Bijwerken in een app opent de installer met `--update <id>`; de installer werkt die app bij en start hem opnieuw.
+- **Bijwerken:** Bijwerken in een app opent de installer met `--update <id>`. De installer werkt die app bij en start hem opnieuw.
+- **Waar dit geldt:** voor Tauri-apps op Windows, als de installer op de pc staat (plugin `openaec-update`, 2026-10-30). Op macOS, voor .deb/.rpm en zonder installer houden apps hun eigen updater. De installer kan die gevallen (nog) niet bijwerken.
 
 ## High contrast
 

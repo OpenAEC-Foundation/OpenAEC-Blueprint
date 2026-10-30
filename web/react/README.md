@@ -29,7 +29,7 @@ Het pakket is TypeScript-bron (`src/`), zonder eigen build. Een app met Vite of 
 | Basis | `OpenAECProvider`, `Icon`, `applyDisplay` (thema, werkruimte, statusbalk, tekstgrootte) |
 | Bediening | `Button`, `IconButton`, `TextField`, `TextArea`, `Select`, `Checkbox`, `Radio`, `Switch`, `Slider`, `Progress` |
 | Labels en tegels | `Status`, `Chip`, `Pill`, `Tile`, `ChoiceTiles`, `RecentList`, `InfoCard`, `FigureTile` |
-| Meldingen | `Banner`, `Toast`, `Menu`, `Dialog` |
+| Meldingen | `Banner`, `Toast`, `Menu`, `Dialog`, `UpdateNotice` (bijwerken via de OpenAEC Installer, met de plugin `openaec-update`) |
 | Schil | `Tabs`, `DocumentTabs`, `Panel`, `PropertyRow`, `Table`, `StatusBar`, `Sidebar`, `Steps`, `ActionBar`, `EmptyState`, `Heading`, `MonoLabel` |
 
 ## Toegankelijkheid
@@ -47,4 +47,4 @@ Het pakket is TypeScript-bron (`src/`), zonder eigen build. Een app met Vite of 
 node scripts/check_react_components.mjs
 ```
 
-Dit doet een strikte typecontrole van `src/`, `test/` en `demo/`, en zet elk component naar HTML om om de klassen en aria-attributen na te lopen (90 controles op 30 componenten). Met `--demo` bouwt het ook [`demo/demo.tsx`](demo/demo.tsx) en toont het die op <http://127.0.0.1:4177/>. Het script leent TypeScript, React en esbuild van de Tauri-sjabloon, dus eerst `npm ci --ignore-scripts` in `style-book/project-templates/Tauri+React`.
+Dit doet een strikte typecontrole van `src/`, `test/` en `demo/`, en zet elk component naar HTML om om de klassen en aria-attributen na te lopen (95 controles op 31 componenten). Met `--demo` bouwt het ook [`demo/demo.tsx`](demo/demo.tsx) en toont het die op <http://127.0.0.1:4177/>. Het script leent TypeScript, React en esbuild van de Tauri-sjabloon, dus eerst `npm ci --ignore-scripts` in `style-book/project-templates/Tauri+React`.

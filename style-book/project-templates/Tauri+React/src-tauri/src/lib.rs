@@ -140,6 +140,9 @@ pub fn run() {
         .plugin(tauri_plugin_store::Builder::default().build())
         .plugin(tauri_plugin_os::init())
         .plugin(tauri_plugin_dialog::init())
+        // Bijwerken via de OpenAEC Installer (OpenAEC-Blueprint#33). Vervang
+        // "open-template" door het id van de app in de catalogus van de installer.
+        .plugin(openaec_update::init("open-template"))
         .manage(app_state)
         .invoke_handler(tauri::generate_handler![
             greet,
