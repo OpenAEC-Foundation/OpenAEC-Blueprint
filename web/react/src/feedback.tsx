@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, type KeyboardEvent, type ReactNode } from "react";
 import { arrowFocus, cx, Icon } from "./base";
+import { Button } from "./controls";
 import type { Tone } from "./tiles";
 
 const WORD: Record<Tone, string> = { error: "Fout.", warning: "Let op.", success: "Gelukt.", info: "Info." };
@@ -117,5 +118,24 @@ export function Dialog({ open, title, onClose, children, actions }: DialogProps)
       {children}
       {actions && <div className="oa-dialog-actions">{actions}</div>}
     </dialog>
+  );
+}
+
+/**
+ * The update notice for the title bar (issue #33), as `design::update::notice` in
+ * openaec-ui: the new version and a compact "Bijwerken" button. The app gets
+ * `latest` and `current` from the plugin openaec-update (command `check`), runs
+ * its close plan in `onUpdate` and then calls `update_now`, which hands the
+ * update to the OpenAEC Installer.
+ */
+export function UpdateNotice({ latest, current, onUpdate, label = "Bijwerken" }: { latest: string; current: string; onUpdate: () => void; label?: string }) {
+  const text = `Versie ${latest} staat klaar`;
+  return (
+    <span className="oa-update-notice" role="status" aria-label={`${text}. Nu ${current}. ${label} opent de OpenAEC Installer.`}>
+      <span aria-hidden="true">{text}</span>
+      <Button kind="primary" compact onClick={onUpdate}>
+        {label}
+      </Button>
+    </span>
   );
 }
