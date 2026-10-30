@@ -1,11 +1,8 @@
 # Icon checks for every pull request and every push to main.
 #
-# The B2 icon set check is a job of its own: it fails on main today. Its
-# manifest pins SHA-256 hashes of scripts as the maker's Windows checkout has
-# them (CRLF), while Linux checks them out with LF. The hash of
-# design/ontwerp-0.4/tokens-0.4.json is also older than the changes of that file
-# on 2026-10-26 and 2026-10-29. The job stays red until the manifest or the
-# check is fixed.
+# The B2 icon set check is a job of its own. Its manifest pins SHA-256 hashes
+# of the generator scripts; the check compares them regardless of line endings,
+# so the maker's Windows checkout (CRLF) and Linux (LF) give the same result.
 name: Icons
 
 on:
@@ -48,7 +45,7 @@ jobs:
         run: cargo test -p openaec-icons --features all --locked
 
   b2:
-    name: B2 icon set (fails on main, stale hashes)
+    name: B2 icon set
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
