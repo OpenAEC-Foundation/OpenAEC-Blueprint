@@ -165,6 +165,7 @@ def build():
       <div class="oa-banner oa-banner--error" role="alert">{i("status.error")}<b>Fout.</b><span>Het bestand kon niet worden opgeslagen.</span><button class="oa-button oa-button--compact">Opnieuw</button></div>
       <div class="oa-banner oa-banner--success">{i("status.success")}<b>Gelukt.</b><span>Rapport gemaakt.</span></div>
       <div class="oa-banner oa-banner--info">{i("status.info")}<b>Info.</b><span>Er is een nieuwe versie beschikbaar.</span></div>
+      <span class="oa-update-notice" role="status">Versie 2026.44.5 staat klaar<button class="oa-button oa-button--primary oa-button--compact">Bijwerken</button></span>
     </div>
     <div class="demo-row" style="align-items:flex-start;margin-top:16px">
       <div class="oa-toast">{i("status.success", extra="demo-success")}<div><b>Opgeslagen</b><span class="oa-secondary">Kantoor Velp.calc is bewaard.</span></div><button class="oa-icon-button oa-icon-button--small" aria-label="Sluiten">{i("ui.close")}</button></div>

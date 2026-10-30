@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import type { ReactElement } from "react";
 import {
   ActionBar, Banner, Button, Checkbox, ChoiceTiles, Dialog, DocumentTabs, EmptyState, FigureTile, IconButton, InfoCard, Menu, OpenAECProvider,
-  Panel, Pill, Progress, PropertyRow, RecentList, Select, Sidebar, Status, StatusBar, Steps, Switch, Table, Tabs, TextField, Tile, Toast,
+  Panel, Pill, Progress, PropertyRow, RecentList, Select, Sidebar, Status, StatusBar, Steps, Switch, Table, Tabs, TextField, Tile, Toast, UpdateNotice,
 } from "../src";
 
 declare const process: { exitCode?: number };
@@ -46,6 +46,7 @@ expect("cijfer", html(<FigureTile value={7} label="Geïnstalleerd" accent />), '
 expect("fout", html(<Banner tone="error" onClose={noop}>Niet opgeslagen.</Banner>), 'class="oa-banner oa-banner--error"', 'role="alert"', "<b>Fout.</b>", 'aria-label="Sluiten"');
 expect("let op", html(<Banner tone="warning">Twee profielen.</Banner>), 'role="status"', "<b>Let op.</b>");
 expect("toast", html(<Toast title="Opgeslagen" onClose={noop}>Bewaard.</Toast>), 'class="oa-toast"', 'role="status"', "<b>Opgeslagen</b>");
+expect("update", html(<UpdateNotice latest="2026.44.5" current="2026.43.0" onUpdate={noop} />), 'class="oa-update-notice" role="status"', "Versie 2026.44.5 staat klaar", "Nu 2026.43.0.", 'class="oa-button oa-button--primary oa-button--compact"', ">Bijwerken</button>");
 const menu = html(<Menu label="Bewerken" items={[{ label: "Kopiëren", icon: "edit.copy", keys: "Ctrl+C", onSelect: noop }, "separator", { label: "Verwijderen", danger: true, onSelect: noop }]} />);
 expect("menu", menu, 'role="menu"', 'role="menuitem"', "<kbd>Ctrl+C</kbd>", "<hr/>", 'class="oa-danger"');
 const dialog = html(<Dialog open={false} title="Wijzigingen opslaan?" onClose={noop} actions={<Button kind="primary">Opslaan</Button>}><p>Tekst</p></Dialog>);
@@ -62,5 +63,5 @@ expect("stappen", html(<Steps steps={["Gegevens", "Sjabloon", "Maken"]} current=
 expect("actiebalk", html(<ActionBar info="Stap 2 van 4"><Button>Vorige</Button></ActionBar>), 'class="oa-action-bar"', "Stap 2 van 4");
 expect("leeg", html(<EmptyState icon="view.search" title="Geen resultaten">Pas de zoekterm aan.</EmptyState>), 'class="oa-empty"', "#i24-view.search");
 
-console.log(failures ? `${failures} van ${checks} controles mislukt` : `React-componenten: ${checks} controles op 30 componenten geslaagd`);
+console.log(failures ? `${failures} van ${checks} controles mislukt` : `React-componenten: ${checks} controles op 31 componenten geslaagd`);
 process.exitCode = failures ? 1 : 0;

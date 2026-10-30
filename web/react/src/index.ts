@@ -7,7 +7,7 @@ export {
   type ButtonKind, type ButtonProps, type IconButtonProps, type Option, type SelectProps, type TextAreaProps, type TextFieldProps,
 } from "./controls";
 export { Chip, ChoiceTiles, FigureTile, InfoCard, Pill, RecentList, Status, Tile, type ChoiceTileOption, type PillProps, type RecentItem, type Tone } from "./tiles";
-export { Banner, Dialog, Menu, Toast, type BannerProps, type DialogProps, type MenuEntry } from "./feedback";
+export { Banner, Dialog, Menu, Toast, UpdateNotice, type BannerProps, type DialogProps, type MenuEntry } from "./feedback";
 export {
   ActionBar, DocumentTabs, EmptyState, Heading, MonoLabel, Panel, PropertyRow, Sidebar, StatusBar, Steps, Table, Tabs,
   type Column, type DocumentTab, type SidebarItem, type TabItem,

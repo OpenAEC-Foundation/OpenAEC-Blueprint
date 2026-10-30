@@ -130,6 +130,14 @@ Voorstel: in de installer-repo, als `release-kit/` met het script voor `latest.j
 3. **`--update`, `--check`, single-instance en `updates.json`** in de installer; daarmee werkt de knop in de apps. *Gebouwd op 2026-10-29 (openaec-installer 91893c7) en uitgebracht in OpenAEC Installer v0.2.5, samen met stap 1 en 2. Getest met een open Open Planner Studio: `--update` via een tweede start doorgegeven, wachten tot sluiten, stil bijgewerkt van 2026.10.0 naar 2026.43.0 en opnieuw gestart.*
 4. **Release-kit** in de installer-repo, en per app de CI omzetten (sleutel, `latest.json`, tagpoort). Begin met Calc en Pointcloud (fase 5).
 5. **Eigen updaters weghalen** uit PDF, Planner, 2D en Cloud Desktop, pas nadat de installer stap 1 tot en met 3 heeft.
+   *Opzet gekozen op 2026-10-30.*
+   - **Alleen Windows.** Op Windows geeft een app de update door aan de installer, maar alleen als die op de pc staat.
+   - **Andere platforms houden hun eigen updater.** Op macOS (nog geen Apple-ondertekening) en voor .deb/.rpm (beheerdersrechten) kan de installer niet bijwerken. Daar, en zonder installer, blijft de eigen updater, zodat niemand zonder updates komt te zitten.
+   - **De bouwstenen:**
+     - het contract in `crates/openaec-ui/src/design/update_core.rs`, met `find_installer` en `refresh_if_stale`: is `updates.json` ouder dan een dag, dan start de app `installer --check`;
+     - de Tauri-plugin `openaec-update` in openaec-installer (`crates/openaec-update`, met een kopie van dat contract via `scripts/sync-openaec.mjs`), met de opdrachten `installer_present`, `check` en `update_now`;
+     - `UpdateNotice` in `@openaec/ui-react`.
+   - **Eerste app: Planner**, daarna PDF, Calc, 2D en Cloud Desktop. Cloud Desktop staat nog niet in de catalogus van de installer.
 6. **Zelf bijwerken van de installer** omzetten naar de JM-Orgue-route.
 
 ## Open vragen voor het team
