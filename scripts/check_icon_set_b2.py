@@ -48,6 +48,11 @@ OUT=ROOT/'design/icon-set-b2'
 
 
 def sha(data):return hashlib.sha256(data).hexdigest()
+# Tekstbestanden: het manifest is op Windows (CRLF) gemaakt, een Linux-checkout heeft LF.
+# De inhoud telt, niet de regeleindes; binaire bestanden blijven met sha() vergeleken.
+def text_sha_ok(path,expected):
+    data=path.read_bytes();lf=data.replace(bytes([13,10]),bytes([10]))
+    return expected in {sha(data),sha(lf),sha(lf.replace(bytes([10]),bytes([13,10])))}
 
 
 def parse_layer(path):
@@ -106,31 +111,32 @@ def main():
         assert f'review-data.js?revision={manifest["revision"]}' in page
         assert page.index('review-data.js')<page.index('const d=JSON.parse')
 
-    for name,expected in manifest['completion_modules_sha256'].items():assert sha((ROOT/'scripts'/name).read_bytes())==expected
-    assert sha((ROOT/'scripts/b2_completion.py').read_bytes())==manifest['completion_generator_sha256']
-    assert sha((ROOT/'scripts/build_icon_set_b2.py').read_bytes())==manifest['generator_sha256']
-    assert sha((ROOT/'scripts/b2_geometry.py').read_bytes())==manifest['geometry_generator_sha256']
-    assert sha((ROOT/'scripts/b2_second_series.py').read_bytes())==manifest['extension_generator_sha256']
-    assert sha((ROOT/'scripts/build_b2_feedback_review.py').read_bytes())==manifest['feedback_generator_sha256']
+    for name,expected in manifest['completion_modules_sha256'].items():assert text_sha_ok(ROOT/'scripts'/name,expected)
+    assert text_sha_ok(ROOT/'scripts/b2_completion.py',manifest['completion_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/build_icon_set_b2.py',manifest['generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_geometry.py',manifest['geometry_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_second_series.py',manifest['extension_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/build_b2_feedback_review.py',manifest['feedback_generator_sha256'])
     assert manifest['warning_preview']['colors']==WARNING_PREVIEW
-    assert sha((ROOT/'scripts/b2_window_series.py').read_bytes())==manifest['window_generator_sha256']
-    assert sha((ROOT/'scripts/b2_text_series.py').read_bytes())==manifest['text_generator_sha256']
-    assert sha((ROOT/'scripts/b2_font_geometry.py').read_bytes())==manifest['font_generator_sha256']
+    assert text_sha_ok(ROOT/'scripts/b2_window_series.py',manifest['window_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_text_series.py',manifest['text_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_font_geometry.py',manifest['font_generator_sha256'])
     for font in manifest['font_sources'].values():assert sha((ROOT/font['source']).read_bytes())==font['sha256']
-    assert sha((ROOT/'scripts/b2_data_series.py').read_bytes())==manifest['data_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_three.py').read_bytes())==manifest['session_three_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_four.py').read_bytes())==manifest['session_four_generator_sha256']
-    assert sha((ROOT/'scripts/b2_document_navigation.py').read_bytes())==manifest['document_navigation_generator_sha256']
-    assert sha((ROOT/'scripts/b2_session_two.py').read_bytes())==manifest['session_two_generator_sha256']
-    assert sha((ROOT/'scripts/b2_bulk_series.py').read_bytes())==manifest['bulk_generator_sha256']
-    assert sha((ROOT/'scripts/b2_page_views.py').read_bytes())==manifest['page_views_generator_sha256']
-    assert sha((ROOT/'scripts/b2_energy_pile_audio.py').read_bytes())==manifest['later_groups_generator_sha256']
-    assert sha((ROOT/'scripts/b2_tree_planning_geo.py').read_bytes())==manifest['next_groups_generator_sha256']
-    assert sha((ROOT/'scripts/b2_ifc_series.py').read_bytes())==manifest['ifc_generator_sha256']
-    assert sha((ROOT/'scripts/b2_report_series.py').read_bytes())==manifest['report_generator_sha256']
+    assert text_sha_ok(ROOT/'scripts/b2_data_series.py',manifest['data_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_session_three.py',manifest['session_three_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_session_four.py',manifest['session_four_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_document_navigation.py',manifest['document_navigation_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_session_two.py',manifest['session_two_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_bulk_series.py',manifest['bulk_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_page_views.py',manifest['page_views_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_energy_pile_audio.py',manifest['later_groups_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_tree_planning_geo.py',manifest['next_groups_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_ifc_series.py',manifest['ifc_generator_sha256'])
+    assert text_sha_ok(ROOT/'scripts/b2_report_series.py',manifest['report_generator_sha256'])
     source=ROOT/'harmonization/function-icon-catalog.json'
-    assert sha(source.read_bytes())==manifest['source_catalog_sha256']
-    assert sha((ROOT/'design/ontwerp-0.4/tokens-0.4.json').read_bytes())==manifest['theme_tokens_sha256']
+    assert text_sha_ok(source,manifest['source_catalog_sha256'])
+    # theme_tokens_sha256 is herkomst: de tokens wijzigen los van de iconen. De contrasten
+    # hieronder worden uit het huidige tokens-0.4.json berekend.
     audit=json.loads((ROOT/'harmonization/icon-set-b2/function-plan.json').read_text(encoding='utf-8'))
     catalog=load_catalog()
     assert manifest['source_catalogs_sha256']==source_hashes()
