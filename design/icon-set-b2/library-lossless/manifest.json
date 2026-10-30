@@ -1,7 +1,7 @@
 {
   "family": "OpenAEC B2",
   "source_revision": 107,
-  "source_manifest_sha256": "3e5d897bfe8ccb6eb446d1e1b44f101270b95037058162921a3c7b9c00959acc",
+  "source_manifest_sha256": "8fb662c62c581defc1a04e31c689a3a8eff5cc1b7d68235f1b8eda7228036737",
   "format": "gzip-compressed original SVG (SVGZ)",
   "compression": {
     "level": 9,
@@ -14,15 +14,15 @@
   "totals": {
     "16": {
       "files": 950,
-      "original_bytes": 27628169,
-      "compressed_bytes": 10438200,
+      "original_bytes": 27570563,
+      "compressed_bytes": 10417328,
       "reduction_percent": 62.22
     },
     "24": {
       "files": 950,
-      "original_bytes": 28072221,
-      "compressed_bytes": 10220786,
-      "reduction_percent": 63.59
+      "original_bytes": 28045603,
+      "compressed_bytes": 10215895,
+      "reduction_percent": 63.57
     }
   },
   "icons": [
@@ -3728,18 +3728,18 @@
       "assets": {
         "16": {
           "path": "16/ui.check-updates.svgz",
-          "compressed_sha256": "0ad3bfd028d19ae262b44641a6638a49c0db1ef8681fa778cf523838f2c608e3",
-          "original_sha256": "62c318cd45e07268adfd9a18f17e8e5d64036ee0ac8ccf5778e9d66723c614a4",
-          "compressed_bytes": 18193,
-          "original_bytes": 45009,
+          "compressed_sha256": "9accaf4d1aacbf0f2c7b255736a2eb5d11a0db079ca88f7a1926f3fa1edbd0fe",
+          "original_sha256": "f95e49ba348bc782f99d2ce0717bb7c83a002713c9f384b049c7196557d96348",
+          "compressed_bytes": 10287,
+          "original_bytes": 24902,
           "source_path": "svg/16/ui.check-updates.svg"
         },
         "24": {
           "path": "24/ui.check-updates.svgz",
-          "compressed_sha256": "3baf9d0dcac118725bbd9dccd6bc712999171a09f2b554b317bb370295908f3c",
-          "original_sha256": "e7abc9e05d6c905e191d516da3f9a57c48320785fbe758ecc5a97b74af0bc756",
-          "compressed_bytes": 17784,
-          "original_bytes": 44855,
+          "compressed_sha256": "4d6f633a9433a55c8e7cb693c25f66de8f8ed8dfe7e3a989f18e1dcd3336e8b4",
+          "original_sha256": "ed1a4e98fbe0ac5f2c66fc80ac3484e02dc6b453eaff1c19d82aa5d81d8adf4a",
+          "compressed_bytes": 10110,
+          "original_bytes": 24574,
           "source_path": "svg/24/ui.check-updates.svg"
         }
       }
@@ -5400,18 +5400,18 @@
       "assets": {
         "16": {
           "path": "16/link.open-external.svgz",
-          "compressed_sha256": "6e0edb3f81a3c5fc8cfbee99a3c8b8d251a4002f240033699314d5d22e2df764",
-          "original_sha256": "ccac5f389c264d37dda3d1f0f45899709626220af17465e114dbea28fb6e8327",
-          "compressed_bytes": 23196,
-          "original_bytes": 56936,
+          "compressed_sha256": "94d7ee0627934c5c4bcda7d8586372de4e9070b0baa740e6143721c898768c4d",
+          "original_sha256": "c650538be00afe604c528a99a182bdf447cdea404e89679e9797f06980bdf405",
+          "compressed_bytes": 10043,
+          "original_bytes": 25243,
           "source_path": "svg/16/link.open-external.svg"
         },
         "24": {
           "path": "24/link.open-external.svgz",
-          "compressed_sha256": "345aeb62f7e20fd79c5e89fa6b96112afb4858f8d3e2aa9196e7a3f09aefbfc1",
-          "original_sha256": "a79a67b2a3a43807559a7ee3eb86651383b4656b087a9c12341d07b553c465b5",
-          "compressed_bytes": 24183,
-          "original_bytes": 60825,
+          "compressed_sha256": "ef9e405d9135e208630aed821f1b6f6487d20ca9db19df6926842f88e6492a5a",
+          "original_sha256": "a63d912efdd8c8515fe0c4acd424f90e003cee1c0b49d1058d910b5b9c9882a9",
+          "compressed_bytes": 11796,
+          "original_bytes": 30046,
           "source_path": "svg/24/link.open-external.svg"
         }
       }
@@ -18732,18 +18732,18 @@
       "assets": {
         "16": {
           "path": "16/update.install.svgz",
-          "compressed_sha256": "d2a01d053fd0a21b45d9767ea53718bb9d65dd88d8fd5e0fce97b1cd79c6da5a",
-          "original_sha256": "c3cdf5b598dad9de0358ad346bb8e174e6976ec887ef6777a67ec32d61117dce",
-          "compressed_bytes": 9786,
-          "original_bytes": 25705,
+          "compressed_sha256": "a03165c001fd8b3594e8dd883fb11b8874170607fa32fa182c8241202133b299",
+          "original_sha256": "c83e456cf6691f1afecb097aa48fd723b8e8ff8381edcc0f4b2f38d88086ad70",
+          "compressed_bytes": 10506,
+          "original_bytes": 26381,
           "source_path": "svg/16/update.install.svg"
         },
         "24": {
           "path": "24/update.install.svgz",
-          "compressed_sha256": "5a2ab379f652a3c4e5dddd582a73810326c7925c5b34c758c9e9e028b9e4c6e7",
-          "original_sha256": "8687072f0ace1b1027e6c38892f56640cb73f382dc0c7443eec7021d6eff9987",
-          "compressed_bytes": 8418,
-          "original_bytes": 22574,
+          "compressed_sha256": "da92a53830f51cac69d994d41cbf17d402312da40078bc0221a356ec6f7c4dd1",
+          "original_sha256": "9d4292e81ecfe054277183ed4dabf225332634bc6850bfb916f5e2d251b496da",
+          "compressed_bytes": 12091,
+          "original_bytes": 30025,
           "source_path": "svg/24/update.install.svg"
         }
       }
@@ -20338,18 +20338,18 @@
       "assets": {
         "16": {
           "path": "16/software.launch.svgz",
-          "compressed_sha256": "8d2448cbf0c182d01600210ac75631d706ea020e4e94afa4b87342d383a65169",
-          "original_sha256": "cbf48a508ac325a71665985faa9d1baca68a188f6ef85f62323d121f6eed9c39",
-          "compressed_bytes": 3601,
-          "original_bytes": 9276,
+          "compressed_sha256": "5132a88966979c16ea16df2f8339348e066c9e1198f1e92022129403f20e1292",
+          "original_sha256": "b436797bbca0ecbd22a26c9447acfed1f3c7c10843e93379c8a76541a75b8ff4",
+          "compressed_bytes": 1849,
+          "original_bytes": 4187,
           "source_path": "svg/16/software.launch.svg"
         },
         "24": {
           "path": "24/software.launch.svgz",
-          "compressed_sha256": "9fb19eceb55257a6ddd85d91727f99e1f8589db848c6a810b6faf43577468fcb",
-          "original_sha256": "b2af6c0849856f07396a9345b16cde49188d49c42dbd52dde9c3c02e350bb597",
-          "compressed_bytes": 3339,
-          "original_bytes": 9443,
+          "compressed_sha256": "918cdfd3c60a2d45453c9fc8349614c057936c53aa7fd2a4bdfa2d89ae7dbf41",
+          "original_sha256": "e7127bb7b04d4f272ed451a0030b24346379812a469954b8433ad28377651d3a",
+          "compressed_bytes": 1870,
+          "original_bytes": 4257,
           "source_path": "svg/24/software.launch.svg"
         }
       }
@@ -20360,18 +20360,18 @@
       "assets": {
         "16": {
           "path": "16/software.open-webtab.svgz",
-          "compressed_sha256": "ae45623d1763168d41b771528ff34f03e63442e605093ecd6a0ef30f46f1f4a9",
-          "original_sha256": "750c5f19862b246c32b0e6871151c3065c82dce80fabde51f53c2e0084c42ba5",
-          "compressed_bytes": 6295,
-          "original_bytes": 16608,
+          "compressed_sha256": "472f9df759df94f18682edfc259f9c70d61b83fa211c4c7dadc768234caffccc",
+          "original_sha256": "18ce49f39f8e55e92b0ae6d5e94e3834922ef6144b8b8b95755e1c1e190d878d",
+          "compressed_bytes": 19170,
+          "original_bytes": 47295,
           "source_path": "svg/16/software.open-webtab.svg"
         },
         "24": {
           "path": "24/software.open-webtab.svgz",
-          "compressed_sha256": "1618ede900a0ba3acf888d6dec3f9786941188d6329195e45e7572bd0a3a8cf3",
-          "original_sha256": "9b2663fdbae708b4eace9f76becac33209f8dbee9f91e63ccb99bf6303c534a9",
-          "compressed_bytes": 7689,
-          "original_bytes": 21218,
+          "compressed_sha256": "3c2c0d2208795a273f43eca80522072cf8ae75ecba4f564bb9f9c24369934b68",
+          "original_sha256": "79861aef5c0534e75565cfe43d1f4bc3e50584c4ac81fc3db0f33d9ad590d889",
+          "compressed_bytes": 24629,
+          "original_bytes": 60068,
           "source_path": "svg/24/software.open-webtab.svg"
         }
       }
@@ -20382,18 +20382,18 @@
       "assets": {
         "16": {
           "path": "16/software.install.svgz",
-          "compressed_sha256": "d2a01d053fd0a21b45d9767ea53718bb9d65dd88d8fd5e0fce97b1cd79c6da5a",
-          "original_sha256": "c3cdf5b598dad9de0358ad346bb8e174e6976ec887ef6777a67ec32d61117dce",
-          "compressed_bytes": 9786,
-          "original_bytes": 25705,
+          "compressed_sha256": "a03165c001fd8b3594e8dd883fb11b8874170607fa32fa182c8241202133b299",
+          "original_sha256": "c83e456cf6691f1afecb097aa48fd723b8e8ff8381edcc0f4b2f38d88086ad70",
+          "compressed_bytes": 10506,
+          "original_bytes": 26381,
           "source_path": "svg/16/software.install.svg"
         },
         "24": {
           "path": "24/software.install.svgz",
-          "compressed_sha256": "5a2ab379f652a3c4e5dddd582a73810326c7925c5b34c758c9e9e028b9e4c6e7",
-          "original_sha256": "8687072f0ace1b1027e6c38892f56640cb73f382dc0c7443eec7021d6eff9987",
-          "compressed_bytes": 8418,
-          "original_bytes": 22574,
+          "compressed_sha256": "da92a53830f51cac69d994d41cbf17d402312da40078bc0221a356ec6f7c4dd1",
+          "original_sha256": "9d4292e81ecfe054277183ed4dabf225332634bc6850bfb916f5e2d251b496da",
+          "compressed_bytes": 12091,
+          "original_bytes": 30025,
           "source_path": "svg/24/software.install.svg"
         }
       }
@@ -20404,18 +20404,18 @@
       "assets": {
         "16": {
           "path": "16/software.update.svgz",
-          "compressed_sha256": "ee5b135a7af3c5874919e7957a37bdad02af0f2b924945d9f32e37c87e6a9876",
-          "original_sha256": "bbb356b9644473f6d75da52494e8bbd04b83e9e6ac949d074a2d799b1796c132",
-          "compressed_bytes": 15008,
-          "original_bytes": 38057,
+          "compressed_sha256": "a03165c001fd8b3594e8dd883fb11b8874170607fa32fa182c8241202133b299",
+          "original_sha256": "c83e456cf6691f1afecb097aa48fd723b8e8ff8381edcc0f4b2f38d88086ad70",
+          "compressed_bytes": 10506,
+          "original_bytes": 26381,
           "source_path": "svg/16/software.update.svg"
         },
         "24": {
           "path": "24/software.update.svgz",
-          "compressed_sha256": "25029be3ea2dd2ec6a2ede88e8b55da47c15a939fb6e789c522c740a6fae30ca",
-          "original_sha256": "a2a26de4f7a8acf2e71c0d24dc7274ea42f8772f449d3e853b25108b685a6f51",
-          "compressed_bytes": 14621,
-          "original_bytes": 38560,
+          "compressed_sha256": "da92a53830f51cac69d994d41cbf17d402312da40078bc0221a356ec6f7c4dd1",
+          "original_sha256": "9d4292e81ecfe054277183ed4dabf225332634bc6850bfb916f5e2d251b496da",
+          "compressed_bytes": 12091,
+          "original_bytes": 30025,
           "source_path": "svg/24/software.update.svg"
         }
       }
@@ -20470,18 +20470,18 @@
       "assets": {
         "16": {
           "path": "16/view.web-reload.svgz",
-          "compressed_sha256": "cc8632eacd22ed80bb303f3d6852bff445599fd38bbb14a09e8d6175eac6a63b",
-          "original_sha256": "67f22cd281a808a7b405f63fd7deae851be1413b8fdb96d851cf4540856939b4",
-          "compressed_bytes": 14986,
-          "original_bytes": 37984,
+          "compressed_sha256": "6080ca23377d34969c4a18c3215d1a5ac0a03630a55a556603c92787e749543a",
+          "original_sha256": "0e675b787dfe8e48702c0e8adce8851ad489754671996a4b31eb813dd8e2f1c1",
+          "compressed_bytes": 7112,
+          "original_bytes": 16904,
           "source_path": "svg/16/view.web-reload.svg"
         },
         "24": {
           "path": "24/view.web-reload.svgz",
-          "compressed_sha256": "e22ec8adcd3beb18e9ab88c61fc76bf48cc48ac965dc8284220f7cb70d491915",
-          "original_sha256": "3cd49b8844facf81c6147855951996e826800cc52a40b04fd079a4e74044d5d7",
-          "compressed_bytes": 14582,
-          "original_bytes": 38469,
+          "compressed_sha256": "2357879244422e633bf73d1aa4492dcc2d4e15b20ee69c4a16a7da2c34d9e795",
+          "original_sha256": "eec04ec27012a338a2c98637f8fffe7d535dd7826cb4091a6ae7f55022c08d32",
+          "compressed_bytes": 9465,
+          "original_bytes": 22880,
           "source_path": "svg/24/view.web-reload.svg"
         }
       }

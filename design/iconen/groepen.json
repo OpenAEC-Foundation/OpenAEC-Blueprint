@@ -24,7 +24,11 @@
      "ids": ["planning.baseline-overlay", "planning.progress-line", "planning.status-date-line", "planning.bar-colors",
              "planning.resource-accent", "planning.float-band", "planning.relations-visible"]},
     {"app": "Planner", "tab": "Lint", "naam": "Inklapknop",
-     "ids": ["workspace.ribbon-collapse", "workspace.ribbon-expand"]}
+     "ids": ["workspace.ribbon-collapse", "workspace.ribbon-expand"]},
+    {"app": "Installer", "tab": "Catalogus", "naam": "Knoppen op een kaart",
+     "ids": ["software.install", "software.launch", "software.open-webtab", "link.open-external"]},
+    {"app": "Installer", "tab": "Catalogus", "naam": "Updates (kop)",
+     "ids": ["software.update", "ui.check-updates"]}
   ],
   "negatieve_controles": [
     {"naam": "zes schakelaars met hetzelfde assenkader (#56 b, #48)", "regel": "gelijkenis",

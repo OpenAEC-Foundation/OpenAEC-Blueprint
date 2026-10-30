@@ -4035,25 +4035,25 @@
     "id": "ui.check-updates",
     "master": 16,
     "bounds": [
-      2.04167,
-      0.37531,
-      13.95833,
-      13.95833
+      1.233487,
+      1.12545,
+      13.766513,
+      13.87455
     ],
     "overlap_area": 0.0,
-    "accent_area": 12.813108738768001
+    "accent_area": 0.0
   },
   {
     "id": "ui.check-updates",
     "master": 24,
     "bounds": [
-      3.125064,
-      0.625433,
-      20.874991,
-      20.874991
+      3.357946,
+      3.375625,
+      20.642054,
+      20.6244
     ],
     "overlap_area": 0.0,
-    "accent_area": 26.869707973724005
+    "accent_area": 0.0
   },
   {
     "id": "ui.file-associations",
@@ -5859,25 +5859,25 @@
     "id": "link.open-external",
     "master": 16,
     "bounds": [
-      1.042003,
-      3.04167,
-      15.29167,
-      12.29167
+      0.875,
+      1.875,
+      14.125,
+      15.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 10.394633151886993
+    "accent_area": 21.262991482247493
   },
   {
     "id": "link.open-external",
     "master": 24,
     "bounds": [
-      1.625038,
-      4.625,
-      22.875,
-      18.375
+      2.125,
+      2.125,
+      21.875,
+      21.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 21.793034206283995
+    "accent_area": 48.719285962614045
   },
   {
     "id": "link.export-list",
@@ -20403,25 +20403,25 @@
     "id": "update.install",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.95833
+      0.875,
+      0.875,
+      14.125,
+      14.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 11.151866253837001
+    "accent_area": 21.485604233182517
   },
   {
     "id": "update.install",
     "master": 24,
     "bounds": [
       2.125,
-      1.125,
+      2.125029,
       21.875,
-      23.874992
+      20.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 23.382583304980507
+    "accent_area": 43.76895121509999
   },
   {
     "id": "documents.overview",
@@ -22155,97 +22155,97 @@
     "id": "software.launch",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.893307
+      3.875,
+      2.423898,
+      13.44237,
+      13.576102
     ],
     "overlap_area": 0.0,
-    "accent_area": 14.385541433696012
+    "accent_area": 0.0
   },
   {
     "id": "software.launch",
     "master": 24,
     "bounds": [
-      2.125,
-      1.125,
-      21.875,
-      23.777484
+      5.125,
+      3.364995,
+      20.42603,
+      20.635005
     ],
     "overlap_area": 0.0,
-    "accent_area": 30.319896965608024
+    "accent_area": 0.0
   },
   {
     "id": "software.open-webtab",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.625
+      0.475,
+      0.475,
+      14.525,
+      14.525
     ],
     "overlap_area": 0.0,
-    "accent_area": 14.484969780701006
+    "accent_area": 0.0
   },
   {
     "id": "software.open-webtab",
     "master": 24,
     "bounds": [
-      2.125,
-      1.125,
-      21.875,
-      23.375
+      1.875,
+      1.875,
+      22.125,
+      22.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 30.382244687619508
+    "accent_area": 0.0
   },
   {
     "id": "software.install",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.95833
+      0.875,
+      0.875,
+      14.125,
+      14.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 11.151866253837001
+    "accent_area": 21.485604233182517
   },
   {
     "id": "software.install",
     "master": 24,
     "bounds": [
       2.125,
-      1.125,
+      2.125029,
       21.875,
-      23.874992
+      20.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 23.382583304980507
+    "accent_area": 43.76895121509999
   },
   {
     "id": "software.update",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.95833
+      0.875,
+      0.875,
+      14.125,
+      14.125
     ],
     "overlap_area": 0.0,
-    "accent_area": 20.428211052379492
+    "accent_area": 21.485604233182517
   },
   {
     "id": "software.update",
     "master": 24,
     "bounds": [
       2.125,
-      1.125,
+      2.125029,
       21.875,
-      23.874992
+      20.875
     ],
     "overlap_area": 0.0,
-    "accent_area": 42.824947706408956
+    "accent_area": 43.76895121509999
   },
   {
     "id": "status.software-installed",
@@ -22299,25 +22299,25 @@
     "id": "view.web-reload",
     "master": 16,
     "bounds": [
-      1.375,
-      0.70833,
-      14.625,
-      15.95833
+      1.37922,
+      0.764367,
+      13.61816,
+      14.11955
     ],
     "overlap_area": 0.0,
-    "accent_area": 20.428211052379492
+    "accent_area": 0.0
   },
   {
     "id": "view.web-reload",
     "master": 24,
     "bounds": [
-      2.125,
-      1.125,
-      21.875,
-      23.874992
+      3.13114,
+      1.975443,
+      20.86506,
+      21.36707
     ],
     "overlap_area": 0.0,
-    "accent_area": 42.824947706408956
+    "accent_area": 0.0
   },
   {
     "id": "format.decimals-increase",
