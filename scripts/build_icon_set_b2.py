@@ -10,6 +10,7 @@ from b2_source_catalog import load_catalog, source_hashes, SUPPLEMENT
 from b2_completion import PLANNED_KEYS, PLANNED
 from b2_scope_audit import audit_hash, validate_scope_audit, render_scope_review
 from build_b2_feedback_review import WARNING_PREVIEW, render_feedback_review
+from b2_richtlijn import NEW_DEFINITIONS as RICHTLIJN_DEFINITIONS, NEW_APPS as RICHTLIJN_APPS, MEANING_UPDATES as RICHTLIJN_MEANINGS, REVISED as RICHTLIJN_REVISED
 from b2_geometry import ROOT, construction, export_svg, foreground, layer_reason, SHAPE_REVISIONS, ROUNDED_JOINTS, WHOLE_ACCENT
 from b2_second_series import DEFINITIONS as SECOND_DEFINITIONS, EXAMPLES as SECOND_EXAMPLES, ISSUES as SECOND_ISSUES, KEYS as SECOND_KEYS, SEMANTIC
 
@@ -150,6 +151,9 @@ ISSUES={
  '7ba47aad8fc33b84':'Feedback naar ontwikkelaar; geen documentannotatie.',
 }
 DEFINITIONS+=SECOND_DEFINITIONS+WINDOW_DEFINITIONS+TEXT_DEFINITIONS+DATA_DEFINITIONS+REPORT_DEFINITIONS+IFC_DEFINITIONS+NEXT_DEFINITIONS+LATER_DEFINITIONS+PAGE_DEFINITIONS+BULK_DEFINITIONS+SESSION_DEFINITIONS+NAV_DEFINITIONS+THIRD_DEFINITIONS+FOURTH_DEFINITIONS+COMPLETION_DEFINITIONS
+# Richtlijn docs/iconen.md: nieuwe betekenissen krijgen een eigen id; een oud id houdt zijn naam.
+DEFINITIONS=[(k,l,g,RICHTLIJN_MEANINGS.get(k,m)) for k,l,g,m in DEFINITIONS]+RICHTLIJN_DEFINITIONS
+RICHTLIJN_SERIES=167
 EXAMPLES.update(SECOND_EXAMPLES)
 EXAMPLES.update(WINDOW_EXAMPLES)
 EXAMPLES.update(TEXT_EXAMPLES)
@@ -181,6 +185,11 @@ ISSUES={k:v for k,v in ISSUES.items() if k not in RESOLVED_ISSUES}
 def digest(data):return hashlib.sha256(data).hexdigest()
 
 
+def text_digest(path):
+    """Hash van een tekstbestand zonder verschil tussen CRLF en LF, zodat Windows en Linux hetzelfde manifest bouwen."""
+    return digest(Path(path).read_bytes().replace(b'\r\n',b'\n'))
+
+
 def stable_model(value):
     if isinstance(value,float):return round(value,11)
     if isinstance(value,(list,tuple)):return [stable_model(v) for v in value]
@@ -209,14 +218,15 @@ def main():
                'source_support':BASIS_SOURCES.get(key),
                'evidence_status':BASIS_SOURCES[key]['description'] if key in BASIS_SOURCES else EVIDENCE.get(key,'bronaanroep beoordeeld als voorbeeld' if example else 'ontwerpcontract; geen bevestigde bronaanroep'),
                'source_function_id':source_key,
-               'candidate_apps':clusters.get(source_key,{}).get('apps',[]),
+               'candidate_apps':RICHTLIJN_APPS.get(key) or clusters.get(source_key,{}).get('apps',[]),
                'candidate_records':clusters.get(source_key,{}).get('occurrences',0),
                'source_example':example,'assets':{},'construction':{},
                'foreground':foreground(key),'layer_reason':layer_reason(key),
                'paint_order':['primary','accent'] if foreground(key)=='accent' else ['accent','primary'],
                'shape_revision':SHAPE_REVISIONS.get(key),'rounded_joint':key in ROUNDED_JOINTS,
-               'series':COMPLETION_SERIES[key] if key in COMPLETION_SERIES else FOURTH_SERIES[key] if key in FOURTH_SERIES else THIRD_SERIES[key] if key in THIRD_SERIES else NAV_SERIES[key] if key in NAV_SERIES else SESSION_SERIES[key] if key in SESSION_SERIES else BULK_SERIES[key] if key in BULK_SERIES else 14 if key in PAGE_KEYS else LATER_SERIES[key] if key in LATER_SERIES else NEXT_SERIES[key] if key in NEXT_SERIES else 7 if key in IFC_KEYS else 6 if key in REPORT_KEYS else 5 if key in DATA_KEYS else 4 if key in TEXT_KEYS else 3 if key in WINDOW_KEYS else 2 if key in SECOND_KEYS else 1,'semantic_color':SEMANTIC.get(key),
-               'whole_icon_accent':key in WHOLE_ACCENT,'typography':FONT_METADATA.get(key)}
+               'series':RICHTLIJN_SERIES if key in RICHTLIJN_APPS else COMPLETION_SERIES[key] if key in COMPLETION_SERIES else FOURTH_SERIES[key] if key in FOURTH_SERIES else THIRD_SERIES[key] if key in THIRD_SERIES else NAV_SERIES[key] if key in NAV_SERIES else SESSION_SERIES[key] if key in SESSION_SERIES else BULK_SERIES[key] if key in BULK_SERIES else 14 if key in PAGE_KEYS else LATER_SERIES[key] if key in LATER_SERIES else NEXT_SERIES[key] if key in NEXT_SERIES else 7 if key in IFC_KEYS else 6 if key in REPORT_KEYS else 5 if key in DATA_KEYS else 4 if key in TEXT_KEYS else 3 if key in WINDOW_KEYS else 2 if key in SECOND_KEYS else 1,'semantic_color':SEMANTIC.get(key),
+               'whole_icon_accent':key in WHOLE_ACCENT,'typography':FONT_METADATA.get(key),
+               'guideline':'docs/iconen.md' if key in RICHTLIJN_REVISED else None}
         for size in (16,24):
             model=construction(key,size)
             model_data={'width':model.width,'paths':model.paths,'circles':model.circles,'fills':model.fills,'clear_primary':model.clear_primary}
@@ -281,32 +291,33 @@ def main():
                       'canonical_functions':targets,'design_status':status,
                       'mapping_status':'afzonderlijke bronbesluiten; geen automatische naamskoppeling',
                       'remaining_source_records':pending})
-    manifest={'family':'OpenAEC B2','revision':106,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
+    manifest={'family':'OpenAEC B2','revision':107,'status':'ontwerpuitwerking; niet in Rust-crate of apps ingebouwd',
               'function_count':len(entries),'svg_count':2*len(entries),'masters':[16,24],
               'paint_order':'per icoon vastgelegd','export':'gevulde contouren; achterste kleur minus voorste kleur',
               'curve_sampling':'12 stappen per halve kwadratische hoek; buffer 20 segmenten per kwadrant; cirkels 64',
-              'scope_audit_sha256':audit_hash(),'basis_sources_sha256':digest(BASIS_PATH.read_bytes()),'source_catalog_sha256':digest(CATALOG.read_bytes()),'source_catalogs_sha256':source_hashes(),'theme_tokens_sha256':digest(TOKENS.read_bytes()),
-              'generator_sha256':digest(Path(__file__).read_bytes()),
-              'geometry_generator_sha256':digest((ROOT/'scripts/b2_geometry.py').read_bytes()),
-              'font_generator_sha256':digest((ROOT/'scripts/b2_font_geometry.py').read_bytes()),
+              'scope_audit_sha256':audit_hash(),'basis_sources_sha256':digest(BASIS_PATH.read_bytes()),'source_catalog_sha256':digest(CATALOG.read_bytes()),'source_catalogs_sha256':source_hashes(),'theme_tokens_sha256':text_digest(TOKENS),
+              'generator_sha256':text_digest(Path(__file__)),
+              'geometry_generator_sha256':text_digest(ROOT/'scripts/b2_geometry.py'),
+              'font_generator_sha256':text_digest(ROOT/'scripts/b2_font_geometry.py'),
               'font_sources':FONT_METADATA,'license_files':['licenses/SpaceGrotesk-OFL.txt'],
-              'completion_generator_sha256':digest((ROOT/'scripts/b2_completion.py').read_bytes()),
-              'completion_modules_sha256':{name:digest((ROOT/'scripts'/name).read_bytes()) for name in ['b2_approved_proposals.py','build_b2_analysis_drafts.py','b2_icon_placement_refinements.py','b2_completion.py','b2_workspace_completion.py','b2_reports_completion.py','b2_bim_completion.py','b2_frame_completion.py','b2_pointcloud_completion.py','b2_energy_completion.py','b2_heatloss_completion.py','b2_pile_completion.py','b2_geotech_completion.py','b2_calc_completion.py','b2_calculations_completion.py','b2_pdf_catalog_completion.py','b2_pdf_controls_completion.py','b2_pdf_editing_completion.py','b2_pdf_final_completion.py','b2_planner_ribbon_completion.py','b2_planner_choices_completion.py','b2_planner_safety_completion.py','b2_planner_dialogs_completion.py','b2_planner_panels_completion.py','b2_planner_final_completion.py','b2_scope_completion.py','b2_scope_audit.py','b2_source_catalog.py','build_b2_supplemental_sources.py','build_b2_coverage_review.py']},
-              'session_four_generator_sha256':digest((ROOT/'scripts/b2_session_four.py').read_bytes()),
-              'session_three_generator_sha256':digest((ROOT/'scripts/b2_session_three.py').read_bytes()),
-              'document_navigation_generator_sha256':digest((ROOT/'scripts/b2_document_navigation.py').read_bytes()),
-              'session_two_generator_sha256':digest((ROOT/'scripts/b2_session_two.py').read_bytes()),
-              'bulk_generator_sha256':digest((ROOT/'scripts/b2_bulk_series.py').read_bytes()),
-              'page_views_generator_sha256':digest((ROOT/'scripts/b2_page_views.py').read_bytes()),
-              'later_groups_generator_sha256':digest((ROOT/'scripts/b2_energy_pile_audio.py').read_bytes()),
-              'next_groups_generator_sha256':digest((ROOT/'scripts/b2_tree_planning_geo.py').read_bytes()),
-              'ifc_generator_sha256':digest((ROOT/'scripts/b2_ifc_series.py').read_bytes()),
-              'report_generator_sha256':digest((ROOT/'scripts/b2_report_series.py').read_bytes()),
-              'data_generator_sha256':digest((ROOT/'scripts/b2_data_series.py').read_bytes()),
-              'text_generator_sha256':digest((ROOT/'scripts/b2_text_series.py').read_bytes()),
-              'window_generator_sha256':digest((ROOT/'scripts/b2_window_series.py').read_bytes()),
-              'extension_generator_sha256':digest((ROOT/'scripts/b2_second_series.py').read_bytes()),
-              'feedback_generator_sha256':digest((ROOT/'scripts/build_b2_feedback_review.py').read_bytes()),
+              'completion_generator_sha256':text_digest(ROOT/'scripts/b2_completion.py'),
+              'completion_modules_sha256':{name:text_digest(ROOT/'scripts'/name) for name in ['b2_approved_proposals.py','build_b2_analysis_drafts.py','b2_icon_placement_refinements.py','b2_completion.py','b2_workspace_completion.py','b2_reports_completion.py','b2_bim_completion.py','b2_frame_completion.py','b2_pointcloud_completion.py','b2_energy_completion.py','b2_heatloss_completion.py','b2_pile_completion.py','b2_geotech_completion.py','b2_calc_completion.py','b2_calculations_completion.py','b2_pdf_catalog_completion.py','b2_pdf_controls_completion.py','b2_pdf_editing_completion.py','b2_pdf_final_completion.py','b2_planner_ribbon_completion.py','b2_planner_choices_completion.py','b2_planner_safety_completion.py','b2_planner_dialogs_completion.py','b2_planner_panels_completion.py','b2_planner_final_completion.py','b2_scope_completion.py','b2_scope_audit.py','b2_source_catalog.py','build_b2_supplemental_sources.py','build_b2_coverage_review.py']},
+              'session_four_generator_sha256':text_digest(ROOT/'scripts/b2_session_four.py'),
+              'session_three_generator_sha256':text_digest(ROOT/'scripts/b2_session_three.py'),
+              'document_navigation_generator_sha256':text_digest(ROOT/'scripts/b2_document_navigation.py'),
+              'session_two_generator_sha256':text_digest(ROOT/'scripts/b2_session_two.py'),
+              'bulk_generator_sha256':text_digest(ROOT/'scripts/b2_bulk_series.py'),
+              'page_views_generator_sha256':text_digest(ROOT/'scripts/b2_page_views.py'),
+              'later_groups_generator_sha256':text_digest(ROOT/'scripts/b2_energy_pile_audio.py'),
+              'next_groups_generator_sha256':text_digest(ROOT/'scripts/b2_tree_planning_geo.py'),
+              'ifc_generator_sha256':text_digest(ROOT/'scripts/b2_ifc_series.py'),
+              'report_generator_sha256':text_digest(ROOT/'scripts/b2_report_series.py'),
+              'data_generator_sha256':text_digest(ROOT/'scripts/b2_data_series.py'),
+              'text_generator_sha256':text_digest(ROOT/'scripts/b2_text_series.py'),
+              'window_generator_sha256':text_digest(ROOT/'scripts/b2_window_series.py'),
+              'extension_generator_sha256':text_digest(ROOT/'scripts/b2_second_series.py'),
+              'feedback_generator_sha256':text_digest(ROOT/'scripts/build_b2_feedback_review.py'),
+              'guideline_generator_sha256':text_digest(ROOT/'scripts/b2_richtlijn.py'),'guideline':'docs/iconen.md',
               'warning_preview':{'status':'gele warning-rol uit tokens-0.4.json','colors':WARNING_PREVIEW},
               'limits':['Bronplaatsen afzonderlijk beoordeeld op de gepinde versies; kandidaat-apps zijn geen runtime-adopties.',
                         'FEM-bron ontbreekt; runtime-extensies blijven buiten volledige dekking.',

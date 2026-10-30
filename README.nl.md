@@ -4,11 +4,11 @@
 
 # OpenAEC Blueprint
 
-**De blauwdruk voor elke OpenAEC-tool. Eén standaardapplicatie in Tauri, Rust en de browser, met gedeelde ontwerptokens, lettertypen, 945 iconen, een versieschema en ondertekende releases.**
+**De blauwdruk voor elke OpenAEC-tool. Eén standaardapplicatie in Tauri, Rust en de browser, met gedeelde ontwerptokens, lettertypen, 950 iconen, een versieschema en ondertekende releases.**
 
 [![Release](https://img.shields.io/github/v/release/OpenAEC-Foundation/OpenAEC-Blueprint?label=release&color=D97706)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/releases/latest)
 [![Releaseworkflow](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml/badge.svg)](https://github.com/OpenAEC-Foundation/OpenAEC-Blueprint/actions/workflows/release.yml)
-[![Iconen](https://img.shields.io/badge/iconen-945-informational)](crates/openaec-icons/)
+[![Iconen](https://img.shields.io/badge/iconen-950-informational)](crates/openaec-icons/)
 [![Thema's](https://img.shields.io/badge/thema's-5-informational)](design/ontwerp-0.4/tokens-0.4.json)
 [![Licentie](https://img.shields.io/badge/licentie-LGPL--3.0%20%C2%B7%20CC%20BY--SA%204.0-blue)](#licentie)
 
@@ -46,7 +46,7 @@ Elk bestand is ondertekend: Windows met Authenticode, macOS met een Developer ID
 - **Begin met een werkende schil.** Titelbalk, lint of werkstroom, documenttabs, zijpanelen, statusbalk en instellingen staan er al. Een tool zet zijn eigen werk in het midden.
 - **Gedrag dat je niet opnieuw bouwt.** Opslaan en sluiten via één sluitplan (ook bij Alt+F4), ongedaan maken per document, de bijwerkmelding, eigen sneltoetsen en een toegankelijke naam voor elk onderdeel.
 - **Vijf thema's.** Licht, Donker, Blueprint, Hoog contrast donker en Hoog contrast licht, in elke vorm van de applicatie.
-- **945 iconen** in 16 en 24 px, één stijl voor elke tool. Een tool neemt alleen de iconen op die hij gebruikt.
+- **950 iconen** in 16 en 24 px, één stijl voor elke tool. Een tool neemt alleen de iconen op die hij gebruikt.
 - **Elke programmeertaal.** Een C-bibliotheek (`.dll`, `.dylib`, `.so`) geeft tokens en iconen aan tools die niet in Rust zijn geschreven.
 - **Releases die gecontroleerd en ondertekend zijn.** Eén tag start de controles, de builds voor drie systemen, de handtekeningen en de release.
 
@@ -56,7 +56,7 @@ Elk bestand is ondertekend: Windows met Authenticode, macOS met een Developer ID
 |---|---|
 | ![Rust-standaardapplicatie](docs/images/readme/rust-app.png) **De Rust-standaardapplicatie** | ![Vier thema's](docs/images/readme/themes.png) **Licht, Donker, Blueprint en Hoog contrast donker** |
 | ![Tauri-standaardapplicatie](docs/images/readme/tauri-app.png) **De Tauri-standaardapplicatie** | ![Instellingen in het thema Blueprint](docs/images/readme/settings.png) **Instellingen, thema Blueprint** |
-| ![Werkstroom-app](docs/images/readme/workflow-app.png) **Een werkstroom-app met stappen in een zijbalk** | ![Iconen](docs/images/readme/icons.png) **De iconenbrowser met alle 945 iconen** |
+| ![Werkstroom-app](docs/images/readme/workflow-app.png) **Een werkstroom-app met stappen in een zijbalk** | ![Iconen](docs/images/readme/icons.png) **De iconenbrowser met alle iconen** |
 | ![Installer](docs/images/readme/installer.png) **De OpenAEC Installer in dezelfde stijl** | |
 
 De Rust-schermen zijn in het Nederlands, de taal van de voorbeelddata. De browserschermen zijn in het Engels.
@@ -83,7 +83,8 @@ Eerst komt de Tauri-app, daarna dezelfde lege app in Rust. Elk krijgt een ondert
 | Onderdeel | Waar |
 |-----------|------|
 | UI-bibliotheek voor Rust | [`crates/openaec-ui`](crates/openaec-ui/) |
-| Alle 945 iconen (16 en 24 px), per app te kiezen | [`crates/openaec-icons`](crates/openaec-icons/) |
+| Alle 950 iconen (16 en 24 px), per app te kiezen | [`crates/openaec-icons`](crates/openaec-icons/) |
+| Hoe je een icoon ontwerpt, en de iconenchecks | [`docs/iconen.md`](docs/iconen.md) |
 | C-bibliotheek met tokens en iconen voor elke taal | [`crates/openaec-blueprint-sdk`](crates/openaec-blueprint-sdk/) |
 | Kleuren, maten en lettertypen (één bron) | [`design/ontwerp-0.4/tokens-0.4.json`](design/ontwerp-0.4/tokens-0.4.json) |
 | Webpakket: CSS, fonts en iconen per app | [`web/`](web/) |

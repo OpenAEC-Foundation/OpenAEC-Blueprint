@@ -33,6 +33,11 @@ Dit bestand geldt voor elke AI-assistent die in deze repository werkt, zoals Cha
 - Noem iets pas "gedeeld" of "geharmoniseerd" als het echt in de Rust-crate zit. Concepten en reviewmateriaal blijven zo benoemd.
 - Controleer licenties van bronassets voordat je ze in `crates/openaec-ui` opneemt.
 
+## Iconen
+
+- Ontwerp je een icoon, of wissel je het icoon van een knop? Volg dan [`docs/iconen.md`](docs/iconen.md): de principes, de vaste regels en de checks. De stappen staan in de skill [`.claude/skills/iconen-ontwerpen/SKILL.md`](.claude/skills/iconen-ontwerpen/SKILL.md).
+- Iconen die volgens de richtlijn getekend zijn, staan in `scripts/b2_richtlijn.py`. De knopgroepen voor de check staan in `design/iconen/groepen.json`. Een overzichtsblad per tab maak je met `scripts/build_icon_overview.py` (alleen op Linux).
+
 ## Controles
 
 Draai na een wijziging de controles die bij dat deel horen:
@@ -44,6 +49,8 @@ python scripts/check_portable_ui.py
 python scripts/check_crate_package.py
 python scripts/check_tokens_04.py
 python scripts/generate_tokens_04.py --check
+python scripts/check_icon_set_b2.py
+python scripts/check_icon_guideline.py
 python scripts/generate_icon_crate.py --check
 python scripts/build_web_components.py --check
 python scripts/build_web_icons.py --check
@@ -63,5 +70,6 @@ cargo package -p openaec-ui
 - `scripts/build_font_package.py` (zonder `--check`) en `scripts/build_inter_aec.py` hebben fontTools en brotli nodig: `python -m pip install --target harmonization/sources/font-runtime -r scripts/requirements-fonts.txt`. De `--check` werkt zonder.
 - Op de machine van de maker staat Rust in `%USERPROFILE%\.cargo\bin` met de MSVC-toolchain en Visual Studio Build Tools 2022. Een terminal die al openstond vóór 2026-10-16 kent dat pad pas na opnieuw openen. Op Linux staat Rust via rustup in `~/.cargo/bin`.
 - `scripts/render_collision_drafts.py` en `scripts/render_domain_icon_review.py` gebruiken PyGObject met librsvg. Die draaien op Linux, niet op de Windows-machine van de maker. Op Debian of Ubuntu: `sudo apt install python3-gi python3-gi-cairo gir1.2-rsvg-2.0 python3-pil`.
+- `scripts/check_icon_set_b2.py` en `scripts/check_icon_guideline.py` hebben shapely en numpy nodig: `python -m pip install --target harmonization/sources/b2-runtime -r scripts/requirements-icon-b2.txt`.
 - Draai generatiescripts alleen voor het deel waaraan je werkt. Regenereer niet de hele `design/`-map zonder opdracht.
 - Meld eerlijk welke controles je wel en niet hebt gedraaid, met de uitkomst.

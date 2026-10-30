@@ -6,7 +6,53 @@
     "harmonization/icon-set-b2/supplemental-sources.json": "0c4c0e3903d45a90c32d2da5f0f0d8339502ee872a7a34623c9b0065b4ba0291"
   },
   "supplemental_source": "harmonization/icon-set-b2/supplemental-sources.json",
-  "new_contracts": [],
+  "new_contracts": [
+    {
+      "id": "solver.run",
+      "label": "Doorrekenen",
+      "category": "Taken en planningsberekening",
+      "apps": [],
+      "occurrences": 0,
+      "design_status": "nieuw ontwerpcontract; geen broncluster",
+      "mapping_status": "toegevoegd voor componenten 2.4"
+    },
+    {
+      "id": "workspace.ribbon-collapse",
+      "label": "Lint inklappen",
+      "category": "Werkruimte",
+      "apps": [],
+      "occurrences": 0,
+      "design_status": "nieuw ontwerpcontract; geen broncluster",
+      "mapping_status": "toegevoegd voor componenten 2.4"
+    },
+    {
+      "id": "workspace.ribbon-expand",
+      "label": "Lint uitklappen",
+      "category": "Werkruimte",
+      "apps": [],
+      "occurrences": 0,
+      "design_status": "nieuw ontwerpcontract; geen broncluster",
+      "mapping_status": "toegevoegd voor componenten 2.4"
+    },
+    {
+      "id": "planning.progress-sheet-export",
+      "label": "Voortgangsblad exporteren",
+      "category": "Referenties, peildatum en relaties",
+      "apps": [],
+      "occurrences": 0,
+      "design_status": "nieuw ontwerpcontract; geen broncluster",
+      "mapping_status": "toegevoegd voor componenten 2.4"
+    },
+    {
+      "id": "planning.progress-sheet-import",
+      "label": "Voortgang bijwerken uit een blad",
+      "category": "Referenties, peildatum en relaties",
+      "apps": [],
+      "occurrences": 0,
+      "design_status": "nieuw ontwerpcontract; geen broncluster",
+      "mapping_status": "toegevoegd voor componenten 2.4"
+    }
+  ],
   "clusters": [
     {
       "id": "file.print",

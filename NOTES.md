@@ -4,6 +4,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Nu bezig
 
+- **Claude (branch `iconen/planning`)** – iconen opnieuw ontwerpen volgens een vaste richtlijn, eerst de tab Planning van Open Planner Studio – `docs/iconen.md`, `.claude/skills/iconen-ontwerpen/`, `scripts/b2_richtlijn.py`, `scripts/b2_geometry.py`, `scripts/build_icon_set_b2.py`, `scripts/check_icon_set_b2.py`, nieuwe iconenchecks in `scripts/` en `.github/workflows/icons.yml`; gegenereerd: `design/icon-set-b2/`, `crates/openaec-icons/`, `web/icons/` – sinds 2026-10-29
+
 
 
 
@@ -60,6 +62,9 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 
 ## Open punten
 
+- **Iconenrichtlijn en tab Planning wachten op Ethan, 2026-10-29**: PR #59 (branch `iconen/planning`) blijft open tot Ethan de tab Planning in Open Planner Studio heeft gezien; de PR verandert ook gedeelde iconen (zoom). Open Planner Studio staat op zijn eigen branch `iconen/planning` (niet op main). Na akkoord: #59 mergen en OPS op de laatste Blueprint-commit zetten. Vervolgpunten in `knownbugs.md`.
+
+- **Twee keer B2-revisie 107, 2026-10-29**: de branch `iconen/planning` (PR #59, iconenrichtlijn en tab Planning) en de branch `b2-revisie-107` (#35, 16 px op het pixelraster met lijnen van 1 px) heten allebei revisie 107. Wie als tweede naar main gaat, bouwt opnieuw als revisie 108. `b2-revisie-107` verandert de lijndikte op 16 px; volgens de iconenrichtlijn ([`docs/iconen.md`](docs/iconen.md)) beslist de eigenaar daar eerst over. PR #59 lost ook de rode B2-check op: scripthashes zijn ongevoelig voor regeleindes en de tokens-hash is bijgewerkt.
 - **Installer-iconen volgens `docs/iconen.md` (Claude, 2026-10-30)**: acht iconen hertekend (`software.install`, `software.update`, `update.install`, `ui.check-updates`, `view.web-reload`, `software.open-webtab`, `link.open-external`, `software.launch`) op de branch `iconen/installer`, bovenop `iconen/planning` (#59), in de werkmap `.worktrees/iconen-installer`, gecommit als `40b96e4b` (niet gepusht). In `openaec-installer` staat op de branch `iconen/installer` (werkmap `.worktrees/iconen-installer`) de nieuwe sprite, en de werkbalk van een webtool gebruikt nu `view.web-reload` en `link.open-external`; gecommit als `f6013ab` (niet gepusht). Goedgekeurd door de gebruiker op 2026-10-30. Nog te doen: pushen, en de Blueprint-branch mergen nadat #59 in main zit; daarna de installer-branch. Bouw op Windows via een LF-wrapper; alleen de zip krijgt bij elke bouw nieuwe tijdstempels.
 
 
@@ -247,6 +252,8 @@ Gedeeld kladblok voor ChatGPT/Codex, Claude en de gebruiker. Werkwijze staat in 
 - Volgorde van het werk: ontwerpen in de Style Repo, dan bibliotheek 0.4 bouwen, dan tools ombouwen, te beginnen met Open Calc Studio.
 
 ## Logboek
+- 2026-10-30 **Claude**: PR #59: zes reviewronden door Sol (Codex `gpt-6.1-sol`). Vanaf ronde 2 vond Sol steeds een nieuwe omweg langs de familiecheck. Na ronde 6 gestopt (besluit van de superagent): de check is een vangnet, geen bewijs; de omwegen staan als VERVOLG in `knownbugs.md` (punt 4). PR #59 open, wacht op Ethan.
+- 2026-10-29 **Claude**: iconenrichtlijn (`docs/iconen.md`), skill `iconen-ontwerpen`, check `check_icon_guideline.py` in de CI, en de iconen van de tab Planning van Open Planner Studio opnieuw getekend (27 herzien, 5 nieuwe ids, revisie 107, 950 iconen). Ontwerpcontrole (Claude Opus 5.5) verwerkt; reviews door Sol (Codex `gpt-6.1-sol`), de stand staat in PR #59. PR #59 open, wacht op Ethan.
 - 2026-10-30 **Claude** (tweede sessie): dubbele installaties in de installer (openaec-installer#29, branch `dubbele-installaties`, commit `f31caa2`). `registry.rs` houdt per tool alle installaties bij (`copies` naast de eerste, HKCU vóór HKLM); de status telt de oudste kopie; Bijwerken werkt elke verouderde kopie na elkaar bij, elk in zijn eigen soort setup; de kaart toont de oudste versie en meldt "Staat 2 keer op deze pc: per gebruiker v…, voor de hele pc v…" met het advies er zo nodig één te verwijderen. Er wordt niets verwijderd. `tsc`, vitest (25), `vite build`, `cargo test` (24) en `cargo clippy` groen; scan op deze pc vindt PDF per gebruiker én systeembreed. De update van een oude tweede kopie via de installer zelf is niet getest: de systeembrede PDF stond na de handmatige test al op 2026.44.4.
 - 2026-10-30 **Claude** (tweede sessie): systeembrede update getest (#33). Open PDF Studio stond hier dubbel: per gebruiker 2026.44.4 en systeembreed 2026.42.11 in Program Files. Met de stappen van de installer: `Open.PDF.Studio_2026.44.4_x64-setup.exe` van de release, handtekening gecontroleerd tegen de pubkey uit `tauri.conf.json` (klopt), daarna `/S /UPDATE` via de shell; de gebruiker gaf de UAC-vraag. Exitcode 0 in 13 s; Program Files en HKLM staan op 2026.44.4, in dezelfde map, zonder nieuwe uninstall-items; de installatie per gebruiker is niet aangeraakt (de setup werkt in updatemodus alleen op SHCTX = HKLM). Niet via de installer zelf, want die ziet de systeembrede kopie niet: `registry.rs` houdt per tool alleen de eerste treffer (HKCU vóór HKLM). Daardoor blijft zo'n tweede kopie oud en staat de app twee keer in het startmenu.
 - 2026-10-30 **Claude**: OpenAEC Installer v0.2.10 uitgebracht (openaec-installer#27 en #28): stil zichzelf bijwerken en de OpenAEC Desktop App in de catalogus. De releaseworkflow startte de feedworkflow zelf; `releases.json` meldde v0.2.10 18 seconden na de publicatie.
