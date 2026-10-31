@@ -1,0 +1,1280 @@
+{
+ "titel": "Open Planner Studio · overige iconen",
+ "uitleg": "Alle iconen van Open Planner Studio buiten de tab Planning (die staat in design/iconen/planning). Per id het nieuwe icoon uit de Blueprint naast het icoon van Open Planner Studio op main (672af4165). De koppeling per plek komt uit OPS #566 van nino2-aec; afwijkingen staan in de PR-tekst. Een id kan op meerdere plekken staan; tab en groep geven de eerste plek.",
+ "knoppen": [
+  {
+   "tab": "Lint",
+   "groep": "Algemene bediening",
+   "knop": "Geselecteerde optie",
+   "id": "selection.mark",
+   "main": "check"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Annotatielijsten",
+   "knop": "Annotatielijst filteren",
+   "id": "list.filter",
+   "main": "filter"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Annotatielijsten",
+   "knop": "Lijst groeperen",
+   "id": "list.group-by",
+   "main": "layers"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Bewerken",
+   "knop": "Opnieuw uitvoeren",
+   "id": "edit.redo",
+   "main": "redo-2"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Navigeren",
+   "knop": "Alles passend",
+   "id": "view.fit",
+   "main": "maximize-2"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Projecten en gegevens",
+   "knop": "Grafiekweergave",
+   "id": "data.chart",
+   "main": "bar-chart-3"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Referenties, peildatum en relaties",
+   "knop": "Mijlpaal toevoegen",
+   "id": "task.milestone-menu",
+   "main": "diamond"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcebelasting en vereffening",
+   "knop": "Vereffening wissen",
+   "id": "resource.clear-level",
+   "main": "eraser"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcebelasting en vereffening",
+   "knop": "Resources vereffenen",
+   "id": "resource.level",
+   "main": "scale"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcebelasting en vereffening",
+   "knop": "Volgende histogramresource",
+   "id": "resource.next",
+   "main": "chevron-right"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcebelasting en vereffening",
+   "knop": "Vorige histogramresource",
+   "id": "resource.previous",
+   "main": "chevron-left"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Indelingen beheren",
+   "id": "layout.manage",
+   "main": "plus"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Sorteervelden kiezen",
+   "id": "list.sort-fields",
+   "main": "arrow-up-down"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Resource toewijzen",
+   "id": "resource.assign",
+   "main": "user-plus"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Resourceoverbelasting",
+   "id": "status.resource-overallocated",
+   "main": "alert-triangle"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Twee tijdschalen tonen",
+   "id": "view.gantt-split",
+   "main": "split-square-horizontal"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resourcekeuzes en Gantt-weergave",
+   "knop": "Planningsoverzicht tonen",
+   "id": "view.minimap",
+   "main": "map"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resources en werkruimtes",
+   "knop": "Resourcepaneel naast planning",
+   "id": "resource.dock",
+   "main": "panel-right"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resources en werkruimtes",
+   "knop": "Resource toevoegen",
+   "id": "resource.new",
+   "main": "plus"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resources en werkruimtes",
+   "knop": "Resourcewerkruimte",
+   "id": "resource.workspace",
+   "main": "users"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Resources en werkruimtes",
+   "knop": "Tabelkolommen kiezen",
+   "id": "table.columns",
+   "main": "columns-3"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Taakstructuur en WBS",
+   "knop": "Taakstructuur inklappen",
+   "id": "tree.collapse-scope",
+   "main": "chevrons-down-up"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Taakstructuur en WBS",
+   "knop": "Taakstructuur uitklappen",
+   "id": "tree.expand-scope",
+   "main": "chevrons-up-down"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Taken en planningsberekening",
+   "knop": "Rapportwerkruimte",
+   "id": "report.workspace",
+   "main": "printer"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Taken en planningsberekening",
+   "knop": "Taak toevoegen",
+   "id": "task.add",
+   "main": "plus"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Vensters en panelen",
+   "knop": "Eigenschappenpaneel tonen",
+   "id": "panel.properties",
+   "main": "eye"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Vensters en panelen",
+   "knop": "Eigenschappenpaneel verborgen",
+   "id": "panel.properties-hidden",
+   "main": "eye-off"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Vensters en panelen",
+   "knop": "Volledig scherm",
+   "id": "view.fullscreen",
+   "main": "maximize-2"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Vensters en panelen",
+   "knop": "Volledig scherm verlaten",
+   "id": "view.fullscreen-exit",
+   "main": "minimize-2"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "AI-mutaties bedienen",
+   "knop": "AI-mutaties pauzeren",
+   "id": "ai.pause",
+   "main": "pause"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "AI-mutaties bedienen",
+   "knop": "AI mag schrijven",
+   "id": "ai.read-only-off",
+   "main": "unlock"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "AI-mutaties bedienen",
+   "knop": "AI alleen-lezen",
+   "id": "ai.read-only-toggle",
+   "main": "lock"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "AI-mutaties bedienen",
+   "knop": "AI-mutaties hervatten",
+   "id": "ai.resume",
+   "main": "play"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Activiteiten en begeleiding",
+   "knop": "AI-activiteitenpaneel",
+   "id": "panel.ai-activity",
+   "main": "activity"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Bridge en lintdichtheid",
+   "knop": "Bridge starten",
+   "id": "ai.bridge-start",
+   "main": "play"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Bridge en lintdichtheid",
+   "knop": "Bridge stoppen",
+   "id": "ai.bridge-stop",
+   "main": "square"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Herstelkopieën",
+   "knop": "Automatische AI-back-up",
+   "id": "backup.auto",
+   "main": "database-backup"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Herstelkopieën",
+   "knop": "Nu herstelkopie maken",
+   "id": "backup.create",
+   "main": "save"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Herstelkopieën",
+   "knop": "Back-upmap openen",
+   "id": "backup.folder",
+   "main": "folder-open"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Verbindingsgegevens en tokens",
+   "knop": "Verbindingsgegevens",
+   "id": "ai.connection-details",
+   "main": "plug"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Verbindingsgegevens en tokens",
+   "knop": "Verbindingsinstellingen",
+   "id": "ai.connection-menu",
+   "main": "plug"
+  },
+  {
+   "tab": "Lint, tab AI",
+   "groep": "Verbindingsgegevens en tokens",
+   "knop": "Nieuw verbindingstoken",
+   "id": "credential.regenerate",
+   "main": "refresh-cw"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Exporteren",
+   "id": "file.export",
+   "main": "download"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Importeren",
+   "id": "file.import",
+   "main": "upload"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Nieuw document",
+   "id": "file.new",
+   "main": "file-text"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Openen",
+   "id": "file.open",
+   "main": "folder-open"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Opslaan",
+   "id": "file.save",
+   "main": "save"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestanden",
+   "knop": "Opslaan als",
+   "id": "file.save-as",
+   "main": "save-all"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestandmenu en projectbibliotheek",
+   "knop": "Bedrijfsbibliotheek",
+   "id": "company.library",
+   "main": "building-2"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestandmenu en projectbibliotheek",
+   "knop": "Voorbeeldprojecten",
+   "id": "file.examples",
+   "main": "book-open"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestandmenu en projectbibliotheek",
+   "knop": "Naar afdrukvoorbereiding",
+   "id": "report.print-entry",
+   "main": "printer"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestandmenu en projectbibliotheek",
+   "knop": "Rondleiding starten",
+   "id": "ui.tour",
+   "main": "compass"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bestandstypeaanduidingen",
+   "knop": "Bestandsaanduiding",
+   "id": "file.type-other",
+   "main": "file-type"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bibliotheekstandaard en kalenders",
+   "knop": "Kalender in bibliotheek opnemen",
+   "id": "calendar.promote",
+   "main": "arrow-up-from-line"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bibliotheekstandaard en kalenders",
+   "knop": "Projectkalender kiezen voor bibliotheek",
+   "id": "calendar.promote-menu",
+   "main": "plus"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bibliotheekstandaard en kalenders",
+   "knop": "Standaardbibliotheek instellen",
+   "id": "company.default",
+   "main": "star"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bibliotheekstandaard en kalenders",
+   "knop": "Standaardbibliotheek",
+   "id": "company.default-status",
+   "main": "star"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Bibliotheekstandaard en kalenders",
+   "knop": "Resourcebibliotheek toevoegen",
+   "id": "company.new",
+   "main": "plus"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Documenttypen en uitvoer",
+   "knop": "Uitvoerkeuzes openen",
+   "id": "file.export-options",
+   "main": "download"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Extensies en hulpfuncties",
+   "knop": "Extensie uit JS installeren",
+   "id": "extension.install-js",
+   "main": "file-code"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Extensies en hulpfuncties",
+   "knop": "Extensie uit ZIP installeren",
+   "id": "extension.install-zip",
+   "main": "file-archive"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Extensies en hulpfuncties",
+   "knop": "Extensies beheren",
+   "id": "extensions.manage",
+   "main": "puzzle"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Instellingen en hulp",
+   "knop": "Hulp",
+   "id": "ui.help",
+   "main": "book-open"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Instellingen en hulp",
+   "knop": "Instellingen",
+   "id": "ui.settings",
+   "main": "settings"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Locatie en documentuitvoer",
+   "knop": "Document sluiten",
+   "id": "document.close",
+   "main": "x"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Navigeren",
+   "knop": "Terug",
+   "id": "nav.back",
+   "main": "arrow-left"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Navigeren",
+   "knop": "Zoeken",
+   "id": "view.search",
+   "main": "search"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Project en wijzigingsreview",
+   "knop": "Projectgegevens",
+   "id": "project.properties",
+   "main": "info"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Uitbreidingen, docking en rekenwizard",
+   "knop": "Uitbreidingspakket",
+   "id": "extension.item",
+   "main": "puzzle"
+  },
+  {
+   "tab": "Backstage",
+   "groep": "Vertrekken en constructieoverzichten",
+   "knop": "Recente projecten",
+   "id": "project.recent",
+   "main": "clock"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Activiteiten en begeleiding",
+   "knop": "Debugterminal tonen",
+   "id": "panel.debug-terminal",
+   "main": "terminal"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Bridge en lintdichtheid",
+   "knop": "Bridge actief",
+   "id": "status.bridge-live",
+   "main": "circle"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Bridge en lintdichtheid",
+   "knop": "Bridge uit",
+   "id": "status.bridge-off",
+   "main": "circle"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Planningsmodi en informatie",
+   "knop": "Relaties tekenen actief",
+   "id": "planning.dependency-draw-mode",
+   "main": "link"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Planningsmodi en informatie",
+   "knop": "Vastgelegde datums tonen",
+   "id": "status.recorded-dates",
+   "main": "circle-dot"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Planningsmodi en informatie",
+   "knop": "Structuurwijziging beperkt",
+   "id": "status.structure-locked",
+   "main": "list-tree"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Project starten of openen",
+   "id": "documents.new-or-open",
+   "main": "plus"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Geopende projecten",
+   "id": "documents.overview",
+   "main": "menu"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Tabstrook naar eind",
+   "id": "tabs.scroll-end",
+   "main": "chevron-right"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Tabstrook naar begin",
+   "id": "tabs.scroll-start",
+   "main": "chevron-left"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Paneel naar volledige weergave",
+   "id": "panel.expand-full",
+   "main": "maximize-2"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Rechterpaneel tonen of verbergen",
+   "id": "panel.right",
+   "main": "chevron-right"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Venster sluiten",
+   "id": "window.close",
+   "main": "x"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Venster maximaliseren",
+   "id": "window.maximize",
+   "main": "square"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Venster minimaliseren",
+   "id": "window.minimize",
+   "main": "minus"
+  },
+  {
+   "tab": "Venster",
+   "groep": "Vensters en panelen",
+   "knop": "Venster herstellen",
+   "id": "window.restore",
+   "main": "copy"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Activiteiten en begeleiding",
+   "knop": "Tutorials",
+   "id": "guide.tutorials",
+   "main": "graduation-cap"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bestandstypeaanduidingen",
+   "knop": "Projectbestandstype",
+   "id": "file.type-project",
+   "main": "file-text"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bewerken",
+   "knop": "Kopiëren",
+   "id": "edit.copy",
+   "main": "copy"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bewerken",
+   "knop": "Verwijderen",
+   "id": "edit.delete",
+   "main": "trash-2"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bewerken",
+   "knop": "Ongedaan maken",
+   "id": "edit.undo",
+   "main": "undo-2"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bibliotheekkoppeling en conceptinvoer",
+   "knop": "Herkende items koppelen",
+   "id": "library.link-recognized",
+   "main": "link-2"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bibliotheekkoppeling en conceptinvoer",
+   "knop": "Bibliotheekafwijking beoordelen",
+   "id": "status.library-item-deviated",
+   "main": "alert-circle"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bibliotheekkoppeling en conceptinvoer",
+   "knop": "Bibliotheekorigineel ontbreekt",
+   "id": "status.library-item-missing",
+   "main": "alert-circle"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Bibliotheekkoppeling en conceptinvoer",
+   "knop": "Voorgesteld bibliotheekitem",
+   "id": "status.library-suggestion",
+   "main": "arrow-right"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Contact en update-informatie",
+   "knop": "Update beschikbaar",
+   "id": "status.update-available",
+   "main": "download"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Documentkoppelingen",
+   "knop": "Externe koppeling openen",
+   "id": "link.open-external",
+   "main": "external-link"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Extensies en hulpfuncties",
+   "knop": "Updates controleren",
+   "id": "ui.check-updates",
+   "main": "rotate-cw"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Extensies en hulpfuncties",
+   "knop": "Sneltoetsen",
+   "id": "ui.shortcuts",
+   "main": "keyboard"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Extra tekengereedschappen",
+   "knop": "Pijl tekenen",
+   "id": "draw.arrow",
+   "main": "arrow-up-right"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Extra tekengereedschappen",
+   "knop": "Vrije hand tekenen",
+   "id": "draw.freehand",
+   "main": "pen"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Instellingen en hulp",
+   "knop": "Vernieuwen",
+   "id": "ui.refresh",
+   "main": "refresh-cw"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Kalenderconcept dupliceren",
+   "id": "calendar.duplicate",
+   "main": "copy"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Kalenderconcept toevoegen",
+   "id": "calendar.new",
+   "main": "plus"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Codetype toevoegen",
+   "id": "planning.code-type-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Codewaarde toevoegen",
+   "id": "planning.code-value-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Vrij veld toevoegen",
+   "id": "planning.custom-field-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Kalenderconcepten en planningsvelden",
+   "knop": "Projectkalender",
+   "id": "status.project-calendar",
+   "main": "star"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Lijsten en bomen",
+   "knop": "Regel weghalen",
+   "id": "list.item-remove",
+   "main": "x"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Locatie en documentuitvoer",
+   "knop": "Lokaal bestand",
+   "id": "file.local",
+   "main": "hard-drive"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Pakketgrootte in releasevergelijking",
+   "knop": "Installatiepakket groter",
+   "id": "status.install-size-larger",
+   "main": "arrow-up"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Pakketgrootte in releasevergelijking",
+   "knop": "Installatiepakket kleiner",
+   "id": "status.install-size-smaller",
+   "main": "arrow-down"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Prestatiemeting en begeleiding",
+   "knop": "Prestatiemeting",
+   "id": "diagnostics.benchmark",
+   "main": "gauge"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Prestatiemeting en begeleiding",
+   "knop": "Prestatiemeting starten",
+   "id": "diagnostics.run-benchmark",
+   "main": "play"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Relaties, herstel en tabelweergave",
+   "knop": "Projecten herstellen",
+   "id": "backup.recover",
+   "main": "rotate-ccw"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Relaties, herstel en tabelweergave",
+   "knop": "Externe taakrelatie",
+   "id": "planning.external-relation",
+   "main": "link-2"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Schermannotaties en logweergave",
+   "knop": "Schermopname annoteren",
+   "id": "capture.annotate",
+   "main": "pencil"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Schermannotaties en logweergave",
+   "knop": "Schermannotaties wissen",
+   "id": "capture.clear-annotations",
+   "main": "trash-2"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Schermannotaties en logweergave",
+   "knop": "Gebied maskeren",
+   "id": "capture.mask",
+   "main": "eye-off"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Status en meldingen",
+   "knop": "Bezig",
+   "id": "status.busy",
+   "main": "refresh-cw"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Status en meldingen",
+   "knop": "Fout",
+   "id": "status.error",
+   "main": "alert-triangle"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Status en meldingen",
+   "knop": "Informatie",
+   "id": "status.info",
+   "main": "package-open"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Tekenen",
+   "knop": "Rechthoek tekenen",
+   "id": "draw.rectangle",
+   "main": "square"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Tekenen",
+   "knop": "Tekst toevoegen",
+   "id": "draw.text",
+   "main": "type"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Tijdinvoer en toewijzingsinformatie",
+   "knop": "Downloadstatistieken",
+   "id": "stats.downloads",
+   "main": "bar-chart-3"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Uitvoeromgeving van extensies",
+   "knop": "Extensiecontext browser",
+   "id": "extension.runtime-browser",
+   "main": "globe"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Uitvoeromgeving van extensies",
+   "knop": "Extensiecontext desktop",
+   "id": "extension.runtime-desktop",
+   "main": "hard-drive"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Appupdate installeren",
+   "id": "update.install",
+   "main": "download"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Verbindingsgegevens en tokens",
+   "knop": "Token verbergen",
+   "id": "credential.hide",
+   "main": "eye-off"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Verbindingsgegevens en tokens",
+   "knop": "Token tonen",
+   "id": "credential.show",
+   "main": "eye"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Werkrooster bewerken",
+   "knop": "Werktijden naar werkdagen",
+   "id": "calendar.copy-workdays",
+   "main": "copy"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Werkrooster bewerken",
+   "knop": "Niet-werkdag toevoegen",
+   "id": "calendar.holiday-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Dialogen",
+   "groep": "Werkrooster bewerken",
+   "knop": "Werktijdvak toevoegen",
+   "id": "calendar.work-band-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Algemene bediening",
+   "knop": "Paneel of dialoog sluiten",
+   "id": "ui.close",
+   "main": "x"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bezettingsinformatie en tabelkolommen",
+   "knop": "Kolom al zichtbaar",
+   "id": "status.column-present",
+   "main": "check"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bezettingsinformatie en tabelkolommen",
+   "knop": "Laatst berekende bezetting",
+   "id": "status.schedule-last-result",
+   "main": "alert-triangle"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bezettingsinformatie en tabelkolommen",
+   "knop": "Tijdelijk doorgerekende bezetting",
+   "id": "status.schedule-preview",
+   "main": "alert-triangle"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bezettingsinformatie en tabelkolommen",
+   "knop": "Zichtbare kolom toevoegen",
+   "id": "table.column-add-menu",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bezettingsinformatie en tabelkolommen",
+   "knop": "Standaardkolommen herstellen",
+   "id": "table.columns-reset",
+   "main": "rotate-ccw"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Bibliotheekkoppeling en conceptinvoer",
+   "knop": "Conceptinvoer bevestigen",
+   "id": "input.confirm-draft",
+   "main": "check"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor kenmerken",
+   "knop": "Gemarkeerde indeling herkennen",
+   "id": "layout.flag",
+   "main": "flag"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor kenmerken",
+   "knop": "Periode-indeling herkennen",
+   "id": "layout.period",
+   "main": "calendar-range"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor kenmerken",
+   "knop": "Sterindeling herkennen",
+   "id": "layout.star",
+   "main": "star"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor resources",
+   "knop": "Ploegindeling herkennen",
+   "id": "layout.crew",
+   "main": "hard-hat"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor resources",
+   "knop": "Materieelindeling herkennen",
+   "id": "layout.equipment",
+   "main": "truck"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor resources",
+   "knop": "Resource-indeling herkennen",
+   "id": "layout.resources",
+   "main": "users"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor resources",
+   "knop": "Gereedschapsindeling herkennen",
+   "id": "layout.tools",
+   "main": "wrench"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor taken",
+   "knop": "Kritiekpadindeling herkennen",
+   "id": "layout.critical",
+   "main": "route"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor taken",
+   "knop": "Filterindeling herkennen",
+   "id": "layout.filter",
+   "main": "filter"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor taken",
+   "knop": "Algemene indeling",
+   "id": "layout.identity",
+   "main": "layout-template"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor taken",
+   "knop": "Mijlpaalindeling herkennen",
+   "id": "layout.milestone",
+   "main": "milestone"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Indelingsiconen voor taken",
+   "knop": "Boomindeling herkennen",
+   "id": "layout.task-tree",
+   "main": "list-tree"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Lijsten en bomen",
+   "knop": "Inklappen",
+   "id": "tree.collapse",
+   "main": "chevron-down"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Lijsten en bomen",
+   "knop": "Uitklappen",
+   "id": "tree.expand",
+   "main": "chevron-right"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Naam en eigenschappen",
+   "knop": "Object hernoemen",
+   "id": "object.rename",
+   "main": "pencil"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Onderbrekingen en fontpakketten",
+   "knop": "Taakonderbreking opheffen",
+   "id": "planning.interruption-remove",
+   "main": "trash-2"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Planning",
+   "knop": "Taakrelatie toevoegen",
+   "id": "planning.dependency-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Planning",
+   "knop": "Bepalende relatie",
+   "id": "planning.driving",
+   "main": "zap"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Planning",
+   "knop": "Bepalende relatie onbekend",
+   "id": "planning.driving-unknown",
+   "main": "circle-help"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Planning",
+   "knop": "Gantt-planning",
+   "id": "planning.gantt",
+   "main": "gantt-chart-square"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Planning",
+   "knop": "Taakonderbreking toevoegen",
+   "id": "planning.interruption-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Prestatiemeting en begeleiding",
+   "knop": "Begeleiding compact tonen",
+   "id": "guide.compact",
+   "main": "chevron-down"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Prestatiemeting en begeleiding",
+   "knop": "Begeleiding uitgebreid tonen",
+   "id": "guide.expand",
+   "main": "chevron-up"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Profielconcept en toelichting",
+   "knop": "Korte toelichting",
+   "id": "help.context-hint",
+   "main": "info"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Profielconcept en toelichting",
+   "knop": "Nieuw planningsprofiel",
+   "id": "planning.profile-new",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Relaties, herstel en tabelweergave",
+   "knop": "Kolom uit weergave halen",
+   "id": "table.column-hide",
+   "main": "minus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Resourcecapaciteit en herkomst",
+   "knop": "Resourcekalender bewerken",
+   "id": "calendar.edit",
+   "main": "pencil"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Resourcecapaciteit en herkomst",
+   "knop": "Capaciteitsstap toevoegen",
+   "id": "resource.availability-step-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Resourcecapaciteit en herkomst",
+   "knop": "Resource van bibliotheek losmaken",
+   "id": "resource.unlink-library",
+   "main": "unlink-2"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Resourcecapaciteit en herkomst",
+   "knop": "Uit bibliotheek afkomstig",
+   "id": "status.library-linked",
+   "main": "library"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Schermannotaties en logweergave",
+   "knop": "Logweergave pauzeren",
+   "id": "log.pause-view",
+   "main": "pause"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Schermannotaties en logweergave",
+   "knop": "Logweergave hervatten",
+   "id": "log.resume-view",
+   "main": "play"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Status en meldingen",
+   "knop": "Geslaagd",
+   "id": "status.success",
+   "main": "check"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Status en meldingen",
+   "knop": "Waarschuwing",
+   "id": "status.warning",
+   "main": "alert-triangle"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Tabellen en formulieren",
+   "knop": "Keuzemenu openen",
+   "id": "ui.dropdown",
+   "main": "chevron-down"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Taken en planningsberekening",
+   "knop": "Notitie toevoegen",
+   "id": "task.note-add",
+   "main": "plus"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Tijdinvoer en toewijzingsinformatie",
+   "knop": "Urenverdeling bewerken",
+   "id": "assignment.hours-distribution",
+   "main": "bar-chart-3"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Tijdinvoer en toewijzingsinformatie",
+   "knop": "Tijd met kwartier verlagen",
+   "id": "input.time-decrease",
+   "main": "chevron-down"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Tijdinvoer en toewijzingsinformatie",
+   "knop": "Tijd met kwartier verhogen",
+   "id": "input.time-increase",
+   "main": "chevron-up"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Tijdinvoer en toewijzingsinformatie",
+   "knop": "Grootheid beschermd door werkregel",
+   "id": "status.assignment-protected",
+   "main": "lock"
+  },
+  {
+   "tab": "Panelen en velden",
+   "groep": "Updates, tabbladen en activiteit",
+   "knop": "Activiteitenlog wissen",
+   "id": "activity.clear",
+   "main": "trash-2"
+  },
+  {
+   "tab": "Lint",
+   "groep": "Panelen",
+   "knop": "Verschuivingen",
+   "id": "panel.schedule-shift",
+   "main": "arrow-left-right"
+  }
+ ]
+}

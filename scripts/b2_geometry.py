@@ -35,7 +35,7 @@ from b2_session_three import extend as extend_third
 from b2_session_four import extend as extend_fourth
 from b2_completion import extend as extend_completion, ACCENT_FRONT as COMPLETION_ACCENT_FRONT
 
-WHOLE_ACCENT={'draw.text','planning.driving'}
+WHOLE_ACCENT={'planning.driving'}
 
 # The foreground is a design decision for each icon, not a family-wide rule.
 ACCENT_FOREGROUND={
@@ -104,7 +104,7 @@ from b2_richtlijn import REVISED as RICHTLIJN_REVISED
 for _key in RICHTLIJN_REVISED:ACCENT_FOREGROUND.pop(_key,None)
 SHAPE_REVISIONS.update(RICHTLIJN_REVISED)
 
-ROUNDED_JOINTS={'edit.undo','edit.redo','nav.back','nav.forward'}
+ROUNDED_JOINTS={'nav.forward'}  # edit.undo, edit.redo en nav.back zijn volgens docs/iconen.md hertekend
 CURRENT_CHANGES=ROUNDED_JOINTS
 
 

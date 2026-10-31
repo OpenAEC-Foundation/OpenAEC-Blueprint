@@ -35,6 +35,30 @@ NEW_DEFINITIONS = [
     ('planning.progress-sheet-import', 'Voortgang bijwerken uit een blad', 'Referenties, peildatum en relaties',
      'De voortgang overnemen uit een ingevuld voortgangsblad: bestaande taken worden bijgewerkt. Geen algemene import; '
      'daarvoor blijft file.import. Tegenhanger van planning.progress-sheet-export.'),
+    ('panel.properties', 'Eigenschappenpaneel tonen', 'Vensters en panelen',
+     'Het paneel met eigenschappen van de selectie tonen; de knop toont dat het paneel nu zichtbaar is. Tegenhanger van panel.properties-hidden.'),
+    ('panel.properties-hidden', 'Eigenschappenpaneel verborgen', 'Vensters en panelen',
+     'Het paneel met eigenschappen van de selectie is verborgen; de knop toont het weer. Tegenhanger van panel.properties.'),
+    ('panel.expand-full', 'Paneel naar volledige weergave', 'Vensters en panelen',
+     'Een compact zijpaneel openen als volledige weergave. Geen volledig scherm van het programma; daarvoor blijft view.fullscreen.'),
+    ('capture.mask', 'Gebied maskeren', 'Schermannotaties en logweergave',
+     'Een gebied in een schermafbeelding afdekken voordat die wordt gedeeld. Geen redactie in een PDF; daarvoor blijft annotate.redact.'),
+    ('ai.read-only-off', 'AI mag schrijven', 'AI-mutaties bedienen',
+     'De knop toont dat de alleen-lezenstand van de AI uit staat; een klik zet hem aan. Tegenhanger van ai.read-only-toggle.'),
+    ('planning.driving-unknown', 'Bepalende relatie onbekend', 'Planning',
+     'Bij een relatie is niet bekend of hij bepalend is, omdat de planning nog niet is doorgerekend. Een toestand, geen opdracht. Naast planning.driving.'),
+    ('extension.install-zip', 'Extensie uit ZIP installeren', 'Extensies en hulpfuncties',
+     'Een extensiepakket als ZIP-bestand kiezen en installeren. Naast extension.install-js.'),
+    ('extension.install-js', 'Extensie uit JS installeren', 'Extensies en hulpfuncties',
+     'Een extensie als los JS-bestand kiezen en installeren. Naast extension.install-zip.'),
+    ('guide.expand', 'Begeleiding uitgebreid tonen', 'Prestatiemeting en begeleiding',
+     'Het begeleidingspaneel van compact naar uitgebreid zetten. Tegenhanger van guide.compact.'),
+    ('task.note-add', 'Notitie toevoegen', 'Taken en planningsberekening',
+     'Een notitie bij de taak toevoegen. Geen annotatie op een tekening; daarvoor blijft draw.note.'),
+    ('panel.schedule-shift', 'Verschuivingenpaneel', 'Vensters en panelen',
+     'Het paneel met de taken die bij het doorrekenen verschoven zijn omschakelen, met de reden per taak. Geen taak verplaatsen; daarvoor blijft planning.move-date.'),
+    ('list.item-remove', 'Regel weghalen', 'Lijsten en bomen',
+     'Eén regel uit een lijst of voorwaarde weghalen met een klein kruisje. Geen object verwijderen; daarvoor blijft edit.delete.'),
 ]
 # Programma's waar de nieuwe betekenis voorkomt. Bij een bestaand id komt dit uit de broncatalogus.
 NEW_APPS = {
@@ -43,6 +67,18 @@ NEW_APPS = {
     'workspace.ribbon-expand': ['Calc', 'Energy', 'Geotechniek', 'Heatloss', 'Pile Plan', 'Planner', 'Pointcloud', 'Workspace Composer'],
     'planning.progress-sheet-export': ['Planner'],
     'planning.progress-sheet-import': ['Planner'],
+    'panel.properties': ['Planner'],
+    'panel.properties-hidden': ['Planner'],
+    'panel.expand-full': ['Planner'],
+    'capture.mask': ['Planner'],
+    'ai.read-only-off': ['Planner'],
+    'panel.schedule-shift': ['Planner'],
+    'planning.driving-unknown': ['Planner'],
+    'extension.install-zip': ['Planner'],
+    'extension.install-js': ['Planner'],
+    'guide.expand': ['Planner'],
+    'task.note-add': ['Planner'],
+    'list.item-remove': ['Planner'],
 }
 # Een bestaand id met een nieuwe betekenistekst. De naam blijft; de tekst zegt nu waar het icoon voor is.
 MEANING_UPDATES = {
@@ -169,9 +205,9 @@ def warnings(p):
         p.line([(7.5, 6.5), (7.5, 8.25)], r=0)
         p.circle(7.5, 10.75, 0.8, filled=True)
     else:
-        p.line([(12, 3), (22, 20.5), (2, 20.5)], closed=True, r=2)
-        p.line([(12, 9.75), (12, 13)], r=0)
-        p.circle(12, 16.5, 1.1, filled=True)
+        p.line([(12, 3), (22, 20), (2, 20)], closed=True, r=2)
+        p.line([(12, 9.5), (12, 12.5)], r=0)
+        p.circle(12, 16.25, 1.1, filled=True)
 
 
 # ---------------------------------------------------------------- groep Relaties
@@ -405,7 +441,7 @@ def clear_status_date(p):
 def progress_menu(p):
     if p.s == 16:
         p.line([(3.5, 1.5), (3.5, 14.5)], r=0)
-        p.line([(3.5, 2.5), (6, 1.75), (9, 3), (13, 2.25), (13, 9.25), (9, 10), (6, 8.75), (3.5, 9.5)], closed=False, r=1.2)
+        p.line([(3.5, 2.5), (6, 1.75), (9, 3), (13.5, 2.25), (13.5, 9.25), (9, 10), (6, 8.75), (3.5, 9.5)], closed=False, r=1.2)
     else:
         p.line([(5, 2), (5, 22)], r=0)
         p.line([(5, 3.5), (9, 2.5), (13.5, 4.5), (19.5, 3.5), (19.5, 14), (13.5, 15), (9, 13), (5, 14)], closed=False, r=1.6)
@@ -594,11 +630,11 @@ def update_install(p):
                             'één ding, dus geen oranje. Eigen vorm naast Bijwerken (bakje met pijl) en Webtool herladen (één pijl).')
 def check_updates(p):
     if p.s == 16:
-        for start, end in ((195, 325), (15, 145)):
-            turn_arrow(p, 7.5, 7.5, 5.75, start, end, False, (1.9, 2.6))
+        for start, end in ((200, 315), (20, 135)):
+            turn_arrow(p, 7.5, 7.5, 5.5, start, end, False, (2.5, 3.2))
     else:
-        for start, end in ((195, 325), (15, 145)):
-            turn_arrow(p, 12, 12, 7.75, start, end, False, (2.8, 3.8))
+        for start, end in ((200, 315), (20, 135)):
+            turn_arrow(p, 12, 12, 8.5, start, end, False, (3.4, 4.6))
 
 
 @design('view.web-reload', 'Eén cirkelpijl met de punt bovenaan, zoals de herlaadknop in een browser. Geen venster eromheen en '
@@ -645,6 +681,1099 @@ def open_external(p):
                            'driehoek is op 16 px te vol. Eén ding, dus geen oranje.')
 def software_launch(p):
     solver_run(p)
+
+
+# ---------------------------------------------------------------- overige iconen van Open Planner Studio
+# Derde ronde (31 oktober 2026, besluit van Ethan: "iconen door met de rest"). De koppeling per plek komt uit
+# OPS #566 van nino2-aec; de vorm komt uit Open Planner Studio op main (Lucide), opnieuw getekend in de lijnstijl.
+# Een vorm die in main op veel plekken staat (de plus, het kruis, de prullenbak), is hier één tekening met
+# meerdere ids. De tabel VORMEN onderaan koppelt tekening, reden en ids.
+
+def plus(p):
+    if p.s == 16:
+        p.line([(7.5, 2.5), (7.5, 12.5)], r=0)
+        p.line([(2.5, 7.5), (12.5, 7.5)], r=0)
+    else:
+        p.line([(12, 4), (12, 20)], r=0)
+        p.line([(4, 12), (20, 12)], r=0)
+
+
+def cross(p):
+    if p.s == 16:
+        p.line([(3.5, 3.5), (12.5, 12.5)], r=0)
+        p.line([(12.5, 3.5), (3.5, 12.5)], r=0)
+    else:
+        p.line([(5, 5), (19, 19)], r=0)
+        p.line([(19, 5), (5, 19)], r=0)
+
+
+def minus(p):
+    p.line([(2.5, 7.5), (12.5, 7.5)] if p.s == 16 else [(4, 12), (20, 12)], r=0)
+
+
+def check(p):
+    if p.s == 16:
+        p.line([(2.5, 8.5), (6.5, 12.5), (13.5, 5.5)], r=0.4)
+    else:
+        p.line([(4, 12.5), (9.5, 18), (20.5, 7)], r=0.6)
+
+
+CHEVRONS = {16: {'right': [(5.5, 2.5), (10.5, 7.5), (5.5, 12.5)], 'left': [(10.5, 2.5), (5.5, 7.5), (10.5, 12.5)],
+                 'down': [(2.5, 5.5), (7.5, 10.5), (12.5, 5.5)], 'up': [(2.5, 10.5), (7.5, 5.5), (12.5, 10.5)]},
+            24: {'right': [(9, 5), (16, 12), (9, 19)], 'left': [(15, 5), (8, 12), (15, 19)],
+                 'down': [(5, 9), (12, 16), (19, 9)], 'up': [(5, 15), (12, 8), (19, 15)]}}
+
+
+def chevron(p, direction):
+    p.line(CHEVRONS[p.s][direction], r=0.5 if p.s == 16 else 0.7)
+
+
+def chevron_right(p):
+    chevron(p, 'right')
+
+
+def chevron_left(p):
+    chevron(p, 'left')
+
+
+def chevron_down(p):
+    chevron(p, 'down')
+
+
+def chevron_up(p):
+    chevron(p, 'up')
+
+
+def dropdown(p):
+    p.line([(3.5, 5.5), (7.5, 9.5), (11.5, 5.5)] if p.s == 16 else [(6, 9), (12, 15), (18, 9)], r=0.4 if p.s == 16 else 0.6)
+
+
+def chevrons_in(p):
+    """Twee punthaken naar elkaar toe, zoals Alles inklappen in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(3.5, 2.5), (7.5, 6.5), (11.5, 2.5)], r=0.4)
+        p.line([(3.5, 13.5), (7.5, 9.5), (11.5, 13.5)], r=0.4)
+    else:
+        p.line([(6, 3.5), (12, 9.5), (18, 3.5)], r=0.6)
+        p.line([(6, 20.5), (12, 14.5), (18, 20.5)], r=0.6)
+
+
+def chevrons_out(p):
+    """Twee punthaken van elkaar af, zoals Alles uitklappen in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(3.5, 6.5), (7.5, 2.5), (11.5, 6.5)], r=0.4)
+        p.line([(3.5, 9.5), (7.5, 13.5), (11.5, 9.5)], r=0.4)
+    else:
+        p.line([(6, 9.5), (12, 3.5), (18, 9.5)], r=0.6)
+        p.line([(6, 14.5), (12, 20.5), (18, 14.5)], r=0.6)
+
+
+def arrow(p, direction):
+    if p.s == 16:
+        shaft = {'left': [(13.5, 7.5), (2.5, 7.5)], 'right': [(2.5, 7.5), (13.5, 7.5)],
+                 'up': [(7.5, 13.5), (7.5, 2.5)], 'down': [(7.5, 2.5), (7.5, 13.5)]}[direction]
+        head = {'left': [(6.5, 3.5), (2.5, 7.5), (6.5, 11.5)], 'right': [(9.5, 3.5), (13.5, 7.5), (9.5, 11.5)],
+                'up': [(3.5, 6.5), (7.5, 2.5), (11.5, 6.5)], 'down': [(3.5, 9.5), (7.5, 13.5), (11.5, 9.5)]}[direction]
+        radius = 0.4
+    else:
+        shaft = {'left': [(21, 12), (3, 12)], 'right': [(3, 12), (21, 12)],
+                 'up': [(12, 21), (12, 3)], 'down': [(12, 3), (12, 21)]}[direction]
+        head = {'left': [(9, 6), (3, 12), (9, 18)], 'right': [(15, 6), (21, 12), (15, 18)],
+                'up': [(6, 9), (12, 3), (18, 9)], 'down': [(6, 15), (12, 21), (18, 15)]}[direction]
+        radius = 0.6
+    p.line(shaft, r=0)
+    p.line(head, r=radius)
+
+
+def arrow_left(p):
+    arrow(p, 'left')
+
+
+def arrow_right(p):
+    arrow(p, 'right')
+
+
+def arrow_up(p):
+    arrow(p, 'up')
+
+
+def arrow_down(p):
+    arrow(p, 'down')
+
+
+def arrow_diagonal(p):
+    if p.s == 16:
+        p.line([(3.5, 12.5), (12.5, 3.5)], r=0)
+        p.line([(9.5, 3.5), (12.5, 3.5), (12.5, 6.5)], r=0.6)
+    else:
+        p.line([(5, 19), (19, 5)], r=0)
+        p.line([(8, 5), (19, 5), (19, 16)], r=0.6)
+
+
+def arrows_sort(p):
+    if p.s == 16:
+        p.line([(4.5, 13.5), (4.5, 2.5)], r=0)
+        p.line([(1.5, 5.5), (4.5, 2.5), (7.5, 5.5)], r=0.4)
+        p.line([(11.5, 2.5), (11.5, 13.5)], r=0)
+        p.line([(8.5, 10.5), (11.5, 13.5), (14.5, 10.5)], r=0.4)
+    else:
+        p.line([(7, 21), (7, 3)], r=0)
+        p.line([(3, 7), (7, 3), (11, 7)], r=0.6)
+        p.line([(17, 3), (17, 21)], r=0)
+        p.line([(13, 17), (17, 21), (21, 17)], r=0.6)
+
+
+def arrow_from_line(p):
+    """Lijn met een oranje pijl omhoog, zoals In bibliotheek opnemen in Open Planner Studio; de hele pijl in één kleur."""
+    if p.s == 16:
+        p.line([(2.5, 13.5), (12.5, 13.5)], r=0)
+        p.line([(7.5, 10.5), (7.5, 2.5)], True, r=0)
+        p.line([(3.5, 6.5), (7.5, 2.5), (11.5, 6.5)], True, r=0.4)
+    else:
+        p.line([(4, 21), (20, 21)], r=0)
+        p.line([(12, 17), (12, 3)], True, r=0)
+        p.line([(6, 9), (12, 3), (18, 9)], True, r=0.6)
+
+
+def undo(p):
+    if p.s == 16:
+        p.line([(2.5, 6.5), (13.5, 6.5), (13.5, 13.5), (6.5, 13.5)], r=3.4)
+        p.line([(5.5, 3.5), (2.5, 6.5), (5.5, 9.5)], r=0.4)
+    else:
+        p.line([(3, 9), (21, 9), (21, 20), (10, 20)], r=5.4)
+        p.line([(8, 4), (3, 9), (8, 14)], r=0.6)
+
+
+def redo(p):
+    undo(p)
+    p.c.mirror()
+
+
+def turn_back(p):
+    """Draaipijl tegen de klok in, zoals Terugzetten en Herstellen in Open Planner Studio."""
+    if p.s == 16:
+        turn_arrow(p, 7.5, 8, 5.5, 10, 285, False, (2.7, 3.4))
+    else:
+        turn_arrow(p, 12, 12.5, 8, 10, 285, False, (3.8, 5))
+    p.c.mirror()
+    for f in p.c.fills:
+        f['rings'] = [[(p.s - x, y) for x, y in ring] for ring in f['rings']]
+
+
+def page(p):
+    """Blad met een schuine hoek; op 24 px ook omgevouwen. Binnen het blad blijft ruimte voor een teken."""
+    if p.s == 16:
+        p.line([(2.5, 1.5), (9.5, 1.5), (12.5, 4.5), (12.5, 14.5), (2.5, 14.5)], closed=True, r=1.0)
+    else:
+        p.line([(4, 2), (15, 2), (20, 7), (20, 22), (4, 22)], closed=True, r=1.6)
+        p.line([(15, 2), (15, 7), (20, 7)], r=0.7)
+
+
+def page_new(p):
+    page(p)
+    if p.s == 16:
+        p.line([(7.5, 7.5), (7.5, 11.5)], True, r=0)
+        p.line([(5.5, 9.5), (9.5, 9.5)], True, r=0)
+    else:
+        p.line([(12, 11), (12, 18)], True, r=0)
+        p.line([(8.5, 14.5), (15.5, 14.5)], True, r=0)
+
+
+def page_lines(p):
+    page(p)
+    if p.s == 16:
+        p.line([(5.5, 8.5), (9.5, 8.5)], r=0)
+        p.line([(5.5, 11.5), (9.5, 11.5)], r=0)
+    else:
+        p.line([(8, 12), (16, 12)], r=0)
+        p.line([(8, 17), (16, 17)], r=0)
+
+
+def page_letter(p):
+    """Blad met een hoofdletter T, zoals de bestandsaanduiding in Open Planner Studio."""
+    page(p)
+    if p.s == 16:
+        p.line([(5, 6.5), (10, 6.5)], r=0)
+        p.line([(7.5, 6.5), (7.5, 11.5)], r=0)
+    else:
+        p.line([(8, 11), (16, 11)], r=0)
+        p.line([(12, 11), (12, 18)], r=0)
+
+
+def page_zip(p):
+    """Blad met een rits: streepjes en een ring, zoals FileArchive in Open Planner Studio."""
+    page(p)
+    if p.s == 16:
+        p.line([(7.5, 3.75), (7.5, 4.5)], r=0)
+        p.line([(7.5, 6.75), (7.5, 7.5)], r=0)
+        p.circle(7.5, 11, 1.25)
+    else:
+        p.line([(10, 6.5), (10, 7.5)], r=0)
+        p.line([(10, 11), (10, 12)], r=0)
+        p.circle(10, 18, 2.75)
+
+
+def page_code(p):
+    page(p)
+    if p.s == 16:
+        p.line([(6, 7.5), (5, 9.5), (6, 11.5)], r=0.3)
+        p.line([(9, 7.5), (10, 9.5), (9, 11.5)], r=0.3)
+    else:
+        p.line([(10, 11.5), (7.5, 15), (10, 18.5)], r=0.5)
+        p.line([(14, 11.5), (16.5, 15), (14, 18.5)], r=0.5)
+
+
+def floppy(p):
+    if p.s == 16:
+        p.line([(1.5, 1.5), (11.5, 1.5), (14.5, 4.5), (14.5, 14.5), (1.5, 14.5)], closed=True, r=1.2)
+        p.line([(4.5, 14.5), (4.5, 9.5), (11.5, 9.5), (11.5, 14.5)], r=0.5)
+        p.line([(4.5, 1.5), (4.5, 4.5), (9.5, 4.5)], r=0.5)
+    else:
+        p.line([(3, 3), (17, 3), (21, 7), (21, 21), (3, 21)], closed=True, r=1.6)
+        p.line([(7, 21), (7, 14), (17, 14), (17, 21)], r=0.7)
+        p.line([(7, 3), (7, 8), (15, 8)], r=0.7)
+
+
+def floppy_copy(p):
+    """Diskette met in oranje de hoek van een tweede exemplaar, zoals Opslaan als in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(1.5, 1.5), (9.5, 1.5), (11.5, 3.5), (11.5, 11.5), (1.5, 11.5)], closed=True, r=1.2)
+        p.line([(3.5, 11.5), (3.5, 9), (9.5, 9), (9.5, 11.5)], r=0.3)
+        p.line([(4.5, 1.5), (4.5, 4), (7.5, 4)], r=0.3)
+        p.line([(14.5, 6.5), (14.5, 14.5), (6.5, 14.5)], True, r=1.2)
+    else:
+        p.line([(3, 3), (14, 3), (17, 6), (17, 17), (3, 17)], closed=True, r=1.6)
+        p.line([(7, 17), (7, 11), (13, 11), (13, 17)], r=0.7)
+        p.line([(7, 3), (7, 7), (12, 7)], r=0.6)
+        p.line([(21, 8), (21, 21), (8, 21)], True, r=1.6)
+
+
+def folder_open(p):
+    if p.s == 16:
+        p.line([(12.5, 6.5), (12.5, 4.5), (8, 4.5), (6.5, 2.5), (1.5, 2.5), (1.5, 13.5)], r=1.2)
+        p.line([(1.5, 13.5), (3.5, 7.5), (14.5, 7.5), (12.5, 13.5)], closed=True, r=0.9)
+    else:
+        p.line([(18, 9), (18, 7), (11.5, 7), (9.5, 4), (3, 4), (3, 20)], r=1.6)
+        p.line([(3, 20), (6, 11), (22, 11), (19, 20)], closed=True, r=1.2)
+
+
+def hard_drive(p):
+    if p.s == 16:
+        p.rect(1.5, 8.5, 14.5, 13.5, r=1.2)
+        p.line([(1.5, 8.5), (4, 3.5), (12, 3.5), (14.5, 8.5)], r=0.8)
+        p.circle(4.5, 11, 0.85, filled=True)
+    else:
+        p.rect(3, 13, 21, 20, r=1.6)
+        p.line([(3, 13), (6.5, 5), (17.5, 5), (21, 13)], r=1.1)
+        p.circle(7, 16.5, 1.1, filled=True)
+
+
+def printer(p):
+    if p.s == 16:
+        p.line([(4.5, 5.5), (4.5, 1.5), (11.5, 1.5), (11.5, 5.5)], r=0.8)
+        p.line([(4.5, 11.5), (1.5, 11.5), (1.5, 5.5), (14.5, 5.5), (14.5, 11.5), (11.5, 11.5)], r=1.2)
+        p.rect(4.5, 9.5, 11.5, 14.5, r=0.5)
+    else:
+        p.line([(7, 8), (7, 3), (17, 3), (17, 8)], r=1.1)
+        p.line([(7, 17), (3, 17), (3, 8), (21, 8), (21, 17), (17, 17)], r=1.6)
+        p.rect(7, 14, 17, 21, r=0.7)
+
+
+def tray_arrow_up(p):
+    """Bakje met een oranje pijl omhoog: gegevens gaan het programma uit. De tegenhanger is software_install."""
+    tray(p)
+    if p.s == 16:
+        p.line([(7.5, 10), (7.5, 1.5)], True, r=0)
+        p.line([(4.5, 4.5), (7.5, 1.5), (10.5, 4.5)], True, r=0.4)
+    else:
+        p.line([(12, 15), (12, 3)], True, r=0)
+        p.line([(7.5, 7.5), (12, 3), (16.5, 7.5)], True, r=0.6)
+
+
+def book_open(p):
+    if p.s == 16:
+        p.line([(7.5, 4), (5.5, 2.5), (1.5, 2.5), (1.5, 12.5), (5.5, 12.5), (7.5, 13.5)], r=0.8)
+        p.line([(7.5, 4), (9.5, 2.5), (13.5, 2.5), (13.5, 12.5), (9.5, 12.5), (7.5, 13.5)], r=0.8)
+        p.line([(7.5, 4), (7.5, 13.5)], r=0)
+    else:
+        p.line([(12, 6), (9, 4), (3, 4), (3, 19), (9, 19), (12, 20.5)], r=1.1)
+        p.line([(12, 6), (15, 4), (21, 4), (21, 19), (15, 19), (12, 20.5)], r=1.1)
+        p.line([(12, 6), (12, 20.5)], r=0)
+
+
+def building(p):
+    """Toren met een lagere vleugel en ramen, zoals Bedrijfsbibliotheek in Open Planner Studio (Building2)."""
+    if p.s == 16:
+        p.line([(1.5, 14.5), (1.5, 2.5), (8.5, 1.5), (8.5, 14.5)], closed=True, r=0.7)
+        p.line([(8.5, 7.5), (14.5, 7.5), (14.5, 14.5), (8.5, 14.5)], r=0.7)
+        p.line([(4.5, 5.5), (5.5, 5.5)], r=0)
+        p.line([(4.5, 8.5), (5.5, 8.5)], r=0)
+        p.line([(4.5, 11.5), (5.5, 11.5)], r=0)
+    else:
+        p.line([(3, 22), (3, 3), (14, 2), (14, 22)], closed=True, r=1)
+        p.line([(14, 9), (21, 9), (21, 22), (14, 22)], r=1)
+        p.line([(7, 7), (10, 7)], r=0)
+        p.line([(7, 12), (10, 12)], r=0)
+        p.line([(7, 17), (10, 17)], r=0)
+
+
+def books(p):
+    if p.s == 16:
+        p.line([(2.5, 2.5), (2.5, 13.5)], r=0)
+        p.line([(6.5, 2.5), (6.5, 13.5)], r=0)
+        p.line([(10, 2.5), (13.5, 13.5)], r=0)
+    else:
+        p.line([(4, 3), (4, 21)], r=0)
+        p.line([(10, 3), (10, 21)], r=0)
+        p.line([(15, 3), (20.5, 21)], r=0)
+
+
+def copy_sheets(p):
+    if p.s == 16:
+        p.rect(5.5, 5.5, 14.5, 14.5, r=1.4)
+        p.line([(1.5, 10.5), (1.5, 1.5), (10.5, 1.5)], r=1.4)
+    else:
+        p.rect(8, 8, 21, 21, r=2)
+        p.line([(3, 16), (3, 3), (16, 3)], r=2)
+
+
+def trash(p):
+    if p.s == 16:
+        p.line([(1.5, 4.5), (13.5, 4.5)], r=0)
+        p.line([(4.5, 4.5), (4.5, 1.5), (10.5, 1.5), (10.5, 4.5)], r=0.4)
+        p.line([(2.5, 4.5), (2.5, 14.5), (12.5, 14.5), (12.5, 4.5)], r=1.2)
+        p.line([(5.5, 7.5), (5.5, 11.5)], r=0)
+        p.line([(9.5, 7.5), (9.5, 11.5)], r=0)
+    else:
+        p.line([(2, 6), (22, 6)], r=0)
+        p.line([(8, 6), (8, 3), (16, 3), (16, 6)], r=0.7)
+        p.line([(5, 6), (5, 22), (19, 22), (19, 6)], r=1.6)
+        p.line([(10, 11), (10, 17)], r=0)
+        p.line([(14, 11), (14, 17)], r=0)
+
+
+def pen_body(p):
+    if p.s == 16:
+        p.line([(1.5, 14.5), (2.5, 10.5), (10.5, 2.5), (13.5, 5.5), (5.5, 13.5)], closed=True, r=0.5)
+    else:
+        p.line([(2.5, 21.5), (4, 15), (16, 3), (21, 8), (9, 20)], closed=True, r=0.7)
+
+
+def pencil(p):
+    pen_body(p)
+    if p.s == 16:
+        p.line([(8.5, 4.5), (11.5, 7.5)], r=0)
+    else:
+        p.line([(13, 6), (18, 11)], r=0)
+
+
+def letter_t(p):
+    if p.s == 16:
+        p.line([(2.5, 2.5), (12.5, 2.5)], r=0)
+        p.line([(7.5, 2.5), (7.5, 13.5)], r=0)
+        p.line([(5.5, 13.5), (9.5, 13.5)], r=0)
+    else:
+        p.line([(4, 4), (20, 4)], r=0)
+        p.line([(12, 4), (12, 20)], r=0)
+        p.line([(9, 20), (15, 20)], r=0)
+
+
+def rectangle(p):
+    if p.s == 16:
+        p.rect(1.5, 3.5, 14.5, 12.5, r=1.2)
+    else:
+        p.rect(3, 5, 21, 19, r=1.6)
+
+
+def square(p):
+    if p.s == 16:
+        p.rect(2.5, 2.5, 12.5, 12.5, r=1.2)
+    else:
+        p.rect(4, 4, 20, 20, r=1.6)
+
+
+def arrows_both_ways(p):
+    """Twee pijlen in tegengestelde richting, zoals Verschuivingen in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(4.5, 1.5), (1.5, 4.5), (4.5, 7.5)], r=0.3)
+        p.line([(1.5, 4.5), (14.5, 4.5)], r=0)
+        p.line([(11.5, 8.5), (14.5, 11.5), (11.5, 14.5)], r=0.3)
+        p.line([(14.5, 11.5), (1.5, 11.5)], r=0)
+    else:
+        p.line([(7, 3), (3, 7), (7, 11)], r=0.5)
+        p.line([(3, 7), (21, 7)], r=0)
+        p.line([(17, 13), (21, 17), (17, 21)], r=0.5)
+        p.line([(21, 17), (3, 17)], r=0)
+
+
+def stop_square(p):
+    if p.s == 16:
+        p.rect(1.5, 1.5, 13.5, 13.5, r=1.4)
+    else:
+        p.rect(3, 3, 21, 21, r=2)
+
+
+def play(p):
+    """Afspeelpijl die het vak vult, zoals Starten en Hervatten in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(3.5, 1.5), (14, 7.5), (3.5, 13.5)], closed=True, r=1.2)
+    else:
+        p.line([(5, 3), (21.5, 12), (5, 21)], closed=True, r=1.8)
+
+
+def corners(p):
+    if p.s == 16:
+        p.line([(1.5, 5.5), (1.5, 1.5), (5.5, 1.5)], r=0.9)
+        p.line([(10.5, 1.5), (14.5, 1.5), (14.5, 5.5)], r=0.9)
+        p.line([(14.5, 10.5), (14.5, 14.5), (10.5, 14.5)], r=0.9)
+        p.line([(5.5, 14.5), (1.5, 14.5), (1.5, 10.5)], r=0.9)
+    else:
+        p.line([(3, 8), (3, 3), (8, 3)], r=1.2)
+        p.line([(16, 3), (21, 3), (21, 8)], r=1.2)
+        p.line([(21, 16), (21, 21), (16, 21)], r=1.2)
+        p.line([(8, 21), (3, 21), (3, 16)], r=1.2)
+
+
+def arrows_out(p):
+    if p.s == 16:
+        p.line([(13.5, 2.5), (9.5, 6.5)], r=0)
+        p.line([(10.5, 2.5), (13.5, 2.5), (13.5, 5.5)], r=0.4)
+        p.line([(2.5, 13.5), (6.5, 9.5)], r=0)
+        p.line([(2.5, 10.5), (2.5, 13.5), (5.5, 13.5)], r=0.4)
+    else:
+        p.line([(21, 3), (14, 10)], r=0)
+        p.line([(15, 3), (21, 3), (21, 9)], r=0.6)
+        p.line([(3, 21), (10, 14)], r=0)
+        p.line([(3, 15), (3, 21), (9, 21)], r=0.6)
+
+
+def arrows_in(p):
+    if p.s == 16:
+        p.line([(13.5, 2.5), (9.5, 6.5)], r=0)
+        p.line([(9.5, 3.5), (9.5, 6.5), (12.5, 6.5)], r=0.4)
+        p.line([(2.5, 13.5), (6.5, 9.5)], r=0)
+        p.line([(3.5, 9.5), (6.5, 9.5), (6.5, 12.5)], r=0.4)
+    else:
+        p.line([(21, 3), (14, 10)], r=0)
+        p.line([(14, 4), (14, 10), (20, 10)], r=0.6)
+        p.line([(3, 21), (10, 14)], r=0)
+        p.line([(4, 14), (10, 14), (10, 20)], r=0.6)
+
+
+def panel_right(p):
+    if p.s == 16:
+        p.rect(1.5, 2.5, 14.5, 13.5, r=1.4)
+        p.line([(9.5, 2.5), (9.5, 13.5)], r=0)
+    else:
+        p.rect(3, 4, 21, 20, r=2)
+        p.line([(15, 4), (15, 20)], r=0)
+
+
+def split_view(p):
+    if p.s == 16:
+        p.line([(4.5, 2.5), (1.5, 2.5), (1.5, 13.5), (4.5, 13.5)], r=1.2)
+        p.line([(10.5, 2.5), (13.5, 2.5), (13.5, 13.5), (10.5, 13.5)], r=1.2)
+        p.line([(7.5, 1.5), (7.5, 14.5)], r=0)
+    else:
+        p.line([(8, 4), (3, 4), (3, 20), (8, 20)], r=1.6)
+        p.line([(16, 4), (21, 4), (21, 20), (16, 20)], r=1.6)
+        p.line([(12, 2), (12, 22)], r=0)
+
+
+def folded_map(p):
+    if p.s == 16:
+        p.line([(1.5, 3.5), (5.5, 1.5), (10.5, 3.5), (14.5, 1.5), (14.5, 12.5), (10.5, 14.5), (5.5, 12.5), (1.5, 14.5)],
+               closed=True, r=0.6)
+        p.line([(5.5, 1.5), (5.5, 12.5)], r=0)
+        p.line([(10.5, 3.5), (10.5, 14.5)], r=0)
+    else:
+        p.line([(3, 6), (9, 3), (15, 6), (21, 3), (21, 18), (15, 21), (9, 18), (3, 21)], closed=True, r=0.8)
+        p.line([(9, 3), (9, 18)], r=0)
+        p.line([(15, 6), (15, 21)], r=0)
+
+
+def grid_four(p):
+    if p.s == 16:
+        for x0, y0 in ((1.5, 1.5), (9.5, 1.5), (1.5, 9.5), (9.5, 9.5)):
+            p.rect(x0, y0, x0 + 5, y0 + 5, r=1.6)
+    else:
+        for x0, y0 in ((3, 3), (14, 3), (3, 14), (14, 14)):
+            p.rect(x0, y0, x0 + 7, y0 + 7, r=1.2)
+
+
+def columns(p):
+    if p.s == 16:
+        p.rect(1.5, 2.5, 14.5, 13.5, r=1.4)
+        p.line([(5.5, 2.5), (5.5, 13.5)], r=0)
+        p.line([(10.5, 2.5), (10.5, 13.5)], r=0)
+    else:
+        p.rect(3, 4, 21, 20, r=2)
+        p.line([(9, 4), (9, 20)], r=0)
+        p.line([(15, 4), (15, 20)], r=0)
+
+
+def gantt_bars(p):
+    if p.s == 16:
+        p.line([(1.5, 4.5), (8.5, 4.5)], r=0)
+        p.line([(4.5, 8.5), (11.5, 8.5)], r=0)
+        p.line([(7.5, 12.5), (14.5, 12.5)], r=0)
+    else:
+        p.line([(2, 5), (12, 5)], r=0)
+        p.line([(7, 12), (17, 12)], r=0)
+        p.line([(12, 19), (22, 19)], r=0)
+
+
+def list_tree(p):
+    if p.s == 16:
+        p.line([(1.5, 2.5), (14.5, 2.5)], r=0)
+        p.line([(3.5, 2.5), (3.5, 12.5), (6.5, 12.5)], r=1.0)
+        p.line([(3.5, 7.5), (6.5, 7.5)], r=0)
+        p.line([(9.5, 7.5), (14.5, 7.5)], r=0)
+        p.line([(9.5, 12.5), (14.5, 12.5)], r=0)
+    else:
+        p.line([(2, 4), (22, 4)], r=0)
+        p.line([(5, 4), (5, 19), (10, 19)], r=1.4)
+        p.line([(5, 12), (10, 12)], r=0)
+        p.line([(14, 12), (22, 12)], r=0)
+        p.line([(14, 19), (22, 19)], r=0)
+
+
+def layers(p):
+    if p.s == 16:
+        p.line([(8, 1.5), (14.5, 5), (8, 8.5), (1.5, 5)], closed=True, r=0.6)
+        p.line([(1.5, 9), (8, 12.5), (14.5, 9)], r=0.6)
+    else:
+        p.line([(12, 2), (22, 7.5), (12, 13), (2, 7.5)], closed=True, r=0.8)
+        p.line([(2, 12), (12, 17.5), (22, 12)], r=0.8)
+        p.line([(2, 16.5), (12, 22), (22, 16.5)], r=0.8)
+
+
+def funnel(p):
+    if p.s == 16:
+        p.line([(1.5, 2.5), (14.5, 2.5), (9.5, 8.5), (9.5, 14.5), (6.5, 12.5), (6.5, 8.5)], closed=True, r=0.7)
+    else:
+        p.line([(2, 3), (22, 3), (14, 12.5), (14, 21.5), (10, 19), (10, 12.5)], closed=True, r=1.0)
+
+
+def ring(p):
+    if p.s == 16:
+        p.circle(7.5, 7.5, 6)
+    else:
+        p.circle(12, 12, 9)
+
+
+def ring_dot(p):
+    ring(p)
+    if p.s == 16:
+        p.circle(7.5, 7.5, 1.75, filled=True)
+    else:
+        p.circle(12, 12, 2.75, filled=True)
+
+
+def status_success(p):
+    ring(p)
+    if p.s == 16:
+        p.line([(4.5, 7.5), (6.5, 9.5), (10.5, 5.5)], r=0.3)
+    else:
+        p.line([(7.5, 12), (10.5, 15), (16.5, 9)], r=0.5)
+
+
+def exclamation(p):
+    if p.s == 16:
+        p.line([(7.5, 4.5), (7.5, 8)], r=0)
+        p.circle(7.5, 10.5, 0.8, filled=True)
+    else:
+        p.line([(12, 7.5), (12, 13)], r=0)
+        p.circle(12, 16.75, 1.15, filled=True)
+
+
+def status_alert(p):
+    ring(p)
+    exclamation(p)
+
+
+def status_error(p):
+    if p.s == 16:
+        p.line([(4.5, 1.5), (10.5, 1.5), (13.5, 4.5), (13.5, 10.5), (10.5, 13.5), (4.5, 13.5), (1.5, 10.5), (1.5, 4.5)],
+               closed=True, r=0.6)
+    else:
+        p.line([(8, 3), (16, 3), (21, 8), (21, 16), (16, 21), (8, 21), (3, 16), (3, 8)], closed=True, r=0.8)
+    exclamation(p)
+
+
+def status_info(p):
+    ring(p)
+    if p.s == 16:
+        p.circle(7.5, 4.75, 0.8, filled=True)
+        p.line([(7.5, 7.5), (7.5, 10.5)], r=0)
+    else:
+        p.circle(12, 7.75, 1.15, filled=True)
+        p.line([(12, 11.5), (12, 16.5)], r=0)
+
+
+def question(p):
+    ring(p)
+    cx, cy, r, stem = (7.5, 5.75, 1.75, 8.25) if p.s == 16 else (12, 9.25, 2.75, 13.5)
+    pts = [(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in range(190, 401, 15)]
+    p.line(pts + [(cx, stem)], r=0)
+    if p.s == 16:
+        p.circle(7.5, 10.75, 0.8, filled=True)
+    else:
+        p.circle(12, 17, 1.1, filled=True)
+
+
+def history(p):
+    """Klok, zoals Recent in Open Planner Studio. Een extra draaipijl maakte de wijzers op 16 px vaag."""
+    if p.s == 16:
+        p.circle(8, 8, 6.5)
+        p.line([(8, 4.5), (8, 8), (10.5, 9.5)], r=0.3)
+    else:
+        p.circle(12, 12, 9.5)
+        p.line([(12, 6.5), (12, 12), (16, 14)], r=0.5)
+
+
+def compass(p):
+    ring(p)
+    if p.s == 16:
+        p.fill([(10, 5), (8.5, 8.5), (5, 10), (6.5, 6.5)])
+    else:
+        p.fill([(16, 8), (13.5, 13.5), (8, 16), (10.5, 10.5)])
+
+
+def star(p):
+    cx, cy, big, small = (7.5, 8, 6.75, 3) if p.s == 16 else (12, 12.5, 10.25, 4.5)
+    pts = [(cx + (big if i % 2 == 0 else small) * math.cos(math.radians(-90 + 36 * i)),
+            cy + (big if i % 2 == 0 else small) * math.sin(math.radians(-90 + 36 * i))) for i in range(10)]
+    p.line(pts, closed=True, r=0.4 if p.s == 16 else 0.6)
+
+
+def lock_body(p):
+    if p.s == 16:
+        p.rect(1.5, 7.5, 13.5, 14.5, r=1.4)
+    else:
+        p.rect(3, 11, 21, 22, r=2)
+
+
+def lock(p):
+    lock_body(p)
+    if p.s == 16:
+        p.line([(4.5, 7.5), (4.5, 1.5), (10.5, 1.5), (10.5, 7.5)], r=2.9)
+    else:
+        p.line([(7.5, 11), (7.5, 2), (16.5, 2), (16.5, 11)], r=4.4)
+
+
+def lock_open(p):
+    lock_body(p)
+    if p.s == 16:
+        p.line([(4.5, 7.5), (4.5, 1.5), (10.5, 1.5), (10.5, 3)], r=2.9)
+    else:
+        p.line([(7.5, 11), (7.5, 2), (16.5, 2), (16.5, 4.5)], r=4.4)
+
+
+def link_chain(p, middle=True):
+    """Twee ronde schakels; de einden zijn halve cirkels, anders leest de vorm als twee haken."""
+    cy, r, left, right, tip = (7.5, 3, 4.5, 10.5, 6 if middle else 5.5) if p.s == 16 else (12, 5, 7, 17, 10 if middle else 8.5)
+    bend = lambda cx, angles: [(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in angles]
+    p.line([(tip, cy - r)] + bend(left, range(270, 89, -15)) + [(tip, cy + r)], r=0)
+    other = left + right - tip
+    p.line([(other, cy - r)] + bend(right, range(-90, 91, 15)) + [(other, cy + r)], r=0)
+    if middle:
+        p.line([(5.5, 7.5), (9.5, 7.5)] if p.s == 16 else [(8, 12), (16, 12)], r=0)
+
+
+def unlink_chain(p):
+    link_chain(p, False)
+
+
+def zap(p):
+    if p.s == 16:
+        p.line([(8.5, 1.5), (3, 9), (7.5, 9), (6.5, 14.5), (12.5, 6.5), (8, 6.5)], closed=True, r=0.3)
+    else:
+        p.line([(13, 2), (4, 14), (11, 14), (10, 22), (20, 10), (13, 10)], closed=True, r=0.5)
+
+
+def plug(p):
+    if p.s == 16:
+        p.line([(5.5, 1.5), (5.5, 5.5)], r=0)
+        p.line([(9.5, 1.5), (9.5, 5.5)], r=0)
+        p.line([(3.5, 5.5), (11.5, 5.5), (11.5, 8), (9, 10.5), (6, 10.5), (3.5, 8)], closed=True, r=1.0)
+        p.line([(7.5, 10.5), (7.5, 14.5)], r=0)
+    else:
+        p.line([(9, 2), (9, 8)], r=0)
+        p.line([(15, 2), (15, 8)], r=0)
+        p.line([(5, 8), (19, 8), (19, 12), (15, 16), (9, 16), (5, 12)], closed=True, r=1.4)
+        p.line([(12, 16), (12, 22)], r=0)
+
+
+def pause(p):
+    if p.s == 16:
+        p.rect(2.5, 1.5, 5.5, 13.5, r=0.7)
+        p.rect(9.5, 1.5, 12.5, 13.5, r=0.7)
+    else:
+        p.rect(5, 3, 10, 21, r=1.1)
+        p.rect(14, 3, 19, 21, r=1.1)
+
+
+def cylinder_turn(p):
+    """Database met een oranje draaipijl, zoals Automatische back-up in Open Planner Studio."""
+    cx, cy, rx, ry, side, low = (6.5, 3.5, 5, 2, 6, 11.5) if p.s == 16 else (10, 5, 8, 3, 9, 18)
+    ellipse = [(cx + rx * math.cos(math.radians(a)), cy + ry * math.sin(math.radians(a))) for a in range(0, 360, 15)]
+    p.line(ellipse, closed=True, r=0)
+    p.line([(cx - rx, cy), (cx - rx, low)] + [(cx + rx * math.cos(math.radians(a)), low + ry * math.sin(math.radians(a)))
+                                              for a in range(165, 84, -15)], r=0)
+    p.line([(cx + rx, cy), (cx + rx, side)], r=0)
+    if p.s == 16:
+        turn_arrow(p, 11.5, 11.5, 3, -70, 195, True, (1.9, 2.5))
+    else:
+        turn_arrow(p, 17.25, 17.25, 4.75, -70, 195, True, (2.8, 3.7))
+
+
+def lens(p):
+    cx, w, h = (7.5, 6.5, 4.5) if p.s == 16 else (12, 10.5, 7)
+    top = [(cx + w * t / 10, cx - h * (1 - (t / 10) ** 2)) for t in range(-10, 11)]
+    p.line(top + [(x, 2 * cx - y) for x, y in reversed(top[1:-1])], closed=True, r=0)
+    return cx
+
+
+def eye(p):
+    cx = lens(p)
+    p.circle(cx, cx, 2 if p.s == 16 else 3.25)
+
+
+def eye_off(p):
+    """Oog zonder iris met een streep erdoor: met iris loopt de streep op 16 px dicht."""
+    lens(p)
+    p.line([(2.5, 1.5), (12.5, 13.5)] if p.s == 16 else [(4, 2), (20, 22)], r=0)
+
+
+def gauge(p):
+    if p.s == 16:
+        p.arc(7.5, 9.5, 6, 135, 405)
+        p.line([(7.5, 9.5), (9.5, 7.5)], r=0)
+    else:
+        p.arc(12, 14, 9, 135, 405)
+        p.line([(12, 14), (15.5, 10.5)], r=0)
+
+
+def bars(p):
+    if p.s == 16:
+        p.line([(1.5, 1.5), (1.5, 14.5), (14.5, 14.5)], r=1.2)
+        p.line([(5.5, 11.5), (5.5, 7.5)], r=0)
+        p.line([(8.5, 11.5), (8.5, 3.5)], r=0)
+        p.line([(11.5, 11.5), (11.5, 9.5)], r=0)
+    else:
+        p.line([(3, 3), (3, 21), (21, 21)], r=1.6)
+        p.line([(8, 17), (8, 11)], r=0)
+        p.line([(13, 17), (13, 5)], r=0)
+        p.line([(18, 17), (18, 14)], r=0)
+
+
+def pulse(p):
+    if p.s == 16:
+        p.line([(1.5, 7.5), (4.5, 7.5), (6.5, 13.5), (9.5, 2.5), (11.5, 7.5), (14.5, 7.5)], r=0.3)
+    else:
+        p.line([(2, 12), (6, 12), (9, 21), (15, 3), (18, 12), (22, 12)], r=0.5)
+
+
+def terminal(p):
+    if p.s == 16:
+        p.line([(2.5, 3.5), (6.5, 7.5), (2.5, 11.5)], r=0.4)
+        p.line([(7.5, 12.5), (13.5, 12.5)], r=0)
+    else:
+        p.line([(4, 6), (10, 12), (4, 18)], r=0.6)
+        p.line([(12, 19), (20, 19)], r=0)
+
+
+def puzzle(p):
+    if p.s == 16:
+        p.line([(1.5, 5.5), (5.5, 5.5), (5.5, 2.5), (9.5, 2.5), (9.5, 5.5), (12.5, 5.5), (12.5, 7.5), (14.5, 7.5),
+                (14.5, 11.5), (12.5, 11.5), (12.5, 14.5), (1.5, 14.5)], closed=True, r=0.8)
+    else:
+        p.line([(2, 8), (8, 8), (8, 3), (14, 3), (14, 8), (19, 8), (19, 11), (22, 11), (22, 17), (19, 17), (19, 22),
+                (2, 22)], closed=True, r=1.1)
+
+
+def gear(p):
+    cx, outer, inner, hole = (8, 6.75, 4.4, 2) if p.s == 16 else (12, 10, 7, 3)
+    pts = []
+    for i in range(6):
+        for da, radius in ((-23, inner), (-13, outer), (13, outer), (23, inner)):
+            a = math.radians(i * 60 + da)
+            pts.append((cx + radius * math.cos(a), cx + radius * math.sin(a)))
+    p.line(pts, closed=True, r=0.3 if p.s == 16 else 0.5)
+    p.circle(cx, cx, hole)
+
+
+def keyboard(p):
+    if p.s == 16:
+        p.rect(1.5, 3.5, 14.5, 12.5, r=1.4)
+        for x in (4.5, 8, 11.5):
+            p.circle(x, 6.5, 0.8, filled=True)
+        p.line([(5.5, 9.5), (10.5, 9.5)], r=0)
+    else:
+        p.rect(2, 4, 22, 20, r=2)
+        for x in (6, 10, 14, 18):
+            p.circle(x, 8, 1, filled=True)
+        for x in (8, 12, 16):
+            p.circle(x, 11.5, 1, filled=True)
+        p.line([(8, 16), (16, 16)], r=0)
+
+
+def grad_cap(p):
+    if p.s == 16:
+        p.line([(7.5, 2.5), (14.5, 6), (7.5, 9.5), (0.5, 6)], closed=True, r=0.5)
+        p.line([(3.5, 8.5), (3.5, 11.5), (7.5, 13.5), (11.5, 11.5), (11.5, 8.5)], r=0.8)
+        p.line([(14.5, 6), (14.5, 10.5)], r=0)
+    else:
+        p.line([(12, 4), (22, 9), (12, 14), (2, 9)], closed=True, r=0.7)
+        p.line([(6, 13), (6, 17), (12, 20), (18, 17), (18, 13)], r=1.1)
+        p.line([(22, 9), (22, 15)], r=0)
+
+
+def users(p):
+    if p.s == 16:
+        p.circle(5.5, 4.5, 2.5)
+        p.line([(1.5, 13.5), (1.5, 11.5), (3.5, 9.5), (7.5, 9.5), (9.5, 11.5), (9.5, 13.5)], r=1.6)
+        p.arc(10.5, 4.5, 2.5, -70, 70)
+        p.line([(12.5, 9.5), (14.5, 11.5), (14.5, 13.5)], r=1.2)
+    else:
+        p.circle(9, 7, 3.75)
+        p.line([(3, 21), (3, 18), (6, 15), (12, 15), (15, 18), (15, 21)], r=2.4)
+        p.arc(16, 7, 3.75, -70, 70)
+        p.line([(19, 15), (22, 18), (22, 21)], r=1.8)
+
+
+def user_add(p):
+    if p.s == 16:
+        p.circle(5.5, 4.5, 2.5)
+        p.line([(1.5, 13.5), (1.5, 11.5), (3.5, 9.5), (7.5, 9.5), (9.5, 11.5), (9.5, 13.5)], r=1.6)
+        p.line([(12.5, 3.5), (12.5, 7.5)], True, r=0)
+        p.line([(10.5, 5.5), (14.5, 5.5)], True, r=0)
+    else:
+        p.circle(9, 7, 3.75)
+        p.line([(3, 21), (3, 18), (6, 15), (12, 15), (15, 18), (15, 21)], r=2.4)
+        p.line([(19.5, 5), (19.5, 11)], True, r=0)
+        p.line([(16.5, 8), (22.5, 8)], True, r=0)
+
+
+def hard_hat(p):
+    """Bouwhelm: koepel met een kam en een brede rand, zoals HardHat in Open Planner Studio."""
+    low, top, side, ridge, band, brim, r = (10.5, 2.5, 2.5, 5.5, 7.5, (1.5, 13.5, 13.5), 4) if p.s == 16 else (15, 4, 4, 10, 10, (2, 22, 19), 6)
+    right = (p.s - 1 if p.s == 16 else p.s)
+    p.rect(brim[0], low, brim[1], brim[2], r=0.8 if p.s == 16 else 1.2)
+    p.line([(ridge, band), (ridge, top), (right - ridge, top), (right - ridge, band)], r=0.7 if p.s == 16 else 1)
+    cy = low - 2 if p.s == 16 else low - 3
+    p.line([(side, low)] + [(side + r + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a)))
+                            for a in range(180, 256, 15)], r=0)
+    p.line([(right - side - r + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a)))
+            for a in range(-75, 1, 15)] + [(right - side, low)], r=0)
+
+
+def truck(p):
+    if p.s == 16:
+        p.line([(2.5, 11.5), (1.5, 11.5), (1.5, 3.5), (9.5, 3.5), (9.5, 11.5), (6.5, 11.5)], r=1.0)
+        p.line([(9.5, 6.5), (12.5, 6.5), (14.5, 8.5), (14.5, 11.5), (13.5, 11.5)], r=0.8)
+        p.circle(4.5, 12.5, 1.5)
+        p.circle(11.5, 12.5, 1.5)
+    else:
+        p.line([(4, 17), (2, 17), (2, 5), (14, 5), (14, 17), (10, 17)], r=1.4)
+        p.line([(14, 9), (18.5, 9), (22, 12.5), (22, 17), (20.5, 17)], r=1.1)
+        p.circle(7, 18, 2.75)
+        p.circle(17.5, 18, 2.75)
+
+
+def wrench(p):
+    """Steeksleutel als gesloten omtrek met een open bek, zoals Wrench in Open Planner Studio."""
+    k = 2 / 3 if p.s == 16 else 1
+    cx, cy, r = 15.5 * k, 8 * k, 6.5 * k
+    round_part = lambda a, b, step: [(cx + r * math.cos(math.radians(x)), cy + r * math.sin(math.radians(x)))
+                                     for x in range(a, b + 1, step)]
+    p.line([(15 * k, 6 * k), (17.5 * k, 8.5 * k)] + round_part(-26, 111, 15)
+           + [(6 * k, 21 * k), (3 * k, 18 * k)] + round_part(152, 299, 15), closed=True, r=0.4 if p.s == 16 else 0.6)
+
+
+def route(p):
+    if p.s == 16:
+        p.circle(3.5, 12.5, 2)
+        p.circle(12.5, 3.5, 2)
+        p.line([(5.5, 12.5), (11.5, 12.5), (11.5, 7.5), (4.5, 7.5), (4.5, 3.5), (10.5, 3.5)], r=1.9)
+    else:
+        p.circle(5, 19, 2.75)
+        p.circle(19, 5, 2.75)
+        p.line([(7.75, 19), (17, 19), (17, 12), (7, 12), (7, 5), (16.25, 5)], r=3)
+
+
+def signpost(p):
+    if p.s == 16:
+        p.line([(7.5, 1.5), (7.5, 3.5)], r=0)
+        p.line([(2.5, 3.5), (11.5, 3.5), (14, 6), (11.5, 8.5), (2.5, 8.5)], closed=True, r=0.6)
+        p.line([(7.5, 8.5), (7.5, 14.5)], r=0)
+    else:
+        p.line([(12, 2), (12, 5)], r=0)
+        p.line([(4, 5), (17, 5), (21, 9), (17, 13), (4, 13)], closed=True, r=0.8)
+        p.line([(12, 13), (12, 22)], r=0)
+
+
+def diamond(p):
+    if p.s == 16:
+        p.line([(7.5, 1.5), (13.5, 7.5), (7.5, 13.5), (1.5, 7.5)], closed=True, r=0.8)
+    else:
+        p.line([(12, 2), (22, 12), (12, 22), (2, 12)], closed=True, r=1.1)
+
+
+def calendar_range(p):
+    calendar_manage(p)
+    if p.s == 16:
+        p.line([(4.5, 10.5), (11.5, 10.5)], True, r=0)
+    else:
+        p.line([(7, 15.5), (17, 15.5)], True, r=0)
+
+
+def balance(p):
+    if p.s == 16:
+        p.line([(7.5, 3.5), (7.5, 13.5)], r=0)
+        p.line([(4.5, 13.5), (10.5, 13.5)], r=0)
+        p.line([(2.5, 3.5), (12.5, 3.5)], r=0)
+        p.line([(2.5, 3.5), (4.5, 10.5), (1, 10.5)], closed=True, r=0.4)
+        p.line([(12.5, 3.5), (14, 10.5), (10.5, 10.5)], closed=True, r=0.4)
+    else:
+        p.line([(12, 3), (12, 21)], r=0)
+        p.line([(7, 21), (17, 21)], r=0)
+        p.line([(4, 5), (20, 5)], r=0)
+        p.line([(5, 5), (8.5, 13), (1.5, 13)], closed=True, r=0.6)
+        p.line([(19, 5), (22.5, 13), (15.5, 13)], closed=True, r=0.6)
+
+
+def eraser(p):
+    if p.s == 16:
+        p.line([(9.5, 2.5), (14.5, 7.5), (8.5, 13.5), (4.5, 13.5), (1.5, 10.5)], closed=True, r=0.6)
+        p.line([(5.5, 6.5), (10.5, 11.5)], r=0)
+        p.line([(8.5, 13.5), (14.5, 13.5)], r=0)
+    else:
+        p.line([(14, 3), (22, 11), (13, 20), (7, 20), (2, 15)], closed=True, r=0.8)
+        p.line([(8, 9), (16, 17)], r=0)
+        p.line([(13, 20), (22, 20)], r=0)
+
+
+VORMEN = [
+    (plus, 'Plus, zoals deze knoppen in Open Planner Studio. Eén teken, dus geen oranje; ook op 10 tot 12 px leesbaar.',
+     ['task.add', 'resource.new', 'calendar.new', 'calendar.holiday-add', 'calendar.work-band-add', 'calendar.promote-menu',
+      'company.new', 'documents.new-or-open', 'layout.manage', 'planning.code-type-add', 'planning.code-value-add',
+      'planning.custom-field-add', 'planning.dependency-add', 'planning.interruption-add', 'planning.profile-new',
+      'resource.availability-step-add', 'table.column-add-menu', 'task.note-add']),
+    (cross, 'Kruis, zoals sluiten in Open Planner Studio.', ['ui.close', 'document.close', 'window.close', 'list.item-remove']),
+    (minus, 'Min, zoals in Open Planner Studio.', ['table.column-hide', 'window.minimize']),
+    (check, 'Vinkje, zoals in Open Planner Studio.', ['input.confirm-draft', 'selection.mark', 'status.column-present']),
+    (chevron_right, 'Punthaak naar rechts, zoals in Open Planner Studio.', ['tree.expand', 'resource.next', 'tabs.scroll-end']),
+    (chevron_left, 'Punthaak naar links, zoals in Open Planner Studio.', ['resource.previous', 'tabs.scroll-start']),
+    (chevron_down, 'Punthaak omlaag, zoals in Open Planner Studio.', ['tree.collapse', 'input.time-decrease', 'guide.compact']),
+    (chevron_up, 'Punthaak omhoog, zoals in Open Planner Studio.', ['input.time-increase', 'guide.expand']),
+    (dropdown, 'Kleine punthaak omlaag aan de rand van een keuzeveld, zoals in Open Planner Studio.', ['ui.dropdown']),
+    (chevrons_in, 'Twee punthaken naar elkaar toe, zoals Alles inklappen in Open Planner Studio.', ['tree.collapse-scope']),
+    (chevrons_out, 'Twee punthaken van elkaar af, zoals Alles uitklappen in Open Planner Studio.', ['tree.expand-scope']),
+    (arrow_left, 'Pijl naar links, zoals Terug in Open Planner Studio. Een pijl is één ding, dus geen oranje.', ['nav.back']),
+    (arrow_right, 'Pijl naar rechts, zoals in Open Planner Studio.', ['status.library-suggestion']),
+    (arrow_up, 'Pijl omhoog, zoals in Open Planner Studio.', ['status.install-size-larger']),
+    (arrow_down, 'Pijl omlaag, zoals in Open Planner Studio.', ['status.install-size-smaller']),
+    (arrow_diagonal, 'Schuine pijl, zoals het pijlgereedschap in Open Planner Studio.', ['draw.arrow']),
+    (arrows_sort, 'Twee pijlen tegen elkaar in, zoals Sorteren in Open Planner Studio.', ['list.sort-fields']),
+    (arrow_from_line, 'Lijn met een oranje pijl omhoog, zoals In bibliotheek opnemen in Open Planner Studio.', ['calendar.promote']),
+    (undo, 'Teruggebogen pijl, zoals Ongedaan maken in Open Planner Studio. Eén lijn, dus geen oranje.', ['edit.undo']),
+    (redo, 'Gespiegelde pijl van Ongedaan maken, zoals in Open Planner Studio.', ['edit.redo']),
+    (check_updates, 'Twee draaipijlen, zoals Vernieuwen in Open Planner Studio.', ['ui.refresh', 'status.busy', 'credential.regenerate']),
+    (turn_back, 'Draaipijl tegen de klok in, zoals Terugzetten in Open Planner Studio.', ['backup.recover', 'table.columns-reset']),
+    (page_new, 'Blad met een oranje plus, zoals Nieuw project in Open Planner Studio.', ['file.new']),
+    (page_lines, 'Blad met regels: een projectbestand. Een aanduiding, dus geen oranje.', ['file.type-project']),
+    (page_letter, 'Blad met de letter T, zoals FileType in Open Planner Studio: een ander bestand. Een aanduiding, dus geen oranje.', ['file.type-other']),
+    (page_zip, 'Blad met rits, zoals Installeren uit ZIP in Open Planner Studio.', ['extension.install-zip']),
+    (page_code, 'Blad met punthaken, zoals Installeren uit JS in Open Planner Studio.', ['extension.install-js']),
+    (floppy, 'Diskette, zoals Opslaan in Open Planner Studio.', ['file.save', 'backup.create']),
+    (floppy_copy, 'Diskette met in oranje de hoek van een tweede exemplaar, zoals Opslaan als in Open Planner Studio.', ['file.save-as']),
+    (folder_open, 'Open map, zoals Openen in Open Planner Studio.', ['file.open', 'backup.folder']),
+    (hard_drive, 'Harde schijf, zoals Van deze pc in Open Planner Studio.', ['file.local', 'extension.runtime-desktop']),
+    (printer, 'Printer, zoals Afdrukvoorbeeld in Open Planner Studio.', ['report.workspace', 'report.print-entry']),
+    (tray_arrow_up, 'Bakje met een oranje pijl omhoog. Gedeeld met tien programma\'s: exporteren gaat omhoog en het programma uit. '
+                    'Open Planner Studio had hier de pijl omlaag (Download).', ['file.export', 'file.export-options']),
+    (software_install, 'Bakje met een oranje pijl omlaag. Gedeeld met negen programma\'s: importeren gaat het programma in. '
+                       'Open Planner Studio had hier de pijl omhoog (Upload).', ['file.import']),
+    (software_install, 'Bakje met een oranje pijl omlaag, zoals Update downloaden in Open Planner Studio.', ['status.update-available']),
+    (book_open, 'Open boek, zoals Voorbeelden in Open Planner Studio.', ['file.examples']),
+    (building, 'Gebouw, zoals Bedrijfsbibliotheek in Open Planner Studio.', ['company.library']),
+    (books, 'Boeken op een plank, zoals Uit bibliotheek in Open Planner Studio.', ['status.library-linked']),
+    (copy_sheets, 'Twee vellen, zoals Kopiëren in Open Planner Studio.', ['edit.copy', 'calendar.duplicate', 'calendar.copy-workdays', 'window.restore']),
+    (trash, 'Prullenbak, zoals Verwijderen in Open Planner Studio.', ['edit.delete', 'activity.clear', 'capture.clear-annotations', 'planning.interruption-remove']),
+    (pencil, 'Potlood, zoals Bewerken in Open Planner Studio.', ['object.rename', 'calendar.edit', 'capture.annotate']),
+    (pen_body, 'Pen, zoals het tekengereedschap in Open Planner Studio.', ['draw.freehand']),
+    (letter_t, 'Letter T: de letter is hier de betekenis, zoals het tekstgereedschap in Open Planner Studio. Eén ding, dus geen oranje.', ['draw.text']),
+    (rectangle, 'Rechthoek, zoals het rechthoekgereedschap in Open Planner Studio.', ['draw.rectangle']),
+    (square, 'Vierkant, zoals Maximaliseren in Open Planner Studio.', ['window.maximize']),
+    (stop_square, 'Vierkant, zoals Stoppen in Open Planner Studio.', ['ai.bridge-stop']),
+    (corners, 'Vier hoeken: alles past in het kader. Open Planner Studio had hier dezelfde pijlen als Presentatiemodus; '
+              'de hoeken geven een eigen vorm in de groep.', ['view.fit']),
+    (arrows_out, 'Twee schuine pijlen naar buiten, zoals in Open Planner Studio.', ['view.fullscreen', 'panel.expand-full']),
+    (arrows_in, 'Twee schuine pijlen naar binnen, zoals in Open Planner Studio.', ['view.fullscreen-exit']),
+    (panel_right, 'Vlak met een paneel rechts, zoals in Open Planner Studio.', ['panel.right', 'resource.dock']),
+    (split_view, 'Vlak in twee helften, zoals Twee tijdschalen in Open Planner Studio.', ['view.gantt-split']),
+    (folded_map, 'Gevouwen kaart, zoals Planningsoverzicht in Open Planner Studio.', ['view.minimap']),
+    (grid_four, 'Vier vlakken, zoals Alle projecten in Open Planner Studio.', ['documents.overview']),
+    (columns, 'Vlak met drie kolommen, zoals Kolommen in Open Planner Studio.', ['table.columns']),
+    (gantt_bars, 'Drie verspringende balken, de vorm uit de Gantt-indeling van Open Planner Studio, zonder het kader: '
+                 'met kader leek het op de algemene indeling en de kalender ernaast.', ['planning.gantt']),
+    (wbs_templates, 'Indelingsvlak met drie vakken, zoals de algemene indeling in Open Planner Studio.', ['layout.identity']),
+    (list_tree, 'Lijst met boomlijnen, zoals in Open Planner Studio.', ['layout.task-tree', 'status.structure-locked']),
+    (layers, 'Lagen, zoals Groeperen in Open Planner Studio.', ['list.group-by']),
+    (funnel, 'Trechter, zoals Filter in Open Planner Studio.', ['list.filter', 'layout.filter']),
+    (ring_dot, 'Ring met een punt: aan. Kleur is niet het enige verschil met Bridge uit.', ['status.bridge-live', 'status.recorded-dates']),
+    (ring, 'Open ring: uit. Kleur is niet het enige verschil met Bridge actief.', ['status.bridge-off']),
+    (status_success, 'Cirkel met vinkje, zoals in Open Planner Studio.', ['status.success']),
+    (status_alert, 'Cirkel met uitroepteken, zoals in Open Planner Studio.', ['status.library-item-missing', 'status.library-item-deviated']),
+    (status_error, 'Achthoek met uitroepteken, zoals fouten in het waarschuwingenpaneel van Open Planner Studio.', ['status.error']),
+    (warnings, 'Waarschuwingsdriehoek, zoals in Open Planner Studio.', ['status.warning', 'status.schedule-preview', 'status.schedule-last-result', 'status.resource-overallocated']),
+    (status_info, 'Cirkel met de letter i, zoals in Open Planner Studio.', ['status.info', 'help.context-hint', 'project.properties']),
+    (question, 'Cirkel met vraagteken, zoals Hulp in Open Planner Studio.', ['ui.help', 'planning.driving-unknown']),
+    (history, 'Klok, zoals Recent in het lint van Open Planner Studio.', ['project.recent']),
+    (compass, 'Kompas, zoals Rondleiding in Open Planner Studio.', ['ui.tour']),
+    (star, 'Ster, zoals in Open Planner Studio.', ['company.default', 'company.default-status', 'status.project-calendar', 'layout.star']),
+    (lock, 'Slot, zoals in Open Planner Studio.', ['ai.read-only-toggle', 'status.assignment-protected']),
+    (lock_open, 'Open slot, zoals in Open Planner Studio.', ['ai.read-only-off']),
+    (arrows_both_ways, 'Twee pijlen, zoals Verschuivingen in Open Planner Studio. Eén ding, dus geen oranje.', ['panel.schedule-shift']),
+    (link_chain, 'Schakel met een middenlijn, zoals Koppelen in Open Planner Studio.', ['planning.external-relation', 'library.link-recognized']),
+    (unlink_chain, 'Schakel zonder middenlijn, zoals Losmaken in Open Planner Studio.', ['resource.unlink-library']),
+    (relations_menu, 'Dezelfde schakel als Relatie: in deze stand teken je relaties.', ['planning.dependency-draw-mode']),
+    (zap, 'Bliksem, zoals Bepalende relatie in Open Planner Studio.', ['planning.driving']),
+    (plug, 'Stekker, zoals Verbinding in Open Planner Studio.', ['ai.connection-menu', 'ai.connection-details']),
+    (pause, 'Twee strepen, zoals Pauzeren in Open Planner Studio.', ['ai.pause', 'log.pause-view']),
+    (play, 'Afspeelpijl, zoals Starten en Hervatten in Open Planner Studio.', ['ai.resume', 'ai.bridge-start', 'log.resume-view', 'diagnostics.run-benchmark']),
+    (cylinder_turn, 'Database met een oranje draaipijl, zoals Automatische back-up in Open Planner Studio.', ['backup.auto']),
+    (eye, 'Oog, zoals in Open Planner Studio.', ['credential.show', 'panel.properties']),
+    (eye_off, 'Doorgestreept oog, zoals in Open Planner Studio.', ['credential.hide', 'panel.properties-hidden', 'capture.mask']),
+    (gauge, 'Meter, zoals Prestatiemeting in Open Planner Studio.', ['diagnostics.benchmark']),
+    (bars, 'Assen met drie balken, zoals in Open Planner Studio.', ['data.chart', 'stats.downloads', 'assignment.hours-distribution']),
+    (pulse, 'Hartslaglijn, zoals AI-activiteit in Open Planner Studio.', ['panel.ai-activity']),
+    (terminal, 'Prompt met regel, zoals Debugterminal in Open Planner Studio.', ['panel.debug-terminal']),
+    (puzzle, 'Puzzelstuk, zoals Extensies in Open Planner Studio.', ['extensions.manage', 'extension.item']),
+    (globe, 'Wereldbol, zoals bij de browserrisico\'s van een extensie in Open Planner Studio.', ['extension.runtime-browser']),
+    (gear, 'Tandwiel, zoals Instellingen in Open Planner Studio.', ['ui.settings']),
+    (keyboard, 'Toetsenbord, zoals Sneltoetsen in Open Planner Studio.', ['ui.shortcuts']),
+    (grad_cap, 'Afstudeerhoed, zoals Tutorials in Open Planner Studio.', ['guide.tutorials']),
+    (users, 'Twee personen, zoals Resources in Open Planner Studio.', ['resource.workspace', 'layout.resources']),
+    (user_add, 'Persoon met een oranje plus, zoals Resource toewijzen in Open Planner Studio.', ['resource.assign']),
+    (hard_hat, 'Bouwhelm, zoals de ploegindeling in Open Planner Studio.', ['layout.crew']),
+    (truck, 'Vrachtwagen, zoals de materieelindeling in Open Planner Studio.', ['layout.equipment']),
+    (wrench, 'Moersleutel, zoals de gereedschapsindeling in Open Planner Studio.', ['layout.tools']),
+    (route, 'Route met twee punten, zoals de kritiekpadindeling in Open Planner Studio.', ['layout.critical']),
+    (signpost, 'Wegwijzer, zoals de mijlpaalindeling in Open Planner Studio.', ['layout.milestone']),
+    (diamond, 'Ruit: de vorm van een mijlpaal op de Gantt, zoals in Open Planner Studio.', ['task.milestone-menu']),
+    (progress_menu, 'Vlag, zoals de vlagindeling in Open Planner Studio.', ['layout.flag']),
+    (calendar_range, 'Kalender met een oranje periode, zoals de periode-indeling in Open Planner Studio.', ['layout.period']),
+    (balance, 'Weegschaal, zoals Vereffenen in Open Planner Studio.', ['resource.level']),
+    (eraser, 'Gum, zoals Vereffening wissen in Open Planner Studio.', ['resource.clear-level']),
+    (magnifier, 'Vergrootglas zonder teken, dezelfde lens als de zoomknoppen, zoals Zoeken in Open Planner Studio.', ['view.search']),
+]
+
+for tekening, reden, ids in VORMEN:
+    for key in ids:
+        design(key, reden)(tekening)
 
 
 def revised_construction(c):

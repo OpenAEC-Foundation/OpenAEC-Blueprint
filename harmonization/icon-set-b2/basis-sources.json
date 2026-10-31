@@ -242,5 +242,197 @@
         "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/a58d53482f6eef57e6c279fbf053e6fdc39dcae8/src/components/layout/Ribbon/ribbonConfig.tsx#L369"
       }
     ]
+  },
+  "panel.properties": {
+    "description": "De lintknop Eigenschappen toont of verbergt het eigenschappenpaneel; zichtbaar toont het oog.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 719,
+        "description": "De lintknop Eigenschappen toont of verbergt het eigenschappenpaneel; zichtbaar toont het oog.",
+        "sha256": "e95f9c943267f3796b76d66b919071aa041f2999d5162ed9362a6a33f485d64b",
+        "git_blob": "68ab0248af6a02a8b6c4c9aa082c272beb73ce47",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/layout/Ribbon/ribbonConfig.tsx#L719"
+      }
+    ]
+  },
+  "panel.properties-hidden": {
+    "description": "De lintknop Eigenschappen toont het doorgestreepte oog als het eigenschappenpaneel verborgen is.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 745,
+        "description": "De lintknop Eigenschappen toont het doorgestreepte oog als het eigenschappenpaneel verborgen is.",
+        "sha256": "e95f9c943267f3796b76d66b919071aa041f2999d5162ed9362a6a33f485d64b",
+        "git_blob": "68ab0248af6a02a8b6c4c9aa082c272beb73ce47",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/layout/Ribbon/ribbonConfig.tsx#L745"
+      }
+    ]
+  },
+  "panel.expand-full": {
+    "description": "De knop in de kop van het compacte resourcepaneel opent de volledige resourceweergave.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/layout/RightRail/RightRail.tsx",
+        "line": 252,
+        "description": "De knop in de kop van het compacte resourcepaneel opent de volledige resourceweergave.",
+        "sha256": "715c0dd94d4832aabbae7187b876b6e924c64c248ca00e7847a0f2c420faa644",
+        "git_blob": "659c0cdb79cbc562a217d249d64d95c17e811c21",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/layout/RightRail/RightRail.tsx#L252"
+      }
+    ]
+  },
+  "capture.mask": {
+    "description": "Het maskeergereedschap in de schermafbeelding dekt een gebied af.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/dialogs/ScreenshotAnnotator.tsx",
+        "line": 502,
+        "description": "Het maskeergereedschap in de schermafbeelding dekt een gebied af.",
+        "sha256": "22c72ddb53a619ee3c4b0631160110e33f1304463e4f1ecea0c3c67381771eb9",
+        "git_blob": "4fac2bf5dea2fc0a8c481eb459d6d7a930ca5529",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/dialogs/ScreenshotAnnotator.tsx#L502"
+      }
+    ]
+  },
+  "ai.read-only-off": {
+    "description": "De knop Alleen lezen toont het open slot als de AI mag schrijven.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/ribbon/ai/AiSafetyGroup.tsx",
+        "line": 103,
+        "description": "De knop Alleen lezen toont het open slot als de AI mag schrijven.",
+        "sha256": "7efdf0d44488e35c72121346177f4176591c5e1aa10f7a1c1738e83f638eebee",
+        "git_blob": "1b687e32804fb8a487987d095c2dbca14158fc15",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/ribbon/ai/AiSafetyGroup.tsx#L103"
+      }
+    ]
+  },
+  "planning.driving-unknown": {
+    "description": "Bij een interne relatie zonder drijvende waarde staat een vraagteken: niet bekend of de relatie bepalend is.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/task-grid/RelationCellEditor.tsx",
+        "line": 181,
+        "description": "Bij een interne relatie zonder drijvende waarde staat een vraagteken: niet bekend of de relatie bepalend is.",
+        "sha256": "51c6c5ad9e567ed9349d16156ace4f73e2db74634828ac7636cdd00fe131efab",
+        "git_blob": "25f2b6804134f19f024f98c21c516b25bcfde750",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/task-grid/RelationCellEditor.tsx#L181"
+      }
+    ]
+  },
+  "extension.install-zip": {
+    "description": "De knop installeert een extensie uit een ZIP-bestand.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/backstage/ExtensionManagerPanel.tsx",
+        "line": 82,
+        "description": "De knop installeert een extensie uit een ZIP-bestand.",
+        "sha256": "12a4b788d568da90fc036f92110bd6f665981309c16059a825b854e380bc6233",
+        "git_blob": "ef4fa40bcb069f2ac8c78577dee120893119fd49",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/backstage/ExtensionManagerPanel.tsx#L82"
+      }
+    ]
+  },
+  "extension.install-js": {
+    "description": "De knop installeert een extensie uit een JS-bestand.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/backstage/ExtensionManagerPanel.tsx",
+        "line": 85,
+        "description": "De knop installeert een extensie uit een JS-bestand.",
+        "sha256": "12a4b788d568da90fc036f92110bd6f665981309c16059a825b854e380bc6233",
+        "git_blob": "ef4fa40bcb069f2ac8c78577dee120893119fd49",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/backstage/ExtensionManagerPanel.tsx#L85"
+      }
+    ]
+  },
+  "guide.expand": {
+    "description": "De knop zet het begeleidingspaneel van compact naar uitgebreid.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/guide/GuidePanel.tsx",
+        "line": 281,
+        "description": "De knop zet het begeleidingspaneel van compact naar uitgebreid.",
+        "sha256": "0aa707470fff11344009bb4f536926102e5cf534e89ff31e3a2e80f1d4c2a5a4",
+        "git_blob": "31ed1c23292f53948b0209f1b9ab1ff0bb1d480c",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/guide/GuidePanel.tsx#L281"
+      }
+    ]
+  },
+  "task.note-add": {
+    "description": "De knop voegt een notitie aan de taak toe.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/task-sections/TaskNotesFields.tsx",
+        "line": 117,
+        "description": "De knop voegt een notitie aan de taak toe.",
+        "sha256": "07d5d745ba4ba6eea41454af4d944e730d22f09a7f67855f363c0274b2f6d63b",
+        "git_blob": "9e317fc1054748cc7baaf5bca305c6fa5f357cb5",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/task-sections/TaskNotesFields.tsx#L117"
+      }
+    ]
+  },
+  "list.item-remove": {
+    "description": "Het kruisje haalt één groeperings- of sorteerregel uit de lijst.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "672af416500167e2836cc0a8b938b4a3c353e74a",
+        "path": "src/components/viewControls/LevelListEditor.tsx",
+        "line": 52,
+        "description": "Het kruisje haalt één groeperings- of sorteerregel uit de lijst.",
+        "sha256": "21509a20ba8d279f2b126205bc4750a99a7d2a025bdbbad590feb1479533ab98",
+        "git_blob": "ffe6f920031f43bac84ab81ae0c864fb9cf61a79",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/viewControls/LevelListEditor.tsx#L52"
+      }
+    ]
+  },
+  "panel.schedule-shift": {
+    "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "2f6bc4d8220a255d1f7a493b9e39141ac2caa821",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 426,
+        "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+        "sha256": "4c6081e057bb9f41d0b498bcdd1fb713e44bd98ef863814b5c972a3f9c2ba095",
+        "git_blob": "21e351f7b0f5aee1f47ebe04f84650780d15c837",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/2f6bc4d8220a255d1f7a493b9e39141ac2caa821/src/components/layout/Ribbon/ribbonConfig.tsx#L426"
+      }
+    ]
   }
 }
