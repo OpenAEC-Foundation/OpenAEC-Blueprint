@@ -210,10 +210,10 @@ De stappen staan in de skill [`.claude/skills/iconen-ontwerpen/SKILL.md`](../.cl
 
 De grenzen zijn op 29 oktober 2026 gekozen met de oude en nieuwe tekeningen naast elkaar:
 
-- Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee knoppen die geen familie zijn 0,45. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
-- Dichtste plek: in de nieuwe tekeningen hoogstens 0,60. Het oude resourcedock haalt 0,70.
+- Gelijkenis: in de nieuwe groepen is de hoogste waarde tussen twee knoppen die geen familie zijn 0,55. In de oude, foute groepen is de hoogste waarde per groep 0,70 (paneelkaders), 0,83 (assenkader) en 0,86 (Voorgangers en Opvolgers).
+- Dichtste plek: in de nieuwe tekeningen hoogstens 0,62. Het oude resourcedock haalt 0,70.
 - Familie: het kleinste vormverschil is 4,5 px², tussen Zoom + en Zoom −. Een kopie die verschoven is, op 96 tot 103 % getekend, of aan één uiteinde 0,5 px langer, ook alles tegelijk, meet hoogstens 2,9 px². Een kopie waarin alleen het kleinste losse deel tot 1 px verschoven is, meet 0 px².
-- Eén kleur per lijn: in de 40 iconen die volgens deze richtlijn getekend zijn, liggen hoofdkleur en accent nu minstens 1,0 px uit elkaar. Bij een half oranje pijl is de afstand 0. In de rest van de set raken ze elkaar bij 189 van de 910 iconen; dat is nog geen fout en de check noemt dat aantal met `--alle`. Die iconen komen aan de beurt als ze per tab herzien worden.
+- Eén kleur per lijn: in de 218 iconen die volgens deze richtlijn getekend zijn, liggen hoofdkleur en accent nu minstens 1,0 px uit elkaar. Bij een half oranje pijl is de afstand 0. In de rest van de set raken ze elkaar bij 159 van de 743 iconen; dat is nog geen fout en de check noemt dat aantal met `--alle`. Die iconen komen aan de beurt als ze per tab herzien worden.
 
 De check op één kleur ziet alleen of twee kleuren elkaar raken. Hij ziet niet of twee losse delen op het oog één lijn vormen. Zo is de lijn van *Statusdatumlijn* donker en het merkteken erboven oranje; daar zit 1,4 px ruimte tussen, en het zijn twee dingen. Dat onderscheid blijft aan het oog.
 

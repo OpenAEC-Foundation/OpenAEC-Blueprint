@@ -631,7 +631,7 @@ def check_updates(p):
             turn_arrow(p, 7.5, 7.5, 5.5, start, end, False, (2.5, 3.2))
     else:
         for start, end in ((200, 315), (20, 135)):
-            turn_arrow(p, 12, 12, 7.75, start, end, False, (3.4, 4.6))
+            turn_arrow(p, 12, 12, 8.5, start, end, False, (3.4, 4.6))
 
 
 @design('view.web-reload', 'Eén cirkelpijl met de punt bovenaan, zoals de herlaadknop in een browser. Geen venster eromheen en '
@@ -849,9 +849,9 @@ def redo(p):
 def turn_back(p):
     """Draaipijl tegen de klok in, zoals Terugzetten en Herstellen in Open Planner Studio."""
     if p.s == 16:
-        turn_arrow(p, 7.5, 8, 5.5, -30, 220, False, (2.7, 3.4))
+        turn_arrow(p, 7.5, 8, 5.5, 10, 285, False, (2.7, 3.4))
     else:
-        turn_arrow(p, 12, 12.5, 8, -30, 220, False, (3.8, 5))
+        turn_arrow(p, 12, 12.5, 8, 10, 285, False, (3.8, 5))
     p.c.mirror()
     for f in p.c.fills:
         f['rings'] = [[(p.s - x, y) for x, y in ring] for ring in f['rings']]
@@ -898,14 +898,16 @@ def page_letter(p):
 
 
 def page_zip(p):
-    """Blad met een rits: korte tanden om en om, zoals FileArchive in Open Planner Studio."""
+    """Blad met een rits: streepjes en een ring, zoals FileArchive in Open Planner Studio."""
     page(p)
     if p.s == 16:
-        for x, y in ((5.5, 5.5), (7.5, 8.5), (5.5, 11.5)):
-            p.line([(x, y), (x + 2, y)], r=0)
+        p.line([(7.5, 3.75), (7.5, 4.5)], r=0)
+        p.line([(7.5, 6.75), (7.5, 7.5)], r=0)
+        p.circle(7.5, 11, 1.25)
     else:
-        for x, y in ((9, 10), (12, 14), (9, 18)):
-            p.line([(x, y), (x + 3, y)], r=0)
+        p.line([(10, 6.5), (10, 7.5)], r=0)
+        p.line([(10, 11), (10, 12)], r=0)
+        p.circle(10, 18, 2.75)
 
 
 def page_code(p):
@@ -934,6 +936,7 @@ def floppy_copy(p):
     if p.s == 16:
         p.line([(1.5, 1.5), (9.5, 1.5), (11.5, 3.5), (11.5, 11.5), (1.5, 11.5)], closed=True, r=1.2)
         p.line([(3.5, 11.5), (3.5, 9), (9.5, 9), (9.5, 11.5)], r=0.3)
+        p.line([(4.5, 1.5), (4.5, 4), (7.5, 4)], r=0.3)
         p.line([(14.5, 6.5), (14.5, 14.5), (6.5, 14.5)], True, r=1.2)
     else:
         p.line([(3, 3), (14, 3), (17, 6), (17, 17), (3, 17)], closed=True, r=1.6)
@@ -1305,7 +1308,7 @@ def question(p):
 def history(p):
     """Klok, zoals Recent in Open Planner Studio. Een extra draaipijl maakte de wijzers op 16 px vaag."""
     if p.s == 16:
-        p.circle(8, 8, 6)
+        p.circle(8, 8, 6.5)
         p.line([(8, 4.5), (8, 8), (10.5, 9.5)], r=0.3)
     else:
         p.circle(12, 12, 9.5)
@@ -1352,7 +1355,7 @@ def lock_open(p):
 
 def link_chain(p, middle=True):
     """Twee ronde schakels; de einden zijn halve cirkels, anders leest de vorm als twee haken."""
-    cy, r, left, right, tip = (7.5, 3, 4.5, 10.5, 6) if p.s == 16 else (12, 5, 7, 17, 10)
+    cy, r, left, right, tip = (7.5, 3, 4.5, 10.5, 6 if middle else 5.5) if p.s == 16 else (12, 5, 7, 17, 10 if middle else 8.5)
     bend = lambda cx, angles: [(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in angles]
     p.line([(tip, cy - r)] + bend(left, range(270, 89, -15)) + [(tip, cy + r)], r=0)
     other = left + right - tip
@@ -1474,10 +1477,10 @@ def puzzle(p):
 
 
 def gear(p):
-    cx, outer, inner, hole = (8, 6.75, 4, 1.5) if p.s == 16 else (12, 10, 7, 2.75)
+    cx, outer, inner, hole = (8, 6.75, 4.4, 2) if p.s == 16 else (12, 10, 7, 3)
     pts = []
     for i in range(6):
-        for da, radius in ((-21, inner), (-12, outer), (12, outer), (21, inner)):
+        for da, radius in ((-23, inner), (-13, outer), (13, outer), (23, inner)):
             a = math.radians(i * 60 + da)
             pts.append((cx + radius * math.cos(a), cx + radius * math.sin(a)))
     p.line(pts, closed=True, r=0.3 if p.s == 16 else 0.5)
@@ -1491,10 +1494,12 @@ def keyboard(p):
             p.circle(x, 6.5, 0.8, filled=True)
         p.line([(5.5, 9.5), (10.5, 9.5)], r=0)
     else:
-        p.rect(2, 5, 22, 19, r=2)
+        p.rect(2, 4, 22, 20, r=2)
         for x in (6, 10, 14, 18):
-            p.circle(x, 9.5, 1, filled=True)
-        p.line([(8, 15), (16, 15)], r=0)
+            p.circle(x, 8, 1, filled=True)
+        for x in (8, 12, 16):
+            p.circle(x, 11.5, 1, filled=True)
+        p.line([(8, 16), (16, 16)], r=0)
 
 
 def grad_cap(p):
