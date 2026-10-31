@@ -20,7 +20,7 @@
   },
   "theme_tokens_sha256": "4d1722d96f3fcf703573544ffdc0e5c64f184d8e8b7625d5f59b93a3a18dc396",
   "generator_sha256": "b6e8b49f20a922a15e2bfd57a76b9007ac706294436777db348924a0fc453b32",
-  "geometry_generator_sha256": "92485870c19496a826d0e2248f301dd85ed12616e071234e515f52006d082209",
+  "geometry_generator_sha256": "83e943100807bb21b8a8ed7375f10fd1c035886447f848ca2ccf9b39c89239b1",
   "font_generator_sha256": "67d2fcf0b7c3df20a170271ee5bc82724f602bcd0973abcb0547ff370e5b44e5",
   "font_sources": {
     "format.bold": {
@@ -279,7 +279,7 @@
   "window_generator_sha256": "3f742e5c34f42c73f4463fed320d399df1b6bfffe95958c54a2b87ecc669eb6b",
   "extension_generator_sha256": "106767a0b97fa102b62d1c66c9d0d4cc11933ca311cae09fa79aac66e02b9c06",
   "feedback_generator_sha256": "0f2c5fb301b5cffdb7b6866de558501ce6591db4b466d1b0fb9a453aca6f5db5",
-  "guideline_generator_sha256": "07de6a0c39fad30c94f0a1c43ac7b8c1ed52e76bc6f663a1b7ba6dd5beabf77e",
+  "guideline_generator_sha256": "99481d16d0f7e4f53bcde3ab64f680b7628e390dbeb4503225a802abe1eeb7f2",
   "guideline": "docs/iconen.md",
   "warning_preview": {
     "status": "gele warning-rol uit tokens-0.4.json",
@@ -273135,11 +273135,11 @@
       "assets": {
         "16": {
           "path": "svg/16/planning.trace-predecessors.svg",
-          "sha256": "bef1450da37bf7e87f0f5512a784f96523d7af6e1c29f80b67d2a6a0addae3a4"
+          "sha256": "943a387914514d3de3f86d686cd77a2ae20a9546e299a09f8be97f25d0134fea"
         },
         "24": {
           "path": "svg/24/planning.trace-predecessors.svg",
-          "sha256": "92db228d2d0a684632118039a8f72fb207823a6ee6f27dca34a36542b7e2aa13"
+          "sha256": "29664113cc66463bf7985f7d7001d879eab01eb249a1d73fb6c6425fd244e5aa"
         }
       },
       "construction": {
@@ -273174,7 +273174,7 @@
               ],
               "closed": false,
               "radius": 0.0,
-              "tone": "primary"
+              "tone": "accent"
             },
             {
               "points": [
@@ -273231,7 +273231,7 @@
               ],
               "closed": false,
               "radius": 0.0,
-              "tone": "primary"
+              "tone": "accent"
             },
             {
               "points": [
@@ -273258,13 +273258,13 @@
           "clear_primary": false
         }
       },
-      "foreground": "accent",
-      "layer_reason": "De oranje pijlpunt ligt vóór de steel.",
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
       "paint_order": [
-        "primary",
-        "accent"
+        "accent",
+        "primary"
       ],
-      "shape_revision": "Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de pijlpunt in oranje (#48).",
+      "shape_revision": "Pijl naar een streep, zoals Voorgangers in Open Planner Studio; de hele pijl in oranje, want één doorlopende lijn heeft één kleur (Ethan, 30 oktober 2026) (#48).",
       "rounded_joint": false,
       "series": 130,
       "semantic_color": null,
@@ -273323,11 +273323,11 @@
       "assets": {
         "16": {
           "path": "svg/16/planning.trace-successors.svg",
-          "sha256": "f1b5611701c07d1cd7fdd8fc02533c7b1c461f86b076728fb8b69e8d8133ae1e"
+          "sha256": "8313048db87e6bf1104ec4e48789f0e350000c87e6bdb085c6b216123c566647"
         },
         "24": {
           "path": "svg/24/planning.trace-successors.svg",
-          "sha256": "bf8c9d393b1eda209c97ffef5dd2671ada03faecfdf9d95369048a97d10740f4"
+          "sha256": "5163d273b0d7bb8e5fa51ffd5cdc926ef68a8d94b8a8fc525717ee21651f9ca9"
         }
       },
       "construction": {
@@ -273362,7 +273362,7 @@
               ],
               "closed": false,
               "radius": 0.0,
-              "tone": "primary"
+              "tone": "accent"
             },
             {
               "points": [
@@ -273419,7 +273419,7 @@
               ],
               "closed": false,
               "radius": 0.0,
-              "tone": "primary"
+              "tone": "accent"
             },
             {
               "points": [
@@ -273446,13 +273446,13 @@
           "clear_primary": false
         }
       },
-      "foreground": "accent",
-      "layer_reason": "De oranje pijlpunt ligt vóór de steel.",
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
       "paint_order": [
-        "primary",
-        "accent"
+        "accent",
+        "primary"
       ],
-      "shape_revision": "Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio (#48).",
+      "shape_revision": "Gespiegelde pijl naar een streep, zoals Opvolgers in Open Planner Studio; de hele pijl in oranje, zoals bij Voorgangers (#48).",
       "rounded_joint": false,
       "series": 130,
       "semantic_color": null,
@@ -274563,11 +274563,11 @@
       "assets": {
         "16": {
           "path": "svg/16/planning.relations-visible.svg",
-          "sha256": "2f3fec150aa0f7dd2b5b4b1bc6312c64d1ff5c4636dfee0124cb4b4f6f23be50"
+          "sha256": "3f28c6fcd7f5b2d318dfc7dd3cb67698de78c42b08ccb8ede3f8133f144fad05"
         },
         "24": {
           "path": "svg/24/planning.relations-visible.svg",
-          "sha256": "facab7fc6c6857ea86d649eff8e22a1606b231c16719a730484737e8c1d2d5f8"
+          "sha256": "e6fdfa8fe08c7a9af818d1bfebe236e6e0a584a75fedd72bfecd37f19916bb8d"
         }
       },
       "construction": {
@@ -274614,7 +274614,7 @@
               ],
               "closed": false,
               "radius": 0.5,
-              "tone": "accent"
+              "tone": "primary"
             }
           ],
           "circles": [],
@@ -274664,7 +274664,7 @@
               ],
               "closed": false,
               "radius": 0.7,
-              "tone": "accent"
+              "tone": "primary"
             }
           ],
           "circles": [],
@@ -274672,13 +274672,13 @@
           "clear_primary": false
         }
       },
-      "foreground": "accent",
-      "layer_reason": "De oranje pijlpunt ligt vóór de lijn.",
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
       "paint_order": [
-        "primary",
-        "accent"
+        "accent",
+        "primary"
       ],
-      "shape_revision": "Afhankelijkheidspijl einde-begin zoals op de Gantt: haaks naar beneden en naar rechts, met de punt in oranje.",
+      "shape_revision": "Afhankelijkheidspijl einde-begin zoals op de Gantt: haaks naar beneden en naar rechts. Eén doorlopende lijn heeft één kleur, en het icoon is alleen dat ding, dus geen oranje.",
       "rounded_joint": false,
       "series": 130,
       "semantic_color": null,
@@ -323331,11 +323331,11 @@
       "assets": {
         "16": {
           "path": "svg/16/planning.progress-sheet-export.svg",
-          "sha256": "90547c89849e89c802a7cac6425689f945cf5c4a9eb9f7aa972eba54c1a5be92"
+          "sha256": "0d40365c0d2349c8f0ba528c3c8e4dab93447e3b9f107e0bd1f4bd597a4aaab5"
         },
         "24": {
           "path": "svg/24/planning.progress-sheet-export.svg",
-          "sha256": "24b25daab31452bc023ace24ab31cebe2b47d86416389e45596e76419b7142f4"
+          "sha256": "eb0013b800f7ece03b894cd7b48f2683b7e67baf72142a69d1fff43607c5c523"
         }
       },
       "construction": {
@@ -323516,11 +323516,11 @@
           "clear_primary": false
         }
       },
-      "foreground": "accent",
-      "layer_reason": "De oranje pijlpunt ligt vóór de steel.",
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
       "paint_order": [
-        "primary",
-        "accent"
+        "accent",
+        "primary"
       ],
       "shape_revision": "Blad met pijl omlaag, zoals Voortgangsblad exporteren in Open Planner Studio (FileDown). Eigen id: file.export is gedeeld en blijft het bakje met pijl; de ontwerpcontrole vond dat op deze knop slechter dan main (29 oktober 2026).",
       "rounded_joint": false,
@@ -323563,11 +323563,11 @@
       "assets": {
         "16": {
           "path": "svg/16/planning.progress-sheet-import.svg",
-          "sha256": "7ba6c1b54a830b95b46067f8050f0c162af6430f175c273040d017e16f08cc7e"
+          "sha256": "36ddfea95d7caad9bfbf05adc0fe358ae317ca75bc7d4946819788cf890dafb5"
         },
         "24": {
           "path": "svg/24/planning.progress-sheet-import.svg",
-          "sha256": "500ed67cd0790f3b2bbdf0471cdc07b3add46633a1382400473595e79d13db35"
+          "sha256": "daf1cd56f67a97be4ead206c04f09e2bece857a934b555cfac3c88e0c339a284"
         }
       },
       "construction": {
@@ -323748,11 +323748,11 @@
           "clear_primary": false
         }
       },
-      "foreground": "accent",
-      "layer_reason": "De oranje pijlpunt ligt vóór de steel.",
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
       "paint_order": [
-        "primary",
-        "accent"
+        "accent",
+        "primary"
       ],
       "shape_revision": "Blad met pijl omhoog, zoals Voortgang bijwerken uit een blad in Open Planner Studio (FileUp). Eigen id om dezelfde reden als planning.progress-sheet-export.",
       "rounded_joint": false,

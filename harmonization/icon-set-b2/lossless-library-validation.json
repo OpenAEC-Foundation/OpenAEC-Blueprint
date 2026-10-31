@@ -4,21 +4,21 @@
   "icons": 950,
   "assets_checked": 1900,
   "all_roundtrips_byte_identical": true,
-  "source_manifest_sha256": "8fb662c62c581defc1a04e31c689a3a8eff5cc1b7d68235f1b8eda7228036737",
-  "library_manifest_sha256": "a54ac6810b490d1a7a7d978b064e1ba62cf688562a381dc631da45017df4de3f",
-  "generator_sha256": "ef91e146986e1c81baed5f895d4001e5397d338e0c5c90192524dd7d709c85ea",
-  "checker_sha256": "ef3fc9e8cd5bfc8011bcb44fc405a3d15960c3424f7dd751832dbd0547dee221",
+  "source_manifest_sha256": "f14e8bd91c50673b34a3b06b5ff268a6cb35ebc16b4a5a274f9f6c164a6d8936",
+  "library_manifest_sha256": "5acc158e04d9f45d8e750e9ed8b59ed1a0c86b83827d51e1a1489ee70e8eeeca",
+  "generator_sha256": "c2d8dc697a373753e25211b9dac300669d7f890e45a25729b878823dda692be2",
+  "checker_sha256": "b3fdfcf73207c32c72a77ecc84c4fabcfdd9bfa8c0a78cbb267bbc93ee18fae1",
   "totals": {
     "16": {
       "files": 950,
-      "original_bytes": 27570563,
-      "compressed_bytes": 10417328,
+      "original_bytes": 27570448,
+      "compressed_bytes": 10417027,
       "reduction_percent": 62.22
     },
     "24": {
       "files": 950,
-      "original_bytes": 28045603,
-      "compressed_bytes": 10215895,
+      "original_bytes": 28045482,
+      "compressed_bytes": 10215970,
       "reduction_percent": 63.57
     }
   }
