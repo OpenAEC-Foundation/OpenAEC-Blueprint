@@ -202,9 +202,9 @@ def warnings(p):
         p.line([(7.5, 6.5), (7.5, 8.25)], r=0)
         p.circle(7.5, 10.75, 0.8, filled=True)
     else:
-        p.line([(12, 3), (22, 20.5), (2, 20.5)], closed=True, r=2)
-        p.line([(12, 9.75), (12, 13)], r=0)
-        p.circle(12, 16.5, 1.1, filled=True)
+        p.line([(12, 3), (22, 20), (2, 20)], closed=True, r=2)
+        p.line([(12, 9.5), (12, 12.5)], r=0)
+        p.circle(12, 16.25, 1.1, filled=True)
 
 
 # ---------------------------------------------------------------- groep Relaties
@@ -438,7 +438,7 @@ def clear_status_date(p):
 def progress_menu(p):
     if p.s == 16:
         p.line([(3.5, 1.5), (3.5, 14.5)], r=0)
-        p.line([(3.5, 2.5), (6, 1.75), (9, 3), (13, 2.25), (13, 9.25), (9, 10), (6, 8.75), (3.5, 9.5)], closed=False, r=1.2)
+        p.line([(3.5, 2.5), (6, 1.75), (9, 3), (13.5, 2.25), (13.5, 9.25), (9, 10), (6, 8.75), (3.5, 9.5)], closed=False, r=1.2)
     else:
         p.line([(5, 2), (5, 22)], r=0)
         p.line([(5, 3.5), (9, 2.5), (13.5, 4.5), (19.5, 3.5), (19.5, 14), (13.5, 15), (9, 13), (5, 14)], closed=False, r=1.6)
@@ -627,11 +627,11 @@ def update_install(p):
                             'één ding, dus geen oranje. Eigen vorm naast Bijwerken (bakje met pijl) en Webtool herladen (één pijl).')
 def check_updates(p):
     if p.s == 16:
-        for start, end in ((195, 325), (15, 145)):
-            turn_arrow(p, 7.5, 7.5, 5.75, start, end, False, (1.9, 2.6))
+        for start, end in ((200, 315), (20, 135)):
+            turn_arrow(p, 7.5, 7.5, 5.5, start, end, False, (2.5, 3.2))
     else:
-        for start, end in ((195, 325), (15, 145)):
-            turn_arrow(p, 12, 12, 7.75, start, end, False, (2.8, 3.8))
+        for start, end in ((200, 315), (20, 135)):
+            turn_arrow(p, 12, 12, 7.75, start, end, False, (3.4, 4.6))
 
 
 @design('view.web-reload', 'Eén cirkelpijl met de punt bovenaan, zoals de herlaadknop in een browser. Geen venster eromheen en '
@@ -742,7 +742,7 @@ def chevron_up(p):
 
 
 def dropdown(p):
-    p.line([(4.5, 6), (7.5, 9), (10.5, 6)] if p.s == 16 else [(7, 10), (12, 15), (17, 10)], r=0.4 if p.s == 16 else 0.6)
+    p.line([(3.5, 5.5), (7.5, 9.5), (11.5, 5.5)] if p.s == 16 else [(6, 9), (12, 15), (18, 9)], r=0.4 if p.s == 16 else 0.6)
 
 
 def chevrons_in(p):
@@ -848,7 +848,10 @@ def redo(p):
 
 def turn_back(p):
     """Draaipijl tegen de klok in, zoals Terugzetten en Herstellen in Open Planner Studio."""
-    web_reload(p)
+    if p.s == 16:
+        turn_arrow(p, 7.5, 8, 5.5, -30, 220, False, (2.7, 3.4))
+    else:
+        turn_arrow(p, 12, 12.5, 8, -30, 220, False, (3.8, 5))
     p.c.mirror()
     for f in p.c.fills:
         f['rings'] = [[(p.s - x, y) for x, y in ring] for ring in f['rings']]
@@ -883,14 +886,26 @@ def page_lines(p):
         p.line([(8, 17), (16, 17)], r=0)
 
 
-def page_zip(p):
+def page_letter(p):
+    """Blad met een hoofdletter T, zoals de bestandsaanduiding in Open Planner Studio."""
     page(p)
     if p.s == 16:
-        p.line([(7.5, 4.5), (7.5, 7.5)], r=0)
-        p.circle(7.5, 10, 1.75)
+        p.line([(5, 6.5), (10, 6.5)], r=0)
+        p.line([(7.5, 6.5), (7.5, 11.5)], r=0)
     else:
-        p.line([(12, 9.5), (12, 12)], r=0)
-        p.rect(9, 12, 15, 17, r=0.8)
+        p.line([(8, 11), (16, 11)], r=0)
+        p.line([(12, 11), (12, 18)], r=0)
+
+
+def page_zip(p):
+    """Blad met een rits: korte tanden om en om, zoals FileArchive in Open Planner Studio."""
+    page(p)
+    if p.s == 16:
+        for x, y in ((5.5, 5.5), (7.5, 8.5), (5.5, 11.5)):
+            p.line([(x, y), (x + 2, y)], r=0)
+    else:
+        for x, y in ((9, 10), (12, 14), (9, 18)):
+            p.line([(x, y), (x + 3, y)], r=0)
 
 
 def page_code(p):
@@ -918,11 +933,12 @@ def floppy_copy(p):
     """Diskette met in oranje de hoek van een tweede exemplaar, zoals Opslaan als in Open Planner Studio."""
     if p.s == 16:
         p.line([(1.5, 1.5), (9.5, 1.5), (11.5, 3.5), (11.5, 11.5), (1.5, 11.5)], closed=True, r=1.2)
-        p.line([(4.5, 8.5), (8.5, 8.5)], r=0)
-        p.line([(14.5, 8.5), (14.5, 14.5), (8.5, 14.5)], True, r=1.2)
+        p.line([(3.5, 11.5), (3.5, 9), (9.5, 9), (9.5, 11.5)], r=0.3)
+        p.line([(14.5, 6.5), (14.5, 14.5), (6.5, 14.5)], True, r=1.2)
     else:
         p.line([(3, 3), (14, 3), (17, 6), (17, 17), (3, 17)], closed=True, r=1.6)
         p.line([(7, 17), (7, 11), (13, 11), (13, 17)], r=0.7)
+        p.line([(7, 3), (7, 7), (12, 7)], r=0.6)
         p.line([(21, 8), (21, 21), (8, 21)], True, r=1.6)
 
 
@@ -980,15 +996,19 @@ def book_open(p):
 
 
 def building(p):
+    """Toren met een lagere vleugel en ramen, zoals Bedrijfsbibliotheek in Open Planner Studio (Building2)."""
     if p.s == 16:
-        p.rect(1.5, 1.5, 13.5, 14.5, r=1.0)
-        p.line([(4.5, 5.5), (10.5, 5.5)], r=0)
-        p.line([(5.5, 14.5), (5.5, 9.5), (9.5, 9.5), (9.5, 14.5)], r=0.4)
+        p.line([(1.5, 14.5), (1.5, 2.5), (8.5, 1.5), (8.5, 14.5)], closed=True, r=0.7)
+        p.line([(8.5, 7.5), (14.5, 7.5), (14.5, 14.5), (8.5, 14.5)], r=0.7)
+        p.line([(4.5, 5.5), (5.5, 5.5)], r=0)
+        p.line([(4.5, 8.5), (5.5, 8.5)], r=0)
+        p.line([(4.5, 11.5), (5.5, 11.5)], r=0)
     else:
-        p.rect(5, 2, 19, 22, r=1.4)
-        p.line([(9, 7), (15, 7)], r=0)
-        p.line([(9, 12), (15, 12)], r=0)
-        p.line([(9.5, 22), (9.5, 17), (14.5, 17), (14.5, 22)], r=0.6)
+        p.line([(3, 22), (3, 3), (14, 2), (14, 22)], closed=True, r=1)
+        p.line([(14, 9), (21, 9), (21, 22), (14, 22)], r=1)
+        p.line([(7, 7), (10, 7)], r=0)
+        p.line([(7, 12), (10, 12)], r=0)
+        p.line([(7, 17), (10, 17)], r=0)
 
 
 def books(p):
@@ -1068,9 +1088,17 @@ def square(p):
 
 def stop_square(p):
     if p.s == 16:
-        p.rect(3.5, 3.5, 11.5, 11.5, r=1.2)
+        p.rect(1.5, 1.5, 13.5, 13.5, r=1.4)
     else:
-        p.rect(5, 5, 19, 19, r=1.6)
+        p.rect(3, 3, 21, 21, r=2)
+
+
+def play(p):
+    """Afspeelpijl die het vak vult, zoals Starten en Hervatten in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(3.5, 1.5), (14, 7.5), (3.5, 13.5)], closed=True, r=1.2)
+    else:
+        p.line([(5, 3), (21.5, 12), (5, 21)], closed=True, r=1.8)
 
 
 def corners(p):
@@ -1185,8 +1213,8 @@ def list_tree(p):
     else:
         p.line([(2, 4), (22, 4)], r=0)
         p.line([(5, 4), (5, 19), (10, 19)], r=1.4)
-        p.line([(5, 11.5), (10, 11.5)], r=0)
-        p.line([(14, 11.5), (22, 11.5)], r=0)
+        p.line([(5, 12), (10, 12)], r=0)
+        p.line([(14, 12), (22, 12)], r=0)
         p.line([(14, 19), (22, 19)], r=0)
 
 
@@ -1275,12 +1303,13 @@ def question(p):
 
 
 def history(p):
-    """Klok met een draaipijl in plaats van een dichte ring, zoals Recent in het lint van Open Planner Studio."""
-    turn_back(p)
+    """Klok, zoals Recent in Open Planner Studio. Een extra draaipijl maakte de wijzers op 16 px vaag."""
     if p.s == 16:
-        p.line([(8.5, 6.5), (8.5, 9), (10.5, 10)], r=0.3)
+        p.circle(8, 8, 6)
+        p.line([(8, 4.5), (8, 8), (10.5, 9.5)], r=0.3)
     else:
-        p.line([(12, 10), (12, 13.5), (15, 15.5)], r=0.5)
+        p.circle(12, 12, 9.5)
+        p.line([(12, 6.5), (12, 12), (16, 14)], r=0.5)
 
 
 def compass(p):
@@ -1300,9 +1329,9 @@ def star(p):
 
 def lock_body(p):
     if p.s == 16:
-        p.rect(2.5, 7.5, 12.5, 14.5, r=1.4)
+        p.rect(1.5, 7.5, 13.5, 14.5, r=1.4)
     else:
-        p.rect(4, 11, 20, 22, r=2)
+        p.rect(3, 11, 21, 22, r=2)
 
 
 def lock(p):
@@ -1322,16 +1351,14 @@ def lock_open(p):
 
 
 def link_chain(p, middle=True):
-    if p.s == 16:
-        p.line([(6.5, 4.5), (1.5, 4.5), (1.5, 10.5), (6.5, 10.5)], r=2.9)
-        p.line([(9.5, 4.5), (14.5, 4.5), (14.5, 10.5), (9.5, 10.5)], r=2.9)
-        if middle:
-            p.line([(5.5, 7.5), (10.5, 7.5)], r=0)
-    else:
-        p.line([(10, 7), (2, 7), (2, 17), (10, 17)], r=4.9)
-        p.line([(14, 7), (22, 7), (22, 17), (14, 17)], r=4.9)
-        if middle:
-            p.line([(8, 12), (16, 12)], r=0)
+    """Twee ronde schakels; de einden zijn halve cirkels, anders leest de vorm als twee haken."""
+    cy, r, left, right, tip = (7.5, 3, 4.5, 10.5, 6) if p.s == 16 else (12, 5, 7, 17, 10)
+    bend = lambda cx, angles: [(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in angles]
+    p.line([(tip, cy - r)] + bend(left, range(270, 89, -15)) + [(tip, cy + r)], r=0)
+    other = left + right - tip
+    p.line([(other, cy - r)] + bend(right, range(-90, 91, 15)) + [(other, cy + r)], r=0)
+    if middle:
+        p.line([(5.5, 7.5), (9.5, 7.5)] if p.s == 16 else [(8, 12), (16, 12)], r=0)
 
 
 def unlink_chain(p):
@@ -1360,25 +1387,25 @@ def plug(p):
 
 def pause(p):
     if p.s == 16:
-        p.line([(5.5, 2.5), (5.5, 12.5)], r=0)
-        p.line([(10.5, 2.5), (10.5, 12.5)], r=0)
+        p.rect(2.5, 1.5, 5.5, 13.5, r=0.7)
+        p.rect(9.5, 1.5, 12.5, 13.5, r=0.7)
     else:
-        p.line([(8, 4), (8, 20)], r=0)
-        p.line([(16, 4), (16, 20)], r=0)
+        p.rect(5, 3, 10, 21, r=1.1)
+        p.rect(14, 3, 19, 21, r=1.1)
 
 
 def cylinder_turn(p):
     """Database met een oranje draaipijl, zoals Automatische back-up in Open Planner Studio."""
-    cx, cy, rx, ry, side, low = (6.5, 3.5, 5, 2, 6.5, 11.5) if p.s == 16 else (10, 5, 8, 3, 10, 18)
+    cx, cy, rx, ry, side, low = (6.5, 3.5, 5, 2, 6, 11.5) if p.s == 16 else (10, 5, 8, 3, 9, 18)
     ellipse = [(cx + rx * math.cos(math.radians(a)), cy + ry * math.sin(math.radians(a))) for a in range(0, 360, 15)]
     p.line(ellipse, closed=True, r=0)
     p.line([(cx - rx, cy), (cx - rx, low)] + [(cx + rx * math.cos(math.radians(a)), low + ry * math.sin(math.radians(a)))
                                               for a in range(165, 84, -15)], r=0)
     p.line([(cx + rx, cy), (cx + rx, side)], r=0)
     if p.s == 16:
-        turn_arrow(p, 11.75, 11.75, 2.5, -30, 200, True, (1.5, 2.1))
+        turn_arrow(p, 11.5, 11.5, 3, -70, 195, True, (1.9, 2.5))
     else:
-        turn_arrow(p, 17.5, 17.5, 4, -30, 200, True, (2.2, 3.1))
+        turn_arrow(p, 17.25, 17.25, 4.75, -70, 195, True, (2.8, 3.7))
 
 
 def lens(p):
@@ -1447,11 +1474,11 @@ def puzzle(p):
 
 
 def gear(p):
-    cx, outer, inner, hole = (8, 6.5, 4.75, 2) if p.s == 16 else (12, 10, 7.25, 3)
+    cx, outer, inner, hole = (8, 6.75, 4, 1.5) if p.s == 16 else (12, 10, 7, 2.75)
     pts = []
-    for i in range(8):
-        for da, radius in ((-13, inner), (-8, outer), (8, outer), (13, inner)):
-            a = math.radians(i * 45 + da)
+    for i in range(6):
+        for da, radius in ((-21, inner), (-12, outer), (12, outer), (21, inner)):
+            a = math.radians(i * 60 + da)
             pts.append((cx + radius * math.cos(a), cx + radius * math.sin(a)))
     p.line(pts, closed=True, r=0.3 if p.s == 16 else 0.5)
     p.circle(cx, cx, hole)
@@ -1459,24 +1486,26 @@ def gear(p):
 
 def keyboard(p):
     if p.s == 16:
-        p.rect(1.5, 4.5, 14.5, 12.5, r=1.4)
+        p.rect(1.5, 3.5, 14.5, 12.5, r=1.4)
         for x in (4.5, 8, 11.5):
-            p.circle(x, 7, 0.8, filled=True)
+            p.circle(x, 6.5, 0.8, filled=True)
         p.line([(5.5, 9.5), (10.5, 9.5)], r=0)
     else:
         p.rect(2, 5, 22, 19, r=2)
-        for x in (7, 12, 17):
-            p.circle(x, 9.5, 1.15, filled=True)
-        p.line([(8, 14.5), (16, 14.5)], r=0)
+        for x in (6, 10, 14, 18):
+            p.circle(x, 9.5, 1, filled=True)
+        p.line([(8, 15), (16, 15)], r=0)
 
 
 def grad_cap(p):
     if p.s == 16:
-        p.line([(7.5, 2.5), (14, 6), (7.5, 9.5), (1, 6)], closed=True, r=0.5)
+        p.line([(7.5, 2.5), (14.5, 6), (7.5, 9.5), (0.5, 6)], closed=True, r=0.5)
         p.line([(3.5, 8.5), (3.5, 11.5), (7.5, 13.5), (11.5, 11.5), (11.5, 8.5)], r=0.8)
+        p.line([(14.5, 6), (14.5, 10.5)], r=0)
     else:
         p.line([(12, 4), (22, 9), (12, 14), (2, 9)], closed=True, r=0.7)
         p.line([(6, 13), (6, 17), (12, 20), (18, 17), (18, 13)], r=1.1)
+        p.line([(22, 9), (22, 15)], r=0)
 
 
 def users(p):
@@ -1506,14 +1535,16 @@ def user_add(p):
 
 
 def hard_hat(p):
-    if p.s == 16:
-        p.arc(7.5, 11.5, 6, 180, 360)
-        p.line([(1, 11.5), (14, 11.5)], r=0)
-        p.line([(7.5, 3.5), (7.5, 8.5)], r=0)
-    else:
-        p.arc(12, 17, 9, 180, 360)
-        p.line([(2, 17), (22, 17)], r=0)
-        p.line([(12, 5), (12, 13)], r=0)
+    """Bouwhelm: koepel met een kam en een brede rand, zoals HardHat in Open Planner Studio."""
+    low, top, side, ridge, band, brim, r = (10.5, 2.5, 2.5, 5.5, 7.5, (1.5, 13.5, 13.5), 4) if p.s == 16 else (15, 4, 4, 10, 10, (2, 22, 19), 6)
+    right = (p.s - 1 if p.s == 16 else p.s)
+    p.rect(brim[0], low, brim[1], brim[2], r=0.8 if p.s == 16 else 1.2)
+    p.line([(ridge, band), (ridge, top), (right - ridge, top), (right - ridge, band)], r=0.7 if p.s == 16 else 1)
+    cy = low - 2 if p.s == 16 else low - 3
+    p.line([(side, low)] + [(side + r + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a)))
+                            for a in range(180, 256, 15)], r=0)
+    p.line([(right - side - r + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a)))
+            for a in range(-75, 1, 15)] + [(right - side, low)], r=0)
 
 
 def truck(p):
@@ -1530,12 +1561,13 @@ def truck(p):
 
 
 def wrench(p):
-    if p.s == 16:
-        p.arc(10.5, 5.5, 3.5, -5, 275)
-        p.line([(8, 8), (2.5, 13.5)], r=0)
-    else:
-        p.arc(16, 8, 5, -5, 275)
-        p.line([(12.5, 11.5), (3.5, 20.5)], r=0)
+    """Steeksleutel als gesloten omtrek met een open bek, zoals Wrench in Open Planner Studio."""
+    k = 2 / 3 if p.s == 16 else 1
+    cx, cy, r = 15.5 * k, 8 * k, 6.5 * k
+    round_part = lambda a, b, step: [(cx + r * math.cos(math.radians(x)), cy + r * math.sin(math.radians(x)))
+                                     for x in range(a, b + 1, step)]
+    p.line([(15 * k, 6 * k), (17.5 * k, 8.5 * k)] + round_part(-26, 111, 15)
+           + [(6 * k, 21 * k), (3 * k, 18 * k)] + round_part(152, 299, 15), closed=True, r=0.4 if p.s == 16 else 0.6)
 
 
 def route(p):
@@ -1629,7 +1661,8 @@ VORMEN = [
     (check_updates, 'Twee draaipijlen, zoals Vernieuwen in Open Planner Studio.', ['ui.refresh', 'status.busy', 'credential.regenerate']),
     (turn_back, 'Draaipijl tegen de klok in, zoals Terugzetten in Open Planner Studio.', ['backup.recover', 'table.columns-reset']),
     (page_new, 'Blad met een oranje plus, zoals Nieuw project in Open Planner Studio.', ['file.new']),
-    (page_lines, 'Blad met regels, zoals in Open Planner Studio. Een aanduiding, dus geen oranje.', ['file.type-other', 'file.type-project']),
+    (page_lines, 'Blad met regels: een projectbestand. Een aanduiding, dus geen oranje.', ['file.type-project']),
+    (page_letter, 'Blad met de letter T, zoals FileType in Open Planner Studio: een ander bestand. Een aanduiding, dus geen oranje.', ['file.type-other']),
     (page_zip, 'Blad met rits, zoals Installeren uit ZIP in Open Planner Studio.', ['extension.install-zip']),
     (page_code, 'Blad met punthaken, zoals Installeren uit JS in Open Planner Studio.', ['extension.install-js']),
     (floppy, 'Diskette, zoals Opslaan in Open Planner Studio.', ['file.save', 'backup.create']),
@@ -1676,7 +1709,7 @@ VORMEN = [
     (warnings, 'Waarschuwingsdriehoek, zoals in Open Planner Studio.', ['status.warning', 'status.schedule-preview', 'status.schedule-last-result', 'status.resource-overallocated']),
     (status_info, 'Cirkel met de letter i, zoals in Open Planner Studio.', ['status.info', 'help.context-hint', 'project.properties']),
     (question, 'Cirkel met vraagteken, zoals Hulp in Open Planner Studio.', ['ui.help', 'planning.driving-unknown']),
-    (history, 'Klok met draaipijl, zoals Recent in het lint van Open Planner Studio.', ['project.recent']),
+    (history, 'Klok, zoals Recent in het lint van Open Planner Studio.', ['project.recent']),
     (compass, 'Kompas, zoals Rondleiding in Open Planner Studio.', ['ui.tour']),
     (star, 'Ster, zoals in Open Planner Studio.', ['company.default', 'company.default-status', 'status.project-calendar', 'layout.star']),
     (lock, 'Slot, zoals in Open Planner Studio.', ['ai.read-only-toggle', 'status.assignment-protected']),
@@ -1687,7 +1720,7 @@ VORMEN = [
     (zap, 'Bliksem, zoals Bepalende relatie in Open Planner Studio.', ['planning.driving']),
     (plug, 'Stekker, zoals Verbinding in Open Planner Studio.', ['ai.connection-menu', 'ai.connection-details']),
     (pause, 'Twee strepen, zoals Pauzeren in Open Planner Studio.', ['ai.pause', 'log.pause-view']),
-    (solver_run, 'Afspeelpijl, zoals Starten en Hervatten in Open Planner Studio.', ['ai.resume', 'ai.bridge-start', 'log.resume-view', 'diagnostics.run-benchmark']),
+    (play, 'Afspeelpijl, zoals Starten en Hervatten in Open Planner Studio.', ['ai.resume', 'ai.bridge-start', 'log.resume-view', 'diagnostics.run-benchmark']),
     (cylinder_turn, 'Database met een oranje draaipijl, zoals Automatische back-up in Open Planner Studio.', ['backup.auto']),
     (eye, 'Oog, zoals in Open Planner Studio.', ['credential.show', 'panel.properties']),
     (eye_off, 'Doorgestreept oog, zoals in Open Planner Studio.', ['credential.hide', 'panel.properties-hidden', 'capture.mask']),
