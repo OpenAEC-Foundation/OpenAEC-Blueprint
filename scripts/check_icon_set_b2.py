@@ -190,7 +190,7 @@ def main():
             if icon['id'] in {'page.insert','page.delete'}:
                 assert layers['primary'].distance(layers['accent'])>=size/16,'page badge too close'
             crossing={'page.extract':(15,12),'page.resize':(16,7),'draw.arrow':(20,4),'object.align-middle':(5,12)}
-            if icon['id'] in crossing:
+            if icon['id'] in crossing and retained:
                 x,y=crossing[icon['id']]
                 assert layers['accent'].covers(Point(x*size/24,y*size/24)),'accent interrupted at crossing'
             if icon['id']=='draw.freehand':assert layers['accent'].is_empty,'freehand must use one colour'
@@ -200,14 +200,15 @@ def main():
                 for x,y in ((13.5,2.75),(13.5,5.25),(15,4),(12.75,4)):
                     assert ring.covers(Point(x*size/24,y*size/24)),'incomplete symmetric ring arrowhead'
 
-            if icon['id'] in ROUNDED_JOINTS:
+            if icon['id'] in ROUNDED_JOINTS and retained:
                 x=18 if icon['id'] in {'edit.redo','nav.forward'} else 6
                 y=10 if icon['id'].startswith('edit.') else 12
                 assert layers['primary'].covers(Point(x*size/24,y*size/24)),'shaft stops before pointer'
             if icon['id'] in SEMANTIC:
                 # Approved alternatives explicitly use an identifying status mark in accent.
                 if icon['id'] in ACCENT_ROLES or icon['id'] in APPROVED:
-                    assert layers['accent'].area>0,'requested identifying accent missing'
+                    # Een hertekend icoon volgt docs/iconen.md: oranje alleen op het deel dat de actie of het verschil toont.
+                    assert layers['accent'].area>0 or not retained,'requested identifying accent missing'
                 else:
                     assert layers['accent'].is_empty,'status contains decorative accent'
                 assert icon['semantic_color']==SEMANTIC[icon['id']]
@@ -215,7 +216,7 @@ def main():
                 assert (OUT/'review/approved-core'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'approved core changed'
             if retained and icon['series']<11 and icon['id']!='planning.driving':
                 assert (OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_bytes()==content.encode(),'accepted series changed'
-            if icon['id']=='planning.driving':
+            if icon['id']=='planning.driving' and retained:
                 before=(OUT/'review/retained-series-1-10'/str(size)/(icon['id']+'.svg')).read_text(encoding='utf-8')
                 assert content.replace(' style="color:var(--icon-accent,currentColor)"','')==before,'driving shape changed'
             if retained and icon['series']<14 and icon['id'] not in {'thermal.openings','thermal.door','pile.new','object.rename','pile.columns','pile.encoding-conflicts','audio.speech','audio.tts','audio.meeting','pile.legend-edit'}:

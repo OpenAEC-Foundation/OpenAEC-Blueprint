@@ -41,6 +41,9 @@ pub enum Icon {
     /// AI-mutaties pauzeren (`ai.pause`); planner.
     #[cfg(any(feature = "planner"))]
     AiPause,
+    /// AI mag schrijven (`ai.read-only-off`); planner.
+    #[cfg(any(feature = "planner"))]
+    AiReadOnlyOff,
     /// AI alleen-lezen (`ai.read-only-toggle`); pdf, pile-plan, planner.
     #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
     AiReadOnlyToggle,
@@ -326,6 +329,9 @@ pub enum Icon {
     /// Schermannotaties wissen (`capture.clear-annotations`); geotechniek, pdf, planner.
     #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
     CaptureClearAnnotations,
+    /// Gebied maskeren (`capture.mask`); planner.
+    #[cfg(any(feature = "planner"))]
+    CaptureMask,
     /// Opname als overlay plaatsen (`capture.overlay`); pdf.
     #[cfg(any(feature = "pdf"))]
     CaptureOverlay,
@@ -758,6 +764,12 @@ pub enum Icon {
     /// Extensie uit bestand installeren (`extension.install-file`); calc, calculations, energy, geotechniek, heatloss, pdf, pile-plan, pointcloud, validator.
     #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
     ExtensionInstallFile,
+    /// Extensie uit JS installeren (`extension.install-js`); planner.
+    #[cfg(any(feature = "planner"))]
+    ExtensionInstallJs,
+    /// Extensie uit ZIP installeren (`extension.install-zip`); planner.
+    #[cfg(any(feature = "planner"))]
+    ExtensionInstallZip,
     /// Uitbreidingspakket (`extension.item`); calc.
     #[cfg(any(feature = "calc"))]
     ExtensionItem,
@@ -1079,6 +1091,9 @@ pub enum Icon {
     /// Begeleiding compact tonen (`guide.compact`); planner.
     #[cfg(any(feature = "planner"))]
     GuideCompact,
+    /// Begeleiding uitgebreid tonen (`guide.expand`); planner.
+    #[cfg(any(feature = "planner"))]
+    GuideExpand,
     /// Tutorial starten (`guide.tutorial-start`); planner.
     #[cfg(any(feature = "planner"))]
     GuideTutorialStart,
@@ -1241,6 +1256,9 @@ pub enum Icon {
     /// Opsommingsitem toevoegen (`list.item-add`); reports.
     #[cfg(any(feature = "reports"))]
     ListItemAdd,
+    /// Regel weghalen (`list.item-remove`); planner.
+    #[cfg(any(feature = "planner"))]
+    ListItemRemove,
     /// Lijstitem omlaag (`list.move-down`); heatloss, pdf.
     #[cfg(any(feature = "heatloss", feature = "pdf"))]
     ListMoveDown,
@@ -1589,6 +1607,9 @@ pub enum Icon {
     /// Elementzichtbaarheid (`panel.element-visibility`); pdf.
     #[cfg(any(feature = "pdf"))]
     PanelElementVisibility,
+    /// Paneel naar volledige weergave (`panel.expand-full`); planner.
+    #[cfg(any(feature = "planner"))]
+    PanelExpandFull,
     /// Formulierveldenpaneel (`panel.form-fields`); pdf.
     #[cfg(any(feature = "pdf"))]
     PanelFormFields,
@@ -1604,6 +1625,12 @@ pub enum Icon {
     /// Modelstructuur — gepland (`panel.model-tree`); calculations.
     #[cfg(any(feature = "calculations"))]
     PanelModelTree,
+    /// Eigenschappenpaneel tonen (`panel.properties`); planner.
+    #[cfg(any(feature = "planner"))]
+    PanelProperties,
+    /// Eigenschappenpaneel verborgen (`panel.properties-hidden`); planner.
+    #[cfg(any(feature = "planner"))]
+    PanelPropertiesHidden,
     /// Rechterpaneel tonen of verbergen (`panel.right`); energy, planner, pointcloud, validator.
     #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
     PanelRight,
@@ -1733,6 +1760,9 @@ pub enum Icon {
     /// Bepalende relatie (`planning.driving`); planner.
     #[cfg(any(feature = "planner"))]
     PlanningDriving,
+    /// Bepalende relatie onbekend (`planning.driving-unknown`); planner.
+    #[cfg(any(feature = "planner"))]
+    PlanningDrivingUnknown,
     /// Externe taakrelatie (`planning.external-relation`); planner.
     #[cfg(any(feature = "planner"))]
     PlanningExternalRelation,
@@ -2396,6 +2426,9 @@ pub enum Icon {
     /// Mijlpaal toevoegen (`task.milestone-menu`); planner.
     #[cfg(any(feature = "planner"))]
     TaskMilestoneMenu,
+    /// Notitie toevoegen (`task.note-add`); planner.
+    #[cfg(any(feature = "planner"))]
+    TaskNoteAdd,
     /// Taak uitspringen (`task.outdent`); planner.
     #[cfg(any(feature = "planner"))]
     TaskOutdent,
@@ -2892,6 +2925,8 @@ impl Icon {
         list.push(Icon::AiConnectionMenu);
         #[cfg(any(feature = "planner"))]
         list.push(Icon::AiPause);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::AiReadOnlyOff);
         #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
         list.push(Icon::AiReadOnlyToggle);
         #[cfg(any(feature = "planner"))]
@@ -3082,6 +3117,8 @@ impl Icon {
         list.push(Icon::CaptureAnnotate);
         #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
         list.push(Icon::CaptureClearAnnotations);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::CaptureMask);
         #[cfg(any(feature = "pdf"))]
         list.push(Icon::CaptureOverlay);
         #[cfg(any(feature = "pdf"))]
@@ -3370,6 +3407,10 @@ impl Icon {
         list.push(Icon::ExtensionImporter);
         #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
         list.push(Icon::ExtensionInstallFile);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::ExtensionInstallJs);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::ExtensionInstallZip);
         #[cfg(any(feature = "calc"))]
         list.push(Icon::ExtensionItem);
         #[cfg(any(feature = "pdf"))]
@@ -3585,6 +3626,8 @@ impl Icon {
         #[cfg(any(feature = "planner"))]
         list.push(Icon::GuideCompact);
         #[cfg(any(feature = "planner"))]
+        list.push(Icon::GuideExpand);
+        #[cfg(any(feature = "planner"))]
         list.push(Icon::GuideTutorialStart);
         #[cfg(any(feature = "energy", feature = "planner"))]
         list.push(Icon::GuideTutorials);
@@ -3692,6 +3735,8 @@ impl Icon {
         list.push(Icon::ListGroupBy);
         #[cfg(any(feature = "reports"))]
         list.push(Icon::ListItemAdd);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::ListItemRemove);
         #[cfg(any(feature = "heatloss", feature = "pdf"))]
         list.push(Icon::ListMoveDown);
         #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -3924,6 +3969,8 @@ impl Icon {
         list.push(Icon::PanelDocumentNavigation);
         #[cfg(any(feature = "pdf"))]
         list.push(Icon::PanelElementVisibility);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PanelExpandFull);
         #[cfg(any(feature = "pdf"))]
         list.push(Icon::PanelFormFields);
         #[cfg(any(feature = "validator"))]
@@ -3934,6 +3981,10 @@ impl Icon {
         list.push(Icon::PanelMeasurements);
         #[cfg(any(feature = "calculations"))]
         list.push(Icon::PanelModelTree);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PanelProperties);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PanelPropertiesHidden);
         #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
         list.push(Icon::PanelRight);
         #[cfg(any(feature = "pdf"))]
@@ -4020,6 +4071,8 @@ impl Icon {
         list.push(Icon::PlanningDependencyDrawMode);
         #[cfg(any(feature = "planner"))]
         list.push(Icon::PlanningDriving);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PlanningDrivingUnknown);
         #[cfg(any(feature = "planner"))]
         list.push(Icon::PlanningExternalRelation);
         #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -4463,6 +4516,8 @@ impl Icon {
         #[cfg(any(feature = "planner"))]
         list.push(Icon::TaskMilestoneMenu);
         #[cfg(any(feature = "planner"))]
+        list.push(Icon::TaskNoteAdd);
+        #[cfg(any(feature = "planner"))]
         list.push(Icon::TaskOutdent);
         #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
         list.push(Icon::TaskSplitMode);
@@ -4798,6 +4853,8 @@ impl Icon {
             Icon::AiConnectionMenu => "ai.connection-menu",
             #[cfg(any(feature = "planner"))]
             Icon::AiPause => "ai.pause",
+            #[cfg(any(feature = "planner"))]
+            Icon::AiReadOnlyOff => "ai.read-only-off",
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             Icon::AiReadOnlyToggle => "ai.read-only-toggle",
             #[cfg(any(feature = "planner"))]
@@ -4988,6 +5045,8 @@ impl Icon {
             Icon::CaptureAnnotate => "capture.annotate",
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             Icon::CaptureClearAnnotations => "capture.clear-annotations",
+            #[cfg(any(feature = "planner"))]
+            Icon::CaptureMask => "capture.mask",
             #[cfg(any(feature = "pdf"))]
             Icon::CaptureOverlay => "capture.overlay",
             #[cfg(any(feature = "pdf"))]
@@ -5276,6 +5335,10 @@ impl Icon {
             Icon::ExtensionImporter => "extension.importer",
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             Icon::ExtensionInstallFile => "extension.install-file",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallJs => "extension.install-js",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallZip => "extension.install-zip",
             #[cfg(any(feature = "calc"))]
             Icon::ExtensionItem => "extension.item",
             #[cfg(any(feature = "pdf"))]
@@ -5491,6 +5554,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::GuideCompact => "guide.compact",
             #[cfg(any(feature = "planner"))]
+            Icon::GuideExpand => "guide.expand",
+            #[cfg(any(feature = "planner"))]
             Icon::GuideTutorialStart => "guide.tutorial-start",
             #[cfg(any(feature = "energy", feature = "planner"))]
             Icon::GuideTutorials => "guide.tutorials",
@@ -5598,6 +5663,8 @@ impl Icon {
             Icon::ListGroupBy => "list.group-by",
             #[cfg(any(feature = "reports"))]
             Icon::ListItemAdd => "list.item-add",
+            #[cfg(any(feature = "planner"))]
+            Icon::ListItemRemove => "list.item-remove",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             Icon::ListMoveDown => "list.move-down",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -5830,6 +5897,8 @@ impl Icon {
             Icon::PanelDocumentNavigation => "panel.document-navigation",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelElementVisibility => "panel.element-visibility",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelExpandFull => "panel.expand-full",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelFormFields => "panel.form-fields",
             #[cfg(any(feature = "validator"))]
@@ -5840,6 +5909,10 @@ impl Icon {
             Icon::PanelMeasurements => "panel.measurements",
             #[cfg(any(feature = "calculations"))]
             Icon::PanelModelTree => "panel.model-tree",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelProperties => "panel.properties",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelPropertiesHidden => "panel.properties-hidden",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "panel.right",
             #[cfg(any(feature = "pdf"))]
@@ -5926,6 +5999,8 @@ impl Icon {
             Icon::PlanningDependencyDrawMode => "planning.dependency-draw-mode",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningDriving => "planning.driving",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDrivingUnknown => "planning.driving-unknown",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningExternalRelation => "planning.external-relation",
             #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -6369,6 +6444,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::TaskMilestoneMenu => "task.milestone-menu",
             #[cfg(any(feature = "planner"))]
+            Icon::TaskNoteAdd => "task.note-add",
+            #[cfg(any(feature = "planner"))]
             Icon::TaskOutdent => "task.outdent",
             #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
             Icon::TaskSplitMode => "task.split-mode",
@@ -6704,6 +6781,8 @@ impl Icon {
             Icon::AiConnectionMenu => "Verbindingsinstellingen",
             #[cfg(any(feature = "planner"))]
             Icon::AiPause => "AI-mutaties pauzeren",
+            #[cfg(any(feature = "planner"))]
+            Icon::AiReadOnlyOff => "AI mag schrijven",
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             Icon::AiReadOnlyToggle => "AI alleen-lezen",
             #[cfg(any(feature = "planner"))]
@@ -6894,6 +6973,8 @@ impl Icon {
             Icon::CaptureAnnotate => "Schermopname annoteren",
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             Icon::CaptureClearAnnotations => "Schermannotaties wissen",
+            #[cfg(any(feature = "planner"))]
+            Icon::CaptureMask => "Gebied maskeren",
             #[cfg(any(feature = "pdf"))]
             Icon::CaptureOverlay => "Opname als overlay plaatsen",
             #[cfg(any(feature = "pdf"))]
@@ -7182,6 +7263,10 @@ impl Icon {
             Icon::ExtensionImporter => "Importuitbreiding",
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             Icon::ExtensionInstallFile => "Extensie uit bestand installeren",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallJs => "Extensie uit JS installeren",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallZip => "Extensie uit ZIP installeren",
             #[cfg(any(feature = "calc"))]
             Icon::ExtensionItem => "Uitbreidingspakket",
             #[cfg(any(feature = "pdf"))]
@@ -7397,6 +7482,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::GuideCompact => "Begeleiding compact tonen",
             #[cfg(any(feature = "planner"))]
+            Icon::GuideExpand => "Begeleiding uitgebreid tonen",
+            #[cfg(any(feature = "planner"))]
             Icon::GuideTutorialStart => "Tutorial starten",
             #[cfg(any(feature = "energy", feature = "planner"))]
             Icon::GuideTutorials => "Tutorials",
@@ -7504,6 +7591,8 @@ impl Icon {
             Icon::ListGroupBy => "Lijst groeperen",
             #[cfg(any(feature = "reports"))]
             Icon::ListItemAdd => "Opsommingsitem toevoegen",
+            #[cfg(any(feature = "planner"))]
+            Icon::ListItemRemove => "Regel weghalen",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             Icon::ListMoveDown => "Lijstitem omlaag",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -7736,6 +7825,8 @@ impl Icon {
             Icon::PanelDocumentNavigation => "Documentnavigatie — gepland",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelElementVisibility => "Elementzichtbaarheid",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelExpandFull => "Paneel naar volledige weergave",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelFormFields => "Formulierveldenpaneel",
             #[cfg(any(feature = "validator"))]
@@ -7746,6 +7837,10 @@ impl Icon {
             Icon::PanelMeasurements => "Meetannotatiespaneel",
             #[cfg(any(feature = "calculations"))]
             Icon::PanelModelTree => "Modelstructuur — gepland",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelProperties => "Eigenschappenpaneel tonen",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelPropertiesHidden => "Eigenschappenpaneel verborgen",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "Rechterpaneel tonen of verbergen",
             #[cfg(any(feature = "pdf"))]
@@ -7832,6 +7927,8 @@ impl Icon {
             Icon::PlanningDependencyDrawMode => "Relaties tekenen actief",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningDriving => "Bepalende relatie",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDrivingUnknown => "Bepalende relatie onbekend",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningExternalRelation => "Externe taakrelatie",
             #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -8275,6 +8372,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::TaskMilestoneMenu => "Mijlpaal toevoegen",
             #[cfg(any(feature = "planner"))]
+            Icon::TaskNoteAdd => "Notitie toevoegen",
+            #[cfg(any(feature = "planner"))]
             Icon::TaskOutdent => "Taak uitspringen",
             #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
             Icon::TaskSplitMode => "Taakonderbreking tekenen",
@@ -8610,6 +8709,8 @@ impl Icon {
             Icon::AiConnectionMenu => "Verbindingsgegevens en tokens",
             #[cfg(any(feature = "planner"))]
             Icon::AiPause => "AI-mutaties bedienen",
+            #[cfg(any(feature = "planner"))]
+            Icon::AiReadOnlyOff => "AI-mutaties bedienen",
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             Icon::AiReadOnlyToggle => "AI-mutaties bedienen",
             #[cfg(any(feature = "planner"))]
@@ -8800,6 +8901,8 @@ impl Icon {
             Icon::CaptureAnnotate => "Schermannotaties en logweergave",
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             Icon::CaptureClearAnnotations => "Schermannotaties en logweergave",
+            #[cfg(any(feature = "planner"))]
+            Icon::CaptureMask => "Schermannotaties en logweergave",
             #[cfg(any(feature = "pdf"))]
             Icon::CaptureOverlay => "Vastleggen en uitvoer",
             #[cfg(any(feature = "pdf"))]
@@ -9088,6 +9191,10 @@ impl Icon {
             Icon::ExtensionImporter => "Uitbreidingen, docking en rekenwizard",
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             Icon::ExtensionInstallFile => "Uitbreidingen, docking en rekenwizard",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallJs => "Extensies en hulpfuncties",
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallZip => "Extensies en hulpfuncties",
             #[cfg(any(feature = "calc"))]
             Icon::ExtensionItem => "Uitbreidingen, docking en rekenwizard",
             #[cfg(any(feature = "pdf"))]
@@ -9303,6 +9410,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::GuideCompact => "Prestatiemeting en begeleiding",
             #[cfg(any(feature = "planner"))]
+            Icon::GuideExpand => "Prestatiemeting en begeleiding",
+            #[cfg(any(feature = "planner"))]
             Icon::GuideTutorialStart => "Activiteiten en begeleiding",
             #[cfg(any(feature = "energy", feature = "planner"))]
             Icon::GuideTutorials => "Activiteiten en begeleiding",
@@ -9410,6 +9519,8 @@ impl Icon {
             Icon::ListGroupBy => "Annotatielijsten",
             #[cfg(any(feature = "reports"))]
             Icon::ListItemAdd => "Tabellen en formulieren",
+            #[cfg(any(feature = "planner"))]
+            Icon::ListItemRemove => "Lijsten en bomen",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             Icon::ListMoveDown => "Bestandslijsten en klemborddocumenten",
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -9642,6 +9753,8 @@ impl Icon {
             Icon::PanelDocumentNavigation => "Geplande documentpanelen en afdrukvoorkeuren",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelElementVisibility => "Weergave en panelen",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelExpandFull => "Vensters en panelen",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelFormFields => "PDF-zijpanelen",
             #[cfg(any(feature = "validator"))]
@@ -9652,6 +9765,10 @@ impl Icon {
             Icon::PanelMeasurements => "PDF-zijpanelen",
             #[cfg(any(feature = "calculations"))]
             Icon::PanelModelTree => "Geplande documentpanelen en afdrukvoorkeuren",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelProperties => "Vensters en panelen",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelPropertiesHidden => "Vensters en panelen",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "Vensters en panelen",
             #[cfg(any(feature = "pdf"))]
@@ -9738,6 +9855,8 @@ impl Icon {
             Icon::PlanningDependencyDrawMode => "Planningsmodi en informatie",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningDriving => "Planning",
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDrivingUnknown => "Planning",
             #[cfg(any(feature = "planner"))]
             Icon::PlanningExternalRelation => "Relaties, herstel en tabelweergave",
             #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -10181,6 +10300,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::TaskMilestoneMenu => "Referenties, peildatum en relaties",
             #[cfg(any(feature = "planner"))]
+            Icon::TaskNoteAdd => "Taken en planningsberekening",
+            #[cfg(any(feature = "planner"))]
             Icon::TaskOutdent => "Taakstructuur en WBS",
             #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
             Icon::TaskSplitMode => "Taken en planningsberekening",
@@ -10516,6 +10637,8 @@ impl Icon {
             Icon::AiConnectionMenu => &["planner"],
             #[cfg(any(feature = "planner"))]
             Icon::AiPause => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::AiReadOnlyOff => &["planner"],
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             Icon::AiReadOnlyToggle => &["pdf", "pile-plan", "planner"],
             #[cfg(any(feature = "planner"))]
@@ -10706,6 +10829,8 @@ impl Icon {
             Icon::CaptureAnnotate => &["planner"],
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             Icon::CaptureClearAnnotations => &["geotechniek", "pdf", "planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::CaptureMask => &["planner"],
             #[cfg(any(feature = "pdf"))]
             Icon::CaptureOverlay => &["pdf"],
             #[cfg(any(feature = "pdf"))]
@@ -10994,6 +11119,10 @@ impl Icon {
             Icon::ExtensionImporter => &["calc"],
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             Icon::ExtensionInstallFile => &["calc", "calculations", "energy", "geotechniek", "heatloss", "pdf", "pile-plan", "pointcloud", "validator"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallJs => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ExtensionInstallZip => &["planner"],
             #[cfg(any(feature = "calc"))]
             Icon::ExtensionItem => &["calc"],
             #[cfg(any(feature = "pdf"))]
@@ -11209,6 +11338,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::GuideCompact => &["planner"],
             #[cfg(any(feature = "planner"))]
+            Icon::GuideExpand => &["planner"],
+            #[cfg(any(feature = "planner"))]
             Icon::GuideTutorialStart => &["planner"],
             #[cfg(any(feature = "energy", feature = "planner"))]
             Icon::GuideTutorials => &["energy", "planner"],
@@ -11316,6 +11447,8 @@ impl Icon {
             Icon::ListGroupBy => &["pdf"],
             #[cfg(any(feature = "reports"))]
             Icon::ListItemAdd => &["reports"],
+            #[cfg(any(feature = "planner"))]
+            Icon::ListItemRemove => &["planner"],
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             Icon::ListMoveDown => &["heatloss", "pdf"],
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -11548,6 +11681,8 @@ impl Icon {
             Icon::PanelDocumentNavigation => &["pdf"],
             #[cfg(any(feature = "pdf"))]
             Icon::PanelElementVisibility => &["pdf"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelExpandFull => &["planner"],
             #[cfg(any(feature = "pdf"))]
             Icon::PanelFormFields => &["pdf"],
             #[cfg(any(feature = "validator"))]
@@ -11558,6 +11693,10 @@ impl Icon {
             Icon::PanelMeasurements => &["pdf"],
             #[cfg(any(feature = "calculations"))]
             Icon::PanelModelTree => &["calculations"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelProperties => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelPropertiesHidden => &["planner"],
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => &["energy", "planner", "pointcloud", "validator"],
             #[cfg(any(feature = "pdf"))]
@@ -11644,6 +11783,8 @@ impl Icon {
             Icon::PlanningDependencyDrawMode => &["composer", "planner"],
             #[cfg(any(feature = "planner"))]
             Icon::PlanningDriving => &["planner"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PlanningDrivingUnknown => &["planner"],
             #[cfg(any(feature = "planner"))]
             Icon::PlanningExternalRelation => &["planner"],
             #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -12087,6 +12228,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             Icon::TaskMilestoneMenu => &["planner"],
             #[cfg(any(feature = "planner"))]
+            Icon::TaskNoteAdd => &["planner"],
+            #[cfg(any(feature = "planner"))]
             Icon::TaskOutdent => &["planner"],
             #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
             Icon::TaskSplitMode => &["calc", "heatloss", "pdf", "planner"],
@@ -12422,6 +12565,8 @@ impl Icon {
             "ai.connection-menu" => Some(Icon::AiConnectionMenu),
             #[cfg(any(feature = "planner"))]
             "ai.pause" => Some(Icon::AiPause),
+            #[cfg(any(feature = "planner"))]
+            "ai.read-only-off" => Some(Icon::AiReadOnlyOff),
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             "ai.read-only-toggle" => Some(Icon::AiReadOnlyToggle),
             #[cfg(any(feature = "planner"))]
@@ -12612,6 +12757,8 @@ impl Icon {
             "capture.annotate" => Some(Icon::CaptureAnnotate),
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             "capture.clear-annotations" => Some(Icon::CaptureClearAnnotations),
+            #[cfg(any(feature = "planner"))]
+            "capture.mask" => Some(Icon::CaptureMask),
             #[cfg(any(feature = "pdf"))]
             "capture.overlay" => Some(Icon::CaptureOverlay),
             #[cfg(any(feature = "pdf"))]
@@ -12900,6 +13047,10 @@ impl Icon {
             "extension.importer" => Some(Icon::ExtensionImporter),
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             "extension.install-file" => Some(Icon::ExtensionInstallFile),
+            #[cfg(any(feature = "planner"))]
+            "extension.install-js" => Some(Icon::ExtensionInstallJs),
+            #[cfg(any(feature = "planner"))]
+            "extension.install-zip" => Some(Icon::ExtensionInstallZip),
             #[cfg(any(feature = "calc"))]
             "extension.item" => Some(Icon::ExtensionItem),
             #[cfg(any(feature = "pdf"))]
@@ -13115,6 +13266,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             "guide.compact" => Some(Icon::GuideCompact),
             #[cfg(any(feature = "planner"))]
+            "guide.expand" => Some(Icon::GuideExpand),
+            #[cfg(any(feature = "planner"))]
             "guide.tutorial-start" => Some(Icon::GuideTutorialStart),
             #[cfg(any(feature = "energy", feature = "planner"))]
             "guide.tutorials" => Some(Icon::GuideTutorials),
@@ -13222,6 +13375,8 @@ impl Icon {
             "list.group-by" => Some(Icon::ListGroupBy),
             #[cfg(any(feature = "reports"))]
             "list.item-add" => Some(Icon::ListItemAdd),
+            #[cfg(any(feature = "planner"))]
+            "list.item-remove" => Some(Icon::ListItemRemove),
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             "list.move-down" => Some(Icon::ListMoveDown),
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -13454,6 +13609,8 @@ impl Icon {
             "panel.document-navigation" => Some(Icon::PanelDocumentNavigation),
             #[cfg(any(feature = "pdf"))]
             "panel.element-visibility" => Some(Icon::PanelElementVisibility),
+            #[cfg(any(feature = "planner"))]
+            "panel.expand-full" => Some(Icon::PanelExpandFull),
             #[cfg(any(feature = "pdf"))]
             "panel.form-fields" => Some(Icon::PanelFormFields),
             #[cfg(any(feature = "validator"))]
@@ -13464,6 +13621,10 @@ impl Icon {
             "panel.measurements" => Some(Icon::PanelMeasurements),
             #[cfg(any(feature = "calculations"))]
             "panel.model-tree" => Some(Icon::PanelModelTree),
+            #[cfg(any(feature = "planner"))]
+            "panel.properties" => Some(Icon::PanelProperties),
+            #[cfg(any(feature = "planner"))]
+            "panel.properties-hidden" => Some(Icon::PanelPropertiesHidden),
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             "panel.right" => Some(Icon::PanelRight),
             #[cfg(any(feature = "pdf"))]
@@ -13550,6 +13711,8 @@ impl Icon {
             "planning.dependency-draw-mode" => Some(Icon::PlanningDependencyDrawMode),
             #[cfg(any(feature = "planner"))]
             "planning.driving" => Some(Icon::PlanningDriving),
+            #[cfg(any(feature = "planner"))]
+            "planning.driving-unknown" => Some(Icon::PlanningDrivingUnknown),
             #[cfg(any(feature = "planner"))]
             "planning.external-relation" => Some(Icon::PlanningExternalRelation),
             #[cfg(any(feature = "heatloss", feature = "planner"))]
@@ -13993,6 +14156,8 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             "task.milestone-menu" => Some(Icon::TaskMilestoneMenu),
             #[cfg(any(feature = "planner"))]
+            "task.note-add" => Some(Icon::TaskNoteAdd),
+            #[cfg(any(feature = "planner"))]
             "task.outdent" => Some(Icon::TaskOutdent),
             #[cfg(any(feature = "calc", feature = "heatloss", feature = "pdf", feature = "planner"))]
             "task.split-mode" => Some(Icon::TaskSplitMode),
@@ -14353,6 +14518,10 @@ impl Icon {
             (Icon::AiPause, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/ai.pause.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::AiPause, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/ai.pause.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::AiReadOnlyOff, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/ai.read-only-off.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::AiReadOnlyOff, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/ai.read-only-off.svgz")),
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
             (Icon::AiReadOnlyToggle, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/ai.read-only-toggle.svgz")),
             #[cfg(any(feature = "pdf", feature = "pile-plan", feature = "planner"))]
@@ -14733,6 +14902,10 @@ impl Icon {
             (Icon::CaptureClearAnnotations, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/capture.clear-annotations.svgz")),
             #[cfg(any(feature = "geotechniek", feature = "pdf", feature = "planner"))]
             (Icon::CaptureClearAnnotations, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/capture.clear-annotations.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::CaptureMask, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/capture.mask.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::CaptureMask, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/capture.mask.svgz")),
             #[cfg(any(feature = "pdf"))]
             (Icon::CaptureOverlay, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/capture.overlay.svgz")),
             #[cfg(any(feature = "pdf"))]
@@ -15309,6 +15482,14 @@ impl Icon {
             (Icon::ExtensionInstallFile, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/extension.install-file.svgz")),
             #[cfg(any(feature = "calc", feature = "calculations", feature = "energy", feature = "geotechniek", feature = "heatloss", feature = "pdf", feature = "pile-plan", feature = "pointcloud", feature = "validator"))]
             (Icon::ExtensionInstallFile, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/extension.install-file.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ExtensionInstallJs, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/extension.install-js.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ExtensionInstallJs, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/extension.install-js.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ExtensionInstallZip, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/extension.install-zip.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ExtensionInstallZip, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/extension.install-zip.svgz")),
             #[cfg(any(feature = "calc"))]
             (Icon::ExtensionItem, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/extension.item.svgz")),
             #[cfg(any(feature = "calc"))]
@@ -15738,6 +15919,10 @@ impl Icon {
             #[cfg(any(feature = "planner"))]
             (Icon::GuideCompact, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/guide.compact.svgz")),
             #[cfg(any(feature = "planner"))]
+            (Icon::GuideExpand, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/guide.expand.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::GuideExpand, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/guide.expand.svgz")),
+            #[cfg(any(feature = "planner"))]
             (Icon::GuideTutorialStart, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/guide.tutorial-start.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::GuideTutorialStart, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/guide.tutorial-start.svgz")),
@@ -15953,6 +16138,10 @@ impl Icon {
             (Icon::ListItemAdd, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/list.item-add.svgz")),
             #[cfg(any(feature = "reports"))]
             (Icon::ListItemAdd, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/list.item-add.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ListItemRemove, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/list.item-remove.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::ListItemRemove, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/list.item-remove.svgz")),
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
             (Icon::ListMoveDown, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/list.move-down.svgz")),
             #[cfg(any(feature = "heatloss", feature = "pdf"))]
@@ -16417,6 +16606,10 @@ impl Icon {
             (Icon::PanelElementVisibility, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.element-visibility.svgz")),
             #[cfg(any(feature = "pdf"))]
             (Icon::PanelElementVisibility, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.element-visibility.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelExpandFull, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.expand-full.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelExpandFull, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.expand-full.svgz")),
             #[cfg(any(feature = "pdf"))]
             (Icon::PanelFormFields, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.form-fields.svgz")),
             #[cfg(any(feature = "pdf"))]
@@ -16437,6 +16630,14 @@ impl Icon {
             (Icon::PanelModelTree, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.model-tree.svgz")),
             #[cfg(any(feature = "calculations"))]
             (Icon::PanelModelTree, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.model-tree.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelProperties, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.properties.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelProperties, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.properties.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelPropertiesHidden, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.properties-hidden.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelPropertiesHidden, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.properties-hidden.svgz")),
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             (Icon::PanelRight, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.right.svgz")),
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
@@ -16609,6 +16810,10 @@ impl Icon {
             (Icon::PlanningDriving, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.driving.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::PlanningDriving, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/planning.driving.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningDrivingUnknown, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.driving-unknown.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PlanningDrivingUnknown, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/planning.driving-unknown.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::PlanningExternalRelation, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/planning.external-relation.svgz")),
             #[cfg(any(feature = "planner"))]
@@ -17493,6 +17698,10 @@ impl Icon {
             (Icon::TaskMilestoneMenu, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/task.milestone-menu.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::TaskMilestoneMenu, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/task.milestone-menu.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::TaskNoteAdd, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/task.note-add.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::TaskNoteAdd, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/task.note-add.svgz")),
             #[cfg(any(feature = "planner"))]
             (Icon::TaskOutdent, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/task.outdent.svgz")),
             #[cfg(any(feature = "planner"))]
