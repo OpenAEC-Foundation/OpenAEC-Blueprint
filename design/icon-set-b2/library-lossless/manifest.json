@@ -1,7 +1,7 @@
 {
   "family": "OpenAEC B2",
   "source_revision": 107,
-  "source_manifest_sha256": "cf17b2b451d3701b0e86a3e3da63b032c29e5ae16058d456a118be059a97f5bc",
+  "source_manifest_sha256": "3aeec1db8f94e0ea4d4405d0b2b5a8b18317d4ea22ca29f59ed17a8abe42566b",
   "format": "gzip-compressed original SVG (SVGZ)",
   "compression": {
     "level": 9,
@@ -9,19 +9,19 @@
     "filename": ""
   },
   "geometry_changes": false,
-  "icon_count": 961,
-  "asset_count": 1922,
+  "icon_count": 962,
+  "asset_count": 1924,
   "totals": {
     "16": {
-      "files": 961,
-      "original_bytes": 26466952,
-      "compressed_bytes": 10020391,
+      "files": 962,
+      "original_bytes": 26497874,
+      "compressed_bytes": 10033043,
       "reduction_percent": 62.14
     },
     "24": {
-      "files": 961,
-      "original_bytes": 26981655,
-      "compressed_bytes": 9896684,
+      "files": 962,
+      "original_bytes": 27012109,
+      "compressed_bytes": 9908727,
       "reduction_percent": 63.32
     }
   },
@@ -21143,6 +21143,28 @@
           "compressed_bytes": 6292,
           "original_bytes": 17534,
           "source_path": "svg/24/task.note-add.svg"
+        }
+      }
+    },
+    {
+      "id": "panel.schedule-shift",
+      "label": "Verschuivingenpaneel",
+      "assets": {
+        "16": {
+          "path": "16/panel.schedule-shift.svgz",
+          "compressed_sha256": "8b3e084d742ba76712ccfba7cc14c840d6ae76aa6ba13b081093460d92d6a2f7",
+          "original_sha256": "e454a3f7834759dd09e450f54553e1003a57476f9f6d200c5b1c02e21c95f043",
+          "compressed_bytes": 12652,
+          "original_bytes": 30922,
+          "source_path": "svg/16/panel.schedule-shift.svg"
+        },
+        "24": {
+          "path": "24/panel.schedule-shift.svgz",
+          "compressed_sha256": "9602f81435fc11433a11d6a6994da1e80b549b9cb1168bf9e8ab7f0fa1ccf45f",
+          "original_sha256": "28f0b98dc14a1f3596a9af5dddc1b0fcee9fa35387a346d09c3507e2d8eaee92",
+          "compressed_bytes": 12043,
+          "original_bytes": 30454,
+          "source_path": "svg/24/panel.schedule-shift.svg"
         }
       }
     },

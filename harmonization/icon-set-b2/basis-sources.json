@@ -418,5 +418,21 @@
         "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/672af416500167e2836cc0a8b938b4a3c353e74a/src/components/viewControls/LevelListEditor.tsx#L52"
       }
     ]
+  },
+  "panel.schedule-shift": {
+    "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+    "planned": false,
+    "sources": [
+      {
+        "repository": "open-planner-studio",
+        "commit": "2f6bc4d8220a255d1f7a493b9e39141ac2caa821",
+        "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+        "line": 426,
+        "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+        "sha256": "4c6081e057bb9f41d0b498bcdd1fb713e44bd98ef863814b5c972a3f9c2ba095",
+        "git_blob": "21e351f7b0f5aee1f47ebe04f84650780d15c837",
+        "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/2f6bc4d8220a255d1f7a493b9e39141ac2caa821/src/components/layout/Ribbon/ribbonConfig.tsx#L426"
+      }
+    ]
   }
 }

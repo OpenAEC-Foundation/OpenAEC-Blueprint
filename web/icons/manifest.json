@@ -1525,10 +1525,10 @@
     },
     "planner": {
       "file": "planner.svg",
-      "icons": 278,
-      "bytes": 1260303,
-      "gzip_bytes": 365047,
-      "sha256": "3b88b1aefadf990a719b1202854c061abeced20954876dd66ce968021165a756",
+      "icons": 279,
+      "bytes": 1263450,
+      "gzip_bytes": 365991,
+      "sha256": "89eb202b5b1c0e2480e932e7574d27fc927923ed686ecd0740062b34f5d09097",
       "ids": [
         "activity.clear",
         "ai.bridge-start",
@@ -1669,6 +1669,7 @@
         "panel.properties",
         "panel.properties-hidden",
         "panel.right",
+        "panel.schedule-shift",
         "panel.tags",
         "panel.warnings",
         "permission.add",

@@ -2,7 +2,7 @@
   "uitleg": "Groepen knoppen die in een programma naast elkaar staan. scripts/check_icon_guideline.py toetst per groep of de iconen genoeg van elkaar verschillen. Een familie is hetzelfde ding met een andere actie (Zoom + en Zoom −): die mag dezelfde basisvorm delen, maar het verschil moet een vorm zijn en geen detail of alleen kleur. Bron van de opbouw: open-planner-studio, src/components/layout/Ribbon/ribbonConfig.tsx en ribbonWidgets.tsx op main (a58d53482).",
   "groepen": [
     {"app": "Planner", "tab": "Planning", "naam": "Planning",
-     "ids": ["solver.run", "planning.move-date", "panel.warnings"]},
+     "ids": ["solver.run", "planning.move-date", "panel.warnings", "panel.schedule-shift"]},
     {"app": "Planner", "tab": "Planning", "naam": "Relaties",
      "ids": ["planning.relations-menu", "task.split-mode"]},
     {"app": "Planner", "tab": "Planning", "naam": "Pad traceren",
@@ -49,6 +49,8 @@
      "families": [["panel.properties", "panel.properties-hidden"]]},
     {"app": "Planner", "tab": "Beeld", "naam": "Weergave",
      "ids": ["table.columns", "list.filter", "list.group-by", "list.sort-fields"]},
+    {"app": "Planner", "tab": "Beeld", "naam": "Panelen",
+     "ids": ["panel.properties", "resource.workspace", "resource.dock", "data.chart", "panel.warnings", "panel.schedule-shift"]},
     {"app": "Planner", "tab": "Beeld", "naam": "Presentatie",
      "ids": ["view.fullscreen", "view.fullscreen-exit", "view.gantt-split", "view.minimap"]},
     {"app": "Planner", "tab": "Beeld", "naam": "Indeling",

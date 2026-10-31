@@ -55,6 +55,8 @@ NEW_DEFINITIONS = [
      'Het begeleidingspaneel van compact naar uitgebreid zetten. Tegenhanger van guide.compact.'),
     ('task.note-add', 'Notitie toevoegen', 'Taken en planningsberekening',
      'Een notitie bij de taak toevoegen. Geen annotatie op een tekening; daarvoor blijft draw.note.'),
+    ('panel.schedule-shift', 'Verschuivingenpaneel', 'Vensters en panelen',
+     'Het paneel met de taken die bij het doorrekenen verschoven zijn omschakelen, met de reden per taak. Geen taak verplaatsen; daarvoor blijft planning.move-date.'),
     ('list.item-remove', 'Regel weghalen', 'Lijsten en bomen',
      'Eén regel uit een lijst of voorwaarde weghalen met een klein kruisje. Geen object verwijderen; daarvoor blijft edit.delete.'),
 ]
@@ -70,6 +72,7 @@ NEW_APPS = {
     'panel.expand-full': ['Planner'],
     'capture.mask': ['Planner'],
     'ai.read-only-off': ['Planner'],
+    'panel.schedule-shift': ['Planner'],
     'planning.driving-unknown': ['Planner'],
     'extension.install-zip': ['Planner'],
     'extension.install-js': ['Planner'],
@@ -1089,6 +1092,20 @@ def square(p):
         p.rect(4, 4, 20, 20, r=1.6)
 
 
+def arrows_both_ways(p):
+    """Twee pijlen in tegengestelde richting, zoals Verschuivingen in Open Planner Studio."""
+    if p.s == 16:
+        p.line([(4.5, 1.5), (1.5, 4.5), (4.5, 7.5)], r=0.3)
+        p.line([(1.5, 4.5), (14.5, 4.5)], r=0)
+        p.line([(11.5, 8.5), (14.5, 11.5), (11.5, 14.5)], r=0.3)
+        p.line([(14.5, 11.5), (1.5, 11.5)], r=0)
+    else:
+        p.line([(7, 3), (3, 7), (7, 11)], r=0.5)
+        p.line([(3, 7), (21, 7)], r=0)
+        p.line([(17, 13), (21, 17), (17, 21)], r=0.5)
+        p.line([(21, 17), (3, 17)], r=0)
+
+
 def stop_square(p):
     if p.s == 16:
         p.rect(1.5, 1.5, 13.5, 13.5, r=1.4)
@@ -1719,6 +1736,7 @@ VORMEN = [
     (star, 'Ster, zoals in Open Planner Studio.', ['company.default', 'company.default-status', 'status.project-calendar', 'layout.star']),
     (lock, 'Slot, zoals in Open Planner Studio.', ['ai.read-only-toggle', 'status.assignment-protected']),
     (lock_open, 'Open slot, zoals in Open Planner Studio.', ['ai.read-only-off']),
+    (arrows_both_ways, 'Twee pijlen, zoals Verschuivingen in Open Planner Studio. Eén ding, dus geen oranje.', ['panel.schedule-shift']),
     (link_chain, 'Schakel met een middenlijn, zoals Koppelen in Open Planner Studio.', ['planning.external-relation', 'library.link-recognized']),
     (unlink_chain, 'Schakel zonder middenlijn, zoals Losmaken in Open Planner Studio.', ['resource.unlink-library']),
     (relations_menu, 'Dezelfde schakel als Relatie: in deze stand teken je relaties.', ['planning.dependency-draw-mode']),

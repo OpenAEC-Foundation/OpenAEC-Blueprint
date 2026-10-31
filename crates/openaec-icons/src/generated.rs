@@ -1634,6 +1634,9 @@ pub enum Icon {
     /// Rechterpaneel tonen of verbergen (`panel.right`); energy, planner, pointcloud, validator.
     #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
     PanelRight,
+    /// Verschuivingenpaneel (`panel.schedule-shift`); planner.
+    #[cfg(any(feature = "planner"))]
+    PanelScheduleShift,
     /// Hoeveelhedenstatenpaneel (`panel.schedules`); pdf.
     #[cfg(any(feature = "pdf"))]
     PanelSchedules,
@@ -3987,6 +3990,8 @@ impl Icon {
         list.push(Icon::PanelPropertiesHidden);
         #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
         list.push(Icon::PanelRight);
+        #[cfg(any(feature = "planner"))]
+        list.push(Icon::PanelScheduleShift);
         #[cfg(any(feature = "pdf"))]
         list.push(Icon::PanelSchedules);
         #[cfg(any(feature = "pdf"))]
@@ -5915,6 +5920,8 @@ impl Icon {
             Icon::PanelPropertiesHidden => "panel.properties-hidden",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "panel.right",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelScheduleShift => "panel.schedule-shift",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelSchedules => "panel.schedules",
             #[cfg(any(feature = "pdf"))]
@@ -7843,6 +7850,8 @@ impl Icon {
             Icon::PanelPropertiesHidden => "Eigenschappenpaneel verborgen",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "Rechterpaneel tonen of verbergen",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelScheduleShift => "Verschuivingenpaneel",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelSchedules => "Hoeveelhedenstatenpaneel",
             #[cfg(any(feature = "pdf"))]
@@ -9771,6 +9780,8 @@ impl Icon {
             Icon::PanelPropertiesHidden => "Vensters en panelen",
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => "Vensters en panelen",
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelScheduleShift => "Vensters en panelen",
             #[cfg(any(feature = "pdf"))]
             Icon::PanelSchedules => "PDF-zijpanelen",
             #[cfg(any(feature = "pdf"))]
@@ -11699,6 +11710,8 @@ impl Icon {
             Icon::PanelPropertiesHidden => &["planner"],
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             Icon::PanelRight => &["energy", "planner", "pointcloud", "validator"],
+            #[cfg(any(feature = "planner"))]
+            Icon::PanelScheduleShift => &["planner"],
             #[cfg(any(feature = "pdf"))]
             Icon::PanelSchedules => &["pdf"],
             #[cfg(any(feature = "pdf"))]
@@ -13627,6 +13640,8 @@ impl Icon {
             "panel.properties-hidden" => Some(Icon::PanelPropertiesHidden),
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             "panel.right" => Some(Icon::PanelRight),
+            #[cfg(any(feature = "planner"))]
+            "panel.schedule-shift" => Some(Icon::PanelScheduleShift),
             #[cfg(any(feature = "pdf"))]
             "panel.schedules" => Some(Icon::PanelSchedules),
             #[cfg(any(feature = "pdf"))]
@@ -16642,6 +16657,10 @@ impl Icon {
             (Icon::PanelRight, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.right.svgz")),
             #[cfg(any(feature = "energy", feature = "planner", feature = "pointcloud", feature = "validator"))]
             (Icon::PanelRight, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.right.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelScheduleShift, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.schedule-shift.svgz")),
+            #[cfg(any(feature = "planner"))]
+            (Icon::PanelScheduleShift, Size::S24) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/24/panel.schedule-shift.svgz")),
             #[cfg(any(feature = "pdf"))]
             (Icon::PanelSchedules, Size::S16) => include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/16/panel.schedules.svgz")),
             #[cfg(any(feature = "pdf"))]

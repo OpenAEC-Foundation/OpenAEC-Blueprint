@@ -2,8 +2,8 @@
   "family": "OpenAEC B2",
   "revision": 107,
   "status": "ontwerpuitwerking; niet in Rust-crate of apps ingebouwd",
-  "function_count": 961,
-  "svg_count": 1922,
+  "function_count": 962,
+  "svg_count": 1924,
   "masters": [
     16,
     24
@@ -12,7 +12,7 @@
   "export": "gevulde contouren; achterste kleur minus voorste kleur",
   "curve_sampling": "12 stappen per halve kwadratische hoek; buffer 20 segmenten per kwadrant; cirkels 64",
   "scope_audit_sha256": "d2ae7835bfc70eb569f0f753a1e05d9101a50f9e068a557769be9d6fc8d6d413",
-  "basis_sources_sha256": "ebaa7581c3ac87f1ecc16db32ee717ab2af9ab403f41d2059060fa607557a6fa",
+  "basis_sources_sha256": "aad889618c9c8250537b15925633e4ab895afeafaf99d97410411022e06d7665",
   "source_catalog_sha256": "0be2f00f2443dcb4fe4e40a2ff4b9ad2b1cebe5ca92ce52874c1c74bab579e3b",
   "source_catalogs_sha256": {
     "harmonization/function-icon-catalog.json": "0be2f00f2443dcb4fe4e40a2ff4b9ad2b1cebe5ca92ce52874c1c74bab579e3b",
@@ -279,7 +279,7 @@
   "window_generator_sha256": "3f742e5c34f42c73f4463fed320d399df1b6bfffe95958c54a2b87ecc669eb6b",
   "extension_generator_sha256": "106767a0b97fa102b62d1c66c9d0d4cc11933ca311cae09fa79aac66e02b9c06",
   "feedback_generator_sha256": "0f2c5fb301b5cffdb7b6866de558501ce6591db4b466d1b0fb9a453aca6f5db5",
-  "guideline_generator_sha256": "c0664dd446c4229c3c64216b6ebc268ea50b900c3fe04b0e33503665ad6988f7",
+  "guideline_generator_sha256": "441fa7b98b4c4fe850511b144e53b525776314f3585a8630f862666507529a6e",
   "guideline": "docs/iconen.md",
   "warning_preview": {
     "status": "gele warning-rol uit tokens-0.4.json",
@@ -311654,6 +311654,214 @@
         "primary"
       ],
       "shape_revision": "Plus, zoals deze knoppen in Open Planner Studio. Eén teken, dus geen oranje; ook op 10 tot 12 px leesbaar.",
+      "rounded_joint": false,
+      "series": 167,
+      "semantic_color": null,
+      "whole_icon_accent": false,
+      "typography": null,
+      "guideline": "docs/iconen.md"
+    },
+    {
+      "id": "panel.schedule-shift",
+      "label": "Verschuivingenpaneel",
+      "group": "Vensters en panelen",
+      "meaning": "Het paneel met de taken die bij het doorrekenen verschoven zijn omschakelen, met de reden per taak. Geen taak verplaatsen; daarvoor blijft planning.move-date.",
+      "status": "B2-ontwerp beschikbaar; nog geen app-integratie",
+      "planned": false,
+      "source_support": {
+        "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+        "planned": false,
+        "sources": [
+          {
+            "repository": "open-planner-studio",
+            "commit": "2f6bc4d8220a255d1f7a493b9e39141ac2caa821",
+            "path": "src/components/layout/Ribbon/ribbonConfig.tsx",
+            "line": 426,
+            "description": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+            "sha256": "4c6081e057bb9f41d0b498bcdd1fb713e44bd98ef863814b5c972a3f9c2ba095",
+            "git_blob": "21e351f7b0f5aee1f47ebe04f84650780d15c837",
+            "url": "https://github.com/OpenAEC-Foundation/open-planner-studio/blob/2f6bc4d8220a255d1f7a493b9e39141ac2caa821/src/components/layout/Ribbon/ribbonConfig.tsx#L426"
+          }
+        ]
+      },
+      "evidence_status": "De knop Verschuivingen in het lint opent het paneel met de taken die verschoven zijn, en waarom.",
+      "source_function_id": "panel.schedule-shift",
+      "candidate_apps": [
+        "Planner"
+      ],
+      "candidate_records": 0,
+      "source_example": null,
+      "assets": {
+        "16": {
+          "path": "svg/16/panel.schedule-shift.svg",
+          "sha256": "e454a3f7834759dd09e450f54553e1003a57476f9f6d200c5b1c02e21c95f043"
+        },
+        "24": {
+          "path": "svg/24/panel.schedule-shift.svg",
+          "sha256": "28f0b98dc14a1f3596a9af5dddc1b0fcee9fa35387a346d09c3507e2d8eaee92"
+        }
+      },
+      "construction": {
+        "16": {
+          "width": 1.25,
+          "paths": [
+            {
+              "points": [
+                [
+                  4.5,
+                  1.5
+                ],
+                [
+                  1.5,
+                  4.5
+                ],
+                [
+                  4.5,
+                  7.5
+                ]
+              ],
+              "closed": false,
+              "radius": 0.3,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  1.5,
+                  4.5
+                ],
+                [
+                  14.5,
+                  4.5
+                ]
+              ],
+              "closed": false,
+              "radius": 0.0,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  11.5,
+                  8.5
+                ],
+                [
+                  14.5,
+                  11.5
+                ],
+                [
+                  11.5,
+                  14.5
+                ]
+              ],
+              "closed": false,
+              "radius": 0.3,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  14.5,
+                  11.5
+                ],
+                [
+                  1.5,
+                  11.5
+                ]
+              ],
+              "closed": false,
+              "radius": 0.0,
+              "tone": "primary"
+            }
+          ],
+          "circles": [],
+          "fills": [],
+          "clear_primary": false
+        },
+        "24": {
+          "width": 1.75,
+          "paths": [
+            {
+              "points": [
+                [
+                  7.0,
+                  3.0
+                ],
+                [
+                  3.0,
+                  7.0
+                ],
+                [
+                  7.0,
+                  11.0
+                ]
+              ],
+              "closed": false,
+              "radius": 0.5,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  3.0,
+                  7.0
+                ],
+                [
+                  21.0,
+                  7.0
+                ]
+              ],
+              "closed": false,
+              "radius": 0.0,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  17.0,
+                  13.0
+                ],
+                [
+                  21.0,
+                  17.0
+                ],
+                [
+                  17.0,
+                  21.0
+                ]
+              ],
+              "closed": false,
+              "radius": 0.5,
+              "tone": "primary"
+            },
+            {
+              "points": [
+                [
+                  21.0,
+                  17.0
+                ],
+                [
+                  3.0,
+                  17.0
+                ]
+              ],
+              "closed": false,
+              "radius": 0.0,
+              "tone": "primary"
+            }
+          ],
+          "circles": [],
+          "fills": [],
+          "clear_primary": false
+        }
+      },
+      "foreground": "primary",
+      "layer_reason": "De hoofdkleur bewaart de doorgaande contour; losliggende accenten blijven intact.",
+      "paint_order": [
+        "accent",
+        "primary"
+      ],
+      "shape_revision": "Twee pijlen, zoals Verschuivingen in Open Planner Studio. Eén ding, dus geen oranje.",
       "rounded_joint": false,
       "series": 167,
       "semantic_color": null,
